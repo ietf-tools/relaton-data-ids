@@ -1,0 +1,79 @@
+---
+id: I-D.moore-6to4-dns
+title:
+  content: 6to4 and DNS
+  language: en
+  script: Latn
+  format: text/plain
+link:
+  content: https://www.ietf.org/archive/id/draft-moore-6to4-dns-03.txt
+  type: TXT
+type: standard
+docid:
+- id: I-D.moore-6to4-dns
+  type: rfc-anchor
+- id: draft-moore-6to4-dns-03
+  type: Internet-Draft
+docnumber: I-D.moore-6to4-dns
+date:
+  type: published
+  value: '2002-10-18'
+contributor:
+  person:
+    name:
+      initial:
+        content: K.
+        language: en
+      surname:
+        content: Moore
+        language: en
+      completename:
+        content: Keith Moore
+        language: en
+    affiliation:
+      organization:
+        name: University of Tennessee
+  role: author
+revdate: '2002-10-18'
+language: en
+script: Latn
+abstract:
+  content: "\n\t <p>6to4 [1] defines a mechanism for allowing sites to communicate\nusing
+    IPv6 over the public IPv4 Internet.  It does so by assigning a\nblock of IPv6
+    addresses corresponding to any 'public' (globally-scoped)\nIPv4 address, and a
+    means of tunneling IPv6 traffic destined for such\naddresses over the IPv4 Internet.
+    \ In this way, any site which is\nconnected to the IPv4 Internet and which has
+    at least one global IPv4\naddress assigned to it, can communicate with IPv6.\nThe
+    advantage of 6to4 is that it decouples deployment of IPv6 by\nthe core of the
+    network (e.g. Internet Service Providers or ISPs) from\ndeployment of IPv6 at
+    the edges (e.g. customer sites), allowing each\nsite or ISP to deploy IPv6 support
+    in its own time frame according to\nits own priorities.  With 6to4, the edges
+    may communicate with one\nanother using IPv6 even if one or more of their ISPs
+    do not yet provide\nnative IPv6 service.  In addition, the principal cost of the
+    6to4\ntransition mechanism is borne by those who benefit from it.\nHowever, the
+    ability to perform so-called 'reverse lookups'\n(lookups of IP addresses rather
+    than domain names) in DNS requires that\nthere be a delegation path for the IP
+    address being queried, from the\nDNS root to the servers for the DNA zone which
+    provides the PTR records\nfor that IP address.  For ordinary IPv6 addresses, the
+    necessary DNS\nservers and records for IPv6 reverse lookups would be maintained
+    by the\neach organization to which an address block is delegated; the delegation\npath
+    of DNS records reflects the delegation of address blocks\nthemselves.  However,
+    for IPv6 addresses beginning with the 6to4 address\nprefix, the DNS records would
+    need to reflect IPv4 address delegation.\nSince the entire motivation of 6to4
+    is to decouple site deployment of\nIPv6 from infrastructure deployment of IPv6,
+    such records cannot be\nexpected to be present for a site using 6to4 - especially
+    for a site\nwhose ISP did not yet support IPv6 in any form.\nThis memo discusses
+    several potential mechanisms for locating the\nDNS servers which are assumed to
+    provide 'reverse lookup' of 6to4\naddresses.\n\n\t </p>\n      "
+  language: en
+  script: Latn
+  format: text/html
+series:
+  type: main
+  title:
+    content: Internet-Draft
+    language: en
+    script: Latn
+    format: text/plain
+  number: draft-moore-6to4-dns-03
+doctype: internet-draft

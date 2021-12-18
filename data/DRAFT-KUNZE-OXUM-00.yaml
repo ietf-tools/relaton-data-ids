@@ -1,0 +1,103 @@
+---
+id: I-D.kunze-oxum
+title:
+  content: 'Oxum: Octet Stream Sum http://www.ietf.org/internet-drafts/draft-kunze-oxum-00.txt'
+  language: en
+  script: Latn
+  format: text/plain
+link:
+  content: https://www.ietf.org/archive/id/draft-kunze-oxum-00.txt
+  type: TXT
+type: standard
+docid:
+- id: I-D.kunze-oxum
+  type: rfc-anchor
+- id: draft-kunze-oxum-00
+  type: Internet-Draft
+docnumber: I-D.kunze-oxum
+date:
+  type: published
+  value: '2008-11-18'
+contributor:
+  person:
+    name:
+      completename:
+        content: John Kunze
+        language: en
+  role: author
+revdate: '2008-11-18'
+language: en
+script: Latn
+abstract:
+  content: "\n\t <p>This document specifies \"oxum\", a two-part number, OCTETS.STREAMS,\nthat
+    is a kind of simple size summary for complex digital objects.\nIn the mainstream
+    case of a complex object that is a set of files,\nthe STREAMS part is the total
+    number of files and the OCTETS part is\nthe total number of 8-bit bytes across
+    all those files; for example,\nan oxum of 876543.21 could mean a total of 876,543
+    bytes across 21\nfiles.  Which set of streams comprises a complex object for an
+    oxum\ncomputation depends in general on the object's type.  One important\ntype
+    is the stream set defined by the set of files contained in a\nfile hierarchy.
+    \ An oxum is not a checksum in that, while a changed\noxum means a changed object,
+    an unchanged oxum does not mean an\nunchanged object.1.  The size of a digital
+    object\n\nIt can be hard to characterize the size of an arbitrary digital\nobject.
+    \ Word count, page count, image dimensions, video running\ntime, or number of
+    database records might all be useful metrics,\ndepending on the type of the object.
+    \ For a single file, one crude\nbut easily obtained metric is the number of octets
+    (8-bit bytes) in\nthe file.  This document introduces an analogous metric for
+    a\n_complex digital object_, by which we mean an object that is not\nequivalent
+    to a single file.  A complex object may consist of a group\nof files or parts
+    of one or more files (e.g., a database).2.  The octet stream sum (oxum)\n\nA complex
+    digital object that has a well-defined set of octet\nstreams, such as a document
+    represented by a group of 14 text and\nimage files, has a well-defined \"oxum\"
+    (octet stream sum).  The oxum\nis a two part number such as\n\n  567898.14\n\nwhich
+    corresponds to 567,898 octets spread over 14 files.  The\ngeneral form of an oxum
+    is\n\n  OCTETS.STREAMS\n\nwhere STREAMS is the total number of streams (e.g.,
+    files) and OCTETS\nis the total number of octets across all those streams.  In
+    general,\nthese two numbers will be positive integers, although there may be\nsituations
+    (not described here) in which it makes sense for either\none of them to be left
+    unspecified with a hyphen ('-').  The period\n('.') separator is required.  Other
+    examples:\n\n1998.10\n\n\n\n  # 1998 octets spread over 10 streams\n105.3\n\n\n\n\n
+    # 105 octets, 3 streams (not 105 and 3 tenths)\n21436794142.831\n\n# almost 19
+    Gigabytes spread over 831 streams\n709895249489.8756\n # about 661 Gb, or 710
+    Gb if you divide by 1000\n-.1\n\n\n\n\n\n# one stream, but number of octets not
+    known yet\n\nThe oxum is designed to be machine readable and to fit into a variety\nof
+    syntactic contexts, such as command lines, file paths, URL\n[RFC3986] query strings,
+    and XML [XML] tags.\n\nNote that the oxum is _not_ designed as a secure digest
+    or checksum.\nWhile an oxum cannot change without a change to the object, an\nunchanged
+    oxum absolutely does not imply an unchanged object.  Do not\nuse oxum in place
+    of a cryptographic digest algorithm (cf. SHA1\n[RFC3174]).3.  Oxum complex object
+    types\n\nAn _oxum object type_ is used to describe how to derive an object's\nstream
+    set.  For oxum to be meaningful for an object type, the type\nmust have a well-defined,
+    canonical stream set.  Once the stream set\nis known, the oxum computation is
+    straightforward and the streams can\nbe processed in any order.  One especially
+    natural way to derive a\nstream set is to define a way to reduce an object type
+    to a file\ngroup.\n\nFiles are primal streams.  In this document, a \"regular\"
+    file is a\ncontiguous sequence of octets with a well-defined start and end,\nwhether
+    the sequence is named in static storage (e.g., \"memo.pdf\") or\nis unnamed and
+    recently retrieved (e.g., a web page) from a network\nsocket.  There are many
+    filesystem entities that are not regular\nfiles, including directory nodes, block
+    special files, and symbolic\nlinks.  In this document, the word \"file\" usually
+    refers to a regular\nfile.\n\nA (regular) file is an oxum-ready stream.  As a
+    base case, a complex\nobject consisting of exactly one file has an oxum of the
+    form\n\"OCTETS.1\", as in\n\n  12345.1\n\nThings get more interesting when dealing
+    with more than one file.\nAny private or public agreement can be made about what
+    constitutes a\nfile group, hence a stream set, for the purposes of an oxum\ncomputation.
+    \ A stream set might be declared to comprise all the\nattachments of an email
+    message, or all the files resulting from a\nnormalized dump procedure run against
+    the tables of a database.  An\neasily delineated group is all the files contained
+    in a directory.\n\nAny recognized group of regular files can form on oxum stream
+    set,\nincluding a simple manifest or list of filenames.  For example, a\ntransfer
+    protocol might use oxum to help set the receiver's\nexpectations in terms of total
+    bytes and files contained in a\ntransferred package [GRABIT].\n\t </p>\n      "
+  language: en
+  script: Latn
+  format: text/html
+series:
+  type: main
+  title:
+    content: Internet-Draft
+    language: en
+    script: Latn
+    format: text/plain
+  number: draft-kunze-oxum-00
+doctype: internet-draft

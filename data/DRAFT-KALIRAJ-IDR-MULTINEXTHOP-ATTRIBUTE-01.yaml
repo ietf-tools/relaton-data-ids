@@ -1,0 +1,71 @@
+---
+id: I-D.kaliraj-idr-multinexthop-attribute
+title:
+  content: BGP MultiNexthop attribute
+  language: en
+  script: Latn
+  format: text/plain
+link:
+  content: https://www.ietf.org/archive/id/draft-kaliraj-idr-multinexthop-attribute-01.txt
+  type: TXT
+type: standard
+docid:
+- id: I-D.kaliraj-idr-multinexthop-attribute
+  type: rfc-anchor
+- id: draft-kaliraj-idr-multinexthop-attribute-01
+  type: Internet-Draft
+docnumber: I-D.kaliraj-idr-multinexthop-attribute
+date:
+  type: published
+  value: '2021-06-11'
+contributor:
+- person:
+    name:
+      completename:
+        content: Kaliraj Vairavakkalai
+        language: en
+    affiliation:
+      organization:
+        name: Juniper Networks, Inc.
+  role: author
+- person:
+    name:
+      completename:
+        content: Minto Jeyananth
+        language: en
+    affiliation:
+      organization:
+        name: Juniper Networks, Inc.
+  role: author
+revdate: '2021-06-11'
+language: en
+script: Latn
+abstract:
+  content: "\n\t <p>   Today, a BGP speaker can advertise one nexthop for a set of
+    NLRIs in\n   an Update.  This nexthop can be encoded in either the BGP-Nexthop\n
+    \  attribute (code 3), or inside the MP_REACH attribute (code 14).\n\n   For cases
+    where multiple nexthops need to be advertised, BGP-Addpath\n   is used.  Though
+    Addpath allows basic ability to advertise multiple-\n   nexthops, it does not
+    allow the sender to specify desired\n   relationship between the multiple nexthops
+    being advertised e.g.,\n   relative-preference, type of load-balancing.  These
+    are local\n   decisions at the receiving speaker based on path-selection between\n
+    \  the various additional-paths, which may tie-break on some arbitrary\n   step
+    like Router-Id.\n\n   Some scenarios with a BGP-free core may benefit from having
+    a\n   mechanism, where egress-node can signal multiple-nexthops along with\n   their
+    relationship to ingress nodes.  This document defines a new BGP\n   attribute
+    \"MultiNexthop\" that can be used for this purpose.\n\n   This attribute can be
+    used for both labeled and unlabled BGP\n   families.  For labeled-families, it
+    is used for a different purpose\n   in \"downstream allocation\" case than \"upstream
+    allocation\" scenarios.\n\n\n\t </p>\n      "
+  language: en
+  script: Latn
+  format: text/html
+series:
+  type: main
+  title:
+    content: Internet-Draft
+    language: en
+    script: Latn
+    format: text/plain
+  number: draft-kaliraj-idr-multinexthop-attribute-01
+doctype: internet-draft

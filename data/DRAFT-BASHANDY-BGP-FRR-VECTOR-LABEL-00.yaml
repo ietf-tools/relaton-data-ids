@@ -1,0 +1,72 @@
+---
+id: I-D.bashandy-bgp-frr-vector-label
+title:
+  content: BGP FRR Protection against Edge Node Failure Using Vector Labels
+  language: en
+  script: Latn
+  format: text/plain
+link:
+  content: https://www.ietf.org/archive/id/draft-bashandy-bgp-frr-vector-label-00.txt
+  type: TXT
+type: standard
+docid:
+- id: I-D.bashandy-bgp-frr-vector-label
+  type: rfc-anchor
+- id: draft-bashandy-bgp-frr-vector-label-00
+  type: Internet-Draft
+docnumber: I-D.bashandy-bgp-frr-vector-label
+date:
+  type: published
+  value: '2012-07-08'
+contributor:
+- person:
+    name:
+      completename:
+        content: Ahmed Bashandy
+        language: en
+  role: author
+- person:
+    name:
+      completename:
+        content: Nagendra Kumar
+        language: en
+  role: author
+- person:
+    name:
+      completename:
+        content: Maciek Konstantynowicz
+        language: en
+  role: author
+revdate: '2012-07-08'
+language: en
+script: Latn
+abstract:
+  content: "\n\t <p>Consider a BGP free core scenario. Suppose the edge BGP speakers
+    PE1,\nPE2,..., PEn know about a prefix P/m via the external routers CE1,\nCE2,...,
+    CEm.  If the edge router PEi crashes or becomes totally\ndisconnected from the
+    core, it is desirable for a core router \"P\"\ncarrying traffic to the failed
+    edge router PEi to immediately restore\ntraffic by re-tunneling packets originally
+    tunneled to PEi and\ndestined to the prefix P/m to one of the other edge routers
+    that\nadvertised P/m, say PEj, until BGP re-converges. In doing so, it is\nhighly
+    desirable to keep the core BGP-free while not imposing\nrestrictions on external
+    connectivity or complicating provisioning\neffort. Thus (1) a core router should
+    not be required to learn any\nBGP prefix, (2) the size of the forwarding and routing
+    tables in the\ncore routers should be independent of the number of BGP prefixes,
+    (3)\nre-routing traffic without waiting for re-convergence must not cause\nloops,
+    (4) provisioning effort should be kept at minimum, and (5)\nthere should be no
+    restrictions on what edge routers advertise what\nprefixes. For labeled prefixes,
+    (6) the label stack on the packet\nmust allow the repair PEj to correctly forward
+    the packet and (7)\nthere must not be any need to perform more than one label
+    lookup on\nany edge or core router during steady state\n\n\t </p>\n      "
+  language: en
+  script: Latn
+  format: text/html
+series:
+  type: main
+  title:
+    content: Internet-Draft
+    language: en
+    script: Latn
+    format: text/plain
+  number: draft-bashandy-bgp-frr-vector-label-00
+doctype: internet-draft

@@ -1,0 +1,76 @@
+---
+id: I-D.ietf-dnsop-edns-tcp-keepalive
+title:
+  content: The edns-tcp-keepalive EDNS0 Option
+  language: en
+  script: Latn
+  format: text/plain
+link:
+  content: https://www.ietf.org/archive/id/draft-ietf-dnsop-edns-tcp-keepalive-00.txt
+  type: TXT
+type: standard
+docid:
+- id: I-D.ietf-dnsop-edns-tcp-keepalive
+  type: rfc-anchor
+- id: draft-ietf-dnsop-edns-tcp-keepalive-00
+  type: Internet-Draft
+docnumber: I-D.ietf-dnsop-edns-tcp-keepalive
+date:
+  type: published
+  value: '2014-04-11'
+contributor:
+- person:
+    name:
+      initial:
+        content: P.
+        language: en
+      surname:
+        content: Wouters
+        language: en
+      completename:
+        content: Paul Wouters
+        language: en
+  role: author
+- person:
+    name:
+      initial:
+        content: J.
+        language: en
+      surname:
+        content: Abley
+        language: en
+      completename:
+        content: Joe Abley
+        language: en
+  role: author
+revdate: '2014-04-11'
+language: en
+script: Latn
+abstract:
+  content: "\n\t <p>   DNS messages between clients and servers may be received over
+    either\n   UDP or TCP.  UDP transport involves keeping less state on a busy\n
+    \  server, but can cause truncation and retries over TCP.  Additionally,\n   UDP
+    can be exploited for reflection attacks.  Using TCP would reduce\n   retransmits
+    and amplification.  However, clients are currently\n   limited in their use of
+    the TCP transport as RFC 5966 suggests\n   closing idle TCP sessions \"in the
+    order of seconds\", making use of\n   TCP only suitable for individual queries
+    generated as a fallback\n   protocol for truncated UDP answers.\n\n   This document
+    defines an EDNS0 option (\"edns-tcp-keepalive\") that\n   allows DNS clients and
+    servers to signal their respective readiness\n   to conduct multiple DNS transactions
+    over individual TCP sessions.\n   This signalling facilitates a better balance
+    of UDP and TCP transport\n   between individual clients and servers, reducing
+    the impact of\n   problems associated with UDP transport and allowing the state\n
+    \  associated with TCP transport to be managed effectively with minimal\n   impact
+    on the DNS transaction time.\n\n\t </p>\n      "
+  language: en
+  script: Latn
+  format: text/html
+series:
+  type: main
+  title:
+    content: Internet-Draft
+    language: en
+    script: Latn
+    format: text/plain
+  number: draft-ietf-dnsop-edns-tcp-keepalive-00
+doctype: internet-draft

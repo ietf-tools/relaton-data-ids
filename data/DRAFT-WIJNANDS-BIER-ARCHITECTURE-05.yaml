@@ -1,0 +1,80 @@
+---
+id: I-D.wijnands-bier-architecture
+title:
+  content: Multicast using Bit Index Explicit Replication
+  language: en
+  script: Latn
+  format: text/plain
+link:
+  content: https://www.ietf.org/archive/id/draft-wijnands-bier-architecture-05.txt
+  type: TXT
+type: standard
+docid:
+- id: I-D.wijnands-bier-architecture
+  type: rfc-anchor
+- id: draft-wijnands-bier-architecture-05
+  type: Internet-Draft
+docnumber: I-D.wijnands-bier-architecture
+date:
+  type: published
+  value: '2015-03-06'
+contributor:
+- person:
+    name:
+      completename:
+        content: IJsbrand Wijnands
+        language: en
+  role: author
+- person:
+    name:
+      completename:
+        content: Eric C. Rosen
+        language: en
+  role: author
+- person:
+    name:
+      completename:
+        content: Andrew Dolganow
+        language: en
+  role: author
+- person:
+    name:
+      completename:
+        content: Tony Przygienda
+        language: en
+  role: author
+- person:
+    name:
+      completename:
+        content: Sam K Aldrin
+        language: en
+  role: author
+revdate: '2015-03-06'
+language: en
+script: Latn
+abstract:
+  content: "\n\t <p>   This document specifies a new architecture for the forwarding
+    of\n   multicast data packets.  It provides optimal forwarding of multicast\n
+    \  packets through a \"multicast domain\".  However, it does not require\n   any
+    explicit tree-building protocol, nor does it require intermediate\n   nodes to
+    maintain any per-flow state.  This architecture is known as\n   \"Bit Index Explicit
+    Replication\" (BIER).  When a multicast data\n   packet enters the domain, the
+    ingress router determines the set of\n   egress routers to which the packet needs
+    to be sent.  The ingress\n   router then encapsulates the packet in a BIER header.
+    \ The BIER\n   header contains a bitstring in which each bit represents exactly
+    one\n   egress router in the domain; to forward the packet to a given set of\n
+    \  egress routers, the bits corresponding to those routers are set in\n   the
+    BIER header.  Elimination of the per-flow state and the explicit\n   tree-building
+    protocols results in a considerable simplification.\n\n\t </p>\n      "
+  language: en
+  script: Latn
+  format: text/html
+series:
+  type: main
+  title:
+    content: Internet-Draft
+    language: en
+    script: Latn
+    format: text/plain
+  number: draft-wijnands-bier-architecture-05
+doctype: internet-draft

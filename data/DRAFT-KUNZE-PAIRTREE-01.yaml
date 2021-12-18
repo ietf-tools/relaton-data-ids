@@ -1,0 +1,146 @@
+---
+id: I-D.kunze-pairtree
+title:
+  content: Pairtrees for Object Storage (V0.1) http://www.ietf.org/internet-drafts/draft-kunze-pairtree-01.txt
+  language: en
+  script: Latn
+  format: text/plain
+link:
+  content: https://www.ietf.org/archive/id/draft-kunze-pairtree-01.txt
+  type: TXT
+type: standard
+docid:
+- id: I-D.kunze-pairtree
+  type: rfc-anchor
+- id: draft-kunze-pairtree-01
+  type: Internet-Draft
+docnumber: I-D.kunze-pairtree
+date:
+  type: published
+  value: '2008-11-26'
+contributor:
+- person:
+    name:
+      completename:
+        content: John Kunze
+        language: en
+  role: author
+- person:
+    name:
+      completename:
+        content: Martin Haye
+        language: en
+  role: author
+- person:
+    name:
+      completename:
+        content: Erik Hetzner
+        language: en
+  role: author
+- person:
+    name:
+      completename:
+        content: Mark Reyes
+        language: en
+  role: author
+- person:
+    name:
+      completename:
+        content: Cory Snavely
+        language: en
+  role: author
+revdate: '2008-11-26'
+language: en
+script: Latn
+abstract:
+  content: "\n\t <p>This document specifies Pairtree, a filesystem hierarchy for holding\nobjects
+    that are located within that hierarchy by mapping identifier\nstrings to object
+    directory (or folder) paths two characters at a\ntime.  If an object directory
+    (folder) holds all the files, and\nnothing but the files, that comprise the object,
+    a \"pairtree\" can be\nimported by a system that knows nothing about the nature
+    or structure\nof the objects but can still deliver any object's files by requested\nidentifier.
+    \ The mapping is reversible, so the importing system can\nalso walk the pairtree
+    and reliably enumerate all the contained\nobject identifiers.  To the extent that
+    object dependencies are\nstored inside the pairtree (e.g., fast indexes stored
+    outside contain\nonly derivative data), simple or complex collections built on
+    top of\npairtrees can recover from index failures and reconstruct a\ncollection
+    view simply by walking the trees.  Pairtrees have the\nadvantage that many object
+    operations, including backup and restore,\ncan be performed with native operating
+    system tools.1.  The basic pairtree algorithm\n\nThe pairtree algorithm maps an
+    arbitrary UTF-8 [RFC3629] encoded\nidentifier string into a filesystem directory
+    path based on\nsuccessive pairs of characters, and also defines the reverse mapping\n(from
+    pathname to identifier).\n\nIn this document the word \"directory\" is used interchangeably
+    with\nthe word \"folder\" and all examples conform to Unix-based filesystem\nconventions
+    which should tranlate easily to Windows conventions after\nsubstituting the path
+    separator ('\\' instead of '/').  Pairtree\nplaces no limitations on file and
+    path lengths, so implementors\nthinking about maximal interoperation may wish
+    to consider the issues\nlisted in the Interoperability section of this document.\n\nThe
+    mapping from identifier string to path has two parts.  First, the\nstring is cleaned
+    by converting characters that would be illegal or\nespecially problemmatic in
+    Unix or Windows filesystems.  The cleaned\nstring is then split into pairs of
+    characters, each of which becomes\na directory name in a filesystem path: successive
+    pairs map to\nsuccessive path components until there are no characters left, with\nthe
+    last component being either a 1- or 2-character directory name.\nThe resulting
+    path is known as a _pairpath_, or _ppath_.\n\nabcd\n\n-&gt; ab/cd/\nabcdefg\n-&gt;
+    ab/cd/ef/g/\n12-986xy4 -&gt; 12/-9/86/xy/4/\n\nArmed with specific knowledge of
+    a given namespace's identifier\ndistribution, one might achieve more balanced
+    or efficient trees by\nmapping to paths from character groupings other than successive\npairs.
+    \ Pairtree assumes that this sort of optimization, however,\nbeing tailored to
+    individual and transient namespace conditions, is\noften less important than having
+    a single generalized and shareable\nmapping.  It uses pairs of characters to achieve
+    hierarchies that\nexhibit a reasonable balance of path length and fanout (number
+    of\nprobable entries in any component directory).2.  Pairpath termination and
+    object encapsulation\n\nA ppath (pairpath) terminates when it reaches an object.
+    \ A little\njargon helps explain this.  A _shorty_ is a 1- or 2-character\ndirectory
+    name, or any file or directory name that begins with\n\"pairtree\" (these are
+    reserved for future use).  A ppath consists of\na sequence of \"shorties\" ending
+    in a non-shorty, such as a\n3-character directory name or the 2-character file
+    name \"xy\".  The\npairtree below contains two objects with identifiers \"abcd\"
+    and\n\"abcde\".\n\nab/\n|\n\\--- cd/\n\n  |\n\n  |--- foo/\n\n  |\n |\nREADME.txt\n\n
+    \ |\n |\nthumbnail.gif\n\n  |\n |\n\n  |\n |--- master_images/\n\n  |\n |\n |\n...\n\n
+    \ |\n |\n ...\n\n  |\n |\n\n  |\n \\--- gh/\n\n  |\n\n  \\--- e/\n\n\n\n |\n\n\n\n
+    \\--- bar/\n\n\n\n\n\n|\nmetadata\n\n\n\n\n\n|\n54321.wav\n\n\n\n\n\n|\nindex.html\n\nAn
+    object is reached when a non-shorty is detected.  An object is\n_properly encapsulated_
+    if it is entirely contained in a non-shorty\ndirectory that is the immediate child
+    of a shorty directory, in other\nwords, if the 1- or 2-char directory name ending
+    the object's ppath\ncontains exactly one non-shorty directory that holds all the
+    object's\ndescendants.  The two objects \"abcd\" and \"abcde\" above are properly\nencapsulated.
+    \ Any shorty directory found at the same level as the\nnon-shorty extends the
+    pairtree.  So while the \"foo/\" directory above\ndoes not subsume \"e/\" at the
+    same level, by encapsulation, it does\nsubsume the \"gh/\" underneath it (i.e.,
+    \"gh/\" is invisible to the\npairtree algorithm, at least on a first pass).\n\nPractice
+    will vary according to local custom as to how to name the\nencapsulating object
+    directory beneath that last shorty.  Its name is\ncompletely independent of the
+    object identifier.  For example, every\nobject directory in a pairtree could have
+    the uniform name \"thingy\".\nIt is common for the directory name to be a terminal
+    substring of the\nobject identifier, as in:\n\n\nid:  13030_45xqv_793842495\nppath:
+    \ 13/03/0_/45/xq/v_/79/38/42/49/5/793842495\n\nAll objects should be properly
+    encapsulated.  If an object is\ndetected that is _improperly encapsulated_, that
+    is, when a ppath\nends with a shorty directory that contains more than one non-shorty,\nthe
+    detecting system should take corrective action.  In this\nsituation, also known
+    as a \"split end\", all those non-shorties\n(directories and files) are considered
+    to belong to one object (not\nproperly encapsulated) identified by the containing
+    ppath.  Excluding\nshorties from the object permits one identifier to be a substring
+    of\nanother (e.g., \"abcd\" and \"abcde\" can co-exist in a pairtree), and\ndefining
+    ppath termination in this way prevents \"hidden riders\", or\ndata residing in
+    a pairtree that is not contained or accounted for in\nany object.  Here is an
+    example of an improperly encapsulated object\nnamed \"bent\".\n\n\nbe/\n|\n\\---
+    nt/\n\n\n\n\n[ split end: two files, no encapsulation ]\n\n  |\nREADME.txt\n\n
+    \ |\nreport.pdf\n\n  |\n\n  \\--- ef/\n\n\n\n |\n...\n\nIf a \"split end\" is
+    encountered, an importing system is encouraged to\nnormalize it by creating a
+    single object directory called \"obj\" and\npushing the non-shorties in question
+    underneath it, as in:\n\nbe/\n|\n\\--- nt/\n\n  |\n\n  |--- obj/\n\n  [ split
+    end repaired with \"obj\" directory ]\n\n  |\n |\nREADME.txt\n\n  |\n |\nreport.pdf\n\n
+    \ |\n\n  \\--- ef/\n\n\n\n |\n...\n\t </p>\n      "
+  language: en
+  script: Latn
+  format: text/html
+series:
+  type: main
+  title:
+    content: Internet-Draft
+    language: en
+    script: Latn
+    format: text/plain
+  number: draft-kunze-pairtree-01
+doctype: internet-draft

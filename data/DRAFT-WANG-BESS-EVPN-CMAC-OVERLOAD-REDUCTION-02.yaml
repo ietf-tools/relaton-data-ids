@@ -1,0 +1,86 @@
+---
+id: I-D.wang-bess-evpn-cmac-overload-reduction
+title:
+  content: Reduction of EVPN C-MAC Overload
+  language: en
+  script: Latn
+  format: text/plain
+link:
+  content: https://www.ietf.org/archive/id/draft-wang-bess-evpn-cmac-overload-reduction-02.txt
+  type: TXT
+type: standard
+docid:
+- id: I-D.wang-bess-evpn-cmac-overload-reduction
+  type: rfc-anchor
+- id: draft-wang-bess-evpn-cmac-overload-reduction-02
+  type: Internet-Draft
+docnumber: I-D.wang-bess-evpn-cmac-overload-reduction
+date:
+  type: published
+  value: '2020-11-14'
+contributor:
+- person:
+    name:
+      initial:
+        content: Y.
+        language: en
+      surname:
+        content: Wang
+        language: en
+      completename:
+        content: Yubao Wang
+        language: en
+    affiliation:
+      organization:
+        name: ZTE Corporation
+  role: author
+- person:
+    name:
+      initial:
+        content: R.
+        language: en
+      surname:
+        content: Chen
+        language: en
+      completename:
+        content: Ran Chen
+        language: en
+    affiliation:
+      organization:
+        name: ZTE Corporation
+  role: author
+revdate: '2020-11-14'
+language: en
+script: Latn
+abstract:
+  content: "\n\t <p>   When there are too many customer-MACs (C-MACs), the RRs and/or
+    ASBRs\n   will be overloaded by the RT-2 routes for these MACs according to\n
+    \  [RFC7432].  This issue can be simply solved by making the remote\n   C-MAC
+    entries learnt via data-plane MAC learning (like what PBB VPLS\n   have done since
+    [RFC7041]) rather than received from RT-2 routes.\n   This simplified solution
+    will works as well as PBB VPLS.  But this\n   simplified solution will lose many
+    important features that based on\n   the ESI concept.  Because the ingress-ESI
+    can't be learnt via data-\n   plane MAC learning at the egress PE.  So when the
+    data packets is\n   forwarded following these MAC entries, they can't benefit
+    from the\n   EAD/EVI routes as per RFC7432.  So the All-Active Redundancy mode
+    for\n   ES can't be supported.  This make the simplified solution can't work\n
+    \  as well as PBB EVPN ([RFC7623]).\n\n   This document proposes some new extensions
+    to [RFC7432] to achieve\n   all-active mode ES redundancy on TPEs and reduce the
+    C-MAC loads for\n   RRs and ASBRs at the same time.  The new solution will work
+    even more\n   better than PBB EVPN under the help of these extensions, especially\n
+    \  when there is no deployment of MPLS dataplane.\n\n   Furthermore, it naturally
+    brings the benefits of high scalability,\n   faster network convergence, and reduced
+    operational complexity, and\n   we call it light-weighted EVPNs because of these
+    advantages.\n\n\t </p>\n      "
+  language: en
+  script: Latn
+  format: text/html
+series:
+  type: main
+  title:
+    content: Internet-Draft
+    language: en
+    script: Latn
+    format: text/plain
+  number: draft-wang-bess-evpn-cmac-overload-reduction-02
+doctype: internet-draft

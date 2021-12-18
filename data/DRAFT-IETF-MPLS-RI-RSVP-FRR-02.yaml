@@ -1,0 +1,119 @@
+---
+id: I-D.ietf-mpls-ri-rsvp-frr
+title:
+  content: Refresh Interval Independent FRR Facility Protection
+  language: en
+  script: Latn
+  format: text/plain
+link:
+  content: https://www.ietf.org/archive/id/draft-ietf-mpls-ri-rsvp-frr-02.txt
+  type: TXT
+type: standard
+docid:
+- id: I-D.ietf-mpls-ri-rsvp-frr
+  type: rfc-anchor
+- id: draft-ietf-mpls-ri-rsvp-frr-02
+  type: Internet-Draft
+docnumber: I-D.ietf-mpls-ri-rsvp-frr
+date:
+  type: published
+  value: '2017-08-11'
+contributor:
+- person:
+    name:
+      initial:
+        content: C.
+        language: en
+      surname:
+        content: R
+        language: en
+      completename:
+        content: Chandrasekar R
+        language: en
+    affiliation:
+      organization:
+        name: Juniper Networks
+  role: author
+- person:
+    name:
+      initial:
+        content: I.
+        language: en
+      surname:
+        content: Minei
+        language: en
+      completename:
+        content: Ina Minei
+        language: en
+    affiliation:
+      organization:
+        name: Google, Inc
+  role: author
+- person:
+    name:
+      initial:
+        content: D.
+        language: en
+      surname:
+        content: Pacella
+        language: en
+      completename:
+        content: Dante Pacella
+        language: en
+    affiliation:
+      organization:
+        name: Verizon
+  role: author
+- person:
+    name:
+      initial:
+        content: T.
+        language: en
+      surname:
+        content: Saad
+        language: en
+      completename:
+        content: Tarek Saad
+        language: en
+    affiliation:
+      organization:
+        name: Cisco Systems Inc.
+  role: author
+revdate: '2017-08-11'
+language: en
+script: Latn
+abstract:
+  content: "\n\t <p>    RSVP-TE relies on periodic refresh of RSVP messages to synchronize\n
+    \   and maintain the LSP related states along the reserved path. In the\n    absence
+    of refresh messages, the LSP related states are\n    automatically deleted. Reliance
+    on periodic refreshes and refresh\n    timeouts are problematic from the scalability
+    point of view. The\n    number of RSVP-TE LSPs that a router needs to maintain
+    has been\n    growing in service provider networks and the implementations should\n
+    \   be capable of handling increase in LSP scale.\n\n    RFC 2961 specifies mechanisms
+    to eliminate the reliance on periodic\n    refresh and refresh timeout of RSVP
+    messages, and enables a router\n    to increase the message refresh interval to
+    values much longer than\n    the default 30 seconds defined in RFC 2205. However,
+    the protocol\n    extensions defined in RFC 4090 for supporting fast reroute (FRR)\n
+    \   using bypass tunnels implicitly rely on short refresh timeouts to\n    cleanup
+    stale states.\n\n    In order to eliminate the reliance on refresh timeouts, the
+    routers\n    should unambiguously determine when a particular LSP state should
+    be\n    deleted. Coupling LSP state with the corresponding RSVP-TE signaling\n
+    \   adjacencies as recommended in RSVP-TE Scaling Recommendations\n    (draft-ietf-teas-rsvp-te-scaling-rec)
+    will apply in scenarios other\n    than RFC 4090 FRR using bypass tunnels. In
+    scenarios involving RFC\n    4090 FRR using bypass tunnels, additional explicit
+    tear down\n    messages are necessary. Refresh-interval Independent RSVP FRR (RI-\n
+    \   RSVP-FRR) extensions specified in this document consists of\n    procedures
+    to enable LSP state cleanup that are essential in\n    scenarios not covered by
+    procedures defined in RSVP-TE Scaling\n    Recommendations.\n\n\t </p>\n      "
+  language: en
+  script: Latn
+  format: text/html
+series:
+  type: main
+  title:
+    content: Internet-Draft
+    language: en
+    script: Latn
+    format: text/plain
+  number: draft-ietf-mpls-ri-rsvp-frr-02
+doctype: internet-draft

@@ -1,0 +1,102 @@
+---
+id: I-D.saucez-lisp-itr-graceful
+title:
+  content: LISP ITR Graceful Restart
+  language: en
+  script: Latn
+  format: text/plain
+link:
+  content: https://www.ietf.org/archive/id/draft-saucez-lisp-itr-graceful-01.txt
+  type: TXT
+type: standard
+docid:
+- id: I-D.saucez-lisp-itr-graceful
+  type: rfc-anchor
+- id: draft-saucez-lisp-itr-graceful-01
+  type: Internet-Draft
+docnumber: I-D.saucez-lisp-itr-graceful
+date:
+  type: published
+  value: '2012-12-26'
+contributor:
+- person:
+    name:
+      initial:
+        content: D.
+        language: en
+      surname:
+        content: Saucez
+        language: en
+      completename:
+        content: Damien Saucez
+        language: en
+  role: author
+- person:
+    name:
+      initial:
+        content: O.
+        language: en
+      surname:
+        content: Bonaventure
+        language: en
+      completename:
+        content: Olivier Bonaventure
+        language: en
+  role: author
+- person:
+    name:
+      initial:
+        content: L.
+        language: en
+      surname:
+        content: Iannone
+        language: en
+      completename:
+        content: Luigi Iannone
+        language: en
+  role: author
+- person:
+    name:
+      initial:
+        content: C.
+        language: en
+      surname:
+        content: Filsfils
+        language: en
+      completename:
+        content: Clarence Filsfils
+        language: en
+  role: author
+revdate: '2012-12-26'
+language: en
+script: Latn
+abstract:
+  content: "\n\t <p>   The Locator/ID Separation Protocol (LISP) is a map-and-encap\n
+    \  mechanism to enable the communication between hosts identified with\n   their
+    Endpoint IDentifier (EID) over the Internet where EIDs are not\n   routable.  To
+    do so, packets toward EIDs are encapsulated in packets\n   with routing locators
+    (RLOCs) to form dynamic tunnels.  An Ingress\n   Tunnel Router (ITR) that encapsulates
+    EID packets determines tunnel\n   endpoints via mappings that associate EIDs to
+    RLOCs.  Before\n   encapsulating a packet, the ITR queries the mapping system
+    to obtain\n   the mapping associated to the EID of the packet it must encapsulate.\n
+    \  Such mapping is cached by the ITR in its local EID-to-RLOC cache for\n   any
+    subsequent encapsulation for the same EID.  LISP is scalable\n   because the EID-to-RLOC
+    cache of an ITR, which is initially empty, is\n   populated progressively according
+    to the traffic going through the\n   ITR.  However, after an ITR is restarted,
+    e.g., for maintenance\n   reason, its cache is empty which means that all packets
+    that are re-\n   routed to the freshly restarted ITR will cause cache misses and
+    a\n   potentially high loss rate.  In this draft, we present mechanisms to\n   reduce
+    the negative impact on traffic caused by the restart of an ITR\n   in a LISP network.\n\n\t
+    </p>\n      "
+  language: en
+  script: Latn
+  format: text/html
+series:
+  type: main
+  title:
+    content: Internet-Draft
+    language: en
+    script: Latn
+    format: text/plain
+  number: draft-saucez-lisp-itr-graceful-01
+doctype: internet-draft

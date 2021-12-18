@@ -1,0 +1,68 @@
+---
+id: I-D.mathis-iccrg-relentless-tcp
+title:
+  content: Relentless Congestion Control
+  language: en
+  script: Latn
+  format: text/plain
+link:
+  content: https://www.ietf.org/archive/id/draft-mathis-iccrg-relentless-tcp-00.txt
+  type: TXT
+type: standard
+docid:
+- id: I-D.mathis-iccrg-relentless-tcp
+  type: rfc-anchor
+- id: draft-mathis-iccrg-relentless-tcp-00
+  type: Internet-Draft
+docnumber: I-D.mathis-iccrg-relentless-tcp
+date:
+  type: published
+  value: '2009-03-04'
+contributor:
+  person:
+    name:
+      completename:
+        content: Matt Mathis
+        language: en
+  role: author
+revdate: '2009-03-04'
+language: en
+script: Latn
+abstract:
+  content: "\n\t <p>Relentless congestion control is a simple modification that can
+    be\napplied to almost any AIMD style congestion control: instead of\napplying
+    a multiplicative reduction to cwnd after a loss, cwnd is\nreduced by the number
+    of lost segments.  It can be modeled as a\nstrict implementation of van Jacobson's
+    Packet Conservation\nPrinciple.  During recovery, new segments are injected into
+    the\nnetwork in exact accordance with the segments that are reported to\nhave
+    been delivered to the receiver by the returning ACKs.\n\nThis algorithm offers
+    a valuable new congestion control property: the\nTCP portion of the control loop
+    has exactly unity gain, which should\nmake it easier to implement simple controllers
+    in network devices to\naccurately control queue sizes across a huge range of scales.\n\nRelentless
+    Congestion Control conforms to neither the details nor the\nphilosophy of current
+    congestion control standards.  These standards\nare based on the idea that the
+    Internet can attain sufficient\nfairness by having relatively simple network devices
+    send uniform\ncongestion signals to all flows, and mandating that all protocols\nhave
+    equivalent responses to these congestion signals.\n\nTo function appropriately
+    in a shared environment, Relentless\nCongestion Control requires that the network
+    allocates capacity\nthrough some technique such as Fair Queuing, Approximate Fair\nDropping,
+    etc.  The salient features of these algorithms are that\nthey segregate the traffic
+    into distinct flows, and send different\ncongestion signals to each flow.  This
+    alternative congestion control\nparadigm is described in a separate document,
+    also under\nconsideration by the ICCRG.\n\nThe goal of the document is to illustrate
+    some new protocol features\nand properties might be possible if we relax the \"TCP-friendly\"\nmandate.
+    \ A secondary goal of Relentless TCP is to make a distinction\nbetween the bottlenecks
+    that belong to protocol itself, vs standard\ncongestion control and the \"TCP-friendly\"
+    paradigm.\n\t </p>\n      "
+  language: en
+  script: Latn
+  format: text/html
+series:
+  type: main
+  title:
+    content: Internet-Draft
+    language: en
+    script: Latn
+    format: text/plain
+  number: draft-mathis-iccrg-relentless-tcp-00
+doctype: internet-draft

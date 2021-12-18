@@ -1,0 +1,90 @@
+---
+id: I-D.eckert-bier-te-frr
+title:
+  content: Protection Methods for BIER-TE
+  language: en
+  script: Latn
+  format: text/plain
+link:
+  content: https://www.ietf.org/archive/id/draft-eckert-bier-te-frr-03.txt
+  type: TXT
+type: standard
+docid:
+- id: I-D.eckert-bier-te-frr
+  type: rfc-anchor
+- id: draft-eckert-bier-te-frr-03
+  type: Internet-Draft
+docnumber: I-D.eckert-bier-te-frr
+date:
+  type: published
+  value: '2018-03-05'
+contributor:
+- person:
+    name:
+      completename:
+        content: Toerless Eckert
+        language: en
+    affiliation:
+      organization:
+        name: Huawei USA - Futurewei Technologies Inc.
+  role: author
+- person:
+    name:
+      completename:
+        content: Gregory Cauchie
+        language: en
+    affiliation:
+      organization:
+        name: Bouygues Telecom
+  role: author
+- person:
+    name:
+      completename:
+        content: Wolfgang Braun
+        language: en
+    affiliation:
+      organization:
+        name: University of Tuebingen
+  role: author
+- person:
+    name:
+      completename:
+        content: Michael Menth
+        language: en
+    affiliation:
+      organization:
+        name: University of Tuebingen
+  role: author
+revdate: '2018-03-05'
+language: en
+script: Latn
+abstract:
+  content: "\n\t <p>   This document proposes protection methods for the BIER-TE\n
+    \  architecture [I-D.ietf-bier-te-arch].  These include 1+1 (live-live)\n   path/tree
+    [RFC7431] redundancy, 1:1 path/tree protection, as well as\n   fast reroute (FRR)
+    methods.  The latter may protect against link and/\n   or node failures and leverage
+    infrastructure tunnels, BIER-in-BIER\n   encapsulation, or header modification
+    for implementation.\n\n   In particular, this memo describes FRR for BIER-TE in
+    detail.  FRR\n   for BIER-TE requires support from the BIER-TE controller and
+    the BFRs\n   that are attached to a link/adjacency for which FRR protection is\n
+    \  desired.  FRR relies on the BIER header described in [RFC8279] which\n   is
+    also used by BIER-TE.  It does not require extensions or\n   modifications to
+    existing BIER-TE tables.  However, the presented FRR\n   procedures need some
+    additional forwarding plane logic on the BFR.\n   An additional table is needed
+    that carries information about pre-\n   computed backup paths.  When a failure
+    is detected, the information\n   from this table is used to modify the bitstring
+    in the BIER header\n   before forwarding a packet over a backup path.  To prevent
+    undesired\n   packet duplication, packets should be tunneled on the backup paths.\n\n\t
+    </p>\n      "
+  language: en
+  script: Latn
+  format: text/html
+series:
+  type: main
+  title:
+    content: Internet-Draft
+    language: en
+    script: Latn
+    format: text/plain
+  number: draft-eckert-bier-te-frr-03
+doctype: internet-draft

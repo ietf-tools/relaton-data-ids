@@ -1,0 +1,92 @@
+---
+id: I-D.laurie-pki-sunlight
+title:
+  content: Certificate Transparency
+  language: en
+  script: Latn
+  format: text/plain
+link:
+  content: https://www.ietf.org/archive/id/draft-laurie-pki-sunlight-02.txt
+  type: TXT
+type: standard
+docid:
+- id: I-D.laurie-pki-sunlight
+  type: rfc-anchor
+- id: draft-laurie-pki-sunlight-02
+  type: Internet-Draft
+docnumber: I-D.laurie-pki-sunlight
+date:
+  type: published
+  value: '2012-10-18'
+contributor:
+- person:
+    name:
+      initial:
+        content: B.
+        language: en
+      surname:
+        content: Laurie
+        language: en
+      completename:
+        content: Ben Laurie
+        language: en
+  role: author
+- person:
+    name:
+      initial:
+        content: A.
+        language: en
+      surname:
+        content: Langley
+        language: en
+      completename:
+        content: Adam Langley
+        language: en
+  role: author
+- person:
+    name:
+      initial:
+        content: E.
+        language: en
+      surname:
+        content: Kasper
+        language: en
+      completename:
+        content: Emilia Kasper
+        language: en
+  role: author
+revdate: '2012-10-18'
+language: en
+script: Latn
+abstract:
+  content: "\n\t <p>   The aim of Certificate Transparency is to have every public
+    end-\n   entity and intermediate TLS certificate issued by a known Certificate\n
+    \  Authority recorded in one or more certificate logs.  In order to\n   detect
+    mis-issuance of certificates, all logs are publicly auditable.\n   In particular,
+    domain owners or their agents will be able to monitor\n   logs for certificates
+    issued on their own domain.\n\n   To protect clients from unlogged mis-issued
+    certificates, logs sign\n   all recorded certificates, and clients can choose
+    not to trust\n   certificates that are not accompanied by an appropriate log\n
+    \  signature.  For privacy and performance reasons log signatures are\n   embedded
+    in the TLS handshake via the TLS authorization extension\n   [RFC5878], or in
+    the certificate itself via an X.509v3 certificate\n   extension [RFC5280].\n\n
+    \  To ensure a globally consistent view of the log, logs also provide a\n   global
+    signature over the entire log.  Any inconsistency of logs can\n   be detected
+    through cross-checks on the global signature.\n   Consistency between any pair
+    of global signatures, corresponding to\n   snapshots of the log at different times,
+    can be efficiently shown.\n\n   Logs are only expected to certify that they have
+    seen a certificate,\n   and thus we do not specify any revocation mechanism for
+    log\n   signatures in this document.  Logs are append-only, and log\n   signatures
+    will be valid indefinitely.\n\n\t </p>\n      "
+  language: en
+  script: Latn
+  format: text/html
+series:
+  type: main
+  title:
+    content: Internet-Draft
+    language: en
+    script: Latn
+    format: text/plain
+  number: draft-laurie-pki-sunlight-02
+doctype: internet-draft

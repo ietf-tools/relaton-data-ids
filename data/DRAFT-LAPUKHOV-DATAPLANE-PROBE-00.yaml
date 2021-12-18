@@ -1,0 +1,74 @@
+---
+id: I-D.lapukhov-dataplane-probe
+title:
+  content: Data-plane probe for in-band telemetry collection
+  language: en
+  script: Latn
+  format: text/plain
+link:
+  content: https://www.ietf.org/archive/id/draft-lapukhov-dataplane-probe-00.txt
+  type: TXT
+type: standard
+docid:
+- id: I-D.lapukhov-dataplane-probe
+  type: rfc-anchor
+- id: draft-lapukhov-dataplane-probe-00
+  type: Internet-Draft
+docnumber: I-D.lapukhov-dataplane-probe
+date:
+  type: published
+  value: '2016-03-18'
+contributor:
+  person:
+    name:
+      initial:
+        content: P.
+        language: en
+      surname:
+        content: Lapukhov
+        language: en
+      completename:
+        content: Petr Lapukhov
+        language: en
+  role: author
+revdate: '2016-03-18'
+language: en
+script: Latn
+abstract:
+  content: "\n\t <p>   Detecting and isolating network faults in IP networks has\n
+    \  traditionally been done using tools like ping and traceroute (see\n   [RFC7276])
+    or more complex systems built on similar concepts of\n   active probing and path
+    tracing.  While using active synthetic probes\n   is proven to be helpful in detecting
+    data-plane faults, isolating\n   fault location has proven to be a much harder
+    problem, especially in\n   diverse networks with multiple active forwarding planes
+    (e.g.  IP and\n   MPLS).  Moreover, existing end-to-end tools do not generally
+    support\n   functionality beyond dealing with packet loss - for example, they
+    are\n   hardly useful for detecting and reporting transient (i.e. milli- or\n
+    \  even micro-second) network congestion.\n\n   Modern network forwarding hardware
+    can enable more sophisticated\n   data-plane functionality that provides substantial
+    improvement to the\n   isolation and identification capabilities of network elements.
+    \ For\n   example, it has become possible to encode a snapshot of a network\n
+    \  elements forwarding state within the packet payload as it transits\n   the
+    device.  One example of such device/network state would be queue\n   depth on
+    the egress port taken by that specific packet.  When\n   combined with a unique
+    device identifier embedded in the same packet,\n   this could allow for precise
+    time and topological identification of\n   the the congested location within the
+    network.\n\n   This document proposes a standard format for embedding telemetry\n
+    \  information in UDP-based probing packets, i.e. packets designated for\n   testing
+    the network while not carrying application traffic.  These\n   active probes could
+    be conveyed over multiple protocols (ICMP, UDP,\n   TCP, etc.) but this document
+    specifically focuses on UDP, given its\n   simple semantics.  In addition this
+    document provides recommendations\n   on handling the active probes by devices
+    that do not support the\n   required data-plane functionality.\n\n\t </p>\n      "
+  language: en
+  script: Latn
+  format: text/html
+series:
+  type: main
+  title:
+    content: Internet-Draft
+    language: en
+    script: Latn
+    format: text/plain
+  number: draft-lapukhov-dataplane-probe-00
+doctype: internet-draft

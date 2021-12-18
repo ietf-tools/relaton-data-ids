@@ -1,0 +1,63 @@
+---
+id: I-D.zimmermann-tcp-lcd
+title:
+  content: Make TCP more Robust to Long Connectivity Disruptions
+  language: en
+  script: Latn
+  format: text/plain
+link:
+  content: https://www.ietf.org/archive/id/draft-zimmermann-tcp-lcd-02.txt
+  type: TXT
+type: standard
+docid:
+- id: I-D.zimmermann-tcp-lcd
+  type: rfc-anchor
+- id: draft-zimmermann-tcp-lcd-02
+  type: Internet-Draft
+docnumber: I-D.zimmermann-tcp-lcd
+date:
+  type: published
+  value: '2009-08-26'
+contributor:
+- person:
+    name:
+      completename:
+        content: Alexander Zimmermann
+        language: en
+  role: author
+- person:
+    name:
+      completename:
+        content: Arnd Hannemann
+        language: en
+  role: author
+revdate: '2009-08-26'
+language: en
+script: Latn
+abstract:
+  content: "\n\t <p>Disruptions in end-to-end path connectivity which last longer
+    than\none retransmission timeout cause suboptimal TCP performance.  The\nreason
+    for the performance degradation is that TCP interprets segment\nloss induced by
+    connectivity disruptions as a sign of congestion,\nresulting in repeated backoffs
+    of the retransmission timer.  This\nleads in turn to a deferred detection of the
+    re-establishment of the\nconnection since TCP waits until the next retransmission
+    timeout\noccurs before attempting the retransmission.\n\nThis document describes
+    how standard ICMP messages can be exploited\nto disambiguate true congestion loss
+    from non-congestion loss caused\nby long connectivity disruptions.  Moreover,
+    a revert strategy of the\nretransmission timer is specified that enables a more
+    prompt\ndetection of whether the connectivity to a previously disconnected\npeer
+    node has been restored or not.  The specified algorithm is a TCP\nsender-only
+    modification that effectively improves TCP performance in\npresence of connectivity
+    disruptions.\n\t </p>\n      "
+  language: en
+  script: Latn
+  format: text/html
+series:
+  type: main
+  title:
+    content: Internet-Draft
+    language: en
+    script: Latn
+    format: text/plain
+  number: draft-zimmermann-tcp-lcd-02
+doctype: internet-draft

@@ -1,0 +1,76 @@
+---
+id: I-D.mathis-tcpm-proportional-rate-reduction
+title:
+  content: Proportional Rate Reduction for TCP
+  language: en
+  script: Latn
+  format: text/plain
+link:
+  content: https://www.ietf.org/archive/id/draft-mathis-tcpm-proportional-rate-reduction-01.txt
+  type: TXT
+type: standard
+docid:
+- id: I-D.mathis-tcpm-proportional-rate-reduction
+  type: rfc-anchor
+- id: draft-mathis-tcpm-proportional-rate-reduction-01
+  type: Internet-Draft
+docnumber: I-D.mathis-tcpm-proportional-rate-reduction
+date:
+  type: published
+  value: '2011-07-11'
+contributor:
+- person:
+    name:
+      completename:
+        content: Matt Mathis
+        language: en
+  role: author
+- person:
+    name:
+      completename:
+        content: Nandita Dukkipati
+        language: en
+  role: author
+- person:
+    name:
+      completename:
+        content: Yuchung Cheng
+        language: en
+  role: author
+revdate: '2011-07-11'
+language: en
+script: Latn
+abstract:
+  content: "\n\t <p>   This document describes an experimental algorithm, Proportional
+    Rate\n   Reduction (PPR) and related algorithms to improve the accuracy of the\n
+    \  amount of data sent by TCP during loss recovery.  Standard Congestion\n   Control
+    requires that TCP and other protocols reduce their congestion\n   window in response
+    to losses.  This window reduction naturally occurs\n   in the same round trip
+    as the data retransmissions to repair the\n   losses, and is implemented by choosing
+    not to transmit any data in\n   response to some ACKs arriving from the receiver.
+    \ Two widely\n   deployed algorithms are used to implement this window reduction:
+    Fast\n   Recovery and Rate Halving.  Both algorithms are needlessly fragile\n
+    \  under a number of conditions, particularly when there is a burst of\n   losses
+    that such that the number of ACKs returning to the sender is\n   so small that
+    the effective window falls below the target congestion\n   window chosen by the
+    congestion control algorithm.  Proportional Rate\n   Reduction avoids these excess
+    window reductions such that at the end\n   of recovery the actual window size
+    will be as close as possible to\n   the window size determined by the congestion
+    control algorithm.  It\n   is patterned after rate halving, but using the fraction
+    that is\n   appropriate for target window chosen by the congestion control\n   algorithm.
+    \ In addition we propose two slightly different algorithms\n   to bound the total
+    window reduction due to all mechanisms, including\n   application stalls, the
+    losses themselves and inhibit further window\n   reductions when possible.\n\n\t
+    </p>\n      "
+  language: en
+  script: Latn
+  format: text/html
+series:
+  type: main
+  title:
+    content: Internet-Draft
+    language: en
+    script: Latn
+    format: text/plain
+  number: draft-mathis-tcpm-proportional-rate-reduction-01
+doctype: internet-draft

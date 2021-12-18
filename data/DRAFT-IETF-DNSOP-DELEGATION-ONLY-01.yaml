@@ -1,0 +1,77 @@
+---
+id: I-D.ietf-dnsop-delegation-only
+title:
+  content: The DELEGATION_ONLY DNSKEY flag
+  language: en
+  script: Latn
+  format: text/plain
+link:
+  content: https://www.ietf.org/archive/id/draft-ietf-dnsop-delegation-only-01.txt
+  type: TXT
+type: standard
+docid:
+- id: I-D.ietf-dnsop-delegation-only
+  type: rfc-anchor
+- id: draft-ietf-dnsop-delegation-only-01
+  type: Internet-Draft
+docnumber: I-D.ietf-dnsop-delegation-only
+date:
+  type: published
+  value: '2020-07-13'
+contributor:
+- person:
+    name:
+      initial:
+        content: P.
+        language: en
+      surname:
+        content: Wouters
+        language: en
+      completename:
+        content: Paul Wouters
+        language: en
+    affiliation:
+      organization:
+        name: Red Hat
+  role: author
+- person:
+    name:
+      initial:
+        content: W.
+        language: en
+      surname:
+        content: Hardaker
+        language: en
+      completename:
+        content: Wes Hardaker
+        language: en
+    affiliation:
+      organization:
+        name: USC/ISI
+  role: author
+revdate: '2020-07-13'
+language: en
+script: Latn
+abstract:
+  content: "\n\t <p>   This document introduces a new DNSKEY flag called DELEGATION_ONLY\n
+    \  that indicates that this zone will only produce delegation responses\n   for
+    data outside of its own apex (or _underscore labels).  That is,\n   the Answer
+    Section for queries that do not involve the apex (or\n   _underscore labels) of
+    the zone is empty, and only glue records in\n   the Authority Section and Additional
+    Section will be acceptable data\n   in the response message.  Additionally, it
+    indicates that it is not\n   expected that the parent of this delegation-only
+    zone bypasses or\n   removes the delegation to this zone.  DNSSEC Validating Resolvers
+    can\n   use this flag to mark any data that violates the DELEGATION_ONLY\n   policy
+    as Bogus.\n\n\t </p>\n      "
+  language: en
+  script: Latn
+  format: text/html
+series:
+  type: main
+  title:
+    content: Internet-Draft
+    language: en
+    script: Latn
+    format: text/plain
+  number: draft-ietf-dnsop-delegation-only-01
+doctype: internet-draft

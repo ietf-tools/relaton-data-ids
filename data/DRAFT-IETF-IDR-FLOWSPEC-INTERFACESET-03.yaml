@@ -1,0 +1,136 @@
+---
+id: I-D.ietf-idr-flowspec-interfaceset
+title:
+  content: Applying BGP flowspec rules on a specific interface set
+  language: en
+  script: Latn
+  format: text/plain
+link:
+  content: https://www.ietf.org/archive/id/draft-ietf-idr-flowspec-interfaceset-03.txt
+  type: TXT
+type: standard
+docid:
+- id: I-D.ietf-idr-flowspec-interfaceset
+  type: rfc-anchor
+- id: draft-ietf-idr-flowspec-interfaceset-03
+  type: Internet-Draft
+docnumber: I-D.ietf-idr-flowspec-interfaceset
+date:
+  type: published
+  value: '2017-03-11'
+contributor:
+- person:
+    name:
+      initial:
+        content: S.
+        language: en
+      surname:
+        content: Litkowski
+        language: en
+      completename:
+        content: Stephane Litkowski
+        language: en
+    affiliation:
+      organization:
+        name: Orange
+  role: author
+- person:
+    name:
+      initial:
+        content: A.
+        language: en
+      surname:
+        content: Simpson
+        language: en
+      completename:
+        content: Adam Simpson
+        language: en
+    affiliation:
+      organization:
+        name: Nokia
+  role: author
+- person:
+    name:
+      initial:
+        content: K.
+        language: en
+      surname:
+        content: Patel
+        language: en
+      completename:
+        content: Keyur Patel
+        language: en
+    affiliation:
+      organization:
+        name: Arrcus, Inc
+  role: author
+- person:
+    name:
+      initial:
+        content: J.
+        language: en
+      surname:
+        content: Haas
+        language: en
+      completename:
+        content: Jeffrey Haas
+        language: en
+    affiliation:
+      organization:
+        name: Juniper Networks
+  role: author
+- person:
+    name:
+      initial:
+        content: L.
+        language: en
+      surname:
+        content: Yong
+        language: en
+      completename:
+        content: Lucy Yong
+        language: en
+    affiliation:
+      organization:
+        name: Huawei
+  role: author
+revdate: '2017-03-11'
+language: en
+script: Latn
+abstract:
+  content: "\n\t <p>   BGP flowspec is an extension to BGP that allows for the dissemination\n
+    \  of traffic flow specification rules.  The primary application of this\n   extension
+    is DDoS mitigation where the flowspec rules are applied in\n   most cases to all
+    peering routers of the network.\n\n   This document will present another use case
+    of BGP flowspec where\n   flow specifications are used to maintain some access
+    control lists at\n   network boundary.  BGP flowspec is a very efficient distributing\n
+    \  machinery that can help in saving OPEX while deploying/updating ACLs.\n   This
+    new application requires flow specification rules to be applied\n   only on a
+    specific subset of interfaces and in a specific direction.\n\n   The current specification
+    of BGP flowspec ([RFC5575]) introduces the\n   notion of flow specification (which
+    describes the matching criterion)\n   and traffic filtering actions.  The flow
+    specification is encoded as\n   part of the NLRI while the traffic filtering actions
+    are encoded as\n   extended communities.  The combination of a flow specification
+    and\n   one or more actions is known as a flow specification rule.  [RFC5575]\n
+    \  does not detail where the flow specification rules need to be\n   applied.\n\n
+    \  Besides the flow specification and traffic filtering actions, this\n   document
+    introduces the notion of traffic filtering scope in order to\n   drive where a
+    particular rule must be applied.  In particular, this\n   document introduces
+    the \"interface-set\" traffic filtering scope that\n   could be used in parallel
+    of traffic filtering actions (marking,\n   rate-limiting ...).  The purpose of
+    this extension is to inform\n   remote routers about groups of interfaces where
+    the rule must be\n   applied.\n\n   This extension can also be used in a DDoS
+    mitigation context where a\n   provider wants to apply the filtering only on specific
+    peers.\n\n\n\t </p>\n      "
+  language: en
+  script: Latn
+  format: text/html
+series:
+  type: main
+  title:
+    content: Internet-Draft
+    language: en
+    script: Latn
+    format: text/plain
+  number: draft-ietf-idr-flowspec-interfaceset-03
+doctype: internet-draft

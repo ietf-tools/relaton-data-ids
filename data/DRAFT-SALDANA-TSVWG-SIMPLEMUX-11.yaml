@@ -1,0 +1,83 @@
+---
+id: I-D.saldana-tsvwg-simplemux
+title:
+  content: Simplemux. A generic multiplexing protocol
+  language: en
+  script: Latn
+  format: text/plain
+link:
+  content: https://www.ietf.org/archive/id/draft-saldana-tsvwg-simplemux-11.txt
+  type: TXT
+type: standard
+docid:
+- id: I-D.saldana-tsvwg-simplemux
+  type: rfc-anchor
+- id: draft-saldana-tsvwg-simplemux-11
+  type: Internet-Draft
+docnumber: I-D.saldana-tsvwg-simplemux
+date:
+  type: published
+  value: '2019-03-04'
+contributor:
+- person:
+    name:
+      completename:
+        content: Jose Saldana
+        language: en
+    affiliation:
+      organization:
+        name: University of Zaragoza
+  role: author
+- person:
+    name:
+      completename:
+        content: Julian Fernandez Navajas
+        language: en
+    affiliation:
+      organization:
+        name: University of Zaragoza
+  role: author
+- person:
+    name:
+      completename:
+        content: Jose Ruiz Mas
+        language: en
+    affiliation:
+      organization:
+        name: University of Zaragoza
+  role: author
+revdate: '2019-03-04'
+language: en
+script: Latn
+abstract:
+  content: "\n\t <p>   The high amount of small packets present in nowaday's networks\n
+    \  results in a low efficiency, as the size of the headers and the\n   payload
+    of these packets can be in the same order of magnitude.  In\n   some situations,
+    multiplexing (i.e. aggregating) a number of small\n   packets into a bigger one
+    is desirable in order to improve the\n   efficiency.  For example, a number of
+    small packets can be sent\n   together between a pair of machines if they share
+    a common network\n   path.  This may happen between machines in different locations
+    or\n   even inside a datacenter with a number of servers hosting virtual\n   machines.
+    \ Thus, the traffic profile can be shifted from small to\n   larger packets, reducing
+    the network overhead and the number of\n   packets per second to be managed by
+    intermediate routers.\n\n   This document describes Simplemux, a protocol able
+    to encapsulate a\n   number of packets belonging to different protocols into a
+    single\n   packet.  Small headers (separators) are added at the beginning of\n
+    \  each multiplexed packet, including some flags, the packet length and\n   a
+    \"Protocol\" field.  This allows the inclusion of a number of packets\n   belonging
+    to different protocols (the \"multiplexed packets\") on a\n   packet of another
+    protocol (the \"tunneling protocol\").\n\n   In order to reduce the overhead,
+    the size of the multiplexing headers\n   is kept very low (it may be a single
+    byte when multiplexing packets\n   of small size).\n\n\t </p>\n      "
+  language: en
+  script: Latn
+  format: text/html
+series:
+  type: main
+  title:
+    content: Internet-Draft
+    language: en
+    script: Latn
+    format: text/plain
+  number: draft-saldana-tsvwg-simplemux-11
+doctype: internet-draft

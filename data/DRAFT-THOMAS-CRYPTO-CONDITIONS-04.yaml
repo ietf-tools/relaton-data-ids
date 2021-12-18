@@ -1,0 +1,82 @@
+---
+id: I-D.thomas-crypto-conditions
+title:
+  content: Crypto-Conditions
+  language: en
+  script: Latn
+  format: text/plain
+link:
+  content: https://www.ietf.org/archive/id/draft-thomas-crypto-conditions-04.txt
+  type: TXT
+type: standard
+docid:
+- id: I-D.thomas-crypto-conditions
+  type: rfc-anchor
+- id: draft-thomas-crypto-conditions-04
+  type: Internet-Draft
+docnumber: I-D.thomas-crypto-conditions
+date:
+  type: published
+  value: '2018-01-19'
+contributor:
+- person:
+    name:
+      completename:
+        content: Stefan Thomas
+        language: en
+    affiliation:
+      organization:
+        name: Ripple
+  role: author
+- person:
+    name:
+      completename:
+        content: Rome Reginelli
+        language: en
+    affiliation:
+      organization:
+        name: Ripple
+  role: author
+- person:
+    name:
+      completename:
+        content: Adrian Hope-Bailie
+        language: en
+    affiliation:
+      organization:
+        name: Ripple
+  role: author
+revdate: '2018-01-19'
+language: en
+script: Latn
+abstract:
+  content: "\n\t <p>   The crypto-conditions specification defines a set of encoding
+    formats\n   and data structures for *conditions* and *fulfillments*.  A condition\n
+    \  uniquely identifies a logical \"boolean circuit\" constructed from one\n   or
+    more logic gates, evaluated by either validating a cryptographic\n   signature
+    or verifying the preimage of a hash digest.  A fulfillment\n   is a data structure
+    encoding one or more cryptographic signatures and\n   hash digest preimages that
+    define the structure of the circuit and\n   provide inputs to the logic gates
+    allowing for the result of the\n   circuit to be evaluated.\n\n   A fulfillment
+    is validated by evaluating that the circuit output is\n   TRUE but also that the
+    provided fulfillment matches the circuit\n   fingerprint, the condition.\n\n   Since
+    evaluation of some of the logic gates in the circuit (those\n   that are signatures)
+    also take a message as input the evaluation of\n   the entire fulfillment takes
+    an optional input message which is\n   passed to each logic gate as required.
+    \ As such the algorithm to\n   validate a fulfillment against a condition and
+    a message matches that\n   of other signature schemes and a crypto-condition can
+    serve as a\n   sophisticated and flexible replacement for a simple signature where\n
+    \  the condition is used as the public key and the fulfillment as the\n   signature.\n\n\t
+    </p>\n      "
+  language: en
+  script: Latn
+  format: text/html
+series:
+  type: main
+  title:
+    content: Internet-Draft
+    language: en
+    script: Latn
+    format: text/plain
+  number: draft-thomas-crypto-conditions-04
+doctype: internet-draft

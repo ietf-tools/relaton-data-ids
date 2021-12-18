@@ -1,0 +1,67 @@
+---
+id: I-D.goenka-ldapext-java-complex-search
+title:
+  content: Complex Directory Lookup using Java Based LDAP Query Extension
+  language: en
+  script: Latn
+  format: text/plain
+link:
+  content: https://www.ietf.org/archive/id/draft-goenka-ldapext-java-complex-search-01.txt
+  type: TXT
+type: standard
+docid:
+- id: I-D.goenka-ldapext-java-complex-search
+  type: rfc-anchor
+- id: draft-goenka-ldapext-java-complex-search-01
+  type: Internet-Draft
+docnumber: I-D.goenka-ldapext-java-complex-search
+date:
+  type: published
+  value: '1999-06-02'
+contributor:
+  person:
+    name:
+      initial:
+        content: V.
+        language: en
+      surname:
+        content: Goenka
+        language: en
+      completename:
+        content: Vishal Goenka
+        language: en
+    affiliation:
+      organization:
+        name: Novell, Inc.
+  role: author
+revdate: '1999-06-02'
+language: en
+script: Latn
+abstract:
+  content: "\n\t <p>LDAP provides some simple primitives to construct search\nfilters.
+    Complex LDAP search queries such as those involving\njoins or functional evaluation
+    of simple query results require\nclient side processing of the intermediate search
+    results. The\nnetwork overhead of retrieving intermediate results can be\nsubstantial
+    for large databases. This document defines an LDAP\nextension for supporting server
+    side evaluation of complex\nsearch queries.\n \n     Custom search logic can be
+    sent across to the server,\n     encapsulated as a Java Object. The LDAP server
+    supporting this\n     extension would instantiate the java object and invoke its
+    well\n     known interfaces in a JVM. The java object running at the server\n
+    \    end acts as the client-proxy, and makes a local search query to\n     the
+    LDAP server. The directory entries are evaluated using the\n     custom logic
+    embedded in the client-proxy, and those that\n     satisfy the evaluation function
+    are returned as the search\n     result to the LDAP server, which passes it back
+    to the\n     originating client. Even non-Java LDAP clients can use this\n     method,
+    provided the search query is written as a java object.\n\t </p>\n      "
+  language: en
+  script: Latn
+  format: text/html
+series:
+  type: main
+  title:
+    content: Internet-Draft
+    language: en
+    script: Latn
+    format: text/plain
+  number: draft-goenka-ldapext-java-complex-search-01
+doctype: internet-draft

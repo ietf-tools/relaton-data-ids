@@ -1,0 +1,65 @@
+---
+id: I-D.bashandy-mpls-ldp-bgp-frr
+title:
+  content: LDP Extension for FRR Edge Node Protection in BGP-Free LDP Core
+  language: en
+  script: Latn
+  format: text/plain
+link:
+  content: https://www.ietf.org/archive/id/draft-bashandy-mpls-ldp-bgp-frr-00.txt
+  type: TXT
+type: standard
+docid:
+- id: I-D.bashandy-mpls-ldp-bgp-frr
+  type: rfc-anchor
+- id: draft-bashandy-mpls-ldp-bgp-frr-00
+  type: Internet-Draft
+docnumber: I-D.bashandy-mpls-ldp-bgp-frr
+date:
+  type: published
+  value: '2012-03-05'
+contributor:
+- person:
+    name:
+      completename:
+        content: Ahmed Bashandy
+        language: en
+  role: author
+- person:
+    name:
+      completename:
+        content: Kamran Raza
+        language: en
+  role: author
+revdate: '2012-03-05'
+language: en
+script: Latn
+abstract:
+  content: "\n\t <p>   Consider a BGP free core scenario with LDP running in the core.\n
+    \  Suppose the edge BGP speakers PE1 and PE2 know about a prefix P/m\n   via the
+    external routers CE1 and CE2.  If the edge LSR PE1 crashes\n   or becomes totally
+    disconnected from the core, it is desirable for a\n   core LSR \"P\", that is
+    carrying traffic to the failed edge LSR PE1,\n   to immediately restore traffic
+    by re-routing packets destined to the\n   prefix P/m from the LSP terminating
+    on PE1 to be forwarded over the\n   LSP terminating on PE2, until BGP reconverges.
+    If the packets\n   originally flowing to the failed edge LSR PE1 are BGP labeled,
+    then\n   the repairing core LSR P must swap the label (corresponding to\n   prefix
+    P/m) advertised by the failed edge LSR PE1 with the label\n   advertised for the
+    same prefix by the edge LSR PE2 before re-routing\n   the packets through an LSP
+    terminating on PE2. To implement BGP edge\n   node protection in a BGP-free LDP
+    core, this document proposes an\n   extension to LDP. This extension allows an
+    LDP speaker running on a\n   Edge LSR Node (e.g. PE1) to inform the LDP speakers
+    running on core\n   LSRs about the \"Repair\" edge LSR (e.g. PE2), as well as
+    Repair LSR's\n   label for prefix P/m, if any.\n\n\t </p>\n      "
+  language: en
+  script: Latn
+  format: text/html
+series:
+  type: main
+  title:
+    content: Internet-Draft
+    language: en
+    script: Latn
+    format: text/plain
+  number: draft-bashandy-mpls-ldp-bgp-frr-00
+doctype: internet-draft

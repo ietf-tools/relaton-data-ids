@@ -1,0 +1,78 @@
+---
+id: I-D.ordogh-spam-reporting-using-imap
+title:
+  content: 'Spam reporting using IMAP: SREP'
+  language: en
+  script: Latn
+  format: text/plain
+link:
+  content: https://www.ietf.org/archive/id/draft-ordogh-spam-reporting-using-imap-00.txt
+  type: TXT
+type: standard
+docid:
+- id: I-D.ordogh-spam-reporting-using-imap
+  type: rfc-anchor
+- id: draft-ordogh-spam-reporting-using-imap-00
+  type: Internet-Draft
+docnumber: I-D.ordogh-spam-reporting-using-imap
+date:
+  type: published
+  value: '2011-08-26'
+contributor:
+  person:
+    name:
+      initial:
+        content: Z.
+        language: en
+      surname:
+        content: Ordogh
+        language: en
+      completename:
+        content: Zoltan Ordogh
+        language: en
+  role: author
+revdate: '2011-08-26'
+language: en
+script: Latn
+abstract:
+  content: "\n\t <p>   The Internet Message Access Protocol [IMAP4] does not support\n
+    \  reporting spam on its own.  There are a number of solutions available\n   based
+    on the multipart/report content type defined in [REPORT].\n   However, these solutions
+    require including the message contents and\n   hence, consume bandwidth to transmit
+    the entire message.  In\n   bandwidth-constrained environments - such as mobile
+    networks - it is\n   highly desirable to send only a minimum set of information
+    - a\n   reference - instead of the entire message.  Furthermore, it is\n   desirable
+    to permit individual server implementations to handle spam\n   in any way these
+    systems choose to: do nothing, flag, recommend\n   deletion or relocation, perform
+    deletion or relocation, and, involve\n   any choice of spam aggregator services
+    in the decision process, such\n   as [OMA-SPAMREP].  Solutions that exist today
+    employ manipulating\n   proprietary flags in the IMAP storage to achieve the bare
+    minimum,\n   however more advanced solutions cannot be developed by using flags\n
+    \  only; the IMAP server needs to be involved actively in the spam\n   reporting
+    process.\n\n   This document specifies the syntax of the SREP command, which allows\n
+    \  a client to inform the server that the user considered a message (or\n   parts
+    thereof) spam, or, that the user no longer considers a message\n   (or parts thereof)
+    spam.  Since all information about the message is\n   readily available on the
+    server, the command also allows the server\n   to implement a more intelligent
+    and accurate decision logic, which\n   may be invoked when the spam is reported
+    and the server can respond\n   with its decision to the client.\n\n   Additionally,
+    this document contains example flows, illustrating\n   various decisions that
+    the server may choose to evaluate, including\n   invoking a service based on [OMA-SPAMREP].\n\n
+    \  This document focuses only on the client-server interactions and the\n   scope
+    is limited to messages that either exist on the IMAP server,\n   or, exist elsewhere
+    and the IMAP server is configured to access them.\n   Consequently, deposit-time
+    filtering, messages that have been\n   deleted, or, exist in an external storage
+    but are accessible via an\n   access protocol unknown to the IMAP server are out
+    of scope.\n\n\t </p>\n      "
+  language: en
+  script: Latn
+  format: text/html
+series:
+  type: main
+  title:
+    content: Internet-Draft
+    language: en
+    script: Latn
+    format: text/plain
+  number: draft-ordogh-spam-reporting-using-imap-00
+doctype: internet-draft

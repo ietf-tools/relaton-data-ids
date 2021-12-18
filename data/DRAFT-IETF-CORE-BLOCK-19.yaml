@@ -1,0 +1,81 @@
+---
+id: I-D.ietf-core-block
+title:
+  content: Block-wise transfers in CoAP
+  language: en
+  script: Latn
+  format: text/plain
+link:
+  content: https://www.ietf.org/archive/id/draft-ietf-core-block-19.txt
+  type: TXT
+type: standard
+docid:
+- id: I-D.ietf-core-block
+  type: rfc-anchor
+- id: draft-ietf-core-block-19
+  type: Internet-Draft
+docnumber: I-D.ietf-core-block
+date:
+  type: published
+  value: '2016-03-21'
+contributor:
+- person:
+    name:
+      initial:
+        content: C.
+        language: en
+      surname:
+        content: Bormann
+        language: en
+      completename:
+        content: Carsten Bormann
+        language: en
+  role: author
+- person:
+    name:
+      initial:
+        content: Z.
+        language: en
+      surname:
+        content: Shelby
+        language: en
+      completename:
+        content: Zach Shelby
+        language: en
+  role: author
+revdate: '2016-03-21'
+language: en
+script: Latn
+abstract:
+  content: "\n\t <p>   CoAP is a RESTful transfer protocol for constrained nodes and\n
+    \  networks.  Basic CoAP messages work well for the small payloads we\n   expect
+    from temperature sensors, light switches, and similar\n   building-automation
+    devices.  Occasionally, however, applications\n   will need to transfer larger
+    payloads -- for instance, for firmware\n   updates.  With HTTP, TCP does the grunt
+    work of slicing large\n   payloads up into multiple packets and ensuring that
+    they all arrive\n   and are handled in the right order.\n\n   CoAP is based on
+    datagram transports such as UDP or DTLS, which\n   limits the maximum size of
+    resource representations that can be\n   transferred without too much fragmentation.
+    \ Although UDP supports\n   larger payloads through IP fragmentation, it is limited
+    to 64 KiB\n   and, more importantly, doesn't really work well for constrained\n
+    \  applications and networks.\n\n   Instead of relying on IP fragmentation, this
+    specification extends\n   basic CoAP with a pair of \"Block\" options, for transferring
+    multiple\n   blocks of information from a resource representation in multiple\n
+    \  request-response pairs.  In many important cases, the Block options\n   enable
+    a server to be truly stateless: the server can handle each\n   block transfer
+    separately, with no need for a connection setup or\n   other server-side memory
+    of previous block transfers.\n\n   In summary, the Block options provide a minimal
+    way to transfer\n   larger representations in a block-wise fashion.\n\n\t </p>\n
+    \     "
+  language: en
+  script: Latn
+  format: text/html
+series:
+  type: main
+  title:
+    content: Internet-Draft
+    language: en
+    script: Latn
+    format: text/plain
+  number: draft-ietf-core-block-19
+doctype: internet-draft

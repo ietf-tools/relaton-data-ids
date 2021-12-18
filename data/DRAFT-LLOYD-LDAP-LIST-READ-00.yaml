@@ -1,0 +1,77 @@
+---
+id: I-D.lloyd-ldap-list-read
+title:
+  content: 'List and Read Operations: LDAP-X.500 Alignment'
+  language: en
+  script: Latn
+  format: text/plain
+link:
+  content: https://www.ietf.org/archive/id/draft-lloyd-ldap-list-read-00.txt
+  type: TXT
+type: standard
+docid:
+- id: I-D.lloyd-ldap-list-read
+  type: rfc-anchor
+- id: draft-lloyd-ldap-list-read-00
+  type: Internet-Draft
+docnumber: I-D.lloyd-ldap-list-read
+date:
+  type: published
+  value: '1998-09-21'
+contributor:
+  person:
+    name:
+      initial:
+        content: A.
+        language: en
+      surname:
+        content: Lloyd
+        language: en
+      completename:
+        content: Alan Lloyd
+        language: en
+    affiliation:
+      organization:
+        name: OpenDirectory
+  role: author
+revdate: '1998-09-21'
+language: en
+script: Latn
+abstract:
+  content: "\n\t <p>LDAP was originally developed as a lightweight protocol but through
+    its\ndevelopment it has added many features to a point where there is very\nlittle
+    difference in terms of simplicity or code size to that of DAP.\nHowever, DAP included
+    features which provided efficient navigation\nthrough a multi server distributed
+    directory systems (List), efficient\nretreival (Read)and the ability to provide
+    service controls to select\noperation requestpriority, permit/deny chained operations
+    and the\nability to select master/replica data in the operation response.\n \nLDAP
+    is now widely used as the access for X.500 distributed directory\nsystems, however
+    LDAP in its original form omitted the items (List, Read\nand Service Controls)
+    as defined above.\nThe List/Read requirements were serviced by LDAP through the
+    use of\n'pre-selected' Search operations. The Service Controls as per X.511\nfor
+    distributed operation control have in most part been omitted from\nLDAP. (These
+    are the subject of another proposal.)\n \nExperience in the field is showing that
+    not having a List (and to a\nlesser degree, Read) operations in LDAP accessing
+    to distributed\ndirectory system causes very inefficient multi server\nnavigation
+    compared to that of an LDAP Search being used. A Search\noperation is the most
+    complicated of directory services, yet in the LDAP\ncase it is being used for
+    lesser and more efficient functions.\n\nFor instance, in the LDAP only multi -
+    server environments, not having\na List operation causes considerable  client
+    re processing and protocol\nexchanges due to dealing with system referrals. This
+    leads to extended\nuser/client response times. For those who have already implemented
+    a\nLDAP Search operation a Read and List should be of little consequence.\n \nThis
+    document defines two additional operations for LDAP namely List\nand Read that
+    extend the LDAPv3 [LDAP] operations to provide a simple\nnavigation/browsing and
+    information retrieval mechanism by which a\nLDAP client can be\n\t </p>\n      "
+  language: en
+  script: Latn
+  format: text/html
+series:
+  type: main
+  title:
+    content: Internet-Draft
+    language: en
+    script: Latn
+    format: text/plain
+  number: draft-lloyd-ldap-list-read-00
+doctype: internet-draft

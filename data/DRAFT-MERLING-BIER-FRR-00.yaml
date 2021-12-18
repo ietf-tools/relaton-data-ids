@@ -1,0 +1,77 @@
+---
+id: I-D.merling-bier-frr
+title:
+  content: BIER Fast Reroute
+  language: en
+  script: Latn
+  format: text/plain
+link:
+  content: https://www.ietf.org/archive/id/draft-merling-bier-frr-00.txt
+  type: TXT
+type: standard
+docid:
+- id: I-D.merling-bier-frr
+  type: rfc-anchor
+- id: draft-merling-bier-frr-00
+  type: Internet-Draft
+docnumber: I-D.merling-bier-frr
+date:
+  type: published
+  value: '2019-03-05'
+contributor:
+- person:
+    name:
+      completename:
+        content: Daniel Merling
+        language: en
+    affiliation:
+      organization:
+        name: University of Tuebingen
+  role: author
+- person:
+    name:
+      completename:
+        content: Michael Menth
+        language: en
+    affiliation:
+      organization:
+        name: University of Tuebingen
+  role: author
+revdate: '2019-03-05'
+language: en
+script: Latn
+abstract:
+  content: "\n\t <p>   BIER is a scalable multicast overlay [RFC8279] that utilizes
+    some\n   routing underlay, e.g., IP, to build up its Bit Index Forwarding\n   Tables
+    (BIFTs).  This document proposes a Fast Reroute Extension for\n   BIER (BIER-FRR).
+    \ In case of a link or node failure, the routing\n   underlay may first utilize
+    FRR techniques to restore connectivity and\n   then its forwarding tables converge.
+    \ After that, BIER can update its\n   BIFTs, which requires time.  BIER packets
+    may not be delivered until\n   the last procedure has finished.  With BIER-FRR,
+    a BIER Forwarding\n   Router (BFR) can deliver BIER packets again after a link
+    or node\n   failures as soon as the connectivity within the routing underlay is\n
+    \  restored and the BFR is informed about a next-hop (NH) that is\n   unreachable
+    on a lower layer.  BIER-FRR provides a mode for link\n   protection and node protection.
+    \ For link protection, it tunnels\n   traffic to the next-hop using the underlying
+    routing.  For node\n   protection, it forwards BIER packets to their specific
+    next-hop and\n   next-next-hops using tunnels in the underlying routing after
+    applying\n   a suitable backup bitmask to the bitstring in the BIER header of
+    each\n   packet.  This procedure prevents duplicates.  If topology allows,\n   BIER-FRR
+    achieves full protection against any single component\n   failure.  For link protection,
+    BIER-FRR requires only a minor change\n   to the forwarding logic.  For node protection,
+    BIER-FRR also requires\n   backup entries in the BIFT.\n\n   This document describes
+    the concept and operating principles of BIER-\n   FRR.  It defines the necessary
+    modifications to the BIER forwarding\n   Procedure and the BIFT, and explains
+    how backup entries are computed.\n\n\t </p>\n      "
+  language: en
+  script: Latn
+  format: text/html
+series:
+  type: main
+  title:
+    content: Internet-Draft
+    language: en
+    script: Latn
+    format: text/plain
+  number: draft-merling-bier-frr-00
+doctype: internet-draft

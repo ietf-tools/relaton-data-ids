@@ -1,0 +1,94 @@
+---
+id: I-D.shalunov-alto-infoexport
+title:
+  content: ALTO Information Export Service
+  language: en
+  script: Latn
+  format: text/plain
+link:
+  content: https://www.ietf.org/archive/id/draft-shalunov-alto-infoexport-00.txt
+  type: TXT
+type: standard
+docid:
+- id: I-D.shalunov-alto-infoexport
+  type: rfc-anchor
+- id: draft-shalunov-alto-infoexport-00
+  type: Internet-Draft
+docnumber: I-D.shalunov-alto-infoexport
+date:
+  type: published
+  value: '2008-10-27'
+contributor:
+- person:
+    name:
+      completename:
+        content: Stanislav Shalunov
+        language: en
+  role: author
+- person:
+    name:
+      completename:
+        content: Reinaldo Penno
+        language: en
+  role: author
+- person:
+    name:
+      completename:
+        content: Richard Woundy
+        language: en
+  role: author
+revdate: '2008-10-27'
+language: en
+script: Latn
+abstract:
+  content: "\n\t <p>The ALTO Information Export Service is a simple way to convey
+    ISP\nrouting policy preferences to applications.  Applications that could\nuse
+    this service are those that have a choice in connection\nendpoints.  Examples
+    of such applications are peer-to-peer and\ncontent delivery networks.\n\nApplications
+    already have access to great amount of underlying\ntopology information.  For
+    example, views of the Internet routing\ntable are easily available at looking
+    glass servers and entirely\npractical to download to every client.  What is missing
+    is the\nrouting policy information -- what does the local ISP actually\nprefer?\n\nThis
+    document describes a very simple mechanism that would allow to\nexport such information
+    to applications.  While such service would\nprimarily be provided by the network,
+    i.e., the local ISP, third\nparties could also operate this service.1.  Requirements
+    notation\n\nThe key words \"MUST\", \"MUST NOT\", \"REQUIRED\", \"SHALL\", \"SHALL
+    NOT\",\n\"SHOULD\", \"SHOULD NOT\", \"RECOMMENDED\", \"MAY\", and \"OPTIONAL\"
+    in this\ndocument are to be interpreted as described in [RFC2119].2.  Overview\n\nEach
+    network region can choose to support the ALTO service.  (A\nnetwork region in
+    this context is an Autonomous System, an ISP, or\nperhaps a smaller region --
+    the details depend on the mechanism of\ndiscovery.)\n\nThe service works as follows:\n\n1.
+    \ The ISP prepares the ALTO information.  This maps some IP\n\n prefixes or AS
+    numbers into priority values.  Higher priority\n\n values indicate higher desirability
+    of the prefix.  There is a\n\n default treatment for IP numbers that are in none
+    of the prefixes\n\n or AS numbers.\n\n2.  The ISP serializes the information into
+    a sequence of octets\n\n (Section 4).\n\n3.  The application, running on a given
+    host, discovers the resource\n\n and fetches the serialized ALTO information (Section
+    3).\n\n4.  The application makes use of the information by preferring IP\n\n numbers
+    with higher priority (Section 5).\n\nThe part of the ISP MAY be implemented, to
+    give a few examples that\ndo not preclude other implementation options,\n\n\nby
+    running a script connecting to existing equipment, fetching\n\nrouting information,
+    and then generating and uploading the\n\nrequisite file;\n\n\nby running a database-backed
+    application that is obtains routing\n\ninformation from existing equipment and
+    generates the requisite\n\nfile dynamically;\n\n\nby modifying the software or
+    hardware of existing equipment to\n\nsupport these functions; or\n\n\nby using
+    new equipment for the purpose of operating this network\n\nservice.3.  Discovery\n\nDiscovery
+    per se is out of scope for this document and will be\nhandled separately.\n\nThe
+    necessary property of discovery is that a client, starting from\nnothing on today's
+    Internet that does not yet universally support\nglobal-scope multicast and may
+    include NATs, can find a URL that\ndescribes the location of the local ALTO service,
+    as configured by\nthe ISP.\n\nSubsequent sections assume that this URL is found.
+    \ So that maximum\nnumber of clients can use the ALTO service, the URL schema
+    SHOULD be\n\"http\" or \"https\".\n\t </p>\n      "
+  language: en
+  script: Latn
+  format: text/html
+series:
+  type: main
+  title:
+    content: Internet-Draft
+    language: en
+    script: Latn
+    format: text/plain
+  number: draft-shalunov-alto-infoexport-00
+doctype: internet-draft

@@ -1,0 +1,105 @@
+---
+id: I-D.shah-armd-arp-reduction
+title:
+  content: ARP Broadcast Reduction for Large Data Centers
+  language: en
+  script: Latn
+  format: text/plain
+link:
+  content: https://www.ietf.org/archive/id/draft-shah-armd-arp-reduction-02.txt
+  type: TXT
+type: standard
+docid:
+- id: I-D.shah-armd-arp-reduction
+  type: rfc-anchor
+- id: draft-shah-armd-arp-reduction-02
+  type: Internet-Draft
+docnumber: I-D.shah-armd-arp-reduction
+date:
+  type: published
+  value: '2011-10-31'
+contributor:
+- person:
+    name:
+      initial:
+        content: A.
+        language: en
+      surname:
+        content: Ghanwani
+        language: en
+      completename:
+        content: Anoop Ghanwani
+        language: en
+    affiliation:
+      organization:
+        name: Brocade
+  role: author
+- person:
+    name:
+      initial:
+        content: H. C.
+        language: en
+      surname:
+        content: Shah
+        language: en
+      completename:
+        content: Himanshu C. Shah
+        language: en
+    affiliation:
+      organization:
+        name: Ciena Corp
+  role: author
+- person:
+    name:
+      initial:
+        content: N. N.
+        language: en
+      surname:
+        content: Bitar
+        language: en
+      completename:
+        content: Dr. Nabil N. Bitar
+        language: en
+    affiliation:
+      organization:
+        name: Verizon
+  role: author
+revdate: '2011-10-31'
+language: en
+script: Latn
+abstract:
+  content: "\n\t <p>   With advent of server virtualization technologies, a host is
+    able to \n   support multiple Virtual Machines (VMs) in a single physical \n   machine.
+    Data Centers can leverage these capabilities to instantiate \n   on the order
+    of 10s to 100s of VMs in a single server with current \n   technology.  It is
+    conceivable that this number can be much higher \n   in the future. Each VM operates
+    as an independent IP host with a set \n   of Virtual Network Interface Cards (vNICs),
+    each having its own MAC \n   address and mapping to a physical Ethernet interface.
+    These physical \n   servers are typically installed in a rack with their Ethernet
+    \n   interfaces connected to a top-of-the-rack (ToR) switch. The ToR \n   switches
+    are interconnected through End-of-the-Row (EoR) or \n   aggregation switches which
+    are in turn connected to core switches.  \n    \n   As discussed in [ARP-Problem]
+    the host VMs use ARP broadcasts to \n   find other host VMs and use periodic (broadcast)
+    Gratuitous ARPs to \n   refresh their IP to MAC address binding in other VM hosts.
+    Such \n   broadcasts in a large data center with potentially thousands of VM \n
+    \  hosts in a Layer 2 based topology can overwhelm the network. \n    \n   This
+    memo proposes mechanisms to reduce the number of broadcasts \n   that are sent
+    throughout the network. This is done by having the \n   ToRs intelligently process
+    ARP and frames, rather than simply \n   broadcasting them throughout the broadcast
+    domain.  \n    \n   While this document addresses ARP, the Neighbor Discovery
+    mechanisms \n   used by the IPv6 hosts that make use of multicast rather than
+    \n   broadcast also pose similar issues in the Data Center. The solutions \n   defined
+    herein should be equally applicable to hosts running IPv6.  \n   The details will
+    be specified in a subsequent revision. \n\n\t </p>\n      "
+  language: en
+  script: Latn
+  format: text/html
+series:
+  type: main
+  title:
+    content: Internet-Draft
+    language: en
+    script: Latn
+    format: text/plain
+  number: draft-shah-armd-arp-reduction-02
+doctype: internet-draft
