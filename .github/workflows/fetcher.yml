@@ -23,9 +23,9 @@ jobs:
         run: relaton fetch-data ietf-internet-drafts
       - name: Push data
         run: |
-          ulimit -s 65536
           echo `date` > flag.txt
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git add data/* flag.txt
+          git add flag.txt
+          find ./data -name '*' | xargs git add
           git diff --quiet && git diff --staged --quiet || (git commit -m 'update documents' && git push)
