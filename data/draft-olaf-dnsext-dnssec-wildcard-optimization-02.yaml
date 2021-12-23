@@ -1,0 +1,62 @@
+---
+id: I-D.olaf-dnsext-dnssec-wildcard-optimization
+title:
+  content: DNSSEC Wildcard  Optimization
+  language: en
+  script: Latn
+  format: text/plain
+link:
+  content: https://www.ietf.org/archive/id/draft-olaf-dnsext-dnssec-wildcard-optimization-02.txt
+  type: TXT
+type: standard
+docid:
+- id: I-D.olaf-dnsext-dnssec-wildcard-optimization
+  type: rfc-anchor
+- id: draft-olaf-dnsext-dnssec-wildcard-optimization-02
+  type: Internet-Draft
+docnumber: I-D.olaf-dnsext-dnssec-wildcard-optimization
+date:
+  type: published
+  value: '2003-01-08'
+contributor:
+  person:
+    name:
+      initial:
+        content: O.
+        language: en
+      surname:
+        content: Kolkman
+        language: en
+      completename:
+        content: Olaf Kolkman
+        language: en
+    affiliation:
+      organization:
+        name: RIPE NCC
+  role: author
+revdate: '2003-01-08'
+language: en
+script: Latn
+abstract:
+  content: "<p>Secure denial of the existence of wildcards may lead to a largenumber
+    of NXT Resource Records and associated SIG Resource Records inDNS responses, even
+    in the common case when wildcards are not presentin the zone. This optimization
+    uses one bit from the NXT type arrayto signal that there is no closer wildcard
+    in the zone for a givenquery name. This reduces the packet size and the need for
+    executingslow, and complicated, code paths in the case when queries are madeto
+    zones which have the bit set at zone signing time. In cases wherethere are no
+    wildcard RRs in the zone (e.g. the root zone) only oneNXT RR and corresponding
+    SIG is needed for denial of existence ofboth a full match and any possible wildcard
+    matches.</p>"
+  language: en
+  script: Latn
+  format: text/html
+series:
+  type: main
+  title:
+    content: Internet-Draft
+    language: en
+    script: Latn
+    format: text/plain
+  number: draft-olaf-dnsext-dnssec-wildcard-optimization-02
+doctype: internet-draft

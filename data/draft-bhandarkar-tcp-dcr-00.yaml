@@ -1,0 +1,66 @@
+---
+id: I-D.bhandarkar-tcp-dcr
+title:
+  content: Improving the robustness of TCP to Non-Congestion Events
+  language: en
+  script: Latn
+  format: text/plain
+link:
+  content: https://www.ietf.org/archive/id/draft-bhandarkar-tcp-dcr-00.txt
+  type: TXT
+type: standard
+docid:
+- id: I-D.bhandarkar-tcp-dcr
+  type: rfc-anchor
+- id: draft-bhandarkar-tcp-dcr-00
+  type: Internet-Draft
+docnumber: I-D.bhandarkar-tcp-dcr
+date:
+  type: published
+  value: '2003-10-16'
+contributor:
+  person:
+    name:
+      initial:
+        content: S.
+        language: en
+      surname:
+        content: Bhandarkar
+        language: en
+      completename:
+        content: Sumitha Bhandarkar
+        language: en
+    affiliation:
+      organization:
+        name: Texas A&M University
+  role: author
+revdate: '2003-10-16'
+language: en
+script: Latn
+abstract:
+  content: "<p>This document proposes TCP-DCR, a simple modification to the TCPcongestion
+    control algorithm to make it more robust to non-congestionevents. In the absence
+    of explicit notification from the network, theTCP congestion control algorithm
+    treats the receipt of threeduplicate acknowledgements as an indication of congestion
+    in thenetwork. This is not always correct, notably so in wireless networkswith
+    channel errors or networks prone to excessive packet reordering,resulting in degraded
+    performance. TCP-DCR aims to remedy this bydelaying the congestion response of
+    TCP for a short interval of timetau, thereby creating room to handle any non-congestion
+    events thatmay have occurred. If at the end of the delay tau, the event is nothandled,
+    then it is treated as a congestion loss. The modificationsthemselves do not handle
+    the non-congestion event, but rather rely onsome underlying mechanism to do this.
+    This document discusses theimplications of delaying congestion response on the
+    fairness, TCP-compatibility and network dynamics, and the benefits to be gained
+    byapplying the TCP-DCR modifications to TCP.</p>"
+  language: en
+  script: Latn
+  format: text/html
+series:
+  type: main
+  title:
+    content: Internet-Draft
+    language: en
+    script: Latn
+    format: text/plain
+  number: draft-bhandarkar-tcp-dcr-00
+doctype: internet-draft

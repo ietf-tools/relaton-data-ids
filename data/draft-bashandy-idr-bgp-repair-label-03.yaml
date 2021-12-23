@@ -1,0 +1,83 @@
+---
+id: I-D.bashandy-idr-bgp-repair-label
+title:
+  content: Scalable, Loop-Free BGP FRR using Repair Label
+  language: en
+  script: Latn
+  format: text/plain
+link:
+  content: https://www.ietf.org/archive/id/draft-bashandy-idr-bgp-repair-label-03.txt
+  type: TXT
+type: standard
+docid:
+- id: I-D.bashandy-idr-bgp-repair-label
+  type: rfc-anchor
+- id: draft-bashandy-idr-bgp-repair-label-03
+  type: Internet-Draft
+docnumber: I-D.bashandy-idr-bgp-repair-label
+date:
+  type: published
+  value: '2011-10-30'
+contributor:
+- person:
+    name:
+      initial:
+        content: A.
+        language: en
+      surname:
+        content: Bashandy
+        language: en
+      completename:
+        content: Ahmed Bashandy
+        language: en
+  role: author
+- person:
+    name:
+      initial:
+        content: B.
+        language: en
+      surname:
+        content: Burjiz
+        language: en
+      completename:
+        content: Burjiz
+        language: en
+  role: author
+- person:
+    name:
+      initial:
+        content: J.
+        language: en
+      surname:
+        content: Heitz
+        language: en
+      completename:
+        content: Jakob Heitz
+        language: en
+  role: author
+revdate: '2011-10-30'
+language: en
+script: Latn
+abstract:
+  content: <p>Consider a BGP free core scenario. Suppose the provider edge BGPspeakers
+    PE1, PE2,..., PEn know about a prefix P/p via the externalrouters CE1, CE2,...,
+    CEm. If the PE router PEi loses connectivity tothe primary path, it is desirable
+    to immediately restore traffic byrerouting packets arriving from the core to PEi
+    and destined to theprefix P/p to one of the other PE routers that advertised P/p,
+    say PEj,until BGP re-converges. However if the loss of connectivity of PEi tothe
+    primary path also resulted in the loss of connectivity between PEjand CEj, rerouting
+    a packet before the control plane converges mayresult in a loop. In this document,
+    we propose using a repair label fortraffic restoration while avoiding loops. We
+    propose advertising the"repair" label through BGP.</p>
+  language: en
+  script: Latn
+  format: text/html
+series:
+  type: main
+  title:
+    content: Internet-Draft
+    language: en
+    script: Latn
+    format: text/plain
+  number: draft-bashandy-idr-bgp-repair-label-03
+doctype: internet-draft

@@ -1,0 +1,79 @@
+---
+id: I-D.tkeiser-afs3-volser-tlv
+title:
+  content: AFSVol Tag-Length-Value Remote Procedure Call Extensions
+  language: en
+  script: Latn
+  format: text/plain
+link:
+  content: https://www.ietf.org/archive/id/draft-tkeiser-afs3-volser-tlv-03.txt
+  type: TXT
+type: standard
+docid:
+- id: I-D.tkeiser-afs3-volser-tlv
+  type: rfc-anchor
+- id: draft-tkeiser-afs3-volser-tlv-03
+  type: Internet-Draft
+docnumber: I-D.tkeiser-afs3-volser-tlv
+date:
+  type: published
+  value: '2010-08-04'
+contributor:
+- person:
+    name:
+      initial:
+        content: T.
+        language: en
+      surname:
+        content: Keiser
+        language: en
+      completename:
+        content: Thomas Keiser
+        language: en
+  role: author
+- person:
+    name:
+      initial:
+        content: S.
+        language: en
+      surname:
+        content: Jenkins
+        language: en
+      completename:
+        content: Steven Jenkins
+        language: en
+  role: author
+revdate: '2010-08-04'
+language: en
+script: Latn
+abstract:
+  content: "<p>AFS-3 is a distributed file system based upon prototypes developed
+    atCarnegie Mellon University during the 1980s. AFS-3 heavily leveragesRemote Procedure
+    Calls (RPCs) as the foundation for its distributedarchitecture. In 2003, new RPCs
+    were introduced into AFS-3 thatprovide for capability introspection between file
+    servers and cachemanagers. This memo introduces equivalent functionality to thevolume
+    server RPC interface, thus making the volume managementinterface more extensible.Furthermore,
+    this memo extends the volume management interface tosupport getting and setting
+    of AFS volume attributes via anextensible Tag-Length-Value (TLV) encoding, which
+    is based upon XDRdiscriminated unions. TLV-based get and set RPCs are specified,along
+    with a tag enumeration RPC. The TLV encoding side-steps thetypical XDR union decode
+    problem, whereby failure to decode a unionleg causes the entire RPC payload decode
+    to fail, by mandating an XDRopaque default leg for the union, along with a standard
+    mechanism forencoding new leg types inside the XDR opaque blob.Finally, tags are
+    allocated for existing volume and transactionmetadata, and implementation-private
+    tags are allocated for metadatarelated to the OpenAFS Demand Attach File Server
+    and RxOSD protocol.Internet Draft CommentsComments regarding this draft are solicited.
+    Please include theAFS-3 protocol standardization mailing list(afs3-standardization@openafs.org)
+    as a recipient of any comments.</p>"
+  language: en
+  script: Latn
+  format: text/html
+series:
+  type: main
+  title:
+    content: Internet-Draft
+    language: en
+    script: Latn
+    format: text/plain
+  number: draft-tkeiser-afs3-volser-tlv-03
+doctype: internet-draft
