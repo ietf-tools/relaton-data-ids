@@ -1,0 +1,140 @@
+---
+id: I-D.kunze-pairtree
+title:
+  content: Pairtrees for Object Storage (V0.1) http://www.ietf.org/internet-drafts/draft-kunze-pairtree-01.txt
+  language: en
+  script: Latn
+  format: text/plain
+link:
+  content: https://www.ietf.org/archive/id/draft-kunze-pairtree-01.txt
+  type: TXT
+type: standard
+docid:
+- id: I-D.kunze-pairtree
+  type: rfc-anchor
+- id: draft-kunze-pairtree-01
+  type: Internet-Draft
+docnumber: I-D.kunze-pairtree
+date:
+  type: published
+  value: '2008-11-26'
+contributor:
+- person:
+    name:
+      completename:
+        content: John Kunze
+        language: en
+  role: author
+- person:
+    name:
+      completename:
+        content: Martin Haye
+        language: en
+  role: author
+- person:
+    name:
+      completename:
+        content: Erik Hetzner
+        language: en
+  role: author
+- person:
+    name:
+      completename:
+        content: Mark Reyes
+        language: en
+  role: author
+- person:
+    name:
+      completename:
+        content: Cory Snavely
+        language: en
+  role: author
+revdate: '2008-11-26'
+language: en
+script: Latn
+abstract:
+  content: "\t <t>This document specifies Pairtree, a filesystem hierarchy for holdingobjects
+    that are located within that hierarchy by mapping identifierstrings to object
+    directory (or folder) paths two characters at atime. If an object directory (folder)
+    holds all the files, andnothing but the files, that comprise the object, a \"pairtree\"
+    can beimported by a system that knows nothing about the nature or structureof
+    the objects but can still deliver any object's files by requestedidentifier. The
+    mapping is reversible, so the importing system canalso walk the pairtree and reliably
+    enumerate all the containedobject identifiers. To the extent that object dependencies
+    arestored inside the pairtree (e.g., fast indexes stored outside containonly derivative
+    data), simple or complex collections built on top ofpairtrees can recover from
+    index failures and reconstruct acollection view simply by walking the trees. Pairtrees
+    have theadvantage that many object operations, including backup and restore,can
+    be performed with native operating system tools.1. The basic pairtree algorithmThe
+    pairtree algorithm maps an arbitrary UTF-8 [RFC3629] encodedidentifier string
+    into a filesystem directory path based onsuccessive pairs of characters, and also
+    defines the reverse mapping(from pathname to identifier).In this document the
+    word \"directory\" is used interchangeably withthe word \"folder\" and all examples
+    conform to Unix-based filesystemconventions which should tranlate easily to Windows
+    conventions aftersubstituting the path separator ('\\' instead of '/'). Pairtreeplaces
+    no limitations on file and path lengths, so implementorsthinking about maximal
+    interoperation may wish to consider the issueslisted in the Interoperability section
+    of this document.The mapping from identifier string to path has two parts. First,
+    thestring is cleaned by converting characters that would be illegal orespecially
+    problemmatic in Unix or Windows filesystems. The cleanedstring is then split into
+    pairs of characters, each of which becomesa directory name in a filesystem path:
+    successive pairs map tosuccessive path components until there are no characters
+    left, withthe last component being either a 1- or 2-character directory name.The
+    resulting path is known as a _pairpath_, or _ppath_.abcd-&gt; ab/cd/abcdefg-&gt;
+    ab/cd/ef/g/12-986xy4 -&gt; 12/-9/86/xy/4/Armed with specific knowledge of a given
+    namespace's identifierdistribution, one might achieve more balanced or efficient
+    trees bymapping to paths from character groupings other than successivepairs.
+    Pairtree assumes that this sort of optimization, however,being tailored to individual
+    and transient namespace conditions, isoften less important than having a single
+    generalized and shareablemapping. It uses pairs of characters to achieve hierarchies
+    thatexhibit a reasonable balance of path length and fanout (number ofprobable
+    entries in any component directory).2. Pairpath termination and object encapsulationA
+    ppath (pairpath) terminates when it reaches an object. A littlejargon helps explain
+    this. A _shorty_ is a 1- or 2-characterdirectory name, or any file or directory
+    name that begins with\"pairtree\" (these are reserved for future use). A ppath
+    consists ofa sequence of \"shorties\" ending in a non-shorty, such as a3-character
+    directory name or the 2-character file name \"xy\". Thepairtree below contains
+    two objects with identifiers \"abcd\" and\"abcde\".ab/|\\--- cd/ | |--- foo/ |
+    |README.txt | |thumbnail.gif | | | |--- master_images/ | | |... | | ... | | |
+    \\--- gh/ | \\--- e/ | \\--- bar/|metadata|54321.wav|index.htmlAn object is reached
+    when a non-shorty is detected. An object is_properly encapsulated_ if it is entirely
+    contained in a non-shortydirectory that is the immediate child of a shorty directory,
+    in otherwords, if the 1- or 2-char directory name ending the object's ppathcontains
+    exactly one non-shorty directory that holds all the object'sdescendants. The two
+    objects \"abcd\" and \"abcde\" above are properlyencapsulated. Any shorty directory
+    found at the same level as thenon-shorty extends the pairtree. So while the \"foo/\"
+    directory abovedoes not subsume \"e/\" at the same level, by encapsulation, it
+    doessubsume the \"gh/\" underneath it (i.e., \"gh/\" is invisible to thepairtree
+    algorithm, at least on a first pass).Practice will vary according to local custom
+    as to how to name theencapsulating object directory beneath that last shorty.
+    Its name iscompletely independent of the object identifier. For example, everyobject
+    directory in a pairtree could have the uniform name \"thingy\".It is common for
+    the directory name to be a terminal substring of theobject identifier, as in:id:
+    13030_45xqv_793842495ppath: 13/03/0_/45/xq/v_/79/38/42/49/5/793842495All objects
+    should be properly encapsulated. If an object isdetected that is _improperly encapsulated_,
+    that is, when a ppathends with a shorty directory that contains more than one
+    non-shorty,the detecting system should take corrective action. In thissituation,
+    also known as a \"split end\", all those non-shorties(directories and files) are
+    considered to belong to one object (notproperly encapsulated) identified by the
+    containing ppath. Excludingshorties from the object permits one identifier to
+    be a substring ofanother (e.g., \"abcd\" and \"abcde\" can co-exist in a pairtree),
+    anddefining ppath termination in this way prevents \"hidden riders\", ordata residing
+    in a pairtree that is not contained or accounted for inany object. Here is an
+    example of an improperly encapsulated objectnamed \"bent\".be/|\\--- nt/[ split
+    end: two files, no encapsulation ] |README.txt |report.pdf | \\--- ef/ |...If
+    a \"split end\" is encountered, an importing system is encouraged tonormalize
+    it by creating a single object directory called \"obj\" andpushing the non-shorties
+    in question underneath it, as in:be/|\\--- nt/ | |--- obj/ [ split end repaired
+    with \"obj\" directory ] | |README.txt | |report.pdf | \\--- ef/ |...</p>"
+  language: en
+  script: Latn
+  format: text/html
+series:
+  type: main
+  title:
+    content: Internet-Draft
+    language: en
+    script: Latn
+    format: text/plain
+  number: draft-kunze-pairtree-01
+doctype: internet-draft
