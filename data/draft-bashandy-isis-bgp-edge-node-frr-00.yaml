@@ -1,0 +1,63 @@
+---
+id: I-D.bashandy-isis-bgp-edge-node-frr
+title:
+  content: IS-IS Extension for BGP FRR Protection against Edge Node Failure
+  language: en
+  script: Latn
+  format: text/plain
+link:
+  content: https://www.ietf.org/archive/id/draft-bashandy-isis-bgp-edge-node-frr-00.txt
+  type: TXT
+type: standard
+docid:
+- id: I-D.bashandy-isis-bgp-edge-node-frr
+  type: rfc-anchor
+- id: draft-bashandy-isis-bgp-edge-node-frr-00
+  type: Internet-Draft
+docnumber: I-D.bashandy-isis-bgp-edge-node-frr
+date:
+  type: published
+  value: '2012-03-05'
+contributor:
+  person:
+    name:
+      initial:
+        content: A.
+        language: en
+      surname:
+        content: Bashandy
+        language: en
+      completename:
+        content: Ahmed Bashandy
+        language: en
+  role: author
+revdate: '2012-03-05'
+language: en
+script: Latn
+abstract:
+  content: "\t <t>Consider a BGP free core scenario where traffic is tunneled betweenedge
+    routers. Suppose the edge BGP speakers PE1, PE2,..., PEn knowabout a prefix P/m
+    via the external routers CE1, CE2,..., CEm. Ifthe edge router PEi crashes or becomes
+    totally disconnected from thecore, it desirable for a core router \"P\" that is
+    carrying traffic tothe failed edge router PEi to immediately restore traffic by
+    re-routing packets originally tunneled to PEi and destined to the prefixP/m to
+    one of the other edge routers that advertised P/m, say PEj,until BGP re-converges.
+    If the packets originally flowing to thefailed edge router PEi are labeled, then
+    the repairing core router Prouter must swap the label advertised by the failed
+    edge router PEifor the prefix P/m with the label advertised for the same prefix
+    bythe edge router PEj before re-routing the packet through an LSPterminating PEj.
+    The document proposes an extension to IS-IS protocolto inform core routers about
+    the repair edge router PEj and, forlabeled packets, the label that needs to be
+    pushed/swapped beforesending the packet into the tunnel terminating on PEj</p>"
+  language: en
+  script: Latn
+  format: text/html
+series:
+  type: main
+  title:
+    content: Internet-Draft
+    language: en
+    script: Latn
+    format: text/plain
+  number: draft-bashandy-isis-bgp-edge-node-frr-00
+doctype: internet-draft
