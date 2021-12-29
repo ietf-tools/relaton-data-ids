@@ -11,7 +11,8 @@ link:
 type: standard
 docid:
 - id: I-D.bashandy-bgp-edge-node-frr
-  type: rfc-anchor
+- id: I-D.bashandy-bgp-edge-node-frr
+  scope: anchor
 - id: draft-bashandy-bgp-edge-node-frr-01
   type: Internet-Draft
 docnumber: I-D.bashandy-bgp-edge-node-frr
@@ -35,22 +36,22 @@ revdate: '2011-10-28'
 language: en
 script: Latn
 abstract:
-  content: <p>Consider a BGP free core scenario. Suppose the edge BGP speakers PE1,PE2,...,
-    PEn know about a prefix P/p via the external routers CE1,CE2,..., CEm. If the
-    edge router PEi crashes or becomes totallydisconnected from the core, it desirable
-    for a penultimate hop route"P" carrying traffic to the failed edge router PEi
-    to immediatelyrestore traffic by re-tunneling packets originally tunneled to PEiand
-    destined to the prefix P/p to one of the other edge routers thatadvertised P/p,
-    say PEj, until BGP re-converges. In doing so, it ishighly desirable to keep the
-    core BGP-free while not imposingrestrictions on external connectivity. Thus (1)
-    a core router shouldnot be required to learn any BGP prefix, (2) the size of theforwarding
-    and routing tables in the core routers should beindependent of the number of BGP
-    prefixes,(3) there should be nospecial router (or group of routers) that handles
-    restoring traffic,and (4) there should be no restrictions on what edge routersadvertise
-    what prefixes. For labeled prefixes, (5) the penultimatehop router must swap the
-    label advertised by the failed edge routerPEi for the prefix P/p with the label
-    advertised for the same prefixby the edge router PEj before re-tunneling the packet
-    to PEj</p>
+  content: <p>Consider a BGP free core scenario. Suppose the edge BGP speakers PE1,
+    PE2,..., PEn know about a prefix P/p via the external routers CE1, CE2,..., CEm.
+    If the edge router PEi crashes or becomes totally disconnected from the core,
+    it desirable for a penultimate hop route "P" carrying traffic to the failed edge
+    router PEi to immediately restore traffic by re-tunneling packets originally tunneled
+    to PEi and destined to the prefix P/p to one of the other edge routers that advertised
+    P/p, say PEj, until BGP re-converges. In doing so, it is highly desirable to keep
+    the core BGP-free while not imposing restrictions on external connectivity. Thus
+    (1) a core router should not be required to learn any BGP prefix, (2) the size
+    of the forwarding and routing tables in the core routers should be independent
+    of the number of BGP prefixes,(3) there should be no special router (or group
+    of routers) that handles restoring traffic, and (4) there should be no restrictions
+    on what edge routers advertise what prefixes. For labeled prefixes, (5) the penultimate
+    hop router must swap the label advertised by the failed edge router PEi for the
+    prefix P/p with the label advertised for the same prefix by the edge router PEj
+    before re-tunneling the packet to PEj</p>
   language: en
   script: Latn
   format: text/html

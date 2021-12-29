@@ -11,7 +11,8 @@ link:
 type: standard
 docid:
 - id: I-D.bashandy-idr-bgp-repair-label
-  type: rfc-anchor
+- id: I-D.bashandy-idr-bgp-repair-label
+  scope: anchor
 - id: draft-bashandy-idr-bgp-repair-label-04
   type: Internet-Draft
 docnumber: I-D.bashandy-idr-bgp-repair-label
@@ -41,16 +42,16 @@ revdate: '2012-05-01'
 language: en
 script: Latn
 abstract:
-  content: <p>Consider a BGP free core scenario. Suppose the provider edge BGPspeakers
-    PE1, PE2,..., PEn know about a prefix P/m via the externalrouters CE1, CE2,...,
-    CEm. If the PE router PEi loses connectivity tothe primary path, it is desirable
-    to immediately restore traffic byrerouting packets arriving from the core to PEi
-    and destined to theprefix P/m to one of the other PE routers that advertised P/m,
-    say PEj,until BGP re-converges. However if the loss of connectivity of PEi tothe
-    primary path also resulted in the loss of connectivity between PEjand CEj, rerouting
-    a packet before the control plane converges mayresult in a loop. In this document,
-    we propose using a repair label fortraffic restoration while avoiding loops. We
-    propose advertising the"repair" label through BGP.</p>
+  content: <p>Consider a BGP free core scenario. Suppose the provider edge BGP speakers
+    PE1, PE2,..., PEn know about a prefix P/m via the external routers CE1, CE2,...,
+    CEm. If the PE router PEi loses connectivity to the primary path, it is desirable
+    to immediately restore traffic by rerouting packets arriving from the core to
+    PEi and destined to the prefix P/m to one of the other PE routers that advertised
+    P/m, say PEj, until BGP re-converges. However if the loss of connectivity of PEi
+    to the primary path also resulted in the loss of connectivity between PEj and
+    CEj, rerouting a packet before the control plane converges may result in a loop.
+    In this document, we propose using a repair label for traffic restoration while
+    avoiding loops. We propose advertising the "repair" label through BGP.</p>
   language: en
   script: Latn
   format: text/html

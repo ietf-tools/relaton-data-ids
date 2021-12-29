@@ -11,7 +11,8 @@ link:
 type: standard
 docid:
 - id: I-D.bashandy-isis-bgp-edge-node-frr
-  type: rfc-anchor
+- id: I-D.bashandy-isis-bgp-edge-node-frr
+  scope: anchor
 - id: draft-bashandy-isis-bgp-edge-node-frr-00
   type: Internet-Draft
 docnumber: I-D.bashandy-isis-bgp-edge-node-frr
@@ -35,20 +36,21 @@ revdate: '2012-03-05'
 language: en
 script: Latn
 abstract:
-  content: <p>Consider a BGP free core scenario where traffic is tunneled betweenedge
-    routers. Suppose the edge BGP speakers PE1, PE2,..., PEn knowabout a prefix P/m
-    via the external routers CE1, CE2,..., CEm. Ifthe edge router PEi crashes or becomes
-    totally disconnected from thecore, it desirable for a core router "P" that is
-    carrying traffic tothe failed edge router PEi to immediately restore traffic by
-    re-routing packets originally tunneled to PEi and destined to the prefixP/m to
-    one of the other edge routers that advertised P/m, say PEj,until BGP re-converges.
-    If the packets originally flowing to thefailed edge router PEi are labeled, then
-    the repairing core router Prouter must swap the label advertised by the failed
-    edge router PEifor the prefix P/m with the label advertised for the same prefix
-    bythe edge router PEj before re-routing the packet through an LSPterminating PEj.
-    The document proposes an extension to IS-IS protocolto inform core routers about
-    the repair edge router PEj and, forlabeled packets, the label that needs to be
-    pushed/swapped beforesending the packet into the tunnel terminating on PEj</p>
+  content: <p>Consider a BGP free core scenario where traffic is tunneled between
+    edge routers. Suppose the edge BGP speakers PE1, PE2,..., PEn know about a prefix
+    P/m via the external routers CE1, CE2,..., CEm. If the edge router PEi crashes
+    or becomes totally disconnected from the core, it desirable for a core router
+    "P" that is carrying traffic to the failed edge router PEi to immediately restore
+    traffic by re- routing packets originally tunneled to PEi and destined to the
+    prefix P/m to one of the other edge routers that advertised P/m, say PEj, until
+    BGP re-converges. If the packets originally flowing to the failed edge router
+    PEi are labeled, then the repairing core router P router must swap the label advertised
+    by the failed edge router PEi for the prefix P/m with the label advertised for
+    the same prefix by the edge router PEj before re-routing the packet through an
+    LSP terminating PEj. The document proposes an extension to IS-IS protocol to inform
+    core routers about the repair edge router PEj and, for labeled packets, the label
+    that needs to be pushed/swapped before sending the packet into the tunnel terminating
+    on PEj</p>
   language: en
   script: Latn
   format: text/html

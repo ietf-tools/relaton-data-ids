@@ -11,7 +11,8 @@ link:
 type: standard
 docid:
 - id: I-D.groth-dns-encryption
-  type: rfc-anchor
+- id: I-D.groth-dns-encryption
+  scope: anchor
 - id: draft-groth-dns-encryption-02
   type: Internet-Draft
 docnumber: I-D.groth-dns-encryption
@@ -38,15 +39,15 @@ revdate: '2008-07-14'
 language: en
 script: Latn
 abstract:
-  content: "<p>This document requests IANA registration of a new DNS OpCode andErrorCode
-    type in facilitating encryption of DNS requests andreplies and feed back to the
-    client if plain text requests are notacceptable. Once this OpCode is seen the
-    DNS server attempts todecrypt the request using its private OpenPGP key. Inside
-    theencrypted packet is the AES key which the client expects to be usedwhen the
-    server encrypts a response. A server may advertise that itis capable of DNS encryption
-    by returning OpenPGP fingerprints inTXT records using a similar format to Public
-    Key Association (PKA).The full pubic keys are returned from DNS servers by using
-    a CERTrequest against the host name(s) of the domain's NS records or viaOpenPGP
+  content: "<p>This document requests IANA registration of a new DNS OpCode and ErrorCode
+    type in facilitating encryption of DNS requests and replies and feed back to the
+    client if plain text requests are not acceptable. Once this OpCode is seen the
+    DNS server attempts to decrypt the request using its private OpenPGP key. Inside
+    the encrypted packet is the AES key which the client expects to be used when the
+    server encrypts a response. A server may advertise that it is capable of DNS encryption
+    by returning OpenPGP fingerprints in TXT records using a similar format to Public
+    Key Association (PKA). The full pubic keys are returned from DNS servers by using
+    a CERT request against the host name(s) of the domain's NS records or via OpenPGP
     key servers.</p>"
   language: en
   script: Latn

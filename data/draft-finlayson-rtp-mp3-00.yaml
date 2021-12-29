@@ -11,7 +11,8 @@ link:
 type: standard
 docid:
 - id: I-D.finlayson-rtp-mp3
-  type: rfc-anchor
+- id: I-D.finlayson-rtp-mp3
+  scope: anchor
 - id: draft-finlayson-rtp-mp3-00
   type: Internet-Draft
 docnumber: I-D.finlayson-rtp-mp3
@@ -38,19 +39,19 @@ revdate: '1999-02-24'
 language: en
 script: Latn
 abstract:
-  content: "<p>While the RTP payload format defined in RFC 2250 is generally applicableto
-    all forms of MPEG audio or video, it is less suitable for MPEG 1 or 2,layer III
-    audio (commonly known as 'MP3'). The reason for this is thatan MP3 frame is not
-    a true 'Application Data Unit' - it contains aback-pointer to data in earlier
-    frames, and so cannot be decodedindependently of these earlier frames. Because
-    RFC 2250 defines that packetboundaries coincide with frame boundaries, it handles
-    packet lossinefficiently when carrying MP3 data. The loss of an MP3 frame will
-    rendersome data in previous (or future) frames useless, even if they are receivedwithout
-    loss. In this document we define a new RTP payload format for MP3 audio. The newformat
-    is essentially the same as that defined in RFC 2250, except for adata-preserving
-    rearrangement of the original MPEG frames, so that packetboundaries now coincide
-    with true MP3 'Application Data Units'. This newformat is therefore more data
-    efficient in the face of packet loss.</p>"
+  content: "<p>While the RTP payload format defined in RFC 2250 is generally applicable
+    to all forms of MPEG audio or video, it is less suitable for MPEG 1 or 2, layer
+    III audio (commonly known as 'MP3'). The reason for this is that an MP3 frame
+    is not a true 'Application Data Unit' - it contains a back-pointer to data in
+    earlier frames, and so cannot be decoded independently of these earlier frames.
+    Because RFC 2250 defines that packet boundaries coincide with frame boundaries,
+    it handles packet loss inefficiently when carrying MP3 data. The loss of an MP3
+    frame will render some data in previous (or future) frames useless, even if they
+    are received without loss. In this document we define a new RTP payload format
+    for MP3 audio. The new format is essentially the same as that defined in RFC 2250,
+    except for a data-preserving rearrangement of the original MPEG frames, so that
+    packet boundaries now coincide with true MP3 'Application Data Units'. This new
+    format is therefore more data efficient in the face of packet loss.</p>"
   language: en
   script: Latn
   format: text/html

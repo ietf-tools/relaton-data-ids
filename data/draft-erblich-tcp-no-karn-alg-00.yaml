@@ -11,7 +11,8 @@ link:
 type: standard
 docid:
 - id: I-D.erblich-tcp-no-karn-alg
-  type: rfc-anchor
+- id: I-D.erblich-tcp-no-karn-alg
+  scope: anchor
 - id: draft-erblich-tcp-no-karn-alg-00
   type: Internet-Draft
 docnumber: I-D.erblich-tcp-no-karn-alg
@@ -35,16 +36,16 @@ revdate: '2006-08-14'
 language: en
 script: Latn
 abstract:
-  content: <p>Karn's algorithm specifies acknowledgements that are theresult of segment
-    retransmits should be ignored, not timed,and should not contribute to the smoothed
-    round-trip-time(SRTT) because they are considered "ambiguous". It is alsostated
-    in Karn's paper that "If an acknowledgement arrivesafter the RTO has expired,
-    it is highly likely to come veryshortly after wards." In time, we have added the
-    "fast retransmit"functionality, so we are not solely dependent on RTO forretransmits.
-    Common sense dictates that if we receive anacknowledgement "very shortly after
-    wards", that thoseacknowledgments should not be considered "ambiguous". Thesenon-ambiguous
-    acknowledgments should be added to the SRTT andtrigger us to return to our previous
-    non-congestion behavior.</p>
+  content: <p>Karn's algorithm specifies acknowledgements that are the result of segment
+    retransmits should be ignored, not timed, and should not contribute to the smoothed
+    round-trip-time (SRTT) because they are considered "ambiguous". It is also stated
+    in Karn's paper that "If an acknowledgement arrives after the RTO has expired,
+    it is highly likely to come very shortly after wards." In time, we have added
+    the "fast retransmit" functionality, so we are not solely dependent on RTO for
+    retransmits. Common sense dictates that if we receive an acknowledgement "very
+    shortly after wards", that those acknowledgments should not be considered "ambiguous".
+    These non-ambiguous acknowledgments should be added to the SRTT and trigger us
+    to return to our previous non-congestion behavior.</p>
   language: en
   script: Latn
   format: text/html

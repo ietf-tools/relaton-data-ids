@@ -12,7 +12,8 @@ link:
 type: standard
 docid:
 - id: I-D.gutmann-pkix-ocsp-rtcs
-  type: rfc-anchor
+- id: I-D.gutmann-pkix-ocsp-rtcs
+  scope: anchor
 - id: draft-gutmann-pkix-ocsp-rtcs-00
   type: Internet-Draft
 docnumber: I-D.gutmann-pkix-ocsp-rtcs
@@ -45,15 +46,15 @@ abstract:
     the inability to provide an unambiguous certificate status response (the only
     thing that a CRL can say with certainty is 'revoked'), and an online responder
     tied to an offline mechanism (some CAs issue CRLs only once or twice a day, even
-    though they have an online, realtime certificate store available).Fortunately,
+    though they have an online, realtime certificate store available). Fortunately,
     the authors of the OCSP RFC foresaw this situation by allowing a client to specify,
-    and a responder to return, more than one type of response.Just as the original
-    OCSP responses were designed for completely CRL-compatible operation, this document
+    and a responder to return, more than one type of response. Just as the original
+    OCSP responses were designed for completely CRL- compatible operation, this document
     specifies a response type that is designed for real-time status operation, providing
     a response not from a stored CRL using CRL-only mechanisms but directly from a
     live certificate store. This allows the responder to provide extended information
-    not possible with CRLs.In abstract terms, the responder is providing an implementation
-    of anauthenticated dictionary that responds to membership queries from relying
+    not possible with CRLs. In abstract terms, the responder is providing an implementation
+    of an authenticated dictionary that responds to membership queries from relying
     parties. A conventional OCSP responder answers the question 'Is x excluded from
     D?', while an OCSP responder with RTCS capability answers the question 'Is x present
     in D?'.</p>"
