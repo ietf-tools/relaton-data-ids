@@ -21,7 +21,7 @@ jobs:
           gem install relaton-cli
       - name: Fetch documents
         run: |
-          find ./data -name '*' | xargs rm -f
+          find ./data -name '*.yaml' | xargs rm -f
           relaton fetch-data ietf-internet-drafts
       - name: Push data
         run: |
