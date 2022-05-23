@@ -13,14 +13,14 @@ docid:
   primary: true
 abstract:
 - content: "<p>To provide equitable service to clients, servers often rate-limit incoming
-    requests, often based upon the source IP address. However, oblivious HTTP removes
-    the ability for the server to distinguish amongst clients so the server can only
-    rate-limit traffic from the oblivious proxy. This harms all clients behind that
-    oblivious proxy. This specification provides feedback from a server to an oblivious
-    proxy, enabling the oblivious proxy to rate-limit incoming requests from clients.
-    Cooperating oblivious proxies can thus provide more equitable service to their
-    distinguishable clients without triggering rate-limiting on the request resource
-    or the target resource that would impact all clients behind that Oblivious proxy.</p>"
+    requests, for example, based upon the source IP address. However, oblivious HTTP
+    removes the ability for the server to distinguish amongst clients so the server
+    can only rate-limit traffic from the oblivious proxy. This harms all clients behind
+    that oblivious proxy. This specification enables a server to convey rate-limit
+    information to an oblivious proxy, which can use it to apply rate-limit policies
+    on oblivious clients. Cooperating oblivious proxies can thus provide more equitable
+    service to their distinguishable clients without impacting on all clients behind
+    that oblivious proxy.</p>"
   language:
   - en
   script:
@@ -46,4 +46,14 @@ relation:
       primary: true
     formattedref:
       content: draft-rdb-ohai-feedback-to-proxy-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-rdb-ohai-feedback-to-proxy-02
+    docid:
+    - id: draft-rdb-ohai-feedback-to-proxy-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-rdb-ohai-feedback-to-proxy-02
       format: text/plain
