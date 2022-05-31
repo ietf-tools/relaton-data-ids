@@ -12,14 +12,14 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>A SAID (Self-Addressing IDentifier) is a special type of content addressable
+- content: "<p>A SAID (Self-Addressing IDentifier) is a special type of content- addressable
     identifier based on encoded cryptographic digest that is self-referential. The
     SAID derivation protocol defined herein enables verification that a given SAID
     is uniquely cryptographically bound to a serialization that includes the SAID
     as a field in that serialization. Embedding a SAID as a field in the associated
-    serialization indicates a preferred content addressable identifier for that serialization
+    serialization indicates a preferred content-addressable identifier for that serialization
     that facilitates greater interoperability, reduced ambiguity, and enhanced security
-    when reasoning about the serialization. Moreover given sufficient cryptographic
+    when reasoning about the serialization. Moreover, given sufficient cryptographic
     strength, a cryptographic commitment such as a signature, digest, or another SAID,
     to a given SAID is essentially equivalent to a commitment to its associated serialization.
     Any change to the serialization invalidates its SAID thereby ensuring secure immutability
@@ -29,7 +29,7 @@ abstract:
     CESR (Composable Event Streaming Representation) [CESR] which includes a pre-pended
     derivation code that encodes the cryptographic suite or algorithm used to generate
     the digest. A CESR primitive's primary expression (alone or in combination ) is
-    textual using Base64 URL Safe characters. CESR primitives may be round-tripped
+    textual using Base64 URL-safe characters. CESR primitives may be round-tripped
     (alone or in combination) to a compact binary representation without loss. The
     CESR derivation code enables cryptographic digest algorithm agility in systems
     that use SAIDs as content addresses. Each serialization may use a different cryptographic
@@ -60,4 +60,14 @@ relation:
       primary: true
     formattedref:
       content: draft-ssmith-said-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ssmith-said-02
+    docid:
+    - id: draft-ssmith-said-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ssmith-said-02
       format: text/plain
