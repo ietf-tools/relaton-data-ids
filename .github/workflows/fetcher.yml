@@ -33,8 +33,8 @@ jobs:
       - name: Push data
         run: |
           echo `date` > flag.txt
-          git config user.name github-actions
-          git config user.email github-actions@github.com
+          git config user.name ietf-bib-bot
+          git config user.email gh-bib-bot@llc.ietf.org
           git add flag.txt
           find ./data -name '*' | xargs git add
           git diff --quiet && git diff --staged --quiet || (git commit -m 'update documents' && git push)
