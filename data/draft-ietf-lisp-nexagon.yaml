@@ -1,7 +1,7 @@
 ---
 id: draft-ietf-lisp-nexagon
 title:
-- content: 'Network-Hexagons: Geolocation Mobility Edge Network Based On LISP'
+- content: Network-Hexagons:Geolocation Mobility Edge Network Based On H3 and LISP
   language:
   - en
   script:
@@ -12,17 +12,16 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>Geolocation-Service aggregates data uploaded from vehicles in edge
-    compute locations - processing it to verified, localized, consolidated geospatial
-    detection-channels. Channels' updates are used by mobility clients for crowed-sourced
-    dynamic mapping and driving applications. Geolocation Services are broken to shards
-    (areas), each one delegated dynamically to compute locations per road activity.
-    This dynamics combined with clients' IP Anchor dynamics causes coherency, context-
-    switching, geo-privacy, and service continuity key-issues. Key-issues are resolved
-    using dataflow virtualization, an inline indirection between mobility clients
-    and Geolocation Services. LISP overlay network-virtualization offers a fully distributed
-    dataflow virtualization - at the edge networking level. Geolocation mobility-network
-    based on LISP is described in this informational.</p>"
+- content: "<p>This informational document describes the combination of LISP and the
+    H3 geospatial hierarchical grid forming a Geolocation mobility edge network. When
+    vehicles with AI cameras detect objects of interest on the road, they use their
+    GPS to calculate their high-resolution (small) grid-tile position. They then use
+    this tile to calculate the high-resolution tile of the detection, and the low-resolution
+    (big) grid-tile containing it. That big-tile identifier is used to calculate IPv6
+    LISP endpoint identifier (EID). This EID address is a queue of a Geolocation process
+    consolidating all vehicles uploads from that area. Geolocation processes generate
+    IPv6 channels of all ongoing road situations in their area. Vehicles driving or
+    navigating to an area can subscribe to these channels using LISP multicast registration.</p>"
   language:
   - en
   script:
@@ -378,4 +377,14 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-lisp-nexagon-34
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-lisp-nexagon-35
+    docid:
+    - id: draft-ietf-lisp-nexagon-35
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-lisp-nexagon-35
       format: text/plain
