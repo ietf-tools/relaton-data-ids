@@ -15,13 +15,14 @@ abstract:
 - content: "<p>This informational document describes the combination of LISP and the
     H3 geospatial hierarchical grid forming a Geolocation mobility edge network. When
     vehicles with AI cameras detect objects of interest on the road, they use their
-    GPS to calculate their high-resolution (small) grid-tile position. They then use
-    this tile to calculate the high-resolution tile of the detection, and the low-resolution
-    (big) grid-tile containing it. That big-tile identifier is used to calculate IPv6
-    LISP endpoint identifier (EID). This EID address is a queue of a Geolocation process
-    consolidating all vehicles uploads from that area. Geolocation processes generate
-    IPv6 channels of all ongoing road situations in their area. Vehicles driving or
-    navigating to an area can subscribe to these channels using LISP multicast registration.</p>"
+    GPS to calculate their high-resolution grid-tile position. They then use this
+    tile to calculate the high-resolution tile of the detection. The low-resolution
+    (big) grid-tile containing the detection tile identifier is used as basis to IPv6
+    LISP endpoint identifier (EID). This EID is the queue destination of Geolocation
+    process consolidating detections form all vehicles in that area. Geolocation processes
+    use their EID as source of channels consolidating per theme of all ongoing road
+    situations in their area. Vehicles driving or navigating to an area subscribe
+    to these channels.</p>"
   language:
   - en
   script:
@@ -387,4 +388,14 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-lisp-nexagon-35
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-lisp-nexagon-36
+    docid:
+    - id: draft-ietf-lisp-nexagon-36
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-lisp-nexagon-36
       format: text/plain
