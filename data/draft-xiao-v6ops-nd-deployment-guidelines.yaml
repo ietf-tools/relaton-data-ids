@@ -1,7 +1,7 @@
 ---
 id: draft-xiao-v6ops-nd-deployment-guidelines
 title:
-- content: Neighbor Discovery Protocol Deployment Guidelines
+- content: Selectively Applying Host Isolation to Simplify IPv6 First-hop Deployment
   language:
   - en
   script:
@@ -12,22 +12,18 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>Neighbor Discovery (ND) is an integral part of IPv6 first-hop. Due
-    to limitation of certain L2 media's support to ND, a number of issues can happen
-    in certain scenarios. Solutions for these issues have been designed. These issues
-    and solutions are summarized in RFC3756, RFC6583, RFC9099. However, there is no
-    guideline on how to prevent the issues or how to select the proper solutions.
-    This document analyzes the existing solutions and summarizes their wisdoms into
-    an insight: isolating hosts into different L2 links or different L3 subnets can
-    be effective in preventing ND issues. In deployment scenarios where the ND issues
-    can occur, this prevention approach can be more effective than deploying the corresponding
-    solutions to solve the issues. Based on this insight, a set of guidelines is proposed
-    for future ND deployments. These guidelines describe where to isolate hosts in
-    L2 or in subnet to prevent ND issues, and how to select suitable solutions for
-    the remaining issues. This will likely simplify ND deployment. The impact of such
-    isolation to other components of IPv6 first-hop is also analyzed. The impact appears
-    small. Therefore, the guidelines will likely simplify the overall IPv6 first-hop
-    deployment.</p>"
+- content: "<p>Neighbor Discovery (ND) is the key protocol of IPv6 first-hop. ND uses
+    multicast extensively and trusts all hosts. In some scenarios like wireless networks,
+    multicast can be inefficient. In other scenarios like public access networks,
+    hosts may not be trustable. Consequently, ND issues may happen in various scenarios.
+    The issues and solutions are documented in more than 30 RFCs. It is difficult
+    to keep track of all these issues and solutions, and how the various solutions
+    fit together. Therefore, deployment guidelines are needed. This document firstly
+    summarizes the known ND issues and optimization solutions into a one-stop reference.
+    Analyzing these solutions reveals an insight: isolating hosts is effective in
+    solving ND issues. Four isolation methods are proposed and their applicability
+    is discussed. Guidelines are then described for selecting a suitable isolation
+    method based on the deployment scenario.</p>"
   language:
   - en
   script:
@@ -53,4 +49,14 @@ relation:
       primary: true
     formattedref:
       content: draft-xiao-v6ops-nd-deployment-guidelines-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-xiao-v6ops-nd-deployment-guidelines-02
+    docid:
+    - id: draft-xiao-v6ops-nd-deployment-guidelines-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-xiao-v6ops-nd-deployment-guidelines-02
       format: text/plain

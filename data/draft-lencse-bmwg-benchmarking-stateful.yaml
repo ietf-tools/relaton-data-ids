@@ -17,9 +17,14 @@ abstract:
     devices. RFC 5180 addressed IPv6 specificities and it also provided a technology
     update, but excluded IPv6 transition technologies. RFC 8219 addressed IPv6 transition
     technologies, including stateful NAT64. However, none of them discussed how to
-    apply RFC 4814 pseudorandom port numbers to any stateful NAT (NAT44, NAT64, NAT66)
-    technologies. We discuss why using pseudorandom port numbers with stateful NAT
-    gateways is a hard problem and recommend a solution.</p>"
+    apply RFC 4814 pseudorandom port numbers to any stateful NATxy (NAT44, NAT64,
+    NAT66) technologies. We discuss why using pseudorandom port numbers with stateful
+    NATxy gateways is a difficult problem. We recommend a solution limiting the port
+    number ranges and using two phases: the preliminary phase and the real test phase.
+    We show how the classic performance measurement procedures (e.g. throughput, frame
+    loss rate, latency, etc.) can be carried out. We also define new performance metrics
+    and measurement procedures for maximum connection establishment rate, connection
+    tear down rate and connection tracking table capacity measurements.</p>"
   language:
   - en
   script:
@@ -65,4 +70,14 @@ relation:
       primary: true
     formattedref:
       content: draft-lencse-bmwg-benchmarking-stateful-03
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-lencse-bmwg-benchmarking-stateful-04
+    docid:
+    - id: draft-lencse-bmwg-benchmarking-stateful-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-lencse-bmwg-benchmarking-stateful-04
       format: text/plain
