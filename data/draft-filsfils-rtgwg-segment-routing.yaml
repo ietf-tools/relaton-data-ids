@@ -1,7 +1,7 @@
 ---
 id: draft-filsfils-rtgwg-segment-routing
 title:
-- content: Segment Routing Use Cases
+- content: Segment Routing Architecture
   language:
   - en
   script:
@@ -12,15 +12,16 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>Segment Routing (SR) leverages the source routing and tunneling paradigms.
-    A node steers a packet through a controlled set of instructions, called segments,
-    by prepending the packet with an SR header. A segment can represent any instruction,
-    topological or service-based. SR allows to enforce a flow through any topological
+- content: "<p>Segment Routing (SR) leverages the source routing paradigm. A node
+    steers a packet through a controlled set of instructions, called segments, by
+    prepending the packet with an SR header. A segment can represent any instruction,
+    topological or service-based. A segment can have a local semantic to an SR node
+    or global within an SR domain. SR allows to enforce a flow through any topological
     path and service chain while maintaining per-flow state only at the ingress node
-    of the SR domain. The Segment Routing architecture can be directly applied to
-    the MPLS dataplane with no change on the forwarding plane. It requires minor extension
-    to the existing link-state routing protocols. Segment Routing can also be applied
-    to IPv6 with a new type of routing extension header.</p>"
+    to the SR domain. The Segment Routing architecture can be directly applied to
+    the MPLS dataplane with no change on the forwarding plane. IGP-based segments
+    require minor extension to the existing link-state routing protocols. Segment
+    Routing can also be applied to IPv6 with a new type of routing extension header.</p>"
   language:
   - en
   script:
@@ -39,16 +40,6 @@ relation:
       format: text/plain
 - type: includes
   bibitem:
-    id: draft-filsfils-rtgwg-segment-routing-use-cases-00
-    docid:
-    - id: draft-filsfils-rtgwg-segment-routing-use-cases-00
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-filsfils-rtgwg-segment-routing-use-cases-00
-      format: text/plain
-- type: includes
-  bibitem:
     id: draft-filsfils-rtgwg-segment-routing-01
     docid:
     - id: draft-filsfils-rtgwg-segment-routing-01
@@ -57,23 +48,4 @@ relation:
     formattedref:
       content: draft-filsfils-rtgwg-segment-routing-01
       format: text/plain
-- type: includes
-  bibitem:
-    id: draft-filsfils-rtgwg-segment-routing-use-cases-01
-    docid:
-    - id: draft-filsfils-rtgwg-segment-routing-use-cases-01
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-filsfils-rtgwg-segment-routing-use-cases-01
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-filsfils-rtgwg-segment-routing-use-cases-02
-    docid:
-    - id: draft-filsfils-rtgwg-segment-routing-use-cases-02
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-filsfils-rtgwg-segment-routing-use-cases-02
-      format: text/plain
+fetched: '2022-07-02'

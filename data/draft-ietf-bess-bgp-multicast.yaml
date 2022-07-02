@@ -1,7 +1,7 @@
 ---
 id: draft-ietf-bess-bgp-multicast
 title:
-- content: Controller Based BGP Multicast Signaling
+- content: BGP Based Multicast
   language:
   - en
   script:
@@ -12,14 +12,16 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document specifies a way that one or more centralized controllers
-    can use BGP to set up multicast distribution trees (identified by either IP source/destination
-    address pair, mLDP FEC, or SR-P2MP Tree-ID) in a network. Since the controllers
-    calculate the trees, they can use sophisticated algorithms and constraints to
-    achieve traffic engineering. The controllers directly signal dynamic replication
-    state to tree nodes, leading to very simple multicast control plane on the tree
-    nodes, as if they were using static routes. This can be used for both underlay
-    and overlay multicast trees, including replacing BGP-MVPN signaling.</p>"
+- content: "<p>This document specifies a BGP address family and related procedures
+    that allow BGP to be used for setting up multicast distribution trees. This document
+    also specifies procedures that enable BGP to be used for multicast source discovery,
+    and for showing interest in receiving particular multicast flows. Taken together,
+    these procedures allow BGP to be used as a replacement for other multicast routing
+    protocols, such as PIM or mLDP. The BGP procedures specified here are based on
+    the BGP multicast procedures that were originally designed for use by providers
+    of Multicast Virtual Private Network service. This document also describes how
+    various signaling mechanisms can be used to set up end-to-end inter-region multiast
+    trees.</p>"
   language:
   - en
   script:
@@ -38,16 +40,6 @@ relation:
       format: text/plain
 - type: includes
   bibitem:
-    id: draft-ietf-bess-bgp-multicast-controller-00
-    docid:
-    - id: draft-ietf-bess-bgp-multicast-controller-00
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-bess-bgp-multicast-controller-00
-      format: text/plain
-- type: includes
-  bibitem:
     id: draft-ietf-bess-bgp-multicast-01
     docid:
     - id: draft-ietf-bess-bgp-multicast-01
@@ -55,16 +47,6 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-bess-bgp-multicast-01
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-bess-bgp-multicast-controller-01
-    docid:
-    - id: draft-ietf-bess-bgp-multicast-controller-01
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-bess-bgp-multicast-controller-01
       format: text/plain
 - type: includes
   bibitem:
@@ -78,16 +60,6 @@ relation:
       format: text/plain
 - type: includes
   bibitem:
-    id: draft-ietf-bess-bgp-multicast-controller-02
-    docid:
-    - id: draft-ietf-bess-bgp-multicast-controller-02
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-bess-bgp-multicast-controller-02
-      format: text/plain
-- type: includes
-  bibitem:
     id: draft-ietf-bess-bgp-multicast-03
     docid:
     - id: draft-ietf-bess-bgp-multicast-03
@@ -95,16 +67,6 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-bess-bgp-multicast-03
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-bess-bgp-multicast-controller-03
-    docid:
-    - id: draft-ietf-bess-bgp-multicast-controller-03
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-bess-bgp-multicast-controller-03
       format: text/plain
 - type: includes
   bibitem:
@@ -116,63 +78,4 @@ relation:
     formattedref:
       content: draft-ietf-bess-bgp-multicast-04
       format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-bess-bgp-multicast-controller-04
-    docid:
-    - id: draft-ietf-bess-bgp-multicast-controller-04
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-bess-bgp-multicast-controller-04
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-bess-bgp-multicast-controller-05
-    docid:
-    - id: draft-ietf-bess-bgp-multicast-controller-05
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-bess-bgp-multicast-controller-05
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-bess-bgp-multicast-controller-06
-    docid:
-    - id: draft-ietf-bess-bgp-multicast-controller-06
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-bess-bgp-multicast-controller-06
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-bess-bgp-multicast-controller-07
-    docid:
-    - id: draft-ietf-bess-bgp-multicast-controller-07
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-bess-bgp-multicast-controller-07
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-bess-bgp-multicast-controller-08
-    docid:
-    - id: draft-ietf-bess-bgp-multicast-controller-08
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-bess-bgp-multicast-controller-08
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-bess-bgp-multicast-controller-09
-    docid:
-    - id: draft-ietf-bess-bgp-multicast-controller-09
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-bess-bgp-multicast-controller-09
-      format: text/plain
+fetched: '2022-07-02'

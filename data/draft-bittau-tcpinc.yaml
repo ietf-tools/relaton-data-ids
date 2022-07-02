@@ -12,16 +12,20 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document specifies tcpcrypt, a cryptographic protocol that protects
-    TCP payload data and is negotiated by means of the TCP Encryption Negotiation
-    Option (TCP-ENO) [I-D.ietf-tcpinc-tcpeno]. Tcpcrypt coexists with middleboxes
-    by tolerating resegmentation, NATs, and other manipulations of the TCP header.
-    The protocol is self-contained and specifically tailored to TCP implementations,
-    which often reside in kernels or other environments in which large external software
-    dependencies can be undesirable. Because of option size restrictions, the protocol
-    requires one additional one-way message latency to perform key exchange. However,
-    this cost is avoided between two hosts that have recently established a previous
-    tcpcrypt connection.</p>"
+- content: "<p>This document presents tcpcrypt, a TCP extension for cryptographically
+    protecting TCP segments. Tcpcrypt maintains the confidentiality of data transmitted
+    in TCP segments against a passive eavesdropper. It protects connections against
+    denial-of-service attacks involving desynchronizing of sequence numbers, and when
+    enabled, against forged RST segments. Finally, applications that perform authentication
+    can obtain end-to-end confidentiality and integrity guarantees by tying authentication
+    to tcpcrypt Session ID values. The extension defines two new TCP options, CRYPT
+    and MAC, which are designed to provide compatible interworking with TCPs that
+    do not implement tcpcrypt. The CRYPT option allows hosts to negotiate the use
+    of tcpcrypt and establish shared secret encryption keys. The MAC option carries
+    a message authentication code with which hosts can verify the integrity of transmitted
+    TCP segments. Tcpcrypt is designed to require relatively low overhead, particularly
+    at servers, so as to be useful even in the case of servers accepting many TCP
+    connections per second.</p>"
   language:
   - en
   script:
@@ -40,46 +44,6 @@ relation:
       format: text/plain
 - type: includes
   bibitem:
-    id: draft-bittau-tcpinc-api-00
-    docid:
-    - id: draft-bittau-tcpinc-api-00
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-bittau-tcpinc-api-00
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-bittau-tcpinc-bcp-00
-    docid:
-    - id: draft-bittau-tcpinc-bcp-00
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-bittau-tcpinc-bcp-00
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-bittau-tcpinc-tcpcrypt-00
-    docid:
-    - id: draft-bittau-tcpinc-tcpcrypt-00
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-bittau-tcpinc-tcpcrypt-00
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-bittau-tcpinc-tcpeno-00
-    docid:
-    - id: draft-bittau-tcpinc-tcpeno-00
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-bittau-tcpinc-tcpeno-00
-      format: text/plain
-- type: includes
-  bibitem:
     id: draft-bittau-tcpinc-01
     docid:
     - id: draft-bittau-tcpinc-01
@@ -88,73 +52,4 @@ relation:
     formattedref:
       content: draft-bittau-tcpinc-01
       format: text/plain
-- type: includes
-  bibitem:
-    id: draft-bittau-tcpinc-api-01
-    docid:
-    - id: draft-bittau-tcpinc-api-01
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-bittau-tcpinc-api-01
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-bittau-tcpinc-tcpcrypt-01
-    docid:
-    - id: draft-bittau-tcpinc-tcpcrypt-01
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-bittau-tcpinc-tcpcrypt-01
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-bittau-tcpinc-tcpeno-01
-    docid:
-    - id: draft-bittau-tcpinc-tcpeno-01
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-bittau-tcpinc-tcpeno-01
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-bittau-tcpinc-tcpcrypt-02
-    docid:
-    - id: draft-bittau-tcpinc-tcpcrypt-02
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-bittau-tcpinc-tcpcrypt-02
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-bittau-tcpinc-tcpeno-02
-    docid:
-    - id: draft-bittau-tcpinc-tcpeno-02
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-bittau-tcpinc-tcpeno-02
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-bittau-tcpinc-tcpcrypt-03
-    docid:
-    - id: draft-bittau-tcpinc-tcpcrypt-03
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-bittau-tcpinc-tcpcrypt-03
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-bittau-tcpinc-tcpcrypt-04
-    docid:
-    - id: draft-bittau-tcpinc-tcpcrypt-04
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-bittau-tcpinc-tcpcrypt-04
-      format: text/plain
+fetched: '2022-07-02'

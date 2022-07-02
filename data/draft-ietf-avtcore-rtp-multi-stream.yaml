@@ -1,8 +1,7 @@
 ---
 id: draft-ietf-avtcore-rtp-multi-stream
 title:
-- content: 'Sending Multiple RTP Streams in a Single RTP Session: Grouping RTP Control
-    Protocol (RTCP) Reception Statistics and Other Feedback'
+- content: Sending Multiple RTP Streams in a Single RTP Session
   language:
   - en
   script:
@@ -13,14 +12,13 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>RTP allows multiple RTP streams to be sent in a single session but
-    requires each Synchronization Source (SSRC) to send RTP Control Protocol (RTCP)
-    reception quality reports for every other SSRC visible in the session. This causes
-    the number of RTCP reception reports to grow with the number of SSRCs, rather
-    than the number of endpoints. In many cases, most of these RTCP reception reports
-    are unnecessary, since all SSRCs of an endpoint are normally co-located and see
-    the same reception quality. This memo defines a Reporting Group extension to RTCP
-    to reduce the reporting overhead in such scenarios.</p>"
+- content: "<p>This memo expands and clarifies the behavior of Real-time Transport
+    Protocol (RTP) endpoints that use multiple synchronization sources (SSRCs). This
+    occurs, for example, when an endpoint sends multiple RTP streams in a single RTP
+    session. This memo updates RFC 3550 with regard to handling multiple SSRCs per
+    endpoint in RTP sessions, with a particular focus on RTP Control Protocol (RTCP)
+    behavior. It also updates RFC 4585 to change and clarify the calculation of the
+    timeout of SSRCs and the inclusion of feedback messages.</p>"
   language:
   - en
   script:
@@ -39,16 +37,6 @@ relation:
       format: text/plain
 - type: includes
   bibitem:
-    id: draft-ietf-avtcore-rtp-multi-stream-optimisation-00
-    docid:
-    - id: draft-ietf-avtcore-rtp-multi-stream-optimisation-00
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-avtcore-rtp-multi-stream-optimisation-00
-      format: text/plain
-- type: includes
-  bibitem:
     id: draft-ietf-avtcore-rtp-multi-stream-01
     docid:
     - id: draft-ietf-avtcore-rtp-multi-stream-01
@@ -56,16 +44,6 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-avtcore-rtp-multi-stream-01
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-avtcore-rtp-multi-stream-optimisation-01
-    docid:
-    - id: draft-ietf-avtcore-rtp-multi-stream-optimisation-01
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-avtcore-rtp-multi-stream-optimisation-01
       format: text/plain
 - type: includes
   bibitem:
@@ -79,16 +57,6 @@ relation:
       format: text/plain
 - type: includes
   bibitem:
-    id: draft-ietf-avtcore-rtp-multi-stream-optimisation-02
-    docid:
-    - id: draft-ietf-avtcore-rtp-multi-stream-optimisation-02
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-avtcore-rtp-multi-stream-optimisation-02
-      format: text/plain
-- type: includes
-  bibitem:
     id: draft-ietf-avtcore-rtp-multi-stream-03
     docid:
     - id: draft-ietf-avtcore-rtp-multi-stream-03
@@ -96,16 +64,6 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-avtcore-rtp-multi-stream-03
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-avtcore-rtp-multi-stream-optimisation-03
-    docid:
-    - id: draft-ietf-avtcore-rtp-multi-stream-optimisation-03
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-avtcore-rtp-multi-stream-optimisation-03
       format: text/plain
 - type: includes
   bibitem:
@@ -119,16 +77,6 @@ relation:
       format: text/plain
 - type: includes
   bibitem:
-    id: draft-ietf-avtcore-rtp-multi-stream-optimisation-04
-    docid:
-    - id: draft-ietf-avtcore-rtp-multi-stream-optimisation-04
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-avtcore-rtp-multi-stream-optimisation-04
-      format: text/plain
-- type: includes
-  bibitem:
     id: draft-ietf-avtcore-rtp-multi-stream-05
     docid:
     - id: draft-ietf-avtcore-rtp-multi-stream-05
@@ -136,16 +84,6 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-avtcore-rtp-multi-stream-05
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-avtcore-rtp-multi-stream-optimisation-05
-    docid:
-    - id: draft-ietf-avtcore-rtp-multi-stream-optimisation-05
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-avtcore-rtp-multi-stream-optimisation-05
       format: text/plain
 - type: includes
   bibitem:
@@ -159,16 +97,6 @@ relation:
       format: text/plain
 - type: includes
   bibitem:
-    id: draft-ietf-avtcore-rtp-multi-stream-optimisation-06
-    docid:
-    - id: draft-ietf-avtcore-rtp-multi-stream-optimisation-06
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-avtcore-rtp-multi-stream-optimisation-06
-      format: text/plain
-- type: includes
-  bibitem:
     id: draft-ietf-avtcore-rtp-multi-stream-07
     docid:
     - id: draft-ietf-avtcore-rtp-multi-stream-07
@@ -176,16 +104,6 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-avtcore-rtp-multi-stream-07
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-avtcore-rtp-multi-stream-optimisation-07
-    docid:
-    - id: draft-ietf-avtcore-rtp-multi-stream-optimisation-07
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-avtcore-rtp-multi-stream-optimisation-07
       format: text/plain
 - type: includes
   bibitem:
@@ -199,16 +117,6 @@ relation:
       format: text/plain
 - type: includes
   bibitem:
-    id: draft-ietf-avtcore-rtp-multi-stream-optimisation-08
-    docid:
-    - id: draft-ietf-avtcore-rtp-multi-stream-optimisation-08
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-avtcore-rtp-multi-stream-optimisation-08
-      format: text/plain
-- type: includes
-  bibitem:
     id: draft-ietf-avtcore-rtp-multi-stream-09
     docid:
     - id: draft-ietf-avtcore-rtp-multi-stream-09
@@ -216,16 +124,6 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-avtcore-rtp-multi-stream-09
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-avtcore-rtp-multi-stream-optimisation-09
-    docid:
-    - id: draft-ietf-avtcore-rtp-multi-stream-optimisation-09
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-avtcore-rtp-multi-stream-optimisation-09
       format: text/plain
 - type: includes
   bibitem:
@@ -239,16 +137,6 @@ relation:
       format: text/plain
 - type: includes
   bibitem:
-    id: draft-ietf-avtcore-rtp-multi-stream-optimisation-10
-    docid:
-    - id: draft-ietf-avtcore-rtp-multi-stream-optimisation-10
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-avtcore-rtp-multi-stream-optimisation-10
-      format: text/plain
-- type: includes
-  bibitem:
     id: draft-ietf-avtcore-rtp-multi-stream-11
     docid:
     - id: draft-ietf-avtcore-rtp-multi-stream-11
@@ -257,23 +145,4 @@ relation:
     formattedref:
       content: draft-ietf-avtcore-rtp-multi-stream-11
       format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-avtcore-rtp-multi-stream-optimisation-11
-    docid:
-    - id: draft-ietf-avtcore-rtp-multi-stream-optimisation-11
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-avtcore-rtp-multi-stream-optimisation-11
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-avtcore-rtp-multi-stream-optimisation-12
-    docid:
-    - id: draft-ietf-avtcore-rtp-multi-stream-optimisation-12
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-avtcore-rtp-multi-stream-optimisation-12
-      format: text/plain
+fetched: '2022-07-02'

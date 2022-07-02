@@ -1,8 +1,7 @@
 ---
 id: draft-ietf-bess-mvpn-bidir
 title:
-- content: Simulating Partial Mesh of Multipoint-to-Multipoint (MP2MP) Provider Tunnels
-    with Ingress Replication
+- content: 'Multicast Virtual Private Network (MVPN): Using Bidirectional P-Tunnels'
   language:
   - en
   script:
@@ -13,12 +12,19 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: <p>RFC 6513 ("Multicast in MPLS/BGP IP VPNs") describes a method to support
-    bidirectional customer multicast flows using a partial mesh of Multipoint-to-Multipoint
-    (MP2MP) tunnels. This document specifies how a partial mesh of MP2MP tunnels can
-    be simulated using Ingress Replication. This solution enables a service provider
-    to use Ingress Replication to offer transparent bidirectional multicast service
-    to its VPN customers.</p>
+- content: <p>A set of prior RFCs specify procedures for supporting multicast in BGP/MPLS
+    IP VPNs. These procedures allow customer multicast data to travel across a service
+    provider's backbone network through a set of multicast tunnels. The tunnels are
+    advertised in certain BGP multicast auto-discovery routes, by means of a BGP attribute
+    known as the "Provider Multicast Service Interface (PMSI) Tunnel" attribute. Encodings
+    have been defined that allow the PMSI Tunnel attribute to identify bidirectional
+    (multipoint-to-multipoint) multicast distribution trees. However, the prior RFCs
+    do not provide all the necessary procedures for using bidirectional tunnels to
+    support multicast VPNs. This document updates RFCs 6513, 6514, and 6625 by specifying
+    those procedures. In particular, it specifies the procedures for assigning customer
+    multicast flows (unidirectional or bidirectional) to specific bidirectional tunnels
+    in the provider backbone, for advertising such assignments, and for determining
+    which flows have been assigned to which tunnels.</p>
   language:
   - en
   script:
@@ -37,16 +43,6 @@ relation:
       format: text/plain
 - type: includes
   bibitem:
-    id: draft-ietf-bess-mvpn-bidir-ingress-replication-00
-    docid:
-    - id: draft-ietf-bess-mvpn-bidir-ingress-replication-00
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-bess-mvpn-bidir-ingress-replication-00
-      format: text/plain
-- type: includes
-  bibitem:
     id: draft-ietf-bess-mvpn-bidir-01
     docid:
     - id: draft-ietf-bess-mvpn-bidir-01
@@ -54,16 +50,6 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-bess-mvpn-bidir-01
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-bess-mvpn-bidir-ingress-replication-01
-    docid:
-    - id: draft-ietf-bess-mvpn-bidir-ingress-replication-01
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-bess-mvpn-bidir-ingress-replication-01
       format: text/plain
 - type: includes
   bibitem:
@@ -77,16 +63,6 @@ relation:
       format: text/plain
 - type: includes
   bibitem:
-    id: draft-ietf-bess-mvpn-bidir-ingress-replication-02
-    docid:
-    - id: draft-ietf-bess-mvpn-bidir-ingress-replication-02
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-bess-mvpn-bidir-ingress-replication-02
-      format: text/plain
-- type: includes
-  bibitem:
     id: draft-ietf-bess-mvpn-bidir-03
     docid:
     - id: draft-ietf-bess-mvpn-bidir-03
@@ -94,16 +70,6 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-bess-mvpn-bidir-03
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-bess-mvpn-bidir-ingress-replication-03
-    docid:
-    - id: draft-ietf-bess-mvpn-bidir-ingress-replication-03
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-bess-mvpn-bidir-ingress-replication-03
       format: text/plain
 - type: includes
   bibitem:
@@ -115,13 +81,4 @@ relation:
     formattedref:
       content: draft-ietf-bess-mvpn-bidir-04
       format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-bess-mvpn-bidir-ingress-replication-04
-    docid:
-    - id: draft-ietf-bess-mvpn-bidir-ingress-replication-04
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-bess-mvpn-bidir-ingress-replication-04
-      format: text/plain
+fetched: '2022-07-02'

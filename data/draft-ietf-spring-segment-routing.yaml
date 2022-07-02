@@ -1,7 +1,7 @@
 ---
 id: draft-ietf-spring-segment-routing
 title:
-- content: Segment Routing Policy Architecture
+- content: Segment Routing Architecture
   language:
   - en
   script:
@@ -12,13 +12,21 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>Segment Routing (SR) allows a node to steer a packet flow along any
-    path. Intermediate per-path states are eliminated thanks to source routing. SR
-    Policy is an ordered list of segments (i.e., instructions) that represent a source-routed
-    policy. Packet flows are steered into a SR Policy on a node where it is instantiated
-    called a headend node. The packets steered into an SR Policy carry an ordered
-    list of segments associated with that SR Policy. This document updates RFC8402
-    as it details the concepts of SR Policy and steering into an SR Policy.</p>"
+- content: <p>Segment Routing (SR) leverages the source routing paradigm. A node steers
+    a packet through an ordered list of instructions, called "segments". A segment
+    can represent any instruction, topological or service based. A segment can have
+    a semantic local to an SR node or global within an SR domain. SR provides a mechanism
+    that allows a flow to be restricted to a specific topological path, while maintaining
+    per-flow state only at the ingress node(s) to the SR domain. SR can be directly
+    applied to the MPLS architecture with no change to the forwarding plane. A segment
+    is encoded as an MPLS label. An ordered list of segments is encoded as a stack
+    of labels. The segment to process is on the top of the stack. Upon completion
+    of a segment, the related label is popped from the stack. SR can be applied to
+    the IPv6 architecture, with a new type of routing header. A segment is encoded
+    as an IPv6 address. An ordered list of segments is encoded as an ordered list
+    of IPv6 addresses in the routing header. The active segment is indicated by the
+    Destination Address (DA) of the packet. The next active segment is indicated by
+    a pointer in the new routing header.</p>
   language:
   - en
   script:
@@ -37,56 +45,6 @@ relation:
       format: text/plain
 - type: includes
   bibitem:
-    id: draft-ietf-spring-segment-routing-central-epe-00
-    docid:
-    - id: draft-ietf-spring-segment-routing-central-epe-00
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-central-epe-00
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-ldp-interop-00
-    docid:
-    - id: draft-ietf-spring-segment-routing-ldp-interop-00
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-ldp-interop-00
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-mpls-00
-    docid:
-    - id: draft-ietf-spring-segment-routing-mpls-00
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-mpls-00
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-msdc-00
-    docid:
-    - id: draft-ietf-spring-segment-routing-msdc-00
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-msdc-00
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-policy-00
-    docid:
-    - id: draft-ietf-spring-segment-routing-policy-00
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-policy-00
-      format: text/plain
-- type: includes
-  bibitem:
     id: draft-ietf-spring-segment-routing-01
     docid:
     - id: draft-ietf-spring-segment-routing-01
@@ -94,56 +52,6 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-spring-segment-routing-01
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-central-epe-01
-    docid:
-    - id: draft-ietf-spring-segment-routing-central-epe-01
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-central-epe-01
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-ldp-interop-01
-    docid:
-    - id: draft-ietf-spring-segment-routing-ldp-interop-01
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-ldp-interop-01
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-mpls-01
-    docid:
-    - id: draft-ietf-spring-segment-routing-mpls-01
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-mpls-01
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-msdc-01
-    docid:
-    - id: draft-ietf-spring-segment-routing-msdc-01
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-msdc-01
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-policy-01
-    docid:
-    - id: draft-ietf-spring-segment-routing-policy-01
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-policy-01
       format: text/plain
 - type: includes
   bibitem:
@@ -157,56 +65,6 @@ relation:
       format: text/plain
 - type: includes
   bibitem:
-    id: draft-ietf-spring-segment-routing-central-epe-02
-    docid:
-    - id: draft-ietf-spring-segment-routing-central-epe-02
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-central-epe-02
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-ldp-interop-02
-    docid:
-    - id: draft-ietf-spring-segment-routing-ldp-interop-02
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-ldp-interop-02
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-mpls-02
-    docid:
-    - id: draft-ietf-spring-segment-routing-mpls-02
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-mpls-02
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-msdc-02
-    docid:
-    - id: draft-ietf-spring-segment-routing-msdc-02
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-msdc-02
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-policy-02
-    docid:
-    - id: draft-ietf-spring-segment-routing-policy-02
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-policy-02
-      format: text/plain
-- type: includes
-  bibitem:
     id: draft-ietf-spring-segment-routing-03
     docid:
     - id: draft-ietf-spring-segment-routing-03
@@ -214,56 +72,6 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-spring-segment-routing-03
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-central-epe-03
-    docid:
-    - id: draft-ietf-spring-segment-routing-central-epe-03
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-central-epe-03
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-ldp-interop-03
-    docid:
-    - id: draft-ietf-spring-segment-routing-ldp-interop-03
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-ldp-interop-03
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-mpls-03
-    docid:
-    - id: draft-ietf-spring-segment-routing-mpls-03
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-mpls-03
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-msdc-03
-    docid:
-    - id: draft-ietf-spring-segment-routing-msdc-03
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-msdc-03
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-policy-03
-    docid:
-    - id: draft-ietf-spring-segment-routing-policy-03
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-policy-03
       format: text/plain
 - type: includes
   bibitem:
@@ -277,56 +85,6 @@ relation:
       format: text/plain
 - type: includes
   bibitem:
-    id: draft-ietf-spring-segment-routing-central-epe-04
-    docid:
-    - id: draft-ietf-spring-segment-routing-central-epe-04
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-central-epe-04
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-ldp-interop-04
-    docid:
-    - id: draft-ietf-spring-segment-routing-ldp-interop-04
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-ldp-interop-04
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-mpls-04
-    docid:
-    - id: draft-ietf-spring-segment-routing-mpls-04
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-mpls-04
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-msdc-04
-    docid:
-    - id: draft-ietf-spring-segment-routing-msdc-04
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-msdc-04
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-policy-04
-    docid:
-    - id: draft-ietf-spring-segment-routing-policy-04
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-policy-04
-      format: text/plain
-- type: includes
-  bibitem:
     id: draft-ietf-spring-segment-routing-05
     docid:
     - id: draft-ietf-spring-segment-routing-05
@@ -334,56 +92,6 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-spring-segment-routing-05
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-central-epe-05
-    docid:
-    - id: draft-ietf-spring-segment-routing-central-epe-05
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-central-epe-05
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-ldp-interop-05
-    docid:
-    - id: draft-ietf-spring-segment-routing-ldp-interop-05
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-ldp-interop-05
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-mpls-05
-    docid:
-    - id: draft-ietf-spring-segment-routing-mpls-05
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-mpls-05
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-msdc-05
-    docid:
-    - id: draft-ietf-spring-segment-routing-msdc-05
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-msdc-05
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-policy-05
-    docid:
-    - id: draft-ietf-spring-segment-routing-policy-05
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-policy-05
       format: text/plain
 - type: includes
   bibitem:
@@ -397,56 +105,6 @@ relation:
       format: text/plain
 - type: includes
   bibitem:
-    id: draft-ietf-spring-segment-routing-central-epe-06
-    docid:
-    - id: draft-ietf-spring-segment-routing-central-epe-06
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-central-epe-06
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-ldp-interop-06
-    docid:
-    - id: draft-ietf-spring-segment-routing-ldp-interop-06
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-ldp-interop-06
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-mpls-06
-    docid:
-    - id: draft-ietf-spring-segment-routing-mpls-06
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-mpls-06
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-msdc-06
-    docid:
-    - id: draft-ietf-spring-segment-routing-msdc-06
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-msdc-06
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-policy-06
-    docid:
-    - id: draft-ietf-spring-segment-routing-policy-06
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-policy-06
-      format: text/plain
-- type: includes
-  bibitem:
     id: draft-ietf-spring-segment-routing-07
     docid:
     - id: draft-ietf-spring-segment-routing-07
@@ -454,56 +112,6 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-spring-segment-routing-07
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-central-epe-07
-    docid:
-    - id: draft-ietf-spring-segment-routing-central-epe-07
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-central-epe-07
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-ldp-interop-07
-    docid:
-    - id: draft-ietf-spring-segment-routing-ldp-interop-07
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-ldp-interop-07
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-mpls-07
-    docid:
-    - id: draft-ietf-spring-segment-routing-mpls-07
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-mpls-07
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-msdc-07
-    docid:
-    - id: draft-ietf-spring-segment-routing-msdc-07
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-msdc-07
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-policy-07
-    docid:
-    - id: draft-ietf-spring-segment-routing-policy-07
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-policy-07
       format: text/plain
 - type: includes
   bibitem:
@@ -517,56 +125,6 @@ relation:
       format: text/plain
 - type: includes
   bibitem:
-    id: draft-ietf-spring-segment-routing-central-epe-08
-    docid:
-    - id: draft-ietf-spring-segment-routing-central-epe-08
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-central-epe-08
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-ldp-interop-08
-    docid:
-    - id: draft-ietf-spring-segment-routing-ldp-interop-08
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-ldp-interop-08
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-mpls-08
-    docid:
-    - id: draft-ietf-spring-segment-routing-mpls-08
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-mpls-08
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-msdc-08
-    docid:
-    - id: draft-ietf-spring-segment-routing-msdc-08
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-msdc-08
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-policy-08
-    docid:
-    - id: draft-ietf-spring-segment-routing-policy-08
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-policy-08
-      format: text/plain
-- type: includes
-  bibitem:
     id: draft-ietf-spring-segment-routing-09
     docid:
     - id: draft-ietf-spring-segment-routing-09
@@ -574,56 +132,6 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-spring-segment-routing-09
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-central-epe-09
-    docid:
-    - id: draft-ietf-spring-segment-routing-central-epe-09
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-central-epe-09
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-ldp-interop-09
-    docid:
-    - id: draft-ietf-spring-segment-routing-ldp-interop-09
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-ldp-interop-09
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-mpls-09
-    docid:
-    - id: draft-ietf-spring-segment-routing-mpls-09
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-mpls-09
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-msdc-09
-    docid:
-    - id: draft-ietf-spring-segment-routing-msdc-09
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-msdc-09
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-policy-09
-    docid:
-    - id: draft-ietf-spring-segment-routing-policy-09
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-policy-09
       format: text/plain
 - type: includes
   bibitem:
@@ -637,56 +145,6 @@ relation:
       format: text/plain
 - type: includes
   bibitem:
-    id: draft-ietf-spring-segment-routing-central-epe-10
-    docid:
-    - id: draft-ietf-spring-segment-routing-central-epe-10
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-central-epe-10
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-ldp-interop-10
-    docid:
-    - id: draft-ietf-spring-segment-routing-ldp-interop-10
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-ldp-interop-10
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-mpls-10
-    docid:
-    - id: draft-ietf-spring-segment-routing-mpls-10
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-mpls-10
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-msdc-10
-    docid:
-    - id: draft-ietf-spring-segment-routing-msdc-10
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-msdc-10
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-policy-10
-    docid:
-    - id: draft-ietf-spring-segment-routing-policy-10
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-policy-10
-      format: text/plain
-- type: includes
-  bibitem:
     id: draft-ietf-spring-segment-routing-11
     docid:
     - id: draft-ietf-spring-segment-routing-11
@@ -694,46 +152,6 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-spring-segment-routing-11
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-ldp-interop-11
-    docid:
-    - id: draft-ietf-spring-segment-routing-ldp-interop-11
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-ldp-interop-11
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-mpls-11
-    docid:
-    - id: draft-ietf-spring-segment-routing-mpls-11
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-mpls-11
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-msdc-11
-    docid:
-    - id: draft-ietf-spring-segment-routing-msdc-11
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-msdc-11
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-policy-11
-    docid:
-    - id: draft-ietf-spring-segment-routing-policy-11
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-policy-11
       format: text/plain
 - type: includes
   bibitem:
@@ -747,36 +165,6 @@ relation:
       format: text/plain
 - type: includes
   bibitem:
-    id: draft-ietf-spring-segment-routing-ldp-interop-12
-    docid:
-    - id: draft-ietf-spring-segment-routing-ldp-interop-12
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-ldp-interop-12
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-mpls-12
-    docid:
-    - id: draft-ietf-spring-segment-routing-mpls-12
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-mpls-12
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-policy-12
-    docid:
-    - id: draft-ietf-spring-segment-routing-policy-12
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-policy-12
-      format: text/plain
-- type: includes
-  bibitem:
     id: draft-ietf-spring-segment-routing-13
     docid:
     - id: draft-ietf-spring-segment-routing-13
@@ -784,36 +172,6 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-spring-segment-routing-13
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-ldp-interop-13
-    docid:
-    - id: draft-ietf-spring-segment-routing-ldp-interop-13
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-ldp-interop-13
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-mpls-13
-    docid:
-    - id: draft-ietf-spring-segment-routing-mpls-13
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-mpls-13
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-policy-13
-    docid:
-    - id: draft-ietf-spring-segment-routing-policy-13
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-policy-13
       format: text/plain
 - type: includes
   bibitem:
@@ -827,36 +185,6 @@ relation:
       format: text/plain
 - type: includes
   bibitem:
-    id: draft-ietf-spring-segment-routing-ldp-interop-14
-    docid:
-    - id: draft-ietf-spring-segment-routing-ldp-interop-14
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-ldp-interop-14
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-mpls-14
-    docid:
-    - id: draft-ietf-spring-segment-routing-mpls-14
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-mpls-14
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-policy-14
-    docid:
-    - id: draft-ietf-spring-segment-routing-policy-14
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-policy-14
-      format: text/plain
-- type: includes
-  bibitem:
     id: draft-ietf-spring-segment-routing-15
     docid:
     - id: draft-ietf-spring-segment-routing-15
@@ -865,173 +193,4 @@ relation:
     formattedref:
       content: draft-ietf-spring-segment-routing-15
       format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-ldp-interop-15
-    docid:
-    - id: draft-ietf-spring-segment-routing-ldp-interop-15
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-ldp-interop-15
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-mpls-15
-    docid:
-    - id: draft-ietf-spring-segment-routing-mpls-15
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-mpls-15
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-policy-15
-    docid:
-    - id: draft-ietf-spring-segment-routing-policy-15
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-policy-15
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-mpls-16
-    docid:
-    - id: draft-ietf-spring-segment-routing-mpls-16
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-mpls-16
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-policy-16
-    docid:
-    - id: draft-ietf-spring-segment-routing-policy-16
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-policy-16
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-mpls-17
-    docid:
-    - id: draft-ietf-spring-segment-routing-mpls-17
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-mpls-17
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-policy-17
-    docid:
-    - id: draft-ietf-spring-segment-routing-policy-17
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-policy-17
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-mpls-18
-    docid:
-    - id: draft-ietf-spring-segment-routing-mpls-18
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-mpls-18
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-policy-18
-    docid:
-    - id: draft-ietf-spring-segment-routing-policy-18
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-policy-18
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-mpls-19
-    docid:
-    - id: draft-ietf-spring-segment-routing-mpls-19
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-mpls-19
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-policy-19
-    docid:
-    - id: draft-ietf-spring-segment-routing-policy-19
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-policy-19
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-mpls-20
-    docid:
-    - id: draft-ietf-spring-segment-routing-mpls-20
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-mpls-20
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-policy-20
-    docid:
-    - id: draft-ietf-spring-segment-routing-policy-20
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-policy-20
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-mpls-21
-    docid:
-    - id: draft-ietf-spring-segment-routing-mpls-21
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-mpls-21
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-policy-21
-    docid:
-    - id: draft-ietf-spring-segment-routing-policy-21
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-policy-21
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-mpls-22
-    docid:
-    - id: draft-ietf-spring-segment-routing-mpls-22
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-mpls-22
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-spring-segment-routing-policy-22
-    docid:
-    - id: draft-ietf-spring-segment-routing-policy-22
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-routing-policy-22
-      format: text/plain
+fetched: '2022-07-02'

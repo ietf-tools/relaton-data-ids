@@ -1,8 +1,7 @@
 ---
 id: draft-schaad-cose
 title:
-- content: 'CBOR Object Signing and Encryption (COSE): Headers for carrying and referencing
-    X.509 certificates'
+- content: CBOR Encoded Message Syntax
   language:
   - en
   script:
@@ -13,12 +12,12 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>The CBOR Encoded Message (COSE) structure syntax uses the COSE Key
-    structure for placing keys in a message. This document extends the way that keys
-    can be identified and transported by providing parameters that refer to or contain
-    X.509 certificates in messages and in the COSE Key structure. This document defines
-    a set of hash algorithms for COSE. These algorithms are needed in order to have
-    X.509 certificates referred to by a thumbprint.</p>"
+- content: "<p>Concise Binary Object Representation (CBOR) is data format designed
+    for small code size and small message size. There is a need for the ability to
+    have the basic security services defined for this data format. This document specifies
+    how to do signatures, message authentication codes and encryption using this data
+    format. The work in this document is derived in part from the JSON web security
+    documents using the same parameters and algorithm identifiers as they do.</p>"
   language:
   - en
   script:
@@ -37,76 +36,6 @@ relation:
       format: text/plain
 - type: includes
   bibitem:
-    id: draft-schaad-cose-alg-00
-    docid:
-    - id: draft-schaad-cose-alg-00
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-schaad-cose-alg-00
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-schaad-cose-hash-algs-00
-    docid:
-    - id: draft-schaad-cose-hash-algs-00
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-schaad-cose-hash-algs-00
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-schaad-cose-more-algs-00
-    docid:
-    - id: draft-schaad-cose-more-algs-00
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-schaad-cose-more-algs-00
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-schaad-cose-msg-00
-    docid:
-    - id: draft-schaad-cose-msg-00
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-schaad-cose-msg-00
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-schaad-cose-rfc8152bis-algs-00
-    docid:
-    - id: draft-schaad-cose-rfc8152bis-algs-00
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-schaad-cose-rfc8152bis-algs-00
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-schaad-cose-rfc8152bis-struct-00
-    docid:
-    - id: draft-schaad-cose-rfc8152bis-struct-00
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-schaad-cose-rfc8152bis-struct-00
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-schaad-cose-x509-00
-    docid:
-    - id: draft-schaad-cose-x509-00
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-schaad-cose-x509-00
-      format: text/plain
-- type: includes
-  bibitem:
     id: draft-schaad-cose-01
     docid:
     - id: draft-schaad-cose-01
@@ -114,76 +43,6 @@ relation:
       primary: true
     formattedref:
       content: draft-schaad-cose-01
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-schaad-cose-alg-01
-    docid:
-    - id: draft-schaad-cose-alg-01
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-schaad-cose-alg-01
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-schaad-cose-hash-algs-01
-    docid:
-    - id: draft-schaad-cose-hash-algs-01
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-schaad-cose-hash-algs-01
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-schaad-cose-more-algs-01
-    docid:
-    - id: draft-schaad-cose-more-algs-01
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-schaad-cose-more-algs-01
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-schaad-cose-msg-01
-    docid:
-    - id: draft-schaad-cose-msg-01
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-schaad-cose-msg-01
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-schaad-cose-rfc8152bis-algs-01
-    docid:
-    - id: draft-schaad-cose-rfc8152bis-algs-01
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-schaad-cose-rfc8152bis-algs-01
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-schaad-cose-rfc8152bis-struct-01
-    docid:
-    - id: draft-schaad-cose-rfc8152bis-struct-01
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-schaad-cose-rfc8152bis-struct-01
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-schaad-cose-x509-01
-    docid:
-    - id: draft-schaad-cose-x509-01
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-schaad-cose-x509-01
       format: text/plain
 - type: includes
   bibitem:
@@ -195,23 +54,4 @@ relation:
     formattedref:
       content: draft-schaad-cose-02
       format: text/plain
-- type: includes
-  bibitem:
-    id: draft-schaad-cose-x509-02
-    docid:
-    - id: draft-schaad-cose-x509-02
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-schaad-cose-x509-02
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-schaad-cose-x509-03
-    docid:
-    - id: draft-schaad-cose-x509-03
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-schaad-cose-x509-03
-      format: text/plain
+fetched: '2022-07-02'

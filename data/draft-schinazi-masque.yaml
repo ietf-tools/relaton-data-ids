@@ -1,7 +1,7 @@
 ---
 id: draft-schinazi-masque
 title:
-- content: MASQUE Obfuscation
+- content: The MASQUE Protocol
   language:
   - en
   script:
@@ -12,19 +12,17 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document describes MASQUE Obfuscation. MASQUE Obfuscation is a
-    mechanism that allows co-locating and obfuscating networking applications behind
-    an HTTPS web server. The currently prevalent use-case is to allow running a proxy
-    or VPN server that is indistinguishable from an HTTPS server to any unauthenticated
-    observer. We do not expect major providers and CDNs to deploy this behind their
-    main TLS certificate, as they are not willing to take the risk of getting blocked,
-    as shown when domain fronting was blocked. An expected use would be for individuals
-    to enable this behind their personal websites via easy to configure open-source
-    software. This document is a straw-man proposal. It does not contain enough details
+- content: "<p>This document describes MASQUE (Multiplexed Application Substrate over
+    QUIC Encryption). MASQUE is a framework that allows concurrently running multiple
+    networking applications inside an HTTP/3 connection. For example, MASQUE can allow
+    a QUIC client to negotiate proxying capability with an HTTP/3 server, and subsequently
+    make use of this functionality while concurrently processing HTTP/3 requests and
+    responses. This document is a straw-man proposal. It does not contain enough details
     to implement the protocol, and is currently intended to spark discussions on the
     approach it is taking. Discussion of this work is encouraged to happen on the
-    MASQUE IETF mailing list masque@ietf.org or on the GitHub repository which contains
-    the draft: https://github.com/DavidSchinazi/masque-drafts.</p>"
+    MASQUE IETF mailing list masque@ietf.org (mailto:masque@ietf.org) or on the GitHub
+    repository which contains the draft: https://github.com/DavidSchinazi/masque-drafts
+    (https://github.com/DavidSchinazi/masque-drafts).</p>"
   language:
   - en
   script:
@@ -43,56 +41,6 @@ relation:
       format: text/plain
 - type: includes
   bibitem:
-    id: draft-schinazi-masque-connect-udp-00
-    docid:
-    - id: draft-schinazi-masque-connect-udp-00
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-schinazi-masque-connect-udp-00
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-schinazi-masque-connect-udp-ecn-00
-    docid:
-    - id: draft-schinazi-masque-connect-udp-ecn-00
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-schinazi-masque-connect-udp-ecn-00
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-schinazi-masque-h3-datagram-00
-    docid:
-    - id: draft-schinazi-masque-h3-datagram-00
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-schinazi-masque-h3-datagram-00
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-schinazi-masque-obfuscation-00
-    docid:
-    - id: draft-schinazi-masque-obfuscation-00
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-schinazi-masque-obfuscation-00
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-schinazi-masque-protocol-00
-    docid:
-    - id: draft-schinazi-masque-protocol-00
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-schinazi-masque-protocol-00
-      format: text/plain
-- type: includes
-  bibitem:
     id: draft-schinazi-masque-01
     docid:
     - id: draft-schinazi-masque-01
@@ -100,46 +48,6 @@ relation:
       primary: true
     formattedref:
       content: draft-schinazi-masque-01
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-schinazi-masque-connect-udp-ecn-01
-    docid:
-    - id: draft-schinazi-masque-connect-udp-ecn-01
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-schinazi-masque-connect-udp-ecn-01
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-schinazi-masque-h3-datagram-01
-    docid:
-    - id: draft-schinazi-masque-h3-datagram-01
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-schinazi-masque-h3-datagram-01
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-schinazi-masque-obfuscation-01
-    docid:
-    - id: draft-schinazi-masque-obfuscation-01
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-schinazi-masque-obfuscation-01
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-schinazi-masque-protocol-01
-    docid:
-    - id: draft-schinazi-masque-protocol-01
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-schinazi-masque-protocol-01
       format: text/plain
 - type: includes
   bibitem:
@@ -151,93 +59,4 @@ relation:
     formattedref:
       content: draft-schinazi-masque-02
       format: text/plain
-- type: includes
-  bibitem:
-    id: draft-schinazi-masque-connect-udp-ecn-02
-    docid:
-    - id: draft-schinazi-masque-connect-udp-ecn-02
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-schinazi-masque-connect-udp-ecn-02
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-schinazi-masque-h3-datagram-02
-    docid:
-    - id: draft-schinazi-masque-h3-datagram-02
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-schinazi-masque-h3-datagram-02
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-schinazi-masque-obfuscation-02
-    docid:
-    - id: draft-schinazi-masque-obfuscation-02
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-schinazi-masque-obfuscation-02
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-schinazi-masque-protocol-02
-    docid:
-    - id: draft-schinazi-masque-protocol-02
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-schinazi-masque-protocol-02
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-schinazi-masque-h3-datagram-03
-    docid:
-    - id: draft-schinazi-masque-h3-datagram-03
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-schinazi-masque-h3-datagram-03
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-schinazi-masque-obfuscation-03
-    docid:
-    - id: draft-schinazi-masque-obfuscation-03
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-schinazi-masque-obfuscation-03
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-schinazi-masque-protocol-03
-    docid:
-    - id: draft-schinazi-masque-protocol-03
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-schinazi-masque-protocol-03
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-schinazi-masque-h3-datagram-04
-    docid:
-    - id: draft-schinazi-masque-h3-datagram-04
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-schinazi-masque-h3-datagram-04
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-schinazi-masque-obfuscation-04
-    docid:
-    - id: draft-schinazi-masque-obfuscation-04
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-schinazi-masque-obfuscation-04
-      format: text/plain
+fetched: '2022-07-02'

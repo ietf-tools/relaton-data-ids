@@ -1,7 +1,7 @@
 ---
 id: draft-ietf-stir-passport
 title:
-- content: PASSporT Extension for Rich Call Data
+- content: 'PASSporT: Personal Assertion Token'
   language:
   - en
   script:
@@ -12,20 +12,17 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: <p>This document extends PASSporT, a token for conveying cryptographically-signed
-    call information about personal communications, to include rich meta-data about
-    a call and caller that can be signed and integrity protected, transmitted, and
-    subsequently rendered to the called party. This framework is intended to include
-    and extend caller and call specific information beyond human-readable display
-    name comparable to the "Caller ID" function common on the telephone network. The
-    JSON element defined for this purpose, Rich Call Data (RCD), is an extensible
-    object defined to either be used as part of STIR or with SIP Call-Info to include
-    related information about calls that helps people decide whether to answer an
-    incoming set of communications from another party. This signing of the RCD information
-    is also enhanced with a integrity mechanism that is designed to protect the authoring
-    and transport of this information between authoritative and non- authoritative
-    parties generating and signing the Rich Call Data for support of different usage
-    and content policies.</p>
+- content: "<p>This document defines a method for creating and validating a token
+    that cryptographically verifies an originating identity or, more generally, a
+    URI or telephone number representing the originator of personal communications.
+    The Personal Assertion Token, PASSporT, is cryptographically signed to protect
+    the integrity of the identity of the originator and to verify the assertion of
+    the identity information at the destination. The cryptographic signature is defined
+    with the intention that it can confidently verify the originating persona even
+    when the signature is sent to the destination party over an insecure channel.
+    PASSporT is particularly useful for many personal-communications applications
+    over IP networks and other multi-hop interconnection scenarios where the originating
+    and destination parties may not have a direct trusted relationship.</p>"
   language:
   - en
   script:
@@ -44,36 +41,6 @@ relation:
       format: text/plain
 - type: includes
   bibitem:
-    id: draft-ietf-stir-passport-divert-00
-    docid:
-    - id: draft-ietf-stir-passport-divert-00
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-stir-passport-divert-00
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-stir-passport-rcd-00
-    docid:
-    - id: draft-ietf-stir-passport-rcd-00
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-stir-passport-rcd-00
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-stir-passport-shaken-00
-    docid:
-    - id: draft-ietf-stir-passport-shaken-00
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-stir-passport-shaken-00
-      format: text/plain
-- type: includes
-  bibitem:
     id: draft-ietf-stir-passport-01
     docid:
     - id: draft-ietf-stir-passport-01
@@ -81,36 +48,6 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-stir-passport-01
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-stir-passport-divert-01
-    docid:
-    - id: draft-ietf-stir-passport-divert-01
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-stir-passport-divert-01
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-stir-passport-rcd-01
-    docid:
-    - id: draft-ietf-stir-passport-rcd-01
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-stir-passport-rcd-01
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-stir-passport-shaken-01
-    docid:
-    - id: draft-ietf-stir-passport-shaken-01
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-stir-passport-shaken-01
       format: text/plain
 - type: includes
   bibitem:
@@ -124,36 +61,6 @@ relation:
       format: text/plain
 - type: includes
   bibitem:
-    id: draft-ietf-stir-passport-divert-02
-    docid:
-    - id: draft-ietf-stir-passport-divert-02
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-stir-passport-divert-02
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-stir-passport-rcd-02
-    docid:
-    - id: draft-ietf-stir-passport-rcd-02
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-stir-passport-rcd-02
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-stir-passport-shaken-02
-    docid:
-    - id: draft-ietf-stir-passport-shaken-02
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-stir-passport-shaken-02
-      format: text/plain
-- type: includes
-  bibitem:
     id: draft-ietf-stir-passport-03
     docid:
     - id: draft-ietf-stir-passport-03
@@ -161,36 +68,6 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-stir-passport-03
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-stir-passport-divert-03
-    docid:
-    - id: draft-ietf-stir-passport-divert-03
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-stir-passport-divert-03
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-stir-passport-rcd-03
-    docid:
-    - id: draft-ietf-stir-passport-rcd-03
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-stir-passport-rcd-03
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-stir-passport-shaken-03
-    docid:
-    - id: draft-ietf-stir-passport-shaken-03
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-stir-passport-shaken-03
       format: text/plain
 - type: includes
   bibitem:
@@ -204,36 +81,6 @@ relation:
       format: text/plain
 - type: includes
   bibitem:
-    id: draft-ietf-stir-passport-divert-04
-    docid:
-    - id: draft-ietf-stir-passport-divert-04
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-stir-passport-divert-04
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-stir-passport-rcd-04
-    docid:
-    - id: draft-ietf-stir-passport-rcd-04
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-stir-passport-rcd-04
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-stir-passport-shaken-04
-    docid:
-    - id: draft-ietf-stir-passport-shaken-04
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-stir-passport-shaken-04
-      format: text/plain
-- type: includes
-  bibitem:
     id: draft-ietf-stir-passport-05
     docid:
     - id: draft-ietf-stir-passport-05
@@ -241,36 +88,6 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-stir-passport-05
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-stir-passport-divert-05
-    docid:
-    - id: draft-ietf-stir-passport-divert-05
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-stir-passport-divert-05
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-stir-passport-rcd-05
-    docid:
-    - id: draft-ietf-stir-passport-rcd-05
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-stir-passport-rcd-05
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-stir-passport-shaken-05
-    docid:
-    - id: draft-ietf-stir-passport-shaken-05
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-stir-passport-shaken-05
       format: text/plain
 - type: includes
   bibitem:
@@ -284,36 +101,6 @@ relation:
       format: text/plain
 - type: includes
   bibitem:
-    id: draft-ietf-stir-passport-divert-06
-    docid:
-    - id: draft-ietf-stir-passport-divert-06
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-stir-passport-divert-06
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-stir-passport-rcd-06
-    docid:
-    - id: draft-ietf-stir-passport-rcd-06
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-stir-passport-rcd-06
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-stir-passport-shaken-06
-    docid:
-    - id: draft-ietf-stir-passport-shaken-06
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-stir-passport-shaken-06
-      format: text/plain
-- type: includes
-  bibitem:
     id: draft-ietf-stir-passport-07
     docid:
     - id: draft-ietf-stir-passport-07
@@ -321,36 +108,6 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-stir-passport-07
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-stir-passport-divert-07
-    docid:
-    - id: draft-ietf-stir-passport-divert-07
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-stir-passport-divert-07
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-stir-passport-rcd-07
-    docid:
-    - id: draft-ietf-stir-passport-rcd-07
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-stir-passport-rcd-07
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-stir-passport-shaken-07
-    docid:
-    - id: draft-ietf-stir-passport-shaken-07
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-stir-passport-shaken-07
       format: text/plain
 - type: includes
   bibitem:
@@ -364,36 +121,6 @@ relation:
       format: text/plain
 - type: includes
   bibitem:
-    id: draft-ietf-stir-passport-divert-08
-    docid:
-    - id: draft-ietf-stir-passport-divert-08
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-stir-passport-divert-08
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-stir-passport-rcd-08
-    docid:
-    - id: draft-ietf-stir-passport-rcd-08
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-stir-passport-rcd-08
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-stir-passport-shaken-08
-    docid:
-    - id: draft-ietf-stir-passport-shaken-08
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-stir-passport-shaken-08
-      format: text/plain
-- type: includes
-  bibitem:
     id: draft-ietf-stir-passport-09
     docid:
     - id: draft-ietf-stir-passport-09
@@ -401,26 +128,6 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-stir-passport-09
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-stir-passport-divert-09
-    docid:
-    - id: draft-ietf-stir-passport-divert-09
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-stir-passport-divert-09
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-stir-passport-rcd-09
-    docid:
-    - id: draft-ietf-stir-passport-rcd-09
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-stir-passport-rcd-09
       format: text/plain
 - type: includes
   bibitem:
@@ -434,16 +141,6 @@ relation:
       format: text/plain
 - type: includes
   bibitem:
-    id: draft-ietf-stir-passport-rcd-10
-    docid:
-    - id: draft-ietf-stir-passport-rcd-10
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-stir-passport-rcd-10
-      format: text/plain
-- type: includes
-  bibitem:
     id: draft-ietf-stir-passport-11
     docid:
     - id: draft-ietf-stir-passport-11
@@ -452,73 +149,4 @@ relation:
     formattedref:
       content: draft-ietf-stir-passport-11
       format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-stir-passport-rcd-11
-    docid:
-    - id: draft-ietf-stir-passport-rcd-11
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-stir-passport-rcd-11
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-stir-passport-rcd-12
-    docid:
-    - id: draft-ietf-stir-passport-rcd-12
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-stir-passport-rcd-12
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-stir-passport-rcd-13
-    docid:
-    - id: draft-ietf-stir-passport-rcd-13
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-stir-passport-rcd-13
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-stir-passport-rcd-14
-    docid:
-    - id: draft-ietf-stir-passport-rcd-14
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-stir-passport-rcd-14
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-stir-passport-rcd-15
-    docid:
-    - id: draft-ietf-stir-passport-rcd-15
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-stir-passport-rcd-15
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-stir-passport-rcd-16
-    docid:
-    - id: draft-ietf-stir-passport-rcd-16
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-stir-passport-rcd-16
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-ietf-stir-passport-rcd-17
-    docid:
-    - id: draft-ietf-stir-passport-rcd-17
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-stir-passport-rcd-17
-      format: text/plain
+fetched: '2022-07-02'

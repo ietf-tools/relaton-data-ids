@@ -1,7 +1,7 @@
 ---
 id: draft-filsfils-spring-segment-routing
 title:
-- content: Segment Routing Policy Architecture
+- content: Segment Routing Architecture
   language:
   - en
   script:
@@ -12,12 +12,21 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>Segment Routing (SR) allows a headend node to steer a packet flow along
-    any path. Intermediate per-flow states are eliminated thanks to source routing.
-    The headend node steers a flow into an SR Policy. The header of a packet steered
-    in an SR Policy is augmented with the ordered list of segments associated with
-    that SR Policy. This document details the concepts of SR Policy and steering into
-    an SR Policy.</p>"
+- content: "<p>Segment Routing (SR) leverages the source routing paradigm. A node
+    steers a packet through an ordered list of instructions, called segments. A segment
+    can represent any instruction, topological or service-based. A segment can have
+    a local semantic to an SR node or global within an SR domain. SR allows to enforce
+    a flow through any topological path and service chain while maintaining per-flow
+    state only at the ingress node to the SR domain. Segment Routing can be directly
+    applied to the MPLS architecture with no change on the forwarding plane. A segment
+    is encoded as an MPLS label. An ordered list of segments is encoded as a stack
+    of labels. The segment to process is on the top of the stack. Upon completion
+    of a segment, the related label is popped from the stack. Segment Routing can
+    be applied to the IPv6 architecture, with a new type of routing extension header.
+    A segment is encoded as an IPv6 address. An ordered list of segments is encoded
+    as an ordered list of IPv6 addresses in the routing extension header. The segment
+    to process is indicated by a pointer in the routing extension header. Upon completion
+    of a segment, the pointer is incremented.</p>"
   language:
   - en
   script:
@@ -36,66 +45,6 @@ relation:
       format: text/plain
 - type: includes
   bibitem:
-    id: draft-filsfils-spring-segment-routing-central-epe-00
-    docid:
-    - id: draft-filsfils-spring-segment-routing-central-epe-00
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-filsfils-spring-segment-routing-central-epe-00
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-filsfils-spring-segment-routing-ldp-interop-00
-    docid:
-    - id: draft-filsfils-spring-segment-routing-ldp-interop-00
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-filsfils-spring-segment-routing-ldp-interop-00
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-filsfils-spring-segment-routing-mpls-00
-    docid:
-    - id: draft-filsfils-spring-segment-routing-mpls-00
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-filsfils-spring-segment-routing-mpls-00
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-filsfils-spring-segment-routing-msdc-00
-    docid:
-    - id: draft-filsfils-spring-segment-routing-msdc-00
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-filsfils-spring-segment-routing-msdc-00
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-filsfils-spring-segment-routing-policy-00
-    docid:
-    - id: draft-filsfils-spring-segment-routing-policy-00
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-filsfils-spring-segment-routing-policy-00
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-filsfils-spring-segment-routing-use-cases-00
-    docid:
-    - id: draft-filsfils-spring-segment-routing-use-cases-00
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-filsfils-spring-segment-routing-use-cases-00
-      format: text/plain
-- type: includes
-  bibitem:
     id: draft-filsfils-spring-segment-routing-01
     docid:
     - id: draft-filsfils-spring-segment-routing-01
@@ -103,66 +52,6 @@ relation:
       primary: true
     formattedref:
       content: draft-filsfils-spring-segment-routing-01
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-filsfils-spring-segment-routing-central-epe-01
-    docid:
-    - id: draft-filsfils-spring-segment-routing-central-epe-01
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-filsfils-spring-segment-routing-central-epe-01
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-filsfils-spring-segment-routing-ldp-interop-01
-    docid:
-    - id: draft-filsfils-spring-segment-routing-ldp-interop-01
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-filsfils-spring-segment-routing-ldp-interop-01
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-filsfils-spring-segment-routing-mpls-01
-    docid:
-    - id: draft-filsfils-spring-segment-routing-mpls-01
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-filsfils-spring-segment-routing-mpls-01
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-filsfils-spring-segment-routing-msdc-01
-    docid:
-    - id: draft-filsfils-spring-segment-routing-msdc-01
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-filsfils-spring-segment-routing-msdc-01
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-filsfils-spring-segment-routing-policy-01
-    docid:
-    - id: draft-filsfils-spring-segment-routing-policy-01
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-filsfils-spring-segment-routing-policy-01
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-filsfils-spring-segment-routing-use-cases-01
-    docid:
-    - id: draft-filsfils-spring-segment-routing-use-cases-01
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-filsfils-spring-segment-routing-use-cases-01
       format: text/plain
 - type: includes
   bibitem:
@@ -176,56 +65,6 @@ relation:
       format: text/plain
 - type: includes
   bibitem:
-    id: draft-filsfils-spring-segment-routing-central-epe-02
-    docid:
-    - id: draft-filsfils-spring-segment-routing-central-epe-02
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-filsfils-spring-segment-routing-central-epe-02
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-filsfils-spring-segment-routing-ldp-interop-02
-    docid:
-    - id: draft-filsfils-spring-segment-routing-ldp-interop-02
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-filsfils-spring-segment-routing-ldp-interop-02
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-filsfils-spring-segment-routing-mpls-02
-    docid:
-    - id: draft-filsfils-spring-segment-routing-mpls-02
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-filsfils-spring-segment-routing-mpls-02
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-filsfils-spring-segment-routing-msdc-02
-    docid:
-    - id: draft-filsfils-spring-segment-routing-msdc-02
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-filsfils-spring-segment-routing-msdc-02
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-filsfils-spring-segment-routing-policy-02
-    docid:
-    - id: draft-filsfils-spring-segment-routing-policy-02
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-filsfils-spring-segment-routing-policy-02
-      format: text/plain
-- type: includes
-  bibitem:
     id: draft-filsfils-spring-segment-routing-03
     docid:
     - id: draft-filsfils-spring-segment-routing-03
@@ -233,56 +72,6 @@ relation:
       primary: true
     formattedref:
       content: draft-filsfils-spring-segment-routing-03
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-filsfils-spring-segment-routing-central-epe-03
-    docid:
-    - id: draft-filsfils-spring-segment-routing-central-epe-03
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-filsfils-spring-segment-routing-central-epe-03
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-filsfils-spring-segment-routing-ldp-interop-03
-    docid:
-    - id: draft-filsfils-spring-segment-routing-ldp-interop-03
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-filsfils-spring-segment-routing-ldp-interop-03
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-filsfils-spring-segment-routing-mpls-03
-    docid:
-    - id: draft-filsfils-spring-segment-routing-mpls-03
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-filsfils-spring-segment-routing-mpls-03
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-filsfils-spring-segment-routing-msdc-03
-    docid:
-    - id: draft-filsfils-spring-segment-routing-msdc-03
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-filsfils-spring-segment-routing-msdc-03
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-filsfils-spring-segment-routing-policy-03
-    docid:
-    - id: draft-filsfils-spring-segment-routing-policy-03
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-filsfils-spring-segment-routing-policy-03
       format: text/plain
 - type: includes
   bibitem:
@@ -294,53 +83,4 @@ relation:
     formattedref:
       content: draft-filsfils-spring-segment-routing-04
       format: text/plain
-- type: includes
-  bibitem:
-    id: draft-filsfils-spring-segment-routing-central-epe-04
-    docid:
-    - id: draft-filsfils-spring-segment-routing-central-epe-04
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-filsfils-spring-segment-routing-central-epe-04
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-filsfils-spring-segment-routing-policy-04
-    docid:
-    - id: draft-filsfils-spring-segment-routing-policy-04
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-filsfils-spring-segment-routing-policy-04
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-filsfils-spring-segment-routing-central-epe-05
-    docid:
-    - id: draft-filsfils-spring-segment-routing-central-epe-05
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-filsfils-spring-segment-routing-central-epe-05
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-filsfils-spring-segment-routing-policy-05
-    docid:
-    - id: draft-filsfils-spring-segment-routing-policy-05
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-filsfils-spring-segment-routing-policy-05
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-filsfils-spring-segment-routing-policy-06
-    docid:
-    - id: draft-filsfils-spring-segment-routing-policy-06
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-filsfils-spring-segment-routing-policy-06
-      format: text/plain
+fetched: '2022-07-02'

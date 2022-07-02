@@ -1,7 +1,7 @@
 ---
 id: draft-shirasaki-nat444
 title:
-- content: NAT444 addressing models
+- content: NAT444
   language:
   - en
   script:
@@ -12,10 +12,16 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document describes addressing models of NAT444. There are some
-    addressing models of NAT444. The addressing models have some issues of network
-    behaviors, operations, and addressing. This document helps network architects
-    to use NAT444 after IPv4 address exhaustion.</p>"
+- content: "<p>This document describes one of the network models that are designed
+    for smooth transition to IPv6. It is called NAT444 model. NAT444 model is composed
+    of IPv6, and IPv4 with Carrier Grade (CGN). NAT444 is the only scheme not to require
+    replacing Customer Premises Equipment (CPE) even if IPv4 address exhausted. But
+    it must be noted that NAT444 has serious restrictions i.e. it limits the number
+    of sessions per CPE so that rich applications such as AJAX and RSS feed cannot
+    work well. Therefore, IPv6 which is free from such a difficulty has to be introduced
+    into the network at the same time. In other words, NAT444 is just a tool to make
+    IPv6 transition easy to be swallowed. It is designed for the days IPv4 and IPv6
+    co-existence.</p>"
   language:
   - en
   script:
@@ -42,23 +48,4 @@ relation:
     formattedref:
       content: draft-shirasaki-nat444-06
       format: text/plain
-- type: includes
-  bibitem:
-    id: draft-shirasaki-nat444-isp-shared-addr-07
-    docid:
-    - id: draft-shirasaki-nat444-isp-shared-addr-07
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-shirasaki-nat444-isp-shared-addr-07
-      format: text/plain
-- type: includes
-  bibitem:
-    id: draft-shirasaki-nat444-isp-shared-addr-08
-    docid:
-    - id: draft-shirasaki-nat444-isp-shared-addr-08
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-shirasaki-nat444-isp-shared-addr-08
-      format: text/plain
+fetched: '2022-07-02'
