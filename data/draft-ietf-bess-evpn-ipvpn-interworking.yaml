@@ -18,7 +18,12 @@ abstract:
     there is a need to specify the interworking aspects between BGP domains of type
     EVPN, VPN-IP and IP, so that the end to end tenant connectivity can be accomplished.
     This document specifies how EVPN interworks with VPN-IPv4/VPN-IPv6 and IPv4/IPv6
-    BGP families for inter-subnet forwarding.</p>"
+    BGP families for inter-subnet forwarding. The document also addresses the interconnect
+    of EVPN domains for Inter-Subnet Forwarding routes. In addition, this specification
+    defines a new BGP Path Attribute called D-PATH (Domain PATH) that protects gateways
+    against control plane loops. D-PATH modifies the BGP best path selection for multiprotocol
+    BGP routes of SAFI 1, 128 and EVPN IP Prefix routes, and therefore this document
+    updates [RFC4271].</p>"
   language:
   - en
   script:
@@ -95,4 +100,14 @@ relation:
     formattedref:
       content: draft-ietf-bess-evpn-ipvpn-interworking-06
       format: text/plain
-fetched: '2022-07-05'
+- type: includes
+  bibitem:
+    id: draft-ietf-bess-evpn-ipvpn-interworking-07
+    docid:
+    - id: draft-ietf-bess-evpn-ipvpn-interworking-07
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-bess-evpn-ipvpn-interworking-07
+      format: text/plain
+fetched: '2022-07-06'
