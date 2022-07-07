@@ -13,8 +13,10 @@ docid:
   primary: true
 abstract:
 - content: "<p>A BGP Speaker performing RPKI-based policy should not issue Route Refresh
-    to its neighbors when receiving new RPKI data. A method for avoiding doing so
-    is described.</p>"
+    to its neighbors because it has received new RPKI data. This document updates
+    RFC8481 by describing how to avoid doing so by either keeping a full Adj-RIB-In
+    or saving paths dropped due to ROV so they may be reevaluated with respect to
+    new RPKI data.</p>"
   language:
   - en
   script:
@@ -51,4 +53,14 @@ relation:
     formattedref:
       content: draft-ietf-sidrops-rov-no-rr-02
       format: text/plain
-fetched: '2022-07-06'
+- type: includes
+  bibitem:
+    id: draft-ietf-sidrops-rov-no-rr-03
+    docid:
+    - id: draft-ietf-sidrops-rov-no-rr-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-sidrops-rov-no-rr-03
+      format: text/plain
+fetched: '2022-07-07'
