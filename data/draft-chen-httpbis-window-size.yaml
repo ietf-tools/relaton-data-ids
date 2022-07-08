@@ -14,7 +14,10 @@ docid:
 abstract:
 - content: "<p>This document proposed the minimum value setting mechanism for HTTP2.0
     Window and Window_update, and a Window_update frame sending mechanism, used to
-    solve the gap caused by the inconsistency of the minimum value.</p>"
+    solve the gap caused by the inconsistency of the minimum value, f the use case
+    when window_size_increment in the window update frame less than 128 bytes and
+    the increased window size also less than 128 bytes, then network connection will
+    come to an error.</p>"
   language:
   - en
   script:
@@ -51,4 +54,14 @@ relation:
     formattedref:
       content: draft-chen-httpbis-window-size-02
       format: text/plain
-fetched: '2022-07-07'
+- type: includes
+  bibitem:
+    id: draft-chen-httpbis-window-size-03
+    docid:
+    - id: draft-chen-httpbis-window-size-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-chen-httpbis-window-size-03
+      format: text/plain
+fetched: '2022-07-08'
