@@ -1,0 +1,96 @@
+---
+id: draft-wang-bess-mvpn-upstream-df-selection-01
+title:
+- content: Multicast VPN Upstream Designated Forwarder Selection
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://www.ietf.org/archive/id/draft-wang-bess-mvpn-upstream-df-selection-01.txt
+  type: TXT
+type: standard
+docid:
+- id: draft-wang-bess-mvpn-upstream-df-selection-01
+  type: Internet-Draft
+  primary: true
+- id: I-D.wang-bess-mvpn-upstream-df-selection
+  type: IETF
+  scope: anchor
+docnumber: I-D.wang-bess-mvpn-upstream-df-selection
+date:
+- type: published
+  value: 2022-07
+contributor:
+- person:
+    name:
+      completename:
+        content: Heng Wang
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - Huawei Technologies
+  role:
+  - author
+- person:
+    name:
+      completename:
+        content: Fanghong Duan
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - Huawei Technologies
+  role:
+  - author
+version:
+- draft: '01'
+revdate: 2022-07
+language:
+- en
+script:
+- Latn
+abstract:
+- content: <p>This document defines Multicast Virtual Private Network (VPN) extensions
+    and procedures that allow fast failover for upstream failures by allowing upstream
+    Provider Edges (PEs) to determine a single forwarder for a VPN multicast flow,
+    without the downstream PEs' duplication prevention. The fast failover is accomplished
+    by using Virtual Router Redundancy Protocol (VRRP) [RFC5798] or similar technologies
+    for the upstream PEs to determine a single desinated fowarder. Also, this document
+    introduces a new BGP Extended Community called "Upstream Forwarder Selection",
+    carried by BGP VPN route so that the upstream PEs can inform downstream PEs the
+    election behavior. The downstream PEs, accordingly, send C-multicast routes to
+    both the primary and standby upstream PEs and forward the multicast flow comming
+    from both sides to the CEs.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-wang-bess-mvpn-upstream-df-selection-00
+    docid:
+    - id: draft-wang-bess-mvpn-upstream-df-selection-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-wang-bess-mvpn-upstream-df-selection-00
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-wang-bess-mvpn-upstream-df-selection-01
+fetched: '2022-07-09'
+doctype: internet-draft
