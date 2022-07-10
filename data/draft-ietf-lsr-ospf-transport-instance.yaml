@@ -1,7 +1,7 @@
 ---
 id: draft-ietf-lsr-ospf-transport-instance
 title:
-- content: OSPF Transport Instance Extensions
+- content: OSPF-GT (Generalized Transport)
   language:
   - en
   script:
@@ -14,12 +14,16 @@ docid:
 abstract:
 - content: "<p>OSPFv2 and OSPFv3 include a reliable flooding mechanism to disseminate
     routing topology and Traffic Engineering (TE) information within a routing domain.
-    Given the effectiveness of these mechanisms, it is convenient to envision using
-    the same mechanism for dissemination of other types of information within the
-    domain. However, burdening OSPF with this additional information will impact intra-domain
-    routing convergence and possibly jeopardize the stability of the OSPF routing
-    domain. This document presents mechanism to relegate this ancillary information
-    to a separate OSPF instance and minimize the impact.</p>"
+    Given the effectiveness of these mechanisms, it is advantageous to use the same
+    mechanism for dissemination of other types of information within the domain. However,
+    burdening OSPF with this additional information will impact intra-domain routing
+    convergence and possibly jeopardize the stability of the OSPF routing domain.
+    This document presents mechanisms to advertise this non-routing information in
+    separate OSPF Generalized Transport (OSPF-GT) instances. OSPF-GT is not constrained
+    to the semantics as traditional OSPF. OSPF-GT neighbors are not required to be
+    directly attached since they are never used to compute hop-by-hop routing. Consequently,
+    independent sparse topologies can be defined to dissemenate non- routing information
+    only to those OSPF-GT routers requiring it.</p>"
   language:
   - en
   script:
@@ -56,4 +60,14 @@ relation:
     formattedref:
       content: draft-ietf-lsr-ospf-transport-instance-02
       format: text/plain
-fetched: '2022-07-09'
+- type: includes
+  bibitem:
+    id: draft-ietf-lsr-ospf-transport-instance-03
+    docid:
+    - id: draft-ietf-lsr-ospf-transport-instance-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-lsr-ospf-transport-instance-03
+      format: text/plain
+fetched: '2022-07-10'
