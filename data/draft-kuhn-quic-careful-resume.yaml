@@ -1,7 +1,7 @@
 ---
 id: draft-kuhn-quic-careful-resume
 title:
-- content: Carefully Resume QUIC Session
+- content: Careful resumption of congestion control from retained state with QUIC
   language:
   - en
   script:
@@ -12,16 +12,17 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document provides a method to allow a QUIC session to carefully
-    resume using a previously utilised Internet path. The method uses a set of computed
-    congestion control parameters that are based on the previously observed path characteristics,
-    such as the bottleneck bandwidth, available capacity, or the RTT. These parameters
-    are stored and can then used to modify the congestion control behaviour of a subsequent
-    connection. The draft discusses assumptions around how a server ought to utilise
-    the parameters to provide opportunities for a new flow to more quickly get up
-    to speed (i.e. utilise available capacity). It discusses how these changes impact
-    the capacity at a shared network bottleneck and the response that is needed after
-    any indication that the new rate is inappropriate.</p>"
+- content: "<p>This document discusses careful resumption of congestion control parameters
+    in QUIC with a cautious method that enables faster startup of new connections.
+    The method uses a set of computed congestion control parameters that are based
+    on the previously observed path characteristics, such as the bottleneck bandwidth,
+    available capacity, or the RTT. These parameters are stored and can then used
+    to modify the congestion control behaviour of a subsequent connection. The draft
+    discusses assumptions around how a server ought to utilise these parameters to
+    provide opportunities for a new connection to more quickly get up to speed (i.e.
+    utilise available capacity). It discusses how these changes impact the capacity
+    at a shared network bottleneck and the response that is needed after any indication
+    that the new rate is inappropriate.</p>"
   language:
   - en
   script:
@@ -48,4 +49,14 @@ relation:
     formattedref:
       content: draft-kuhn-quic-careful-resume-01
       format: text/plain
-fetched: '2022-07-10'
+- type: includes
+  bibitem:
+    id: draft-kuhn-quic-careful-resume-02
+    docid:
+    - id: draft-kuhn-quic-careful-resume-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-kuhn-quic-careful-resume-02
+      format: text/plain
+fetched: '2022-07-11'

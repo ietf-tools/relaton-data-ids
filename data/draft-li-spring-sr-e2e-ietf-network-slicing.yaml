@@ -12,21 +12,19 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>Network slicing can be used to meet the connectivity and performance
+- content: "<p>IETF network slice can be used to meet the connectivity and performance
     requirement of different services or customers in a shared network. An IETF network
-    slice can be realized as enhanced VPNs (VPN+), which is delivered by integrating
-    the overlay VPN service with a Virtual Transport Network (VTN) as the underlay.
-    An end-to-end IETF network slice may span multiple network domains. Within each
-    domain, traffic of the end-to-end network slice service is mapped to a domain
-    VTN. In the context of IETF network slicing, a VTN can be instantiated as a Network
-    Resource Partition (NRP). When segment routing (SR) is used to build a multi-domain
-    IETF network slices, information of the local network slices in each domain can
-    be specified using special SR binding segments called NRP binding segments (NRP
-    BSID). The multi-domain IETF network slice can be specified using a list of NRP
-    BSIDs in the packet, each of which can be used by the corresponding domain edge
-    nodes to steer the traffic of end-to-end IETF network slice into the specific
-    NRP in the local domain. This document describes the functionality of NRP binding
-    segment and its instantiation in SR-MPLS and SRv6.</p>"
+    slice can be realized by mapping a set of connectivity constructs to a network
+    resource partition (NRP). In some network scenarios, an end-to-end IETF network
+    slice may span multiple network domains. Within each domain, traffic of the end-to-
+    end network slice service is mapped to a local domain NRP. When segment routing
+    (SR) is used to provide multi-domain IETF network slices, information of the local
+    domain NRP can be specified using special SR binding segments which is called
+    NRP binding segments (NRP BSID). Then a multi-domain IETF network slice can be
+    specified using a list of NRP BSIDs in the packet, each of which is used by the
+    corresponding domain edge nodes to steer the traffic of end-to-end IETF network
+    slice into the specific local domain NRP. This document describes the functionality
+    of NRP binding segment and its instantiation in SR-MPLS and SRv6 data plane.</p>"
   language:
   - en
   script:
@@ -73,4 +71,14 @@ relation:
     formattedref:
       content: draft-li-spring-sr-e2e-ietf-network-slicing-03
       format: text/plain
-fetched: '2022-07-10'
+- type: includes
+  bibitem:
+    id: draft-li-spring-sr-e2e-ietf-network-slicing-04
+    docid:
+    - id: draft-li-spring-sr-e2e-ietf-network-slicing-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-li-spring-sr-e2e-ietf-network-slicing-04
+      format: text/plain
+fetched: '2022-07-11'

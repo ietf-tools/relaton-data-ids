@@ -20,12 +20,14 @@ abstract:
     and scale of forwarding engines has also improved vastly over the same time period.
     There is a pressing need to match the needs with the capabilities to deliver the
     next generation of MPLS architecture. In this memo, we propose an alternate mechanism
-    whereby a single SPL can encode multiple forwarding actions and carry associated
-    data, some in the label stack and some after the label stack. This proposal also
-    solves the problem of scarcity of base SPLs. This approach can immediately address
-    several use cases: * to carry a Slice Selector for IETF network slicing; * to
-    signal that further fast reroute may have harmful consequences; * to indicate
-    that there is relevant data after the label stack; * among others.</p>'
+    whereby a single SPL can encode multiple forwarding actions and carry data (if
+    any) associated with the actions, some in the label stack and some after the label
+    stack. This proposal also solves the problem of scarcity of base SPLs. As proof
+    of its utility and flexibility, this approach can immediately address several
+    use cases: * to carry an Entropy Label for better load balancing; * to carry a
+    Flow-Aggregate Selector for IETF network slicing; * to signal that further fast
+    reroute may have harmful consequences; * to indicate that there is relevant data
+    after the label stack; * among others.</p>'
   language:
   - en
   script:
@@ -62,4 +64,14 @@ relation:
     formattedref:
       content: draft-kompella-mpls-mspl4fa-02
       format: text/plain
-fetched: '2022-07-10'
+- type: includes
+  bibitem:
+    id: draft-kompella-mpls-mspl4fa-03
+    docid:
+    - id: draft-kompella-mpls-mspl4fa-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-kompella-mpls-mspl4fa-03
+      format: text/plain
+fetched: '2022-07-11'

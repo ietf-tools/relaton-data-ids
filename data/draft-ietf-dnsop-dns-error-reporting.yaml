@@ -12,7 +12,7 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>DNS Error Reporting is a lightweight error reporting mechanism that
+- content: <p>DNS Error Reporting is a lightweight error reporting mechanism that
     provides the operator of an authoritative server with reports on DNS resource
     records that fail to resolve or validate, that a Domain Owner or DNS Hosting organization
     can use to improve domain hosting. The reports are based on Extended DNS Errors
@@ -20,7 +20,10 @@ abstract:
     or an attack, the operator of the authoritative server may be unaware of this.
     To mitigate this lack of feedback, this document describes a method for a validating
     recursive resolver to automatically signal an error to an agent specified by the
-    authoritative server. DNS Error Reporting uses the DNS to report errors.</p>"
+    authoritative server. DNS Error Reporting uses the DNS to report errors. Another
+    lack of feedback occurs when validation was successful, or when there is no error
+    to report. This positive feedback may be helpful to show that a deployment was
+    successful. This document introcudes an extended DNS error "NO ERROR".</p>
   language:
   - en
   script:
@@ -47,4 +50,14 @@ relation:
     formattedref:
       content: draft-ietf-dnsop-dns-error-reporting-01
       format: text/plain
-fetched: '2022-07-10'
+- type: includes
+  bibitem:
+    id: draft-ietf-dnsop-dns-error-reporting-02
+    docid:
+    - id: draft-ietf-dnsop-dns-error-reporting-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-dnsop-dns-error-reporting-02
+      format: text/plain
+fetched: '2022-07-11'

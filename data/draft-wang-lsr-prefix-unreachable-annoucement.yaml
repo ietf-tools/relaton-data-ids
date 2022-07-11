@@ -12,16 +12,15 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document describes a mechanism to solve an existing issue with
-    Longest Prefix Match (LPM), that exists where an operator domain is divided into
-    multiple areas or levels where summarization is utilized. This draft addresses
-    a fail-over issue related to a multi areas or levels domain, where a link or node
-    down event occurs resulting in an LPM component prefix being omitted from the
-    FIB resulting in black hole sink of routing and connectivity loss. This draft
-    introduces a new control plane convergence signaling mechanism using a negative
-    prefix called Prefix Unreachable Announcement Mechanism(PUAM), utilized to detect
-    a link or node down event and signal the RIB that the event has occurred to force
-    immediate control plane convergence.</p>"
+- content: "<p>This document describes a mechanism that can trigger the switchover
+    of the services which rely on the reachability of the peer endpoints, for example
+    the BGP or the tunnel services. It is mainly used in the scenarios that the summary
+    prefixes are advertised at the border routers whereas the services endpoints are
+    located in different IGP areas or levels, whose reachabilities are covered by
+    the summary prefixes. It introduces a new signaling mechanism using a negative
+    prefix announcement called Prefix Unreachable Announcement Mechanism(PUAM), utilized
+    to detect a link or node down event and signal the overlay services that the event
+    has occurred to force immediate switchover.</p>"
   language:
   - en
   script:
@@ -128,4 +127,14 @@ relation:
     formattedref:
       content: draft-wang-lsr-prefix-unreachable-annoucement-09
       format: text/plain
-fetched: '2022-07-10'
+- type: includes
+  bibitem:
+    id: draft-wang-lsr-prefix-unreachable-annoucement-10
+    docid:
+    - id: draft-wang-lsr-prefix-unreachable-annoucement-10
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-wang-lsr-prefix-unreachable-annoucement-10
+      format: text/plain
+fetched: '2022-07-11'
