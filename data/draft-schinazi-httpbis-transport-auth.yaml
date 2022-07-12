@@ -12,13 +12,15 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>The most common existing authentication mechanisms for HTTP are sent
-    with each HTTP request, and authenticate that request instead of the underlying
-    HTTP connection, or transport. While these mechanisms work well for existing uses
-    of HTTP, they are not suitable for emerging applications that multiplex non-HTTP
-    traffic inside an HTTP connection. This document describes the HTTP Transport
-    Authentication Framework, a method of authenticating not only an HTTP request,
-    but also its underlying transport.</p>"
+- content: "<p>Existing HTTP authentication mechanisms are probeable in the sense
+    that it is possible for an unauthenticated client to probe whether an origin serves
+    resources that require authentication. It is possible for an origin to hide the
+    fact that it requires authentication by not generating Unauthorized status codes,
+    however that only works with non-cryptographic authentication schemes: cryptographic
+    schemes (such as signatures or message authentication codes) require a fresh nonce
+    to be signed, and there is no existing way for the origin to share such a nonce
+    without exposing the fact that it serves resources that require authentication.
+    This document proposes a new non-probeable cryptographic authentication scheme.</p>"
   language:
   - en
   script:
@@ -85,4 +87,24 @@ relation:
     formattedref:
       content: draft-schinazi-httpbis-transport-auth-05
       format: text/plain
-fetched: '2022-07-11'
+- type: includes
+  bibitem:
+    id: draft-schinazi-httpbis-transport-auth-06
+    docid:
+    - id: draft-schinazi-httpbis-transport-auth-06
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-schinazi-httpbis-transport-auth-06
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-schinazi-httpbis-transport-auth-07
+    docid:
+    - id: draft-schinazi-httpbis-transport-auth-07
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-schinazi-httpbis-transport-auth-07
+      format: text/plain
+fetched: '2022-07-12'

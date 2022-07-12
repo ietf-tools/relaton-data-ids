@@ -13,7 +13,13 @@ docid:
   primary: true
 abstract:
 - content: "<p>This document defines an extension to the timestamp format defined
-    in RFC3339 for representing additional information including a time zone.</p>"
+    in RFC3339 for representing additional information including a time zone. // The
+    present version (-05) includes a few changes that are intended // for discussion
+    at IETF 114. In particular, the introduction of // the critical-flag exposes the
+    fact that some RFC 3339 // implementations assign different semantics to the time
+    zone // offsets Z and +00:00; we may want to consider ways to cope with // this
+    apparently common deviation. Also, the name of the format is // still up for suggestions
+    that improve upon the current choice.</p>"
   language:
   - en
   script:
@@ -70,4 +76,14 @@ relation:
     formattedref:
       content: draft-ietf-sedate-datetime-extended-04
       format: text/plain
-fetched: '2022-07-11'
+- type: includes
+  bibitem:
+    id: draft-ietf-sedate-datetime-extended-05
+    docid:
+    - id: draft-ietf-sedate-datetime-extended-05
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-sedate-datetime-extended-05
+      format: text/plain
+fetched: '2022-07-12'
