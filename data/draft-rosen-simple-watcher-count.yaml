@@ -1,0 +1,47 @@
+---
+id: draft-rosen-simple-watcher-count
+title:
+- content: Optimizing Notifications for Presence Network Agents
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-rosen-simple-watcher-count
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>In large presence systems deployed in multiservice networks, presence
+    information is often known by the network in addition to, or instead of the presentity's
+    devices (endpoints). Examples of such information include location and availability
+    for various kinds of session establishment. Even if devices know the information,
+    the network often has more bandwidth and better scale to keep the presence server
+    up to date. A Presence Network Agent (PNA) can publish presence information to
+    a Presence Server(PS). When done large scale, the basic publish operation can
+    be inefficient. When the network has millions of subscribers, only some of which
+    have watchers, blind Publish operations are unecessary. WINFO can be used to determine
+    watchers, but the efficiency of maintaining WINFO per subscriber, and the size
+    of the messages involved, make that solution unattractive. The PNA would prefer
+    to have the Presence Server simply tell it when there was at least one watcher.
+    This document describes an XML document stored on the PS by which the PNA maintains
+    a list of subscribers it can provide presence for as a SIP event package that
+    tells the PNA when the number of watchers for a presentity on the list (or a specific
+    presence element for a presentity) goes from 0 to at least 1 or from 1 to 0.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-rosen-simple-watcher-count-00
+    docid:
+    - id: draft-rosen-simple-watcher-count-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-rosen-simple-watcher-count-00
+      format: text/plain
+fetched: '2022-07-23'

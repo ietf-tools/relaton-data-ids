@@ -1,0 +1,49 @@
+---
+id: draft-briscoe-tcpm-inspace-mode-tcpbis
+title:
+- content: Inner Space for all TCP Options (Kitchen Sink Draft - to be Split Up)
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-briscoe-tcpm-inspace-mode-tcpbis
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This document describes an experimental redesign of TCP's extensibility
+    mechanism. It aims to traverse most known middleboxes including connection splitters,
+    by making it possible to tunnel all TCP options within the TCP Data. It provides
+    a choice between in- order and out-of-order delivery for TCP options. In-order
+    delivery is a useful new facility for options that control datastream processing.
+    Out-of-order delivery has been the norm for TCP options until now, and is necessary
+    for options involved with acknowledging data, otherwise flow control can deadlock.
+    TCP's original design limits TCP option space to 40B. In the new design there
+    is no such arbitrary limit, other than the maximum size of a segment. The TCP
+    client can immediately start to use the extra option space optimistically from
+    the very first SYN segment, by using a dual handshake. The dual handshake is designed
+    to prevent a legacy server from getting confused and sending the control options
+    to the application as user-data. The dual handshake is only one strategy - a single
+    handshake will usually suffice once deployment is underway. In summary, the protocol
+    should allow new TCP options to be introduced i) with minimal middlebox traversal
+    problems; ii) with incremental deployment from legacy servers; iii) with zero
+    handshaking delay iv) with a choice of in-order and out-of-order delivery v) without
+    arbitrary limits on available space.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-briscoe-tcpm-inspace-mode-tcpbis-00
+    docid:
+    - id: draft-briscoe-tcpm-inspace-mode-tcpbis-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-briscoe-tcpm-inspace-mode-tcpbis-00
+      format: text/plain
+fetched: '2022-07-23'

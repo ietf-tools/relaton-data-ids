@@ -1,0 +1,46 @@
+---
+id: draft-bashandy-mpls-ldp-bgp-frr
+title:
+- content: LDP Extension for FRR Edge Node Protection in BGP-Free LDP Core
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-bashandy-mpls-ldp-bgp-frr
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: <p>Consider a BGP free core scenario with LDP running in the core. Suppose
+    the edge BGP speakers PE1 and PE2 know about a prefix P/m via the external routers
+    CE1 and CE2. If the edge LSR PE1 crashes or becomes totally disconnected from
+    the core, it is desirable for a core LSR "P", that is carrying traffic to the
+    failed edge LSR PE1, to immediately restore traffic by re-routing packets destined
+    to the prefix P/m from the LSP terminating on PE1 to be forwarded over the LSP
+    terminating on PE2, until BGP reconverges. If the packets originally flowing to
+    the failed edge LSR PE1 are BGP labeled, then the repairing core LSR P must swap
+    the label (corresponding to prefix P/m) advertised by the failed edge LSR PE1
+    with the label advertised for the same prefix by the edge LSR PE2 before re-routing
+    the packets through an LSP terminating on PE2. To implement BGP edge node protection
+    in a BGP-free LDP core, this document proposes an extension to LDP. This extension
+    allows an LDP speaker running on a Edge LSR Node (e.g. PE1) to inform the LDP
+    speakers running on core LSRs about the "Repair" edge LSR (e.g. PE2), as well
+    as Repair LSR's label for prefix P/m, if any.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-bashandy-mpls-ldp-bgp-frr-00
+    docid:
+    - id: draft-bashandy-mpls-ldp-bgp-frr-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-bashandy-mpls-ldp-bgp-frr-00
+      format: text/plain
+fetched: '2022-07-23'

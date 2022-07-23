@@ -1,0 +1,50 @@
+---
+id: draft-natarajan-tsvwg-sctp-nrsack
+title:
+- content: Non-Renegable Selective Acknowledgements (NR-SACKs) for SCTP
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-natarajan-tsvwg-sctp-nrsack
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>Stream Control Transmission Protocol (SCTP) [RFC4960] specifies Selective
+    Acknowledgements (SACKs) to allow an SCTP data receiver to acknowledge DATA chunks
+    which arrive out-of-order. In SCTP, SACK information is advisory -- though SACKs
+    notify a data sender about the reception of specific out-of-order data, the SCTP
+    data receiver is permitted to later discard the data, a.k.a reneging. Since delivery
+    of a SACKed out-of-order DATA chunk is not guaranteed, a copy of this DATA chunk
+    MUST be kept in the data sender's retransmission queue until this DATA chunk is
+    cumulatively acked. By definition, data that has been delivered to the application
+    is non-renegable by the SCTP data receiver. (Recall that, in SCTP, out- of-order
+    data can sometimes be delivered.) Also, SCTP implementations can be configured
+    such that the SCTP data receiver is not allowed to, and therefore, never reneges
+    on out-of-order data. With SCTP's current SACK mechanism, non-renegable out-of-order
+    data is selectively acked, and is (wrongly) deemed renegable by the SCTP data
+    sender. This document specifies an extension to SCTP's acknowledgment mechanism
+    called Non-Renegable Selective Acknowledgements (NR-SACKs.) NR-SACKs enable a
+    data receiver to explicitly inform the data sender of non-renegable out-of-order
+    data. As opposed to renegable data, a data sender can consider non-renegable data
+    as never requiring retransmission, and therefore can remove non-renegable data
+    from the retransmission queue.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-natarajan-tsvwg-sctp-nrsack-08
+    docid:
+    - id: draft-natarajan-tsvwg-sctp-nrsack-08
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-natarajan-tsvwg-sctp-nrsack-08
+      format: text/plain
+fetched: '2022-07-23'

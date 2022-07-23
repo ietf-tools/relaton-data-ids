@@ -1,0 +1,55 @@
+---
+id: draft-liu-epp-pa-notify
+title:
+- content: |
+    Uniform Treatment of Pending Action Notification in EPP
+    A Strawman Proposal
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-liu-epp-pa-notify
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>Many domain registries, especially sponsored TLDs and ccTLDs, have
+    specific policy that calls for the server to perform additional backend processing
+    before it completes a transform operation on an object requested by a client.
+    When the pending action is completed, the server must notify the client about
+    the outcome. However, current EPP core specifications do not address the notification
+    messaging in a generic way. As a result, a registry has to resort to defining
+    a new schema as extension to the object mapping concerned for this purpose. Inspired
+    by recent discussions on the 'ietf-provreg' mailing list on related topics, this
+    draft presents a strawman proposal for uniform treatment of server notification
+    for pending action in the base EPP protocol. A new OPTIONAL child element is added
+    to &lt;poll&gt; response as basic notification content, which consists of the
+    transaction ID that triggered the pending action and the outcome of the pending
+    action. In addition, object specific data and extension information can be piggybacked
+    in existing child elements of &lt;response&gt;. The required modification to the
+    EPP base protocol is kept to the minimum and incurs no change to the EPP base
+    object mappings. Most importantly, the proposed solution is applicable to any
+    object mapping, ensuring EPP's extensibility beyond domain registry applications.
+    Strong interests by the registry community in deploying this feature warrant that
+    it be best handled as a generic but optional feature in the EPP base protocol.
+    This allows any registry to handle pending action without the need to define a
+    new schema, eliminating the proliferation of ad hoc object extensions repetitively
+    defined by disparate registries for the very same purpose.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-liu-epp-pa-notify-00
+    docid:
+    - id: draft-liu-epp-pa-notify-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-liu-epp-pa-notify-00
+      format: text/plain
+fetched: '2022-07-23'

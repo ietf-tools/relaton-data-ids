@@ -1,0 +1,45 @@
+---
+id: draft-kitamura-ipv6-uncertain-address-state
+title:
+- content: Harmless IPv6 Address State Extension (Uncertain State)
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-kitamura-ipv6-uncertain-address-state
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: <p>This document describes a new IPv6 address state called "Uncertain"
+    address state as an extension of IPv6 address state specification. "Uncertain"
+    address state is designed to introduce two functionalities. One is to achieve
+    "Temporary Address Reservation" function. The other is to avoid a DAD (Duplicate
+    Address Detection) time consuming problem for dynamically created addresses. New
+    "Uncertain" Address State is inserted between "Tentative" address state and "Valid"
+    address state. After "Tentative" address state (DAD operation has finished) for
+    a newly created address, its state will enter to "Uncertain" address state. While
+    an address stay at "Uncertain" address state, the address is behaved as if it
+    is temporary reserved by the node exclusively. (The other nodes can not obtain
+    such a reserved address.) When it becomes really necessary for the node to utilize
+    the temporary reserved address, its address state is changed into "Valid" address
+    state without accompanying time consuming DAD operation. By these procedures,
+    we can avoid the DAD problem.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-kitamura-ipv6-uncertain-address-state-01
+    docid:
+    - id: draft-kitamura-ipv6-uncertain-address-state-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-kitamura-ipv6-uncertain-address-state-01
+      format: text/plain
+fetched: '2022-07-23'

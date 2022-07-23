@@ -1,0 +1,47 @@
+---
+id: draft-scharf-tsvwg-quick-start-flow-control
+title:
+- content: Avoiding Interactions of Quick-Start TCP and Flow Control
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-scharf-tsvwg-quick-start-flow-control
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This document describes methods to avoid interactions between the flow
+    control of the Transmission Control Protocol (TCP) and the Quick-Start TCP mechanism.
+    Quick-Start is an optional TCP congestion control extension that allows hosts
+    to determine an allowed sending rate from feedback of routers along the path.
+    With Quick-Start, data transfers can start with a potentially large congestion
+    window and avoid the time-consuming slow-start. In order to fully utilize the
+    data rate determined by Quick-Start, the sending host must not be limited by the
+    TCP flow control, i. e., the amount of free buffer space advertised by the receive
+    window. There are two potential interactions between Quick-Start and the TCP flow
+    control: First, receivers might not provide sufficiently large buffer space after
+    connection setup, or they may implement buffer allocation strategies that implicitly
+    assume the slow-start behavior on the sender side. This document therefore provides
+    guidelines for buffer allocation in hosts supporting the Quick-Start extension.
+    Second, the TCP receive window scaling mechanism interferes with Quick-Start when
+    being used in the initial three-way handshake connection setup. This document
+    describes a simple solution to overcome this problem.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-scharf-tsvwg-quick-start-flow-control-01
+    docid:
+    - id: draft-scharf-tsvwg-quick-start-flow-control-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-scharf-tsvwg-quick-start-flow-control-01
+      format: text/plain
+fetched: '2022-07-23'

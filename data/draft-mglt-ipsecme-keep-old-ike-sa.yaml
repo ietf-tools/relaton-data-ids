@@ -1,0 +1,44 @@
+---
+id: draft-mglt-ipsecme-keep-old-ike-sa
+title:
+- content: KEEP_OLD_IKE_SA Extension
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-mglt-ipsecme-keep-old-ike-sa
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This document considers a VPN Client setting a VPN with a security
+    gateway where at least one of the peer has multiple interfaces. With the current
+    IKEv2, the outer IP addresses of the VPN are determined by those used by IKEv2
+    channel. As a result using multiple interface requires to set an IKEv2 channel
+    on each interface, and then on each paths if both the VPN Client and the security
+    gateway have multiple interfaces. Setting multiple IKEv2 channel involves multiple
+    authentications which MAY each require multiple round trips and delay the VPN
+    establishment. In addition multiple authentications unnecessarily load the VPN
+    client and the authentication infrastructure. This document presents the KEEP_OLD_IKE_SA
+    extension, where an additional IKEv2 channel from an already authenticated IKEv2
+    channel. The newly created IKEv2 channel is set without the IKEv2 authentication
+    exchange. The newly created IKEv2 channel can then be assigned to another interface
+    using MOBIKE.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-mglt-ipsecme-keep-old-ike-sa-00
+    docid:
+    - id: draft-mglt-ipsecme-keep-old-ike-sa-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-mglt-ipsecme-keep-old-ike-sa-00
+      format: text/plain
+fetched: '2022-07-23'

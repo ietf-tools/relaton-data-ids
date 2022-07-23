@@ -1,0 +1,43 @@
+---
+id: draft-mrex-tls-secure-renegotiation
+title:
+- content: Transport Layer Security (TLS) Secure Renegotiation
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-mrex-tls-secure-renegotiation
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>A protocol design flaw in the TLS renegotiation handshake leaves all
+    currently implemented protocol version of TLS (SSLv3 to TLSv1.2) vulnerable to
+    Man-in-the-Middle (MitM) attacks where the attacker can establish a TLS session
+    with a server, send crafted application data of his choice to the server and then
+    proxy an unsuspecting client's TLS handshake into the TLS renegotiation handshake
+    of the server. Many applications on top of TLS see the data injected by the attacker
+    and the data sent by the client as a single data stream and assume that an authentication
+    during the TLS renegotiation handshake or contained in the client's application
+    data applies to the entire data stream received through the TLS-protected communication
+    channel. This document describes a protocol change for all protocol versions of
+    TLS and SSLv3 that will fix this vulnerability for all communication between updated
+    TLS clients and updated TLS servers.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-mrex-tls-secure-renegotiation-04
+    docid:
+    - id: draft-mrex-tls-secure-renegotiation-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-mrex-tls-secure-renegotiation-04
+      format: text/plain
+fetched: '2022-07-23'

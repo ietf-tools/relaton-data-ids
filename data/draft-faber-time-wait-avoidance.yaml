@@ -1,0 +1,43 @@
+---
+id: draft-faber-time-wait-avoidance
+title:
+- content: Avoiding the TCP TIME_WAIT state at Busy Servers
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-faber-time-wait-avoidance
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This document describes the problems associated with the accumulation
+    of TCP TIME_WAIT states at a network server, such as a web server, and details
+    two methods for avoiding that accumulation. Servers that have many TCP connections
+    in TIME_WAIT state experience performance degradation, and can collapse. One solution
+    is a TCP modification that causes clients to enter TIME_WAIT state rather than
+    servers. The other is an HTTP modification that allows the client to close the
+    transport connection, maintaining the TIME_WAIT state at the client. The goal
+    of both approaches is ensure that TIME_WAIT states accumu- late at the less loaded
+    endpoint. The document also presents initial performance data from reference implementations
+    of these solutions, which suggest that the modifica- tions improve HTTP connection
+    rates at the server by as much as 50%, and allow servers to operate at small transaction
+    throughputs that they cannot sustain their default configuration.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-faber-time-wait-avoidance-00
+    docid:
+    - id: draft-faber-time-wait-avoidance-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-faber-time-wait-avoidance-00
+      format: text/plain
+fetched: '2022-07-23'

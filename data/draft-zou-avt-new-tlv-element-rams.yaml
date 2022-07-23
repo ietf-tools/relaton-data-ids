@@ -1,0 +1,46 @@
+---
+id: draft-zou-avt-new-tlv-element-rams
+title:
+- content: A new TLV RAMS-I element for RAMS
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-zou-avt-new-tlv-element-rams
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>[I-D.ietf-avt-rapid-acquisition-for-rtp] defines a method for rapid
+    acquisition of multicast sessions (RAMS). Upon accepting the first RAMS-R message,
+    RS MUST echo an RAMS-I message as a response to RR. This document proposes to
+    optionally convey a parameter called unicast backspace in the RAMS-I message.
+    Unicast backspace is the RTP timestamp difference between the first unicast burst
+    packet to be sent and the latest primary multicast packet in the buffer of RS.
+    The RTP timestamps values for these packets are taken from the primary multicast
+    stream. The parameter is a constant once RS chooses a starting point for the unicast
+    burst. This parameter can be used by RR to determine when to join the primary
+    multicast session. RR would not rely on RAMS-I to revise the earliest multicast
+    join time after the burst rate is changed by RS and therefore is immune to the
+    lose of RAMS-I. Moreover, if this parameter is known, RR with appropriate playback
+    control can reduce the additional end-to-end delay introduced by the RAMS process
+    or can enable the RS to serve the RR with shorter burst duration and therefore
+    save the bandwidth of RS export and the burst forwarding path.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-zou-avt-new-tlv-element-rams-00
+    docid:
+    - id: draft-zou-avt-new-tlv-element-rams-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-zou-avt-new-tlv-element-rams-00
+      format: text/plain
+fetched: '2022-07-23'

@@ -1,0 +1,48 @@
+---
+id: draft-pettersen-cookie-origin
+title:
+- content: Identifying origin server of HTTP Cookies
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-pettersen-cookie-origin
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: <p>HTTP Cookies, as originally defined by Netscape in [NETSC] and as later
+    updated by [RFC2109] , [RFC2965], and [I-D.ietf-httpstate-cookie] did not address
+    the issue of how to restrict for which domains a server is allowed to set a cookie.
+    This is particularly a problem for servers hosted in top-level domains having
+    subdomains that are controlled by registries and not by domain owners, e.g., "co.uk"
+    and "city.state.us" domains. In such situations, unless the client uses some kind
+    of domain black-list, it is possible for a malicious server to set cookies, so
+    they are sent to all servers in a domain the attacker does not control. These
+    cookies may adveresly affect the function of servers receiving them. The primary
+    reason this is a problem is that the server receiving the cookie has no way of
+    telling which server originally set it; therefore it is not able to distinguish
+    reliably an invalid cookie from a valid one. This document proposes a new attribute,
+    "$Origin", that is associated with each cookie and sent in all client cookie headers
+    in the requests sent to the server. Servers recognizing the attribute may then
+    check to see if the cookie was set by a server, which is allowed to set cookies
+    for the server and, if necessary, ignore the cookie. This document updates RFC
+    2109 and RFC 2965.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-pettersen-cookie-origin-02
+    docid:
+    - id: draft-pettersen-cookie-origin-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-pettersen-cookie-origin-02
+      format: text/plain
+fetched: '2022-07-23'

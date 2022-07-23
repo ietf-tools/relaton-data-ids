@@ -1,0 +1,44 @@
+---
+id: draft-goyal-ospf-lsacorr
+title:
+- content: LSA Correlation to Schedule Routing Table Calculations
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-goyal-ospf-lsacorr
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>OSPF requires a router to recalculate its routing table whenever it
+    receives a new router or network LSA. However, a topology change, such as a router
+    down event, may cause a number of new LSAs to be generated. These LSAs may arrive
+    at a router at different times. In order to avoid several routing table calculations
+    in quick succession in such cases, commercial routers enforce a hold time between
+    successive routing table calculations. The hold time based schemes, while limiting
+    the number of routing table calculations, may also cause undesirable delays in
+    convergence to the topology change. This ID describes an alternate approach to
+    schedule routing table calculations, called LSA Correlation. Rather than using
+    individual LSAs as triggers for routing table calculations, LSA Correlation scheme
+    correlates the information in the LSAs to identify the topology change. A routing
+    table calculation can be performed when the topology change has been identified,
+    which could span multiple LSAs.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-goyal-ospf-lsacorr-00
+    docid:
+    - id: draft-goyal-ospf-lsacorr-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-goyal-ospf-lsacorr-00
+      format: text/plain
+fetched: '2022-07-23'

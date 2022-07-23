@@ -1,0 +1,43 @@
+---
+id: draft-benjamin-extendedcallbackinfo
+title:
+- content: AFS Callback Extensions (Draft 14)
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-benjamin-extendedcallbackinfo
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>AFS cache-control strategy is callback (invalidate) based. The AFS
+    callback design allows a client to know when an object it has cached is no longer
+    consistent, but the callback notification message itself provides no specific
+    information about the triggering event. This is a protocol inefficiency, as in
+    several scenarios it results in unnecessary round-trips to file servers to verify
+    file status information, file access information, or to fetch file data which
+    has not changed. We propose an extension of the callback mechanism to provide
+    information about the event(s) triggering a callback, in the payload of the callback
+    notification message itself. The proposed mechanism eliminates most or all unnecessary
+    round-trips imposed by the current callback mechanism, and simultaneously allows
+    AFS implementations to (efficiently) provide correct semantics in several scenarios
+    involving multiple writers (ie, where AFS currently provides incorrect semantics).</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-benjamin-extendedcallbackinfo-02
+    docid:
+    - id: draft-benjamin-extendedcallbackinfo-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-benjamin-extendedcallbackinfo-02
+      format: text/plain
+fetched: '2022-07-23'

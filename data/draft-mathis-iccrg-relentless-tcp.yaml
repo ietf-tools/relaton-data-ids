@@ -1,0 +1,55 @@
+---
+id: draft-mathis-iccrg-relentless-tcp
+title:
+- content: Relentless Congestion Control
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-mathis-iccrg-relentless-tcp
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: '<p>Relentless congestion control is a simple modification that can be
+    applied to almost any AIMD style congestion control: instead of applying a multiplicative
+    reduction to cwnd after a loss, cwnd is reduced by the number of lost segments.
+    It can be modeled as a strict implementation of van Jacobson''s Packet Conservation
+    Principle. During recovery, new segments are injected into the network in exact
+    accordance with the segments that are reported to have been delivered to the receiver
+    by the returning ACKs. This algorithm offers a valuable new congestion control
+    property: the TCP portion of the control loop has exactly unity gain, which should
+    make it easier to implement simple controllers in network devices to accurately
+    control queue sizes across a huge range of scales. Relentless Congestion Control
+    conforms to neither the details nor the philosophy of current congestion control
+    standards. These standards are based on the idea that the Internet can attain
+    sufficient fairness by having relatively simple network devices send uniform congestion
+    signals to all flows, and mandating that all protocols have equivalent responses
+    to these congestion signals. To function appropriately in a shared environment,
+    Relentless Congestion Control requires that the network allocates capacity through
+    some technique such as Fair Queuing, Approximate Fair Dropping, etc. The salient
+    features of these algorithms are that they segregate the traffic into distinct
+    flows, and send different congestion signals to each flow. This alternative congestion
+    control paradigm is described in a separate document, also under consideration
+    by the ICCRG. The goal of the document is to illustrate some new protocol features
+    and properties might be possible if we relax the "TCP-friendly" mandate. A secondary
+    goal of Relentless TCP is to make a distinction between the bottlenecks that belong
+    to protocol itself, vs standard congestion control and the "TCP-friendly" paradigm.</p>'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-mathis-iccrg-relentless-tcp-00
+    docid:
+    - id: draft-mathis-iccrg-relentless-tcp-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-mathis-iccrg-relentless-tcp-00
+      format: text/plain
+fetched: '2022-07-23'

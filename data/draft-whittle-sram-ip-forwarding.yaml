@@ -1,0 +1,57 @@
+---
+id: draft-whittle-sram-ip-forwarding
+title:
+- content: SRAM-based IP Forwarding Eliminates the Need for Route Aggregation
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-whittle-sram-ip-forwarding
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: <p>I propose a simple, low-cost, low-power, Static RAM (SRAM) based architecture
+    for the Forwarding Information Base (FIB) function of transit and border routers
+    in the Default Free Zone (DFZ) of the Internet. This will provide direct hardware
+    forwarding irrespective of the size of the "global BGP routing table", within
+    the current IPv4 convention of limiting advertised prefixes to no longer than
+    /24. Routers with this or a similar architecture provide the only elegant hardware
+    solution to the problem of route disaggregation, which is unavoidable due to increasing
+    numbers of ISPs and Autonomous System (AS) end-users who need to advertise their
+    prefixes on topologically diverse parts of the network, for purposes including
+    multihoming and traffic engineering. Router hardware limitations with respect
+    to route disaggregation could also be eliminated for IPv6, by adding further SRAMs
+    or, on a more limited basis, by using spare space in the SRAM which is required
+    for IPv4. Two additional SRAMs and a reallocation of the existing 2000::/3 global
+    unicast allocations to a smaller range - for instance 2000::/10 - would provide
+    for Provider Independent (PI) /32 allocations to 4 million ISPs and multihomed
+    end-users. Each /32 assignment could be advertised as up to eight /35 prefixes
+    - each of which provides 8192 /48 user networks. A less disruptive alternative
+    to reallocating existing IPv6 global unicast addresses would be to define a /10
+    prefix - inside or outside 2000::/3 - for new PI assignments to ISPs and AS end-users
+    with the long-term assurance of rapid SRAM-based forwarding for prefixes as short
+    as /35, without concern for route aggregation or network topology. It may be feasible,
+    for a decade or more, to handle IPv6 without an addition SRAM chip. Unused space
+    in the IPv4 chip (or two chips for larger routers) would map 2,097,152 /35 prefixes
+    - for instance to support PI assignments of /32 prefixes to 262,144 ISPs and AS
+    end-users. This would provide 17 billion /48 prefixes - the standard assignment
+    for non-AS end-users.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-whittle-sram-ip-forwarding-01
+    docid:
+    - id: draft-whittle-sram-ip-forwarding-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-whittle-sram-ip-forwarding-01
+      format: text/plain
+fetched: '2022-07-23'

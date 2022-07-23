@@ -1,0 +1,45 @@
+---
+id: draft-kuhn-leapsecond
+title:
+- content: Coordinated Universal Time with Smoothed Leap Seconds (UTC-SLS)
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-kuhn-leapsecond
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: <p>Coordinated Universal Time (UTC) is the international standard timescale
+    used in many Internet protocols. UTC features occasional single-second adjustments,
+    known as "leap seconds". These happen at the end of announced UTC days, in the
+    form of either an extra second 23:59:60 or a missing second 23:59:59. Both events
+    need special consideration in UTC-synchronized systems that represent time as
+    a scalar value. This specification defines UTC-SLS, a minor variation of UTC that
+    lacks leap seconds. Instead, UTC-SLS performs an equivalent "smooth" adjustment,
+    during which the rate of the clock temporarily changes by 0.1% for 1000 seconds.
+    UTC-SLS is a drop-in replacement for UTC. UTC-SLS can be generated from the same
+    information as UTC. It can be used with any specification that refers to UTC but
+    lacks provisions for leap seconds. UTC-SLS provides a robust and interoperable
+    way for networked UTC- synchronized clocks to handle leap seconds. By providing
+    UTC-SLS instead of UTC to applications, operating systems can free most application
+    and protocol designers from any need to even know about UTC leap seconds.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-kuhn-leapsecond-00
+    docid:
+    - id: draft-kuhn-leapsecond-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-kuhn-leapsecond-00
+      format: text/plain
+fetched: '2022-07-23'

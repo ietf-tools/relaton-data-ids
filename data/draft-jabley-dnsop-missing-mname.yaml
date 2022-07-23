@@ -1,0 +1,43 @@
+---
+id: draft-jabley-dnsop-missing-mname
+title:
+- content: Indicating Non-Availability of Dynamic Updates in the DNS
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-jabley-dnsop-missing-mname
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: <p>The Start of Authority (SOA) Resource Record (RR) in the Domain Name
+    System (DNS) specifies various parameters related to the handling of data in DNS
+    zones. These parameters are variously used by authority- only servers, caching
+    resolvers and DNS clients to guide them in the way that data contained within
+    particular zones should be used. One particular field in the SOA RR is known as
+    MNAME, which is used to specify the "Primary Master" server for a zone. This is
+    the server to which Dynamic Updates are sent by clients. Many zones do not accept
+    updates using the Dynamic Update mechanism, and any such DNS UPDATE messages which
+    are received provide no usual purpose. For such zones it may be preferable not
+    to receive updates from clients at all. This document proposes a convention by
+    which a zone operator can signal to clients that a particular zone does not accept
+    Dynamic Updates.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-jabley-dnsop-missing-mname-00
+    docid:
+    - id: draft-jabley-dnsop-missing-mname-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-jabley-dnsop-missing-mname-00
+      format: text/plain
+fetched: '2022-07-23'

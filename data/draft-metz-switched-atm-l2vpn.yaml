@@ -1,0 +1,56 @@
+---
+id: draft-metz-switched-atm-l2vpn
+title:
+- content: Switched ATM L2VPN
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-metz-switched-atm-l2vpn
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>Many providers operate ATM networks that support a suite of network
+    services. These networks employ ATM signaling and routing protocols to expedite
+    connection setup and recovery. Over time these providers will migrate all or portions
+    of their ATM infrastructure and services to an IP/MPLS-based Packet Switched Network
+    (PSN) thus leading to the creation of ATM L2VPNs. This document describes a solution
+    that supports dynamic signaling and routing of point-to-point switched ATM connections
+    (i.e. VP or VC) across an IP/MPLS network. It is based on the L2VPN (VPWS) architecture
+    which employs an {attachment circuit, PE, pseudo-wire, PE, attachment circuit}
+    tuple to define a distinct point- to-point L2 connection between two end-points
+    within the VPN [PPVPN L2]. The presumption is that the L2 connection is a switched
+    ATM VC or VP and that one or both ACs and the PW are established in real-time
+    using routing and signaling protocol machinery native to the ATM and IP/MPLS networks.
+    We call this a switched ATM L2VPN. The key component of a switched ATM L2VPN is
+    a PWE3 native service processing (NSP) function on the PE that serves as an interworking
+    gateway between native ATM and IP/MPLS signaling and routing protocols. The NSP
+    learns of ATM prefixes reachable through the local attachment circuits. The ATM
+    prefixes are exchanged with a co-resident MP-BGP instance for automatic distribution
+    and discovery of ATM reachability to participating PEs and their directly-attached
+    ATM networks. The NSP is capable of processing the necessary native ATM signaling
+    messages for real-time connection management. The NSP interacts with the co- resident
+    PWE3 signaling machinery for concurrent PW connection management. Extensions to
+    the PWE3 signaling protocol are required to support dynamic single-sided provisioning
+    and to transport ATM signaling parameters between the NSPs for connection management
+    purposes. Extensions to the MP-BGP protocol are needed distribute ATM prefixes
+    and associated next hop information between PEs.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-metz-switched-atm-l2vpn-00
+    docid:
+    - id: draft-metz-switched-atm-l2vpn-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-metz-switched-atm-l2vpn-00
+      format: text/plain
+fetched: '2022-07-23'

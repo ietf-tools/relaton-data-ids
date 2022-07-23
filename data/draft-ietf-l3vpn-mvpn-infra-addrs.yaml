@@ -1,0 +1,45 @@
+---
+id: draft-ietf-l3vpn-mvpn-infra-addrs
+title:
+- content: IPv4 and IPv6 Infrastructure Addresses in BGP Updates for Multicast VPN
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-ietf-l3vpn-mvpn-infra-addrs
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: <p>To provide Multicast VPN (MVPN) service, Provider Edge routers originate
+    BGP Update messages that carry Multicast-VPN ("MCAST-VPN") BGP routes; they also
+    originate unicast VPN routes that carry MVPN-specific attributes. These routes
+    encode addresses from the customer's address space, as well as addresses from
+    the provider's address space. These two address spaces are independent, and the
+    address family (IPv4 or IPv6) of the two spaces may or may not be the same. These
+    routes always contain an "address family" field that specifies whether the customer
+    addresses are IPv4 addresses or whether they are IPv6 addresses. However, there
+    is no field that explicitly specifies the address family of the provider addresses.
+    To ensure interoperability, this document specifies that provider IPv4 addresses
+    are always encoded in these update messages as 4-octet addresses, and that the
+    distinction between IPv4 and IPv6 is signaled solely by the length of the address
+    field. Specific cases are explained in detail. This document updates RFC 6514.
+    [STANDARDS-TRACK]</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-ietf-l3vpn-mvpn-infra-addrs-05
+    docid:
+    - id: draft-ietf-l3vpn-mvpn-infra-addrs-05
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-l3vpn-mvpn-infra-addrs-05
+      format: text/plain
+fetched: '2022-07-23'

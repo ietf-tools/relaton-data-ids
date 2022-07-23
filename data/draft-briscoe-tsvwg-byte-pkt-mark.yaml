@@ -1,0 +1,42 @@
+---
+id: draft-briscoe-tsvwg-byte-pkt-mark
+title:
+- content: Byte and Packet Congestion Notification
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-briscoe-tsvwg-byte-pkt-mark
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This memo concerns dropping or marking packets using active queue management
+    (AQM) such as random early detection (RED) or pre- congestion notification (PCN).
+    The primary conclusion is that packet size should be taken into account when transports
+    decode congestion indications, not when network equipment writes them. Reducing
+    drop of small packets has some tempting advantages: i) it drops less control packets,
+    which tend to be small and ii) it makes TCP's bit- rate less dependent on packet
+    size. However, there are ways of addressing these issues at the transport layer,
+    rather than reverse engineering network forwarding to fix specific transport problems.
+    Network layer algorithms like the byte-mode packet drop variant of RED should
+    not be used to drop fewer small packets, because that creates a perverse incentive
+    for transports to use tiny segments, consequently also opening up a DoS vulnerability.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-briscoe-tsvwg-byte-pkt-mark-02
+    docid:
+    - id: draft-briscoe-tsvwg-byte-pkt-mark-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-briscoe-tsvwg-byte-pkt-mark-02
+      format: text/plain
+fetched: '2022-07-23'

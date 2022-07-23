@@ -1,0 +1,44 @@
+---
+id: draft-demizu-tcp-ts2
+title:
+- content: TS2 --- A Modified TCP Timestamps Mechanism
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-demizu-tcp-ts2
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: <p>This memo proposes a modified TCP Timestamps mechanism called "TS2".
+    It uses the existing "TCP Timestamps option" specified in RFC1323 and a new TCP
+    option called "the TCP Old Timestamps option", which is specified in this memo.
+    As a fallback, an RFC1323-compatible mode called "TS1" is also available. The
+    base mechanism of TS2 includes the definitions of those two TCP Timestamps options,
+    mode negotiation to enable TS1 or TS2, and a rule for updating internal states.
+    The applied mechanisms of TS2 include an accurate RTT measurement mechanism that
+    is correct even for duplicate ACK segments (RTTM/TS2), a reordering-robust mechanism
+    to detect wrapped sequence numbers (PAWS/TS2), a lightweight mechanism to detect
+    spoofed segments (PASA/TS2), a loss inference mechanism applicable to both original
+    and retransmitted data segments (DLI/TS2), and a spurious loss inference detection
+    mechanism that operates without waiting for one RTT by sending arbitrary in-window
+    data (SLID/TS2).</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-demizu-tcp-ts2-01
+    docid:
+    - id: draft-demizu-tcp-ts2-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-demizu-tcp-ts2-01
+      format: text/plain
+fetched: '2022-07-23'

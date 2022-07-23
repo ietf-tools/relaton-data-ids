@@ -1,0 +1,41 @@
+---
+id: draft-musthafa-pim-unrouted-data-handling
+title:
+- content: Unrouted Data Handling in PIM-SM
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-musthafa-pim-unrouted-data-handling
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>A shared-media LAN like Ethernet may have multiple PIM-SM routers connected
+    to it. In a scenario where two or more routers are connected to the same LAN and
+    if only one of the PIM-SM Routers has members joined for a particular group, all
+    the other routers will receive the same traffic. Since no members are joined for
+    this group in the routers, each time when data is received, the PIM-SM has the
+    overhead of processing all these data packets in the control plane to decide where
+    to route the packet. To avoid this, an (S, G) or (*, G) Entry with NULL Oif list
+    is created so that discarding of the packets will be handled efficiently in the
+    data plane as opposed to searching the route entry in the control plane and then
+    dropping the packet.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-musthafa-pim-unrouted-data-handling-00
+    docid:
+    - id: draft-musthafa-pim-unrouted-data-handling-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-musthafa-pim-unrouted-data-handling-00
+      format: text/plain
+fetched: '2022-07-23'

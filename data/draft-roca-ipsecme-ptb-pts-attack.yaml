@@ -1,0 +1,44 @@
+---
+id: draft-roca-ipsecme-ptb-pts-attack
+title:
+- content: Too Big or Too Small? The PTB-PTS ICMP-based Attack against IPsec Gateways
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-roca-ipsecme-ptb-pts-attack
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: '<p>This document introduces the "Packet Too Big"-"Packet Too Small" Internet
+    Control Message Protocol (ICMP) based attack against IPsec gateways. We explain
+    how an attacker having eavesdropping and packet injection capabilities, from the
+    unsecure network where he only sees encrypted packets, can force a gateway to
+    reduce the Path Maximum Transmission Unit (PMTU) of an IPsec tunnel to the minimum,
+    which can trigger severe issues for the hosts behind this gateway: with a Linux
+    host, depending on the PMTU discovery algorithm in use (i.e., PMTUd versus PLPMTUd)
+    and protocol (TCP versus UDP), the attack either creates a Denial of Service or
+    major performance penalties. This attack highlights two fundamental problems,
+    namely: (1) the impossibility to distinguish legitimate from illegitimate ICMP
+    packets coming from the untrusted network, and (2) the contradictions in the way
+    Path MTU is managed by some end hosts when this Path MTU is below the minimum
+    packet size any link should support because of the IPsec encapsulation.</p>'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-roca-ipsecme-ptb-pts-attack-00
+    docid:
+    - id: draft-roca-ipsecme-ptb-pts-attack-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-roca-ipsecme-ptb-pts-attack-00
+      format: text/plain
+fetched: '2022-07-23'

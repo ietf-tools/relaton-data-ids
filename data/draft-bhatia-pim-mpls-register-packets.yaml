@@ -1,0 +1,44 @@
+---
+id: draft-bhatia-pim-mpls-register-packets
+title:
+- content: Replacing PIM Register packets with MPLS encapsulation
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-bhatia-pim-mpls-register-packets
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>In PIM-SM the designated router (DR) closest to the source keeps sending
+    PIM register packets till it receives an explicit Register- Stop message from
+    the rendezvous point (RP) router. The process of encapsulating multicast data
+    traffic to the RP, and the decapsulation done by RP are relatively expensive operations
+    for a router to perform, depending upon whether or not the router has appropriate
+    hardware support for these tasks. Since the PIM register messages are native IP
+    packets and routed based on IP forwarding tables no resource reservation mechanisms
+    are available. All IP packets will follow common paths that are defined by the
+    traditional IGP's algorithm and customizing the path for multicast applications
+    is impossible. This document proposes using MPLS tunnel(s) to send traffic from
+    the source to the RP till the shortest path tree (SPT) from the RP to the source
+    is established. Processing MPLS packets is easy and is readily supported on most
+    platforms.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-bhatia-pim-mpls-register-packets-00
+    docid:
+    - id: draft-bhatia-pim-mpls-register-packets-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-bhatia-pim-mpls-register-packets-00
+      format: text/plain
+fetched: '2022-07-23'

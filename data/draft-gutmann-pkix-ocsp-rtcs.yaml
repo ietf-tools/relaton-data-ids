@@ -1,0 +1,50 @@
+---
+id: draft-gutmann-pkix-ocsp-rtcs
+title:
+- content: X.509 Internet Public Key Infrastructure Real-time Certificate Status Facility
+    for OCSP - (RTCS)
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-gutmann-pkix-ocsp-rtcs
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>When the OCSP protocol was defined, the design was based on full compatibility
+    with CRL-based mechanisms. This requires the use of a complex means of certificate
+    identification that has resulted in interoperability problems among implementations,
+    the inability to provide an unambiguous certificate status response (the only
+    thing that a CRL can say with certainty is 'revoked'), and an online responder
+    tied to an offline mechanism (some CAs issue CRLs only once or twice a day, even
+    though they have an online, realtime certificate store available). Fortunately,
+    the authors of the OCSP RFC foresaw this situation by allowing a client to specify,
+    and a responder to return, more than one type of response. Just as the original
+    OCSP responses were designed for completely CRL- compatible operation, this document
+    specifies a response type that is designed for real-time status operation, providing
+    a response not from a stored CRL using CRL-only mechanisms but directly from a
+    live certificate store. This allows the responder to provide extended information
+    not possible with CRLs. In abstract terms, the responder is providing an implementation
+    of an authenticated dictionary that responds to membership queries from relying
+    parties. A conventional OCSP responder answers the question 'Is x excluded from
+    D?', while an OCSP responder with RTCS capability answers the question 'Is x present
+    in D?'.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-gutmann-pkix-ocsp-rtcs-00
+    docid:
+    - id: draft-gutmann-pkix-ocsp-rtcs-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-gutmann-pkix-ocsp-rtcs-00
+      format: text/plain
+fetched: '2022-07-23'

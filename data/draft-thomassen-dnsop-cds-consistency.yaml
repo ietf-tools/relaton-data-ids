@@ -1,0 +1,40 @@
+---
+id: draft-thomassen-dnsop-cds-consistency
+title:
+- content: Ensuring CDS/CDNSKEY Consistency is Mandatory
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-thomassen-dnsop-cds-consistency
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: <p>For maintaining DNSSEC Delegation Trust, DS records have to be kept
+    up to date. [RFC7344] automates this by having the child publish CDS and/or CDNSKEY
+    records which hold the prospective DS parameters. Parent-side entities (e.g. Registries,
+    Registrars) can use these records to update the delegation's DS records. A common
+    method for detecting changes in CDS/CDNSKEY record sets is to query them periodically
+    from the child zone ("polling"), as described in Section 6.1 of [RFC7344]. This
+    document specifies that if polling is used, parent-side entities MUST ensure that
+    CDS/CDNSKEY record sets are equivalent across all of the child's authoritative
+    nameservers, before taking any action based on these records.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-thomassen-dnsop-cds-consistency-00
+    docid:
+    - id: draft-thomassen-dnsop-cds-consistency-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-thomassen-dnsop-cds-consistency-00
+      format: text/plain
+fetched: '2022-07-23'

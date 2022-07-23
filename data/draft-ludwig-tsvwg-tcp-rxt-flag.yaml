@@ -1,0 +1,40 @@
+---
+id: draft-ludwig-tsvwg-tcp-rxt-flag
+title:
+- content: TCP Retransmit (RXT) Flag
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-ludwig-tsvwg-tcp-rxt-flag
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This document proposes a solution to TCP’s retransmission ambiguity
+    problem. It is based on using a single bit, named the Retransmit (RXT) flag, taken
+    from the Reserved field of the TCP header. The TCP sender sets the RXT flag in
+    segments containing retransmitted data. In response to such a segment, the TCP
+    receiver sends an immediate pure ACK with the RXT flag set. By inspecting the
+    RXT flag of the ACKs that arrive after a retransmit the TCP sender can then resolve
+    the retransmission ambiguity. This protocol feature provides a basis for future
+    TCP enhancements such as schemes to detect and respond to spurious timeouts and
+    packet re-orderings.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-ludwig-tsvwg-tcp-rxt-flag-03
+    docid:
+    - id: draft-ludwig-tsvwg-tcp-rxt-flag-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ludwig-tsvwg-tcp-rxt-flag-03
+      format: text/plain
+fetched: '2022-07-23'

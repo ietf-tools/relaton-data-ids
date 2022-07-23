@@ -1,0 +1,41 @@
+---
+id: draft-kazu-jmsg-sign
+title:
+- content: Japanese Message Signing Procedure
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-kazu-jmsg-sign
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This memo proposes a signing procedure for Japanese message. The procedure
+    guarantees signature validity even messages are processed through message transfer
+    agents which carelessly transform character set encodings. To sign Japanese message
+    digitally, local forms such as EUC/Japanese, Shift-JIS, etc., are first converted
+    into the transfer form, ISO-2022-JP, then duplicated into two objects. The first
+    object is transformed into the signature form proposed in this memo and a detached
+    digital signature is calculated over it. An entire digital signature is created
+    with the second object and the detached digital signature. Japanese text is verified
+    as the signature form instead of the transfer form. To encrypt Japanese message,
+    the transfer form, ISO-2022-JP, is used.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-kazu-jmsg-sign-00
+    docid:
+    - id: draft-kazu-jmsg-sign-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-kazu-jmsg-sign-00
+      format: text/plain
+fetched: '2022-07-23'

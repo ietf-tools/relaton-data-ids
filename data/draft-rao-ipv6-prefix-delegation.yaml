@@ -1,0 +1,46 @@
+---
+id: draft-rao-ipv6-prefix-delegation
+title:
+- content: IPv6 Prefix Delegation using ICMPv6
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-rao-ipv6-prefix-delegation
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>The currently proposed solution for IPv6 Prefix Delegation is based
+    on DHCPv6 protocol. We believe that in certain network topologies and configurations
+    where the CPE routers may not be capable or configured to use DHCPv6 and hence
+    can not utilize the currently proposed DHCPv6 based ipv6 prefix delegation procedure.
+    Therefore an alternate ipv6 prefix delegation procedure that does not require
+    or depend on the DHCPv6 protocol is needed. This document proposes an ICMPv6 based
+    prefix delegation (PD) mechanism which is in conformance with RFC 3769 that describes
+    the requirements for IPv6 prefix delegation. This proposal involves using the
+    Router Solicitation (RS) message for the prefix request and the Router Advertisement(RA)
+    message for the prefix delegation. A new flag called P-flag (bit 0 of the reserved
+    field) is defined to indicate that the RS message includes a PD request. RS messages
+    with PD request can now include PIO option(s) to carry PD information such as
+    prefix preference(s) or PD parameters such as lease etc. It also proposes defining
+    a new flag called D-flag (reserved bit 26) of the PIO option to indicate the presence
+    of PD specific PIO in RS and RA messages.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-rao-ipv6-prefix-delegation-01
+    docid:
+    - id: draft-rao-ipv6-prefix-delegation-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-rao-ipv6-prefix-delegation-01
+      format: text/plain
+fetched: '2022-07-23'

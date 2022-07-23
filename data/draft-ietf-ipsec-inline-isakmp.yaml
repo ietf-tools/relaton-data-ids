@@ -1,0 +1,46 @@
+---
+id: draft-ietf-ipsec-inline-isakmp
+title:
+- content: Inline Keying within the ISAKMP Framework.
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-ietf-ipsec-inline-isakmp
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>The current proposal for IP-layer key management [ISAKMP, OAKLEY, ISAOAK]
+    has fairly high overhead. Before a security association can be established, at
+    least one pair of messages need to be exchanged between the communicating peers.
+    For efficiency, this suggests that ISAKMP setup should be infrequent. However,
+    general principles of key management suggest that individual keys should be used
+    as little as practical and changed as frequently as possible. Steve Bellovin has
+    suggested that, ideally, different security associations should be used for each
+    different transport-level connection[BADESP]. This document discusses a way of
+    structuring a protocol to permit this to happen with minimal overhead, both in
+    round-trip delay at connection setup, and in bandwidth once the connection is
+    established. The general concept of inline or in-band keying here was inspired
+    by SKIP[SKIP]. However, SKIP's approach is burdened by the addition of an extra
+    intermediate header of perhaps 20 to 28 bytes to every protected packet, which
+    doubles the bandwidth overhead of protected traffic compared with ESP with fixed
+    keying. In order to minimise the per-packet overhead, an inline keying header</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-ietf-ipsec-inline-isakmp-01
+    docid:
+    - id: draft-ietf-ipsec-inline-isakmp-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-ipsec-inline-isakmp-01
+      format: text/plain
+fetched: '2022-07-23'

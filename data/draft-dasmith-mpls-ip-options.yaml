@@ -1,0 +1,42 @@
+---
+id: draft-dasmith-mpls-ip-options
+title:
+- content: Requirements for Label Edge Router Forwarding of IPv4 Option Packets
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-dasmith-mpls-ip-options
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This document imposes a new requirement on Label Edge Routers (LER)
+    specifying that when determining whether to MPLS encapsulate an IP packet, the
+    determination is made independent of any IP options that may be carried in the
+    IP packet header. Lack of a formal standard may result in a different forwarding
+    behavior for different IP packets associated with the same prefix-based Forwarding
+    Equivalence Class (FEC). While an IP packet with either a specific option type
+    or no header option may follow the MPLS label switched path (LSP) associated with
+    a prefix-based FEC, an IP packet with a different option type but associated with
+    the same prefix-based FEC may bypass MPLS encapsulation and instead be IP routed
+    downstream. IP option packets that fail to be MPLS encapsulated simply due to
+    their header options present a security risk against the MPLS infrastructure.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-dasmith-mpls-ip-options-01
+    docid:
+    - id: draft-dasmith-mpls-ip-options-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-dasmith-mpls-ip-options-01
+      format: text/plain
+fetched: '2022-07-23'

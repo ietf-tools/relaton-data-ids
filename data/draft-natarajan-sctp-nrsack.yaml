@@ -1,0 +1,47 @@
+---
+id: draft-natarajan-sctp-nrsack
+title:
+- content: Stream Control Transmission Protocol (SCTP) Data Acknowledgement with Non-Renegable
+    Selective Acknowledgements (NR-SACKs).
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-natarajan-sctp-nrsack
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>Stream Control Transmission Protocol (SCTP) [RFC4960] specifies Selective
+    Acknowledgements (SACKs) to allow a transport layer data receiver to acknowledge
+    DATA chunks which arrive out-of-order. In SCTP, SACK information is advisory because
+    the data receiver is permitted to renege; that is, later discard a DATA chunk
+    which previously has been SACKed. Since delivery of a SACKed out-of-order DATA
+    chunk is not guaranteed, a copy of this DATA chunk MUST be kept in the data sender's
+    retransmission queue until this DATA chunk is cumulatively acked. This document
+    specifies Non-Renegable Selective Acknowledgements (NR- SACKs), an extension to
+    SCTP's acknowledgment mechanism. NR-SACKs enable a data receiver to explicitly
+    acknowledge out-of-order DATA chunks that have been delivered to the receiving
+    application. (Recall that, in SCTP, out-of-order data sometimes can be delivered.)
+    NR-SACKs also enable a data receiver to indicate any out-of-order DATA chunks
+    on which the receiver guarantees never to renege. As opposed to SACKed DATA chunks,
+    a sender can consider NR-SACKed DATA chunks as never requiring retransmission,
+    thus freeing space in the data sender's retransmission queue sooner.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-natarajan-sctp-nrsack-00
+    docid:
+    - id: draft-natarajan-sctp-nrsack-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-natarajan-sctp-nrsack-00
+      format: text/plain
+fetched: '2022-07-23'

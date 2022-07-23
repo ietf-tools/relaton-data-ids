@@ -1,0 +1,44 @@
+---
+id: draft-ford-cfrg-cosi
+title:
+- content: Collective Edwards-Curve Digital Signature Algorithm
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-ford-cfrg-cosi
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>Collective signatures are compact cryptographic proofs showing that
+    several distinct secret key holders, called cosigners, have cooperated to sign
+    a given message. This document describes a collective signature extension to the
+    EdDSA signing schemes for the Ed25519 and Ed448 elliptic curves. A collective
+    EdDSA signature consists of a point R, a scalar s, and a bitmask Z indicating
+    the specific subset of a known group of cosigners that produced this signature.
+    A collective signature produced by n cosigners is of size 64+ceil(n/8) bytes for
+    Ed25519 and 114+ceil(n/8) bytes for Ed448, respectively, instead of 64n and 114n
+    bytes for n individual signatures. Further, collective signature verification
+    requires only one double scalar multiplication rather than n. The verifier learns
+    exactly which subset of the cosigners participated, enabling the verifier to implement
+    flexible acceptance-threshold policies, and preserving transparency and accountability
+    in the event a bad message is collectively signed.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-ford-cfrg-cosi-00
+    docid:
+    - id: draft-ford-cfrg-cosi-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ford-cfrg-cosi-00
+      format: text/plain
+fetched: '2022-07-23'

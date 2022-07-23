@@ -1,0 +1,43 @@
+---
+id: draft-hemige-pim-improved-assert
+title:
+- content: Improved Assert in PIM-SM
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-hemige-pim-improved-assert
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>In [PIM-SM], assert procedures are triggered by data-plane interaction
+    with the control-plane when traffic arrives on an outgoing interface. There are
+    several disadvantages with this in that duplicate traffic is forwarded downstream
+    until an assert winner is elected and seen by all routers on the LAN; such dependence
+    on the data-plane to build control-plane state does not scale well. When [PIM-SM]
+    is used to setup P2MP LSP trees as in [SURESH-P2MP], it is not always possible
+    to determine if traffic arrived on an outbound interface . This draft proposes
+    mechanisms to trigger assert completely in the control plane by reacting to Joins
+    sent to another router on a LAN. These procedures are essential when it is not
+    possible to determine if traffic arrived on an outbound interface. It also helps
+    completely remove the dependency on data-plane to trigger asserts and eliminates
+    duplicate traffic resulting from assert scenarios.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-hemige-pim-improved-assert-00
+    docid:
+    - id: draft-hemige-pim-improved-assert-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-hemige-pim-improved-assert-00
+      format: text/plain
+fetched: '2022-07-23'

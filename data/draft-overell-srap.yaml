@@ -1,0 +1,47 @@
+---
+id: draft-overell-srap
+title:
+- content: 'Simple Roaming Authentication Protocol: SRAP'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-overell-srap
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>The Simple Roaming Authentication Protocol is intended to provide an
+    authentication facility for other non-authenticated protocols. It utilises registered
+    SASL [SASL] mechanisms. This protocol has been developed in order that an ISP's
+    roaming customers can be authenticated when connecting via other networks or ISPs.
+    Rather than deploying new client software to handle authenticating versions of
+    all protocols (SMTP, POP3, NNTP etc) a single SRAP applet is deployed that handles
+    the authentication for all other protocols. When the server of a non-authenticated
+    protocol wishes to authenticate a client the server starts another connection
+    back to the client using SRAP. The SRAP conversation authenticates the client
+    to the server. The original non-authenticated protocol can now proceed. For example
+    with SMTP consider two machines Alice's and Bob's. Alice's runs an SMTP client
+    and a SRAP authenticatee; Bob's runs an SMTP server and a SRAP authenticator.
+    Alice's machine connects to Bob's using SMTP. SMTP does not support authentication
+    so another connection is made back from Bob's machine to Alice's, this time using
+    SRAP. The SRAP conversation authenticates Alice to Bob. The SMTP conversation
+    can now proceed.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-overell-srap-00
+    docid:
+    - id: draft-overell-srap-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-overell-srap-00
+      format: text/plain
+fetched: '2022-07-23'

@@ -1,0 +1,49 @@
+---
+id: draft-mancuso-nsis-impl-sign
+title:
+- content: Implicit Signaling over Stateless Networks
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-mancuso-nsis-impl-sign
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This memo defines a mechanism for NSIS Signaling Layer Protocol (NSLP).
+    The driving motivation is that some network domains, e.g. based on Differentiated
+    Services data plane, might not explicit support a per-router and/or per-domain
+    admission control rule. Hence, for such domains, explicit signaling is not a viable
+    approach. To partially solve this issue, we suggest an admission control paradigm
+    devised to provide ?Implicit Signaling? via data plane packet delivery operation.
+    Implicit Signaling relies the decision to admit a new flow upon the successful
+    and timely delivery, through the domain, of Probe packets independently generated
+    by the NSIS initiator (NI). The key idea is to use failed receptions of Probes
+    to discover, at the NI, that a congestion condition occurs in the network segment
+    between NSIS initiator and NSIS Responder (NR), and to abort a reservation procedure.
+    Since Implicit Signaling is not able to communicate per-flow traffic and QoS parameters,
+    in principle it cannot exert a QoS control as tight as in the case of explicit
+    mechanisms. However, it is important to notice that Implicit Signaling can indeed
+    operate in a differentiated manner on the basis of traffic and QOS parameters,
+    if i) Probes are marked according to the flow traffic and QoS requirements, ii)
+    marked Probes experience a dropping behaviour according to their mark, and iii)
+    Probe dropping is controlled according to measurements taken into the core routers.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-mancuso-nsis-impl-sign-00
+    docid:
+    - id: draft-mancuso-nsis-impl-sign-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-mancuso-nsis-impl-sign-00
+      format: text/plain
+fetched: '2022-07-23'

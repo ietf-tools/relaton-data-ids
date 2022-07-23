@@ -1,0 +1,55 @@
+---
+id: draft-peng-fcn
+title:
+- content: A proposal to add Fast Congestion Notification to IP and Improve TCP Performance
+    in Wireless and Mobile networks
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-peng-fcn
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This paper create a method using a simple implementation to inform
+    the traffic source at a very early stage that the network is becoming overload
+    or congested and to ask the source to slow down its transmission rate. For simplicity,
+    the network only indicates congesition to the node where data transmission rate
+    will be reduced or increased adaptively. For the consideration of asymmetric routing
+    and to shorten long control delay time, the congestion notification message generated
+    for the incipient congestion in the network should immediately routed back according
+    to its source address. Upon receiving this message, the source terminal discards
+    this message and immediately initiates its congestion control, then it sends message
+    to tell the network node to stop adding it. To improve TCP performance in wireles
+    and mobile networks, we assume only this message created in the network can initiate
+    congestion window reduction to achieve separation of congestion control and loss
+    recovery mechanism. Then, I mention that this Fast Congestion Notification should
+    be created once the buffer size exceeds the prefixed threshold and still generated
+    though upon packet losses due to congestion until the messages inform the source
+    redution of congestion window reache it. However, in traditional fix networks,
+    it is no need of the ability of packet losses to initiate congestion control and
+    the FCN will not required to be generated after packet losses due to buffer overflow
+    occurs for the packet losses are mainly due to congestion in such environment.
+    It is most noted that the source address of following Fast Congestion Notification
+    messages will remain the same as the first one in a window to avoid reducing the
+    transmission rate of multiple TCP connections simultaneously and improve the fairness
+    and performance either in wire or in wireless environent.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-peng-fcn-00
+    docid:
+    - id: draft-peng-fcn-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-peng-fcn-00
+      format: text/plain
+fetched: '2022-07-23'

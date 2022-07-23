@@ -1,0 +1,55 @@
+---
+id: draft-mattson-multicast-2547bis
+title:
+- content: Multicast Group Membership Update over 2547bis VPNs
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-mattson-multicast-2547bis
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>[RFC2547-bis] is a peer-to-peer VPN model allowing customers to establish
+    unicast routed connectivity over L3 VPNs. But [RFC2547bis] does not provide a
+    means for customers to establish multicast distribution trees over these VPNs.
+    This text proposes a simple means for supporting multicast over [RFC2547-bis]
+    VPNs. The solution is generic and can be used with most multicast IGPs (M-IGPs)
+    including PIM-SM, PIM-DM, IGMP proxy and CBT. The proposed technique allows a
+    PE to act as a gateway between multicast M-IGP peers in the CE and the MBGP-based
+    VPN. The PE maintains an M-IGMP peering relationship with an M-IGP agent at the
+    CE. Through the M-IGP peering session the PE receives group membership information.
+    The PE gateway exports this membership information to BGP. The information is
+    then conveyed to the appropriate far-end PE by means of MBGP with proposed extensions.
+    The far-end PE imports this membership information and acts on it according to
+    the rules of the M-IGP it is supporting. In general the far-end PE will setup/teardown
+    a forwarding entry for this group and pass the join/prune information toward the
+    source. In order, to keep this protocol simple, this solution is directed only
+    at the Source-Specific Multicast service model, but is structured in a way that
+    does not explicitly preclude future expansion to cover the Any-Source Multicast
+    service model. Another simplifying assumption regards the topology of the VPN.
+    Multicast protocols are often designed with the assumption that the IGP routing
+    on which it is based is symmetrical throughout the network. The proposal maintains
+    this assumption. The solution is not necessarily applicable to all the possible
+    multi-level, overlapping, asymmetrical VPN topologies that are possible within
+    [2547-bis]. Rather, this proposal is directed at the fully-meshed VPNs with symmetrical
+    routing metrics at each PE.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-mattson-multicast-2547bis-00
+    docid:
+    - id: draft-mattson-multicast-2547bis-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-mattson-multicast-2547bis-00
+      format: text/plain
+fetched: '2022-07-23'

@@ -1,0 +1,50 @@
+---
+id: draft-funk-tls-inner-application-extension
+title:
+- content: TLS Inner Application Extension (TLS/IA)
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-funk-tls-inner-application-extension
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: <p>This document defines a new TLS extension called "Inner Application".
+    When TLS is used with the Inner Application extension (TLS/IA), additional messages
+    are exchanged after completion of the TLS handshake, in effect providing an extended
+    handshake prior to the start of upper layer data communications. Each TLS/IA message
+    contains an encrypted sequence of Attribute-Value-Pairs (AVPs) from the RADIUS/Diameter
+    namespace. Hence, the AVPs defined in RADIUS and Diameter have the same meaning
+    in TLS/AI; that is, each attribute code point refers to the same logical attribute
+    in any of these protocols. Arbitrary "applications" may be implemented using the
+    AVP exchange. Possible applications include EAP or other forms of user authentication,
+    client integrity checking, provisioning of additional tunnels, and the like. Use
+    of the RADIUS/Diameter namespace provides natural compatibility between TLS/IA
+    applications and widely deployed AAA infrastructures. It is anticipated that TLS/IA
+    will be used with and without subsequent protected data communication within the
+    tunnel established by the handshake. For example, TLS/IA may be used to secure
+    an HTTP data connection, allowing more robust password-based user authentication
+    to occur than would otherwise be possible using mechanisms available in HTTP.
+    TLS/IA may also be used for its handshake portion alone; for example, EAP-TTLSv1
+    encapsulates a TLS/IA handshake in EAP as a means to mutually authenticate a client
+    and server and establish keys for a separate data connection.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-funk-tls-inner-application-extension-03
+    docid:
+    - id: draft-funk-tls-inner-application-extension-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-funk-tls-inner-application-extension-03
+      format: text/plain
+fetched: '2022-07-23'

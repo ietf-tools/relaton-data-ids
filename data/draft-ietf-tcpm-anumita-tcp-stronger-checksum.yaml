@@ -1,0 +1,48 @@
+---
+id: draft-ietf-tcpm-anumita-tcp-stronger-checksum
+title:
+- content: Support for Stronger Error Detection Codes in TCP for Jumbo Frames
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-ietf-tcpm-anumita-tcp-stronger-checksum
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: <p>There is a class of data serving protocols and applications that cannot
+    tolerate undetected data corruption on the wire. Data corruption could occur at
+    the source in software, in the network interface card, out on the link, on intermediate
+    routers or at the destination network interface card or node. The Ethernet CRC
+    and the 16-bit checksum in the TCP/UDP headers are used to detect data errors.
+    Most applications rely on these checksums to detect data corruptions and do not
+    use any checksums or CRC checks at their level. Research has shown that the TCP/UDP
+    checksums are catching a significant number of errors, however, the research suggests
+    that one packet in 10 billion will have an error that goes undetected for Ethernet
+    MTU frames (MTU of 1500). Under certain situations, "bad" hosts can introduce
+    undetected errors at a much higher frequency and order. With the use of Jumbo
+    frames on the rise, and therefore more data bits on the wire that could be corrupted,
+    the current 16-bit TCP/UDP checksum, or the Ethernet 32-bit CRC are simply not
+    sufficient for detecting errors. This document specifies a proposal to use stronger
+    checksum algorithms for TCP Jumbo Frames for IPv4 and IPv6 networks. The Castagnoli
+    CRC 32C algorithm used in iSCSI and SCTP is proposed as the error detection code
+    of choice.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-ietf-tcpm-anumita-tcp-stronger-checksum-00
+    docid:
+    - id: draft-ietf-tcpm-anumita-tcp-stronger-checksum-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-tcpm-anumita-tcp-stronger-checksum-00
+      format: text/plain
+fetched: '2022-07-23'

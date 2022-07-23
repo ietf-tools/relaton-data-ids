@@ -1,0 +1,178 @@
+---
+id: draft-ray-radx
+title:
+- content: Low Overhead Compression For Short String Data
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-ray-radx
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: '<p>Compression methods primarily rely on detecting patterns of redundancy
+    in text strings, which means that a minimum of around 800 bytes of data are required
+    before compression can occur. Most data fields in databases are far smaller than
+    that, and therefore dictionary-based compression is not efficient. The method
+    proposed begins by making assumptions about the data and accepting some compromises;
+    which allows compression to begin from the very first byte. The discussion proves
+    that this can result in 1) an average 30% compression, 2) a maximum 50% compression,
+    and 3) no expansion at all (0%) of the input data. As an added benefit, all processing
+    can be performed using bit shifting and masking, which drastically lowers the
+    cost of compression; no division or multiplication operations are necessary. UTF-8
+    text is handled gracefully. OVERVIEW AND BACKGROUND The origin of RadX is the
+    attempt by Digital Equipment Corporation in the 1970''s to pack more text into
+    the limited memory space available to computers in that era, particularly as DEC
+    was supporting different classes of machines with different word sizes - some,
+    like the PDP/8 series, were byte machines, but some used 32 or even 36 bits. DEC
+    engineers basically used radix40 as the basis for a compressed character set which
+    included the alphabet, the numerals, the space, and three other special characters
+    (which varied by machine). They called it "RAD50", because in that era DEC were
+    into octal arithmetic and every- thing was in three-bit groups. It worked - they
+    packed three letters into every 16 bits (40 x 40 x 40 = 64000), but the glaring
+    problem was that it didn''t work for anything but filenames - the character set
+    was too small. There were also performance issues. Using non-binary bases for
+    character sets is not kind to ALUs; lots of division, modulus and multiplication
+    are involved. Those who designed UTF-8 to represent Unicode in a flexible and
+    fool- proof way had a similar problem. They decided on an approach in which all
+    transformations could use bit-shifting instead of divide and multi- ply. We have
+    done the same, which implies, of course, sticking to binary bases and radices.
+    DISCUSSION The best compression methods seek out redundancy in text - but in order
+    to do that, the analyzer needs a sufficiently large sample, which some experts
+    have determined needs to exceed 800 bytes for random text. The most elegant solutions
+    generate dictionaries on-the-fly, requiring only one pass through the data. If
+    this method does not serve, then the best alternative is to make some assumptions
+    about the data before it is ever seen, perhaps even restrict the universe of permitted
+    values, and then dive right into a compression procedure from the very first byte.
+    UTF-8 solved many encoding problems - backward compatibility with ASCII being
+    the most important, but no less important is the ability to recover from a bad
+    byte or sequence error, to skip illegal segments which may have come from some
+    other Unicode encoding scheme, and so on. But the recognition that an algorithm
+    cannot be arrogantly wasteful of CPU cycles is what has made it possible to utilize
+    it without having to worry about the cost. IMPLEMENTATION RadX is a useful combination
+    of Radix-32/64 compression. The data is primarily stored in Radix-32, which allows
+    bit-shifting instead of divi- ding/multiplying to greatly simplify computation.
+    This is combined with a check for double characters, which can be encoded effectively
+    in 4 bits. Other ASCII characters are stored in 6 bits; UTF-8 characters are reduced
+    to bare Unicode and stored in 24 bits maximum. A series of zero bytes is used
+    for padding. As the input string is scanned from left to right, all disallowed
+    Uni- code ranges are ignored. Control characters are treated as spaces, and all
+    spaces consolidated. If the character is UTF-8, the Unicode page number is simply
+    substituted for pages 00 to 0F. For codes from U+0080 to U+0FFF, only the last
+    8 bits need to be added, so an extra byte is used. For U+1000 onwards, two extra
+    bytes are encoded. For safety, certain bit patterns are detected and skipped.
+    If the character is not UTF-8, then it is simple ASCII - and Radix-32 compression
+    is attempted. A special subset of 32 characters is defined as: " .0123456789ABCDEFGHILMNOPRSTUWY"
+    These are space, period, the numerals, and the alphabet with the excep- tion of
+    J, K, Q, V, X, and Z. The table indexing automatically upper- cases alphas and
+    substitutes some punctuation. If doubled codes are found, Radix-64 encoding is
+    used with a "double" flag; if three Radix- 32 encoding are found, that set is
+    used; else a single Radix-64 byte is created. The bit allocation table below shows
+    the final encodings. Bit allocation ============== 0 n xxxxxx Radix-64 ASCII,
+    n=0 if doubled, 1 if single 0 000 0000 +2 bytes Unicode U+1000 to U+D7FF (or padding)
+    0 011 1xxx +1 byte Unicode U+0080 to U+07FF 0 111 xxxx +1 byte Unicode U+0800
+    to U+0FFF 0 111 1110 +1 byte Unicode repeats, diff. in last digit 0 111 1111 Identical
+    repeat of entire last sequence 1 xxxxx yyyyy zzzzz Radix-32 triplet The great
+    advantages of this system over DEC RAD50 are that 1) the computational overhead
+    is low, since there is no need to use division and modulus repeatedly for each
+    character - simple bit-shift is suffi- cient, and 2) there are no unmappable characters.
+    The Internet requires UTF-8 support, and with RadX we can have our cake and eat
+    it too; we can compress ASCII efficiently and yet not get fazed when UTF-8 unexpectedly
+    pops up (or is introduced on purpose). In fact, quite a lot of UTF-8 is also compressed
+    - Indic languages, for instance, such as Hindi and Tamil are also compressed by
+    30%. The following ranges are mapped: U+0080 to U+024F, and U+0300 to U+D7FF.
+    Codes outside those ranges are deleted. Codes from U+0080 to U+0FFF are mapped
+    using one extra byte; from U+1000 onwards, two extra bytes are required. This
+    still represents a savings, or at least no penalty: A. A UTF-8 character is found
+    which is near or identical to the previous one. It is now stored in 8 bits. Compression
+    = 3:1 to 2:1 (66% to 50%) B. Double ASCII character pair found, map to Radix-64.
+    2 bytes are stored in 8 bits. Compression = 2:1 (50%) C. 3 characters found which
+    map into Radix-32. 3 bytes are stored in 16 bits. Compression = 3:2 (33%) D. A
+    UTF-8 character in the range U+0800 to U+0FFF is found; it occupies 3 byte in
+    UTF-8. It is now stored in 16 bits. Compression = 3:2 (33%) E. An ASCII character
+    is found, and mapped to Radix-64. 1 byte is stored in 8 bits. Compression = 1:1
+    (0%) F. A UTF-8 character is found in the range U+0080 to U+07FF; it occupies
+    2 bytes and is stored in 16 bits. Compression = 2:2 (0%) G. A UTF-8 character
+    in the range U+1000 to U+D7FF occupies 3 bytes and is encoded in 24 bits. Compression
+    = 3:3 (0%) That takes care of all the possible characters in ASCII and UTF-8.
+    Any dangerous Unicode sequences are deleted as shown below. All the encodable
+    sequences are first checked to see if they match the previous Unicode character;
+    if they do, the single-byte Unicode repeat code is used. &lt;CODE BEGINS&gt; Bit
+    Transformation Sequence (in processing order) =================================================
+    0 ??????? -&gt; indexed substitution table zzzzzz -&gt; 00 zzzzzz [Note A] xxxxx
+    yyyyy zzzzz -&gt; 1 xxxxx yy yyy zzzzz [Note B] zzzzzz -&gt; 01 zzzzzz [Note C]
+    10 ?????? -&gt; delete [orphan continuation byte] 1100 000 -&gt; delete [Note
+    D] 1100 0 x yy 10 yy zzzz -&gt; 0011 100x yyyy zzzz [Note E] 1100 1000 10 yy zzzz
+    -&gt; 0011 1010 00 yy zzzz [Note F] 1100 1001 10 00 zzzz -&gt; 0011 1010 0100
+    zzzz [Note G] 1100 10 ?? -&gt; delete [Note H] 110 xxx yy 10 yy zzzz -&gt; 0011
+    1xxx yyyy zzzz [Note J] 1110 0000 10 0????? -&gt; delete [illegal padding] 1110
+    0000 10 xxxx yy 10 yy zzzz -&gt; 0111 xxxx yyyy zzzz [Note K] 1110 111 ? -&gt;
+    delete [U+E000 - U+FFFF] 1110 aaaa 10 xxxx yy 10 yy zzzz -&gt; 0000 0000 aaaa
+    xxxx yyyy zzzz [No.L] ???? ???? -&gt; delete [U+10000 and above] Notes: [A] ASCII
+    doubled char in Radix-64 [B] 3 ASCII chars in Radix-32 [C] ASCII single char in
+    Radix-64 [D] U+007F or less - hidden ASCII [E] U+0080 to U+01FF [F] U+0200 to
+    U+023F [G] U+0240 to U+024F [H] U+0250 - U+02FF - custom chars [J] U+0300 - U+07FF
+    [K] U+0800 - U+0FFF [L] U+1000 to U+DFFF &lt;CODE ENDS&gt; The substitution table
+    below allows the alphabetic characters in Radix- 64 to be visually recognized
+    as such in data files, so that there is some ability to verify directly. The Radix-32
+    set is mostly aligned with it to simplify debugging. In Radix-64, only codes 1
+    to 55 are used for ASCII; 0 and 56 to 63 are reserved for Unicode encoding prefixes.
+    &lt;CODE BEGINS&gt; Radix-64 and Radix-32 Character Encoding Table ==============================================
+    Char Rad32 Rad64 Char Rad32 Rad64 Char Rad32 Rad64 ==== ===== ===== ==== =====
+    ===== ==== ===== ===== &lt;space&gt; 0 32 @ 55 ` 39 ! 10 33 A 1 1 a 1 1 " 34 B
+    2 2 b 2 2 # 35 C 3 3 c 3 3 $ 36 D 4 4 d 4 4 % 37 E 5 5 e 5 5 &amp; 38 F 6 6 f
+    6 6 '' 39 G 7 7 g 7 7 ( 27 H 8 8 h 8 8 ) 29 I 9 9 i 9 9 * 40 J 10 j 10 + 41 K
+    11 k 11 , 42 L 12 12 l 12 12 - 43 M 13 13 m 13 13 . 10 10 N 14 14 n 14 14 / 28
+    O 15 15 o 15 15 0 11 44 P 16 16 p 16 16 1 17 45 Q 17 q 17 2 22 46 R 18 18 r 18
+    18 3 24 47 S 19 19 s 19 19 4 26 48 T 20 20 t 20 20 5 27 49 U 21 21 u 21 21 6 28
+    50 V 22 v 22 7 29 51 W 23 23 w 23 23 8 30 52 X 24 x 24 9 31 53 Y 25 25 y 25 25
+    : 54 Z 26 z 26 ; 54 [ 27 { 27 &lt; 27 \ 28 | 28 = 43 ] 29 } 29 &gt; 29 ^ 30 ~
+    30 ? 10 33 _ 31 The reverse process is even simpler. A series of zeroes flags
+    the end of the text, so processing can stop once that is encountered. Every other
+    possible combination represents a compression mode that can be decoded and expanded.
+    RadX To UTF-8 Regeneration Sequence (in processing order) =========================================================
+    0000 0000 0000 ???? ???? ???? -&gt; delete [space padding] 0000 0000 aaaa xxxx
+    yyyy zzzz -&gt; 1110 aaaa 10 xxxx yy 10 yy zzzz 0011 0xxx yyyy zzzz -&gt; 110
+    xxx yy 10 yy zzzz 0011 1110 zzzz ZZZZ -&gt; rpt prev UTF-8, subst last digit 0011
+    1111 -&gt; repeat previous sequence 0011 1xxx yyyy zzzz -&gt; 1110 0000 10 1xxx
+    yy 10 yy zzzz 00 zzzzzz -&gt; rrrrrrrr rrrrrrrr [reverse Radix-64] 01 zzzzzz -&gt;
+    rrrrrrrr [reverse Radix-64] 1 xxxxx yy yyy zzzzz -&gt; rrrrrrrr rrrrrrrr rrrrrrrr
+    [reverse Radix-32] &lt;CODE ENDS&gt; The fourth sequence above is used when the
+    current UTF-8 and also the next one, are almost the same as the last but differ
+    in the final hex digit. The fifth sequence above is used when the entire current
+    encoding is identical to the last. Special processing is done for word beginnings
+    which are lower case - the preceding Radix-64 space character''s "double" bit
+    is set to indicate that the next letter should NOT be uppercased (0x20 vs. 0x60).
+    (Double spaces are impossible, since they are eliminated before anything else.)
+    The sequence 0x800? cannot normally occur, since that would represent the Radix-32
+    sequence for two spaces in a row; so this allows for a set of 32 special codes
+    which have not been allocated, any may be used for future extension. USAGE EXAMPLE
+    And finally, here is a worst-case scenario with the famous full-alpha- bet sentence.
+    T H E Q U I C K B R O W N ..20+8+5... 32 17 ..21+9+3... 11 ..0+2+18... ..15+23+14..
+    F O X J U M P S O V E R ..0+6+15... 24 32 10 ..21+13+16.. ..19+0+15.. 22 ..5+18+0
+    T H E L A Z Y D O G . ..20+8+5... ...0+12+1... 26 ..25+0+4... ..15+7+10.. The
+    three-number groups represent a two-byte condensation in Rad-32, and the lone
+    numbers represent a fallback to Rad-64 using one byte. The original 44-byte sentence
+    is reduced to 32, or a 27% reduction even without any doubled characters. This
+    letter frequency assumption works for all European languages, with a slight loss
+    for German, Italian and Polish. RESULTING FEATURES The result of applying the
+    above procedures to text strings gives the following advantages:</p>'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-ray-radx-00
+    docid:
+    - id: draft-ray-radx-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ray-radx-00
+      format: text/plain
+fetched: '2022-07-23'

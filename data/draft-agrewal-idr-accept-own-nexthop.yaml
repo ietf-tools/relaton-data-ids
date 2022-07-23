@@ -1,0 +1,50 @@
+---
+id: draft-agrewal-idr-accept-own-nexthop
+title:
+- content: BGP accept-own-nexthop community attribute
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-agrewal-idr-accept-own-nexthop
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>Various Service chain techniques utilize a Controller to inject Border
+    Gateway Protocol (BGP) Virtual Private Network (VPN) routes to help steer traffic
+    through a given path. The Controller does so by controlling how these VPN routes
+    are imported into various Virtual Routing and Forwarding (VRF) tables at routers
+    along the desired path. A couple of such approaches are specified in [I-D.ietf-bess-service-chaining].
+    These approaches rely on the Controller modifying the Route Target (RT) list and
+    next-hop of a VPN route received from a downstream router and redistributing these
+    modified routes to upstream routers. This is done such that - o routes originated
+    by an ingress VRF at the downstream router are imported into the egress VRF at
+    the immediately preceding upstream router and o next-hop advertised to the upstream
+    router is the address of the immediately succeeding downstream router. This forces
+    the traffic to flow through a sequence of network functions creating a service
+    chain. This works fine as long as the VRF importing the route received from the
+    Controller is on a different router than the VRF that originally exported the
+    route to the Controller. This is because BGP protocol [RFC4271] specifies that
+    a router reject routes received with its own next-hop. This document proposes
+    a new community the reception of which relaxes this particular rule in the BGP
+    protocol standard and describes at least one way of how next-hops of such routes
+    could be resolved.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-agrewal-idr-accept-own-nexthop-00
+    docid:
+    - id: draft-agrewal-idr-accept-own-nexthop-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-agrewal-idr-accept-own-nexthop-00
+      format: text/plain
+fetched: '2022-07-23'

@@ -1,0 +1,47 @@
+---
+id: draft-metz-spasv
+title:
+- content: Short Passive (SPASV) Command for FTP
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-metz-spasv
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>RFC 1639[Pis94] documents experimental long port (LPRT) and long passive
+    (LPSV) commands that many IP Version 6 implementations are using as the replacement
+    for the PORT and PASV commands in FTP [PR85]. The author believes that this is
+    the incorrect direction to be heading and that the replacement for PORT and PASV
+    should carry less information instead of more. The passive command (SPASV) is
+    a replacement for the PASV command. It only carries port numbers and does not
+    carry addresses. This makes it usable with IPv4 and IPv6. A benefit of not carrying
+    addresses is that pure network address translators (NAT) do not have to do a search-and-replace
+    on the TCP stream, which is an expensive operation. This also eliminates three-way
+    FTP, which is a rarely used mode of operation that leaves most existing FTP servers
+    wide open to the FTP Bounce Attack [Hob95]. Because the FTP PORT command is unfriendly
+    to some kinds of firewall configurations [Bel94] and that unfriendliness is there
+    to support three-way FTP, there is no replacement for the PORT command -- all
+    transfers should use passive mode instead. The author's inet6-apps kit (available
+    on ftp.ipv6.inner.net and ftp.inner.net) includes a client and server that supports
+    the current version of these commands. Those FTP servers implement this command.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-metz-spasv-00
+    docid:
+    - id: draft-metz-spasv-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-metz-spasv-00
+      format: text/plain
+fetched: '2022-07-23'

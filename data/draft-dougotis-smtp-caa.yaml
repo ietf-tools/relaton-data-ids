@@ -1,0 +1,47 @@
+---
+id: draft-dougotis-smtp-caa
+title:
+- content: SMTP Client Address Authorization (SMTP-CAA)
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-dougotis-smtp-caa
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: <p>The helo/ehlo domain reported by a client at the beginning of an SMTP
+    [RFC2821] session has largely been ignored without reliable means to verify this
+    information. To properly recognize a domain sending mail, the domain of the client
+    must be verifiable. This document utilizes a DNS SRV record that extends the definitions
+    for fields of this record as defined in [RFC2782] where the label becomes unique
+    by appending a label of "__caa" following the Proto field. Server verification
+    of permitted client addresses becomes possible as a method to confirm the domain
+    of a client without having prior information shared. Cooperation between client
+    and server domains utilizing this method exclude third party masquerades as originating
+    from within cooperative domains. Initially only a notice of Unknown or Unconfirmed
+    will be added to mail from uncooperative domains unless the domain is determined
+    to be not valid, where then the mail will be refused. This added notice provides
+    assurance the server is checking client domains in addition to alerting users
+    to the level of mail compliance on received mail. Once use of this method is common
+    practice in conjunction with other means for confirming the client domain, mail
+    may be refused if the client and/or domain fails these confirmation checks.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-dougotis-smtp-caa-00
+    docid:
+    - id: draft-dougotis-smtp-caa-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-dougotis-smtp-caa-00
+      format: text/plain
+fetched: '2022-07-23'

@@ -1,0 +1,47 @@
+---
+id: draft-dmudric-sipcore-sipv6-addr-selection
+title:
+- content: SIPv6 Headers and SDP Media Line Address Selection on Multihomed Hosts
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-dmudric-sipcore-sipv6-addr-selection
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>In the networks where multihomed hosts can have ULA and GUA addresses
+    from different ISPs, multiple SIP signaling and media connectivity issues might
+    arise due to inappropriate address selections. Some of the problems are described
+    in [RFC5220]. Since SIP and SDP allow IP addresses to be embedded into their headers
+    and lines, even if proper addresses are selected initially, SIP is not equipped
+    with the mechanisms to respond to network events, and transition transport to
+    reachable addresses. As a result, SIP messages and media might be filtered by
+    routers, or discarded as unreachable destinations. SIP protocol (RFC 3261) defines
+    signaling messages and their headers. This document describes how a multihomed
+    host should select addresses for SIP headers, like Contact and Via, to be reachable
+    destinations. Host SHOULD change a default router for uplink failures, remove
+    prefixes and addresses for unreachable ISP, and update contact address list. SDP
+    protocol (RFC 3264) defines how participants in a session select their parameters.
+    This document describes how an offerer and answerer on multihomed hosts should
+    select their addresses. If one of the selected addresses becomes unreachable,
+    the document describes the mechanism how a new one should be selected and renegotiated.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-dmudric-sipcore-sipv6-addr-selection-00
+    docid:
+    - id: draft-dmudric-sipcore-sipv6-addr-selection-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-dmudric-sipcore-sipv6-addr-selection-00
+      format: text/plain
+fetched: '2022-07-23'

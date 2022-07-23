@@ -1,0 +1,46 @@
+---
+id: draft-froment-sip-record-route-fix
+title:
+- content: Addressing Record-Route issues in Session Initiation Protocol (SIP)
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-froment-sip-record-route-fix
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: '<p>A typical function of a Session Initiation Protocol (SIP) Proxy is
+    to set a Record-Route header on initial requests in order to make subsequent requests
+    pass through it. This header contains a SIP Uniform Resource Identifier (URI)
+    indicating where and how the subsequent requests should be sent to reach the proxy.
+    Like any SIP URI, it can contain sip or sips schemes, IPV4 or IPV6 addresses,
+    and URI parameters that could influence the routing like different transport parameters
+    (UDP, TCP, SCTP...), or a compression indication like "comp=sigcomp". When a proxy
+    has to change some of those parameters between its incoming and outgoing interfaces
+    (multi-homed proxies, transport switching, sip to sips or IPV4 to IPV6 scenarios...),
+    the question arises on what should be put in Record- Route: it is just not possible
+    to make one header having the characteristics of both sides at the same time.
+    This document aims to clarify these scenarios and fix bugs already identified
+    on this topic; it formally suggests the use of the double Record-Route technique
+    as a replacement to the current RFC3261 text, which only describes Record-Route
+    rewriting solution.</p>'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-froment-sip-record-route-fix-00
+    docid:
+    - id: draft-froment-sip-record-route-fix-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-froment-sip-record-route-fix-00
+      format: text/plain
+fetched: '2022-07-23'

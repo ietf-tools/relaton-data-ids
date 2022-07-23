@@ -1,0 +1,51 @@
+---
+id: draft-hamilton-cmr
+title:
+- content: Certificate Manifest Register (Certificate Revocation List v4)
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-hamilton-cmr
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: <p>In the spirit of simple, incremental improvement, we describe a whitelist-based
+    revocation mechanism called the "Certificate Manifest Register". This is a list
+    of all potentially-valid certificates which are (as of the date of production)
+    known to have been legitimately issued by the CA and how they are to be treated
+    by the client. This permits certificates which are checked against it to be presumed
+    invalid unless listed. Several recent events have cast doubt on the sufficiency
+    of blacklist-based PKIX certificate revocation mechanisms. At least one publicly-trusted
+    Certification Authority was recently found to have been penetrated by a state-backed
+    attacker, which issued itself several certificates valid for a particular global
+    web search and email provider and then removed the records that it had done so.
+    In effect, the attacker was able to cause the CA to sleepwalk. There was nothing
+    that the client software developers could do to protect their users and themselves
+    except remove the trust in that CA's root. This event directly caused that particular
+    CA's insolvency. The Certificate Revocation List format and definitions (X.509v2
+    as described in RFC 5280, its predecessors, and possibly its successors) are used
+    and adapted whole-hog, with no data format changes and the alteration of one rule
+    and one semantic to support whitelist-based processing. CMR is defined to use
+    version integer 3 (v4) to differentiate its processing path from v2 CRL. The changes
+    from the CRL Profile are so minor, though, that they potentially might be implemented
+    without a version bump, without disruption to current v2 CRL consumers.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-hamilton-cmr-00
+    docid:
+    - id: draft-hamilton-cmr-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-hamilton-cmr-00
+      format: text/plain
+fetched: '2022-07-23'

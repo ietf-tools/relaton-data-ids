@@ -1,0 +1,48 @@
+---
+id: draft-templin-inetmtu-trivial
+title:
+- content: Trivial Packetization Layer Path MTU Discovery for IP/*/IP Tunnels
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-templin-inetmtu-trivial
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>The nominal Maximum Transmission Unit (MTU) of the Internet has become
+    1500 bytes, but existing IP/*/IP tunneling mechanisms impose an encapsulation
+    overhead that can reduce the effective path MTU to smaller values. Additionally,
+    existing tunneling mechanisms are limited in their ability to discover and utilize
+    larger MTUs. This document specifies a trivial mechanism for tunnel MTU determination
+    that addresses these issues.1. Introduction The nominal Maximum Transmission Unit
+    (MTU) of today's Internet has become 1500 bytes due to the preponderance of networking
+    gear that configures an MTU of that size. Since not all links in the Internet
+    configure a 1500 byte MTU, however, packets can be dropped due to an MTU restriction
+    on the path. Upper layers see IP/*/IP tunnels as ordinary links, but even for
+    packets no larger than 1500 bytes these links are susceptible to silent loss (e.g.,
+    due to path MTU restrictions, lost error messages, layered encapsulations, reassembly
+    buffer limitations, etc.) resulting in poor performance and/or communications
+    failures [RFC2923][RFC4459][RFC4821][RFC4963]. This document specifies a trivial
+    mechanism for IP/*/IP tunnel MTU determination. It updates the functional specifications
+    for Tunnel Endpoints (TEs) found in existing tunneling mechanisms (see: Section
+    9).</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-templin-inetmtu-trivial-01
+    docid:
+    - id: draft-templin-inetmtu-trivial-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-templin-inetmtu-trivial-01
+      format: text/plain
+fetched: '2022-07-23'

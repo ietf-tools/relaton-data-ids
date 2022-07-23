@@ -1,0 +1,55 @@
+---
+id: draft-hamilton-crlwhitelist
+title:
+- content: Certificate Revocation List (CRL) Extensions for Backward-Compatible Whitelist
+    Provision
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-hamilton-crlwhitelist
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>We describe two extensions to the Certificate Revocation List v2 to
+    more strongly identify revoked and legitimately issued certificates. This creates
+    a means for non-CA OCSP responders which are fed by CRL and can parse these extensions
+    to presume that unlisted or non- matching certificates from that Issuer are REVOKED
+    rather than UNKNOWN, as well as creating a means by which the Issuer can provide
+    digest values for stronger certificate authentication. Placing issuance data within
+    the CRL in some ways violates the original intent of the CRL, but CRLv2 has places
+    for Extensions. It is a logical extension to permit existing buildout to address
+    newly- exploited vulnerabilities in the model. A new crlEntryExtension is defined
+    to permit the optional provision of several hashes of each certificate on the
+    list of revoked certificates. In addition, a new crlExtension is defined to provide
+    serial numbers and hashes of issued certificates. Neither of these extensions
+    needs to be marked critical, and the original semantics are preserved for existing
+    clients. Notably, no data format or protocol of PKIX can currently utilize any
+    extra hashes to provide any extra authentication or security. Nevertheless, until
+    there is a standard way for the CA issuer to provide these digest values, it's
+    impossible to build anything which uses them. The downside: Whitelist CRLs with
+    strong certificate authentication data are *huge*. The canonical 1MB CRL example
+    would, if extended with this extra information, balloon to at a minimum 2.5MB
+    (presuming random 20-byte serial numbers) to a single-digest maximum of approximately
+    400MB. CAs are encouraged not to alter their current CRL production, and produce
+    these extensions only when needed by a certificate status server or consuming
+    client.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-hamilton-crlwhitelist-00
+    docid:
+    - id: draft-hamilton-crlwhitelist-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-hamilton-crlwhitelist-00
+      format: text/plain
+fetched: '2022-07-23'

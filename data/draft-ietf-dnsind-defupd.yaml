@@ -1,0 +1,42 @@
+---
+id: draft-ietf-dnsind-defupd
+title:
+- content: Deferred Dynamic Updates in the Domain Name System (DNS DEFUPD)
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-ietf-dnsind-defupd
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>Not all applications that perform dynamic updates using the protocol
+    specified in [UPDATE] want their updates applied immediately. A case in point
+    is [DHCP], wherein the DHCP lease time should control the lifetime of associated
+    DNS data even if the DHCP client or server is not available at the time the DHCP
+    lease expires. The essence of this proposal is that DNS Dynamic Updates should
+    be deferrable for some time delay period, after which they will be executed normally.
+    Furthermore, RRs added or updated by a deferred update can have expiration times
+    specified for them, as enforced by the automatic Dynamic Updates. Automatic serial
+    number changes (as in [UPDATE]), dynamic zone slave notification (see [NOTIFY])
+    and incremental zone transfer (see [IXFR]) will jointly see to it that the zone
+    changes are propagated with expedience.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-ietf-dnsind-defupd-00
+    docid:
+    - id: draft-ietf-dnsind-defupd-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-dnsind-defupd-00
+      format: text/plain
+fetched: '2022-07-23'

@@ -1,0 +1,55 @@
+---
+id: draft-vesely-vhlo
+title:
+- content: Verified Hello SMTP extension
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-vesely-vhlo
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>Verified Hello (VHLO) is an SMTP extension for managing authorization
+    by policy, as done for whitelisting messages. The VHLO command verb provides for
+    weak authentication of SMTP clients and policy negotiation. Policies and reputation
+    are being increasingly used to identify messages worthiness. However, they are
+    currently enforced by rejecting SMTP transactions, or discarding messages. Feedback
+    is scarce, also because reply codes are difficult to interpret automatically.
+    Negotiation is not provided for. VHLO is designed so that servers can provide
+    feedback to their clients about which vouching services or authentication methods
+    they require. Credentials can also be negotiated on the fly, in order to allow
+    clients to learn whether messages will be whitelisted by the receiving server
+    before actually transmitting them. Negotiation and feedback are intended to ease
+    rapid diffusion of popular reputation systems and authentication methods. A IANA
+    register is defined for extending the set of available methods. The VHLO command
+    is similar to EHLO, but accepts a series of parameters. The sender communicates
+    the mail domain name of the organization on whose behalf it operates, along with
+    any vouching services (VBR) for its reputation. On the other hand, the sending
+    host's affiliation with that mail domain is checked by DNS lookups (MX, PTR, or
+    SPF) or using DKIM. DNSBLs and Greylisting are also considered. Weakly authenticated
+    clients enjoy an intermediate level of trust: they have no relying privileges,
+    but may attempt to deliver mail to local users, are whitelisted from some filters,
+    and may receive DSNs and feedback-loop abuse reports as needed. However, failing
+    to succesfully negotiate VHLO authentication does not preclude a client's ability
+    to relay mail: It may relay as usual; that is to say, without knowing whether
+    the credentials it tries to provide have any meaning for the receiving server.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-vesely-vhlo-06
+    docid:
+    - id: draft-vesely-vhlo-06
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-vesely-vhlo-06
+      format: text/plain
+fetched: '2022-07-23'

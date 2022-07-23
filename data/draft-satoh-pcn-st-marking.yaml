@@ -1,0 +1,61 @@
+---
+id: draft-satoh-pcn-st-marking
+title:
+- content: Single PCN Threshold Marking by using PCN baseline encoding for both admission
+    and termination controls
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-satoh-pcn-st-marking
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>Pre-congestion notification (PCN) gives early warning of congestion
+    by metering and marking packets in order to protect the quality of service of
+    inelastic flows. PCN traffic load is divide into three pre-congestion states by
+    two rates that [I-D.ietf.pcn.architecture] defines per link: PCN-admissible- and
+    PCN-supportable-rates. PCN admission control and flow termination mechanisms operate
+    in accordance with these three states. [I-D.ietf.pcn.baseline.encoding] defines
+    two PCN encoding states. This document proposes an algorithm for marking and metering
+    by using PCN baseline encoding for both flow admission and flow termination. The
+    ratio of marked packets determines the three link states: no packets marked, some
+    packets marked, and all packets marked. To achieve this marking behaviour, we
+    use two token buckets. One is not used for marking but for a marking switch; the
+    other is used for marking. The token bucket for marking has two thresholds. One
+    is TBthreshold.threshold, already defined in [I-D.ietf-pcn-marking-behaviour],
+    and the other is a new threshold, which is set to be the number of bits of a metered-packet
+    smaller than the token bucket size. Therefore, the new threshold is larger than
+    TBthreshold.threshold. If the amount of tokens is less than TBthreshold.threshold,
+    all the packets are marked as defined in [I-D.ietf-pcn-marking-behaviour]. If
+    the amount of tokens is less than the new threshold and greater than TBthreshold.threshold,
+    one- Nth packets are marked. We evaluated the performance of admission control
+    and flow termination using a simulation. For admission control, the results show
+    that the performance of the algorithm was almost the same as, but slightly inferior
+    to, that of CL [draft-briscoe-tsvwg-cl-phb-03]. For flow termination, the performance
+    of the algorithm was almost the same as CL when the load was 1.2 times the supportable
+    rate, but it was superior to CL when the load was high (two times the supportable
+    rate). Furthermore, in the algorithm, over termination percentages of all the
+    bottleneck links are almost the same in the case of multi-bottleneck. In CL, the
+    over termination percentages of all the bottleneck links are different and those
+    at upstream bottleneck links are higher than those at downstream bottleneck links
+    because of accumulation of marked packets.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-satoh-pcn-st-marking-02
+    docid:
+    - id: draft-satoh-pcn-st-marking-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-satoh-pcn-st-marking-02
+      format: text/plain
+fetched: '2022-07-23'

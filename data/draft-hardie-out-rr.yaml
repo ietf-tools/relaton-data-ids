@@ -1,0 +1,47 @@
+---
+id: draft-hardie-out-rr
+title:
+- content: A DNS RR for Pointers to RRs outside class IN
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-hardie-out-rr
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>The Domain Name System is a global distributed lookup system with delegation.
+    In the original specification of the DNS [RFC 1035], CLASSes were described as
+    parallel data structures within a single namespace but with potentially different
+    delegations of authority. [BCP 42] defines a different vision, in which different
+    CLASSes represent fundamentally different namespaces. Though [BCP 42] includes
+    procedures for assignment of CLASSes, there has been little use of this axis of
+    extensibility; in practice, CLASS IN is the only widely deployed CLASS in the
+    DNS. The ubiquity of CLASS IN for name to IP address mapping has caused a vicious
+    cycle in which extensions are placed within that CLASS to take advantage of its
+    global deployment, with each addition further increasing its gravitational attraction.
+    This document describes a Resource Record for use within CLASS IN that contains
+    a pointer to a CLASS outside of IN. This mechanism is intended to allow administrators
+    to indicate that a named resource identified within CLASS IN is also present in
+    a different namespace, potentially under a different name. This cross-class pointer
+    will allow the DNS to handle new namespaces with mechanisms appropriate to those
+    namespaces while providing a connection to the globally deployed CLASS IN namespace.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-hardie-out-rr-00
+    docid:
+    - id: draft-hardie-out-rr-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-hardie-out-rr-00
+      format: text/plain
+fetched: '2022-07-23'

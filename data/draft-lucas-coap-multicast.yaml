@@ -1,0 +1,44 @@
+---
+id: draft-lucas-coap-multicast
+title:
+- content: CoAP Multicast
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-lucas-coap-multicast
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>Multicast is a preferred approach to send a single message to multiple
+    recipients but it is typically lossy. CoAP is the choice of messaging for IoT.
+    If using multicast to transmit CoAP messages there is a risk they get lost and
+    a further risk that sequences of messages get disrupted and leave the system in
+    an unknown or unpleasant state. In the device world we might want to guarantee
+    that a whole sequence of commands arrives at the device. For example a sequence
+    to Open, Report, Do some action, and Close. It is better that all of these messages
+    arrive or all of them do not arrive rather than have some of them arrive and to
+    not know which ones failed. CoAP messages tend to be small due to constrained
+    resources on the recipient devices. Existing frame sizes though are relatively
+    large so it is possible to pack these frames with several smaller CoAP messages
+    and send them as a group. CoAP Multicast proposes the simplest way to do this.
+    It is a device independent method and adds no need for encryption channels.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-lucas-coap-multicast-00
+    docid:
+    - id: draft-lucas-coap-multicast-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-lucas-coap-multicast-00
+      format: text/plain
+fetched: '2022-07-23'

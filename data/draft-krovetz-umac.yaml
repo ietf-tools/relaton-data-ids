@@ -1,0 +1,42 @@
+---
+id: draft-krovetz-umac
+title:
+- content: 'UMAC: Message Authentication Code using Universal Hashing'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-krovetz-umac
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: <p>This specification describes how to generate an authentication tag using
+    the UMAC message authentication algorithm. UMAC is designed to be very fast to
+    compute in software on contemporary uniprocessors. Measured speeds are as low
+    as one cycle per byte. UMAC relies on addition of 32-bit and 64-bit numbers and
+    multiplication of 32-bit numbers, operations well-supported by contemporary machines.
+    To generate the authentication tag on a given message, a "universal" hash function
+    is applied to the message and key to produce a short, fixed-length hash value,
+    and this hash value is then xor'ed with a key-derived pseudorandom pad. UMAC enjoys
+    a rigorous security analysis, and its only internal "cryptographic" component
+    is a block cipher used to generate the pseudorandom pads and internal key material.
+    This memo provides information for the Internet community.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-krovetz-umac-07
+    docid:
+    - id: draft-krovetz-umac-07
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-krovetz-umac-07
+      format: text/plain
+fetched: '2022-07-23'

@@ -1,0 +1,46 @@
+---
+id: draft-myers-ikev2-ocsp
+title:
+- content: Online Certificate Status Protocol (OCSP) Extensions to IKEv2
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-myers-ikev2-ocsp
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: <p>While the Internet Key Exchange Protocol version 2 (IKEv2) supports
+    public key based authentication, the corresponding use of in-band Certificate
+    Revocation Lists (CRL) is problematic due to unbounded CRL size. The size of an
+    Online Certificate Status Protocol (OCSP) response is however well-bounded and
+    small. This document defines the "OCSP Content" extension to IKEv2. A CERTREQ
+    payload with "OCSP Content" identifies zero or more trusted OCSP responders and
+    is a request for inclusion of an OCSP response in the IKEv2 handshake. A cooperative
+    recipient of such a request responds with a CERT payload containing the appropriate
+    OCSP response. This content is recognizable via the same "OCSP Content" identifier.
+    When certificates are used with IKEv2, the communicating peers need a mechanism
+    to determine the revocation status of the peer's certificate. OCSP is one such
+    mechanism. This document applies when OCSP is desired and security policy prevents
+    one of the IKEv2 peers from accessing the relevant OCSP responder directly. Firewalls
+    are often deployed in a manner that prevents such access by IKEv2 peers outside
+    of an enterprise network. [STANDARDS-TRACK]</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-myers-ikev2-ocsp-05
+    docid:
+    - id: draft-myers-ikev2-ocsp-05
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-myers-ikev2-ocsp-05
+      format: text/plain
+fetched: '2022-07-23'

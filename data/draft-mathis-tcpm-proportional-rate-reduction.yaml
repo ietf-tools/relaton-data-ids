@@ -1,0 +1,50 @@
+---
+id: draft-mathis-tcpm-proportional-rate-reduction
+title:
+- content: Proportional Rate Reduction for TCP
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-mathis-tcpm-proportional-rate-reduction
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This document describes an experimental algorithm, Proportional Rate
+    Reduction (PPR) and related algorithms to improve the accuracy of the amount of
+    data sent by TCP during loss recovery. Standard Congestion Control requires that
+    TCP and other protocols reduce their congestion window in response to losses.
+    This window reduction naturally occurs in the same round trip as the data retransmissions
+    to repair the losses, and is implemented by choosing not to transmit any data
+    in response to some ACKs arriving from the receiver. Two widely deployed algorithms
+    are used to implement this window reduction: Fast Recovery and Rate Halving. Both
+    algorithms are needlessly fragile under a number of conditions, particularly when
+    there is a burst of losses that such that the number of ACKs returning to the
+    sender is so small that the effective window falls below the target congestion
+    window chosen by the congestion control algorithm. Proportional Rate Reduction
+    avoids these excess window reductions such that at the end of recovery the actual
+    window size will be as close as possible to the window size determined by the
+    congestion control algorithm. It is patterned after rate halving, but using the
+    fraction that is appropriate for target window chosen by the congestion control
+    algorithm. In addition we propose two slightly different algorithms to bound the
+    total window reduction due to all mechanisms, including application stalls, the
+    losses themselves and inhibit further window reductions when possible.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-mathis-tcpm-proportional-rate-reduction-01
+    docid:
+    - id: draft-mathis-tcpm-proportional-rate-reduction-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-mathis-tcpm-proportional-rate-reduction-01
+      format: text/plain
+fetched: '2022-07-23'

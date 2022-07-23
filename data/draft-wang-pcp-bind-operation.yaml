@@ -1,0 +1,48 @@
+---
+id: draft-wang-pcp-bind-operation
+title:
+- content: PCP BIND Operation
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-wang-pcp-bind-operation
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>Port Control Protocol[PCP, RFC6887] describes two opcodes between PCP
+    client and PCP server: PCP map opcode and PCP peer opcode. These two opcodes are
+    used mainly for the establishment of map table in NAT devices, to let the incoming
+    packet pass through the NAT devices, reach to the server behind it (map opcode);
+    or build the required map table explicitly in NAT devices (peer opcode). These
+    opcodes are enough for the client-server communication model in general NAT environment,
+    but for client-client communication model, especially that in symmetric NAT environment
+    or in situation that two communication hosts are in different address family,
+    there must exists one relay device, which act the same as PCP server, to forward
+    the communication data. To control the behavior of relay device (similar as PCP
+    server), build the communication channel between two ends via it and open its
+    data forward capability to the third-party partner, it is needed to define one
+    new opcode for PCP protocol. The PCP BIND opcode will bind two communication channels
+    which are ended at PCP server together and make the communication between two
+    hosts behind the symmetric NAT environment, or that between two hosts belong to
+    different address family possible. Such solution is simpler than the current procedures
+    used by TURN.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-wang-pcp-bind-operation-00
+    docid:
+    - id: draft-wang-pcp-bind-operation-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-wang-pcp-bind-operation-00
+      format: text/plain
+fetched: '2022-07-23'

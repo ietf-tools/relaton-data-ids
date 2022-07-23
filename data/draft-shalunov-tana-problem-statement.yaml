@@ -1,0 +1,107 @@
+---
+id: draft-shalunov-tana-problem-statement
+title:
+- content: Transport for Advanced Networking Applications (TANA) Problem Statement
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-shalunov-tana-problem-statement
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: '<p>The IETF P2PI workshop conducted in the end of May 2008 at MIT in Boston
+    has identified a number of potential documents for the IETF to work on. One is
+    a transport protocol with congestion control mechanism that enables an advanced
+    networking application to minimize the extra delay it induces in the bottleneck
+    while implementing an end-to-end version of scavenger service. At least one such
+    protocol has now been implemented by a major peer-to-peer application and deployed
+    in the wild with favorable results. Another is a document that addresses community
+    concerns about the use of multiple transport connections by peer-to-peer applications,
+    both when these connections run to the same peer and to different peers. These
+    two items appear to fall within the Transport area, but not within the charter
+    of any existing working group. It is not obvious what WG''s charter could be naturally
+    extended to encompass these two items. The TANA BoF is held to explore the problem
+    space, gauge the interest in the problems within the Transport area, and to see
+    if the community and the area directors believe that it makes sense to form a
+    TANA working group within the Transport area chartered to work on 1. standardizing
+    end-to-end congestion control that enables advanced application to minimize the
+    delay they introduce into the network and a protocol using it and 2. a document
+    describing the current practice of peer-to-peer apps'' use of multiple transport
+    connections and recommendations in this space.1. Requirements notation The key
+    words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD
+    NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted
+    as described in [RFC2119].2. Congestion control that minimizes delay and a UDP-based
+    protocol using it The standard congestion control in TCP is based on loss and
+    has not been designed to drive delay to any given value. Because TCP needs losses
+    to back off, when a FIFO bottleneck lacks AQM, TCP fills the buffer, effectively
+    maximizing possible delay. Large number of the thinnest links in the Internet,
+    particularly most uplinks of home connections, lack AQM. They also frequently
+    contain enough buffer space to get delays into hundreds of milliseconds and even
+    seconds. There is no benefit to having delays this large, but there are very substantial
+    drawbacks for interactive applications: games and VoIP become impossible and even
+    web browsing becomes very slow. While a number of delay-based congestion control
+    mechanisms have been proposed, they were generally not designed to minimize the
+    delay induced in the network. It is desirable to have a congestion control mechanism
+    that would allow to keep the latency across the congested bottleneck low even
+    as it is saturated. This would allow applications that send large amounts of data,
+    particularly upstream on home connections, such as peer-to-peer application, to
+    operate without destroying the experience in interactive applications. It is possible
+    to design congestion control mechanisms that take advantage of delay measurements
+    and can back off before loss occurs. One such mechanism has been deployed by BitTorrent
+    in the wild with the BitTorrent DNA client. This mechanism not only allows to
+    keep delay across a bottleneck low, but also yields quickly in the presence of
+    competing traffic with loss-based congestion control. Standardization of a congestion
+    control mechanism that meets these design objectives would enable other advanced
+    networking applications to better get out of the way of interactive apps. To deploy
+    a protocol using such congestion control in today''s Internet, the protocol needs
+    to be designed to work with existing deployed NATs, firewalls, and other middleboxes.
+    This limits the choices of the transport framing to TCP and UDP. Modifying TCP
+    is out of scope for TANA, because it is a more ambitious project while advanced
+    applications can use a special protocol to talk among instances of themselves.
+    This leaves us with UDP as the underlying framing for the protocol. In addition
+    to direct and immediate benefits for advanced application, such congestion control
+    would lay the foundation for a possible future evolution of the Internet where
+    loss is not part of the designed behavior and delay is minimized.3. Use of multiple
+    transport connections by peer-to-peer applications The community is concerned
+    about the possible use of multiple transport connections by peer-to-peer clients,
+    particularly if the goal of such use is to circumvent fairness mechanisms in TCP.
+    Peer-to-peer clients are designed to open connections to multiple other peers
+    to organize a well-connected mesh. For example, with just a single connection
+    per peer, peers would pair off and be quickly out of trading material; with two
+    connections, peers would form long chains that still promote segmentation and
+    are fragile. There is confusion about whether peer-to-peer applications are also
+    designed to open multiple connections to the same peer to get an unfair share
+    of bottleneck capacity. (I am personally not familiar with examples of P2P clients
+    that are designed to open multiple connections to the same destination, for any
+    purpose.) While the use of multiple transport connections, even to the same destination,
+    has been common since the advent of the web browser, peer-to-peer applications
+    are believed by some to open an unusually large number of connections and send
+    data for particularly long periods of time. The most common P2P protocol, BitTorrent,
+    uses a mechanism called "choking" to limit the number of connections that actually
+    send and receive data. Many more connections are open that used for data. Most
+    connections are only used for small pieces of metadata. This further complicates
+    the analysis and can create the impression that the peer uses many more connections
+    than it actually does. Both the IETF transport community and the designers of
+    P2P apps would benefit from clarity produced by a document that would 1. describe
+    the current practice of multiple connections use by peer-to-peer apps and 2. make
+    recommendations about the best such practices.</p>'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-shalunov-tana-problem-statement-01
+    docid:
+    - id: draft-shalunov-tana-problem-statement-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-shalunov-tana-problem-statement-01
+      format: text/plain
+fetched: '2022-07-23'

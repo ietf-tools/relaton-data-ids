@@ -1,0 +1,48 @@
+---
+id: draft-raiciu-mptcp-congestion
+title:
+- content: Coupled Multipath-Aware Congestion Control
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-raiciu-mptcp-congestion
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>Often endpoints are connected by multiple paths, but communications
+    are usually restricted to a single path per connection. Resource usage within
+    the network would be more efficient were it possible for these multiple paths
+    to be used concurrently. Multipath TCP is a proposal to achieve multipath transport
+    in TCP. New congestion control algorithms are needed for multipath transport protocols
+    such as Multipath TCP, as single path algorithms have a series of issues in the
+    multipath context. One of the prominent problems is that running existing algorithms
+    such as TCP New Reno independently on each path would give the multipath flow
+    more than its fair share at a bottleneck link traversed by more than one of its
+    subflows. Further, it is desirable that a source with multiple paths available
+    will transfer more traffic using the least congested of the paths, hence achieving
+    resource pooling. This would increase the overall utilization of the network and
+    also its robustness to failure. This document presents a congestion control algorithm
+    which couples the congestion control algorithms running on different subflows
+    by linking their increase functions, and dynamically controls the overall aggresiveness
+    of the multipath flow. The result is a practical algorithm that is fair to TCP
+    at bottlenecks while moving traffic away from congested links.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-raiciu-mptcp-congestion-01
+    docid:
+    - id: draft-raiciu-mptcp-congestion-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-raiciu-mptcp-congestion-01
+      format: text/plain
+fetched: '2022-07-23'

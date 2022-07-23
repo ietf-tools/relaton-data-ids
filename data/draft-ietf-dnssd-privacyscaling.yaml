@@ -1,0 +1,48 @@
+---
+id: draft-ietf-dnssd-privacyscaling
+title:
+- content: DNS-SD Privacy Scaling Tradeoffs
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-ietf-dnssd-privacyscaling
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: <p>DNS-SD (DNS Service Discovery) normally discloses information about
+    both the devices offering services and the devices requesting services. This information
+    includes host names, network parameters, and possibly a further description of
+    the corresponding service instance. Especially when mobile devices engage in DNS
+    Service Discovery over Multicast DNS at a public hotspot, a serious privacy problem
+    arises. The draft currently progressing in the DNS-SD Working Group assumes peer-to-peer
+    pairing between the service to be discovered and each of its clients. This has
+    good security properties, but creates scaling issues, because each server needs
+    to publish as many announcements as it has paired clients. This leads to large
+    number of operations when servers are paired with many clients. Different designs
+    are possible. For example, if there was only one server "discovery key" known
+    by each authorized client, each server would only have to announce a single record,
+    and clients would only have to process one response for each server that is present
+    on the network. Yet, these designs will present different privacy profiles, and
+    pose different management challenges. This draft analyses the tradeoffs between
+    privacy and scaling in a set of different designs, using either shared secrets
+    or public keys.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-ietf-dnssd-privacyscaling-00
+    docid:
+    - id: draft-ietf-dnssd-privacyscaling-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-dnssd-privacyscaling-00
+      format: text/plain
+fetched: '2022-07-23'

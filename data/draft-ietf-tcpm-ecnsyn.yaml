@@ -1,0 +1,54 @@
+---
+id: draft-ietf-tcpm-ecnsyn
+title:
+- content: Adding Explicit Congestion Notification (ECN) Capability to TCP's SYN/ACK
+    Packets
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-ietf-tcpm-ecnsyn
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>The proposal in this document is Experimental. While it may be deployed
+    in the current Internet, it does not represent a consensus that this is the best
+    possible mechanism for the use of Explicit Congestion Notification (ECN) in TCP
+    SYN/ACK packets. This document describes an optional, experimental modification
+    to RFC 3168 to allow TCP SYN/ACK packets to be ECN-Capable. For TCP, RFC 3168
+    specifies setting an ECN-Capable codepoint on data packets, but not on SYN and
+    SYN/ACK packets. However, because of the high cost to the TCP transfer of having
+    a SYN/ACK packet dropped, with the resulting retransmission timeout, this document
+    describes the use of ECN for the SYN/ACK packet itself, when sent in response
+    to a SYN packet with the two ECN flags set in the TCP header, indicating a willingness
+    to use ECN. Setting the initial TCP SYN/ACK packet as ECN-Capable can be of great
+    benefit to the TCP connection, avoiding the severe penalty of a retransmission
+    timeout for a connection that has not yet started placing a load on the network.
+    The TCP responder (the sender of the SYN/ACK packet) must reply to a report of
+    an ECN-marked SYN/ACK packet by resending a SYN/ACK packet that is not ECN-Capable.
+    If the resent SYN/ACK packet is acknowledged, then the TCP responder reduces its
+    initial congestion window from two, three, or four segments to one segment, thereby
+    reducing the subsequent load from that connection on the network. If instead the
+    SYN/ACK packet is dropped, or for some other reason the TCP responder does not
+    receive an acknowledgement in the specified time, the TCP responder follows TCP
+    standards for a dropped SYN/ACK packet (setting the retransmission timer). This
+    memo defines an Experimental Protocol for the Internet community.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-ietf-tcpm-ecnsyn-10
+    docid:
+    - id: draft-ietf-tcpm-ecnsyn-10
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-tcpm-ecnsyn-10
+      format: text/plain
+fetched: '2022-07-23'

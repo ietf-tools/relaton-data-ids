@@ -1,0 +1,50 @@
+---
+id: draft-ietf-mptcp-congestion
+title:
+- content: Coupled Congestion Control for Multipath Transport Protocols
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-ietf-mptcp-congestion
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: <p>Often endpoints are connected by multiple paths, but communications
+    are usually restricted to a single path per connection. Resource usage within
+    the network would be more efficient were it possible for these multiple paths
+    to be used concurrently. Multipath TCP is a proposal to achieve multipath transport
+    in TCP. New congestion control algorithms are needed for multipath transport protocols
+    such as Multipath TCP, as single path algorithms have a series of issues in the
+    multipath context. One of the prominent problems is that running existing algorithms
+    such as standard TCP independently on each path would give the multipath flow
+    more than its fair share at a bottleneck link traversed by more than one of its
+    subflows. Further, it is desirable that a source with multiple paths available
+    will transfer more traffic using the least congested of the paths, achieving a
+    property called "resource pooling" where a bundle of links effectively behaves
+    like one shared link with bigger capacity. This would increase the overall efficiency
+    of the network and also its robustness to failure. This document presents a congestion
+    control algorithm that couples the congestion control algorithms running on different
+    subflows by linking their increase functions, and dynamically controls the overall
+    aggressiveness of the multipath flow. The result is a practical algorithm that
+    is fair to TCP at bottlenecks while moving traffic away from congested links.
+    This document defines an Experimental Protocol for the Internet community.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-ietf-mptcp-congestion-07
+    docid:
+    - id: draft-ietf-mptcp-congestion-07
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-mptcp-congestion-07
+      format: text/plain
+fetched: '2022-07-23'

@@ -1,0 +1,41 @@
+---
+id: draft-groth-dns-encryption
+title:
+- content: DNS Encryption
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-groth-dns-encryption
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This document requests IANA registration of a new DNS OpCode and ErrorCode
+    type in facilitating encryption of DNS requests and replies and feed back to the
+    client if plain text requests are not acceptable. Once this OpCode is seen the
+    DNS server attempts to decrypt the request using its private OpenPGP key. Inside
+    the encrypted packet is the AES key which the client expects to be used when the
+    server encrypts a response. A server may advertise that it is capable of DNS encryption
+    by returning OpenPGP fingerprints in TXT records using a similar format to Public
+    Key Association (PKA). The full pubic keys are returned from DNS servers by using
+    a CERT request against the host name(s) of the domain's NS records or via OpenPGP
+    key servers.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-groth-dns-encryption-02
+    docid:
+    - id: draft-groth-dns-encryption-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-groth-dns-encryption-02
+      format: text/plain
+fetched: '2022-07-23'

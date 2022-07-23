@@ -1,0 +1,45 @@
+---
+id: draft-ietf-idr-encaps-safi
+title:
+- content: BGP Encapsulation SAFI and BGP Tunnel Encapsulation Attribute
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-ietf-idr-encaps-safi
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: <p>In certain situations, transporting a packet from one BGP speaker to
+    another, the BGP next hop, requires that the packet be encapsulated by the first
+    BGP speaker and decapsulated by the second. To support these situations, there
+    needs to be some agreement between the two BGP speakers with regard to the "encapsulation
+    information", i.e., the format of the encapsulation header as well as the contents
+    of various fields of the header. The encapsulation information need not be signaled
+    for all encapsulation types. In the cases where the signaling is required (such
+    as L2TPv3, GRE with key), This draft specifies a method by which BGP speakers
+    can signal encapsulation information to each other. The signaling is done by sending
+    BGP updates using the "Encapsulation SAFI" and IPv4 or IPv6 AFI. In the cases
+    where no encapsulation information needs to be signaled (such as GRE without key),
+    this draft specifies a BGP extended community that can be attached to UPDATE messages
+    that carry payload prefixes to indicate the encapsulation protocol type to be
+    used.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-ietf-idr-encaps-safi-00
+    docid:
+    - id: draft-ietf-idr-encaps-safi-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-idr-encaps-safi-00
+      format: text/plain
+fetched: '2022-07-23'

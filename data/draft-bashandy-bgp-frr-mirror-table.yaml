@@ -1,0 +1,42 @@
+---
+id: draft-bashandy-bgp-frr-mirror-table
+title:
+- content: BGP FRR Protection against Edge Node Failure Using Table Mirroring with
+    Context Labels
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-bashandy-bgp-frr-mirror-table
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: <p>Consider a BGP free core scenario. Suppose the edge BGP speakers PE1,
+    PE2,..., PEn know about a prefix P/m via the external routers CE1, CE2,..., CEm.
+    If the edge router PEi crashes or becomes totally disconnected from the core,
+    it is desirable for a core router "P" carrying traffic to the failed edge router
+    PEi to immediately restore traffic by re-tunneling packets originally tunneled
+    to PEi and destined to the prefix P/m to one of the other edge routers that advertised
+    P/m, say PEj, until BGP re-converges. This draft proposes a BGP FRR scheme that
+    relies on having the repairing edge router mirror the protected edge router forwarding
+    table. The repairing edge router uses a locally allocated context label to identify
+    the correct mirrored table.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-bashandy-bgp-frr-mirror-table-00
+    docid:
+    - id: draft-bashandy-bgp-frr-mirror-table-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-bashandy-bgp-frr-mirror-table-00
+      format: text/plain
+fetched: '2022-07-23'

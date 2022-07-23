@@ -1,0 +1,49 @@
+---
+id: draft-sheffer-ipsec-failover
+title:
+- content: IPsec Gateway Failover Protocol
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-sheffer-ipsec-failover
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>The Internet Key Exchange version 2 (IKEv2) protocol has a certain
+    computational and communication overhead with respect to the number of round-trips
+    required and the cryptographic operations involved. In remote access situations,
+    the Extensible Authentication Protocol is used for authentication, which adds
+    several more round trips and therefore latency. To re-establish security associations
+    (SA) upon a failure recovery condition is time consuming, especially when an IPsec
+    peer, such as a VPN gateway, needs to re-establish a large number of SAs with
+    various end points. A high number of concurrent sessions might cause additional
+    problems for an IPsec peer during SA re-establishment. In many failure cases it
+    would be useful to provide an efficient way to resume an interrupted IKE/IPsec
+    session. This document proposes an extension to IKEv2 that allows a client to
+    re-establish an IKE SA with a gateway in a highly efficient manner, utilizing
+    a previously established IKE SA. A client can reconnect to a gateway from which
+    it was disconnected, or alternatively migrate to another gateway that is associated
+    with the previous one. The proposed approach conveys IKEv2 state information,
+    in the form of an encrypted ticket, to a VPN client that is later presented to
+    the VPN gateway for re-authentication. The encrypted ticket can only be decrypted
+    by the VPN gateway in order to restore state for faster session setup.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-sheffer-ipsec-failover-04
+    docid:
+    - id: draft-sheffer-ipsec-failover-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-sheffer-ipsec-failover-04
+      format: text/plain
+fetched: '2022-07-23'

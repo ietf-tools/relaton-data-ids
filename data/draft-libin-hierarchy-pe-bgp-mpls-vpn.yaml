@@ -1,0 +1,53 @@
+---
+id: draft-libin-hierarchy-pe-bgp-mpls-vpn
+title:
+- content: Hierarchy of Provider Edge Device in  BGP/MPLS VPN
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-libin-hierarchy-pe-bgp-mpls-vpn
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>In the deployment of BGP/MPLS VPN,the PE(Provider Edge)Device should
+    maintain all the VPN routes of the VPNs which it belong to.When there are many
+    VPNs converged by a PE,and the capacity of PE is relevant limited,then the bottleneck
+    will be encountered.Another problem is that the current BGP/MPLS VPN model is
+    something of a 'Plane Modle' where the demand of the performance of the PE device
+    are all the same no matter which layer the PE device is belongs to.However,the
+    typical network is 'Core-Convergence-Access(Edge)' model,and the performance of
+    the device is superior in Core Layer and inferior in Access Layer,and the scale
+    of network is large in Access Layer and small in Core Layer,the routes are converged
+    in every layer,so in current 'Plane Modle',when PE device push to the edge layer,it
+    has to maintain more VPN routes,this makes it difficult to extend the PE device
+    to edge layer.This document defines an model of Hierarchy of Provider Edge Device
+    in BGP/MPLS VPN,where Hierarchy of Provider Edge Device can be composed of several
+    device and every device take on the different part,partake the function of the
+    former concentrative PE,we call this model 'Hierarchy Model',In this model the
+    demand of performance in Routing and Switching is strict to the PE device in High
+    layer,loose to the PE device in edge layer. One HoPE can be composed of a SPE
+    and UPES connected to the SPE, or be composed of a high-level SPE and HoPEs connected
+    the high level SPE and and build up a new HoPE.This build is called nesting of
+    HoPE,and this kind of nesting can be done for many times.Thus the former HoPE
+    connect to the high-level SPE as a role of UPE,and the new HoPE can connect a
+    single UPE too.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-libin-hierarchy-pe-bgp-mpls-vpn-02
+    docid:
+    - id: draft-libin-hierarchy-pe-bgp-mpls-vpn-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-libin-hierarchy-pe-bgp-mpls-vpn-02
+      format: text/plain
+fetched: '2022-07-23'

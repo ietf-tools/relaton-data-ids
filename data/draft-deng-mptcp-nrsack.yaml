@@ -1,0 +1,43 @@
+---
+id: draft-deng-mptcp-nrsack
+title:
+- content: Non-Renegable Selective Acknowledgements (NR-SACKs) for MPTCP
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-deng-mptcp-nrsack
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>Multipath Transmission Control Protocol (MPTCP) [RFC6824] adopts Selective
+    Acknowledgements (SACKs) at the subflow level to allow an MPTCP receiver to acknowledge
+    the receipt of out-of-order data. In MPTCP, SACK information is expected (but
+    not mandated)--though SACKs notify a data sender the reception of specific out-of-order
+    data, the out-of-order data cannot be delivered to application layer until it
+    has been cumulatively acknowledged at the connection-level. The MPTCP data receiver
+    is permitted to later abandon the out-of-order data cached in the receive buffer.
+    The out-of-order data is called renegable. Since the delivery of a SACKed out-of-order
+    data is renegable, the sender has to maintain copies of SACKed data in the send
+    buffer until it is cumulatively acked. As a result, the send buffer is inevitably
+    wasted and the transmission rate is restricted even though the network is not
+    congested.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-deng-mptcp-nrsack-00
+    docid:
+    - id: draft-deng-mptcp-nrsack-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-deng-mptcp-nrsack-00
+      format: text/plain
+fetched: '2022-07-23'

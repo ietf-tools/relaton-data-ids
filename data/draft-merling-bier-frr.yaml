@@ -1,0 +1,52 @@
+---
+id: draft-merling-bier-frr
+title:
+- content: BIER Fast Reroute
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-merling-bier-frr
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>BIER is a scalable multicast overlay [RFC8279] that utilizes some routing
+    underlay, e.g., IP, to build up its Bit Index Forwarding Tables (BIFTs). This
+    document proposes a Fast Reroute Extension for BIER (BIER-FRR). In case of a link
+    or node failure, the routing underlay may first utilize FRR techniques to restore
+    connectivity and then its forwarding tables converge. After that, BIER can update
+    its BIFTs, which requires time. BIER packets may not be delivered until the last
+    procedure has finished. With BIER-FRR, a BIER Forwarding Router (BFR) can deliver
+    BIER packets again after a link or node failures as soon as the connectivity within
+    the routing underlay is restored and the BFR is informed about a next-hop (NH)
+    that is unreachable on a lower layer. BIER-FRR provides a mode for link protection
+    and node protection. For link protection, it tunnels traffic to the next-hop using
+    the underlying routing. For node protection, it forwards BIER packets to their
+    specific next-hop and next-next-hops using tunnels in the underlying routing after
+    applying a suitable backup bitmask to the bitstring in the BIER header of each
+    packet. This procedure prevents duplicates. If topology allows, BIER-FRR achieves
+    full protection against any single component failure. For link protection, BIER-FRR
+    requires only a minor change to the forwarding logic. For node protection, BIER-FRR
+    also requires backup entries in the BIFT. This document describes the concept
+    and operating principles of BIER- FRR. It defines the necessary modifications
+    to the BIER forwarding Procedure and the BIFT, and explains how backup entries
+    are computed.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-merling-bier-frr-00
+    docid:
+    - id: draft-merling-bier-frr-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-merling-bier-frr-00
+      format: text/plain
+fetched: '2022-07-23'
