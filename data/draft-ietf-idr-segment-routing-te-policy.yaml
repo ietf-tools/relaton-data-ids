@@ -13,14 +13,15 @@ docid:
   primary: true
 abstract:
 - content: "<p>This document introduces a BGP SAFI with two NLRIs to advertise a candidate
-    path of a Segment Routing (SR) Policy. An SR Policy is a set of candidate paths,
-    each consisting of one or more segment lists. The headend of an SR Policy may
-    learn multiple candidate paths for an SR Policy. Candidate paths may be learned
-    via several different mechanisms, e.g., CLI, NetConf, PCEP, or BGP. This document
-    specifies how BGP may be used to distribute SR Policy candidate paths. It defines
-    sub-TLVs for the Tunnel Encapsulation Attribute for signaling information about
-    these candidate paths. This documents updates RFC9012 with extensions to the Color
-    Extended Community to support additional steering modes over SR Policy.</p>"
+    path of a Segment Routing (SR) Policy. An SR Policy is an ordered list of segments
+    (i.e., instructions) that represent a source-routed policy. An SR Policy consists
+    of one or more candidate paths, each consisting of one or more segment lists.
+    A headend may be provisioned with candidate paths for an SR Policy via several
+    different mechanisms, e.g., CLI, NETCONF, PCEP, or BGP. This document specifies
+    how BGP may be used to distribute SR Policy candidate paths. It defines sub-TLVs
+    for the Tunnel Encapsulation Attribute for signaling information about these candidate
+    paths. This documents updates RFC9012 with extensions to the Color Extended Community
+    to support additional steering modes over SR Policy.</p>"
   language:
   - en
   script:
@@ -217,4 +218,14 @@ relation:
     formattedref:
       content: draft-ietf-idr-segment-routing-te-policy-18
       format: text/plain
-fetched: '2022-07-23'
+- type: includes
+  bibitem:
+    id: draft-ietf-idr-segment-routing-te-policy-19
+    docid:
+    - id: draft-ietf-idr-segment-routing-te-policy-19
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-idr-segment-routing-te-policy-19
+      format: text/plain
+fetched: '2022-07-24'
