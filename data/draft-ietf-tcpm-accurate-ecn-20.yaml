@@ -1,0 +1,113 @@
+---
+id: draft-ietf-tcpm-accurate-ecn-20
+title:
+- content: More Accurate ECN Feedback in TCP
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://www.ietf.org/archive/id/draft-ietf-tcpm-accurate-ecn-20.txt
+  type: TXT
+type: standard
+docid:
+- id: draft-ietf-tcpm-accurate-ecn-20
+  type: Internet-Draft
+  primary: true
+- id: I-D.ietf-tcpm-accurate-ecn
+  type: IETF
+  scope: anchor
+docnumber: I-D.ietf-tcpm-accurate-ecn
+date:
+- type: published
+  value: '2022-07-25'
+contributor:
+- person:
+    name:
+      completename:
+        content: Bob Briscoe
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - Independent
+  role:
+  - author
+- person:
+    name:
+      completename:
+        content: Mirja Kühlewind
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - Ericsson
+  role:
+  - author
+- person:
+    name:
+      completename:
+        content: Richard Scheffenegger
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - NetApp
+  role:
+  - author
+version:
+- draft: '20'
+revdate: '2022-07-25'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>Explicit Congestion Notification (ECN) is a mechanism where network
+    nodes can mark IP packets instead of dropping them to indicate incipient congestion
+    to the end-points. Receivers with an ECN- capable transport protocol feed back
+    this information to the sender. ECN was originally specified for TCP in such a
+    way that only one feedback signal can be transmitted per Round-Trip Time (RTT).
+    Recent new TCP mechanisms like Congestion Exposure (ConEx), Data Center TCP (DCTCP)
+    or Low Latency Low Loss Scalable Throughput (L4S) need more accurate ECN feedback
+    information whenever more than one marking is received in one RTT. This document
+    updates the original ECN specification to specify a scheme to provide more than
+    one feedback signal per RTT in the TCP header. Given TCP header space is scarce,
+    it allocates a reserved header bit previously assigned to the ECN- Nonce. It also
+    overloads the two existing ECN flags in the TCP header. The resulting extra space
+    is exploited to feed back the IP- ECN field received during the 3-way handshake
+    as well. Supplementary feedback information can optionally be provided in a new
+    TCP option, which is never used on the TCP SYN. The document also specifies the
+    treatment of this updated TCP wire protocol by middleboxes.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-ietf-tcpm-accurate-ecn-19
+    docid:
+    - id: draft-ietf-tcpm-accurate-ecn-19
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-tcpm-accurate-ecn-19
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-ietf-tcpm-accurate-ecn-20
+fetched: '2022-07-25'
+doctype: internet-draft
