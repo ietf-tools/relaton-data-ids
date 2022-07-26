@@ -1,7 +1,7 @@
 ---
 id: draft-pardue-masque-dgram-priority
 title:
-- content: HTTP Datagram Prioritization
+- content: HTTP Datagrams, UDP Proxying, and Extensible Prioritization
   language:
   - en
   script:
@@ -13,11 +13,13 @@ docid:
   primary: true
 abstract:
 - content: "<p>Application protocols using the QUIC transport protocol rely on streams,
-    and optionally the DATAGRAM extension, to carry application data. Streams and
-    datagrams can be multiplexed but QUIC provides no interoperable prioritization
-    scheme or signaling mechanism itself. The HTTP Extensible Prioritization scheme
-    describes how to prioritize streams in HTTP/2 and HTTP/3. This document adopts
-    the scheme to support HTTP datagrams.</p>"
+    and optionally the unreliable datagram extension, to carry application data. Streams
+    and datagrams can be multiplexed in single connections but QUIC does not define
+    an interoperable prioritization scheme or signaling mechanism. The HTTP Extensible
+    Prioritization scheme describes an application-level scheme for the prioritization
+    of streams in HTTP/2 and HTTP/3. This document defines how Extensible Priorities
+    can be augmented to apply to the multiplexing of HTTP datagram flows with other
+    flows or streams.</p>"
   language:
   - en
   script:
@@ -44,4 +46,14 @@ relation:
     formattedref:
       content: draft-pardue-masque-dgram-priority-01
       format: text/plain
-fetched: '2022-07-25'
+- type: includes
+  bibitem:
+    id: draft-pardue-masque-dgram-priority-02
+    docid:
+    - id: draft-pardue-masque-dgram-priority-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-pardue-masque-dgram-priority-02
+      format: text/plain
+fetched: '2022-07-26'
