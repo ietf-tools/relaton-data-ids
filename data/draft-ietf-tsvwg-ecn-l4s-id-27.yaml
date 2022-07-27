@@ -1,0 +1,105 @@
+---
+id: draft-ietf-tsvwg-ecn-l4s-id-27
+title:
+- content: Explicit Congestion Notification (ECN) Protocol for Very Low Queuing Delay
+    (L4S)
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://www.ietf.org/archive/id/draft-ietf-tsvwg-ecn-l4s-id-27.txt
+  type: TXT
+type: standard
+docid:
+- id: draft-ietf-tsvwg-ecn-l4s-id-27
+  type: Internet-Draft
+  primary: true
+- id: I-D.ietf-tsvwg-ecn-l4s-id
+  type: IETF
+  scope: anchor
+docnumber: I-D.ietf-tsvwg-ecn-l4s-id
+date:
+- type: published
+  value: '2022-07-27'
+contributor:
+- person:
+    name:
+      completename:
+        content: Koen De Schepper
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - Nokia Bell Labs
+  role:
+  - author
+- person:
+    name:
+      completename:
+        content: Bob Briscoe
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - Independent
+  role:
+  - author
+version:
+- draft: '27'
+revdate: '2022-07-27'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>This specification defines the protocol to be used for a new network
+    service called low latency, low loss and scalable throughput (L4S). L4S uses an
+    Explicit Congestion Notification (ECN) scheme at the IP layer that is similar
+    to the original (or 'Classic') ECN approach, except as specified within. L4S uses
+    'scalable' congestion control, which induces much more frequent control signals
+    from the network and it responds to them with much more fine-grained adjustments,
+    so that very low (typically sub-millisecond on average) and consistently low queuing
+    delay becomes possible for L4S traffic without compromising link utilization.
+    Thus even capacity-seeking (TCP-like) traffic can have high bandwidth and very
+    low delay at the same time, even during periods of high traffic load. The L4S
+    identifier defined in this document distinguishes L4S from 'Classic' (e.g. TCP-Reno-friendly)
+    traffic. It gives an incremental migration path so that suitably modified network
+    bottlenecks can distinguish and isolate existing traffic that still follows the
+    Classic behaviour, to prevent it degrading the low queuing delay and low loss
+    of L4S traffic. This specification defines the rules that L4S transports and network
+    elements need to follow with the intention that L4S flows neither harm each other's
+    performance nor that of Classic traffic. Examples of new active queue management
+    (AQM) marking algorithms and examples of new transports (whether TCP-like or real-time)
+    are specified separately.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-ietf-tsvwg-ecn-l4s-id-26
+    docid:
+    - id: draft-ietf-tsvwg-ecn-l4s-id-26
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-tsvwg-ecn-l4s-id-26
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-ietf-tsvwg-ecn-l4s-id-27
+fetched: '2022-07-27'
+doctype: internet-draft
