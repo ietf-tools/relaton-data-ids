@@ -14,11 +14,12 @@ docid:
 abstract:
 - content: "<p>The widespread adoption of Domain-based Message Authentication, Reporting,
     and Conformance (DMARC) led Mailing List Managers (MLM) to rewrite the From: header
-    field as a workaround. This document describes reverting MLM transformations in
-    IETF mailing lists. That way, it is possible to verify DomainKeys Identified Mail
-    (DKIM) signatures that were applied at submission time and thereby restore original
-    identifiers. For reliable results, some compliance is required of all agents involved,
-    author domain signers, MLMs, forwarders, and final recipients' verifiers.</p>"
+    field as a workaround. This document proposes two methods to restore the original
+    From: value of transformed messages, to be effected by the receiving Message Delivery
+    Agent (rMDA). One method requires receivers to identify a set of trusted MLM operators
+    who set the Author: header field. The other method tries to revert MLM transformations
+    in order to verify DomainKeys Identified Mail (DKIM) signatures that were applied
+    by the author domain at submission time.</p>"
   language:
   - en
   script:
@@ -85,4 +86,14 @@ relation:
     formattedref:
       content: draft-vesely-dmarc-mlm-transform-05
       format: text/plain
-fetched: '2022-08-18'
+- type: includes
+  bibitem:
+    id: draft-vesely-dmarc-mlm-transform-06
+    docid:
+    - id: draft-vesely-dmarc-mlm-transform-06
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-vesely-dmarc-mlm-transform-06
+      format: text/plain
+fetched: '2022-08-19'
