@@ -1,7 +1,7 @@
 ---
 id: draft-song-mpls-extension-header
 title:
-- content: MPLS Post-Stack Extension Header
+- content: Support MPLS Network Actions using Post-Stack Extension Headers
   language:
   - en
   script:
@@ -14,12 +14,15 @@ docid:
 abstract:
 - content: "<p>Motivated by the need to support multiple in-network services and functions
     in an MPLS network (a.k.a. MPLS Network Actions (MNA)), this document describes
-    a generic and extensible method to encapsulate extension headers into MPLS packets.
-    The encapsulation method allows stacking multiple post-stack extension headers
-    and quickly accessing any of them as well as the original upper layer protocol
-    header and payload. We show how the post-stack extension header can be used to
-    support several new MNAs as a generic mechanism. This document strictly confines
-    to specifying the solution of encoding of the MPLS Post-Stack Extension Header.</p>"
+    a generic and extensible method to encapsulate MNA instructions as well as possible
+    ancillary data in an MPLS packet. All the post-stack MNAs are encapsulated in
+    a structure called Post-stack MNA Header (PAH). A PAH is composed of a common
+    header plus a chain of extension headers; each extension header is a container
+    for an MNA. The encapsulation method allows chaining multiple post-stack extension
+    headers and provides the means to enable fast access to them as well as the original
+    upper layer headers. This document confines to the solution of PAH encoding and
+    leaves the specification of PAH indicator to the overall MNA solution. We show
+    how PAH can be used to support several new MNAs as a generic post-stack mechanism.</p>"
   language:
   - en
   script:
@@ -126,4 +129,14 @@ relation:
     formattedref:
       content: draft-song-mpls-extension-header-09
       format: text/plain
-fetched: '2022-09-01'
+- type: includes
+  bibitem:
+    id: draft-song-mpls-extension-header-10
+    docid:
+    - id: draft-song-mpls-extension-header-10
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-song-mpls-extension-header-10
+      format: text/plain
+fetched: '2022-09-02'
