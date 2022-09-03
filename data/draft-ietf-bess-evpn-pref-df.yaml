@@ -16,16 +16,18 @@ abstract:
     (EVPN) is defined as the PE responsible for sending Broadcast, Unknown unicast
     and Broadcast traffic (BUM) to a multi-homed device/ network in the case of an
     all-active multi-homing Ethernet Segment (ES), or BUM and unicast in the case
-    of single-active multi-homing. The DF is selected out of a candidate list of PEs
-    that advertise the same Ethernet Segment Identifier (ESI) to the EVPN network,
-    according to the Default DF Election algorithm. While the Default Algorithm provides
-    an efficient and automated way of selecting the DF across different Ethernet Tags
-    in the ES, there are some use cases where a more 'deterministic' and user-controlled
-    method is required. At the same time, Service Providers require an easy way to
-    force an on- demand DF switchover in order to carry out some maintenance tasks
-    on the existing DF or control whether a new active PE can preempt the existing
-    DF PE. This document proposes a DF Election algorithm that meets the requirements
-    of determinism and operation control.</p>"
+    of single-active multi-homing. The Designated Forwarder is selected out of a candidate
+    list of PEs that advertise the same Ethernet Segment Identifier (ESI) to the EVPN
+    network, according to the Default Designated Forwarder Election algorithm. While
+    the Default Algorithm provides an efficient and automated way of selecting the
+    Designated Forwarder across different Ethernet Tags in the Ethernet Segment, there
+    are some use cases where a more 'deterministic' and user-controlled method is
+    required. At the same time, Service Providers require an easy way to force an
+    on- demand Designated Forwarder switchover in order to carry out some maintenance
+    tasks on the existing Designated Forwarder or control whether a new active PE
+    can preempt the existing Designated Forwarder PE. This document proposes a Designated
+    Forwarder Election algorithm that meets the requirements of determinism and operation
+    control.</p>"
   language:
   - en
   script:
@@ -132,4 +134,14 @@ relation:
     formattedref:
       content: draft-ietf-bess-evpn-pref-df-09
       format: text/plain
-fetched: '2022-09-02'
+- type: includes
+  bibitem:
+    id: draft-ietf-bess-evpn-pref-df-10
+    docid:
+    - id: draft-ietf-bess-evpn-pref-df-10
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-bess-evpn-pref-df-10
+      format: text/plain
+fetched: '2022-09-03'
