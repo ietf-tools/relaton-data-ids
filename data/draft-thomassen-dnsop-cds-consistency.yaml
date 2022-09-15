@@ -1,7 +1,7 @@
 ---
 id: draft-thomassen-dnsop-cds-consistency
 title:
-- content: Ensuring CDS/CDNSKEY Consistency is Mandatory
+- content: Consistency for CDS/CDNSKEY and CSYNC is Mandatory
   language:
   - en
   script:
@@ -12,15 +12,17 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: <p>For maintaining DNSSEC Delegation Trust, DS records have to be kept
-    up to date. [RFC7344] automates this by having the child publish CDS and/or CDNSKEY
-    records which hold the prospective DS parameters. Parent-side entities (e.g. Registries,
-    Registrars) can use these records to update the delegation's DS records. A common
-    method for detecting changes in CDS/CDNSKEY record sets is to query them periodically
-    from the child zone ("polling"), as described in Section 6.1 of [RFC7344]. This
-    document specifies that if polling is used, parent-side entities MUST ensure that
-    CDS/CDNSKEY record sets are equivalent across all of the child's authoritative
-    nameservers, before taking any action based on these records.</p>
+- content: <p>Maintenance of DNS delegations requires occasional changes of the DS
+    and NS record sets on the parent side of the delegation. [RFC7344] automates this
+    for DS records by having the child publish CDS and/or CDNSKEY records which hold
+    the prospective DS parameters. Similarly, CSYNC records indicate a desired update
+    of the delegation's NS records [RFC7477]. Parent-side entities (e.g. Registries,
+    Registrars) typically discover these records by periodically querying them from
+    the child ("polling"), before using them to update the delegation's parameters.
+    This document specifies that if polling is used, parent-side entities MUST ensure
+    that updates triggered via CDS/CDNSKEY and CSYNC records are consistent across
+    the child's authoritative nameservers, before taking any action based on these
+    records.</p>
   language:
   - en
   script:
@@ -37,4 +39,14 @@ relation:
     formattedref:
       content: draft-thomassen-dnsop-cds-consistency-00
       format: text/plain
-fetched: '2022-09-14'
+- type: includes
+  bibitem:
+    id: draft-thomassen-dnsop-cds-consistency-01
+    docid:
+    - id: draft-thomassen-dnsop-cds-consistency-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-thomassen-dnsop-cds-consistency-01
+      format: text/plain
+fetched: '2022-09-15'
