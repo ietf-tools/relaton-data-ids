@@ -14,15 +14,17 @@ docid:
 abstract:
 - content: "<p>This document describes a backwards compatible, optional IS-IS extension
     that allows the creation of IS-IS flood reflection topologies. Flood reflection
-    allows topologies in which L1 areas provide transit forwarding for L2 using all
+    permits topologies in which L1 areas provide transit forwarding for L2 using all
     available L1 nodes internally. It accomplishes this by creating L2 flood reflection
-    adjacencies within each L1 area. Those adjacencies are used to flood L2 LSPDUs,
-    and they are used in the L2 SPF computation. However, they are not used for forwarding
-    within the flood reflection cluster. This arrangement gives the L2 topology significantly
-    better scaling properties. As additional benefit, only those routers directly
-    participating in flood reflection have to support the feature. This allows for
-    the incremental deployment of scalable L1 transit areas in an existing network,
-    without the necessity of upgrading other routers in the network.</p>"
+    adjacencies within each L1 area. Those adjacencies are used to flood L2 LSPDUs
+    and are used in the L2 SPF computation. However, they are not utilized for forwarding
+    within the flood reflection cluster except in pathological cases mentioned in
+    Section 7. This arrangement gives the L2 topology significantly better scaling
+    properties than traditionally used flat designs. As an additional benefit, only
+    those routers directly participating in flood reflection are required to support
+    the feature. This allows for incremental deployment of scalable L1 transit areas
+    in an existing, previously flat network design, without the necessity of upgrading
+    all routers in the network.</p>"
   language:
   - en
   script:
@@ -109,4 +111,13 @@ relation:
     formattedref:
       content: draft-ietf-lsr-isis-flood-reflection-07
       format: text/plain
-fetched: '2022-09-20'
+- type: includes
+  bibitem:
+    id: draft-ietf-lsr-isis-flood-reflection-08
+    docid:
+    - id: draft-ietf-lsr-isis-flood-reflection-08
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-lsr-isis-flood-reflection-08
+      format: text/plain
