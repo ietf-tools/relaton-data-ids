@@ -1,27 +1,27 @@
 ---
-id: draft-ietf-lamps-5g-nftypes-03
+id: draft-ietf-lamps-rfc7030-csrattrs-01
 title:
-- content: X.509 Certificate Extension for 5G Network Function Types
+- content: Clarification of RFC7030 CSR Attributes definition
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://www.ietf.org/archive/id/draft-ietf-lamps-5g-nftypes-03.txt
+- content: https://www.ietf.org/archive/id/draft-ietf-lamps-rfc7030-csrattrs-01.txt
   type: TXT
 type: standard
 docid:
-- id: draft-ietf-lamps-5g-nftypes-03
+- id: draft-ietf-lamps-rfc7030-csrattrs-01
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-lamps-5g-nftypes
+- id: I-D.ietf-lamps-rfc7030-csrattrs
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-lamps-5g-nftypes
+docnumber: I-D.ietf-lamps-rfc7030-csrattrs
 date:
 - type: published
-  value: '2022-09-26'
+  value: '2022-09-30'
 contributor:
 - person:
     name:
@@ -29,23 +29,23 @@ contributor:
         forename:
         - language:
           - en
-          initial: R
+          initial: M
         formatted_initials:
-          content: R.
+          content: M.
           language:
           - en
       surname:
-        content: Housley
+        content: Richardson
         language:
         - en
       completename:
-        content: Russ Housley
+        content: Michael Richardson
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Vigil Security, LLC
+        - content: Sandelman Software Works
   role:
   - author
 - person:
@@ -54,51 +54,23 @@ contributor:
         forename:
         - language:
           - en
-          initial: S
+          initial: O
         formatted_initials:
-          content: S.
+          content: O.
           language:
           - en
       surname:
-        content: Turner
+        content: Friel
         language:
         - en
       completename:
-        content: Sean Turner
+        content: Owen Friel
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: sn3rd
-  role:
-  - author
-- person:
-    name:
-      given:
-        forename:
-        - language:
-          - en
-          initial: J
-        - language:
-          - en
-          initial: P
-        formatted_initials:
-          content: J. P.
-          language:
-          - en
-      surname:
-        content: Mattsson
-        language:
-        - en
-      completename:
-        content: John Preuß Mattsson
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Ericsson
+        - content: Cisco
   role:
   - author
 - person:
@@ -113,30 +85,58 @@ contributor:
           language:
           - en
       surname:
-        content: Migault
+        content: von Oheimb
         language:
         - en
       completename:
-        content: Daniel Migault
+        content: David von Oheimb
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Ericsson
+        - content: Siemens
+  role:
+  - author
+- person:
+    name:
+      given:
+        forename:
+        - language:
+          - en
+          initial: D
+        formatted_initials:
+          content: D.
+          language:
+          - en
+      surname:
+        content: Harkins
+        language:
+        - en
+      completename:
+        content: Dan Harkins
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: The Industrial Lounge
   role:
   - author
 version:
-- draft: '03'
-revdate: '2022-09-26'
+- draft: '01'
+revdate: '2022-09-30'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document specifies the certificate extension for including Network
-    Function Types (NFTypes) for the 5G System in X.509v3 public key certificates
-    as profiled in RFC 5280.</p>"
+- content: "<p>The Enrollment over Secure Transport (EST, RFC7030) is ambiguous in
+    its specification of the CSR Attributes Response. This has resulted in implementation
+    challenges and implementor confusion. This document updates RFC7030 (EST) and
+    clarifies how the CSR Attributes Response can be used by an EST server to specify
+    both CSR attribute OIDs and also CSR attribute values, in particular X.509 extension
+    values, that the server expects the client to include in subsequent CSR request.</p>"
   language:
   - en
   script:
@@ -145,23 +145,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-lamps-5g-nftypes-02
+    id: draft-ietf-lamps-rfc7030-csrattrs-00
     docid:
-    - id: draft-ietf-lamps-5g-nftypes-02
+    - id: draft-ietf-lamps-rfc7030-csrattrs-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-lamps-5g-nftypes-02
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-lamps-5g-nftypes-04
-    docid:
-    - id: draft-ietf-lamps-5g-nftypes-04
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-lamps-5g-nftypes-04
+      content: draft-ietf-lamps-rfc7030-csrattrs-00
       format: text/plain
 series:
 - type: main
@@ -172,5 +162,5 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-lamps-5g-nftypes-03
+  number: draft-ietf-lamps-rfc7030-csrattrs-01
 doctype: internet-draft
