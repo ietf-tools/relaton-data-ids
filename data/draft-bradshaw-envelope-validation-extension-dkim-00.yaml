@@ -1,0 +1,86 @@
+---
+id: draft-bradshaw-envelope-validation-extension-dkim-00
+title:
+- content: DKIM Envelope Validation Extension (eve)
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://www.ietf.org/archive/id/draft-bradshaw-envelope-validation-extension-dkim-00.txt
+  type: TXT
+type: standard
+docid:
+- id: draft-bradshaw-envelope-validation-extension-dkim-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.bradshaw-envelope-validation-extension-dkim
+  type: IETF
+  scope: anchor
+docnumber: I-D.bradshaw-envelope-validation-extension-dkim
+date:
+- type: published
+  value: '2022-10-04'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - language:
+          - en
+          initial: M
+        formatted_initials:
+          content: M.
+          language:
+          - en
+      surname:
+        content: Bradshaw
+        language:
+        - en
+      completename:
+        content: Marc Bradshaw
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Fastmail, PTY LTD
+  role:
+  - author
+version:
+- draft: '00'
+revdate: '2022-10-04'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>DKIM as defined in RFC6376 is an IETF standard of cryptographically
+    signing email with a domain key. DKIM is widely used to build a reputation based
+    on the signing domain and assign that reputation to message filtering. Section
+    8.6 defines a vulnerability called DKIM replay, in which a single message can
+    be replayed to a large group of unrelated recipients, thereby hijacking the reputation
+    of the original sender. This proposal defines a method of declaring the original
+    envelope sender and recipient(s) within a DKIM signature such that compliant DKIM
+    validators can detect a DKIM signature which may have been replayed and modify
+    their use of domain reputation accordingly. This technique remains fully backwards
+    compatible with DKIM validators which do not support the new methods, while allowing
+    compliant forwarders to declare their ingress authentication state in Authentication
+    Results headers for consumption by subsequent validators.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-bradshaw-envelope-validation-extension-dkim-00
+doctype: internet-draft

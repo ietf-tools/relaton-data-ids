@@ -1,27 +1,27 @@
 ---
-id: draft-ietf-ccamp-gmpls-otn-b100g-applicability-12
+id: draft-ietf-opsawg-sap-10
 title:
-- content: Applicability of GMPLS for Beyond 100G Optical Transport Network
+- content: A YANG Network Model for Service Attachment Points (SAPs)
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://www.ietf.org/archive/id/draft-ietf-ccamp-gmpls-otn-b100g-applicability-12.txt
+- content: https://www.ietf.org/archive/id/draft-ietf-opsawg-sap-10.txt
   type: TXT
 type: standard
 docid:
-- id: draft-ietf-ccamp-gmpls-otn-b100g-applicability-12
+- id: draft-ietf-opsawg-sap-10
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-ccamp-gmpls-otn-b100g-applicability
+- id: I-D.ietf-opsawg-sap
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-ccamp-gmpls-otn-b100g-applicability
+docnumber: I-D.ietf-opsawg-sap
 date:
 - type: published
-  value: '2022-09-28'
+  value: '2022-10-04'
 contributor:
 - person:
     name:
@@ -29,23 +29,23 @@ contributor:
         forename:
         - language:
           - en
-          initial: Q
+          initial: M
         formatted_initials:
-          content: Q.
+          content: M.
           language:
           - en
       surname:
-        content: Wang
+        content: Boucadair
         language:
         - en
       completename:
-        content: Qilei Wang
+        content: Mohamed Boucadair
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: ZTE Corporation
+        - content: Orange
   role:
   - author
 - person:
@@ -54,73 +54,26 @@ contributor:
         forename:
         - language:
           - en
-          initial: R
-        formatted_initials:
-          content: R.
-          language:
-          - en
-      surname:
-        content: Valiveti
-        language:
-        - en
-      completename:
-        content: Radha Valiveti
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Infinera Corp
-  role:
-  - author
-- person:
-    name:
-      given:
-        forename:
+          initial: O
         - language:
           - en
-          initial: H
+          initial: G
         formatted_initials:
-          content: H.
+          content: O. G.
           language:
           - en
       surname:
-        content: Zheng
+        content: de Dios
         language:
         - en
       completename:
-        content: Haomian Zheng
+        content: Oscar Gonzalez de Dios
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei
-  role:
-  - author
-- person:
-    name:
-      given:
-        forename:
-        - language:
-          - en
-          initial: H
-        formatted_initials:
-          content: H.
-          language:
-          - en
-      surname:
-        content: van Helvoort
-        language:
-        - en
-      completename:
-        content: Huub van Helvoort
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Hai Gaoming B.V
+        - content: Telefonica
   role:
   - author
 - person:
@@ -135,11 +88,61 @@ contributor:
           language:
           - en
       surname:
-        content: Belotti
+        content: Barguil
         language:
         - en
       completename:
-        content: Sergio Belotti
+        content: Samier Barguil
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Telefonica
+  role:
+  - author
+- person:
+    name:
+      given:
+        forename:
+        - language:
+          - en
+          initial: Q
+        formatted_initials:
+          content: Q.
+          language:
+          - en
+      surname:
+        content: Wu
+        language:
+        - en
+      completename:
+        content: Qin Wu
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei
+  role:
+  - author
+- person:
+    name:
+      given:
+        forename:
+        - language:
+          - en
+          initial: V
+        formatted_initials:
+          content: V.
+          language:
+          - en
+      surname:
+        content: Lopez
+        language:
+        - en
+      completename:
+        content: Victor Lopez
         language:
         - en
     affiliation:
@@ -149,17 +152,23 @@ contributor:
   role:
   - author
 version:
-- draft: '12'
-revdate: '2022-09-28'
+- draft: '10'
+revdate: '2022-10-04'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document examines the applicability of using existing GMPLS routing
-    and signalling mechanisms to set up Optical Data Unit-k (ODUk) Label Switched
-    Paths (LSPs) over Optical Data Unit-Cn (ODUCn) links as defined in the 2020 version
-    of G.709.</p>"
+- content: "<p>This document defines a YANG data model for representing an abstract
+    view of the provider network topology that contains the points from which its
+    services can be attached (e.g., basic connectivity, VPN, network slices). Also,
+    the model can be used to retrieve the points where the services are actually being
+    delivered to customers (including peer networks). This document augments the 'ietf-network'
+    data model by adding the concept of Service Attachment Points (SAPs). The SAPs
+    are the network reference points to which network services, such as Layer 3 Virtual
+    Private Network (L3VPN) or Layer 2 Virtual Private Network (L2VPN), can be attached.
+    Both User-Network Interface (UNI) and Network-to-Network Interface (NNI) are supported
+    in the SAP data model.</p>"
   language:
   - en
   script:
@@ -168,23 +177,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-ccamp-gmpls-otn-b100g-applicability-11
+    id: draft-ietf-opsawg-sap-09
     docid:
-    - id: draft-ietf-ccamp-gmpls-otn-b100g-applicability-11
+    - id: draft-ietf-opsawg-sap-09
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-ccamp-gmpls-otn-b100g-applicability-11
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-ccamp-gmpls-otn-b100g-applicability-13
-    docid:
-    - id: draft-ietf-ccamp-gmpls-otn-b100g-applicability-13
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-ccamp-gmpls-otn-b100g-applicability-13
+      content: draft-ietf-opsawg-sap-09
       format: text/plain
 series:
 - type: main
@@ -195,5 +194,5 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-ccamp-gmpls-otn-b100g-applicability-12
+  number: draft-ietf-opsawg-sap-10
 doctype: internet-draft
