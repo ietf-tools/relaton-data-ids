@@ -1,0 +1,40 @@
+---
+id: draft-gondwana-email-mailpath
+title:
+- content: Email extension for specifying the next hop path for delivery
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-gondwana-email-mailpath
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: <p>Much work has been put into adding authentication methods (DKIM, ARC),
+    source verification (SPF) and policy support (DMARC) to email flows, however all
+    these specifications have focused on looking backwards through email flow only,
+    and only add new headers to messages, causing them all to be susceptible to replay
+    or re-use. In particular, in early 2022, a type of attack called "DKIM Replay"
+    was widely seen, where correctly DKIM-signed messages were sent to a different
+    envelope sender. The "To" address would not be aligned, but such messages can
+    also be the result of legitimate mailflow, so these messages were delivered to
+    end-recipient mailboxes, and caused reputation issues for the signers of the original
+    message.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-gondwana-email-mailpath-00
+    docid:
+    - id: draft-gondwana-email-mailpath-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-gondwana-email-mailpath-00
+      format: text/plain
