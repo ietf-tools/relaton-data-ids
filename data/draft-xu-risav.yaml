@@ -1,7 +1,7 @@
 ---
 id: draft-xu-risav
 title:
-- content: An RPKI and IPsec-based End-to-End Approach for Source Address Validation
+- content: An RPKI and IPsec-based AS-to-AS Approach for Source Address Validation
   language:
   - en
   script:
@@ -12,12 +12,12 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>Because the Internet forwards packets according to the IP destination
-    address, packet forwarding typically takes no place with inspection of the source
-    address. Therefore, malicious attacks or behaviors have been launched with spoofed
-    source addresses. This document defines using RPKI (Resource Public Key Infrastructure)
-    and IPsec (IP Security) to reinforce the security of source addresses in the inter-
-    domain layer.</p>"
+- content: "<p>This document presents RISAV, a protocol for establishing and using
+    IPsec security between Autonomous Systems (ASes) using the RPKI identity system.
+    In this protocol, the originating AS adds authenticating information to each outgoing
+    packet at its Border Routers (ASBRs), and the receiving AS verifies and strips
+    this information at its ASBRs. Packets that fail validation are dropped by the
+    ASBR. RISAV achieves Source Address Validation among all participating ASes.</p>"
   language:
   - en
   script:
@@ -33,4 +33,14 @@ relation:
       primary: true
     formattedref:
       content: draft-xu-risav-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-xu-risav-01
+    docid:
+    - id: draft-xu-risav-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-xu-risav-01
       format: text/plain
