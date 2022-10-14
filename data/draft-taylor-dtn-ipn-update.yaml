@@ -12,18 +12,24 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>The Delay Tolerant Networking 'ipn' Endpoint Identifier scheme was
-    first defined as Compressed Bundle Header Encoding (CBHE) [RFC6260] for use with
-    the Bundle Protocol version 6 (BPv6) [RFC5050]. [RFC7116] updated [RFC6260] and
-    requested IANA registries associated with the ipn scheme when used with BPv6.
-    The Bundle Protocol version 7 (BPv7) specification [RFC9171] also defines an ipn
-    scheme (for use with BPv7) by reusing the format from [RFC6260]. The evolution
-    and specification of the ipn scheme has led to confusion over its use and format
-    between BPv6 and BPv7. This document defines the ipn scheme as it is to be used
-    with BPv7 and also updates [RFC7116] to make it clear that IANA CBHE registries
-    are only to be used for BPv6. This document also updates the format of the BPv7
-    ipn scheme to include Numbering Authorities and requests the formation of BPv7
-    ipn scheme IANA registries.</p>"
+- content: "<p>The 'ipn' URI scheme was first defined in [RFC6260] as a format for
+    endpoint identifiers with the Delay Tolerant Networking Bundle Protocol version
+    6 (BPv6) [RFC5050], when using Compressed Bundle Header Encoding (CBHE). [RFC7116]
+    requested IANA registries to control the allocation of the numeric identifiers
+    used with the 'ipn' URI scheme. The Bundle Protocol version 7 (BPv7) specification
+    [RFC9171] repeats the definition of the 'ipn' URI scheme, for use with BPv7, reusing
+    the format from [RFC6260]. Because the specification of the 'ipn' URI scheme has
+    been split over several documents, referencing different versions of the Bundle
+    Protocol, some confusion has occurred amongst readers and implementers. This document
+    pulls together the information contained in those previous documents and asserts
+    the specification of the 'ipn' URI scheme for use with BPv7, acting as an update
+    to those previous documents. A criticism of the existing 'ipn' URI scheme node
+    number allocation strategy as defined in [RFC7116] is that sub-ranges of a single
+    number space are assigned for the use by individual organisations. This allocation
+    strategy results in inefficient encoding of URIs with BPv7. This document extends
+    the format of the 'ipn' URI scheme to include Numbering Authorities, allowing
+    for a more flexible sub- allocation strategy, resulting in a more efficient encoding
+    with BPv7.</p>"
   language:
   - en
   script:
@@ -49,4 +55,14 @@ relation:
       primary: true
     formattedref:
       content: draft-taylor-dtn-ipn-update-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-taylor-dtn-ipn-update-02
+    docid:
+    - id: draft-taylor-dtn-ipn-update-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-taylor-dtn-ipn-update-02
       format: text/plain
