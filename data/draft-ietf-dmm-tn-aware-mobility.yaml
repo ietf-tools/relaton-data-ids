@@ -12,21 +12,24 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document specifies a framework and mapping of slices in 5G mobile
-    systems to transport network slices in IP, Layer 2 or Layer 1 transport networks.
-    Slices in 5G systems are characterized by latency bounds, reservation guarantees,
-    jitter, data rates, availability, mobility speed, usage density, criticality and
-    priority. These characteristics are mapped to transport network slice include
-    bandwidth, latency and criteria such as isolation, directionality and disjoint
-    routes. Mobile slice criteria are mapped to the appropriate transport slice and
-    capabilities offered in backhaul, midhaul and fronthaul connectivity segments
-    between radio side network functions and user plane function(gateway). This document
-    describes how a mobile network slice is mapped to a slice in IP or Layer 2 transport
-    network between 3GPP provisioning end points. The same mapping mechanisms apply
-    during initial UE session setup and following UE mobility. Applicability of this
-    framework and underlying transport networks, which can enable different slice
-    properties are also discussed. This is based on mapping between mobile and transport
-    underlays (L2, Segment Routing, IPv6, MPLS and IPv4).</p>"
+- content: "<p>Slices in a 5G system should be identified and mapped to the corresponding
+    transport network underlay segments to provide the capabilities requested by the
+    5G customer. One set of slices in a 5G system correspond to resources and connectivity
+    to carry signaling and data plane packets across a distributed infrastructure
+    that make up the 5G system, for example, distributed entities of a radio network
+    (gNB). Another set of 5G slices represent resource and connectivity capabilities
+    offered by the 5G system to its end users (UE) for the lifetime of a session including
+    UE mobility. Both depend in part on multiple transport network slice segments
+    with requirements that include bandwidth, latency, and criteria such as isolation,
+    directionality, and disjoint routes. This document describes how a 5G slice is
+    mapped to a slice in IP or Layer 2 transport network for both above cases, including
+    scenarios where the 5G customer network is separated from the provider transport
+    network by an intermediate network. Mobile slice criteria are mapped to the appropriate
+    transport slice and capabilities offered in backhaul, mid-haul and fronthaul connectivity
+    segments between radio side network functions and user plane function(gateway).
+    Applicability of this framework and underlying transport networks, which can enable
+    different slice properties are also discussed. This is based on mapping between
+    mobile and transport underlays (L2, Segment Routing, IPv6, MPLS and IPv4).</p>"
   language:
   - en
   script:
@@ -82,4 +85,14 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-dmm-tn-aware-mobility-04
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-dmm-tn-aware-mobility-05
+    docid:
+    - id: draft-ietf-dmm-tn-aware-mobility-05
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-dmm-tn-aware-mobility-05
       format: text/plain

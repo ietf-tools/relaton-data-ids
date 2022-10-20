@@ -1,7 +1,7 @@
 ---
 id: draft-schwartz-ohai-consistency-doublecheck
 title:
-- content: Key Consistency for Oblivious HTTP by Double-Checking
+- content: Key Consistency by Double-Checking via a Semi-Trusted Proxy
   language:
   - en
   script:
@@ -12,9 +12,12 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>The assurances provided by Oblivious HTTP depend on the client's ability
-    to verify that it is using the same Gateway, Target, and KeyConfig as many other
-    users. This specification defines a protocol to enable this verification.</p>"
+- content: "<p>Several recent IETF privacy protocols require clients to acquire bootstrap
+    information for a service in a way that guarantees both authenticity and consistency,
+    e.g., encrypting to the same key as many other users. This specification defines
+    a procedure for transferring arbitrary HTTP resources in a manner that provides
+    these guarantees. The procedure relies on access to a semi-trusted HTTP proxy,
+    under the same security assumptions as an Oblivious HTTP Relay.</p>"
   language:
   - en
   script:
@@ -50,4 +53,14 @@ relation:
       primary: true
     formattedref:
       content: draft-schwartz-ohai-consistency-doublecheck-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-schwartz-ohai-consistency-doublecheck-03
+    docid:
+    - id: draft-schwartz-ohai-consistency-doublecheck-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-schwartz-ohai-consistency-doublecheck-03
       format: text/plain
