@@ -1,7 +1,7 @@
 ---
 id: draft-ietf-alto-new-transport
 title:
-- content: 'ALTO/H2: The ALTO Protocol using HTTP/2'
+- content: 'ALTO New Transport: ALTO Transport Information Structures'
   language:
   - en
   script:
@@ -12,11 +12,17 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>The ALTO base protocol [RFC7285] uses HTTP/1.x as the transport protocol
-    and hence ALTO transport includes the limitations of HTTP/1.x. ALTO/SSE [RFC8895]
-    addresses some of the limitations, but is still based on HTTP/1.x. This document
-    introduces ALTO new transport, which provides the transport functions of ALTO/SSE
-    on top of HTTP/2, for more efficient ALTO transport.</p>"
+- content: "<p>The ALTO base protocol [RFC7285] defines both the ALTO information
+    resources and their transport from the server to the client. Using HTTP/1.x as
+    the transport protocol, the ALTO transport in the base protocol includes the limitations
+    of HTTP/1.x. ALTO/SSE [RFC8895] defines a new transport design addressing some
+    of the limitations, but is still based on HTTP/1.x. This document introduces ALTO
+    new transport, which introduces ALTO transport information structures (TIS) at
+    an ALTO server. The introduction of ALTO TIS allows at least two types of efficient
+    transport using HTTP: (1) HTTP/2/3 independent client (long) poll allowed by non-blocking,
+    newer HTTP, and (2) HTTP/2 specific server push. This document defines ALTO TIS
+    and the first design. A companion document defines server-push ALTO transport
+    based on ALTO TIS.</p>"
   language:
   - en
   script:
@@ -42,4 +48,14 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-alto-new-transport-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-alto-new-transport-02
+    docid:
+    - id: draft-ietf-alto-new-transport-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-alto-new-transport-02
       format: text/plain
