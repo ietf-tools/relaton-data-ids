@@ -1,0 +1,159 @@
+---
+id: draft-ounsworth-pq-composite-keys-03
+title:
+- content: Composite Public and Private Keys For Use In Internet PKI
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://www.ietf.org/archive/id/draft-ounsworth-pq-composite-keys-03.txt
+  type: TXT
+type: standard
+docid:
+- id: draft-ounsworth-pq-composite-keys-03
+  type: Internet-Draft
+  primary: true
+- id: I-D.ounsworth-pq-composite-keys
+  type: IETF
+  scope: anchor
+docnumber: I-D.ounsworth-pq-composite-keys
+date:
+- type: published
+  value: '2022-10-22'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - language:
+          - en
+          initial: M
+        formatted_initials:
+          content: M.
+          language:
+          - en
+      surname:
+        content: Ounsworth
+        language:
+        - en
+      completename:
+        content: Mike Ounsworth
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Entrust Limited
+  role:
+  - author
+- person:
+    name:
+      given:
+        forename:
+        - language:
+          - en
+          initial: M
+        formatted_initials:
+          content: M.
+          language:
+          - en
+      surname:
+        content: Pala
+        language:
+        - en
+      completename:
+        content: Massimiliano Pala
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: CableLabs
+  role:
+  - author
+- person:
+    name:
+      given:
+        forename:
+        - language:
+          - en
+          initial: J
+        formatted_initials:
+          content: J.
+          language:
+          - en
+      surname:
+        content: Klaußner
+        language:
+        - en
+      completename:
+        content: Jan Klaußner
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: D-Trust GmbH
+  role:
+  - author
+version:
+- draft: '03'
+revdate: '2022-10-22'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: <p>The migration to post-quantum cryptography is unique in the history
+    of modern digital cryptography in that neither the old outgoing nor the new incoming
+    algorithms are fully trusted to protect data for the required data lifetimes.
+    The outgoing algorithms, such as RSA and elliptic curve, may fall to quantum cryptalanysis,
+    while the incoming post-quantum algorithms face uncertainty about both the underlying
+    mathematics as well as hardware and software implementations that have not had
+    sufficient maturing time to rule out classical cryptanalytic attacks and implementation
+    bugs. Cautious implementors may wish to layer cryptographic algorithms such that
+    an attacker would need to break all of them in order to compromise the data being
+    protected using either a Post-Quantum / Traditional Hybrid, Post-Quantum / Post-Quantum
+    Hybrid, or combinations thereof. This document, and its companions, defines a
+    specific instantiation of hybrid paradigm called "composite" where multiple cryptographic
+    algorithms are combined to form a single key, signature, or key encapsulation
+    mechanism (KEM) such that they can be treated as a single atomic object at the
+    protocol level. This document defines the structures CompositePublicKey and CompositePrivateKey,
+    which are sequences of the respective structure for each component algorithm.
+    The generic composite variant is defined which allows arbitrary combinations of
+    key types to be placed in the CompositePublicKey and CompositePrivateKey structures
+    without needing the combination to be pre-registered or pre-agreed. The explicit
+    variant is alxso defined which allows for a set of algorithm identifier OIDs to
+    be registered together as an explicit composite algorithm and assigned an OID.
+    This document is intended to be coupled with corresponding documents that define
+    the structure and semantics of composite signatures and encryption, such as [I-D.ounsworth-pq-composite-sigs]
+    and [I-D.ounsworth-pq-composite-kem].</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-ounsworth-pq-composite-keys-02
+    docid:
+    - id: draft-ounsworth-pq-composite-keys-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ounsworth-pq-composite-keys-02
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-ounsworth-pq-composite-keys-03
+doctype: internet-draft
