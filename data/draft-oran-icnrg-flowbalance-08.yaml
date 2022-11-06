@@ -1,0 +1,107 @@
+---
+id: draft-oran-icnrg-flowbalance-08
+title:
+- content: Maintaining CCNx or NDN flow balance with highly variable data object sizes
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://www.ietf.org/archive/id/draft-oran-icnrg-flowbalance-08.txt
+  type: TXT
+type: standard
+docid:
+- id: draft-oran-icnrg-flowbalance-08
+  type: Internet-Draft
+  primary: true
+- id: I-D.oran-icnrg-flowbalance
+  type: IETF
+  scope: anchor
+docnumber: I-D.oran-icnrg-flowbalance
+date:
+- type: published
+  value: '2022-11-06'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: David
+          language:
+          - en
+        - language:
+          - en
+          initial: D
+        - language:
+          - en
+          initial: R
+        formatted_initials:
+          content: D. R.
+          language:
+          - en
+      surname:
+        content: Oran
+        language:
+        - en
+      completename:
+        content: David R. Oran
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Network Systems Research and Design
+  role:
+  - type: author
+version:
+- draft: '08'
+revdate: '2022-11-06'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>Deeply embedded in some ICN architectures, especially Named Data Networking
+    (NDN) and Content-Centric Networking (CCNx) is the notion of flow balance. This
+    captures the idea that there is a one-to-one correspondence between requests for
+    data, carried in Interest messages, and the responses with the requested data
+    object, carried in Data messages. This has a number of highly beneficial properties
+    for flow and congestion control in networks, as well as some desirable security
+    properties. For example, neither legitimate users nor attackers are able to inject
+    large amounts of un-requested data into the network. Existing congestion control
+    approaches however have a difficult time dealing effectively with a widely varying
+    MTU of ICN data messages, because the protocols allow a dynamic range of 1-64K
+    bytes. Since Interest messages are used to allocate the reverse link bandwidth
+    for returning Data, there is large uncertainty in how to allocate that bandwidth.
+    Unfortunately, most current congestion control schemes in CCNx and NDN only count
+    Interest messages and have no idea how much data is involved that could congest
+    the inverse link. This document proposes a method to maintain flow balance by
+    accommodating the wide dynamic range in Data message size.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-oran-icnrg-flowbalance-07
+    docid:
+    - id: draft-oran-icnrg-flowbalance-07
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-oran-icnrg-flowbalance-07
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-oran-icnrg-flowbalance-08
+doctype: internet-draft
