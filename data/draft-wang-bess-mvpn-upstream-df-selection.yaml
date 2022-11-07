@@ -13,16 +13,15 @@ docid:
   primary: true
 abstract:
 - content: <p>This document defines Multicast Virtual Private Network (VPN) extensions
-    and procedures that allow fast failover for upstream failures by allowing upstream
-    Provider Edges (PEs) to determine a single forwarder for a VPN multicast flow,
-    without the downstream PEs' duplication prevention. The fast failover is accomplished
-    by using Virtual Router Redundancy Protocol (VRRP) [RFC5798] or similar technologies
-    for the upstream PEs to determine a single desinated fowarder. Also, this document
-    introduces a new BGP Extended Community called "Upstream Forwarder Selection",
-    carried by BGP VPN route so that the upstream PEs can inform downstream PEs the
-    election behavior. The downstream PEs, accordingly, send C-multicast routes to
-    both the primary and standby upstream PEs and forward the multicast flow comming
-    from both sides to the CEs.</p>
+    and procedures of designated forwarder election performed between ingress PEs,
+    which is different from the one discribed in [RFC9026] in which the upstream designated
+    fowarder determined by using the "Standby PE Community" carried in the C-Multicast
+    routes. Based on the DF election, the failure detcetion point discovery mechanism
+    between DF and standby DF is extended in MVPN procedures to achieve fast failover
+    by using BFD session to track the status of detection point. To realize a stable
+    "warm root standby", this document obsolete the P-Tunnel status determining procedure
+    for downstream PEs in regular MVPN by introducing an anycast RPF checking mechanism
+    in dataplane as an instead.</p>
   language:
   - en
   script:
@@ -48,4 +47,14 @@ relation:
       primary: true
     formattedref:
       content: draft-wang-bess-mvpn-upstream-df-selection-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-wang-bess-mvpn-upstream-df-selection-02
+    docid:
+    - id: draft-wang-bess-mvpn-upstream-df-selection-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-wang-bess-mvpn-upstream-df-selection-02
       format: text/plain
