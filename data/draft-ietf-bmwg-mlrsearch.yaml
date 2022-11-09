@@ -1,7 +1,7 @@
 ---
 id: draft-ietf-bmwg-mlrsearch
 title:
-- content: Multiple Loss Ratio Search for Packet Throughput (MLRsearch)
+- content: Multiple Loss Ratio Search
   language:
   - en
   script:
@@ -12,22 +12,14 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>TODO: Update after all sections are ready. This document proposes changes
-    to [RFC2544], specifically to packet throughput search methodology, by defining
-    a new search algorithm referred to as Multiple Loss Ratio search (MLRsearch for
-    short). Instead of relying on binary search with pre-set starting offered load,
-    it proposes a novel approach discovering the starting point in the initial phase,
-    and then searching for packet throughput based on defined packet loss ratio (PLR)
-    input criteria and defined final trial duration time. One of the key design principles
-    behind MLRsearch is minimizing the total test duration and searching for multiple
-    packet throughput rates (each with a corresponding PLR) concurrently, instead
-    of doing it sequentially. The main motivation behind MLRsearch is the new set
-    of challenges and requirements posed by NFV (Network Function Virtualization),
-    specifically software based implementations of NFV data planes. Using [RFC2544]
-    in the experience of the authors yields often not repetitive and not replicable
-    end results due to a large number of factors that are out of scope for this draft.
-    MLRsearch aims to address this challenge in a simple way of getting the same result
-    sooner, so more repetitions can be done to describe the replicability.</p>"
+- content: "<p>This document proposes improvements to [RFC2544] throughput search
+    by defining a new methodology called Multiple Loss Ratio search (MLRsearch). The
+    main objectives for MLRsearch are to minimize the total test duration, search
+    for multiple loss ratios and improve results repeatibility and comparability.
+    The main motivation behind MLRsearch is the new set of challenges and requirements
+    posed by testing Network Function Virtualization (NFV) systems and other software
+    based network data planes. MLRsearch offers several ways to address these challenges,
+    giving user configuration options to select their way.</p>"
   language:
   - en
   script:
@@ -63,4 +55,14 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-bmwg-mlrsearch-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-bmwg-mlrsearch-03
+    docid:
+    - id: draft-ietf-bmwg-mlrsearch-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-bmwg-mlrsearch-03
       format: text/plain

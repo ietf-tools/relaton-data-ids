@@ -1,27 +1,27 @@
 ---
-id: draft-ietf-grow-bmp-tlv-09
+id: draft-ietf-grow-bmp-tlv-ebit-01
 title:
-- content: TLV support for BMP Route Monitoring and Peer Down Messages
+- content: Support for Enterprise-specific TLVs in the BGP Monitoring Protocol
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://www.ietf.org/archive/id/draft-ietf-grow-bmp-tlv-09.txt
+- content: https://www.ietf.org/archive/id/draft-ietf-grow-bmp-tlv-ebit-01.txt
   type: TXT
 type: standard
 docid:
-- id: draft-ietf-grow-bmp-tlv-09
+- id: draft-ietf-grow-bmp-tlv-ebit-01
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-grow-bmp-tlv
+- id: I-D.ietf-grow-bmp-tlv-ebit
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-grow-bmp-tlv
+docnumber: I-D.ietf-grow-bmp-tlv-ebit
 date:
 - type: published
-  value: '2022-10-12'
+  value: '2022-11-08'
 contributor:
 - person:
     name:
@@ -80,22 +80,20 @@ contributor:
   role:
   - type: author
 version:
-- draft: '09'
-revdate: '2022-10-12'
+- draft: '01'
+revdate: '2022-11-08'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>Most of the message types defined by the BGP Monitoring Protocol (BMP)
-    make provision for optional trailing data. However, Route Monitoring messages
-    (which provide a snapshot of the monitored Routing Information Base) and Peer
-    Down messages (which indicate that a peering session was terminated) do not. Supporting
-    optional data in TLV format across all BMP message types allows for a homogeneous
-    and extensible surface that would be useful for the most different use-cases that
-    need to convey additional data to a BMP station. While it is not intended for
-    this document to cover any specific utilization scenario, it defines a simple
-    way to support optional TLV data in all message types.</p>"
+- content: "<p>Message types defined by the BGP Monitoring Protocol (BMP) do provision
+    for data in TLV - Type, Length, Value - format, either in the shape of a TLV message
+    body, ie. Route Mirroring and Stats Reports, or optional TLVs at the end of a
+    BMP message, ie. Peer Up and Peer Down. However the space for Type value is unique
+    and governed by IANA. To allow the usage of vendor-specific TLVs, a mechanism
+    to define per-vendor Type values is required. In this document we introduce an
+    Enterprise Bit, or E-bit, for such purpose.</p>"
   language:
   - en
   script:
@@ -104,23 +102,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-grow-bmp-tlv-08
+    id: draft-ietf-grow-bmp-tlv-ebit-00
     docid:
-    - id: draft-ietf-grow-bmp-tlv-08
+    - id: draft-ietf-grow-bmp-tlv-ebit-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-grow-bmp-tlv-08
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-grow-bmp-tlv-10
-    docid:
-    - id: draft-ietf-grow-bmp-tlv-10
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-grow-bmp-tlv-10
+      content: draft-ietf-grow-bmp-tlv-ebit-00
       format: text/plain
 series:
 - type: main
@@ -131,5 +119,5 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-grow-bmp-tlv-09
+  number: draft-ietf-grow-bmp-tlv-ebit-01
 doctype: internet-draft
