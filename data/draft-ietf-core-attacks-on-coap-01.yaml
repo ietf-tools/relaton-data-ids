@@ -1,89 +1,66 @@
 ---
-id: draft-tigress-sample-implementation-00
+id: draft-ietf-core-attacks-on-coap-01
 title:
-- content: 'Transfer Digital Credentials Securely: sample implementation and threat
-    model'
+- content: Attacks on the Constrained Application Protocol (CoAP)
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://www.ietf.org/archive/id/draft-tigress-sample-implementation-00.txt
+- content: https://www.ietf.org/archive/id/draft-ietf-core-attacks-on-coap-01.txt
   type: TXT
 type: standard
 docid:
-- id: draft-tigress-sample-implementation-00
+- id: draft-ietf-core-attacks-on-coap-01
   type: Internet-Draft
   primary: true
-- id: I-D.tigress-sample-implementation
+- id: I-D.ietf-core-attacks-on-coap
   type: IETF
   scope: anchor
-docnumber: I-D.tigress-sample-implementation
+docnumber: I-D.ietf-core-attacks-on-coap
 date:
 - type: published
-  value: '2022-11-06'
+  value: '2022-11-10'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Dmitry
+        - content: John
           language:
           - en
         - language:
           - en
-          initial: D
+          initial: J
+        - language:
+          - en
+          initial: P
         formatted_initials:
-          content: D.
+          content: J. P.
           language:
           - en
       surname:
-        content: Vinokurov
+        content: Mattsson
         language:
         - en
       completename:
-        content: Dmitry Vinokurov
+        content: John Preuß Mattsson
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Apple Inc
+        - content: Ericsson AB
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Alexey
+        - content: John
           language:
           - en
-        - language:
-          - en
-          initial: A
-        formatted_initials:
-          content: A.
-          language:
-          - en
-      surname:
-        content: Bulgakov
-        language:
-        - en
-      completename:
-        content: Alexey Bulgakov
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Apple Inc
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
         - language:
           - en
           initial: J
@@ -92,24 +69,77 @@ contributor:
           language:
           - en
       surname:
-        content: Giraud
+        content: Fornehed
         language:
         - en
       completename:
-        content: Jean-Luc Giraud
+        content: John Fornehed
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Apple Inc
+        - content: Ericsson AB
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Casey
+        - language:
+          - en
+          initial: G
+        formatted_initials:
+          content: G.
+          language:
+          - en
+      surname:
+        content: Selander
+        language:
+        - en
+      completename:
+        content: Göran Selander
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Ericsson AB
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Francesca
+          language:
+          - en
+        - language:
+          - en
+          initial: F
+        formatted_initials:
+          content: F.
+          language:
+          - en
+      surname:
+        content: Palombini
+        language:
+        - en
+      completename:
+        content: Francesca Palombini
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Ericsson AB
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Christian
           language:
           - en
         - language:
@@ -120,101 +150,50 @@ contributor:
           language:
           - en
       surname:
-        content: Astiz
+        content: Amsüss
         language:
         - en
       completename:
-        content: Casey Astiz
+        content: Christian Amsüss
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Apple Inc
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Alex
-          language:
-          - en
-        - language:
-          - en
-          initial: A
-        formatted_initials:
-          content: A.
-          language:
-          - en
-      surname:
-        content: Pelletier
-        language:
-        - en
-      completename:
-        content: Alex Pelletier
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Apple Inc
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Jake
-          language:
-          - en
-        - language:
-          - en
-          initial: J
-        formatted_initials:
-          content: J.
-          language:
-          - en
-      surname:
-        content: Hansen
-        language:
-        - en
-      completename:
-        content: Jake Hansen
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Apple Inc
+        - content: Energy Harvesting Solutions
   role:
   - type: author
 version:
-- draft: '00'
-revdate: '2022-11-06'
+- draft: '01'
+revdate: '2022-11-10'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document describes a sample implementation and its threat model
-    of the secure transfer of digital credentials (Tigress) solution of the corresponding
-    Tigress Internet-draft [Tigress-00].</p>"
+- content: "<p>Being able to securely read information from sensors, to securely control
+    actuators, and to not enable distributed denial-of-service attacks are essential
+    in a world of connected and networking things interacting with the physical world.
+    Using a security protocol such as DTLS, TLS, or OSCORE to protect CoAP is a requirement
+    for secure operation and protects against many attacks. This document summarizes
+    a number of known attacks on CoAP deployments and show that just using CoAP with
+    a security protocol like DTLS, TLS, or OSCORE is not enough for secure operation.
+    Several of the discussed attacks can be mitigated with the solutions in RFC 9175.</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-tigress-sample-implementation-01
+    id: draft-ietf-core-attacks-on-coap-00
     docid:
-    - id: draft-tigress-sample-implementation-01
+    - id: draft-ietf-core-attacks-on-coap-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-tigress-sample-implementation-01
+      content: draft-ietf-core-attacks-on-coap-00
       format: text/plain
 series:
 - type: main
@@ -225,5 +204,5 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-tigress-sample-implementation-00
+  number: draft-ietf-core-attacks-on-coap-01
 doctype: internet-draft

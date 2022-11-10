@@ -1,83 +1,139 @@
 ---
-id: draft-tigress-sample-implementation-00
+id: draft-ietf-suit-manifest-21
 title:
-- content: 'Transfer Digital Credentials Securely: sample implementation and threat
-    model'
+- content: A Concise Binary Object Representation (CBOR)-based Serialization Format
+    for the Software Updates for Internet of Things (SUIT) Manifest
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://www.ietf.org/archive/id/draft-tigress-sample-implementation-00.txt
+- content: https://www.ietf.org/archive/id/draft-ietf-suit-manifest-21.txt
   type: TXT
 type: standard
 docid:
-- id: draft-tigress-sample-implementation-00
+- id: draft-ietf-suit-manifest-21
   type: Internet-Draft
   primary: true
-- id: I-D.tigress-sample-implementation
+- id: I-D.ietf-suit-manifest
   type: IETF
   scope: anchor
-docnumber: I-D.tigress-sample-implementation
+docnumber: I-D.ietf-suit-manifest
 date:
 - type: published
-  value: '2022-11-06'
+  value: '2022-11-09'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Dmitry
+        - content: Brendan
           language:
           - en
         - language:
           - en
-          initial: D
+          initial: B
         formatted_initials:
-          content: D.
+          content: B.
           language:
           - en
       surname:
-        content: Vinokurov
+        content: Moran
         language:
         - en
       completename:
-        content: Dmitry Vinokurov
+        content: Brendan Moran
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Apple Inc
+        - content: Arm Limited
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Alexey
+        - content: Hannes
           language:
           - en
         - language:
           - en
-          initial: A
+          initial: H
         formatted_initials:
-          content: A.
+          content: H.
           language:
           - en
       surname:
-        content: Bulgakov
+        content: Tschofenig
         language:
         - en
       completename:
-        content: Alexey Bulgakov
+        content: Hannes Tschofenig
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Apple Inc
+        - content: Arm Limited
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Henk
+          language:
+          - en
+        - language:
+          - en
+          initial: H
+        formatted_initials:
+          content: H.
+          language:
+          - en
+      surname:
+        content: Birkholz
+        language:
+        - en
+      completename:
+        content: Henk Birkholz
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Fraunhofer SIT
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Koen
+          language:
+          - en
+        - language:
+          - en
+          initial: K
+        formatted_initials:
+          content: K.
+          language:
+          - en
+      surname:
+        content: Zandberg
+        language:
+        - en
+      completename:
+        content: Koen Zandberg
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Inria
   role:
   - type: author
 - person:
@@ -86,135 +142,54 @@ contributor:
         forename:
         - language:
           - en
-          initial: J
+          initial: O
         formatted_initials:
-          content: J.
+          content: O.
           language:
           - en
       surname:
-        content: Giraud
+        content: Rønningstad
         language:
         - en
       completename:
-        content: Jean-Luc Giraud
+        content: Øyvind Rønningstad
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Apple Inc
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Casey
-          language:
-          - en
-        - language:
-          - en
-          initial: C
-        formatted_initials:
-          content: C.
-          language:
-          - en
-      surname:
-        content: Astiz
-        language:
-        - en
-      completename:
-        content: Casey Astiz
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Apple Inc
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Alex
-          language:
-          - en
-        - language:
-          - en
-          initial: A
-        formatted_initials:
-          content: A.
-          language:
-          - en
-      surname:
-        content: Pelletier
-        language:
-        - en
-      completename:
-        content: Alex Pelletier
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Apple Inc
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Jake
-          language:
-          - en
-        - language:
-          - en
-          initial: J
-        formatted_initials:
-          content: J.
-          language:
-          - en
-      surname:
-        content: Hansen
-        language:
-        - en
-      completename:
-        content: Jake Hansen
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Apple Inc
+        - content: Nordic Semiconductor
   role:
   - type: author
 version:
-- draft: '00'
-revdate: '2022-11-06'
+- draft: '21'
+revdate: '2022-11-09'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document describes a sample implementation and its threat model
-    of the secure transfer of digital credentials (Tigress) solution of the corresponding
-    Tigress Internet-draft [Tigress-00].</p>"
+- content: "<p>This specification describes the format of a manifest. A manifest is
+    a bundle of metadata about code/data obtained by a recipient (chiefly the firmware
+    for an IoT device), where to find the that code/data, the devices to which it
+    applies, and cryptographic information protecting the manifest. Software updates
+    and Trusted Invocation both tend to use sequences of common operations, so the
+    manifest encodes those sequences of operations, rather than declaring the metadata.</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-tigress-sample-implementation-01
+    id: draft-ietf-suit-manifest-20
     docid:
-    - id: draft-tigress-sample-implementation-01
+    - id: draft-ietf-suit-manifest-20
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-tigress-sample-implementation-01
+      content: draft-ietf-suit-manifest-20
       format: text/plain
 series:
 - type: main
@@ -225,5 +200,5 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-tigress-sample-implementation-00
+  number: draft-ietf-suit-manifest-21
 doctype: internet-draft
