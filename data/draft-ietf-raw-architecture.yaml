@@ -16,12 +16,12 @@ abstract:
     and availability for IP connectivity across any combination of wired and wireless
     network segments. The RAW Architecture extends the DetNet Architecture and other
     standard IETF concepts and mechanisms to adapt to the specific challenges of the
-    wireless medium. This document defines an architecture element for the RAW data
-    plane, in the form of an OODA loop, that optimizes the use of constrained spectrum
-    and energy while maintaining the expected connectivity properties. It also introduces
-    a new Control plane Function to prepare alternate paths to go around local failures.
-    The loop involves OAM, PCE, and PREOF extensions, and a new component called the
-    Path Selection Engine (PSE).</p>"
+    wireless medium, in particular intermittently lossy connectivity. This document
+    defines a network control loop that optimizes the use of constrained spectrum
+    and energy while maintaining the expected connectivity properties, typically reliability
+    and latency. The loop involves OAM, PCE, and PREOF extensions, and a new Controller
+    plane Function called the Path Selection Engine, that dynamically selects the
+    DetNet path for the next packets to route around local failures.</p>"
   language:
   - en
   script:
@@ -127,4 +127,14 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-raw-architecture-09
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-raw-architecture-10
+    docid:
+    - id: draft-ietf-raw-architecture-10
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-raw-architecture-10
       format: text/plain
