@@ -1,33 +1,40 @@
 ---
-id: draft-ali-spring-sr-traffic-accounting-07
+id: draft-ali-spring-sr-service-programming-oam-05
 title:
-- content: Traffic Accounting in Segment Routing Networks
+- content: OAM for Service Programming with Segment Routing
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://www.ietf.org/archive/id/draft-ali-spring-sr-traffic-accounting-07.txt
+- content: https://www.ietf.org/archive/id/draft-ali-spring-sr-service-programming-oam-05.txt
   type: TXT
 type: standard
 docid:
-- id: draft-ali-spring-sr-traffic-accounting-07
+- id: draft-ali-spring-sr-service-programming-oam-05
   type: Internet-Draft
   primary: true
-- id: I-D.ali-spring-sr-traffic-accounting
+- id: I-D.ali-spring-sr-service-programming-oam
   type: IETF
   scope: anchor
-docnumber: I-D.ali-spring-sr-traffic-accounting
+docnumber: I-D.ali-spring-sr-service-programming-oam
 date:
 - type: published
-  value: '2022-05-08'
+  value: '2022-11-16'
 contributor:
 - person:
     name:
       given:
         forename:
         - content: Zafar
+          language:
+          - en
+        - language:
+          - en
+          initial: Z
+        formatted_initials:
+          content: Z.
           language:
           - en
       surname:
@@ -51,6 +58,13 @@ contributor:
         - content: Clarence
           language:
           - en
+        - language:
+          - en
+          initial: C
+        formatted_initials:
+          content: C.
+          language:
+          - en
       surname:
         content: Filsfils
         language:
@@ -69,15 +83,25 @@ contributor:
     name:
       given:
         forename:
-        - content: Ketan
+        - content: Nagendra
+          language:
+          - en
+        - language:
+          - en
+          initial: N
+        - language:
+          - en
+          initial: K
+        formatted_initials:
+          content: N. K.
           language:
           - en
       surname:
-        content: Talaulikar
+        content: Nainar
         language:
         - en
       completename:
-        content: Ketan Talaulikar
+        content: Nagendra Kumar Nainar
         language:
         - en
     affiliation:
@@ -90,142 +114,124 @@ contributor:
     name:
       given:
         forename:
-        - content: Siva
+        - content: Carlos
+          language:
+          - en
+        - language:
+          - en
+          initial: C
+        formatted_initials:
+          content: C.
           language:
           - en
       surname:
-        content: Sivabalan
+        content: Pignataro
         language:
         - en
       completename:
-        content: Siva Sivabalan
+        content: Carlos Pignataro
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Ciena Corporation
+        - content: Cisco Systems
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Martin
+        - content: Francois
+          language:
+          - en
+        - language:
+          - en
+          initial: F
+        formatted_initials:
+          content: F.
           language:
           - en
       surname:
-        content: Horneffer
+        content: Clad
         language:
         - en
       completename:
-        content: Martin Horneffer
+        content: Francois Clad
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Deutsche Telekom
+        - content: Cisco Systems
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Robert
+        - content: Faisal
+          language:
+          - en
+        - language:
+          - en
+          initial: F
+        formatted_initials:
+          content: F.
           language:
           - en
       surname:
-        content: Raszuk
+        content: Iqbal
         language:
         - en
       completename:
-        content: Robert Raszuk
+        content: Faisal Iqbal
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: NTT Network Innovations
+        - content: Arista Networks
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Stephane
+        - content: Xiaohu
+          language:
+          - en
+        - language:
+          - en
+          initial: X
+        formatted_initials:
+          content: X.
           language:
           - en
       surname:
-        content: Litkowski
+        content: Xu
         language:
         - en
       completename:
-        content: Stephane Litkowski
+        content: Xiaohu Xu
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Orange Business Services
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Daniel
-          language:
-          - en
-      surname:
-        content: Voyer
-        language:
-        - en
-      completename:
-        content: Daniel Voyer
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Bell Canada
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Rick
-          language:
-          - en
-      surname:
-        content: Morton
-        language:
-        - en
-      completename:
-        content: Rick Morton
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Bell Canada
+        - content: Capitalonline
   role:
   - type: author
 version:
-- draft: '07'
-revdate: '2022-05-08'
+- draft: '05'
+revdate: '2022-11-16'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>Capacity planning is the continuous art of forecasting traffic load
-    and failures to evolve the network topology, its capacity, and its routing to
-    meet a defined Service-Level Agreement (SLA). This document takes a holistic view
-    of network capacity planning and identifies the role of traffic accounting in
-    network operation and capacity planning, without creating any additional states
-    in the SR fabric.</p>"
+- content: "<p>This document defines the Operations, Administrations and Maintenance
+    (OAM) for service programming in SR-enabled MPLS and IP networks.</p>"
   language:
   - en
   script:
@@ -234,23 +240,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ali-spring-sr-traffic-accounting-06
+    id: draft-ali-spring-sr-service-programming-oam-04
     docid:
-    - id: draft-ali-spring-sr-traffic-accounting-06
+    - id: draft-ali-spring-sr-service-programming-oam-04
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ali-spring-sr-traffic-accounting-06
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ali-spring-sr-traffic-accounting-08
-    docid:
-    - id: draft-ali-spring-sr-traffic-accounting-08
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ali-spring-sr-traffic-accounting-08
+      content: draft-ali-spring-sr-service-programming-oam-04
       format: text/plain
 series:
 - type: main
@@ -261,5 +257,5 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ali-spring-sr-traffic-accounting-07
+  number: draft-ali-spring-sr-service-programming-oam-05
 doctype: internet-draft

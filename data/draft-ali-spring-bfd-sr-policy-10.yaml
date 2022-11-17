@@ -1,180 +1,191 @@
 ---
-id: draft-ietf-pim-igmp-mld-proxy-yang-07
+id: draft-ali-spring-bfd-sr-policy-10
 title:
-- content: A Yang Data Model for IGMP/MLD Proxy
+- content: Bidirectional Forwarding Detection (BFD) for Segment Routing Policies for
+    Traffic Engineering
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://www.ietf.org/archive/id/draft-ietf-pim-igmp-mld-proxy-yang-07.txt
+- content: https://www.ietf.org/archive/id/draft-ali-spring-bfd-sr-policy-10.txt
   type: TXT
 type: standard
 docid:
-- id: draft-ietf-pim-igmp-mld-proxy-yang-07
+- id: draft-ali-spring-bfd-sr-policy-10
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-pim-igmp-mld-proxy-yang
+- id: I-D.ali-spring-bfd-sr-policy
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-pim-igmp-mld-proxy-yang
+docnumber: I-D.ali-spring-bfd-sr-policy
 date:
 - type: published
-  value: '2022-10-01'
+  value: '2022-11-16'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Hongji
+        - content: Zafar
           language:
           - en
         - language:
           - en
-          initial: H
+          initial: Z
         formatted_initials:
-          content: H.
+          content: Z.
           language:
           - en
       surname:
-        content: Zhao
+        content: Ali
         language:
         - en
       completename:
-        content: Hongji Zhao
+        content: Zafar Ali
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Ericsson
+        - content: Cisco Systems
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Xufeng
+        - content: Ketan
           language:
           - en
         - language:
           - en
-          initial: X
+          initial: K
         formatted_initials:
-          content: X.
+          content: K.
           language:
           - en
       surname:
-        content: Liu
+        content: Talaulikar
         language:
         - en
       completename:
-        content: Xufeng Liu
+        content: Ketan Talaulikar
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: IBM Corporation
+        - content: Cisco Systems
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Yisong
+        - content: Clarence
           language:
           - en
         - language:
           - en
-          initial: Y
+          initial: C
         formatted_initials:
-          content: Y.
+          content: C.
           language:
           - en
       surname:
-        content: Liu
+        content: Filsfils
         language:
         - en
       completename:
-        content: Yisong Liu
+        content: Clarence Filsfils
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: China Mobile
+        - content: Cisco Systems
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Mani
+        - content: Nagendra
           language:
           - en
         - language:
           - en
-          initial: M
+          initial: N
+        - language:
+          - en
+          initial: K
         formatted_initials:
-          content: M.
+          content: N. K.
           language:
           - en
       surname:
-        content: Panchanathan
+        content: Nainar
         language:
         - en
       completename:
-        content: Mani Panchanathan
+        content: Nagendra Kumar Nainar
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cisco
+        - content: Cisco Systems
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Mahesh
+        - content: Carlos
           language:
           - en
         - language:
           - en
-          initial: M
+          initial: C
         formatted_initials:
-          content: M.
+          content: C.
           language:
           - en
       surname:
-        content: Sivakumar
+        content: Pignataro
         language:
         - en
       completename:
-        content: Mahesh Sivakumar
+        content: Carlos Pignataro
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Juniper
+        - content: Cisco Systems
   role:
   - type: author
 version:
-- draft: '07'
-revdate: '2022-10-01'
+- draft: '10'
+revdate: '2022-11-16'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document defines a YANG data model that can be used to configure
-    and manage Internet Group Management Protocol (IGMP) or Multicast Listener Discovery
-    (MLD) proxy devices. The YANG module in this document conforms to Network Management
-    Datastore Architecture (NMDA).</p>"
+- content: "<p>Segment Routing (SR) allows a headend node to steer a packet flow along
+    any path using a segment list which is referred to as a SR Policy. Intermediate
+    per-flow states are eliminated thanks to source routing. The header of a packet
+    steered in an SR Policy is augmented with the ordered list of segments associated
+    with that SR Policy. Bidirectional Forwarding Detection (BFD) is used to monitor
+    different kinds of paths between node. BFD mechanisms can be also used to monitor
+    the availability of the path indicated by a SR Policy and to detect any failures.
+    Seamless BFD (S-BFD) extensions provide a simplified mechanism which is suitable
+    for monitoring of paths that are setup dynamically and on a large scale. This
+    document describes the use of Seamless BFD (S-BFD) mechanism to monitor the SR
+    Policies that are used for Traffic Engineering (TE) in SR deployments.</p>"
   language:
   - en
   script:
@@ -183,23 +194,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-pim-igmp-mld-proxy-yang-06
+    id: draft-ali-spring-bfd-sr-policy-09
     docid:
-    - id: draft-ietf-pim-igmp-mld-proxy-yang-06
+    - id: draft-ali-spring-bfd-sr-policy-09
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-pim-igmp-mld-proxy-yang-06
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-pim-igmp-mld-proxy-yang-08
-    docid:
-    - id: draft-ietf-pim-igmp-mld-proxy-yang-08
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-pim-igmp-mld-proxy-yang-08
+      content: draft-ali-spring-bfd-sr-policy-09
       format: text/plain
 series:
 - type: main
@@ -210,5 +211,5 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-pim-igmp-mld-proxy-yang-07
+  number: draft-ali-spring-bfd-sr-policy-10
 doctype: internet-draft
