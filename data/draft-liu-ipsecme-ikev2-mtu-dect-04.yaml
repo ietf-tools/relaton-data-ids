@@ -1,18 +1,18 @@
 ---
-id: draft-liu-ipsecme-ikev2-mtu-dect-03
+id: draft-liu-ipsecme-ikev2-mtu-dect-04
 title:
-- content: IKEv2 IPv4 Downstream Fragmentation Notification Extension
+- content: IKEv2 IPv4 Link Maximum Atomic Packet Notification Extension
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://www.ietf.org/archive/id/draft-liu-ipsecme-ikev2-mtu-dect-03.txt
+- content: https://www.ietf.org/archive/id/draft-liu-ipsecme-ikev2-mtu-dect-04.txt
   type: TXT
 type: standard
 docid:
-- id: draft-liu-ipsecme-ikev2-mtu-dect-03
+- id: draft-liu-ipsecme-ikev2-mtu-dect-04
   type: Internet-Draft
   primary: true
 - id: I-D.liu-ipsecme-ikev2-mtu-dect
@@ -21,36 +21,8 @@ docid:
 docnumber: I-D.liu-ipsecme-ikev2-mtu-dect
 date:
 - type: published
-  value: '2022-10-23'
+  value: '2022-11-20'
 contributor:
-- person:
-    name:
-      given:
-        forename:
-        - content: Daiying
-          language:
-          - en
-        - language:
-          - en
-          initial: D
-        formatted_initials:
-          content: D.
-          language:
-          - en
-      surname:
-        content: Liu
-        language:
-        - en
-      completename:
-        content: Daiying Liu
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Ericsson
-  role:
-  - type: author
 - person:
     name:
       given:
@@ -71,6 +43,34 @@ contributor:
         - en
       completename:
         content: Daniel Migault
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Ericsson
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Daiying
+          language:
+          - en
+        - language:
+          - en
+          initial: D
+        formatted_initials:
+          content: D.
+          language:
+          - en
+      surname:
+        content: Liu
+        language:
+        - en
+      completename:
+        content: Daiying Liu
         language:
         - en
     affiliation:
@@ -136,17 +136,22 @@ contributor:
   role:
   - type: author
 version:
-- draft: '03'
-revdate: '2022-10-23'
+- draft: '04'
+revdate: '2022-11-20'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document describes an IKEv2 IPv4 Downstream Fragmentation Notification
-    Extension which enables a receiving security gateway to notify the sending receiving
-    gateway that downstream fragmentation is ongoing. The sending gateway MAY take
-    action to avoid such fragmentation to occur.</p>"
+- content: "<p>This document considers a ingress and an egress security gateway connected
+    over a IPv4 network. The Tunnel Link Packet have their Don't Fragment (DF) set
+    to 0. This document defines the IKEv2 IPv4 Link Maximum Atomic Packet Notification
+    Extension which enables the egress security gateway to notify the ingress security
+    gateway that Mid-tunnel Fragmentation is observed with the value of the Link Maximum
+    Atomic Packet. The ingress security gateway is expected to take action as to avoid
+    the egress security gateway to perform costly reassemble operation. The ingress
+    security gateway is expected to either perform (when possible) Inner Fragmentation
+    of to update Tunnel MTU.</p>"
   language:
   - en
   script:
@@ -155,23 +160,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-liu-ipsecme-ikev2-mtu-dect-02
+    id: draft-liu-ipsecme-ikev2-mtu-dect-03
     docid:
-    - id: draft-liu-ipsecme-ikev2-mtu-dect-02
+    - id: draft-liu-ipsecme-ikev2-mtu-dect-03
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-liu-ipsecme-ikev2-mtu-dect-02
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-liu-ipsecme-ikev2-mtu-dect-04
-    docid:
-    - id: draft-liu-ipsecme-ikev2-mtu-dect-04
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-liu-ipsecme-ikev2-mtu-dect-04
+      content: draft-liu-ipsecme-ikev2-mtu-dect-03
       format: text/plain
 series:
 - type: main
@@ -182,5 +177,5 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-liu-ipsecme-ikev2-mtu-dect-03
+  number: draft-liu-ipsecme-ikev2-mtu-dect-04
 doctype: internet-draft
