@@ -1,0 +1,62 @@
+---
+id: draft-eap-sha256-srp6a
+title:
+- content: EAP SHA256-SRP6a Authentication Protocol
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-eap-sha256-srp6a
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This document describes an authentication protocol intended for Internet
+    applications which may require a robust and non-leaky exchange of credentials
+    even under adverse network conditions. The protocol has the ability to recover
+    from packet loss during the authentication process, as for example, should the
+    Internet application use the UDP transport protocol under lossy network conditions.
+    It does so by allowing the retransmission of lost packets during authentication.
+    The protocol follows the Extensible Authentication Protocol (RFC 3748 and RFC
+    5247) framework, which allows for the use of multiple authentication mechanisms.
+    It utilizes Secure Remote Password protocol (RFC 2945), with strong, password-based
+    cryptographic hashing. It utilizes the Secure Hashing Algorithm message digest
+    algorithm as the hashing mechanism. The authentication protocol allows for one
+    Server and one or more Clients. Where multiple Clients exist, each may communicate
+    only with the Server. Clients initiate the authentication exchange process. Until
+    the authentication completes successfully, the Server and Client ignore/discard
+    any packets except those supporting the authentication process. The authentication
+    algorithm is based on a username/password or passphrase pair. These are used to
+    generate secure ephemeral keys. The Server has a store of all valid usernames
+    and password hashes. Each Client stores its own username and password. The authentication
+    algorithm provides for each side to prove to the other that it has a valid username/password
+    or passphrase pair, in a way that a third-party monitoring the transactions could
+    not use intercepted information to later successfully authenticate. This mutual
+    authentication exchange consists of several pairs of interactions. The first is
+    a request for authentication by the Client, containing the Client name, to which
+    the Server responds with a challenge for its identity. The Client responds with
+    the Server name for verification purposes. Thereafter, Client and Server each
+    exchange three values consisting of password salts, ephemeral public keys, and
+    hash values. These are generated and verified by Client and Server in accordance
+    with SRP against the stored password/passphrase hashes. While any step in the
+    process may be repeated to provide for dropped packets should a response not be
+    received, the authentication process is terminated by any incorrect value received
+    in any response. Multicast UDP authentication is also supported, with certain
+    limitations.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-eap-sha256-srp6a-00
+    docid:
+    - id: draft-eap-sha256-srp6a-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-eap-sha256-srp6a-00
+      format: text/plain
