@@ -1,5 +1,5 @@
 ---
-id: draft-ietf-bess-evpn-irb-mcast-07
+id: draft-ietf-bess-evpn-irb-mcast-08
 title:
 - content: EVPN Optimized Inter-Subnet Multicast (OISM) Forwarding
   language:
@@ -8,11 +8,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://www.ietf.org/archive/id/draft-ietf-bess-evpn-irb-mcast-07.txt
+- content: https://www.ietf.org/archive/id/draft-ietf-bess-evpn-irb-mcast-08.txt
   type: TXT
 type: standard
 docid:
-- id: draft-ietf-bess-evpn-irb-mcast-07
+- id: draft-ietf-bess-evpn-irb-mcast-08
   type: Internet-Draft
   primary: true
 - id: I-D.ietf-bess-evpn-irb-mcast
@@ -21,7 +21,7 @@ docid:
 docnumber: I-D.ietf-bess-evpn-irb-mcast
 date:
 - type: published
-  value: '2022-06-23'
+  value: '2022-11-28'
 contributor:
 - person:
     name:
@@ -198,8 +198,8 @@ contributor:
   role:
   - type: author
 version:
-- draft: '07'
-revdate: '2022-06-23'
+- draft: '08'
+revdate: '2022-11-28'
 language:
 - en
 script:
@@ -209,16 +209,15 @@ abstract:
     Network (LAN), comprising a single IP subnet, to be divided into multiple "segments".
     Each segment may be located at a different site, and the segments are interconnected
     by an IP or MPLS backbone. Intra-subnet traffic (either unicast or multicast)
-    always appears to the endusers to be bridged, even when it is actually carried
+    always appears to the end users to be bridged, even when it is actually carried
     over the IP or MPLS backbone. When a single "tenant" owns multiple such LANs,
     EVPN also allows IP unicast traffic to be routed between those LANs. This document
     specifies new procedures that allow inter-subnet IP multicast traffic to be routed
     among the LANs of a given tenant, while still making intra-subnet IP multicast
     traffic appear to be bridged. These procedures can provide optimal routing of
-    the inter- subnet multicast traffic, and do not require any such traffic to leave
-    a given router and then reenter that same router. These procedures also accommodate
-    IP multicast traffic that needs to travel to or from systems that are outside
-    the EVPN domain.</p>
+    the inter- subnet multicast traffic, and do not require any such traffic to egress
+    a given router and then ingress that same router. These procedures also accommodate
+    IP multicast traffic that originates or is destined external to the EVPN domain.</p>
   language:
   - en
   script:
@@ -227,23 +226,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-bess-evpn-irb-mcast-06
+    id: draft-ietf-bess-evpn-irb-mcast-07
     docid:
-    - id: draft-ietf-bess-evpn-irb-mcast-06
+    - id: draft-ietf-bess-evpn-irb-mcast-07
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-bess-evpn-irb-mcast-06
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-bess-evpn-irb-mcast-08
-    docid:
-    - id: draft-ietf-bess-evpn-irb-mcast-08
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-bess-evpn-irb-mcast-08
+      content: draft-ietf-bess-evpn-irb-mcast-07
       format: text/plain
 series:
 - type: main
@@ -254,5 +243,5 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-bess-evpn-irb-mcast-07
+  number: draft-ietf-bess-evpn-irb-mcast-08
 doctype: internet-draft
