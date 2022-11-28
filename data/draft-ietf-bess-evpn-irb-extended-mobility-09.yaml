@@ -1,27 +1,27 @@
 ---
-id: draft-ietf-bess-evpn-unequal-lb-16
+id: draft-ietf-bess-evpn-irb-extended-mobility-09
 title:
-- content: Weighted Multi-Path Procedures for EVPN Multi-Homing
+- content: Extended Mobility Procedures for EVPN-IRB
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://www.ietf.org/archive/id/draft-ietf-bess-evpn-unequal-lb-16.txt
+- content: https://www.ietf.org/archive/id/draft-ietf-bess-evpn-irb-extended-mobility-09.txt
   type: TXT
 type: standard
 docid:
-- id: draft-ietf-bess-evpn-unequal-lb-16
+- id: draft-ietf-bess-evpn-irb-extended-mobility-09
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-bess-evpn-unequal-lb
+- id: I-D.ietf-bess-evpn-irb-extended-mobility
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-bess-evpn-unequal-lb
+docnumber: I-D.ietf-bess-evpn-irb-extended-mobility
 date:
 - type: published
-  value: '2022-06-01'
+  value: '2022-11-28'
 contributor:
 - person:
     name:
@@ -83,6 +83,34 @@ contributor:
     name:
       given:
         forename:
+        - content: Aparna
+          language:
+          - en
+        - language:
+          - en
+          initial: A
+        formatted_initials:
+          content: A.
+          language:
+          - en
+      surname:
+        content: Pattekar
+        language:
+        - en
+      completename:
+        content: Aparna Pattekar
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Cisco Systems
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
         - content: Jorge
           language:
           - en
@@ -105,34 +133,6 @@ contributor:
     - organization:
         name:
         - content: Nokia
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: John
-          language:
-          - en
-        - language:
-          - en
-          initial: J
-        formatted_initials:
-          content: J.
-          language:
-          - en
-      surname:
-        content: Drake
-        language:
-        - en
-      completename:
-        content: John Drake
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Juniper
   role:
   - type: author
 - person:
@@ -167,49 +167,50 @@ contributor:
     name:
       given:
         forename:
-        - content: Samir
+        - content: John
           language:
           - en
         - language:
           - en
-          initial: S
+          initial: J
         formatted_initials:
-          content: S.
+          content: J.
           language:
           - en
       surname:
-        content: Thoria
+        content: Drake
         language:
         - en
       completename:
-        content: Samir Thoria
+        content: John Drake
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems
+        - content: Juniper Networks
   role:
   - type: author
 version:
-- draft: '16'
-revdate: '2022-06-01'
+- draft: '09'
+revdate: '2022-11-28'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>EVPN enables all-active multi-homing for a CE device connected to two
-    or more PEs via a LAG, such that bridged and routed traffic from remote PEs to
-    hosts attached to the Ethernet Segment can be equally load balanced (it uses Equal
-    Cost Multi Path) across the multi-homing PEs. EVPN also enables multi-homing for
-    IP subnets advertised in IP Prefix routes, so that routed traffic from remote
-    PEs to those IP subnets can be load balanced. This document defines extensions
-    to EVPN procedures to optimally handle unequal access bandwidth distribution across
-    a set of multi-homing PEs in order to: * provide greater flexibility, with respect
-    to adding or removing individual multi-homed PE-CE links. * handle multi-homed
-    PE-CE link failures that can result in unequal PE-CE access bandwidth across a
-    set of multi-homing PEs.</p>"
+- content: "<p>Procedure to handle host mobility in a layer 2 Network with EVPN control
+    plane is defined as part of RFC 7432. EVPN has since evolved to find wider applicability
+    across various IRB use cases that include distributing both MAC and IP reachability
+    via a common EVPN control plane. MAC Mobility procedures defined in RFC 7432 are
+    extensible to IRB use cases if a fixed 1:1 mapping between VM IP and MAC is assumed
+    across VM moves. Generic mobility support for IP and MAC that allows these bindings
+    to change across moves is required to support a broader set of EVPN IRB use cases,
+    and requires further consideration. EVPN all-active multi-homing further introduces
+    scenarios that require additional consideration from mobility perspective. This
+    document enumerates a set of design considerations applicable to mobility across
+    these EVPN IRB use cases and defines generic sequence number assignment procedures
+    to address these IRB use cases.</p>"
   language:
   - en
   script:
@@ -218,23 +219,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-bess-evpn-unequal-lb-15
+    id: draft-ietf-bess-evpn-irb-extended-mobility-08
     docid:
-    - id: draft-ietf-bess-evpn-unequal-lb-15
+    - id: draft-ietf-bess-evpn-irb-extended-mobility-08
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-bess-evpn-unequal-lb-15
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-bess-evpn-unequal-lb-17
-    docid:
-    - id: draft-ietf-bess-evpn-unequal-lb-17
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-bess-evpn-unequal-lb-17
+      content: draft-ietf-bess-evpn-irb-extended-mobility-08
       format: text/plain
 series:
 - type: main
@@ -245,5 +236,5 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-bess-evpn-unequal-lb-16
+  number: draft-ietf-bess-evpn-irb-extended-mobility-09
 doctype: internet-draft
