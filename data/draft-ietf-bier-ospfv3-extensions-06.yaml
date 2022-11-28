@@ -1,5 +1,5 @@
 ---
-id: draft-ietf-bier-ospfv3-extensions-05
+id: draft-ietf-bier-ospfv3-extensions-06
 title:
 - content: OSPFv3 Extensions for BIER
   language:
@@ -8,11 +8,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://www.ietf.org/archive/id/draft-ietf-bier-ospfv3-extensions-05.txt
+- content: https://www.ietf.org/archive/id/draft-ietf-bier-ospfv3-extensions-06.txt
   type: TXT
 type: standard
 docid:
-- id: draft-ietf-bier-ospfv3-extensions-05
+- id: draft-ietf-bier-ospfv3-extensions-06
   type: Internet-Draft
   primary: true
 - id: I-D.ietf-bier-ospfv3-extensions
@@ -21,7 +21,7 @@ docid:
 docnumber: I-D.ietf-bier-ospfv3-extensions
 date:
 - type: published
-  value: '2021-11-19'
+  value: '2022-11-28'
 contributor:
 - person:
     name:
@@ -111,8 +111,8 @@ contributor:
   role:
   - type: author
 version:
-- draft: '05'
-revdate: '2021-11-19'
+- draft: '06'
+revdate: '2022-11-28'
 language:
 - en
 script:
@@ -120,17 +120,12 @@ script:
 abstract:
 - content: <p>Bit Index Explicit Replication (BIER) is an architecture that provides
     multicast forwarding through a "BIER domain" without requiring intermediate routers
-    to maintain multicast related per-flow state. Neither does BIER require an explicit
-    tree-building protocol for its operation. A multicast data packet enters a BIER
-    domain at a "Bit-Forwarding Ingress Router" (BFIR), and leaves the BIER domain
-    at one or more "Bit-Forwarding Egress Routers" (BFERs). The BFIR router adds a
-    BIER header to the packet. Such header contains a bit-string in which each bit
-    represents exactly one BFER to forward the packet to. The set of BFERs to which
-    the multicast packet needs to be forwarded is expressed by the according set of
-    bits set in BIER packet header. This document describes the OSPFv3 [RFC8362] protocol
-    extensions required for BIER with MPLS encapsulation [RFC8296]. Support for other
-    encapsulation types is outside the scope of this document. The use of multiple
-    encapsulation types is outside the scope of this document.</p>
+    to maintain multicast related per-flow state. BIER architecture uses MPLS or IPv6
+    encapsulation to steer the multicast traffic towards the receivers. This document
+    describes the OSPFv3 [RFC8362] protocol extensions required for BIER with MPLS
+    encapsulation [RFC8296]. Support for other encapsulation types is outside the
+    scope of this document. The use of multiple encapsulation types is outside the
+    scope of this document.</p>
   language:
   - en
   script:
@@ -139,23 +134,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-bier-ospfv3-extensions-04
+    id: draft-ietf-bier-ospfv3-extensions-05
     docid:
-    - id: draft-ietf-bier-ospfv3-extensions-04
+    - id: draft-ietf-bier-ospfv3-extensions-05
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-bier-ospfv3-extensions-04
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-bier-ospfv3-extensions-06
-    docid:
-    - id: draft-ietf-bier-ospfv3-extensions-06
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-bier-ospfv3-extensions-06
+      content: draft-ietf-bier-ospfv3-extensions-05
       format: text/plain
 series:
 - type: main
@@ -166,5 +151,5 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-bier-ospfv3-extensions-05
+  number: draft-ietf-bier-ospfv3-extensions-06
 doctype: internet-draft
