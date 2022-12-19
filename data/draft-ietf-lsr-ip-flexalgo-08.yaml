@@ -1,185 +1,209 @@
 ---
 schema-version: v1.2.1
-id: draft-sl-rtgwg-far-dcn-18
+id: draft-ietf-lsr-ip-flexalgo-08
 title:
-- content: Generic Fault-Avoidance Routing Protocol for Data Center Networks
+- content: IGP Flexible Algorithms (Flex-Algorithm) In IP Networks
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://www.ietf.org/archive/id/draft-sl-rtgwg-far-dcn-18.txt
+- content: https://www.ietf.org/archive/id/draft-ietf-lsr-ip-flexalgo-08.txt
   type: TXT
 type: standard
 docid:
-- id: draft-sl-rtgwg-far-dcn-18
+- id: draft-ietf-lsr-ip-flexalgo-08
   type: Internet-Draft
   primary: true
-- id: I-D.sl-rtgwg-far-dcn
+- id: I-D.ietf-lsr-ip-flexalgo
   type: IETF
   scope: anchor
-docnumber: I-D.sl-rtgwg-far-dcn
+docnumber: I-D.ietf-lsr-ip-flexalgo
 date:
 - type: published
-  value: '2022-06-01'
+  value: '2022-12-19'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Bin
+        - content: William
           language:
           - en
         - language:
           - en
-          initial: B
+          initial: W
         formatted_initials:
-          content: B.
+          content: W.
           language:
           - en
       surname:
-        content: Liu
+        content: Britto
         language:
         - en
       completename:
-        content: Bin Liu
+        content: William Britto
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: ZTE Inc., ZTE Plaza
+        - content: Juniper Networks
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Yantao
+        - content: Shraddha
           language:
           - en
         - language:
           - en
-          initial: Y
+          initial: S
         formatted_initials:
-          content: Y.
+          content: S.
           language:
           - en
       surname:
-        content: Sun
+        content: Hegde
         language:
         - en
       completename:
-        content: Yantao Sun
+        content: Shraddha Hegde
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Beijing Jiaotong University
+        - content: Juniper Networks
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Jing
+        - content: Parag
           language:
           - en
         - language:
           - en
-          initial: J
+          initial: P
         formatted_initials:
-          content: J.
+          content: P.
           language:
           - en
       surname:
-        content: Cheng
+        content: Kaneriya
         language:
         - en
       completename:
-        content: Jing Cheng
+        content: Parag Kaneriya
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Beijing Jiaotong University
+        - content: Juniper Networks
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Yichen
+        - content: Rejesh
           language:
           - en
         - language:
           - en
-          initial: Y
+          initial: R
         formatted_initials:
-          content: Y.
+          content: R.
           language:
           - en
       surname:
-        content: Zhang
+        content: Shetty
         language:
         - en
       completename:
-        content: Yichen Zhang
+        content: Rejesh Shetty
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Beijing Jiaotong University
+        - content: Juniper Networks
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Bhumip
+        - content: Ron
           language:
           - en
         - language:
           - en
-          initial: B
+          initial: R
         formatted_initials:
-          content: B.
+          content: R.
           language:
           - en
       surname:
-        content: Khasnabish
+        content: Bonica
         language:
         - en
       completename:
-        content: Bhumip Khasnabish
+        content: Ron Bonica
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Individual contributor
+        - content: Juniper Networks
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Peter
+          language:
+          - en
+        - language:
+          - en
+          initial: P
+        formatted_initials:
+          content: P.
+          language:
+          - en
+      surname:
+        content: Psenak
+        language:
+        - en
+      completename:
+        content: Peter Psenak
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Cisco Systems
   role:
   - type: author
 version:
-- draft: '18'
-revdate: '2022-06-01'
+- draft: '08'
+revdate: '2022-12-19'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document describes a generic routing method and protocol for a
-    regular data center network, named the Fault-Avoidance Routing (FAR) protocol.
-    The FAR protocol provides a generic routing method for all types of regular topology
-    network architectures that have been proposed for large-scale cloud-based data
-    centers over the past few years. The FAR protocol is designed to leverage any
-    regularity in the topology and compute its routing table in a concise manner.
-    Fat- tree is taken as an example architecture to illustrate how the FAR protocol
-    can be applied in real operational scenarios.</p>"
+- content: "<p>An IGP Flexible Algorithm (Flex-Algorithm) allows IGPs to compute constraint-based
+    paths. The base IGP Flex-Algorithm specification describes how it is used with
+    Segment Routing (SR) data planes - SR MPLS and SRv6. This document extends IGP
+    Flex-Algorithm, so that it can be used with regular IPv4 and IPv6 forwarding.</p>"
   language:
   - en
   script:
@@ -188,23 +212,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-sl-rtgwg-far-dcn-17
+    id: draft-ietf-lsr-ip-flexalgo-07
     docid:
-    - id: draft-sl-rtgwg-far-dcn-17
+    - id: draft-ietf-lsr-ip-flexalgo-07
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-sl-rtgwg-far-dcn-17
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-sl-rtgwg-far-dcn-19
-    docid:
-    - id: draft-sl-rtgwg-far-dcn-19
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-sl-rtgwg-far-dcn-19
+      content: draft-ietf-lsr-ip-flexalgo-07
       format: text/plain
 series:
 - type: main
@@ -215,7 +229,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-sl-rtgwg-far-dcn-18
+  number: draft-ietf-lsr-ip-flexalgo-08
 doctype: internet-draft
 ext:
   schema-version: v1.0.0
