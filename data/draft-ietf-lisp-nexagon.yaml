@@ -13,17 +13,15 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document uses virtual layer3 routing and geospatial addressing
-    based on a hierarchical grid in forming a Geolocation mobility-edge network. When
-    vehicles with AI cameras detect objects of interest on the road, they use their
-    GPS to calculate their high-resolution grid-tile position, they then use this
-    tile to calculate the high-resolution tile of the detection. A low-resolution
-    tile which contains the detection-tile identifies a network-addressable object.
-    The object tile-ID is used as basis for IPv6 endpoint identifier(EID). Geospatial
-    EIDs are queue-destination and channel-source of objects. Geolocation objects
-    consolidate detections form all vehicles in a given area. Geolocation objects
-    based on EID queues and channels are network portable via the Locator/ID Separation
-    Protocol (LISP).</p>"
+- content: "<p>This document describes an interoperable system that utilizes virtual
+    layer 3 routing and geospatial addressing to form a Geolocation mobility-edge
+    network. The network uses a hierarchical H3 grid to calculate the high-resolution
+    tile positions of vehicles with vision AI cameras based on their GPS coordinates.
+    When these vehicles detect elements of interest on the road, the system uses the
+    tile ID of the detection as the basis for an IPv6 endpoint identifier (EID). These
+    EIDs are the queue destination and channel source for network-addressable agents
+    which consolidate detections from all vehicles in a given area. The mobility network
+    is built using the Locator/ID Separation Protocol (LISP).</p>"
   language:
   - en
   script:
@@ -459,6 +457,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-lisp-nexagon-42
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-lisp-nexagon-43
+    docid:
+    - id: draft-ietf-lisp-nexagon-43
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-lisp-nexagon-43
       format: text/plain
 ext:
   schema-version: v1.0.0
