@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.1
-id: draft-ietf-lisp-nexagon-44
+id: draft-ietf-lisp-nexagon-45
 title:
 - content: Network-Hexagons:Geolocation Mobility Edge Network Based On H3 and LISP
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://www.ietf.org/archive/id/draft-ietf-lisp-nexagon-44.txt
+- content: https://www.ietf.org/archive/id/draft-ietf-lisp-nexagon-45.txt
   type: TXT
 type: standard
 docid:
-- id: draft-ietf-lisp-nexagon-44
+- id: draft-ietf-lisp-nexagon-45
   type: Internet-Draft
   primary: true
 - id: I-D.ietf-lisp-nexagon
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.ietf-lisp-nexagon
 date:
 - type: published
-  value: '2022-12-23'
+  value: '2022-12-24'
 contributor:
 - person:
     name:
@@ -221,23 +221,24 @@ contributor:
   role:
   - type: author
 version:
-- draft: '44'
-revdate: '2022-12-23'
+- draft: '45'
+revdate: '2022-12-24'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document describes an interoperable system of Geolocation agents
-    that utilizes virtual layer 3 routing and geospatial addressing to form a mobility-edge
-    network. The network uses a hierarchical H3 grid to calculate the high-resolution
-    tile positions of detections made by vehicles equipped with vision AI cameras
-    using their GPS coordinates. When these vehicles detect elements of interest or
-    map road segments, the system uses the tile ID of the detection or road segment
-    as the basis for an IPv6 endpoint identifier (EID). These EIDs are the destination
-    queues and channel sources for network-addressable agents that consolidate detections
-    from all vehicles in a given area. The mobility network is constructed using the
-    Locator/ID Separation Protocol (LISP).</p>"
+- content: <p>This document describes a system that utilizes geospatial grid indexing
+    and the Locator/ID Separation Protocol (LISP) to create a dynamic-mapping geolocation
+    mobility network. The system uses a hierarchical H3 grid to calculate the high-resolution
+    tile positions of detections and driven road-segments made by vehicles equipped
+    with vision AI sensors using their global positioning coordinates. When these
+    vehicles record driven road-segments or detect elements of interest, the system
+    uses the grid tile ID of the detection or road segment as the basis for an IPv6
+    endpoint identifier (EID). These EIDs are the destination queues and channel sources
+    for network addressable geolocation agents, or "nexagons". Nexagon agents consolidate
+    detections from all vehicles in a given area, dynamically learn roads &amp; conditions
+    to support mapping &amp; driving applications.</p>
   language:
   - en
   script:
@@ -246,23 +247,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-lisp-nexagon-43
+    id: draft-ietf-lisp-nexagon-44
     docid:
-    - id: draft-ietf-lisp-nexagon-43
+    - id: draft-ietf-lisp-nexagon-44
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-lisp-nexagon-43
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-lisp-nexagon-45
-    docid:
-    - id: draft-ietf-lisp-nexagon-45
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-lisp-nexagon-45
+      content: draft-ietf-lisp-nexagon-44
       format: text/plain
 series:
 - type: main
@@ -273,7 +264,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-lisp-nexagon-44
+  number: draft-ietf-lisp-nexagon-45
 doctype: internet-draft
 ext:
   schema-version: v1.0.0
