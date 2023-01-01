@@ -1,19 +1,19 @@
 ---
 schema-version: v1.2.1
-id: draft-ietf-alto-new-transport-03
+id: draft-ietf-alto-new-transport-04
 title:
-- content: 'ALTO New Transport: ALTO Transport Information Structures'
+- content: ALTO Transport Information Publication Service
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://www.ietf.org/archive/id/draft-ietf-alto-new-transport-03.txt
+- content: https://www.ietf.org/archive/id/draft-ietf-alto-new-transport-04.txt
   type: TXT
 type: standard
 docid:
-- id: draft-ietf-alto-new-transport-03
+- id: draft-ietf-alto-new-transport-04
   type: Internet-Draft
   primary: true
 - id: I-D.ietf-alto-new-transport
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.ietf-alto-new-transport
 date:
 - type: published
-  value: '2022-10-21'
+  value: '2022-12-31'
 contributor:
 - person:
     name:
@@ -137,24 +137,33 @@ contributor:
   role:
   - type: author
 version:
-- draft: '03'
-revdate: '2022-10-21'
+- draft: '04'
+revdate: '2022-12-31'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>The ALTO base protocol [RFC7285] defines both the ALTO information
-    resources and their transport from the server to the client. Using HTTP/1.x as
-    the transport protocol, the ALTO transport in the base protocol includes the limitations
-    of HTTP/1.x. ALTO/SSE [RFC8895] defines a new transport design addressing some
-    of the limitations, but is still based on HTTP/1.x. This document introduces ALTO
-    new transport, which introduces ALTO transport information structures (TIS) at
-    an ALTO server. The introduction of ALTO TIS allows at least two types of efficient
-    transport using HTTP: (1) HTTP/2/3 independent client (long) pull allowed by non-blocking,
-    newer HTTP, and (2) HTTP/2 specific server push. This document defines ALTO TIS
-    and the first design. A companion document [draft-schott-alto-new-transport-push]
-    defines server-push ALTO transport based on ALTO TIS.</p>"
+- content: "<p>The ALTO base protocol [RFC7285] is based on HTTP/1.x, focusing on
+    the simple, sequential request-reply use case, in which an ALTO client requests
+    a sequence of information resources, and the server sends the complete content
+    of each information resource to the client one by one. ALTO/SSE [RFC8895] defines
+    a new transport design to allow an ALTO client to request the monitoring of multiple
+    resources, and the server can then continuously, concurrently, and incrementally
+    push updates whenever monitored network information resources change. But ALTO/SSE
+    assumes an HTTP/1.x setting, and essentially designs a new concurrent transport
+    protocol on top of a sequential HTTP/1.x connection, but newer versions of HTTP
+    (e.g., HTTP/2 [RFC7540]) already support concurrent, non-blocking transport of
+    multiple streams in the same HTTP connection. This document introduces the ALTO
+    transport information publication service (TIPS), which allows the naming of individual
+    incremental updates to multiple ALTO information resources and the distribution
+    of the naming, enabling ALTO to take advantage of newer HTTP versions. In particular,
+    it gives an ALTO client the new capability to explicitly request (pull) a specific
+    incremental update. It also provides an ALTO server the new capability to push
+    a specific incremental update using native HTTP/2 or HTTP/3 server push. This
+    document defines TIPS as a service, independent of client pull or server push.
+    A companion document [draft-schott-alto-new-transport-push] defines server-push
+    ALTO transport based on ALTO TIPS.</p>"
   language:
   - en
   script:
@@ -163,23 +172,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-alto-new-transport-02
+    id: draft-ietf-alto-new-transport-03
     docid:
-    - id: draft-ietf-alto-new-transport-02
+    - id: draft-ietf-alto-new-transport-03
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-alto-new-transport-02
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-alto-new-transport-04
-    docid:
-    - id: draft-ietf-alto-new-transport-04
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-alto-new-transport-04
+      content: draft-ietf-alto-new-transport-03
       format: text/plain
 series:
 - type: main
@@ -190,7 +189,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-alto-new-transport-03
+  number: draft-ietf-alto-new-transport-04
 doctype: internet-draft
 ext:
   schema-version: v1.0.0
