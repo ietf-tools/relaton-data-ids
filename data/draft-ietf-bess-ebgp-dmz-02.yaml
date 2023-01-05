@@ -1,177 +1,181 @@
 ---
 schema-version: v1.2.1
-id: draft-cuiling-dnsop-sm2-alg-01
+id: draft-ietf-bess-ebgp-dmz-02
 title:
-- content: SM2 Digital Signature Algorithm for DNSSEC
+- content: Cumulative DMZ Link Bandwidth and load-balancing
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://www.ietf.org/archive/id/draft-cuiling-dnsop-sm2-alg-01.txt
+- content: https://www.ietf.org/archive/id/draft-ietf-bess-ebgp-dmz-02.txt
   type: TXT
 type: standard
 docid:
-- id: draft-cuiling-dnsop-sm2-alg-01
+- id: draft-ietf-bess-ebgp-dmz-02
   type: Internet-Draft
   primary: true
-- id: I-D.cuiling-dnsop-sm2-alg
+- id: I-D.ietf-bess-ebgp-dmz
   type: IETF
   scope: anchor
-docnumber: I-D.cuiling-dnsop-sm2-alg
+docnumber: I-D.ietf-bess-ebgp-dmz
 date:
 - type: published
-  value: '2022-07-26'
+  value: '2023-01-04'
 contributor:
 - person:
     name:
       given:
-        forename:
-        - content: Cuiling
-          language:
-          - en
-        - language:
-          - en
-          initial: C
         formatted_initials:
-          content: C.
           language:
           - en
       surname:
-        content: Zhang
+        content: satyamoh@cisco.com
         language:
         - en
       completename:
-        content: Cuiling Zhang
+        content: satyamoh@cisco.com
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: CNNIC
+        - content: Cisco Systems
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Yukun
+        - content: Arie
           language:
           - en
         - language:
           - en
-          initial: Y
+          initial: A
         formatted_initials:
-          content: Y.
+          content: A.
           language:
           - en
       surname:
-        content: Liu
+        content: Vayner
         language:
         - en
       completename:
-        content: Yukun Liu
+        content: Arie Vayner
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: CNNIC
+        - content: Google
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Feng
+        - content: Akshay
           language:
           - en
         - language:
           - en
-          initial: F
+          initial: A
         formatted_initials:
-          content: F.
+          content: A.
           language:
           - en
       surname:
-        content: Leng
+        content: Gattani
         language:
         - en
       completename:
-        content: Feng Leng
+        content: Akshay Gattani
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: CNNIC
+        - content: Arista Networks
   role:
   - type: author
 - person:
     name:
       given:
         forename:
+        - content: Ajay
+          language:
+          - en
         - language:
           - en
-          initial: Q
+          initial: A
         formatted_initials:
-          content: Q.
+          content: A.
           language:
           - en
       surname:
-        content: Zhao
+        content: Kini
         language:
         - en
       completename:
-        content: Qi Zhao
+        content: Ajay Kini
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: CNNIC
+        - content: Arista Networks
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Zheng
+        - content: Jeff
           language:
           - en
         - language:
           - en
-          initial: Z
+          initial: J
         formatted_initials:
-          content: Z.
+          content: J.
           language:
           - en
       surname:
-        content: He
+        content: Tantsura
         language:
         - en
       completename:
-        content: Zheng He
+        content: Jeff Tantsura
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: CNNIC
+        - content: Microsoft
   role:
   - type: author
 version:
-- draft: '01'
-revdate: '2022-07-26'
+- draft: '02'
+revdate: '2023-01-04'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document describes how to specify SM2 Digital Signature Algorithm
-    keys and signatures in DNS Security (DNSSEC). It lists the curve and uses SM3
-    as hash algorithm for signatures.</p>"
+- content: "<p>The DMZ Link Bandwidth draft provides a way to load-balance traffic
+    to a destination which is reachable via more than one path according to the weight
+    attahced. Typically, the link bandwidth (either configured on the link of the
+    EBGP egress interface or set via a policy) is encoded in an extended community
+    and then sent to the IBGP peer that employs multi-path. The link-bandwidth value
+    is then extracted from the extended community and is used as a weight in the RIB/FIB,
+    which does the load-balancing. This draft extends the usage of the DMZ link bandwidth
+    to another setting where the ingress BGP speaker requires knowledge of the cumulative
+    bandwidth while doing the load-balancing. The draft also proposes neighbor-level
+    knobs to enable the link bandwidth extended community to be regenerated and then
+    advertised to EBGP peers to override the default behavior of not advertising optional
+    non-transitive attributes to EBGP peers.</p>"
   language:
   - en
   script:
@@ -180,23 +184,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-cuiling-dnsop-sm2-alg-00
+    id: draft-ietf-bess-ebgp-dmz-01
     docid:
-    - id: draft-cuiling-dnsop-sm2-alg-00
+    - id: draft-ietf-bess-ebgp-dmz-01
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-cuiling-dnsop-sm2-alg-00
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-cuiling-dnsop-sm2-alg-02
-    docid:
-    - id: draft-cuiling-dnsop-sm2-alg-02
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-cuiling-dnsop-sm2-alg-02
+      content: draft-ietf-bess-ebgp-dmz-01
       format: text/plain
 series:
 - type: main
@@ -207,7 +201,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-cuiling-dnsop-sm2-alg-01
+  number: draft-ietf-bess-ebgp-dmz-02
 doctype: internet-draft
 ext:
   schema-version: v1.0.0
