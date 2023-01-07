@@ -218,9 +218,9 @@ abstract:
     A ppath consists of a sequence of "shorties" ending in a non-shorty, such as a
     3-character directory name or the 2-character file name "xy". The pairtree below
     contains two objects with identifiers "abcd" and "abcde". ab/ | \--- cd/ | |---
-    foo/ | | README.txt | | thumbnail.gif | | | |--- master_images/ | | | ... | |
-    ... | | | \--- gh/ | \--- e/ | \--- bar/ | metadata | 54321.wav | index.html An
-    object is reached when a non-shorty is detected. An object is _properly encapsulated_
+    foo/ | | README.txt | | thumbnail.gif | | | |--- master_images/ | | |... | |...
+    | | | \--- gh/ | \--- e/ | \--- bar/ | metadata | 54321.wav | index.html An object
+    is reached when a non-shorty is detected. An object is _properly encapsulated_
     if it is entirely contained in a non-shorty directory that is the immediate child
     of a shorty directory, in other words, if the 1- or 2-char directory name ending
     the object''s ppath contains exactly one non-shorty directory that holds all the
@@ -245,11 +245,10 @@ abstract:
     or data residing in a pairtree that is not contained or accounted for in any object.
     Here is an example of an improperly encapsulated object named "bent". be/ | \---
     nt/ [ split end: two files, no encapsulation ] | README.txt | report.pdf | \---
-    ef/ | ... If a "split end" is encountered, an importing system is encouraged to
+    ef/ |... If a "split end" is encountered, an importing system is encouraged to
     normalize it by creating a single object directory called "obj" and pushing the
     non-shorties in question underneath it, as in: be/ | \--- nt/ | |--- obj/ [ split
-    end repaired with "obj" directory ] | | README.txt | | report.pdf | \--- ef/ |
-    ...</p>'
+    end repaired with "obj" directory ] | | README.txt | | report.pdf | \--- ef/ |...</p>'
   language:
   - en
   script:

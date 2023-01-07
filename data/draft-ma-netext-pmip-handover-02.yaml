@@ -120,7 +120,7 @@ abstract:
     to CN. (b)MN doesn''t participate in any mobility-related signaling.LMA and MAG
     are responsible for managing IP mobility on behalf of the host. (c)This document
     is compatible with RFC5213. The points of this document are as follows: (1) Concepts:
-    The MN''s Home Agent(HA) ,Home Address (HoA) and Care-of address(CoA) is not only
+    The MN''s Home Agent(HA),Home Address (HoA) and Care-of address(CoA) is not only
     for user but also for the specific session.MN initiating a session uses the address
     assigned by the LMA which the MN is registered at the moment as the HoA for the
     session.The user initiating a session uses the address assigned by the LMA which
@@ -136,18 +136,18 @@ abstract:
     gateway.If both the source address of the data packets is the MN''s HoA recorded
     in Inner-domain BCE,and the CN''s HoA and CoA recorded in Inter-domain BCE are
     the same,the LMA will route the packets directly to CN as described in RFC5213.Otherwise,
-    according to looking up the Inter-domain BCE,LMA gets the CoA of CN. Then ,LMA
+    according to looking up the Inter-domain BCE,LMA gets the CoA of CN. Then,LMA
     encapsulates the packets to route to CN.On receiving a packet from a correspondent
     node with the destination address matching a mobile node''s home network prefix(es),
     the CN''s LMA MUST first check the source address and the destination address
     of the data packets,if the source address of the data packets is MN''s HoA recorded
     in Inter-domain BCE and the destination address is CN''s HoA recorded in Inner-domain
-    BCE ,the CN''LMA will forward the packets to the right MAG directly as described
+    BCE,the CN''LMA will forward the packets to the right MAG directly as described
     in RFC5213.Otherwise, CN''LMA will remove the outer header before forwarding the
     packet. Then,LMA looks up the Inner-domain BCE to forward the packets to the right
     MAG. (4)Updates:When MN moves to visited LMA(MN-vLMA),MN-vLMA will do three things.
     Firstly MN-vLMA will assign a MN-CoA for MN and build up the Inner- domain BCE
-    for MN. Secondly,MN-vLMA will sends message to MN-hLMA to get the HoA of CN .Then,MN-vLMA
+    for MN. Secondly,MN-vLMA will sends message to MN-hLMA to get the HoA of CN.Then,MN-vLMA
     builds up the binding between CN-HoA and CN-HoA in the Inter-domain BCE.Thirdly,
     MN-vLMA sends message to CN-LMA wiht the MN-CoA and MN-HoA included in the message
     to help CN- LMA updating the Inter-domain BCE for MN. Compared with "draft-ma-netext-pmip-handover-00.txt",

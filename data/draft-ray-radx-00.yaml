@@ -83,7 +83,7 @@ abstract:
     8 bits need to be added, so an extra byte is used. For U+1000 onwards, two extra
     bytes are encoded. For safety, certain bit patterns are detected and skipped.
     If the character is not UTF-8, then it is simple ASCII - and Radix-32 compression
-    is attempted. A special subset of 32 characters is defined as: " .0123456789ABCDEFGHILMNOPRSTUWY"
+    is attempted. A special subset of 32 characters is defined as: ".0123456789ABCDEFGHILMNOPRSTUWY"
     These are space, period, the numerals, and the alphabet with the excep- tion of
     J, K, Q, V, X, and Z. The table indexing automatically upper- cases alphas and
     substitutes some punctuation. If doubled codes are found, Radix-64 encoding is
@@ -120,16 +120,16 @@ abstract:
     sequences are first checked to see if they match the previous Unicode character;
     if they do, the single-byte Unicode repeat code is used. &lt;CODE BEGINS&gt; Bit
     Transformation Sequence (in processing order) =================================================
-    0 ??????? -&gt; indexed substitution table zzzzzz -&gt; 00 zzzzzz [Note A] xxxxx
+    0??????? -&gt; indexed substitution table zzzzzz -&gt; 00 zzzzzz [Note A] xxxxx
     yyyyy zzzzz -&gt; 1 xxxxx yy yyy zzzzz [Note B] zzzzzz -&gt; 01 zzzzzz [Note C]
-    10 ?????? -&gt; delete [orphan continuation byte] 1100 000 -&gt; delete [Note
-    D] 1100 0 x yy 10 yy zzzz -&gt; 0011 100x yyyy zzzz [Note E] 1100 1000 10 yy zzzz
+    10?????? -&gt; delete [orphan continuation byte] 1100 000 -&gt; delete [Note D]
+    1100 0 x yy 10 yy zzzz -&gt; 0011 100x yyyy zzzz [Note E] 1100 1000 10 yy zzzz
     -&gt; 0011 1010 00 yy zzzz [Note F] 1100 1001 10 00 zzzz -&gt; 0011 1010 0100
-    zzzz [Note G] 1100 10 ?? -&gt; delete [Note H] 110 xxx yy 10 yy zzzz -&gt; 0011
+    zzzz [Note G] 1100 10?? -&gt; delete [Note H] 110 xxx yy 10 yy zzzz -&gt; 0011
     1xxx yyyy zzzz [Note J] 1110 0000 10 0????? -&gt; delete [illegal padding] 1110
-    0000 10 xxxx yy 10 yy zzzz -&gt; 0111 xxxx yyyy zzzz [Note K] 1110 111 ? -&gt;
+    0000 10 xxxx yy 10 yy zzzz -&gt; 0111 xxxx yyyy zzzz [Note K] 1110 111? -&gt;
     delete [U+E000 - U+FFFF] 1110 aaaa 10 xxxx yy 10 yy zzzz -&gt; 0000 0000 aaaa
-    xxxx yyyy zzzz [No.L] ???? ???? -&gt; delete [U+10000 and above] Notes: [A] ASCII
+    xxxx yyyy zzzz [No.L]???????? -&gt; delete [U+10000 and above] Notes: [A] ASCII
     doubled char in Radix-64 [B] 3 ASCII chars in Radix-32 [C] ASCII single char in
     Radix-64 [D] U+007F or less - hidden ASCII [E] U+0080 to U+01FF [F] U+0200 to
     U+023F [G] U+0240 to U+024F [H] U+0250 - U+02FF - custom chars [J] U+0300 - U+07FF
@@ -140,23 +140,23 @@ abstract:
     to 55 are used for ASCII; 0 and 56 to 63 are reserved for Unicode encoding prefixes.
     &lt;CODE BEGINS&gt; Radix-64 and Radix-32 Character Encoding Table ==============================================
     Char Rad32 Rad64 Char Rad32 Rad64 Char Rad32 Rad64 ==== ===== ===== ==== =====
-    ===== ==== ===== ===== &lt;space&gt; 0 32 @ 55 ` 39 ! 10 33 A 1 1 a 1 1 " 34 B
+    ===== ==== ===== ===== &lt;space&gt; 0 32 @ 55 ` 39! 10 33 A 1 1 a 1 1 " 34 B
     2 2 b 2 2 # 35 C 3 3 c 3 3 $ 36 D 4 4 d 4 4 % 37 E 5 5 e 5 5 &amp; 38 F 6 6 f
     6 6 '' 39 G 7 7 g 7 7 ( 27 H 8 8 h 8 8 ) 29 I 9 9 i 9 9 * 40 J 10 j 10 + 41 K
-    11 k 11 , 42 L 12 12 l 12 12 - 43 M 13 13 m 13 13 . 10 10 N 14 14 n 14 14 / 28
-    O 15 15 o 15 15 0 11 44 P 16 16 p 16 16 1 17 45 Q 17 q 17 2 22 46 R 18 18 r 18
-    18 3 24 47 S 19 19 s 19 19 4 26 48 T 20 20 t 20 20 5 27 49 U 21 21 u 21 21 6 28
-    50 V 22 v 22 7 29 51 W 23 23 w 23 23 8 30 52 X 24 x 24 9 31 53 Y 25 25 y 25 25
-    : 54 Z 26 z 26 ; 54 [ 27 { 27 &lt; 27 \ 28 | 28 = 43 ] 29 } 29 &gt; 29 ^ 30 ~
-    30 ? 10 33 _ 31 The reverse process is even simpler. A series of zeroes flags
-    the end of the text, so processing can stop once that is encountered. Every other
-    possible combination represents a compression mode that can be decoded and expanded.
-    RadX To UTF-8 Regeneration Sequence (in processing order) =========================================================
-    0000 0000 0000 ???? ???? ???? -&gt; delete [space padding] 0000 0000 aaaa xxxx
-    yyyy zzzz -&gt; 1110 aaaa 10 xxxx yy 10 yy zzzz 0011 0xxx yyyy zzzz -&gt; 110
-    xxx yy 10 yy zzzz 0011 1110 zzzz ZZZZ -&gt; rpt prev UTF-8, subst last digit 0011
-    1111 -&gt; repeat previous sequence 0011 1xxx yyyy zzzz -&gt; 1110 0000 10 1xxx
-    yy 10 yy zzzz 00 zzzzzz -&gt; rrrrrrrr rrrrrrrr [reverse Radix-64] 01 zzzzzz -&gt;
+    11 k 11, 42 L 12 12 l 12 12 - 43 M 13 13 m 13 13. 10 10 N 14 14 n 14 14 / 28 O
+    15 15 o 15 15 0 11 44 P 16 16 p 16 16 1 17 45 Q 17 q 17 2 22 46 R 18 18 r 18 18
+    3 24 47 S 19 19 s 19 19 4 26 48 T 20 20 t 20 20 5 27 49 U 21 21 u 21 21 6 28 50
+    V 22 v 22 7 29 51 W 23 23 w 23 23 8 30 52 X 24 x 24 9 31 53 Y 25 25 y 25 25: 54
+    Z 26 z 26; 54 [ 27 { 27 &lt; 27 \ 28 | 28 = 43 ] 29 } 29 &gt; 29 ^ 30 ~ 30? 10
+    33 _ 31 The reverse process is even simpler. A series of zeroes flags the end
+    of the text, so processing can stop once that is encountered. Every other possible
+    combination represents a compression mode that can be decoded and expanded. RadX
+    To UTF-8 Regeneration Sequence (in processing order) =========================================================
+    0000 0000 0000???????????? -&gt; delete [space padding] 0000 0000 aaaa xxxx yyyy
+    zzzz -&gt; 1110 aaaa 10 xxxx yy 10 yy zzzz 0011 0xxx yyyy zzzz -&gt; 110 xxx yy
+    10 yy zzzz 0011 1110 zzzz ZZZZ -&gt; rpt prev UTF-8, subst last digit 0011 1111
+    -&gt; repeat previous sequence 0011 1xxx yyyy zzzz -&gt; 1110 0000 10 1xxx yy
+    10 yy zzzz 00 zzzzzz -&gt; rrrrrrrr rrrrrrrr [reverse Radix-64] 01 zzzzzz -&gt;
     rrrrrrrr [reverse Radix-64] 1 xxxxx yy yyy zzzzz -&gt; rrrrrrrr rrrrrrrr rrrrrrrr
     [reverse Radix-32] &lt;CODE ENDS&gt; The fourth sequence above is used when the
     current UTF-8 and also the next one, are almost the same as the last but differ
@@ -169,15 +169,15 @@ abstract:
     sequence for two spaces in a row; so this allows for a set of 32 special codes
     which have not been allocated, any may be used for future extension. USAGE EXAMPLE
     And finally, here is a worst-case scenario with the famous full-alpha- bet sentence.
-    T H E Q U I C K B R O W N ..20+8+5... 32 17 ..21+9+3... 11 ..0+2+18... ..15+23+14..
-    F O X J U M P S O V E R ..0+6+15... 24 32 10 ..21+13+16.. ..19+0+15.. 22 ..5+18+0
-    T H E L A Z Y D O G . ..20+8+5... ...0+12+1... 26 ..25+0+4... ..15+7+10.. The
-    three-number groups represent a two-byte condensation in Rad-32, and the lone
-    numbers represent a fallback to Rad-64 using one byte. The original 44-byte sentence
-    is reduced to 32, or a 27% reduction even without any doubled characters. This
-    letter frequency assumption works for all European languages, with a slight loss
-    for German, Italian and Polish. RESULTING FEATURES The result of applying the
-    above procedures to text strings gives the following advantages:</p>'
+    T H E Q U I C K B R O W N..20+8+5... 32 17..21+9+3... 11..0+2+18.....15+23+14..
+    F O X J U M P S O V E R..0+6+15... 24 32 10..21+13+16....19+0+15.. 22..5+18+0
+    T H E L A Z Y D O G...20+8+5......0+12+1... 26..25+0+4.....15+7+10.. The three-number
+    groups represent a two-byte condensation in Rad-32, and the lone numbers represent
+    a fallback to Rad-64 using one byte. The original 44-byte sentence is reduced
+    to 32, or a 27% reduction even without any doubled characters. This letter frequency
+    assumption works for all European languages, with a slight loss for German, Italian
+    and Polish. RESULTING FEATURES The result of applying the above procedures to
+    text strings gives the following advantages:</p>'
   language:
   - en
   script:
