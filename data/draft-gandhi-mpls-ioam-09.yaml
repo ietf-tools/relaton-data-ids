@@ -1,57 +1,29 @@
 ---
 schema-version: v1.2.1
-id: draft-jags-mpls-mna-hdr-04
+id: draft-gandhi-mpls-ioam-09
 title:
-- content: MPLS Network Action (MNA) Sub-Stack Solution
+- content: MPLS Data Plane Encapsulation for In Situ OAM Data
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://www.ietf.org/archive/id/draft-jags-mpls-mna-hdr-04.txt
+- content: https://www.ietf.org/archive/id/draft-gandhi-mpls-ioam-09.txt
   type: TXT
 type: standard
 docid:
-- id: draft-jags-mpls-mna-hdr-04
+- id: draft-gandhi-mpls-ioam-09
   type: Internet-Draft
   primary: true
-- id: I-D.jags-mpls-mna-hdr
+- id: I-D.gandhi-mpls-ioam
   type: IETF
   scope: anchor
-docnumber: I-D.jags-mpls-mna-hdr
+docnumber: I-D.gandhi-mpls-ioam
 date:
 - type: published
-  value: '2022-12-20'
+  value: '2023-01-10'
 contributor:
-- person:
-    name:
-      given:
-        forename:
-        - content: Jaganbabu
-          language:
-          - en
-        - language:
-          - en
-          initial: J
-        formatted_initials:
-          content: J.
-          language:
-          - en
-      surname:
-        content: Rajamanickam
-        language:
-        - en
-      completename:
-        content: Jaganbabu Rajamanickam
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Cisco Systems, Inc.
-  role:
-  - type: author
 - person:
     name:
       given:
@@ -84,28 +56,84 @@ contributor:
     name:
       given:
         forename:
-        - content: Royi
+        - content: Frank
           language:
           - en
         - language:
           - en
-          initial: R
+          initial: F
         formatted_initials:
-          content: R.
+          content: F.
           language:
           - en
       surname:
-        content: Zigler
+        content: Brockners
         language:
         - en
       completename:
-        content: Royi Zigler
+        content: Frank Brockners
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Broadcom
+        - content: Cisco Systems, Inc.
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Bin
+          language:
+          - en
+        - language:
+          - en
+          initial: B
+        formatted_initials:
+          content: B.
+          language:
+          - en
+      surname:
+        content: Wen
+        language:
+        - en
+      completename:
+        content: Bin Wen
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Comcast
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Bruno
+          language:
+          - en
+        - language:
+          - en
+          initial: B
+        formatted_initials:
+          content: B.
+          language:
+          - en
+      surname:
+        content: Decraene
+        language:
+        - en
+      completename:
+        content: Bruno Decraene
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Orange
   role:
   - type: author
 - person:
@@ -136,48 +164,19 @@ contributor:
         - content: Futurewei Technologies
   role:
   - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Kireeti
-          language:
-          - en
-        - language:
-          - en
-          initial: K
-        formatted_initials:
-          content: K.
-          language:
-          - en
-      surname:
-        content: Kompella
-        language:
-        - en
-      completename:
-        content: Kireeti Kompella
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Juniper Networks
-  role:
-  - type: author
 version:
-- draft: '04'
-revdate: '2022-12-20'
+- draft: '09'
+revdate: '2023-01-10'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document defines the MPLS Network Action (MNA) sub-stack solution
-    for carrying Network Actions and Ancillary Data in the label stack. MPLS Network
-    Actions can be used to influence packet forwarding decisions, carry additional
-    OAM information in the MPLS packet, or perform user-defined operations. This document
-    addresses the MNA requirements specified in draft-ietf-mpls-mna-requirements.
-    This document follows the MNA framework specified in draft-ietf-mpls- mna-fwk.</p>"
+- content: "<p>In Situ Operations, Administration, and Maintenance (IOAM) is used
+    for recording and collecting operational and telemetry information while the packet
+    traverses a path between two points in the network. This document defines how
+    IOAM data fields are transported with MPLS data plane encapsulation using MPLS
+    Network Action (MNA) and follows the MNA framework defined in draft-ietf-mpls-mna-fwk.</p>"
   language:
   - en
   script:
@@ -186,23 +185,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-jags-mpls-mna-hdr-03
+    id: draft-gandhi-mpls-ioam-08
     docid:
-    - id: draft-jags-mpls-mna-hdr-03
+    - id: draft-gandhi-mpls-ioam-08
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-jags-mpls-mna-hdr-03
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-jags-mpls-mna-hdr-05
-    docid:
-    - id: draft-jags-mpls-mna-hdr-05
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-jags-mpls-mna-hdr-05
+      content: draft-gandhi-mpls-ioam-08
       format: text/plain
 series:
 - type: main
@@ -213,7 +202,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-jags-mpls-mna-hdr-04
+  number: draft-gandhi-mpls-ioam-09
 doctype: internet-draft
 ext:
   schema-version: v1.0.0
