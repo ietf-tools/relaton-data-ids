@@ -1,85 +1,29 @@
 ---
 schema-version: v1.2.1
-id: draft-ietf-lisp-map-server-reliable-transport-00
+id: draft-ietf-lisp-eid-mobility-11
 title:
-- content: LISP Map Server Reliable Transport
+- content: LISP L2/L3 EID Mobility Using a Unified Control Plane
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://www.ietf.org/archive/id/draft-ietf-lisp-map-server-reliable-transport-00.txt
+- content: https://www.ietf.org/archive/id/draft-ietf-lisp-eid-mobility-11.txt
   type: TXT
 type: standard
 docid:
-- id: draft-ietf-lisp-map-server-reliable-transport-00
+- id: draft-ietf-lisp-eid-mobility-11
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-lisp-map-server-reliable-transport
+- id: I-D.ietf-lisp-eid-mobility
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-lisp-map-server-reliable-transport
+docnumber: I-D.ietf-lisp-eid-mobility
 date:
 - type: published
-  value: '2022-07-10'
+  value: '2023-01-10'
 contributor:
-- person:
-    name:
-      given:
-        forename:
-        - content: Darrel
-          language:
-          - en
-        - language:
-          - en
-          initial: D
-        formatted_initials:
-          content: D.
-          language:
-          - en
-      surname:
-        content: Lewis
-        language:
-        - en
-      completename:
-        content: Darrel Lewis
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Cisco Systems
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Balaji
-          language:
-          - en
-        - language:
-          - en
-          initial: B
-        formatted_initials:
-          content: B.
-          language:
-          - en
-      surname:
-        content: Venkatachalapathy
-        language:
-        - en
-      completename:
-        content: Balaji Venkatachalapathy
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Cisco Systems
-  role:
-  - type: author
 - person:
     name:
       given:
@@ -112,89 +56,142 @@ contributor:
     name:
       given:
         forename:
-        - content: Isidor
+        - content: Vrushali
           language:
           - en
         - language:
           - en
-          initial: I
+          initial: V
         formatted_initials:
-          content: I.
+          content: V.
           language:
           - en
       surname:
-        content: Kouvelas
+        content: Ashtaputre
         language:
         - en
       completename:
-        content: Isidor Kouvelas
+        content: Vrushali Ashtaputre
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Arista Networks Inc.
+        - content: Cisco Systems
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Chris
+        - content: Fabio
           language:
           - en
         - language:
           - en
-          initial: C
+          initial: F
         formatted_initials:
-          content: C.
+          content: F.
           language:
           - en
       surname:
-        content: Cassar
+        content: Maino
         language:
         - en
       completename:
-        content: Chris Cassar
+        content: Fabio Maino
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Rivian Automotive
+        - content: Cisco Systems
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Victor
+          language:
+          - en
+        - language:
+          - en
+          initial: V
+        formatted_initials:
+          content: V.
+          language:
+          - en
+      surname:
+        content: Moreno
+        language:
+        - en
+      completename:
+        content: Victor Moreno
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Google LLC
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Dino
+          language:
+          - en
+        - language:
+          - en
+          initial: D
+        formatted_initials:
+          content: D.
+          language:
+          - en
+      surname:
+        content: Farinacci
+        language:
+        - en
+      completename:
+        content: Dino Farinacci
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: lispers.net
   role:
   - type: author
 version:
-- draft: '00'
-revdate: '2022-07-10'
+- draft: '11'
+revdate: '2023-01-10'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>The communication between LISP ETRs and Map-Servers is based on unreliable
-    UDP message exchange coupled with periodic message transmission in order to maintain
-    soft state. The drawback of periodic messaging is the constant load imposed on
-    both the ETR and the Map-Server. New use cases for LISP have increased the amount
-    of state that needs to be communicated with requirements that are not satisfied
-    by the current mechanism. This document introduces the use of a reliable transport
-    for ETR to Map-Server communication in order to eliminate the periodic messaging
-    overhead, while providing reliability, flow-control and endpoint liveness detection.</p>"
+- content: "<p>The LISP control plane offers the flexibility to support multiple overlay
+    flavors simultaneously. This document specifies how LISP can be used to provide
+    control-plane support to deploy a unified L2 and L3 overlay solution for End-point
+    Identifier (EID) mobility, as well as analyzing possible deployment options and
+    models.</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-ietf-lisp-map-server-reliable-transport-01
+    id: draft-ietf-lisp-eid-mobility-10
     docid:
-    - id: draft-ietf-lisp-map-server-reliable-transport-01
+    - id: draft-ietf-lisp-eid-mobility-10
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-lisp-map-server-reliable-transport-01
+      content: draft-ietf-lisp-eid-mobility-10
       format: text/plain
 series:
 - type: main
@@ -205,7 +202,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-lisp-map-server-reliable-transport-00
+  number: draft-ietf-lisp-eid-mobility-11
 doctype: internet-draft
 ext:
   schema-version: v1.0.0
