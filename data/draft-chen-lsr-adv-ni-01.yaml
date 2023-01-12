@@ -1,28 +1,28 @@
 ---
 schema-version: v1.2.1
-id: draft-chen-pim-mrh6-03
+id: draft-chen-lsr-adv-ni-01
 title:
-- content: Stateless Traffic Engineering Multicast using MRH
+- content: IGP Extensions for Advertising Node Index
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://www.ietf.org/archive/id/draft-chen-pim-mrh6-03.txt
+- content: https://www.ietf.org/archive/id/draft-chen-lsr-adv-ni-01.txt
   type: TXT
 type: standard
 docid:
-- id: draft-chen-pim-mrh6-03
+- id: draft-chen-lsr-adv-ni-01
   type: Internet-Draft
   primary: true
-- id: I-D.chen-pim-mrh6
+- id: I-D.chen-lsr-adv-ni
   type: IETF
   scope: anchor
-docnumber: I-D.chen-pim-mrh6
+docnumber: I-D.chen-lsr-adv-ni
 date:
 - type: published
-  value: '2022-07-11'
+  value: '2023-01-12'
 contributor:
 - person:
     name:
@@ -56,22 +56,25 @@ contributor:
     name:
       given:
         forename:
-        - content: Mike
+        - content: Donald
           language:
           - en
         - language:
           - en
-          initial: M
+          initial: D
+        - language:
+          - en
+          initial: E
         formatted_initials:
-          content: M.
+          content: D. E.
           language:
           - en
       surname:
-        content: McBride
+        content: Eastlake
         language:
         - en
       completename:
-        content: Mike McBride
+        content: Donald E. Eastlake 3rd
         language:
         - en
     affiliation:
@@ -84,112 +87,28 @@ contributor:
     name:
       given:
         forename:
-        - content: Yanhe
+        - content: Aijun
           language:
           - en
         - language:
           - en
-          initial: Y
+          initial: A
         formatted_initials:
-          content: Y.
+          content: A.
           language:
           - en
       surname:
-        content: Fan
+        content: Wang
         language:
         - en
       completename:
-        content: Yanhe Fan
+        content: Aijun Wang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Casa Systems
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Zhenbin
-          language:
-          - en
-        - language:
-          - en
-          initial: Z
-        formatted_initials:
-          content: Z.
-          language:
-          - en
-      surname:
-        content: Li
-        language:
-        - en
-      completename:
-        content: Zhenbin Li
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Huawei
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Xuesong
-          language:
-          - en
-        - language:
-          - en
-          initial: X
-        formatted_initials:
-          content: X.
-          language:
-          - en
-      surname:
-        content: Geng
-        language:
-        - en
-      completename:
-        content: Xuesong Geng
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Huawei
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Mehmet
-          language:
-          - en
-        - language:
-          - en
-          initial: M
-        formatted_initials:
-          content: M.
-          language:
-          - en
-      surname:
-        content: Toy
-        language:
-        - en
-      completename:
-        content: Mehmet Toy
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Verizon
+        - content: China Telecom
   role:
   - type: author
 - person:
@@ -220,7 +139,7 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Verizon
+        - content: Verizon Inc.
   role:
   - type: author
 - person:
@@ -255,28 +174,28 @@ contributor:
     name:
       given:
         forename:
-        - content: Aijun
+        - content: Yanhe
           language:
           - en
         - language:
           - en
-          initial: A
+          initial: Y
         formatted_initials:
-          content: A.
+          content: Y.
           language:
           - en
       surname:
-        content: Wang
+        content: Fan
         language:
         - en
       completename:
-        content: Aijun Wang
+        content: Yanhe Fan
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: China Telecom
+        - content: Casa Systems
   role:
   - type: author
 - person:
@@ -336,18 +255,15 @@ contributor:
   role:
   - type: author
 version:
-- draft: '03'
-revdate: '2022-07-11'
+- draft: '01'
+revdate: '2023-01-12'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document describes a stateless traffic engineering (TE) multicast
-    along an explicit P2MP Path/Tree using an IPv6 extension header called TE multicast
-    routing header (MRH). The MRH with the path encoded in link numbers is added into
-    a packet to be multicast at the ingress. The packet is delivered to the egresses
-    along the path. There is no state stored in the core of the network.</p>"
+- content: "<p>This document describes OSPF and IS-IS extensions for distributing
+    the node index configured on a node.</p>"
   language:
   - en
   script:
@@ -356,23 +272,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-chen-pim-mrh6-02
+    id: draft-chen-lsr-adv-ni-00
     docid:
-    - id: draft-chen-pim-mrh6-02
+    - id: draft-chen-lsr-adv-ni-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-chen-pim-mrh6-02
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-chen-pim-mrh6-04
-    docid:
-    - id: draft-chen-pim-mrh6-04
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-chen-pim-mrh6-04
+      content: draft-chen-lsr-adv-ni-00
       format: text/plain
 series:
 - type: main
@@ -383,7 +289,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-chen-pim-mrh6-03
+  number: draft-chen-lsr-adv-ni-01
 doctype: internet-draft
 ext:
   schema-version: v1.0.0
