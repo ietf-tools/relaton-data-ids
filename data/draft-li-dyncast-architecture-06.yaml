@@ -1,122 +1,62 @@
 ---
 schema-version: v1.2.1
-id: draft-ggalimbe-ccamp-flexigrid-carrier-label-13
+id: draft-li-dyncast-architecture-06
 title:
-- content: Signaling extensions for Media Channel sub-carriers configuration in Spectrum
-    Switched Optical Networks (SSON) in Lambda Switch Capable (LSC) Optical Line Systems.
+- content: Dynamic-Anycast Architecture
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://www.ietf.org/archive/id/draft-ggalimbe-ccamp-flexigrid-carrier-label-13.txt
+- content: https://www.ietf.org/archive/id/draft-li-dyncast-architecture-06.txt
   type: TXT
 type: standard
 docid:
-- id: draft-ggalimbe-ccamp-flexigrid-carrier-label-13
+- id: draft-li-dyncast-architecture-06
   type: Internet-Draft
   primary: true
-- id: I-D.ggalimbe-ccamp-flexigrid-carrier-label
+- id: I-D.li-dyncast-architecture
   type: IETF
   scope: anchor
-docnumber: I-D.ggalimbe-ccamp-flexigrid-carrier-label
+docnumber: I-D.li-dyncast-architecture
 date:
 - type: published
-  value: '2022-07-01'
+  value: '2023-01-16'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Gabriele
+        - content: Yizhou
           language:
           - en
         - language:
           - en
-          initial: G
+          initial: Y
         formatted_initials:
-          content: G.
+          content: Y.
           language:
           - en
       surname:
-        content: Galimberti
+        content: Li
         language:
         - en
       completename:
-        content: Gabriele Galimberti
+        content: Yizhou Li
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cisco
+        - content: Huawei Technologies
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Domenico
-          language:
-          - en
-        - language:
-          - en
-          initial: D
-        - language:
-          - en
-          initial: L
-        formatted_initials:
-          content: D. L.
-          language:
-          - en
-      surname:
-        content: Fauci
-        language:
-        - en
-      completename:
-        content: Domenico La Fauci
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Cisco
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Andrea
-          language:
-          - en
-        - language:
-          - en
-          initial: A
-        formatted_initials:
-          content: A.
-          language:
-          - en
-      surname:
-        content: Zanardi
-        language:
-        - en
-      completename:
-        content: Andrea Zanardi
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: FBK
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Lorenzo
+        - content: Luigi
           language:
           - en
         - language:
@@ -127,60 +67,114 @@ contributor:
           language:
           - en
       surname:
-        content: Galvagni
+        content: Iannone
         language:
         - en
       completename:
-        content: Lorenzo Galvagni
+        content: Luigi Iannone
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: FBK
+        - content: Huawei Technologies
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Julien
+        - content: Dirk
           language:
           - en
         - language:
           - en
-          initial: J
+          initial: D
         formatted_initials:
-          content: J.
+          content: D.
           language:
           - en
       surname:
-        content: Meuric
+        content: Trossen
         language:
         - en
       completename:
-        content: Julien Meuric
+        content: Dirk Trossen
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Orange
+        - content: Huawei Technologies
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Peng
+          language:
+          - en
+        - language:
+          - en
+          initial: P
+        formatted_initials:
+          content: P.
+          language:
+          - en
+      surname:
+        content: Liu
+        language:
+        - en
+      completename:
+        content: Peng Liu
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: China Mobile
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Cheng
+          language:
+          - en
+        - language:
+          - en
+          initial: C
+        formatted_initials:
+          content: C.
+          language:
+          - en
+      surname:
+        content: Li
+        language:
+        - en
+      completename:
+        content: Cheng Li
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei Technologies
   role:
   - type: author
 version:
-- draft: '13'
-revdate: '2022-07-01'
+- draft: '06'
+revdate: '2023-01-16'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This memo defines the signaling extensions for managing Spectrum Switched
-    Optical Network (SSON) parameters shared between the Client and the Network and
-    inside the Network in accordance to the model described in [RFC7698]. The extensions
-    are in accordance and extending the parameters defined in ITU-T Recommendation
-    G.694.1.[ITU.G694.1] and its extensions and G.872.[ITU.G872].</p>"
+- content: "<p>This document describes an architecture for the Dynamic-Anycast (Dyncast).
+    It includes an architecture overview, main components, and the workflow of control
+    plane and dataplane.</p>"
   language:
   - en
   script:
@@ -189,23 +183,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ggalimbe-ccamp-flexigrid-carrier-label-12
+    id: draft-li-dyncast-architecture-05
     docid:
-    - id: draft-ggalimbe-ccamp-flexigrid-carrier-label-12
+    - id: draft-li-dyncast-architecture-05
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ggalimbe-ccamp-flexigrid-carrier-label-12
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ggalimbe-ccamp-flexigrid-carrier-label-14
-    docid:
-    - id: draft-ggalimbe-ccamp-flexigrid-carrier-label-14
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ggalimbe-ccamp-flexigrid-carrier-label-14
+      content: draft-li-dyncast-architecture-05
       format: text/plain
 series:
 - type: main
@@ -216,7 +200,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ggalimbe-ccamp-flexigrid-carrier-label-13
+  number: draft-li-dyncast-architecture-06
 doctype: internet-draft
 ext:
   schema-version: v1.0.0
