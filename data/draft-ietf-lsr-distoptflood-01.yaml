@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.1
-id: draft-ietf-lsr-distoptflood-00
+id: draft-ietf-lsr-distoptflood-01
 title:
 - content: IS-IS Optimal Distributed Flooding for Dense Topologies
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://www.ietf.org/archive/id/draft-ietf-lsr-distoptflood-00.txt
+- content: https://www.ietf.org/archive/id/draft-ietf-lsr-distoptflood-01.txt
   type: TXT
 type: standard
 docid:
-- id: draft-ietf-lsr-distoptflood-00
+- id: draft-ietf-lsr-distoptflood-01
   type: Internet-Draft
   primary: true
 - id: I-D.ietf-lsr-distoptflood
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.ietf-lsr-distoptflood
 date:
 - type: published
-  value: '2023-01-06'
+  value: '2023-01-16'
 contributor:
 - person:
     name:
@@ -49,7 +49,7 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Juniper Networks
+        - content: Akamai
   role:
   - type: author
 - person:
@@ -109,38 +109,42 @@ contributor:
   role:
   - type: author
 version:
-- draft: '00'
-revdate: '2023-01-06'
+- draft: '01'
+revdate: '2023-01-16'
 language:
 - en
 script:
 - Latn
 abstract:
 - content: <p>In dense topologies (such as data center fabrics based on the Clos and
-    butterfly topologies, though not limited to these), IGP flooding mechanisms designed
-    for sparse topologies can "overflood," or carry too many copies of topology and
-    reachability information to fabric devices. This results in slower convergence
-    times and higher resource utilization. The modifications to the flooding mechanism
-    in the Intermediate System to Intermediate System (IS-IS) link state protocol
-    described in this document reduce resource utilization significantly, while increasing
-    convergence performance in dense topologies. Note that a Clos fabric is used as
-    the primary example of a dense flooding topology throughout this document. However,
-    the flooding optimizations described in this document apply to any topology.</p>
+    butterfly topologies, though not limited to those exclusively), IGP flooding mechanisms
+    designed originally for sparse topologies can "overflood," or in other words generate
+    too many identical copies of topology and reachability information arriving at
+    a given node from other devices. This normally results in slower convergence times
+    and higher resource utilization to process and discard the superfluous copies.
+    The modifications to the flooding mechanism in the Intermediate System to Intermediate
+    System (IS-IS) link state protocol described in this document reduce resource
+    utilization significantly, while increaseing convergence performance in dense
+    topologies. Beside reducing the extraneous copies it uses the dense topologies
+    to "load-balance" flooding across different possible paths in the network to prevent
+    build up of flooding hot-spots. Note that a Clos fabric is used as the primary
+    example of a dense flooding topology throughout this document. However, the flooding
+    optimizations described in this document apply to any arbitrary topology.</p>
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-ietf-lsr-distoptflood-01
+    id: draft-ietf-lsr-distoptflood-00
     docid:
-    - id: draft-ietf-lsr-distoptflood-01
+    - id: draft-ietf-lsr-distoptflood-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-lsr-distoptflood-01
+      content: draft-ietf-lsr-distoptflood-00
       format: text/plain
 series:
 - type: main
@@ -151,7 +155,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-lsr-distoptflood-00
+  number: draft-ietf-lsr-distoptflood-01
 doctype: internet-draft
 ext:
   schema-version: v1.0.0

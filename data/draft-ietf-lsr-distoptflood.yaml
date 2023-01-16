@@ -14,15 +14,19 @@ docid:
   primary: true
 abstract:
 - content: <p>In dense topologies (such as data center fabrics based on the Clos and
-    butterfly topologies, though not limited to these), IGP flooding mechanisms designed
-    for sparse topologies can "overflood," or carry too many copies of topology and
-    reachability information to fabric devices. This results in slower convergence
-    times and higher resource utilization. The modifications to the flooding mechanism
-    in the Intermediate System to Intermediate System (IS-IS) link state protocol
-    described in this document reduce resource utilization significantly, while increasing
-    convergence performance in dense topologies. Note that a Clos fabric is used as
-    the primary example of a dense flooding topology throughout this document. However,
-    the flooding optimizations described in this document apply to any topology.</p>
+    butterfly topologies, though not limited to those exclusively), IGP flooding mechanisms
+    designed originally for sparse topologies can "overflood," or in other words generate
+    too many identical copies of topology and reachability information arriving at
+    a given node from other devices. This normally results in slower convergence times
+    and higher resource utilization to process and discard the superfluous copies.
+    The modifications to the flooding mechanism in the Intermediate System to Intermediate
+    System (IS-IS) link state protocol described in this document reduce resource
+    utilization significantly, while increaseing convergence performance in dense
+    topologies. Beside reducing the extraneous copies it uses the dense topologies
+    to "load-balance" flooding across different possible paths in the network to prevent
+    build up of flooding hot-spots. Note that a Clos fabric is used as the primary
+    example of a dense flooding topology throughout this document. However, the flooding
+    optimizations described in this document apply to any arbitrary topology.</p>
   language:
   - en
   script:
@@ -38,6 +42,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-lsr-distoptflood-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-lsr-distoptflood-01
+    docid:
+    - id: draft-ietf-lsr-distoptflood-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-lsr-distoptflood-01
       format: text/plain
 ext:
   schema-version: v1.0.0
