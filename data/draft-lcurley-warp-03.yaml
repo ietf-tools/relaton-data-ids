@@ -1,19 +1,19 @@
 ---
 schema-version: v1.2.1
-id: draft-lcurley-warp-02
+id: draft-lcurley-warp-03
 title:
-- content: Warp - Segmented Live Media Transport
+- content: Warp - Live Media Transport over QUIC
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://www.ietf.org/archive/id/draft-lcurley-warp-02.txt
+- content: https://www.ietf.org/archive/id/draft-lcurley-warp-03.txt
   type: TXT
 type: standard
 docid:
-- id: draft-lcurley-warp-02
+- id: draft-lcurley-warp-03
   type: Internet-Draft
   primary: true
 - id: I-D.lcurley-warp
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.lcurley-warp
 date:
 - type: published
-  value: '2022-10-24'
+  value: '2023-01-18'
 contributor:
 - person:
     name:
@@ -108,19 +108,47 @@ contributor:
         - content: Cisco
   role:
   - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Victor
+          language:
+          - en
+        - language:
+          - en
+          initial: V
+        formatted_initials:
+          content: V.
+          language:
+          - en
+      surname:
+        content: Vasiliev
+        language:
+        - en
+      completename:
+        content: Victor Vasiliev
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Google
+  role:
+  - type: author
 version:
-- draft: '02'
-revdate: '2022-10-24'
+- draft: '03'
+revdate: '2023-01-18'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document defines the core behavior for Warp, a segmented live
-    media transport protocol over QUIC. Media is split into segments based on the
-    underlying media encoding and transmitted independently over QUIC streams. QUIC
-    streams are prioritized based on the delivery order, allowing less important segments
-    to be starved or dropped during congestion.</p>"
+- content: "<p>This document defines the core behavior for Warp, a live media transport
+    protocol over QUIC. Media is split into objects based on the underlying media
+    encoding and transmitted independently over QUIC streams. QUIC streams are prioritized
+    based on the delivery order, allowing less important objects to be starved or
+    dropped during congestion.</p>"
   language:
   - en
   script:
@@ -129,23 +157,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-lcurley-warp-01
+    id: draft-lcurley-warp-02
     docid:
-    - id: draft-lcurley-warp-01
+    - id: draft-lcurley-warp-02
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-lcurley-warp-01
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-lcurley-warp-03
-    docid:
-    - id: draft-lcurley-warp-03
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-lcurley-warp-03
+      content: draft-lcurley-warp-02
       format: text/plain
 series:
 - type: main
@@ -156,7 +174,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-lcurley-warp-02
+  number: draft-lcurley-warp-03
 doctype: internet-draft
 ext:
   schema-version: v1.0.0
