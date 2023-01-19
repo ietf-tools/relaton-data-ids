@@ -24,7 +24,13 @@ abstract:
     The second technique defines a SMTP extension that allows both the sender and
     receiver to participate in signing the message signature. It includes a path building
     technique that accurately defines the SMTP forwarding path of the message. Both
-    techniques permit a receiver to detect DKIM and ARC replay attacks and other attacks.</p>"
+    techniques permit a receiver to detect DKIM and ARC replay attacks and other attacks.
+    This specification also defines a relay flow identifier to prevent spammers from
+    using relay forwarding, We do this by having relays categorize their authenticated
+    traffic flows and publish to receivers identifiers associated with those flows.
+    Receivers can use this identifier to help categorize traffic through the relay
+    and use that identifier to apply fine-grain anti-abuse policies instead of on
+    the entire traffic through the relay.</p>"
   language:
   - en
   script:
@@ -70,6 +76,16 @@ relation:
       primary: true
     formattedref:
       content: draft-chuang-replay-resistant-arc-03
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-chuang-replay-resistant-arc-04
+    docid:
+    - id: draft-chuang-replay-resistant-arc-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-chuang-replay-resistant-arc-04
       format: text/plain
 ext:
   schema-version: v1.0.0
