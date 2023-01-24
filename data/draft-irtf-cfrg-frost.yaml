@@ -13,14 +13,17 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>In this draft, we present the two-round signing variant of FROST, a
-    Flexible Round-Optimized Schnorr Threshold signature scheme. FROST signatures
-    can be issued after a threshold number of entities cooperate to issue a signature,
-    allowing for improved distribution of trust and redundancy with respect to a secret
-    key. Further, this draft specifies signatures that are compatible with [RFC8032].
-    However, unlike [RFC8032], the protocol for producing signatures in this draft
-    is not deterministic, so as to ensure protection against a key-recovery attack
-    that is possible when even only one signer participant is malicious.</p>"
+- content: "<p>This document specifies the Flexible Round-Optimized Schnorr Threshold
+    (FROST) signing protocol. FROST signatures can be issued after a threshold number
+    of entities cooperate to compute a signature, allowing for improved distribution
+    of trust and redundancy with respect to a secret key. FROST depends only on a
+    prime-order group and cryptographic hash function. This document specifies a number
+    of ciphersuites to instantiate FROST using different prime- order groups and hash
+    functions. One such ciphersuite can be used to produce signatures that can be
+    verified with an Edwards-Curve Digital Signature Algorithm (EdDSA, as defined
+    in RFC8032) compliant verifier. However, unlike EdDSA, the signatures produced
+    by FROST are not deterministic. This document is a product of the Crypto Forum
+    Research Group (CFRG) in the IRTF.</p>"
   language:
   - en
   script:
@@ -146,6 +149,16 @@ relation:
       primary: true
     formattedref:
       content: draft-irtf-cfrg-frost-11
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-irtf-cfrg-frost-12
+    docid:
+    - id: draft-irtf-cfrg-frost-12
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-irtf-cfrg-frost-12
       format: text/plain
 ext:
   schema-version: v1.0.0

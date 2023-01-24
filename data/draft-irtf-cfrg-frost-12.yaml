@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.1
-id: draft-irtf-cfrg-frost-11
+id: draft-irtf-cfrg-frost-12
 title:
 - content: Two-Round Threshold Schnorr Signatures with FROST
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://www.ietf.org/archive/id/draft-irtf-cfrg-frost-11.txt
+- content: https://www.ietf.org/archive/id/draft-irtf-cfrg-frost-12.txt
   type: TXT
 type: standard
 docid:
-- id: draft-irtf-cfrg-frost-11
+- id: draft-irtf-cfrg-frost-12
   type: Internet-Draft
   primary: true
 - id: I-D.irtf-cfrg-frost
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.irtf-cfrg-frost
 date:
 - type: published
-  value: '2022-10-07'
+  value: '2023-01-24'
 contributor:
 - person:
     name:
@@ -140,21 +140,24 @@ contributor:
   role:
   - type: author
 version:
-- draft: '11'
-revdate: '2022-10-07'
+- draft: '12'
+revdate: '2023-01-24'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>In this draft, we present the two-round signing variant of FROST, a
-    Flexible Round-Optimized Schnorr Threshold signature scheme. FROST signatures
-    can be issued after a threshold number of entities cooperate to issue a signature,
-    allowing for improved distribution of trust and redundancy with respect to a secret
-    key. Further, this draft specifies signatures that are compatible with [RFC8032].
-    However, unlike [RFC8032], the protocol for producing signatures in this draft
-    is not deterministic, so as to ensure protection against a key-recovery attack
-    that is possible when even only one signer participant is malicious.</p>"
+- content: "<p>This document specifies the Flexible Round-Optimized Schnorr Threshold
+    (FROST) signing protocol. FROST signatures can be issued after a threshold number
+    of entities cooperate to compute a signature, allowing for improved distribution
+    of trust and redundancy with respect to a secret key. FROST depends only on a
+    prime-order group and cryptographic hash function. This document specifies a number
+    of ciphersuites to instantiate FROST using different prime- order groups and hash
+    functions. One such ciphersuite can be used to produce signatures that can be
+    verified with an Edwards-Curve Digital Signature Algorithm (EdDSA, as defined
+    in RFC8032) compliant verifier. However, unlike EdDSA, the signatures produced
+    by FROST are not deterministic. This document is a product of the Crypto Forum
+    Research Group (CFRG) in the IRTF.</p>"
   language:
   - en
   script:
@@ -163,23 +166,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-irtf-cfrg-frost-10
+    id: draft-irtf-cfrg-frost-11
     docid:
-    - id: draft-irtf-cfrg-frost-10
+    - id: draft-irtf-cfrg-frost-11
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-irtf-cfrg-frost-10
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-irtf-cfrg-frost-12
-    docid:
-    - id: draft-irtf-cfrg-frost-12
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-irtf-cfrg-frost-12
+      content: draft-irtf-cfrg-frost-11
       format: text/plain
 series:
 - type: main
@@ -190,7 +183,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-irtf-cfrg-frost-11
+  number: draft-irtf-cfrg-frost-12
 doctype: internet-draft
 ext:
   schema-version: v1.0.0
