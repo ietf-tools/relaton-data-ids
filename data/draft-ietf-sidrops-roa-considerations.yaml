@@ -13,14 +13,10 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>In RPKI, the address space holder needs to issue an ROA object when
-    authorizing one or more ASes to originate routes to IP prefix(es). During ROA
-    issurance process, the address space holder may need to specify an origin AS for
-    a list of IP prefixes. Additionally, the address space holder is free to choose
-    to put multiple prefixes into a single ROA or issue separate ROAs for each prefix
-    according to the current specification. This memo analyzes some operational problems
-    which may arise from ROAs containing multiple IP prefixes and recommends avoiding
-    placing multiple IP prefixes in one ROA as possible.</p>"
+- content: "<p>When using the RPKI, address space holders need to issue a ROA object(s)
+    to authorize one or more ASes to originate routes to IP prefix(es). This memo
+    discusses operational problems which may arise from ROAs containing multiple IP
+    prefixes, and recommends that each ROA only contain a single IP prefix.</p>"
   language:
   - en
   script:
@@ -86,6 +82,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-sidrops-roa-considerations-05
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-sidrops-roa-considerations-06
+    docid:
+    - id: draft-ietf-sidrops-roa-considerations-06
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-sidrops-roa-considerations-06
       format: text/plain
 ext:
   schema-version: v1.0.0
