@@ -1,0 +1,111 @@
+---
+schema-version: v1.2.1
+id: draft-mzhang-nfsv4-sequence-id-calibration-00
+title:
+- content: Sequence ID calibration for mis-ordered requests
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://www.ietf.org/archive/id/draft-mzhang-nfsv4-sequence-id-calibration-00.txt
+  type: TXT
+type: standard
+docid:
+- id: draft-mzhang-nfsv4-sequence-id-calibration-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.mzhang-nfsv4-sequence-id-calibration
+  type: IETF
+  scope: anchor
+docnumber: I-D.mzhang-nfsv4-sequence-id-calibration
+date:
+- type: published
+  value: '2023-01-27'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Zhang
+          language:
+          - en
+        - language:
+          - en
+          initial: Z
+        formatted_initials:
+          content: Z.
+          language:
+          - en
+      surname:
+        content: Mingqian
+        language:
+        - en
+      completename:
+        content: Zhang Mingqian
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei Technologies Co.
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        formatted_initials:
+          language:
+          - en
+      surname:
+        content: JingYang
+        language:
+        - en
+      completename:
+        content: JingYang
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei Technologies Co.
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2023-01-27'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>This document updates RFC8881, Network File System (NFS) version 4
+    minor version 1, by adding two operations to prevent the client from destroying
+    session when getting the reply of a mis-ordered request with NFS4ERR_SEQ_MISORDERED.
+    In NFSv4 minor version 1, sequence ID is used to ensure that the size of the needed
+    reply cache is tightly bounded. If the server gets a mis-ordered request, the
+    client will often break the session and establish a new session with the server.
+    This approach results in a significant burden on the client and the server. During
+    the process of session rebuilding, IO performance will be affected. This is especially
+    troublesome when network latency is substantial, as, for example when client and
+    server are in different locations. This document will propose extensions to NFSv4
+    that would allow client reconnection to be dispensed with.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-mzhang-nfsv4-sequence-id-calibration-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.0
