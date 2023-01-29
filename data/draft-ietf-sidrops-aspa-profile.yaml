@@ -13,11 +13,13 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document defines a profile for the Autonomous System Provider
-    Authorization (ASPA) object in the Resource Public Key Infrastructure (RPKI).
-    An ASPA is a digitally signed object that provides a means of validating that
-    a Customer Autonomous System (CAS) has authorized the members of a specified Provider
-    AS set as its upstream provider(s) and/or connected Internet-exchange route server(s).</p>"
+- content: "<p>This document defines a Cryptographic Message Syntax (CMS) protected
+    content type for Autonomous System Provider Authorization (ASPA) objects for use
+    with the Resource Public Key Infrastructure (RPKI). An ASPA is a digitally signed
+    object through which the issuer (the holder of an Autonomous System identifier),
+    can authorize one or more other Autonomous Systems (ASes) as its upstream providers.
+    When validated, an ASPA's eContent can be used for detection and mitigation of
+    route leaks.</p>"
   language:
   - en
   script:
@@ -143,6 +145,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-sidrops-aspa-profile-11
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-sidrops-aspa-profile-12
+    docid:
+    - id: draft-ietf-sidrops-aspa-profile-12
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-sidrops-aspa-profile-12
       format: text/plain
 ext:
   schema-version: v1.0.0
