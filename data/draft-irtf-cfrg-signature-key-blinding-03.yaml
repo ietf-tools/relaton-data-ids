@@ -1,65 +1,89 @@
 ---
 schema-version: v1.2.1
-id: draft-ietf-ipsecme-add-ike-06
+id: draft-irtf-cfrg-signature-key-blinding-03
 title:
-- content: Internet Key Exchange Protocol Version 2 (IKEv2) Configuration for Encrypted
-    DNS
+- content: Key Blinding for Signature Schemes
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://www.ietf.org/archive/id/draft-ietf-ipsecme-add-ike-06.txt
+- content: https://www.ietf.org/archive/id/draft-irtf-cfrg-signature-key-blinding-03.txt
   type: TXT
 type: standard
 docid:
-- id: draft-ietf-ipsecme-add-ike-06
+- id: draft-irtf-cfrg-signature-key-blinding-03
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-ipsecme-add-ike
+- id: I-D.irtf-cfrg-signature-key-blinding
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-ipsecme-add-ike
+docnumber: I-D.irtf-cfrg-signature-key-blinding
 date:
 - type: published
-  value: '2022-09-12'
+  value: '2023-01-31'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Mohamed
+        - content: Frank
           language:
           - en
         - language:
           - en
-          initial: M
+          initial: F
         formatted_initials:
-          content: M.
+          content: F.
           language:
           - en
       surname:
-        content: Boucadair
+        content: Denis
         language:
         - en
       completename:
-        content: Mohamed Boucadair
+        content: Frank Denis
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Orange
+        - content: Fastly Inc.
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Tirumaleswar
+        - content: Edward
           language:
           - en
+        - language:
+          - en
+          initial: E
+        formatted_initials:
+          content: E.
+          language:
+          - en
+      surname:
+        content: Eaton
+        language:
+        - en
+      completename:
+        content: Edward Eaton
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: University of Waterloo
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
         - language:
           - en
           initial: T
@@ -68,87 +92,61 @@ contributor:
           language:
           - en
       surname:
-        content: Reddy.K
+        content: Lepoint
         language:
         - en
       completename:
-        content: Tirumaleswar Reddy.K
+        content: Tancrède Lepoint
         language:
         - en
-    affiliation:
-    - organization:
-        name:
-        - content: Nokia
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Dan
+        - content: Christopher
           language:
           - en
         - language:
           - en
-          initial: D
+          initial: C
+        - language:
+          - en
+          initial: A
         formatted_initials:
-          content: D.
+          content: C. A.
           language:
           - en
       surname:
-        content: Wing
+        content: Wood
         language:
         - en
       completename:
-        content: Dan Wing
+        content: Christopher A. Wood
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Citrix Systems, Inc.
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Valery
-          language:
-          - en
-        - language:
-          - en
-          initial: V
-        formatted_initials:
-          content: V.
-          language:
-          - en
-      surname:
-        content: Smyslov
-        language:
-        - en
-      completename:
-        content: Valery Smyslov
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: ELVIS-PLUS
+        - content: Cloudflare, Inc.
   role:
   - type: author
 version:
-- draft: '06'
-revdate: '2022-09-12'
+- draft: '03'
+revdate: '2023-01-31'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document specifies new Internet Key Exchange Protocol Version
-    2 (IKEv2) Configuration Payload Attribute Types to assign DNS resolvers that support
-    encrypted DNS protocols, such as DNS-over-HTTPS (DoH), DNS-over-TLS (DoT), and
-    DNS-over-QUIC (DoQ).</p>"
+- content: "<p>This document describes extensions to existing digital signature schemes
+    for key blinding. The core property of signing with key blinding is that a blinded
+    public key and all signatures produced using the blinded key pair are independent
+    of the unblinded key pair. Moreover, signatures produced using blinded key pairs
+    are indistinguishable from signatures produced using unblinded key pairs. This
+    functionality has a variety of applications, including Tor onion services and
+    privacy-preserving airdrop for bootstrapping cryptocurrency systems.</p>"
   language:
   - en
   script:
@@ -157,23 +155,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-ipsecme-add-ike-05
+    id: draft-irtf-cfrg-signature-key-blinding-02
     docid:
-    - id: draft-ietf-ipsecme-add-ike-05
+    - id: draft-irtf-cfrg-signature-key-blinding-02
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-ipsecme-add-ike-05
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-ipsecme-add-ike-07
-    docid:
-    - id: draft-ietf-ipsecme-add-ike-07
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-ipsecme-add-ike-07
+      content: draft-irtf-cfrg-signature-key-blinding-02
       format: text/plain
 series:
 - type: main
@@ -184,7 +172,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-ipsecme-add-ike-06
+  number: draft-irtf-cfrg-signature-key-blinding-03
 doctype: internet-draft
 ext:
   schema-version: v1.0.0
