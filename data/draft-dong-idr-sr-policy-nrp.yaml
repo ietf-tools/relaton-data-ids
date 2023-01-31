@@ -16,15 +16,15 @@ abstract:
 - content: "<p>Segment Routing (SR) Policy is a set of candidate paths, each consisting
     of one or more segment lists and the associated information. The header of a packet
     steered in an SR Policy is augmented with an ordered list of segments associated
-    with that SR Policy. A Network Resource Partition (NRP) is a collection of network
-    resources allocated in the network which can be used to support one or a group
-    of IETF network slice services. In networks where there are multiple NRPs, an
-    SR Policy may be associated with a particular NRP. The association between SR
-    Policy and NRP needs to be specified, so that for service traffic which is steered
-    into the SR Policy, the header of the packets can be augmented with the information
-    associated with the NRP. An SR Policy candidate path can be distributed using
-    BGP SR Policy. This document defines the extensions to BGP SR policy to specify
-    the NRP which the SR Policy candidate path is associated with.</p>"
+    with that SR Policy. A Network Resource Partition (NRP) is a subset of network
+    resources allocated in the underlay network which can be used to support one or
+    a group of IETF network slice services. In networks where there are multiple NRPs,
+    an SR Policy may be associated with a particular NRP. The association between
+    SR Policy and NRP needs to be specified, so that for service traffic which is
+    steered into the SR Policy, the header of the packets can be augmented with the
+    information associated with the NRP. An SR Policy candidate path can be distributed
+    using BGP SR Policy. This document defines the extensions to BGP SR policy to
+    specify the NRP which the SR Policy candidate path is associated with.</p>"
   language:
   - en
   script:
@@ -50,6 +50,16 @@ relation:
       primary: true
     formattedref:
       content: draft-dong-idr-sr-policy-nrp-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-dong-idr-sr-policy-nrp-02
+    docid:
+    - id: draft-dong-idr-sr-policy-nrp-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-dong-idr-sr-policy-nrp-02
       format: text/plain
 ext:
   schema-version: v1.0.0
