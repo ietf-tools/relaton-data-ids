@@ -1,19 +1,16 @@
 ---
 schema-version: v1.2.1
-id: draft-kaliraj-bess-bgp-sig-private-mpls-labels-04
+id: draft-kaliraj-bess-bgp-sig-private-mpls-labels-05
 title:
-- content: BGP signalled MPLS-namespaces
+- content: BGP signaled MPLS namespaces
   language:
   - en
   script:
   - Latn
   format: text/plain
-link:
-- content: https://www.ietf.org/archive/id/draft-kaliraj-bess-bgp-sig-private-mpls-labels-04.txt
-  type: TXT
 type: standard
 docid:
-- id: draft-kaliraj-bess-bgp-sig-private-mpls-labels-04
+- id: draft-kaliraj-bess-bgp-sig-private-mpls-labels-05
   type: Internet-Draft
   primary: true
 - id: I-D.kaliraj-bess-bgp-sig-private-mpls-labels
@@ -22,7 +19,7 @@ docid:
 docnumber: I-D.kaliraj-bess-bgp-sig-private-mpls-labels
 date:
 - type: published
-  value: '2021-12-28'
+  value: '2023-02-03'
 contributor:
 - person:
     name:
@@ -84,24 +81,25 @@ contributor:
   role:
   - type: author
 version:
-- draft: '04'
-revdate: '2021-12-28'
+- draft: '05'
+revdate: '2023-02-03'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: <p>The MPLS-forwarding-layer in a core network is a shared resource. The
+- content: <p>The MPLS forwarding layer in a core network is a shared resource. The
     MPLS FIB at nodes in this layer contains labels that are dynamically allocated
-    and locally significant at that node. For some usecases like upstream-label-allocation,
-    it is useful to be able to create virtual private MPLS-forwarding-layers over
-    this shared MPLS-forwarding-layer. This allows installing deterministic private
-    label-values in the private-FIBs created at nodes participating in this private
-    MPLS forwarding-layer, while preserving the "locally significant" nature of the
-    underlying shared 'public' MPLS-forwarding-layer. This specification describes
-    the procedures to create such virtual private MPLS-forwarding layers (private
-    MPLS-planes) using a new BGP family. And gives a few example use-cases on how
-    this private forwarding-layers can be used.</p>
+    and locally significant at that node. These labels are scoped in context of the
+    global loopback address. Let us call this the global MPLS namespace. For some
+    usecases like upstream label allocation, it is useful to create private MPLS namespaces
+    (virtual MPLS FIB) over this shared MPLS forwarding layer. This allows installing
+    deterministic label values in the private FIBs created at nodes participating
+    in the private MPLS namespace, while preserving the "locally significant" nature
+    of the underlying shared global MPLS FIB. This specification describes the procedures
+    to create such virtual private MPLS forwarding layers (private MPLS namespaces)
+    using a new BGP family. And gives a few example use-cases on how this private
+    forwarding layers can be used.</p>
   language:
   - en
   script:
@@ -110,23 +108,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-kaliraj-bess-bgp-sig-private-mpls-labels-03
+    id: draft-kaliraj-bess-bgp-sig-private-mpls-labels-04
     docid:
-    - id: draft-kaliraj-bess-bgp-sig-private-mpls-labels-03
+    - id: draft-kaliraj-bess-bgp-sig-private-mpls-labels-04
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-kaliraj-bess-bgp-sig-private-mpls-labels-03
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-kaliraj-bess-bgp-sig-private-mpls-labels-05
-    docid:
-    - id: draft-kaliraj-bess-bgp-sig-private-mpls-labels-05
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-kaliraj-bess-bgp-sig-private-mpls-labels-05
+      content: draft-kaliraj-bess-bgp-sig-private-mpls-labels-04
       format: text/plain
 series:
 - type: main
@@ -137,7 +125,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-kaliraj-bess-bgp-sig-private-mpls-labels-04
+  number: draft-kaliraj-bess-bgp-sig-private-mpls-labels-05
 doctype: internet-draft
 ext:
   schema-version: v1.0.0
