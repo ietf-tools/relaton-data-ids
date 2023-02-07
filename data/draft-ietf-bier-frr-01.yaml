@@ -1,28 +1,25 @@
 ---
 schema-version: v1.2.1
-id: draft-chen-bier-te-frr-03
+id: draft-ietf-bier-frr-01
 title:
-- content: BIER-TE Fast ReRoute
+- content: BIER Fast ReRoute
   language:
   - en
   script:
   - Latn
   format: text/plain
-link:
-- content: https://www.ietf.org/archive/id/draft-chen-bier-te-frr-03.txt
-  type: TXT
 type: standard
 docid:
-- id: draft-chen-bier-te-frr-03
+- id: draft-ietf-bier-frr-01
   type: Internet-Draft
   primary: true
-- id: I-D.chen-bier-te-frr
+- id: I-D.ietf-bier-frr
   type: IETF
   scope: anchor
-docnumber: I-D.chen-bier-te-frr
+docnumber: I-D.ietf-bier-frr
 date:
 - type: published
-  value: '2022-08-15'
+  value: '2023-02-07'
 contributor:
 - person:
     name:
@@ -84,28 +81,56 @@ contributor:
     name:
       given:
         forename:
-        - content: Yisong
+        - content: Steffen
           language:
           - en
         - language:
           - en
-          initial: Y
+          initial: S
         formatted_initials:
-          content: Y.
+          content: S.
           language:
           - en
       surname:
-        content: Liu
+        content: Lindner
         language:
         - en
       completename:
-        content: Yisong Liu
+        content: Steffen Lindner
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: China Mobile
+        - content: University of Tuebingen
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Michael
+          language:
+          - en
+        - language:
+          - en
+          initial: M
+        formatted_initials:
+          content: M.
+          language:
+          - en
+      surname:
+        content: Menth
+        language:
+        - en
+      completename:
+        content: Michael Menth
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: University of Tuebingen
   role:
   - type: author
 - person:
@@ -165,6 +190,34 @@ contributor:
     - organization:
         name:
         - content: Verizon Inc.
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Yisong
+          language:
+          - en
+        - language:
+          - en
+          initial: Y
+        formatted_initials:
+          content: Y.
+          language:
+          - en
+      surname:
+        content: Liu
+        language:
+        - en
+      completename:
+        content: Yisong Liu
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: China Mobile
   role:
   - type: author
 - person:
@@ -252,20 +305,24 @@ contributor:
   role:
   - type: author
 version:
-- draft: '03'
-revdate: '2022-08-15'
+- draft: '01'
+revdate: '2023-02-07'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: <p>This document describes a mechanism for fast re-route (FRR) protection
-    against the failure of a transit node or link on an explicit point to multipoint
-    (P2MP) multicast path/tree in a "Bit Index Explicit Replication" (BIER) Traffic
-    Engineering (TE) domain. It does not have any per-path state in the core. For
-    a multicast packet to traverse a transit node along an explicit P2MP path, when
-    the node fails, its upstream hop node as a PLR reroutes the packet around the
-    failed node along the P2MP path once it detects the failure.</p>
+- content: "<p>BIER is a scalable multicast overlay that utilizes a routing underlay,
+    e.g., IP, to build up its Bit Index Forwarding Tables (BIFTs). This document proposes
+    Fast Reroute for BIER (BIER-FRR). It protects BIER traffic after detecting the
+    failure of a link or node in the core of a BIER domain until affected BIFT entries
+    are recomputed after reconvergence of the routing underlay. BIER-FRR is applied
+    locally at the point of local repair (PLR) and does not introduce any per-flow
+    state. The document specifies nomenclature for BIER-FRR and gives examples for
+    its integration in BIER forwarding. Furthermore, it presents operation modes for
+    BIER-FRR. Link and node protection may be chosen as protection level. Moreover,
+    the backup strategies tunnel-based BIER-FRR and LFA-based BIER-FRR are defined
+    and compared.</p>"
   language:
   - en
   script:
@@ -274,23 +331,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-chen-bier-te-frr-02
+    id: draft-ietf-bier-frr-00
     docid:
-    - id: draft-chen-bier-te-frr-02
+    - id: draft-ietf-bier-frr-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-chen-bier-te-frr-02
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-chen-bier-te-frr-04
-    docid:
-    - id: draft-chen-bier-te-frr-04
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-chen-bier-te-frr-04
+      content: draft-ietf-bier-frr-00
       format: text/plain
 series:
 - type: main
@@ -301,7 +348,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-chen-bier-te-frr-03
+  number: draft-ietf-bier-frr-01
 doctype: internet-draft
 ext:
   schema-version: v1.0.0
