@@ -1,111 +1,108 @@
 ---
 schema-version: v1.2.1
-id: draft-cth-rtgwg-bgp-control-09
+id: draft-chen-bier-te-egress-protect-04
 title:
-- content: Architecture for Use of BGP as Central Controller
+- content: BIER-TE Egress Protection
   language:
   - en
   script:
   - Latn
   format: text/plain
-link:
-- content: https://www.ietf.org/archive/id/draft-cth-rtgwg-bgp-control-09.txt
-  type: TXT
 type: standard
 docid:
-- id: draft-cth-rtgwg-bgp-control-09
+- id: draft-chen-bier-te-egress-protect-04
   type: Internet-Draft
   primary: true
-- id: I-D.cth-rtgwg-bgp-control
+- id: I-D.chen-bier-te-egress-protect
   type: IETF
   scope: anchor
-docnumber: I-D.cth-rtgwg-bgp-control
+docnumber: I-D.chen-bier-te-egress-protect
 date:
 - type: published
-  value: '2022-08-15'
+  value: '2023-02-07'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Yujia
+        - content: Huaimo
           language:
           - en
         - language:
           - en
-          initial: Y
+          initial: H
         formatted_initials:
-          content: Y.
+          content: H.
           language:
           - en
       surname:
-        content: Luo
+        content: Chen
         language:
         - en
       completename:
-        content: Yujia Luo
+        content: Huaimo Chen
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: China Telcom Co., Ltd.
+        - content: Futurewei
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Liang
+        - content: Mike
           language:
           - en
         - language:
           - en
-          initial: L
+          initial: M
         formatted_initials:
-          content: L.
+          content: M.
           language:
           - en
       surname:
-        content: Ou
+        content: McBride
         language:
         - en
       completename:
-        content: Liang Ou
+        content: Mike McBride
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: China Telcom Co., Ltd.
+        - content: Futurewei
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Xiang
+        - content: Aijun
           language:
           - en
         - language:
           - en
-          initial: X
+          initial: A
         formatted_initials:
-          content: X.
+          content: A.
           language:
           - en
       surname:
-        content: Huang
+        content: Wang
         language:
         - en
       completename:
-        content: Xiang Huang
+        content: Aijun Wang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Tencent
+        - content: China Telecom
   role:
   - type: author
 - person:
@@ -143,100 +140,128 @@ contributor:
     name:
       given:
         forename:
-        - content: Huaimo
+        - content: Yisong
           language:
           - en
         - language:
           - en
-          initial: H
+          initial: Y
         formatted_initials:
-          content: H.
+          content: Y.
           language:
           - en
       surname:
-        content: Chen
+        content: Liu
         language:
         - en
       completename:
-        content: Huaimo Chen
+        content: Yisong Liu
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Futurewei
+        - content: China Mobile
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Shunwan
+        - content: Yanhe
           language:
           - en
         - language:
           - en
-          initial: S
+          initial: Y
         formatted_initials:
-          content: S.
+          content: Y.
           language:
           - en
       surname:
-        content: Zhuang
+        content: Fan
         language:
         - en
       completename:
-        content: Shunwan Zhuang
+        content: Yanhe Fan
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei
+        - content: Casa Systems
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Zhenbin
+        - content: Lei
           language:
           - en
         - language:
           - en
-          initial: Z
+          initial: L
         formatted_initials:
-          content: Z.
+          content: L.
           language:
           - en
       surname:
-        content: Li
+        content: Liu
         language:
         - en
       completename:
-        content: Zhenbin Li
+        content: Lei Liu
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei
+        - content: Fujitsu
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Xufeng
+          language:
+          - en
+        - language:
+          - en
+          initial: X
+        formatted_initials:
+          content: X.
+          language:
+          - en
+      surname:
+        content: Liu
+        language:
+        - en
+      completename:
+        content: Xufeng Liu
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: IBM Corporation
   role:
   - type: author
 version:
-- draft: '09'
-revdate: '2022-08-15'
+- draft: '04'
+revdate: '2023-02-07'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>BGP is a core part of a network including Software-Defined Networking
-    (SDN) system. It has the traffic engineering information on the network topology
-    and can compute optimal paths for a given traffic flow across the network. This
-    document describes some reference architectures for BGP as a central controller.
-    A BGP-based central controller can simplify the operations on the network and
-    use network resources efficiently for providing services with high quality.</p>"
+- content: <p>This document describes a mechanism for fast protection against the
+    failure of an egress node of an explicit point to multipoint (P2MP) multicast
+    path/tree in a "Bit Index Explicit Replication" (BIER) Traffic Engineering (TE)
+    domain. It does not have any per-flow state in the core of the domain. For a multicast
+    packet to the egress node, when the egress node fails, its upstream hop as a PLR
+    sends the packet to the egress' backup node once the PLR detects the failure.</p>
   language:
   - en
   script:
@@ -245,23 +270,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-cth-rtgwg-bgp-control-08
+    id: draft-chen-bier-te-egress-protect-03
     docid:
-    - id: draft-cth-rtgwg-bgp-control-08
+    - id: draft-chen-bier-te-egress-protect-03
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-cth-rtgwg-bgp-control-08
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-cth-rtgwg-bgp-control-10
-    docid:
-    - id: draft-cth-rtgwg-bgp-control-10
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-cth-rtgwg-bgp-control-10
+      content: draft-chen-bier-te-egress-protect-03
       format: text/plain
 series:
 - type: main
@@ -272,7 +287,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-cth-rtgwg-bgp-control-09
+  number: draft-chen-bier-te-egress-protect-04
 doctype: internet-draft
 ext:
   schema-version: v1.0.0
