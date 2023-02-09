@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.1
-id: draft-chen-rtgwg-srv6-midpoint-protection-10
+id: draft-chen-rtgwg-srv6-midpoint-protection-11
 title:
 - content: SRv6 Midpoint Protection
   language:
@@ -8,12 +8,9 @@ title:
   script:
   - Latn
   format: text/plain
-link:
-- content: https://www.ietf.org/archive/id/draft-chen-rtgwg-srv6-midpoint-protection-10.txt
-  type: TXT
 type: standard
 docid:
-- id: draft-chen-rtgwg-srv6-midpoint-protection-10
+- id: draft-chen-rtgwg-srv6-midpoint-protection-11
   type: Internet-Draft
   primary: true
 - id: I-D.chen-rtgwg-srv6-midpoint-protection
@@ -22,7 +19,7 @@ docid:
 docnumber: I-D.chen-rtgwg-srv6-midpoint-protection
 date:
 - type: published
-  value: '2022-11-08'
+  value: '2023-02-08'
 contributor:
 - person:
     name:
@@ -196,8 +193,8 @@ contributor:
   role:
   - type: author
 version:
-- draft: '10'
-revdate: '2022-11-08'
+- draft: '11'
+revdate: '2023-02-08'
 language:
 - en
 script:
@@ -205,15 +202,12 @@ script:
 abstract:
 - content: "<p>The current local repair mechanism, e.g., TI-LFA, allows local repair
     actions on the direct neighbors of the failed node or link to temporarily route
-    traffic to the destination. This mechanism could not work properly when the failure
-    happens in the destination point. In SRv6 TE, the IPv6 destination address in
-    the outer IPv6 header could be the segment endpoint of the TE path rather than
-    the destination of the TE path. When the SRv6 endpoint fails, local repair couldn't
-    work on the direct neighbor of the failed endpoint either. This document defines
-    midpoint protection for SRv6 TE path, which enables other nodes on the network
-    to perform endpoint behaviors instead of the faulty node, update the IPv6 destination
-    address to the other endpoint, and choose the next hop based on the new destination
-    address.</p>"
+    traffic to the destination. This mechanism does not work properly for SRv6 TE
+    path after the failure happens in the destination point and IGP converges on the
+    failure. This document defines midpoint protection for SRv6 TE path, which enables
+    other nodes on the network to perform endpoint behaviors for the faulty node,
+    update the IPv6 destination address to the next endpoint after the faulty node,
+    and choose the next hop based on the new destination address.</p>"
   language:
   - en
   script:
@@ -222,23 +216,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-chen-rtgwg-srv6-midpoint-protection-09
+    id: draft-chen-rtgwg-srv6-midpoint-protection-10
     docid:
-    - id: draft-chen-rtgwg-srv6-midpoint-protection-09
+    - id: draft-chen-rtgwg-srv6-midpoint-protection-10
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-chen-rtgwg-srv6-midpoint-protection-09
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-chen-rtgwg-srv6-midpoint-protection-11
-    docid:
-    - id: draft-chen-rtgwg-srv6-midpoint-protection-11
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-chen-rtgwg-srv6-midpoint-protection-11
+      content: draft-chen-rtgwg-srv6-midpoint-protection-10
       format: text/plain
 series:
 - type: main
@@ -249,7 +233,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-chen-rtgwg-srv6-midpoint-protection-10
+  number: draft-chen-rtgwg-srv6-midpoint-protection-11
 doctype: internet-draft
 ext:
   schema-version: v1.0.0
