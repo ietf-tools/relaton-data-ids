@@ -13,16 +13,16 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>DKIM [RFC6376] is an IETF standard for the cryptographic protocol to
-    sign and authenticate email at the domain level and protect the integrity of messages
-    during transit. In particular this enables DKIM to be able authenticate email
-    through email forwarding. Section 8.6 of [RFC6376] defines a vulnerability called
-    DKIM Replay as a spam message sent through a SMTP MTA DKIM signer, that then is
-    sent to many more recipients, leveraging the reputation of the signer. This document
-    defines the damage this causes to email delivery and interoperability, and the
-    impacted mail flows. Part of the reason why this is such a difficult problem is
-    that receivers have a hard time differentiating between legitimate forwarding
-    flows and DKIM replay.</p>"
+- content: "<p>DomainKeys Identified Mail (DKIM, RFC6376) claims some responsibility
+    for a message by associating a domain and protecting the integrity of the covered
+    portion of a message during transit through a digital signature. DKIM survives
+    basic email relaying. In a Replay Attack, the recipient of a DKIM-signed message
+    sends the message further, to other recipients, while retaining the original,
+    validating signature, thereby seeking to leverage the reputation of the original
+    signer. This document discusses the damage this causes to email delivery and interoperability,
+    and the associated Mail Flows. A significant challenge to mitigating this problem
+    is that it is difficult for Receivers to differentiate between legitimate forwarding
+    flows and DKIM Replay.</p>"
   language:
   - en
   script:
@@ -38,6 +38,16 @@ relation:
       primary: true
     formattedref:
       content: draft-chuang-dkim-replay-problem-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-chuang-dkim-replay-problem-01
+    docid:
+    - id: draft-chuang-dkim-replay-problem-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-chuang-dkim-replay-problem-01
       format: text/plain
 ext:
   schema-version: v1.0.0
