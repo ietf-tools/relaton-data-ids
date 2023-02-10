@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.1
-id: draft-ietf-pim-assert-packing-05
+id: draft-ietf-pim-assert-packing-07
 title:
 - content: PIM Assert Message Packing
   language:
@@ -8,12 +8,9 @@ title:
   script:
   - Latn
   format: text/plain
-link:
-- content: https://www.ietf.org/archive/id/draft-ietf-pim-assert-packing-05.txt
-  type: TXT
 type: standard
 docid:
-- id: draft-ietf-pim-assert-packing-05
+- id: draft-ietf-pim-assert-packing-07
   type: Internet-Draft
   primary: true
 - id: I-D.ietf-pim-assert-packing
@@ -22,7 +19,7 @@ docid:
 docnumber: I-D.ietf-pim-assert-packing
 date:
 - type: published
-  value: '2021-11-22'
+  value: '2023-02-10'
 contributor:
 - person:
     name:
@@ -136,26 +133,26 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: ZTE
+        - content: ZTE Corporation
   role:
   - type: author
 version:
-- draft: '05'
-revdate: '2021-11-22'
+- draft: '07'
+revdate: '2023-02-10'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>In PIM-SM shared LAN networks, there is typically more than one upstream
-    router. When duplicate data packets appear on the LAN from different routers,
-    assert packets are sent from these routers to elect a single forwarder. The PIM
-    assert packets are sent periodically to keep the assert state. The PIM assert
-    packet carries information about a single multicast source and group, along with
-    the metric-preference and metric of the route towards the source or RP. This document
-    defines a standard to send and receive information for multiple multicast sources
-    and groups in a single PIM assert message. This can be particularly helpful when
-    there is traffic for a large number of multicast groups.</p>"
+- content: "<p>LANs often have more than one upstream router. When PIM Sparse Mode
+    (PIM-SM), including PIM-SSM, is used, this can lead to duplicate IP multicast
+    packets being forwarded by these PIM routers. PIM Assert messages are used to
+    elect a single forwarder for each IP multicast traffic flow between these routers.
+    This document defines a mechanism to send and receive information for multiple
+    IP multicast flows in a single PackedAssert message. This optimization reduces
+    the total number of PIM packets on the LAN and can therefore speed up the election
+    of the single forwarder, reducing the number of duplicate IP multicast packets
+    incurred.</p>"
   language:
   - en
   script:
@@ -163,16 +160,6 @@ abstract:
   format: text/html
 relation:
 - type: updates
-  bibitem:
-    id: draft-ietf-pim-assert-packing-04
-    docid:
-    - id: draft-ietf-pim-assert-packing-04
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-pim-assert-packing-04
-      format: text/plain
-- type: updatedBy
   bibitem:
     id: draft-ietf-pim-assert-packing-06
     docid:
@@ -191,7 +178,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-pim-assert-packing-05
+  number: draft-ietf-pim-assert-packing-07
 doctype: internet-draft
 ext:
   schema-version: v1.0.0
