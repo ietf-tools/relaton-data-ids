@@ -1,9 +1,8 @@
 ---
 schema-version: v1.2.1
-id: draft-ietf-lisp-pubsub-11
+id: draft-ietf-masque-connect-ip-06
 title:
-- content: Publish/Subscribe Functionality for the Locator/ID Separation Protocol
-    (LISP)
+- content: Proxying IP in HTTP
   language:
   - en
   script:
@@ -11,22 +10,78 @@ title:
   format: text/plain
 type: standard
 docid:
-- id: draft-ietf-lisp-pubsub-11
+- id: draft-ietf-masque-connect-ip-06
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-lisp-pubsub
+- id: I-D.ietf-masque-connect-ip
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-lisp-pubsub
+docnumber: I-D.ietf-masque-connect-ip
 date:
 - type: published
-  value: '2023-02-10'
+  value: '2023-02-13'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Alberto
+        - content: Tommy
+          language:
+          - en
+        - language:
+          - en
+          initial: T
+        formatted_initials:
+          content: T.
+          language:
+          - en
+      surname:
+        content: Pauly
+        language:
+        - en
+      completename:
+        content: Tommy Pauly
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Apple Inc.
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: David
+          language:
+          - en
+        - language:
+          - en
+          initial: D
+        formatted_initials:
+          content: D.
+          language:
+          - en
+      surname:
+        content: Schinazi
+        language:
+        - en
+      completename:
+        content: David Schinazi
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Google LLC
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Alex
           language:
           - en
         - language:
@@ -37,108 +92,24 @@ contributor:
           language:
           - en
       surname:
-        content: Rodriguez-Natal
+        content: Chernyakhovsky
         language:
         - en
       completename:
-        content: Alberto Rodriguez-Natal
+        content: Alex Chernyakhovsky
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cisco
+        - content: Google LLC
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Vina
-          language:
-          - en
-        - language:
-          - en
-          initial: V
-        formatted_initials:
-          content: V.
-          language:
-          - en
-      surname:
-        content: Ermagan
-        language:
-        - en
-      completename:
-        content: Vina Ermagan
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Google
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Albert
-          language:
-          - en
-        - language:
-          - en
-          initial: A
-        formatted_initials:
-          content: A.
-          language:
-          - en
-      surname:
-        content: Cabellos-Aparicio
-        language:
-        - en
-      completename:
-        content: Albert Cabellos-Aparicio
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: UPC/BarcelonaTech
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Sharon
-          language:
-          - en
-        - language:
-          - en
-          initial: S
-        formatted_initials:
-          content: S.
-          language:
-          - en
-      surname:
-        content: Barkai
-        language:
-        - en
-      completename:
-        content: Sharon Barkai
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Nexar
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Mohamed
+        - content: Mirja
           language:
           - en
         - language:
@@ -149,30 +120,60 @@ contributor:
           language:
           - en
       surname:
-        content: Boucadair
+        content: Kühlewind
         language:
         - en
       completename:
-        content: Mohamed Boucadair
+        content: Mirja Kühlewind
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Orange
+        - content: Ericsson
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Magnus
+          language:
+          - en
+        - language:
+          - en
+          initial: M
+        formatted_initials:
+          content: M.
+          language:
+          - en
+      surname:
+        content: Westerlund
+        language:
+        - en
+      completename:
+        content: Magnus Westerlund
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Ericsson
   role:
   - type: author
 version:
-- draft: '11'
-revdate: '2023-02-10'
+- draft: '06'
+revdate: '2023-02-13'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document specifies an extension to the request/reply based Locator/ID
-    Separation Protocol (LISP) control plane to enable Publish/Subscribe (PubSub)
-    operation.</p>"
+- content: "<p>This document describes how to proxy IP packets in HTTP. This protocol
+    is similar to UDP proxying in HTTP, but allows transmitting arbitrary IP packets.
+    More specifically, this document defines a protocol that allows an HTTP client
+    to create an IP tunnel through an HTTP server that acts as a proxy. This document
+    updates RFC 9298.</p>"
   language:
   - en
   script:
@@ -181,23 +182,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-lisp-pubsub-10
+    id: draft-ietf-masque-connect-ip-05
     docid:
-    - id: draft-ietf-lisp-pubsub-10
+    - id: draft-ietf-masque-connect-ip-05
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-lisp-pubsub-10
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-lisp-pubsub-12
-    docid:
-    - id: draft-ietf-lisp-pubsub-12
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-lisp-pubsub-12
+      content: draft-ietf-masque-connect-ip-05
       format: text/plain
 series:
 - type: main
@@ -208,7 +199,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-lisp-pubsub-11
+  number: draft-ietf-masque-connect-ip-06
 doctype: internet-draft
 ext:
   schema-version: v1.0.0
