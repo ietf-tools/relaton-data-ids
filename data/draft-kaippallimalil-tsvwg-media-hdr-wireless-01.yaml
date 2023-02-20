@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.1
-id: draft-kaippallimalil-tsvwg-media-hdr-wireless-00
+id: draft-kaippallimalil-tsvwg-media-hdr-wireless-01
 title:
 - content: Media Header Extensions for Wireless Networks
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://www.ietf.org/archive/id/draft-kaippallimalil-tsvwg-media-hdr-wireless-00.txt
-  type: TXT
+- content: https://datatracker.ietf.org/doc/html/draft-kaippallimalil-tsvwg-media-hdr-wireless-01
+  type: src
 type: standard
 docid:
-- id: draft-kaippallimalil-tsvwg-media-hdr-wireless-00
+- id: draft-kaippallimalil-tsvwg-media-hdr-wireless-01
   type: Internet-Draft
   primary: true
 - id: I-D.kaippallimalil-tsvwg-media-hdr-wireless
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.kaippallimalil-tsvwg-media-hdr-wireless
 date:
 - type: published
-  value: '2022-10-20'
+  value: '2023-02-20'
 contributor:
 - person:
     name:
@@ -81,8 +81,8 @@ contributor:
   role:
   - type: author
 version:
-- draft: '00'
-revdate: '2022-10-20'
+- draft: '01'
+revdate: '2023-02-20'
 language:
 - en
 script:
@@ -92,37 +92,36 @@ abstract:
     variations in link capacity over short intervals due to wireless channel conditions,
     interference, or the end-user's movement. These variations in capacity take place
     in the order of hundreds of milliseconds and is much too fast for end-to-end congestion
-    signaling by itself to convey the changes. Media applications on the other hand
-    demand both high throughput and low latency, and are able to dynamically adjust
-    the size and quality of a stream to match available network bandwidth. However,
-    catering to such media flows over a radio link where the capacity changes rapidly
-    requires the buffers to be managed carefully. This draft proposes additional information
-    about the media transported in each packet to manage the buffers and optimize
-    the scheduling of radio resources. The set of information proposed here includes
-    relative importance of the packet, burst length and timestamp to be conveyed by
-    the media application in a header extension. This can be used to provide the wireless
-    network the flexibility to prioritize packets that are essential when the radio
-    capacity is temporarily low, defer packets that can tolerate some additional delay,
-    or even drop packets selectively in more extreme conditions. Another aspect considered
-    here is the means by which the media packet information is transported. Potential
-    solutions include carrying this information in Media over QUIC extension headers,
-    UDP options, or in a MASQUE encapsulation between the application server and wireless
-    network entity.</p>"
+    signaling by itself to convey the changes for an application to adapt. Media applications
+    on the other hand demand both high throughput and low latency, and are able to
+    dynamically adjust the size and quality of a stream to match available network
+    bandwidth. However, catering to such media flows over a radio link where the capacity
+    changes rapidly requires the buffers and QoS in general to be managed carefully.
+    This draft proposes additional information about the media transported in each
+    packet to manage the buffers and optimize the scheduling of radio resources. The
+    set of information proposed here includes importance of the packet, burst length
+    and time budget to be conveyed by the media application in a new UDP option. The
+    metadata in the UDP option is used to provide the wireless network the flexibility
+    to prioritize packets that are essential when the radio capacity is temporarily
+    low, defer packets that can tolerate some additional delay, or even drop packets
+    selectively in more extreme conditions. This draft defines media metadata, a new
+    UDP option to carry this metadata and the operational aspects for using it between
+    a UDP source and a on-path wireless entity.</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-kaippallimalil-tsvwg-media-hdr-wireless-01
+    id: draft-kaippallimalil-tsvwg-media-hdr-wireless-00
     docid:
-    - id: draft-kaippallimalil-tsvwg-media-hdr-wireless-01
+    - id: draft-kaippallimalil-tsvwg-media-hdr-wireless-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-kaippallimalil-tsvwg-media-hdr-wireless-01
+      content: draft-kaippallimalil-tsvwg-media-hdr-wireless-00
       format: text/plain
 series:
 - type: main
@@ -133,7 +132,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-kaippallimalil-tsvwg-media-hdr-wireless-00
+  number: draft-kaippallimalil-tsvwg-media-hdr-wireless-01
 doctype: internet-draft
 ext:
   schema-version: v1.0.0
