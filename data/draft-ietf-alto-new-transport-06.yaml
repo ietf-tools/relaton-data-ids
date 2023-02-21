@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.1
-id: draft-ietf-alto-new-transport-05
+id: draft-ietf-alto-new-transport-06
 title:
 - content: ALTO Transport Information Publication Service
   language:
@@ -8,9 +8,12 @@ title:
   script:
   - Latn
   format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-alto-new-transport-06
+  type: src
 type: standard
 docid:
-- id: draft-ietf-alto-new-transport-05
+- id: draft-ietf-alto-new-transport-06
   type: Internet-Draft
   primary: true
 - id: I-D.ietf-alto-new-transport
@@ -19,7 +22,7 @@ docid:
 docnumber: I-D.ietf-alto-new-transport
 date:
 - type: published
-  value: '2023-02-06'
+  value: '2023-02-21'
 contributor:
 - person:
     name:
@@ -109,6 +112,34 @@ contributor:
     name:
       given:
         forename:
+        - content: Lauren
+          language:
+          - en
+        - language:
+          - en
+          initial: L
+        formatted_initials:
+          content: L.
+          language:
+          - en
+      surname:
+        content: Delwiche
+        language:
+        - en
+      completename:
+        content: Lauren Delwiche
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Yale University
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
         - content: Lachlan
           language:
           - en
@@ -134,33 +165,29 @@ contributor:
   role:
   - type: author
 version:
-- draft: '05'
-revdate: '2023-02-06'
+- draft: '06'
+revdate: '2023-02-21'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>The ALTO base protocol [RFC7285] is based on HTTP/1.x, designed for
+- content: "<p>The ALTO protocol (RFC 7285) leverages HTTP/1.x and is designed for
     the simple, sequential request-reply use case, in which an ALTO client requests
-    a sequence of information resources, and the server sends the complete content
-    of each information resource to the client one by one. To support the use case
-    that an ALTO client can monitor multiple resources at the same time and the ALTO
-    server sends only their updates, the ALTO Working Group introduced ALTO/SSE [RFC8895],
-    which defines a new, SSE-based multiplexing protocol on top of HTTP/1.x, to allow
-    the server to concurrently, and incrementally push updates to the client whenever
-    monitored network information resources change. However, newer versions of HTTP
-    (e.g., HTTP/2 [RFC7540]) already support concurrent, non-blocking transport of
-    multiple streams in the same HTTP connection. This document introduces the ALTO
-    transport information publication service (TIPS), which allows the naming of (i.e.,
-    assigning resource identifiers to) individual incremental updates to multiple
-    ALTO information resources and the distribution of the naming, enabling ALTO to
-    take advantage of newer HTTP versions. In particular, it gives an ALTO client
-    the new capability to explicitly request (pull) a specific incremental update.
-    It also provides an ALTO server the new capability to push a specific incremental
-    update using native HTTP/2 or HTTP/3 server push. This document defines TIPS as
-    a service, independent of client pull or server push. A companion document [draft-schott-alto-new-transport-push]
-    defines the complete server- push ALTO transport based on ALTO TIPS.</p>"
+    a sequence of information resources, and the server responds with the complete
+    content of each resource one at a time. ALTO/SSE (RFC 8895) defines a multiplexing
+    protocol on top of HTTP/1.x, so that the server can incrementally push resource
+    updates to the client whenever monitored network information resources change,
+    allowing the client to monitor multiple resources at the same time. However, HTTP/2
+    and later versions already support concurrent, non-blocking transport of multiple
+    streams in the same HTTP connection. To take advantage of newer HTTP features,
+    this document introduces the ALTO Transport Information Publication Service (TIPS).
+    TIPS allows the naming of (i.e., assigning resource identifiers to) individual
+    incremental updates to multiple ALTO information resources, and the distribution
+    of those names. It gives an ALTO client the capability to explicitly request (pull)
+    a specific incremental update. It also provides an ALTO server the capability
+    to push a specific incremental update. This document defines TIPS as a service,
+    with client pull and server push.</p>"
   language:
   - en
   script:
@@ -169,23 +196,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-alto-new-transport-04
+    id: draft-ietf-alto-new-transport-05
     docid:
-    - id: draft-ietf-alto-new-transport-04
+    - id: draft-ietf-alto-new-transport-05
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-alto-new-transport-04
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-alto-new-transport-06
-    docid:
-    - id: draft-ietf-alto-new-transport-06
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-alto-new-transport-06
+      content: draft-ietf-alto-new-transport-05
       format: text/plain
 series:
 - type: main
@@ -196,7 +213,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-alto-new-transport-05
+  number: draft-ietf-alto-new-transport-06
 doctype: internet-draft
 ext:
   schema-version: v1.0.0
