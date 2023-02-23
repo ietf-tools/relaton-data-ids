@@ -1,6 +1,7 @@
 name: Fetcher
 
 on:
+  pull_request:
   push:
     branches: [ main ]
   schedule:
@@ -8,6 +9,8 @@ on:
   workflow_dispatch:
 
 jobs:
+  gemfilesfetcher: 
+    uses: ietf-ribose/relaton-gemfiles-fetcher/.github/workflows/gemfiles-fetcher.yml@master
   fetch:
     name: IETF Internet-Drafts fetching
     runs-on: ubuntu-latest
@@ -22,15 +25,15 @@ jobs:
       - name: Use Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.1
+          ruby-version: 3.2
 
       - name: Install gem
         run: |
-          gem install relaton-cli
+          bundle install
       - name: Fetch documents
         run: |
           find ./data -name '*.yaml' | xargs rm -f
-          relaton fetch-data ietf-internet-drafts
+          bundle exec relaton fetch-data ietf-internet-drafts
       - name: Push data
         run: |
           echo `date` > flag.txt
