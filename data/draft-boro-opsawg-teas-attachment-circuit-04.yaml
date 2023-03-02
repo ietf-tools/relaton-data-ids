@@ -1,90 +1,62 @@
 ---
 schema-version: v1.2.1
-id: draft-ietf-spring-sr-replication-segment-12
+id: draft-boro-opsawg-teas-attachment-circuit-04
 title:
-- content: SR Replication Segment for Multi-point Service Delivery
+- content: YANG Data Models for 'Attachment Circuits'-as-a-Service (ACaaS)
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-spring-sr-replication-segment-12
+- content: https://datatracker.ietf.org/doc/html/draft-boro-opsawg-teas-attachment-circuit-04
   type: src
 type: standard
 docid:
-- id: draft-ietf-spring-sr-replication-segment-12
+- id: draft-boro-opsawg-teas-attachment-circuit-04
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-spring-sr-replication-segment
+- id: I-D.boro-opsawg-teas-attachment-circuit
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-spring-sr-replication-segment
+docnumber: I-D.boro-opsawg-teas-attachment-circuit
 date:
 - type: published
-  value: '2023-02-27'
+  value: '2023-03-02'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Daniel
+        - content: Mohamed
           language:
           - en
         - language:
           - en
-          initial: D
+          initial: M
         formatted_initials:
-          content: D.
+          content: M.
           language:
           - en
       surname:
-        content: Voyer
+        content: Boucadair
         language:
         - en
       completename:
-        content: Daniel Voyer
+        content: Mohamed Boucadair
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Bell Canada
+        - content: Orange
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Clarence
-          language:
-          - en
-        - language:
-          - en
-          initial: C
-        formatted_initials:
-          content: C.
-          language:
-          - en
-      surname:
-        content: Filsfils
-        language:
-        - en
-      completename:
-        content: Clarence Filsfils
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Cisco Systems, Inc.
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Rishabh
+        - content: Richard
           language:
           - en
         - language:
@@ -95,39 +67,70 @@ contributor:
           language:
           - en
       surname:
-        content: Parekh
+        content: Roberts
         language:
         - en
       completename:
-        content: Rishabh Parekh
+        content: Richard Roberts
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems, Inc.
+        - content: Juniper
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Hooman
+        - content: Oscar
           language:
           - en
         - language:
           - en
-          initial: H
+          initial: O
+        - language:
+          - en
+          initial: G
         formatted_initials:
-          content: H.
+          content: O. G.
           language:
           - en
       surname:
-        content: Bidgoli
+        content: de Dios
         language:
         - en
       completename:
-        content: Hooman Bidgoli
+        content: Oscar Gonzalez de Dios
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Telefonica
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Samier
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Barguil
+        language:
+        - en
+      completename:
+        content: Samier Barguil
         language:
         - en
     affiliation:
@@ -140,44 +143,46 @@ contributor:
     name:
       given:
         forename:
-        - content: Zhaohui
-          language:
-          - en
         - language:
           - en
-          initial: Z
-        - language:
-          - en
-          initial: J
+          initial: B
         formatted_initials:
-          content: Z. J.
+          content: B.
           language:
           - en
       surname:
-        content: Zhang
+        content: Wu
         language:
         - en
       completename:
-        content: Zhaohui (Jeffrey) Zhang
+        content: Bo Wu
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Juniper Networks
+        - content: Huawei Technologies
   role:
   - type: author
 version:
-- draft: '12'
-revdate: '2023-02-27'
+- draft: '04'
+revdate: '2023-03-02'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document describes the SR Replication segment for Multi-point
-    service delivery. A SR Replication segment allows a packet to be replicated from
-    a Replication Node to Downstream nodes.</p>"
+- content: "<p>This document specifies a YANG service data model for Attachment Circuits
+    (ACs). This model can be used for the provisioning of ACs prior or during service
+    provisioning (e.g., Network Slice Service). The document specifies also a module
+    that updates other service and network modules with the required information to
+    bind specific services to ACs that are created using the AC service model. Also,
+    the document specifies a set of reusable groupings. Whether a service model reuses
+    structures defined in the AC models or simply include an AC reference is a design
+    choice of these service models. Relying upon the AC service model to manage ACs
+    over which a service is delivered has the merit to decorrelate the management
+    of a service vs. upgrade the AC components to reflect recent AC technologies or
+    features.</p>"
   language:
   - en
   script:
@@ -186,23 +191,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-spring-sr-replication-segment-11
+    id: draft-boro-opsawg-teas-attachment-circuit-03
     docid:
-    - id: draft-ietf-spring-sr-replication-segment-11
+    - id: draft-boro-opsawg-teas-attachment-circuit-03
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-spring-sr-replication-segment-11
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-spring-sr-replication-segment-13
-    docid:
-    - id: draft-ietf-spring-sr-replication-segment-13
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-sr-replication-segment-13
+      content: draft-boro-opsawg-teas-attachment-circuit-03
       format: text/plain
 series:
 - type: main
@@ -213,7 +208,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-spring-sr-replication-segment-12
+  number: draft-boro-opsawg-teas-attachment-circuit-04
 doctype: internet-draft
 ext:
   schema-version: v1.0.0
