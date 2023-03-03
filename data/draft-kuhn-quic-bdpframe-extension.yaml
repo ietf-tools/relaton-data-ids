@@ -13,10 +13,15 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This draft describes the BDP Frame extension for QUIC. It enables the
-    exchange of information related to the path characteristics between the client
-    and the server during a connection. This information can later be exploited when
-    a new connection is established.</p>"
+- content: "<p>This document describes the BDP_FRAME extension for QUIC. The frame
+    enables the exchange of CC parameters related to the path characteristics between
+    the receiver and the sender during a connection. These CC parameters can be utilised
+    by the Careful Resume method when a new connection is established or for application-limited
+    traffic. The CC parameters allows a receiver to prepare to use the additional
+    capacity that could be amde available when the method is used. This CC parameters
+    can also be used by the receiver to request that previously computed CC parameters
+    related to the path characteristics, are not used, when the receiver has additional
+    information about the path or traffic to be sent.</p>"
   language:
   - en
   script:
@@ -32,6 +37,16 @@ relation:
       primary: true
     formattedref:
       content: draft-kuhn-quic-bdpframe-extension-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-kuhn-quic-bdpframe-extension-01
+    docid:
+    - id: draft-kuhn-quic-bdpframe-extension-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-kuhn-quic-bdpframe-extension-01
       format: text/plain
 ext:
   schema-version: v1.0.0
