@@ -1,62 +1,35 @@
 ---
 schema-version: v1.2.1
-id: draft-ietf-privacypass-protocol-08
+id: draft-ietf-sidrops-aspa-verification-12
 title:
-- content: Privacy Pass Issuance Protocol
+- content: BGP AS_PATH Verification Based on Autonomous System Provider Authorization
+    (ASPA) Objects
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-privacypass-protocol-08
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-sidrops-aspa-verification-12
   type: src
 type: standard
 docid:
-- id: draft-ietf-privacypass-protocol-08
+- id: draft-ietf-sidrops-aspa-verification-12
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-privacypass-protocol
+- id: I-D.ietf-sidrops-aspa-verification
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-privacypass-protocol
+docnumber: I-D.ietf-sidrops-aspa-verification
 date:
 - type: published
-  value: '2023-01-30'
+  value: '2023-03-06'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Sofia
-          language:
-          - en
-        - language:
-          - en
-          initial: S
-        formatted_initials:
-          content: S.
-          language:
-          - en
-      surname:
-        content: Celi
-        language:
-        - en
-      completename:
-        content: Sofia Celi
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Brave Software
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Alex
+        - content: Alexander
           language:
           - en
         - language:
@@ -67,118 +40,173 @@ contributor:
           language:
           - en
       surname:
-        content: Davidson
+        content: Azimov
         language:
         - en
       completename:
-        content: Alex Davidson
+        content: Alexander Azimov
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Brave Software
+        - content: Yandex
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Armando
+        - content: Eugene
           language:
           - en
         - language:
           - en
-          initial: A
+          initial: E
         formatted_initials:
-          content: A.
+          content: E.
           language:
           - en
       surname:
-        content: Faz-Hernandez
+        content: Bogomazov
         language:
         - en
       completename:
-        content: Armando Faz-Hernandez
+        content: Eugene Bogomazov
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cloudflare
+        - content: Qrator Labs
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Steven
+        - content: Randy
           language:
           - en
         - language:
           - en
-          initial: S
+          initial: R
         formatted_initials:
-          content: S.
+          content: R.
           language:
           - en
       surname:
-        content: Valdez
+        content: Bush
         language:
         - en
       completename:
-        content: Steven Valdez
+        content: Randy Bush
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Google LLC
+        - content: Internet Initiative Japan & Arrcus, Inc.
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Christopher
+        - content: Keyur
           language:
           - en
         - language:
           - en
-          initial: C
-        - language:
-          - en
-          initial: A
+          initial: K
         formatted_initials:
-          content: C. A.
+          content: K.
           language:
           - en
       surname:
-        content: Wood
+        content: Patel
         language:
         - en
       completename:
-        content: Christopher A. Wood
+        content: Keyur Patel
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cloudflare
+        - content: Arrcus
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Job
+          language:
+          - en
+        - language:
+          - en
+          initial: J
+        formatted_initials:
+          content: J.
+          language:
+          - en
+      surname:
+        content: Snijders
+        language:
+        - en
+      completename:
+        content: Job Snijders
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Fastly
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Kotikalapudi
+          language:
+          - en
+        - language:
+          - en
+          initial: K
+        formatted_initials:
+          content: K.
+          language:
+          - en
+      surname:
+        content: Sriram
+        language:
+        - en
+      completename:
+        content: Kotikalapudi Sriram
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: USA National Institute of Standards and Technology
   role:
   - type: author
 version:
-- draft: '08'
-revdate: '2023-01-30'
+- draft: '12'
+revdate: '2023-03-06'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document specifies two variants of the two-message issuance protocol
-    for Privacy Pass tokens: one that produces tokens that are privately verifiable
-    using the issuance private key, and another that produces tokens that are publicly
-    verifiable using the issuance public key.</p>"
+- content: "<p>This document describes procedures that make use of Autonomous System
+    Provider Authorization (ASPA) objects in the Resource Public Key Infrastructure
+    (RPKI) to verify the Border Gateway Protocol (BGP) AS_PATH attribute of advertised
+    routes. This type of AS_PATH verification provides detection and mitigation of
+    route leaks and improbable AS paths. It also to some degree provides protection
+    against forged-origin prefix hijacks.</p>"
   language:
   - en
   script:
@@ -187,23 +215,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-privacypass-protocol-07
+    id: draft-ietf-sidrops-aspa-verification-11
     docid:
-    - id: draft-ietf-privacypass-protocol-07
+    - id: draft-ietf-sidrops-aspa-verification-11
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-privacypass-protocol-07
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-privacypass-protocol-09
-    docid:
-    - id: draft-ietf-privacypass-protocol-09
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-privacypass-protocol-09
+      content: draft-ietf-sidrops-aspa-verification-11
       format: text/plain
 series:
 - type: main
@@ -214,7 +232,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-privacypass-protocol-08
+  number: draft-ietf-sidrops-aspa-verification-12
 doctype: internet-draft
 ext:
   schema-version: v1.0.0
