@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.1
-id: draft-ounsworth-cfrg-kem-combiners-00
+id: draft-ounsworth-cfrg-kem-combiners-01
 title:
 - content: Combiner function for hybrid key encapsulation mechanisms (Hybrid KEMs)
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ounsworth-cfrg-kem-combiners-00
+- content: https://datatracker.ietf.org/doc/html/draft-ounsworth-cfrg-kem-combiners-01
   type: src
 type: standard
 docid:
-- id: draft-ounsworth-cfrg-kem-combiners-00
+- id: draft-ounsworth-cfrg-kem-combiners-01
   type: Internet-Draft
   primary: true
 - id: I-D.ounsworth-cfrg-kem-combiners
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.ounsworth-cfrg-kem-combiners
 date:
 - type: published
-  value: '2022-11-25'
+  value: '2023-03-06'
 contributor:
 - person:
     name:
@@ -52,9 +52,37 @@ contributor:
         - content: Entrust Limited
   role:
   - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Aron
+          language:
+          - en
+        - language:
+          - en
+          initial: A
+        formatted_initials:
+          content: A.
+          language:
+          - en
+      surname:
+        content: Wussler
+        language:
+        - en
+      completename:
+        content: Aron Wussler
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Proton AG
+  role:
+  - type: author
 version:
-- draft: '00'
-revdate: '2022-11-25'
+- draft: '01'
+revdate: '2023-03-06'
 language:
 - en
 script:
@@ -62,27 +90,24 @@ script:
 abstract:
 - content: "<p>The migration to post-quantum cryptography often calls for performing
     multiple key encapsulations in parallel and then combining their outputs to derive
-    a single shared secret. This document defines the KEM combiner KDF( H(ss1) ||
-    H(ss2) ) which is considered to be a dual PRF in practice, even though not provably
-    secure. This mechanism simplifies to KDF( ss1 || ss2 ) when used with a KEM which
-    internally uses a KDF to produce its shared secret. RSA-KEM, ECDH, Edwards curve
-    DH, and CRYSTALS-Kyber are shown to meet this criteria and therefore be safe to
-    use with the simplified KEM combiner.</p>"
+    a single shared secret. This document defines a flexible multi-share KEM combiner
+    to join an arbitrary number of key shares, that is a multi-PRF compatible with
+    NIST SP 800-56Cr2 [SP800-56C].</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-ounsworth-cfrg-kem-combiners-01
+    id: draft-ounsworth-cfrg-kem-combiners-00
     docid:
-    - id: draft-ounsworth-cfrg-kem-combiners-01
+    - id: draft-ounsworth-cfrg-kem-combiners-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ounsworth-cfrg-kem-combiners-01
+      content: draft-ounsworth-cfrg-kem-combiners-00
       format: text/plain
 series:
 - type: main
@@ -93,7 +118,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ounsworth-cfrg-kem-combiners-00
+  number: draft-ounsworth-cfrg-kem-combiners-01
 doctype: internet-draft
 ext:
   schema-version: v1.0.0

@@ -15,12 +15,9 @@ docid:
 abstract:
 - content: "<p>The migration to post-quantum cryptography often calls for performing
     multiple key encapsulations in parallel and then combining their outputs to derive
-    a single shared secret. This document defines the KEM combiner KDF( H(ss1) ||
-    H(ss2) ) which is considered to be a dual PRF in practice, even though not provably
-    secure. This mechanism simplifies to KDF( ss1 || ss2 ) when used with a KEM which
-    internally uses a KDF to produce its shared secret. RSA-KEM, ECDH, Edwards curve
-    DH, and CRYSTALS-Kyber are shown to meet this criteria and therefore be safe to
-    use with the simplified KEM combiner.</p>"
+    a single shared secret. This document defines a flexible multi-share KEM combiner
+    to join an arbitrary number of key shares, that is a multi-PRF compatible with
+    NIST SP 800-56Cr2 [SP800-56C].</p>"
   language:
   - en
   script:
@@ -36,6 +33,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ounsworth-cfrg-kem-combiners-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ounsworth-cfrg-kem-combiners-01
+    docid:
+    - id: draft-ounsworth-cfrg-kem-combiners-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ounsworth-cfrg-kem-combiners-01
       format: text/plain
 ext:
   schema-version: v1.0.0
