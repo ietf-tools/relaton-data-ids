@@ -13,13 +13,13 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document introduces a mechanism to specify a Segment Routing (SR)
-    policy, as a collection of SR candidate paths. An SR policy is identified by &lt;headend,
-    color, endpoint&gt; tuple. An SR policy can contain one or more candidate paths
-    where each candidate path is identified in PCEP by its uniquely assigned PLSP-ID.
-    This document proposes extension to PCEP to support association among candidate
-    paths of a given SR policy. The mechanism proposed in this document is applicable
-    to both MPLS and IPv6 data planes of SR.</p>"
+- content: "<p>A Segment Routing (SR) Policy ([RFC9256]) is a non-empty set of SR
+    Candidate Paths, that all share the same &lt;headend, color, endpoint&gt; tuple.
+    This document extends [RFC8664] to fully support the SR Policy construct. SR Policy
+    is modeled in PCEP as an Association of one or more SR Candidate Paths. PCEP extensions
+    are defined to signal additional attributes of an SR Policy, which are not covered
+    by [RFC8664]. The mechanism is applicable to all data planes of SR (MPLS, SRv6,
+    etc.).</p>"
   language:
   - en
   script:
@@ -115,6 +115,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-pce-segment-routing-policy-cp-08
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-pce-segment-routing-policy-cp-09
+    docid:
+    - id: draft-ietf-pce-segment-routing-policy-cp-09
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-pce-segment-routing-policy-cp-09
       format: text/plain
 ext:
   schema-version: v1.0.0

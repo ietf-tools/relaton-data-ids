@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.1
-id: draft-ietf-pce-segment-routing-policy-cp-08
+id: draft-ietf-pce-segment-routing-policy-cp-09
 title:
 - content: PCEP extension to support Segment Routing Policy Candidate Paths
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-pce-segment-routing-policy-cp-08
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-pce-segment-routing-policy-cp-09
   type: src
 type: standard
 docid:
-- id: draft-ietf-pce-segment-routing-policy-cp-08
+- id: draft-ietf-pce-segment-routing-policy-cp-09
   type: Internet-Draft
   primary: true
 - id: I-D.ietf-pce-segment-routing-policy-cp
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.ietf-pce-segment-routing-policy-cp
 date:
 - type: published
-  value: '2022-10-24'
+  value: '2023-03-07'
 contributor:
 - person:
     name:
@@ -49,7 +49,7 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems
+        - content: Cisco Systems, Inc.
   role:
   - type: author
 - person:
@@ -105,7 +105,7 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Juniper Networks
+        - content: Juniper Networks, Inc.
   role:
   - type: author
 - person:
@@ -165,20 +165,20 @@ contributor:
   role:
   - type: author
 version:
-- draft: '08'
-revdate: '2022-10-24'
+- draft: '09'
+revdate: '2023-03-07'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document introduces a mechanism to specify a Segment Routing (SR)
-    policy, as a collection of SR candidate paths. An SR policy is identified by &lt;headend,
-    color, endpoint&gt; tuple. An SR policy can contain one or more candidate paths
-    where each candidate path is identified in PCEP by its uniquely assigned PLSP-ID.
-    This document proposes extension to PCEP to support association among candidate
-    paths of a given SR policy. The mechanism proposed in this document is applicable
-    to both MPLS and IPv6 data planes of SR.</p>"
+- content: "<p>A Segment Routing (SR) Policy ([RFC9256]) is a non-empty set of SR
+    Candidate Paths, that all share the same &lt;headend, color, endpoint&gt; tuple.
+    This document extends [RFC8664] to fully support the SR Policy construct. SR Policy
+    is modeled in PCEP as an Association of one or more SR Candidate Paths. PCEP extensions
+    are defined to signal additional attributes of an SR Policy, which are not covered
+    by [RFC8664]. The mechanism is applicable to all data planes of SR (MPLS, SRv6,
+    etc.).</p>"
   language:
   - en
   script:
@@ -187,23 +187,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-pce-segment-routing-policy-cp-07
+    id: draft-ietf-pce-segment-routing-policy-cp-08
     docid:
-    - id: draft-ietf-pce-segment-routing-policy-cp-07
+    - id: draft-ietf-pce-segment-routing-policy-cp-08
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-pce-segment-routing-policy-cp-07
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-pce-segment-routing-policy-cp-09
-    docid:
-    - id: draft-ietf-pce-segment-routing-policy-cp-09
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-pce-segment-routing-policy-cp-09
+      content: draft-ietf-pce-segment-routing-policy-cp-08
       format: text/plain
 series:
 - type: main
@@ -214,7 +204,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-pce-segment-routing-policy-cp-08
+  number: draft-ietf-pce-segment-routing-policy-cp-09
 doctype: internet-draft
 ext:
   schema-version: v1.0.0
