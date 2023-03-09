@@ -1,49 +1,49 @@
 ---
 schema-version: v1.2.1
-id: draft-chen-bier-te-lan-05
+id: draft-ietf-idr-sdwan-edge-discovery-06
 title:
-- content: BIER-TE for Broadcast Link
+- content: BGP UPDATE for SDWAN Edge Discovery
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-chen-bier-te-lan-05
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-sdwan-edge-discovery-06
   type: src
 type: standard
 docid:
-- id: draft-chen-bier-te-lan-05
+- id: draft-ietf-idr-sdwan-edge-discovery-06
   type: Internet-Draft
   primary: true
-- id: I-D.chen-bier-te-lan
+- id: I-D.ietf-idr-sdwan-edge-discovery
   type: IETF
   scope: anchor
-docnumber: I-D.chen-bier-te-lan
+docnumber: I-D.ietf-idr-sdwan-edge-discovery
 date:
 - type: published
-  value: '2023-03-07'
+  value: '2023-03-09'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Huaimo
+        - content: Linda
           language:
           - en
         - language:
           - en
-          initial: H
+          initial: L
         formatted_initials:
-          content: H.
+          content: L.
           language:
           - en
       surname:
-        content: Chen
+        content: Dunbar
         language:
         - en
       completename:
-        content: Huaimo Chen
+        content: Linda Dunbar
         language:
         - en
     affiliation:
@@ -56,56 +56,84 @@ contributor:
     name:
       given:
         forename:
-        - content: Mike
+        - content: Susan
           language:
           - en
         - language:
           - en
-          initial: M
+          initial: S
         formatted_initials:
-          content: M.
+          content: S.
           language:
           - en
       surname:
-        content: McBride
+        content: Hares
         language:
         - en
       completename:
-        content: Mike McBride
+        content: Susan Hares
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Futurewei
+        - content: Hickory Hill Consulting
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Aijun
+        - content: Robert
           language:
           - en
         - language:
           - en
-          initial: A
+          initial: R
         formatted_initials:
-          content: A.
+          content: R.
           language:
           - en
       surname:
-        content: Wang
+        content: Raszuk
         language:
         - en
       completename:
-        content: Aijun Wang
+        content: Robert Raszuk
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: China Telecom
+        - content: Arrcus
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Kausik
+          language:
+          - en
+        - language:
+          - en
+          initial: K
+        formatted_initials:
+          content: K.
+          language:
+          - en
+      surname:
+        content: Majumdar
+        language:
+        - en
+      completename:
+        content: Kausik Majumdar
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Microsoft
   role:
   - type: author
 - person:
@@ -136,77 +164,22 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Verizon Inc.
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Lei
-          language:
-          - en
-        - language:
-          - en
-          initial: L
-        formatted_initials:
-          content: L.
-          language:
-          - en
-      surname:
-        content: Liu
-        language:
-        - en
-      completename:
-        content: Lei Liu
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Fujitsu
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Xufeng
-          language:
-          - en
-        - language:
-          - en
-          initial: X
-        formatted_initials:
-          content: X.
-          language:
-          - en
-      surname:
-        content: Liu
-        language:
-        - en
-      completename:
-        content: Xufeng Liu
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Volta Networks
+        - content: Verizon
   role:
   - type: author
 version:
-- draft: '05'
-revdate: '2023-03-07'
+- draft: '06'
+revdate: '2023-03-09'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: <p>This document describes extensions to "Bit Index Explicit Replication
-    Traffic Engineering" (BIER-TE) for supporting LANs (i.e., broadcast links). For
-    a multicast packet with an explicit point-to-multipoint (P2MP) path traversing
-    LANs, the packet is replicated and forwarded statelessly along the path.</p>
+- content: "<p>The document describes the encoding of BGP UPDATE messages for the
+    SDWAN edge node property discovery. In the context of this document, BGP Route
+    Reflector (RR) is the component of the SDWAN Controller that receives the BGP
+    UPDATE from SDWAN edges and in turns propagates the information to the intended
+    peers that are authorized to communicate via the SDWAN overlay network.</p>"
   language:
   - en
   script:
@@ -215,23 +188,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-chen-bier-te-lan-04
+    id: draft-ietf-idr-sdwan-edge-discovery-05
     docid:
-    - id: draft-chen-bier-te-lan-04
+    - id: draft-ietf-idr-sdwan-edge-discovery-05
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-chen-bier-te-lan-04
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-chen-bier-te-lan-06
-    docid:
-    - id: draft-chen-bier-te-lan-06
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-chen-bier-te-lan-06
+      content: draft-ietf-idr-sdwan-edge-discovery-05
       format: text/plain
 series:
 - type: main
@@ -242,7 +205,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-chen-bier-te-lan-05
+  number: draft-ietf-idr-sdwan-edge-discovery-06
 doctype: internet-draft
 ext:
   schema-version: v1.0.0
