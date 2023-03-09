@@ -1,62 +1,90 @@
 ---
 schema-version: v1.2.1
-id: draft-ietf-bfd-secure-sequence-numbers-09
+id: draft-ietf-pce-sr-p2mp-policy-03
 title:
-- content: Secure BFD Sequence Numbers
+- content: PCEP extensions for p2mp sr policy
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-bfd-secure-sequence-numbers-09
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-pce-sr-p2mp-policy-03
   type: src
 type: standard
 docid:
-- id: draft-ietf-bfd-secure-sequence-numbers-09
+- id: draft-ietf-pce-sr-p2mp-policy-03
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-bfd-secure-sequence-numbers
+- id: I-D.ietf-pce-sr-p2mp-policy
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-bfd-secure-sequence-numbers
+docnumber: I-D.ietf-pce-sr-p2mp-policy
 date:
 - type: published
-  value: '2022-03-29'
+  value: '2023-03-09'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Mahesh
+        - content: Hooman
           language:
           - en
         - language:
           - en
-          initial: M
+          initial: H
         formatted_initials:
-          content: M.
+          content: H.
           language:
           - en
       surname:
-        content: Jethanandani
+        content: Bidgoli
         language:
         - en
       completename:
-        content: Mahesh Jethanandani
+        content: Hooman Bidgoli
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Kloud Services
+        - content: Nokia
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Sonal
+        - content: Daniel
+          language:
+          - en
+        - language:
+          - en
+          initial: D
+        formatted_initials:
+          content: D.
+          language:
+          - en
+      surname:
+        content: Voyer
+        language:
+        - en
+      completename:
+        content: Daniel Voyer
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Bell Canada
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Saranya
           language:
           - en
         - language:
@@ -67,24 +95,24 @@ contributor:
           language:
           - en
       surname:
-        content: Agarwal
+        content: Rajarathinam
         language:
         - en
       completename:
-        content: Sonal Agarwal
+        content: Saranya Rajarathinam
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems, Inc
+        - content: Nokia
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Ashesh
+        - content: Anuj
           language:
           - en
         - language:
@@ -95,88 +123,87 @@ contributor:
           language:
           - en
       surname:
-        content: Mishra
+        content: Budhiraja
         language:
         - en
       completename:
-        content: Ashesh Mishra
+        content: Anuj Budhiraja
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: O3b Networks
+        - content: Cisco System
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Ankur
+        - content: Tarek
           language:
           - en
         - language:
           - en
-          initial: A
+          initial: T
         formatted_initials:
-          content: A.
+          content: T.
           language:
           - en
       surname:
-        content: Saxena
+        content: Saad
         language:
         - en
       completename:
-        content: Ankur Saxena
+        content: Tarek Saad
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Ciena Corporation
+        - content: Juniper Networks
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Alan
+        - content: Siva
           language:
           - en
         - language:
           - en
-          initial: A
+          initial: S
         formatted_initials:
-          content: A.
+          content: S.
           language:
           - en
       surname:
-        content: DeKok
+        content: Sivabalan
         language:
         - en
       completename:
-        content: Alan DeKok
+        content: Siva Sivabalan
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Network RADIUS SARL
+        - content: Ciena
   role:
   - type: author
 version:
-- draft: '09'
-revdate: '2022-03-29'
+- draft: '03'
+revdate: '2023-03-09'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document describes two new BFD Authentication mechanism, Meticulous
-    Keyed ISAAC, and Meticulous Keyed FNV1A. These mechanisms can be used to authenticate
-    BFD packets, and secure the sequence number exchange, with less CPU time cost
-    than using MD5 or SHA1, with the tradeoff of decreased security. This document
-    updates RFC 5880.</p>"
+- content: "<p>SR P2MP policies are set of policies that enable architecture for P2MP
+    service delivery. This document specifies extensions to the Path Computation Element
+    Communication Protocol (PCEP) that allow a stateful PCE to compute and initiate
+    P2MP paths from a Root to a set of Leaves.</p>"
   language:
   - en
   script:
@@ -185,23 +212,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-bfd-secure-sequence-numbers-08
+    id: draft-ietf-pce-sr-p2mp-policy-02
     docid:
-    - id: draft-ietf-bfd-secure-sequence-numbers-08
+    - id: draft-ietf-pce-sr-p2mp-policy-02
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-bfd-secure-sequence-numbers-08
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-bfd-secure-sequence-numbers-10
-    docid:
-    - id: draft-ietf-bfd-secure-sequence-numbers-10
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-bfd-secure-sequence-numbers-10
+      content: draft-ietf-pce-sr-p2mp-policy-02
       format: text/plain
 series:
 - type: main
@@ -212,7 +229,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-bfd-secure-sequence-numbers-09
+  number: draft-ietf-pce-sr-p2mp-policy-03
 doctype: internet-draft
 ext:
   schema-version: v1.0.0
