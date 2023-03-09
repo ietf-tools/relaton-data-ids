@@ -1,65 +1,146 @@
 ---
 schema-version: v1.2.1
-id: draft-ietf-bess-evpn-bfd-03
+id: draft-ietf-oauth-dpop-14
 title:
-- content: EVPN Network Layer Fault Management
+- content: OAuth 2.0 Demonstrating Proof-of-Possession at the Application Layer (DPoP)
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-bess-evpn-bfd-03
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-oauth-dpop-14
   type: src
 type: standard
 docid:
-- id: draft-ietf-bess-evpn-bfd-03
+- id: draft-ietf-oauth-dpop-14
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-bess-evpn-bfd
+- id: I-D.ietf-oauth-dpop
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-bess-evpn-bfd
+docnumber: I-D.ietf-oauth-dpop
 date:
 - type: published
-  value: '2021-02-22'
+  value: '2023-03-08'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Vengada
+        - content: Daniel
           language:
           - en
         - language:
           - en
-          initial: V
-        - language:
-          - en
-          initial: P
+          initial: D
         formatted_initials:
-          content: V. P.
+          content: D.
           language:
           - en
       surname:
-        content: Govindan
+        content: Fett
         language:
         - en
       completename:
-        content: Vengada Prasad Govindan
+        content: Daniel Fett
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems
+        - content: yes.com
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Mallik
+        - content: Brian
+          language:
+          - en
+        - language:
+          - en
+          initial: B
+        formatted_initials:
+          content: B.
+          language:
+          - en
+      surname:
+        content: Campbell
+        language:
+        - en
+      completename:
+        content: Brian Campbell
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Ping Identity
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: John
+          language:
+          - en
+        - language:
+          - en
+          initial: J
+        formatted_initials:
+          content: J.
+          language:
+          - en
+      surname:
+        content: Bradley
+        language:
+        - en
+      completename:
+        content: John Bradley
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Yubico
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Torsten
+          language:
+          - en
+        - language:
+          - en
+          initial: T
+        formatted_initials:
+          content: T.
+          language:
+          - en
+      surname:
+        content: Lodderstedt
+        language:
+        - en
+      completename:
+        content: Torsten Lodderstedt
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: yes.com
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Michael
           language:
           - en
         - language:
@@ -70,119 +151,58 @@ contributor:
           language:
           - en
       surname:
-        content: Mudigonda
+        content: Jones
         language:
         - en
       completename:
-        content: Mallik Mudigonda
+        content: Michael Jones
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems
+        - content: Microsoft
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Ali
-          language:
-          - en
-        - language:
-          - en
-          initial: A
-        formatted_initials:
-          content: A.
-          language:
-          - en
-      surname:
-        content: Sajassi
-        language:
-        - en
-      completename:
-        content: Ali Sajassi
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Cisco Systems
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Greg
-          language:
-          - en
-        - language:
-          - en
-          initial: G
-        formatted_initials:
-          content: G.
-          language:
-          - en
-      surname:
-        content: Mirsky
-        language:
-        - en
-      completename:
-        content: Greg Mirsky
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: ZTE
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Donald
+        - content: David
           language:
           - en
         - language:
           - en
           initial: D
-        - language:
-          - en
-          initial: E
         formatted_initials:
-          content: D. E.
+          content: D.
           language:
           - en
       surname:
-        content: Eastlake
+        content: Waite
         language:
         - en
       completename:
-        content: Donald E. Eastlake 3rd
+        content: David Waite
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Futurewei Technologies
+        - content: Ping Identity
   role:
   - type: author
 version:
-- draft: '03'
-revdate: '2021-02-22'
+- draft: '14'
+revdate: '2023-03-08'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document specifies proactive, in-band network layer OAM mechanisms
-    to detect loss of continuity and miss-connection faults that affect unicast and
-    multi-destination paths (used by Broadcast, Unknown Unicast, and Multicast traffic)
-    in an Ethernet VPN (EVPN) network. The mechanisms specified in the draft are based
-    on the widely adopted Bidirectional Forwarding Detection (BFD) protocol.</p>"
+- content: "<p>This document describes a mechanism for sender-constraining OAuth 2.0
+    tokens via a proof-of-possession mechanism on the application level. This mechanism
+    allows for the detection of replay attacks with access and refresh tokens.</p>"
   language:
   - en
   script:
@@ -191,23 +211,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-bess-evpn-bfd-02
+    id: draft-ietf-oauth-dpop-13
     docid:
-    - id: draft-ietf-bess-evpn-bfd-02
+    - id: draft-ietf-oauth-dpop-13
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-bess-evpn-bfd-02
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-bess-evpn-bfd-04
-    docid:
-    - id: draft-ietf-bess-evpn-bfd-04
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-bess-evpn-bfd-04
+      content: draft-ietf-oauth-dpop-13
       format: text/plain
 series:
 - type: main
@@ -218,7 +228,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-bess-evpn-bfd-03
+  number: draft-ietf-oauth-dpop-14
 doctype: internet-draft
 ext:
   schema-version: v1.0.0
