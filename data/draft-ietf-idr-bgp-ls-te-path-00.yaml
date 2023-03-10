@@ -1,65 +1,34 @@
 ---
 schema-version: v1.2.1
-id: draft-ietf-netmod-acl-extensions-00
+id: draft-ietf-idr-bgp-ls-te-path-00
 title:
-- content: Extensions to the Access Control Lists (ACLs) YANG Model
+- content: Advertisement of Traffic Engineering Paths using BGP Link-State
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-netmod-acl-extensions-00
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-bgp-ls-te-path-00
   type: src
 type: standard
 docid:
-- id: draft-ietf-netmod-acl-extensions-00
+- id: draft-ietf-idr-bgp-ls-te-path-00
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-netmod-acl-extensions
+- id: I-D.ietf-idr-bgp-ls-te-path
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-netmod-acl-extensions
+docnumber: I-D.ietf-idr-bgp-ls-te-path
 date:
 - type: published
-  value: '2023-02-16'
+  value: '2023-03-10'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Oscar
-          language:
-          - en
-        - language:
-          - en
-          initial: O
-        - language:
-          - en
-          initial: G
-        formatted_initials:
-          content: O. G.
-          language:
-          - en
-      surname:
-        content: de Dios
-        language:
-        - en
-      completename:
-        content: Oscar Gonzalez de Dios
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Telefonica
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Samier
+        - content: Stefano
           language:
           - en
         - language:
@@ -70,106 +39,145 @@ contributor:
           language:
           - en
       surname:
-        content: Barguil
+        content: Previdi
         language:
         - en
       completename:
-        content: Samier Barguil
+        content: Stefano Previdi
         language:
         - en
-    affiliation:
-    - organization:
-        name:
-        - content: Telefonica
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Mohamed
+        - content: Ketan
           language:
           - en
         - language:
           - en
-          initial: M
+          initial: K
         formatted_initials:
-          content: M.
+          content: K.
           language:
           - en
       surname:
-        content: Boucadair
+        content: Talaulikar
         language:
         - en
       completename:
-        content: Mohamed Boucadair
+        content: Ketan Talaulikar
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Orange
+        - content: Cisco Systems
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Qin
+        - content: Jie
           language:
           - en
         - language:
           - en
-          initial: Q
+          initial: J
         formatted_initials:
-          content: Q.
+          content: J.
           language:
           - en
       surname:
-        content: Wu
+        content: Dong
         language:
         - en
       completename:
-        content: Qin Wu
+        content: Jie Dong
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huaweim
+        - content: Huawei Technologies
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Hannes
+          language:
+          - en
+        - language:
+          - en
+          initial: H
+        formatted_initials:
+          content: H.
+          language:
+          - en
+      surname:
+        content: Gredler
+        language:
+        - en
+      completename:
+        content: Hannes Gredler
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: RtBrick Inc.
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Jeff
+          language:
+          - en
+        - language:
+          - en
+          initial: J
+        formatted_initials:
+          content: J.
+          language:
+          - en
+      surname:
+        content: Tantsura
+        language:
+        - en
+      completename:
+        content: Jeff Tantsura
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Microsoft
   role:
   - type: author
 version:
 - draft: '00'
-revdate: '2023-02-16'
+revdate: '2023-03-10'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>RFC 8519 defines a YANG data model for Access Control Lists (ACLs).
-    This document discusses a set of extensions that fix many of the limitations of
-    the ACL model as initially defined in RFC 8519. Discussion Venues This note is
-    to be removed before publishing as an RFC. Discussion of this document takes place
-    on the Network Modeling Working Group mailing list (netmod@ietf.org), which is
-    archived at https://mailarchive.ietf.org/arch/browse/netmod/. Source for this
-    draft and an issue tracker can be found at https://github.com/boucadair/enhanced-acl-netmod.</p>"
+- content: "<p>This document describes a mechanism to collect the Traffic Engineering
+    Path information that is locally available in a node and advertise it into BGP
+    Link-State (BGP-LS) updates. Such information can be used by external components
+    for path computation, re- optimization, service placement, network visualization,
+    etc.</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
-relation:
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-netmod-acl-extensions-01
-    docid:
-    - id: draft-ietf-netmod-acl-extensions-01
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-netmod-acl-extensions-01
-      format: text/plain
 series:
 - type: main
   title:
@@ -179,7 +187,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-netmod-acl-extensions-00
+  number: draft-ietf-idr-bgp-ls-te-path-00
 doctype: internet-draft
 ext:
   schema-version: v1.0.0
