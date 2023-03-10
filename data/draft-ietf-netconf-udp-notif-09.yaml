@@ -1,182 +1,214 @@
 ---
 schema-version: v1.2.1
-id: draft-gandhi-mpls-ioam-09
+id: draft-ietf-netconf-udp-notif-09
 title:
-- content: MPLS Data Plane Encapsulation for In Situ OAM Data
+- content: UDP-based Transport for Configured Subscriptions
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-gandhi-mpls-ioam-09
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-netconf-udp-notif-09
   type: src
 type: standard
 docid:
-- id: draft-gandhi-mpls-ioam-09
+- id: draft-ietf-netconf-udp-notif-09
   type: Internet-Draft
   primary: true
-- id: I-D.gandhi-mpls-ioam
+- id: I-D.ietf-netconf-udp-notif
   type: IETF
   scope: anchor
-docnumber: I-D.gandhi-mpls-ioam
+docnumber: I-D.ietf-netconf-udp-notif
 date:
 - type: published
-  value: '2023-01-10'
+  value: '2023-03-10'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Rakesh
+        - content: Guangying
           language:
           - en
         - language:
           - en
-          initial: R
+          initial: G
         formatted_initials:
-          content: R.
+          content: G.
           language:
           - en
       surname:
-        content: Gandhi
+        content: Zheng
         language:
         - en
       completename:
-        content: Rakesh Gandhi
+        content: Guangying Zheng
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems, Inc.
+        - content: Huawei
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Frank
+        - content: Tianran
           language:
           - en
         - language:
           - en
-          initial: F
+          initial: T
         formatted_initials:
-          content: F.
+          content: T.
           language:
           - en
       surname:
-        content: Brockners
+        content: Zhou
         language:
         - en
       completename:
-        content: Frank Brockners
+        content: Tianran Zhou
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems, Inc.
+        - content: Huawei
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Bin
+        - content: Thomas
           language:
           - en
         - language:
           - en
-          initial: B
+          initial: T
         formatted_initials:
-          content: B.
+          content: T.
           language:
           - en
       surname:
-        content: Wen
+        content: Graf
         language:
         - en
       completename:
-        content: Bin Wen
+        content: Thomas Graf
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Comcast
+        - content: Swisscom
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Bruno
+        - content: Pierre
           language:
           - en
         - language:
           - en
-          initial: B
+          initial: P
         formatted_initials:
-          content: B.
+          content: P.
           language:
           - en
       surname:
-        content: Decraene
+        content: Francois
         language:
         - en
       completename:
-        content: Bruno Decraene
+        content: Pierre Francois
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Orange
+        - content: INSA-Lyon
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Haoyu
+        - content: Alex
           language:
           - en
+        - language:
+          - en
+          initial: A
         - language:
           - en
           initial: H
         formatted_initials:
-          content: H.
+          content: A. H.
           language:
           - en
       surname:
-        content: Song
+        content: Feng
         language:
         - en
       completename:
-        content: Haoyu Song
+        content: Alex Huang Feng
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Futurewei Technologies
+        - content: INSA-Lyon
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Paolo
+          language:
+          - en
+        - language:
+          - en
+          initial: P
+        formatted_initials:
+          content: P.
+          language:
+          - en
+      surname:
+        content: Lucente
+        language:
+        - en
+      completename:
+        content: Paolo Lucente
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: NTT
   role:
   - type: author
 version:
 - draft: '09'
-revdate: '2023-01-10'
+revdate: '2023-03-10'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>In Situ Operations, Administration, and Maintenance (IOAM) is used
-    for recording and collecting operational and telemetry information while the packet
-    traverses a path between two points in the network. This document defines how
-    IOAM data fields are transported with MPLS data plane encapsulation using MPLS
-    Network Action (MNA) and follows the MNA framework defined in draft-ietf-mpls-mna-fwk.</p>"
+- content: "<p>This document describes an UDP-based notification mechanism to collect
+    data from networking devices. A shim header is proposed to facilitate the data
+    streaming directly from the publishing process on network processor of line cards
+    to receivers. The objective is to provide a lightweight approach to enable higher
+    frequency and less performance impact on publisher and receiver processes compared
+    to already established notification mechanisms.</p>"
   language:
   - en
   script:
@@ -185,23 +217,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-gandhi-mpls-ioam-08
+    id: draft-ietf-netconf-udp-notif-08
     docid:
-    - id: draft-gandhi-mpls-ioam-08
+    - id: draft-ietf-netconf-udp-notif-08
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-gandhi-mpls-ioam-08
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-gandhi-mpls-ioam-10
-    docid:
-    - id: draft-gandhi-mpls-ioam-10
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-gandhi-mpls-ioam-10
+      content: draft-ietf-netconf-udp-notif-08
       format: text/plain
 series:
 - type: main
@@ -212,7 +234,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-gandhi-mpls-ioam-09
+  number: draft-ietf-netconf-udp-notif-09
 doctype: internet-draft
 ext:
   schema-version: v1.0.0
