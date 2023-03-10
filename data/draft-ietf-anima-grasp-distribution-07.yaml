@@ -1,34 +1,34 @@
 ---
 schema-version: v1.2.1
-id: draft-ietf-spring-segment-protection-sr-te-paths-03
+id: draft-ietf-anima-grasp-distribution-07
 title:
-- content: Segment Protection for SR-TE Paths
+- content: Information Distribution over GRASP
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-spring-segment-protection-sr-te-paths-03
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-anima-grasp-distribution-07
   type: src
 type: standard
 docid:
-- id: draft-ietf-spring-segment-protection-sr-te-paths-03
+- id: draft-ietf-anima-grasp-distribution-07
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-spring-segment-protection-sr-te-paths
+- id: I-D.ietf-anima-grasp-distribution
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-spring-segment-protection-sr-te-paths
+docnumber: I-D.ietf-anima-grasp-distribution
 date:
 - type: published
-  value: '2022-03-07'
+  value: '2023-03-10'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Shraddha
+        - content: Sheng
           language:
           - en
         - language:
@@ -39,80 +39,82 @@ contributor:
           language:
           - en
       surname:
-        content: Hegde
+        content: Jiang
         language:
         - en
       completename:
-        content: Shraddha Hegde
+        content: Sheng Jiang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Juniper Networks Inc.
+        - content: |-
+            Beijing University of Posts and
+                  Telecommunications
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Chris
+        - content: Artur
           language:
           - en
         - language:
           - en
-          initial: C
+          initial: A
         formatted_initials:
-          content: C.
+          content: A.
           language:
           - en
       surname:
-        content: Bowers
+        content: Hecker
         language:
         - en
       completename:
-        content: Chris Bowers
+        content: Artur Hecker
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Juniper Networks Inc.
+        - content: Huawei Technologies
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Stephane
+        - content: Bing
           language:
           - en
         - language:
           - en
-          initial: S
+          initial: B
         formatted_initials:
-          content: S.
+          content: B.
           language:
           - en
       surname:
-        content: Litkowski
+        content: Liu
         language:
         - en
       completename:
-        content: Stephane Litkowski
+        content: Bing Liu
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems
+        - content: Huawei Technologies
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Xiaohu
+        - content: Xun
           language:
           - en
         - language:
@@ -123,65 +125,89 @@ contributor:
           language:
           - en
       surname:
-        content: Xu
+        content: Xiao
         language:
         - en
       completename:
-        content: Xiaohu Xu
+        content: Xun Xiao
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Alibaba Inc.
+        - content: Huawei Technologies
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Feng
+        - content: Xiuli
           language:
           - en
         - language:
           - en
-          initial: F
+          initial: X
         formatted_initials:
-          content: F.
+          content: X.
           language:
           - en
       surname:
-        content: Xu
+        content: Zheng
         language:
         - en
       completename:
-        content: Feng Xu
+        content: Xiuli Zheng
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Tencent
+        - content: Huawei Technologies
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Yanyan
+          language:
+          - en
+        - language:
+          - en
+          initial: Y
+        formatted_initials:
+          content: Y.
+          language:
+          - en
+      surname:
+        content: Zhang
+        language:
+        - en
+      completename:
+        content: Yanyan Zhang
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Individual
   role:
   - type: author
 version:
-- draft: '03'
-revdate: '2022-03-07'
+- draft: '07'
+revdate: '2023-03-10'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>Segment routing supports the creation of explicit paths using Adj-
-    Segment-ID (SID), Node-SIDs, and BSIDs. It is important to provide fast reroute
-    (FRR) mechanisms to respond to failures of links and nodes in the Segment-Routed
-    Traffic-Engineered(SR-TE) path. A point of local repair (PLR) can provide FRR
-    protection against the failure of a link in an SR-TE path by examining only the
-    first (top) label in the SR label stack. In order to protect against the failure
-    of a node, a PLR may need to examine the second label in the stack as well, in
-    order to determine SR-TE path beyond the failed node. This document specifies
-    how a PLR can use the first and second label in the SR-MPLS label stack describing
-    an SR-TE path to provide protection against node failures.</p>"
+- content: "<p>This document analyzes the Information distribution models in the Autonomic
+    Networks that are based on the ANI. Most of instantaneous modes and their requirements
+    have been met by GRASP already. However, in order to effectively support the asynchronous
+    information distribution modes, which is newly described in this document, several
+    new GRASP extensions are defined. This document also describes the corresponding
+    behaviors on processing these new extensions.</p>"
   language:
   - en
   script:
@@ -190,23 +216,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-spring-segment-protection-sr-te-paths-02
+    id: draft-ietf-anima-grasp-distribution-06
     docid:
-    - id: draft-ietf-spring-segment-protection-sr-te-paths-02
+    - id: draft-ietf-anima-grasp-distribution-06
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-spring-segment-protection-sr-te-paths-02
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-spring-segment-protection-sr-te-paths-04
-    docid:
-    - id: draft-ietf-spring-segment-protection-sr-te-paths-04
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-segment-protection-sr-te-paths-04
+      content: draft-ietf-anima-grasp-distribution-06
       format: text/plain
 series:
 - type: main
@@ -217,7 +233,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-spring-segment-protection-sr-te-paths-03
+  number: draft-ietf-anima-grasp-distribution-07
 doctype: internet-draft
 ext:
   schema-version: v1.0.0
