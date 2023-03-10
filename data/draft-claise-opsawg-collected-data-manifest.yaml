@@ -13,15 +13,14 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>Most network equipment feature telemetry as a mean to monitoring their
-    status. Several protocols exist to this end, for example, the model-driven telemetry
-    governed by YANG models. Some of these protocols provide the data itself, without
-    any contextual information about the collection method. This can render the data
-    unusable if that context is lost, for instance when the data is stored without
-    the relevant information. This document proposes the Data Manifest, which is composed
-    of two YANG data models, namely, the Platform Manifest and the Data Collection
-    Manifest, to store contextual information along with the collected data, in order
-    to keep the collected data exploitable in the future.</p>"
+- content: "<p>Network elements use Model-driven Telemetry, and in particular YANG-
+    Push, to continuously stream information, including both counters and state information.
+    This document documents the metadata that ensure that the collected data can be
+    interpreted correctly. This document specifies the Data Manifest, composed of
+    two YANG data models (the Platform Manifest and the Data Collection Manifest.)
+    The Data Manifest must be streamed and stored along with the data, up to the collection
+    and analytics system in order to keep the collected data fully exploitable by
+    the data scientists.</p>"
   language:
   - en
   script:
@@ -87,6 +86,16 @@ relation:
       primary: true
     formattedref:
       content: draft-claise-opsawg-collected-data-manifest-05
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-claise-opsawg-collected-data-manifest-06
+    docid:
+    - id: draft-claise-opsawg-collected-data-manifest-06
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-claise-opsawg-collected-data-manifest-06
       format: text/plain
 ext:
   schema-version: v1.0.0
