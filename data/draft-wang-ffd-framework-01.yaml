@@ -1,152 +1,34 @@
 ---
 schema-version: v1.2.1
-id: draft-zzhang-bier-anycast-00
+id: draft-wang-ffd-framework-01
 title:
-- content: BIER with Anycast
+- content: Framework of Fast Fault Detection for IP-based Network
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-zzhang-bier-anycast-00
+- content: https://datatracker.ietf.org/doc/html/draft-wang-ffd-framework-01
   type: src
 type: standard
 docid:
-- id: draft-zzhang-bier-anycast-00
+- id: draft-wang-ffd-framework-01
   type: Internet-Draft
   primary: true
-- id: I-D.zzhang-bier-anycast
+- id: I-D.wang-ffd-framework
   type: IETF
   scope: anchor
-docnumber: I-D.zzhang-bier-anycast
+docnumber: I-D.wang-ffd-framework
 date:
 - type: published
-  value: '2023-02-08'
+  value: '2023-03-11'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Zhaohui
-          language:
-          - en
-        - language:
-          - en
-          initial: Z
-        - language:
-          - en
-          initial: J
-        formatted_initials:
-          content: Z. J.
-          language:
-          - en
-      surname:
-        content: Zhang
-        language:
-        - en
-      completename:
-        content: Zhaohui (Jeffrey) Zhang
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Juniper Networks
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: IJsbrand
-          language:
-          - en
-        - language:
-          - en
-          initial: I
-        formatted_initials:
-          content: I.
-          language:
-          - en
-      surname:
-        content: Wijnands
-        language:
-        - en
-      completename:
-        content: IJsbrand Wijnands
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Arrcus
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Zheng
-          language:
-          - en
-        - language:
-          - en
-          initial: Z
-        formatted_initials:
-          content: Z.
-          language:
-          - en
-      surname:
-        content: Zhang
-        language:
-        - en
-      completename:
-        content: Zheng Zhang
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: ZTE
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Mankamana
-          language:
-          - en
-        - language:
-          - en
-          initial: M
-        - language:
-          - en
-          initial: P
-        formatted_initials:
-          content: M. P.
-          language:
-          - en
-      surname:
-        content: Mishra
-        language:
-        - en
-      completename:
-        content: Mankamana Prasad Mishra
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Cisco Systems
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Huaimo
+        - content: Haibo
           language:
           - en
         - language:
@@ -157,47 +39,135 @@ contributor:
           language:
           - en
       surname:
-        content: Chen
+        content: Wang
         language:
         - en
       completename:
-        content: Huaimo Chen
+        content: Haibo Wang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Futurewei
+        - content: Huawei
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Fengwei
+          language:
+          - en
+        - language:
+          - en
+          initial: F
+        formatted_initials:
+          content: F.
+          language:
+          - en
+      surname:
+        content: Qin
+        language:
+        - en
+      completename:
+        content: Fengwei Qin
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: China Mobile
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Lily
+          language:
+          - en
+        - language:
+          - en
+          initial: L
+        formatted_initials:
+          content: L.
+          language:
+          - en
+      surname:
+        content: Zhao
+        language:
+        - en
+      completename:
+        content: Lily Zhao
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Shuanglong
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Chen
+        language:
+        - en
+      completename:
+        content: Shuanglong Chen
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei
   role:
   - type: author
 version:
-- draft: '00'
-revdate: '2023-02-08'
+- draft: '01'
+revdate: '2023-03-11'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>BIER architecture currently does not support anycast, in that each
-    BIER Forwarding Router (BFR) has its own unique BFR-prefix and BFR- ID. BIER signaling
-    protocols also check if there are duplicate BFR- IDs advertised. This document
-    discusses and specifies anycast support with BIER. It updates RFC 8279, RFC 8401
-    and RFC 8444.</p>"
+- content: "<p>The IP-based distributed system and software application layer often
+    use heartbeat to maintain the network topology status. However, the heartbeat
+    setting is long, which prolongs the system fault detection time. IP-based storage
+    network is the typical usage of that scenario. When the IP-based storage network
+    fault occurs, NVMe connections need to be switched over. Currently, no effective
+    method is available for quick detection, switchover is performed only based on
+    keepalive timeout, resulting in low performance. This document defines the basic
+    framework of how network assisted host devices can quickly detect application
+    connection failures caused by network faults.</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-zzhang-bier-anycast-01
+    id: draft-wang-ffd-framework-00
     docid:
-    - id: draft-zzhang-bier-anycast-01
+    - id: draft-wang-ffd-framework-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-zzhang-bier-anycast-01
+      content: draft-wang-ffd-framework-00
       format: text/plain
 series:
 - type: main
@@ -208,7 +178,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-zzhang-bier-anycast-00
+  number: draft-wang-ffd-framework-01
 doctype: internet-draft
 ext:
   schema-version: v1.0.0
