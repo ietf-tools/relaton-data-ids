@@ -1,19 +1,19 @@
 ---
 schema-version: v1.2.1
-id: draft-liu-ipsecme-ikev2-mtu-dect-04
+id: draft-liu-ipsecme-ikev2-mtu-dect-05
 title:
-- content: IKEv2 IPv4 Link Maximum Atomic Packet Notification Extension
+- content: IKEv2 Link Maximum Atomic Packet and Packet Too Big Notification Extension
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-liu-ipsecme-ikev2-mtu-dect-04
+- content: https://datatracker.ietf.org/doc/html/draft-liu-ipsecme-ikev2-mtu-dect-05
   type: src
 type: standard
 docid:
-- id: draft-liu-ipsecme-ikev2-mtu-dect-04
+- id: draft-liu-ipsecme-ikev2-mtu-dect-05
   type: Internet-Draft
   primary: true
 - id: I-D.liu-ipsecme-ikev2-mtu-dect
@@ -22,36 +22,8 @@ docid:
 docnumber: I-D.liu-ipsecme-ikev2-mtu-dect
 date:
 - type: published
-  value: '2022-11-20'
+  value: '2023-03-10'
 contributor:
-- person:
-    name:
-      given:
-        forename:
-        - content: Daniel
-          language:
-          - en
-        - language:
-          - en
-          initial: D
-        formatted_initials:
-          content: D.
-          language:
-          - en
-      surname:
-        content: Migault
-        language:
-        - en
-      completename:
-        content: Daniel Migault
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Ericsson
-  role:
-  - type: author
 - person:
     name:
       given:
@@ -72,6 +44,34 @@ contributor:
         - en
       completename:
         content: Daiying Liu
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Ericsson
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Daniel
+          language:
+          - en
+        - language:
+          - en
+          initial: D
+        formatted_initials:
+          content: D.
+          language:
+          - en
+      surname:
+        content: Migault
+        language:
+        - en
+      completename:
+        content: Daniel Migault
         language:
         - en
     affiliation:
@@ -137,22 +137,24 @@ contributor:
   role:
   - type: author
 version:
-- draft: '04'
-revdate: '2022-11-20'
+- draft: '05'
+revdate: '2023-03-10'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document considers a ingress and an egress security gateway connected
-    over a IPv4 network. The Tunnel Link Packet have their Don't Fragment (DF) set
-    to 0. This document defines the IKEv2 IPv4 Link Maximum Atomic Packet Notification
-    Extension which enables the egress security gateway to notify the ingress security
-    gateway that Mid-tunnel Fragmentation is observed with the value of the Link Maximum
-    Atomic Packet. The ingress security gateway is expected to take action as to avoid
-    the egress security gateway to perform costly reassemble operation. The ingress
-    security gateway is expected to either perform (when possible) Inner Fragmentation
-    of to update Tunnel MTU.</p>"
+- content: "<p>This document defines the IKEv2 Link Maximum Atomic Packet Notification
+    and Packet Too Big Extension. This extension enables an egress security gateway
+    to notify its ingress counter part that fragmentation is happening or a packet
+    too big is received (and cannot be decrypted). In both cases, the egress node
+    provides MTU information that enable the ingress node can configure appropriately
+    its Tunnel Maximum Transmission Unit or MTU or simply put Tunnel MTU (TMTU) to
+    prevent fragmentation or too big packets to be transmitted. This extension does
+    not intent to replace ICMP. It provides information ICMP does not provide and
+    even when that information could be provided by ICMP, this extension provides
+    a reliable authenticated channel that ensures the ingress node receive this information
+    even when ICMP messages cannot be received by the ingress node.</p>"
   language:
   - en
   script:
@@ -161,23 +163,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-liu-ipsecme-ikev2-mtu-dect-03
+    id: draft-liu-ipsecme-ikev2-mtu-dect-04
     docid:
-    - id: draft-liu-ipsecme-ikev2-mtu-dect-03
+    - id: draft-liu-ipsecme-ikev2-mtu-dect-04
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-liu-ipsecme-ikev2-mtu-dect-03
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-liu-ipsecme-ikev2-mtu-dect-05
-    docid:
-    - id: draft-liu-ipsecme-ikev2-mtu-dect-05
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-liu-ipsecme-ikev2-mtu-dect-05
+      content: draft-liu-ipsecme-ikev2-mtu-dect-04
       format: text/plain
 series:
 - type: main
@@ -188,7 +180,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-liu-ipsecme-ikev2-mtu-dect-04
+  number: draft-liu-ipsecme-ikev2-mtu-dect-05
 doctype: internet-draft
 ext:
   schema-version: v1.0.0

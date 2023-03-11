@@ -2,7 +2,7 @@
 schema-version: v1.2.1
 id: draft-liu-ipsecme-ikev2-mtu-dect
 title:
-- content: IKEv2 IPv4 Link Maximum Atomic Packet Notification Extension
+- content: IKEv2 Link Maximum Atomic Packet and Packet Too Big Notification Extension
   language:
   - en
   script:
@@ -13,15 +13,17 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document considers a ingress and an egress security gateway connected
-    over a IPv4 network. The Tunnel Link Packet have their Don't Fragment (DF) set
-    to 0. This document defines the IKEv2 IPv4 Link Maximum Atomic Packet Notification
-    Extension which enables the egress security gateway to notify the ingress security
-    gateway that Mid-tunnel Fragmentation is observed with the value of the Link Maximum
-    Atomic Packet. The ingress security gateway is expected to take action as to avoid
-    the egress security gateway to perform costly reassemble operation. The ingress
-    security gateway is expected to either perform (when possible) Inner Fragmentation
-    of to update Tunnel MTU.</p>"
+- content: "<p>This document defines the IKEv2 Link Maximum Atomic Packet Notification
+    and Packet Too Big Extension. This extension enables an egress security gateway
+    to notify its ingress counter part that fragmentation is happening or a packet
+    too big is received (and cannot be decrypted). In both cases, the egress node
+    provides MTU information that enable the ingress node can configure appropriately
+    its Tunnel Maximum Transmission Unit or MTU or simply put Tunnel MTU (TMTU) to
+    prevent fragmentation or too big packets to be transmitted. This extension does
+    not intent to replace ICMP. It provides information ICMP does not provide and
+    even when that information could be provided by ICMP, this extension provides
+    a reliable authenticated channel that ensures the ingress node receive this information
+    even when ICMP messages cannot be received by the ingress node.</p>"
   language:
   - en
   script:
@@ -77,6 +79,16 @@ relation:
       primary: true
     formattedref:
       content: draft-liu-ipsecme-ikev2-mtu-dect-04
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-liu-ipsecme-ikev2-mtu-dect-05
+    docid:
+    - id: draft-liu-ipsecme-ikev2-mtu-dect-05
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-liu-ipsecme-ikev2-mtu-dect-05
       format: text/plain
 ext:
   schema-version: v1.0.0
