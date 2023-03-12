@@ -8,31 +8,34 @@ on:
   workflow_dispatch:
 
 jobs:
+  gemfilesfetcher: 
+    uses: ietf-ribose/relaton-gemfiles-fetcher/.github/workflows/gemfiles-fetcher.yml@main
   fetch:
     name: IETF Internet-Drafts fetching
+    needs: [gemfilesfetcher]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
-
+        uses: actions/checkout@v3
       - name: Perform rsync from IETF
         run: |
           rsync -avcizxL rsync.ietf.org::bibxml-ids ./bibxml-ids
-
       - name: Use Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.1
+          ruby-version: 3.1.0
 
-      - name: Install gem
-        run: |
-          gem install relaton-cli
+      - name: Install Gems
+        run: bundle install
+      - name: Test relaton Gem
+        run: bundle info relaton
       - name: Fetch documents
         run: |
           find ./data -name '*.yaml' | xargs rm -f
-          relaton fetch-data ietf-internet-drafts
+          bundle exec relaton fetch-data ietf-internet-drafts
       - name: Push data
         run: |
+          git pull
           echo `date` > flag.txt
           git config user.name ietf-bib-bot
           git config user.email gh-bib-bot@llc.ietf.org
