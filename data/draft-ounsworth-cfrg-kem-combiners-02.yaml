@@ -1,164 +1,142 @@
 ---
 schema-version: v1.2.1
-id: draft-ietf-grow-bmp-yang-00
+id: draft-ounsworth-cfrg-kem-combiners-02
 title:
-- content: BMP YANG Module
+- content: Combiner function for hybrid key encapsulation mechanisms (Hybrid KEMs)
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-grow-bmp-yang-00
+- content: https://datatracker.ietf.org/doc/html/draft-ounsworth-cfrg-kem-combiners-02
   type: src
 type: standard
 docid:
-- id: draft-ietf-grow-bmp-yang-00
+- id: draft-ounsworth-cfrg-kem-combiners-02
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-grow-bmp-yang
+- id: I-D.ounsworth-cfrg-kem-combiners
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-grow-bmp-yang
+docnumber: I-D.ounsworth-cfrg-kem-combiners
 date:
 - type: published
-  value: '2022-11-25'
+  value: '2023-03-12'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Camilo
+        - content: Mike
           language:
           - en
         - language:
           - en
-          initial: C
+          initial: M
         formatted_initials:
-          content: C.
+          content: M.
           language:
           - en
       surname:
-        content: Cardona
+        content: Ounsworth
         language:
         - en
       completename:
-        content: Camilo Cardona
+        content: Mike Ounsworth
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: NTT
+        - content: Entrust Limited
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Paolo
+        - content: Aron
           language:
           - en
         - language:
           - en
-          initial: P
+          initial: A
         formatted_initials:
-          content: P.
+          content: A.
           language:
           - en
       surname:
-        content: Lucente
+        content: Wussler
         language:
         - en
       completename:
-        content: Paolo Lucente
+        content: Aron Wussler
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: NTT
+        - content: Proton AG
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Thomas
+        - content: Stavros
           language:
           - en
         - language:
           - en
-          initial: T
+          initial: S
         formatted_initials:
-          content: T.
+          content: S.
           language:
           - en
       surname:
-        content: Graf
+        content: Kousidis
         language:
         - en
       completename:
-        content: Thomas Graf
+        content: Stavros Kousidis
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Swisscom
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - language:
-          - en
-          initial: B
-        formatted_initials:
-          content: B.
-          language:
-          - en
-      surname:
-        content: Claise
-        language:
-        - en
-      completename:
-        content: Benoît Claise
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Huawei
+        - content: BSI
   role:
   - type: author
 version:
-- draft: '00'
-revdate: '2022-11-25'
+- draft: '02'
+revdate: '2023-03-12'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document proposes a YANG module for BMP (BGP Monitoring Protocol)
-    configuration and monitoring. A complementary RPC triggers a refresh of the session
-    of a BMP station.</p>"
+- content: "<p>The migration to post-quantum cryptography often calls for performing
+    multiple key encapsulations in parallel and then combining their outputs to derive
+    a single shared secret. This document defines a flexible multi-share KEM combiner
+    to join an arbitrary number of key shares, that is a multi-PRF compatible with
+    NIST SP 800-56Cr2 [SP800-56C]. The combiner defined here is CCA- secure as long
+    as at least one of the ingredient KEMs is.</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-ietf-grow-bmp-yang-01
+    id: draft-ounsworth-cfrg-kem-combiners-01
     docid:
-    - id: draft-ietf-grow-bmp-yang-01
+    - id: draft-ounsworth-cfrg-kem-combiners-01
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-grow-bmp-yang-01
+      content: draft-ounsworth-cfrg-kem-combiners-01
       format: text/plain
 series:
 - type: main
@@ -169,7 +147,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-grow-bmp-yang-00
+  number: draft-ounsworth-cfrg-kem-combiners-02
 doctype: internet-draft
 ext:
   schema-version: v1.0.0

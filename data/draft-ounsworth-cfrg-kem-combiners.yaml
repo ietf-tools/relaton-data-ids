@@ -17,7 +17,8 @@ abstract:
     multiple key encapsulations in parallel and then combining their outputs to derive
     a single shared secret. This document defines a flexible multi-share KEM combiner
     to join an arbitrary number of key shares, that is a multi-PRF compatible with
-    NIST SP 800-56Cr2 [SP800-56C].</p>"
+    NIST SP 800-56Cr2 [SP800-56C]. The combiner defined here is CCA- secure as long
+    as at least one of the ingredient KEMs is.</p>"
   language:
   - en
   script:
@@ -43,6 +44,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ounsworth-cfrg-kem-combiners-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ounsworth-cfrg-kem-combiners-02
+    docid:
+    - id: draft-ounsworth-cfrg-kem-combiners-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ounsworth-cfrg-kem-combiners-02
       format: text/plain
 ext:
   schema-version: v1.0.0
