@@ -1,20 +1,20 @@
 ---
 schema-version: v1.2.1
-id: draft-ponchon-ipsecme-anti-replay-subspaces-00
+id: draft-ponchon-ipsecme-anti-replay-subspaces-01
 title:
-- content: IPsec and IKE anti-replay sequence number subspaces for multi-path tunnels
-    and multi-core processing
+- content: IPsec and IKE anti-replay sequence number subspaces for traffic-engineered
+    paths and multi-core processing
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ponchon-ipsecme-anti-replay-subspaces-00
+- content: https://datatracker.ietf.org/doc/html/draft-ponchon-ipsecme-anti-replay-subspaces-01
   type: src
 type: standard
 docid:
-- id: draft-ponchon-ipsecme-anti-replay-subspaces-00
+- id: draft-ponchon-ipsecme-anti-replay-subspaces-01
   type: Internet-Draft
   primary: true
 - id: I-D.ponchon-ipsecme-anti-replay-subspaces
@@ -23,7 +23,7 @@ docid:
 docnumber: I-D.ponchon-ipsecme-anti-replay-subspaces
 date:
 - type: published
-  value: '2022-10-24'
+  value: '2023-03-13'
 contributor:
 - person:
     name:
@@ -138,36 +138,35 @@ contributor:
   role:
   - type: author
 version:
-- draft: '00'
-revdate: '2022-10-24'
+- draft: '01'
+revdate: '2023-03-13'
 language:
 - en
 script:
 - Latn
 abstract:
 - content: "<p>This document discusses the challenges of running IPsec with anti-
-    replay in environments where packets may be re-ordered (e.g., when sent over multiple
-    IP paths, traffic-engineered paths and/or using different QoS classes) as well
-    as when processed on multiple cores. Different approaches to solving this problem
-    are discussed, and a new solution based on splitting the anti-replay sequence
-    number space into multiple different sequencing subspaces is proposed. Since this
-    solution requires support on both parties, an IKE extension is proposed in order
-    to negotiate the use of the Anti-Replay sequence number subspaces.</p>"
+    replay in multi-core environments where packets may be re-ordered (e.g., when
+    sent over multiple IP paths, traffic-engineered paths and/or using different QoS
+    classes). A new solution based on splitting the anti-replay sequence number space
+    into multiple different sequencing subspaces is proposed. Since this solution
+    requires support on both parties, an IKE extension is proposed in order to negotiate
+    the use of the anti-replay sequence number subspaces.</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-ponchon-ipsecme-anti-replay-subspaces-01
+    id: draft-ponchon-ipsecme-anti-replay-subspaces-00
     docid:
-    - id: draft-ponchon-ipsecme-anti-replay-subspaces-01
+    - id: draft-ponchon-ipsecme-anti-replay-subspaces-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ponchon-ipsecme-anti-replay-subspaces-01
+      content: draft-ponchon-ipsecme-anti-replay-subspaces-00
       format: text/plain
 series:
 - type: main
@@ -178,7 +177,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ponchon-ipsecme-anti-replay-subspaces-00
+  number: draft-ponchon-ipsecme-anti-replay-subspaces-01
 doctype: internet-draft
 ext:
   schema-version: v1.0.0

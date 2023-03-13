@@ -1,34 +1,34 @@
 ---
 schema-version: v1.2.1
-id: draft-shahzad-scim-device-model-02
+id: draft-ounsworth-cfrg-kem-combiners-03
 title:
-- content: Device Schema Extensions to the SCIM model
+- content: Combiner function for hybrid key encapsulation mechanisms (Hybrid KEMs)
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-shahzad-scim-device-model-02
+- content: https://datatracker.ietf.org/doc/html/draft-ounsworth-cfrg-kem-combiners-03
   type: src
 type: standard
 docid:
-- id: draft-shahzad-scim-device-model-02
+- id: draft-ounsworth-cfrg-kem-combiners-03
   type: Internet-Draft
   primary: true
-- id: I-D.shahzad-scim-device-model
+- id: I-D.ounsworth-cfrg-kem-combiners
   type: IETF
   scope: anchor
-docnumber: I-D.shahzad-scim-device-model
+docnumber: I-D.ounsworth-cfrg-kem-combiners
 date:
 - type: published
-  value: '2023-01-10'
+  value: '2023-03-13'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Muhammad
+        - content: Mike
           language:
           - en
         - language:
@@ -39,87 +39,90 @@ contributor:
           language:
           - en
       surname:
-        content: Shahzad
+        content: Ounsworth
         language:
         - en
       completename:
-        content: Muhammad Shahzad
+        content: Mike Ounsworth
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: North Carolina State University
+        - content: Entrust Limited
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: HASSAN
+        - content: Aron
           language:
           - en
         - language:
           - en
-          initial: H
+          initial: A
         formatted_initials:
-          content: H.
+          content: A.
           language:
           - en
       surname:
-        content: Hassan
+        content: Wussler
         language:
         - en
       completename:
-        content: HASSAN IQBAL
+        content: Aron Wussler
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: North Carolina State University
+        - content: Proton AG
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Eliot
+        - content: Stavros
           language:
           - en
         - language:
           - en
-          initial: E
+          initial: S
         formatted_initials:
-          content: E.
+          content: S.
           language:
           - en
       surname:
-        content: Lear
+        content: Kousidis
         language:
         - en
       completename:
-        content: Eliot Lear
+        content: Stavros Kousidis
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems
+        - content: BSI
   role:
   - type: author
 version:
-- draft: '02'
-revdate: '2023-01-10'
+- draft: '03'
+revdate: '2023-03-13'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>The initial core schema for SCIM (System for Cross Identity Management)
-    was designed for provisioning users. This memo specifies schema extensions that
-    enables provisioning of devices, using various underlying bootstrapping systems,
-    such as Wifi EasyConnect, RFC 8366 vouchers, and BLE passcodes.</p>"
+- content: "<p>The migration to post-quantum cryptography often calls for performing
+    multiple key encapsulations in parallel and then combining their outputs to derive
+    a single shared secret. This document defines a comprehensible and easy to implement
+    Keccak- based KEM combiner to join an arbitrary number of key shares, that is
+    compatible with NIST SP 800-56Cr2 [SP800-56C] when viewed as a key derivation
+    function. The combiners defined here are practical multi- PRFs and are CCA-secure
+    as long as at least one of the ingredient KEMs is.</p>"
   language:
   - en
   script:
@@ -128,23 +131,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-shahzad-scim-device-model-01
+    id: draft-ounsworth-cfrg-kem-combiners-02
     docid:
-    - id: draft-shahzad-scim-device-model-01
+    - id: draft-ounsworth-cfrg-kem-combiners-02
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-shahzad-scim-device-model-01
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-shahzad-scim-device-model-03
-    docid:
-    - id: draft-shahzad-scim-device-model-03
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-shahzad-scim-device-model-03
+      content: draft-ounsworth-cfrg-kem-combiners-02
       format: text/plain
 series:
 - type: main
@@ -155,7 +148,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-shahzad-scim-device-model-02
+  number: draft-ounsworth-cfrg-kem-combiners-03
 doctype: internet-draft
 ext:
   schema-version: v1.0.0

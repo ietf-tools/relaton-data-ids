@@ -1,34 +1,34 @@
 ---
 schema-version: v1.2.1
-id: draft-shahzad-scim-device-model-02
+id: draft-chen-detnet-sr-based-bounded-latency-02
 title:
-- content: Device Schema Extensions to the SCIM model
+- content: Segment Routing (SR) Based Bounded Latency
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-shahzad-scim-device-model-02
+- content: https://datatracker.ietf.org/doc/html/draft-chen-detnet-sr-based-bounded-latency-02
   type: src
 type: standard
 docid:
-- id: draft-shahzad-scim-device-model-02
+- id: draft-chen-detnet-sr-based-bounded-latency-02
   type: Internet-Draft
   primary: true
-- id: I-D.shahzad-scim-device-model
+- id: I-D.chen-detnet-sr-based-bounded-latency
   type: IETF
   scope: anchor
-docnumber: I-D.shahzad-scim-device-model
+docnumber: I-D.chen-detnet-sr-based-bounded-latency
 date:
 - type: published
-  value: '2023-01-10'
+  value: '2023-03-13'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Muhammad
+        - content: Mach
           language:
           - en
         - language:
@@ -39,87 +39,92 @@ contributor:
           language:
           - en
       surname:
-        content: Shahzad
+        content: Chen
         language:
         - en
       completename:
-        content: Muhammad Shahzad
+        content: Mach Chen
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: North Carolina State University
+        - content: Huawei
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: HASSAN
+        - content: Xuesong
           language:
           - en
         - language:
           - en
-          initial: H
+          initial: X
         formatted_initials:
-          content: H.
+          content: X.
           language:
           - en
       surname:
-        content: Hassan
+        content: Geng
         language:
         - en
       completename:
-        content: HASSAN IQBAL
+        content: Xuesong Geng
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: North Carolina State University
+        - content: Huawei
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Eliot
+        - content: Zhenqiang
           language:
           - en
         - language:
           - en
-          initial: E
+          initial: Z
         formatted_initials:
-          content: E.
+          content: Z.
           language:
           - en
       surname:
-        content: Lear
+        content: Li
         language:
         - en
       completename:
-        content: Eliot Lear
+        content: Zhenqiang Li
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems
+        - content: China Mobile
   role:
   - type: author
 version:
 - draft: '02'
-revdate: '2023-01-10'
+revdate: '2023-03-13'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>The initial core schema for SCIM (System for Cross Identity Management)
-    was designed for provisioning users. This memo specifies schema extensions that
-    enables provisioning of devices, using various underlying bootstrapping systems,
-    such as Wifi EasyConnect, RFC 8366 vouchers, and BLE passcodes.</p>"
+- content: "<p>One of the goals of DetNet is to provide bounded end-to-end latency
+    for critical flows. This document defines how to leverage Segment Routing (SR)
+    to implement bounded latency. Specifically, the SR Identifier (SID) is used to
+    specify transmission time (cycles) of a packet. When forwarding devices along
+    the path follow the instructions carried in the packet, the bounded latency is
+    achieved. This is called Cycle Specified Queuing and Forwarding (CSQF) in this
+    document. Since SR is a source routing technology, no per-flow state is maintained
+    at intermediate and egress nodes, SR-based CSQF naturally supports flow aggregation
+    that is deemed to be a key capability to allow DetNet to scale to large networks.</p>"
   language:
   - en
   script:
@@ -128,23 +133,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-shahzad-scim-device-model-01
+    id: draft-chen-detnet-sr-based-bounded-latency-01
     docid:
-    - id: draft-shahzad-scim-device-model-01
+    - id: draft-chen-detnet-sr-based-bounded-latency-01
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-shahzad-scim-device-model-01
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-shahzad-scim-device-model-03
-    docid:
-    - id: draft-shahzad-scim-device-model-03
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-shahzad-scim-device-model-03
+      content: draft-chen-detnet-sr-based-bounded-latency-01
       format: text/plain
 series:
 - type: main
@@ -155,7 +150,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-shahzad-scim-device-model-02
+  number: draft-chen-detnet-sr-based-bounded-latency-02
 doctype: internet-draft
 ext:
   schema-version: v1.0.0
