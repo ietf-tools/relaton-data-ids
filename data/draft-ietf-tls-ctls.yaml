@@ -13,12 +13,11 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: <p>This document specifies a "compact" version of TLS and DTLS. It is logically
-    isomorphic to ordinary TLS, but saves space by trimming obsolete material, tighter
-    encoding, a template-based specialization technique, and alternative cryptographic
-    techniques. cTLS is not directly interoperable with TLS or DTLS, but it should
-    eventually be possible for a single server port to offer cTLS alongside TLS or
-    DTLS.</p>
+- content: <p>This document specifies a "compact" version of TLS 1.3 and DTLS 1.3.
+    It saves bandwidth by trimming obsolete material, tighter encoding, a template-based
+    specialization technique, and alternative cryptographic techniques. cTLS is not
+    directly interoperable with TLS 1.3 or DTLS 1.3 since the over-the-wire framing
+    is different. A single server can, however, offer cTLS alongside TLS or DTLS.</p>
   language:
   - en
   script:
@@ -104,6 +103,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-tls-ctls-07
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-tls-ctls-08
+    docid:
+    - id: draft-ietf-tls-ctls-08
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-tls-ctls-08
       format: text/plain
 ext:
   schema-version: v1.0.0
