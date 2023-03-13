@@ -2,7 +2,7 @@
 schema-version: v1.2.1
 id: draft-ietf-ippm-explicit-flow-measurements
 title:
-- content: Explicit Flow Measurements Techniques
+- content: Explicit Host-to-Network Flow Measurements Techniques
   language:
   - en
   script:
@@ -14,14 +14,14 @@ docid:
   primary: true
 abstract:
 - content: "<p>This document describes protocol independent methods called Explicit
-    Flow Measurement Techniques that employ few marking bits, inside the header of
-    each packet, for loss and delay measurement. The endpoints, marking the traffic,
-    signal these metrics to intermediate observers allowing them to measure connection
-    performance, and to locate the network segment where impairments happen. Different
-    alternatives are considered within this document. These signaling methods apply
-    to all protocols but they are especially valuable when applied to protocols that
-    encrypt transport header and do not allow traditional methods for delay and loss
-    detection.</p>"
+    Host-to-Network Flow Measurement Techniques that can be applicable to transport-layer
+    protocols between client and server. These methods employ just a few marking bits
+    inside the header of each packet for performance measurements and require collaborative
+    client and server. Both endpoints cooperate by marking and, possibly, mirroring
+    information back and forward on the round-trip connection. The techniques are
+    especially valuable when applied to protocols that encrypt transport headers,
+    since they enable loss and delay measurements by passive on-path network devices.
+    Different techniques are considered within this document.</p>"
   language:
   - en
   script:
@@ -57,6 +57,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-ippm-explicit-flow-measurements-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-ippm-explicit-flow-measurements-03
+    docid:
+    - id: draft-ietf-ippm-explicit-flow-measurements-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-ippm-explicit-flow-measurements-03
       format: text/plain
 ext:
   schema-version: v1.0.0
