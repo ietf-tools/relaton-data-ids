@@ -1,28 +1,28 @@
 ---
 schema-version: v1.2.1
-id: draft-zzhang-dmm-mup-evolution-03
+id: draft-zzhang-spring-microtap-segment-01
 title:
-- content: Mobile User Plane Evolution
+- content: MicroTap Segment in Segment Routing
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-zzhang-dmm-mup-evolution-03
+- content: https://datatracker.ietf.org/doc/html/draft-zzhang-spring-microtap-segment-01
   type: src
 type: standard
 docid:
-- id: draft-zzhang-dmm-mup-evolution-03
+- id: draft-zzhang-spring-microtap-segment-01
   type: Internet-Draft
   primary: true
-- id: I-D.zzhang-dmm-mup-evolution
+- id: I-D.zzhang-spring-microtap-segment
   type: IETF
   scope: anchor
-docnumber: I-D.zzhang-dmm-mup-evolution
+docnumber: I-D.zzhang-spring-microtap-segment
 date:
 - type: published
-  value: '2023-02-04'
+  value: '2023-03-13'
 contributor:
 - person:
     name:
@@ -59,143 +59,140 @@ contributor:
     name:
       given:
         forename:
-        - content: Keyur
+        - content: Ryan
           language:
           - en
         - language:
           - en
-          initial: K
+          initial: R
         formatted_initials:
-          content: K.
+          content: R.
           language:
           - en
       surname:
-        content: Patel
+        content: Hoffman
         language:
         - en
       completename:
-        content: Keyur Patel
+        content: Ryan Hoffman
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Arrcus
+        - content: TELUS
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Luis
+        - content: Gurminderjit
           language:
           - en
         - language:
           - en
-          initial: L
-        - language:
-          - en
-          initial: M
+          initial: G
         formatted_initials:
-          content: L. M.
+          content: G.
           language:
           - en
       surname:
-        content: Contreras
+        content: Bajwa
         language:
         - en
       completename:
-        content: Luis M. Contreras
+        content: Gurminderjit Bajwa
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Telefonica
+        - content: TELUS
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Kashif
+        - content: Daniel
           language:
           - en
         - language:
           - en
-          initial: K
+          initial: D
         formatted_initials:
-          content: K.
+          content: D.
           language:
           - en
       surname:
-        content: Islam
+        content: Voyer
         language:
         - en
       completename:
-        content: Kashif Islam
+        content: Daniel Voyer
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Redhat
+        - content: Bell Canada
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Jari
+        - content: Shay
           language:
           - en
         - language:
           - en
-          initial: J
+          initial: S
         formatted_initials:
-          content: J.
+          content: S.
           language:
           - en
       surname:
-        content: Mutikainen
+        content: Zadok
         language:
         - en
       completename:
-        content: Jari Mutikainen
+        content: Shay Zadok
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: NTT Docomo
+        - content: Broadcom
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Tianji
+        - content: Aijun
           language:
           - en
         - language:
           - en
-          initial: T
+          initial: A
         formatted_initials:
-          content: T.
+          content: A.
           language:
           - en
       surname:
-        content: Jiang
+        content: Wang
         language:
         - en
       completename:
-        content: Tianji Jiang
+        content: Aijun Wang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: China Mobile
+        - content: China Telecom
   role:
   - type: author
 - person:
@@ -229,53 +226,34 @@ contributor:
 - person:
     name:
       given:
-        forename:
-        - content: Ori
-          language:
-          - en
-        - language:
-          - en
-          initial: O
-        - language:
-          - en
-          initial: P
         formatted_initials:
-          content: O. P.
           language:
           - en
       surname:
-        content: Sejati
+        content: Shengtao
         language:
         - en
       completename:
-        content: Ori Prio Sejati
+        content: Shengtao
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: XL Axiata
+        - content: Arrcus
   role:
   - type: author
 version:
-- draft: '03'
-revdate: '2023-02-04'
+- draft: '01'
+revdate: '2023-03-13'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>[I-D.zzhang-dmm-5g-distributed-upf] describes evolution of mobile user
-    plane in 5G, including distributed User Plane Functions (UPFs)and alternative
-    user plane implementations that some vendors/ operators are promoting without
-    changing 3GPP architecture/signaling. Building on top of that, this document further
-    discusses potentially integrating UPF and Access Node (AN) in a future generation
-    (xG) of mobile network. This document is not an attempt to do 3GPP work in IETF.
-    Rather, it discusses potential integration of IETF/wireline and 3GPP/wireless
-    technologies - first among parties who are familiar with both areas and friendly
-    with IETF/wireline technologies. If the ideas in this document are deemed reasonable,
-    feasible and desired among these parties, they can then be brought to 3GPP for
-    further discussions.</p>"
+- content: "<p>This document specifies a microTap segment that can be used to instruct
+    a transit node to make a copy of a segment-routed packet and deliver it to a specified
+    node for the purpose of network monitoring, trouble shooting, or lawful intercept.</p>"
   language:
   - en
   script:
@@ -284,23 +262,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-zzhang-dmm-mup-evolution-02
+    id: draft-zzhang-spring-microtap-segment-00
     docid:
-    - id: draft-zzhang-dmm-mup-evolution-02
+    - id: draft-zzhang-spring-microtap-segment-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-zzhang-dmm-mup-evolution-02
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-zzhang-dmm-mup-evolution-04
-    docid:
-    - id: draft-zzhang-dmm-mup-evolution-04
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-zzhang-dmm-mup-evolution-04
+      content: draft-zzhang-spring-microtap-segment-00
       format: text/plain
 series:
 - type: main
@@ -311,7 +279,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-zzhang-dmm-mup-evolution-03
+  number: draft-zzhang-spring-microtap-segment-01
 doctype: internet-draft
 ext:
   schema-version: v1.0.0

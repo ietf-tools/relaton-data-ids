@@ -13,21 +13,21 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>Network equipments are often configured by a variety of network management
-    systems (NMS), protocols, and people. If a network issue arises because of a wrong
-    configuration modification, it's important to quickly identify the specific service
-    request and obtain the reason for pushing that modification. Another potential
-    network issue can stem from concurrent NMS's with overlapping intent, each having
-    their own tasks to perform: in such a case, it's important to map the respective
-    modifications to its originating NMS. This document specifies a mechanism to automatically
-    map the configuration modifications to their source, up to a specific NMS service
-    request, in the context of NETCONF. Such a mechanism is required for autonomous
-    networks, to trace the reason of a particular configuration change that lead to
-    an anomaly detection or a broken SLA. This mechanism facilitates the troubleshooting,
-    the post mortem analysis, and in the end the closed loop automation required for
-    self-healing networks. The specifications contain a new YANG module mapping a
-    local configuration change to the corresponding northbound transaction, up to
-    the controller or even the orchestrator.</p>"
+- content: "<p>Network equipment are often configured by a variety of network management
+    systems (NMS), protocols, and teams. If a network issue arises (e.g., because
+    of a wrong configuration change), it is important to quickly identify the root
+    cause and obtain the reason for pushing that modification. Another potential network
+    issue can stem from concurrent NMSes with overlapping intents, each having their
+    own tasks to perform. In such a case, it is important to map the respective modifications
+    to its originating NMS. This document specifies a NETCONF mechanism to automatically
+    map the configuration modifications to their source, up to a specific NMS change
+    request. Such a mechanism is required, in particular, for autonomous networks
+    to trace the source of a particular configuration change that led to an anomaly
+    detection. This mechanism facilitates the troubleshooting, the post mortem analysis,
+    and in the end the closed loop automation required for self-healing networks.
+    The specification also includes a YANG module that is meant to map a local configuration
+    change to the corresponding change transaction, up to the controller or even the
+    orchestrator.</p>"
   language:
   - en
   script:
@@ -43,6 +43,16 @@ relation:
       primary: true
     formattedref:
       content: draft-quilbeuf-opsawg-configuration-tracing-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-quilbeuf-opsawg-configuration-tracing-01
+    docid:
+    - id: draft-quilbeuf-opsawg-configuration-tracing-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-quilbeuf-opsawg-configuration-tracing-01
       format: text/plain
 ext:
   schema-version: v1.0.0
