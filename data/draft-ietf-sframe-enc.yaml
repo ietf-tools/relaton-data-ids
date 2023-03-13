@@ -15,11 +15,11 @@ docid:
 abstract:
 - content: "<p>This document describes the Secure Frame (SFrame) end-to-end encryption
     and authentication mechanism for media frames in a multiparty conference call,
-    in which central media servers (SFUs) can access the media metadata needed to
-    make forwarding decisions without having access to the actual media. The proposed
-    mechanism differs from other approaches through its use of media frames as the
-    encryptable unit, instead of individual RTP packets, which makes it more bandwidth
-    efficient and also allows use with non-RTP transports.</p>"
+    in which central media servers (selective forwarding units or SFUs) can access
+    the media metadata needed to make forwarding decisions without having access to
+    the actual media. The proposed mechanism differs from the Secure Real-Time Protocol
+    (SRTP) in that it is independent of RTP (thus compatible with non-RTP media transport)
+    and can be applied to whole media frames in order to be more bandwidth efficient.</p>"
   language:
   - en
   script:
@@ -35,6 +35,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-sframe-enc-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-sframe-enc-01
+    docid:
+    - id: draft-ietf-sframe-enc-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-sframe-enc-01
       format: text/plain
 ext:
   schema-version: v1.0.0
