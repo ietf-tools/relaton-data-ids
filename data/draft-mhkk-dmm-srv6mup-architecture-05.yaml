@@ -1,0 +1,495 @@
+---
+schema-version: v1.2.1
+id: draft-mhkk-dmm-srv6mup-architecture-05
+title:
+- content: Mobile User Plane Architecture using Segment Routing for Distributed Mobility
+    Management
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-mhkk-dmm-srv6mup-architecture-05
+  type: src
+type: standard
+docid:
+- id: draft-mhkk-dmm-srv6mup-architecture-05
+  type: Internet-Draft
+  primary: true
+- id: I-D.mhkk-dmm-srv6mup-architecture
+  type: IETF
+  scope: anchor
+docnumber: I-D.mhkk-dmm-srv6mup-architecture
+date:
+- type: published
+  value: '2023-03-13'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Satoru
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Matsushima
+        language:
+        - en
+      completename:
+        content: Satoru Matsushima
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: SoftBank
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Katsuhiro
+          language:
+          - en
+        - language:
+          - en
+          initial: K
+        formatted_initials:
+          content: K.
+          language:
+          - en
+      surname:
+        content: Horiba
+        language:
+        - en
+      completename:
+        content: Katsuhiro Horiba
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: SoftBank
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Ashiq
+          language:
+          - en
+        - language:
+          - en
+          initial: A
+        formatted_initials:
+          content: A.
+          language:
+          - en
+      surname:
+        content: Khan
+        language:
+        - en
+      completename:
+        content: Ashiq Khan
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: SoftBank
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Yuya
+          language:
+          - en
+        - language:
+          - en
+          initial: Y
+        formatted_initials:
+          content: Y.
+          language:
+          - en
+      surname:
+        content: Kawakami
+        language:
+        - en
+      completename:
+        content: Yuya Kawakami
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: SoftBank
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Tetsuya
+          language:
+          - en
+        - language:
+          - en
+          initial: T
+        formatted_initials:
+          content: T.
+          language:
+          - en
+      surname:
+        content: Murakami
+        language:
+        - en
+      completename:
+        content: Tetsuya Murakami
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Arrcus, Inc.
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Keyur
+          language:
+          - en
+        - language:
+          - en
+          initial: K
+        formatted_initials:
+          content: K.
+          language:
+          - en
+      surname:
+        content: Patel
+        language:
+        - en
+      completename:
+        content: Keyur Patel
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Arrcus, Inc.
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Miya
+          language:
+          - en
+        - language:
+          - en
+          initial: M
+        formatted_initials:
+          content: M.
+          language:
+          - en
+      surname:
+        content: Kohno
+        language:
+        - en
+      completename:
+        content: Miya Kohno
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Cisco Systems, Inc.
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Teppei
+          language:
+          - en
+        - language:
+          - en
+          initial: T
+        formatted_initials:
+          content: T.
+          language:
+          - en
+      surname:
+        content: Kamata
+        language:
+        - en
+      completename:
+        content: Teppei Kamata
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Cisco Systems, Inc.
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Pablo
+          language:
+          - en
+        - language:
+          - en
+          initial: P
+        formatted_initials:
+          content: P.
+          language:
+          - en
+      surname:
+        content: Camarillo
+        language:
+        - en
+      completename:
+        content: Pablo Camarillo
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Cisco Systems, Inc.
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Jakub
+          language:
+          - en
+        - language:
+          - en
+          initial: J
+        formatted_initials:
+          content: J.
+          language:
+          - en
+      surname:
+        content: Horn
+        language:
+        - en
+      completename:
+        content: Jakub Horn
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Cisco Systems, Inc.
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Daniel
+          language:
+          - en
+        - language:
+          - en
+          initial: D
+        formatted_initials:
+          content: D.
+          language:
+          - en
+      surname:
+        content: Voyer
+        language:
+        - en
+      completename:
+        content: Daniel Voyer
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Bell Canada
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Shay
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Zadok
+        language:
+        - en
+      completename:
+        content: Shay Zadok
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Broadcom
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Israel
+          language:
+          - en
+        - language:
+          - en
+          initial: I
+        formatted_initials:
+          content: I.
+          language:
+          - en
+      surname:
+        content: Meilik
+        language:
+        - en
+      completename:
+        content: Israel Meilik
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Broadcom
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Ashutosh
+          language:
+          - en
+        - language:
+          - en
+          initial: A
+        formatted_initials:
+          content: A.
+          language:
+          - en
+      surname:
+        content: Agrawal
+        language:
+        - en
+      completename:
+        content: Ashutosh Agrawal
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Intel
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Kumaresh
+          language:
+          - en
+        - language:
+          - en
+          initial: K
+        formatted_initials:
+          content: K.
+          language:
+          - en
+      surname:
+        content: Perumal
+        language:
+        - en
+      completename:
+        content: Kumaresh Perumal
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Intel
+  role:
+  - type: author
+version:
+- draft: '05'
+revdate: '2023-03-13'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>This document defines the Mobile User Plane (MUP) architecture using
+    Segment Routing (SR) for Distributed Mobility Management. The requirements for
+    Distributed Mobility Management described in [RFC7333] can be satisfied by routing
+    fashion. Mobile services are deployed over several parts of IP networks. An SR
+    network can accommodate a part of those networks, or all those networks. IPv6
+    dataplane option (SRv6) is suitable for both cases especially for the latter case
+    thanks to the large address space, so this document illustrates the MUP deployment
+    cases with IPv6 dataplane. MUP Architecture can incorporate existing session based
+    mobile networks. By leveraging Segment Routing, mobile user plane can be integrated
+    into the dataplane. In that routing paradigm, session information between the
+    entities of the mobile user plane is turned to routing information.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-mhkk-dmm-srv6mup-architecture-04
+    docid:
+    - id: draft-mhkk-dmm-srv6mup-architecture-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-mhkk-dmm-srv6mup-architecture-04
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-mhkk-dmm-srv6mup-architecture-05
+doctype: internet-draft
+ext:
+  schema-version: v1.0.0
