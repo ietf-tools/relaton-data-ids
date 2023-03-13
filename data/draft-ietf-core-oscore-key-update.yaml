@@ -13,20 +13,14 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>Object Security for Constrained RESTful Environments (OSCORE) uses
-    AEAD algorithms to ensure confidentiality and integrity of exchanged messages.
-    Due to known issues allowing forgery attacks against AEAD algorithms, limits should
-    be followed on the number of times a specific key is used for encryption or decryption.
-    Among other reasons, approaching key usage limits requires updating the OSCORE
-    keying material before communications can securely continue. This document defines
-    how two OSCORE peers must follow these key usage limits and what steps they must
-    take to preserve the security of their communications. Also, it specifies Key
-    Update for OSCORE (KUDOS), a lightweight procedure that two peers can use to update
-    their keying material and establish a new OSCORE Security Context. Accordingly,
-    it updates the use of the OSCORE flag bits in the CoAP OSCORE Option. Finally,
-    this document specifies a method that two peers can use to update their OSCORE
-    identifiers, as a stand-alone procedure or embedded in a KUDOS execution. Thus,
-    this document updates RFC 8613.</p>"
+- content: "<p>This document defines Key Update for OSCORE (KUDOS), a lightweight
+    procedure that two CoAP endpoints can use to update their keying material by establishing
+    a new OSCORE Security Context. Accordingly, it updates the use of the OSCORE flag
+    bits in the CoAP OSCORE Option as well as the protection of CoAP response messages
+    with OSCORE, and it deprecates the key update procedure specified in Appendix
+    B.2 of RFC 8613. Thus, this document updates RFC 8613. Also, this document defines
+    a procedure that two endpoints can use to update their OSCORE identifiers, run
+    either stand-alone or during a KUDOS execution.</p>"
   language:
   - en
   script:
@@ -72,6 +66,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-core-oscore-key-update-03
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-core-oscore-key-update-04
+    docid:
+    - id: draft-ietf-core-oscore-key-update-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-core-oscore-key-update-04
       format: text/plain
 ext:
   schema-version: v1.0.0

@@ -1,91 +1,62 @@
 ---
 schema-version: v1.2.1
-id: draft-fossati-tls-attestation-02
+id: draft-ietf-core-comi-12
 title:
-- content: Using Attestation in Transport Layer Security (TLS) and Datagram Transport
-    Layer Security (DTLS)
+- content: CoAP Management Interface (CORECONF)
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-fossati-tls-attestation-02
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-core-comi-12
   type: src
 type: standard
 docid:
-- id: draft-fossati-tls-attestation-02
+- id: draft-ietf-core-comi-12
   type: Internet-Draft
   primary: true
-- id: I-D.fossati-tls-attestation
+- id: I-D.ietf-core-comi
   type: IETF
   scope: anchor
-docnumber: I-D.fossati-tls-attestation
+docnumber: I-D.ietf-core-comi
 date:
 - type: published
-  value: '2022-10-24'
+  value: '2023-03-13'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Hannes
+        - content: Michel
           language:
           - en
         - language:
           - en
-          initial: H
+          initial: M
         formatted_initials:
-          content: H.
+          content: M.
           language:
           - en
       surname:
-        content: Tschofenig
+        content: Veillette
         language:
         - en
       completename:
-        content: Hannes Tschofenig
+        content: Michel Veillette
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Arm Limited
+        - content: Trilliant Networks Inc.
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Thomas
-          language:
-          - en
-        - language:
-          - en
-          initial: T
-        formatted_initials:
-          content: T.
-          language:
-          - en
-      surname:
-        content: Fossati
-        language:
-        - en
-      completename:
-        content: Thomas Fossati
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Arm Limited
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Paul
+        - content: Peter
           language:
           - en
         - language:
@@ -96,88 +67,118 @@ contributor:
           language:
           - en
       surname:
-        content: Howard
+        content: Van der Stok
         language:
         - en
       completename:
-        content: Paul Howard
+        content: Peter Van der Stok
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Arm Limited
+        - content: consultant
   role:
   - type: author
 - person:
     name:
       given:
         forename:
+        - content: Alexander
+          language:
+          - en
         - language:
           - en
-          initial: I
+          initial: A
         formatted_initials:
-          content: I.
+          content: A.
           language:
           - en
       surname:
-        content: Mihalcea
+        content: Pelov
         language:
         - en
       completename:
-        content: Ionuț Mihalcea
+        content: Alexander Pelov
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Arm Limited
+        - content: Acklio
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Yogesh
+        - content: Andy
           language:
           - en
         - language:
           - en
-          initial: Y
+          initial: A
         formatted_initials:
-          content: Y.
+          content: A.
           language:
           - en
       surname:
-        content: Deshpande
+        content: Bierman
         language:
         - en
       completename:
-        content: Yogesh Deshpande
+        content: Andy Bierman
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Arm Limited
+        - content: YumaWorks
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Carsten
+          language:
+          - en
+        - language:
+          - en
+          initial: C
+        formatted_initials:
+          content: C.
+          language:
+          - en
+      surname:
+        content: Bormann
+        language:
+        - en
+      completename:
+        content: Carsten Bormann
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Universität Bremen TZI
   role:
   - type: author
 version:
-- draft: '02'
-revdate: '2022-10-24'
+- draft: '12'
+revdate: '2023-03-13'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>Attestation is the process by which an entity produces evidence about
-    itself that another party can use to evaluate the trustworthiness of that entity.
-    In use cases that require the use of remote attestation, such as confidential
-    computing or device onboarding, an attester has to convey evidence or attestation
-    results to a relying party. This information exchange may happen at different
-    layers in the protocol stack. This specification provides a generic way of passing
-    evidence and attestation results in the TLS handshake. Functionality-wise this
-    is accomplished with the help of key attestation.</p>"
+- content: "<p>This document describes a network management interface for constrained
+    devices and networks, called CoAP Management Interface (CORECONF). The Constrained
+    Application Protocol (CoAP) is used to access datastore and data node resources
+    specified in YANG, or SMIv2 converted to YANG. CORECONF uses the YANG to CBOR
+    mapping and converts YANG identifier strings to numeric identifiers for payload
+    size reduction. CORECONF extends the set of YANG based protocols, NETCONF and
+    RESTCONF, with the capability to manage constrained devices and networks.</p>"
   language:
   - en
   script:
@@ -186,23 +187,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-fossati-tls-attestation-01
+    id: draft-ietf-core-comi-11
     docid:
-    - id: draft-fossati-tls-attestation-01
+    - id: draft-ietf-core-comi-11
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-fossati-tls-attestation-01
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-fossati-tls-attestation-03
-    docid:
-    - id: draft-fossati-tls-attestation-03
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-fossati-tls-attestation-03
+      content: draft-ietf-core-comi-11
       format: text/plain
 series:
 - type: main
@@ -213,7 +204,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-fossati-tls-attestation-02
+  number: draft-ietf-core-comi-12
 doctype: internet-draft
 ext:
   schema-version: v1.0.0
