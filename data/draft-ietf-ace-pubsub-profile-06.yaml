@@ -1,20 +1,20 @@
 ---
 schema-version: v1.2.1
-id: draft-ietf-ace-pubsub-profile-05
+id: draft-ietf-ace-pubsub-profile-06
 title:
-- content: Pub-Sub Profile for Authentication and Authorization for Constrained Environments
-    (ACE)
+- content: Publish-Subscribe Profile for Authentication and Authorization for Constrained
+    Environments (ACE)
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-ace-pubsub-profile-05
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-ace-pubsub-profile-06
   type: src
 type: standard
 docid:
-- id: draft-ietf-ace-pubsub-profile-05
+- id: draft-ietf-ace-pubsub-profile-06
   type: Internet-Draft
   primary: true
 - id: I-D.ietf-ace-pubsub-profile
@@ -23,7 +23,7 @@ docid:
 docnumber: I-D.ietf-ace-pubsub-profile
 date:
 - type: published
-  value: '2022-12-16'
+  value: '2023-03-13'
 contributor:
 - person:
     name:
@@ -81,20 +81,50 @@ contributor:
         - content: Brunel University
   role:
   - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Marco
+          language:
+          - en
+        - language:
+          - en
+          initial: M
+        formatted_initials:
+          content: M.
+          language:
+          - en
+      surname:
+        content: Tiloca
+        language:
+        - en
+      completename:
+        content: Marco Tiloca
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: RISE AB
+  role:
+  - type: author
 version:
-- draft: '05'
-revdate: '2022-12-16'
+- draft: '06'
+revdate: '2023-03-13'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This specification defines an application profile for authentication
-    and authorization for Publishers and Subscribers in a constrained pub-sub scenario,
-    using the ACE framework. This profile relies on transport layer or application
-    layer security to authorize the pub- sub clients to the broker. Moreover, it describes
-    the use of application layer security to protect the content of the pub-sub client
-    message exchange through the broker. The profile mainly focuses on the pub-sub
+- content: "<p>This document defines an application profile for enabling secure group
+    communication for a constrained Publish-Subscribe (pub/sub) scenario, where Publishers
+    and Subscribers communicate through a broker, using the ACE framework. This profile
+    relies on transport layer or application layer security profiles of ACE to achieve
+    communication security, server authentication and proof-of-possession for a key
+    owned by the Client and bound to an OAuth 2.0 Access Token. The document describes
+    how to request and provision keying material for group communication, and protect
+    the content of the pub/sub client message exchange, focusing mainly on the pub/sub
     scenarios using the Constrained Application Protocol (CoAP) [I-D.ietf-core-coap-pubsub].</p>"
   language:
   - en
@@ -104,23 +134,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-ace-pubsub-profile-04
+    id: draft-ietf-ace-pubsub-profile-05
     docid:
-    - id: draft-ietf-ace-pubsub-profile-04
+    - id: draft-ietf-ace-pubsub-profile-05
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-ace-pubsub-profile-04
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-ace-pubsub-profile-06
-    docid:
-    - id: draft-ietf-ace-pubsub-profile-06
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-ace-pubsub-profile-06
+      content: draft-ietf-ace-pubsub-profile-05
       format: text/plain
 series:
 - type: main
@@ -131,7 +151,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-ace-pubsub-profile-05
+  number: draft-ietf-ace-pubsub-profile-06
 doctype: internet-draft
 ext:
   schema-version: v1.0.0
