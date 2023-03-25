@@ -2,7 +2,7 @@
 schema-version: v1.2.1
 id: draft-ietf-tls-deprecate-obsolete-kex
 title:
-- content: Deprecating Obsolete Key Exchange Methods in TLS
+- content: Deprecating Obsolete Key Exchange Methods in TLS 1.2
   language:
   - en
   script:
@@ -13,8 +13,11 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document makes several prescriptions regarding the following key
-    exchange methods in TLS, most of which have been superseded by better options:</p>"
+- content: "<p>This document deprecates the use of RSA key exchange and Diffie Hellman
+    over a finite field in TLS 1.2, and discourages the use of static elliptic curve
+    Diffie Hellman cipher suites. Note that these prescriptions apply only to TLS
+    1.2 since TLS 1.0 and 1.1 are deprecated by [RFC8996] and TLS 1.3 either does
+    not use the affected algorithm or does not share the relevant configuration options.</p>"
   language:
   - en
   script:
@@ -40,6 +43,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-tls-deprecate-obsolete-kex-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-tls-deprecate-obsolete-kex-02
+    docid:
+    - id: draft-ietf-tls-deprecate-obsolete-kex-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-tls-deprecate-obsolete-kex-02
       format: text/plain
 ext:
   schema-version: v1.0.0
