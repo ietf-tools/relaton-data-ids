@@ -14,16 +14,16 @@ docid:
   primary: true
 abstract:
 - content: <p>This document describes a mechanism to advertise different IPv6 prefixes
-    which are associated with different color attributes to establish end-to-end intent
-    aware paths. Such IPv6 prefixes are called "colorful prefixes", and this mechanism
-    is called Colorful Prefix Routing (CPR). The colorful prefixes are the SRv6 locator
-    prefixes associated with different intent. SRv6 services (e.g. SRv6 VPN services)
-    could be assigned with SRv6 SIDs under the SRv6 locator prefix with the required
-    intent, so that the SRv6 service traffic can be steered to the end-to-end intent
-    aware paths of the corresponding SRv6 locator prefix to meet the service requirements.
-    The existing IPv6 unicast Address Family could be used for the advertisement of
-    colorful prefixes, thus this mechanism is easy to interoperate and allows incremental
-    deployment in multi-domain networks.</p>
+    which are associated with different color attributes to establish end-to-end intent-aware
+    paths for SRv6 services. Such IPv6 prefixes are called "Colorful Prefixes", and
+    this mechanism is called Colorful Prefix Routing (CPR). In SRv6 networks, the
+    colorful prefixes are the SRv6 locators associated with different intent. SRv6
+    services (e.g. SRv6 VPN services) with specific intent could be assigned with
+    SRv6 SIDs under the corresponding SRv6 locators, which are advertised as colorful
+    prefixes. This allows the SRv6 service traffic to be steered into end-to-end intent-aware
+    paths simply based on the SRv6 Service SIDs. The existing IPv6 Address Family
+    could be used for the advertisement of IPv6 colorful prefixes, thus this mechanism
+    is easy to interoperate and allows incremental deployment in multi-domain networks.</p>
   language:
   - en
   script:
@@ -39,6 +39,16 @@ relation:
       primary: true
     formattedref:
       content: draft-wang-idr-cpr-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-wang-idr-cpr-01
+    docid:
+    - id: draft-wang-idr-cpr-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-wang-idr-cpr-01
       format: text/plain
 ext:
   schema-version: v1.0.0
