@@ -1,158 +1,178 @@
 ---
 schema-version: v1.2.1
-id: draft-ietf-bfd-unsolicited-12
+id: draft-joung-detnet-asynch-detnet-framework-02
 title:
-- content: Unsolicited BFD for Sessionless Applications
+- content: Asynchronous Deterministic Networking Framework for Large-Scale Networks
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-bfd-unsolicited-12
+- content: https://datatracker.ietf.org/doc/html/draft-joung-detnet-asynch-detnet-framework-02
   type: src
 type: standard
 docid:
-- id: draft-ietf-bfd-unsolicited-12
+- id: draft-joung-detnet-asynch-detnet-framework-02
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-bfd-unsolicited
+- id: I-D.joung-detnet-asynch-detnet-framework
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-bfd-unsolicited
+docnumber: I-D.joung-detnet-asynch-detnet-framework
 date:
 - type: published
-  value: '2023-03-13'
+  value: '2023-03-26'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Enke
+        - content: Jinoo
           language:
           - en
         - language:
           - en
-          initial: E
+          initial: J
         formatted_initials:
-          content: E.
+          content: J.
           language:
           - en
       surname:
-        content: Chen
+        content: Joung
         language:
         - en
       completename:
-        content: Enke Chen
+        content: Jinoo Joung
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Palo Alto Networks
+        - content: Sangmyung University
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Naiming
-          language:
-          - en
         - language:
           - en
-          initial: N
+          initial: J
         formatted_initials:
-          content: N.
+          content: J.
           language:
           - en
       surname:
-        content: Shen
+        content: Ryoo
         language:
         - en
       completename:
-        content: Naiming Shen
+        content: Jeong-dong Ryoo
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Zededa
+        - content: ETRI
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Robert
+        - content: Taesik
           language:
           - en
         - language:
           - en
-          initial: R
+          initial: T
         formatted_initials:
-          content: R.
+          content: T.
           language:
           - en
       surname:
-        content: Raszuk
+        content: Cheung
         language:
         - en
       completename:
-        content: Robert Raszuk
+        content: Taesik Cheung
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Arrcus
+        - content: ETRI
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Reshad
+        - content: Yizhou
           language:
           - en
         - language:
           - en
-          initial: R
+          initial: Y
         formatted_initials:
-          content: R.
+          content: Y.
           language:
           - en
       surname:
-        content: Rahman
+        content: Li
         language:
         - en
       completename:
-        content: Reshad Rahman
+        content: Yizhou Li
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Graphiant
+        - content: Huawei
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Peng
+          language:
+          - en
+        - language:
+          - en
+          initial: P
+        formatted_initials:
+          content: P.
+          language:
+          - en
+      surname:
+        content: Liu
+        language:
+        - en
+      completename:
+        content: Peng Liu
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: China Mobile
   role:
   - type: author
 version:
-- draft: '12'
-revdate: '2023-03-13'
+- draft: '02'
+revdate: '2023-03-26'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: <p>For operational simplification of "sessionless" applications using Bidirectional
-    Forwarding Detection (BFD), in this document we present procedures for "unsolicited
-    BFD" that allow a BFD session to be initiated by only one side, and established
-    without explicit per- session configuration or registration by the other side
-    (subject to certain per-interface or global policies). We also introduce a new
-    YANG module to configure and manage "unsolicited BFD". The YANG module in this
-    document is based on YANG 1.1 as defined in RFC 7950 and conforms to the Network
-    Management Datastore Architecture (NMDA) as described in RFC 8342. This document
-    updates RFC 9314.</p>
+- content: "<p>This document describes an overall framework of Asynchronous Deterministic
+    Networking (ADN) for large-scale networks. It specifies the functional architecture
+    and requirements for providing latency and jitter bounds to high priority traffic,
+    without strict time-synchronization of network nodes.</p>"
   language:
   - en
   script:
@@ -161,23 +181,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-bfd-unsolicited-11
+    id: draft-joung-detnet-asynch-detnet-framework-01
     docid:
-    - id: draft-ietf-bfd-unsolicited-11
+    - id: draft-joung-detnet-asynch-detnet-framework-01
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-bfd-unsolicited-11
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-bfd-unsolicited-13
-    docid:
-    - id: draft-ietf-bfd-unsolicited-13
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-bfd-unsolicited-13
+      content: draft-joung-detnet-asynch-detnet-framework-01
       format: text/plain
 series:
 - type: main
@@ -188,7 +198,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-bfd-unsolicited-12
+  number: draft-joung-detnet-asynch-detnet-framework-02
 doctype: internet-draft
 ext:
   schema-version: v1.0.0
