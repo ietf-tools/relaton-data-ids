@@ -1,29 +1,29 @@
 ---
 schema-version: v1.2.1
-id: draft-ietf-spring-bfd-05
+id: draft-ietf-mpls-bfd-directed-22
 title:
-- content: Bidirectional Forwarding Detection (BFD) in Segment Routing Networks Using
-    MPLS Dataplane
+- content: Bidirectional Forwarding Detection (BFD) Directed Return Path for MPLS
+    Label Switched Paths (LSPs)
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-spring-bfd-05
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-mpls-bfd-directed-22
   type: src
 type: standard
 docid:
-- id: draft-ietf-spring-bfd-05
+- id: draft-ietf-mpls-bfd-directed-22
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-spring-bfd
+- id: I-D.ietf-mpls-bfd-directed
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-spring-bfd
+docnumber: I-D.ietf-mpls-bfd-directed
 date:
 - type: published
-  value: '2022-10-24'
+  value: '2023-03-27'
 contributor:
 - person:
     name:
@@ -78,7 +78,7 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Microsoft
+        - content: Juniper Networks
   role:
   - type: author
 - person:
@@ -137,51 +137,21 @@ contributor:
         - content: Huawei
   role:
   - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Jiang
-          language:
-          - en
-        - language:
-          - en
-          initial: J
-        formatted_initials:
-          content: J.
-          language:
-          - en
-      surname:
-        content: Wenying
-        language:
-        - en
-      completename:
-        content: Jiang Wenying
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: CMCC
-  role:
-  - type: author
 version:
-- draft: '05'
-revdate: '2022-10-24'
+- draft: '22'
+revdate: '2023-03-27'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>Segment Routing (SR) architecture leverages the paradigm of source
-    routing. It can be realized in the Multiprotocol Label Switching (MPLS) network
-    without any change to the data plane. A segment is encoded as an MPLS label, and
-    an ordered list of segments is encoded as a stack of labels. Bidirectional Forwarding
-    Detection (BFD) is expected to monitor any existing path between systems. This
-    document defines how to use Label Switched Path Ping to bootstrap a BFD session,
-    control an SR Policy in the reverse direction of the SR-MPLS tunnel, and applicability
-    of BFD Demand mode in the SR-MPLS domain. Also, the document describes the use
-    of BFD Echo with BFD Control packet payload.</p>"
+- content: "<p>Bidirectional Forwarding Detection (BFD) is expected to be able to
+    monitor a wide variety of encapsulations of paths between systems. When a BFD
+    session monitors an explicitly routed unidirectional path there may be a need
+    to direct egress BFD peer to use a specific path for the reverse direction of
+    the BFD session. This document describes an extension to MPLS LSP echo request
+    that allows a BFD system request that the remote BFD peer transmits BFD control
+    packets over the specified LSP.</p>"
   language:
   - en
   script:
@@ -190,23 +160,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-spring-bfd-04
+    id: draft-ietf-mpls-bfd-directed-21
     docid:
-    - id: draft-ietf-spring-bfd-04
+    - id: draft-ietf-mpls-bfd-directed-21
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-spring-bfd-04
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-spring-bfd-06
-    docid:
-    - id: draft-ietf-spring-bfd-06
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-bfd-06
+      content: draft-ietf-mpls-bfd-directed-21
       format: text/plain
 series:
 - type: main
@@ -217,7 +177,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-spring-bfd-05
+  number: draft-ietf-mpls-bfd-directed-22
 doctype: internet-draft
 ext:
   schema-version: v1.0.0
