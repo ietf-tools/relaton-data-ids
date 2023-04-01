@@ -1,19 +1,19 @@
 ---
 schema-version: v1.2.1
-id: draft-chuang-dkim-replay-problem-01
+id: draft-chuang-dkim-replay-problem-02
 title:
-- content: DKIM Replay Problem Statement and Scenarios
+- content: DKIM Replay Problem Statement
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-chuang-dkim-replay-problem-01
+- content: https://datatracker.ietf.org/doc/html/draft-chuang-dkim-replay-problem-02
   type: src
 type: standard
 docid:
-- id: draft-chuang-dkim-replay-problem-01
+- id: draft-chuang-dkim-replay-problem-02
   type: Internet-Draft
   primary: true
 - id: I-D.chuang-dkim-replay-problem
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.chuang-dkim-replay-problem
 date:
 - type: published
-  value: '2023-02-10'
+  value: '2023-04-01'
 contributor:
 - person:
     name:
@@ -50,6 +50,34 @@ contributor:
     - organization:
         name:
         - content: Google, Inc.
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Dave
+          language:
+          - en
+        - language:
+          - en
+          initial: D
+        formatted_initials:
+          content: D.
+          language:
+          - en
+      surname:
+        content: Crocker
+        language:
+        - en
+      completename:
+        content: Dave Crocker
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Brandenburg InternetWorking
   role:
   - type: author
 - person:
@@ -109,23 +137,23 @@ contributor:
   role:
   - type: author
 version:
-- draft: '01'
-revdate: '2023-02-10'
+- draft: '02'
+revdate: '2023-04-01'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>DomainKeys Identified Mail (DKIM, RFC6376) claims some responsibility
-    for a message by associating a domain and protecting the integrity of the covered
-    portion of a message during transit through a digital signature. DKIM survives
-    basic email relaying. In a Replay Attack, the recipient of a DKIM-signed message
-    sends the message further, to other recipients, while retaining the original,
-    validating signature, thereby seeking to leverage the reputation of the original
-    signer. This document discusses the damage this causes to email delivery and interoperability,
-    and the associated Mail Flows. A significant challenge to mitigating this problem
-    is that it is difficult for Receivers to differentiate between legitimate forwarding
-    flows and DKIM Replay.</p>"
+- content: "<p>DomainKeys Identified Mail (DKIM, RFC6376) permits claiming some responsibility
+    for a message by cryptographically associating a domain name with the message.
+    For data covered by the cryptographic signature, this also enables detecting changes
+    made during transit. DKIM survives basic email relaying. In a Replay Attack, a
+    recipient of a DKIM-signed message re-posts the message to other recipients,while
+    retaining the original, validating signature, and thereby leveraging the reputation
+    of the original signer. This document discusses the resulting damage to email
+    delivery, interoperability, and associated mail flows. A significant challenge
+    to mitigating this problem is that it is difficult for receivers to differentiate
+    between legitimate forwarding flows and a DKIM Replay Attack.</p>"
   language:
   - en
   script:
@@ -134,23 +162,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-chuang-dkim-replay-problem-00
+    id: draft-chuang-dkim-replay-problem-01
     docid:
-    - id: draft-chuang-dkim-replay-problem-00
+    - id: draft-chuang-dkim-replay-problem-01
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-chuang-dkim-replay-problem-00
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-chuang-dkim-replay-problem-02
-    docid:
-    - id: draft-chuang-dkim-replay-problem-02
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-chuang-dkim-replay-problem-02
+      content: draft-chuang-dkim-replay-problem-01
       format: text/plain
 series:
 - type: main
@@ -161,7 +179,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-chuang-dkim-replay-problem-01
+  number: draft-chuang-dkim-replay-problem-02
 doctype: internet-draft
 ext:
   schema-version: v1.0.0
