@@ -1,91 +1,146 @@
 ---
 schema-version: v1.2.1
-id: draft-ietf-add-dnr-14
+id: draft-ietf-ccamp-l1csm-yang-22
 title:
-- content: DHCP and Router Advertisement Options for the Discovery of Network-designated
-    Resolvers (DNR)
+- content: A YANG Data Model for L1 Connectivity Service Model (L1CSM)
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-add-dnr-14
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-l1csm-yang-22
   type: src
 type: standard
 docid:
-- id: draft-ietf-add-dnr-14
+- id: draft-ietf-ccamp-l1csm-yang-22
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-add-dnr
+- id: I-D.ietf-ccamp-l1csm-yang
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-add-dnr
+docnumber: I-D.ietf-ccamp-l1csm-yang
 date:
 - type: published
-  value: '2023-03-13'
+  value: '2023-04-03'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Mohamed
+        - content: Young
           language:
           - en
         - language:
           - en
-          initial: M
+          initial: Y
         formatted_initials:
-          content: M.
+          content: Y.
           language:
           - en
       surname:
-        content: Boucadair
+        content: Lee
         language:
         - en
       completename:
-        content: Mohamed Boucadair
+        content: Young Lee
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Orange
+        - content: Samsung
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Tirumaleswar
-          language:
-          - en
         - language:
           - en
-          initial: T
+          initial: K
         formatted_initials:
-          content: T.
+          content: K.
           language:
           - en
       surname:
-        content: Reddy.K
+        content: Lee
         language:
         - en
       completename:
-        content: Tirumaleswar Reddy.K
+        content: Kwang-koog Lee
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Nokia
+        - content: Korea Telecom
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Dan
+        - content: Haomian
+          language:
+          - en
+        - language:
+          - en
+          initial: H
+        formatted_initials:
+          content: H.
+          language:
+          - en
+      surname:
+        content: Zheng
+        language:
+        - en
+      completename:
+        content: Haomian Zheng
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei Technologies
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Oscar
+          language:
+          - en
+        - language:
+          - en
+          initial: O
+        - language:
+          - en
+          initial: G
+        formatted_initials:
+          content: O. G.
+          language:
+          - en
+      surname:
+        content: de Dios
+        language:
+        - en
+      completename:
+        content: Oscar Gonzalez de Dios
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Telefonica
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Daniele
           language:
           - en
         - language:
@@ -96,88 +151,32 @@ contributor:
           language:
           - en
       surname:
-        content: Wing
+        content: Ceccarelli
         language:
         - en
       completename:
-        content: Dan Wing
+        content: Daniele Ceccarelli
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Citrix Systems, Inc.
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Neil
-          language:
-          - en
-        - language:
-          - en
-          initial: N
-        formatted_initials:
-          content: N.
-          language:
-          - en
-      surname:
-        content: Cook
-        language:
-        - en
-      completename:
-        content: Neil Cook
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Open-Xchange
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Tommy
-          language:
-          - en
-        - language:
-          - en
-          initial: T
-        formatted_initials:
-          content: T.
-          language:
-          - en
-      surname:
-        content: Jensen
-        language:
-        - en
-      completename:
-        content: Tommy Jensen
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Microsoft
+        - content: Cisco
   role:
   - type: author
 version:
-- draft: '14'
-revdate: '2023-03-13'
+- draft: '22'
+revdate: '2023-04-03'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>The document specifies new DHCP and IPv6 Router Advertisement options
-    to discover encrypted DNS resolvers (e.g., DNS-over-HTTPS, DNS-over- TLS, DNS-over-QUIC).
-    Particularly, it allows a host to learn an authentication domain name together
-    with a list of IP addresses and a set of service parameters to reach such encrypted
-    DNS resolvers.</p>"
+- content: "<p>This document provides a YANG Layer 1 Connectivity Service Model (L1CSM).
+    This model can be utilized by a customer network controller to initiate a connectivity
+    service request as well as to retrieve service states for a Layer 1 network controller
+    communicating with its customer network controller. This YANG model is in compliance
+    of Network Management Datastore Architecture (NMDA).</p>"
   language:
   - en
   script:
@@ -186,23 +185,23 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-add-dnr-13
+    id: draft-ietf-ccamp-l1csm-yang-21
     docid:
-    - id: draft-ietf-add-dnr-13
+    - id: draft-ietf-ccamp-l1csm-yang-21
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-add-dnr-13
+      content: draft-ietf-ccamp-l1csm-yang-21
       format: text/plain
 - type: updatedBy
   bibitem:
-    id: draft-ietf-add-dnr-15
+    id: draft-ietf-ccamp-l1csm-yang-23
     docid:
-    - id: draft-ietf-add-dnr-15
+    - id: draft-ietf-ccamp-l1csm-yang-23
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-add-dnr-15
+      content: draft-ietf-ccamp-l1csm-yang-23
       format: text/plain
 series:
 - type: main
@@ -213,7 +212,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-add-dnr-14
+  number: draft-ietf-ccamp-l1csm-yang-22
 doctype: internet-draft
 ext:
   schema-version: v1.0.0
