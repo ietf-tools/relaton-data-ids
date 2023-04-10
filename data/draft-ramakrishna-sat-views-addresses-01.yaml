@@ -1,28 +1,28 @@
 ---
 schema-version: v1.2.1
-id: draft-ramakrishna-sat-data-sharing-00
+id: draft-ramakrishna-sat-views-addresses-01
 title:
-- content: Protocol for Requesting and Sharing Views across Networks
+- content: Views and View Addresses for Secure Asset Transfer
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ramakrishna-sat-data-sharing-00
+- content: https://datatracker.ietf.org/doc/html/draft-ramakrishna-sat-views-addresses-01
   type: src
 type: standard
 docid:
-- id: draft-ramakrishna-sat-data-sharing-00
+- id: draft-ramakrishna-sat-views-addresses-01
   type: Internet-Draft
   primary: true
-- id: I-D.ramakrishna-sat-data-sharing
+- id: I-D.ramakrishna-sat-views-addresses
   type: IETF
   scope: anchor
-docnumber: I-D.ramakrishna-sat-data-sharing
+docnumber: I-D.ramakrishna-sat-views-addresses
 date:
 - type: published
-  value: '2022-10-17'
+  value: '2023-04-10'
 contributor:
 - person:
     name:
@@ -140,22 +140,22 @@ contributor:
     name:
       given:
         forename:
-        - content: Dhinakaran
+        - content: Krishnasuri
           language:
           - en
         - language:
           - en
-          initial: D
+          initial: K
         formatted_initials:
-          content: D.
+          content: K.
           language:
           - en
       surname:
-        content: Vinayagamurthy
+        content: Narayanam
         language:
         - en
       completename:
-        content: Dhinakaran Vinayagamurthy
+        content: Krishnasuri Narayanam
         language:
         - en
     affiliation:
@@ -165,8 +165,8 @@ contributor:
   role:
   - type: author
 version:
-- draft: '00'
-revdate: '2022-10-17'
+- draft: '01'
+revdate: '2023-04-10'
 language:
 - en
 script:
@@ -175,33 +175,35 @@ abstract:
 - content: "<p>With increasing use of DLT (distributed ledger technology) systems,
     including blockchain systems and networks, for virtual assets, there is a need
     for asset-related data and metadata to traverse system boundaries and link their
-    respective business workflows. Systems and networks can define and project views,
-    or asset states, outside of their boundaries, as well as guard them using access
-    control policies, and external agents or other systems can address those views
-    in a globally unique manner. Universal interoperability requires such systems
-    and networks to request and supply views via gateway nodes using a request-response
-    protocol. The endpoints of this protocol lie within the respective systems or
-    in networks of peer nodes, but the cross-system protocol occurs through the systems’
-    respective gateways. The inter-gateway protocol that allows an external party
+    respective business workflows. Core requirements for such interoperation between
+    systems are the abilities of these systems to project views of their assets to
+    external parties, either individual agents or other systems, and the abilities
+    of those external parties to locate and address the views they are interested
+    in. A view denotes the complete or partial state of a virtual asset, or the output
+    of a function computed over the states of one or more assets, or locks or pledges
+    made over assets for internal or external parties. Systems projecting these views
+    must be able to guard them using custom access control policies, and external
+    parties consuming them must be able to verify them independently for authenticity,
+    finality, and freshness. The end-to-end protocol that allows an external party
     to request a view by an address and a DLT system to return a view in response
-    must be DLT-neutral and mask the internal particularities and complexities of
+    must be DLT-neutral and mask the interior particularities and complexities of
     the DLT systems. The view generation and verification modules at the endpoints
-    must obey the native consensus logic of their respective networks.</p>"
+    must obey the native consensus logic of their respective systems.</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-ramakrishna-sat-data-sharing-01
+    id: draft-ramakrishna-sat-views-addresses-00
     docid:
-    - id: draft-ramakrishna-sat-data-sharing-01
+    - id: draft-ramakrishna-sat-views-addresses-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ramakrishna-sat-data-sharing-01
+      content: draft-ramakrishna-sat-views-addresses-00
       format: text/plain
 series:
 - type: main
@@ -212,7 +214,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ramakrishna-sat-data-sharing-00
+  number: draft-ramakrishna-sat-views-addresses-01
 doctype: internet-draft
 ext:
   schema-version: v1.0.0
