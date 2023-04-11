@@ -1,0 +1,45 @@
+---
+schema-version: v1.2.1
+id: draft-hegde-lsr-ospf-better-idbx
+title:
+- content: Improved OSPF Database Exchange Procedure
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-hegde-lsr-ospf-better-idbx
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>When an OSPF router undergoes restart, previous instances of LSAs belonging
+    to that router may remain in the databases of other routers in the OSPF domain
+    until such LSAs are aged out. Hence, when the restarting router joins the network
+    again, neighboring routers re- establish adjacencies while the restarting router
+    is still bringing- up its interfaces and adjacencies and generates LSAs with sequence
+    numbers that may be lower than the stale LSAs. Such stale LSAs may be interpreted
+    as bi-directional connectivity before the initial database exchanges are finished
+    and genuine bi-directional LSA connectivity exists. Such incorrect interpretation
+    may lead to, among other thiegs, transient traffic packect drops. This document
+    suggests improvements in the OSPF database exchange process to prevent such problems
+    due to stale LSA utilization. The solution does not preclude changes in the existing
+    standard but presents an extension that will prevent this scenario.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-hegde-lsr-ospf-better-idbx-00
+    docid:
+    - id: draft-hegde-lsr-ospf-better-idbx-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-hegde-lsr-ospf-better-idbx-00
+      format: text/plain
+ext:
+  schema-version: v1.0.0
