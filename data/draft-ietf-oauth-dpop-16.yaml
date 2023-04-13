@@ -1,28 +1,28 @@
 ---
 schema-version: v1.2.1
-id: draft-ietf-pim-sr-p2mp-policy-05
+id: draft-ietf-oauth-dpop-16
 title:
-- content: Segment Routing Point-to-Multipoint Policy
+- content: OAuth 2.0 Demonstrating Proof-of-Possession at the Application Layer (DPoP)
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-pim-sr-p2mp-policy-05
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-oauth-dpop-16
   type: src
 type: standard
 docid:
-- id: draft-ietf-pim-sr-p2mp-policy-05
+- id: draft-ietf-oauth-dpop-16
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-pim-sr-p2mp-policy
+- id: I-D.ietf-oauth-dpop
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-pim-sr-p2mp-policy
+docnumber: I-D.ietf-oauth-dpop
 date:
 - type: published
-  value: '2022-07-02'
+  value: '2023-04-13'
 contributor:
 - person:
     name:
@@ -39,147 +39,173 @@ contributor:
           language:
           - en
       surname:
-        content: Voyer
+        content: Fett
         language:
         - en
       completename:
-        content: Daniel Voyer
+        content: Daniel Fett
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Bell Canada
+        - content: Authlete
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Clarence
+        - content: Brian
           language:
           - en
         - language:
           - en
-          initial: C
+          initial: B
         formatted_initials:
-          content: C.
+          content: B.
           language:
           - en
       surname:
-        content: Filsfils
+        content: Campbell
         language:
         - en
       completename:
-        content: Clarence Filsfils
+        content: Brian Campbell
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems, Inc.
+        - content: Ping Identity
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Rishabh
+        - content: John
           language:
           - en
-        - language:
-          - en
-          initial: R
-        formatted_initials:
-          content: R.
-          language:
-          - en
-      surname:
-        content: Parekh
-        language:
-        - en
-      completename:
-        content: Rishabh Parekh
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Cisco Systems, Inc.
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Hooman
-          language:
-          - en
-        - language:
-          - en
-          initial: H
-        formatted_initials:
-          content: H.
-          language:
-          - en
-      surname:
-        content: Bidgoli
-        language:
-        - en
-      completename:
-        content: Hooman Bidgoli
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Nokia
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Zhaohui
-          language:
-          - en
-        - language:
-          - en
-          initial: Z
         - language:
           - en
           initial: J
         formatted_initials:
-          content: Z. J.
+          content: J.
           language:
           - en
       surname:
-        content: Zhang
+        content: Bradley
         language:
         - en
       completename:
-        content: Zhaohui (Jeffrey) Zhang
+        content: John Bradley
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Juniper Networks
+        - content: Yubico
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Torsten
+          language:
+          - en
+        - language:
+          - en
+          initial: T
+        formatted_initials:
+          content: T.
+          language:
+          - en
+      surname:
+        content: Lodderstedt
+        language:
+        - en
+      completename:
+        content: Torsten Lodderstedt
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: yes.com
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Michael
+          language:
+          - en
+        - language:
+          - en
+          initial: M
+        - language:
+          - en
+          initial: B
+        formatted_initials:
+          content: M. B.
+          language:
+          - en
+      surname:
+        content: Jones
+        language:
+        - en
+      completename:
+        content: Michael B. Jones
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: independent
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: David
+          language:
+          - en
+        - language:
+          - en
+          initial: D
+        formatted_initials:
+          content: D.
+          language:
+          - en
+      surname:
+        content: Waite
+        language:
+        - en
+      completename:
+        content: David Waite
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Ping Identity
   role:
   - type: author
 version:
-- draft: '05'
-revdate: '2022-07-02'
+- draft: '16'
+revdate: '2023-04-13'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document describes an architecture to construct a Point-to- Multipoint
-    (P2MP) tree to deliver Multi-point services in a Segment Routing domain. A SR
-    P2MP tree is constructed by stitching a set of Replication segments together.
-    A SR Point-to-Multipoint (SR P2MP) Policy is used to define and instantiate a
-    P2MP tree which is computed by a PCE.</p>"
+- content: "<p>This document describes a mechanism for sender-constraining OAuth 2.0
+    tokens via a proof-of-possession mechanism on the application level. This mechanism
+    allows for the detection of replay attacks with access and refresh tokens.</p>"
   language:
   - en
   script:
@@ -188,23 +214,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-pim-sr-p2mp-policy-04
+    id: draft-ietf-oauth-dpop-15
     docid:
-    - id: draft-ietf-pim-sr-p2mp-policy-04
+    - id: draft-ietf-oauth-dpop-15
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-pim-sr-p2mp-policy-04
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-pim-sr-p2mp-policy-06
-    docid:
-    - id: draft-ietf-pim-sr-p2mp-policy-06
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-pim-sr-p2mp-policy-06
+      content: draft-ietf-oauth-dpop-15
       format: text/plain
 series:
 - type: main
@@ -215,7 +231,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-pim-sr-p2mp-policy-05
+  number: draft-ietf-oauth-dpop-16
 doctype: internet-draft
 ext:
   schema-version: v1.0.0
