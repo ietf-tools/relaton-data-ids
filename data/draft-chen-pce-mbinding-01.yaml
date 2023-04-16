@@ -1,28 +1,28 @@
 ---
 schema-version: v1.2.1
-id: draft-chen-idr-sr-ingress-protection-07
+id: draft-chen-pce-mbinding-01
 title:
-- content: SR Path Ingress Protection
+- content: PCE for Mirror Binding
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-chen-idr-sr-ingress-protection-07
+- content: https://datatracker.ietf.org/doc/html/draft-chen-pce-mbinding-01
   type: src
 type: standard
 docid:
-- id: draft-chen-idr-sr-ingress-protection-07
+- id: draft-chen-pce-mbinding-01
   type: Internet-Draft
   primary: true
-- id: I-D.chen-idr-sr-ingress-protection
+- id: I-D.chen-pce-mbinding
   type: IETF
   scope: anchor
-docnumber: I-D.chen-idr-sr-ingress-protection
+docnumber: I-D.chen-pce-mbinding
 date:
 - type: published
-  value: '2022-10-16'
+  value: '2023-04-16'
 contributor:
 - person:
     name:
@@ -56,22 +56,53 @@ contributor:
     name:
       given:
         forename:
-        - content: Mehmet
+        - content: Bruno
           language:
           - en
         - language:
           - en
-          initial: M
+          initial: B
         formatted_initials:
-          content: M.
+          content: B.
           language:
           - en
       surname:
-        content: Toy
+        content: Decraene
         language:
         - en
       completename:
-        content: Mehmet Toy
+        content: Bruno Decraene
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Orange
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Gyan
+          language:
+          - en
+        - language:
+          - en
+          initial: G
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: G. S.
+          language:
+          - en
+      surname:
+        content: Mishra
+        language:
+        - en
+      completename:
+        content: Gyan Mishra
         language:
         - en
     affiliation:
@@ -112,28 +143,28 @@ contributor:
     name:
       given:
         forename:
-        - content: Zhenqiang
+        - content: Xufeng
           language:
           - en
         - language:
           - en
-          initial: Z
+          initial: X
         formatted_initials:
-          content: Z.
+          content: X.
           language:
           - en
       surname:
-        content: Li
+        content: Liu
         language:
         - en
       completename:
-        content: Zhenqiang Li
+        content: Xufeng Liu
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: China Mobile
+        - content: IBM Corporation
   role:
   - type: author
 - person:
@@ -164,44 +195,20 @@ contributor:
         - content: Fujitsu
   role:
   - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Xufeng
-          language:
-          - en
-        - language:
-          - en
-          initial: X
-        formatted_initials:
-          content: X.
-          language:
-          - en
-      surname:
-        content: Liu
-        language:
-        - en
-      completename:
-        content: Xufeng Liu
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Volta Networks
-  role:
-  - type: author
 version:
-- draft: '07'
-revdate: '2022-10-16'
+- draft: '01'
+revdate: '2023-04-16'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document describes extensions to Border Gateway Protocol (BGP)
-    for protecting the ingress node of a Segment Routing (SR) tunnel or path.</p>"
+- content: "<p>PCE is used to distribute a binding to a node. The binding includes
+    a binding SID and a path represented by a list of SIDs. This document describes
+    extensions to PCEP for distributing the information about the binding to a protecting
+    node. For an SR path via the node with the binding SID, when the node fails, the
+    protecting node such as the upstream neighbor on the path uses the information
+    to protect the binding SID of the failed node.</p>"
   language:
   - en
   script:
@@ -210,23 +217,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-chen-idr-sr-ingress-protection-06
+    id: draft-chen-pce-mbinding-00
     docid:
-    - id: draft-chen-idr-sr-ingress-protection-06
+    - id: draft-chen-pce-mbinding-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-chen-idr-sr-ingress-protection-06
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-chen-idr-sr-ingress-protection-08
-    docid:
-    - id: draft-chen-idr-sr-ingress-protection-08
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-chen-idr-sr-ingress-protection-08
+      content: draft-chen-pce-mbinding-00
       format: text/plain
 series:
 - type: main
@@ -237,7 +234,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-chen-idr-sr-ingress-protection-07
+  number: draft-chen-pce-mbinding-01
 doctype: internet-draft
 ext:
   schema-version: v1.0.0
