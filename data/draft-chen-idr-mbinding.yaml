@@ -13,10 +13,12 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>BGP is used to distribute a binding SID with a list of SIDs to a node.
-    This document describes extensions to BGP for distributing the binding SID with
-    the list of SIDs and an identifier of the node. When detecting the failure of
-    the node, an neighbor of the node protects the binding SID of the failed node.</p>"
+- content: "<p>BGP is used to distribute a binding to a node. The binding includes
+    a binding SID and a path represented by a list of SIDs. This document describes
+    extensions to BGP for distributing the information about the binding to a protecting
+    node. For an SR path via the node with the binding SID, when the node fails, the
+    protecting node such as the upstream neighbor on the path uses the information
+    to protect the binding SID of the failed node.</p>"
   language:
   - en
   script:
@@ -32,6 +34,16 @@ relation:
       primary: true
     formattedref:
       content: draft-chen-idr-mbinding-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-chen-idr-mbinding-01
+    docid:
+    - id: draft-chen-idr-mbinding-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-chen-idr-mbinding-01
       format: text/plain
 ext:
   schema-version: v1.0.0

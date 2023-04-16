@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.1
-id: draft-chen-idr-mbinding-00
+id: draft-chen-idr-mbinding-01
 title:
 - content: BGP for Mirror Binding
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-chen-idr-mbinding-00
+- content: https://datatracker.ietf.org/doc/html/draft-chen-idr-mbinding-01
   type: src
 type: standard
 docid:
-- id: draft-chen-idr-mbinding-00
+- id: draft-chen-idr-mbinding-01
   type: Internet-Draft
   primary: true
 - id: I-D.chen-idr-mbinding
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.chen-idr-mbinding
 date:
 - type: published
-  value: '2022-10-23'
+  value: '2023-04-16'
 contributor:
 - person:
     name:
@@ -196,32 +196,34 @@ contributor:
   role:
   - type: author
 version:
-- draft: '00'
-revdate: '2022-10-23'
+- draft: '01'
+revdate: '2023-04-16'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>BGP is used to distribute a binding SID with a list of SIDs to a node.
-    This document describes extensions to BGP for distributing the binding SID with
-    the list of SIDs and an identifier of the node. When detecting the failure of
-    the node, an neighbor of the node protects the binding SID of the failed node.</p>"
+- content: "<p>BGP is used to distribute a binding to a node. The binding includes
+    a binding SID and a path represented by a list of SIDs. This document describes
+    extensions to BGP for distributing the information about the binding to a protecting
+    node. For an SR path via the node with the binding SID, when the node fails, the
+    protecting node such as the upstream neighbor on the path uses the information
+    to protect the binding SID of the failed node.</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-chen-idr-mbinding-01
+    id: draft-chen-idr-mbinding-00
     docid:
-    - id: draft-chen-idr-mbinding-01
+    - id: draft-chen-idr-mbinding-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-chen-idr-mbinding-01
+      content: draft-chen-idr-mbinding-00
       format: text/plain
 series:
 - type: main
@@ -232,7 +234,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-chen-idr-mbinding-00
+  number: draft-chen-idr-mbinding-01
 doctype: internet-draft
 ext:
   schema-version: v1.0.0
