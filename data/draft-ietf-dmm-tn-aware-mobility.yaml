@@ -13,24 +13,18 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>Slices in a 5G system should be identified and mapped to the corresponding
-    transport network underlay segments to provide the capabilities requested by the
-    5G customer. One set of slices in a 5G system correspond to resources and connectivity
-    to carry signaling and data plane packets across a distributed infrastructure
-    that make up the 5G system, for example, distributed entities of a radio network
-    (gNB). Another set of 5G slices represent resource and connectivity capabilities
-    offered by the 5G system to its end users (UE) for the lifetime of a session including
-    UE mobility. Both depend in part on multiple transport network slice segments
-    with requirements that include bandwidth, latency, and criteria such as isolation,
-    directionality, and disjoint routes. This document describes how a 5G slice is
-    mapped to a slice in IP or Layer 2 transport network for both above cases, including
-    scenarios where the 5G customer network is separated from the provider transport
-    network by an intermediate network. Mobile slice criteria are mapped to the appropriate
-    transport slice and capabilities offered in backhaul, mid-haul and fronthaul connectivity
-    segments between radio side network functions and user plane function(gateway).
-    Applicability of this framework and underlying transport networks, which can enable
-    different slice properties are also discussed. This is based on mapping between
-    mobile and transport underlays (L2, Segment Routing, IPv6, MPLS and IPv4).</p>"
+- content: "<p>Network slicing in 5G enables the multiplexing of logical networks
+    over the same infrastructure. 5G signaling and user's data plane packets over
+    the radio access network (RAN) and mobile core network (5GC) use IP transport
+    in many segments of the end-to-end 5G slice. When end-to-end slices in a 5G system
+    use IP network resources, they are mapped to corresponding IP transport network
+    slice(s) which in turn provide the bandwidth, latency, isolation and other criteria
+    requested by the 5G slice. This document describes mapping of 5G slices to IP
+    or Layer 2 transport network slices when the IP transport network (slice provider)
+    is separated from the networks in which the 5G network functions are deployed
+    (for example, 5G functions distributed across data centers). The slice mapping
+    proposed here is supported transparently when a 5G user device moves across 5G
+    attachment points and session anchors.</p>"
   language:
   - en
   script:
@@ -96,6 +90,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-dmm-tn-aware-mobility-05
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-dmm-tn-aware-mobility-06
+    docid:
+    - id: draft-ietf-dmm-tn-aware-mobility-06
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-dmm-tn-aware-mobility-06
       format: text/plain
 ext:
   schema-version: v1.0.0
