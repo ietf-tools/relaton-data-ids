@@ -1,28 +1,28 @@
 ---
 schema-version: v1.2.1
-id: draft-chen-pim-srv6-p2mp-path-07
+id: draft-chen-pim-be-mrh-02
 title:
-- content: Stateless SRv6 Point-to-Multipoint Path
+- content: Stateless Best Effort Multicast Using MRH
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-chen-pim-srv6-p2mp-path-07
+- content: https://datatracker.ietf.org/doc/html/draft-chen-pim-be-mrh-02
   type: src
 type: standard
 docid:
-- id: draft-chen-pim-srv6-p2mp-path-07
+- id: draft-chen-pim-be-mrh-02
   type: Internet-Draft
   primary: true
-- id: I-D.chen-pim-srv6-p2mp-path
+- id: I-D.chen-pim-be-mrh
   type: IETF
   scope: anchor
-docnumber: I-D.chen-pim-srv6-p2mp-path
+docnumber: I-D.chen-pim-be-mrh
 date:
 - type: published
-  value: '2022-10-23'
+  value: '2023-04-24'
 contributor:
 - person:
     name:
@@ -44,6 +44,37 @@ contributor:
         - en
       completename:
         content: Huaimo Chen
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Futurewei
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Donald
+          language:
+          - en
+        - language:
+          - en
+          initial: D
+        - language:
+          - en
+          initial: E
+        formatted_initials:
+          content: D. E.
+          language:
+          - en
+      surname:
+        content: Eastlake
+        language:
+        - en
+      completename:
+        content: Donald E. Eastlake 3rd
         language:
         - en
     affiliation:
@@ -112,90 +143,6 @@ contributor:
     name:
       given:
         forename:
-        - content: Zhenbin
-          language:
-          - en
-        - language:
-          - en
-          initial: Z
-        formatted_initials:
-          content: Z.
-          language:
-          - en
-      surname:
-        content: Li
-        language:
-        - en
-      completename:
-        content: Zhenbin Li
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Huawei
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Xuesong
-          language:
-          - en
-        - language:
-          - en
-          initial: X
-        formatted_initials:
-          content: X.
-          language:
-          - en
-      surname:
-        content: Geng
-        language:
-        - en
-      completename:
-        content: Xuesong Geng
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Huawei
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Mehmet
-          language:
-          - en
-        - language:
-          - en
-          initial: M
-        formatted_initials:
-          content: M.
-          language:
-          - en
-      surname:
-        content: Toy
-        language:
-        - en
-      completename:
-        content: Mehmet Toy
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Verizon
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
         - content: Gyan
           language:
           - en
@@ -221,6 +168,34 @@ contributor:
     - organization:
         name:
         - content: Verizon
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Yisong
+          language:
+          - en
+        - language:
+          - en
+          initial: Y
+        formatted_initials:
+          content: Y.
+          language:
+          - en
+      surname:
+        content: Liu
+        language:
+        - en
+      completename:
+        content: Yisong Liu
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: China Mobile
   role:
   - type: author
 - person:
@@ -255,6 +230,34 @@ contributor:
     name:
       given:
         forename:
+        - content: Xufeng
+          language:
+          - en
+        - language:
+          - en
+          initial: X
+        formatted_initials:
+          content: X.
+          language:
+          - en
+      surname:
+        content: Liu
+        language:
+        - en
+      completename:
+        content: Xufeng Liu
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: IBM Corporation
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
         - content: Lei
           language:
           - en
@@ -279,47 +282,20 @@ contributor:
         - content: Fujitsu
   role:
   - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Xufeng
-          language:
-          - en
-        - language:
-          - en
-          initial: X
-        formatted_initials:
-          content: X.
-          language:
-          - en
-      surname:
-        content: Liu
-        language:
-        - en
-      completename:
-        content: Xufeng Liu
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Volta Networks
-  role:
-  - type: author
 version:
-- draft: '07'
-revdate: '2022-10-23'
+- draft: '02'
+revdate: '2023-04-24'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document describes a solution for a SRv6 Point-to-Multipoint (P2MP)
-    Path/Tree to deliver the traffic from the ingress of the path to the multiple
-    egresses/leaves of the path in a SR domain. There is no state stored in the core
-    of the network for a SR P2MP path like a SR Point-to-Point (P2P) path in this
-    solution.</p>"
+- content: "<p>This document describes stateless best effort Multicast along the shortest
+    paths to the egress nodes of a P2MP Path/Tree. The multicast data packet is encapsulated
+    in an IPv6 Multicast Routing Header (MRH). The MRH contains the egress nodes represented
+    by the indexes of the nodes and flexible bit strings for the nodes. The packet
+    is delivered to each of the egress nodes along the shortest path. There is no
+    state stored in the core of the network.</p>"
   language:
   - en
   script:
@@ -328,23 +304,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-chen-pim-srv6-p2mp-path-06
+    id: draft-chen-pim-be-mrh-01
     docid:
-    - id: draft-chen-pim-srv6-p2mp-path-06
+    - id: draft-chen-pim-be-mrh-01
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-chen-pim-srv6-p2mp-path-06
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-chen-pim-srv6-p2mp-path-08
-    docid:
-    - id: draft-chen-pim-srv6-p2mp-path-08
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-chen-pim-srv6-p2mp-path-08
+      content: draft-chen-pim-be-mrh-01
       format: text/plain
 series:
 - type: main
@@ -355,7 +321,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-chen-pim-srv6-p2mp-path-07
+  number: draft-chen-pim-be-mrh-02
 doctype: internet-draft
 ext:
   schema-version: v1.0.0
