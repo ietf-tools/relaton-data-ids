@@ -1,0 +1,94 @@
+---
+schema-version: v1.2.1
+id: draft-ietf-radext-radiusv11-00
+title:
+- content: RADIUS Version 1.1
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-radext-radiusv11-00
+  type: src
+type: standard
+docid:
+- id: draft-ietf-radext-radiusv11-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.ietf-radext-radiusv11
+  type: IETF
+  scope: anchor
+docnumber: I-D.ietf-radext-radiusv11
+date:
+- type: published
+  value: '2023-04-26'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Alan
+          language:
+          - en
+        - language:
+          - en
+          initial: A
+        formatted_initials:
+          content: A.
+          language:
+          - en
+      surname:
+        content: DeKok
+        language:
+        - en
+      completename:
+        content: Alan DeKok
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: FreeRADIUS
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2023-04-26'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: <p>This document defines Application-Layer Protocol Negotiation Extensions
+    for use with RADIUS/TLS and RADIUS/DTLS. These extensions permit the negotiation
+    of an additional application protocol for RADIUS over (D)TLS. No changes are made
+    to RADIUS/UDP or RADIUS/TCP. The extensions allow the negotiation of a transport
+    profile where the RADIUS shared secret is no longer used, and all MD5-based packet
+    signing and attribute obfuscation methods are removed. When this extension is
+    used, the previous Authenticator field is repurposed to contain an explicit request
+    / response identifier, called a Token. The Token also allows more than 256 packets
+    to be outstanding on one connection. This extension can be seen as a transport
+    profile for RADIUS, as it is not an entirely new protocol. It uses the existing
+    RADIUS packet layout and attribute format without change. As such, it can carry
+    all present and future RADIUS attributes. Implementation of this extension requires
+    only minor changes to the protocol encoder and decoder functionality. The protocol
+    defined by this extension is named "RADIUS version 1.1", or "RADIUS/1.1".</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-ietf-radext-radiusv11-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.0
