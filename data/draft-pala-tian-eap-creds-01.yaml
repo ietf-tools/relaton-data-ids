@@ -1,28 +1,28 @@
 ---
 schema-version: v1.2.1
-id: draft-pala-tian-eap-creds-spp-01
+id: draft-pala-tian-eap-creds-01
 title:
-- content: Credentials Provisioning and Management via EAP Method (EAP-CREDS)
+- content: Credentials Provisioning and Management via EAP (EAP-CREDS)
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-pala-tian-eap-creds-spp-01
+- content: https://datatracker.ietf.org/doc/html/draft-pala-tian-eap-creds-01
   type: src
 type: standard
 docid:
-- id: draft-pala-tian-eap-creds-spp-01
+- id: draft-pala-tian-eap-creds-01
   type: Internet-Draft
   primary: true
-- id: I-D.pala-tian-eap-creds-spp
+- id: I-D.pala-tian-eap-creds
   type: IETF
   scope: anchor
-docnumber: I-D.pala-tian-eap-creds-spp
+docnumber: I-D.pala-tian-eap-creds
 date:
 - type: published
-  value: '2022-06-30'
+  value: '2023-05-01'
 contributor:
 - person:
     name:
@@ -82,7 +82,7 @@ contributor:
   - type: author
 version:
 - draft: '01'
-revdate: '2022-06-30'
+revdate: '2023-05-01'
 language:
 - en
 script:
@@ -93,16 +93,24 @@ abstract:
     access, the need for a standardized credentials provisioning and management framework
     is paramount. The 802.1x architecture allows for entities (e.g., devices, applications,
     etc.) to authenticate to the network by providing a communication channel where
-    different methods can be used to exchange different types of credentials. EAP-CREDS
-    is an EAP method that specifically designed for credential provisioning and management.
-    If implemented in Access Networks (e.g., wired), EAP-CREDS can offer credentials
-    management services such as registration, provisioning, and renewal. Besides,
-    EAP-CREDS provides protocol encapsulation mechanism that allows it to use with
-    other credential management protocols. Therefore, this document defines how to
-    use EAP-CREDS with the Simple Provisioning Protocol (SPP) to support the provisioning
-    and management of authentication credentials for user and/or devices in an access
-    network. Other credential provisioning protocols can also use this document as
-    a guideline and template for its own encapsulation with EAP-CREDS.</p>"
+    different methods can be used to exchange different types of credentials. However,
+    the need for managing these credentials (i.e., provisioning and renewal) is still
+    a hard problem to solve. Usually, credentails used in an access network can be
+    in different levels (e.g., network-level, user-level) and sometimes tend to live
+    unmanaged for quite a long time due to the challenges of operation and implementation.
+    EAP-CREDS (RFC XXXX), if implemented in Managed Networks (e.g., Cable Modems),
+    could enable our operators to offer a registration and credentials management
+    service integrated in the home WiFi thus enabling visibility about registered
+    devices. During initialization, EAP-CREDS also allows for MUD files or URLs to
+    be transferred between the EAP Peer and the EAP Server, thus giving detailed visibility
+    about devices when they are provisioned with credentials for accessing the networks.
+    The possibility provided by EAP-CREDS can help to secure home or business networks
+    by leveraging the synergies of the security teams from the network operators thanks
+    to the extended knowledge of what and how is registered/ authenticated. This specifications
+    define how to support the provisioning and management of authentication credentials
+    that can be exploited in different environments (e.g., Wired, WiFi, cellular,
+    etc.) to users and/or devices by using EAP together with standard provisioning
+    protocols.</p>"
   language:
   - en
   script:
@@ -111,23 +119,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-pala-tian-eap-creds-spp-00
+    id: draft-pala-tian-eap-creds-00
     docid:
-    - id: draft-pala-tian-eap-creds-spp-00
+    - id: draft-pala-tian-eap-creds-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-pala-tian-eap-creds-spp-00
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-pala-tian-eap-creds-spp-02
-    docid:
-    - id: draft-pala-tian-eap-creds-spp-02
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-pala-tian-eap-creds-spp-02
+      content: draft-pala-tian-eap-creds-00
       format: text/plain
 series:
 - type: main
@@ -138,7 +136,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-pala-tian-eap-creds-spp-01
+  number: draft-pala-tian-eap-creds-01
 doctype: internet-draft
 ext:
   schema-version: v1.0.0
