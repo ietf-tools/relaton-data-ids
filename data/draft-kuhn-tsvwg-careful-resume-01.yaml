@@ -1,28 +1,28 @@
 ---
 schema-version: v1.2.1
-id: draft-kuhn-quic-bdpframe-extension-01
+id: draft-kuhn-tsvwg-careful-resume-01
 title:
-- content: BDP Frame Extension
+- content: Careful convergence of congestion control from retained state
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-kuhn-quic-bdpframe-extension-01
+- content: https://datatracker.ietf.org/doc/html/draft-kuhn-tsvwg-careful-resume-01
   type: src
 type: standard
 docid:
-- id: draft-kuhn-quic-bdpframe-extension-01
+- id: draft-kuhn-tsvwg-careful-resume-01
   type: Internet-Draft
   primary: true
-- id: I-D.kuhn-quic-bdpframe-extension
+- id: I-D.kuhn-tsvwg-careful-resume
   type: IETF
   scope: anchor
-docnumber: I-D.kuhn-quic-bdpframe-extension
+docnumber: I-D.kuhn-tsvwg-careful-resume
 date:
 - type: published
-  value: '2023-03-03'
+  value: '2023-05-10'
 contributor:
 - person:
     name:
@@ -138,21 +138,24 @@ contributor:
   - type: author
 version:
 - draft: '01'
-revdate: '2023-03-03'
+revdate: '2023-05-10'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document describes the BDP_FRAME extension for QUIC. The frame
-    enables the exchange of CC parameters related to the path characteristics between
-    the receiver and the sender during a connection. These CC parameters can be utilised
-    by the Careful Resume method when a new connection is established or for application-limited
-    traffic. The CC parameters allows a receiver to prepare to use the additional
-    capacity that could be amde available when the method is used. This CC parameters
-    can also be used by the receiver to request that previously computed CC parameters
-    related to the path characteristics, are not used, when the receiver has additional
-    information about the path or traffic to be sent.</p>"
+- content: "<p>This document specifies careful convergence of Congestion Control (CC),
+    providing a cautious method that enables fast startup for a wide range of connections
+    or reconnections. The method reuses a set of computed CC parameters that are based
+    on the previously observed path characteristics between the same pair of transport
+    endpoints, such as the bottleneck bandwidth, available capacity, or the RTT. These
+    parameters are stored, allowing them to be later used to modify the CC behavior
+    of a subsequent connection. The document also discusses assumptions and defines
+    requirements around how a sender utilizes these parameters to provide opportunities
+    for a connection to more quickly get up to speed (i.e. utilize the available capacity).
+    It discusses how these changes impact the capacity at a shared network bottleneck
+    and the safe response that is needed after any indication that the new rate is
+    inappropriate. The method is expected to be appropriate to IETF transports.</p>"
   language:
   - en
   script:
@@ -161,23 +164,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-kuhn-quic-bdpframe-extension-00
+    id: draft-kuhn-tsvwg-careful-resume-00
     docid:
-    - id: draft-kuhn-quic-bdpframe-extension-00
+    - id: draft-kuhn-tsvwg-careful-resume-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-kuhn-quic-bdpframe-extension-00
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-kuhn-quic-bdpframe-extension-02
-    docid:
-    - id: draft-kuhn-quic-bdpframe-extension-02
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-kuhn-quic-bdpframe-extension-02
+      content: draft-kuhn-tsvwg-careful-resume-00
       format: text/plain
 series:
 - type: main
@@ -188,7 +181,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-kuhn-quic-bdpframe-extension-01
+  number: draft-kuhn-tsvwg-careful-resume-01
 doctype: internet-draft
 ext:
   schema-version: v1.0.0

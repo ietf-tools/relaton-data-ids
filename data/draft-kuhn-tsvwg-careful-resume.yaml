@@ -2,7 +2,7 @@
 schema-version: v1.2.1
 id: draft-kuhn-tsvwg-careful-resume
 title:
-- content: Careful convergence of congestion control from retained state with QUIC
+- content: Careful convergence of congestion control from retained state
   language:
   - en
   script:
@@ -13,22 +13,18 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document discusses careful convergence of Congestion Control (CC)
-    in QUIC, providing a cautious method that enables fast startup in a wide range
-    of connections: reconnections using previous transport security credentials (0-RTT
-    context), reconnections between 2 peers (prior knowledge of transport context),
-    application-limited traffic. The method provides QUIC with transport services
-    that resemble those currently available in TCP, such as TCP Control Block (TCB)
-    [RFC9040] caching or updates to support application-limited traffic. The method
-    reuses a set of computed CC parameters that are based on the previously observed
-    path characteristics between the the same pair of transport endpoints, such as
-    the bottleneck bandwidth, available capacity, or the RTT. These parameters are
-    stored, allowing then to be later used to modify the CC behavior of a subsequent
-    connection. The document also discusses assumptions and defines requirements around
-    how a sender utilizes these parameters to provide opportunities for a new connection
-    to more quickly get up to speed (i.e. utilize the available capacity). It discusses
-    how these changes impact the capacity at a shared network bottleneck and the safe
-    response that is needed after any indication that the new rate is inappropriate.</p>"
+- content: "<p>This document specifies careful convergence of Congestion Control (CC),
+    providing a cautious method that enables fast startup for a wide range of connections
+    or reconnections. The method reuses a set of computed CC parameters that are based
+    on the previously observed path characteristics between the same pair of transport
+    endpoints, such as the bottleneck bandwidth, available capacity, or the RTT. These
+    parameters are stored, allowing them to be later used to modify the CC behavior
+    of a subsequent connection. The document also discusses assumptions and defines
+    requirements around how a sender utilizes these parameters to provide opportunities
+    for a connection to more quickly get up to speed (i.e. utilize the available capacity).
+    It discusses how these changes impact the capacity at a shared network bottleneck
+    and the safe response that is needed after any indication that the new rate is
+    inappropriate. The method is expected to be appropriate to IETF transports.</p>"
   language:
   - en
   script:
@@ -44,6 +40,16 @@ relation:
       primary: true
     formattedref:
       content: draft-kuhn-tsvwg-careful-resume-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-kuhn-tsvwg-careful-resume-01
+    docid:
+    - id: draft-kuhn-tsvwg-careful-resume-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-kuhn-tsvwg-careful-resume-01
       format: text/plain
 ext:
   schema-version: v1.0.0
