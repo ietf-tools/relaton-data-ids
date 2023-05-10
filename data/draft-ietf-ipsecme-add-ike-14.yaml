@@ -1,34 +1,35 @@
 ---
 schema-version: v1.2.1
-id: draft-tuexen-tsvwg-sctp-zero-checksum-02
+id: draft-ietf-ipsecme-add-ike-14
 title:
-- content: Zero Checksum for the Stream Control Transmission Protocol
+- content: Internet Key Exchange Protocol Version 2 (IKEv2) Configuration for Encrypted
+    DNS
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-tuexen-tsvwg-sctp-zero-checksum-02
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-ipsecme-add-ike-14
   type: src
 type: standard
 docid:
-- id: draft-tuexen-tsvwg-sctp-zero-checksum-02
+- id: draft-ietf-ipsecme-add-ike-14
   type: Internet-Draft
   primary: true
-- id: I-D.tuexen-tsvwg-sctp-zero-checksum
+- id: I-D.ietf-ipsecme-add-ike
   type: IETF
   scope: anchor
-docnumber: I-D.tuexen-tsvwg-sctp-zero-checksum
+docnumber: I-D.ietf-ipsecme-add-ike
 date:
 - type: published
-  value: '2023-03-25'
+  value: '2023-05-10'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Michael
+        - content: Mohamed
           language:
           - en
         - language:
@@ -39,24 +40,80 @@ contributor:
           language:
           - en
       surname:
-        content: Tüxen
+        content: Boucadair
         language:
         - en
       completename:
-        content: Michael Tüxen
+        content: Mohamed Boucadair
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Münster University of Applied Sciences
+        - content: Orange
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Victor
+        - content: Tirumaleswar
+          language:
+          - en
+        - language:
+          - en
+          initial: T
+        formatted_initials:
+          content: T.
+          language:
+          - en
+      surname:
+        content: Reddy.K
+        language:
+        - en
+      completename:
+        content: Tirumaleswar Reddy.K
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Nokia
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Dan
+          language:
+          - en
+        - language:
+          - en
+          initial: D
+        formatted_initials:
+          content: D.
+          language:
+          - en
+      surname:
+        content: Wing
+        language:
+        - en
+      completename:
+        content: Dan Wing
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Citrix Systems, Inc.
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Valery
           language:
           - en
         - language:
@@ -67,90 +124,31 @@ contributor:
           language:
           - en
       surname:
-        content: Boivie
+        content: Smyslov
         language:
         - en
       completename:
-        content: Victor Boivie
+        content: Valery Smyslov
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Google
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Florent
-          language:
-          - en
-        - language:
-          - en
-          initial: F
-        formatted_initials:
-          content: F.
-          language:
-          - en
-      surname:
-        content: Castelli
-        language:
-        - en
-      completename:
-        content: Florent Castelli
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Google
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Randell
-          language:
-          - en
-        - language:
-          - en
-          initial: R
-        formatted_initials:
-          content: R.
-          language:
-          - en
-      surname:
-        content: Jesup
-        language:
-        - en
-      completename:
-        content: Randell Jesup
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Mozilla Corporation
+        - content: ELVIS-PLUS
   role:
   - type: author
 version:
-- draft: '02'
-revdate: '2023-03-25'
+- draft: '14'
+revdate: '2023-05-10'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>The Stream Control Transmission Protocol (SCTP) uses a 32-bit checksum
-    in the common header of each packet to provide some level of data integrity. When
-    the lower layer used by SCTP provides already the same or a higher level of data
-    integrity, computing this checksum does not provide any additional protection,
-    but does require computing resources. This document provides a simple extension
-    to SCTP allowing to save these computing resources by using the constant 0 as
-    the checksum in a backwards compatible way.</p>"
+- content: "<p>This document specifies new Internet Key Exchange Protocol Version
+    2 (IKEv2) Configuration Payload Attribute Types to assign DNS resolvers that support
+    encrypted DNS protocols, such as DNS-over-HTTPS (DoH), DNS-over-TLS (DoT), and
+    DNS-over-QUIC (DoQ).</p>"
   language:
   - en
   script:
@@ -159,23 +157,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-tuexen-tsvwg-sctp-zero-checksum-01
+    id: draft-ietf-ipsecme-add-ike-13
     docid:
-    - id: draft-tuexen-tsvwg-sctp-zero-checksum-01
+    - id: draft-ietf-ipsecme-add-ike-13
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-tuexen-tsvwg-sctp-zero-checksum-01
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-tuexen-tsvwg-sctp-zero-checksum-03
-    docid:
-    - id: draft-tuexen-tsvwg-sctp-zero-checksum-03
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-tuexen-tsvwg-sctp-zero-checksum-03
+      content: draft-ietf-ipsecme-add-ike-13
       format: text/plain
 series:
 - type: main
@@ -186,7 +174,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-tuexen-tsvwg-sctp-zero-checksum-02
+  number: draft-ietf-ipsecme-add-ike-14
 doctype: internet-draft
 ext:
   schema-version: v1.0.0
