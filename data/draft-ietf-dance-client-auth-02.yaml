@@ -1,28 +1,28 @@
 ---
 schema-version: v1.2.1
-id: draft-ietf-dance-tls-clientid-01
+id: draft-ietf-dance-client-auth-02
 title:
-- content: TLS Extension for DANE Client Identity
+- content: TLS Client Authentication via DANE TLSA records
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-dance-tls-clientid-01
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-dance-client-auth-02
   type: src
 type: standard
 docid:
-- id: draft-ietf-dance-tls-clientid-01
+- id: draft-ietf-dance-client-auth-02
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-dance-tls-clientid
+- id: I-D.ietf-dance-client-auth
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-dance-tls-clientid
+docnumber: I-D.ietf-dance-client-auth
 date:
 - type: published
-  value: '2022-11-08'
+  value: '2023-05-12'
 contributor:
 - person:
     name:
@@ -80,46 +80,19 @@ contributor:
         - content: Two Sigma
   role:
   - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Ash
-          language:
-          - en
-        - language:
-          - en
-          initial: A
-        formatted_initials:
-          content: A.
-          language:
-          - en
-      surname:
-        content: Wilson
-        language:
-        - en
-      completename:
-        content: Ash Wilson
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Valimail
-  role:
-  - type: author
 version:
-- draft: '01'
-revdate: '2022-11-08'
+- draft: '02'
+revdate: '2023-05-12'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document specifies a TLS and DTLS extension to convey a DNS- Based
-    Authentication of Named Entities (DANE) Client Identity to a TLS or DTLS server.
-    This is useful for applications that perform TLS client authentication via DANE
-    TLSA records.</p>"
+- content: "<p>The DANE TLSA protocol [RFC6698] [RFC7671] describes how to publish
+    Transport Layer Security (TLS) server certificates or public keys in the DNS.
+    This document updates RFC 6698 and RFC 7671. It describes how to additionally
+    use the TLSA record to publish client certificates or public keys, and also the
+    rules and considerations for using them with TLS.</p>"
   language:
   - en
   script:
@@ -128,23 +101,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-dance-tls-clientid-00
+    id: draft-ietf-dance-client-auth-01
     docid:
-    - id: draft-ietf-dance-tls-clientid-00
+    - id: draft-ietf-dance-client-auth-01
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-dance-tls-clientid-00
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-dance-tls-clientid-02
-    docid:
-    - id: draft-ietf-dance-tls-clientid-02
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-dance-tls-clientid-02
+      content: draft-ietf-dance-client-auth-01
       format: text/plain
 series:
 - type: main
@@ -155,7 +118,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-dance-tls-clientid-01
+  number: draft-ietf-dance-client-auth-02
 doctype: internet-draft
 ext:
   schema-version: v1.0.0
