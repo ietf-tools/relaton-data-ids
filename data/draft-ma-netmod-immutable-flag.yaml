@@ -13,16 +13,14 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: '<p>This document defines a way to formally document as a YANG extension
-    or YANG metadata an existing model handling behavior: modification restrictions
-    on data declared as configuration. This document defines a YANG extension named
-    "immutable" to indicate that specific "config true" data nodes are not allowed
-    to be created/deleted/updated. To indicate that specific entries of a list/leaf-list
-    node or instances inside list entries cannot be updated/deleted after initialization,
-    a metadata annotation with the same name is also defined. Any data node or instance
-    marked as immutable is read-only to the clients of YANG-driven management protocols,
-    such as NETCONF, RESTCONF and other management operations (e.g., SNMP and CLI
-    requests).</p>'
+- content: <p>This document defines a way to formally document existing behavior,
+    implemented by servers in production, on the immutability of some configuration
+    nodes, using a YANG "extension" and a YANG metadata annotation, both called "immutable",
+    which are collectively used to flag which data nodes are immutable. Clients may
+    use "immutable" statements in the YANG, and annotations provided by the server,
+    to know beforehand when certain otherwise valid configuration requests will cause
+    the server to return an error. The immutable flag is descriptive, documenting
+    existing behavior, not proscriptive, dictating server behavior.</p>
   language:
   - en
   script:
@@ -98,6 +96,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ma-netmod-immutable-flag-06
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ma-netmod-immutable-flag-07
+    docid:
+    - id: draft-ma-netmod-immutable-flag-07
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ma-netmod-immutable-flag-07
       format: text/plain
 ext:
   schema-version: v1.0.0
