@@ -1,28 +1,28 @@
 ---
 schema-version: v1.2.1
-id: draft-ounsworth-pq-composite-sigs-08
+id: draft-ounsworth-pq-composite-kem-02
 title:
-- content: Composite Signatures For Use In Internet PKI
+- content: Composite KEM For Use In Internet PKI
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ounsworth-pq-composite-sigs-08
+- content: https://datatracker.ietf.org/doc/html/draft-ounsworth-pq-composite-kem-02
   type: src
 type: standard
 docid:
-- id: draft-ounsworth-pq-composite-sigs-08
+- id: draft-ounsworth-pq-composite-kem-02
   type: Internet-Draft
   primary: true
-- id: I-D.ounsworth-pq-composite-sigs
+- id: I-D.ounsworth-pq-composite-kem
   type: IETF
   scope: anchor
-docnumber: I-D.ounsworth-pq-composite-sigs
+docnumber: I-D.ounsworth-pq-composite-kem
 date:
 - type: published
-  value: '2023-03-13'
+  value: '2023-05-29'
 contributor:
 - person:
     name:
@@ -80,37 +80,9 @@ contributor:
         - content: Entrust Limited
   role:
   - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Massimiliano
-          language:
-          - en
-        - language:
-          - en
-          initial: M
-        formatted_initials:
-          content: M.
-          language:
-          - en
-      surname:
-        content: Pala
-        language:
-        - en
-      completename:
-        content: Massimiliano Pala
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: CableLabs
-  role:
-  - type: author
 version:
-- draft: '08'
-revdate: '2023-03-13'
+- draft: '02'
+revdate: '2023-05-29'
 language:
 - en
 script:
@@ -119,7 +91,7 @@ abstract:
 - content: <p>The migration to post-quantum cryptography is unique in the history
     of modern digital cryptography in that neither the old outgoing nor the new incoming
     algorithms are fully trusted to protect data for the required data lifetimes.
-    The outgoing algorithms, such as RSA and elliptic curve, may fall to quantum cryptanalysis,
+    The outgoing algorithms, such as RSA and elliptic curve, may fall to quantum cryptalanysis,
     while the incoming post-quantum algorithms face uncertainty about both the underlying
     mathematics as well as hardware and software implementations that have not had
     sufficient maturing time to rule out classical cryptanalytic attacks and implementation
@@ -130,18 +102,13 @@ abstract:
     specific instantiation of hybrid paradigm called "composite" where multiple cryptographic
     algorithms are combined to form a single key, signature, or key encapsulation
     mechanism (KEM) such that they can be treated as a single atomic object at the
-    protocol level. This document defines the structures CompositeSignatureValue,
-    and CompositeSignatureParams, which are sequences of the respective structure
-    for each component algorithm. The explicit variant is defined which allows for
-    a set of signature algorithm identifier OIDs to be registered together as an explicit
-    composite signature algorithm and assigned an OID. The generic composite variant
-    is also defined which allows arbitrary combinations of signature algorithms to
-    be used in the CompositeSignatureValue and CompositeSignatureParams structures
-    without needing the combination to be pre-registered or pre-agreed. This document
-    is intended to be coupled with corresponding documents that define the structure
-    and semantics of composite public and private keys and encryption [I-D.ounsworth-pq-composite-keys],
-    however may also be used with non-composite keys, such as when a protocol combines
-    multiple certificates into a single cryptographic operation.</p>
+    protocol level. This document defines the structure CompositeCiphertextValue which
+    is a sequence of the respective ciphertexts for each component algorithm. Explicit
+    pairings of algorithms are defined which should meet most Internet needs. For
+    the purpose of combining KEMs, the combiner function from [I-D.ounsworth-cfrg-kem-combiners]
+    is used. This document is intended to be coupled with the composite keys structure
+    define in [I-D.ounsworth-pq-composite-keys] and the CMS KEMRecipientInfo mechanism
+    in [I-D.housley-lamps-cms-kemri].</p>
   language:
   - en
   script:
@@ -150,23 +117,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ounsworth-pq-composite-sigs-07
+    id: draft-ounsworth-pq-composite-kem-01
     docid:
-    - id: draft-ounsworth-pq-composite-sigs-07
+    - id: draft-ounsworth-pq-composite-kem-01
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ounsworth-pq-composite-sigs-07
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ounsworth-pq-composite-sigs-09
-    docid:
-    - id: draft-ounsworth-pq-composite-sigs-09
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ounsworth-pq-composite-sigs-09
+      content: draft-ounsworth-pq-composite-kem-01
       format: text/plain
 series:
 - type: main
@@ -177,7 +134,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ounsworth-pq-composite-sigs-08
+  number: draft-ounsworth-pq-composite-kem-02
 doctype: internet-draft
 ext:
   schema-version: v1.0.0
