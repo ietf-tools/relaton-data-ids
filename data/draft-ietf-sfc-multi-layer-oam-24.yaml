@@ -1,62 +1,90 @@
 ---
 schema-version: v1.2.1
-id: draft-ietf-taps-impl-15
+id: draft-ietf-sfc-multi-layer-oam-24
 title:
-- content: Implementing Interfaces to Transport Services
+- content: Active OAM for Service Function Chaining (SFC)
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-taps-impl-15
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-sfc-multi-layer-oam-24
   type: src
 type: standard
 docid:
-- id: draft-ietf-taps-impl-15
+- id: draft-ietf-sfc-multi-layer-oam-24
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-taps-impl
+- id: I-D.ietf-sfc-multi-layer-oam
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-taps-impl
+docnumber: I-D.ietf-sfc-multi-layer-oam
 date:
 - type: published
-  value: '2023-03-09'
+  value: '2023-06-05'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Anna
+        - content: Greg
           language:
           - en
         - language:
           - en
-          initial: A
+          initial: G
         formatted_initials:
-          content: A.
+          content: G.
           language:
           - en
       surname:
-        content: Brunstrom
+        content: Mirsky
         language:
         - en
       completename:
-        content: Anna Brunstrom
+        content: Greg Mirsky
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Karlstad University
+        - content: Ericsson
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Tommy
+        - content: Wei
+          language:
+          - en
+        - language:
+          - en
+          initial: W
+        formatted_initials:
+          content: W.
+          language:
+          - en
+      surname:
+        content: Meng
+        language:
+        - en
+      completename:
+        content: Wei Meng
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: ZTE Corporation
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Ting
           language:
           - en
         - language:
@@ -67,119 +95,118 @@ contributor:
           language:
           - en
       surname:
-        content: Pauly
+        content: Ao
         language:
         - en
       completename:
-        content: Tommy Pauly
+        content: Ting Ao
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Apple Inc.
+        - content: China Mobile
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Reese
+        - content: Bhumip
           language:
           - en
         - language:
           - en
-          initial: R
+          initial: B
         formatted_initials:
-          content: R.
+          content: B.
           language:
           - en
       surname:
-        content: Enghardt
+        content: Khasnabish
         language:
         - en
       completename:
-        content: Reese Enghardt
+        content: Bhumip Khasnabish
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Netflix
+        - content: Individual contributor
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Philipp
+        - content: Kent
           language:
           - en
         - language:
           - en
-          initial: P
+          initial: K
+        formatted_initials:
+          content: K.
+          language:
+          - en
+      surname:
+        content: Leung
+        language:
+        - en
+      completename:
+        content: Kent Leung
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Individual contributor
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Gyan
+          language:
+          - en
+        - language:
+          - en
+          initial: G
         - language:
           - en
           initial: S
         formatted_initials:
-          content: P. S.
+          content: G. S.
           language:
           - en
       surname:
-        content: Tiesel
+        content: Mishra
         language:
         - en
       completename:
-        content: Philipp S. Tiesel
+        content: Gyan Mishra
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: SAP SE
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Michael
-          language:
-          - en
-        - language:
-          - en
-          initial: M
-        formatted_initials:
-          content: M.
-          language:
-          - en
-      surname:
-        content: Welzl
-        language:
-        - en
-      completename:
-        content: Michael Welzl
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: University of Oslo
+        - content: Verizon Inc.
   role:
   - type: author
 version:
-- draft: '15'
-revdate: '2023-03-09'
+- draft: '24'
+revdate: '2023-06-05'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>The Transport Services system enables applications to use transport
-    protocols flexibly for network communication and defines a protocol- independent
-    Transport Services Application Programming Interface (API) that is based on an
-    asynchronous, event-driven interaction pattern. This document serves as a guide
-    to implementation on how to build such a system.</p>"
+- content: "<p>A set of requirements for active Operation, Administration, and Maintenance
+    (OAM) of Service Function Chains (SFCs) in a network is presented in this document.
+    Based on these requirements, an encapsulation of active OAM messages in SFC and
+    a mechanism to detect and localize defects are described.</p>"
   language:
   - en
   script:
@@ -188,23 +215,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-taps-impl-14
+    id: draft-ietf-sfc-multi-layer-oam-23
     docid:
-    - id: draft-ietf-taps-impl-14
+    - id: draft-ietf-sfc-multi-layer-oam-23
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-taps-impl-14
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-taps-impl-16
-    docid:
-    - id: draft-ietf-taps-impl-16
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-taps-impl-16
+      content: draft-ietf-sfc-multi-layer-oam-23
       format: text/plain
 series:
 - type: main
@@ -215,7 +232,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-taps-impl-15
+  number: draft-ietf-sfc-multi-layer-oam-24
 doctype: internet-draft
 ext:
   schema-version: v1.0.0
