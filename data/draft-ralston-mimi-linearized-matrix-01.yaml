@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.1
-id: draft-ralston-mimi-linearized-matrix-00
+id: draft-ralston-mimi-linearized-matrix-01
 title:
 - content: Linearized Matrix API
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ralston-mimi-linearized-matrix-00
+- content: https://datatracker.ietf.org/doc/html/draft-ralston-mimi-linearized-matrix-01
   type: src
 type: standard
 docid:
-- id: draft-ralston-mimi-linearized-matrix-00
+- id: draft-ralston-mimi-linearized-matrix-01
   type: Internet-Draft
   primary: true
 - id: I-D.ralston-mimi-linearized-matrix
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.ralston-mimi-linearized-matrix
 date:
 - type: published
-  value: '2023-03-25'
+  value: '2023-06-06'
 contributor:
 - person:
     name:
@@ -81,40 +81,34 @@ contributor:
   role:
   - type: author
 version:
-- draft: '00'
-revdate: '2023-03-25'
+- draft: '01'
+revdate: '2023-06-06'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: <p>Matrix is an existing openly specified decentralized secure communications
-    protocol able to provide a framework for instant messaging interoperability. Matrix
-    rooms (aka conversations) currently use a Directed Acyclic Graph (DAG) for persisting
-    events/ messages. Servers broadcast their changes to the DAG to every other server
-    in order to create new events. This model provides excellent decentralization
-    characteristics and conversation history replication, but proves complex when
-    aiming to use Matrix strictly for interoperability between today's existing messaging
-    service providers, which often do not persist chat history serverside, and do
-    not seek to replicate it between servers. This document explores an API surface
-    for Matrix which optimizes for ease of interoperability at the expense of decentralized
-    conversation history at a per-room level. We call this API surface "Linearized
-    Matrix".</p>
+- content: '<p>Matrix is an existing openly specified decentralized secure communications
+    protocol able to provide a framework for instant messaging interoperability. However,
+    the existing model can be complex to reason about for simple interoperability
+    usecases. With modifications to the room model, Matrix can support those simpler
+    usecases more easily. This document explores "Linearized Matrix": the modified
+    room model still backed by Matrix.</p>'
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-ralston-mimi-linearized-matrix-01
+    id: draft-ralston-mimi-linearized-matrix-00
     docid:
-    - id: draft-ralston-mimi-linearized-matrix-01
+    - id: draft-ralston-mimi-linearized-matrix-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ralston-mimi-linearized-matrix-01
+      content: draft-ralston-mimi-linearized-matrix-00
       format: text/plain
 series:
 - type: main
@@ -125,7 +119,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ralston-mimi-linearized-matrix-00
+  number: draft-ralston-mimi-linearized-matrix-01
 doctype: internet-draft
 ext:
   schema-version: v1.0.0
