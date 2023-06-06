@@ -1,0 +1,18 @@
+name: Crawler
+
+on:
+  push:
+    branches: [ master, main ]
+    tags: [ v* ]
+  pull_request:
+  schedule:
+  - cron: '0 14 * * *'
+  workflow_dispatch:
+
+jobs:
+  crawl:
+    uses: relaton/support/.github/workflows/crawler.yml@master
+    with:
+      override-files: |
+        https://raw.githubusercontent.com/ietf-tools/bibxml-service/main/Gemfile=Gemfile
+        https://raw.githubusercontent.com/ietf-tools/bibxml-service/main/Gemfile.lock=Gemfile.lock
