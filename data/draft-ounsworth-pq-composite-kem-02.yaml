@@ -1,0 +1,140 @@
+---
+schema-version: v1.2.1
+id: draft-ounsworth-pq-composite-kem-02
+title:
+- content: Composite KEM For Use In Internet PKI
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-ounsworth-pq-composite-kem-02
+  type: src
+type: standard
+docid:
+- id: draft-ounsworth-pq-composite-kem-02
+  type: Internet-Draft
+  primary: true
+- id: I-D.ounsworth-pq-composite-kem
+  type: IETF
+  scope: anchor
+docnumber: I-D.ounsworth-pq-composite-kem
+date:
+- type: published
+  value: '2023-05-29'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Mike
+          language:
+          - en
+        - language:
+          - en
+          initial: M
+        formatted_initials:
+          content: M.
+          language:
+          - en
+      surname:
+        content: Ounsworth
+        language:
+        - en
+      completename:
+        content: Mike Ounsworth
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Entrust Limited
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: John
+          language:
+          - en
+        - language:
+          - en
+          initial: J
+        formatted_initials:
+          content: J.
+          language:
+          - en
+      surname:
+        content: Gray
+        language:
+        - en
+      completename:
+        content: John Gray
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Entrust Limited
+  role:
+  - type: author
+version:
+- draft: '02'
+revdate: '2023-05-29'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: <p>The migration to post-quantum cryptography is unique in the history
+    of modern digital cryptography in that neither the old outgoing nor the new incoming
+    algorithms are fully trusted to protect data for the required data lifetimes.
+    The outgoing algorithms, such as RSA and elliptic curve, may fall to quantum cryptalanysis,
+    while the incoming post-quantum algorithms face uncertainty about both the underlying
+    mathematics as well as hardware and software implementations that have not had
+    sufficient maturing time to rule out classical cryptanalytic attacks and implementation
+    bugs. Cautious implementers may wish to layer cryptographic algorithms such that
+    an attacker would need to break all of them in order to compromise the data being
+    protected using either a Post-Quantum / Traditional Hybrid, Post-Quantum / Post-Quantum
+    Hybrid, or combinations thereof. This document, and its companions, defines a
+    specific instantiation of hybrid paradigm called "composite" where multiple cryptographic
+    algorithms are combined to form a single key, signature, or key encapsulation
+    mechanism (KEM) such that they can be treated as a single atomic object at the
+    protocol level. This document defines the structure CompositeCiphertextValue which
+    is a sequence of the respective ciphertexts for each component algorithm. Explicit
+    pairings of algorithms are defined which should meet most Internet needs. For
+    the purpose of combining KEMs, the combiner function from [I-D.ounsworth-cfrg-kem-combiners]
+    is used. This document is intended to be coupled with the composite keys structure
+    define in [I-D.ounsworth-pq-composite-keys] and the CMS KEMRecipientInfo mechanism
+    in [I-D.housley-lamps-cms-kemri].</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-ounsworth-pq-composite-kem-01
+    docid:
+    - id: draft-ounsworth-pq-composite-kem-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ounsworth-pq-composite-kem-01
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-ounsworth-pq-composite-kem-02
+doctype: internet-draft
+ext:
+  schema-version: v1.0.0
