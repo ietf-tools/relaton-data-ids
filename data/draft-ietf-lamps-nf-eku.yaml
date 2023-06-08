@@ -2,8 +2,7 @@
 schema-version: v1.2.1
 id: draft-ietf-lamps-nf-eku
 title:
-- content: X.509 Certificate Extended Key Usage (EKU) for (JOSE) and CBOR Object Signing
-    and Encryption (COSE)
+- content: X.509 Certificate Extended Key Usage (EKU) for 5G Network Functions
   language:
   - en
   script:
@@ -15,13 +14,10 @@ docid:
   primary: true
 abstract:
 - content: "<p>RFC 5280 specifies several extended key purpose identifiers (KeyPurposeIds)
-    for X.509 certificates. This document defines JSON Web Signature (JWS), JSON Web
-    Encryption (JWE), CBOR Object Web Signature (CWS) and CBOR Object Web Encryption
-    (CWE) KeyPurposeIds inclusion in the Extended Key Usage (EKU) extension of X.509
-    public key certificates. An application processing JWS, JWE, CWS or CWE may require
-    that the EKU extension be present and that a JWS, JWE, CWS or CWE KeyPurposeId
-    be indicated in order for the certificate to be acceptable to validate the JWS
-    or CWS signature or to encrypt a key in JWE or CWE.</p>"
+    for X.509 certificates. This document defines encrypting JSON objects in HTTP
+    messages, JSON Web Token (JWT) and signing the OAuth 2.0 access tokens KeyPurposeIds
+    for inclusion in the Extended Key Usage (EKU) extension of X.509 v3 public key
+    certificates used by Network Functions (NFs) for the 5G System.</p>"
   language:
   - en
   script:
@@ -37,6 +33,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-lamps-nf-eku-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-lamps-nf-eku-01
+    docid:
+    - id: draft-ietf-lamps-nf-eku-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-lamps-nf-eku-01
       format: text/plain
 ext:
   schema-version: v1.0.0
