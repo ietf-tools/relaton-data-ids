@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.1
-id: draft-ftbs-rats-msg-wrap-02
+id: draft-ftbs-rats-msg-wrap-03
 title:
 - content: RATS Conceptual Messages Wrapper
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ftbs-rats-msg-wrap-02
+- content: https://datatracker.ietf.org/doc/html/draft-ftbs-rats-msg-wrap-03
   type: src
 type: standard
 docid:
-- id: draft-ftbs-rats-msg-wrap-02
+- id: draft-ftbs-rats-msg-wrap-03
   type: Internet-Draft
   primary: true
 - id: I-D.ftbs-rats-msg-wrap
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.ftbs-rats-msg-wrap
 date:
 - type: published
-  value: '2023-03-07'
+  value: '2023-06-15'
 contributor:
 - person:
     name:
@@ -133,8 +133,8 @@ contributor:
   role:
   - type: author
 version:
-- draft: '02'
-revdate: '2023-03-07'
+- draft: '03'
+revdate: '2023-06-15'
 language:
 - en
 script:
@@ -142,9 +142,11 @@ script:
 abstract:
 - content: "<p>This document defines two encapsulation formats for RATS conceptual
     messages (i.e., evidence, attestation results, endorsements and reference values.)
-    The first format uses a CBOR or JSON array with two members: one for the type,
-    another for the value. The other format wraps the value in a CBOR byte string
-    and prepends a CBOR tag to convey the type information.</p>"
+    The first format uses a CBOR or JSON array with two mandatory members, one for
+    the type, another for the value, and a third optional member complementing the
+    type field that says which kind of conceptual message(s) are carried in the value.
+    The other format wraps the value in a CBOR byte string and prepends a CBOR tag
+    to convey the type information.</p>"
   language:
   - en
   script:
@@ -161,16 +163,6 @@ relation:
     formattedref:
       content: draft-ftbs-rats-msg-wrap-01
       format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ftbs-rats-msg-wrap-03
-    docid:
-    - id: draft-ftbs-rats-msg-wrap-03
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ftbs-rats-msg-wrap-03
-      format: text/plain
 series:
 - type: main
   title:
@@ -180,7 +172,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ftbs-rats-msg-wrap-02
+  number: draft-ftbs-rats-msg-wrap-03
 doctype: internet-draft
 ext:
   schema-version: v1.0.0
