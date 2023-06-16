@@ -1,84 +1,83 @@
 ---
 schema-version: v1.2.1
-id: draft-ietf-alto-oam-yang-09
+id: draft-ietf-alto-new-transport-11
 title:
-- content: YANG Data Models for the Application-Layer Traffic Optimization (ALTO)
-    Protocol
+- content: The ALTO Transport Information Publication Service
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-alto-oam-yang-09
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-alto-new-transport-11
   type: src
 type: standard
 docid:
-- id: draft-ietf-alto-oam-yang-09
+- id: draft-ietf-alto-new-transport-11
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-alto-oam-yang
+- id: I-D.ietf-alto-new-transport
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-alto-oam-yang
+docnumber: I-D.ietf-alto-new-transport
 date:
 - type: published
-  value: '2023-06-13'
+  value: '2023-06-16'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Jingxuan
+        - content: Roland
           language:
           - en
         - language:
           - en
-          initial: J
+          initial: R
         formatted_initials:
-          content: J.
+          content: R.
           language:
           - en
       surname:
-        content: Zhang
+        content: Schott
         language:
         - en
       completename:
-        content: Jingxuan Zhang
+        content: Roland Schott
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Tongji University
+        - content: Deutsche Telekom
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Dhruv
-          language:
-          - en
         - language:
           - en
-          initial: D
+          initial: Y
+        - language:
+          - en
+          initial: R
         formatted_initials:
-          content: D.
+          content: Y. R.
           language:
           - en
       surname:
-        content: Dhody
+        content: Yang
         language:
         - en
       completename:
-        content: Dhruv Dhody
+        content: Y. Richard Yang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei Technologies
+        - content: Yale University
   role:
   - type: author
 - person:
@@ -113,74 +112,82 @@ contributor:
     name:
       given:
         forename:
-        - content: Roland
+        - content: Lauren
           language:
           - en
         - language:
           - en
-          initial: R
+          initial: L
         formatted_initials:
-          content: R.
+          content: L.
           language:
           - en
       surname:
-        content: Schott
+        content: Delwiche
         language:
         - en
       completename:
-        content: Roland Schott
+        content: Lauren Delwiche
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Deutsche Telekom
+        - content: Yale University
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Qiufang
+        - content: Lachlan
           language:
           - en
         - language:
           - en
-          initial: Q
+          initial: L
         formatted_initials:
-          content: Q.
+          content: L.
           language:
           - en
       surname:
-        content: Ma
+        content: Keller
         language:
         - en
       completename:
-        content: Qiufang Ma
+        content: Lachlan Keller
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei
+        - content: Yale University
   role:
   - type: author
 version:
-- draft: '09'
-revdate: '2023-06-13'
+- draft: '11'
+revdate: '2023-06-16'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document defines a YANG data model for Operations, Administration,
-    and Maintenance (OAM) &amp; Management of Application- Layer Traffic Optimization
-    (ALTO) Protocol. The operator of an ALTO server can use this data model to (1)
-    set up the ALTO server, (2) configure server discovery, (3) create, update and
-    remove ALTO information resources, (4) manage the access control of each ALTO
-    information resource, and (5) collect statistical data of the ALTO server. The
-    application provider can also use this data model to configure ALTO clients to
-    communicate with known ALTO servers.</p>"
+- content: "<p>The ALTO Protocol (RFC 7285) leverages HTTP/1.x and is designed for
+    the simple, sequential request-reply use case, in which an ALTO client requests
+    a sequence of information resources, and the server responds with the complete
+    content of each resource one at a time. ALTO incremental updates using Server-Sent
+    Events (SSE) (RFC 8895) defines a multiplexing protocol on top of HTTP/1.x, so
+    that an ALTO server can incrementally push resource updates to clients whenever
+    monitored network information resources change, allowing the clients to monitor
+    multiple resources at the same time. However, HTTP/2 and later versions already
+    support concurrent, non-blocking transport of multiple streams in the same HTTP
+    connection. To take advantage of newer HTTP features, this document introduces
+    the ALTO Transport Information Publication Service (TIPS). TIPS uses an incremental
+    RESTful design to give an ALTO client the new capability to explicitly, concurrently
+    (non-blocking) request (pull) specific incremental updates using native HTTP/2
+    or HTTP/3, while still functioning for HTTP/1.x. TIPS also provides for an ALTO
+    server to concurrently push specific incremental updates using native HTTP/2 or
+    HTTP/3 server push.</p>"
   language:
   - en
   script:
@@ -189,23 +196,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-alto-oam-yang-06
+    id: draft-ietf-alto-new-transport-03
     docid:
-    - id: draft-ietf-alto-oam-yang-06
+    - id: draft-ietf-alto-new-transport-03
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-alto-oam-yang-06
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-alto-oam-yang-10
-    docid:
-    - id: draft-ietf-alto-oam-yang-10
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-alto-oam-yang-10
+      content: draft-ietf-alto-new-transport-03
       format: text/plain
 series:
 - type: main
@@ -216,7 +213,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-alto-oam-yang-09
+  number: draft-ietf-alto-new-transport-11
 doctype: internet-draft
 ext:
   schema-version: v1.0.0
