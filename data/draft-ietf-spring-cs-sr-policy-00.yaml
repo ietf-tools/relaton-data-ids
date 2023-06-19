@@ -1,62 +1,34 @@
 ---
 schema-version: v1.2.1
-id: draft-ietf-ippm-stamp-srpm-00
+id: draft-ietf-spring-cs-sr-policy-00
 title:
-- content: Simple TWAMP (STAMP) Extensions for Segment Routing Networks
+- content: Circuit Style Segment Routing Policies
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-ippm-stamp-srpm-00
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-spring-cs-sr-policy-00
   type: src
 type: standard
 docid:
-- id: draft-ietf-ippm-stamp-srpm-00
+- id: draft-ietf-spring-cs-sr-policy-00
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-ippm-stamp-srpm
+- id: I-D.ietf-spring-cs-sr-policy
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-ippm-stamp-srpm
+docnumber: I-D.ietf-spring-cs-sr-policy
 date:
 - type: published
-  value: '2021-06-04'
+  value: '2023-06-19'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Rakesh
-          language:
-          - en
-        - language:
-          - en
-          initial: R
-        formatted_initials:
-          content: R.
-          language:
-          - en
-      surname:
-        content: Gandhi
-        language:
-        - en
-      completename:
-        content: Rakesh Gandhi
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Cisco Systems, Inc.
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Clarence
+        - content: Christian
           language:
           - en
         - language:
@@ -67,11 +39,11 @@ contributor:
           language:
           - en
       surname:
-        content: Filsfils
+        content: Schmutzer
         language:
         - en
       completename:
-        content: Clarence Filsfils
+        content: Christian Schmutzer
         language:
         - en
     affiliation:
@@ -84,109 +56,106 @@ contributor:
     name:
       given:
         forename:
-        - content: Daniel
+        - content: Zafar
           language:
           - en
         - language:
           - en
-          initial: D
+          initial: Z
         formatted_initials:
-          content: D.
+          content: Z.
           language:
           - en
       surname:
-        content: Voyer
+        content: Ali
         language:
         - en
       completename:
-        content: Daniel Voyer
+        content: Zafar Ali
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Bell Canada
+        - content: Cisco Systems, Inc.
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Mach
+        - content: Praveen
           language:
           - en
         - language:
           - en
-          initial: M
+          initial: P
         formatted_initials:
-          content: M.
+          content: P.
           language:
           - en
       surname:
-        content: Chen
+        content: Maheshwari
         language:
         - en
       completename:
-        content: Mach Chen
+        content: Praveen Maheshwari
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei
+        - content: Airtel India
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Bart
-          language:
-          - en
-        - language:
-          - en
-          initial: B
-        formatted_initials:
-          content: B.
-          language:
-          - en
-      surname:
-        content: Janssens
-        language:
-        - en
-      completename:
-        content: Bart Janssens
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Colt
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Richard
+        - content: Reza
           language:
           - en
         - language:
           - en
           initial: R
-        - language:
-          - en
-          initial: F
         formatted_initials:
-          content: R. F.
+          content: R.
           language:
           - en
       surname:
-        content: Foote
+        content: Rokui
         language:
         - en
       completename:
-        content: Richard "Footer" Foote
+        content: Reza Rokui
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Ciena
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Andrew
+          language:
+          - en
+        - language:
+          - en
+          initial: A
+        formatted_initials:
+          content: A.
+          language:
+          - en
+      surname:
+        content: Stone
+        language:
+        - en
+      completename:
+        content: Andrew Stone
         language:
         - en
     affiliation:
@@ -197,33 +166,21 @@ contributor:
   - type: author
 version:
 - draft: '00'
-revdate: '2021-06-04'
+revdate: '2023-06-19'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>Segment Routing (SR) leverages the source routing paradigm. SR is applicable
-    to both Multiprotocol Label Switching (SR-MPLS) and IPv6 (SRv6) forwarding planes.
-    This document specifies RFC 8762 (Simple Two-Way Active Measurement Protocol (STAMP))
-    extensions for SR networks, for both SR-MPLS and SRv6 forwarding planes by augmenting
-    the optional extensions defined in RFC 8972.</p>"
+- content: <p>This document describes how Segment Routing (SR) policies can be used
+    to satisfy the requirements for strict bandwidth guarantees, end-to- end recovery
+    and persistent paths within a segment routing network. SR policies satisfying
+    these requirements are called "circuit-style" SR policies (CS-SR policies).</p>
   language:
   - en
   script:
   - Latn
   format: text/html
-relation:
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-ippm-stamp-srpm-13
-    docid:
-    - id: draft-ietf-ippm-stamp-srpm-13
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-ippm-stamp-srpm-13
-      format: text/plain
 series:
 - type: main
   title:
@@ -233,7 +190,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-ippm-stamp-srpm-00
+  number: draft-ietf-spring-cs-sr-policy-00
 doctype: internet-draft
 ext:
   schema-version: v1.0.0
