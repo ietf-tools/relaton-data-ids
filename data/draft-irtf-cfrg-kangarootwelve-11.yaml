@@ -1,184 +1,176 @@
 ---
 schema-version: v1.2.1
-id: draft-ietf-pce-segment-routing-policy-cp-10
+id: draft-irtf-cfrg-kangarootwelve-11
 title:
-- content: PCEP extension to support Segment Routing Policy Candidate Paths
+- content: KangarooTwelve and TurboSHAKE
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-pce-segment-routing-policy-cp-10
+- content: https://datatracker.ietf.org/doc/html/draft-irtf-cfrg-kangarootwelve-11
   type: src
 type: standard
 docid:
-- id: draft-ietf-pce-segment-routing-policy-cp-10
+- id: draft-irtf-cfrg-kangarootwelve-11
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-pce-segment-routing-policy-cp
+- id: I-D.irtf-cfrg-kangarootwelve
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-pce-segment-routing-policy-cp
+docnumber: I-D.irtf-cfrg-kangarootwelve
 date:
 - type: published
-  value: '2023-04-21'
+  value: '2023-06-20'
 contributor:
 - person:
     name:
       given:
-        forename:
-        - content: Mike
-          language:
-          - en
-        - language:
-          - en
-          initial: M
         formatted_initials:
-          content: M.
           language:
           - en
       surname:
-        content: Koldychev
+        content: "=?utf-8?q?Beno=C3=AEt_Viguier?="
         language:
         - en
       completename:
-        content: Mike Koldychev
+        content: "=?utf-8?q?Beno=C3=AEt_Viguier?="
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems, Inc.
+        - content: ABN AMRO Bank
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Siva
+        - content: David
           language:
           - en
         - language:
           - en
-          initial: S
+          initial: D
         formatted_initials:
-          content: S.
+          content: D.
           language:
           - en
       surname:
-        content: Sivabalan
+        content: Wong
         language:
         - en
       completename:
-        content: Siva Sivabalan
+        content: David Wong
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Ciena Corporation
+        - content: O(1) Labs
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Colby
+        - content: Giles
           language:
           - en
         - language:
           - en
-          initial: C
+          initial: G
         formatted_initials:
-          content: C.
+          content: G.
           language:
           - en
       surname:
-        content: Barth
+        content: Van Assche
         language:
         - en
       completename:
-        content: Colby Barth
+        content: Giles Van Assche
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Juniper Networks, Inc.
+        - content: STMicroelectronics
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Shuping
+        - content: Quynh
           language:
           - en
         - language:
           - en
-          initial: S
+          initial: Q
         formatted_initials:
-          content: S.
+          content: Q.
           language:
           - en
       surname:
-        content: Peng
+        content: Dang
         language:
         - en
       completename:
-        content: Shuping Peng
+        content: Quynh Dang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei Technologies
+        - content: National Institute of Standards and Technology
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Hooman
+        - content: Joan
           language:
           - en
         - language:
           - en
-          initial: H
+          initial: J
         formatted_initials:
-          content: H.
+          content: J.
           language:
           - en
       surname:
-        content: Bidgoli
+        content: Daemen
         language:
         - en
       completename:
-        content: Hooman Bidgoli
+        content: Joan Daemen
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Nokia
+        - content: Radboud University
   role:
   - type: author
 version:
-- draft: '10'
-revdate: '2023-04-21'
+- draft: '11'
+revdate: '2023-06-20'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>A Segment Routing (SR) Policy [RFC9256] is a non-empty set of SR Candidate
-    Paths, that share the same &lt;headend, color, endpoint&gt; tuple. This document
-    extends [RFC8664] to fully support the SR Policy construct. SR Policy is modeled
-    in PCEP as an Association of one or more SR Candidate Paths. PCEP extensions are
-    defined to signal additional attributes of an SR Policy, which are not covered
-    by [RFC8664]. The mechanism is applicable to all data planes of SR (MPLS, SRv6,
-    etc.).</p>"
+- content: "<p>This document defines three eXtendable Output Functions (XOF), hash
+    functions with output of arbitrary length, named TurboSHAKE128, TurboSHAKE256
+    and KangarooTwelve. All three functions provide efficient and secure hashing primitives,
+    and the last is able to exploit the parallelism of the implementation in a scalable
+    way. This document builds up on the definitions of the permutations and of the
+    sponge construction in [FIPS 202], and is meant to serve as a stable reference
+    and an implementation guide.</p>"
   language:
   - en
   script:
@@ -187,23 +179,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-pce-segment-routing-policy-cp-03
+    id: draft-irtf-cfrg-kangarootwelve-02
     docid:
-    - id: draft-ietf-pce-segment-routing-policy-cp-03
+    - id: draft-irtf-cfrg-kangarootwelve-02
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-pce-segment-routing-policy-cp-03
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-pce-segment-routing-policy-cp-11
-    docid:
-    - id: draft-ietf-pce-segment-routing-policy-cp-11
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-pce-segment-routing-policy-cp-11
+      content: draft-irtf-cfrg-kangarootwelve-02
       format: text/plain
 series:
 - type: main
@@ -214,7 +196,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-pce-segment-routing-policy-cp-10
+  number: draft-irtf-cfrg-kangarootwelve-11
 doctype: internet-draft
 ext:
   schema-version: v1.0.0

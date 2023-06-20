@@ -1,49 +1,77 @@
 ---
 schema-version: v1.2.1
-id: draft-ietf-pce-segment-routing-policy-cp-10
+id: draft-ietf-spring-sr-replication-segment-15
 title:
-- content: PCEP extension to support Segment Routing Policy Candidate Paths
+- content: SR Replication segment for Multi-point Service Delivery
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-pce-segment-routing-policy-cp-10
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-spring-sr-replication-segment-15
   type: src
 type: standard
 docid:
-- id: draft-ietf-pce-segment-routing-policy-cp-10
+- id: draft-ietf-spring-sr-replication-segment-15
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-pce-segment-routing-policy-cp
+- id: I-D.ietf-spring-sr-replication-segment
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-pce-segment-routing-policy-cp
+docnumber: I-D.ietf-spring-sr-replication-segment
 date:
 - type: published
-  value: '2023-04-21'
+  value: '2023-06-20'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Mike
+        - content: Daniel
           language:
           - en
         - language:
           - en
-          initial: M
+          initial: D
         formatted_initials:
-          content: M.
+          content: D.
           language:
           - en
       surname:
-        content: Koldychev
+        content: Voyer
         language:
         - en
       completename:
-        content: Mike Koldychev
+        content: Daniel Voyer
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Bell Canada
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Clarence
+          language:
+          - en
+        - language:
+          - en
+          initial: C
+        formatted_initials:
+          content: C.
+          language:
+          - en
+      surname:
+        content: Filsfils
+        language:
+        - en
+      completename:
+        content: Clarence Filsfils
         language:
         - en
     affiliation:
@@ -56,84 +84,28 @@ contributor:
     name:
       given:
         forename:
-        - content: Siva
+        - content: Rishabh
           language:
           - en
         - language:
           - en
-          initial: S
+          initial: R
         formatted_initials:
-          content: S.
+          content: R.
           language:
           - en
       surname:
-        content: Sivabalan
+        content: Parekh
         language:
         - en
       completename:
-        content: Siva Sivabalan
+        content: Rishabh Parekh
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Ciena Corporation
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Colby
-          language:
-          - en
-        - language:
-          - en
-          initial: C
-        formatted_initials:
-          content: C.
-          language:
-          - en
-      surname:
-        content: Barth
-        language:
-        - en
-      completename:
-        content: Colby Barth
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Juniper Networks, Inc.
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Shuping
-          language:
-          - en
-        - language:
-          - en
-          initial: S
-        formatted_initials:
-          content: S.
-          language:
-          - en
-      surname:
-        content: Peng
-        language:
-        - en
-      completename:
-        content: Shuping Peng
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Huawei Technologies
+        - content: Cisco Systems, Inc.
   role:
   - type: author
 - person:
@@ -164,21 +136,48 @@ contributor:
         - content: Nokia
   role:
   - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Zhaohui
+          language:
+          - en
+        - language:
+          - en
+          initial: Z
+        - language:
+          - en
+          initial: J
+        formatted_initials:
+          content: Z. J.
+          language:
+          - en
+      surname:
+        content: Zhang
+        language:
+        - en
+      completename:
+        content: Zhaohui (Jeffrey) Zhang
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Juniper Networks
+  role:
+  - type: author
 version:
-- draft: '10'
-revdate: '2023-04-21'
+- draft: '15'
+revdate: '2023-06-20'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>A Segment Routing (SR) Policy [RFC9256] is a non-empty set of SR Candidate
-    Paths, that share the same &lt;headend, color, endpoint&gt; tuple. This document
-    extends [RFC8664] to fully support the SR Policy construct. SR Policy is modeled
-    in PCEP as an Association of one or more SR Candidate Paths. PCEP extensions are
-    defined to signal additional attributes of an SR Policy, which are not covered
-    by [RFC8664]. The mechanism is applicable to all data planes of SR (MPLS, SRv6,
-    etc.).</p>"
+- content: "<p>This document describes the Segment Routing Replication segment for
+    Multi-point service delivery. A Replication segment allows a packet to be replicated
+    from a Replication node to Downstream nodes.</p>"
   language:
   - en
   script:
@@ -187,23 +186,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-pce-segment-routing-policy-cp-03
+    id: draft-ietf-spring-sr-replication-segment-07
     docid:
-    - id: draft-ietf-pce-segment-routing-policy-cp-03
+    - id: draft-ietf-spring-sr-replication-segment-07
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-pce-segment-routing-policy-cp-03
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-pce-segment-routing-policy-cp-11
-    docid:
-    - id: draft-ietf-pce-segment-routing-policy-cp-11
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-pce-segment-routing-policy-cp-11
+      content: draft-ietf-spring-sr-replication-segment-07
       format: text/plain
 series:
 - type: main
@@ -214,7 +203,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-pce-segment-routing-policy-cp-10
+  number: draft-ietf-spring-sr-replication-segment-15
 doctype: internet-draft
 ext:
   schema-version: v1.0.0
