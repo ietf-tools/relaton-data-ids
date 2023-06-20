@@ -1,34 +1,62 @@
 ---
 schema-version: v1.2.1
-id: draft-ietf-spring-srv6-srh-compression-04
+id: draft-ietf-bess-evpn-vpws-seamless-00
 title:
-- content: Compressed SRv6 Segment List Encoding in SRH
+- content: EVPN-VPWS Seamless Integration with L2VPN VPWS
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-spring-srv6-srh-compression-04
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-bess-evpn-vpws-seamless-00
   type: src
 type: standard
 docid:
-- id: draft-ietf-spring-srv6-srh-compression-04
+- id: draft-ietf-bess-evpn-vpws-seamless-00
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-spring-srv6-srh-compression
+- id: I-D.ietf-bess-evpn-vpws-seamless
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-spring-srv6-srh-compression
+docnumber: I-D.ietf-bess-evpn-vpws-seamless
 date:
 - type: published
-  value: '2023-03-31'
+  value: '2023-06-20'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Weiqiang
+        - content: Patrice
+          language:
+          - en
+        - language:
+          - en
+          initial: P
+        formatted_initials:
+          content: P.
+          language:
+          - en
+      surname:
+        content: Brissette
+        language:
+        - en
+      completename:
+        content: Patrice Brissette
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Cisco Systems
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Wen
           language:
           - en
         - language:
@@ -39,80 +67,80 @@ contributor:
           language:
           - en
       surname:
-        content: Cheng
+        content: Lin
         language:
         - en
       completename:
-        content: Weiqiang Cheng
+        content: Wen Lin
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: China Mobile
+        - content: Juniper
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Clarence
+        - content: Jorge
           language:
           - en
         - language:
           - en
-          initial: C
+          initial: J
         formatted_initials:
-          content: C.
+          content: J.
           language:
           - en
       surname:
-        content: Filsfils
+        content: Rabadan
         language:
         - en
       completename:
-        content: Clarence Filsfils
+        content: Jorge Rabadan
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems
+        - content: Nokia
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Zhenbin
+        - content: Jim
           language:
           - en
         - language:
           - en
-          initial: Z
+          initial: J
         formatted_initials:
-          content: Z.
+          content: J.
           language:
           - en
       surname:
-        content: Li
+        content: Uttaro
         language:
         - en
       completename:
-        content: Zhenbin Li
+        content: Jim Uttaro
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei Technologies
+        - content: ATT
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Bruno
+        - content: Bin
           language:
           - en
         - language:
@@ -123,84 +151,40 @@ contributor:
           language:
           - en
       surname:
-        content: Decraene
+        content: Wen
         language:
         - en
       completename:
-        content: Bruno Decraene
+        content: Bin Wen
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Orange
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Francois
-          language:
-          - en
-        - language:
-          - en
-          initial: F
-        formatted_initials:
-          content: F.
-          language:
-          - en
-      surname:
-        content: Clad
-        language:
-        - en
-      completename:
-        content: Francois Clad
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Cisco Systems
+        - content: Comcast
   role:
   - type: author
 version:
-- draft: '04'
-revdate: '2023-03-31'
+- draft: '00'
+revdate: '2023-06-20'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document specifies new flavors for the SR endpoint behaviors defined
-    in RFC 8986, which enable a compressed SRv6 Segment-List encoding in the Segment
-    Routing Header (SRH).</p>"
+- content: "<p>This document presents a solution for migrating L2VPN Virtual Private
+    Wire Service (VPWS) to Ethernet VPN Virtual Private Wire Service (EVPN-VPWS) services.
+    The solution allows the coexistence of EVPN and L2VPN services under the same
+    point-to-point VPN instance. By using this seamless integration solution, a service
+    provider can introduce EVPN into their existing L2VPN network or migrate from
+    an existing L2VPN based network to EVPN. The migration may be done per pseudowire
+    or per flexible-crossconnect (FXC) service basis. This document specifies control-plane
+    and forwarding behaviors.</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
-relation:
-- type: updates
-  bibitem:
-    id: draft-ietf-spring-srv6-srh-compression-03
-    docid:
-    - id: draft-ietf-spring-srv6-srh-compression-03
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-srv6-srh-compression-03
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-spring-srv6-srh-compression-05
-    docid:
-    - id: draft-ietf-spring-srv6-srh-compression-05
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-srv6-srh-compression-05
-      format: text/plain
 series:
 - type: main
   title:
@@ -210,7 +194,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-spring-srv6-srh-compression-04
+  number: draft-ietf-bess-evpn-vpws-seamless-00
 doctype: internet-draft
 ext:
   schema-version: v1.0.0
