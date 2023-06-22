@@ -1,0 +1,44 @@
+---
+schema-version: v1.2.1
+id: draft-ietf-dnsop-cds-consistency
+title:
+- content: Consistency for CDS/CDNSKEY and CSYNC is Mandatory
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-ietf-dnsop-cds-consistency
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: <p>Maintenance of DNS delegations requires occasional changes of the DS
+    and NS record sets on the parent side of the delegation. [RFC7344] automates this
+    for DS records by having the child publish CDS and/or CDNSKEY records which hold
+    the prospective DS parameters. Similarly, CSYNC records indicate a desired update
+    of the delegation's NS records [RFC7477]. Parent-side entities (e.g. Registries,
+    Registrars) typically discover these records by periodically querying them from
+    the child ("polling"), before using them to update the delegation's parameters.
+    This document specifies that if polling is used, parent-side entities MUST ensure
+    that updates triggered via CDS/CDNSKEY and CSYNC records are consistent across
+    the child's authoritative nameservers, before taking any action based on these
+    records.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-ietf-dnsop-cds-consistency-00
+    docid:
+    - id: draft-ietf-dnsop-cds-consistency-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-dnsop-cds-consistency-00
+      format: text/plain
+ext:
+  schema-version: v1.0.0
