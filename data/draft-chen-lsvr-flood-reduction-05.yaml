@@ -1,28 +1,28 @@
 ---
 schema-version: v1.2.1
-id: draft-chen-bier-te-egress-protect-04
+id: draft-chen-lsvr-flood-reduction-05
 title:
-- content: BIER-TE Egress Protection
+- content: BGP-SPF Flooding Reduction
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-chen-bier-te-egress-protect-04
+- content: https://datatracker.ietf.org/doc/html/draft-chen-lsvr-flood-reduction-05
   type: src
 type: standard
 docid:
-- id: draft-chen-bier-te-egress-protect-04
+- id: draft-chen-lsvr-flood-reduction-05
   type: Internet-Draft
   primary: true
-- id: I-D.chen-bier-te-egress-protect
+- id: I-D.chen-lsvr-flood-reduction
   type: IETF
   scope: anchor
-docnumber: I-D.chen-bier-te-egress-protect
+docnumber: I-D.chen-lsvr-flood-reduction
 date:
 - type: published
-  value: '2023-02-07'
+  value: '2023-06-23'
 contributor:
 - person:
     name:
@@ -50,62 +50,6 @@ contributor:
     - organization:
         name:
         - content: Futurewei
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Mike
-          language:
-          - en
-        - language:
-          - en
-          initial: M
-        formatted_initials:
-          content: M.
-          language:
-          - en
-      surname:
-        content: McBride
-        language:
-        - en
-      completename:
-        content: Mike McBride
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Futurewei
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Aijun
-          language:
-          - en
-        - language:
-          - en
-          initial: A
-        formatted_initials:
-          content: A.
-          language:
-          - en
-      surname:
-        content: Wang
-        language:
-        - en
-      completename:
-        content: Aijun Wang
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: China Telecom
   role:
   - type: author
 - person:
@@ -143,6 +87,34 @@ contributor:
     name:
       given:
         forename:
+        - content: Aijun
+          language:
+          - en
+        - language:
+          - en
+          initial: A
+        formatted_initials:
+          content: A.
+          language:
+          - en
+      surname:
+        content: Wang
+        language:
+        - en
+      completename:
+        content: Aijun Wang
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: China Telecom
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
         - content: Yisong
           language:
           - en
@@ -165,6 +137,34 @@ contributor:
     - organization:
         name:
         - content: China Mobile
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Haibo
+          language:
+          - en
+        - language:
+          - en
+          initial: H
+        formatted_initials:
+          content: H.
+          language:
+          - en
+      surname:
+        content: Wang
+        language:
+        - en
+      completename:
+        content: Haibo Wang
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei
   role:
   - type: author
 - person:
@@ -195,76 +195,19 @@ contributor:
         - content: Casa Systems
   role:
   - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Lei
-          language:
-          - en
-        - language:
-          - en
-          initial: L
-        formatted_initials:
-          content: L.
-          language:
-          - en
-      surname:
-        content: Liu
-        language:
-        - en
-      completename:
-        content: Lei Liu
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Fujitsu
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Xufeng
-          language:
-          - en
-        - language:
-          - en
-          initial: X
-        formatted_initials:
-          content: X.
-          language:
-          - en
-      surname:
-        content: Liu
-        language:
-        - en
-      completename:
-        content: Xufeng Liu
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: IBM Corporation
-  role:
-  - type: author
 version:
-- draft: '04'
-revdate: '2023-02-07'
+- draft: '05'
+revdate: '2023-06-23'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: <p>This document describes a mechanism for fast protection against the
-    failure of an egress node of an explicit point to multipoint (P2MP) multicast
-    path/tree in a "Bit Index Explicit Replication" (BIER) Traffic Engineering (TE)
-    domain. It does not have any per-flow state in the core of the domain. For a multicast
-    packet to the egress node, when the egress node fails, its upstream hop as a PLR
-    sends the packet to the egress' backup node once the PLR detects the failure.</p>
+- content: "<p>This document describes extensions to Border Gateway Protocol (BGP)
+    for flooding the link states on a topology that is a subgraph of the complete
+    topology of a BGP-SPF domain, so that the amount of flooding traffic in the domain
+    is greatly reduced. This would reduce convergence time with a more stable and
+    optimized routing environment.</p>"
   language:
   - en
   script:
@@ -273,23 +216,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-chen-bier-te-egress-protect-01
+    id: draft-chen-lsvr-flood-reduction-01
     docid:
-    - id: draft-chen-bier-te-egress-protect-01
+    - id: draft-chen-lsvr-flood-reduction-01
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-chen-bier-te-egress-protect-01
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-chen-bier-te-egress-protect-05
-    docid:
-    - id: draft-chen-bier-te-egress-protect-05
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-chen-bier-te-egress-protect-05
+      content: draft-chen-lsvr-flood-reduction-01
       format: text/plain
 series:
 - type: main
@@ -300,7 +233,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-chen-bier-te-egress-protect-04
+  number: draft-chen-lsvr-flood-reduction-05
 doctype: internet-draft
 ext:
   schema-version: v1.0.0
