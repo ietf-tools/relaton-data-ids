@@ -1,0 +1,44 @@
+---
+schema-version: v1.2.1
+id: draft-joung-detnet-stateless-fair-queuing
+title:
+- content: Latency Guarantee with Stateless Fair Queuing
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-joung-detnet-stateless-fair-queuing
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This document specifies the framework and the operational procedure
+    for deterministic networks with work conserving packet schedulers that guarantees
+    end-to-end latency bounds to flows. Schedulers in core nodes of the network do
+    not need to maintain flow states. Instead, the entrance node of a flow marks an
+    ideal service completion time, called Finish Time (FT), of a packet in the packet
+    header. The subsequent core nodes update FT by adding a delay factor, which is
+    a function of the flow and upstream nodes. The packets in the queue are served
+    in the ascending order of the FT. This technique is called fair queuing. The result
+    is that flows are isolated from each other almost perfectly. The latency bound
+    of a flow depends only on the flow's intrinsic parameters, except the maximum
+    packet length among other flows sharing each output link with the flow.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-joung-detnet-stateless-fair-queuing-00
+    docid:
+    - id: draft-joung-detnet-stateless-fair-queuing-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-joung-detnet-stateless-fair-queuing-00
+      format: text/plain
+ext:
+  schema-version: v1.0.0
