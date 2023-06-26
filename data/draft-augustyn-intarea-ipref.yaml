@@ -14,11 +14,16 @@ docid:
   primary: true
 abstract:
 - content: "<p>This document describes IP addressing with references (referred to
-    as IPREF) and how it can be used with IPv4 and IPv6. IPREF is a private-to-private
-    technology where hosts on private networks communicate with hosts on other private
-    networks directly. Special addresses, called IPREF addresses, are used for the
-    purpose. It also describes how hosts on private networks may publish their IPREF
-    addresses via Domain Name System (DNS).</p>"
+    as IPREF) and how it can be used with IPv4 and IPv6. It uses special addresses
+    called IPREF addresses which use references to IP addresses instead of actual
+    addresses. IPREF provides highly scalable means of traversing private address
+    spaces end-to-end. It can traverse private address spaces both within the same
+    protocol domain and across protocol domains. For example, it allows NAT traversal
+    for IPv4, or for IPv6 with NAT6 or filters. It also allows direct communication
+    between IPv4 and IPv6 networks, including over NAT, NAT6, or filters. IPREF addresses
+    are publishable via Domain Name System (DNS). Any host on any private network
+    may publish its services via DNS. These services are reachable from any network,
+    whether IPv4 or IPv6, provided IPREF is supported on both ends.</p>"
   language:
   - en
   script:
@@ -34,6 +39,16 @@ relation:
       primary: true
     formattedref:
       content: draft-augustyn-intarea-ipref-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-augustyn-intarea-ipref-01
+    docid:
+    - id: draft-augustyn-intarea-ipref-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-augustyn-intarea-ipref-01
       format: text/plain
 ext:
   schema-version: v1.0.0
