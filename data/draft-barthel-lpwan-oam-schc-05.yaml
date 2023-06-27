@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.1
-id: draft-barthel-lpwan-oam-schc-00
+id: draft-barthel-lpwan-oam-schc-05
 title:
 - content: OAM for LPWAN using Static Context Header Compression (SCHC)
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-barthel-lpwan-oam-schc-00
+- content: https://datatracker.ietf.org/doc/html/draft-barthel-lpwan-oam-schc-05
   type: src
 type: standard
 docid:
-- id: draft-barthel-lpwan-oam-schc-00
+- id: draft-barthel-lpwan-oam-schc-05
   type: Internet-Draft
   primary: true
 - id: I-D.barthel-lpwan-oam-schc
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.barthel-lpwan-oam-schc
 date:
 - type: published
-  value: '2019-01-30'
+  value: '2023-06-27'
 contributor:
 - person:
     name:
@@ -77,7 +77,7 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: IMT-Atlantique
+        - content: IMT Atlantique
   role:
   - type: author
 - person:
@@ -164,43 +164,55 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: SIGFOX
+        - content: Cisco
   role:
   - type: author
 version:
-- draft: '00'
-revdate: '2019-01-30'
+- draft: '05'
+revdate: '2023-06-27'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>With IP protocols now generalizing to constrained networks, users expect
+- content: "<p>This document describes ICMPv6 compression with SCHC and how basic
+    OAM is performed on Low Power Wide Area Networks (LPWANs) by compressing ICMPv6/IPv6
+    headers and by protecting the LPWAN network and the Device from undesirable ICMPv6
+    traffic. With IP protocols now generalizing to constrained networks, users expect
     to be able to Operate, Administer and Maintain them with the familiar tools and
     protocols they already use on less constrained networks. OAM uses specific messages
     sent into the data plane to measure some parameters of a network. Most of the
     time, no explicit values are sent is these messages. Network parameters are obtained
-    from the analysis of these specific messages. This can be used: o To detect if
-    a host is up or down. o To measure the RTT and its variation over time. o To learn
+    from the analysis of these specific messages. This can be used: * To detect if
+    a host is up or down. * To measure the RTT and its variation over time. * To learn
     the path used by packets to reach a destination. OAM in LPWAN is a little bit
     trickier since the bandwidth is limited and extra traffic added by OAM can introduce
-    perturbation on regular transmission. Two scenarios can be investigated: o OAM
-    coming from internet. In that case, the NGW should act as a</p>"
+    perturbation on regular transmission. Three main scenarios are investigated: *
+    OAM reachability messages coming from internet. In that case, the SCHC core should
+    act as a proxy and handle specifically the OAM traffic. * OAM messages initiated
+    by LPWAN devices: They can be anticipated by the core SCHC. * OAM error messages
+    coming from internet. In that case, the SCHC core may forward a compressed version
+    to the device. The primitive functionalities of OAM are achieved with the ICMPv6
+    protocol. ICMPv6 defines messages that inform the source of IPv6 packets of errors
+    during packet delivery. It also defines the Echo Request/ Reply messages that
+    are used for basic network troubleshooting (ping command). ICMPv6 messages are
+    transported on IPv6. This document also introduces the notion of actions in a
+    SCHC rule, to perform locally some operations.</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-barthel-lpwan-oam-schc-05
+    id: draft-barthel-lpwan-oam-schc-01
     docid:
-    - id: draft-barthel-lpwan-oam-schc-05
+    - id: draft-barthel-lpwan-oam-schc-01
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-barthel-lpwan-oam-schc-05
+      content: draft-barthel-lpwan-oam-schc-01
       format: text/plain
 series:
 - type: main
@@ -211,7 +223,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-barthel-lpwan-oam-schc-00
+  number: draft-barthel-lpwan-oam-schc-05
 doctype: internet-draft
 ext:
   schema-version: v1.0.0

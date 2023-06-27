@@ -1,90 +1,90 @@
 ---
 schema-version: v1.2.1
-id: draft-barthel-lpwan-oam-schc-00
+id: draft-ietf-ippm-encrypted-pdmv2-04
 title:
-- content: OAM for LPWAN using Static Context Header Compression (SCHC)
+- content: IPv6 Performance and Diagnostic Metrics Version 2 (PDMv2) Destination Option
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-barthel-lpwan-oam-schc-00
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-ippm-encrypted-pdmv2-04
   type: src
 type: standard
 docid:
-- id: draft-barthel-lpwan-oam-schc-00
+- id: draft-ietf-ippm-encrypted-pdmv2-04
   type: Internet-Draft
   primary: true
-- id: I-D.barthel-lpwan-oam-schc
+- id: I-D.ietf-ippm-encrypted-pdmv2
   type: IETF
   scope: anchor
-docnumber: I-D.barthel-lpwan-oam-schc
+docnumber: I-D.ietf-ippm-encrypted-pdmv2
 date:
 - type: published
-  value: '2019-01-30'
+  value: '2023-06-27'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Dominique
+        - content: Nalini
           language:
           - en
         - language:
           - en
-          initial: D
+          initial: N
         formatted_initials:
-          content: D.
+          content: N.
           language:
           - en
       surname:
-        content: Barthel
+        content: Elkins
         language:
         - en
       completename:
-        content: Dominique Barthel
+        content: Nalini Elkins
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Orange SA
+        - content: Inside Products
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Laurent
+        - content: michael
           language:
           - en
         - language:
           - en
-          initial: L
+          initial: M
         formatted_initials:
-          content: L.
+          content: M.
           language:
           - en
       surname:
-        content: Toutain
+        content: ackermann
         language:
         - en
       completename:
-        content: Laurent Toutain
+        content: michael ackermann
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: IMT-Atlantique
+        - content: BCBS Michigan
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Arunprabhu
+        - content: Ameya
           language:
           - en
         - language:
@@ -95,112 +95,105 @@ contributor:
           language:
           - en
       surname:
-        content: Kandasamy
+        content: Deshpande
         language:
         - en
       completename:
-        content: Arunprabhu Kandasamy
+        content: Ameya Deshpande
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Acklio
+        - content: NITK Surathkal/Google
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Diego
+        - content: Tommaso
           language:
           - en
         - language:
           - en
-          initial: D
-        - language:
-          - en
-          initial: R
+          initial: T
         formatted_initials:
-          content: D. R.
+          content: T.
           language:
           - en
       surname:
-        content: Dujovne
+        content: Pecorella
         language:
         - en
       completename:
-        content: Diego Roberto Dujovne
+        content: Tommaso Pecorella
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Universidad Diego Portales
+        - content: University of Florence
   role:
   - type: author
 - person:
     name:
       given:
         forename:
+        - content: Adnan
+          language:
+          - en
         - language:
           - en
-          initial: J
-        - language:
-          - en
-          initial: C
+          initial: A
         formatted_initials:
-          content: J. C.
+          content: A.
           language:
           - en
       surname:
-        content: Zúñiga
+        content: Rashid
         language:
         - en
       completename:
-        content: Juan-Carlos Zúñiga
+        content: Adnan Rashid
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: SIGFOX
+        - content: Politecnico di Bari
   role:
   - type: author
 version:
-- draft: '00'
-revdate: '2019-01-30'
+- draft: '04'
+revdate: '2023-06-27'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>With IP protocols now generalizing to constrained networks, users expect
-    to be able to Operate, Administer and Maintain them with the familiar tools and
-    protocols they already use on less constrained networks. OAM uses specific messages
-    sent into the data plane to measure some parameters of a network. Most of the
-    time, no explicit values are sent is these messages. Network parameters are obtained
-    from the analysis of these specific messages. This can be used: o To detect if
-    a host is up or down. o To measure the RTT and its variation over time. o To learn
-    the path used by packets to reach a destination. OAM in LPWAN is a little bit
-    trickier since the bandwidth is limited and extra traffic added by OAM can introduce
-    perturbation on regular transmission. Two scenarios can be investigated: o OAM
-    coming from internet. In that case, the NGW should act as a</p>"
+- content: "<p>RFC8250 describes an optional Destination Option (DO) header embedded
+    in each packet to provide sequence numbers and timing information as a basis for
+    measurements. As this data is sent in clear-text, this may create an opportunity
+    for malicious actors to get information for subsequent attacks. This document
+    defines PDMv2 which has a lightweight handshake (registration procedure) and encryption
+    to secure this data. Additional performance metrics which may be of use are also
+    defined.</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-barthel-lpwan-oam-schc-05
+    id: draft-ietf-ippm-encrypted-pdmv2-00
     docid:
-    - id: draft-barthel-lpwan-oam-schc-05
+    - id: draft-ietf-ippm-encrypted-pdmv2-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-barthel-lpwan-oam-schc-05
+      content: draft-ietf-ippm-encrypted-pdmv2-00
       format: text/plain
 series:
 - type: main
@@ -211,7 +204,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-barthel-lpwan-oam-schc-00
+  number: draft-ietf-ippm-encrypted-pdmv2-04
 doctype: internet-draft
 ext:
   schema-version: v1.0.0

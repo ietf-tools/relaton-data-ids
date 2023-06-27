@@ -19,7 +19,9 @@ abstract:
     8659 contains the core CAA specification, where Property Tags that restrict the
     issuance of certificates which certify domain names are defined. This specification
     defines a Property Tag that grants authorization to CAs to issue certificates
-    which certify email addresses that include the domain name.</p>"
+    which contain the id-kp-emailProtection key purpose in the extendedKeyUsage extension
+    and one or more rfc822Name or otherName of type id-on-SmtpUTF8Mailbox that include
+    the domain name in the subjectAltName extension.</p>"
   language:
   - en
   script:
@@ -65,6 +67,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-lamps-caa-issuemail-03
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-lamps-caa-issuemail-04
+    docid:
+    - id: draft-ietf-lamps-caa-issuemail-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-lamps-caa-issuemail-04
       format: text/plain
 ext:
   schema-version: v1.0.0
