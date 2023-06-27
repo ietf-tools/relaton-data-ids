@@ -1,29 +1,113 @@
 ---
 schema-version: v1.2.1
-id: draft-ietf-bess-bgp-multicast-04
+id: draft-ietf-bess-evpn-redundant-mcast-source-06
 title:
-- content: BGP Based Multicast
+- content: Multicast Source Redundancy in EVPN Networks
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-bess-bgp-multicast-04
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-bess-evpn-redundant-mcast-source-06
   type: src
 type: standard
 docid:
-- id: draft-ietf-bess-bgp-multicast-04
+- id: draft-ietf-bess-evpn-redundant-mcast-source-06
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-bess-bgp-multicast
+- id: I-D.ietf-bess-evpn-redundant-mcast-source
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-bess-bgp-multicast
+docnumber: I-D.ietf-bess-evpn-redundant-mcast-source
 date:
 - type: published
-  value: '2022-01-07'
+  value: '2023-06-27'
 contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Jorge
+          language:
+          - en
+        - language:
+          - en
+          initial: J
+        formatted_initials:
+          content: J.
+          language:
+          - en
+      surname:
+        content: Rabadan
+        language:
+        - en
+      completename:
+        content: Jorge Rabadan
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Nokia
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Jayant
+          language:
+          - en
+        - language:
+          - en
+          initial: J
+        formatted_initials:
+          content: J.
+          language:
+          - en
+      surname:
+        content: Kotalwar
+        language:
+        - en
+      completename:
+        content: Jayant Kotalwar
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Nokia
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Senthil
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Sathappan
+        language:
+        - en
+      completename:
+        content: Senthil Sathappan
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Nokia
+  role:
+  - type: author
 - person:
     name:
       given:
@@ -59,22 +143,22 @@ contributor:
     name:
       given:
         forename:
-        - content: Lenny
+        - content: Wen
           language:
           - en
         - language:
           - en
-          initial: L
+          initial: W
         formatted_initials:
-          content: L.
+          content: W.
           language:
           - en
       surname:
-        content: Giuliano
+        content: Lin
         language:
         - en
       completename:
-        content: Lenny Giuliano
+        content: Wen Lin
         language:
         - en
     affiliation:
@@ -87,135 +171,54 @@ contributor:
     name:
       given:
         forename:
-        - content: Keyur
+        - content: Eric
           language:
           - en
         - language:
           - en
-          initial: K
+          initial: E
+        - language:
+          - en
+          initial: C
         formatted_initials:
-          content: K.
+          content: E. C.
           language:
           - en
       surname:
-        content: Patel
+        content: Rosen
         language:
         - en
       completename:
-        content: Keyur Patel
+        content: Eric C. Rosen
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Arrcus
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: IJsbrand
-          language:
-          - en
-        - language:
-          - en
-          initial: I
-        formatted_initials:
-          content: I.
-          language:
-          - en
-      surname:
-        content: Wijnands
-        language:
-        - en
-      completename:
-        content: IJsbrand Wijnands
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Cisco Systems
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Mankamana
-          language:
-          - en
-        - language:
-          - en
-          initial: M
-        - language:
-          - en
-          initial: P
-        formatted_initials:
-          content: M. P.
-          language:
-          - en
-      surname:
-        content: Mishra
-        language:
-        - en
-      completename:
-        content: Mankamana Prasad Mishra
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Cisco Systems
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Arkadiy
-          language:
-          - en
-        - language:
-          - en
-          initial: A
-        formatted_initials:
-          content: A.
-          language:
-          - en
-      surname:
-        content: Gulko
-        language:
-        - en
-      completename:
-        content: Arkadiy Gulko
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Refinitiv
+        - content: Individual
   role:
   - type: author
 version:
-- draft: '04'
-revdate: '2022-01-07'
+- draft: '06'
+revdate: '2023-06-27'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document specifies a BGP address family and related procedures
-    that allow BGP to be used for setting up multicast distribution trees. This document
-    also specifies procedures that enable BGP to be used for multicast source discovery,
-    and for showing interest in receiving particular multicast flows. Taken together,
-    these procedures allow BGP to be used as a replacement for other multicast routing
-    protocols, such as PIM or mLDP. The BGP procedures specified here are based on
-    the BGP multicast procedures that were originally designed for use by providers
-    of Multicast Virtual Private Network service. This document also describes how
-    various signaling mechanisms can be used to set up end-to-end inter-region multiast
-    trees.</p>"
+- content: "<p>Ethernet Virtual Private Network (EVPN) supports intra and inter- subnet
+    IP multicast forwarding. However, EVPN (or conventional IP multicast techniques
+    for that matter) do not have a solution for the case where the following two statements
+    are true at the same time: a) a given multicast group carries more than one flow
+    (i.e., more than one source), and b) it is desired that each receiver gets only
+    one of the several flows. Existing multicast techniques assume there are no redundant
+    sources sending the same flow to the same IP multicast group, and, in case there
+    were redundant sources, the receiver's application would deal with the received
+    duplicated packets. This document extends the existing EVPN specifications and
+    assumes that IP Multicast source redundancy may exist. It also assumes that, in
+    case two or more sources send the same IP Multicast flows into the tenant domain,
+    the EVPN PEs need to avoid that the receivers get packet duplication by following
+    the described procedures.</p>"
   language:
   - en
   script:
@@ -224,23 +227,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-bess-bgp-multicast-02
+    id: draft-ietf-bess-evpn-redundant-mcast-source-05
     docid:
-    - id: draft-ietf-bess-bgp-multicast-02
+    - id: draft-ietf-bess-evpn-redundant-mcast-source-05
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-bess-bgp-multicast-02
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-bess-bgp-multicast-05
-    docid:
-    - id: draft-ietf-bess-bgp-multicast-05
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-bess-bgp-multicast-05
+      content: draft-ietf-bess-evpn-redundant-mcast-source-05
       format: text/plain
 series:
 - type: main
@@ -251,7 +244,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-bess-bgp-multicast-04
+  number: draft-ietf-bess-evpn-redundant-mcast-source-06
 doctype: internet-draft
 ext:
   schema-version: v1.0.0
