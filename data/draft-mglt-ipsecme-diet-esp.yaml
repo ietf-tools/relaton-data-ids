@@ -2,7 +2,7 @@
 schema-version: v1.2.1
 id: draft-mglt-ipsecme-diet-esp
 title:
-- content: ESP Header Compression and Diet-ESP
+- content: ESP Header Compression Profile
   language:
   - en
   script:
@@ -13,19 +13,8 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>With the use of encrypted ESP for secure IP communication, the compression
-    of IP payload is only possible with complex frameworks, such as RObust Header
-    Compression (ROHC). Such frameworks are too complex for numerous use cases and
-    especially for IoT scenarios, which makes IPsec not being used here, although
-    it offers architectural benefits. ESP Header Compression (EHC) defines a flexible
-    framework to compress communications protected with IPsec/ESP. Compression and
-    decompression is defined by EHC Rules orchestrated by EHC Strategies. The necessary
-    state is hold within the IPsec Security Association and can be negotiated during
-    key agreement, e.g. with IKEv2. The document specifies the necessary parameters
-    of the EHC Context to allow compression of ESP and the most common included protocols,
-    such as IPv4, IPv6, UDP and TCP and the corresponding EHC Rules. It also defines
-    the Diet-ESP EHC Strategy which compresses up to 32 bytes per packet for traditional
-    IPv6 VPN and up to 66 bytes for IPv6 VPN sent over a single TCP or UDP session.</p>"
+- content: "<p>ESP Header Compression Profile (EHCP) defines a profile to compress
+    communications protected with IPsec/ESP.</p>"
   language:
   - en
   script:
@@ -121,6 +110,16 @@ relation:
       primary: true
     formattedref:
       content: draft-mglt-ipsecme-diet-esp-08
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-mglt-ipsecme-diet-esp-09
+    docid:
+    - id: draft-mglt-ipsecme-diet-esp-09
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-mglt-ipsecme-diet-esp-09
       format: text/plain
 ext:
   schema-version: v1.0.0
