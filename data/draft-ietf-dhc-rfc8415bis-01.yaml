@@ -1,63 +1,92 @@
 ---
 schema-version: v1.2.1
-id: draft-ietf-pim-mofrr-tilfa-01
+id: draft-ietf-dhc-rfc8415bis-01
 title:
-- content: Multicast-only Fast Reroute Based on Topology Independent Loop-free Alternate
-    Fast Reroute
+- content: Dynamic Host Configuration Protocol for IPv6 (DHCPv6)
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-pim-mofrr-tilfa-01
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-dhc-rfc8415bis-01
   type: src
 type: standard
 docid:
-- id: draft-ietf-pim-mofrr-tilfa-01
+- id: draft-ietf-dhc-rfc8415bis-01
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-pim-mofrr-tilfa
+- id: I-D.ietf-dhc-rfc8415bis
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-pim-mofrr-tilfa
+docnumber: I-D.ietf-dhc-rfc8415bis
 date:
 - type: published
-  value: '2022-12-08'
+  value: '2023-06-29'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Yisong
+        - content: Tomek
           language:
           - en
         - language:
           - en
-          initial: Y
+          initial: T
         formatted_initials:
-          content: Y.
+          content: T.
           language:
           - en
       surname:
-        content: Liu
+        content: Mrugalski
         language:
         - en
       completename:
-        content: Yisong Liu
+        content: Tomek Mrugalski
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: China Mobile
+        - content: |-
+            Internet Systems Consortium,
+                  Inc.
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Mike
+        - content: Bernie
+          language:
+          - en
+        - language:
+          - en
+          initial: B
+        formatted_initials:
+          content: B.
+          language:
+          - en
+      surname:
+        content: Volz
+        language:
+        - en
+      completename:
+        content: Bernie Volz
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Individual Contributor
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Michael
           language:
           - en
         - language:
@@ -68,117 +97,92 @@ contributor:
           language:
           - en
       surname:
-        content: McBride
+        content: Richardson
         language:
         - en
       completename:
-        content: Mike McBride
+        content: Michael Richardson
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Futurewei
+        - content: Sandelman Software Works
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Zheng
+        - content: Sheng
           language:
           - en
         - language:
           - en
-          initial: Z
+          initial: S
         formatted_initials:
-          content: Z.
+          content: S.
           language:
           - en
       surname:
-        content: Zhang
+        content: Jiang
         language:
         - en
       completename:
-        content: Zheng Zhang
+        content: Sheng Jiang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: ZTE
+        - content: Beijing University of Posts and Telecommunications
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Jingrong
+        - content: Timothy
           language:
           - en
         - language:
           - en
-          initial: J
+          initial: T
         formatted_initials:
-          content: J.
+          content: T.
           language:
           - en
       surname:
-        content: Xie
+        content: Winters
         language:
         - en
       completename:
-        content: Jingrong Xie
+        content: Timothy Winters
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Changwang
-          language:
-          - en
-        - language:
-          - en
-          initial: C
-        formatted_initials:
-          content: C.
-          language:
-          - en
-      surname:
-        content: Lin
-        language:
-        - en
-      completename:
-        content: Changwang Lin
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: New H3C Technologies
+        - content: QA Cafe
   role:
   - type: author
 version:
 - draft: '01'
-revdate: '2022-12-08'
+revdate: '2023-06-29'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>Multicast-only Fast Reroute (MoFRR) has been defined in [RFC7431],
-    but the selection of the secondary multicast next hop only according to the loop-free
-    alternate fast reroute, which has restrictions in multicast deployments. This
-    document describes a mechanism for Multicast-only Fast Reroute by using Topology
-    Independent Loop-free Alternate fast reroute, which is independent of network
-    topology and can achieve covering more network environments.</p>"
+- content: "<p>This document describes the Dynamic Host Configuration Protocol for
+    IPv6 (DHCPv6): an extensible mechanism for configuring nodes with network configuration
+    parameters, IP addresses, and prefixes. Parameters can be provided statelessly,
+    or in combination with stateful assignment of one or more IPv6 addresses and/or
+    IPv6 prefixes. DHCPv6 can operate either in place of or in addition to stateless
+    address autoconfiguration (SLAAC). This document replaces RFC8415 to incorporate
+    reported errata and to obsolete the assignment of temporary addresses (the IA_TA
+    option) and the server unicast capability (the Server Unicast option and UseMulticast
+    status code).</p>"
   language:
   - en
   script:
@@ -187,23 +191,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-pim-mofrr-tilfa-00
+    id: draft-ietf-dhc-rfc8415bis-00
     docid:
-    - id: draft-ietf-pim-mofrr-tilfa-00
+    - id: draft-ietf-dhc-rfc8415bis-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-pim-mofrr-tilfa-00
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-pim-mofrr-tilfa-02
-    docid:
-    - id: draft-ietf-pim-mofrr-tilfa-02
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-pim-mofrr-tilfa-02
+      content: draft-ietf-dhc-rfc8415bis-00
       format: text/plain
 series:
 - type: main
@@ -214,7 +208,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-pim-mofrr-tilfa-01
+  number: draft-ietf-dhc-rfc8415bis-01
 doctype: internet-draft
 ext:
   schema-version: v1.0.0
