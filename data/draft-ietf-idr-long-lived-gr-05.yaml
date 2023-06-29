@@ -1,34 +1,34 @@
 ---
 schema-version: v1.2.1
-id: draft-ietf-regext-rdap-redacted-10
+id: draft-ietf-idr-long-lived-gr-05
 title:
-- content: Redacted Fields in the Registration Data Access Protocol (RDAP) Response
+- content: Support for Long-lived BGP Graceful Restart
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-regext-rdap-redacted-10
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-long-lived-gr-05
   type: src
 type: standard
 docid:
-- id: draft-ietf-regext-rdap-redacted-10
+- id: draft-ietf-idr-long-lived-gr-05
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-regext-rdap-redacted
+- id: I-D.ietf-idr-long-lived-gr
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-regext-rdap-redacted
+docnumber: I-D.ietf-idr-long-lived-gr
 date:
 - type: published
-  value: '2022-12-16'
+  value: '2023-06-29'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: James
+        - content: Jim
           language:
           - en
         - language:
@@ -39,52 +39,80 @@ contributor:
           language:
           - en
       surname:
-        content: Gould
+        content: Uttaro
         language:
         - en
       completename:
-        content: James Gould
+        content: Jim Uttaro
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: VeriSign, Inc.
+        - content: Independent Contributor
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: David
+        - content: Enke
           language:
           - en
         - language:
           - en
-          initial: D
+          initial: E
         formatted_initials:
-          content: D.
+          content: E.
           language:
           - en
       surname:
-        content: Smith
+        content: Chen
         language:
         - en
       completename:
-        content: David Smith
+        content: Enke Chen
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: VeriSign, Inc.
+        - content: Palo Alto Networks
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Jody
+        - content: Bruno
+          language:
+          - en
+        - language:
+          - en
+          initial: B
+        formatted_initials:
+          content: B.
+          language:
+          - en
+      surname:
+        content: Decraene
+        language:
+        - en
+      completename:
+        content: Bruno Decraene
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Orange
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: John
           language:
           - en
         - language:
@@ -95,57 +123,39 @@ contributor:
           language:
           - en
       surname:
-        content: Kolker
+        content: Scudder
         language:
         - en
       completename:
-        content: Jody Kolker
+        content: John Scudder
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: GoDaddy Inc.
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Roger
-          language:
-          - en
-        - language:
-          - en
-          initial: R
-        formatted_initials:
-          content: R.
-          language:
-          - en
-      surname:
-        content: Carney
-        language:
-        - en
-      completename:
-        content: Roger Carney
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: GoDaddy Inc.
+        - content: Juniper Networks
   role:
   - type: author
 version:
-- draft: '10'
-revdate: '2022-12-16'
+- draft: '05'
+revdate: '2023-06-29'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document describes an RDAP extension for explicitly identifying
-    redacted RDAP response fields, using JSONPath as the default expression language.</p>"
+- content: <p>In this document, we introduce a new BGP capability termed "Long- lived
+    Graceful Restart Capability" so that stale routes can be retained for a longer
+    time upon session failure than is provided for by BGP Graceful Restart (RFC 4724).
+    A well-known BGP community "LLGR_STALE" is introduced for marking stale routes
+    retained for a longer time. A second well-known BGP community, "NO_LLGR", is introduced
+    to mark routes for which these procedures should not be applied. We also specify
+    that such long-lived stale routes be treated as the least-preferred, and their
+    advertisements be limited to BGP speakers that have advertised the new capability.
+    Use of this extension is not advisable in all cases, and we provide guidelines
+    to help determine if it is. We update RFC 6368 by specifying that the LLGR_STALE
+    community must be propagated into, or out of, the path attributes exchanged between
+    PE and CE.</p>
   language:
   - en
   script:
@@ -154,23 +164,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-regext-rdap-redacted-08
+    id: draft-ietf-idr-long-lived-gr-03
     docid:
-    - id: draft-ietf-regext-rdap-redacted-08
+    - id: draft-ietf-idr-long-lived-gr-03
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-regext-rdap-redacted-08
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-regext-rdap-redacted-13
-    docid:
-    - id: draft-ietf-regext-rdap-redacted-13
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-regext-rdap-redacted-13
+      content: draft-ietf-idr-long-lived-gr-03
       format: text/plain
 series:
 - type: main
@@ -181,7 +181,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-regext-rdap-redacted-10
+  number: draft-ietf-idr-long-lived-gr-05
 doctype: internet-draft
 ext:
   schema-version: v1.0.0
