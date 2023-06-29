@@ -1,0 +1,57 @@
+---
+schema-version: v1.2.1
+id: draft-eckert-detnet-glbf
+title:
+- content: Deterministic Networking (DetNet) Data Plane - guaranteed Latency Based
+    Forwarding (gLBF) for bounded latency with low jitter and asynchronous forwarding
+    in Deterministic Networks
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-eckert-detnet-glbf
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: <p>This memo proposes a mechanism called "guaranteed Latency Based Forwarding"
+    (gLBF) as part of DetNet for hop-by-hop packet forwarding with per-hop deterministically
+    bounded latency and minimal jitter. gLBF is intended to be useful across a wide
+    range of networks and applications with need for high-precision deterministic
+    networking services, including in-car networks or networks used for industrial
+    automation across on factory floors, all the way to ++100Gbps country-wide networks.
+    Contrary to other mechanisms, gLBF does not require network wide clock synchronization,
+    nor does it need to maintain per-flow state at network nodes, avoiding drawbacks
+    of other known methods while leveraging their advantages. Specifically, gLBF uses
+    the queuing model and calculus of Urgency Based Scheduling (UBS, [UBS]), which
+    is used by TSN Asynchronous Traffic Shaping [TSN-ATS]. gLBF is intended to be
+    a plug-in replacement for TSN-ATN or as a parallel mechanism beside TSN-ATS because
+    it allows to keeping the same controller-plane design which is selecting paths
+    for TSN-ATS, sizing TSN-ATS queues, calculating latencies and admitting flows
+    to calculated paths for calculated latencies. In addition to reducing the jitter
+    compared to TSN-ATS by additional buffering (dampening) in the network, gLBF also
+    eliminates the need for per-flow, per-hop state maintenance required by TSN-ATS.
+    This avoids the need to signal per-flow state to every hop from the controller-plane
+    and associated scaling problems. It also reduces implementation cost for high-speed
+    networking hardware due to the avoidance of additional high-speed speed read/write
+    memory access to retrieve, process and update per-flow state variables for a large
+    number of flows.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-eckert-detnet-glbf-00
+    docid:
+    - id: draft-eckert-detnet-glbf-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-eckert-detnet-glbf-00
+      format: text/plain
+ext:
+  schema-version: v1.0.0
