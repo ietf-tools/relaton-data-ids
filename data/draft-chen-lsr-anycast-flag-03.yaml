@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.1
-id: draft-chen-lsr-anycast-flag-00
+id: draft-chen-lsr-anycast-flag-03
 title:
 - content: Updates to Anycast Property advertisement for OSPF
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-chen-lsr-anycast-flag-00
+- content: https://datatracker.ietf.org/doc/html/draft-chen-lsr-anycast-flag-03
   type: src
 type: standard
 docid:
-- id: draft-chen-lsr-anycast-flag-00
+- id: draft-chen-lsr-anycast-flag-03
   type: Internet-Draft
   primary: true
 - id: I-D.chen-lsr-anycast-flag
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.chen-lsr-anycast-flag
 date:
 - type: published
-  value: '2021-09-12'
+  value: '2023-06-30'
 contributor:
 - person:
     name:
@@ -108,36 +108,65 @@ contributor:
         - content: Cisco Systems
   role:
   - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Ketan
+          language:
+          - en
+        - language:
+          - en
+          initial: K
+        formatted_initials:
+          content: K.
+          language:
+          - en
+      surname:
+        content: Talaulikar
+        language:
+        - en
+      completename:
+        content: Ketan Talaulikar
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Cisco Systems
+  role:
+  - type: author
 version:
-- draft: '00'
-revdate: '2021-09-12'
+- draft: '03'
+revdate: '2023-06-30'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>Both SR-MPLS prefixes-SID and IPv4/IPv6 prefix may be configured as
-    anycast and as such the same value can be advertised by multiple routers. It is
-    useful for other routers to know that the advertisement is for an anycast identifier.
-    This document updates [RFC7684] and [RFC8362], by defining a new flag in OSPFv2
-    Extended Prefix Opaque LSA [RFC7684] and Prefix Options [RFC8362] to advertise
-    the anycast property, and also updates the corresponding interpretation of the
-    Flags field of the Prefix Attribute Flags TLV in [RFC9085].</p>"
+- content: "<p>Both SR-MPLS prefixes-SID and IPv4 prefix may be configured as anycast
+    and as such the same value can be advertised by multiple routers. It is useful
+    for other routers to know that the advertisement is for an anycast identifier.
+    Each prefix is advertised along with an 8-bit field of capabilities,by using the
+    flag flield in the OSPFv2 Extended Prefix TLV [RFC7684], but the definition of
+    anycast flag to identify the prefix as anycast has not yet been defined. This
+    document updates [RFC7684], by defining a new flag in the OSPFv2 Extended Prefix
+    TLV [RFC7684] to advertise the anycast property.</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-chen-lsr-anycast-flag-03
+    id: draft-chen-lsr-anycast-flag-02
     docid:
-    - id: draft-chen-lsr-anycast-flag-03
+    - id: draft-chen-lsr-anycast-flag-02
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-chen-lsr-anycast-flag-03
+      content: draft-chen-lsr-anycast-flag-02
       format: text/plain
 series:
 - type: main
@@ -148,7 +177,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-chen-lsr-anycast-flag-00
+  number: draft-chen-lsr-anycast-flag-03
 doctype: internet-draft
 ext:
   schema-version: v1.0.0

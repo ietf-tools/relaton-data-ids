@@ -13,14 +13,14 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>Each prefix is advertised along with an 8-bit field of capabilities,by
-    using the Prefix Options[RFC8362] and the flag flield in the OSPFv2 Extended Prefix
-    TLV [RFC7684], but the definition of anycast flag to identify the prefix as anycast
-    has not yet been defined. However, Almost all bits of the Flag field has been
-    assigned already. Thus, it is also required to extend the flag field for future
-    use. This document updates [RFC7684] and [RFC8362], by defining a new variable
-    length Prefix attributes Sub-TLVs for OSPFv2 and OSPFv3 and a new flag in the
-    Prefix attributes Sub-TLV to advertise the anycast property.</p>"
+- content: "<p>Both SR-MPLS prefixes-SID and IPv4 prefix may be configured as anycast
+    and as such the same value can be advertised by multiple routers. It is useful
+    for other routers to know that the advertisement is for an anycast identifier.
+    Each prefix is advertised along with an 8-bit field of capabilities,by using the
+    flag flield in the OSPFv2 Extended Prefix TLV [RFC7684], but the definition of
+    anycast flag to identify the prefix as anycast has not yet been defined. This
+    document updates [RFC7684], by defining a new flag in the OSPFv2 Extended Prefix
+    TLV [RFC7684] to advertise the anycast property.</p>"
   language:
   - en
   script:
@@ -46,6 +46,26 @@ relation:
       primary: true
     formattedref:
       content: draft-chen-lsr-anycast-flag-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-chen-lsr-anycast-flag-02
+    docid:
+    - id: draft-chen-lsr-anycast-flag-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-chen-lsr-anycast-flag-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-chen-lsr-anycast-flag-03
+    docid:
+    - id: draft-chen-lsr-anycast-flag-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-chen-lsr-anycast-flag-03
       format: text/plain
 ext:
   schema-version: v1.0.0

@@ -1,28 +1,28 @@
 ---
 schema-version: v1.2.1
-id: draft-chen-lsr-anycast-flag-00
+id: draft-chen-lsr-prefix-extended-flags-00
 title:
-- content: Updates to Anycast Property advertisement for OSPF
+- content: Prefix Flag Extension for OSPFv2 and OSPFv3
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-chen-lsr-anycast-flag-00
+- content: https://datatracker.ietf.org/doc/html/draft-chen-lsr-prefix-extended-flags-00
   type: src
 type: standard
 docid:
-- id: draft-chen-lsr-anycast-flag-00
+- id: draft-chen-lsr-prefix-extended-flags-00
   type: Internet-Draft
   primary: true
-- id: I-D.chen-lsr-anycast-flag
+- id: I-D.chen-lsr-prefix-extended-flags
   type: IETF
   scope: anchor
-docnumber: I-D.chen-lsr-anycast-flag
+docnumber: I-D.chen-lsr-prefix-extended-flags
 date:
 - type: published
-  value: '2021-09-12'
+  value: '2023-06-30'
 contributor:
 - person:
     name:
@@ -108,37 +108,54 @@ contributor:
         - content: Cisco Systems
   role:
   - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Ketan
+          language:
+          - en
+        - language:
+          - en
+          initial: K
+        formatted_initials:
+          content: K.
+          language:
+          - en
+      surname:
+        content: Talaulikar
+        language:
+        - en
+      completename:
+        content: Ketan Talaulikar
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Cisco Systems
+  role:
+  - type: author
 version:
 - draft: '00'
-revdate: '2021-09-12'
+revdate: '2023-06-30'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>Both SR-MPLS prefixes-SID and IPv4/IPv6 prefix may be configured as
-    anycast and as such the same value can be advertised by multiple routers. It is
-    useful for other routers to know that the advertisement is for an anycast identifier.
-    This document updates [RFC7684] and [RFC8362], by defining a new flag in OSPFv2
-    Extended Prefix Opaque LSA [RFC7684] and Prefix Options [RFC8362] to advertise
-    the anycast property, and also updates the corresponding interpretation of the
-    Flags field of the Prefix Attribute Flags TLV in [RFC9085].</p>"
+- content: "<p>Within OSPF, each prefix is advertised along with an 8-bit field of
+    capabilities,by using the Prefix Options[RFC5340] and the flag flield in the OSPFv2
+    Extended Prefix TLV [RFC7684]. However, for OSPFv3, all the bits of the PrefixOptions
+    have already been assigned, and for OSPFv2, there are not many undefined bits
+    left in the OSPFv2 Extended Prefix TLV. This document solves the problem of insufficient
+    existing flags, and defines the variable length Prefix attributes Sub-TLV for
+    OSPFv2 and OSPFv3 for the extended flag fields.</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
-relation:
-- type: updatedBy
-  bibitem:
-    id: draft-chen-lsr-anycast-flag-03
-    docid:
-    - id: draft-chen-lsr-anycast-flag-03
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-chen-lsr-anycast-flag-03
-      format: text/plain
 series:
 - type: main
   title:
@@ -148,7 +165,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-chen-lsr-anycast-flag-00
+  number: draft-chen-lsr-prefix-extended-flags-00
 doctype: internet-draft
 ext:
   schema-version: v1.0.0
