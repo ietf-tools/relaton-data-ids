@@ -1,140 +1,35 @@
 ---
 schema-version: v1.2.1
-id: draft-ietf-bier-mld-02
+id: draft-ietf-ippm-stamp-on-lag-03
 title:
-- content: BIER Ingress Multicast Flow Overlay using Multicast Listener Discovery
-    Protocols
+- content: Simple Two-Way Active Measurement Protocol Extensions for Performance Measurement
+    on LAG
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-bier-mld-02
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-ippm-stamp-on-lag-03
   type: src
 type: standard
 docid:
-- id: draft-ietf-bier-mld-02
+- id: draft-ietf-ippm-stamp-on-lag-03
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-bier-mld
+- id: I-D.ietf-ippm-stamp-on-lag
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-bier-mld
+docnumber: I-D.ietf-ippm-stamp-on-lag
 date:
 - type: published
-  value: '2019-07-08'
+  value: '2023-07-02'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Pierre
-          language:
-          - en
-        - language:
-          - en
-          initial: P
-        formatted_initials:
-          content: P.
-          language:
-          - en
-      surname:
-        content: Pfister
-        language:
-        - en
-      completename:
-        content: Pierre Pfister
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Cisco Systems
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: IJsbrand
-          language:
-          - en
-        - language:
-          - en
-          initial: I
-        formatted_initials:
-          content: I.
-          language:
-          - en
-      surname:
-        content: Wijnands
-        language:
-        - en
-      completename:
-        content: IJsbrand Wijnands
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Cisco Systems
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Stig
-          language:
-          - en
-        - language:
-          - en
-          initial: S
-        formatted_initials:
-          content: S.
-          language:
-          - en
-      surname:
-        content: Venaas
-        language:
-        - en
-      completename:
-        content: Stig Venaas
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Cisco Systems
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - language:
-          - en
-          initial: C
-        formatted_initials:
-          content: C.
-          language:
-          - en
-      surname:
-        content: Wang
-        language:
-        - en
-      completename:
-        content: Cui(Linda) Wang
-        language:
-        - en
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Zheng
+        - content: Zhenqiang
           language:
           - en
         - language:
@@ -145,57 +40,144 @@ contributor:
           language:
           - en
       surname:
-        content: Zhang
+        content: Li
         language:
         - en
       completename:
-        content: Zheng Zhang
+        content: Zhenqiang Li
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: ZTE Corporation
+        - content: China Mobile
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Markus
+        - content: Tianran
           language:
           - en
         - language:
           - en
-          initial: M
+          initial: T
         formatted_initials:
-          content: M.
+          content: T.
           language:
           - en
       surname:
-        content: Stenberg
+        content: Zhou
         language:
         - en
       completename:
-        content: Markus Stenberg
+        content: Tianran Zhou
         language:
         - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Guo
+          language:
+          - en
+        - language:
+          - en
+          initial: G
+        formatted_initials:
+          content: G.
+          language:
+          - en
+      surname:
+        content: Jun
+        language:
+        - en
+      completename:
+        content: Guo Jun
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: ZTE Corp.
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Greg
+          language:
+          - en
+        - language:
+          - en
+          initial: G
+        formatted_initials:
+          content: G.
+          language:
+          - en
+      surname:
+        content: Mirsky
+        language:
+        - en
+      completename:
+        content: Greg Mirsky
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Ericsson
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Rakesh
+          language:
+          - en
+        - language:
+          - en
+          initial: R
+        formatted_initials:
+          content: R.
+          language:
+          - en
+      surname:
+        content: Gandhi
+        language:
+        - en
+      completename:
+        content: Rakesh Gandhi
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Cisco
   role:
   - type: author
 version:
-- draft: '02'
-revdate: '2019-07-08'
+- draft: '03'
+revdate: '2023-07-02'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document specifies the ingress part of a multicast flow overlay
-    for BIER networks. Using existing multicast listener discovery protocols, it enables
-    multicast membership information sharing from egress routers, acting as listeners,
-    toward ingress routers, acting as queriers. Ingress routers keep per-egress-router
-    state, used to construct the BIER bit mask associated with IP multicast packets
-    entering the BIER domain.</p>"
+- content: "<p>This document extends Simple Two-Way Active Measurement Protocol (STAMP)
+    to implement performance measurement on every member link of a Link Aggregation
+    Group (LAG). Knowing the measured metrics of each member link of a LAG enables
+    operators to enforce a performance based traffic steering policy across the member
+    links.</p>"
   language:
   - en
   script:
@@ -204,23 +186,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-bier-mld-00
+    id: draft-ietf-ippm-stamp-on-lag-02
     docid:
-    - id: draft-ietf-bier-mld-00
+    - id: draft-ietf-ippm-stamp-on-lag-02
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-bier-mld-00
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-bier-mld-08
-    docid:
-    - id: draft-ietf-bier-mld-08
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-bier-mld-08
+      content: draft-ietf-ippm-stamp-on-lag-02
       format: text/plain
 series:
 - type: main
@@ -231,7 +203,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-bier-mld-02
+  number: draft-ietf-ippm-stamp-on-lag-03
 doctype: internet-draft
 ext:
   schema-version: v1.0.0
