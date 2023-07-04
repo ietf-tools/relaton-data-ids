@@ -1,34 +1,90 @@
 ---
 schema-version: v1.2.3
-id: draft-zhao-pim-evpn-multicast-yang-01
+id: draft-dunbar-rtgwg-5g-edge-metadata-bgp-usage-01
 title:
-- content: Yang Data Model for EVPN multicast
+- content: BGP Usage for 5G Edge Computing Service Metadata
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-zhao-pim-evpn-multicast-yang-01
+- content: https://datatracker.ietf.org/doc/html/draft-dunbar-rtgwg-5g-edge-metadata-bgp-usage-01
   type: src
 type: standard
 docid:
-- id: draft-zhao-pim-evpn-multicast-yang-01
+- id: draft-dunbar-rtgwg-5g-edge-metadata-bgp-usage-01
   type: Internet-Draft
   primary: true
-- id: I-D.zhao-pim-evpn-multicast-yang
+- id: I-D.dunbar-rtgwg-5g-edge-metadata-bgp-usage
   type: IETF
   scope: anchor
-docnumber: I-D.zhao-pim-evpn-multicast-yang
+docnumber: I-D.dunbar-rtgwg-5g-edge-metadata-bgp-usage
 date:
 - type: published
-  value: '2023-03-25'
+  value: '2023-07-03'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Hongji
+        - content: Linda
+          language:
+          - en
+        - language:
+          - en
+          initial: L
+        formatted_initials:
+          content: L.
+          language:
+          - en
+      surname:
+        content: Dunbar
+        language:
+        - en
+      completename:
+        content: Linda Dunbar
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Futurewei
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Kausik
+          language:
+          - en
+        - language:
+          - en
+          initial: K
+        formatted_initials:
+          content: K.
+          language:
+          - en
+      surname:
+        content: Majumdar
+        language:
+        - en
+      completename:
+        content: Kausik Majumdar
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Microsoft
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Haibo
           language:
           - en
         - language:
@@ -39,142 +95,65 @@ contributor:
           language:
           - en
       surname:
-        content: Zhao
+        content: Wang
         language:
         - en
       completename:
-        content: Hongji Zhao
+        content: Haibo Wang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Ericsson
+        - content: Huawei
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Yisong
+        - content: Gyan
           language:
           - en
         - language:
           - en
-          initial: Y
+          initial: G
+        - language:
+          - en
+          initial: S
         formatted_initials:
-          content: Y.
+          content: G. S.
           language:
           - en
       surname:
-        content: Liu
+        content: Mishra
         language:
         - en
       completename:
-        content: Yisong Liu
+        content: Gyan Mishra
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: China Mobile
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Xufeng
-          language:
-          - en
-        - language:
-          - en
-          initial: X
-        formatted_initials:
-          content: X.
-          language:
-          - en
-      surname:
-        content: Liu
-        language:
-        - en
-      completename:
-        content: Xufeng Liu
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: IBM Corporation
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Mani
-          language:
-          - en
-        - language:
-          - en
-          initial: M
-        formatted_initials:
-          content: M.
-          language:
-          - en
-      surname:
-        content: Panchanathan
-        language:
-        - en
-      completename:
-        content: Mani Panchanathan
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Cisco
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Mahesh
-          language:
-          - en
-        - language:
-          - en
-          initial: M
-        formatted_initials:
-          content: M.
-          language:
-          - en
-      surname:
-        content: Sivakumar
-        language:
-        - en
-      completename:
-        content: Mahesh Sivakumar
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Juniper
+        - content: Verizon
   role:
   - type: author
 version:
 - draft: '01'
-revdate: '2023-03-25'
+revdate: '2023-07-03'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document describes a YANG data model for EVPN multicast services.
-    The model is agnostic of the underlay as well as RFC 9251. This document mainly
-    focuses on EVPN instance framework.</p>"
+- content: "<p>This draft describes the problems in the 5G Edge computing environment
+    and how BGP can be used to propagate additional IP layer detectable information
+    about the 5G edge data centers so that the ingress routers in the 5G Local Data
+    Network can make path selections based on not only the routing distance but also
+    the IP Layer relevant metrics of the destinations. The goal is to improve latency
+    and performance for 5G Edge Computing (EC) services even when the detailed servers
+    running status are unavailable.</p>"
   language:
   - en
   script:
@@ -183,23 +162,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-zhao-pim-evpn-multicast-yang-00
+    id: draft-dunbar-rtgwg-5g-edge-metadata-bgp-usage-00
     docid:
-    - id: draft-zhao-pim-evpn-multicast-yang-00
+    - id: draft-dunbar-rtgwg-5g-edge-metadata-bgp-usage-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-zhao-pim-evpn-multicast-yang-00
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-zhao-pim-evpn-multicast-yang-02
-    docid:
-    - id: draft-zhao-pim-evpn-multicast-yang-02
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-zhao-pim-evpn-multicast-yang-02
+      content: draft-dunbar-rtgwg-5g-edge-metadata-bgp-usage-00
       format: text/plain
 series:
 - type: main
@@ -210,7 +179,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-zhao-pim-evpn-multicast-yang-01
+  number: draft-dunbar-rtgwg-5g-edge-metadata-bgp-usage-01
 doctype: internet-draft
 ext:
   schema-version: v1.0.0
