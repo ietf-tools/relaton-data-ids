@@ -1,0 +1,162 @@
+---
+schema-version: v1.2.3
+id: draft-ietf-netmod-system-config-02
+title:
+- content: System-defined Configuration
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-netmod-system-config-02
+  type: src
+type: standard
+docid:
+- id: draft-ietf-netmod-system-config-02
+  type: Internet-Draft
+  primary: true
+- id: I-D.ietf-netmod-system-config
+  type: IETF
+  scope: anchor
+docnumber: I-D.ietf-netmod-system-config
+date:
+- type: published
+  value: '2023-07-04'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Qiufang
+          language:
+          - en
+        - language:
+          - en
+          initial: Q
+        formatted_initials:
+          content: Q.
+          language:
+          - en
+      surname:
+        content: Ma
+        language:
+        - en
+      completename:
+        content: Qiufang Ma
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Qin
+          language:
+          - en
+        - language:
+          - en
+          initial: Q
+        formatted_initials:
+          content: Q.
+          language:
+          - en
+      surname:
+        content: Wu
+        language:
+        - en
+      completename:
+        content: Qin Wu
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Chong
+          language:
+          - en
+        - language:
+          - en
+          initial: C
+        formatted_initials:
+          content: C.
+          language:
+          - en
+      surname:
+        content: Feng
+        language:
+        - en
+      completename:
+        content: Chong Feng
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei
+  role:
+  - type: author
+version:
+- draft: '02'
+revdate: '2023-07-04'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: <p>This document describes how a management client and server handle YANG-modeled
+    configuration data that is defined by the server itself. The system-defined configuration
+    can be referenced (e.g. leafref) by configuration explicitly created by a client.
+    The Network Management Datastore Architecture (NMDA) defined in RFC 8342 is updated
+    with a read-only conventional configuration datastore called "system" to hold
+    system-defined configuration. As an alternative to clients explicitly copying
+    referenced system-defined configuration into the target configuration datastore
+    (e.g., &lt;running&gt;) so that the datastore is valid, a "resolve-system" parameter
+    is defined to allow the server acting as a "system client" to copy referenced
+    system-defined nodes automatically. This solution enables clients manipulating
+    the target configuration datastore (e.g., &lt;running&gt;) to overlay (e.g., copy
+    system configuration using the same key value as in &lt;system&gt;) and reference
+    nodes defined in &lt;system&gt;, override values of configurations defined in
+    &lt;system&gt;, and configure descendant nodes of system-defined nodes. This document
+    updates RFC 8342, RFC 6241, RFC 8526 and RFC 8040.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-ietf-netmod-system-config-00
+    docid:
+    - id: draft-ietf-netmod-system-config-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-netmod-system-config-00
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-ietf-netmod-system-config-02
+doctype: internet-draft
+ext:
+  schema-version: v1.0.0
