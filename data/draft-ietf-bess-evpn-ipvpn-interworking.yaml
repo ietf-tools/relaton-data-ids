@@ -13,18 +13,19 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>EVPN is used as a unified control plane for tenant network intra and
-    inter-subnet forwarding. When a tenant network spans not only EVPN domains but
-    also domains where BGP VPN-IP or IP families provide inter-subnet forwarding,
-    there is a need to specify the interworking aspects between BGP domains of type
-    EVPN, VPN-IP and IP, so that the end to end tenant connectivity can be accomplished.
-    This document specifies how EVPN interworks with VPN-IPv4/VPN-IPv6 and IPv4/IPv6
-    BGP families for inter-subnet forwarding. The document also addresses the interconnect
-    of EVPN domains for Inter-Subnet Forwarding routes. In addition, this specification
-    defines a new BGP Path Attribute called D-PATH (Domain PATH) that protects gateways
-    against control plane loops. D-PATH modifies the BGP best path selection for multiprotocol
-    BGP routes of SAFI 1, 128 and EVPN IP Prefix routes, and therefore this document
-    updates [RFC4271].</p>"
+- content: "<p>Ethernet Virtual Private Network (EVPN) is used as a unified control
+    plane for tenant network intra and inter-subnet forwarding. When a tenant network
+    spans not only EVPN domains but also domains where BGP VPN-IP or IP families provide
+    inter-subnet forwarding, there is a need to specify the interworking aspects between
+    BGP domains of type EVPN, VPN-IP and IP, so that the end to end tenant connectivity
+    can be accomplished. This document specifies how EVPN interworks with VPN-IPv4/VPN-IPv6
+    and IPv4/IPv6 BGP families for inter-subnet forwarding. The document also addresses
+    the interconnect of EVPN domains for Inter-Subnet Forwarding routes. In addition,
+    this specification defines a new BGP Path Attribute called D-PATH (Domain PATH)
+    that protects gateways against control plane loops. D-PATH modifies the BGP best
+    path selection for multiprotocol BGP routes of SAFI 128 and EVPN IP Prefix routes,
+    and therefore this document updates the BGP best path selection in [RFC4271],
+    but only for IPVPN and EVPN families.</p>"
   language:
   - en
   script:
@@ -110,6 +111,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-bess-evpn-ipvpn-interworking-07
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-bess-evpn-ipvpn-interworking-08
+    docid:
+    - id: draft-ietf-bess-evpn-ipvpn-interworking-08
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-bess-evpn-ipvpn-interworking-08
       format: text/plain
 ext:
   schema-version: v1.0.0

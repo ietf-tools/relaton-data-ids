@@ -14,28 +14,20 @@ docid:
   primary: true
 abstract:
 - content: <p>This document specifies a mechanism, referred to as "Intent Driven Service
-    Mapping" to express association of overlay routes with underlay routes satisfying
-    a certain SLA using BGP. The document describes a framework for classifying underlay
-    routes into transport classes and mapping service routes to a specific transport
-    class. The "Transport class" construct maps to a desired SLA and can be used to
-    realize the "Topology Slice" in 5G Network slicing architecture. This document
-    specifies BGP protocol procedures that enable dissemination of such service mapping
-    information that may span multiple cooperating administrative domains. These domains
-    may be administered by the same provider or by closely co-ordinating provider
-    networks. A new BGP transport layer address family (SAFI 76) is defined for this
-    purpose that uses RFC-4364 technology and follows RFC-8277 NLRI encoding. This
-    new address family is called "BGP Classful Transport", aka BGP CT. BGP CT makes
-    it possible to advertise multiple tunnels to the same destination address, thus
-    avoiding need of multiple loopbacks on the egress node. It carries transport prefixes
-    across tunnel domain boundaries (e.g. in Inter-AS Option-C networks), which is
-    parallel to BGP LU (SAFI 4). It disseminates "Transport class" information for
-    the transport prefixes across the participating domains, which is not possible
-    with BGP LU. This makes the end-to-end network a "Transport Class" aware tunneled
-    network. Just like BGP LU (SAFI 4), BGP CT family (SAFI 76) is used in inter-
-    AS option-C networks. The Service Mapping procedures described in this document
-    apply in the same manner to Intra-AS service endpoints as well as Inter-AS option-A,
-    option-B, option-C variations. Examples of these variations are given in Appendix
-    A.</p>
+    Mapping", that uses BGP to express intent based association of overlay routes,
+    with underlay routes having specific Traffic Engineering (TE) characteristics,
+    that satisfy a certain Service Level Agreement (SLA). The document achieves this
+    by defining new constructs, to group underlay routes with sufficienty similar
+    TE characteristics into identifiable classes (Transport Class), that overlay routes
+    use as an ordered set to resolve reachability (Resolution Scheme) towards service
+    endpoints. These constructs can be used to realize the "IETF Network Slice" defined
+    in TEAS Network Slices framework. This document specifies protocol procedures
+    for BGP that enable dissemination of such service mapping information in a network
+    that may span multiple cooperating administrative domains. These domains may be
+    administered either by the same provider or by closely coordinating providers.
+    A new BGP address family that leverages RFC-4364 procedures and follows RFC-8277
+    NLRI encoding, is defined to advertise underlay routes with its identified class.
+    This new address family is called "BGP Classful Transport", a.k.a., BGP CT.</p>
   language:
   - en
   script:
@@ -141,6 +133,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-idr-bgp-ct-09
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-idr-bgp-ct-10
+    docid:
+    - id: draft-ietf-idr-bgp-ct-10
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-idr-bgp-ct-10
       format: text/plain
 ext:
   schema-version: v1.0.0
