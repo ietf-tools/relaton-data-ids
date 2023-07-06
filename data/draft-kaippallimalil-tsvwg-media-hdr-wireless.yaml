@@ -22,16 +22,13 @@ abstract:
     dynamically adjust the size and quality of a stream to match available network
     bandwidth. However, catering to such media flows over a radio link where the capacity
     changes rapidly requires the buffers and QoS in general to be managed carefully.
-    This draft proposes additional information about the media transported in each
-    packet to manage the buffers and optimize the scheduling of radio resources. The
-    set of information proposed here includes importance of the packet, burst length
-    and time budget to be conveyed by the media application in a new UDP option. The
-    metadata in the UDP option is used to provide the wireless network the flexibility
-    to prioritize packets that are essential when the radio capacity is temporarily
-    low, defer packets that can tolerate some additional delay, or even drop packets
-    selectively in more extreme conditions. This draft defines media metadata, a new
-    UDP option to carry this metadata and the operational aspects for using it between
-    a UDP source and a on-path wireless entity.</p>"
+    This draft proposes to provide metadata about the media transported in each packet
+    to allow the wireless network to manage radio resources optimally and to maximize
+    network utilization while also improving application performance. This draft discusses
+    at a high level potential solution options to this problem and the trade-offs
+    involved. The draft then defines a solution that uses a new UDP option to carry
+    media metadata between a UDP source and destination. This option is compact and
+    has low processing overhead at the wireless router.</p>"
   language:
   - en
   script:
@@ -57,6 +54,16 @@ relation:
       primary: true
     formattedref:
       content: draft-kaippallimalil-tsvwg-media-hdr-wireless-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-kaippallimalil-tsvwg-media-hdr-wireless-02
+    docid:
+    - id: draft-kaippallimalil-tsvwg-media-hdr-wireless-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-kaippallimalil-tsvwg-media-hdr-wireless-02
       format: text/plain
 ext:
   schema-version: v1.0.0
