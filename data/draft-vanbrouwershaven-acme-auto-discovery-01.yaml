@@ -1,0 +1,133 @@
+---
+schema-version: v1.2.3
+id: draft-vanbrouwershaven-acme-auto-discovery-01
+title:
+- content: Auto-discovery mechanism for ACME client configuration
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-vanbrouwershaven-acme-auto-discovery-01
+  type: src
+type: standard
+docid:
+- id: draft-vanbrouwershaven-acme-auto-discovery-01
+  type: Internet-Draft
+  primary: true
+- id: I-D.vanbrouwershaven-acme-auto-discovery
+  type: IETF
+  scope: anchor
+docnumber: I-D.vanbrouwershaven-acme-auto-discovery
+date:
+- type: published
+  value: '2023-07-06'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Paul
+          language:
+          - en
+        - language:
+          - en
+          initial: P
+        formatted_initials:
+          content: P.
+          language:
+          - en
+      surname:
+        content: van Brouwershaven
+        language:
+        - en
+      completename:
+        content: Paul van Brouwershaven
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Entrust Limited
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Mike
+          language:
+          - en
+        - language:
+          - en
+          initial: M
+        formatted_initials:
+          content: M.
+          language:
+          - en
+      surname:
+        content: Ounsworth
+        language:
+        - en
+      completename:
+        content: Mike Ounsworth
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Entrust Limited
+  role:
+  - type: author
+version:
+- draft: '01'
+revdate: '2023-07-06'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: '<p>A significant impediment to the widespread adoption of the Automated
+    Certificate Management Environment (ACME) [RFC8555] is that ACME clients need
+    to be pre-configured with the URL of the ACME server to be used. This often leaves
+    domain owners at the mercy of their hosting provider as to which Certification
+    Authorities (CAs) can be used. This specification provides a mechanism to bootstrap
+    ACME client configuration from a domain''s DNS CAA Resource Record [RFC8659],
+    thus giving control of which CA(s) to use back to the domain owner. Specifically,
+    this document specifies two new extensions to the DNS CAA Resource Record: the
+    "discovery" and "priority" parameters. Additionally, it registers the URI "/.well-known/acme"
+    at which all compliant ACME servers will host their ACME directory object. By
+    retrieving instructions for the ACME client from the authorized CA(s), this mechanism
+    allows for the domain owner to configure multiple CAs in either load-balanced
+    or fallback prioritizations which improves user preferences and increases diversity
+    in certificate issuers.</p>'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-vanbrouwershaven-acme-auto-discovery-00
+    docid:
+    - id: draft-vanbrouwershaven-acme-auto-discovery-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-vanbrouwershaven-acme-auto-discovery-00
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-vanbrouwershaven-acme-auto-discovery-01
+doctype: internet-draft
+ext:
+  schema-version: v1.0.0
