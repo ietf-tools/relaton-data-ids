@@ -16,11 +16,16 @@ abstract:
 - content: "<p>This document describes JSON and CBOR serializations for CRYSTALS Dilithium,
     a Post-Quantum Cryptography (PQC) based suite. This document does not define any
     new cryptography, only seralizations of existing cryptographic systems. This document
-    registers key types for JOSE and COSE, specifically LWE. Key types in this document
+    registers key types for JOSE and COSE, specifically MLWE. Key types in this document
     are specified by the cryptographic algorithm family in use by a particular algorithm
     as discussed in RFC7517. This document registers signature algorithms types for
     JOSE and COSE, specifically CRYDI3 and others as required for use of various parameterizations
-    of the post-quantum signature scheme CRYSTALS Dilithium.</p>"
+    of the post-quantum signature scheme CRYSTALS Dilithium. Note to RFC Editor: CRYSTALS
+    Dilithium is described and noted as a part of the 2022 PQC Selected Digital Signature
+    Algorithims (https://csrc.nist.gov/Projects/post-quantum-cryptography/selected-
+    algorithms-2022) As a result, this document should not be proceed to AUTH48 until
+    NIST completes paramter tuning and selection as a part of the PQC (https://csrc.nist.gov/projects/post-quantum-cryptography)
+    standardization process.</p>"
   language:
   - en
   script:
@@ -36,6 +41,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-cose-dilithium-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-cose-dilithium-01
+    docid:
+    - id: draft-ietf-cose-dilithium-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-cose-dilithium-01
       format: text/plain
 ext:
   schema-version: v1.0.0
