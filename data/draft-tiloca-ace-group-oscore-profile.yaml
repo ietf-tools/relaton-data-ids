@@ -16,16 +16,18 @@ docid:
   primary: true
 abstract:
 - content: "<p>This document specifies a profile for the Authentication and Authorization
-    for Constrained Environments (ACE) framework. The profile uses Group OSCORE to
-    provide communication security between a Client and a (set of) Resource Server(s)
-    as members of an OSCORE Group. The profile securely binds an OAuth 2.0 Access
-    Token with the public key of the Client associated with the private key used in
-    the OSCORE group. The profile uses Group OSCORE to achieve server authentication,
-    as well as proof-of-possession for the Client's public key. Also, it provides
-    proof of the Client's membership to the OSCORE group, by binding the Access Token
-    to information from the Group OSCORE Security Context, thus allowing the Resource
-    Server(s) to verify the Client's membership upon receiving a message protected
-    with Group OSCORE from the Client.</p>"
+    for Constrained Environments (ACE) framework. The profile uses Group Object Security
+    for Constrained RESTful Environments (Group OSCORE) to provide communication security
+    between a Client and one or multiple Resource Servers that are members of an OSCORE
+    group. The profile securely binds an OAuth 2.0 Access Token to the public key
+    of the Client associated with the private key used by that Client in the OSCORE
+    group. The profile uses Group OSCORE to achieve server authentication, as well
+    as proof-of-possession for the Client's public key. Also, it provides proof of
+    the Client's membership to the OSCORE group by binding the Access Token to information
+    from the Group OSCORE Security Context, thus allowing the Resource Server(s) to
+    verify the Client's membership upon receiving a message protected with Group OSCORE
+    from the Client. Effectively, the profile enables fine-grained access control
+    paired with secure group communication, in accordance with the Zero Trust principles.</p>"
   language:
   - en
   script:
@@ -141,6 +143,16 @@ relation:
       primary: true
     formattedref:
       content: draft-tiloca-ace-group-oscore-profile-10
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-tiloca-ace-group-oscore-profile-11
+    docid:
+    - id: draft-tiloca-ace-group-oscore-profile-11
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-tiloca-ace-group-oscore-profile-11
       format: text/plain
 ext:
   schema-version: v1.0.0

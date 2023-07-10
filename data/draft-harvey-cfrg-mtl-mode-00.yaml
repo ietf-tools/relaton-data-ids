@@ -1,0 +1,180 @@
+---
+schema-version: v1.2.3
+id: draft-harvey-cfrg-mtl-mode-00
+title:
+- content: Merkle Tree Ladder Mode (MTL) Signatures
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-harvey-cfrg-mtl-mode-00
+  type: src
+type: standard
+docid:
+- id: draft-harvey-cfrg-mtl-mode-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.harvey-cfrg-mtl-mode
+  type: IETF
+  scope: anchor
+docnumber: I-D.harvey-cfrg-mtl-mode
+date:
+- type: published
+  value: '2023-07-10'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Joe
+          language:
+          - en
+        - language:
+          - en
+          initial: J
+        formatted_initials:
+          content: J.
+          language:
+          - en
+      surname:
+        content: Harvey
+        language:
+        - en
+      completename:
+        content: Joe Harvey
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Verisign Labs
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Burt
+          language:
+          - en
+        - language:
+          - en
+          initial: B
+        formatted_initials:
+          content: B.
+          language:
+          - en
+      surname:
+        content: Kaliski
+        language:
+        - en
+      completename:
+        content: Burt Kaliski
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Verisign Labs
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Andrew
+          language:
+          - en
+        - language:
+          - en
+          initial: A
+        formatted_initials:
+          content: A.
+          language:
+          - en
+      surname:
+        content: Fregly
+        language:
+        - en
+      completename:
+        content: Andrew Fregly
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Verisign Labs
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Swapneel
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Sheth
+        language:
+        - en
+      completename:
+        content: Swapneel Sheth
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Verisign Labs
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2023-07-10'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: <p>This document provides an interoperable specification for Merkle tree
+    ladder (MTL) mode, a technique for using an underlying signature scheme to authenticate
+    an evolving series of messages. MTL mode can reduce the signature scheme's operational
+    impact. Rather than signing messages individually, the MTL mode of operation signs
+    structures called "Merkle tree ladders" that are derived from the messages to
+    be authenticated. Individual messages are then authenticated relative to the ladder
+    using a Merkle tree authentication path and the ladder is authenticated using
+    the public key of the underlying signature scheme. The size and computational
+    cost of the underlying signatures are thereby amortized across multiple messages,
+    reducing the scheme's operational impact. The reduction can be particularly beneficial
+    when MTL mode is applied to a post-quantum signature scheme that has a large signature
+    size or computational cost. As an example, the document shows how to use MTL mode
+    with SPHINCS+, the stateless hash-based signature scheme selected by NIST for
+    standardization. Like other Merkle tree techniques, MTL mode's security is based
+    only on cryptographic hash functions, so the mode is quantum-safe based on the
+    quantum- resistance of its cryptographic hash functions.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-harvey-cfrg-mtl-mode-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.0

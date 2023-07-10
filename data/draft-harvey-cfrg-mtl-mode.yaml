@@ -1,0 +1,49 @@
+---
+schema-version: v1.2.3
+id: draft-harvey-cfrg-mtl-mode
+title:
+- content: Merkle Tree Ladder Mode (MTL) Signatures
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-harvey-cfrg-mtl-mode
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: <p>This document provides an interoperable specification for Merkle tree
+    ladder (MTL) mode, a technique for using an underlying signature scheme to authenticate
+    an evolving series of messages. MTL mode can reduce the signature scheme's operational
+    impact. Rather than signing messages individually, the MTL mode of operation signs
+    structures called "Merkle tree ladders" that are derived from the messages to
+    be authenticated. Individual messages are then authenticated relative to the ladder
+    using a Merkle tree authentication path and the ladder is authenticated using
+    the public key of the underlying signature scheme. The size and computational
+    cost of the underlying signatures are thereby amortized across multiple messages,
+    reducing the scheme's operational impact. The reduction can be particularly beneficial
+    when MTL mode is applied to a post-quantum signature scheme that has a large signature
+    size or computational cost. As an example, the document shows how to use MTL mode
+    with SPHINCS+, the stateless hash-based signature scheme selected by NIST for
+    standardization. Like other Merkle tree techniques, MTL mode's security is based
+    only on cryptographic hash functions, so the mode is quantum-safe based on the
+    quantum- resistance of its cryptographic hash functions.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-harvey-cfrg-mtl-mode-00
+    docid:
+    - id: draft-harvey-cfrg-mtl-mode-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-harvey-cfrg-mtl-mode-00
+      format: text/plain
+ext:
+  schema-version: v1.0.0
