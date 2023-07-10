@@ -1,0 +1,47 @@
+---
+schema-version: v1.2.3
+id: draft-haas-idr-bgp-attribute-escape
+title:
+- content: BGP Attribute Escape
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-haas-idr-bgp-attribute-escape
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: <p>BGP-4 [RFC 4271] has been very successful in being extended over the
+    years it has been deployed. A significant part of that success is due to its ability
+    to incrementally add new features to its Path Attributes when they are marked
+    "optional transitive". Implementations that are ignorant of a feature for an unknown
+    Path Attribute that are so marked will propagate BGP routes with such attributes.
+    Unfortunately, this blind propagation of unknown Path Attributes may happen for
+    features that are intended to be used in a limited scope. When such Path Attributes
+    inadvertantly are carried beyond that scope, it can lead to things such as unintended
+    disclosure of sensitive information, or cause improper routing. In their worst
+    cases, such propagation may be for malformed Path Attributes and lead to BGP session
+    resets or crashes. This document calls such inadvertent propagation of BGP Path
+    Attributes, "attribute escape". This document further describes some of the scenarios
+    that leads to this behavior and makes recommendations on practices that may limit
+    its impact.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-haas-idr-bgp-attribute-escape-00
+    docid:
+    - id: draft-haas-idr-bgp-attribute-escape-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-haas-idr-bgp-attribute-escape-00
+      format: text/plain
+ext:
+  schema-version: v1.0.0
