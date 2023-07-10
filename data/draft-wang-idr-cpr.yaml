@@ -21,9 +21,12 @@ abstract:
     services (e.g. SRv6 VPN services) with specific intent could be assigned with
     SRv6 SIDs under the corresponding SRv6 locators, which are advertised as colorful
     prefixes. This allows the SRv6 service traffic to be steered into end-to-end intent-aware
-    paths simply based on the SRv6 Service SIDs. The existing IPv6 Address Family
-    could be used for the advertisement of IPv6 colorful prefixes, thus this mechanism
-    is easy to interoperate and allows incremental deployment in multi-domain networks.</p>
+    paths simply based on the longest prefix matching of SRv6 Service SIDs to the
+    colorful prefixes. In data plane, dedicated tranport label or SID for the inter-domain
+    path is not needed, thus the encapsulation efficiency could be optimized. The
+    existing IPv6 Address Family could be used for the advertisement of IPv6 colorful
+    prefixes, thus this mechanism is easy to interoperate and can be deployed incrementally
+    in multi- domain networks.</p>
   language:
   - en
   script:
@@ -49,6 +52,16 @@ relation:
       primary: true
     formattedref:
       content: draft-wang-idr-cpr-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-wang-idr-cpr-02
+    docid:
+    - id: draft-wang-idr-cpr-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-wang-idr-cpr-02
       format: text/plain
 ext:
   schema-version: v1.0.0
