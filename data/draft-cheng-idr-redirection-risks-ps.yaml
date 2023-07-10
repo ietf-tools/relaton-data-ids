@@ -13,12 +13,13 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>Redirection of network traffic on the Internet is a common technology.
-    In operator network, there are complex scenarios, such as multi-domain interconnection
-    and large scale network topology. Typo, limitation of out-of-band tool capabilities
-    for configuration verification, network adjustment or failure may cause risks,
-    such as traffic detour, traffic exposure, traffic black hole and traffic loops.
-    This draft describes these risks.</p>"
+- content: "<p>BGP Update includes the destination prefix and AS_PATH that records
+    the AS number through which it passes. The traffic routing to the destination
+    prefix should be forwarded along the AS sequence in AS_PATH. However, due to traffic
+    redirection, route aggregation and etc., the AS path of forwarding and the AS_PATH
+    of BGP Update often do not match. The inconsistency leads to security risks such
+    as black holes, loops in inter-domain forwarding, and the possibility of forwarding
+    through malicious AS that source/upstream AS does not want to pass through.</p>"
   language:
   - en
   script:
@@ -54,6 +55,16 @@ relation:
       primary: true
     formattedref:
       content: draft-cheng-idr-redirection-risks-ps-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-cheng-idr-redirection-risks-ps-03
+    docid:
+    - id: draft-cheng-idr-redirection-risks-ps-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-cheng-idr-redirection-risks-ps-03
       format: text/plain
 ext:
   schema-version: v1.0.0
