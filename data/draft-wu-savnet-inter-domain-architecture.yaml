@@ -16,12 +16,15 @@ abstract:
 - content: "<p>This document presents an inter-domain SAVNET architecture that serves
     as a comprehensive framework for the development of inter- domain source address
     validation (SAV) mechanisms. The proposed architecture empowers AS to generate
-    SAV rules by leveraging SAV- related information from various sources. It integrates
-    existing SAV mechanisms and offers ample design space for new inter-domain SAV
-    mechanisms. Instead of delving into protocol extensions or implementations, this
-    document primarily focuses on defining the interconnections between architectural
-    elements, components, and the SAV-related information required for deploying an
-    inter-domain SAV mechanism.</p>"
+    SAV rules by leveraging SAV- specific Information communicated between ASes, and
+    during the incremental/partial deployment of the SAV-specific Information, it
+    can leverage the general information such as the routing information from the
+    RIB to generate the SAV table when the SAV-specific Information for an AS's prefixes
+    are not available. Instead of delving into protocol extensions or implementations,
+    this document primarily focuses on proposing the SAV-specific Information and
+    general information for deploying an inter-domain SAV mechanism, and defining
+    the architectural components and interconnections between them for generating
+    the SAV table.</p>"
   language:
   - en
   script:
@@ -57,6 +60,16 @@ relation:
       primary: true
     formattedref:
       content: draft-wu-savnet-inter-domain-architecture-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-wu-savnet-inter-domain-architecture-03
+    docid:
+    - id: draft-wu-savnet-inter-domain-architecture-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-wu-savnet-inter-domain-architecture-03
       format: text/plain
 ext:
   schema-version: v1.0.0
