@@ -1,90 +1,34 @@
 ---
 schema-version: v1.2.3
-id: draft-hwy-opsawg-ifl-framework-03
+id: draft-xu-lsr-ospf-flooding-reduction-in-msdc-05
 title:
-- content: Inband Flow Learning Framework
+- content: OSPF Flooding Reduction in MSDCs
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-hwy-opsawg-ifl-framework-03
+- content: https://datatracker.ietf.org/doc/html/draft-xu-lsr-ospf-flooding-reduction-in-msdc-05
   type: src
 type: standard
 docid:
-- id: draft-hwy-opsawg-ifl-framework-03
+- id: draft-xu-lsr-ospf-flooding-reduction-in-msdc-05
   type: Internet-Draft
   primary: true
-- id: I-D.hwy-opsawg-ifl-framework
+- id: I-D.xu-lsr-ospf-flooding-reduction-in-msdc
   type: IETF
   scope: anchor
-docnumber: I-D.hwy-opsawg-ifl-framework
+docnumber: I-D.xu-lsr-ospf-flooding-reduction-in-msdc
 date:
 - type: published
-  value: '2023-07-03'
+  value: '2023-07-27'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Liuyan
-          language:
-          - en
-        - language:
-          - en
-          initial: L
-        formatted_initials:
-          content: L.
-          language:
-          - en
-      surname:
-        content: Han
-        language:
-        - en
-      completename:
-        content: Liuyan Han
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: China Mobile
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Minxue
-          language:
-          - en
-        - language:
-          - en
-          initial: M
-        formatted_initials:
-          content: M.
-          language:
-          - en
-      surname:
-        content: Wang
-        language:
-        - en
-      completename:
-        content: Minxue Wang
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: China Mobile
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Xuanxuan
+        - content: Xiaohu
           language:
           - en
         - language:
@@ -95,60 +39,121 @@ contributor:
           language:
           - en
       surname:
-        content: Wang
+        content: Xu
         language:
         - en
       completename:
-        content: Xuanxuan Wang
+        content: Xiaohu Xu
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei
+        - content: China Mobile
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Tianran
+        - content: Luyuan
           language:
           - en
         - language:
           - en
-          initial: T
+          initial: L
         formatted_initials:
-          content: T.
+          content: L.
           language:
           - en
       surname:
-        content: Zhou
+        content: Fang
         language:
         - en
       completename:
-        content: Tianran Zhou
+        content: Luyuan Fang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei
+        - content: eBay
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Jeff
+          language:
+          - en
+        - language:
+          - en
+          initial: J
+        formatted_initials:
+          content: J.
+          language:
+          - en
+      surname:
+        content: Tantsura
+        language:
+        - en
+      completename:
+        content: Jeff Tantsura
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Nvidia
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Shaowen
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Ma
+        language:
+        - en
+      completename:
+        content: Shaowen Ma
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Google
   role:
   - type: author
 version:
-- draft: '03'
-revdate: '2023-07-03'
+- draft: '05'
+revdate: '2023-07-27'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>To deploy the inband performance measurement and flow information telemetry
-    on live traffic, this document proposes a framework of an inband and flow based
-    flow information learning mechanism called Inband Flow Learning (IFL). This document
-    also provides different deployment approaches and considerations in practical
-    network deployment.</p>"
+- content: "<p>OSPF is one of the used underlay routing protocol for MSDC (Massively
+    Scalable Data Center) networks. For a given OSPF router within the CLOS topology,
+    it would receive multiple copies of exactly the same LSA from multiple OSPF neighbors.
+    In addition, two OSPF neighbors may send each other the same LSA simultaneously.
+    The unnecessary link-state information flooding wastes the precious process resource
+    of OSPF routers greatly due to the presence of too many OSPF neighbors for each
+    OSPF router within the CLOS topology. This document proposes extensions to OSPF
+    so as to reduce the OSPF flooding within such MSDC networks. The reduction of
+    the OSPF flooding is much beneficial to improve the scalability of MSDC networks.
+    These modifications are applicable to both OSPFv2 and OSPFv3.</p>"
   language:
   - en
   script:
@@ -157,23 +162,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-hwy-opsawg-ifl-framework-02
+    id: draft-xu-lsr-ospf-flooding-reduction-in-msdc-01
     docid:
-    - id: draft-hwy-opsawg-ifl-framework-02
+    - id: draft-xu-lsr-ospf-flooding-reduction-in-msdc-01
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-hwy-opsawg-ifl-framework-02
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-hwy-opsawg-ifl-framework-04
-    docid:
-    - id: draft-hwy-opsawg-ifl-framework-04
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-hwy-opsawg-ifl-framework-04
+      content: draft-xu-lsr-ospf-flooding-reduction-in-msdc-01
       format: text/plain
 series:
 - type: main
@@ -184,7 +179,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-hwy-opsawg-ifl-framework-03
+  number: draft-xu-lsr-ospf-flooding-reduction-in-msdc-05
 doctype: internet-draft
 ext:
   schema-version: v1.0.0
