@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-raw-architecture-11
+id: draft-ietf-raw-architecture-14
 title:
 - content: Reliable and Available Wireless Architecture
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-raw-architecture-11
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-raw-architecture-14
   type: src
 type: standard
 docid:
-- id: draft-ietf-raw-architecture-11
+- id: draft-ietf-raw-architecture-14
   type: Internet-Draft
   primary: true
 - id: I-D.ietf-raw-architecture
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.ietf-raw-architecture
 date:
 - type: published
-  value: '2022-12-07'
+  value: '2023-07-29'
 contributor:
 - person:
     name:
@@ -53,8 +53,8 @@ contributor:
   role:
   - type: author
 version:
-- draft: '11'
-revdate: '2022-12-07'
+- draft: '14'
+revdate: '2023-07-29'
 language:
 - en
 script:
@@ -67,9 +67,10 @@ abstract:
     wireless medium, in particular intermittently lossy connectivity. This document
     defines a network control loop that optimizes the use of constrained spectrum
     and energy while maintaining the expected connectivity properties, typically reliability
-    and latency. The loop involves OAM, PCE, and PREOF extensions, and a new Controller
-    plane Function called the Path Selection Engine, that dynamically selects the
-    DetNet path for the next packets to route around local failures.</p>"
+    and latency. The loop involves OAM, DetNet Controller Plane, and PREOF extensions,
+    and specifically a new recovery Function called PAREO and a new Point of Local
+    Repair operation, that dynamically selects the DetNet path(s) for the future packets
+    to route around local degradations and failures.</p>"
   language:
   - en
   script:
@@ -86,16 +87,6 @@ relation:
     formattedref:
       content: draft-ietf-raw-architecture-07
       format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-raw-architecture-14
-    docid:
-    - id: draft-ietf-raw-architecture-14
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-raw-architecture-14
-      format: text/plain
 series:
 - type: main
   title:
@@ -105,7 +96,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-raw-architecture-11
+  number: draft-ietf-raw-architecture-14
 doctype: internet-draft
 ext:
   schema-version: v1.0.0
