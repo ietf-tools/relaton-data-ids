@@ -13,20 +13,15 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>A Segment Routing (SR) path is identified by an SR segment list. Only
-    the complete segment list can identify the end-to-end SR path, and a sub-set of
-    segments from the segment list cannot distinguish one SR path from another as
-    they may be partially congruent. SR path identification is a pre-requisite for
-    various use-cases such as Performance Measurement (PM), bidirectional paths correlation,
-    and end-to-end 1+1 path protection. In SR for MPLS data plane (SR-MPLS), the segment
-    identifiers are stripped from the packet through label popping as the packet transits
-    the network. This means that when a packet reaches the egress of the SR path,
-    it is not possible to determine on which SR path it traversed the network. This
-    document defines a new type of segment that is referred to as Path Segment, which
-    is used to identify an SR path in an SR-MPLS network. When used, it is inserted
-    by the ingress node of the SR path and immediately follows the last segment identifier
-    in the segment list of the SR path. The Path Segment is preserved until it reaches
-    the egress node for SR path identification and correlation.</p>"
+- content: "<p>A Segment Routing (SR) path is identified by an SR segment list. A
+    sub-set of segments from the segment list cannot distinguish one SR path from
+    another as they may be partially congruent. SR path identification is a pre-requisite
+    for various use-cases such as Performance Measurement (PM), and end-to-end 1+1
+    path protection. In SR for MPLS data plane (SR-MPLS), an Egress node can not determine
+    on which SR path a packet traversed the network from the label stack because the
+    segment identifiers are stripped from the label stack as the packet transits the
+    network. This document defines Path Segment to identify an SR path on the egress
+    node of the path.</p>"
   language:
   - en
   script:
@@ -132,6 +127,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-spring-mpls-path-segment-09
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-spring-mpls-path-segment-10
+    docid:
+    - id: draft-ietf-spring-mpls-path-segment-10
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-spring-mpls-path-segment-10
       format: text/plain
 ext:
   schema-version: v1.0.0
