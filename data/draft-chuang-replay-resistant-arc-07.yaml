@@ -1,0 +1,130 @@
+---
+schema-version: v1.2.3
+id: draft-chuang-replay-resistant-arc-07
+title:
+- content: Replay Resistant Authenticated Receiver Chain
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-chuang-replay-resistant-arc-07
+  type: src
+type: standard
+docid:
+- id: draft-chuang-replay-resistant-arc-07
+  type: Internet-Draft
+  primary: true
+- id: I-D.chuang-replay-resistant-arc
+  type: IETF
+  scope: anchor
+docnumber: I-D.chuang-replay-resistant-arc
+date:
+- type: published
+  value: '2023-07-31'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Wei
+          language:
+          - en
+        - language:
+          - en
+          initial: W
+        formatted_initials:
+          content: W.
+          language:
+          - en
+      surname:
+        content: Chuang
+        language:
+        - en
+      completename:
+        content: Wei Chuang
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Google, Inc.
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Bron
+          language:
+          - en
+        - language:
+          - en
+          initial: B
+        formatted_initials:
+          content: B.
+          language:
+          - en
+      surname:
+        content: Gondwana
+        language:
+        - en
+      completename:
+        content: Bron Gondwana
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Fastmail Pty Ltd
+  role:
+  - type: author
+version:
+- draft: '07'
+revdate: '2023-07-31'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: <p>DKIM (RFC6376) is an IETF standard for the cryptographic protocol to
+    authenticate email at the domain level and protect the integrity of messages during
+    transit. Section 8.6 defines a vulnerability called DKIM Replay as a spam message
+    sent through a SMTP MTA DKIM signer, that then is sent to many more recipients,
+    leveraging the reputation of the signer. We propose a replay resistant cryptographic
+    based protocol that discloses all SMTP recipients and signs them, allowing a receiver
+    or any third party to verify that the message went to the intended recipient.
+    If not then then potentially the message is replayed. Moreover it leverages ARC
+    (RFC8617) and sender defined forwarding path to build a "chain of custody" that
+    accurately defines the SMTP forwarding path of the message. This also allows the
+    protocol to detect DKIM and ARC replay attacks and other attacks.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-chuang-replay-resistant-arc-04
+    docid:
+    - id: draft-chuang-replay-resistant-arc-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-chuang-replay-resistant-arc-04
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-chuang-replay-resistant-arc-07
+doctype: internet-draft
+ext:
+  schema-version: v1.0.0
