@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-lamps-caa-issuemail-00
+id: draft-ietf-lamps-caa-issuemail-06
 title:
 - content: Certification Authority Authorization (CAA) Processing for Email Addresses
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-lamps-caa-issuemail-00
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-lamps-caa-issuemail-06
   type: src
 type: standard
 docid:
-- id: draft-ietf-lamps-caa-issuemail-00
+- id: draft-ietf-lamps-caa-issuemail-06
   type: Internet-Draft
   primary: true
 - id: I-D.ietf-lamps-caa-issuemail
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.ietf-lamps-caa-issuemail
 date:
 - type: published
-  value: '2023-02-10'
+  value: '2023-08-02'
 contributor:
 - person:
     name:
@@ -53,36 +53,37 @@ contributor:
   role:
   - type: author
 version:
-- draft: '00'
-revdate: '2023-02-10'
+- draft: '06'
+revdate: '2023-08-02'
 language:
 - en
 script:
 - Latn
 abstract:
 - content: "<p>The Certification Authority Authorization (CAA) DNS resource record
-    type provides a mechanism for domains to express the allowed set of Certification
-    Authorities that may issue certificates for the domain. The core CAA specification
-    ([RFC8659]) solely defines Property Tags that restrict the issuance of certificates
-    that certify domain names; it does not define a mechanism for domains to restrict
-    the issuance of certificates that include email addresses. This specification
-    defines a Property Tag that grants authorization to Certification Authorities
-    to issue certificates which certify email addresses.</p>"
+    (RR) provides a mechanism for domains to express the allowed set of Certification
+    Authorities (CAs) that are authorized to issue certificates for the domain. RFC
+    8659 contains the core CAA specification, where Property Tags that restrict the
+    issuance of certificates which certify domain names are defined. This specification
+    defines a Property Tag that grants authorization to CAs to issue certificates
+    which contain the id-kp-emailProtection key purpose in the extendedKeyUsage extension
+    and one or more rfc822Name or otherName of type id-on-SmtpUTF8Mailbox that include
+    the domain name in the subjectAltName extension.</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-ietf-lamps-caa-issuemail-06
+    id: draft-ietf-lamps-caa-issuemail-03
     docid:
-    - id: draft-ietf-lamps-caa-issuemail-06
+    - id: draft-ietf-lamps-caa-issuemail-03
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-lamps-caa-issuemail-06
+      content: draft-ietf-lamps-caa-issuemail-03
       format: text/plain
 series:
 - type: main
@@ -93,7 +94,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-lamps-caa-issuemail-00
+  number: draft-ietf-lamps-caa-issuemail-06
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
