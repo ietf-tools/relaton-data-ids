@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-guy-xfsp
 title:
-- content: eXtensible Flight System Protocol
+- content: eXtensible Stateless Equipment Data Exchange
   language:
   - en
   script:
@@ -13,12 +13,13 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>Ths document presents a binary IP-based protocol to facilitate interoperable
+- content: "<p>This document presents a binary IP-based protocol to facilitate interoperable
     communications between avionics equipment. The protocol is UDP-based, stateless,
     and broadcast. Messages consist of a common header followed by a series of parameters
-    and related attributes. The parameters may be informational, e.g., indicating
-    airspeed is 150 kts, or commands, such as an instruction that deploys the landing
-    gear.</p>"
+    and related attributes. The parameters are always informational, e.g., indicating
+    airspeed is 150 kts, but parameter attributes can be set to indicate intent, e.g.,
+    this parameter contains a new user selected value such as an instruction that
+    deploys the landing gear.</p>"
   language:
   - en
   script:
@@ -34,6 +35,16 @@ relation:
       primary: true
     formattedref:
       content: draft-guy-xfsp-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-guy-xfsp-01
+    docid:
+    - id: draft-guy-xfsp-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-guy-xfsp-01
       format: text/plain
 ext:
   schema-version: v1.0.1
