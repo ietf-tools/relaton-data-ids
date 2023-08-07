@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-thomassen-dnsop-generalized-dns-notify-00
+id: draft-thomassen-dnsop-generalized-dns-notify-02
 title:
 - content: Generalized DNS Notifications
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-thomassen-dnsop-generalized-dns-notify-00
+- content: https://datatracker.ietf.org/doc/html/draft-thomassen-dnsop-generalized-dns-notify-02
   type: src
 type: standard
 docid:
-- id: draft-thomassen-dnsop-generalized-dns-notify-00
+- id: draft-thomassen-dnsop-generalized-dns-notify-02
   type: Internet-Draft
   primary: true
 - id: I-D.thomassen-dnsop-generalized-dns-notify
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.thomassen-dnsop-generalized-dns-notify
 date:
 - type: published
-  value: '2022-11-28'
+  value: '2023-08-07'
 contributor:
 - person:
     name:
@@ -80,15 +80,46 @@ contributor:
         - content: deSEC, Secure Systems Engineering
   role:
   - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: John
+          language:
+          - en
+        - language:
+          - en
+          initial: J
+        - language:
+          - en
+          initial: R
+        formatted_initials:
+          content: J. R.
+          language:
+          - en
+      surname:
+        content: Levine
+        language:
+        - en
+      completename:
+        content: John R. Levine
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Standcore LLC
+  role:
+  - type: author
 version:
-- draft: '00'
-revdate: '2022-11-28'
+- draft: '02'
+revdate: '2023-08-07'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>Changes in CDS/CDNSKEY, CSYNC, and other records related to delegation
+- content: '<p>Changes in CDS/CDNSKEY, CSYNC, and other records related to delegation
     maintenance are usually detected through scheduled scans run by the consuming
     party (e.g. top-level domain registry), incurring an uncomfortable trade-off between
     scanning cost and update latency. A similar problem exists when scheduling zone
@@ -98,27 +129,29 @@ abstract:
     of when the next SOA check would be due. This document extends the use of DNS
     NOTIFY beyond conventional zone transfer hints, bringing the benefits of ad-hoc
     notifications to DNS delegation maintenance in general. Use cases include DNSSEC
-    key rollovers hints via NOTIFY(CDS) and NOTIFY(DNSKEY), and quicker changes to
-    a delegation's NS record set via NOTIFY(CSYNC). TO BE REMOVED: This document is
-    being collaborated on in Github at: https://github.com/peterthomassen/draft-thomassen-dnsop-generalized-
+    key rollovers hints via NOTIFY(CDS) and NOTIFY(DNSKEY) messages, and quicker changes
+    to a delegation''s NS record set via NOTIFY(CSYNC) messages. Furthermore, this
+    document proposes a new DNS record type, tentatively referred to as "NOTIFY record",
+    which is used to publish details about where generalized notifications should
+    be sent. TO BE REMOVED: This document is being collaborated on in Github at: https://github.com/peterthomassen/draft-thomassen-dnsop-generalized-
     dns-notify (https://github.com/peterthomassen/draft-thomassen-dnsop- generalized-dns-notify).
     The most recent working version of the document, open issues, etc. should all
-    be available there. The authors (gratefully) accept pull requests.</p>"
+    be available there. The authors (gratefully) accept pull requests.</p>'
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-thomassen-dnsop-generalized-dns-notify-02
+    id: draft-thomassen-dnsop-generalized-dns-notify-00
     docid:
-    - id: draft-thomassen-dnsop-generalized-dns-notify-02
+    - id: draft-thomassen-dnsop-generalized-dns-notify-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-thomassen-dnsop-generalized-dns-notify-02
+      content: draft-thomassen-dnsop-generalized-dns-notify-00
       format: text/plain
 series:
 - type: main
@@ -129,7 +162,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-thomassen-dnsop-generalized-dns-notify-00
+  number: draft-thomassen-dnsop-generalized-dns-notify-02
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
