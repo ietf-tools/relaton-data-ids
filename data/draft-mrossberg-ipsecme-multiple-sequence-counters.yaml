@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-mrossberg-ipsecme-multiple-sequence-counters
 title:
-- content: Problem statements and uses cases for lightweight Child Security Associations
+- content: Broadening the Scope of Encapsulating Security Payload (ESP) Protocol
   language:
   - en
   script:
@@ -13,11 +13,20 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>IKE SAs may have one or more child SAs that are used for traffic protection.
-    This document collects arguments for (and against) having more fine-grained sub-child-SAs.
-    They can be used to separate data streams for various technical reasons but share
-    the same security properties and traffic selectors. This shall allow for a more
-    flexible use of IPsec in multiple scenarios.</p>"
+- content: "<p>There are certain use cases where the Encapusalating Security Payload
+    (ESP) protocol in its current form cannot reach its maximum potential regarding
+    security, features and performance. Although these scenarios are quite different,
+    the shortcomings could be remedied by three measures: Introducing more fine-grained
+    sub-child-SAs, adapting the ESP header and trailer format, and allowing parts
+    of the transport layer header to be unencrypted. These mechanisms are neither
+    completely interdependent, nor are they entirely orthogonal, as the implementation
+    of one measure does influence the integration of another. Although an independent
+    specification and implementation of these mechanisms is possible, it may be worthwhile
+    to consider a combined solution to avoid a combinatorial explosion of optional
+    features. Therefore, this document does not yet propose a specific change to ESP.
+    Instead, explains the relevant scenarios, details possible modifications of the
+    protocol, collects arguments for (and against) these changes, and discusses their
+    implications.</p>"
   language:
   - en
   script:
@@ -33,6 +42,16 @@ relation:
       primary: true
     formattedref:
       content: draft-mrossberg-ipsecme-multiple-sequence-counters-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-mrossberg-ipsecme-multiple-sequence-counters-01
+    docid:
+    - id: draft-mrossberg-ipsecme-multiple-sequence-counters-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-mrossberg-ipsecme-multiple-sequence-counters-01
       format: text/plain
 ext:
   schema-version: v1.0.1
