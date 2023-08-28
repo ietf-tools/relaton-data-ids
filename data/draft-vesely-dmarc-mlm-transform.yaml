@@ -15,11 +15,9 @@ docid:
 abstract:
 - content: "<p>The widespread adoption of Domain-based Message Authentication, Reporting,
     and Conformance (DMARC) led Mailing List Managers (MLM) to rewrite the From: header
-    field as a workaround. This document proposes three methods to get rid of munged
-    From: lines. The methods vary requirements, complexity and success rates. Method
-    one considers how MLMs can avoid From: munging for specific users. Methods two
-    uses the Author: header field while method three tries to revert MLM transformations,
-    in order to restore the original From: line after reception.</p>"
+    field as a workaround. This document proposes a methods to to revert MLM transformations,
+    in order to restore the original From: line after reception. The method only works
+    with some MLMs and some signing patterns.</p>"
   language:
   - en
   script:
@@ -105,6 +103,16 @@ relation:
       primary: true
     formattedref:
       content: draft-vesely-dmarc-mlm-transform-07
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-vesely-dmarc-mlm-transform-08
+    docid:
+    - id: draft-vesely-dmarc-mlm-transform-08
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-vesely-dmarc-mlm-transform-08
       format: text/plain
 ext:
   schema-version: v1.0.1
