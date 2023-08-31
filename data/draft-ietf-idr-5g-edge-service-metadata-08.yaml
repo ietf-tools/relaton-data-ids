@@ -1,90 +1,149 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-spring-srv6-srh-compression-06
+id: draft-ietf-idr-5g-edge-service-metadata-08
 title:
-- content: Compressed SRv6 Segment List Encoding in SRH
+- content: BGP Extension for 5G Edge Service Metadata
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-spring-srv6-srh-compression-06
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-5g-edge-service-metadata-08
   type: src
 type: standard
 docid:
-- id: draft-ietf-spring-srv6-srh-compression-06
+- id: draft-ietf-idr-5g-edge-service-metadata-08
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-spring-srv6-srh-compression
+- id: I-D.ietf-idr-5g-edge-service-metadata
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-spring-srv6-srh-compression
+docnumber: I-D.ietf-idr-5g-edge-service-metadata
 date:
 - type: published
-  value: '2023-07-28'
+  value: '2023-08-31'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Weiqiang
+        - content: Linda
           language:
           - en
         - language:
           - en
-          initial: W
+          initial: L
         formatted_initials:
-          content: W.
+          content: L.
           language:
           - en
       surname:
-        content: Cheng
+        content: Dunbar
         language:
         - en
       completename:
-        content: Weiqiang Cheng
+        content: Linda Dunbar
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: China Mobile
+        - content: Futurewei
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Clarence
+        - content: Kausik
           language:
           - en
         - language:
           - en
-          initial: C
+          initial: K
         formatted_initials:
-          content: C.
+          content: K.
           language:
           - en
       surname:
-        content: Filsfils
+        content: Majumdar
         language:
         - en
       completename:
-        content: Clarence Filsfils
+        content: Kausik Majumdar
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems, Inc.
+        - content: Microsoft Azure
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Zhenbin
+        - content: Haibo
+          language:
+          - en
+        - language:
+          - en
+          initial: H
+        formatted_initials:
+          content: H.
+          language:
+          - en
+      surname:
+        content: Wang
+        language:
+        - en
+      completename:
+        content: Haibo Wang
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Gyan
+          language:
+          - en
+        - language:
+          - en
+          initial: G
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: G. S.
+          language:
+          - en
+      surname:
+        content: Mishra
+        language:
+        - en
+      completename:
+        content: Gyan Mishra
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Verizon
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Zongpeng
           language:
           - en
         - language:
@@ -95,86 +154,36 @@ contributor:
           language:
           - en
       surname:
-        content: Li
+        content: Du
         language:
         - en
       completename:
-        content: Zhenbin Li
+        content: Zongpeng Du
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei Technologies
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Bruno
-          language:
-          - en
-        - language:
-          - en
-          initial: B
-        formatted_initials:
-          content: B.
-          language:
-          - en
-      surname:
-        content: Decraene
-        language:
-        - en
-      completename:
-        content: Bruno Decraene
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Orange
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Francois
-          language:
-          - en
-        - language:
-          - en
-          initial: F
-        formatted_initials:
-          content: F.
-          language:
-          - en
-      surname:
-        content: Clad
-        language:
-        - en
-      completename:
-        content: Francois Clad
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Cisco Systems, Inc.
+        - content: China Mobile
   role:
   - type: author
 version:
-- draft: '06'
-revdate: '2023-07-28'
+- draft: '08'
+revdate: '2023-08-31'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document specifies new flavors for the SR endpoint behaviors defined
-    in RFC 8986, which enable a compressed SRv6 Segment-List encoding in the Segment
-    Routing Header (SRH).</p>"
+- content: "<p>This draft describes a new Metadata Path Attribute and some Sub-TLVs
+    for egress routers to advertise the Metadata about the attached edge services
+    (ES). The Edge Service Metadata can be used by the ingress routers in the 5G Local
+    Data Network to make path selections not only based on the routing cost but also
+    the running environment of the edge services. The goal is to improve latency and
+    performance for 5G edge services. The extension enables an edge service at one
+    specific location to be more preferred than the others with the same IP address
+    (ANYCAST) to receive data flow from a specific source, like a specific User Equipment
+    (UE).</p>"
   language:
   - en
   script:
@@ -183,23 +192,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-spring-srv6-srh-compression-02
+    id: draft-ietf-idr-5g-edge-service-metadata-00
     docid:
-    - id: draft-ietf-spring-srv6-srh-compression-02
+    - id: draft-ietf-idr-5g-edge-service-metadata-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-spring-srv6-srh-compression-02
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-spring-srv6-srh-compression-07
-    docid:
-    - id: draft-ietf-spring-srv6-srh-compression-07
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-srv6-srh-compression-07
+      content: draft-ietf-idr-5g-edge-service-metadata-00
       format: text/plain
 series:
 - type: main
@@ -210,7 +209,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-spring-srv6-srh-compression-06
+  number: draft-ietf-idr-5g-edge-service-metadata-08
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
