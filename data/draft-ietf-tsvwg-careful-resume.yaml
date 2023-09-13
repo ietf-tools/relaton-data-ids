@@ -13,19 +13,17 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document specifies careful convergence of Congestion Control (CC),
-    providing a cautious method that enables fast startup for a wide range of connections
-    or reconnections. The method reuses a set of computed CC parameters that are based
-    on the previously observed path characteristics between the same pair of transport
-    endpoints, such as the bottleneck bandwidth, available capacity, or the Round
-    Trip Time (RTT). These parameters are stored, allowing them to be later used to
-    modify the CC behavior of a subsequent connection. The document also discusses
-    assumptions and defines requirements around how a sender utilizes these parameters
-    to provide opportunities for a connection to more quickly get up to speed (i.e.
-    utilize the available capacity). It discusses how these changes impact the capacity
-    at a shared network bottleneck and the safe response that is needed after any
-    indication that the new rate is inappropriate. The method is expected to be appropriate
-    to IETF transports.</p>"
+- content: "<p>This document specifies a cautious method for IETF transports that
+    enables fast startup of congestion control for a wide range of connections or
+    reconnections. The method reuses a set of computed congestion control parameters
+    that are based on previously observed path characteristics between the same pair
+    of transport endpoints. These parameters are stored, allowing them to be later
+    used to modify the congestion control behavior of a subsequent connection. It
+    discusses assumptions and defines requirements for how a sender utilizes these
+    parameters to provide opportunities for a connection to more rapidly get up to
+    speed and rapidly utilize available capacity. It discusses how the method impacts
+    the capacity at a shared network bottleneck and the safe response that is needed
+    after any indication that the new rate is inappropriate.</p>"
   language:
   - en
   script:
@@ -51,6 +49,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-tsvwg-careful-resume-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-tsvwg-careful-resume-02
+    docid:
+    - id: draft-ietf-tsvwg-careful-resume-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-tsvwg-careful-resume-02
       format: text/plain
 ext:
   schema-version: v1.0.1
