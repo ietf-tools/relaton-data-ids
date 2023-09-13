@@ -14,13 +14,13 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document describes how to add trust into the Broadcast Remote
-    ID (RID) specification discussed in the DRIP Architecture; first trust in the
-    RID ownership and second in the source of the RID messages. The document defines
-    message types and associated formats (sent within the Authentication Message)
-    that can be used to authenticate past messages sent by an unmanned aircraft (UA)
-    and provide proof of UA trustworthiness even in the absence of Internet connectivity
-    at the receiving node.</p>"
+- content: "<p>The Drone Remote Identification Protocol (DRIP), plus trust policies
+    and periodic access to registries, augments Unmanned Aircraft System Remote Identification
+    (UAS RID), enabling local real time assessment of trustworthiness of received
+    RID messages and observed UAS, even by Observers then lacking Internet access.
+    This document defines DRIP message types and formats to be sent in Broadcast RID
+    Authentication Messages to verify that attached and recent detached messages were
+    signed by the registered owner of the DRIP Entity Tag (DET) claimed.</p>"
   language:
   - en
   script:
@@ -336,6 +336,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-drip-auth-30
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-drip-auth-31
+    docid:
+    - id: draft-ietf-drip-auth-31
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-drip-auth-31
       format: text/plain
 ext:
   schema-version: v1.0.1
