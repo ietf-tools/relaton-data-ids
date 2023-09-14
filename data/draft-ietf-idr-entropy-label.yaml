@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-ietf-idr-entropy-label
 title:
-- content: BGP Router Capabilities Attribute
+- content: BGP Next-Hop Dependent Capabilities Attribute
   language:
   - en
   script:
@@ -17,10 +17,10 @@ abstract:
     When a route is propagated beyond the immediate peer, it is useful to allow certain
     capabilities to be conveyed further. In particular, it is useful to advertise
     forwarding plane features. This specification defines a BGP transitive attribute
-    to carry such capability information, the "Router Capabilities Attribute," or
-    RCA. Unlike the capabilities defined by RFC 5492, those conveyed in the RCA apply
-    solely to the routes advertised by the BGP UPDATE that contains the particular
-    RCA. This specification also defines an RCA capability that can be used to advertise
+    to carry such capability information, the "Next-Hop Dependent Capabilities Attribute,"
+    or NHC. Unlike the capabilities defined by RFC 5492, those conveyed in the NHC
+    apply solely to the routes advertised by the BGP UPDATE that contains the particular
+    NHC. This specification also defines an NHC capability that can be used to advertise
     the ability to process the MPLS Entropy Label as an egress LSR for all NLRI advertised
     in the BGP UPDATE. It updates RFC 6790 and RFC 7447 concerning this BGP signaling.</p>
   language:
@@ -128,6 +128,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-idr-entropy-label-09
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-idr-entropy-label-10
+    docid:
+    - id: draft-ietf-idr-entropy-label-10
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-idr-entropy-label-10
       format: text/plain
 ext:
   schema-version: v1.0.1
