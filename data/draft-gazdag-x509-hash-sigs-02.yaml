@@ -1,34 +1,63 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-privacypass-protocol-06
+id: draft-gazdag-x509-hash-sigs-02
 title:
-- content: Privacy Pass Issuance Protocol
+- content: 'Internet X.509 Public Key Infrastructure: Algorithm Identifiers for Hash-based
+    Signatures'
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-privacypass-protocol-06
+- content: https://datatracker.ietf.org/doc/html/draft-gazdag-x509-hash-sigs-02
   type: src
 type: standard
 docid:
-- id: draft-ietf-privacypass-protocol-06
+- id: draft-gazdag-x509-hash-sigs-02
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-privacypass-protocol
+- id: I-D.gazdag-x509-hash-sigs
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-privacypass-protocol
+docnumber: I-D.gazdag-x509-hash-sigs
 date:
 - type: published
-  value: '2022-07-06'
+  value: '2023-09-14'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Sofia
+        - content: Kaveh
+          language:
+          - en
+        - language:
+          - en
+          initial: K
+        formatted_initials:
+          content: K.
+          language:
+          - en
+      surname:
+        content: Bashiri
+        language:
+        - en
+      completename:
+        content: Kaveh Bashiri
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: BSI
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Scott
           language:
           - en
         - language:
@@ -39,80 +68,73 @@ contributor:
           language:
           - en
       surname:
-        content: Celi
+        content: Fluhrer
         language:
         - en
       completename:
-        content: Sofia Celi
+        content: Scott Fluhrer
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Brave Software
+        - content: Cisco Systems
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Alex
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Gazdag
+        language:
+        - en
+      completename:
+        content: Stefan-Lukas Gazdag
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: genua GmbH
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Daniel
           language:
           - en
         - language:
           - en
-          initial: A
+          initial: D
         formatted_initials:
-          content: A.
+          content: D.
           language:
           - en
       surname:
-        content: Davidson
+        content: Van Geest
         language:
         - en
       completename:
-        content: Alex Davidson
+        content: Daniel Van Geest
         language:
         - en
-    affiliation:
-    - organization:
-        name:
-        - content: Brave Software
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Armando
-          language:
-          - en
-        - language:
-          - en
-          initial: A
-        formatted_initials:
-          content: A.
-          language:
-          - en
-      surname:
-        content: Faz-Hernandez
-        language:
-        - en
-      completename:
-        content: Armando Faz-Hernandez
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Cloudflare
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Steven
+        - content: Stavros
           language:
           - en
         - language:
@@ -123,63 +145,34 @@ contributor:
           language:
           - en
       surname:
-        content: Valdez
+        content: Kousidis
         language:
         - en
       completename:
-        content: Steven Valdez
+        content: Stavros Kousidis
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Google LLC
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Christopher
-          language:
-          - en
-        - language:
-          - en
-          initial: C
-        - language:
-          - en
-          initial: A
-        formatted_initials:
-          content: C. A.
-          language:
-          - en
-      surname:
-        content: Wood
-        language:
-        - en
-      completename:
-        content: Christopher A. Wood
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Cloudflare
+        - content: BSI
   role:
   - type: author
 version:
-- draft: '06'
-revdate: '2022-07-06'
+- draft: '02'
+revdate: '2023-09-14'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document specifies two variants of the the two-message issuance
-    protocol for Privacy Pass tokens: one that produces tokens that are privately
-    verifiable, and another that produces tokens that are publicly verifiable. The
-    privately verifiable issuance protocol optionally supports public metadata during
-    the issuance flow.</p>"
+- content: "<p>This document specifies algorithm identifiers and ASN.1 encoding formats
+    for the Hash-Based Signature (HBS) schemes Hierarchical Signature System (HSS),
+    eXtended Merkle Signature Scheme (XMSS), and XMSS^MT, a multi-tree variant of
+    XMSS, as well as SLH-DSA (formerly SPHINCS+), the latter being the only stateless
+    scheme. This specification applies to the Internet X.509 Public Key infrastructure
+    (PKI) when those digital signatures are used in Internet X.509 certificates and
+    certificate revocation lists.</p>"
   language:
   - en
   script:
@@ -188,23 +181,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-privacypass-protocol-04
+    id: draft-gazdag-x509-hash-sigs-01
     docid:
-    - id: draft-ietf-privacypass-protocol-04
+    - id: draft-gazdag-x509-hash-sigs-01
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-privacypass-protocol-04
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-privacypass-protocol-14
-    docid:
-    - id: draft-ietf-privacypass-protocol-14
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-privacypass-protocol-14
+      content: draft-gazdag-x509-hash-sigs-01
       format: text/plain
 series:
 - type: main
@@ -215,7 +198,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-privacypass-protocol-06
+  number: draft-gazdag-x509-hash-sigs-02
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
