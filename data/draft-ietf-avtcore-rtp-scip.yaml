@@ -18,10 +18,12 @@ abstract:
     Interoperability Protocol (SCIP). SCIP is an application layer protocol that defines
     the establishment of reliable SCIP endpoint to SCIP endpoint secure communications
     over the RTP channel provided by network equipment. The scope of this document
-    is limited to defining the scip codecs and Session Description Protocol (SDP)
-    and RTP parameters to be supported by network devices with minimal description
-    of the SCIP Application Layer Protocol. Since the SCIP RTP payload is encrypted,
-    it is considered "opaque" to network devices.</p>
+    is limited to defining the scip codecs and the SDP and RTP parameters to be supported
+    by network devices with minimal description of the SCIP Application Layer Protocol.
+    Since the SCIP RTP payload is encrypted, it is considered "opaque" to network
+    devices. SCIP is considered a tunneling protocol where the contents of the RTP
+    payload will be indeterminant and should not be filtered or altered by the network.
+    SCIP only relies on RTP as a simple transport.</p>
   language:
   - en
   script:
@@ -87,6 +89,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-avtcore-rtp-scip-05
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-avtcore-rtp-scip-06
+    docid:
+    - id: draft-ietf-avtcore-rtp-scip-06
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-avtcore-rtp-scip-06
       format: text/plain
 ext:
   schema-version: v1.0.1
