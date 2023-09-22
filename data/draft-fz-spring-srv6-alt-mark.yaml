@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-fz-spring-srv6-alt-mark
 title:
-- content: Segment Routing Header encapsulation for Alternate Marking Method
+- content: Application of the Alternate Marking Method to the Segment Routing Header
   language:
   - en
   script:
@@ -13,10 +13,19 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document describes how the Alternate Marking Method can be used
-    as the passive performance measurement tool in an SRv6 network. It defines how
-    Alternate Marking data fields are transported as part of the Segment Routing with
-    IPv6 data plane (SRv6) header.</p>"
+- content: "<p>The Alternate Marking Method is a passive performance measurement method
+    based on marking consecutive batches of packets, which can be used to measure
+    packet loss, latency, and jitter of live traffic. This method requires a packet
+    marking method so that packet flows can be distinguished and identified. A mechanism
+    to carry suitable packet marking in the Hop-by-Hop Header and the Destination
+    Options Header of an IPv6 packet is described in RFC 9343 and is also applicable
+    to Segment Routing for IPv6 (SRv6). This document describes an alternative approach
+    that uses a new TLV in the Segment Routing Header (SRH) of an SRv6 packet. This
+    approach has been implemented and has potential scaling and simplification benefits
+    over the technique described in RFC 9343. This protocol extension has been developed
+    outside the IETF and is published here to guide implementation, ensure interoperability
+    among implementations, and enable wide-scale deployment to determine the potential
+    benefits of this approach.</p>"
   language:
   - en
   script:
@@ -92,6 +101,16 @@ relation:
       primary: true
     formattedref:
       content: draft-fz-spring-srv6-alt-mark-06
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-fz-spring-srv6-alt-mark-07
+    docid:
+    - id: draft-fz-spring-srv6-alt-mark-07
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-fz-spring-srv6-alt-mark-07
       format: text/plain
 ext:
   schema-version: v1.0.1
