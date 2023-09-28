@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-dekok-radext-deprecating-radius
 title:
-- content: Deprecating RADIUS/UDP and RADIUS/TCP
+- content: Deprecating Insecure Practices in RADIUS
   language:
   - en
   script:
@@ -20,11 +20,13 @@ abstract:
     have proven their utility as replacements for the previous UDP (RFC 2865) and
     TCP (RFC 6613) transports. With that knowledge, the continued use of insecure
     transports for RADIUS has serious and negative implications for privacy and security.
-    This document formally deprecates the use of the User Datagram Protocol (UDP)
-    and of the Transmission Control Protocol (TCP) as transport protocols for RADIUS.
-    These transports are permitted inside of secure networks, but their use even in
-    that environment is strongly discouraged. For all other environments, the use
-    of secure transports such as IPsec or TLS is mandated.</p>"
+    This document formally deprecates using the User Datagram Protocol (UDP) and of
+    the Transmission Control Protocol (TCP) as transport protocols for RADIUS. These
+    transports are permitted inside of secure networks, but their use in secure networks
+    is still discouraged. For all other environments, the use of secure transports
+    such as IPsec or TLS is mandated. We also discuss additional security issues with
+    RADIUS deployments, and give recommendations for practices which increase security
+    and privacy.</p>"
   language:
   - en
   script:
@@ -70,6 +72,16 @@ relation:
       primary: true
     formattedref:
       content: draft-dekok-radext-deprecating-radius-03
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-dekok-radext-deprecating-radius-04
+    docid:
+    - id: draft-dekok-radext-deprecating-radius-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-dekok-radext-deprecating-radius-04
       format: text/plain
 ext:
   schema-version: v1.0.1
