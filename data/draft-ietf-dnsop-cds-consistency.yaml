@@ -19,11 +19,11 @@ abstract:
     the prospective DS parameters. Similarly, RFC 7477 specifies CSYNC records to
     indicate a desired update of the delegation's NS (and glue) records. Parent-side
     entities (e.g. Registries, Registrars) typically discover these records by querying
-    them from the child, and then use them to update the delegation's DS RRset accordingly.
-    This document specifies that when performing such queries, parent- side entities
-    MUST ensure that updates triggered via CDS/CDNSKEY and CSYNC records are consistent
-    across the child's authoritative nameservers, before taking any action based on
-    these records.</p>"
+    them from the child, and then use them to update the parent-side RRsets of the
+    delegation accordingly. This document specifies that when performing such queries,
+    parent- side entities MUST ensure that updates triggered via CDS/CDNSKEY and CSYNC
+    records are consistent across the child's authoritative nameservers, before taking
+    any action based on these records.</p>"
   language:
   - en
   script:
@@ -69,6 +69,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-dnsop-cds-consistency-03
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-dnsop-cds-consistency-04
+    docid:
+    - id: draft-ietf-dnsop-cds-consistency-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-dnsop-cds-consistency-04
       format: text/plain
 ext:
   schema-version: v1.0.1
