@@ -14,12 +14,13 @@ docid:
   primary: true
 abstract:
 - content: "<p>The Stream Control Transmission Protocol (SCTP) uses a 32-bit checksum
-    in the common header of each packet to provide some level of data integrity. When
-    some method used by SCTP provides already the same or a higher level of data integrity,
-    computing this checksum does not provide any additional protection, but does require
-    computing resources. This document provides a simple extension to SCTP allowing
-    to save these computing resources by using the constant 0 as a checksum in a backwards
-    compatible way.</p>"
+    in the common header of each packet to provide some level of data integrity. If
+    another method used by SCTP provides already the same or a higher level of data
+    integrity, computing this checksum does not provide any additional protection,
+    but does require computing resources. This document provides a simple extension
+    to SCTP allowing to save these computing resources by using zero as the checksum
+    in a backwards compatible way. It also defines how this feature can be used when
+    SCTP packets are encapsulated in Datagram Transport Layer Security (DTLS) packets.</p>"
   language:
   - en
   script:
@@ -65,6 +66,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-tsvwg-sctp-zero-checksum-03
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-tsvwg-sctp-zero-checksum-04
+    docid:
+    - id: draft-ietf-tsvwg-sctp-zero-checksum-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-tsvwg-sctp-zero-checksum-04
       format: text/plain
 ext:
   schema-version: v1.0.1
