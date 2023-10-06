@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-ftbs-rats-msg-wrap-00
+id: draft-ftbs-rats-msg-wrap-04
 title:
 - content: RATS Conceptual Messages Wrapper
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ftbs-rats-msg-wrap-00
+- content: https://datatracker.ietf.org/doc/html/draft-ftbs-rats-msg-wrap-04
   type: src
 type: standard
 docid:
-- id: draft-ftbs-rats-msg-wrap-00
+- id: draft-ftbs-rats-msg-wrap-04
   type: Internet-Draft
   primary: true
 - id: I-D.ftbs-rats-msg-wrap
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.ftbs-rats-msg-wrap
 date:
 - type: published
-  value: '2022-10-12'
+  value: '2023-10-06'
 contributor:
 - person:
     name:
@@ -105,7 +105,7 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: arm
+        - content: Linaro
   role:
   - type: author
 - person:
@@ -130,41 +130,41 @@ contributor:
         content: Hannes Tschofenig
         language:
         - en
-    affiliation:
-    - organization:
-        name:
-        - content: arm
   role:
   - type: author
 version:
-- draft: '00'
-revdate: '2022-10-12'
+- draft: '04'
+revdate: '2023-10-06'
 language:
 - en
 script:
 - Latn
 abstract:
 - content: "<p>This document defines two encapsulation formats for RATS conceptual
-    messages (e.g., evidence, attestation results, endorsements and reference values.)
-    Discussion Venues This note is to be removed before publishing as an RFC. Discussion
-    of this document takes place on the Remote ATtestation ProcedureS Working Group
-    mailing list (rats@ietf.org), which is archived at https://mailarchive.ietf.org/arch/browse/rats/.
-    Source for this draft and an issue tracker can be found at https://github.com/thomas-fossati/draft-ftbs-rats-msg-wrap.</p>"
+    messages (i.e., evidence, attestation results, endorsements and reference values.)
+    The first format uses a CBOR or JSON array with two mandatory members, one for
+    the type, another for the value, and a third optional member complementing the
+    type field that says which kind of conceptual message(s) are carried in the value.
+    The other format wraps the value in a CBOR byte string and prepends a CBOR tag
+    to convey the type information. This document also defines a corresponding CBOR
+    tag, as well as JSON Web Tokens (JWT) and CBOR Web Tokens (CWT) claims. These
+    allow embedding the wrapped conceptual messages into CBOR-based protocols and
+    web tokens, respectively.</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-ftbs-rats-msg-wrap-04
+    id: draft-ftbs-rats-msg-wrap-02
     docid:
-    - id: draft-ftbs-rats-msg-wrap-04
+    - id: draft-ftbs-rats-msg-wrap-02
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ftbs-rats-msg-wrap-04
+      content: draft-ftbs-rats-msg-wrap-02
       format: text/plain
 series:
 - type: main
@@ -175,7 +175,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ftbs-rats-msg-wrap-00
+  number: draft-ftbs-rats-msg-wrap-04
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
