@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-herbert-fast-03
+id: draft-herbert-fast-07
 title:
 - content: Firewall and Service Tickets
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-herbert-fast-03
+- content: https://datatracker.ietf.org/doc/html/draft-herbert-fast-07
   type: src
 type: standard
 docid:
-- id: draft-herbert-fast-03
+- id: draft-herbert-fast-07
   type: Internet-Draft
   primary: true
 - id: I-D.herbert-fast
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.herbert-fast
 date:
 - type: published
-  value: '2018-09-19'
+  value: '2023-10-07'
 contributor:
 - person:
     name:
@@ -49,25 +49,27 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Quantonium
+        - content: SiPanda
   role:
   - type: author
 version:
-- draft: '03'
-revdate: '2018-09-19'
+- draft: '07'
+revdate: '2023-10-07'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document describes the Firewalls and Service Tickets protocol.
-    A ticket is data that accompanies a packet and indicates a granted right to traverse
-    a network or a request for network service to be applied. Applications request
-    tickets from a local agent in the network and attach issued tickets to packets.
-    Firewall tickets are issued to grant packets the right to traverse a network;
-    service tickets indicate the desired service to be applied to a packets. A single
-    ticket may provide both firewall and service ticket information. Tickets are sent
-    in IPv6 Hop-by-Hop options.</p>"
+- content: "<p>This document describes the Firewalls and Service Tickets (FAST) protocol.
+    This is a generic and extensible protocol for hosts to signal network nodes to
+    request services or to gain admission into a network. A ticket is data that accompanies
+    a packet and indicates a granted right to traverse a network or a request for
+    network services to be applied (in the latter case the ticket serves as a service
+    profile). Applications request tickets from a local agent in their network and
+    attach issued tickets to packets. Firewall tickets are issued to grant packets
+    the right to traverse a network; service tickets indicate the desired service
+    to be applied to packets. A single ticket may provide both firewall and service
+    ticket information and semantics. Tickets are sent in IPv6 Hop-by-Hop options.</p>"
   language:
   - en
   script:
@@ -76,23 +78,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-herbert-fast-02
+    id: draft-herbert-fast-05
     docid:
-    - id: draft-herbert-fast-02
+    - id: draft-herbert-fast-05
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-herbert-fast-02
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-herbert-fast-07
-    docid:
-    - id: draft-herbert-fast-07
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-herbert-fast-07
+      content: draft-herbert-fast-05
       format: text/plain
 series:
 - type: main
@@ -103,7 +95,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-herbert-fast-03
+  number: draft-herbert-fast-07
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

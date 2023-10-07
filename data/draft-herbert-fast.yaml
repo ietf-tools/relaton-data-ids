@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-herbert-fast
 title:
-- content: Firewall and Service Tickets (FAST)
+- content: Firewall and Service Tickets
   language:
   - en
   script:
@@ -13,18 +13,16 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: <p>Firewall and Service Tickets is a generic and extensible protocol mechanism
-    for hosts to send explicit signals to on-path elements to request network services
-    on a per packet basis. This is a type of "host to networks signaling", and the
-    data of the signal is a "ticket" that accompanies a packet. A ticket indicates
-    the requested services or a grant of admission into a network; tickets are processed
-    by network nodes to instantiate the requested services. Tickets are scoped to
-    be relevant to their "origin domain" which is the network or limited domain in
-    which they are issued. Outside of their origin domain tickets are not processed
-    and are forwarded as opaque data. To prevent forgery and to obscure the services
-    being requested, tickets are authenticated, encrypted, or otherwise obfuscated
-    such that they can only be read by network nodes in their origin domain. Tickets
-    are sent in IPv6 Hop-by-Hop options.</p>
+- content: "<p>This document describes the Firewalls and Service Tickets (FAST) protocol.
+    This is a generic and extensible protocol for hosts to signal network nodes to
+    request services or to gain admission into a network. A ticket is data that accompanies
+    a packet and indicates a granted right to traverse a network or a request for
+    network services to be applied (in the latter case the ticket serves as a service
+    profile). Applications request tickets from a local agent in their network and
+    attach issued tickets to packets. Firewall tickets are issued to grant packets
+    the right to traverse a network; service tickets indicate the desired service
+    to be applied to packets. A single ticket may provide both firewall and service
+    ticket information and semantics. Tickets are sent in IPv6 Hop-by-Hop options.</p>"
   language:
   - en
   script:
@@ -100,6 +98,16 @@ relation:
       primary: true
     formattedref:
       content: draft-herbert-fast-06
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-herbert-fast-07
+    docid:
+    - id: draft-herbert-fast-07
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-herbert-fast-07
       format: text/plain
 ext:
   schema-version: v1.0.1
