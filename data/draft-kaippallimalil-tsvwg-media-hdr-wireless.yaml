@@ -18,17 +18,17 @@ abstract:
     interference, or the end-user's movement. These variations in capacity take place
     in the order of hundreds of milliseconds and is much too fast for end-to-end congestion
     signaling by itself to convey the changes for an application to adapt. Media applications
-    on the other hand demand both high throughput and low latency, and are able to
-    dynamically adjust the size and quality of a stream to match available network
-    bandwidth. However, catering to such media flows over a radio link where the capacity
-    changes rapidly requires the buffers and QoS in general to be managed carefully.
-    This draft proposes to provide metadata about the media transported in each packet
-    to allow the wireless network to manage radio resources optimally and to maximize
-    network utilization while also improving application performance. This draft discusses
-    at a high level potential solution options to this problem and the trade-offs
-    involved. The draft then defines a solution that uses a new UDP option to carry
-    media metadata between a UDP source and destination. This option is compact and
-    has low processing overhead at the wireless router.</p>"
+    on the other hand demand both high throughput and low latency, and can dynamically
+    adjust the size and quality of a stream to match available network bandwidth.
+    However, catering to such media flows over a radio link with rapid changes in
+    capacity requires the buffers and congestion to be managed carefully. This draft
+    proposes to provide metadata about the media transported in each packet to allow
+    the wireless network to manage radio resources optimally and to maximize network
+    utilization while also improving application performance. This draft discusses
+    potential solution options to this problem and the trade-offs involved. The draft
+    then defines a new UDP option to carry media metadata between a UDP source and
+    destination. This metadata is designed to be minimal, compact and has low processing
+    overhead per-packet for encoding and retrieval.</p>"
   language:
   - en
   script:
@@ -64,6 +64,16 @@ relation:
       primary: true
     formattedref:
       content: draft-kaippallimalil-tsvwg-media-hdr-wireless-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-kaippallimalil-tsvwg-media-hdr-wireless-03
+    docid:
+    - id: draft-kaippallimalil-tsvwg-media-hdr-wireless-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-kaippallimalil-tsvwg-media-hdr-wireless-03
       format: text/plain
 ext:
   schema-version: v1.0.1
