@@ -13,17 +13,11 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>Source address validation (SAV) table consists of SAV rules that are
-    manually configured or automatically generated. The table will take effect in
-    data plane for checking the validity of source addresses. SAV mechanisms may enable
-    SAV tables in data plane using different methods (e.g., ACL or FIB), and these
-    tables are suitable for different application scenarios. This document aims to
-    provide a systematic view of existing SAV tables, which makes it convenient for
-    engineers or operators to improve existing SAV mechanisms or properly apply SAV
-    on routers. The document first examines existing forms of SAV tables and provides
-    a unified abstraction. Then, three validation modes are concluded as well as suggestions
-    for application scenarios. Finally, diversified actions for each validity state
-    are introduced for compliance of different operation requirements.</p>"
+- content: "<p>Existing source address validation (SAV) mechanisms have their own
+    core data structures for SAV rules which are coupled with the corresponding underlying
+    implementation. This document defines a unified abstraction named SAV table that
+    stores all the SAV rules. The abstraction makes it convenient for engineers or
+    operators to improve existing SAV mechanisms or properly apply SAV on routers.</p>"
   language:
   - en
   script:
@@ -49,6 +43,16 @@ relation:
       primary: true
     formattedref:
       content: draft-huang-savnet-sav-table-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-huang-savnet-sav-table-02
+    docid:
+    - id: draft-huang-savnet-sav-table-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-huang-savnet-sav-table-02
       format: text/plain
 ext:
   schema-version: v1.0.1

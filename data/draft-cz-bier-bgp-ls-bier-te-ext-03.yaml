@@ -1,29 +1,28 @@
 ---
 schema-version: v1.2.3
-id: draft-chen-pce-pcep-extension-pce-controller-bier-04
+id: draft-cz-bier-bgp-ls-bier-te-ext-03
 title:
-- content: PCEP Procedures and Protocol Extensions for Using PCE as a Central Controller
-    (PCECC) of BIER
+- content: BGP-LS extensions for BIER-TE
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-chen-pce-pcep-extension-pce-controller-bier-04
+- content: https://datatracker.ietf.org/doc/html/draft-cz-bier-bgp-ls-bier-te-ext-03
   type: src
 type: standard
 docid:
-- id: draft-chen-pce-pcep-extension-pce-controller-bier-04
+- id: draft-cz-bier-bgp-ls-bier-te-ext-03
   type: Internet-Draft
   primary: true
-- id: I-D.chen-pce-pcep-extension-pce-controller-bier
+- id: I-D.cz-bier-bgp-ls-bier-te-ext
   type: IETF
   scope: anchor
-docnumber: I-D.chen-pce-pcep-extension-pce-controller-bier
+docnumber: I-D.cz-bier-bgp-ls-bier-te-ext
 date:
 - type: published
-  value: '2023-02-20'
+  value: '2023-10-19'
 contributor:
 - person:
     name:
@@ -50,29 +49,29 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: ch. Zhu
+        - content: ZTE Corporation
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: BenChong
+        - content: Zheng
           language:
           - en
         - language:
           - en
-          initial: B
+          initial: Z
         formatted_initials:
-          content: B.
+          content: Z.
           language:
           - en
       surname:
-        content: Xu
+        content: Zhang
         language:
         - en
       completename:
-        content: BenChong Xu
+        content: Zheng Zhang
         language:
         - en
     affiliation:
@@ -85,69 +84,74 @@ contributor:
     name:
       given:
         forename:
-        - content: Huaimo
+        - content: Yisong
           language:
           - en
         - language:
           - en
-          initial: H
+          initial: Y
         formatted_initials:
-          content: H.
+          content: Y.
           language:
           - en
       surname:
-        content: Chen
+        content: Liu
         language:
         - en
       completename:
-        content: Huaimo Chen
+        content: Yisong Liu
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Futurewei
+        - content: China Mobile
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Aijun
+        - content: Changwang
           language:
           - en
         - language:
           - en
-          initial: A
+          initial: C
         formatted_initials:
-          content: A.
+          content: C.
           language:
           - en
       surname:
-        content: Wang
+        content: Lin
         language:
         - en
       completename:
-        content: Aijun Wang
+        content: Changwang Lin
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: China Telecom
+        - content: New H3C Technologies
   role:
   - type: author
 version:
-- draft: '04'
-revdate: '2023-02-20'
+- draft: '03'
+revdate: '2023-10-19'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: <p>This draft specify a new mechanism where PCE allocates the BIER information
-    centrally and uses PCEP to distribute them to all nodes, then PCC generate a "Bit
-    Index Forwarding Table"(BIFT).</p>
+- content: "<p>BIER-TE forwards and replicates packets based on a BitString in the
+    packet header, but every BitPosition of the BitString of a BIER-TE packet indicates
+    one or more adjacencies. BGP Link-State (BGP-LS) enables the collection of various
+    topology informations from the network, and the topology informations are used
+    by the PCE to calculate the path and then propagate them onto the BFRs(instead
+    of having each node to calculate on its own) and that can be for both inter-as
+    and intra-as situations. This document specifies extensions to the BGP Link-state
+    address- family in order to advertise BIER-TE informations.</p>"
   language:
   - en
   script:
@@ -156,23 +160,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-chen-pce-pcep-extension-pce-controller-bier-02
+    id: draft-cz-bier-bgp-ls-bier-te-ext-02
     docid:
-    - id: draft-chen-pce-pcep-extension-pce-controller-bier-02
+    - id: draft-cz-bier-bgp-ls-bier-te-ext-02
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-chen-pce-pcep-extension-pce-controller-bier-02
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-chen-pce-pcep-extension-pce-controller-bier-05
-    docid:
-    - id: draft-chen-pce-pcep-extension-pce-controller-bier-05
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-chen-pce-pcep-extension-pce-controller-bier-05
+      content: draft-cz-bier-bgp-ls-bier-te-ext-02
       format: text/plain
 series:
 - type: main
@@ -183,7 +177,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-chen-pce-pcep-extension-pce-controller-bier-04
+  number: draft-cz-bier-bgp-ls-bier-te-ext-03
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

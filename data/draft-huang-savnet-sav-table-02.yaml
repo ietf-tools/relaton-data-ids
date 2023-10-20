@@ -1,55 +1,55 @@
 ---
 schema-version: v1.2.3
-id: draft-gong-lsr-ospf-unreachable-link-01
+id: draft-huang-savnet-sav-table-02
 title:
-- content: Advertising Unreachable Links in OSPF
+- content: Source Address Validation Table Abstraction and Application
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-gong-lsr-ospf-unreachable-link-01
+- content: https://datatracker.ietf.org/doc/html/draft-huang-savnet-sav-table-02
   type: src
 type: standard
 docid:
-- id: draft-gong-lsr-ospf-unreachable-link-01
+- id: draft-huang-savnet-sav-table-02
   type: Internet-Draft
   primary: true
-- id: I-D.gong-lsr-ospf-unreachable-link
+- id: I-D.huang-savnet-sav-table
   type: IETF
   scope: anchor
-docnumber: I-D.gong-lsr-ospf-unreachable-link
+docnumber: I-D.huang-savnet-sav-table
 date:
 - type: published
-  value: '2023-04-17'
+  value: '2023-10-19'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Liyan
+        - content: Mingqing
           language:
           - en
         - language:
           - en
-          initial: L
+          initial: M
         formatted_initials:
-          content: L.
+          content: M.
           language:
           - en
       surname:
-        content: Gong
+        content: Huang
         language:
         - en
       completename:
-        content: Liyan Gong
+        content: Mingqing Huang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: China Mobile
+        - content: Huawei Technologies
   role:
   - type: author
 - person:
@@ -84,6 +84,111 @@ contributor:
     name:
       given:
         forename:
+        - content: Dan
+          language:
+          - en
+        - language:
+          - en
+          initial: D
+        formatted_initials:
+          content: D.
+          language:
+          - en
+      surname:
+        content: Li
+        language:
+        - en
+      completename:
+        content: Dan Li
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Tsinghua University
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Nan
+          language:
+          - en
+        - language:
+          - en
+          initial: N
+        formatted_initials:
+          content: N.
+          language:
+          - en
+      surname:
+        content: Geng
+        language:
+        - en
+      completename:
+        content: Nan Geng
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei Technologies
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Mingxing
+          language:
+          - en
+        formatted_initials:
+          language:
+          - en
+      surname:
+        content: Liu
+        language:
+        - en
+      completename:
+        content: Mingxing Liu
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei Technologies
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - language:
+          - en
+          initial: L
+        formatted_initials:
+          content: L.
+          language:
+          - en
+      surname:
+        content: Chen
+        language:
+        - en
+      completename:
+        content: Li Chen
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Zhongguancun Laboratory
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
         - content: Changwang
           language:
           - en
@@ -108,100 +213,19 @@ contributor:
         - content: New H3C Technologies
   role:
   - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Mengxiao
-          language:
-          - en
-        - language:
-          - en
-          initial: M
-        formatted_initials:
-          content: M.
-          language:
-          - en
-      surname:
-        content: Chen
-        language:
-        - en
-      completename:
-        content: Mengxiao Chen
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: New H3C Technologies
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Ran
-          language:
-          - en
-        - language:
-          - en
-          initial: R
-        formatted_initials:
-          content: R.
-          language:
-          - en
-      surname:
-        content: Chen
-        language:
-        - en
-      completename:
-        content: Ran Chen
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: ZTE Corporation
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Yanrong
-          language:
-          - en
-        - language:
-          - en
-          initial: Y
-        formatted_initials:
-          content: Y.
-          language:
-          - en
-      surname:
-        content: Liang
-        language:
-        - en
-      completename:
-        content: Yanrong Liang
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Ruijie Networks Co., Ltd.
-  role:
-  - type: author
 version:
-- draft: '01'
-revdate: '2023-04-17'
+- draft: '02'
+revdate: '2023-10-19'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document proposes the method to advertise unreachable links in
-    OSPF.</p>"
+- content: "<p>Existing source address validation (SAV) mechanisms have their own
+    core data structures for SAV rules which are coupled with the corresponding underlying
+    implementation. This document defines a unified abstraction named SAV table that
+    stores all the SAV rules. The abstraction makes it convenient for engineers or
+    operators to improve existing SAV mechanisms or properly apply SAV on routers.</p>"
   language:
   - en
   script:
@@ -210,23 +234,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-gong-lsr-ospf-unreachable-link-00
+    id: draft-huang-savnet-sav-table-00
     docid:
-    - id: draft-gong-lsr-ospf-unreachable-link-00
+    - id: draft-huang-savnet-sav-table-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-gong-lsr-ospf-unreachable-link-00
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-gong-lsr-ospf-unreachable-link-02
-    docid:
-    - id: draft-gong-lsr-ospf-unreachable-link-02
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-gong-lsr-ospf-unreachable-link-02
+      content: draft-huang-savnet-sav-table-00
       format: text/plain
 series:
 - type: main
@@ -237,7 +251,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-gong-lsr-ospf-unreachable-link-01
+  number: draft-huang-savnet-sav-table-02
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

@@ -1,65 +1,33 @@
 ---
 schema-version: v1.2.3
-id: draft-chen-pce-pcep-extension-pce-controller-bier-04
+id: draft-wzwb-opsawg-network-inventory-management-04
 title:
-- content: PCEP Procedures and Protocol Extensions for Using PCE as a Central Controller
-    (PCECC) of BIER
+- content: A YANG Network Data Model of Network Inventory
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-chen-pce-pcep-extension-pce-controller-bier-04
+- content: https://datatracker.ietf.org/doc/html/draft-wzwb-opsawg-network-inventory-management-04
   type: src
 type: standard
 docid:
-- id: draft-chen-pce-pcep-extension-pce-controller-bier-04
+- id: draft-wzwb-opsawg-network-inventory-management-04
   type: Internet-Draft
   primary: true
-- id: I-D.chen-pce-pcep-extension-pce-controller-bier
+- id: I-D.wzwb-opsawg-network-inventory-management
   type: IETF
   scope: anchor
-docnumber: I-D.chen-pce-pcep-extension-pce-controller-bier
+docnumber: I-D.wzwb-opsawg-network-inventory-management
 date:
 - type: published
-  value: '2023-02-20'
+  value: '2023-10-19'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Ran
-          language:
-          - en
-        - language:
-          - en
-          initial: R
-        formatted_initials:
-          content: R.
-          language:
-          - en
-      surname:
-        content: Chen
-        language:
-        - en
-      completename:
-        content: Ran Chen
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: ch. Zhu
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: BenChong
-          language:
-          - en
         - language:
           - en
           initial: B
@@ -68,86 +36,118 @@ contributor:
           language:
           - en
       surname:
-        content: Xu
+        content: Wu
         language:
         - en
       completename:
-        content: BenChong Xu
+        content: Bo Wu
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: ZTE Corporation
+        - content: Huawei
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Huaimo
+        - content: Cheng
           language:
           - en
         - language:
           - en
-          initial: H
+          initial: C
         formatted_initials:
-          content: H.
+          content: C.
           language:
           - en
       surname:
-        content: Chen
+        content: Zhou
         language:
         - en
       completename:
-        content: Huaimo Chen
+        content: Cheng Zhou
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Futurewei
+        - content: China Mobile
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Aijun
+        - content: Qin
           language:
           - en
         - language:
           - en
-          initial: A
+          initial: Q
         formatted_initials:
-          content: A.
+          content: Q.
           language:
           - en
       surname:
-        content: Wang
+        content: Wu
         language:
         - en
       completename:
-        content: Aijun Wang
+        content: Qin Wu
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: China Telecom
+        - content: Huawei
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Mohamed
+          language:
+          - en
+        - language:
+          - en
+          initial: M
+        formatted_initials:
+          content: M.
+          language:
+          - en
+      surname:
+        content: Boucadair
+        language:
+        - en
+      completename:
+        content: Mohamed Boucadair
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Orange
   role:
   - type: author
 version:
 - draft: '04'
-revdate: '2023-02-20'
+revdate: '2023-10-19'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: <p>This draft specify a new mechanism where PCE allocates the BIER information
-    centrally and uses PCEP to distribute them to all nodes, then PCC generate a "Bit
-    Index Forwarding Table"(BIFT).</p>
+- content: "<p>This document defines a base YANG data model for network inventory
+    that is application- and technology-agnostic. This data model can be augmented
+    with application-specific and technology-specific details in other, more specific
+    network inventory data models. This document is meant to help IVY base Network
+    Inventory model discussion and ease agreement on a base model that would be flexible
+    enough to be augmented with components that are covered by the IVY Charter. The
+    hardware components definition are adapted from draft-ietf-ccamp- network-inventory-yang-02.</p>"
   language:
   - en
   script:
@@ -156,23 +156,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-chen-pce-pcep-extension-pce-controller-bier-02
+    id: draft-wzwb-opsawg-network-inventory-management-00
     docid:
-    - id: draft-chen-pce-pcep-extension-pce-controller-bier-02
+    - id: draft-wzwb-opsawg-network-inventory-management-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-chen-pce-pcep-extension-pce-controller-bier-02
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-chen-pce-pcep-extension-pce-controller-bier-05
-    docid:
-    - id: draft-chen-pce-pcep-extension-pce-controller-bier-05
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-chen-pce-pcep-extension-pce-controller-bier-05
+      content: draft-wzwb-opsawg-network-inventory-management-00
       format: text/plain
 series:
 - type: main
@@ -183,7 +173,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-chen-pce-pcep-extension-pce-controller-bier-04
+  number: draft-wzwb-opsawg-network-inventory-management-04
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
