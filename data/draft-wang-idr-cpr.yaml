@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-wang-idr-cpr
 title:
-- content: BGP Colorful Prefix Routing (CPR) for SRv6 based Services
+- content: BGP Colored Prefix Routing (CPR) for SRv6 based Services
   language:
   - en
   script:
@@ -13,20 +13,20 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: <p>This document describes a mechanism to advertise different IPv6 prefixes
-    which are associated with different color attributes to establish end-to-end intent-aware
-    paths for SRv6 services. Such IPv6 prefixes are called "Colorful Prefixes", and
-    this mechanism is called Colorful Prefix Routing (CPR). In SRv6 networks, the
-    colorful prefixes are the SRv6 locators associated with different intent. SRv6
-    services (e.g. SRv6 VPN services) with specific intent could be assigned with
-    SRv6 SIDs under the corresponding SRv6 locators, which are advertised as colorful
-    prefixes. This allows the SRv6 service traffic to be steered into end-to-end intent-aware
+- content: <p>This document describes a mechanism to advertise IPv6 prefixes in BGP
+    which are associated with Color Extended Communities to establish end-to-end intent-aware
+    paths for SRv6 services. Such IPv6 prefixes are called "Colored Prefixes", and
+    this mechanism is called Colored Prefix Routing (CPR). In SRv6 networks, the Colored
+    prefixes are the SRv6 locators associated with different intent. SRv6 services
+    (e.g. SRv6 VPN services) with specific intent could be assigned with SRv6 SIDs
+    under the corresponding SRv6 locators, which are advertised as Colored prefixes.
+    This allows the SRv6 service traffic to be steered into end-to-end intent-aware
     paths simply based on the longest prefix matching of SRv6 Service SIDs to the
-    colorful prefixes. In data plane, dedicated tranport label or SID for the inter-domain
+    Colored prefixes. In data plane, dedicated transport label or SID for the inter-domain
     path is not needed, thus the encapsulation efficiency could be optimized. The
-    existing IPv6 Address Family could be used for the advertisement of IPv6 colorful
+    existing IPv6 Address Family could be used for the advertisement of IPv6 Colored
     prefixes, thus this mechanism is easy to interoperate and can be deployed incrementally
-    in multi- domain networks.</p>
+    in multi-domain networks.</p>
   language:
   - en
   script:
@@ -62,6 +62,16 @@ relation:
       primary: true
     formattedref:
       content: draft-wang-idr-cpr-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-wang-idr-cpr-03
+    docid:
+    - id: draft-wang-idr-cpr-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-wang-idr-cpr-03
       format: text/plain
 ext:
   schema-version: v1.0.1

@@ -13,17 +13,14 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document proposes an intra-domain SAVNET architecture. Devices
-    in the intra-domain network can communicate with each other and advertise SAV-specific
-    information. SAV-specific information explicitly or implicitly indicates the accurate
-    incoming directions of source addresses. With the advertised information, devices
-    can generate accurate SAV rules automatically. Under the incremental/ partial
-    deployment of the architecture, routing information can be used as a supplement
-    of SAV-specific information for SAV rule generation. The architecture primarily
-    introduces the SAV-specific information, architectural components, and the collaborations
-    between them. Future intra-domain SAV mechanisms/protocols can be developed based
-    on the architecture. Concrete protocol extensions or implementations are not the
-    focus of this document.</p>"
+- content: "<p>This document proposes the intra-domain SAVNET architecture, which
+    achieves accurate source address validation (SAV) in an intra-domain network by
+    an automatic way. Compared with uRPF-like SAV mechanisms that only depend on routers'
+    local routing information, SAVNET routers generate SAV rules by using both local
+    routing information and SAV-specific information exchanged among routers, resulting
+    in more accurate SAV validation in asymmetric routing scenarios. Compared with
+    ACL rules that require manual efforts to accommodate to network dynamics, SAVNET
+    routers learn the SAV rules automatically in a distributed way.</p>"
   language:
   - en
   script:
@@ -69,6 +66,16 @@ relation:
       primary: true
     formattedref:
       content: draft-li-savnet-intra-domain-architecture-03
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-li-savnet-intra-domain-architecture-04
+    docid:
+    - id: draft-li-savnet-intra-domain-architecture-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-li-savnet-intra-domain-architecture-04
       format: text/plain
 ext:
   schema-version: v1.0.1
