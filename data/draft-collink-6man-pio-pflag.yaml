@@ -13,10 +13,10 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document defines a ‘P’ flag in the Prefix Information Option of
+- content: <p>This document defines a "P" flag in the Prefix Information Option of
     IPv6 Router Advertisements (RAs). The flag is used to indicate that the network
-    prefers that hosts acquire global addresses using DHCPv6 PD instead of using SLAAC
-    for this prefix.</p>"
+    prefers that hosts do not use the prefix provided in the PIO for SLAAC but request
+    a prefix via DHCPv6 PD instead, and use that delegated prefix to form addresses.</p>
   language:
   - en
   script:
@@ -42,6 +42,16 @@ relation:
       primary: true
     formattedref:
       content: draft-collink-6man-pio-pflag-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-collink-6man-pio-pflag-02
+    docid:
+    - id: draft-collink-6man-pio-pflag-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-collink-6man-pio-pflag-02
       format: text/plain
 ext:
   schema-version: v1.0.1
