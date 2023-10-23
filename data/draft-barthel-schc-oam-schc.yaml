@@ -13,29 +13,11 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document describes ICMPv6 compression with SCHC and how basic
-    OAM is performed on Low Power Wide Area Networks (LPWANs) by compressing ICMPv6/IPv6
-    headers and by protecting the LPWAN network and the Device from undesirable ICMPv6
-    traffic. With IP protocols now generalizing to constrained networks, users expect
-    to be able to Operate, Administer and Maintain them with the familiar tools and
-    protocols they already use on less constrained networks. OAM uses specific messages
-    sent into the data plane to measure some parameters of a network. Most of the
-    time, no explicit values are sent is these messages. Network parameters are obtained
-    from the analysis of these specific messages. This can be used: * To detect if
-    a host is up or down. * To measure the RTT and its variation over time. * To learn
-    the path used by packets to reach a destination. OAM in LPWAN is a little bit
-    trickier since the bandwidth is limited and extra traffic added by OAM can introduce
-    perturbation on regular transmission. Three main scenarios are investigated: *
-    OAM reachability messages coming from internet. In that case, the SCHC core should
-    act as a proxy and handle specifically the OAM traffic. * OAM messages initiated
-    by LPWAN devices: They can be anticipated by the core SCHC. * OAM error messages
-    coming from internet. In that case, the SCHC core may forward a compressed version
-    to the device. The primitive functionalities of OAM are achieved with the ICMPv6
-    protocol. ICMPv6 defines messages that inform the source of IPv6 packets of errors
-    during packet delivery. It also defines the Echo Request/ Reply messages that
-    are used for basic network troubleshooting (ping command). ICMPv6 messages are
-    transported on IPv6. This document also introduces the notion of actions in a
-    SCHC rule, to perform locally some operations.</p>"
+- content: "<p>This document describes how SCHC can be used to efficiently perform
+    basic Operation, Administration and Maintenance (OAM) on Low Power Wide Area Networks
+    (LPWANs) by compressing ICMPv6/IPv6 headers, or by shielding the LPWAN network
+    and the Device from undesirable ICMPv6 traffic. This document specifies additional
+    behavior for SCHC [RFC8724] and extends the YANG Data Model defined in [RFC9363].</p>"
   language:
   - en
   script:
@@ -61,6 +43,16 @@ relation:
       primary: true
     formattedref:
       content: draft-barthel-schc-oam-schc-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-barthel-schc-oam-schc-02
+    docid:
+    - id: draft-barthel-schc-oam-schc-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-barthel-schc-oam-schc-02
       format: text/plain
 ext:
   schema-version: v1.0.1
