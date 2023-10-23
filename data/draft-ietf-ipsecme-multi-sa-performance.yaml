@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-ietf-ipsecme-multi-sa-performance
 title:
-- content: IKEv2 support for per-queue Child SAs
+- content: IKEv2 support for per-resource Child SAs
   language:
   - en
   script:
@@ -13,14 +13,17 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document defines three Notify Message Type Payloads for the Internet
-    Key Exchange Protocol Version 2 (IKEv2) indicating support for the negotiation
-    of multiple identical Child SAs to optimize performance. The CPU_QUEUES notification
-    indicates support for multiple queues or CPUs. The CPU_QUEUE_INFO notification
-    is used to confirm and optionally convey information about the specific queue.
-    The TS_MAX_QUEUE notify conveys that the peer is unwilling to create more additional
-    Child SAs for this particular Traffic Selector set. Using multiple identical Child
-    SAs has the benefit that each stream has its own Sequence Number Counter, ensuring
+- content: "<p>This document defines two Notify Message Type Payloads for the Internet
+    Key Exchange Protocol Version 2 (IKEv2) to support the negotiation of multiple
+    Child SAs with the same Traffic Selectors used on different resources, such as
+    CPUs, to increase bandwidth of IPsec traffic between peers. The SA_RESOURCE_INFO
+    notification is used to convey information that the negotiated Child SA and subsequent
+    new Child SAs with the same Traffic Selectors are a logical group of Child SAs
+    where most or all of the Child SAs are bound to a specific resource, such as a
+    specific CPU. The TS_MAX_QUEUE notify conveys that the peer is unwilling to create
+    more additional Child SAs for this particular negotiated Traffic Selector combination.
+    Using multiple Child SAs with the same Traffic Selectors has the benefit that
+    each resource holding the Child SA has its own Sequence Number Counter, ensuring
     that CPUs don't have to synchronize their crypto state or disable their packet
     replay protection.</p>"
   language:
@@ -48,6 +51,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-ipsecme-multi-sa-performance-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-ipsecme-multi-sa-performance-02
+    docid:
+    - id: draft-ietf-ipsecme-multi-sa-performance-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-ipsecme-multi-sa-performance-02
       format: text/plain
 ext:
   schema-version: v1.0.1

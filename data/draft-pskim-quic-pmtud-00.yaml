@@ -1,0 +1,95 @@
+---
+schema-version: v1.2.3
+id: draft-pskim-quic-pmtud-00
+title:
+- content: An Alternative Path MTU Discovery for QUIC
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-pskim-quic-pmtud-00
+  type: src
+type: standard
+docid:
+- id: draft-pskim-quic-pmtud-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.pskim-quic-pmtud
+  type: IETF
+  scope: anchor
+docnumber: I-D.pskim-quic-pmtud
+date:
+- type: published
+  value: '2023-10-22'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Pyung
+          language:
+          - en
+        - language:
+          - en
+          initial: P
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: P. S.
+          language:
+          - en
+      surname:
+        content: Kim
+        language:
+        - en
+      completename:
+        content: Pyung Soo Kim
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: TU Korea
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2023-10-22'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>This draft describes an alternative Path MTU Discovery (PMTUD) for
+    QUIC. RFC 8899 searches for PMTU by sending a probe at the QUIC layer, which is
+    an active probing approach. In this draft, a passive probing approach is adopted
+    to discover the PMTU. The process of discovering the PMTU is not performed separately,
+    but is performed simultaneously in the actual application data communication.
+    That is, the actual application data is allowed to be carried in the process of
+    discovering the PMTU. A probe packet is defined newly using 1-RTT packet which
+    includes actual application data as well as a short packet header and a PING_EXT
+    frame. The PING_EXT frame is also defined newly. Until the best PMTU is discovered,
+    the size of the probe packet is changed according to the size of the PMTU candidate.
+    A simple discovery algorithm using only the PMTU candidate sequence with linear
+    upward is described in this draft.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-pskim-quic-pmtud-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
