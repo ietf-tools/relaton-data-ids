@@ -13,27 +13,15 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: <p>The migration to post-quantum cryptography is unique in the history
-    of modern digital cryptography in that neither the old outgoing nor the new incoming
-    algorithms are fully trusted to protect data for the required data lifetimes.
-    The outgoing algorithms, such as RSA and elliptic curve, may fall to quantum cryptalanysis,
-    while the incoming post-quantum algorithms face uncertainty about both the underlying
-    mathematics as well as hardware and software implementations that have not had
-    sufficient maturing time to rule out classical cryptanalytic attacks and implementation
-    bugs. Cautious implementers may wish to layer cryptographic algorithms such that
-    an attacker would need to break all of them in order to compromise the data being
-    protected using either a Post-Quantum / Traditional Hybrid, Post-Quantum / Post-Quantum
-    Hybrid, or combinations thereof. This document, and its companions, defines a
-    specific instantiation of hybrid paradigm called "composite" where multiple cryptographic
-    algorithms are combined to form a single key, signature, or key encapsulation
-    mechanism (KEM) such that they can be treated as a single atomic object at the
-    protocol level. This document defines the structure CompositeCiphertextValue which
-    is a sequence of the respective ciphertexts for each component algorithm. Explicit
-    pairings of algorithms are defined which should meet most Internet needs. For
-    the purpose of combining KEMs, the combiner function from [I-D.ounsworth-cfrg-kem-combiners]
-    is used. This document is intended to be coupled with the composite keys structure
-    define in [I-D.ounsworth-pq-composite-keys] and the CMS KEMRecipientInfo mechanism
-    in [I-D.housley-lamps-cms-kemri].</p>
+- content: "<p>This document defines Post-Quantum / Traditional composite Key Encapsulation
+    Mechanism (KEM) algorithms suitable for use within X.509 and PKIX and CMS protocols.
+    Composite algorithms are provided which combine ML-KEM with RSA-KEM and ECDH-KEM.
+    The provided set of composite algorithms should meet most Internet needs. This
+    document assumes that all component algorithms are KEMs, and therefore it depends
+    on [RFC5990] and [I-D.ounsworth-lamps-cms-dhkem] in order to promote RSA and ECDH
+    respectively into KEMs. For the purpose of combining KEMs, the combiner function
+    from [I-D.ounsworth-cfrg-kem-combiners] is used. For use within CMS, this document
+    is intended to be coupled with the CMS KEMRecipientInfo mechanism in [I-D.housley-lamps-cms-kemri].</p>"
   language:
   - en
   script:
@@ -49,6 +37,26 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-lamps-pq-composite-kem-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-lamps-pq-composite-kem-01
+    docid:
+    - id: draft-ietf-lamps-pq-composite-kem-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-lamps-pq-composite-kem-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-lamps-pq-composite-kem-02
+    docid:
+    - id: draft-ietf-lamps-pq-composite-kem-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-lamps-pq-composite-kem-02
       format: text/plain
 ext:
   schema-version: v1.0.1

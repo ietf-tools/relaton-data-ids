@@ -25,17 +25,12 @@ abstract:
     protected using either a Post-Quantum / Traditional Hybrid, Post-Quantum / Post-Quantum
     Hybrid, or combinations thereof. This document, and its companions, defines a
     specific instantiation of hybrid paradigm called "composite" where multiple cryptographic
-    algorithms are combined to form a single key, signature, or key encapsulation
-    mechanism (KEM) such that they can be treated as a single atomic object at the
-    protocol level. This document defines the structures CompositeSignatureValue,
-    and CompositeSignatureParams, which are sequences of the respective structure
-    for each component algorithm. The explicit variant is defined which allows for
-    a set of signature algorithm identifier OIDs to be registered together as an explicit
-    composite signature algorithm and assigned an OID. This document is intended to
-    be coupled with corresponding documents that define the structure and semantics
-    of composite public and private keys and encryption [I-D.ounsworth-pq-composite-keys],
-    however may also be used with non-composite keys, such as when a protocol combines
-    multiple certificates into a single cryptographic operation.</p>
+    algorithms are combined to form a single key or signature such that they can be
+    treated as a single atomic object at the protocol level. This document defines
+    the structures CompositeSignaturePublicKey, CompositeSignaturePrivateKey and CompositeSignatureValue,
+    which are sequences of the respective structure for each component algorithm.
+    Composite signature algorithm identifiers are specified in this document which
+    represent the explicit combinations of the underlying component algorithms.</p>
   language:
   - en
   script:
@@ -141,6 +136,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ounsworth-pq-composite-sigs-09
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ounsworth-pq-composite-sigs-10
+    docid:
+    - id: draft-ounsworth-pq-composite-sigs-10
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ounsworth-pq-composite-sigs-10
       format: text/plain
 ext:
   schema-version: v1.0.1

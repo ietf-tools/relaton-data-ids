@@ -13,16 +13,13 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document describes Plabels, a two-party VDAF for the following
-    aggregation task: each Client holds a bit string, and the Collector wishes to
-    count how many of these strings begin with a candidate prefix. Such a VDAF can
-    be used to solve the heavy hitters problem, where the goal is compute the subset
-    of the measurements that occur most frequently. This document also describes various
-    modes of operation for Plabels. First, its output type can be enriched to support
-    aggregation functions beyond prefix counts. Second, an extension to the aggregation
-    phase is described that significantly reduces communication cost compared to existing
-    techniques. Third, a three-party variant is described that is robust in the honest
-    majority setting.</p>"
+- content: "<p>This document describes Mastic, a two-party VDAF for the following
+    aggregation task: each client holds a string, and the collector wishes to count
+    how many of these strings begin with a given prefix. Such a VDAF can be used to
+    solve the private heavy hitters problem, where the goal is to compute the subset
+    of the strings that occur most frequently without learning which client holds
+    which string. This document also describes different modes of operation for Mastic
+    that support additional use cases and admit various performance and security trade-offs.</p>"
   language:
   - en
   script:
@@ -38,6 +35,16 @@ relation:
       primary: true
     formattedref:
       content: draft-mouris-cfrg-mastic-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-mouris-cfrg-mastic-01
+    docid:
+    - id: draft-mouris-cfrg-mastic-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-mouris-cfrg-mastic-01
       format: text/plain
 ext:
   schema-version: v1.0.1
