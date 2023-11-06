@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-huang-savnet-sav-table
 title:
-- content: Source Address Validation Table Abstraction and Application
+- content: General Source Address Validation Capabilities
   language:
   - en
   script:
@@ -13,11 +13,13 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>Existing source address validation (SAV) mechanisms have their own
-    core data structures for SAV rules which are coupled with the corresponding underlying
-    implementation. This document defines a unified abstraction named SAV table that
-    stores all the SAV rules. The abstraction makes it convenient for engineers or
-    operators to improve existing SAV mechanisms or properly apply SAV on routers.</p>"
+- content: "<p>The SAV rules of existing source address validation (SAV) mechanisms,
+    are derived from other core data structures, e.g., FIB-based uRPF, which are not
+    dedicatedly designed for source filtering. Therefore there are some limitations
+    related to deployable scenarios and traffic handling policies. To overcome these
+    limitations, this document introduces the general SAV capabilitiies from data
+    plane perspective. How to implement the capabilities and how to generate SAV rules
+    are not in the scope of this document.</p>"
   language:
   - en
   script:
@@ -53,6 +55,16 @@ relation:
       primary: true
     formattedref:
       content: draft-huang-savnet-sav-table-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-huang-savnet-sav-table-03
+    docid:
+    - id: draft-huang-savnet-sav-table-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-huang-savnet-sav-table-03
       format: text/plain
 ext:
   schema-version: v1.0.1
