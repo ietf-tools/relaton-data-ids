@@ -1,28 +1,28 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-detnet-mpls-over-ip-preof-06
+id: draft-ietf-detnet-pof-05
 title:
-- content: 'Deterministic Networking (DetNet): DetNet PREOF via MPLS over UDP/IP'
+- content: 'Deterministic Networking (DetNet): Packet Ordering Function'
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-detnet-mpls-over-ip-preof-06
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-detnet-pof-05
   type: src
 type: standard
 docid:
-- id: draft-ietf-detnet-mpls-over-ip-preof-06
+- id: draft-ietf-detnet-pof-05
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-detnet-mpls-over-ip-preof
+- id: I-D.ietf-detnet-pof
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-detnet-mpls-over-ip-preof
+docnumber: I-D.ietf-detnet-pof
 date:
 - type: published
-  value: '2023-07-25'
+  value: '2023-11-07'
 contributor:
 - person:
     name:
@@ -81,45 +81,71 @@ contributor:
     name:
       given:
         forename:
-        - content: Andrew
+        - content: Stephan
           language:
           - en
         - language:
           - en
-          initial: A
-        - language:
-          - en
-          initial: G
+          initial: S
         formatted_initials:
-          content: A. G.
+          content: S.
           language:
           - en
       surname:
-        content: Malis
+        content: Kehrer
         language:
         - en
       completename:
-        content: Andrew G. Malis
+        content: Stephan Kehrer
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Malis Consulting
+        - content: Hirschmann Automation and Control GmbH
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Tobias
+          language:
+          - en
+        - language:
+          - en
+          initial: T
+        formatted_initials:
+          content: T.
+          language:
+          - en
+      surname:
+        content: Heer
+        language:
+        - en
+      completename:
+        content: Tobias Heer
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Hirschmann Automation and Control GmbH
   role:
   - type: author
 version:
-- draft: '06'
-revdate: '2023-07-25'
+- draft: '05'
+revdate: '2023-11-07'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document describes how DetNet IP data plane can support the Packet
-    Replication, Elimination, and Ordering Functions (PREOF) built on the existing
-    MPLS PREOF solution defined for DetNet MPLS Data Plane and the mechanisms defined
-    by MPLS-over-UDP technology.</p>"
+- content: "<p>Replication and Elimination functions of DetNet Architecture can result
+    in out-of-order packets, which is not acceptable for some time-sensitive applications.
+    The Packet Ordering Function (POF) algorithm described herein enables to restore
+    the correct packet order when replication and elimination functions are used in
+    DetNet networks.</p>"
   language:
   - en
   script:
@@ -128,23 +154,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-detnet-mpls-over-ip-preof-02
+    id: draft-ietf-detnet-pof-01
     docid:
-    - id: draft-ietf-detnet-mpls-over-ip-preof-02
+    - id: draft-ietf-detnet-pof-01
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-detnet-mpls-over-ip-preof-02
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-detnet-mpls-over-ip-preof-08
-    docid:
-    - id: draft-ietf-detnet-mpls-over-ip-preof-08
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-detnet-mpls-over-ip-preof-08
+      content: draft-ietf-detnet-pof-01
       format: text/plain
 series:
 - type: main
@@ -155,7 +171,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-detnet-mpls-over-ip-preof-06
+  number: draft-ietf-detnet-pof-05
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
