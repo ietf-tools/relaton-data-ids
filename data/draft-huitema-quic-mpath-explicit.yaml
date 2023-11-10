@@ -1,0 +1,48 @@
+---
+schema-version: v1.2.3
+id: draft-huitema-quic-mpath-explicit
+title:
+- content: Explicit QUIC Path-ID extension
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-huitema-quic-mpath-explicit
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>The work on QUIC multipath has almost converged, but we are still debating
+    how to identify paths. The draft multipath version 06 identifies paths explicitly
+    using the sequence number of the Connection Identifier used for sending packets
+    on the path. The WG is considering an alternate proposal in which the path ID
+    is explicit. In order to compare the two solutions, we propose here an extension
+    to the multipath draft allowing endpoints to negotiate the use of explicit sequence
+    numbers. When the extension is negotiated, endpoints announce new connection identifiers
+    using a new MP_CONNECTION_ID frame, which carries the parameters of the NEW_CONNECTION_ID
+    plus a path ID. This path ID is used instead of the CID sequence number to identify
+    packet number spaces, to create encryption nonces, to identify paths in MP_ACK,
+    MP_ABANDON, MP_AVAILABLE and MP_STANBY frames, and to perform the logic associated
+    with path creation, path CID rotation, and NAT rebinding. The draft analyzes the
+    pros and cons of using this extension. After experimentation and analysis, we
+    expect that this extension will be either absorbed into a new version of the QUIc
+    multipath draft, or abandoned.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-huitema-quic-mpath-explicit-00
+    docid:
+    - id: draft-huitema-quic-mpath-explicit-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-huitema-quic-mpath-explicit-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
