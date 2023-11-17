@@ -1,104 +1,49 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-core-dns-over-coap-04
+id: draft-fu-bess-evpn-umr-application-01
 title:
-- content: DNS over CoAP (DoC)
+- content: UMR application in Ethernet VPN(EVPN)
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-core-dns-over-coap-04
+- content: https://datatracker.ietf.org/doc/html/draft-fu-bess-evpn-umr-application-01
   type: src
 type: standard
 docid:
-- id: draft-ietf-core-dns-over-coap-04
+- id: draft-fu-bess-evpn-umr-application-01
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-core-dns-over-coap
+- id: I-D.fu-bess-evpn-umr-application
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-core-dns-over-coap
+docnumber: I-D.fu-bess-evpn-umr-application
 date:
 - type: published
-  value: '2023-10-23'
+  value: '2023-11-17'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Martine
+        - content: Zheng
           language:
           - en
         - language:
           - en
-          initial: M
-        - language:
-          - en
-          initial: S
+          initial: Z
         formatted_initials:
-          content: M. S.
+          content: Z.
           language:
           - en
       surname:
-        content: Lenders
+        content: Fu
         language:
         - en
       completename:
-        content: Martine Sophie Lenders
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: TUD Dresden University of Technology
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Christian
-          language:
-          - en
-        - language:
-          - en
-          initial: C
-        formatted_initials:
-          content: C.
-          language:
-          - en
-      surname:
-        content: Amsüss
-        language:
-        - en
-      completename:
-        content: Christian Amsüss
-        language:
-        - en
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Cenk
-          language:
-          - en
-        - language:
-          - en
-          initial: C
-        formatted_initials:
-          content: C.
-          language:
-          - en
-      surname:
-        content: Gündoğan
-        language:
-        - en
-      completename:
-        content: Cenk Gündoğan
+        content: Zheng Fu
         language:
         - en
     affiliation:
@@ -111,74 +56,128 @@ contributor:
     name:
       given:
         forename:
-        - content: Thomas
+        - content: Tong
           language:
           - en
         - language:
           - en
           initial: T
-        - language:
-          - en
-          initial: C
         formatted_initials:
-          content: T. C.
+          content: T.
           language:
           - en
       surname:
-        content: Schmidt
+        content: Zhu
         language:
         - en
       completename:
-        content: Thomas C. Schmidt
+        content: Tong Zhu
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: HAW Hamburg
+        - content: Huawei Technologies
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Matthias
+        - content: Haibo
           language:
           - en
         - language:
           - en
-          initial: M
+          initial: H
         formatted_initials:
-          content: M.
+          content: H.
           language:
           - en
       surname:
-        content: Wählisch
+        content: Wang
         language:
         - en
       completename:
-        content: Matthias Wählisch
+        content: Haibo Wang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: TUD Dresden University of Technology & Barkhausen Institut
+        - content: Huawei Technologies
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Jian
+          language:
+          - en
+        - language:
+          - en
+          initial: J
+        formatted_initials:
+          content: J.
+          language:
+          - en
+      surname:
+        content: Dai
+        language:
+        - en
+      completename:
+        content: Jian Dai
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei Technologies
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Dawei
+          language:
+          - en
+        - language:
+          - en
+          initial: D
+        formatted_initials:
+          content: D.
+          language:
+          - en
+      surname:
+        content: Wang
+        language:
+        - en
+      completename:
+        content: Dawei Wang
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei Technologies
   role:
   - type: author
 version:
-- draft: '04'
-revdate: '2023-10-23'
+- draft: '01'
+revdate: '2023-11-17'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document defines a protocol for sending DNS messages over the
-    Constrained Application Protocol (CoAP). These CoAP messages are protected by
-    DTLS-Secured CoAP (CoAPS) or Object Security for Constrained RESTful Environments
-    (OSCORE) to provide encrypted DNS message exchange for constrained devices in
-    the Internet of Things (IoT).</p>"
+- content: "<p>This document describes an application scenario that how unknown MAC-
+    route(UMR) is used in the EVPN network. In particular, this document describes
+    how MAC address route and UMR route are advertised on DC's GW or NVE. This document
+    also describes the soloution that MAC mobility issue due to the lack of advertisement
+    of specific MAC routes. However, some incremental work is required, which will
+    be covered in a separate document.</p>"
   language:
   - en
   script:
@@ -187,23 +186,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-core-dns-over-coap-01
+    id: draft-fu-bess-evpn-umr-application-00
     docid:
-    - id: draft-ietf-core-dns-over-coap-01
+    - id: draft-fu-bess-evpn-umr-application-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-core-dns-over-coap-01
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-core-dns-over-coap-05
-    docid:
-    - id: draft-ietf-core-dns-over-coap-05
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-core-dns-over-coap-05
+      content: draft-fu-bess-evpn-umr-application-00
       format: text/plain
 series:
 - type: main
@@ -214,7 +203,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-core-dns-over-coap-04
+  number: draft-fu-bess-evpn-umr-application-01
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
