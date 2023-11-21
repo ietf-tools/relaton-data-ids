@@ -13,9 +13,25 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This obsoletes RFC 4777 with an enhanced Automatic Sign-On a password
-    hash, recommended Telnet security considerations using TLS and update on how non-complient
-    5250 negotiations are handled.</p>"
+- content: <p>This obsoletes RFC4777 with an enhanced Automatic Sign-On PBKDF2 with
+    HMAC SHA-512 password hash available with systems running with V7R5M0 or later
+    and configured to use Password Level (QPWDLVL) 4 or higher for the user profile
+    passwords Section 5.3. Require use of Transport Layer Security (TLS) to secure
+    the telnet session between the Telnet server and client Section 13. Add Telnet
+    Device Negotiation Termination Section 10.5 documenting how telnet clients that
+    do not follow 5250 negotiation are handled. Document use of Transport Layer Security
+    (TLS) using port 992 Section 14. Enhancement to add Multi Factor Authentication
+    to automatic sign-on Changes since -00 Draft * Update abstract for PBKDF2 with
+    HMAC SHA-512 password hash * Document use of Transport Layer Security (TLS) in
+    Security Considerations Section 13 Changes since -01 Draft * TLS handshake must
+    complete before invite for terminal type is sent in Section 2 * Change using TLS
+    from RECOMENDED to REQUIRED to be ccompliant with this draft Section 13 * Change
+    disabling port 23 from RECOMENDED to REQUIRED Section 13 * Detail use and related
+    DCM configuration for TLS Section 13 * Add IANA Considerations use of port 992
+    for Telnet using TLS/SSL (service telnet-ssl) to Section 14 * Include "application
+    definition" and "Digital Certificate Manager (DCM)" to Section 1.1 * Update abstract
+    for Authentication factor in Section 5 * Update Response Codes for Authentication
+    factor in Section 10.4</p>
   language:
   - en
   script:
@@ -41,6 +57,16 @@ relation:
       primary: true
     formattedref:
       content: draft-garvey-networking-rfc4777bis-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-garvey-networking-rfc4777bis-02
+    docid:
+    - id: draft-garvey-networking-rfc4777bis-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-garvey-networking-rfc4777bis-02
       format: text/plain
 ext:
   schema-version: v1.0.1
