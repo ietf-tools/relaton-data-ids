@@ -14,10 +14,12 @@ docid:
   primary: true
 abstract:
 - content: "<p>This document updates the Nonce extension section of RFC-8954. Nonce
-    extension is a optional extension for Online Certificate Status Protocol (OCSP)
+    extension is an optional extension for Online Certificate Status Protocol (OCSP)
     request and response messages. OCSP is used for checking the status of a certificate,
     and the Nonce extension is used to cryptographically bind an OCSP response message
-    to a particular OCSP request message. This document updates RFC 8954.</p>"
+    to a particular OCSP request message. This document updates OCSP responder behavior
+    for the OCSP requests that have Nonce length longer than the maximum length limit
+    defined in [RFC8954], So that it won't impact the existing OCSP clients.</p>"
   language:
   - en
   script:
@@ -33,6 +35,16 @@ relation:
       primary: true
     formattedref:
       content: draft-hsharma-lamps-ocsp-nonce-update-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-hsharma-lamps-ocsp-nonce-update-01
+    docid:
+    - id: draft-hsharma-lamps-ocsp-nonce-update-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-hsharma-lamps-ocsp-nonce-update-01
       format: text/plain
 ext:
   schema-version: v1.0.1
