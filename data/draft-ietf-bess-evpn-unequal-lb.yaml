@@ -13,17 +13,34 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>EVPN enables all-active multi-homing for a CE device connected to two
-    or more PEs via a LAG, such that bridged and routed traffic from remote PEs to
-    hosts attached to the Ethernet Segment can be equally load balanced (it uses Equal
-    Cost Multi Path) across the multi-homing PEs. EVPN also enables multi-homing for
-    IP subnets advertised in IP Prefix routes, so that routed traffic from remote
-    PEs to those IP subnets can be load balanced. This document defines extensions
-    to EVPN procedures to optimally handle unequal access bandwidth distribution across
-    a set of multi-homing PEs in order to: * provide greater flexibility, with respect
-    to adding or removing individual multi-homed PE-CE links. * handle multi-homed
-    PE-CE link failures that can result in unequal PE-CE access bandwidth across a
-    set of multi-homing PEs.</p>"
+- content: "<p>EVPN enables all-active multi-homing for a CE (Customer Equipment)
+    device connected to two or more PE (Provider Equipment) devices via a LAG (Link
+    Aggregation), such that bridged and routed traffic from remote PEs to hosts attached
+    to the Ethernet Segment can be equally load balanced (it uses Equal Cost Multi
+    Path) across the multi-homing PEs. EVPN also enables multi-homing for IP subnets
+    advertised in IP Prefix routes, so that routed traffic from remote PEs to those
+    IP subnets can be load balanced. This document defines extensions to EVPN procedures
+    to optimally handle unequal access bandwidth distribution across a set of multi-homing
+    PEs in order to: * provide greater flexibility, with respect to adding or removing
+    individual multi-homed PE-CE links. * handle multi-homed PE-CE link failures that
+    can result in unequal PE-CE access bandwidth across a set of multi-homing PEs.
+    In order to achieve the above, it specifies signaling extensions and procedures
+    to: * Loadbalance bridged and routed traffic across egress PEs in proportion to
+    PE-CE link bandwidth or a generalized weight distribution. * Achieve BUM (Broadcast,
+    UnknownUnicast, Multicast) DF (Designated Forwarder) election distribution for
+    a given ES (Ethernet Segment) across the multi-homing PE set in proportion to
+    PE-CE link bandwidth. Section 6 of this document further updates [RFC8584], [EVPN-PER-MCAST-FLOW-DF],
+    and [EVPN-DF-PREF] in order for the DF election extension defined in this document
+    to work across different DF election algorithms. NOTE TO IESG (TO BE DELETED BEFORE
+    PUBLISHING): This draft lists six authors which is above the required limit of
+    five. Given significant and active contributions to the draft from all six authors
+    over the course of six years, we would like to request IESG to allow publication
+    with six authors. Specifically, the three Cisco authors are the original inventors
+    of these procedures and contributed heavily to rev 0 draft, most of which is still
+    intact. AT&amp;T is also a key contributor towards defining the use cases that
+    this document addresses as well as the proposed solution. Authors from Nokia and
+    Juniper have further contributed to revisions and discussions steadily over last
+    six years to enable respective implementations and a wider adoption.</p>"
   language:
   - en
   script:
@@ -219,6 +236,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-bess-evpn-unequal-lb-18
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-bess-evpn-unequal-lb-19
+    docid:
+    - id: draft-ietf-bess-evpn-unequal-lb-19
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-bess-evpn-unequal-lb-19
       format: text/plain
 ext:
   schema-version: v1.0.1
