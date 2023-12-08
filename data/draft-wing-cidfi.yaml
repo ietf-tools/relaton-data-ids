@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-wing-cidfi
 title:
-- content: CID Flow Indicator (CIDFI)
+- content: Framework for CID Flow Indicator (CIDFI)
   language:
   - en
   script:
@@ -13,11 +13,16 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>Conveying metadata about network conditions and metadata about individual
-    packets can improve the user experience especially on wireless networks which
-    suffer bandwidth and delay variability. This document describes how clients and
-    servers can cooperate with network elements so their QUIC and DTLS streams can
-    be augmented with information about network conditions and packet importance.</p>"
+- content: "<p>Host-to-network signaling and network-to-host signaling can improve
+    the user experience to adapt to network's constraints and share expected application
+    needs, and thus to provide differentiated service to a flow and to packets within
+    a flow. The differentiated service may be provided at the network (e.g., packet
+    prioritization), the server (e.g., adaptive transmission), or both. This document
+    describes how clients can communicate with their nearby network elements so their
+    QUIC and DTLS streams can be augmented with information about network conditions
+    and packet importance to meet both intentional and reactive management policies.
+    With optional server support individual packets can receive differentiated service.
+    The proposed approach covers both directions of a flow.</p>"
   language:
   - en
   script:
@@ -53,6 +58,16 @@ relation:
       primary: true
     formattedref:
       content: draft-wing-cidfi-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-wing-cidfi-03
+    docid:
+    - id: draft-wing-cidfi-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-wing-cidfi-03
       format: text/plain
 ext:
   schema-version: v1.0.1
