@@ -1,28 +1,28 @@
 ---
 schema-version: v1.2.3
-id: draft-templin-intarea-ipid-ext-01
+id: draft-templin-6man-ipid-ext-09
 title:
-- content: Identification Extension Options for the Internet Protocol
+- content: IPv6 Extended Fragment Header
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-templin-intarea-ipid-ext-01
+- content: https://datatracker.ietf.org/doc/html/draft-templin-6man-ipid-ext-09
   type: src
 type: standard
 docid:
-- id: draft-templin-intarea-ipid-ext-01
+- id: draft-templin-6man-ipid-ext-09
   type: Internet-Draft
   primary: true
-- id: I-D.templin-intarea-ipid-ext
+- id: I-D.templin-6man-ipid-ext
   type: IETF
   scope: anchor
-docnumber: I-D.templin-intarea-ipid-ext
+docnumber: I-D.templin-6man-ipid-ext
 date:
 - type: published
-  value: '2023-07-30'
+  value: '2023-12-11'
 contributor:
 - person:
     name:
@@ -53,19 +53,21 @@ contributor:
   role:
   - type: author
 version:
-- draft: '01'
-revdate: '2023-07-30'
+- draft: '09'
+revdate: '2023-12-11'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>The Internet Protocol, version 4 (IPv4) header includes a 16 bit Identification
+- content: "<p>The Internet Protocol, version 4 (IPv4) header includes a 16-bit Identification
     field in all packets, but this length is too small to ensure reassembly integrity
     even at moderate data rates in modern networks. Even for Internet Protocol, version
-    6 (IPv6), the 32 bit Identification field may be smaller than desired for some
-    intended uses. This document addresses these limitations by defining both an Identification
-    Extension option for IPv4 and a corresponding Destination Option for IPv6.</p>"
+    6 (IPv6), the 32-bit Identification field included when a Fragment Header is present
+    may be smaller than desired for some applications. This specification addresses
+    these limitations by defining an IPv6 Destination Options Extended Fragment Header
+    option that includes a 64-bit Identification; it further defines a control messaging
+    service for fragment retransmission and reassembly congestion management.</p>"
   language:
   - en
   script:
@@ -74,23 +76,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-templin-intarea-ipid-ext-00
+    id: draft-templin-6man-ipid-ext-03
     docid:
-    - id: draft-templin-intarea-ipid-ext-00
+    - id: draft-templin-6man-ipid-ext-03
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-templin-intarea-ipid-ext-00
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-templin-intarea-ipid-ext-31
-    docid:
-    - id: draft-templin-intarea-ipid-ext-31
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-templin-intarea-ipid-ext-31
+      content: draft-templin-6man-ipid-ext-03
       format: text/plain
 series:
 - type: main
@@ -101,7 +93,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-templin-intarea-ipid-ext-01
+  number: draft-templin-6man-ipid-ext-09
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
