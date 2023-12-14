@@ -1,90 +1,149 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-sidrops-rfc6482bis-08
+id: draft-ietf-taps-impl-18
 title:
-- content: A Profile for Route Origin Authorizations (ROAs)
+- content: Implementing Interfaces to Transport Services
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-sidrops-rfc6482bis-08
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-taps-impl-18
   type: src
 type: standard
 docid:
-- id: draft-ietf-sidrops-rfc6482bis-08
+- id: draft-ietf-taps-impl-18
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-sidrops-rfc6482bis
+- id: I-D.ietf-taps-impl
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-sidrops-rfc6482bis
+docnumber: I-D.ietf-taps-impl
 date:
 - type: published
-  value: '2023-11-07'
+  value: '2023-12-14'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Job
+        - content: Anna
           language:
           - en
         - language:
           - en
-          initial: J
+          initial: A
         formatted_initials:
-          content: J.
+          content: A.
           language:
           - en
       surname:
-        content: Snijders
+        content: Brunstrom
         language:
         - en
       completename:
-        content: Job Snijders
+        content: Anna Brunstrom
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Fastly
+        - content: Karlstad University
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Ben
+        - content: Tommy
           language:
           - en
         - language:
           - en
-          initial: B
+          initial: T
         formatted_initials:
-          content: B.
+          content: T.
           language:
           - en
       surname:
-        content: Maddison
+        content: Pauly
         language:
         - en
       completename:
-        content: Ben Maddison
+        content: Tommy Pauly
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Workonline
+        - content: Apple Inc.
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Matt
+        - content: Reese
+          language:
+          - en
+        - language:
+          - en
+          initial: R
+        formatted_initials:
+          content: R.
+          language:
+          - en
+      surname:
+        content: Enghardt
+        language:
+        - en
+      completename:
+        content: Reese Enghardt
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Netflix
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Philipp
+          language:
+          - en
+        - language:
+          - en
+          initial: P
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: P. S.
+          language:
+          - en
+      surname:
+        content: Tiesel
+        language:
+        - en
+      completename:
+        content: Philipp S. Tiesel
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: SAP SE
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Michael
           language:
           - en
         - language:
@@ -95,88 +154,32 @@ contributor:
           language:
           - en
       surname:
-        content: Lepinski
+        content: Welzl
         language:
         - en
       completename:
-        content: Matt Lepinski
+        content: Michael Welzl
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Carleton College
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Derrick
-          language:
-          - en
-        - language:
-          - en
-          initial: D
-        formatted_initials:
-          content: D.
-          language:
-          - en
-      surname:
-        content: Kong
-        language:
-        - en
-      completename:
-        content: Derrick Kong
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Raytheon
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Stephen
-          language:
-          - en
-        - language:
-          - en
-          initial: S
-        formatted_initials:
-          content: S.
-          language:
-          - en
-      surname:
-        content: Kent
-        language:
-        - en
-      completename:
-        content: Stephen Kent
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Independent
+        - content: University of Oslo
   role:
   - type: author
 version:
-- draft: '08'
-revdate: '2023-11-07'
+- draft: '18'
+revdate: '2023-12-14'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document defines a standard profile for Route Origin Authorizations
-    (ROAs). A ROA is a digitally signed object that provides a means of verifying
-    that an IP address block holder has authorized an Autonomous System (AS) to originate
-    routes to one or more prefixes within the address block. This document obsoletes
-    RFC 6482.</p>"
+- content: "<p>The Transport Services system enables applications to use transport
+    protocols flexibly for network communication and defines a protocol- independent
+    Transport Services Application Programming Interface (API) that is based on an
+    asynchronous, event-driven interaction pattern. This document serves as a guide
+    to implementing such a system.</p>"
   language:
   - en
   script:
@@ -185,23 +188,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-sidrops-rfc6482bis-01
+    id: draft-ietf-taps-impl-04
     docid:
-    - id: draft-ietf-sidrops-rfc6482bis-01
+    - id: draft-ietf-taps-impl-04
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-sidrops-rfc6482bis-01
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-sidrops-rfc6482bis-09
-    docid:
-    - id: draft-ietf-sidrops-rfc6482bis-09
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-sidrops-rfc6482bis-09
+      content: draft-ietf-taps-impl-04
       format: text/plain
 series:
 - type: main
@@ -212,7 +205,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-sidrops-rfc6482bis-08
+  number: draft-ietf-taps-impl-18
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
