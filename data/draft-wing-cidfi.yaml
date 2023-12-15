@@ -18,11 +18,11 @@ abstract:
     needs, and thus to provide differentiated service to a flow and to packets within
     a flow. The differentiated service may be provided at the network (e.g., packet
     prioritization), the server (e.g., adaptive transmission), or both. This document
-    describes how clients can communicate with their nearby network elements so their
-    QUIC and DTLS streams can be augmented with information about network conditions
-    and packet importance to meet both intentional and reactive management policies.
-    With optional server support individual packets can receive differentiated service.
-    The proposed approach covers both directions of a flow.</p>"
+    describes how clients can communicate with their nearby network elements so they
+    can learn network constraints. Optionally, with QUIC server support their incoming
+    QUIC packets can be mapped to metadata about their contents so packet importance
+    can influence both intentional and reactive management policies. The framework
+    handles both directions of a flow.</p>"
   language:
   - en
   script:
@@ -68,6 +68,16 @@ relation:
       primary: true
     formattedref:
       content: draft-wing-cidfi-03
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-wing-cidfi-04
+    docid:
+    - id: draft-wing-cidfi-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-wing-cidfi-04
       format: text/plain
 ext:
   schema-version: v1.0.1
