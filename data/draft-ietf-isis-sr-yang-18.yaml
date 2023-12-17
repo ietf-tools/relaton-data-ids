@@ -1,86 +1,143 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-rats-eat-23
+id: draft-ietf-isis-sr-yang-18
 title:
-- content: The Entity Attestation Token (EAT)
+- content: A YANG Data Model for IS-IS Segment Routing for the MPLS Data Plane
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-rats-eat-23
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-isis-sr-yang-18
   type: src
 type: standard
 docid:
-- id: draft-ietf-rats-eat-23
+- id: draft-ietf-isis-sr-yang-18
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-rats-eat
+- id: I-D.ietf-isis-sr-yang
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-rats-eat
+docnumber: I-D.ietf-isis-sr-yang
 date:
 - type: published
-  value: '2023-12-14'
+  value: '2023-12-16'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Laurence
+        - content: Stephane
           language:
           - en
         - language:
           - en
-          initial: L
+          initial: S
         formatted_initials:
-          content: L.
+          content: S.
           language:
           - en
       surname:
-        content: Lundblade
+        content: Litkowski
         language:
         - en
       completename:
-        content: Laurence Lundblade
+        content: Stephane Litkowski
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Security Theory LLC
+        - content: Cisco Systems
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Giridhar
+        - content: Yingzhen
           language:
           - en
         - language:
           - en
-          initial: G
+          initial: Y
         formatted_initials:
-          content: G.
+          content: Y.
           language:
           - en
       surname:
-        content: Mandyam
+        content: Qu
         language:
         - en
       completename:
-        content: Giridhar Mandyam
+        content: Yingzhen Qu
         language:
         - en
+    affiliation:
+    - organization:
+        name:
+        - content: Futurewei Technologies
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Jeremy
+        - content: Pushpasis
+          language:
+          - en
+        - language:
+          - en
+          initial: P
+        formatted_initials:
+          content: P.
+          language:
+          - en
+      surname:
+        content: Sarkar
+        language:
+        - en
+      completename:
+        content: Pushpasis Sarkar
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Individual
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - language:
+          - en
+          initial: H
+        formatted_initials:
+          content: H.
+          language:
+          - en
+      surname:
+        content: Chen
+        language:
+        - en
+      completename:
+        content: Ing-Wher (Helen) Chen
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: The MITRE Corporation
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Jeff
           language:
           - en
         - language:
@@ -91,61 +148,29 @@ contributor:
           language:
           - en
       surname:
-        content: O'Donoghue
+        content: Tantsura
         language:
         - en
       completename:
-        content: Jeremy O'Donoghue
+        content: Jeff Tantsura
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Qualcomm Technologies Inc.
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Carl
-          language:
-          - en
-        - language:
-          - en
-          initial: C
-        formatted_initials:
-          content: C.
-          language:
-          - en
-      surname:
-        content: Wallace
-        language:
-        - en
-      completename:
-        content: Carl Wallace
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Red Hound Software, Inc.
+        - content: Nvidia
   role:
   - type: author
 version:
-- draft: '23'
-revdate: '2023-12-14'
+- draft: '18'
+revdate: '2023-12-16'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>An Entity Attestation Token (EAT) provides an attested claims set that
-    describes state and characteristics of an entity, a device like a smartphone,
-    IoT device, network equipment or such. This claims set is used by a relying party,
-    server or service to determine the type and degree of trust placed in the entity.
-    An EAT is either a CBOR Web Token (CWT) or JSON Web Token (JWT) with attestation-oriented
-    claims.</p>"
+- content: "<p>This document defines a YANG data module that can be used to configure
+    and manage IS-IS Segment Routing for MPLS data plane.</p>"
   language:
   - en
   script:
@@ -154,23 +179,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-rats-eat-01
+    id: draft-ietf-isis-sr-yang-16
     docid:
-    - id: draft-ietf-rats-eat-01
+    - id: draft-ietf-isis-sr-yang-16
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-rats-eat-01
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-rats-eat-24
-    docid:
-    - id: draft-ietf-rats-eat-24
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-rats-eat-24
+      content: draft-ietf-isis-sr-yang-16
       format: text/plain
 series:
 - type: main
@@ -181,7 +196,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-rats-eat-23
+  number: draft-ietf-isis-sr-yang-18
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
