@@ -13,15 +13,16 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>BBS is a digital signature scheme categorized as a form of short group
-    signature that supports several unique properties. Notably, the scheme supports
-    signing multiple messages whilst producing a single output digital signature.
-    Through this capability, the possessor of a signature is able to generate proofs
-    that selectively disclose subsets of the originally signed set of messages, whilst
-    preserving the verifiable authenticity and integrity of the messages. Furthermore,
-    these proofs are said to be zero-knowledge in nature as they do not reveal the
-    underlying signature; instead, what they reveal is a proof of knowledge of the
-    undisclosed signature.</p>"
+- content: "<p>This document describes the BBS Signature scheme, a secure, multi-
+    message digital signature protocol, supporting proving knowledge of a signature
+    while selectively disclosing any subset of the signed messages. Concretely, the
+    scheme allows for signing multiple messages whilst producing a single, constant
+    size, digital signature. Additionally, the possessor of a BBS signatures is able
+    to create zero-knowledge, proofs-of-knowledge of a signature, while selectively
+    disclosing subsets of the signed messages. Being zero-knowledge, the BBS proofs
+    do not reveal any information about the undisclosed messages or the signature
+    it self, while at the same time, guarantying the authenticity and integrity of
+    the disclosed messages.</p>"
   language:
   - en
   script:
@@ -77,6 +78,16 @@ relation:
       primary: true
     formattedref:
       content: draft-irtf-cfrg-bbs-signatures-04
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-irtf-cfrg-bbs-signatures-05
+    docid:
+    - id: draft-irtf-cfrg-bbs-signatures-05
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-irtf-cfrg-bbs-signatures-05
       format: text/plain
 ext:
   schema-version: v1.0.1
