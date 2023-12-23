@@ -13,18 +13,18 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document updates [RFC6724] based on operational experience gained
-    since its publication over ten years ago. In particular it updates the precedence
-    of Unique Local Addresses (ULAs) in the default address selection policy table,
-    which as originally defined by [RFC6724] has lower precedence than legacy IPv4
-    addressing. The update places both IPv6 Global Unicast Addresses (GUAs) and ULAs
-    ahead of all IPv4 addresses on the policy table to better suit operational deployment
-    and management of ULAs in production. In updating the [RFC6724] default policy
-    table, this document also demotes the preference for 6to4 addresses. These changes
-    to default behavior improve supportability of common use cases such as, but not
-    limited to, automatic / unmanaged scenarios. It is recognized that some less common
-    deployment scenarios may require explicit configuration or custom changes to achieve
-    desired operational parameters.</p>"
+- content: "<p>When [RFC6724] was published it defined an address selection algorithm
+    along with a default policy table, and noted a number of examples where that policy
+    table might benefit from adjustment for specific scenarios. It also noted that
+    it is important for implementations to provide a way to change the default policies
+    as more experience is gained. This update draws on several years of operational
+    experience to refine RFC 6724 further, with particular emphasis on preference
+    for the use of ULA addresses over IPv4 addresses and the addition of mandatory
+    support for Rule 5.5. The update also demotes the preference for 6to4 addresses.
+    The changes to default behavior improve supportability of common use cases, including
+    automatic / unmanaged scenarios. It is recognized that some less common deployment
+    scenarios may require explicit configuration or custom changes to achieve desired
+    operational parameters.</p>"
   language:
   - en
   script:
@@ -80,6 +80,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-6man-rfc6724-update-04
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-6man-rfc6724-update-05
+    docid:
+    - id: draft-ietf-6man-rfc6724-update-05
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-6man-rfc6724-update-05
       format: text/plain
 ext:
   schema-version: v1.0.1
