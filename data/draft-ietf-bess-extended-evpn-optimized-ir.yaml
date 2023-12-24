@@ -13,16 +13,18 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>[EVPN-AR] specifies an optimized ingress replication solution for more
-    efficient multicast and broadcast delivery in a Network Virtualization Overlay
-    (NVO) network for EVPN. This document extends the optimized ingress replication
-    procedures specified in [EVPN-AR] to overcome the limitation that an AR- REPLICATOR
-    may have. An AR-REPLICATOR may be unable to retain the source IP address or include
-    the expected ESI label that is required for EVPN split-horizon filtering when
-    replicating the packet on behalf of its multihomed AR-LEAF. Under this circumstance,
-    the extended procedures specified in this document allows the support of EVPN
-    multihoming on the AR-LEAFs as well as optimized ingress replication for the rest
-    of the EVPN overlay network.</p>"
+- content: "<p>In the Virtualization Overlay (NVO) network with Ethernet VPN (EVPN),
+    optimized ingress replication uses Assisted-Replication (AR) to achieve more efficient
+    delivery of Broadcast and Multicast (BM) traffic. An AR-LEAF, which is a Network
+    Virtualization Edge (NVE) device, forwards received BM traffic from its tenant
+    system to an AR- REPLICATOR. The AR-REPLICATOR then replicates it to the remaining
+    AR-LEAFs in the network. However, when replicating the packet on behalf of its
+    multihomed AR-LEAF, an AR-REPLICATOR may face challenges in retaining the source
+    IP address or including the expected Ethernet Segment Identifier (ESI) label that
+    is required for EVPN split-horizon filtering. This document extends the optimized
+    ingress replication procedures to address such limitations. The extended procedures
+    specified in this document allow the support of EVPN multihoming on the AR-LEAFs
+    as well as optimized ingress replication for the rest of the EVPN NVO network.</p>"
   language:
   - en
   script:
@@ -88,6 +90,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-bess-extended-evpn-optimized-ir-05
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-bess-extended-evpn-optimized-ir-06
+    docid:
+    - id: draft-ietf-bess-extended-evpn-optimized-ir-06
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-bess-extended-evpn-optimized-ir-06
       format: text/plain
 ext:
   schema-version: v1.0.1
