@@ -1,0 +1,149 @@
+---
+schema-version: v1.2.3
+id: draft-lamps-bonnell-keyusage-crl-validation-00
+title:
+- content: Clarification to processing Key Usage values during CRL validation
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-lamps-bonnell-keyusage-crl-validation-00
+  type: src
+type: standard
+docid:
+- id: draft-lamps-bonnell-keyusage-crl-validation-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.lamps-bonnell-keyusage-crl-validation
+  type: IETF
+  scope: anchor
+docnumber: I-D.lamps-bonnell-keyusage-crl-validation
+date:
+- type: published
+  value: '2024-01-05'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Corey
+          language:
+          - en
+        - language:
+          - en
+          initial: C
+        formatted_initials:
+          content: C.
+          language:
+          - en
+      surname:
+        content: Bonnell
+        language:
+        - en
+      completename:
+        content: Corey Bonnell
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: DigiCert, Inc.
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Tadahiko
+          language:
+          - en
+        - language:
+          - en
+          initial: T
+        formatted_initials:
+          content: T.
+          language:
+          - en
+      surname:
+        content: Ito
+        language:
+        - en
+      completename:
+        content: Tadahiko Ito
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: SECOM CO., LTD.
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Tomofumi
+          language:
+          - en
+        - language:
+          - en
+          initial: T
+        formatted_initials:
+          content: T.
+          language:
+          - en
+      surname:
+        content: Okubo
+        language:
+        - en
+      completename:
+        content: Tomofumi Okubo
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: DigiCert, Inc.
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2024-01-05'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>RFC 5280 defines the profile of X.509 certificates and certificate
+    revocation lists (CRLs) for use in the Internet. This profile requires that certificates
+    which certify keys for signing CRLs contain the key usage extension with the cRLSign
+    bit asserted. Additionally, RFC 5280 defines steps for the validation of CRLs.
+    While there is a requirement for CRL validators to verify that the cRLSign bit
+    is asserted in the keyUsage extension of the CRL issuer's certificate, there is
+    no requirement for validators to verify the presence of the keyUsage extension
+    itself. The lack of this requirement may manifest in an issue in some Public Key
+    Infrastructures where a CRL issuer who has been certified by a Certification Authority
+    to issue CRLs on its behalf can sign CRLs using a key that has not been certified
+    for signing CRLs. This document specifies an enhancement to the CRL validation
+    process to explicitly require the presence of the keyUsage extension to resolve
+    this issue.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-lamps-bonnell-keyusage-crl-validation-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
