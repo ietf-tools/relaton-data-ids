@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-ietf-anima-constrained-voucher
 title:
-- content: Constrained Bootstrapping Remote Secure Key Infrastructure (BRSKI)
+- content: Constrained Bootstrapping Remote Secure Key Infrastructure (cBRSKI)
   language:
   - en
   script:
@@ -14,18 +14,17 @@ docid:
   primary: true
 abstract:
 - content: <p>This document defines the Constrained Bootstrapping Remote Secure Key
-    Infrastructure (Constrained BRSKI) protocol, which provides a solution for secure
-    zero-touch bootstrapping of resource-constrained (IoT) devices into the network
-    of a domain owner. This protocol is designed for constrained networks, which may
-    have limited data throughput or may experience frequent packet loss. Constrained
-    BRSKI is a variant of the BRSKI protocol, which uses an artifact signed by the
-    device manufacturer called the "voucher" which enables a new device and the owner's
-    network to mutually authenticate. While the BRSKI voucher is typically encoded
-    in JSON, Constrained BRSKI uses a compact CBOR-encoded voucher. The BRSKI voucher
-    definition is extended with new data types that allow for smaller voucher sizes.
-    The Enrollment over Secure Transport (EST) protocol, used in BRSKI, is replaced
-    with EST-over-CoAPS; and HTTPS used in BRSKI is replaced with DTLS-secured CoAP
-    (CoAPS). This document Updates RFC 8366 and RFC 8995.</p>
+    Infrastructure (cBRSKI) protocol, which provides a solution for secure zero-touch
+    onboarding of resource-constrained (IoT) devices into the network of a domain
+    owner. This protocol is designed for constrained networks, which may have limited
+    data throughput or may experience frequent packet loss. cBRSKI is a variant of
+    the BRSKI protocol, which uses an artifact signed by the device manufacturer called
+    the "voucher" which enables a new device and the owner's network to mutually authenticate.
+    While the BRSKI voucher data is encoded in JSON, cBRSKI uses a compact CBOR-encoded
+    voucher. The BRSKI voucher data definition is extended with new data types that
+    allow for smaller voucher sizes. The Enrollment over Secure Transport (EST) protocol,
+    used in BRSKI, is replaced with EST-over- CoAPS; and HTTPS used in BRSKI is replaced
+    with DTLS-secured CoAP (CoAPS). This document Updates RFC 8995 and RFC 9148.</p>
   language:
   - en
   script:
@@ -261,6 +260,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-anima-constrained-voucher-22
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-anima-constrained-voucher-23
+    docid:
+    - id: draft-ietf-anima-constrained-voucher-23
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-anima-constrained-voucher-23
       format: text/plain
 ext:
   schema-version: v1.0.1
