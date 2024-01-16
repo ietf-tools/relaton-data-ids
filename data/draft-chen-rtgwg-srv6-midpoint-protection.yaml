@@ -13,14 +13,13 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>The current local repair mechanism, e.g., TI-LFA, allows local repair
-    actions on the direct neighbors of the failed node or link to temporarily route
-    traffic to the destination. This mechanism does not work properly for SRv6 TE
-    path after the failure happens in the destination point and IGP converges on the
-    failure. This document defines midpoint protection for SRv6 TE path, which enables
-    other nodes on the network to perform endpoint behaviors for the faulty node,
-    update the IPv6 destination address to the next endpoint after the faulty node,
-    and choose the next hop based on the new destination address.</p>"
+- content: "<p>The current local repair mechanism, e.g., TI-LFA, allows the upstream
+    neighbor of the failed node or link to fast re-route traffic around the failure.
+    This mechanism does not work properly for SRv6 TE path after the failure happens
+    in an endpoint node and IGP converges on the failure. This document defines midpoint
+    protection for SRv6 TE path, which enables the upstream endpoint node of the failed
+    node to perform the endpoint behavior for the faulty node and fast re-route traffic
+    around the failure after IGP converges on the failure.</p>"
   language:
   - en
   script:
@@ -156,6 +155,16 @@ relation:
       primary: true
     formattedref:
       content: draft-chen-rtgwg-srv6-midpoint-protection-12
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-chen-rtgwg-srv6-midpoint-protection-13
+    docid:
+    - id: draft-chen-rtgwg-srv6-midpoint-protection-13
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-chen-rtgwg-srv6-midpoint-protection-13
       format: text/plain
 ext:
   schema-version: v1.0.1
