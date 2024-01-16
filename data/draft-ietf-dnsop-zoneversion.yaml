@@ -2,8 +2,7 @@
 schema-version: v1.2.3
 id: draft-ietf-dnsop-zoneversion
 title:
-- content: The "ZONEVERSION" EDNS option for the version token of a Resource Record's
-    zone
+- content: The DNS Zone Version (ZONEVERSION) Option
   language:
   - en
   script:
@@ -14,14 +13,16 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: <p>The "ZONEVERSION" EDNS option allows a DNS querier to request a DNS
-    authoritative server to add an EDNS option in the answer of such query with a
-    token field representing the version of the zone which contains the answered Resource
-    Record ("RR"), such as the Start Of Authority ("SOA") serial field in zones when
-    this number corresponds to the zone version. This "ZONEVERSION" data allows to
-    debug and diagnose problems by helping to recognize the data source of an answer
-    in an atomic single DNS query, by associating the response with a respective zone
-    version of such domain name.</p>
+- content: "<p>The DNS ZONEVERSION option is a way for DNS clients to request, and
+    for authoritative DNS servers to provide, information regarding the version of
+    the zone from which a response is generated. The Serial field from the Start Of
+    Authority (SOA) resource record is a good example of a zone's version, and the
+    only one defined by this specification. Additional version types may be defined
+    by future specifications. Including zone version data in a response simplifies
+    and improves the quality of debugging and and diagnostics since the version and
+    the data are provided atomically. This can be especially useful for zones and
+    DNS providers that leverage IP anycast or multiple backend systems. It functions
+    similarly to the NSID option.</p>"
   language:
   - en
   script:
@@ -77,6 +78,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-dnsop-zoneversion-04
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-dnsop-zoneversion-05
+    docid:
+    - id: draft-ietf-dnsop-zoneversion-05
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-dnsop-zoneversion-05
       format: text/plain
 ext:
   schema-version: v1.0.1
