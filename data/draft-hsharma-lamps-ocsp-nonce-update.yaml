@@ -17,11 +17,11 @@ abstract:
     extension is an optional extension for Online Certificate Status Protocol (OCSP)
     request and response messages. OCSP is used for checking the status of a certificate,
     and the Nonce extension is used to cryptographically bind an OCSP response message
-    to a particular OCSP request message. This document updates OCSP responder behavior
-    for the OCSP requests that have Nonce length longer than the maximum length limit
-    defined in [RFC8954], So that it won't impact the existing OCSP clients. This
-    update removes the disparity between the behavior of responders that supports
-    or ignores Nonce.</p>"
+    to a particular OCSP request message. There are few compliance recommendation
+    to use of cryptographic algorithm that generates the longer Nonce than 32 octets.
+    This document updates the maximum allowed length of Nonce to 128 octets to support
+    such algorithms. This document is modified to enforce the Nonce length requirements
+    only to those clients and responders that supports Nonce extension.</p>"
   language:
   - en
   script:
@@ -67,6 +67,16 @@ relation:
       primary: true
     formattedref:
       content: draft-hsharma-lamps-ocsp-nonce-update-03
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-hsharma-lamps-ocsp-nonce-update-04
+    docid:
+    - id: draft-hsharma-lamps-ocsp-nonce-update-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-hsharma-lamps-ocsp-nonce-update-04
       format: text/plain
 ext:
   schema-version: v1.0.1
