@@ -13,8 +13,13 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>The document describes the methods to optimize the stitching of multiple
-    SD-WAN segments on Cloud DCs Gateways.</p>"
+- content: "<p>This document describes a method for SD-WAN CPEs using GENEVE Encapsulation
+    (RFC8926) to encapsulate the IPsec encrypted packets and send them to their closest
+    Cloud GWs, who can steer the IPsec encrypted payload through the Cloud Backbone
+    without decryption to the egress Cloud GWs which then forward the original IPsec
+    encrypted payload to the destination CPEs. This method is for Cloud Backbone to
+    connect multiple segments of SD-WAN without the Cloud GWs decrypting and re- encrypting
+    the payloads.</p>"
   language:
   - en
   script:
@@ -70,6 +75,16 @@ relation:
       primary: true
     formattedref:
       content: draft-dmk-rtgwg-multisegment-sdwan-04
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-dmk-rtgwg-multisegment-sdwan-05
+    docid:
+    - id: draft-dmk-rtgwg-multisegment-sdwan-05
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-dmk-rtgwg-multisegment-sdwan-05
       format: text/plain
 ext:
   schema-version: v1.0.1
