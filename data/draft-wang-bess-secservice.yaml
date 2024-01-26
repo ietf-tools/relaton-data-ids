@@ -13,13 +13,15 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>For certain users, security is of paramount importance. Even when building
-    their own backbone networks, these users require end-to-end service encryption
-    to ensure the confidentiality and integrity of their data. In such scenarios,
-    IPsec can be used to provide flexible and robust encryption capabilities, while
-    SRv6 can be used to guide the forwarding of data packets along different paths
-    on the network. By combining these technologies, users can create a highly secure
-    and efficient network environment that meets their specific needs and requirements.</p>"
+- content: "<p>This document describes an approach to encrypting selective user data
+    flows using IPsec and then orchestrating the encrypted flows based on the SRv6
+    Policy path. The method is needed for some users or applications that demand an
+    elevated level of security, necessitating the encryption of their data flows even
+    within networks like SRv6, which are built and managed by Network Service Providers
+    (NSP) and generally considered secure. Employing encryption for selective flows
+    over NSP managed networks, including technologies like SRv6, adds an extra layer
+    of protection, safeguarding valuable data from potential breaches and enhancing
+    overall network security.</p>"
   language:
   - en
   script:
@@ -45,6 +47,16 @@ relation:
       primary: true
     formattedref:
       content: draft-wang-bess-secservice-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-wang-bess-secservice-02
+    docid:
+    - id: draft-wang-bess-secservice-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-wang-bess-secservice-02
       format: text/plain
 ext:
   schema-version: v1.0.1
