@@ -1,28 +1,28 @@
 ---
 schema-version: v1.2.3
-id: draft-saumvinayak-bess-all-df-bum-04
+id: draft-saum-bess-dampening-backoff-08
 title:
-- content: All PEs as DF
+- content: Defreezing Optimization post EVPN Mac Dampening
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-saumvinayak-bess-all-df-bum-04
+- content: https://datatracker.ietf.org/doc/html/draft-saum-bess-dampening-backoff-08
   type: src
 type: standard
 docid:
-- id: draft-saumvinayak-bess-all-df-bum-04
+- id: draft-saum-bess-dampening-backoff-08
   type: Internet-Draft
   primary: true
-- id: I-D.saumvinayak-bess-all-df-bum
+- id: I-D.saum-bess-dampening-backoff
   type: IETF
   scope: anchor
-docnumber: I-D.saumvinayak-bess-all-df-bum
+docnumber: I-D.saum-bess-dampening-backoff
 date:
 - type: published
-  value: '2022-08-04'
+  value: '2024-01-28'
 contributor:
 - person:
     name:
@@ -77,28 +77,49 @@ contributor:
     affiliation:
     - organization:
         name:
+        - content: Oracle India Pvt Ltd
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Swathi
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Shankar
+        language:
+        - en
+      completename:
+        content: Swathi Shankar
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
         - content: Aruba Networks, HPE
   role:
   - type: author
 version:
-- draft: '04'
-revdate: '2022-08-04'
+- draft: '08'
+revdate: '2024-01-28'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>The Designated forwarder concept is leveraged to prevent looping of
-    BUM traffic into tenant network sourced across NVO fabric for multihoming deployments.
-    [RFC7432] defines a preliminary approach to select the DF for an ES,VLAN or ES,Vlan
-    Group, panning across multiple NVE's. [RFC8584] makes the election logic more
-    robust and fine grained by inculcating fair election of DF handling most of the
-    prevalent use-cases. This document presents a deployment problem and a corresponding
-    solution which cannot be easily resolve by rules mentioned in [RFC7432] and [RFC8584].
-    It involves redundant firewall deployment on disparate overlay sites connected
-    over WAN. The requirement is to allow reachability, ONLY, to the local firewall,
-    unless there is an outage. In case of outage the reachability can be extended
-    to remote site's firewall over WAN.</p>"
+- content: "<p>MAC move handling in EVPN deployments is discussed in detail in [RFC7432].
+    There are few optimizations which can be done in existing way of handling the
+    mac duplication. This document describes few of the potential techniques to do
+    so. This document is of informational type based on comments in the ietf meeting.</p>"
   language:
   - en
   script:
@@ -107,23 +128,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-saumvinayak-bess-all-df-bum-03
+    id: draft-saum-bess-dampening-backoff-03
     docid:
-    - id: draft-saumvinayak-bess-all-df-bum-03
+    - id: draft-saum-bess-dampening-backoff-03
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-saumvinayak-bess-all-df-bum-03
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-saumvinayak-bess-all-df-bum-07
-    docid:
-    - id: draft-saumvinayak-bess-all-df-bum-07
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-saumvinayak-bess-all-df-bum-07
+      content: draft-saum-bess-dampening-backoff-03
       format: text/plain
 series:
 - type: main
@@ -134,7 +145,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-saumvinayak-bess-all-df-bum-04
+  number: draft-saum-bess-dampening-backoff-08
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
