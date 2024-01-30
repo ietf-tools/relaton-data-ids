@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-tcpm-prr-rfc6937bis-03
+id: draft-ietf-tcpm-prr-rfc6937bis-05
 title:
 - content: Proportional Rate Reduction for TCP
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-tcpm-prr-rfc6937bis-03
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-tcpm-prr-rfc6937bis-05
   type: src
 type: standard
 docid:
-- id: draft-ietf-tcpm-prr-rfc6937bis-03
+- id: draft-ietf-tcpm-prr-rfc6937bis-05
   type: Internet-Draft
   primary: true
 - id: I-D.ietf-tcpm-prr-rfc6937bis
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.ietf-tcpm-prr-rfc6937bis
 date:
 - type: published
-  value: '2023-03-26'
+  value: '2024-01-29'
 contributor:
 - person:
     name:
@@ -46,10 +46,6 @@ contributor:
         content: Matt Mathis
         language:
         - en
-    affiliation:
-    - organization:
-        name:
-        - content: Measurement Lab.
   role:
   - type: author
 - person:
@@ -108,21 +104,48 @@ contributor:
         - content: Google, Inc.
   role:
   - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Neal
+          language:
+          - en
+        - language:
+          - en
+          initial: N
+        formatted_initials:
+          content: N.
+          language:
+          - en
+      surname:
+        content: Cardwell
+        language:
+        - en
+      completename:
+        content: Neal Cardwell
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Google, Inc.
+  role:
+  - type: author
 version:
-- draft: '03'
-revdate: '2023-03-26'
+- draft: '05'
+revdate: '2024-01-29'
 language:
 - en
 script:
 - Latn
 abstract:
 - content: "<p>This document updates the experimental Proportional Rate Reduction
-    (PRR) algorithm, described RFC 6937, to standards track. PRR potentially replaces
-    the Fast Recovery to regulate the amount of data sent by TCP or other transport
-    protocol during loss recovery. PRR accurately regulates the actual flight size
-    through recovery such that at the end of recovery it will be as close as possible
-    to the slow start threshold (ssthresh), as determined by the congestion control
-    algorithm.</p>"
+    (PRR) algorithm, described RFC 6937, to standards track. PRR provides logic to
+    regulate the amount of data sent by TCP or other transport protocols during fast
+    recovery. PRR accurately regulates the actual flight size through recovery such
+    that at the end of recovery it will be as close as possible to the slow start
+    threshold (ssthresh), as determined by the congestion control algorithm.</p>"
   language:
   - en
   script:
@@ -139,16 +162,6 @@ relation:
     formattedref:
       content: draft-ietf-tcpm-prr-rfc6937bis-02
       format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-tcpm-prr-rfc6937bis-05
-    docid:
-    - id: draft-ietf-tcpm-prr-rfc6937bis-05
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-tcpm-prr-rfc6937bis-05
-      format: text/plain
 series:
 - type: main
   title:
@@ -158,7 +171,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-tcpm-prr-rfc6937bis-03
+  number: draft-ietf-tcpm-prr-rfc6937bis-05
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
