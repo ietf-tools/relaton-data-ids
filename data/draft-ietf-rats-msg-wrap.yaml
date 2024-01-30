@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-ietf-rats-msg-wrap
 title:
-- content: RATS Conceptual Messages Wrapper
+- content: RATS Conceptual Messages Wrapper (CMW)
   language:
   - en
   script:
@@ -14,13 +14,13 @@ docid:
   primary: true
 abstract:
 - content: "<p>This document defines two encapsulation formats for RATS conceptual
-    messages (i.e., evidence, attestation results, endorsements and reference values.)
-    The first format uses a CBOR or JSON array with two mandatory members, one for
-    the type, another for the value, and a third optional member complementing the
-    type field that says which kind of conceptual message(s) are carried in the value.
-    The other format wraps the value in a CBOR byte string and prepends a CBOR tag
-    to convey the type information. This document also defines a corresponding CBOR
-    tag, as well as JSON Web Tokens (JWT) and CBOR Web Tokens (CWT) claims. These
+    messages (i.e., Evidence, Attestation Results, Endorsements and Reference Values.)
+    The first encapsulation format uses a CBOR or JSON array with two mandatory members,
+    one for the type, another for the value, and a third optional member complementing
+    the type field that says which kind of conceptual message(s) are carried in the
+    value. The other format wraps the value in a CBOR byte string and prepends a CBOR
+    tag to convey the type information. This document also defines a corresponding
+    CBOR tag, as well as JSON Web Tokens (JWT) and CBOR Web Tokens (CWT) claims. These
     allow embedding the wrapped conceptual messages into CBOR-based protocols and
     web APIs, respectively.</p>"
   language:
@@ -58,6 +58,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-rats-msg-wrap-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-rats-msg-wrap-03
+    docid:
+    - id: draft-ietf-rats-msg-wrap-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-rats-msg-wrap-03
       format: text/plain
 ext:
   schema-version: v1.0.1
