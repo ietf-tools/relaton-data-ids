@@ -1,0 +1,161 @@
+---
+schema-version: v1.2.3
+id: draft-ietf-avtcore-rtp-scip-07
+title:
+- content: RTP Payload Format for the Secure Communication Interoperability Protocol
+    (SCIP) Codec
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-avtcore-rtp-scip-07
+  type: src
+type: standard
+docid:
+- id: draft-ietf-avtcore-rtp-scip-07
+  type: Internet-Draft
+  primary: true
+- id: I-D.ietf-avtcore-rtp-scip
+  type: IETF
+  scope: anchor
+docnumber: I-D.ietf-avtcore-rtp-scip
+date:
+- type: published
+  value: '2024-01-31'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Dan
+          language:
+          - en
+        - language:
+          - en
+          initial: D
+        formatted_initials:
+          content: D.
+          language:
+          - en
+      surname:
+        content: Hanson
+        language:
+        - en
+      completename:
+        content: Dan Hanson
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: General Dynamics Mission Systems, Inc.
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        formatted_initials:
+          language:
+          - en
+      surname:
+        content: MikeFaller
+        language:
+        - en
+      completename:
+        content: MikeFaller
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: General Dynamics Mission Systems, Inc.
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Keith
+          language:
+          - en
+        - language:
+          - en
+          initial: K
+        formatted_initials:
+          content: K.
+          language:
+          - en
+      surname:
+        content: Maver
+        language:
+        - en
+      completename:
+        content: Keith Maver
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: General Dynamics Mission Systems, Inc.
+  role:
+  - type: author
+version:
+- draft: '07'
+revdate: '2024-01-31'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>This document describes the RTP payload format of the Secure Communication
+    Interoperability Protocol (SCIP). SCIP is an application layer protocol that provides
+    end-to-end capability exchange, packetization/de-packetization of media, reliable
+    transport, and security services such as confidentiality and integrity protection.
+    SCIP handles packetization/de-packetization of the encrypted media and acts as
+    a tunneling protocol, treating SCIP payloads as opaque octets to be encapsulated
+    within RTP payloads prior to transmission or decapsulated on reception. SCIP payloads
+    are sized to fit within the maximum transmission unit (MTU) when transported over
+    RTP thereby avoiding fragmentation. SCIP provides confidentiality and integrity
+    of the tunneled media, therefore the SCIP payload does not require the use of
+    Secure RTP (SRTP) for payload protection. SCIP also provides for reliable transport
+    at the application layer, so it is not necessary to negotiate RTCP retransmission
+    capabilities. To establish reliable communications using SCIP over RTP, it is
+    important that middle boxes avoid parsing or modifying SCIP payloads. Because
+    SCIP payloads are confidentiality and integrity protected and are only decipherable
+    by the originating and receiving SCIP devices, modification of the payload by
+    middle boxes would be detected as an integrity failure in SCIP devices, resulting
+    in retransmission and/or communication failure. Middle boxes do not need to parse
+    the SCIP payloads to correctly transport them. Not only is parsing unnecessary
+    to tunnel/detunnel SCIP within RTP, but the parsing and filtering of SCIP payloads
+    by middle boxes would likely lead to ossification of the evolving SCIP protocol.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-ietf-avtcore-rtp-scip-06
+    docid:
+    - id: draft-ietf-avtcore-rtp-scip-06
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-avtcore-rtp-scip-06
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-ietf-avtcore-rtp-scip-07
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
