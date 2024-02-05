@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-yao-tsvwg-cco-requirement-and-analysis
 title:
-- content: 'Collective Communication Optimization: Requirement and Analysis'
+- content: 'Collective Communication Optimizations: Requirement and Analysis'
   language:
   - en
   script:
@@ -13,14 +13,17 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>As is mentioned in draft [CCO PS &amp; USECASE], the most obvious problem
-    on why existing protocols cannot meet the high-performance requirements of collective
-    communications is that these distributed applications are not co-designed with
-    the underlying networking protocols. There is a semantic gap between inter-process
-    message transportation and packet forwarding, which should be bridged by efficient
-    mapping and optimization. This draft further presents the technical requirements
-    on how the collective communication optimization should be designed, and makes
-    some discussion and analysis on several related work.</p>"
+- content: "<p>Gernerative AI applications depend on large scale parallel computing
+    clusters for model training and inference. Existing implementations of collective
+    communication in parallel computing is built on top of RDMA, the most adoptable
+    AI transport protocol. However, One-to- Many, Many-to-One, and Many-to-Many collective
+    operations all depend on point-to-point transport semantics of RDMA, which inevitably
+    introduces more bandwidth occupancy and transmission overhead. Emerging approaches
+    for collective communication optimization focus on network-assisted collective
+    acceleration and can work compatibly with RDMA. This document analyzes different
+    technical schemes for network-assisted collective acceleration based on RDMA,
+    and presents the gap between these work and current IETF standards, notably iWARP.
+    Requirements for designing new standards are proposed accordingly.</p>"
   language:
   - en
   script:
@@ -36,6 +39,16 @@ relation:
       primary: true
     formattedref:
       content: draft-yao-tsvwg-cco-requirement-and-analysis-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-yao-tsvwg-cco-requirement-and-analysis-01
+    docid:
+    - id: draft-yao-tsvwg-cco-requirement-and-analysis-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-yao-tsvwg-cco-requirement-and-analysis-01
       format: text/plain
 ext:
   schema-version: v1.0.1

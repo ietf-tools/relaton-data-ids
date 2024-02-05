@@ -1,19 +1,19 @@
 ---
 schema-version: v1.2.3
-id: draft-yao-tsvwg-cco-requirement-and-analysis-00
+id: draft-yao-tsvwg-cco-requirement-and-analysis-01
 title:
-- content: 'Collective Communication Optimization: Requirement and Analysis'
+- content: 'Collective Communication Optimizations: Requirement and Analysis'
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-yao-tsvwg-cco-requirement-and-analysis-00
+- content: https://datatracker.ietf.org/doc/html/draft-yao-tsvwg-cco-requirement-and-analysis-01
   type: src
 type: standard
 docid:
-- id: draft-yao-tsvwg-cco-requirement-and-analysis-00
+- id: draft-yao-tsvwg-cco-requirement-and-analysis-01
   type: Internet-Draft
   primary: true
 - id: I-D.yao-tsvwg-cco-requirement-and-analysis
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.yao-tsvwg-cco-requirement-and-analysis
 date:
 - type: published
-  value: '2023-10-23'
+  value: '2024-02-04'
 contributor:
 - person:
     name:
@@ -137,6 +137,34 @@ contributor:
     name:
       given:
         forename:
+        - content: Weifeng
+          language:
+          - en
+        - language:
+          - en
+          initial: W
+        formatted_initials:
+          content: W.
+          language:
+          - en
+      surname:
+        content: Wang
+        language:
+        - en
+      completename:
+        content: Weifeng Wang
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: New H3C Technologies Co., Ltd
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
         - content: Dirk
           language:
           - en
@@ -158,40 +186,45 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: HKUST (Guangzhou)
+        - content: |-
+            THE HONG KONG UNIVERSITY OF SCIENCE AND TECHNOLOGY
+                  (GUANGZHOU)
   role:
   - type: author
 version:
-- draft: '00'
-revdate: '2023-10-23'
+- draft: '01'
+revdate: '2024-02-04'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>As is mentioned in draft [CCO PS &amp; USECASE], the most obvious problem
-    on why existing protocols cannot meet the high-performance requirements of collective
-    communications is that these distributed applications are not co-designed with
-    the underlying networking protocols. There is a semantic gap between inter-process
-    message transportation and packet forwarding, which should be bridged by efficient
-    mapping and optimization. This draft further presents the technical requirements
-    on how the collective communication optimization should be designed, and makes
-    some discussion and analysis on several related work.</p>"
+- content: "<p>Gernerative AI applications depend on large scale parallel computing
+    clusters for model training and inference. Existing implementations of collective
+    communication in parallel computing is built on top of RDMA, the most adoptable
+    AI transport protocol. However, One-to- Many, Many-to-One, and Many-to-Many collective
+    operations all depend on point-to-point transport semantics of RDMA, which inevitably
+    introduces more bandwidth occupancy and transmission overhead. Emerging approaches
+    for collective communication optimization focus on network-assisted collective
+    acceleration and can work compatibly with RDMA. This document analyzes different
+    technical schemes for network-assisted collective acceleration based on RDMA,
+    and presents the gap between these work and current IETF standards, notably iWARP.
+    Requirements for designing new standards are proposed accordingly.</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-yao-tsvwg-cco-requirement-and-analysis-01
+    id: draft-yao-tsvwg-cco-requirement-and-analysis-00
     docid:
-    - id: draft-yao-tsvwg-cco-requirement-and-analysis-01
+    - id: draft-yao-tsvwg-cco-requirement-and-analysis-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-yao-tsvwg-cco-requirement-and-analysis-01
+      content: draft-yao-tsvwg-cco-requirement-and-analysis-00
       format: text/plain
 series:
 - type: main
@@ -202,7 +235,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-yao-tsvwg-cco-requirement-and-analysis-00
+  number: draft-yao-tsvwg-cco-requirement-and-analysis-01
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
