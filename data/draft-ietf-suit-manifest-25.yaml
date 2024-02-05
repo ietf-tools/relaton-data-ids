@@ -1,49 +1,78 @@
 ---
 schema-version: v1.2.3
-id: draft-kuhn-quic-bdpframe-extension-00
+id: draft-ietf-suit-manifest-25
 title:
-- content: BDP Frame Extension
+- content: A Concise Binary Object Representation (CBOR)-based Serialization Format
+    for the Software Updates for Internet of Things (SUIT) Manifest
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-kuhn-quic-bdpframe-extension-00
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-suit-manifest-25
   type: src
 type: standard
 docid:
-- id: draft-kuhn-quic-bdpframe-extension-00
+- id: draft-ietf-suit-manifest-25
   type: Internet-Draft
   primary: true
-- id: I-D.kuhn-quic-bdpframe-extension
+- id: I-D.ietf-suit-manifest
   type: IETF
   scope: anchor
-docnumber: I-D.kuhn-quic-bdpframe-extension
+docnumber: I-D.ietf-suit-manifest
 date:
 - type: published
-  value: '2022-03-06'
+  value: '2024-02-05'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Nicolas
+        - content: Brendan
           language:
           - en
         - language:
           - en
-          initial: N
+          initial: B
         formatted_initials:
-          content: N.
+          content: B.
           language:
           - en
       surname:
-        content: Kuhn
+        content: Moran
         language:
         - en
       completename:
-        content: Nicolas Kuhn
+        content: Brendan Moran
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Arm Limited
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Hannes
+          language:
+          - en
+        - language:
+          - en
+          initial: H
+        formatted_initials:
+          content: H.
+          language:
+          - en
+      surname:
+        content: Tschofenig
+        language:
+        - en
+      completename:
+        content: Hannes Tschofenig
         language:
         - en
   role:
@@ -52,141 +81,112 @@ contributor:
     name:
       given:
         forename:
-        - content: Stephan
+        - content: Henk
           language:
           - en
         - language:
           - en
-          initial: S
+          initial: H
         formatted_initials:
-          content: S.
+          content: H.
           language:
           - en
       surname:
-        content: Emile
+        content: Birkholz
         language:
         - en
       completename:
-        content: Stephan Emile
+        content: Henk Birkholz
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Orange
+        - content: Fraunhofer SIT
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Gorry
+        - content: Koen
           language:
           - en
         - language:
           - en
-          initial: G
+          initial: K
         formatted_initials:
-          content: G.
+          content: K.
           language:
           - en
       surname:
-        content: Fairhurst
+        content: Zandberg
         language:
         - en
       completename:
-        content: Gorry Fairhurst
+        content: Koen Zandberg
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: University of Aberdeen
+        - content: Inria
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Tom
-          language:
-          - en
         - language:
           - en
-          initial: T
+          initial: O
         formatted_initials:
-          content: T.
+          content: O.
           language:
           - en
       surname:
-        content: Jones
+        content: Rønningstad
         language:
         - en
       completename:
-        content: Tom Jones
+        content: Øyvind Rønningstad
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: University of Aberdeen
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Christian
-          language:
-          - en
-        - language:
-          - en
-          initial: C
-        formatted_initials:
-          content: C.
-          language:
-          - en
-      surname:
-        content: Huitema
-        language:
-        - en
-      completename:
-        content: Christian Huitema
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Private Octopus Inc.
+        - content: Nordic Semiconductor
   role:
   - type: author
 version:
-- draft: '00'
-revdate: '2022-03-06'
+- draft: '25'
+revdate: '2024-02-05'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This draft describes the BDP Frame extension for QUIC. It enables the
-    exchange of information related to the path characteristics between the client
-    and the server during a connection. This information can later be exploited when
-    a new connection is established.</p>"
+- content: "<p>This specification describes the format of a manifest. A manifest is
+    a bundle of metadata about code/data obtained by a recipient (chiefly the firmware
+    for an IoT device), where to find the code/data, the devices to which it applies,
+    and cryptographic information protecting the manifest. Software updates and Trusted
+    Invocation both tend to use sequences of common operations, so the manifest encodes
+    those sequences of operations, rather than declaring the metadata.</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-kuhn-quic-bdpframe-extension-04
+    id: draft-ietf-suit-manifest-22
     docid:
-    - id: draft-kuhn-quic-bdpframe-extension-04
+    - id: draft-ietf-suit-manifest-22
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-kuhn-quic-bdpframe-extension-04
+      content: draft-ietf-suit-manifest-22
       format: text/plain
 series:
 - type: main
@@ -197,7 +197,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-kuhn-quic-bdpframe-extension-00
+  number: draft-ietf-suit-manifest-25
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
