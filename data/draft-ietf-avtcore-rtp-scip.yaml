@@ -17,24 +17,23 @@ abstract:
 - content: "<p>This document describes the RTP payload format of the Secure Communication
     Interoperability Protocol (SCIP). SCIP is an application layer protocol that provides
     end-to-end capability exchange, packetization/de-packetization of media, reliable
-    transport, and security services such as confidentiality and integrity protection.
-    SCIP handles packetization/de-packetization of the encrypted media and acts as
-    a tunneling protocol, treating SCIP payloads as opaque octets to be encapsulated
-    within RTP payloads prior to transmission or decapsulated on reception. SCIP payloads
-    are sized to fit within the maximum transmission unit (MTU) when transported over
-    RTP thereby avoiding fragmentation. SCIP provides confidentiality and integrity
-    of the tunneled media, therefore the SCIP payload does not require the use of
-    Secure RTP (SRTP) for payload protection. SCIP also provides for reliable transport
-    at the application layer, so it is not necessary to negotiate RTCP retransmission
-    capabilities. To establish reliable communications using SCIP over RTP, it is
-    important that middle boxes avoid parsing or modifying SCIP payloads. Because
-    SCIP payloads are confidentiality and integrity protected and are only decipherable
-    by the originating and receiving SCIP devices, modification of the payload by
-    middle boxes would be detected as an integrity failure in SCIP devices, resulting
-    in retransmission and/or communication failure. Middle boxes do not need to parse
-    the SCIP payloads to correctly transport them. Not only is parsing unnecessary
-    to tunnel/detunnel SCIP within RTP, but the parsing and filtering of SCIP payloads
-    by middle boxes would likely lead to ossification of the evolving SCIP protocol.</p>"
+    transport, and payload encryption. SCIP handles packetization/de-packetization
+    of the encrypted media and acts as a tunneling protocol, treating SCIP payloads
+    as opaque octets to be encapsulated within RTP payloads prior to transmission
+    or decapsulated on reception. SCIP payloads are sized to fit within the maximum
+    transmission unit (MTU) when transported over RTP thereby avoiding fragmentation.
+    SCIP transmits encrypted traffic and does not require the use of Secure RTP (SRTP)
+    for payload protection. SCIP also provides for reliable transport at the application
+    layer, so it is not necessary to negotiate RTCP retransmission capabilities. To
+    establish reliable communications using SCIP over RTP, it is important that middle
+    boxes avoid parsing or modifying SCIP payloads. Because SCIP payloads are confidentiality
+    and integrity protected and are only decipherable by the originating and receiving
+    SCIP devices, modification of the payload by middle boxes would be detected as
+    an integrity failure in SCIP devices, resulting in retransmission and/or communication
+    failure. Middle boxes do not need to parse the SCIP payloads to correctly transport
+    them. Not only is parsing unnecessary to tunnel/detunnel SCIP within RTP, but
+    the parsing and filtering of SCIP payloads by middle boxes would likely lead to
+    ossification of the evolving SCIP protocol.</p>"
   language:
   - en
   script:
@@ -130,6 +129,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-avtcore-rtp-scip-08
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-avtcore-rtp-scip-09
+    docid:
+    - id: draft-ietf-avtcore-rtp-scip-09
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-avtcore-rtp-scip-09
       format: text/plain
 ext:
   schema-version: v1.0.1
