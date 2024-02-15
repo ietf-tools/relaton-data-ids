@@ -1,0 +1,49 @@
+---
+schema-version: v1.2.3
+id: draft-vanbrouwershaven-acme-client-discovery
+title:
+- content: Auto-discovery mechanism for ACME authorized clients
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-vanbrouwershaven-acme-client-discovery
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: <p>A significant challenge in the widespread adoption of the Automated
+    Certificate Management Environment (ACME) [RFC8555] is the trust establishment
+    between ACME servers and clients. While ACME clients can automatically discover
+    the URL of the ACME server through ACME Auto Discovery [I-D.vanbrouwershaven-acme-auto-discovery],
+    they face difficulty in identifying authorized clients. This draft proposes a
+    solution to this problem by allowing Certification Authority (CA) customers to
+    specify which ACME keys are authorized to request certificates on their behalf
+    by simply providing the domain name of the service provider. Specifically, this
+    document registers the URI "/.well-known/acme- keys" at which all compliant service
+    providers can publish their ACME client public keys. This mechanism allows the
+    ACME server to identify the specific service provider, enhancing the trust relationship.
+    Furthermore, it provides flexibility to service providers as they can use multiple
+    keys and rotate them as often as they like, thereby improving security and control
+    over their ACME client configurations while giving CA customers the ability to
+    specifically authorize which service providers can request certificates on their
+    behalf.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-vanbrouwershaven-acme-client-discovery-00
+    docid:
+    - id: draft-vanbrouwershaven-acme-client-discovery-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-vanbrouwershaven-acme-client-discovery-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

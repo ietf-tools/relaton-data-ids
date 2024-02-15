@@ -1,0 +1,202 @@
+---
+schema-version: v1.2.3
+id: draft-vanbrouwershaven-acme-client-discovery-00
+title:
+- content: Auto-discovery mechanism for ACME authorized clients
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-vanbrouwershaven-acme-client-discovery-00
+  type: src
+type: standard
+docid:
+- id: draft-vanbrouwershaven-acme-client-discovery-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.vanbrouwershaven-acme-client-discovery
+  type: IETF
+  scope: anchor
+docnumber: I-D.vanbrouwershaven-acme-client-discovery
+date:
+- type: published
+  value: '2024-02-15'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Paul
+          language:
+          - en
+        - language:
+          - en
+          initial: P
+        formatted_initials:
+          content: P.
+          language:
+          - en
+      surname:
+        content: van Brouwershaven
+        language:
+        - en
+      completename:
+        content: Paul van Brouwershaven
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Entrust Limited
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Mike
+          language:
+          - en
+        - language:
+          - en
+          initial: M
+        formatted_initials:
+          content: M.
+          language:
+          - en
+      surname:
+        content: Ounsworth
+        language:
+        - en
+      completename:
+        content: Mike Ounsworth
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Entrust Limited
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Corey
+          language:
+          - en
+        - language:
+          - en
+          initial: C
+        formatted_initials:
+          content: C.
+          language:
+          - en
+      surname:
+        content: Bonnell
+        language:
+        - en
+      completename:
+        content: Corey Bonnell
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: DigiCert, Inc
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - language:
+          - en
+          initial: I
+        formatted_initials:
+          content: I.
+          language:
+          - en
+      surname:
+        content: Barreira
+        language:
+        - en
+      completename:
+        content: Iñigo Barreira
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Sectigo (Europe) SL
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - language:
+          - en
+          initial: Q
+        formatted_initials:
+          content: Q.
+          language:
+          - en
+      surname:
+        content: Misell
+        language:
+        - en
+      completename:
+        content: Q Misell
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: AS207960 Cyfyngedig
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2024-02-15'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: <p>A significant challenge in the widespread adoption of the Automated
+    Certificate Management Environment (ACME) [RFC8555] is the trust establishment
+    between ACME servers and clients. While ACME clients can automatically discover
+    the URL of the ACME server through ACME Auto Discovery [I-D.vanbrouwershaven-acme-auto-discovery],
+    they face difficulty in identifying authorized clients. This draft proposes a
+    solution to this problem by allowing Certification Authority (CA) customers to
+    specify which ACME keys are authorized to request certificates on their behalf
+    by simply providing the domain name of the service provider. Specifically, this
+    document registers the URI "/.well-known/acme- keys" at which all compliant service
+    providers can publish their ACME client public keys. This mechanism allows the
+    ACME server to identify the specific service provider, enhancing the trust relationship.
+    Furthermore, it provides flexibility to service providers as they can use multiple
+    keys and rotate them as often as they like, thereby improving security and control
+    over their ACME client configurations while giving CA customers the ability to
+    specifically authorize which service providers can request certificates on their
+    behalf.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-vanbrouwershaven-acme-client-discovery-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
