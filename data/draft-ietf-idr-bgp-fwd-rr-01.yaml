@@ -1,28 +1,28 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-idr-bgp-ct-srv6-01
+id: draft-ietf-idr-bgp-fwd-rr-01
 title:
-- content: BGP CT - Adaptation to SRv6 dataplane
+- content: BGP Route Reflector in Forwarding Path
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-bgp-ct-srv6-01
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-bgp-fwd-rr-01
   type: src
 type: standard
 docid:
-- id: draft-ietf-idr-bgp-ct-srv6-01
+- id: draft-ietf-idr-bgp-fwd-rr-01
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-idr-bgp-ct-srv6
+- id: I-D.ietf-idr-bgp-fwd-rr
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-idr-bgp-ct-srv6
+docnumber: I-D.ietf-idr-bgp-fwd-rr
 date:
 - type: published
-  value: '2024-01-28'
+  value: '2024-02-16'
 contributor:
 - person:
     name:
@@ -82,17 +82,19 @@ contributor:
   - type: author
 version:
 - draft: '01'
-revdate: '2024-01-28'
+revdate: '2024-02-16'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: <p>This document specifies how the mechanisms for "Intent Driven Service
-    Mapping" defined in [BGP-CT] are applied to SRv6 dataplane. The extensions needed
-    for SRv6 dataplane operations are specified. Base procedures of BGP CT are followed
-    unaltered. Illustration of how BGP CT procedures work in SRv6 dataplane is provided
-    in this document.</p>
+- content: "<p>The procedures in BGP Route Reflection (RR) spec [RFC4456] primarily
+    deal with scenarios where the RR is reflecting BGP routes with next hop unchanged.
+    These procedures can sometimes result in traffic forwarding loops in deployments
+    where the RR is in forwarding path, because of reflecting BGP routes with next
+    hop set to self. This document specifies approaches to minimize possiblity of
+    such traffic forwarding loops. One of those approaches updates path selection
+    procedures specified in Section 9 of BGP RR. [RFC4456]</p>"
   language:
   - en
   script:
@@ -101,23 +103,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-idr-bgp-ct-srv6-00
+    id: draft-ietf-idr-bgp-fwd-rr-00
     docid:
-    - id: draft-ietf-idr-bgp-ct-srv6-00
+    - id: draft-ietf-idr-bgp-fwd-rr-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-idr-bgp-ct-srv6-00
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-idr-bgp-ct-srv6-02
-    docid:
-    - id: draft-ietf-idr-bgp-ct-srv6-02
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-idr-bgp-ct-srv6-02
+      content: draft-ietf-idr-bgp-fwd-rr-00
       format: text/plain
 series:
 - type: main
@@ -128,7 +120,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-idr-bgp-ct-srv6-01
+  number: draft-ietf-idr-bgp-fwd-rr-01
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

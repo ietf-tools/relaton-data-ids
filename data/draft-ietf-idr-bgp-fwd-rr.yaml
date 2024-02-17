@@ -14,12 +14,12 @@ docid:
   primary: true
 abstract:
 - content: "<p>The procedures in BGP Route Reflection (RR) spec [RFC4456] primarily
-    deal with scenarios where the RR is not in forwarding path, and is reflecting
-    BGP routes with next hop unchanged. These procedures can sometimes result in traffic
-    forwarding loops in deployments where the RR is in forwarding path, and is reflecting
-    BGP routes with next hop set to self. This document specifies approaches to minimize
-    possiblity of such traffic forwarding loops. One of those approaches updates path
-    selection procedures specified in Section 9 of BGP RR. [RFC4456]</p>"
+    deal with scenarios where the RR is reflecting BGP routes with next hop unchanged.
+    These procedures can sometimes result in traffic forwarding loops in deployments
+    where the RR is in forwarding path, because of reflecting BGP routes with next
+    hop set to self. This document specifies approaches to minimize possiblity of
+    such traffic forwarding loops. One of those approaches updates path selection
+    procedures specified in Section 9 of BGP RR. [RFC4456]</p>"
   language:
   - en
   script:
@@ -35,6 +35,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-idr-bgp-fwd-rr-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-idr-bgp-fwd-rr-01
+    docid:
+    - id: draft-ietf-idr-bgp-fwd-rr-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-idr-bgp-fwd-rr-01
       format: text/plain
 ext:
   schema-version: v1.0.1

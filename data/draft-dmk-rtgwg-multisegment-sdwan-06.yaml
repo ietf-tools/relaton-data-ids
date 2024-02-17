@@ -1,189 +1,184 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-v6ops-hbh-09
+id: draft-dmk-rtgwg-multisegment-sdwan-06
 title:
-- content: Operational Issues with Processing of the Hop-by-Hop Options Header
+- content: Multi-segment SD-WAN via Cloud DCs
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-v6ops-hbh-09
+- content: https://datatracker.ietf.org/doc/html/draft-dmk-rtgwg-multisegment-sdwan-06
   type: src
 type: standard
 docid:
-- id: draft-ietf-v6ops-hbh-09
+- id: draft-dmk-rtgwg-multisegment-sdwan-06
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-v6ops-hbh
+- id: I-D.dmk-rtgwg-multisegment-sdwan
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-v6ops-hbh
+docnumber: I-D.dmk-rtgwg-multisegment-sdwan
 date:
 - type: published
-  value: '2024-02-10'
+  value: '2024-02-16'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Shuping
+        - content: Kausik
           language:
           - en
         - language:
           - en
-          initial: S
+          initial: K
         formatted_initials:
-          content: S.
+          content: K.
           language:
           - en
       surname:
-        content: Peng
+        content: Majumdar
         language:
         - en
       completename:
-        content: Shuping Peng
+        content: Kausik Majumdar
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei Technologies
+        - content: Microsoft
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Zhenbin
+        - content: Linda
           language:
           - en
         - language:
           - en
-          initial: Z
+          initial: L
         formatted_initials:
-          content: Z.
+          content: L.
           language:
           - en
       surname:
-        content: Li
+        content: Dunbar
         language:
         - en
       completename:
-        content: Zhenbin Li
+        content: Linda Dunbar
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei Technologies
+        - content: Futurewei
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Chongfeng
+        - content: Venkit
           language:
           - en
         - language:
           - en
-          initial: C
+          initial: V
         formatted_initials:
-          content: C.
+          content: V.
           language:
           - en
       surname:
-        content: Xie
+        content: Kasiviswanathan
         language:
         - en
       completename:
-        content: Chongfeng Xie
+        content: Venkit Kasiviswanathan
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: China Telecom
+        - content: Arista
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Zhuangzhuang
+        - content: Ashok
           language:
           - en
         - language:
           - en
-          initial: Z
+          initial: A
         formatted_initials:
-          content: Z.
+          content: A.
           language:
           - en
       surname:
-        content: Qin
+        content: Ramchandra
         language:
         - en
       completename:
-        content: Zhuangzhuang Qin
+        content: Ashok Ramchandra
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: China Unicom
+        - content: Microsoft
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Gyan
+        - content: Aseem
           language:
           - en
         - language:
           - en
-          initial: G
-        - language:
-          - en
-          initial: S
+          initial: A
         formatted_initials:
-          content: G. S.
+          content: A.
           language:
           - en
       surname:
-        content: Mishra
+        content: Choudhary
         language:
         - en
       completename:
-        content: Gyan Mishra
+        content: Aseem Choudhary
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Verizon Inc.
+        - content: Aviatrix
   role:
   - type: author
 version:
-- draft: '09'
-revdate: '2024-02-10'
+- draft: '06'
+revdate: '2024-02-16'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document describes the processing of the Hop-by-Hop Options Header
-    (HBH) in current routers in the aspects of standards specification, common implementations,
-    and default operations. This document outlines reasons why the Hop-by-Hop Options
-    Header is rarely utilized in current networks. In addition, this document describes
-    how HBH Options Header could be used as a powerful mechanism allowing deployment
-    and operations of new services requiring a more optimized way to leverage network
-    resources of an infrastructure. The purpose of this draft is to document reasons
-    why HBH Options Header is rarely used within networks. It motivates the benefits
-    and requirements needed to enable wider use of HBH Options.</p>"
+- content: "<p>This document describes a method for SD-WAN CPEs using GENEVE Encapsulation
+    (RFC8926) to encapsulate the IPsec encrypted packets and send them to their closest
+    Cloud GWs, who can steer the IPsec encrypted payload through the Cloud Backbone
+    without decryption to the egress Cloud GWs which then forward the original IPsec
+    encrypted payload to the destination CPEs. This method is for Cloud Backbone to
+    connect multiple segments of SD-WAN without the Cloud GWs decrypting and re- encrypting
+    the payloads.</p>"
   language:
   - en
   script:
@@ -192,23 +187,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-v6ops-hbh-05
+    id: draft-dmk-rtgwg-multisegment-sdwan-03
     docid:
-    - id: draft-ietf-v6ops-hbh-05
+    - id: draft-dmk-rtgwg-multisegment-sdwan-03
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-v6ops-hbh-05
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-v6ops-hbh-10
-    docid:
-    - id: draft-ietf-v6ops-hbh-10
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-v6ops-hbh-10
+      content: draft-dmk-rtgwg-multisegment-sdwan-03
       format: text/plain
 series:
 - type: main
@@ -219,7 +204,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-v6ops-hbh-09
+  number: draft-dmk-rtgwg-multisegment-sdwan-06
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
