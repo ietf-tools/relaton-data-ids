@@ -1,8 +1,8 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-6man-enhanced-vpn-vtn-id-05
+id: draft-ietf-6man-enhanced-vpn-vtn-id-06
 title:
-- content: Carrying Virtual Transport Network (VTN) Information in IPv6 Extension
+- content: Carrying Network Resource Partition (NRP) Information in IPv6 Extension
     Header
   language:
   - en
@@ -10,11 +10,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-6man-enhanced-vpn-vtn-id-05
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-6man-enhanced-vpn-vtn-id-06
   type: src
 type: standard
 docid:
-- id: draft-ietf-6man-enhanced-vpn-vtn-id-05
+- id: draft-ietf-6man-enhanced-vpn-vtn-id-06
   type: Internet-Draft
   primary: true
 - id: I-D.ietf-6man-enhanced-vpn-vtn-id
@@ -23,7 +23,7 @@ docid:
 docnumber: I-D.ietf-6man-enhanced-vpn-vtn-id
 date:
 - type: published
-  value: '2023-07-06'
+  value: '2024-02-20'
 contributor:
 - person:
     name:
@@ -169,8 +169,8 @@ contributor:
   role:
   - type: author
 version:
-- draft: '05'
-revdate: '2023-07-06'
+- draft: '06'
+revdate: '2024-02-20'
 language:
 - en
 script:
@@ -180,18 +180,17 @@ abstract:
     separated connectivity over a common network infrastructure. With the introduction
     and evolvement of 5G and also in some existing network scenarios, some customers
     may require network connectivity services with advanced features comparing to
-    conventional VPN services. Such kind of network service is called enhanced VPNs
-    (VPN+). VPN+ can be used, for example, to deliver IETF network slice services.
-    A VTN is a virtual underlay network that is associated with a network topology,
-    and is allocated with a set of dedicated or shared resources from the underlay
-    physical network. VPN+ services can be delivered by mapping one or a group of
-    overlay VPNs to the appropriate VTNs as the virtual underlay. For packet forwarding
-    in a specific VTN, some fields in the data packet are used to identify the VTN
-    the packet belongs to, so that VTN-specific processing can be performed on each
-    node along a VTN-specific path. This document specifies a new IPv6 Hop-by-Hop
-    option to carry the VTN related information in data packets, which could be used
-    to identify the VTN-specific processing to be performed on the packets by each
-    network node along a VTN-specific path.</p>"
+    conventional VPN services. Such kind of network service is called enhanced VPNs.
+    Enhanced VPNs can be used, for example, to deliver network slice services. A Network
+    Resource Partition (NRP) is a subset of the network resources and associated policies
+    on each of a connected set of links in the underlay network. An NRP could be used
+    as the underlay to support one or a group of enhanced VPN services. For packet
+    forwarding in a specific NRP, some fields in the data packet are used to identify
+    the NRP the packet belongs to, so that NRP-specific processing can be performed
+    on each node along a path in the NRP. This document specifies a new IPv6 Hop-by-Hop
+    option to carry the NRP related information in data packets, which could be used
+    to identify the NRP-specific processing to be performed on the packets by each
+    network node along a network path in the NRP.</p>"
   language:
   - en
   script:
@@ -200,23 +199,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-6man-enhanced-vpn-vtn-id-01
+    id: draft-ietf-6man-enhanced-vpn-vtn-id-05
     docid:
-    - id: draft-ietf-6man-enhanced-vpn-vtn-id-01
+    - id: draft-ietf-6man-enhanced-vpn-vtn-id-05
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-6man-enhanced-vpn-vtn-id-01
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-6man-enhanced-vpn-vtn-id-06
-    docid:
-    - id: draft-ietf-6man-enhanced-vpn-vtn-id-06
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-6man-enhanced-vpn-vtn-id-06
+      content: draft-ietf-6man-enhanced-vpn-vtn-id-05
       format: text/plain
 series:
 - type: main
@@ -227,7 +216,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-6man-enhanced-vpn-vtn-id-05
+  number: draft-ietf-6man-enhanced-vpn-vtn-id-06
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
