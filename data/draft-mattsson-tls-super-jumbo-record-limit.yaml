@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-mattsson-tls-super-jumbo-record-limit
 title:
-- content: Super Jumbo Record Size Limit Extension for TLS 1.3
+- content: Large Record Sizes for TLS and DTLS
   language:
   - en
   script:
@@ -13,10 +13,12 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: <p>An extension "super_jumbo_record_size_limit" to (Datagram) Transport
-    Layer Security (TLS) is defined that allows endpoints to negotiate a 2^16 bytes
-    maximum size of protected records. This is larger than the default limit of around
-    2^14 bytes.</p>
+- content: "<p>RFC 8449 defines a record size limit extension for TLS and DTLS allowing
+    endpoints to negotiate a record size limit smaller than the protocol-defined maximum
+    record size, which is around 2^14 bytes. This document specifies a TLS flag extension
+    to be used in combination with the record size limit extension allowing endpoints
+    to use a record size limit larger than the protocol-defined maximum record size,
+    but not more than about 2^16 bytes.</p>"
   language:
   - en
   script:
@@ -32,6 +34,16 @@ relation:
       primary: true
     formattedref:
       content: draft-mattsson-tls-super-jumbo-record-limit-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-mattsson-tls-super-jumbo-record-limit-01
+    docid:
+    - id: draft-mattsson-tls-super-jumbo-record-limit-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-mattsson-tls-super-jumbo-record-limit-01
       format: text/plain
 ext:
   schema-version: v1.0.1
