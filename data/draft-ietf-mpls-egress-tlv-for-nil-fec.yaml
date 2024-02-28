@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-ietf-mpls-egress-tlv-for-nil-fec
 title:
-- content: Egress TLV for Nil FEC in Label Switched Path Ping and Traceroute Mechanisms
+- content: Egress Validation in Label Switched Path Ping and Traceroute Mechanisms
   language:
   - en
   script:
@@ -13,17 +13,18 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>MPLS ping and traceroute mechanism as described in RFC 8029 and related
-    extensions for SR as defined in RFC 8287 is very useful to validate the control
-    plane and data plane synchronization. In some environments, only some intermediate
-    or transit nodes may have been upgraded to support these validation procedures.
-    A simple MPLS ping and traceroute mechanism allows traversing any path without
-    validating the control plane state. RFC 8029 supports this mechanism with Nil
-    FEC. The procedures described in RFC 8029 mostly apply when the Nil FEC is used
-    as an intermediate FEC in the label stack. When all labels in the label stack
-    are represented using Nil FEC, it poses some challenges. This document introduces
-    the new TLV as an extension to exisiting Nil FEC. It describes MPLS ping and traceroute
-    procedures using Nil FEC with this extension to overcome these challenges.</p>"
+- content: "<p>The MPLS ping and traceroute mechanism as described in RFC 8029 and
+    related extensions for Segment Routing(SR) as defined in RFC 8287 is very useful
+    to validate the control plane and data plane synchronization. In some environments,
+    only some intermediate or transit nodes may have been upgraded to support these
+    validation procedures. A simple MPLS ping and traceroute mechanism allows traversing
+    any path without validating the control plane state. RFC 8029 supports this mechanism
+    with Nil Forwarding Equivalence Class (FEC). The procedures described in RFC 8029
+    mostly apply when the Nil FEC is used as an intermediate FEC in the label stack.
+    When all labels in the label stack are represented using Nil FEC, it poses some
+    challenges. This document introduces a new Type-Length-Value (TLV) as an extension
+    to exisiting Nil FEC. It describes MPLS ping and traceroute procedures using Nil
+    FEC with this extension to overcome these challenges.</p>"
   language:
   - en
   script:
@@ -139,6 +140,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-mpls-egress-tlv-for-nil-fec-10
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-mpls-egress-tlv-for-nil-fec-11
+    docid:
+    - id: draft-ietf-mpls-egress-tlv-for-nil-fec-11
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-mpls-egress-tlv-for-nil-fec-11
       format: text/plain
 ext:
   schema-version: v1.0.1
