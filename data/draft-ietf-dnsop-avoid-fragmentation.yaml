@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-ietf-dnsop-avoid-fragmentation
 title:
-- content: IP Fragmentation Avoidance in DNS
+- content: IP Fragmentation Avoidance in DNS over UDP
   language:
   - en
   script:
@@ -14,12 +14,12 @@ docid:
   primary: true
 abstract:
 - content: "<p>The widely deployed EDNS0 feature in the DNS enables a DNS receiver
-    to indicate its received UDP message size capacity which supports the sending
-    of large UDP responses by a DNS server. Large DNS/UDP responses are fragmented,
-    and IP fragmentation has exposed weaknesses in application protocols. It is possible
-    to avoid IP fragmentation in DNS by limiting response size where possible, and
-    signaling the need to upgrade from UDP to TCP transport where necessary. This
-    document specifies techniques to avoid IP fragmentation in DNS.</p>"
+    to indicate its received UDP message size capacity, which supports the sending
+    of large UDP responses by a DNS server. Large DNS/UDP messages are more likely
+    to be fragmented and IP fragmentation has exposed weaknesses in application protocols.
+    It is possible to avoid IP fragmentation in DNS by limiting the response size
+    where possible, and signaling the need to upgrade from UDP to TCP transport where
+    necessary. This document specifies techniques to avoid IP fragmentation in DNS.</p>"
   language:
   - en
   script:
@@ -195,6 +195,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-dnsop-avoid-fragmentation-16
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-dnsop-avoid-fragmentation-17
+    docid:
+    - id: draft-ietf-dnsop-avoid-fragmentation-17
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-dnsop-avoid-fragmentation-17
       format: text/plain
 ext:
   schema-version: v1.0.1
