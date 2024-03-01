@@ -13,18 +13,19 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>A client requesting a certificate from a Certification Authority (CA)
-    may wish to offer believable claims about the protections afforded to the corresponding
-    private key, such as whether the private key resides on a hardware security module
-    or the protection capabilities provided by the hardware. This document describes
-    how to encode Evidence produced by an Attester for inclusion in Certificate Signing
-    Requests (CSRs), and any certificates necessary for validating it. Including Evidence
-    along with a CSR can help to improve the assessment of the security posture for
-    the private key, and the trustworthiness properties of the submitted key to the
-    requested certificate profile. These Evidence Claims can include information about
-    the hardware component's manufacturer, the version of installed or running firmware,
-    the version of software installed or running in layers above the firmware, or
-    the presence of hardware components providing specific protection capabilities
+- content: "<p>A PKI end entity requesting a certificate from a Certification Authority
+    (CA) may wish to offer believable claims about the protections afforded to the
+    corresponding private key, such as whether the private key resides on a hardware
+    security module or the protection capabilities provided by the hardware. This
+    document defines a new PKCS#10 attribute attr-evidence and CRMF extension ext-evidence
+    that allows placing any Evidence data, in any pre-existing format, along with
+    any certificates needed to validate it, into a PKCS#10 or CRMF CSR. Including
+    Evidence along with a CSR can help to improve the assessment of the security posture
+    for the private key, and the trustworthiness properties of the submitted key to
+    the requested certificate profile. These Evidence Claims can include information
+    about the hardware component's manufacturer, the version of installed or running
+    firmware, the version of software installed or running in layers above the firmware,
+    or the presence of hardware components providing specific protection capabilities
     or shielded locations (e.g., to protect keys).</p>"
   language:
   - en
@@ -91,6 +92,36 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-lamps-csr-attestation-05
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-lamps-csr-attestation-06
+    docid:
+    - id: draft-ietf-lamps-csr-attestation-06
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-lamps-csr-attestation-06
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-lamps-csr-attestation-07
+    docid:
+    - id: draft-ietf-lamps-csr-attestation-07
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-lamps-csr-attestation-07
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-lamps-csr-attestation-08
+    docid:
+    - id: draft-ietf-lamps-csr-attestation-08
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-lamps-csr-attestation-08
       format: text/plain
 ext:
   schema-version: v1.0.1

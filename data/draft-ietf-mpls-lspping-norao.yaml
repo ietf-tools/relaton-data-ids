@@ -15,17 +15,17 @@ docid:
 abstract:
 - content: <p>The MPLS echo request and MPLS echo response messages, defined in RFC
     8029 "Detecting Multiprotocol Label Switched (MPLS) Data-Plane Failures" (usually
-    referred to as LSP ping messages), are encapsulated in IP headers that include
-    a Router Alert Option (RAO). The rationale for using an RAO as the exception mechanism
-    is questionable. Furthermore, RFC 6398 identifies security vulnerabilities associated
+    referred to as LSP ping messages), are encapsulated in IP whose headers include
+    a Router Alert Option (RAO). In actual deployments, the RAO was neither required
+    nor used. Furthermore, RFC 6398 identifies security vulnerabilities associated
     with the RAO in non-controlled environments, e.g., the case of using the MPLS
     echo request/reply as inter-area Operations, Administration, and Maintenance (OAM),
     and recommends against its use outside of controlled environments. Therefore,
     this document retires the RAO for MPLS OAM and updates RFC 8029 to remove the
     RAO from LSP ping message encapsulations. Furthermore, this document explains
-    why RFC 7506 has been reclassified as Historic. This document also recommends
-    the use of an IPv6 loopback address (::1/128) and not the use of an IPv4 loopback
-    address mapped to IPv6.</p>
+    why RFC 7506 has been reclassified as Historic. Also, the use of an IPv6 loopback
+    address (::1/128) as the IPv6 destination address for an MPLS echo request message
+    is RECOMMENDED.</p>
   language:
   - en
   script:
@@ -111,6 +111,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-mpls-lspping-norao-07
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-mpls-lspping-norao-08
+    docid:
+    - id: draft-ietf-mpls-lspping-norao-08
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-mpls-lspping-norao-08
       format: text/plain
 ext:
   schema-version: v1.0.1
