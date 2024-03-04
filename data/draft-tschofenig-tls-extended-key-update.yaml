@@ -15,17 +15,17 @@ docid:
 abstract:
 - content: "<p>The Transport Layer Security (TLS) 1.3 specification offers a dedicated
     message to update cryptographic keys during the lifetime of an ongoing session.
-    It allows the sender to perform an update of the key and initialization vector
-    and may trigger the recipient, via the request_update field, to transmit a key
-    update message in the reverse direction. In environments where sessions are long-lived,
-    such as industrial IoT or telecommunication networks, this key update along is
-    insufficient since perfect forward secrecy is not offered via this mechanism.
+    The traffic secret and the initialization vector are updated directionally but
+    the sender may trigger the recipient, via the request_update field, to transmit
+    a key update message in the reverse direction. In environments where sessions
+    are long-lived, such as industrial IoT or telecommunication networks, this key
+    update alone is insufficient since forward secrecy is not offered via this mechanism.
     Earlier versions of TLS allowed the two peers to perform renegotiation, which
     is a handshake that establishes new cryptographic parameters for an existing session.
     When a security vulnerability with the renegotiation mechanism was discovered,
-    RFC 5746 was standardized as a fix. Renegotiation has, however, been removed from
-    TLS 1.3. This specification defines an extended key update message that supports
-    perfect forward secrecy using a Diffie-Hellman key exchange.</p>"
+    RFC 5746 was developed as a fix. Renegotiation has, however, been removed from
+    version 1.3 leaving a gap in the feature set of TLS. This specification defines
+    an extended key update that supports forward secrecy.</p>"
   language:
   - en
   script:
@@ -41,6 +41,16 @@ relation:
       primary: true
     formattedref:
       content: draft-tschofenig-tls-extended-key-update-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-tschofenig-tls-extended-key-update-01
+    docid:
+    - id: draft-tschofenig-tls-extended-key-update-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-tschofenig-tls-extended-key-update-01
       format: text/plain
 ext:
   schema-version: v1.0.1
