@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-ietf-spring-sr-for-enhanced-vpn
 title:
-- content: Segment Routing based Virtual Transport Network (VTN) for Enhanced VPN
+- content: Segment Routing based Network Resource Partition (NRP) for Enhanced VPN
   language:
   - en
   script:
@@ -13,20 +13,24 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: <p>Segment Routing (SR) leverages the source routing paradigm. A node steers
-    a packet through an ordered list of instructions, called "segments". A segment
-    can represent topological or service based instructions. A segment can further
-    be associated with a set of network resources used for executing the instruction.
-    Such a segment is called resource-aware segment. A Virtual Transport Network (VTN)
-    is a virtual underlay network which is associated with a network topology, and
-    is allocated with a set of dedicated or shared resources from the underlay physical
-    network. Resource-aware Segment Identifiers (SIDs) may be used to build SR paths
-    with a set of reserved network resources. In addition, a group of resource-aware
-    SIDs may be used to build SR based virtual underlay networks, which provide customized
-    network topology and resource attributes required by one or a group of customers
-    and/or services. Such virtual underlay networks are the SR instantiations of VTNs.
-    This document describes a suggested approach to build SR based VTNs using resource-aware
-    SIDs. The SR based VTNs can be used to deliver RFC XXXX network slices in SR networks.</p>
+- content: <p>Enhanced VPNs aim to deliver VPN services with enhanced characteristics,
+    such as guaranteed resources, latency, jitter, etc., so as to support customers
+    requirements on connectivity services with these enhanced characteristics. Enhanced
+    VPN requires integration between the overlay VPN connectivity and the characteristics
+    provided by the underlay network. A Network Resource Partition (NRP) is a subset
+    of the network resources and associated policies on each of a connected set of
+    links in the underlay network. An NRP could be used as the underlay to support
+    one or a group of enhanced VPN services. Segment Routing (SR) leverages the source
+    routing paradigm. A node steers a packet through an ordered list of instructions,
+    called "segments". A segment can represent topological or service based instructions.
+    A segment can further be associated with a set of network resources used for executing
+    the instruction. Such a segment is called resource-aware segment. Resource-aware
+    Segment Identifiers (SIDs) may be used to build SR paths with a set of reserved
+    network resources. In addition, a group of resource-aware SIDs may be used to
+    build SR based NRPs, which provide customized network topology and resource attributes
+    required by one or a group of enhanced VPN services. This document describes an
+    approach to build SR based NRPs using resource-aware SIDs. The SR based NRP can
+    be used to deliver enhanced VPN services in SR networks.</p>
   language:
   - en
   script:
@@ -102,6 +106,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-spring-sr-for-enhanced-vpn-06
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-spring-sr-for-enhanced-vpn-07
+    docid:
+    - id: draft-ietf-spring-sr-for-enhanced-vpn-07
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-spring-sr-for-enhanced-vpn-07
       format: text/plain
 ext:
   schema-version: v1.0.1
