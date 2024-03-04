@@ -14,14 +14,19 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>Attestation is the process by which an entity produces evidence about
-    itself that another party can use to evaluate the trustworthiness of that entity.
-    In use cases that require the use of remote attestation, such as confidential
-    computing or device onboarding, an attester has to convey evidence or attestation
-    results to a relying party. This information exchange may happen at different
-    layers in the protocol stack. This specification provides a generic way of passing
-    evidence and attestation results in the TLS handshake. Functionality-wise this
-    is accomplished with the help of key attestation.</p>"
+- content: "<p>The TLS handshake protocol allows authentication of one or both peers
+    using static, long-term credentials. In some cases, it is also desirable to ensure
+    that the peer runtime environment is in a secure state. Such an assurance can
+    be achieved using attestation which is a process by which an entity produces evidence
+    about itself that another party can use to appraise whether that entity is found
+    in a secure state. This document describes a series of protocol extensions to
+    the TLS 1.3 handshake that enables the binding of the TLS authentication key to
+    a remote attestation session. This enables an entity capable of producing attestation
+    evidence, such as a confidential workload running in a Trusted Execution Environment
+    (TEE), or an IoT device that is trying to authenticate itself to a network access
+    point, to present a more comprehensive set of security metrics to its peer. These
+    extensions have been designed to allow the peers to use any attestation technology,
+    in any remote attestation topology, and mutually.</p>"
   language:
   - en
   script:
@@ -77,6 +82,16 @@ relation:
       primary: true
     formattedref:
       content: draft-fossati-tls-attestation-04
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-fossati-tls-attestation-05
+    docid:
+    - id: draft-fossati-tls-attestation-05
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-fossati-tls-attestation-05
       format: text/plain
 ext:
   schema-version: v1.0.1
