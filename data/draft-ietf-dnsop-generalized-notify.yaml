@@ -13,24 +13,16 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: '<p>Changes in CDS/CDNSKEY, CSYNC, and other records related to delegation
-    maintenance are usually detected through scheduled scans run by the consuming
-    party (e.g. top-level domain registry), incurring an uncomfortable trade-off between
-    scanning cost and update latency. A similar problem exists when scheduling zone
-    transfers, and has been solved using the well-known DNS NOTIFY mechanism ([RFC1996]).
-    This mechanism enables a primary nameserver to proactively inform secondaries
-    about zone changes, allowing the secondary to initiate an ad-hoc transfer independently
-    of when the next SOA check would be due. This document extends the use of DNS
-    NOTIFY beyond conventional zone transfer hints, bringing the benefits of ad-hoc
-    notifications to DNS delegation maintenance in general. Use cases include DNSSEC
-    key rollovers hints via NOTIFY(CDS) and NOTIFY(DNSKEY) messages, and quicker changes
-    to a delegation''s NS record set via NOTIFY(CSYNC) messages. Furthermore, this
-    document proposes a new DNS record type, tentatively referred to as "NOTIFY record",
-    which is used to publish details about where generalized notifications should
-    be sent. TO BE REMOVED: This document is being collaborated on in Github at: https://github.com/peterthomassen/draft-ietf-dnsop-generalized-notify
+- content: "<p>This document extends the use of DNS NOTIFY ([RFC1996] beyond conventional
+    zone transfer hints, bringing the benefits of ad-hoc notifications to DNS delegation
+    maintenance in general. Use cases include DNSSEC key rollovers hints, and quicker
+    changes to a delegation's NS record set. To enable this functionality, a method
+    for discovering the receiver endpoint for such notification message is introduced,
+    via the new NOTIFY record type. TO BE REMOVED: This document is being collaborated
+    on in Github at: https://github.com/peterthomassen/draft-ietf-dnsop-generalized-notify
     (https://github.com/peterthomassen/draft-ietf-dnsop-generalized- notify). The
     most recent working version of the document, open issues, etc. should all be available
-    there. The authors (gratefully) accept pull requests.</p>'
+    there. The authors (gratefully) accept pull requests.</p>"
   language:
   - en
   script:
@@ -46,6 +38,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-dnsop-generalized-notify-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-dnsop-generalized-notify-01
+    docid:
+    - id: draft-ietf-dnsop-generalized-notify-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-dnsop-generalized-notify-01
       format: text/plain
 ext:
   schema-version: v1.0.1

@@ -18,9 +18,12 @@ abstract:
     (RRset) during iterative resolution. When following a referral response from an
     authoritative server to a child zone, DNS resolvers should explicitly query the
     authoritative NS RRset at the apex of the child zone and cache this in preference
-    to the NS RRset on the parent side of the zone cut. Resolvers should also periodically
-    revalidate the child delegation by re-quering the parent zone at the expiration
-    of the TTL of the parent side NS RRset.</p>"
+    to the NS RRset on the parent side of the zone cut. The (A and AAAA) address RRsets
+    in the additional section from referral responses and authoritative NS answers
+    for the names of the NS RRset, should similarly be requeried and used to replace
+    the entries with the lower trustworthiness ranking in cache. Resolvers should
+    also periodically revalidate the child delegation by re-quering the parent zone
+    at the expiration of the TTL of the parent side NS RRset.</p>"
   language:
   - en
   script:
@@ -76,6 +79,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-dnsop-ns-revalidation-04
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-dnsop-ns-revalidation-05
+    docid:
+    - id: draft-ietf-dnsop-ns-revalidation-05
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-dnsop-ns-revalidation-05
       format: text/plain
 ext:
   schema-version: v1.0.1

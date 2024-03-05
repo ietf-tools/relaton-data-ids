@@ -14,25 +14,26 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>BIER provides stateless multicast in BIER domains using bitstrings
+- content: '<p>BIER provides stateless multicast in BIER domains using bitstrings
     to indicate receivers. BIER-TE extends BIER with tree engineering capabilities.
-    Both suffer from scalability problems in large networks as bitsrings are of limited
+    Both suffer from scalability problems in large networks as bitstrings are of limited
     size so the BIER domains need to be subdivided using set identifiers so that possibly
     many packets need to be sent to reach all receivers of a multicast group within
     a subdomain. This problem can be mitigated by encoding explicit multicast trees
     in packet headers with bitstrings that have only node-local significance. A drawback
     of this method is that any hop on the path needs to be encoded so that long paths
     consume lots of header space. This document presents the idea of Segment Routed
-    Recursive Tree Structures (RTS), a unifying approach to use either bitstrings
-    with local node-local significance or SIDs with local or domain-wide significance
-    to encode multicast trees in packet headers. RTS, like RBS is intended to expand
-    the applicability of deployment for stateless multicast replication beyond what
-    BIER and BIER-TE support and expect: larger networks, less operational complexity,
-    and utilization of more modern forwarding planes as those expected to be possible
-    when BIER was designed (ca. 2010). This document only specifies the forwarding
-    plane but discusses possible architectural options, which are primarily determined
-    through the future definition/mapping to encapsulation headers and controller-plane
-    functions.</p>"
+    Recursive Tree Structures (RTS), a unifying approach in which a packet header
+    representing a multicast distribution tree is constructed from a tree structure
+    of vertices ("so called Recursive Units") that support replication to their next-hop
+    neighbors either via local bitstrings or via sequence of next-hop neighbor identifiers
+    called SIDs. RTS, like RBS is intended to expand the applicability of deployment
+    for stateless multicast replication beyond what BIER and BIER-TE support and expect:
+    larger networks, less operational complexity, and utilization of more modern forwarding
+    planes as those expected to be possible when BIER was designed (ca. 2010). This
+    document only specifies the forwarding plane but discusses possible architectural
+    options, which are primarily determined through the future definition/mapping
+    to encapsulation headers and controller-plane functions.</p>'
   language:
   - en
   script:
@@ -48,6 +49,16 @@ relation:
       primary: true
     formattedref:
       content: draft-eckert-pim-rts-forwarding-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-eckert-pim-rts-forwarding-01
+    docid:
+    - id: draft-eckert-pim-rts-forwarding-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-eckert-pim-rts-forwarding-01
       format: text/plain
 ext:
   schema-version: v1.0.1
