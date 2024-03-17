@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-ietf-idr-bgp-fwd-rr
 title:
-- content: BGP Route Reflector in Forwarding Path
+- content: BGP Route Reflector with Next Hop Self
   language:
   - en
   script:
@@ -13,13 +13,16 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>The procedures in BGP Route Reflection (RR) spec [RFC4456] primarily
+- content: "<p>The procedures in BGP Route Reflection (RR) spec RFC4456 primarily
     deal with scenarios where the RR is reflecting BGP routes with next hop unchanged.
-    These procedures can sometimes result in traffic forwarding loops in deployments
-    where the RR is in forwarding path, because of reflecting BGP routes with next
-    hop set to self. This document specifies approaches to minimize possiblity of
-    such traffic forwarding loops. One of those approaches updates path selection
-    procedures specified in Section 9 of BGP RR. [RFC4456]</p>"
+    In some deployments like Inter-AS Option C (Section 10, RFC4364), the ABRs may
+    perform RR functionality with nexthop set to self. If adequate precautions are
+    not taken, the RFC4456 procedures can result in traffic forwarding loop in such
+    deployments. This document illustrates one such looping scenario, and specifies
+    approaches to minimize possiblity of traffic forwarding loop in such deployments.
+    An example with Inter-AS Option C (Section 10, RFC4364) deployment is used, where
+    RR with next hop self is used at redundant ABRs when they re-advertise BGP transport
+    family routes between multiple IGP domains.</p>"
   language:
   - en
   script:
@@ -45,6 +48,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-idr-bgp-fwd-rr-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-idr-bgp-fwd-rr-02
+    docid:
+    - id: draft-ietf-idr-bgp-fwd-rr-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-idr-bgp-fwd-rr-02
       format: text/plain
 ext:
   schema-version: v1.0.1
