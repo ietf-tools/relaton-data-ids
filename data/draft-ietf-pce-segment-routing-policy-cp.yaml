@@ -2,7 +2,8 @@
 schema-version: v1.2.3
 id: draft-ietf-pce-segment-routing-policy-cp
 title:
-- content: PCEP Extensions for SR Policy Candidate Paths
+- content: Path Computation Element Communication Protocol (PCEP) Extensions for Segment
+    Routing (SR) Policy Candidate Paths
   language:
   - en
   script:
@@ -13,11 +14,15 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>A Segment Routing (SR) Policy is a non-empty set of SR Candidate Paths,
-    which share the same &lt;headend, color, endpoint&gt; tuple. SR Policy is modeled
-    in PCEP as an Association of one or more SR Candidate Paths. PCEP extensions are
-    defined to signal additional attributes of an SR Policy. The mechanism is applicable
-    to all SR forwarding planes (MPLS, SRv6, etc.).</p>"
+- content: "<p>Segment Routing (SR) allows a node to steer a packet flow along any
+    path. SR Policy is an ordered list of segments (i.e., instructions) that represent
+    a source-routed policy. Packet flows are steered into an SR Policy on a node where
+    it is instantiated called a headend node. An SR Policy is made of one or more
+    candidate paths. This document specifies Path Computation Element Communication
+    Protocol (PCEP) extension to associate candidate paths of the SR Policy. Additionally,
+    this document updates [RFC8231] to allow stateful bringup of an SR LSP, without
+    using PCReq/PCRep messages. This document is applicable to both Segment Routing
+    over MPLS and to Segment Routing over IPv6 (SRv6).</p>"
   language:
   - en
   script:
@@ -173,6 +178,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-pce-segment-routing-policy-cp-14
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-pce-segment-routing-policy-cp-15
+    docid:
+    - id: draft-ietf-pce-segment-routing-policy-cp-15
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-pce-segment-routing-policy-cp-15
       format: text/plain
 ext:
   schema-version: v1.0.1
