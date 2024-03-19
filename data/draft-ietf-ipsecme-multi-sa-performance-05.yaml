@@ -1,0 +1,188 @@
+---
+schema-version: v1.2.3
+id: draft-ietf-ipsecme-multi-sa-performance-05
+title:
+- content: IKEv2 support for per-resource Child SAs
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-ipsecme-multi-sa-performance-05
+  type: src
+type: standard
+docid:
+- id: draft-ietf-ipsecme-multi-sa-performance-05
+  type: Internet-Draft
+  primary: true
+- id: I-D.ietf-ipsecme-multi-sa-performance
+  type: IETF
+  scope: anchor
+docnumber: I-D.ietf-ipsecme-multi-sa-performance
+date:
+- type: published
+  value: '2024-03-18'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Antony
+          language:
+          - en
+        - language:
+          - en
+          initial: A
+        formatted_initials:
+          content: A.
+          language:
+          - en
+      surname:
+        content: Antony
+        language:
+        - en
+      completename:
+        content: Antony Antony
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: secunet Security Networks AG
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Tobias
+          language:
+          - en
+        - language:
+          - en
+          initial: T
+        formatted_initials:
+          content: T.
+          language:
+          - en
+      surname:
+        content: Brunner
+        language:
+        - en
+      completename:
+        content: Tobias Brunner
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: codelabs GmbH
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Steffen
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Klassert
+        language:
+        - en
+      completename:
+        content: Steffen Klassert
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: secunet Security Networks AG
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Paul
+          language:
+          - en
+        - language:
+          - en
+          initial: P
+        formatted_initials:
+          content: P.
+          language:
+          - en
+      surname:
+        content: Wouters
+        language:
+        - en
+      completename:
+        content: Paul Wouters
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Aiven
+  role:
+  - type: author
+version:
+- draft: '05'
+revdate: '2024-03-18'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>This document defines two Notify Message Type Payloads for the Internet
+    Key Exchange Protocol Version 2 (IKEv2) to support the negotiation of multiple
+    Child SAs with the same Traffic Selectors used on different resources, such as
+    CPUs, to increase bandwidth of IPsec traffic between peers. The SA_RESOURCE_INFO
+    notification is used to convey information that the negotiated Child SA and subsequent
+    new Child SAs with the same Traffic Selectors are a logical group of Child SAs
+    where most or all of the Child SAs are bound to a specific resource, such as a
+    specific CPU. The TS_MAX_QUEUE notify conveys that the peer is unwilling to create
+    more additional Child SAs for this particular negotiated Traffic Selector combination.
+    Using multiple Child SAs with the same Traffic Selectors has the benefit that
+    each resource holding the Child SA has its own Sequence Number Counter, ensuring
+    that CPUs don't have to synchronize their crypto state or disable their packet
+    replay protection.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-ietf-ipsecme-multi-sa-performance-04
+    docid:
+    - id: draft-ietf-ipsecme-multi-sa-performance-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-ipsecme-multi-sa-performance-04
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-ietf-ipsecme-multi-sa-performance-05
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
