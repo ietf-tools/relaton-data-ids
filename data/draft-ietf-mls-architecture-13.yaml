@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-mls-architecture-01
+id: draft-ietf-mls-architecture-13
 title:
 - content: The Messaging Layer Security (MLS) Architecture
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-mls-architecture-01
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-mls-architecture-13
   type: src
 type: standard
 docid:
-- id: draft-ietf-mls-architecture-01
+- id: draft-ietf-mls-architecture-13
   type: Internet-Draft
   primary: true
 - id: I-D.ietf-mls-architecture
@@ -22,36 +22,8 @@ docid:
 docnumber: I-D.ietf-mls-architecture
 date:
 - type: published
-  value: '2018-10-22'
+  value: '2024-03-22'
 contributor:
-- person:
-    name:
-      given:
-        forename:
-        - content: Emad
-          language:
-          - en
-        - language:
-          - en
-          initial: E
-        formatted_initials:
-          content: E.
-          language:
-          - en
-      surname:
-        content: Omara
-        language:
-        - en
-      completename:
-        content: Emad Omara
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Google
-  role:
-  - type: author
 - person:
     name:
       given:
@@ -77,7 +49,7 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: INRIA
+        - content: Inria & Mozilla
   role:
   - type: author
 - person:
@@ -112,6 +84,30 @@ contributor:
     name:
       given:
         forename:
+        - content: Emad
+          language:
+          - en
+        - language:
+          - en
+          initial: E
+        formatted_initials:
+          content: E.
+          language:
+          - en
+      surname:
+        content: Omara
+        language:
+        - en
+      completename:
+        content: Emad Omara
+        language:
+        - en
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
         - content: Srinivas
           language:
           - en
@@ -130,38 +126,6 @@ contributor:
         content: Srinivas Inguva
         language:
         - en
-    affiliation:
-    - organization:
-        name:
-        - content: Twitter
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Albert
-          language:
-          - en
-        - language:
-          - en
-          initial: A
-        formatted_initials:
-          content: A.
-          language:
-          - en
-      surname:
-        content: Kwon
-        language:
-        - en
-      completename:
-        content: Albert Kwon
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: MIT
   role:
   - type: author
 - person:
@@ -193,17 +157,27 @@ contributor:
   role:
   - type: author
 version:
-- draft: '01'
-revdate: '2018-10-22'
+- draft: '13'
+revdate: '2024-03-22'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document describes the architecture and requirements for the Messaging
-    Layer Security (MLS) protocol. MLS provides a security layer for group messaging
-    applications with from two to a large number of clients. It is meant to protect
-    against eavesdropping, tampering, and message forgery.</p>"
+- content: "<p>The Messaging Layer Security (MLS) protocol (I-D.ietf-mls-protocol)
+    provides a Group Key Agreement protocol for messaging applications. MLS is meant
+    to protect against eavesdropping, tampering, message forgery, and provide Forward
+    Secrecy (FS) and Post-Compromise Security (PCS). This document describes the architecture
+    for using MLS in a general secure group messaging infrastructure and defines the
+    security goals for MLS. It provides guidance on building a group messaging system
+    and discusses security and privacy tradeoffs offered by multiple security mechanisms
+    that are part of the MLS protocol (e.g., frequency of public encryption key rotation).
+    The document also provides guidance for parts of the infrastructure that are not
+    standardized by MLS and are instead left to the application. While the recommendations
+    of this document are not mandatory to follow in order to interoperate at the protocol
+    level, they affect the overall security guarantees that are achieved by a messaging
+    application. This is especially true in the case of active adversaries that are
+    able to compromise clients, the delivery service, or the authentication service.</p>"
   language:
   - en
   script:
@@ -212,23 +186,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-mls-architecture-00
+    id: draft-ietf-mls-architecture-02
     docid:
-    - id: draft-ietf-mls-architecture-00
+    - id: draft-ietf-mls-architecture-02
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-mls-architecture-00
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-mls-architecture-13
-    docid:
-    - id: draft-ietf-mls-architecture-13
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-mls-architecture-13
+      content: draft-ietf-mls-architecture-02
       format: text/plain
 series:
 - type: main
@@ -239,7 +203,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-mls-architecture-01
+  number: draft-ietf-mls-architecture-13
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
