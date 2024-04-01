@@ -1,90 +1,177 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-privacypass-rate-limit-tokens-04
+id: draft-ietf-mboned-multicast-telemetry-09
 title:
-- content: Rate-Limited Token Issuance Protocol
+- content: Multicast On-path Telemetry using IOAM
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-privacypass-rate-limit-tokens-04
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-mboned-multicast-telemetry-09
   type: src
 type: standard
 docid:
-- id: draft-ietf-privacypass-rate-limit-tokens-04
+- id: draft-ietf-mboned-multicast-telemetry-09
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-privacypass-rate-limit-tokens
+- id: I-D.ietf-mboned-multicast-telemetry
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-privacypass-rate-limit-tokens
+docnumber: I-D.ietf-mboned-multicast-telemetry
 date:
 - type: published
-  value: '2024-03-04'
+  value: '2024-04-01'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Scott
+        - content: Haoyu
           language:
           - en
+        - language:
+          - en
+          initial: H
+        formatted_initials:
+          content: H.
+          language:
+          - en
+      surname:
+        content: Song
+        language:
+        - en
+      completename:
+        content: Haoyu Song
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Futurewei Technologies
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Mike
+          language:
+          - en
+        - language:
+          - en
+          initial: M
+        formatted_initials:
+          content: M.
+          language:
+          - en
+      surname:
+        content: McBride
+        language:
+        - en
+      completename:
+        content: Mike McBride
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Futurewei Technologies
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Greg
+          language:
+          - en
+        - language:
+          - en
+          initial: G
+        formatted_initials:
+          content: G.
+          language:
+          - en
+      surname:
+        content: Mirsky
+        language:
+        - en
+      completename:
+        content: Greg Mirsky
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Ericsson
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Gyan
+          language:
+          - en
+        - language:
+          - en
+          initial: G
         - language:
           - en
           initial: S
         formatted_initials:
-          content: S.
+          content: G. S.
           language:
           - en
       surname:
-        content: Hendrickson
+        content: Mishra
         language:
         - en
       completename:
-        content: Scott Hendrickson
+        content: Gyan Mishra
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Google LLC
+        - content: Verizon Inc.
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Jana
+        - content: Hitoshi
           language:
           - en
         - language:
           - en
-          initial: J
+          initial: H
         formatted_initials:
-          content: J.
+          content: H.
           language:
           - en
       surname:
-        content: Iyengar
+        content: Asaeda
         language:
         - en
       completename:
-        content: Jana Iyengar
+        content: Hitoshi Asaeda
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Fastly
+        - content: National Institute of Information and Communications Technology
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Tommy
+        - content: Tianran
           language:
           - en
         - language:
@@ -95,90 +182,33 @@ contributor:
           language:
           - en
       surname:
-        content: Pauly
+        content: Zhou
         language:
         - en
       completename:
-        content: Tommy Pauly
+        content: Tianran Zhou
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Apple Inc.
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Steven
-          language:
-          - en
-        - language:
-          - en
-          initial: S
-        formatted_initials:
-          content: S.
-          language:
-          - en
-      surname:
-        content: Valdez
-        language:
-        - en
-      completename:
-        content: Steven Valdez
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Google LLC
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Christopher
-          language:
-          - en
-        - language:
-          - en
-          initial: C
-        - language:
-          - en
-          initial: A
-        formatted_initials:
-          content: C. A.
-          language:
-          - en
-      surname:
-        content: Wood
-        language:
-        - en
-      completename:
-        content: Christopher A. Wood
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Cloudflare
+        - content: Huawei Technologies
   role:
   - type: author
 version:
-- draft: '04'
-revdate: '2024-03-04'
+- draft: '09'
+revdate: '2024-04-01'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document specifies a variant of the Privacy Pass issuance protocol
-    that allows for tokens to be rate-limited on a per-origin basis. This enables
-    origins to use tokens for use cases that need to restrict access from anonymous
-    clients.</p>"
+- content: "<p>This document specifies the requirements of on-path telemetry for multicast
+    traffic using In-situ OAM. While In-situ OAM is advantageous for multicast traffic
+    telemetry, some unique challenges are present. This document provides the solutions
+    based on the In- situ OAM trace option and direct export option to support the
+    telemetry data correlation and the multicast tree reconstruction without incurring
+    data redundancy.</p>"
   language:
   - en
   script:
@@ -187,23 +217,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-privacypass-rate-limit-tokens-03
+    id: draft-ietf-mboned-multicast-telemetry-03
     docid:
-    - id: draft-ietf-privacypass-rate-limit-tokens-03
+    - id: draft-ietf-mboned-multicast-telemetry-03
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-privacypass-rate-limit-tokens-03
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-privacypass-rate-limit-tokens-05
-    docid:
-    - id: draft-ietf-privacypass-rate-limit-tokens-05
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-privacypass-rate-limit-tokens-05
+      content: draft-ietf-mboned-multicast-telemetry-03
       format: text/plain
 series:
 - type: main
@@ -214,7 +234,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-privacypass-rate-limit-tokens-04
+  number: draft-ietf-mboned-multicast-telemetry-09
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

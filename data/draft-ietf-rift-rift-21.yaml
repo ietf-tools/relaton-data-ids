@@ -1,90 +1,34 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-privacypass-rate-limit-tokens-04
+id: draft-ietf-rift-rift-21
 title:
-- content: Rate-Limited Token Issuance Protocol
+- content: 'RIFT: Routing in Fat Trees'
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-privacypass-rate-limit-tokens-04
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-rift-rift-21
   type: src
 type: standard
 docid:
-- id: draft-ietf-privacypass-rate-limit-tokens-04
+- id: draft-ietf-rift-rift-21
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-privacypass-rate-limit-tokens
+- id: I-D.ietf-rift-rift
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-privacypass-rate-limit-tokens
+docnumber: I-D.ietf-rift-rift
 date:
 - type: published
-  value: '2024-03-04'
+  value: '2024-04-01'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Scott
-          language:
-          - en
-        - language:
-          - en
-          initial: S
-        formatted_initials:
-          content: S.
-          language:
-          - en
-      surname:
-        content: Hendrickson
-        language:
-        - en
-      completename:
-        content: Scott Hendrickson
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Google LLC
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Jana
-          language:
-          - en
-        - language:
-          - en
-          initial: J
-        formatted_initials:
-          content: J.
-          language:
-          - en
-      surname:
-        content: Iyengar
-        language:
-        - en
-      completename:
-        content: Jana Iyengar
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Fastly
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Tommy
+        - content: Tony
           language:
           - en
         - language:
@@ -95,90 +39,174 @@ contributor:
           language:
           - en
       surname:
-        content: Pauly
+        content: Przygienda
         language:
         - en
       completename:
-        content: Tommy Pauly
+        content: Tony Przygienda
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Apple Inc.
+        - content: Juniper Networks
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Steven
+        - content: Jordan
           language:
           - en
         - language:
           - en
-          initial: S
+          initial: J
         formatted_initials:
-          content: S.
+          content: J.
           language:
           - en
       surname:
-        content: Valdez
+        content: Head
         language:
         - en
       completename:
-        content: Steven Valdez
+        content: Jordan Head
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Google LLC
+        - content: Juniper Networks
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Christopher
+        - content: Alankar
           language:
           - en
-        - language:
-          - en
-          initial: C
         - language:
           - en
           initial: A
         formatted_initials:
-          content: C. A.
+          content: A.
           language:
           - en
       surname:
-        content: Wood
+        content: Sharma
         language:
         - en
       completename:
-        content: Christopher A. Wood
+        content: Alankar Sharma
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cloudflare
+        - content: Hudson River Trading
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Pascal
+          language:
+          - en
+        - language:
+          - en
+          initial: P
+        formatted_initials:
+          content: P.
+          language:
+          - en
+      surname:
+        content: Thubert
+        language:
+        - en
+      completename:
+        content: Pascal Thubert
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Individual
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Bruno
+          language:
+          - en
+        - language:
+          - en
+          initial: B
+        formatted_initials:
+          content: B.
+          language:
+          - en
+      surname:
+        content: Rijsman
+        language:
+        - en
+      completename:
+        content: Bruno Rijsman
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Individual
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Dmitry
+          language:
+          - en
+        - language:
+          - en
+          initial: D
+        formatted_initials:
+          content: D.
+          language:
+          - en
+      surname:
+        content: Afanasiev
+        language:
+        - en
+      completename:
+        content: Dmitry Afanasiev
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Yandex
   role:
   - type: author
 version:
-- draft: '04'
-revdate: '2024-03-04'
+- draft: '21'
+revdate: '2024-04-01'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document specifies a variant of the Privacy Pass issuance protocol
-    that allows for tokens to be rate-limited on a per-origin basis. This enables
-    origins to use tokens for use cases that need to restrict access from anonymous
-    clients.</p>"
+- content: "<p>This document defines a specialized, dynamic routing protocol for Clos,
+    fat tree, and variants thereof. These topologies were initially used within crossbar
+    interconnects, and consequently router and switch backplanes, but their characteristics
+    make them ideal for constructing IP fabrics as well. The protocol specified by
+    this document is optimized toward the minimization of control plane state to support
+    very large substrates as well as the minimization of configuration and operational
+    complexity to allow for simplified deployment of said topologies.</p>"
   language:
   - en
   script:
@@ -187,23 +215,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-privacypass-rate-limit-tokens-03
+    id: draft-ietf-rift-rift-04
     docid:
-    - id: draft-ietf-privacypass-rate-limit-tokens-03
+    - id: draft-ietf-rift-rift-04
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-privacypass-rate-limit-tokens-03
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-privacypass-rate-limit-tokens-05
-    docid:
-    - id: draft-ietf-privacypass-rate-limit-tokens-05
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-privacypass-rate-limit-tokens-05
+      content: draft-ietf-rift-rift-04
       format: text/plain
 series:
 - type: main
@@ -214,7 +232,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-privacypass-rate-limit-tokens-04
+  number: draft-ietf-rift-rift-21
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
