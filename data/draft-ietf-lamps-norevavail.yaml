@@ -20,7 +20,9 @@ abstract:
     report, and distribute revocation information. Some long-lived X.509v3 public
     key certificates never expire, and they are never revoked. This specification
     defines the noRevAvail certificate extension so that a relying party can readily
-    determine that the CA does not publish revocation information for the certificate.</p>"
+    determine that the CA does not publish revocation information for the certificate,
+    and it updates the certification path validation algorithm in RFC 5280 to skip
+    revocation checking when the noRevAvail certificate extension is present.</p>"
   language:
   - en
   script:
@@ -56,6 +58,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-lamps-norevavail-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-lamps-norevavail-03
+    docid:
+    - id: draft-ietf-lamps-norevavail-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-lamps-norevavail-03
       format: text/plain
 ext:
   schema-version: v1.0.1
