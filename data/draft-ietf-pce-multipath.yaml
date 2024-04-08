@@ -16,10 +16,11 @@ abstract:
 - content: "<p>Certain traffic engineering path computation problems require solutions
     that consist of multiple traffic paths, that together form a solution. Returning
     just one single traffic path does not provide a valid solution. This document
-    defines a mechanism to encode multiple paths for a single set of objectives and
-    constraints. This is a generic PCEP mechanism, not specific to any path setup
-    type or dataplane. The mechanism is applicable to both stateless and stateful
-    PCEP.</p>"
+    defines mechanisms to encode multiple paths for a single set of objectives and
+    constraints. This allows encoding of multiple Segment Lists per Candidate Path
+    within a Segment Routing Policy. The new PCEP mechanisms are meant to be generic,
+    where possible, to allow for future re-use outside of SR Policy. The new PCEP
+    mechanisms are applicable to both stateless and stateful PCEP.</p>"
   language:
   - en
   script:
@@ -135,6 +136,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-pce-multipath-10
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-pce-multipath-11
+    docid:
+    - id: draft-ietf-pce-multipath-11
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-pce-multipath-11
       format: text/plain
 ext:
   schema-version: v1.0.1
