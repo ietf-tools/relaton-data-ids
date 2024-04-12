@@ -1,65 +1,62 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-dhc-addr-notification-03
+id: draft-voyersriram-opsawg-ipfix-gtpu-05
 title:
-- content: Registering Self-generated IPv6 Addresses using DHCPv6
+- content: Export of GTP-U Information in IP Flow Information Export (IPFIX)
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-dhc-addr-notification-03
+- content: https://datatracker.ietf.org/doc/html/draft-voyersriram-opsawg-ipfix-gtpu-05
   type: src
 type: standard
 docid:
-- id: draft-ietf-dhc-addr-notification-03
+- id: draft-voyersriram-opsawg-ipfix-gtpu-05
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-dhc-addr-notification
+- id: I-D.voyersriram-opsawg-ipfix-gtpu
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-dhc-addr-notification
+docnumber: I-D.voyersriram-opsawg-ipfix-gtpu
 date:
 - type: published
-  value: '2023-08-16'
+  value: '2024-04-12'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Warren
+        - content: Daniel
           language:
           - en
         - language:
           - en
-          initial: W
-        - language:
-          - en
-          initial: A
+          initial: D
         formatted_initials:
-          content: W. A.
+          content: D.
           language:
           - en
       surname:
-        content: Kumari
+        content: Voyer
         language:
         - en
       completename:
-        content: Warren "Ace" Kumari
+        content: Daniel Voyer
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Google, LLC
+        - content: Bell Canada
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Suresh
+        - content: Sriram
           language:
           - en
         - language:
@@ -70,141 +67,112 @@ contributor:
           language:
           - en
       surname:
-        content: Krishnan
+        content: Gopalakrishnan
         language:
         - en
       completename:
-        content: Suresh Krishnan
+        content: Sriram Gopalakrishnan
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems, Inc.
+        - content: Cisco Systems
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Rajiv
+        - content: Thomas
           language:
           - en
         - language:
           - en
-          initial: R
+          initial: T
         formatted_initials:
-          content: R.
+          content: T.
           language:
           - en
       surname:
-        content: Asati
+        content: Graf
         language:
         - en
       completename:
-        content: Rajiv Asati
+        content: Thomas Graf
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems, Inc.
+        - content: Swisscom
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Lorenzo
-          language:
-          - en
         - language:
           - en
-          initial: L
+          initial: B
         formatted_initials:
-          content: L.
+          content: B.
           language:
           - en
       surname:
-        content: Colitti
+        content: Claise
         language:
         - en
       completename:
-        content: Lorenzo Colitti
+        content: Benoît Claise
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Google, LLC
+        - content: Huawei
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Jen
+        - content: Vyasraj
           language:
           - en
         - language:
           - en
-          initial: J
+          initial: V
         formatted_initials:
-          content: J.
+          content: V.
           language:
           - en
       surname:
-        content: Linkova
+        content: Satyanarayana
         language:
         - en
       completename:
-        content: Jen Linkova
+        content: Vyasraj Satyanarayana
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Google, LLC
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Sheng
-          language:
-          - en
-        - language:
-          - en
-          initial: S
-        formatted_initials:
-          content: S.
-          language:
-          - en
-      surname:
-        content: Jiang
-        language:
-        - en
-      completename:
-        content: Sheng Jiang
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Beijing University of Posts and Telecommunications
+        - content: Juniper Networks
   role:
   - type: author
 version:
-- draft: '03'
-revdate: '2023-08-16'
+- draft: '05'
+revdate: '2024-04-12'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document defines a method to inform a DHCPv6 server that a device
-    has a self-generated or statically configured address.</p>"
+- content: "<p>This document introduces IP Flow Information Export Information Elements
+    to identify information contained in the Generic Packet Radio Service Tunneling
+    Protocol User Plane header such as Tunnel Endpoint Identifier, and data contained
+    in its session container extension header.</p>"
   language:
   - en
   script:
@@ -213,23 +181,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-dhc-addr-notification-01
+    id: draft-voyersriram-opsawg-ipfix-gtpu-02
     docid:
-    - id: draft-ietf-dhc-addr-notification-01
+    - id: draft-voyersriram-opsawg-ipfix-gtpu-02
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-dhc-addr-notification-01
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-dhc-addr-notification-11
-    docid:
-    - id: draft-ietf-dhc-addr-notification-11
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-dhc-addr-notification-11
+      content: draft-voyersriram-opsawg-ipfix-gtpu-02
       format: text/plain
 series:
 - type: main
@@ -240,7 +198,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-dhc-addr-notification-03
+  number: draft-voyersriram-opsawg-ipfix-gtpu-05
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
