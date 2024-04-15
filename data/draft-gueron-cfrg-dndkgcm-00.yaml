@@ -1,0 +1,87 @@
+---
+schema-version: v1.2.3
+id: draft-gueron-cfrg-dndkgcm-00
+title:
+- content: Double Nonce Derive Key AES-GCM (DNDK-GCM)
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-gueron-cfrg-dndkgcm-00
+  type: src
+type: standard
+docid:
+- id: draft-gueron-cfrg-dndkgcm-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.gueron-cfrg-dndkgcm
+  type: IETF
+  scope: anchor
+docnumber: I-D.gueron-cfrg-dndkgcm
+date:
+- type: published
+  value: '2024-04-15'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Shay
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Gueron
+        language:
+        - en
+      completename:
+        content: Shay Gueron
+        language:
+        - en
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2024-04-15'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>This document specifies an authenticated encryption algorithm called
+    Double Nonce Derive Key AES-GCM (DNDK-GCM) that operates with a 32- byte root
+    key and encrypts with a 24-byte random nonce, and optionally provides for key
+    commitment. Encryption takes the root key and a random nonce, derives a fresh
+    encryption key and a key commitment value, invokes AES-GCM with the derived key
+    and a 12-byte zero nonce, and outputs the ciphertext, authentication tag and the
+    key commitment value. The low collision probability with 24-byte random nonces
+    extends the lifetime of the root key and this supports processing up to 2^64 bytes
+    under one root key. DNDK-GCM involves a small overhead compared to using AES-GCM
+    directly, and its security relies only on the standard assumption on AES as a
+    pseudorandom permutation.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-gueron-cfrg-dndkgcm-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

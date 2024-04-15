@@ -1,0 +1,44 @@
+---
+schema-version: v1.2.3
+id: draft-gueron-cfrg-dndkgcm
+title:
+- content: Double Nonce Derive Key AES-GCM (DNDK-GCM)
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-gueron-cfrg-dndkgcm
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This document specifies an authenticated encryption algorithm called
+    Double Nonce Derive Key AES-GCM (DNDK-GCM) that operates with a 32- byte root
+    key and encrypts with a 24-byte random nonce, and optionally provides for key
+    commitment. Encryption takes the root key and a random nonce, derives a fresh
+    encryption key and a key commitment value, invokes AES-GCM with the derived key
+    and a 12-byte zero nonce, and outputs the ciphertext, authentication tag and the
+    key commitment value. The low collision probability with 24-byte random nonces
+    extends the lifetime of the root key and this supports processing up to 2^64 bytes
+    under one root key. DNDK-GCM involves a small overhead compared to using AES-GCM
+    directly, and its security relies only on the standard assumption on AES as a
+    pseudorandom permutation.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-gueron-cfrg-dndkgcm-00
+    docid:
+    - id: draft-gueron-cfrg-dndkgcm-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-gueron-cfrg-dndkgcm-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
