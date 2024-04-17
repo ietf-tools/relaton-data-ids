@@ -14,22 +14,15 @@ docid:
   primary: true
 abstract:
 - content: "<p>In the Resource Public Key Infrastructure (RPKI), Signed Objects are
-    defined as Cryptographic Message Syntax (CMS) protected content types by way of
-    a standard template (RFC 6488). That template includes an optional CMS signing-time
-    attribute, representing the purported time at which the object was signed by its
-    issuer. At the time when the standard template was defined, rsync was the only
-    distribution mechanism for RPKI repositories. Since the publication of the standard
-    template, a new, additional protocol for distribution of RPKI repositories has
-    been developed: the RPKI Repository Delta Protocol (RRDP). While RPKI repository
-    operators must provide rsync service, RRDP is typically deployed alongside it
-    as well, and preferred by default by most Relying Party (RP) implementations.
-    However, RP implementations also support fallback to rsync in the event of problems
-    with the RRDP service. As deployment experience with RRDP has increased, the usefulness
-    of optimizing switchovers by RPs from one mechanism to the other has become apparent.
-    This document describes how Publishers and RPs can use the CMS signing-time attribute
-    to minimize the burden of switching over from RRDP to rsync. Additionally, this
-    document updates RFC 6488 by mandating the presence of the CMS signing-time attribute
-    and disallowing the use of the binary-signing-time attribute.</p>"
+    defined as Cryptographic Message Syntax (CMS) protected content types. Signed
+    Objects contain a signing-time attribute, representing the purported time at which
+    the object was signed by its issuer. RPKI repositories are accessible using the
+    rsync and RPKI Repository Delta protocols, allowing Relying Parties (RPs) to synchronize
+    a local copy of the RPKI repository used for validation with the remote repositories.
+    This document describes how the CMS signing-time attribute can be used to avoid
+    needless retransfers of data when switching between different synchronization
+    protocols. This document updates RFC 6488 by mandating the presence of the CMS
+    signing-time attribute and disallowing the use of the binary-signing-time attribute.</p>"
   language:
   - en
   script:
@@ -105,6 +98,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-sidrops-cms-signing-time-06
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-sidrops-cms-signing-time-07
+    docid:
+    - id: draft-ietf-sidrops-cms-signing-time-07
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-sidrops-cms-signing-time-07
       format: text/plain
 ext:
   schema-version: v1.0.1
