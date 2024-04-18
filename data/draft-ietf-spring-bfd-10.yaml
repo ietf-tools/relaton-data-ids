@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-spring-bfd-02
+id: draft-ietf-spring-bfd-10
 title:
 - content: Bidirectional Forwarding Detection (BFD) in Segment Routing Networks Using
     MPLS Dataplane
@@ -10,11 +10,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-spring-bfd-02
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-spring-bfd-10
   type: src
 type: standard
 docid:
-- id: draft-ietf-spring-bfd-02
+- id: draft-ietf-spring-bfd-10
   type: Internet-Draft
   primary: true
 - id: I-D.ietf-spring-bfd
@@ -23,7 +23,7 @@ docid:
 docnumber: I-D.ietf-spring-bfd
 date:
 - type: published
-  value: '2021-09-23'
+  value: '2024-04-17'
 contributor:
 - person:
     name:
@@ -78,7 +78,7 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Juniper Networks
+        - content: NVDIA
   role:
   - type: author
 - person:
@@ -166,8 +166,8 @@ contributor:
   role:
   - type: author
 version:
-- draft: '02'
-revdate: '2021-09-23'
+- draft: '10'
+revdate: '2024-04-17'
 language:
 - en
 script:
@@ -178,10 +178,11 @@ abstract:
     without any change to the data plane. A segment is encoded as an MPLS label, and
     an ordered list of segments is encoded as a stack of labels. Bidirectional Forwarding
     Detection (BFD) is expected to monitor any existing path between systems. This
-    document defines how to use Label Switched Path Ping to bootstrap a BFD session,
-    control an SR Policy in the reverse direction of the SR-MPLS tunnel, and applicability
-    of BFD Demand mode in the SR-MPLS domain. Also, the document describes the use
-    of BFD Echo with BFD Control packet payload.</p>"
+    document defines how to use Label Switched Path (LSP) Ping to bootstrap a BFD
+    session, optional control of the selection of a segment list as the reverse direction
+    of the BFD session, applicability of BFD Demand mode, and Seamless BFD in the
+    SR-MPLS domain. Also, the document describes the use of the BFD Echo function
+    with the BFD Control packet payload.</p>"
   language:
   - en
   script:
@@ -190,23 +191,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-spring-bfd-00
+    id: draft-ietf-spring-bfd-09
     docid:
-    - id: draft-ietf-spring-bfd-00
+    - id: draft-ietf-spring-bfd-09
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-spring-bfd-00
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-spring-bfd-10
-    docid:
-    - id: draft-ietf-spring-bfd-10
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-bfd-10
+      content: draft-ietf-spring-bfd-09
       format: text/plain
 series:
 - type: main
@@ -217,7 +208,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-spring-bfd-02
+  number: draft-ietf-spring-bfd-10
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
