@@ -1,121 +1,90 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-opsawg-teas-common-ac-05
+id: draft-ietf-idr-sr-policy-ifit-08
 title:
-- content: A Common YANG Data Model for Attachment Circuits
+- content: BGP SR Policy Extensions to Enable IFIT
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-teas-common-ac-05
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-sr-policy-ifit-08
   type: src
 type: standard
 docid:
-- id: draft-ietf-opsawg-teas-common-ac-05
+- id: draft-ietf-idr-sr-policy-ifit-08
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-opsawg-teas-common-ac
+- id: I-D.ietf-idr-sr-policy-ifit
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-opsawg-teas-common-ac
+docnumber: I-D.ietf-idr-sr-policy-ifit
 date:
 - type: published
-  value: '2024-02-09'
+  value: '2024-04-19'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Mohamed
+        - content: Fengwei
           language:
           - en
         - language:
           - en
-          initial: M
+          initial: F
         formatted_initials:
-          content: M.
+          content: F.
           language:
           - en
       surname:
-        content: Boucadair
+        content: Qin
         language:
         - en
       completename:
-        content: Mohamed Boucadair
+        content: Fengwei Qin
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Orange
+        - content: China Mobile
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Richard
+        - content: Hang
           language:
           - en
         - language:
           - en
-          initial: R
+          initial: H
         formatted_initials:
-          content: R.
+          content: H.
           language:
           - en
       surname:
-        content: Roberts
+        content: Yuan
         language:
         - en
       completename:
-        content: Richard Roberts
+        content: Hang Yuan
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Juniper
+        - content: UnionPay
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Oscar
-          language:
-          - en
-        - language:
-          - en
-          initial: O
-        - language:
-          - en
-          initial: G
-        formatted_initials:
-          content: O. G.
-          language:
-          - en
-      surname:
-        content: de Dios
-        language:
-        - en
-      completename:
-        content: Oscar Gonzalez de Dios
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Telefonica
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Samier
+        - content: Shunxing
           language:
           - en
         - language:
@@ -126,57 +95,91 @@ contributor:
           language:
           - en
       surname:
-        content: Barguil
+        content: Yang
         language:
         - en
       completename:
-        content: Samier Barguil
+        content: Shunxing Yang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Nokia
+        - content: China Telecom
   role:
   - type: author
 - person:
     name:
       given:
         forename:
+        - content: Tianran
+          language:
+          - en
         - language:
           - en
-          initial: B
+          initial: T
         formatted_initials:
-          content: B.
+          content: T.
           language:
           - en
       surname:
-        content: Wu
+        content: Zhou
         language:
         - en
       completename:
-        content: Bo Wu
+        content: Tianran Zhou
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei Technologies
+        - content: Huawei
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Giuseppe
+          language:
+          - en
+        - language:
+          - en
+          initial: G
+        formatted_initials:
+          content: G.
+          language:
+          - en
+      surname:
+        content: Fioccola
+        language:
+        - en
+      completename:
+        content: Giuseppe Fioccola
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei
   role:
   - type: author
 version:
-- draft: '05'
-revdate: '2024-02-09'
+- draft: '08'
+revdate: '2024-04-19'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>The document specifies a common Attachment Circuits (ACs) YANG module,
-    which is designed with the intent to be reusable by other models. For example,
-    this common model can be reused by service models to expose ACs as a service,
-    service models that require binding a service to a set of ACs, network and device
-    models to provision ACs, etc.</p>"
+- content: "<p>Segment Routing (SR) policy is a set of candidate SR paths consisting
+    of one or more segment lists and necessary path attributes. It enables instantiation
+    of an ordered list of segments with a specific intent for traffic steering. In-situ
+    Flow Information Telemetry (IFIT) refers to network OAM data plane on-path telemetry
+    techniques, in particular the most popular are In-situ OAM (IOAM) and Alternate
+    Marking. This document defines extensions to BGP to distribute SR policies carrying
+    IFIT information. So that IFIT methods can be enabled automatically when the SR
+    policy is applied.</p>"
   language:
   - en
   script:
@@ -185,23 +188,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-opsawg-teas-common-ac-03
+    id: draft-ietf-idr-sr-policy-ifit-02
     docid:
-    - id: draft-ietf-opsawg-teas-common-ac-03
+    - id: draft-ietf-idr-sr-policy-ifit-02
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-opsawg-teas-common-ac-03
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-opsawg-teas-common-ac-10
-    docid:
-    - id: draft-ietf-opsawg-teas-common-ac-10
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-opsawg-teas-common-ac-10
+      content: draft-ietf-idr-sr-policy-ifit-02
       format: text/plain
 series:
 - type: main
@@ -212,7 +205,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-opsawg-teas-common-ac-05
+  number: draft-ietf-idr-sr-policy-ifit-08
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

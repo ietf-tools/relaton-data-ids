@@ -1,62 +1,121 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-nvo3-geneve-oam-04
+id: draft-ietf-opsawg-teas-common-ac-10
 title:
-- content: OAM for use in GENEVE
+- content: A Common YANG Data Model for Attachment Circuits
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-nvo3-geneve-oam-04
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-teas-common-ac-10
   type: src
 type: standard
 docid:
-- id: draft-ietf-nvo3-geneve-oam-04
+- id: draft-ietf-opsawg-teas-common-ac-10
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-nvo3-geneve-oam
+- id: I-D.ietf-opsawg-teas-common-ac
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-nvo3-geneve-oam
+docnumber: I-D.ietf-opsawg-teas-common-ac
 date:
 - type: published
-  value: '2022-05-03'
+  value: '2024-04-19'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Greg
+        - content: Mohamed
           language:
           - en
+        - language:
+          - en
+          initial: M
+        formatted_initials:
+          content: M.
+          language:
+          - en
+      surname:
+        content: Boucadair
+        language:
+        - en
+      completename:
+        content: Mohamed Boucadair
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Orange
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Richard
+          language:
+          - en
+        - language:
+          - en
+          initial: R
+        formatted_initials:
+          content: R.
+          language:
+          - en
+      surname:
+        content: Roberts
+        language:
+        - en
+      completename:
+        content: Richard Roberts
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Juniper
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Oscar
+          language:
+          - en
+        - language:
+          - en
+          initial: O
         - language:
           - en
           initial: G
         formatted_initials:
-          content: G.
+          content: O. G.
           language:
           - en
       surname:
-        content: Mirsky
+        content: de Dios
         language:
         - en
       completename:
-        content: Greg Mirsky
+        content: Oscar Gonzalez de Dios
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Ericsson
+        - content: Telefonica
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Sami
+        - content: Samier
           language:
           - en
         - language:
@@ -67,90 +126,57 @@ contributor:
           language:
           - en
       surname:
-        content: Boutros
+        content: Barguil
         language:
         - en
       completename:
-        content: Sami Boutros
+        content: Samier Barguil
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Ciena
+        - content: Nokia
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: David
-          language:
-          - en
         - language:
           - en
-          initial: D
-        - language:
-          - en
-          initial: L
+          initial: B
         formatted_initials:
-          content: D. L.
+          content: B.
           language:
           - en
       surname:
-        content: Black
+        content: Wu
         language:
         - en
       completename:
-        content: David L. Black
+        content: Bo Wu
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Dell EMC
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Santosh
-          language:
-          - en
-        - language:
-          - en
-          initial: S
-        formatted_initials:
-          content: S.
-          language:
-          - en
-      surname:
-        content: Pallagatti
-        language:
-        - en
-      completename:
-        content: Santosh Pallagatti
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: VMware
+        - content: Huawei Technologies
   role:
   - type: author
 version:
-- draft: '04'
-revdate: '2022-05-03'
+- draft: '10'
+revdate: '2024-04-19'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document lists a set of general requirements for active OAM protocols
-    in the Geneve overlay network. Based on the requirements, IP encapsulation for
-    active Operations, Administration, and Maintenance protocols in Geneve protocol
-    is defined. Considerations for using ICMP and UDP-based protocols are discussed.</p>"
+- content: "<p>The document specifies a common Attachment Circuits (ACs) YANG module,
+    which is designed with the intent to be reusable by other models. For example,
+    this common model can be reused by service models to expose ACs as a service,
+    service models that require binding a service to a set of ACs, network and device
+    models to provision ACs, etc.</p>"
   language:
   - en
   script:
@@ -159,23 +185,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-nvo3-geneve-oam-03
+    id: draft-ietf-opsawg-teas-common-ac-03
     docid:
-    - id: draft-ietf-nvo3-geneve-oam-03
+    - id: draft-ietf-opsawg-teas-common-ac-03
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-nvo3-geneve-oam-03
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-nvo3-geneve-oam-10
-    docid:
-    - id: draft-ietf-nvo3-geneve-oam-10
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-nvo3-geneve-oam-10
+      content: draft-ietf-opsawg-teas-common-ac-03
       format: text/plain
 series:
 - type: main
@@ -186,7 +202,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-nvo3-geneve-oam-04
+  number: draft-ietf-opsawg-teas-common-ac-10
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
