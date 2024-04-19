@@ -1,0 +1,43 @@
+---
+schema-version: v1.2.3
+id: draft-ietf-sidrops-manifest-numbers
+title:
+- content: RPKI Manifest Number Handling
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-ietf-sidrops-manifest-numbers
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: <p>The Resource Public Key Infrastructure (RPKI) makes use of signed objects
+    called manifests. A manifest lists each file that a publisher intends to include
+    within an RPKI repository, and can be used to detect certain forms of attack against
+    a repository. Manifests include a "manifest number" (manifestNumber), which the
+    publisher must increment whenever it issues a new manifest, and Relying Parties
+    (RPs) are required to verify that a newly-retrieved manifest for a given Certification
+    Authority (CA) has a higher manifestNumber than the previously-validated manifest.
+    However, the manifestNumber field is 20 octets in length (i.e. not unbounded),
+    and no behaviour is specified for when a manifestNumber reaches the largest possible
+    value. This document specifies publisher and RP behaviour for this scenario.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-ietf-sidrops-manifest-numbers-00
+    docid:
+    - id: draft-ietf-sidrops-manifest-numbers-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-sidrops-manifest-numbers-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
