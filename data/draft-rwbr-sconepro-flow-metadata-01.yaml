@@ -1,29 +1,113 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-add-split-horizon-authority-06
+id: draft-rwbr-sconepro-flow-metadata-01
 title:
-- content: Establishing Local DNS Authority in Validated Split-Horizon Environments
+- content: Flow Metadata for Collaborative Host/Network Signaling
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-add-split-horizon-authority-06
+- content: https://datatracker.ietf.org/doc/html/draft-rwbr-sconepro-flow-metadata-01
   type: src
 type: standard
 docid:
-- id: draft-ietf-add-split-horizon-authority-06
+- id: draft-rwbr-sconepro-flow-metadata-01
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-add-split-horizon-authority
+- id: I-D.rwbr-sconepro-flow-metadata
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-add-split-horizon-authority
+docnumber: I-D.rwbr-sconepro-flow-metadata
 date:
 - type: published
-  value: '2023-10-13'
+  value: '2024-04-26'
 contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Sridharan
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Rajagopalan
+        language:
+        - en
+      completename:
+        content: Sridharan Rajagopalan
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Cloud Software Group Holdings, Inc.
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Dan
+          language:
+          - en
+        - language:
+          - en
+          initial: D
+        formatted_initials:
+          content: D.
+          language:
+          - en
+      surname:
+        content: Wing
+        language:
+        - en
+      completename:
+        content: Dan Wing
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Cloud Software Group Holdings, Inc.
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Mohamed
+          language:
+          - en
+        - language:
+          - en
+          initial: M
+        formatted_initials:
+          content: M.
+          language:
+          - en
+      surname:
+        content: Boucadair
+        language:
+        - en
+      completename:
+        content: Mohamed Boucadair
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Orange
+  role:
+  - type: author
 - person:
     name:
       given:
@@ -52,106 +136,20 @@ contributor:
         - content: Nokia
   role:
   - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Dan
-          language:
-          - en
-        - language:
-          - en
-          initial: D
-        formatted_initials:
-          content: D.
-          language:
-          - en
-      surname:
-        content: Wing
-        language:
-        - en
-      completename:
-        content: Dan Wing
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Citrix Systems, Inc.
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Kevin
-          language:
-          - en
-        - language:
-          - en
-          initial: K
-        formatted_initials:
-          content: K.
-          language:
-          - en
-      surname:
-        content: Smith
-        language:
-        - en
-      completename:
-        content: Kevin Smith
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Vodafone Group
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Benjamin
-          language:
-          - en
-        - language:
-          - en
-          initial: B
-        - language:
-          - en
-          initial: M
-        formatted_initials:
-          content: B. M.
-          language:
-          - en
-      surname:
-        content: Schwartz
-        language:
-        - en
-      completename:
-        content: Benjamin M. Schwartz
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Meta Platforms, Inc.
-  role:
-  - type: author
 version:
-- draft: '06'
-revdate: '2023-10-13'
+- draft: '01'
+revdate: '2024-04-26'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>When split-horizon DNS is deployed by a network, certain domains can
-    be resolved authoritatively by the network-provided DNS resolver. DNS clients
-    that don't always use this resolver might wish to do so for these domains. This
-    specification defines a mechanism for domain owners to inform clients about local
-    resolvers that are authorized to answer authoritatively for certain subdomains.</p>"
+- content: "<p>This document defines per-flow and per-packet metadata for both network-to-host
+    and host-to-network signaling in Concise Data Definition Language (CDDL) which
+    expresses both CBOR and JSON. The common metadata definition allows interworking
+    between signaling protocols with high fidelity. The metadata is also self- describing
+    to improve interpretation by network elements and endpoints while reducing the
+    need for version negotiation.</p>"
   language:
   - en
   script:
@@ -160,23 +158,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-add-split-horizon-authority-01
+    id: draft-rwbr-sconepro-flow-metadata-00
     docid:
-    - id: draft-ietf-add-split-horizon-authority-01
+    - id: draft-rwbr-sconepro-flow-metadata-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-add-split-horizon-authority-01
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-add-split-horizon-authority-08
-    docid:
-    - id: draft-ietf-add-split-horizon-authority-08
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-add-split-horizon-authority-08
+      content: draft-rwbr-sconepro-flow-metadata-00
       format: text/plain
 series:
 - type: main
@@ -187,7 +175,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-add-split-horizon-authority-06
+  number: draft-rwbr-sconepro-flow-metadata-01
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
