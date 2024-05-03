@@ -1,90 +1,34 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-httpbis-rfc6265bis-13
+id: draft-ietf-idr-bgp-sendholdtimer-06
 title:
-- content: 'Cookies: HTTP State Management Mechanism'
+- content: Border Gateway Protocol 4 (BGP-4) Send Hold Timer
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-rfc6265bis-13
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-bgp-sendholdtimer-06
   type: src
 type: standard
 docid:
-- id: draft-ietf-httpbis-rfc6265bis-13
+- id: draft-ietf-idr-bgp-sendholdtimer-06
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-httpbis-rfc6265bis
+- id: I-D.ietf-idr-bgp-sendholdtimer
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-httpbis-rfc6265bis
+docnumber: I-D.ietf-idr-bgp-sendholdtimer
 date:
 - type: published
-  value: '2023-11-15'
+  value: '2024-05-02'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Steven
-          language:
-          - en
-        - language:
-          - en
-          initial: S
-        formatted_initials:
-          content: S.
-          language:
-          - en
-      surname:
-        content: Bingler
-        language:
-        - en
-      completename:
-        content: Steven Bingler
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Google LLC
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Mike
-          language:
-          - en
-        - language:
-          - en
-          initial: M
-        formatted_initials:
-          content: M.
-          language:
-          - en
-      surname:
-        content: West
-        language:
-        - en
-      completename:
-        content: Mike West
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Google LLC
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: John
+        - content: Job
           language:
           - en
         - language:
@@ -95,33 +39,90 @@ contributor:
           language:
           - en
       surname:
-        content: Wilander
+        content: Snijders
         language:
         - en
       completename:
-        content: John Wilander
+        content: Job Snijders
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Apple, Inc
+        - content: Fastly
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Ben
+          language:
+          - en
+        - language:
+          - en
+          initial: B
+        formatted_initials:
+          content: B.
+          language:
+          - en
+      surname:
+        content: Cartwright-Cox
+        language:
+        - en
+      completename:
+        content: Ben Cartwright-Cox
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Port 179 Ltd
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Yingzhen
+          language:
+          - en
+        - language:
+          - en
+          initial: Y
+        formatted_initials:
+          content: Y.
+          language:
+          - en
+      surname:
+        content: Qu
+        language:
+        - en
+      completename:
+        content: Yingzhen Qu
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Futurewei Technologies
   role:
   - type: author
 version:
-- draft: '13'
-revdate: '2023-11-15'
+- draft: '06'
+revdate: '2024-05-02'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document defines the HTTP Cookie and Set-Cookie header fields.
-    These header fields can be used by HTTP servers to store state (called cookies)
-    at HTTP user agents, letting the servers maintain a stateful session over the
-    mostly stateless HTTP protocol. Although cookies have many historical infelicities
-    that degrade their security and privacy, the Cookie and Set-Cookie header fields
-    are widely used on the Internet. This document obsoletes RFC 6265.</p>"
+- content: "<p>This document defines the SendHoldtimer, along with the SendHoldTimer_Expires
+    event, for the Border Gateway Protocol (BGP) Finite State Machine (FSM). Implementation
+    of the SendHoldTimer helps overcome situations where a BGP session is not terminated
+    after the local system detects that the remote system is not processing BGP messages.
+    This document specifies that the local system should close the BGP connection
+    and not solely rely on the remote system for session closure when the SendHoldTimer
+    expires. This document updates RFC4271.</p>"
   language:
   - en
   script:
@@ -130,23 +131,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-httpbis-rfc6265bis-05
+    id: draft-ietf-idr-bgp-sendholdtimer-05
     docid:
-    - id: draft-ietf-httpbis-rfc6265bis-05
+    - id: draft-ietf-idr-bgp-sendholdtimer-05
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-httpbis-rfc6265bis-05
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-httpbis-rfc6265bis-14
-    docid:
-    - id: draft-ietf-httpbis-rfc6265bis-14
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-httpbis-rfc6265bis-14
+      content: draft-ietf-idr-bgp-sendholdtimer-05
       format: text/plain
 series:
 - type: main
@@ -157,7 +148,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-httpbis-rfc6265bis-13
+  number: draft-ietf-idr-bgp-sendholdtimer-06
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
