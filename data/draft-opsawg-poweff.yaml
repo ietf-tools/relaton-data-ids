@@ -13,22 +13,15 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: '<p>This document motivates and specifies a data model to report power
-    and energy efficiency of an asset. As highlighted during the IAB workshop on environmental
-    impacts (https://datatracker.ietf.org/doc/html/draft-iab-ws-environmental- impacts-report-00),
-    visibility is a very important first step (paraphrasing Peter Drucker''s mantra
-    of "You cannot improve what you don''t measure"). During the workshop the need
-    for standardized metrics was established, to avoid proprietary, double counting
-    and even contradictory metrics across vendors. This Power and Energy Efficiency
-    Telemetry Specification (POWEFF) is required to promote consistency across vendors
-    and consumers, based on: 1. The definition of datasets and attributes defining
-    a common data model utilized by the standard calculation to yield power and energy
-    efficiency value for any asset or network element. 2. The standard calculations
-    utilizing the specified datasets and attributes which will yield energy consumption
-    and energy efficiency value for any asset or network element. The model provides
-    information and data requirements for calculating the Power and Energy Efficiency
-    for specific assets. Assets can include hardware (physical or virtual), software,
-    applications, or services.</p>'
+- content: "<p>This document specifies a device YANG “dashboard” data model that allows
+    devices to report which power measurement and control functions they offer. This
+    basic YANG model is applicable to any kind of device, regardless of whether the
+    device itself has any support for YANG-based management interfaces or not. The
+    YANG model simply allows a device to describe what it can report, and which interfaces
+    are available to request this data. Devices that lack any on-board YANG-based
+    management interfaces provide this information in form of a YANG instance data
+    file. This file may be readable from an on-board web server on the device, or
+    hosted anywhere else.</p>"
   language:
   - en
   script:
@@ -44,6 +37,16 @@ relation:
       primary: true
     formattedref:
       content: draft-opsawg-poweff-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-opsawg-poweff-01
+    docid:
+    - id: draft-opsawg-poweff-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-opsawg-poweff-01
       format: text/plain
 ext:
   schema-version: v1.0.1
