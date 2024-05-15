@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-lin-idr-sr-epe-over-l2bundle
 title:
-- content: Segment Routing BGP Egress Peer Engineering over Layer 2 Bundle
+- content: Segment Routing BGP Egress Peer Engineering over Layer 2 Bundle Members
   language:
   - en
   script:
@@ -19,7 +19,11 @@ abstract:
     bundle, BGP Peering SIDs need to be allocated to individual bundle member links,
     and advertisement of such BGP Peering SIDs in BGP-LS is required. This document
     describes how to support Segment Routing BGP Egress Peer Engineering over Layer
-    2 bundle.</p>"
+    2 bundle members. This document updates [RFC9085] to allow the L2 Bundle Member
+    Attributes TLV to be added to the BGP-LS Attribute associated with the Link NLRI
+    of BGP peering link. This document updates [RFC9085] and [RFC9086] to allow the
+    PeerAdj SID TLV to be included as a sub-TLV of the L2 Bundle Member Attributes
+    TLV.</p>"
   language:
   - en
   script:
@@ -85,6 +89,16 @@ relation:
       primary: true
     formattedref:
       content: draft-lin-idr-sr-epe-over-l2bundle-05
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-lin-idr-sr-epe-over-l2bundle-06
+    docid:
+    - id: draft-lin-idr-sr-epe-over-l2bundle-06
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-lin-idr-sr-epe-over-l2bundle-06
       format: text/plain
 ext:
   schema-version: v1.0.1
