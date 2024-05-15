@@ -14,11 +14,11 @@ docid:
   primary: true
 abstract:
 - content: "<p>In this document we present several examples of non-deterministic routing
-    behavior involving route redistribution into BGP. In order to eliminate such non-deterministic
+    behavior involving route redistribution into BGP. To eliminate such non-deterministic
     behavior, we propose an enhancement to BGP route selection that would take into
-    account the administrative distance under certain conditions. We also recommend
-    that the LOCAL_PREF value be reduced for the redistributed backup route, and be
-    calculated automatically based on the administrative distance.</p>"
+    account the administrative distance under certain conditions. Additionally, We
+    recommend automatically lowering the LOCAL_PREF value in implementation for the
+    redistributed backup route when appropriate.</p>"
   language:
   - en
   script:
@@ -74,6 +74,16 @@ relation:
       primary: true
     formattedref:
       content: draft-chen-bgp-redist-04
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-chen-bgp-redist-05
+    docid:
+    - id: draft-chen-bgp-redist-05
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-chen-bgp-redist-05
       format: text/plain
 ext:
   schema-version: v1.0.1
