@@ -13,14 +13,14 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>Microloops are brief packet loops that occur in the network following
-    a topology change (link down, link up, node fault, or metric change events). Microloops
-    are caused by the non-simultaneous convergence of different nodes in the network.
-    If nodes converge and send traffic to a neighbor node that has not converged yet,
-    traffic may be looped between these two nodes, resulting in packet loss,jitter,
-    and out-of-order packets. This document presents some optional implementation
-    methods aimed at providing loop avoidance in the case of IGP network convergence
-    event in different scenarios.</p>"
+- content: "<p>Microloops are transient packet loops that occur in the network following
+    a topology change (link- down, link up, node fault, or metric change events).
+    Microloops are caused by the non-simultaneous convergence of different nodes in
+    the network. If a converged node sends traffic to a neighbor node that has not
+    converged yet (or vice versa), traffic may be looped between these nodes, resulting
+    in packet loss, jitter, and packet disorder. This document presents some optional
+    implementation methods aimed at loop avoidance in different scenarios of IGP network
+    convergence.</p>"
   language:
   - en
   script:
@@ -46,6 +46,16 @@ relation:
       primary: true
     formattedref:
       content: draft-deng-spring-sr-loop-free-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-deng-spring-sr-loop-free-02
+    docid:
+    - id: draft-deng-spring-sr-loop-free-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-deng-spring-sr-loop-free-02
       format: text/plain
 ext:
   schema-version: v1.0.1
