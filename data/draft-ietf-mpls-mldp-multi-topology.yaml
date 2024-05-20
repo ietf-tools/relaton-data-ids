@@ -17,10 +17,12 @@ abstract:
     within an IP network. Flexible Algorithm (FA) is another mechanism of creating
     a sub-topology within a topology using defined topology constraints and computation
     algorithm. In order to deploy mLDP (Multipoint label distribution protocol) in
-    a network that supports MTR and/or FA, mLDP is required to become topology and
-    FA aware. This document specifies extensions to mLDP to support MTR, with FA,
-    in order for Multipoint LSPs(Label Switched Paths) to follow a particular topology
-    and algorithm.</p>"
+    a network that supports MTR, FA, or other methods of signaling non-default IGP
+    algorithms, mLDP is required to become topology and algorithm aware. This document
+    specifies extensions to mLDP to support MTR, with an algorithm, in order for Multipoint
+    LSPs(Label Switched Paths) to follow a particular topology and algorithm. It updates
+    [RFC7307] by allocating eight bits from a previously reserved field to be used
+    as the IGP Algorithm (IPA) field.</p>"
   language:
   - en
   script:
@@ -106,6 +108,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-mpls-mldp-multi-topology-07
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-mpls-mldp-multi-topology-08
+    docid:
+    - id: draft-ietf-mpls-mldp-multi-topology-08
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-mpls-mldp-multi-topology-08
       format: text/plain
 ext:
   schema-version: v1.0.1
