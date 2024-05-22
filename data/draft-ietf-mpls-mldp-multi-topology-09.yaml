@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-mpls-mldp-multi-topology-07
+id: draft-ietf-mpls-mldp-multi-topology-09
 title:
 - content: mLDP Extensions for Multi-Topology Routing
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-mpls-mldp-multi-topology-07
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-mpls-mldp-multi-topology-09
   type: src
 type: standard
 docid:
-- id: draft-ietf-mpls-mldp-multi-topology-07
+- id: draft-ietf-mpls-mldp-multi-topology-09
   type: Internet-Draft
   primary: true
 - id: I-D.ietf-mpls-mldp-multi-topology
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.ietf-mpls-mldp-multi-topology
 date:
 - type: published
-  value: '2024-05-17'
+  value: '2024-05-21'
 contributor:
 - person:
     name:
@@ -174,8 +174,8 @@ contributor:
   role:
   - type: author
 version:
-- draft: '07'
-revdate: '2024-05-17'
+- draft: '09'
+revdate: '2024-05-21'
 language:
 - en
 script:
@@ -185,10 +185,12 @@ abstract:
     within an IP network. Flexible Algorithm (FA) is another mechanism of creating
     a sub-topology within a topology using defined topology constraints and computation
     algorithm. In order to deploy mLDP (Multipoint label distribution protocol) in
-    a network that supports MTR and/or FA, mLDP is required to become topology and
-    FA aware. This document specifies extensions to mLDP to support MTR, with FA,
-    in order for Multipoint LSPs(Label Switched Paths) to follow a particular topology
-    and algorithm.</p>"
+    a network that supports MTR, FA, or other methods of signaling non-default IGP
+    algorithms, mLDP is required to become topology and algorithm aware. This document
+    specifies extensions to mLDP to support MTR, with an algorithm, in order for Multipoint
+    LSPs(Label Switched Paths) to follow a particular topology and algorithm. It updates
+    [RFC7307] by allocating eight bits from a previously reserved field to be used
+    as the IGP Algorithm (IPA) field.</p>"
   language:
   - en
   script:
@@ -197,23 +199,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-mpls-mldp-multi-topology-02
+    id: draft-ietf-mpls-mldp-multi-topology-08
     docid:
-    - id: draft-ietf-mpls-mldp-multi-topology-02
+    - id: draft-ietf-mpls-mldp-multi-topology-08
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-mpls-mldp-multi-topology-02
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-mpls-mldp-multi-topology-09
-    docid:
-    - id: draft-ietf-mpls-mldp-multi-topology-09
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-mpls-mldp-multi-topology-09
+      content: draft-ietf-mpls-mldp-multi-topology-08
       format: text/plain
 series:
 - type: main
@@ -224,7 +216,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-mpls-mldp-multi-topology-07
+  number: draft-ietf-mpls-mldp-multi-topology-09
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
