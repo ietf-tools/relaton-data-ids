@@ -1,59 +1,90 @@
 ---
 schema-version: v1.2.3
-id: draft-xu-savax-control-06
+id: draft-ietf-rats-eat-27
 title:
-- content: Control Plane of Inter-Domain Source Address Validation Architecture
+- content: The Entity Attestation Token (EAT)
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-xu-savax-control-06
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-rats-eat-27
   type: src
 type: standard
 docid:
-- id: draft-xu-savax-control-06
+- id: draft-ietf-rats-eat-27
   type: Internet-Draft
   primary: true
-- id: I-D.xu-savax-control
+- id: I-D.ietf-rats-eat
   type: IETF
   scope: anchor
-docnumber: I-D.xu-savax-control
+docnumber: I-D.ietf-rats-eat
 date:
 - type: published
-  value: '2023-11-21'
+  value: '2024-05-26'
 contributor:
 - person:
     name:
       given:
         forename:
+        - content: Laurence
+          language:
+          - en
         - language:
           - en
-          initial: K
+          initial: L
         formatted_initials:
-          content: K.
+          content: L.
           language:
           - en
       surname:
-        content: Xu
+        content: Lundblade
         language:
         - en
       completename:
-        content: Ke Xu
+        content: Laurence Lundblade
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Tsinghua University
+        - content: Security Theory LLC
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Jianping
+        - content: Giridhar
+          language:
+          - en
+        - language:
+          - en
+          initial: G
+        formatted_initials:
+          content: G.
+          language:
+          - en
+      surname:
+        content: Mandyam
+        language:
+        - en
+      completename:
+        content: Giridhar Mandyam
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Mediatek USA
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Jeremy
           language:
           - en
         - language:
@@ -64,90 +95,61 @@ contributor:
           language:
           - en
       surname:
-        content: Wu
+        content: O'Donoghue
         language:
         - en
       completename:
-        content: Jianping Wu
+        content: Jeremy O'Donoghue
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Tsinghua University
+        - content: Qualcomm Technologies Inc.
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Xiaoliang
+        - content: Carl
           language:
           - en
         - language:
           - en
-          initial: X
+          initial: C
         formatted_initials:
-          content: X.
+          content: C.
           language:
           - en
       surname:
-        content: Wang
+        content: Wallace
         language:
         - en
       completename:
-        content: Xiaoliang Wang
+        content: Carl Wallace
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Tsinghua University
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Yangfei
-          language:
-          - en
-        - language:
-          - en
-          initial: Y
-        formatted_initials:
-          content: Y.
-          language:
-          - en
-      surname:
-        content: Guo
-        language:
-        - en
-      completename:
-        content: Yangfei Guo
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Zhongguancun Laboratory
+        - content: Red Hound Software, Inc.
   role:
   - type: author
 version:
-- draft: '06'
-revdate: '2023-11-21'
+- draft: '27'
+revdate: '2024-05-26'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>Because the Internet forwards packets according to the IP destination
-    address, packet forwarding typically takes place without inspection of the source
-    address and malicious attacks have been launched using spoofed source addresses.
-    The inter-domain source address validation architecture is an effort to enhance
-    the Internet by using state machines to generate consistent tags. When communicating
-    between two end hosts at different ADs of the IPv6 network, tags will be added
-    to the packets to identify the authenticity of the IPv6 source address.</p>"
+- content: "<p>An Entity Attestation Token (EAT) provides an attested claims set that
+    describes state and characteristics of an entity, a device like a smartphone,
+    IoT device, network equipment or such. This claims set is used by a relying party,
+    server or service to determine the type and degree of trust placed in the entity.
+    An EAT is either a CBOR Web Token (CWT) or JSON Web Token (JWT) with attestation-oriented
+    claims.</p>"
   language:
   - en
   script:
@@ -156,23 +158,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-xu-savax-control-04
+    id: draft-ietf-rats-eat-01
     docid:
-    - id: draft-xu-savax-control-04
+    - id: draft-ietf-rats-eat-01
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-xu-savax-control-04
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-xu-savax-control-07
-    docid:
-    - id: draft-xu-savax-control-07
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-xu-savax-control-07
+      content: draft-ietf-rats-eat-01
       format: text/plain
 series:
 - type: main
@@ -183,7 +175,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-xu-savax-control-06
+  number: draft-ietf-rats-eat-27
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
