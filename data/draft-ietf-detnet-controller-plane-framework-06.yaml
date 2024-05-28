@@ -1,139 +1,86 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-mpls-rfc6374-sr-09
+id: draft-ietf-detnet-controller-plane-framework-06
 title:
-- content: Performance Measurement for Segment Routing Networks with MPLS Data Plane
+- content: Deterministic Networking (DetNet) Controller Plane Framework
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-mpls-rfc6374-sr-09
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-detnet-controller-plane-framework-06
   type: src
 type: standard
 docid:
-- id: draft-ietf-mpls-rfc6374-sr-09
+- id: draft-ietf-detnet-controller-plane-framework-06
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-mpls-rfc6374-sr
+- id: I-D.ietf-detnet-controller-plane-framework
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-mpls-rfc6374-sr
+docnumber: I-D.ietf-detnet-controller-plane-framework
 date:
 - type: published
-  value: '2024-02-09'
+  value: '2024-05-27'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Rakesh
+        - content: Andrew
           language:
           - en
         - language:
           - en
-          initial: R
+          initial: A
+        - language:
+          - en
+          initial: G
         formatted_initials:
-          content: R.
+          content: A. G.
           language:
           - en
       surname:
-        content: Gandhi
+        content: Malis
         language:
         - en
       completename:
-        content: Rakesh Gandhi
+        content: Andrew G. Malis
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems, Inc.
+        - content: Independent
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Clarence
+        - content: Xuesong
           language:
           - en
         - language:
           - en
-          initial: C
+          initial: X
         formatted_initials:
-          content: C.
+          content: X.
           language:
           - en
       surname:
-        content: Filsfils
+        content: Geng
         language:
         - en
       completename:
-        content: Clarence Filsfils
+        content: Xuesong Geng
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems, Inc.
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Daniel
-          language:
-          - en
-        - language:
-          - en
-          initial: D
-        formatted_initials:
-          content: D.
-          language:
-          - en
-      surname:
-        content: Voyer
-        language:
-        - en
-      completename:
-        content: Daniel Voyer
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Bell Canada
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Stefano
-          language:
-          - en
-        - language:
-          - en
-          initial: S
-        formatted_initials:
-          content: S.
-          language:
-          - en
-      surname:
-        content: Salsano
-        language:
-        - en
-      completename:
-        content: Stefano Salsano
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Universita di Roma "Tor Vergata"
+        - content: Huawei
   role:
   - type: author
 - person:
@@ -164,22 +111,104 @@ contributor:
         - content: Huawei
   role:
   - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Fengwei
+          language:
+          - en
+        - language:
+          - en
+          initial: F
+        formatted_initials:
+          content: F.
+          language:
+          - en
+      surname:
+        content: Qin
+        language:
+        - en
+      completename:
+        content: Fengwei Qin
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: China Mobile
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Balazs
+          language:
+          - en
+        - language:
+          - en
+          initial: B
+        formatted_initials:
+          content: B.
+          language:
+          - en
+      surname:
+        content: Varga
+        language:
+        - en
+      completename:
+        content: Balazs Varga
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Ericsson
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Carlos
+          language:
+          - en
+        - language:
+          - en
+          initial: C
+        - language:
+          - en
+          initial: J
+        formatted_initials:
+          content: C. J.
+          language:
+          - en
+      surname:
+        content: Bernardos
+        language:
+        - en
+      completename:
+        content: Carlos J. Bernardos
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Universidad Carlos III de Madrid
+  role:
+  - type: author
 version:
-- draft: '09'
-revdate: '2024-02-09'
+- draft: '06'
+revdate: '2024-05-27'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>Segment Routing (SR) leverages the source routing paradigm. SR is applicable
-    to Multiprotocol Label Switching data plane (SR-MPLS) as specified in RFC 8402.
-    RFC 6374 and RFC 7876 specify protocol mechanisms to enable efficient and accurate
-    measurement of packet loss, one-way and two-way delay, as well as related metrics
-    such as delay variation in MPLS networks. RFC 9341 defines Alternate-Marking Method
-    using Block Number (BN) for data correlation mechanism for packet loss measurement.
-    This document utilizes these mechanisms for Performance Delay and Loss Measurements
-    in SR-MPLS networks, for both links and end-to-end SR-MPLS paths including Policies.</p>"
+- content: "<p>This document provides a framework overview for the Deterministic Networking
+    (DetNet) controller plane. It discusses concepts and requirements for DetNet controller
+    plane which could be basis for future solution specification.</p>"
   language:
   - en
   script:
@@ -188,23 +217,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-mpls-rfc6374-sr-07
+    id: draft-ietf-detnet-controller-plane-framework-04
     docid:
-    - id: draft-ietf-mpls-rfc6374-sr-07
+    - id: draft-ietf-detnet-controller-plane-framework-04
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-mpls-rfc6374-sr-07
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-mpls-rfc6374-sr-10
-    docid:
-    - id: draft-ietf-mpls-rfc6374-sr-10
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-mpls-rfc6374-sr-10
+      content: draft-ietf-detnet-controller-plane-framework-04
       format: text/plain
 series:
 - type: main
@@ -215,7 +234,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-mpls-rfc6374-sr-09
+  number: draft-ietf-detnet-controller-plane-framework-06
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
