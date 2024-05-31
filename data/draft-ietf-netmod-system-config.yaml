@@ -14,19 +14,12 @@ docid:
   primary: true
 abstract:
 - content: <p>This document defines how a management client and server handle YANG-
-    modeled configuration data that is defined by the server itself. The system-defined
-    configuration can be referenced (e.g. leafref) by configuration explicitly created
+    modeled configuration data that is instantiated by the server itself. The system-defined
+    configuration can be referenced (e.g., leafref) by configuration explicitly created
     by a client. The Network Management Datastore Architecture (NMDA) defined in RFC
     8342 is updated with a read-only conventional configuration datastore called "system"
-    to hold system-defined configuration. As an alternative to clients explicitly
-    copying referenced system- defined configuration into the target configuration
-    datastore (e.g., &lt;running&gt;) so that the datastore is valid, a "resolve-system"
-    parameter is defined to allow the server acting as a "system client" to copy referenced
-    system nodes automatically. This solution enables clients manipulating the target
-    configuration datastore (e.g., &lt;running&gt;) to reference nodes defined in
-    &lt;system&gt;, override system- provided values, and configure descendant nodes
-    of system-defined configuration. This document updates RFC 8342, RFC 6241, RFC
-    8526 and RFC 8040.</p>
+    to expose system-defined configuration. This document updates RFC 8342, RFC 6241,
+    RFC 8526 and RFC 8040.</p>
   language:
   - en
   script:
@@ -92,6 +85,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-netmod-system-config-05
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-netmod-system-config-06
+    docid:
+    - id: draft-ietf-netmod-system-config-06
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-netmod-system-config-06
       format: text/plain
 ext:
   schema-version: v1.0.1
