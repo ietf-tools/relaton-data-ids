@@ -1,83 +1,86 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-bier-idr-extensions-03
+id: draft-ietf-bess-bgp-multicast-08
 title:
-- content: BGP Extensions for BIER
+- content: BGP Based Multicast
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-bier-idr-extensions-03
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-bess-bgp-multicast-08
   type: src
 type: standard
 docid:
-- id: draft-ietf-bier-idr-extensions-03
+- id: draft-ietf-bess-bgp-multicast-08
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-bier-idr-extensions
+- id: I-D.ietf-bess-bgp-multicast
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-bier-idr-extensions
+docnumber: I-D.ietf-bess-bgp-multicast
 date:
 - type: published
-  value: '2017-08-08'
+  value: '2024-06-03'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Xiaohu
+        - content: Zhaohui
           language:
           - en
         - language:
           - en
-          initial: X
+          initial: Z
+        - language:
+          - en
+          initial: J
         formatted_initials:
-          content: X.
+          content: Z. J.
           language:
           - en
       surname:
-        content: Xu
+        content: Zhang
         language:
         - en
       completename:
-        content: Xiaohu Xu
+        content: Zhaohui (Jeffrey) Zhang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei
+        - content: Juniper Networks
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Mach
+        - content: Lenny
           language:
           - en
         - language:
           - en
-          initial: M
+          initial: L
         formatted_initials:
-          content: M.
+          content: L.
           language:
           - en
       surname:
-        content: Chen
+        content: Giuliano
         language:
         - en
       completename:
-        content: Mach Chen
+        content: Lenny Giuliano
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei
+        - content: Juniper Networks
   role:
   - type: author
 - person:
@@ -105,7 +108,7 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Arrcus, Inc.
+        - content: Arrcus
   role:
   - type: author
 - person:
@@ -133,55 +136,86 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Cisco
+        - content: Arrcus
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Tony
+        - content: Mankamana
           language:
           - en
         - language:
           - en
-          initial: T
+          initial: M
+        - language:
+          - en
+          initial: P
         formatted_initials:
-          content: T.
+          content: M. P.
           language:
           - en
       surname:
-        content: Przygienda
+        content: Mishra
         language:
         - en
       completename:
-        content: Tony Przygienda
+        content: Mankamana Prasad Mishra
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Juniper
+        - content: Cisco Systems
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Arkadiy
+          language:
+          - en
+        - language:
+          - en
+          initial: A
+        formatted_initials:
+          content: A.
+          language:
+          - en
+      surname:
+        content: Gulko
+        language:
+        - en
+      completename:
+        content: Arkadiy Gulko
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: EdwardJones
   role:
   - type: author
 version:
-- draft: '03'
-revdate: '2017-08-08'
+- draft: '08'
+revdate: '2024-06-03'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>Bit Index Explicit Replication (BIER) is a new multicast forwarding
-    architecture which doesn't require an explicit tree-building protocol and doesn't
-    require intermediate routers to maintain any multicast state. BIER is applicable
-    in a multi-tenant data center network environment for efficient delivery of Broadcast,
-    Unknown-unicast and Multicast (BUM) traffic while eliminating the need for maintaining
-    a huge amount of multicast state in the underlay. This document describes BGP
-    extensions for advertising the BIER-specific information. These extensions are
-    applicable in those multi-tenant data centers where BGP instead of IGP is deployed
-    as an underlay for network reachability advertisement. These extensions may also
-    be applicable in other scenarios.</p>"
+- content: "<p>This document specifies a BGP address family and related procedures
+    that allow BGP to be used for setting up multicast distribution trees. This document
+    also specifies procedures that enable BGP to be used for multicast source discovery,
+    and for showing interest in receiving particular multicast flows. Taken together,
+    these procedures allow BGP to be used as a replacement for other multicast routing
+    protocols, such as PIM or mLDP. The BGP procedures specified here are based on
+    the BGP multicast procedures that were originally designed for use by providers
+    of Multicast Virtual Private Network service. This document also describes how
+    various signaling mechanisms can be used to set up end-to-end inter-region multicast
+    trees.</p>"
   language:
   - en
   script:
@@ -190,23 +224,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-bier-idr-extensions-01
+    id: draft-ietf-bess-bgp-multicast-02
     docid:
-    - id: draft-ietf-bier-idr-extensions-01
+    - id: draft-ietf-bess-bgp-multicast-02
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-bier-idr-extensions-01
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-bier-idr-extensions-11
-    docid:
-    - id: draft-ietf-bier-idr-extensions-11
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-bier-idr-extensions-11
+      content: draft-ietf-bess-bgp-multicast-02
       format: text/plain
 series:
 - type: main
@@ -217,7 +241,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-bier-idr-extensions-03
+  number: draft-ietf-bess-bgp-multicast-08
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

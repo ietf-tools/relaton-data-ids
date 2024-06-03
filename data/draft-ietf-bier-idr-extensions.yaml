@@ -15,11 +15,11 @@ docid:
 abstract:
 - content: "<p>Bit Index Explicit Replication (BIER) is a new multicast forwarding
     architecture which doesn't require an explicit tree-building protocol and doesn't
-    require intermediate routers to maintain any multicast state. BIER is applicable
-    in a multi-tenant data center network environment for efficient delivery of Broadcast,
-    Unknown-unicast and Multicast (BUM) traffic while eliminating the need for maintaining
-    a huge amount of multicast state in the underlay. This document describes BGP
-    extensions for advertising the BIER-specific information.</p>"
+    require intermediate routers to maintain per-tree multicast states. Some BIER-specific
+    information and state, which are only in proportion to the network but not per-tree,
+    do need to be advertised, calculated, and maintained. This document describes
+    BGP extensions for advertising the BIER information and methods for calculating
+    BIER states based on the advertisement.</p>"
   language:
   - en
   script:
@@ -135,6 +135,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-bier-idr-extensions-10
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-bier-idr-extensions-11
+    docid:
+    - id: draft-ietf-bier-idr-extensions-11
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-bier-idr-extensions-11
       format: text/plain
 ext:
   schema-version: v1.0.1

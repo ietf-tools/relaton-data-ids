@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-bier-idr-extensions-03
+id: draft-ietf-bier-idr-extensions-11
 title:
 - content: BGP Extensions for BIER
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-bier-idr-extensions-03
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-bier-idr-extensions-11
   type: src
 type: standard
 docid:
-- id: draft-ietf-bier-idr-extensions-03
+- id: draft-ietf-bier-idr-extensions-11
   type: Internet-Draft
   primary: true
 - id: I-D.ietf-bier-idr-extensions
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.ietf-bier-idr-extensions
 date:
 - type: published
-  value: '2017-08-08'
+  value: '2024-06-03'
 contributor:
 - person:
     name:
@@ -49,7 +49,7 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Huawei
+        - content: China Mobile
   role:
   - type: author
 - person:
@@ -133,7 +133,7 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Cisco
+        - content: Individual
   role:
   - type: author
 - person:
@@ -164,9 +164,40 @@ contributor:
         - content: Juniper
   role:
   - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Zhaohui
+          language:
+          - en
+        - language:
+          - en
+          initial: Z
+        - language:
+          - en
+          initial: J
+        formatted_initials:
+          content: Z. J.
+          language:
+          - en
+      surname:
+        content: Zhang
+        language:
+        - en
+      completename:
+        content: Zhaohui (Jeffrey) Zhang
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Juniper
+  role:
+  - type: author
 version:
-- draft: '03'
-revdate: '2017-08-08'
+- draft: '11'
+revdate: '2024-06-03'
 language:
 - en
 script:
@@ -174,14 +205,11 @@ script:
 abstract:
 - content: "<p>Bit Index Explicit Replication (BIER) is a new multicast forwarding
     architecture which doesn't require an explicit tree-building protocol and doesn't
-    require intermediate routers to maintain any multicast state. BIER is applicable
-    in a multi-tenant data center network environment for efficient delivery of Broadcast,
-    Unknown-unicast and Multicast (BUM) traffic while eliminating the need for maintaining
-    a huge amount of multicast state in the underlay. This document describes BGP
-    extensions for advertising the BIER-specific information. These extensions are
-    applicable in those multi-tenant data centers where BGP instead of IGP is deployed
-    as an underlay for network reachability advertisement. These extensions may also
-    be applicable in other scenarios.</p>"
+    require intermediate routers to maintain per-tree multicast states. Some BIER-specific
+    information and state, which are only in proportion to the network but not per-tree,
+    do need to be advertised, calculated, and maintained. This document describes
+    BGP extensions for advertising the BIER information and methods for calculating
+    BIER states based on the advertisement.</p>"
   language:
   - en
   script:
@@ -190,23 +218,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-bier-idr-extensions-01
+    id: draft-ietf-bier-idr-extensions-08
     docid:
-    - id: draft-ietf-bier-idr-extensions-01
+    - id: draft-ietf-bier-idr-extensions-08
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-bier-idr-extensions-01
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-bier-idr-extensions-11
-    docid:
-    - id: draft-ietf-bier-idr-extensions-11
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-bier-idr-extensions-11
+      content: draft-ietf-bier-idr-extensions-08
       format: text/plain
 series:
 - type: main
@@ -217,7 +235,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-bier-idr-extensions-03
+  number: draft-ietf-bier-idr-extensions-11
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
