@@ -1,0 +1,49 @@
+---
+schema-version: v1.2.3
+id: draft-chung-ccwg-search
+title:
+- content: SEARCH -- a New Slow Start Algorithm for TCP and QUIC
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-chung-ccwg-search
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>TCP slow start is designed to ramp up to the network congestion point
+    quickly, doubling the congestion window each round-trip time until the congestion
+    point is reached, whereupon TCP exits the slow start phase. Unfortunately, the
+    default Linux TCP slow start implementation -- TCP Cubic with HyStart -- can cause
+    premature exit from slow start, especially over wireless links, degrading link
+    utilization. However, without HyStart, TCP exits slow start too late, causing
+    unnecessary packet loss. To improve TCP slow start performance, this document
+    proposes using the Slow start Exit At Right CHokepoint (SEARCH) algorithm where
+    the TCP sender determines the congestion point based on acknowledged deliveries
+    -- specifically, the sender computes the delivered bytes compared to the expected
+    delivered bytes, smoothed to account for link latency variation and normalized
+    to accommodate link capacities, and exits slow start if the delivered bytes are
+    lower than expected. We implemented SEARCH as a Linux kernel v5.16 module and
+    evaluated it over WiFi, 4G/LTE, and low earth orbit (LEO) and geosynchronous (GEO)
+    satellite links. Analysis of the results show that the SEARCH reliably exits from
+    slow start after the congestion point is reached but before inducing packet loss.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-chung-ccwg-search-00
+    docid:
+    - id: draft-chung-ccwg-search-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-chung-ccwg-search-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
