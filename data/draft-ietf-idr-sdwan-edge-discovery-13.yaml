@@ -1,62 +1,62 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-mpls-mna-usecases-07
+id: draft-ietf-idr-sdwan-edge-discovery-13
 title:
-- content: Use Cases for MPLS Network Action Indicators and MPLS Ancillary Data
+- content: BGP UPDATE for SD-WAN Edge Discovery
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-mpls-mna-usecases-07
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-sdwan-edge-discovery-13
   type: src
 type: standard
 docid:
-- id: draft-ietf-mpls-mna-usecases-07
+- id: draft-ietf-idr-sdwan-edge-discovery-13
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-mpls-mna-usecases
+- id: I-D.ietf-idr-sdwan-edge-discovery
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-mpls-mna-usecases
+docnumber: I-D.ietf-idr-sdwan-edge-discovery
 date:
 - type: published
-  value: '2024-05-20'
+  value: '2024-06-04'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Tarek
+        - content: Linda
           language:
           - en
         - language:
           - en
-          initial: T
+          initial: L
         formatted_initials:
-          content: T.
+          content: L.
           language:
           - en
       surname:
-        content: Saad
+        content: Dunbar
         language:
         - en
       completename:
-        content: Tarek Saad
+        content: Linda Dunbar
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems, Inc.
+        - content: Futurewei
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Kiran
+        - content: Kausik
           language:
           - en
         - language:
@@ -67,90 +67,116 @@ contributor:
           language:
           - en
       surname:
-        content: Makhijani
+        content: Majumdar
         language:
         - en
       completename:
-        content: Kiran Makhijani
+        content: Kausik Majumdar
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Futurewei Technologies
+        - content: Microsoft Azure
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Haoyu
+        - content: Susan
           language:
           - en
         - language:
           - en
-          initial: H
+          initial: S
         formatted_initials:
-          content: H.
+          content: S.
           language:
           - en
       surname:
-        content: Song
+        content: Hares
         language:
         - en
       completename:
-        content: Haoyu Song
+        content: Susan Hares
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Futurewei Technologies
+        - content: Hickory Hill Consulting
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Greg
+        - content: Robert
           language:
           - en
         - language:
           - en
-          initial: G
+          initial: R
         formatted_initials:
-          content: G.
+          content: R.
           language:
           - en
       surname:
-        content: Mirsky
+        content: Raszuk
         language:
         - en
       completename:
-        content: Greg Mirsky
+        content: Robert Raszuk
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Ericsson
+        - content: Arrcus
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Venkit
+          language:
+          - en
+        - language:
+          - en
+          initial: V
+        formatted_initials:
+          content: V.
+          language:
+          - en
+      surname:
+        content: Kasiviswanathan
+        language:
+        - en
+      completename:
+        content: Venkit Kasiviswanathan
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Arista
   role:
   - type: author
 version:
-- draft: '07'
-revdate: '2024-05-20'
+- draft: '13'
+revdate: '2024-06-04'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document presents use cases that have a common feature in that
-    they may be addressed by encoding network action indicators and associated ancillary
-    data within MPLS packets. There are interest in extending the MPLS data plane
-    to carry such indicators and ancillary data to address the use cases that are
-    described in this document. The use cases described in this document are not an
-    exhaustive set, but rather the ones that are actively discussed by members of
-    the IETF MPLS, PALS, and DetNet working groups.</p>"
+- content: "<p>The document describes the encoding of BGP UPDATE messages for the
+    SD-WAN edge node property discovery. In the context of this document, BGP Route
+    Reflector (RR) is the component of the SD-WAN Controller that receives the BGP
+    UPDATE from SD-WAN edges and in turns propagates the information to the intended
+    peers that are authorized to communicate via the SD-WAN overlay network.</p>"
   language:
   - en
   script:
@@ -159,23 +185,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-mpls-mna-usecases-00
+    id: draft-ietf-idr-sdwan-edge-discovery-06
     docid:
-    - id: draft-ietf-mpls-mna-usecases-00
+    - id: draft-ietf-idr-sdwan-edge-discovery-06
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-mpls-mna-usecases-00
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-mpls-mna-usecases-08
-    docid:
-    - id: draft-ietf-mpls-mna-usecases-08
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-mpls-mna-usecases-08
+      content: draft-ietf-idr-sdwan-edge-discovery-06
       format: text/plain
 series:
 - type: main
@@ -186,7 +202,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-mpls-mna-usecases-07
+  number: draft-ietf-idr-sdwan-edge-discovery-13
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
