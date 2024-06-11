@@ -1,0 +1,160 @@
+---
+schema-version: v1.2.3
+id: draft-ietf-sidrops-manifest-numbers-01
+title:
+- content: RPKI Manifest Number Handling
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-sidrops-manifest-numbers-01
+  type: src
+type: standard
+docid:
+- id: draft-ietf-sidrops-manifest-numbers-01
+  type: Internet-Draft
+  primary: true
+- id: I-D.ietf-sidrops-manifest-numbers
+  type: IETF
+  scope: anchor
+docnumber: I-D.ietf-sidrops-manifest-numbers
+date:
+- type: published
+  value: '2024-06-10'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Tom
+          language:
+          - en
+        - language:
+          - en
+          initial: T
+        formatted_initials:
+          content: T.
+          language:
+          - en
+      surname:
+        content: Harrison
+        language:
+        - en
+      completename:
+        content: Tom Harrison
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Asia Pacific Network Information Centre
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: George
+          language:
+          - en
+        - language:
+          - en
+          initial: G
+        - language:
+          - en
+          initial: G
+        formatted_initials:
+          content: G. G.
+          language:
+          - en
+      surname:
+        content: Michaelson
+        language:
+        - en
+      completename:
+        content: George G. Michaelson
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Asia-Pacific Network Information Centre
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Job
+          language:
+          - en
+        - language:
+          - en
+          initial: J
+        formatted_initials:
+          content: J.
+          language:
+          - en
+      surname:
+        content: Snijders
+        language:
+        - en
+      completename:
+        content: Job Snijders
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Fastly
+  role:
+  - type: author
+version:
+- draft: '01'
+revdate: '2024-06-10'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: <p>The Resource Public Key Infrastructure (RPKI) makes use of signed objects
+    called manifests. A manifest lists each file that a publisher intends to include
+    within an RPKI repository, and can be used to detect certain forms of attack against
+    a repository. Manifests include a "manifest number" (manifestNumber), which the
+    publisher must increment whenever it issues a new manifest, and Relying Parties
+    (RPs) are required to verify that a newly-retrieved manifest for a given Certification
+    Authority (CA) has a higher manifestNumber than the previously-validated manifest.
+    However, the manifestNumber field is 20 octets in length (i.e. not unbounded),
+    and no behaviour is specified for when a manifestNumber reaches the largest possible
+    value. This document specifies publisher and RP behaviour for this scenario.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-ietf-sidrops-manifest-numbers-00
+    docid:
+    - id: draft-ietf-sidrops-manifest-numbers-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-sidrops-manifest-numbers-00
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-ietf-sidrops-manifest-numbers-01
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
