@@ -20,14 +20,12 @@ abstract:
     In SRv6 networks, the Colored prefixes are the SRv6 locators associated with different
     intent. SRv6 services (e.g. SRv6 VPN services) with specific intent could be assigned
     with SRv6 Segment Identifiers (SIDs) under the corresponding SRv6 locators, which
-    are advertised as Colored prefixes. This allows the SRv6 service traffic to be
-    steered into end-to-end intent-aware paths simply based on the longest prefix
-    matching of SRv6 Service SIDs to the Colored prefixes. In the data plane, dedicated
-    transport labels or SIDs for the inter-domain path are not needed, thus the encapsulation
-    efficiency could be optimized. The existing IPv6 Address Family and Color Extended
-    Community could be reused for the advertisement of IPv6 Colored prefixes without
-    new BGP extensions, thus this mechanism is easy to interoperate and can be deployed
-    incrementally in multi-domain networks.</p>
+    are advertised as Colored prefixes. This operational methodology allows the SRv6
+    service traffic to be steered into end-to-end intent-aware paths simply based
+    on the longest prefix matching of SRv6 Service SIDs to the Colored prefixes. The
+    existing IPv6 Address Family and Color Extended Community are reused for the advertisement
+    of IPv6 Colored prefixes without new BGP extensions, thus this mechanism is easy
+    to interoperate and can be deployed incrementally in multi-domain networks.</p>
   language:
   - en
   script:
@@ -63,6 +61,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-idr-cpr-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-idr-cpr-03
+    docid:
+    - id: draft-ietf-idr-cpr-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-idr-cpr-03
       format: text/plain
 ext:
   schema-version: v1.0.1
