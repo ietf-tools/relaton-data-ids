@@ -13,19 +13,20 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>Ethernet Virtual Private Network (EVPN) is commonly used along with
-    Network Virtualization Overlay (NVO) tunnels, as well as MPLS and Segment Routing
-    tunnels. The EVPN multi-homing procedures may be different depending on the tunnel
-    type used in the EVPN Broadcast Domain. In particular, there are two multi-homing
-    Split Horizon procedures to avoid looped frames on the multi-homed CE: ESI Label
-    based and Local Bias. ESI Label based Split Horizon is used for MPLSoX tunnels,
-    E.g., MPLSoUDP, whereas Local Bias is used for other tunnels, E.g., VXLAN tunnels.
-    The existing specifications do not allow the operator to decide which Split Horizon
-    procedure to use for tunnel encapsulations that could support both. Examples of
-    tunnels that may support both procedures are MPLSoGRE, MPLSoUDP, GENEVE or SRv6.
-    This document updates the EVPN Multihoming procedures in RFC8365 and RFC7432 so
-    that an operator can decide the Split Horizon procedure for a given tunnel depending
-    on their own requirements.</p>"
+- content: "<p>Ethernet Virtual Private Network (EVPN) is commonly used with Network
+    Virtualization Overlay (NVO) tunnels, as well as MPLS and Segment Routing tunnels.
+    The multi-homing procedures in EVPN may vary based on the type of tunnel used
+    within the EVPN Broadcast Domain. Specifically, there are two multi-homing Split
+    Horizon procedures designed to prevent looped frames on multi-homed Customer Edge
+    (CE) devices: the ESI Label-based procedure and the Local Bias procedure. The
+    ESI Label-based Split Horizon is applied to MPLS-based tunnels, such as MPLSoUDP,
+    while the Local Bias procedure is used for other tunnels, such as VXLAN. Current
+    specifications do not allow operators to choose which Split Horizon procedure
+    to use for tunnel encapsulations that support both methods. Examples of tunnels
+    that may support both procedures include MPLSoGRE, MPLSoUDP, GENEVE, and SRv6.
+    This document updates the EVPN multi-homing procedures described in RFC 8365 and
+    RFC 7432, enabling operators to select the appropriate Split Horizon procedure
+    for a given tunnel based on their specific requirements.</p>"
   language:
   - en
   script:
@@ -121,6 +122,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-bess-evpn-mh-split-horizon-08
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-bess-evpn-mh-split-horizon-09
+    docid:
+    - id: draft-ietf-bess-evpn-mh-split-horizon-09
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-bess-evpn-mh-split-horizon-09
       format: text/plain
 ext:
   schema-version: v1.0.1
