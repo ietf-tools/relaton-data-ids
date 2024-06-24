@@ -20,13 +20,16 @@ abstract:
     architecture. While the focus of this document is on the role of ACLs in providing
     a more flexible approach to file access authorization than is made available by
     the POSIX-derived authorization-related attributes, the potential provision of
-    other security-related functionality is covered as well. While the goals of the
-    description are similar to those motivating previous specifications, the approach
-    taken is substantially different, in that the relationship of the multiple ACL
-    models supported has changed. A core set of functionality, derived from the now-withdrawn
-    POSIX draft ACLs is presented as the conceptual base of the feature set. Additional
-    features used to provide the functionality within the NFSv4 ACL model are presented
-    as OPTIONAL extensions to that core. The current version of the document is intended,
+    other security-related functionality is covered as well. Because of the failure
+    of previous specifications to provide a satisfactory approach to either of the
+    two ACL models for which support was intended, this document will include some
+    small protocol extensions to correct protocol defects, as provided for in RFC8178.
+    In this document, the relationship among the multiple ACL models supported has
+    changed. A core set of functionality, derived from a subset of that provided by
+    the now-withdrawn draft POSIX ACLs is presented as the conceptual base of the
+    feature set. Two additional sets of features used to provide the functionality
+    within the NFSv4 ACL model and the full draft POSIX ACL model are presented as
+    OPTIONAL extensions to that core. The current version of the document is intended,
     in large part, to result in working group discussion regarding repairing problems
     with previous specifications of ACL-related features and to enable work to provide
     a greater degree of interoperability than has been available heretofore. The drafts
@@ -80,6 +83,16 @@ relation:
       primary: true
     formattedref:
       content: draft-dnoveck-nfsv4-acls-03
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-dnoveck-nfsv4-acls-04
+    docid:
+    - id: draft-dnoveck-nfsv4-acls-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-dnoveck-nfsv4-acls-04
       format: text/plain
 ext:
   schema-version: v1.0.1

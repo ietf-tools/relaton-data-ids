@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-dnoveck-nfsv4-acls-03
+id: draft-dnoveck-nfsv4-acls-04
 title:
 - content: ACLs within the NFSv4 Protocols
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-dnoveck-nfsv4-acls-03
+- content: https://datatracker.ietf.org/doc/html/draft-dnoveck-nfsv4-acls-04
   type: src
 type: standard
 docid:
-- id: draft-dnoveck-nfsv4-acls-03
+- id: draft-dnoveck-nfsv4-acls-04
   type: Internet-Draft
   primary: true
 - id: I-D.dnoveck-nfsv4-acls
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.dnoveck-nfsv4-acls
 date:
 - type: published
-  value: '2024-06-18'
+  value: '2024-06-24'
 contributor:
 - person:
     name:
@@ -53,8 +53,8 @@ contributor:
   role:
   - type: author
 version:
-- draft: '03'
-revdate: '2024-06-18'
+- draft: '04'
+revdate: '2024-06-24'
 language:
 - en
 script:
@@ -67,13 +67,16 @@ abstract:
     architecture. While the focus of this document is on the role of ACLs in providing
     a more flexible approach to file access authorization than is made available by
     the POSIX-derived authorization-related attributes, the potential provision of
-    other security-related functionality is covered as well. While the goals of the
-    description are similar to those motivating previous specifications, the approach
-    taken is substantially different, in that the relationship of the multiple ACL
-    models supported has changed. A core set of functionality, derived from the now-withdrawn
-    POSIX draft ACLs is presented as the conceptual base of the feature set. Additional
-    features used to provide the functionality within the NFSv4 ACL model are presented
-    as OPTIONAL extensions to that core. The current version of the document is intended,
+    other security-related functionality is covered as well. Because of the failure
+    of previous specifications to provide a satisfactory approach to either of the
+    two ACL models for which support was intended, this document will include some
+    small protocol extensions to correct protocol defects, as provided for in RFC8178.
+    In this document, the relationship among the multiple ACL models supported has
+    changed. A core set of functionality, derived from a subset of that provided by
+    the now-withdrawn draft POSIX ACLs is presented as the conceptual base of the
+    feature set. Two additional sets of features used to provide the functionality
+    within the NFSv4 ACL model and the full draft POSIX ACL model are presented as
+    OPTIONAL extensions to that core. The current version of the document is intended,
     in large part, to result in working group discussion regarding repairing problems
     with previous specifications of ACL-related features and to enable work to provide
     a greater degree of interoperability than has been available heretofore. The drafts
@@ -90,23 +93,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-dnoveck-nfsv4-acls-00
+    id: draft-dnoveck-nfsv4-acls-03
     docid:
-    - id: draft-dnoveck-nfsv4-acls-00
+    - id: draft-dnoveck-nfsv4-acls-03
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-dnoveck-nfsv4-acls-00
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-dnoveck-nfsv4-acls-04
-    docid:
-    - id: draft-dnoveck-nfsv4-acls-04
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-dnoveck-nfsv4-acls-04
+      content: draft-dnoveck-nfsv4-acls-03
       format: text/plain
 series:
 - type: main
@@ -117,7 +110,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-dnoveck-nfsv4-acls-03
+  number: draft-dnoveck-nfsv4-acls-04
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
