@@ -1,111 +1,111 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-idr-5g-edge-service-metadata-17
+id: draft-ietf-mboned-multicast-telemetry-11
 title:
-- content: BGP Extension for 5G Edge Service Metadata
+- content: Multicast On-path Telemetry using IOAM
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-5g-edge-service-metadata-17
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-mboned-multicast-telemetry-11
   type: src
 type: standard
 docid:
-- id: draft-ietf-idr-5g-edge-service-metadata-17
+- id: draft-ietf-mboned-multicast-telemetry-11
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-idr-5g-edge-service-metadata
+- id: I-D.ietf-mboned-multicast-telemetry
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-idr-5g-edge-service-metadata
+docnumber: I-D.ietf-mboned-multicast-telemetry
 date:
 - type: published
-  value: '2024-04-18'
+  value: '2024-06-24'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Linda
+        - content: Haoyu
           language:
           - en
         - language:
           - en
-          initial: L
+          initial: H
         formatted_initials:
-          content: L.
+          content: H.
           language:
           - en
       surname:
-        content: Dunbar
+        content: Song
         language:
         - en
       completename:
-        content: Linda Dunbar
+        content: Haoyu Song
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Futurewei
+        - content: Futurewei Technologies
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Kausik
+        - content: Mike
           language:
           - en
         - language:
           - en
-          initial: K
+          initial: M
         formatted_initials:
-          content: K.
+          content: M.
           language:
           - en
       surname:
-        content: Majumdar
+        content: McBride
         language:
         - en
       completename:
-        content: Kausik Majumdar
+        content: Mike McBride
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Microsoft Azure
+        - content: Futurewei Technologies
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Cheng
+        - content: Greg
           language:
           - en
         - language:
           - en
-          initial: C
+          initial: G
         formatted_initials:
-          content: C.
+          content: G.
           language:
           - en
       surname:
-        content: Li
+        content: Mirsky
         language:
         - en
       completename:
-        content: Cheng Li
+        content: Greg Mirsky
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei
+        - content: Ericsson
   role:
   - type: author
 - person:
@@ -136,54 +136,79 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Verizon
+        - content: Verizon Inc.
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Zongpeng
+        - content: Hitoshi
           language:
           - en
         - language:
           - en
-          initial: Z
+          initial: H
         formatted_initials:
-          content: Z.
+          content: H.
           language:
           - en
       surname:
-        content: Du
+        content: Asaeda
         language:
         - en
       completename:
-        content: Zongpeng Du
+        content: Hitoshi Asaeda
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: China Mobile
+        - content: National Institute of Information and Communications Technology
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Tianran
+          language:
+          - en
+        - language:
+          - en
+          initial: T
+        formatted_initials:
+          content: T.
+          language:
+          - en
+      surname:
+        content: Zhou
+        language:
+        - en
+      completename:
+        content: Tianran Zhou
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei Technologies
   role:
   - type: author
 version:
-- draft: '17'
-revdate: '2024-04-18'
+- draft: '11'
+revdate: '2024-06-24'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This draft describes a new Metadata Path Attribute and some Sub-TLVs
-    for egress routers to advertise the Metadata about the attached edge services
-    (ES). The edge service Metadata can be used by the ingress routers in the 5G Local
-    Data Network to make path selections not only based on the routing cost but also
-    the running environment of the edge services. The goal is to improve latency and
-    performance for 5G edge services. The extension enables an edge service at one
-    specific location to be more preferred than the others with the same IP address
-    (ANYCAST) to receive data flow from a specific source, like a specific User Equipment
-    (UE).</p>"
+- content: "<p>This document specifies the solutions to meet the requirements of on-
+    path telemetry for multicast traffic using In-situ OAM. While In- situ OAM is
+    advantageous for multicast traffic telemetry, some unique challenges are present.
+    This document provides the solutions based on the In-situ OAM trace option and
+    direct export option to support the telemetry data correlation and the multicast
+    tree reconstruction without incurring data redundancy.</p>"
   language:
   - en
   script:
@@ -192,23 +217,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-idr-5g-edge-service-metadata-10
+    id: draft-ietf-mboned-multicast-telemetry-00
     docid:
-    - id: draft-ietf-idr-5g-edge-service-metadata-10
+    - id: draft-ietf-mboned-multicast-telemetry-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-idr-5g-edge-service-metadata-10
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-idr-5g-edge-service-metadata-19
-    docid:
-    - id: draft-ietf-idr-5g-edge-service-metadata-19
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-idr-5g-edge-service-metadata-19
+      content: draft-ietf-mboned-multicast-telemetry-00
       format: text/plain
 series:
 - type: main
@@ -219,7 +234,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-idr-5g-edge-service-metadata-17
+  number: draft-ietf-mboned-multicast-telemetry-11
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
