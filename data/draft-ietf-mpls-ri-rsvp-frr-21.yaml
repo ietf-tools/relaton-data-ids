@@ -1,50 +1,77 @@
 ---
 schema-version: v1.2.3
-id: draft-gandhi-mpls-mna-ioam-dex-00
+id: draft-ietf-mpls-ri-rsvp-frr-21
 title:
-- content: MPLS Network Actions for Transporting In Situ Operations, Administration,
-    and Maintenance (IOAM) Data Fields and Direct Exporting
+- content: Refresh-interval Independent FRR Facility Protection
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-gandhi-mpls-mna-ioam-dex-00
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-mpls-ri-rsvp-frr-21
   type: src
 type: standard
 docid:
-- id: draft-gandhi-mpls-mna-ioam-dex-00
+- id: draft-ietf-mpls-ri-rsvp-frr-21
   type: Internet-Draft
   primary: true
-- id: I-D.gandhi-mpls-mna-ioam-dex
+- id: I-D.ietf-mpls-ri-rsvp-frr
   type: IETF
   scope: anchor
-docnumber: I-D.gandhi-mpls-mna-ioam-dex
+docnumber: I-D.ietf-mpls-ri-rsvp-frr
 date:
 - type: published
-  value: '2024-06-12'
+  value: '2024-06-26'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Rakesh
+        - content: Chandrasekar
           language:
           - en
         - language:
           - en
-          initial: R
+          initial: C
         formatted_initials:
-          content: R.
+          content: C.
           language:
           - en
       surname:
-        content: Gandhi
+        content: R
         language:
         - en
       completename:
-        content: Rakesh Gandhi
+        content: Chandrasekar R
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Juniper Networks, Inc.
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Tarek
+          language:
+          - en
+        - language:
+          - en
+          initial: T
+        formatted_initials:
+          content: T.
+          language:
+          - en
+      surname:
+        content: Saad
+        language:
+        - en
+      completename:
+        content: Tarek Saad
         language:
         - en
     affiliation:
@@ -57,141 +84,93 @@ contributor:
     name:
       given:
         forename:
-        - content: Frank
+        - content: Ina
           language:
           - en
         - language:
           - en
-          initial: F
+          initial: I
         formatted_initials:
-          content: F.
+          content: I.
           language:
           - en
       surname:
-        content: Brockners
+        content: Minei
         language:
         - en
       completename:
-        content: Frank Brockners
+        content: Ina Minei
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems, Inc.
+        - content: Google, Inc.
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Bin
+        - content: Dante
           language:
           - en
         - language:
           - en
-          initial: B
+          initial: D
         formatted_initials:
-          content: B.
+          content: D.
           language:
           - en
       surname:
-        content: Wen
+        content: Pacella
         language:
         - en
       completename:
-        content: Bin Wen
+        content: Dante Pacella
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Comcast
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Bruno
-          language:
-          - en
-        - language:
-          - en
-          initial: B
-        formatted_initials:
-          content: B.
-          language:
-          - en
-      surname:
-        content: Decraene
-        language:
-        - en
-      completename:
-        content: Bruno Decraene
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Orange
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Haoyu
-          language:
-          - en
-        - language:
-          - en
-          initial: H
-        formatted_initials:
-          content: H.
-          language:
-          - en
-      surname:
-        content: Song
-        language:
-        - en
-      completename:
-        content: Haoyu Song
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Futurewei Technologies
+        - content: Verizon, Inc.
   role:
   - type: author
 version:
-- draft: '00'
-revdate: '2024-06-12'
+- draft: '21'
+revdate: '2024-06-26'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>In Situ Operations, Administration, and Maintenance (IOAM) is used
-    for recording and collecting operational and telemetry information while the packet
-    traverses a path between two points in the network. This document defines MPLS
-    Network Actions for transporting IOAM data fields and direct exporting them.</p>"
+- content: "<p>The RSVP-TE Fast Reroute extensions specified in RFC 4090 defines two
+    local repair techniques to reroute Label Switched Path (LSP) traffic over pre-established
+    backup tunnel. Facility backup method allows one or more LSPs traversing a connected
+    link or node to be protected using a bypass tunnel. The many-to-one nature of
+    local repair technique is attractive from scalability point of view. This document
+    enumerates facility backup procedures in RFC 4090 that rely on refresh timeout
+    and hence make facility backup method refresh- interval dependent. The RSVP-TE
+    extensions defined in this document will enhance the facility backup protection
+    mechanism by making the corresponding procedures refresh-interval independent
+    and hence compatible with Refresh-interval Independent RSVP (RI-RSVP) specified
+    in RFC 8370. Hence, this document updates RFC 4090 in order to support RI-RSVP
+    capability specified in RFC 8370.</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-gandhi-mpls-mna-ioam-dex-01
+    id: draft-ietf-mpls-ri-rsvp-frr-01
     docid:
-    - id: draft-gandhi-mpls-mna-ioam-dex-01
+    - id: draft-ietf-mpls-ri-rsvp-frr-01
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-gandhi-mpls-mna-ioam-dex-01
+      content: draft-ietf-mpls-ri-rsvp-frr-01
       format: text/plain
 series:
 - type: main
@@ -202,7 +181,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-gandhi-mpls-mna-ioam-dex-00
+  number: draft-ietf-mpls-ri-rsvp-frr-21
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
