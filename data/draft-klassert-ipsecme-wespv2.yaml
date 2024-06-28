@@ -16,12 +16,11 @@ abstract:
 - content: "<p>This document describes the Wrapped Encapsulating Security Payload
     v2 (WESPv2) protocol, which builds on the Encapsulating Security Payload (ESP)
     [RFC4303]. It is designed to overcome limitations of the ESP protocol to expose
-    flow information to the network in a transparent way and to align the cipher text
-    to the needs of the sender and receiver. To do so, it defines an optional Flow
-    Identifier where flow specific information can be stored. It also defines a Crypt
-    Offset to allow intermediate devices to read some header bytes at the beginning
-    of the inner packet. In particular, this preserves the original use-case of WESP
-    [RFC5840]. Optional padding can be added for cipher text alignment.</p>"
+    inner flow information to the network in a transparent way. To do so, it adapts
+    IPv6 Extension header options to WESPv2 where flow identitiers can be stored.
+    It also defines a Crypt Offset to allow intermediate devices to read some header
+    bytes at the beginning of the inner packet. In particular, this preserves the
+    original use-case of WESP [RFC5840].</p>"
   language:
   - en
   script:
@@ -37,6 +36,16 @@ relation:
       primary: true
     formattedref:
       content: draft-klassert-ipsecme-wespv2-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-klassert-ipsecme-wespv2-01
+    docid:
+    - id: draft-klassert-ipsecme-wespv2-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-klassert-ipsecme-wespv2-01
       format: text/plain
 ext:
   schema-version: v1.0.1
