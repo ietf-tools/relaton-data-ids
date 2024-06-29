@@ -16,16 +16,15 @@ abstract:
 - content: "<p>The document [I-D.draft-mhkk-dmm-srv6mup-architecture] describes the
     Mobile User Plane (MUP) architecture for Distributed Mobility Management. The
     proposed architecture converts the user mobility session information from the
-    control plane entity to an optimal IPv6 dataplane routing information. However,
-    when anycast address is used for service in data network (DN), this solution can
-    be enhanced to dynamically set up the dataplane to the optimal service instance.
-    This document discusses a solution to integrate computing-aware traffic steering
-    capabilities to the mentioned MUP architecture. The target applied use-case is
-    the anycast IP services scenario, where different instances that share the same
-    anycast address of the service can serve the user request. For each session request,
-    based on the up-to-date collected computing and network information, the MUP controller
-    can convert the session information to the dataplane routing information to the
-    optimal service instance.</p>"
+    control plane entity to an IPv6 dataplane routing information. When there are
+    multiple candidate instances located at different location to serve an user request,
+    the MUP Provider Edge (PE) might prioritize the closest service location. However,
+    the closest routing path might not be the optimal route. This document discusses
+    how the mentioned MUP architecture can be leveraged to set up dataplane routing
+    paths to the optimal service instance location with the assistance of computing-aware
+    traffic steering capabilities. For each session request, based on the up-to- date
+    collected computing and network information, the MUP controller can convert the
+    session information to the optimal route.</p>"
   language:
   - en
   script:
@@ -41,6 +40,16 @@ relation:
       primary: true
     formattedref:
       content: draft-dcn-dmm-cats-mup-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-dcn-dmm-cats-mup-01
+    docid:
+    - id: draft-dcn-dmm-cats-mup-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-dcn-dmm-cats-mup-01
       format: text/plain
 ext:
   schema-version: v1.0.1
