@@ -1,57 +1,29 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-rtgwg-segment-routing-ti-lfa-11
+id: draft-bashandy-rtgwg-segment-routing-uloop-17
 title:
-- content: Topology Independent Fast Reroute using Segment Routing
+- content: Loop avoidance using Segment Routing
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-rtgwg-segment-routing-ti-lfa-11
+- content: https://datatracker.ietf.org/doc/html/draft-bashandy-rtgwg-segment-routing-uloop-17
   type: src
 type: standard
 docid:
-- id: draft-ietf-rtgwg-segment-routing-ti-lfa-11
+- id: draft-bashandy-rtgwg-segment-routing-uloop-17
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-rtgwg-segment-routing-ti-lfa
+- id: I-D.bashandy-rtgwg-segment-routing-uloop
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-rtgwg-segment-routing-ti-lfa
+docnumber: I-D.bashandy-rtgwg-segment-routing-uloop
 date:
 - type: published
-  value: '2023-06-30'
+  value: '2024-06-29'
 contributor:
-- person:
-    name:
-      given:
-        forename:
-        - content: Stephane
-          language:
-          - en
-        - language:
-          - en
-          initial: S
-        formatted_initials:
-          content: S.
-          language:
-          - en
-      surname:
-        content: Litkowski
-        language:
-        - en
-      completename:
-        content: Stephane Litkowski
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Cisco Systems
-  role:
-  - type: author
 - person:
     name:
       given:
@@ -77,7 +49,7 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Individual
+        - content: Cisco Systems
   role:
   - type: author
 - person:
@@ -112,28 +84,28 @@ contributor:
     name:
       given:
         forename:
-        - content: Pierre
+        - content: Stephane
           language:
           - en
         - language:
           - en
-          initial: P
+          initial: S
         formatted_initials:
-          content: P.
+          content: S.
           language:
           - en
       surname:
-        content: Francois
+        content: Litkowski
         language:
         - en
       completename:
-        content: Pierre Francois
+        content: Stephane Litkowski
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: INSA Lyon
+        - content: Cisco Systems
   role:
   - type: author
 - person:
@@ -168,47 +140,70 @@ contributor:
     name:
       given:
         forename:
-        - content: Daniel
+        - content: Pierre
           language:
           - en
         - language:
           - en
-          initial: D
+          initial: P
         formatted_initials:
-          content: D.
+          content: P.
           language:
           - en
       surname:
-        content: Voyer
+        content: Francois
         language:
         - en
       completename:
-        content: Daniel Voyer
+        content: Pierre Francois
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Bell Canada
+        - content: INSA Lyon
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Peter
+          language:
+          - en
+        - language:
+          - en
+          initial: P
+        formatted_initials:
+          content: P.
+          language:
+          - en
+      surname:
+        content: Psenak
+        language:
+        - en
+      completename:
+        content: Peter Psenak
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Cisco Systems
   role:
   - type: author
 version:
-- draft: '11'
-revdate: '2023-06-30'
+- draft: '17'
+revdate: '2024-06-29'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document presents Topology Independent Loop-free Alternate Fast
-    Re-route (TI-LFA), aimed at providing protection of node and adjacency segments
-    within the Segment Routing (SR) framework. This Fast Re-route (FRR) behavior builds
-    on proven IP-FRR concepts being LFAs, remote LFAs (RLFA), and remote LFAs with
-    directed forwarding (DLFA). It extends these concepts to provide guaranteed coverage
-    in any two connected networks using a link-state IGP. A key aspect of TI-LFA is
-    the FRR path selection approach establishing protection over the expected post-convergence
-    paths from the point of local repair, reducing the operational need to control
-    the tie-breaks among various FRR options.</p>"
+- content: "<p>This document presents a mechanism aimed at providing loop avoidance
+    in the case of IGP network convergence event. The solution relies on the temporary
+    use of SR policies ensuring loop-freeness over the post-convergence paths from
+    the converging node to the destination.</p>"
   language:
   - en
   script:
@@ -217,23 +212,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-rtgwg-segment-routing-ti-lfa-10
+    id: draft-bashandy-rtgwg-segment-routing-uloop-00
     docid:
-    - id: draft-ietf-rtgwg-segment-routing-ti-lfa-10
+    - id: draft-bashandy-rtgwg-segment-routing-uloop-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-rtgwg-segment-routing-ti-lfa-10
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-rtgwg-segment-routing-ti-lfa-16
-    docid:
-    - id: draft-ietf-rtgwg-segment-routing-ti-lfa-16
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-rtgwg-segment-routing-ti-lfa-16
+      content: draft-bashandy-rtgwg-segment-routing-uloop-00
       format: text/plain
 series:
 - type: main
@@ -244,7 +229,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-rtgwg-segment-routing-ti-lfa-11
+  number: draft-bashandy-rtgwg-segment-routing-uloop-17
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
