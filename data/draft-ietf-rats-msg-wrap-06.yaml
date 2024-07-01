@@ -1,19 +1,19 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-rats-msg-wrap-01
+id: draft-ietf-rats-msg-wrap-06
 title:
-- content: RATS Conceptual Messages Wrapper
+- content: RATS Conceptual Messages Wrapper (CMW)
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-rats-msg-wrap-01
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-rats-msg-wrap-06
   type: src
 type: standard
 docid:
-- id: draft-ietf-rats-msg-wrap-01
+- id: draft-ietf-rats-msg-wrap-06
   type: Internet-Draft
   primary: true
 - id: I-D.ietf-rats-msg-wrap
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.ietf-rats-msg-wrap
 date:
 - type: published
-  value: '2023-12-21'
+  value: '2024-07-01'
 contributor:
 - person:
     name:
@@ -133,23 +133,21 @@ contributor:
   role:
   - type: author
 version:
-- draft: '01'
-revdate: '2023-12-21'
+- draft: '06'
+revdate: '2024-07-01'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document defines two encapsulation formats for RATS conceptual
-    messages (i.e., evidence, attestation results, endorsements and reference values.)
-    The first format uses a CBOR or JSON array with two mandatory members, one for
-    the type, another for the value, and a third optional member complementing the
-    type field that says which kind of conceptual message(s) are carried in the value.
-    The other format wraps the value in a CBOR byte string and prepends a CBOR tag
-    to convey the type information. This document also defines a corresponding CBOR
-    tag, as well as JSON Web Tokens (JWT) and CBOR Web Tokens (CWT) claims. These
-    allow embedding the wrapped conceptual messages into CBOR-based protocols and
-    web APIs, respectively.</p>"
+- content: "<p>This document defines the RATS conceptual message wrapper (CMW) format,
+    a type of encapsulation format that can be used for any RATS messages, such as
+    Evidence, Attestation Results, Endorsements, and Reference Values. Additionally,
+    the document describes a collection type that enables the aggregation of one or
+    more CMWs into a single message. This document also defines corresponding CBOR
+    tag, JSON Web Tokens (JWT) and CBOR Web Tokens (CWT) claims, as well as an X.509
+    extension. These allow embedding the wrapped conceptual messages into CBOR-based
+    protocols, web APIs, and PKIX protocols.</p>"
   language:
   - en
   script:
@@ -158,23 +156,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-rats-msg-wrap-00
+    id: draft-ietf-rats-msg-wrap-04
     docid:
-    - id: draft-ietf-rats-msg-wrap-00
+    - id: draft-ietf-rats-msg-wrap-04
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-rats-msg-wrap-00
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-rats-msg-wrap-06
-    docid:
-    - id: draft-ietf-rats-msg-wrap-06
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-rats-msg-wrap-06
+      content: draft-ietf-rats-msg-wrap-04
       format: text/plain
 series:
 - type: main
@@ -185,7 +173,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-rats-msg-wrap-01
+  number: draft-ietf-rats-msg-wrap-06
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
