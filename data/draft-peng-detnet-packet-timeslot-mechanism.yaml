@@ -21,10 +21,12 @@ abstract:
     but depends on the size of the packet. Statistical multiplexing has certain challenges
     and complexity in meeting deterministic QoS, and its delay performance is dependent
     on the used queueing mechanism. This document further describes a generic time
-    division multiplexing scheme in IP/MPLS networks, which we call timeslot queueing
-    and forwarding (TQF) mechanism. TQF is an enhancement based on TSN TAS, which
-    defines a cyclic period consisting of multiple timeslots, and a flow is assigned
-    to be transmited within one or more dedicated timeslots.</p>"
+    division multiplexing scheme for layer-3 in an IP/MPLS networks, which we call
+    timeslot queueing and forwarding (TQF) mechanism. TQF is an enhancement based
+    on TSN TAS and allows the data plane to create a flexible timeslot mapping scheme
+    based on available timeslot resources. It defines a cyclic period consisting of
+    multiple timeslots where a flow is assigned to be transmited within one or more
+    dedicated timeslots. The objective of TQF is to better handle large scaling requirements.</p>"
   language:
   - en
   script:
@@ -110,6 +112,16 @@ relation:
       primary: true
     formattedref:
       content: draft-peng-detnet-packet-timeslot-mechanism-07
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-peng-detnet-packet-timeslot-mechanism-08
+    docid:
+    - id: draft-peng-detnet-packet-timeslot-mechanism-08
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-peng-detnet-packet-timeslot-mechanism-08
       format: text/plain
 ext:
   schema-version: v1.0.1
