@@ -2,8 +2,7 @@
 schema-version: v1.2.3
 id: draft-ietf-cbor-edn-literals
 title:
-- content: 'CBOR Extended Diagnostic Notation (EDN): Application-Oriented Literals,
-    ABNF, and Media Type'
+- content: CBOR Extended Diagnostic Notation (EDN)
   language:
   - en
   script:
@@ -16,12 +15,16 @@ docid:
 abstract:
 - content: <p>The Concise Binary Object Representation, CBOR (STD 94, RFC 8949), defines
     a "diagnostic notation" in order to be able to converse about CBOR data items
-    without having to resort to binary data. This document specifies how to add application-oriented
-    extensions to the diagnostic notation. It then defines two such extensions for
-    text representations of epoch-based date/times and of IP addresses and prefixes
-    (RFC 9164). A few further additions close some gaps in usability. To facilitate
-    tool interoperation, this document specifies a formal ABNF definition for extended
-    diagnostic notation (EDN) that accommodates application- oriented literals.</p>
+    without having to resort to binary data. RFC 8610 extends this into what is known
+    as Extended Diagnostic Notation (EDN). This document sets forth a further step
+    of evolution of EDN, and it is intended to serve as a single reference target
+    in specifications that use EDN. It specifies how to add application-oriented extensions
+    to the diagnostic notation. It then defines two such extensions for text representations
+    of epoch-based date/times and of IP addresses and prefixes (RFC 9164). A few further
+    additions close some gaps in usability. It modifies one extension specified in
+    Appendix G.4 of RFC 8610 to enable further increasing usability. To facilitate
+    tool interoperation, this document specifies a formal ABNF definition for EDN
+    as defined today, and it adds media types.</p>
   language:
   - en
   script:
@@ -127,6 +130,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-cbor-edn-literals-09
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-cbor-edn-literals-10
+    docid:
+    - id: draft-ietf-cbor-edn-literals-10
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-cbor-edn-literals-10
       format: text/plain
 ext:
   schema-version: v1.0.1
