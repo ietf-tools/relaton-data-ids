@@ -1,0 +1,43 @@
+---
+schema-version: v1.2.3
+id: draft-schinazi-httpbis-wrap-up
+title:
+- content: The HTTP Wrap Up Capsule
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-schinazi-httpbis-wrap-up
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: <p>HTTP intermediaries sometimes need to terminate long-lived request streams
+    in order to facilitate load balancing or impose data limits. However, Web browsers
+    commonly cannot retry failed proxied requests when they cannot ascertain whether
+    an in-progress request was acted on. To avoid user-visible failures, it is best
+    for the intermediary to inform the client of upcoming request stream terminations
+    in advance of the actual termination so that the client can wrap up existing operations
+    related to that stream and start sending new work to a different stream or connection.
+    This document specifies a new "WRAP_UP" capsule that allows a proxy to instruct
+    a client that it should not start new requests on a tunneled connection, while
+    still allowing it to finish existing requests.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-schinazi-httpbis-wrap-up-00
+    docid:
+    - id: draft-schinazi-httpbis-wrap-up-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-schinazi-httpbis-wrap-up-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
