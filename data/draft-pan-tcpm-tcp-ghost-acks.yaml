@@ -1,0 +1,43 @@
+---
+schema-version: v1.2.3
+id: draft-pan-tcpm-tcp-ghost-acks
+title:
+- content: Improve TCP Handling of Out-of-Window Packets to Mitigate Ghost ACKs
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-pan-tcpm-tcp-ghost-acks
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>Historically, TCP as specified in RFC 793 was threatened by the blind
+    data injection attack because of the loose acceptable ACK value validation, where
+    the ACK value of a data segment is considered valid as long as it does not acknowledge
+    data ahead of the next segment to send. RFC 5961 improved the defect by shrinking
+    the range of acceptable ACK values in a data segment. Later, RFC 9293 involved
+    the updates proposed by RFC 5961 as a TCP stack implementation option. However,
+    an endpoint that follows the RFC 9293 specifications can still accept a data segment
+    containing an ACK value acknowledging data that the endpoint has never sent. This
+    document specifies small modifications to the way TCP verifies incoming data segments'
+    ACK value to prevent TCP from accepting invalid ACK values.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-pan-tcpm-tcp-ghost-acks-00
+    docid:
+    - id: draft-pan-tcpm-tcp-ghost-acks-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-pan-tcpm-tcp-ghost-acks-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
