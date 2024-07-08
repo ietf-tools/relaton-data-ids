@@ -1,0 +1,94 @@
+---
+schema-version: v1.2.3
+id: draft-pskim-quic-pmtu-algorithms-00
+title:
+- content: Path MTU Algorithms for QUIC
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-pskim-quic-pmtu-algorithms-00
+  type: src
+type: standard
+docid:
+- id: draft-pskim-quic-pmtu-algorithms-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.pskim-quic-pmtu-algorithms
+  type: IETF
+  scope: anchor
+docnumber: I-D.pskim-quic-pmtu-algorithms
+date:
+- type: published
+  value: '2024-07-07'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Pyung
+          language:
+          - en
+        - language:
+          - en
+          initial: P
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: P. S.
+          language:
+          - en
+      surname:
+        content: Kim
+        language:
+        - en
+      completename:
+        content: Pyung Soo Kim
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: TU Korea
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2024-07-07'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>This draft consider a couple of algorithms for Path MTU (PMTU) in QUIC
+    to discovery optimal PMTU and resolve PMTU black hole problem. Fistly, a passive
+    probing approach is adopted to discover the PMTU. The process of discovering the
+    PMTU is not performed separately, but is performed simultaneously in the actual
+    application data communication. That is, the actual application data is allowed
+    to be carried in the process of discovering the PMTU. A probe packet is defined
+    newly using 1-RTT packet which includes actual application data as well as a short
+    packet header and a PING_EXT frame. Until the optimal PMTU is discovered, the
+    size of the probe packet is changed according to the size of the PMTU candidate.
+    Secondly, a PMTU black hole problem in secure and reliable transport protocol
+    is discussed and a possible solution can be suggested from existing researches.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-pskim-quic-pmtu-algorithms-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
