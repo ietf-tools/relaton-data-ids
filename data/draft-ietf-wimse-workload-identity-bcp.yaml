@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-ietf-wimse-workload-identity-bcp
 title:
-- content: Best Current Practice for Workload Identity
+- content: Best Current Practice for OAuth 2.0 Client Authentication in Workload Environments
   language:
   - en
   script:
@@ -17,10 +17,9 @@ abstract:
     poses a challenge as managing secrets, such as client_id and client_secret, can
     be complex and error-prone. "Service account token volume projection", a term
     introduced by Kubernetes, provides a way of injecting JSON Web Tokens (JWTs) to
-    workloads. This document specifies the use of JWTs for client credentials in container
-    orchestration systems to improve interoperability in orchestration systems, to
-    reduce complexity for developers, and motivates authorization server to support
-    RFC 7523.</p>
+    workloads. This document describes the current best practices to avoid client_secret
+    provisioning and leverage platform attestation to receive access tokens from an
+    OAuth 2.0 authorization server via RFC 7523.</p>
   language:
   - en
   script:
@@ -36,6 +35,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-wimse-workload-identity-bcp-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-wimse-workload-identity-bcp-01
+    docid:
+    - id: draft-ietf-wimse-workload-identity-bcp-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-wimse-workload-identity-bcp-01
       format: text/plain
 ext:
   schema-version: v1.0.1
