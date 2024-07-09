@@ -1,0 +1,94 @@
+---
+schema-version: v1.2.3
+id: draft-arends-parent-only-record-signalling-00
+title:
+- content: DNS Delegation Extensions
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-arends-parent-only-record-signalling-00
+  type: src
+type: standard
+docid:
+- id: draft-arends-parent-only-record-signalling-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.arends-parent-only-record-signalling
+  type: IETF
+  scope: anchor
+docnumber: I-D.arends-parent-only-record-signalling
+date:
+- type: published
+  value: '2024-07-08'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Roy
+          language:
+          - en
+        - language:
+          - en
+          initial: R
+        formatted_initials:
+          content: R.
+          language:
+          - en
+      surname:
+        content: Arends
+        language:
+        - en
+      completename:
+        content: Roy Arends
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: ICANN
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2024-07-08'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>New RR types have been proposed that appear only at the parent side
+    of a delegation, similar to the DS resource record (RR) type. Supporting parent
+    side RR types requires modifications to the DNS Security Extensions (DNSSEC).
+    Without these modifications, validating resolvers are susceptible to response
+    modification attacks. An on-path adversary could potentially remove the parent-side
+    resource records without being detected. To detect the removal of a parent-side
+    RR type, an authenticated denial record (such as NSEC or NSEC3) is necessary to
+    confirm presence or absence of a parent-side RR type. Currently, validating resolver
+    do not expect authenticated denial records in a secure delegation response. Therefore,
+    a secure signal is needed to inform the validating resolver to anticipate authenticated
+    denial records for a delegation. To support the future deployment of parent-side
+    RR types, this draft designates a range of yet unallocated RR types specifically
+    for parent-side use. Authoritative servers will include these records in a delegation
+    response without requiring upgrades.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-arends-parent-only-record-signalling-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

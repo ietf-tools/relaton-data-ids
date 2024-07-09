@@ -14,16 +14,16 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document defines Post-Quantum / Traditional composite Key Encapsulation
-    Mechanism (KEM) algorithms suitable for use within X.509, PKIX and CMS protocols.
-    Composite algorithms are provided which combine ML-KEM with RSA-KEM and ECDH-KEM.
-    The provided set of composite algorithms should meet most Internet needs. This
-    document assumes that all component algorithms are KEMs, and therefore it depends
-    on [I-D.ietf-lamps-rfc5990bis] and [I-D.ounsworth-lamps-cms-dhkem] in order to
-    promote RSA and ECDH respectively into KEMs. For the purpose of combining KEMs,
-    the combiner function from [I-D.ounsworth-cfrg-kem-combiners] is used. For use
-    within CMS, this document is intended to be coupled with the CMS KEMRecipientInfo
-    mechanism in [I-D.housley-lamps-cms-kemri].</p>"
+- content: "<p>This document introduces a set of Key Encapsulation Mechanism (KEM)
+    schemes that use pairs of cryptographic elements such as public keys and cipher
+    texts to combine their security properties. These schemes effectively mitigate
+    risks associated with the adoption of post- quantum cryptography and are fully
+    compatible with existing X.509, PKIX, and CMS data structures and protocols. This
+    document defines eleven specific pairwise combinations, namely ML-KEM Composite
+    Schemes, that blend ML-KEM with traditional algorithms such as RSA- OAEP, ECDH,
+    X25519, and X448. For use within CMS, this document is intended to be coupled
+    with the CMS KEMRecipientInfo mechanism in [I-D.housley-lamps-cms-kemri]. These
+    combinations are tailored to meet security best practices and regulatory requirements.</p>"
   language:
   - en
   script:
@@ -69,6 +69,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-lamps-pq-composite-kem-03
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-lamps-pq-composite-kem-04
+    docid:
+    - id: draft-ietf-lamps-pq-composite-kem-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-lamps-pq-composite-kem-04
       format: text/plain
 ext:
   schema-version: v1.0.1

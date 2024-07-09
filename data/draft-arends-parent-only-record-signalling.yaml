@@ -1,0 +1,47 @@
+---
+schema-version: v1.2.3
+id: draft-arends-parent-only-record-signalling
+title:
+- content: DNS Delegation Extensions
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-arends-parent-only-record-signalling
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>New RR types have been proposed that appear only at the parent side
+    of a delegation, similar to the DS resource record (RR) type. Supporting parent
+    side RR types requires modifications to the DNS Security Extensions (DNSSEC).
+    Without these modifications, validating resolvers are susceptible to response
+    modification attacks. An on-path adversary could potentially remove the parent-side
+    resource records without being detected. To detect the removal of a parent-side
+    RR type, an authenticated denial record (such as NSEC or NSEC3) is necessary to
+    confirm presence or absence of a parent-side RR type. Currently, validating resolver
+    do not expect authenticated denial records in a secure delegation response. Therefore,
+    a secure signal is needed to inform the validating resolver to anticipate authenticated
+    denial records for a delegation. To support the future deployment of parent-side
+    RR types, this draft designates a range of yet unallocated RR types specifically
+    for parent-side use. Authoritative servers will include these records in a delegation
+    response without requiring upgrades.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-arends-parent-only-record-signalling-00
+    docid:
+    - id: draft-arends-parent-only-record-signalling-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-arends-parent-only-record-signalling-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
