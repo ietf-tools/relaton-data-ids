@@ -1,0 +1,151 @@
+---
+schema-version: v1.2.3
+id: draft-huque-dnsop-keytags-00
+title:
+- content: Collision Free Keytags for DNSSEC
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-huque-dnsop-keytags-00
+  type: src
+type: standard
+docid:
+- id: draft-huque-dnsop-keytags-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.huque-dnsop-keytags
+  type: IETF
+  scope: anchor
+docnumber: I-D.huque-dnsop-keytags
+date:
+- type: published
+  value: '2024-07-25'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Mark
+          language:
+          - en
+        - language:
+          - en
+          initial: M
+        - language:
+          - en
+          initial: P
+        formatted_initials:
+          content: M. P.
+          language:
+          - en
+      surname:
+        content: Andrews
+        language:
+        - en
+      completename:
+        content: Mark P. Andrews
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Internet Systems Consortium
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Shumon
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Huque
+        language:
+        - en
+      completename:
+        content: Shumon Huque
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Salesforce
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Elias
+          language:
+          - en
+        - language:
+          - en
+          initial: E
+        formatted_initials:
+          content: E.
+          language:
+          - en
+      surname:
+        content: Heftrig
+        language:
+        - en
+      completename:
+        content: Elias Heftrig
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Fraunhofer Institute
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2024-07-25'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>DNSSEC employs a Key Tag field in the RRSIG and DS resource records
+    in order to efficiently identify the key that produced a DNSSEC signature and
+    the key that should be used as secure entry point into a delegated zone. The Key
+    Tag was not intended to be a unique identifier. Key tag collisions can occur in
+    practice for keys in the same zone, though they are relatively rare in normal
+    operation. Colliding key tags impose additional work on a validating resolver,
+    which then has to check signatures for each of the candidate set of keys identified
+    by the Key Tag. Furthermore, they open up resolvers to computational denial of
+    service attacks by adversaries deploying specially crafted zones with many intentionally
+    colliding key tags. This document specifies updates to the DNSSEC protocol and
+    the process of key generation to avoid colliding keys and enforce the uniqueness
+    of key tags.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-huque-dnsop-keytags-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
