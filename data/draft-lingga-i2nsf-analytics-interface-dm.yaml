@@ -2,7 +2,8 @@
 schema-version: v1.2.3
 id: draft-lingga-i2nsf-analytics-interface-dm
 title:
-- content: I2NSF Analytics Interface YANG Data Model
+- content: I2NSF Analytics Interface YANG Data Model for Closed-Loop Security Control
+    in the I2NSF Framework
   language:
   - en
   script:
@@ -15,11 +16,15 @@ docid:
 abstract:
 - content: "<p>This document describes an information model and a YANG data model
     for the Analytics Interface between an Interface to Network Security Functions
-    (I2NSF) Analyzer and a Security Controller in an I2NSF system in a Network Functions
-    Virtualization (NFV) environment. The YANG data model described in this document
-    is based on the I2NSF NSF- Facing Interface and the I2NSF Monitoring Interface
-    for enabling the delivery of analytics information based on monitoring data received
-    from a Network Security Function (NSF).</p>"
+    (I2NSF) Analyzer and a Security Controller in an I2NSF framework. I2NSF Analyzer
+    collects the monitoring data from Network Security Functions (NSF), and analyzes
+    them with Machine Learning (ML) algorithms. This Analytics Interface is used for
+    I2NSF Analyzer to deliver analysis results (e.g., policy reconfiguration and feedback
+    message) to Security Controller for Closed-Loop Security Control in the I2NSF
+    Framework in [I-D.jeong-i2nsf-security-management-automation]. The YANG data model
+    described in this document is based on the YANG data models of the I2NSF NSF-Facing
+    Interface [I-D.ietf-i2nsf-nsf-facing-interface-dm] and the I2NSF Monitoring Interface
+    [I-D.ietf-i2nsf-nsf-monitoring-data-model].</p>"
   language:
   - en
   script:
@@ -65,6 +70,16 @@ relation:
       primary: true
     formattedref:
       content: draft-lingga-i2nsf-analytics-interface-dm-03
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-lingga-i2nsf-analytics-interface-dm-04
+    docid:
+    - id: draft-lingga-i2nsf-analytics-interface-dm-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-lingga-i2nsf-analytics-interface-dm-04
       format: text/plain
 ext:
   schema-version: v1.0.1
