@@ -14,14 +14,15 @@ docid:
   primary: true
 abstract:
 - content: "<p>Large-scale supercomputing and AI data centers utilize multipath to
-    implement load balancing and improve link reliability. Adaptive routing (AR),
-    widely used in direct topologies such as dragonfly, can dynamically adjust routing
-    policies based on path congestion and failures. When congestion or failure occurs,
-    the local node applies AR and also sends the congestion/failure information to
-    other nodes in a timely and accurate manner to enforce AR on other nodes, thus
-    avoiding exacerbating congestion on the path. This document specifies Adaptive
-    Routing Notification (ARN) for proactively disseminating congestion detection
-    and congestion elimination information.</p>"
+    implement load balancing and/or improve transport reliability. Adaptive routing
+    (AR), widely used in direct topologies such as dragonfly, is growing popular in
+    commodity data centers to dynamically adjust routing policies based on path congestion
+    and failures. When congestion or failure occurs, the sensing node can not only
+    apply AR locally but also send the congestion/failure information to other nodes
+    in a timely and accurate manner to enforce AR on other nodes, thus avoiding exacerbating
+    congestion on the reported path. This document specifies Adaptive Routing Notification
+    (ARN), a general mechanism to proactively disseminate congestion detection and
+    congestion elimination information for remote nodes to perform re-routing policies.</p>"
   language:
   - en
   script:
@@ -47,6 +48,16 @@ relation:
       primary: true
     formattedref:
       content: draft-wh-rtgwg-adaptive-routing-arn-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-wh-rtgwg-adaptive-routing-arn-02
+    docid:
+    - id: draft-wh-rtgwg-adaptive-routing-arn-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-wh-rtgwg-adaptive-routing-arn-02
       format: text/plain
 ext:
   schema-version: v1.0.1
