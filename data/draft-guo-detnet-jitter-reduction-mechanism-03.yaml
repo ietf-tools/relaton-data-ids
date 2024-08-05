@@ -1,49 +1,77 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-mpls-inband-pm-encapsulation-04
+id: draft-guo-detnet-jitter-reduction-mechanism-03
 title:
-- content: Encapsulation For MPLS Performance Measurement with Alternate Marking Method
+- content: Jitter Reduction Mechanism for DetNet
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-mpls-inband-pm-encapsulation-04
+- content: https://datatracker.ietf.org/doc/html/draft-guo-detnet-jitter-reduction-mechanism-03
   type: src
 type: standard
 docid:
-- id: draft-ietf-mpls-inband-pm-encapsulation-04
+- id: draft-guo-detnet-jitter-reduction-mechanism-03
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-mpls-inband-pm-encapsulation
+- id: I-D.guo-detnet-jitter-reduction-mechanism
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-mpls-inband-pm-encapsulation
+docnumber: I-D.guo-detnet-jitter-reduction-mechanism
 date:
 - type: published
-  value: '2022-12-29'
+  value: '2024-08-04'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Weiqiang
+        - content: Daorong
           language:
           - en
         - language:
           - en
-          initial: W
+          initial: D
         formatted_initials:
-          content: W.
+          content: D.
           language:
           - en
       surname:
-        content: Cheng
+        content: Guo
         language:
         - en
       completename:
-        content: Weiqiang Cheng
+        content: Daorong Guo
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: New H3C Technologies Co., Ltd
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Tianji
+          language:
+          - en
+        - language:
+          - en
+          initial: T
+        formatted_initials:
+          content: T.
+          language:
+          - en
+      surname:
+        content: Jiang
+        language:
+        - en
+      completename:
+        content: Tianji Jiang
         language:
         - en
     affiliation:
@@ -56,91 +84,35 @@ contributor:
     name:
       given:
         forename:
-        - content: Xiao
+        - content: Shenchao
           language:
           - en
         - language:
           - en
-          initial: X
+          initial: S
         formatted_initials:
-          content: X.
+          content: S.
           language:
           - en
       surname:
-        content: Min
+        content: Xu
         language:
         - en
       completename:
-        content: Xiao Min
+        content: Shenchao Xu
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: ZTE Corp.
+        - content: New H3C Technologies Co., Ltd
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Tianran
-          language:
-          - en
-        - language:
-          - en
-          initial: T
-        formatted_initials:
-          content: T.
-          language:
-          - en
-      surname:
-        content: Zhou
-        language:
-        - en
-      completename:
-        content: Tianran Zhou
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Huawei
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Ximing
-          language:
-          - en
-        - language:
-          - en
-          initial: X
-        formatted_initials:
-          content: X.
-          language:
-          - en
-      surname:
-        content: Dong
-        language:
-        - en
-      completename:
-        content: Ximing Dong
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: FiberHome
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Yoav
+        - content: XUEJUN
           language:
           - en
         - language:
@@ -151,30 +123,57 @@ contributor:
           language:
           - en
       surname:
-        content: Peleg
+        content: Xuejun
         language:
         - en
       completename:
-        content: Yoav Peleg
+        content: XUEJUN YOU
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Broadcom
+        - content: New H3C Technologies Co., Ltd
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        formatted_initials:
+          language:
+          - en
+      surname:
+        content: zhushiyin
+        language:
+        - en
+      completename:
+        content: zhushiyin
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: New H3C Technologies Co., Ltd
   role:
   - type: author
 version:
-- draft: '04'
-revdate: '2022-12-29'
+- draft: '03'
+revdate: '2024-08-04'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document defines the encapsulation for MPLS performance measurement
-    with alternate marking method, which performs flow-based packet loss, delay, and
-    jitter measurements on MPLS live traffic.</p>"
+- content: "<p>In large-scale deterministic networks (LDN), App-flows need to span
+    multiple deterministic network domains, and the latency in multiple domains is
+    added together. The jitter will be increased. In order to realize the protection
+    service function, App-flows should be transmitted on multiple paths. The delay
+    difference in data transmission on different paths is no different from jitter
+    in end- to-end services. Jitter generated by various factors needs to be reduced
+    to meet business requirements. This document describes the end-to-end jitter reduction
+    mechanism in an LDN. This mechanism can effectively control the end-to-end jitter
+    to meet specific business needs and make the planning of multiple paths for service
+    protection more flexible.</p>"
   language:
   - en
   script:
@@ -183,23 +182,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-mpls-inband-pm-encapsulation-02
+    id: draft-guo-detnet-jitter-reduction-mechanism-00
     docid:
-    - id: draft-ietf-mpls-inband-pm-encapsulation-02
+    - id: draft-guo-detnet-jitter-reduction-mechanism-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-mpls-inband-pm-encapsulation-02
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-mpls-inband-pm-encapsulation-14
-    docid:
-    - id: draft-ietf-mpls-inband-pm-encapsulation-14
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-mpls-inband-pm-encapsulation-14
+      content: draft-guo-detnet-jitter-reduction-mechanism-00
       format: text/plain
 series:
 - type: main
@@ -210,7 +199,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-mpls-inband-pm-encapsulation-04
+  number: draft-guo-detnet-jitter-reduction-mechanism-03
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
