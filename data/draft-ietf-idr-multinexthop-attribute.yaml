@@ -14,12 +14,14 @@ docid:
   primary: true
 abstract:
 - content: <p>Today, a BGP speaker can advertise one nexthop for a set of NLRIs in
-    an Update. This nexthop can be encoded in either the top-level BGP- Nexthop attribute
-    (code 3), or inside the MP_REACH_NLRI attribute (code 14). This document defines
-    a new optional non-transitive BGP attribute called "MultiNexthop (MNH)" with IANA
-    BGP attribute type code TBD, that can be used to carry an ordered set of one or
-    more Nexthops in the same route, with forwaring information scoped on a per nexthop
-    basis.</p>
+    an Update message. This nexthop can be encoded in either the top- level BGP-Nexthop
+    attribute (code 3), or inside the MP_REACH_NLRI attribute (code 14). Forwarding
+    information related to the nexthop is scattered across various attributes, extended
+    communities or the NLRI field. This document defines a new optional non-transitive
+    BGP attribute called "MultiNexthop (MNH)" with IANA BGP attribute type code TBD,
+    that can be used to carry an ordered set of one or more Nexthops in the same Update
+    message, with all forwarding information being carried in one attribute, scoped
+    on a per nexthop basis.</p>
   language:
   - en
   script:
@@ -35,6 +37,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-idr-multinexthop-attribute-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-idr-multinexthop-attribute-01
+    docid:
+    - id: draft-ietf-idr-multinexthop-attribute-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-idr-multinexthop-attribute-01
       format: text/plain
 ext:
   schema-version: v1.0.1
