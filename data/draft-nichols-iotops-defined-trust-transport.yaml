@@ -13,27 +13,31 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document describes a broadcast-oriented, many-to-many Defined-
-    trust Transport (DeftT) framework that makes it simple to express and enforce
-    application and deployment specific integrity, authentication, access control
-    and behavior constraints directly in the protocol stack. DeftT enables secure
-    and completely self- contained (e.g., no external identity servers or certificate
-    authorities) overlay networks where credentialed members can join and leave at
-    any time. DeftT is part of a Defined-trust Communications approach with a specific
-    example implementation available. Combined with IPv6 multicast and modern hardware-based
-    methods for securing keys and code, it provides an easy to use foundation for
-    secure and efficient communications in Limited Domains (RFC8799), in particular
-    for Operational Technology (OT) networks. Conventional IP transports create optionally
-    secured one-to-one sessions. Where member identities exist, they must either be
-    validated via external servers or all member identities must be be preconfigured
-    in each member during enrollment. Synchronization of data across a domain is carried
-    out through multiple two-party transport sessions. In contrast, DeftT is a multi-party
-    transport that synchronizes collections of secured information across all enrolled
-    members of a domain. Security in DeftT is not optional and members are preconfigured
-    only with their own identities and the secured rules to authenticate other member
-    identities. This document describes an architecture that is not a standard and
-    does not enjoy IETF consensus. (The community is invited to consider standardizing
-    its concepts and the specification.)</p>"
+- content: "<p>This document is not an Internet Standards Track specification and
+    does not enjoy IETF consensus. It is published for examination, evaluation, and
+    experimentation. The Defined-trust Transport (DeftT) framework is designed to
+    provide default-deny communications for certain types of Limited Domains (RFC8799)
+    used for Operational Technology (OT) networks and, in particular, Critical Infrastructure
+    networking. DeftT is designed to express and enforce application- and deployment-specific
+    integrity, authentication, access control and behavior constraints directly in
+    its protocol modules. It enables secure and completely self-contained (e.g., no
+    external identity servers or certificate authorities) overlay networks where credentialed
+    members can join and leave at any time. Security is not optional and members preconfigured
+    only with their individual cryptographically secured identities and the secured
+    communication rules independently authenticate other members' identities and their
+    role- and attribute-specific communications. DeftT is an integrated trust management,
+    multi-party transport that synchronizes collections of secured information across
+    all members of its domain. It uses a many-to-many synchronization primitive rather
+    than source-destination send-and-acknowledgement. Packets are not routable and
+    information only leaves its originating subnet if it is both explicitly permitted
+    in the secured rules and there is a member element (relay) constructed to move
+    validated information containers across subnets. DeftT provides default deny networking
+    for closed communities with dynamic membership and a collection-based transport
+    that is efficient on broadcast media. DeftT is part of a Defined- trust Communications
+    approach with an example implementation available. Combined with IPv6 multicast
+    and modern hardware-based methods for securing keys and code, it can provide a
+    foundation for secure and efficient communications in Limited Domains, particularaly
+    in Critical Infrastructure domains.</p>"
   language:
   - en
   script:
@@ -109,6 +113,16 @@ relation:
       primary: true
     formattedref:
       content: draft-nichols-iotops-defined-trust-transport-06
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-nichols-iotops-defined-trust-transport-07
+    docid:
+    - id: draft-nichols-iotops-defined-trust-transport-07
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-nichols-iotops-defined-trust-transport-07
       format: text/plain
 ext:
   schema-version: v1.0.1
