@@ -2,8 +2,7 @@
 schema-version: v1.2.3
 id: draft-ietf-v6ops-nd-considerations
 title:
-- content: Selectively Isolating Hosts to Prevent Potential Neighbor Discovery Issues
-    and Simplify IPv6 First-hops
+- content: Neighbor Discovery Considerations in IPv6 Deployments
   language:
   - en
   script:
@@ -14,19 +13,18 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>Neighbor Discovery (ND) is a key protocol of IPv6 first-hop. ND uses
-    multicast extensively and trusts all hosts. In some scenarios like wireless networks,
-    multicast can be inefficient. In other scenarios like public access networks,
-    hosts may not be trustable. Consequently, ND has potential issues in various scenarios.
-    The issues and the solutions for them are documented in more than 30 RFCs. It
-    is difficult to keep track of all these issues and solutions. Therefore, an overview
-    is useful. This document firstly summarizes the known ND issues and optimization
-    solutions into a one-stop reference. Analyzing these solutions reveals an insight:
-    isolating hosts is effective in preventing ND issues. Five isolation methods are
-    proposed and their applicability is discussed. Guidelines are described for selecting
-    a suitable isolation method based on the deployment scenario. When ND issues are
-    prevented with a proper isolation method, the solutions for these issues are not
-    needed. This simplifies the IPv6 first- hops.</p>"
+- content: "<p>Neighbor Discovery (ND) is a critical part of IPv6. ND uses multicast
+    extensively and trusts all hosts. In some scenarios, such as wireless networks,
+    multicast can be inefficient. In other scenarios, such as public access networks,
+    hosts may not be trustworthy. Consequently, ND can have issues in some scenarios.
+    The issues and mitigation solutions are documented in more than 20 RFCs, making
+    it challenging to track all these issues and solutions. Therefore, an overview
+    document is helpful. This document first summarizes the published ND issues and
+    the solutions. This provides a one-stop reference. This document then analyzes
+    these mitigation solutions to reveal that isolating hosts into different subnets
+    or links can help prevent ND issues. Three isolation methods and their applicability
+    are described. A simple guideline is provided for selecting a suitable isolation
+    method to prevent potential ND issues.</p>"
   language:
   - en
   script:
@@ -82,6 +80,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-v6ops-nd-considerations-04
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-v6ops-nd-considerations-05
+    docid:
+    - id: draft-ietf-v6ops-nd-considerations-05
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-v6ops-nd-considerations-05
       format: text/plain
 ext:
   schema-version: v1.0.1
