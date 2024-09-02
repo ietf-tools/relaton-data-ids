@@ -1,180 +1,185 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-pim-evpn-multicast-yang-01
+id: draft-ietf-pce-pcep-extension-native-ip-39
 title:
-- content: Yang Data Model for EVPN multicast
+- content: Path Computation Element Communication Protocol (PCEP) Extensions for Native
+    IP Networks
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-pim-evpn-multicast-yang-01
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-pce-pcep-extension-native-ip-39
   type: src
 type: standard
 docid:
-- id: draft-ietf-pim-evpn-multicast-yang-01
+- id: draft-ietf-pce-pcep-extension-native-ip-39
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-pim-evpn-multicast-yang
+- id: I-D.ietf-pce-pcep-extension-native-ip
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-pim-evpn-multicast-yang
+docnumber: I-D.ietf-pce-pcep-extension-native-ip
 date:
 - type: published
-  value: '2024-03-04'
+  value: '2024-09-01'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Hongji
+        - content: Aijun
           language:
           - en
         - language:
           - en
-          initial: H
+          initial: A
         formatted_initials:
-          content: H.
+          content: A.
           language:
           - en
       surname:
-        content: Zhao
+        content: Wang
         language:
         - en
       completename:
-        content: Hongji Zhao
+        content: Aijun Wang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Ericsson
+        - content: China Telecom
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Yisong
+        - content: Boris
           language:
           - en
         - language:
           - en
-          initial: Y
+          initial: B
         formatted_initials:
-          content: Y.
+          content: B.
           language:
           - en
       surname:
-        content: Liu
+        content: Khasanov
         language:
         - en
       completename:
-        content: Yisong Liu
+        content: Boris Khasanov
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: China Mobile
+        - content: MTS Web Services (MWS)
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Xufeng
+        - content: Sheng
           language:
           - en
         - language:
           - en
-          initial: X
+          initial: S
         formatted_initials:
-          content: X.
+          content: S.
           language:
           - en
       surname:
-        content: Liu
+        content: Fang
         language:
         - en
       completename:
-        content: Xufeng Liu
+        content: Sheng Fang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Alef Edge
+        - content: Huawei Technologies
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Mani
+        - content: Ren
           language:
           - en
         - language:
           - en
-          initial: M
+          initial: R
         formatted_initials:
-          content: M.
+          content: R.
           language:
           - en
       surname:
-        content: Panchanathan
+        content: Tan
         language:
         - en
       completename:
-        content: Mani Panchanathan
+        content: Ren Tan
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cisco
+        - content: Huawei Technologies
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Mahesh
+        - content: Chun
           language:
           - en
         - language:
           - en
-          initial: M
+          initial: C
         formatted_initials:
-          content: M.
+          content: C.
           language:
           - en
       surname:
-        content: Sivakumar
+        content: Zhu
         language:
         - en
       completename:
-        content: Mahesh Sivakumar
+        content: Chun Zhu
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Juniper
+        - content: ZTE Corporation
   role:
   - type: author
 version:
-- draft: '01'
-revdate: '2024-03-04'
+- draft: '39'
+revdate: '2024-09-01'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document describes a YANG data model for EVPN multicast services.
-    The model is agnostic of the underlay as well as RFC 9251. This document mainly
-    focuses on EVPN instance framework.</p>"
+- content: "<p>This document introduces extensions to the PCE Communication Protocol
+    (PCEP) to support path computation in native IP networks through a PCE-based central
+    control mechanism known as Centralized Control Dynamic Routing (CCDR). These extensions
+    empower a PCE to calculate and manage paths specifically for native IP networks,
+    expand PCEP’s capabilities beyond its traditional use in MPLS and GMPLS networks.
+    By implementing these extensions, IP network resources can be utilized more efficiently,
+    facilitating the deployment of traffic engineering in native IP environments.</p>"
   language:
   - en
   script:
@@ -183,23 +188,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-pim-evpn-multicast-yang-00
+    id: draft-ietf-pce-pcep-extension-native-ip-36
     docid:
-    - id: draft-ietf-pim-evpn-multicast-yang-00
+    - id: draft-ietf-pce-pcep-extension-native-ip-36
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-pim-evpn-multicast-yang-00
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-pim-evpn-multicast-yang-02
-    docid:
-    - id: draft-ietf-pim-evpn-multicast-yang-02
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-pim-evpn-multicast-yang-02
+      content: draft-ietf-pce-pcep-extension-native-ip-36
       format: text/plain
 series:
 - type: main
@@ -210,7 +205,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-pim-evpn-multicast-yang-01
+  number: draft-ietf-pce-pcep-extension-native-ip-39
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

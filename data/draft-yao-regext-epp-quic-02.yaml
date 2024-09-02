@@ -1,34 +1,62 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-pim-evpn-multicast-yang-01
+id: draft-yao-regext-epp-quic-02
 title:
-- content: Yang Data Model for EVPN multicast
+- content: Extensible Provisioning Protocol (EPP) Transport over QUIC
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-pim-evpn-multicast-yang-01
+- content: https://datatracker.ietf.org/doc/html/draft-yao-regext-epp-quic-02
   type: src
 type: standard
 docid:
-- id: draft-ietf-pim-evpn-multicast-yang-01
+- id: draft-yao-regext-epp-quic-02
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-pim-evpn-multicast-yang
+- id: I-D.yao-regext-epp-quic
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-pim-evpn-multicast-yang
+docnumber: I-D.yao-regext-epp-quic
 date:
 - type: published
-  value: '2024-03-04'
+  value: '2024-09-01'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Hongji
+        - content: Jiankang
+          language:
+          - en
+        - language:
+          - en
+          initial: J
+        formatted_initials:
+          content: J.
+          language:
+          - en
+      surname:
+        content: Yao
+        language:
+        - en
+      completename:
+        content: Jiankang Yao
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: CNNIC
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Hongtao
           language:
           - en
         - language:
@@ -39,142 +67,114 @@ contributor:
           language:
           - en
       surname:
-        content: Zhao
+        content: Li
         language:
         - en
       completename:
-        content: Hongji Zhao
+        content: Hongtao Li
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Ericsson
+        - content: CNNIC
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Yisong
+        - content: Zhiwei
           language:
           - en
         - language:
           - en
-          initial: Y
+          initial: Z
         formatted_initials:
-          content: Y.
+          content: Z.
           language:
           - en
       surname:
-        content: Liu
+        content: Yan
         language:
         - en
       completename:
-        content: Yisong Liu
+        content: Zhiwei Yan
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: China Mobile
+        - content: CNNIC
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Xufeng
+        - content: Dan
           language:
           - en
         - language:
           - en
-          initial: X
+          initial: D
         formatted_initials:
-          content: X.
+          content: D.
           language:
           - en
       surname:
-        content: Liu
+        content: Keathley
         language:
         - en
       completename:
-        content: Xufeng Liu
+        content: Dan Keathley
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Alef Edge
+        - content: VeriSign, Inc.
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Mani
+        - content: James
           language:
           - en
         - language:
           - en
-          initial: M
+          initial: J
         formatted_initials:
-          content: M.
+          content: J.
           language:
           - en
       surname:
-        content: Panchanathan
+        content: Gould
         language:
         - en
       completename:
-        content: Mani Panchanathan
+        content: James Gould
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cisco
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Mahesh
-          language:
-          - en
-        - language:
-          - en
-          initial: M
-        formatted_initials:
-          content: M.
-          language:
-          - en
-      surname:
-        content: Sivakumar
-        language:
-        - en
-      completename:
-        content: Mahesh Sivakumar
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Juniper
+        - content: VeriSign, Inc.
   role:
   - type: author
 version:
-- draft: '01'
-revdate: '2024-03-04'
+- draft: '02'
+revdate: '2024-09-01'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document describes a YANG data model for EVPN multicast services.
-    The model is agnostic of the underlay as well as RFC 9251. This document mainly
-    focuses on EVPN instance framework.</p>"
+- content: "<p>This document describes how an Extensible Provisioning Protocol (EPP)
+    session is mapped onto a QUIC connection. EPP over QUIC (EoQ) leverages the performance
+    and security features of the QUIC protocol as an EPP transport.</p>"
   language:
   - en
   script:
@@ -183,23 +183,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-pim-evpn-multicast-yang-00
+    id: draft-yao-regext-epp-quic-01
     docid:
-    - id: draft-ietf-pim-evpn-multicast-yang-00
+    - id: draft-yao-regext-epp-quic-01
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-pim-evpn-multicast-yang-00
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-pim-evpn-multicast-yang-02
-    docid:
-    - id: draft-ietf-pim-evpn-multicast-yang-02
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-pim-evpn-multicast-yang-02
+      content: draft-yao-regext-epp-quic-01
       format: text/plain
 series:
 - type: main
@@ -210,7 +200,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-pim-evpn-multicast-yang-01
+  number: draft-yao-regext-epp-quic-02
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
