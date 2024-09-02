@@ -13,18 +13,32 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: <p>The Concise Binary Object Representation, CBOR (STD 94, RFC 8949), defines
-    a "diagnostic notation" in order to be able to converse about CBOR data items
-    without having to resort to binary data. RFC 8610 extends this into what is known
-    as Extended Diagnostic Notation (EDN). This document sets forth a further step
-    of evolution of EDN, and it is intended to serve as a single reference target
-    in specifications that use EDN. It specifies how to add application-oriented extensions
-    to the diagnostic notation. It then defines two such extensions for text representations
+- content: <p>The Concise Binary Object Representation (CBOR) (STD 94, RFC 8949) is
+    a data format whose design goals include the possibility of extremely small code
+    size, fairly small message size, and extensibility without the need for version
+    negotiation. In addition to the binary interchange format, CBOR from the outset
+    (RFC 7049) defined a text-based "diagnostic notation" in order to be able to converse
+    about CBOR data items without having to resort to binary data. RFC 8610 extended
+    this into what is known as Extended Diagnostic Notation (EDN). This document consolidates
+    the definition of EDN, sets forth a further step of its evolution, and is intended
+    to serve as a single reference target in specifications that use EDN. It specifies
+    an extension point for adding application-oriented extensions to the diagnostic
+    notation. It then defines two such extensions that enhance EDN with text representations
     of epoch-based date/times and of IP addresses and prefixes (RFC 9164). A few further
-    additions close some gaps in usability. It modifies one extension specified in
-    Appendix G.4 of RFC 8610 to enable further increasing usability. To facilitate
-    tool interoperation, this document specifies a formal ABNF definition for EDN
-    as defined today, and it adds media types.</p>
+    additions close some gaps in usability. The document modifies one extension originally
+    specified in Appendix G.4 of RFC 8610 to enable further increasing usability.
+    To facilitate tool interoperation, this document specifies a formal ABNF grammar,
+    and it adds media types. // The present revision -12 reflects the branch "roll-up"
+    in the // repository, an attempt to contain the entire specification of EDN //
+    in this document, instead of describing updates to the existing // documents RFC
+    8949 and RFC 8610. While the WG hasn't taken a // decision to follow this updated
+    editorial approach, the feedback // has been sufficiently positive that the author
+    believes it is not // misleading to make this revision available as the current
+    WG // Internet-Draft as well. That said, this is still a snapshot. The // editorial
+    work on the branch "roll-up" is not complete. Content // will continue to move
+    between sections. The exact reflection of // this document being a replacement
+    for both Section 8 of RFC 8949 // and Appendix G of RFC 8610 needs to be recorded
+    in the metadata // and in abstract and introduction.</p>
   language:
   - en
   script:
@@ -150,6 +164,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-cbor-edn-literals-11
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-cbor-edn-literals-12
+    docid:
+    - id: draft-ietf-cbor-edn-literals-12
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-cbor-edn-literals-12
       format: text/plain
 ext:
   schema-version: v1.0.1
