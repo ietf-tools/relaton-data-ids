@@ -1,63 +1,34 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-pim-mofrr-tilfa-04
+id: draft-tuexen-tsvwg-sctp-multipath-28
 title:
-- content: Multicast-only Fast Reroute Based on Topology Independent Loop-free Alternate
-    Fast Reroute
+- content: Load Sharing for the Stream Control Transmission Protocol (SCTP)
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-pim-mofrr-tilfa-04
+- content: https://datatracker.ietf.org/doc/html/draft-tuexen-tsvwg-sctp-multipath-28
   type: src
 type: standard
 docid:
-- id: draft-ietf-pim-mofrr-tilfa-04
+- id: draft-tuexen-tsvwg-sctp-multipath-28
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-pim-mofrr-tilfa
+- id: I-D.tuexen-tsvwg-sctp-multipath
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-pim-mofrr-tilfa
+docnumber: I-D.tuexen-tsvwg-sctp-multipath
 date:
 - type: published
-  value: '2024-07-01'
+  value: '2024-09-05'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Yisong
-          language:
-          - en
-        - language:
-          - en
-          initial: Y
-        formatted_initials:
-          content: Y.
-          language:
-          - en
-      surname:
-        content: Liu
-        language:
-        - en
-      completename:
-        content: Yisong Liu
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: China Mobile
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Mike
+        - content: Martin
           language:
           - en
         - language:
@@ -68,52 +39,80 @@ contributor:
           language:
           - en
       surname:
-        content: McBride
+        content: Becke
         language:
         - en
       completename:
-        content: Mike McBride
+        content: Martin Becke
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Futurewei
+        - content: HAW Hamburg
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Zheng
+        - content: Thomas
           language:
           - en
         - language:
           - en
-          initial: Z
+          initial: T
         formatted_initials:
-          content: Z.
+          content: T.
           language:
           - en
       surname:
-        content: Zhang
+        content: Dreibholz
         language:
         - en
       completename:
-        content: Zheng Zhang
+        content: Thomas Dreibholz
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: ZTE
+        - content: SimulaMet
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Jingrong
+        - content: Nasif
+          language:
+          - en
+        - language:
+          - en
+          initial: N
+        formatted_initials:
+          content: N.
+          language:
+          - en
+      surname:
+        content: Ekiz
+        language:
+        - en
+      completename:
+        content: Nasif Ekiz
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: University of Delaware
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Jana
           language:
           - en
         - language:
@@ -124,61 +123,91 @@ contributor:
           language:
           - en
       surname:
-        content: Xie
+        content: Iyengar
         language:
         - en
       completename:
-        content: Jingrong Xie
+        content: Jana Iyengar
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei
+        - content: Franklin and Marshall College
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Changwang
+        - content: Preethi
           language:
           - en
         - language:
           - en
-          initial: C
+          initial: P
         formatted_initials:
-          content: C.
+          content: P.
           language:
           - en
       surname:
-        content: Lin
+        content: Natarajan
         language:
         - en
       completename:
-        content: Changwang Lin
+        content: Preethi Natarajan
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: New H3C Technologies
+        - content: Cisco Systems
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Randall
+          language:
+          - en
+        - language:
+          - en
+          initial: R
+        - language:
+          - en
+          initial: R
+        formatted_initials:
+          content: R. R.
+          language:
+          - en
+      surname:
+        content: Stewart
+        language:
+        - en
+      completename:
+        content: Randall R. Stewart
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Netflix
   role:
   - type: author
 version:
-- draft: '04'
-revdate: '2024-07-01'
+- draft: '28'
+revdate: '2024-09-05'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>Multicast-only Fast Reroute (MoFRR) has been defined in RFC7431, but
-    the selection of the secondary multicast next hop depends on the loop-free alternate
-    fast reroute, which has restrictions in multicast deployments. This document describes
-    a mechanism for Multicast-only Fast Reroute by using Topology Independent Loop-free
-    Alternate fast reroute, which is independent of network topology and can achieve
-    the coverage of more network environments.</p>"
+- content: "<p>The Stream Control Transmission Protocol (SCTP) supports multi-homing
+    for providing network fault tolerance. However, mainly one path is used for data
+    transmission. Only timer-based retransmissions are carried over other paths as
+    well. This document describes how multiple paths can be used simultaneously for
+    transmitting user messages.</p>"
   language:
   - en
   script:
@@ -187,23 +216,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-pim-mofrr-tilfa-02
+    id: draft-tuexen-tsvwg-sctp-multipath-04
     docid:
-    - id: draft-ietf-pim-mofrr-tilfa-02
+    - id: draft-tuexen-tsvwg-sctp-multipath-04
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-pim-mofrr-tilfa-02
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-pim-mofrr-tilfa-05
-    docid:
-    - id: draft-ietf-pim-mofrr-tilfa-05
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-pim-mofrr-tilfa-05
+      content: draft-tuexen-tsvwg-sctp-multipath-04
       format: text/plain
 series:
 - type: main
@@ -214,7 +233,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-pim-mofrr-tilfa-04
+  number: draft-tuexen-tsvwg-sctp-multipath-28
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
