@@ -16,14 +16,15 @@ docid:
 abstract:
 - content: "<p>Segment Routing (SR) architecture leverages the paradigm of source
     routing. It can be realized in the Multiprotocol Label Switching (MPLS) network
-    without any change to the data plane. A segment is encoded as an MPLS label, and
-    an ordered list of segments is encoded as a stack of labels. Bidirectional Forwarding
-    Detection (BFD) is expected to monitor any existing path between systems. This
-    document defines how to use Label Switched Path (LSP) Ping to bootstrap a BFD
-    session, optional control of the selection of a segment list as the reverse direction
-    of the BFD session, applicability of BFD Demand mode, and Seamless BFD in the
-    SR-MPLS domain. Also, the document describes the use of the BFD Echo function
-    with the BFD Control packet payload.</p>"
+    without changing the data plane. Bidirectional Forwarding Detection (BFD) is expected
+    to monitor a segment list, representing a specific source-routed SR Policy path
+    between the headend and an endpoint. This document describes using BFD for monitoring
+    individual segment lists of candidate paths of an SR Policy. It documents the
+    use of various BFD modes and features such as BFD Demand mode, Seamless BFD, and
+    BFD Echo function with the BFD Control packet payload in the SR-MPLS domain. Also,
+    this document defines how to use Label Switched Path Ping to bootstrap a BFD session,
+    with optional control of selecting a segment list in the reverse direction of
+    the BFD session.</p>"
   language:
   - en
   script:
@@ -139,6 +140,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-spring-bfd-10
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-spring-bfd-11
+    docid:
+    - id: draft-ietf-spring-bfd-11
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-spring-bfd-11
       format: text/plain
 ext:
   schema-version: v1.0.1

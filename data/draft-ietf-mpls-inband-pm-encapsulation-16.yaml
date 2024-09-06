@@ -1,134 +1,105 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-spring-bfd-10
+id: draft-ietf-mpls-inband-pm-encapsulation-16
 title:
-- content: Bidirectional Forwarding Detection (BFD) in Segment Routing Networks Using
-    MPLS Dataplane
+- content: Encapsulation For MPLS Performance Measurement with Alternate-Marking Method
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-spring-bfd-10
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-mpls-inband-pm-encapsulation-16
   type: src
 type: standard
 docid:
-- id: draft-ietf-spring-bfd-10
+- id: draft-ietf-mpls-inband-pm-encapsulation-16
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-spring-bfd
+- id: I-D.ietf-mpls-inband-pm-encapsulation
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-spring-bfd
+docnumber: I-D.ietf-mpls-inband-pm-encapsulation
 date:
 - type: published
-  value: '2024-04-17'
+  value: '2024-09-05'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Greg
+        - content: Weiqiang
           language:
           - en
         - language:
           - en
-          initial: G
+          initial: W
         formatted_initials:
-          content: G.
+          content: W.
           language:
           - en
       surname:
-        content: Mirsky
+        content: Cheng
         language:
         - en
       completename:
-        content: Greg Mirsky
+        content: Weiqiang Cheng
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Ericsson
+        - content: China Mobile
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Jeff
+        - content: Xiao
           language:
           - en
         - language:
           - en
-          initial: J
+          initial: X
         formatted_initials:
-          content: J.
+          content: X.
           language:
           - en
       surname:
-        content: Tantsura
+        content: Min
         language:
         - en
       completename:
-        content: Jeff Tantsura
+        content: Xiao Min
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: NVDIA
+        - content: ZTE Corp.
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Ilya
+        - content: Tianran
           language:
           - en
         - language:
           - en
-          initial: I
+          initial: T
         formatted_initials:
-          content: I.
+          content: T.
           language:
           - en
       surname:
-        content: Varlashkin
+        content: Zhou
         language:
         - en
       completename:
-        content: Ilya Varlashkin
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Google
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Mach
-          language:
-          - en
-        - language:
-          - en
-          initial: M
-        formatted_initials:
-          content: M.
-          language:
-          - en
-      surname:
-        content: Chen
-        language:
-        - en
-      completename:
-        content: Mach Chen
+        content: Tianran Zhou
         language:
         - en
     affiliation:
@@ -141,7 +112,7 @@ contributor:
     name:
       given:
         forename:
-        - content: Jiang
+        - content: Jinyou
           language:
           - en
         - language:
@@ -152,37 +123,58 @@ contributor:
           language:
           - en
       surname:
-        content: Wenying
+        content: Dai
         language:
         - en
       completename:
-        content: Jiang Wenying
+        content: Jinyou Dai
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: CMCC
+        - content: FiberHome
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Yoav
+          language:
+          - en
+        - language:
+          - en
+          initial: Y
+        formatted_initials:
+          content: Y.
+          language:
+          - en
+      surname:
+        content: Peleg
+        language:
+        - en
+      completename:
+        content: Yoav Peleg
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Broadcom
   role:
   - type: author
 version:
-- draft: '10'
-revdate: '2024-04-17'
+- draft: '16'
+revdate: '2024-09-05'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>Segment Routing (SR) architecture leverages the paradigm of source
-    routing. It can be realized in the Multiprotocol Label Switching (MPLS) network
-    without any change to the data plane. A segment is encoded as an MPLS label, and
-    an ordered list of segments is encoded as a stack of labels. Bidirectional Forwarding
-    Detection (BFD) is expected to monitor any existing path between systems. This
-    document defines how to use Label Switched Path (LSP) Ping to bootstrap a BFD
-    session, optional control of the selection of a segment list as the reverse direction
-    of the BFD session, applicability of BFD Demand mode, and Seamless BFD in the
-    SR-MPLS domain. Also, the document describes the use of the BFD Echo function
-    with the BFD Control packet payload.</p>"
+- content: "<p>This document defines the encapsulation for MPLS performance measurement
+    with the Alternate-Marking method, which performs flow- based packet loss, delay,
+    and jitter measurements on the MPLS traffic.</p>"
   language:
   - en
   script:
@@ -191,23 +183,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-spring-bfd-03
+    id: draft-ietf-mpls-inband-pm-encapsulation-00
     docid:
-    - id: draft-ietf-spring-bfd-03
+    - id: draft-ietf-mpls-inband-pm-encapsulation-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-spring-bfd-03
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-spring-bfd-11
-    docid:
-    - id: draft-ietf-spring-bfd-11
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-bfd-11
+      content: draft-ietf-mpls-inband-pm-encapsulation-00
       format: text/plain
 series:
 - type: main
@@ -218,7 +200,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-spring-bfd-10
+  number: draft-ietf-mpls-inband-pm-encapsulation-16
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
