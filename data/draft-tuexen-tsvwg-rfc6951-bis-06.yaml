@@ -1,29 +1,29 @@
 ---
 schema-version: v1.2.3
-id: draft-tuexen-tsvwg-sctp-udp-encaps-cons-08
+id: draft-tuexen-tsvwg-rfc6951-bis-06
 title:
-- content: Additional Considerations for UDP Encapsulation of Stream Control Transmission
-    Protocol (SCTP) Packets
+- content: UDP Encapsulation of Stream Control Transmission Protocol (SCTP) Packets
+    for End-Host to End-Host Communication
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-tuexen-tsvwg-sctp-udp-encaps-cons-08
+- content: https://datatracker.ietf.org/doc/html/draft-tuexen-tsvwg-rfc6951-bis-06
   type: src
 type: standard
 docid:
-- id: draft-tuexen-tsvwg-sctp-udp-encaps-cons-08
+- id: draft-tuexen-tsvwg-rfc6951-bis-06
   type: Internet-Draft
   primary: true
-- id: I-D.tuexen-tsvwg-sctp-udp-encaps-cons
+- id: I-D.tuexen-tsvwg-rfc6951-bis
   type: IETF
   scope: anchor
-docnumber: I-D.tuexen-tsvwg-sctp-udp-encaps-cons
+docnumber: I-D.tuexen-tsvwg-rfc6951-bis
 date:
 - type: published
-  value: '2023-09-10'
+  value: '2024-09-07'
 contributor:
 - person:
     name:
@@ -78,25 +78,29 @@ contributor:
         content: Randall R. Stewart
         language:
         - en
-    affiliation:
-    - organization:
-        name:
-        - content: Netflix, Inc.
   role:
   - type: author
 version:
-- draft: '08'
-revdate: '2023-09-10'
+- draft: '06'
+revdate: '2024-09-07'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>RFC 6951 specifies the UDP encapsulation of SCTP packets. The described
-    handling of received packets requires the check of the verification tag. However,
-    RFC 6951 misses a specification of the handling of received packets for which
-    this check is not possible. This document updates RFC 6951 by specifying the handling
-    of received packets for which the verification tag can not be checked.</p>"
+- content: "<p>This document describes a simple method of encapsulating Stream Control
+    Transmission Protocol (SCTP) packets into UDP packets and its limitations. This
+    allows the usage of SCTP in networks with legacy NATs that do not support SCTP.
+    It can also be used to implement SCTP on hosts without directly accessing the
+    IP layer, for example, implementing it as part of the application without requiring
+    special privileges. Please note that this document only describes the functionality
+    needed within an SCTP stack to add on UDP encapsulation, providing only those
+    mechanisms for two end-hosts to communicate with each other over UDP ports. In
+    particular, it does not provide mechanisms to determine whether UDP encapsulation
+    is being used by the peer, nor the mechanisms for determining which remote UDP
+    port number can be used. These functions are out of scope for this document. This
+    document covers only end-hosts and not tunneling (egress or ingress) endpoints.
+    It obsoletes RFC 6951.</p>"
   language:
   - en
   script:
@@ -105,23 +109,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-tuexen-tsvwg-sctp-udp-encaps-cons-07
+    id: draft-tuexen-tsvwg-rfc6951-bis-01
     docid:
-    - id: draft-tuexen-tsvwg-sctp-udp-encaps-cons-07
+    - id: draft-tuexen-tsvwg-rfc6951-bis-01
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-tuexen-tsvwg-sctp-udp-encaps-cons-07
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-tuexen-tsvwg-sctp-udp-encaps-cons-10
-    docid:
-    - id: draft-tuexen-tsvwg-sctp-udp-encaps-cons-10
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-tuexen-tsvwg-sctp-udp-encaps-cons-10
+      content: draft-tuexen-tsvwg-rfc6951-bis-01
       format: text/plain
 series:
 - type: main
@@ -132,7 +126,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-tuexen-tsvwg-sctp-udp-encaps-cons-08
+  number: draft-tuexen-tsvwg-rfc6951-bis-06
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
