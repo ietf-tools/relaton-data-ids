@@ -9,6 +9,10 @@ on:
   - cron: '0 */4 * * *'
   workflow_dispatch:
 
+concurrency:
+  group: crawler
+  cancel-in-progress: false
+
 jobs:
   crawl:
     uses: relaton/support/.github/workflows/crawler.yml@master
