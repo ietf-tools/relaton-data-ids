@@ -1,118 +1,34 @@
 ---
 schema-version: v1.2.3
-id: draft-iplir-protocol-04
+id: draft-ietf-lamps-rfc5019bis-11
 title:
-- content: IPlir network layer security protocol
+- content: Updates to Lightweight OCSP Profile for High Volume Environments
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-iplir-protocol-04
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-lamps-rfc5019bis-11
   type: src
 type: standard
 docid:
-- id: draft-iplir-protocol-04
+- id: draft-ietf-lamps-rfc5019bis-11
   type: Internet-Draft
   primary: true
-- id: I-D.iplir-protocol
+- id: I-D.ietf-lamps-rfc5019bis
   type: IETF
   scope: anchor
-docnumber: I-D.iplir-protocol
+docnumber: I-D.ietf-lamps-rfc5019bis
 date:
 - type: published
-  value: '2023-09-29'
+  value: '2024-09-13'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Davletshina
-          language:
-          - en
-        - language:
-          - en
-          initial: D
-        formatted_initials:
-          content: D.
-          language:
-          - en
-      surname:
-        content: Alexandra
-        language:
-        - en
-      completename:
-        content: Davletshina Alexandra
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: InfoTeCS
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Urivskiy
-          language:
-          - en
-        - language:
-          - en
-          initial: U
-        formatted_initials:
-          content: U.
-          language:
-          - en
-      surname:
-        content: Alexey
-        language:
-        - en
-      completename:
-        content: Urivskiy Alexey
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: InfoTeCS
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Rybkin
-          language:
-          - en
-        - language:
-          - en
-          initial: R
-        formatted_initials:
-          content: R.
-          language:
-          - en
-      surname:
-        content: Andrey
-        language:
-        - en
-      completename:
-        content: Rybkin Andrey
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: InfoTeCS
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Tychina
+        - content: Tadahiko
           language:
           - en
         - language:
@@ -123,58 +39,118 @@ contributor:
           language:
           - en
       surname:
-        content: Leonid
+        content: Ito
         language:
         - en
       completename:
-        content: Tychina Leonid
+        content: Tadahiko Ito
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: InfoTeCS
+        - content: SECOM CO., LTD.
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Parshin
+        - content: Clint
           language:
           - en
         - language:
           - en
-          initial: P
+          initial: C
         formatted_initials:
-          content: P.
+          content: C.
           language:
           - en
       surname:
-        content: Ilia
+        content: Wilson
         language:
         - en
       completename:
-        content: Parshin Ilia
+        content: Clint Wilson
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: InfoTeCS
+        - content: Apple, Inc.
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Corey
+          language:
+          - en
+        - language:
+          - en
+          initial: C
+        formatted_initials:
+          content: C.
+          language:
+          - en
+      surname:
+        content: Bonnell
+        language:
+        - en
+      completename:
+        content: Corey Bonnell
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: DigiCert, Inc.
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Sean
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Turner
+        language:
+        - en
+      completename:
+        content: Sean Turner
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: sn3rd
   role:
   - type: author
 version:
-- draft: '04'
-revdate: '2023-09-29'
+- draft: '11'
+revdate: '2024-09-13'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document specifies the IPlir network layer security protocol.
-    It describes how to provide a set of security services for traffic over public
-    and corporate networks using the TCP/IP stack.</p>"
+- content: "<p>This specification defines a profile of the Online Certificate Status
+    Protocol (OCSP) that addresses the scalability issues inherent when using OCSP
+    in large scale (high volume) Public Key Infrastructure (PKI) environments and/or
+    in PKI environments that require a lightweight solution to minimize communication
+    bandwidth and client- side processing. This specification obsoletes RFC 5019.
+    The profile specified in RFC 5019 has been updated to allow and recommend the
+    use of SHA-256 over SHA-1.</p>"
   language:
   - en
   script:
@@ -183,23 +159,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-iplir-protocol-02
+    id: draft-ietf-lamps-rfc5019bis-06
     docid:
-    - id: draft-iplir-protocol-02
+    - id: draft-ietf-lamps-rfc5019bis-06
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-iplir-protocol-02
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-iplir-protocol-06
-    docid:
-    - id: draft-iplir-protocol-06
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-iplir-protocol-06
+      content: draft-ietf-lamps-rfc5019bis-06
       format: text/plain
 series:
 - type: main
@@ -210,7 +176,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-iplir-protocol-04
+  number: draft-ietf-lamps-rfc5019bis-11
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
