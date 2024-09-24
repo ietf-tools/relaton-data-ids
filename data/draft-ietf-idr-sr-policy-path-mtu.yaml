@@ -15,9 +15,12 @@ docid:
 abstract:
 - content: "<p>Segment Routing is a source routing paradigm that explicitly indicates
     the forwarding path for packets at the ingress node. An SR policy is a set of
-    candidate SR paths consisting of one or more segment lists with necessary path
-    attributes. However, the path maximum transmission unit (MTU) information for
-    SR path is not available in the SR policy since the SR does not require signaling.
+    SR Policy candidate paths consisting of one or more segments with the appropriate
+    SR path attributes. BGP distributes each SR Policy candidate path as combination
+    of an prefix plus a the BGP Tunnel Encapsulation(Tunnel-Encaps) attribute containing
+    an SR Policy Tunnel TLV with information on the SR Policy candidate path as a
+    tunnel. However, the path maximum transmission unit (MTU) information for a segment
+    list for SR path is not currently passed in the BGP Tunnel-Encaps attribute..
     This document defines extensions to BGP to distribute path MTU information within
     SR policies.</p>"
   language:
@@ -125,6 +128,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-idr-sr-policy-path-mtu-09
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-idr-sr-policy-path-mtu-10
+    docid:
+    - id: draft-ietf-idr-sr-policy-path-mtu-10
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-idr-sr-policy-path-mtu-10
       format: text/plain
 ext:
   schema-version: v1.0.1

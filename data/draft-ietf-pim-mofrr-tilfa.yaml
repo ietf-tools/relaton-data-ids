@@ -22,7 +22,11 @@ abstract:
     to multicast traffic, enabling enhanced resilience and minimized packet loss in
     multicast networks. The document outlines the necessary protocol extensions and
     operational considerations to implement TI-LFA in conjunction with MoFRR for PIM,
-    ensuring that multicast traffic is rapidly rerouted in the event of a failure.</p>"
+    ensuring that multicast traffic is rapidly rerouted in the event of a failure.
+    This document uses the backup path computed by TI-LFA through IGP as a secondary
+    Upstream Multicast Hop (UMH) for PIM. By using the TI-LFA backup path to send
+    PIM secondary join messages hop-by-hop, it achieves the generation of a fast reroute
+    backup path for PIM multicast.</p>"
   language:
   - en
   script:
@@ -88,6 +92,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-pim-mofrr-tilfa-05
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-pim-mofrr-tilfa-06
+    docid:
+    - id: draft-ietf-pim-mofrr-tilfa-06
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-pim-mofrr-tilfa-06
       format: text/plain
 ext:
   schema-version: v1.0.1
