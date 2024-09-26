@@ -13,15 +13,15 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>Bit Index Explicit Replication (BIER) can be used as provider tunnel
-    for Multicast Virtual Private Network (MVPN), Global Table Multicast or Ethernet
-    Virtual Private Network (EVPN). It is possible that not all routers in the provider
-    network support BIER and there are various methods to handle BIER-incapable transit
-    routers. However those methods assume the MVPN/EVPN Provider Edges (PEs) are BIER-
-    capable. This document specifies a method to allow BIER-incapable routers to act
-    as MVPN/EVPN PEs with BIER as the transport, by having the upstream BIER Forwarding
-    Router (BFR) that is connected directly or indirectly via a tunnel to a BIER-incapable
-    PE remove the BIER header and send the payload to the PE.</p>"
+- content: "<p>This document specifies a mechanism for Penultimate Hop Popping (PHP)
+    in the Bit Index Explicit Replication (BIER) architecture. PHP enables the removal
+    of the BIER header by the penultimate router, thereby reducing the processing
+    burden on the final router in the delivery path. This extension to BIER enhances
+    operational efficiency by optimizing packet forwarding in scenarios where the
+    final hop's capabilities or requirements necessitate such handling. The document
+    details the necessary extensions to the BIER encapsulation and forwarding processes
+    to support PHP, providing guidance for implementation and deployment within BIER-enabled
+    networks.</p>"
   language:
   - en
   script:
@@ -147,6 +147,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-bier-php-11
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-bier-php-12
+    docid:
+    - id: draft-ietf-bier-php-12
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-bier-php-12
       format: text/plain
 ext:
   schema-version: v1.0.1
