@@ -14,12 +14,13 @@ docid:
   primary: true
 abstract:
 - content: "<p>This document describes Mastic, a two-party VDAF for the following
-    aggregation task: each client holds a string, and the collector wishes to count
-    how many of these strings begin with a given prefix. Such a VDAF can be used to
-    solve the private heavy hitters problem, where the goal is to compute the subset
-    of the strings that occur most frequently without learning which client holds
-    which string. This document also describes different modes of operation for Mastic
-    that support additional use cases and admit various performance and security trade-offs.</p>"
+    secure aggregation task: each client holds an input and an associated weight,
+    and the data collector wants to aggregate the weights of all clients whose inputs
+    begin with a prefix chosen by the data collector. This functionality enables two
+    classes of applications. First, it allows grouping metrics by client attributes
+    without revealing which clients have which attributes. Second, it solves the weighted
+    heavy hitters problem, where the goal is to compute the subset of inputs that
+    have the highest total weight.</p>"
   language:
   - en
   script:
@@ -55,6 +56,16 @@ relation:
       primary: true
     formattedref:
       content: draft-mouris-cfrg-mastic-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-mouris-cfrg-mastic-03
+    docid:
+    - id: draft-mouris-cfrg-mastic-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-mouris-cfrg-mastic-03
       format: text/plain
 ext:
   schema-version: v1.0.1
