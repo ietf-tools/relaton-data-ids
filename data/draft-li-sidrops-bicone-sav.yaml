@@ -14,16 +14,16 @@ docid:
   primary: true
 abstract:
 - content: "<p>The primary design goal of source address validation (SAV) is avoiding
-    improper block (i.e., blocking legitimate traffic) while maintaining directionality,
+    improper blocks (i.e., blocking legitimate traffic) while maintaining directionality,
     especially in partial deployment scenarios (see [I-D.ietf-savnet-inter-domain-problem-statement]
-    and [RFC8704]). Existing advanced SAV solutions ([RFC8704] and [I-D.ietf-sidrops-bar-sav])
-    typically generate ingress SAV allowlist filters on interfaces facing a customer
-    or lateral peer AS. This document analyzes potential improper block problems when
-    using the allowlist. To enhance the SAV robustness and avoid improper block, this
-    document provides an additional option for network operators, i.e., generating
-    a blocklist filter by using BGP updates, ROAs, and ASPAs related to the provider
-    cone. Network operators can flexibly use the allowlist or blocklist on different
-    interfaces according to their requirements and actual conditions.</p>"
+    and [RFC8704]). Existing advanced SAV solutions (e.g., EFP-uRPF [RFC8704]) typically
+    generate ingress SAV allowlist filters on interfaces facing a customer or lateral
+    peer AS. This document analyzes the potential improper block problems when using
+    an allowlist. To avoid improper blocks, this document proposes a new SAV solution
+    by generating an ingress SAV blocklist filter based on BGP updates, ROAs, and
+    ASPAs related to the provider cone. In practice, network operators can flexibly
+    decide to use a blocklist or an allowlist according to their requirements and
+    actual conditions.</p>"
   language:
   - en
   script:
@@ -79,6 +79,16 @@ relation:
       primary: true
     formattedref:
       content: draft-li-sidrops-bicone-sav-04
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-li-sidrops-bicone-sav-05
+    docid:
+    - id: draft-li-sidrops-bicone-sav-05
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-li-sidrops-bicone-sav-05
       format: text/plain
 ext:
   schema-version: v1.0.1
