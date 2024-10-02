@@ -19,11 +19,13 @@ abstract:
     there was only one standardized version of the Bundle Protocol, version 6, and
     as many of these transport and convergence-layer protocols pre-date the publication
     of version 7, they do not include any protocol mechanism to differentiate between
-    versions of the Bundle Protocol. This document updates [RFC9171] by defining a
-    CBOR [RFC8949] tag that should be used as an explicit indicator that a particular
-    CBOR array is a Bundle Protocol version 7 bundle. It also describes a mechanism
-    by which an implementation can determine the version of the Bundle Protocol that
-    was used to encode a bundle by examining the initial octets of the encoded data.</p>"
+    versions of the Bundle Protocol. This document describes a mechanism by which
+    an implementation can efficiently determine validity and the version of the Bundle
+    Protocol that was used to encode a bundle by examining the initial octets of the
+    encoded data, allowing this document to be used as a normative reference for updates
+    to existing protocols. Additionally, this document updates [RFC9171] by defining
+    a CBOR [RFC8949] tag that may be used as an explicit indicator that a particular
+    indefinite-length CBOR array is a Bundle Protocol version 7 bundle.</p>"
   language:
   - en
   script:
@@ -49,6 +51,16 @@ relation:
       primary: true
     formattedref:
       content: draft-taylor-dtn-demux-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-taylor-dtn-demux-02
+    docid:
+    - id: draft-taylor-dtn-demux-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-taylor-dtn-demux-02
       format: text/plain
 ext:
   schema-version: v1.0.1
