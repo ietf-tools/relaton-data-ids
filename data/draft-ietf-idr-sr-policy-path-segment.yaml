@@ -13,15 +13,17 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>A Segment Routing (SR) policy is a set of candidate SR paths consisting
-    of one or more segment lists with necessary path attributes. For each SR path,
-    it may also have its own path attributes, and Path Segment is one of them. A Path
-    Segment is defined to identify an SR path, which can be used for performance measurement,
-    path correlation, and end-2-end path protection. Path Segment can be also used
-    to correlate two unidirectional SR paths into a bidirectional SR path which is
-    required in some scenarios, for example, mobile backhaul transport network. This
-    document defines extensions to BGP to distribute SR policies carrying Path Segment
-    and bidirectional path information.</p>"
+- content: "<p>A Segment Routing(SR) policy identifies a set of candidate SR paths
+    Each SR path is passed in BGP as the SR Policy SAFI NLRI accompanied with the
+    Tunnel Encapsulation attribute (Tunnel-encaps). Each SR Path (tunnel) uses a set
+    of TLVs in the Tunnel-encaps attribute to describe the characteristics of the
+    SR Policy tunnel. One of the TLVs that describes the tunnel is the Segment list
+    TLV which provides a list of segments contained in the tunnel. This document specifies
+    a new Path Segment Sub-TLV to associate a Path Segment ID to the SR Segment List.
+    The Path Segment ID can be used for performance measurement, path correlation,
+    and end-2-end path protection. This Path Segment identifier can be also be used
+    to correlate two unidirectional SR paths into a bidirectional SR path. Bidirection
+    SR path may be required in some scenarios such as mobile backhaul transport network.</p>"
   language:
   - en
   script:
@@ -157,6 +159,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-idr-sr-policy-path-segment-12
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-idr-sr-policy-path-segment-13
+    docid:
+    - id: draft-ietf-idr-sr-policy-path-segment-13
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-idr-sr-policy-path-segment-13
       format: text/plain
 ext:
   schema-version: v1.0.1
