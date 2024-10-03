@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-sidrops-avoid-rpki-state-in-bgp-00
+id: draft-ietf-sidrops-avoid-rpki-state-in-bgp-01
 title:
 - content: Guidance to Avoid Carrying RPKI Validation States in Transitive BGP Path
     Attributes
@@ -10,11 +10,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-sidrops-avoid-rpki-state-in-bgp-00
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-sidrops-avoid-rpki-state-in-bgp-01
   type: src
 type: standard
 docid:
-- id: draft-ietf-sidrops-avoid-rpki-state-in-bgp-00
+- id: draft-ietf-sidrops-avoid-rpki-state-in-bgp-01
   type: Internet-Draft
   primary: true
 - id: I-D.ietf-sidrops-avoid-rpki-state-in-bgp
@@ -23,7 +23,7 @@ docid:
 docnumber: I-D.ietf-sidrops-avoid-rpki-state-in-bgp
 date:
 - type: published
-  value: '2024-04-09'
+  value: '2024-10-03'
 contributor:
 - person:
     name:
@@ -110,8 +110,8 @@ contributor:
   role:
   - type: author
 version:
-- draft: '00'
-revdate: '2024-04-09'
+- draft: '01'
+revdate: '2024-10-03'
 language:
 - en
 script:
@@ -119,28 +119,28 @@ script:
 abstract:
 - content: "<p>This document provides guidance to avoid carrying Resource Public Key
     Infrastructure (RPKI) derived Validation States in Transitive Border Gateway Protocol
-    (BGP) Path Attributes. Annotating routes with attributes signaling validation
-    state may flood needless BGP UPDATE messages through the global Internet routing
-    system, when, for example, Route Origin Authorizations are issued, revoked, or
-    RPKI-To- Router sessions are terminated. Operators SHOULD ensure Validation States
-    are not signalled in transitive BGP Path Attributes. Specifically, Operators SHOULD
-    NOT group BGP routes by their Prefix Origin Validation state into distinct BGP
-    Communities.</p>"
+    (BGP) Path Attributes. Annotating routes with transitive attributes signaling
+    Validation State may cause needless flooding of BGP UPDATE messages through the
+    global Internet routing system, for example when Route Origin Authorizations (ROAs)
+    are issued, or are revoked, or when RPKI-To-Router sessions are terminated. Operators
+    SHOULD ensure Validation States are not signaled in transitive BGP Path Attributes.
+    Specifically, Operators SHOULD NOT group BGP routes by their Prefix Origin Validation
+    state into BGP Communities.</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-ietf-sidrops-avoid-rpki-state-in-bgp-01
+    id: draft-ietf-sidrops-avoid-rpki-state-in-bgp-00
     docid:
-    - id: draft-ietf-sidrops-avoid-rpki-state-in-bgp-01
+    - id: draft-ietf-sidrops-avoid-rpki-state-in-bgp-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-sidrops-avoid-rpki-state-in-bgp-01
+      content: draft-ietf-sidrops-avoid-rpki-state-in-bgp-00
       format: text/plain
 series:
 - type: main
@@ -151,7 +151,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-sidrops-avoid-rpki-state-in-bgp-00
+  number: draft-ietf-sidrops-avoid-rpki-state-in-bgp-01
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
