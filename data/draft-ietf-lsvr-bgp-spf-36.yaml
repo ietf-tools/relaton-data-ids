@@ -1,35 +1,62 @@
 ---
 schema-version: v1.2.3
-id: draft-fregly-dnsop-slh-dsa-mtl-dnssec-02
+id: draft-ietf-lsvr-bgp-spf-36
 title:
-- content: Stateless Hash-Based Signatures in Merkle Tree Ladder Mode (SLH-DSA-MTL)
-    for DNSSEC
+- content: BGP Link-State Shortest Path First (SPF) Routing
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-fregly-dnsop-slh-dsa-mtl-dnssec-02
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-lsvr-bgp-spf-36
   type: src
 type: standard
 docid:
-- id: draft-fregly-dnsop-slh-dsa-mtl-dnssec-02
+- id: draft-ietf-lsvr-bgp-spf-36
   type: Internet-Draft
   primary: true
-- id: I-D.fregly-dnsop-slh-dsa-mtl-dnssec
+- id: I-D.ietf-lsvr-bgp-spf
   type: IETF
   scope: anchor
-docnumber: I-D.fregly-dnsop-slh-dsa-mtl-dnssec
+docnumber: I-D.ietf-lsvr-bgp-spf
 date:
 - type: published
-  value: '2024-07-08'
+  value: '2024-10-08'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Andrew
+        - content: Keyur
+          language:
+          - en
+        - language:
+          - en
+          initial: K
+        formatted_initials:
+          content: K.
+          language:
+          - en
+      surname:
+        content: Patel
+        language:
+        - en
+      completename:
+        content: Keyur Patel
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Arrcus, Inc.
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Acee
           language:
           - en
         - language:
@@ -40,117 +67,90 @@ contributor:
           language:
           - en
       surname:
-        content: Fregly
+        content: Lindem
         language:
         - en
       completename:
-        content: Andrew Fregly
+        content: Acee Lindem
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Verisign Labs
+        - content: LabN Consulting, LLC
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Joe
+        - content: Shawn
           language:
           - en
         - language:
           - en
-          initial: J
+          initial: S
         formatted_initials:
-          content: J.
+          content: S.
           language:
           - en
       surname:
-        content: Harvey
+        content: Zandi
         language:
         - en
       completename:
-        content: Joe Harvey
+        content: Shawn Zandi
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Verisign Labs
+        - content: LinkedIn
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Burt
+        - content: Wim
           language:
           - en
         - language:
           - en
-          initial: B
+          initial: W
         formatted_initials:
-          content: B.
+          content: W.
           language:
           - en
       surname:
-        content: Kaliski
+        content: Henderickx
         language:
         - en
       completename:
-        content: Burt Kaliski
+        content: Wim Henderickx
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Verisign Labs
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Duane
-          language:
-          - en
-        - language:
-          - en
-          initial: D
-        formatted_initials:
-          content: D.
-          language:
-          - en
-      surname:
-        content: Wessels
-        language:
-        - en
-      completename:
-        content: Duane Wessels
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Verisign Labs
+        - content: Nokia
   role:
   - type: author
 version:
-- draft: '02'
-revdate: '2024-07-08'
+- draft: '36'
+revdate: '2024-10-08'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document describes how to apply the Stateless Hash-Based Digital
-    Signature Algorithm in Merkle Tree Ladder mode to the DNS Security Extensions.
-    This combination is referred to as the SLH-DSA-MTL Signature scheme. This document
-    describes how to specify SLH-DSA-MTL keys and signatures in DNSSEC. It uses both
-    the SHA2 and SHAKE family of hash functions. This document also provides guidance
-    for use of EDNS(0) in signature retrieval.</p>"
+- content: "<p>Many Massively Scaled Data Centers (MSDCs) have converged on simplified
+    layer 3 routing. Furthermore, requirements for operational simplicity has led
+    many of these MSDCs to converge on BGP as their single routing protocol for both
+    their fabric routing and their Data Center Interconnect (DCI) routing. This document
+    describes extensions to BGP to use BGP Link-State distribution and the Shortest
+    Path First (SPF) algorithm. In doing this, it allows BGP to be efficiently used
+    as both the underlay protocol and the overlay protocol in MSDCs.</p>"
   language:
   - en
   script:
@@ -159,23 +159,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-fregly-dnsop-slh-dsa-mtl-dnssec-01
+    id: draft-ietf-lsvr-bgp-spf-24
     docid:
-    - id: draft-fregly-dnsop-slh-dsa-mtl-dnssec-01
+    - id: draft-ietf-lsvr-bgp-spf-24
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-fregly-dnsop-slh-dsa-mtl-dnssec-01
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-fregly-dnsop-slh-dsa-mtl-dnssec-03
-    docid:
-    - id: draft-fregly-dnsop-slh-dsa-mtl-dnssec-03
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-fregly-dnsop-slh-dsa-mtl-dnssec-03
+      content: draft-ietf-lsvr-bgp-spf-24
       format: text/plain
 series:
 - type: main
@@ -186,7 +176,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-fregly-dnsop-slh-dsa-mtl-dnssec-02
+  number: draft-ietf-lsvr-bgp-spf-36
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
