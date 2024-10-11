@@ -13,12 +13,14 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: <p>On some IPv6 links, hosts/clients may have advanced knowledge that all
-    routers on the link would be willing to provide DHCPv6 address/ prefix delegation
-    services without the need for an initial RS/RA message exchange followed by one
-    or more separate DHCPv6 exchanges. This document specifies a new IPv6 Neighbor
-    Discovery option termed the "DHCPv6 Option" that supports the managed delegation
-    of addresses/prefixes in a single message exchange.</p>
+- content: <p>On some IPv6 links, clients may have a reasonable expectation that routers
+    on the link would be willing to support DHCPv6 address/prefix delegation services
+    without the need to first examine the M/O bits in a received Router Advertisement
+    (RA) message. Such clients should therefore be capable of invoking the IPv6 Neighbor
+    Discovery (IPv6ND) router discovery and Dynamic Host Configuration Protocol for
+    IPv6 (DHCPv6) address/prefix delegation services in a single message exchange
+    instead of multiple. This document specifies a new IPv6ND option termed the "DHCPv6ND
+    Option" that supports both functions in a single message exchange.</p>
   language:
   - en
   script:
@@ -34,6 +36,16 @@ relation:
       primary: true
     formattedref:
       content: draft-templin-6man-dhcpv6nd-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-templin-6man-dhcpv6nd-01
+    docid:
+    - id: draft-templin-6man-dhcpv6nd-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-templin-6man-dhcpv6nd-01
       format: text/plain
 ext:
   schema-version: v1.0.1
