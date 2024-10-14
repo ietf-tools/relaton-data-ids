@@ -13,13 +13,15 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>The Network File System v4.2 (NFSv4.2) allows a client to cache directory
-    entries (dirents) for files. By caching dirents, the client avoids querying the
-    server to refresh information. One issue with this caching is that under Access
-    Based Enumeration, the client can not determine if the user has permission to
-    view the dirent's attributes. We introduce a new file attribute called uncacheable
-    which indicates that the client MUST NOT cache the attributes for that dirent.
-    This document extends NFSv4.2 (see RFC7863).</p>"
+- content: "<p>The Network File System v4.2 (NFSv4.2) allows a client to cache both
+    the metadata and the data for a file object. It can also cache the metadata for
+    a directory object. Caching the dirents (i.e., the metadata) allows the client
+    to avoid querying the server to refresh information. But this defeats the server
+    checking to see if the user has permission to view the dirent's attributes. Caching
+    the data can cause performance impacts if the page cache hit rate is low.. This
+    document introduces a new file attribute called uncacheable which indicates that
+    the client MUST NOT cache the metadata or data for that dirent. This document
+    extends NFSv4.2 (see RFC7863).</p>"
   language:
   - en
   script:
@@ -35,6 +37,16 @@ relation:
       primary: true
     formattedref:
       content: draft-haynes-nfsv4-uncacheable-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-haynes-nfsv4-uncacheable-01
+    docid:
+    - id: draft-haynes-nfsv4-uncacheable-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-haynes-nfsv4-uncacheable-01
       format: text/plain
 ext:
   schema-version: v1.0.1

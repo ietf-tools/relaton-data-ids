@@ -1,0 +1,100 @@
+---
+schema-version: v1.2.3
+id: draft-haynes-nfsv4-uncacheable-01
+title:
+- content: Adding an Uncacheable Attribute to NFSv4.2
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-haynes-nfsv4-uncacheable-01
+  type: src
+type: standard
+docid:
+- id: draft-haynes-nfsv4-uncacheable-01
+  type: Internet-Draft
+  primary: true
+- id: I-D.haynes-nfsv4-uncacheable
+  type: IETF
+  scope: anchor
+docnumber: I-D.haynes-nfsv4-uncacheable
+date:
+- type: published
+  value: '2024-10-13'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Thomas
+          language:
+          - en
+        - language:
+          - en
+          initial: T
+        formatted_initials:
+          content: T.
+          language:
+          - en
+      surname:
+        content: Haynes
+        language:
+        - en
+      completename:
+        content: Thomas Haynes
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Hammerspace
+  role:
+  - type: author
+version:
+- draft: '01'
+revdate: '2024-10-13'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>The Network File System v4.2 (NFSv4.2) allows a client to cache both
+    the metadata and the data for a file object. It can also cache the metadata for
+    a directory object. Caching the dirents (i.e., the metadata) allows the client
+    to avoid querying the server to refresh information. But this defeats the server
+    checking to see if the user has permission to view the dirent's attributes. Caching
+    the data can cause performance impacts if the page cache hit rate is low.. This
+    document introduces a new file attribute called uncacheable which indicates that
+    the client MUST NOT cache the metadata or data for that dirent. This document
+    extends NFSv4.2 (see RFC7863).</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-haynes-nfsv4-uncacheable-00
+    docid:
+    - id: draft-haynes-nfsv4-uncacheable-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-haynes-nfsv4-uncacheable-00
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-haynes-nfsv4-uncacheable-01
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
