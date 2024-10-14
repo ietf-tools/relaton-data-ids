@@ -20,14 +20,11 @@ abstract:
     CPU and memory usage of clients (computing nodes) and improves data processing
     efficiency. This design idea is applied in NFSv4.2 or future NFS versions, such
     as Server-Side Copy, in which client sends the control command and the storage
-    server copies data without transmitting between client and server. Compared with
-    traditional copy operations, data is read from the source storage server and then
-    written to the target storage server after two network transmissions. Data transmission
-    on the network is reduced, and bandwidth resources are greatly released. In addition,
-    the client changes from an original data copy executor to a data copy controller,
-    and a specific execution action is executed by the storage server. Therefore,
-    a large amount of computing resources and memory resources are saved on the client
-    side.</p>"
+    server copies data without transmitting between client and server. We are proposing
+    a new mechanism for setting the attributes for all the files and directories in
+    the parent directory, based on thes same thinking of the server side copy mechanism.
+    Compared with traditional setting of attributes, data transmission over the network
+    is reduced and the bandwidth resources are greatly released.</p>"
   language:
   - en
   script:
@@ -93,6 +90,16 @@ relation:
       primary: true
     formattedref:
       content: draft-mzhang-nfsv4-recursively-setting-05
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-mzhang-nfsv4-recursively-setting-06
+    docid:
+    - id: draft-mzhang-nfsv4-recursively-setting-06
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-mzhang-nfsv4-recursively-setting-06
       format: text/plain
 ext:
   schema-version: v1.0.1
