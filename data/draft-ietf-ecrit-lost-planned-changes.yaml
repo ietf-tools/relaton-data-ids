@@ -15,17 +15,16 @@ docid:
 abstract:
 - content: "<p>This document defines an extension to the Location to Service Translation
     (LoST) protocol (RFC5222) that allows a LoST server to notify a client of planned
-    changes to the data it receives. This extension is only useful for the validation
-    function of LoST. It is beneficial for LoST validation clients to be aware of
-    planned changes, as records that previously were valid may become invalid as of
-    a known future date, and new records may become valid after some future date.
-    This extension adds an element to the &lt;findService&gt; request: namely, a date
-    that allows the LoST client to request that the server perform validation as of
-    the date specified. It adds an optional Time-To-Live element to the response,
-    which informs clients of the current expected lifetime of a validation. It also
-    adds a separate interface to the LoST server that allows a client to poll for
-    planned changes. Additionally, this document provides a conventional XML schema
-    for LoST, as a backwards compatible alternative to the RelaxNG schema in RFC5222.</p>"
+    changes to location data. This extension is only useful with the validation function
+    of LoST. It is beneficial for LoST validation clients to be aware of planned changes,
+    since at a known future date, previously valid records may become invalid, and
+    new records may become valid. This extension adds an element to the &lt;findService&gt;
+    request to allow a LoST client to request validation as of a specified date. It
+    adds an optional Time-To-Live element to the response, which informs clients of
+    the current expected lifetime of a validation. It also adds a separate interface
+    to a LoST server that allows a client to poll for planned changes. Additionally,
+    this document provides a conventional XML schema for LoST, as a backwards compatible
+    alternative to the RelaxNG schema in RFC5222.</p>"
   language:
   - en
   script:
@@ -131,6 +130,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-ecrit-lost-planned-changes-09
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-ecrit-lost-planned-changes-10
+    docid:
+    - id: draft-ietf-ecrit-lost-planned-changes-10
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-ecrit-lost-planned-changes-10
       format: text/plain
 ext:
   schema-version: v1.0.1
