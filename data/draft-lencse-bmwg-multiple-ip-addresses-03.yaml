@@ -1,0 +1,129 @@
+---
+schema-version: v1.2.3
+id: draft-lencse-bmwg-multiple-ip-addresses-03
+title:
+- content: Recommendations for using Multiple IP Addresses in Benchmarking Tests
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-lencse-bmwg-multiple-ip-addresses-03
+  type: src
+type: standard
+docid:
+- id: draft-lencse-bmwg-multiple-ip-addresses-03
+  type: Internet-Draft
+  primary: true
+- id: I-D.lencse-bmwg-multiple-ip-addresses
+  type: IETF
+  scope: anchor
+docnumber: I-D.lencse-bmwg-multiple-ip-addresses
+date:
+- type: published
+  value: '2024-10-15'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - language:
+          - en
+          initial: G
+        formatted_initials:
+          content: G.
+          language:
+          - en
+      surname:
+        content: Lencse
+        language:
+        - en
+      completename:
+        content: Gábor Lencse
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Széchenyi István University
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Keiichi
+          language:
+          - en
+        - language:
+          - en
+          initial: K
+        formatted_initials:
+          content: K.
+          language:
+          - en
+      surname:
+        content: Shima
+        language:
+        - en
+      completename:
+        content: Keiichi Shima
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: SoftBank Corp.
+  role:
+  - type: author
+version:
+- draft: '03'
+revdate: '2024-10-15'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>RFC 2544 has defined a benchmarking methodology for network interconnect
+    devices. Its test frame format contained fixed IP addresses and fixed port numbers.
+    RFC 4814 introduced pseudorandom port numbers but used a single source and destination
+    IP address pair when testing with a single destination network. This limitation
+    may cause an issue when the device under test uses the Receive-Side Scaling (RSS)
+    mechanism in the packet processing flow. RSS has two implementations: the first
+    only includes the IP addresses, whereas the second also includes the port numbers
+    in the tuple used for hashing. Benchmarking tests that use a single IP address
+    pair and RFC 4814 pseudorandom port numbers are biased against the first type
+    of RSS implementation because traffic is not distributed among the processing
+    elements. This document recommends the usage of pseudorandom IP addresses in a
+    similar manner as RFC 4814 did with the port numbers. If accepted, this document
+    updates all affected RFCs, including RFC 2544, RFC 4814, RFC 5180, RFC 8219.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-lencse-bmwg-multiple-ip-addresses-00
+    docid:
+    - id: draft-lencse-bmwg-multiple-ip-addresses-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-lencse-bmwg-multiple-ip-addresses-00
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-lencse-bmwg-multiple-ip-addresses-03
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
