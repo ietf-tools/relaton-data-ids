@@ -1,0 +1,129 @@
+---
+schema-version: v1.2.3
+id: draft-schinazi-httpbis-wrap-up-01
+title:
+- content: The HTTP Wrap Up Capsule
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-schinazi-httpbis-wrap-up-01
+  type: src
+type: standard
+docid:
+- id: draft-schinazi-httpbis-wrap-up-01
+  type: Internet-Draft
+  primary: true
+- id: I-D.schinazi-httpbis-wrap-up
+  type: IETF
+  scope: anchor
+docnumber: I-D.schinazi-httpbis-wrap-up
+date:
+- type: published
+  value: '2024-10-16'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: David
+          language:
+          - en
+        - language:
+          - en
+          initial: D
+        formatted_initials:
+          content: D.
+          language:
+          - en
+      surname:
+        content: Schinazi
+        language:
+        - en
+      completename:
+        content: David Schinazi
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Google LLC
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Lucas
+          language:
+          - en
+        - language:
+          - en
+          initial: L
+        formatted_initials:
+          content: L.
+          language:
+          - en
+      surname:
+        content: Pardue
+        language:
+        - en
+      completename:
+        content: Lucas Pardue
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Cloudflare
+  role:
+  - type: author
+version:
+- draft: '01'
+revdate: '2024-10-16'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: <p>HTTP intermediaries sometimes need to terminate long-lived request streams
+    in order to facilitate load balancing or impose data limits. However, Web browsers
+    commonly cannot retry failed proxied requests when they cannot ascertain whether
+    an in-progress request was acted on. To avoid user-visible failures, it is best
+    for the intermediary to inform the client of upcoming request stream terminations
+    in advance of the actual termination so that the client can wrap up existing operations
+    related to that stream and start sending new work to a different stream or connection.
+    This document specifies a new "WRAP_UP" capsule that allows a proxy to instruct
+    a client that it should not start new requests on a tunneled connection, while
+    still allowing it to finish existing requests.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-schinazi-httpbis-wrap-up-00
+    docid:
+    - id: draft-schinazi-httpbis-wrap-up-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-schinazi-httpbis-wrap-up-00
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-schinazi-httpbis-wrap-up-01
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
