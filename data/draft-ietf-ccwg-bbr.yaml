@@ -1,0 +1,45 @@
+---
+schema-version: v1.2.3
+id: draft-ietf-ccwg-bbr
+title:
+- content: BBR Congestion Control
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-ietf-ccwg-bbr
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: <p>This document specifies the BBR congestion control algorithm. BBR ("Bottleneck
+    Bandwidth and Round-trip propagation time") uses recent measurements of a transport
+    connection's delivery rate, round-trip time, and packet loss rate to build an
+    explicit model of the network path. BBR then uses this model to control both how
+    fast it sends data and the maximum volume of data it allows in flight in the network
+    at any time. Relative to loss-based congestion control algorithms such as Reno
+    [RFC5681] or CUBIC [RFC9438], BBR offers substantially higher throughput for bottlenecks
+    with shallow buffers or random losses, and substantially lower queueing delays
+    for bottlenecks with deep buffers (avoiding "bufferbloat"). BBR can be implemented
+    in any transport protocol that supports packet-delivery acknowledgment. Thus far,
+    open source implementations are available for TCP [RFC9293] and QUIC [RFC9000].
+    This document specifies version 3 of the BBR algorithm, BBRv3.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-ietf-ccwg-bbr-00
+    docid:
+    - id: draft-ietf-ccwg-bbr-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-ccwg-bbr-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

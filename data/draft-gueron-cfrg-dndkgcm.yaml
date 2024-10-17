@@ -14,16 +14,19 @@ docid:
   primary: true
 abstract:
 - content: "<p>This document specifies an authenticated encryption algorithm called
-    Double Nonce Derive Key AES-GCM (DNDK-GCM) that operates with a 32- byte root
-    key and encrypts with a 24-byte random nonce, and optionally provides for key
-    commitment. Encryption takes the root key and a random nonce, derives a fresh
-    encryption key and a key commitment value, invokes AES-GCM with the derived key
-    and a 12-byte zero nonce, and outputs the ciphertext, authentication tag and the
-    key commitment value. The low collision probability with 24-byte random nonces
-    extends the lifetime of the root key and this supports processing up to 2^64 bytes
-    under one root key. DNDK-GCM involves a small overhead compared to using AES-GCM
-    directly, and its security relies only on the standard assumption on AES as a
-    pseudorandom permutation.</p>"
+    Double Nonce Derive Key AES-GCM (DNDK-GCM). It operates with a 32- byte root key
+    and is designed to encrypt with a 24-byte random nonce (IV), and to provide for
+    key commitment. Encryption takes the root key and a random nonce (IV), derives
+    a fresh encryption key and a key commitment value, invokes AES-GCM with the derived
+    key and a 12-byte zero nonce, and outputs the ciphertext, authentication tag and
+    the key commitment value. Although this is not the primary targeted usage, it
+    is also possible, under some restrictions, to use DNDK-GCM with a non-repeating
+    but non-random nonce The low collision probability in a collection of 24-byte
+    random nonces, together with the per-nonce derivation of an encryption key, extend
+    the lifetime of the root key, and the scheme can support processing up to 2^64
+    bytes under a given root key. DNDK-GCM introduces relatively small overhead compared
+    to using AES- GCM directly, and its security relies only on the standard assumption
+    that AES acts as a pseudorandom permutation</p>"
   language:
   - en
   script:
@@ -39,6 +42,16 @@ relation:
       primary: true
     formattedref:
       content: draft-gueron-cfrg-dndkgcm-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-gueron-cfrg-dndkgcm-01
+    docid:
+    - id: draft-gueron-cfrg-dndkgcm-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-gueron-cfrg-dndkgcm-01
       format: text/plain
 ext:
   schema-version: v1.0.1
