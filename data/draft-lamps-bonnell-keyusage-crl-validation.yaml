@@ -18,14 +18,12 @@ abstract:
     which certify keys for signing CRLs contain the key usage extension with the cRLSign
     bit asserted. Additionally, RFC 5280 defines steps for the validation of CRLs.
     While there is a requirement for CRL validators to verify that the cRLSign bit
-    is asserted in the keyUsage extension of the CRL issuer's certificate, there is
-    no requirement for validators to verify the presence of the keyUsage extension
-    itself. The lack of this requirement will cause verifiers that implement the RFC
-    5280 CRL validation algorithm to accept a CRL which is signed by a certificate
-    with no keyUsage extension, and therefore does not explicitly have the cRLSign
-    bit asserted. This document specifies an enhancement to the CRL validation process
-    to explicitly require the presence of the keyUsage extension in CRL issuer certificates
-    to resolve this issue.</p>"
+    is asserted in the keyUsage extension of the CRL issuer's certificate, this document
+    clarifies the requirement for relying parties to also verify the presence of the
+    keyUsage extension in the CRL issuer's certificate. This check remediates a potential
+    security issue that arises when relying parties accept a CRL which is signed by
+    a certificate with no keyUsage extension, and therefore does not explicitly have
+    the cRLSign bit asserted.</p>"
   language:
   - en
   script:
@@ -61,6 +59,16 @@ relation:
       primary: true
     formattedref:
       content: draft-lamps-bonnell-keyusage-crl-validation-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-lamps-bonnell-keyusage-crl-validation-03
+    docid:
+    - id: draft-lamps-bonnell-keyusage-crl-validation-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-lamps-bonnell-keyusage-crl-validation-03
       format: text/plain
 ext:
   schema-version: v1.0.1

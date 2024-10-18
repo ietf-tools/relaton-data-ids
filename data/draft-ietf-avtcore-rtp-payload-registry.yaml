@@ -13,17 +13,12 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: <p>It has been observed that specifications of new Real-time Transport
-    Protocol (RTP) payload formats often forget to specify registration of the format's
-    media type in the IANA registry "RTP Payload Formats Media Types" as recommended
-    by RFC 8088. In practice this has no real impact. One reason is that the Media
-    Types registry is the crucial registry to register any Media Type to establish
-    the media type used to identified the format in various signaling usage. This
-    document resolves the situation by first updating the RTP Payload Format Media
-    Type registry to include all the known RTP payload formats at the time of writing,
-    then it closes this IANA Registry for any future registration. Beyond instructing
-    IANA to close this registry, the instructions to authors in RFC 8088 are updated
-    to reflect this.</p>
+- content: <p>A number of authors of RTP Payload Formats and the WG process have failed
+    to ensure that the media types for RTP payload formats is registred in the IANA
+    registry "RTP Payload Formats Media Types" as recommended by RFC 8088. To simplify
+    the process and rely only on the media types registry this document closes the
+    RTP payload specific registry. In addition it updates the instruction to payload
+    format authors in RFC 8088 to reflect this change.</p>
   language:
   - en
   script:
@@ -79,6 +74,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-avtcore-rtp-payload-registry-04
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-avtcore-rtp-payload-registry-05
+    docid:
+    - id: draft-ietf-avtcore-rtp-payload-registry-05
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-avtcore-rtp-payload-registry-05
       format: text/plain
 ext:
   schema-version: v1.0.1
