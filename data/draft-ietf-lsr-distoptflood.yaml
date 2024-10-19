@@ -14,28 +14,17 @@ docid:
   primary: true
 abstract:
 - content: <p>In dense topologies (such as data center fabrics based on the Clos and
-    butterfly though not limited to those; in fact any topology with relatively high
-    degree of connectivity qualifies here) IGP flooding mechanisms designed originally
-    for rather sparse topologies can "overflood", or in other words generate too many
-    identical copies of same information arriving at a given node from other devices.
-    This normally results in slower convergence times and higher resource utilization
-    to process and discard the superfluous copies. Distributed algorithms that restrict
-    the amount of flooding performed can be constructed, as long as they result in
-    a flooding subgraph connecting all nodes on the network in terms of flooding still.
-    Such algorithms can reduce resource utilization significantly, while improving
-    convergence performance. We denote such algorithm as "distributed flooding prunners"
-    (or "prunner" for short) while requiring them to follow some simple, additional
-    rules. The rules presented in detail later allow to deploy mix of nodes any prunning
-    algorithm and multiple prunners at the same time if necessary while ensuring correct
-    flood coverage for the whole network. Additionally, node by node migration, without
-    flag day, from one algorithm to another if necessary is possible. And assuming
-    the algorithms are behaving correctly, the blast radius on algorithm change is
-    normally contained to a single node performing the switch and obviously the convergence
-    of an algorithm on introduction or removal of node running such algorithm. One
-    such algorithm (modification of previous art), deployable even without configuration,
-    is described in this document. Beside reducing the extraneous copies, the proposed
-    solution does "load- balance" flooding across different possible paths in the
-    network to prevent build up of flooding hot-spots.</p>
+    butterfly though not limited to those; in fact any large topology or one with
+    relatively high degree of connectivity qualifies here) IGP flooding mechanisms
+    designed originally for rather sparse topologies can "overflood", or in other
+    words generate too many identical copies of same information arriving at a given
+    node from other devices. This normally results in longer convergence times and
+    higher resource utilization to process and discard the superfluous copies. Flooding
+    algorithm extensions that restrict the amount of flooding performed can be constructed
+    and can reduce resource utilization significantly, while improving convergence
+    performance. One such flooding modification (based on previous art) optimized
+    for operational considerations, described further in Section 2, is described in
+    this document.</p>
   language:
   - en
   script:
@@ -111,6 +100,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-lsr-distoptflood-06
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-lsr-distoptflood-07
+    docid:
+    - id: draft-ietf-lsr-distoptflood-07
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-lsr-distoptflood-07
       format: text/plain
 ext:
   schema-version: v1.0.1
