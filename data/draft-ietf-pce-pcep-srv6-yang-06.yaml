@@ -1,157 +1,181 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-pce-pcep-yang-22
+id: draft-ietf-pce-pcep-srv6-yang-06
 title:
-- content: A YANG Data Model for Path Computation Element Communications Protocol
-    (PCEP)
+- content: A YANG Data Model for Segment Routing (SR) Policy and SR in IPv6 (SRv6)
+    support in Path Computation Element Communications Protocol (PCEP)
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-pce-pcep-yang-22
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-pce-pcep-srv6-yang-06
   type: src
 type: standard
 docid:
-- id: draft-ietf-pce-pcep-yang-22
+- id: draft-ietf-pce-pcep-srv6-yang-06
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-pce-pcep-yang
+- id: I-D.ietf-pce-pcep-srv6-yang
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-pce-pcep-yang
+docnumber: I-D.ietf-pce-pcep-srv6-yang
 date:
 - type: published
-  value: '2023-09-11'
+  value: '2024-10-19'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Dhruv
+        - content: Cheng
           language:
           - en
         - language:
           - en
-          initial: D
+          initial: C
         formatted_initials:
-          content: D.
+          content: C.
           language:
           - en
       surname:
-        content: Dhody
+        content: Li
         language:
         - en
       completename:
-        content: Dhruv Dhody
+        content: Cheng Li
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei
+        - content: Huawei Technologies
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Vishnu
+        - content: Siva
           language:
           - en
         - language:
           - en
-          initial: V
-        - language:
-          - en
-          initial: P
+          initial: S
         formatted_initials:
-          content: V. P.
+          content: S.
           language:
           - en
       surname:
-        content: Beeram
+        content: Sivabalan
         language:
         - en
       completename:
-        content: Vishnu Pavan Beeram
+        content: Siva Sivabalan
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Juniper Networks
+        - content: Ciena Corporation
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Jonathan
+        - content: Shuping
           language:
           - en
         - language:
           - en
-          initial: J
+          initial: S
         formatted_initials:
-          content: J.
+          content: S.
           language:
           - en
       surname:
-        content: Hardwick
+        content: Peng
         language:
         - en
       completename:
-        content: Jonathan Hardwick
+        content: Shuping Peng
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Microsoft
+        - content: Huawei Technologies
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Jeff
+        - content: Mike
           language:
           - en
         - language:
           - en
-          initial: J
+          initial: M
         formatted_initials:
-          content: J.
+          content: M.
           language:
           - en
       surname:
-        content: Tantsura
+        content: Koldychev
         language:
         - en
       completename:
-        content: Jeff Tantsura
+        content: Mike Koldychev
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Nvidia
+        - content: Cisco Systems, Inc.
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - language:
+          - en
+          initial: L
+        formatted_initials:
+          content: L.
+          language:
+          - en
+      surname:
+        content: Ndifor
+        language:
+        - en
+      completename:
+        content: Luc-Fabrice Ndifor
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: MTN Cameroon
   role:
   - type: author
 version:
-- draft: '22'
-revdate: '2023-09-11'
+- draft: '06'
+revdate: '2024-10-19'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document defines a YANG data model for the management of Path
-    Computation Element communications Protocol (PCEP) for communications between
+- content: "<p>This document augments a YANG data model for the management of Path
+    Computation Element Communications Protocol (PCEP) for communications between
     a Path Computation Client (PCC) and a Path Computation Element (PCE), or between
-    two PCEs. The data model includes configuration and state data.</p>"
+    two PCEs in support for Segment Routing in IPv6 (SRv6) and SR Policy. The data
+    model includes configuration data and state data (status information and counters
+    for the collection of statistics).</p>"
   language:
   - en
   script:
@@ -160,23 +184,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-pce-pcep-yang-03
+    id: draft-ietf-pce-pcep-srv6-yang-01
     docid:
-    - id: draft-ietf-pce-pcep-yang-03
+    - id: draft-ietf-pce-pcep-srv6-yang-01
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-pce-pcep-yang-03
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-pce-pcep-yang-26
-    docid:
-    - id: draft-ietf-pce-pcep-yang-26
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-pce-pcep-yang-26
+      content: draft-ietf-pce-pcep-srv6-yang-01
       format: text/plain
 series:
 - type: main
@@ -187,7 +201,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-pce-pcep-yang-22
+  number: draft-ietf-pce-pcep-srv6-yang-06
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
