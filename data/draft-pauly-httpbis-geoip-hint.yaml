@@ -13,11 +13,15 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This documents defines an HTTP Client Hint that allows a client to
-    share information about its IP Geolocation. This helps ensure that servers have
-    information about location that is consistent with what a client expects and what
-    other servers use. Discussion Venues This note is to be removed before publishing
-    as an RFC. Source for this draft and an issue tracker can be found at https://github.com/tfpauly/privacy-proxy.</p>"
+- content: "<p>Techniques that improve user privacy by hiding original client IP addresses,
+    such as VPNs and proxies, have faced challenges with server that rely on IP addresses
+    to determine client location. Maintaining a geographically relevant user experience
+    requires large pools of IP addresses, which can be costly. Additionally, users
+    often receive inaccurate geolocation results because servers rely on geo-IP feeds
+    that can be outdated. To address these challenges, we can allow clients to actively
+    send their network geolocation directly to the origin server via an HTTP Client
+    Hint. This approach will not only enhance geolocation accuracy and reduce IP costs,
+    but it also gives clients more transparency regarding their perceived geolocation.</p>"
   language:
   - en
   script:
@@ -33,6 +37,16 @@ relation:
       primary: true
     formattedref:
       content: draft-pauly-httpbis-geoip-hint-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-pauly-httpbis-geoip-hint-01
+    docid:
+    - id: draft-pauly-httpbis-geoip-hint-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-pauly-httpbis-geoip-hint-01
       format: text/plain
 ext:
   schema-version: v1.0.1
