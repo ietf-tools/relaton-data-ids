@@ -1,136 +1,78 @@
 ---
 schema-version: v1.2.3
-id: draft-netana-nmop-network-anomaly-semantics-02
+id: draft-ietf-teas-actn-pm-telemetry-autonomics-14
 title:
-- content: Semantic Metadata Annotation for Network Anomaly Detection
+- content: YANG models for Virtual Network (VN)/TE Performance Monitoring Telemetry
+    and Scaling Intent Autonomics
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-netana-nmop-network-anomaly-semantics-02
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-teas-actn-pm-telemetry-autonomics-14
   type: src
 type: standard
 docid:
-- id: draft-netana-nmop-network-anomaly-semantics-02
+- id: draft-ietf-teas-actn-pm-telemetry-autonomics-14
   type: Internet-Draft
   primary: true
-- id: I-D.netana-nmop-network-anomaly-semantics
+- id: I-D.ietf-teas-actn-pm-telemetry-autonomics
   type: IETF
   scope: anchor
-docnumber: I-D.netana-nmop-network-anomaly-semantics
+docnumber: I-D.ietf-teas-actn-pm-telemetry-autonomics
 date:
 - type: published
-  value: '2024-07-08'
+  value: '2024-10-19'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Thomas
+        - content: Young
           language:
           - en
         - language:
           - en
-          initial: T
+          initial: Y
         formatted_initials:
-          content: T.
+          content: Y.
           language:
           - en
       surname:
-        content: Graf
+        content: Lee
         language:
         - en
       completename:
-        content: Thomas Graf
+        content: Young Lee
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Swisscom
+        - content: Samsung Electronics
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Wanting
+        - content: Dhruv
           language:
           - en
         - language:
           - en
-          initial: W
+          initial: D
         formatted_initials:
-          content: W.
+          content: D.
           language:
           - en
       surname:
-        content: Du
+        content: Dhody
         language:
         - en
       completename:
-        content: Wanting Du
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Swisscom
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Alex
-          language:
-          - en
-        - language:
-          - en
-          initial: A
-        - language:
-          - en
-          initial: H
-        formatted_initials:
-          content: A. H.
-          language:
-          - en
-      surname:
-        content: Feng
-        language:
-        - en
-      completename:
-        content: Alex Huang Feng
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: INSA-Lyon
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Vincenzo
-          language:
-          - en
-        - language:
-          - en
-          initial: V
-        formatted_initials:
-          content: V.
-          language:
-          - en
-      surname:
-        content: Riccobene
-        language:
-        - en
-      completename:
-        content: Vincenzo Riccobene
+        content: Dhruv Dhody
         language:
         - en
     affiliation:
@@ -143,44 +85,101 @@ contributor:
     name:
       given:
         forename:
-        - content: Antonio
+        - content: Ricard
           language:
           - en
         - language:
           - en
-          initial: A
+          initial: R
         formatted_initials:
-          content: A.
+          content: R.
           language:
           - en
       surname:
-        content: Roberto
+        content: Vilalta
         language:
         - en
       completename:
-        content: Antonio Roberto
+        content: Ricard Vilalta
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei
+        - content: CTTC
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Daniel
+          language:
+          - en
+        - language:
+          - en
+          initial: D
+        formatted_initials:
+          content: D.
+          language:
+          - en
+      surname:
+        content: King
+        language:
+        - en
+      completename:
+        content: Daniel King
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Lancaster University
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Daniele
+          language:
+          - en
+        - language:
+          - en
+          initial: D
+        formatted_initials:
+          content: D.
+          language:
+          - en
+      surname:
+        content: Ceccarelli
+        language:
+        - en
+      completename:
+        content: Daniele Ceccarelli
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Cisco
   role:
   - type: author
 version:
-- draft: '02'
-revdate: '2024-07-08'
+- draft: '14'
+revdate: '2024-10-19'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document explains why and how semantic metadata annotation helps
-    to test, validate and compare outlier detection, supports supervised and semi-supervised
-    machine learning development, enables data exchange among network operators, vendors
-    and academia and make anomalies for humans apprehensible. The proposed semantics
-    uniforms the network anomaly data exchange between and among operators and vendors
-    to improve their network outlier detection systems.</p>"
+- content: "<p>This document provides YANG data models that describe the performance
+    monitoring parameters and scaling intent mechanisms for TE-tunnels and Virtual
+    Networks (VNs). Their performance monitoring parameters are exposed as the key
+    telemetry data for tunnels and VN. The models presented in this document allow
+    customers to subscribe to and monitor the key performance data of the TE-tunnel
+    or the VN. The models also provide customers with the ability to program autonomic
+    scaling intent mechanisms on the level of TE-tunnel as well as VN.</p>"
   language:
   - en
   script:
@@ -189,23 +188,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-netana-nmop-network-anomaly-semantics-01
+    id: draft-ietf-teas-actn-pm-telemetry-autonomics-05
     docid:
-    - id: draft-netana-nmop-network-anomaly-semantics-01
+    - id: draft-ietf-teas-actn-pm-telemetry-autonomics-05
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-netana-nmop-network-anomaly-semantics-01
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-netana-nmop-network-anomaly-semantics-03
-    docid:
-    - id: draft-netana-nmop-network-anomaly-semantics-03
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-netana-nmop-network-anomaly-semantics-03
+      content: draft-ietf-teas-actn-pm-telemetry-autonomics-05
       format: text/plain
 series:
 - type: main
@@ -216,7 +205,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-netana-nmop-network-anomaly-semantics-02
+  number: draft-ietf-teas-actn-pm-telemetry-autonomics-14
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
