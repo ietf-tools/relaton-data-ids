@@ -13,15 +13,11 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>The Network Configuration Protocol (NETCONF) provides mechanisms to
-    install, manipulate, and delete the configuration of network devices. NETCONF
-    can be carried over various transports such as TCP, SSH or else. QUIC provides
-    useful semantics for Network management and NETCONF in particular as a single
-    connection can carry multiple requests over streams, enabling much better efficiency
-    and performance for both peers. QUIC provides shorter handshake and includes TLS.
-    QUIC is also more adaptable to more difficult environments such as those with
-    long delays. This document describes how to use NETCONF over the QUIC transport
-    protocol, named NETCONFoQUIC.</p>"
+- content: "<p>This document specifies how to use QUIC as a secure transport for exchanging
+    Network Configuration Protocol (NETCONF) messages. QUIC provides encryption properties
+    similar to TLS, while eliminating TCP head-of-line blocking issues and also providing
+    more loss detection and congestion control than UDP. NETCONF over QUIC has privacy
+    properties similar to NETCONF over TLS specified in [I-D.ietf-netconf-over-tls13].</p>"
   language:
   - en
   script:
@@ -37,6 +33,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-netconf-over-quic-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-netconf-over-quic-01
+    docid:
+    - id: draft-ietf-netconf-over-quic-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-netconf-over-quic-01
       format: text/plain
 ext:
   schema-version: v1.0.1

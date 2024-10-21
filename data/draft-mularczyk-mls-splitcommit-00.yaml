@@ -1,0 +1,110 @@
+---
+schema-version: v1.2.3
+id: draft-mularczyk-mls-splitcommit-00
+title:
+- content: MLS Split Commits
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-mularczyk-mls-splitcommit-00
+  type: src
+type: standard
+docid:
+- id: draft-mularczyk-mls-splitcommit-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.mularczyk-mls-splitcommit
+  type: IETF
+  scope: anchor
+docnumber: I-D.mularczyk-mls-splitcommit
+date:
+- type: published
+  value: '2024-10-21'
+contributor:
+- person:
+    name:
+      given:
+        formatted_initials:
+          language:
+          - en
+      surname:
+        content: Joël
+        language:
+        - en
+      completename:
+        content: Joël
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Amazon
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Marta
+          language:
+          - en
+        - language:
+          - en
+          initial: M
+        formatted_initials:
+          content: M.
+          language:
+          - en
+      surname:
+        content: Mularczyk
+        language:
+        - en
+      completename:
+        content: Marta Mularczyk
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Amazon
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2024-10-21'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: <p>This document describes an extension to the MLS protocol [RFC940] that
+    improves its efficiency in terms of per-member download size. This comes at essentially
+    no cost. In essence, this document defines a new message type called split commit
+    which replaces regular MLS commits. Unlike regular commits, a split commit can
+    be "split" by the Delivery Service (DS) into much smaller per-member commits,
+    one for each receiving member. The size of a per-member commit is always logarithmic
+    in the group size, while the size of a regular MLS commit can be linear. This
+    extension works in settings with a DS that can do the splitting which can be demanding
+    with encrypted MLS handshake messages. This is motivated by academic research
+    [KKP22], [HKPPW22], [AHKM22].</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-mularczyk-mls-splitcommit-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
