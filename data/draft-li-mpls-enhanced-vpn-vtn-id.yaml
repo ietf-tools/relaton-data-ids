@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-li-mpls-enhanced-vpn-vtn-id
 title:
-- content: Carrying Virtual Transport Network (VTN) Information in MPLS Packet
+- content: Carrying NRP Identifier and related information in MPLS Packet
   language:
   - en
   script:
@@ -13,17 +13,16 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>A Virtual Transport Network (VTN) is a virtual network which has a
-    customized network topology and a set of dedicated or shared network resources
-    allocated from the underlying physical network. Multiple VTNs can be created by
-    network operator for using as the underlay for one or a group of VPNs services
-    to provide enhanced VPN (VPN+) services. In packet forwarding, some fields in
-    the data packet needs to be used to identify the VTN the packet belongs to, so
-    that the VTN-specific processing can be executed on the packet. In the context
-    of network slicing, a VTN can be instantiated as a Network Resource Partition
-    (NRP). This document proposes a mechanism to carry the data plane VTN ID in an
-    MPLS packet to identify the VTN the packet belongs to. The procedure for processing
-    the VTN ID is also specified.</p>"
+- content: "<p>A Network Resource Partition (NRP) is a subset of the network resources
+    and associated policies on each of a connected set of links in the underlay network.
+    An NRP could be used as the underlay to support one or a group of enhanced VPN
+    services. Multiple NRPs can be created by network operator to meet the diverse
+    requirements of enhanced VPN services. In packet forwarding, some fields in the
+    data packet needs to be used to identify the NRP the packet belongs to, so that
+    the NRP-specific processing can be executed on the packet. This document proposes
+    a mechanism to carry the data plane NRP ID in an MPLS packet to identify the NRP
+    the packet belongs to. The procedure for processing the data plane NRP ID is also
+    specified.</p>"
   language:
   - en
   script:
@@ -69,6 +68,16 @@ relation:
       primary: true
     formattedref:
       content: draft-li-mpls-enhanced-vpn-vtn-id-03
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-li-mpls-enhanced-vpn-vtn-id-04
+    docid:
+    - id: draft-li-mpls-enhanced-vpn-vtn-id-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-li-mpls-enhanced-vpn-vtn-id-04
       format: text/plain
 ext:
   schema-version: v1.0.1

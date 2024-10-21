@@ -13,13 +13,15 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>RFC 4302 and RFC 4303 specify that, during Security Association (SA)
-    establishment, IPsec implementation should notify the peer if it will not provide
-    anti-replay protection, to avoid having the peer do unnecessary sequence number
-    monitoring and SA setup. This document defines the ANTI_REPLAY_STATUS Notify Message
+- content: "<p>Although RFC 4302 and RFC 4303 don't prohibit using Extended Sequence
+    Number (ESN) when the anti-replay function is not enabled, many IPsec implementations
+    require ESN to be used only with anti-replay. Therefore, failing to negotiate
+    the use of ESN when the anti-replay is disabled will cause the sequence numbers
+    to exhaust rapidly in high-traffic-volume scenarios, leading to the frequent rekey
+    of Child SAs. This document defines the REPLAY_PROT_AND_ESN_STATUS Notify Message
     Status Type Payload in the Internet Key Exchange Protocol Version 2 (IKEv2) to
-    inform the peers of their own anti-replay status when creating the IPsec SAs,
-    to fulfill the above requirement.</p>"
+    inform the peer of its replay protection status and capability of using ESN without
+    anti-replay when creating the Child SAs, to address the above problem.</p>"
   language:
   - en
   script:
@@ -35,6 +37,16 @@ relation:
       primary: true
     formattedref:
       content: draft-pan-ipsecme-anti-replay-notification-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-pan-ipsecme-anti-replay-notification-01
+    docid:
+    - id: draft-pan-ipsecme-anti-replay-notification-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-pan-ipsecme-anti-replay-notification-01
       format: text/plain
 ext:
   schema-version: v1.0.1

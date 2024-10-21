@@ -24,14 +24,14 @@ abstract:
     configured LSPs to the PCE. Further, stateful PCE could also create and remove
     PCE-initiated LSPs by itself. A PCE-based Central Controller (PCECC) simplify
     the processing of a distributed control plane by integrating with elements of
-    Software-Defined Networking (SDN). In some use cases, such as PCECC or Binding
-    Segment Identifier (SID) for Segment Routing (SR), there are requirements for
-    a stateful PCE to make allocation of labels, SIDs, etc. These use cases require
-    PCE aware of various identifier spaces from where to make allocations on behalf
-    of a PCC. This document describes a generic mechanism for a PCC to inform the
-    PCE of the identifier space set aside for the PCE control via PCEP. The identifier
-    could be an MPLS label, a SID, or any other to-be-defined identifier that can
-    be allocated and managed by the PCE.</p>"
+    Software-Defined Networking (SDN). In some use cases, such as PCECC provisioning
+    or Binding Segment Identifier (SID) for Segment Routing (SR) allocation, there
+    are requirements for a stateful PCE to make allocation of labels, SIDs, etc. These
+    use cases require PCE to be aware of various identifier spaces from where to make
+    allocations on behalf of a PCC. This document defines a generic mechanism by which
+    a PCC can inform the PCE of the identifier space set aside for the PCE control
+    via PCEP. The identifier could be an MPLS label, a SID, or any other identifier
+    that can be allocated and managed by the PCE.</p>"
   language:
   - en
   script:
@@ -47,6 +47,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-pce-controlled-id-space-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-pce-controlled-id-space-01
+    docid:
+    - id: draft-ietf-pce-controlled-id-space-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-pce-controlled-id-space-01
       format: text/plain
 ext:
   schema-version: v1.0.1
