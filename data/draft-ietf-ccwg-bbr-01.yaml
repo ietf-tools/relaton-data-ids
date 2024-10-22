@@ -1,0 +1,159 @@
+---
+schema-version: v1.2.3
+id: draft-ietf-ccwg-bbr-01
+title:
+- content: BBR Congestion Control
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-ccwg-bbr-01
+  type: src
+type: standard
+docid:
+- id: draft-ietf-ccwg-bbr-01
+  type: Internet-Draft
+  primary: true
+- id: I-D.ietf-ccwg-bbr
+  type: IETF
+  scope: anchor
+docnumber: I-D.ietf-ccwg-bbr
+date:
+- type: published
+  value: '2024-10-21'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Neal
+          language:
+          - en
+        - language:
+          - en
+          initial: N
+        formatted_initials:
+          content: N.
+          language:
+          - en
+      surname:
+        content: Cardwell
+        language:
+        - en
+      completename:
+        content: Neal Cardwell
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Google
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Ian
+          language:
+          - en
+        - language:
+          - en
+          initial: I
+        formatted_initials:
+          content: I.
+          language:
+          - en
+      surname:
+        content: Swett
+        language:
+        - en
+      completename:
+        content: Ian Swett
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Google
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Joseph
+          language:
+          - en
+        - language:
+          - en
+          initial: J
+        formatted_initials:
+          content: J.
+          language:
+          - en
+      surname:
+        content: Beshay
+        language:
+        - en
+      completename:
+        content: Joseph Beshay
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Meta
+  role:
+  - type: author
+version:
+- draft: '01'
+revdate: '2024-10-21'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: <p>This document specifies the BBR congestion control algorithm. BBR ("Bottleneck
+    Bandwidth and Round-trip propagation time") uses recent measurements of a transport
+    connection's delivery rate, round-trip time, and packet loss rate to build an
+    explicit model of the network path. BBR then uses this model to control both how
+    fast it sends data and the maximum volume of data it allows in flight in the network
+    at any time. Relative to loss-based congestion control algorithms such as Reno
+    [RFC5681] or CUBIC [RFC9438], BBR offers substantially higher throughput for bottlenecks
+    with shallow buffers or random losses, and substantially lower queueing delays
+    for bottlenecks with deep buffers (avoiding "bufferbloat"). BBR can be implemented
+    in any transport protocol that supports packet-delivery acknowledgment. Thus far,
+    open source implementations are available for TCP [RFC9293] and QUIC [RFC9000].
+    This document specifies version 3 of the BBR algorithm, BBRv3.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-ietf-ccwg-bbr-00
+    docid:
+    - id: draft-ietf-ccwg-bbr-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-ccwg-bbr-00
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-ietf-ccwg-bbr-01
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

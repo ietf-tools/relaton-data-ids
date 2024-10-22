@@ -13,12 +13,13 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document defines how to compress/decompress communications protected
-    with IPsec/ESP using Static Context Header Compression and fragmentation (SCHC).
-    SCHC uses static information from IPv6 headers to reduce redundancy and size of
-    packets on the wire. This specification provides guidelines on the application
-    of SCHC to compress/decompress at different levels of the ESP/IPv6 protected packets,
-    leveraging the information already shared by the peers.</p>"
+- content: "<p>The document specifies Diet-ESP, an ESP Header Compression Profile
+    (EHCP) that compresses IPsec/ESP communications using Static Context Header Compression
+    (SCHC). Diet-ESP assumes the Traffic Selectors of the Security Association (SA)
+    can be expressed by a single IKEv2 Traffic Selector Payload [RFC7296], Section
+    3.13.1. More specifically, the Traffic Selectors are defined with a single type
+    of IP addresses (IPv4 or IPv6), a single IP range, a single protocol (such as
+    UDP, TCP, or not relevant), a single port range and multiple DSCP numbers.</p>"
   language:
   - en
   script:
@@ -44,6 +45,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-ipsecme-diet-esp-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-ipsecme-diet-esp-02
+    docid:
+    - id: draft-ietf-ipsecme-diet-esp-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-ipsecme-diet-esp-02
       format: text/plain
 ext:
   schema-version: v1.0.1

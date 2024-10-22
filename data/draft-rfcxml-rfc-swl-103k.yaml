@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-rfcxml-rfc-swl-103k
 title:
-- content: Compression and Decompression Protocol using Markel Tree Algorithm
+- content: SW103K PROTOCOL
   language:
   - en
   script:
@@ -13,10 +13,105 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document describes a protocol for the compression and decompression
-    of data using the Markel Tree Algorithm. This protocol allows for the compression
-    of a 103MB file into a 1MB file, which can then be transmitted over a network
-    and decompressed back to its original size at the receiving end.</p>"
+- content: "<p>What Problems Does This Protocol Solve? The SW103k protocol addresses
+    several challenges that arise when transporting data over networks with limited
+    bandwidth, latency constraints, and data integrity concerns. Specifically, it
+    provides a compression and decompression mechanism designed to: Optimize Bandwidth
+    Utilization: In environments where bandwidth is limited, such as IoT networks,
+    satellite communications, and mobile data transfers, SW103k reduces the amount
+    of data sent over the wire by compressing data in transit, thus saving bandwidth.
+    Improve Data Transfer Speeds: By compressing data before transmission, the protocol
+    reduces the volume of data that needs to be transferred, which improves transfer
+    speeds, especially in networks where bandwidth is a bottleneck. Ensure Data Integrity:
+    In addition to compression, SW103k integrates error- checking mechanisms that
+    ensure data arrives intact. This helps mitigate issues in unreliable network conditions
+    where packet loss or corruption might occur. Security Considerations: The protocol
+    incorporates optional encryption to provide confidentiality during data transmission.
+    This is especially useful in scenarios where sensitive data needs to be transferred,
+    like financial transactions or health data over potentially insecure networks.
+    How Does This Protocol Work? The SW103k protocol operates in a client-server architecture,
+    where the sender (client) compresses the payload using a predefined compression
+    algorithm before transmitting it to the receiver (server). The receiver then decompresses
+    the data back into its original form. Key Components: Compression Algorithm: SW103k
+    uses a hybrid compression algorithm combining LZ77 and Huffman encoding, ensuring
+    efficient data compression with minimal overhead. The protocol negotiates the
+    compression parameters (e.g., window size) at the start of each connection. Decompression
+    Mechanism: The receiver is responsible for decompressing the data using the same
+    parameters agreed upon during the initial handshake. The decompression process
+    is optimized for low-latency environments to ensure the data is available with
+    minimal delay. Transport Layer: SW103k functions over standard transport layers
+    such as TCP or QUIC, and adds a lightweight layer that manages compression, decompression,
+    and error-checking. The protocol header contains metadata about the compression
+    type and error-checking mechanism used. Error Checking: SW103k includes a checksum
+    or CRC32 in each transmission block, ensuring that data corruption can be detected
+    and retransmitted if necessary. Comparison with Other Transport Protocols Compared
+    to other transport protocols like TCP or QUIC, SW103k doesn’t replace them but
+    adds an additional layer of compression and decompression to the transport process.
+    Unlike raw TCP or QUIC, which primarily focus on connection reliability and speed,
+    SW103k introduces bandwidth optimization through compression, which makes it particularly
+    useful in constrained environments. Here’s how SW103k compares with other protocols:
+    TCP: TCP provides reliable transmission, but it does not natively compress data.
+    While you can use application-layer compression with TCP, SW103k integrates compression
+    at the transport layer, optimizing both compression and transmission. QUIC: QUIC
+    focuses on speed and low-latency transmissions, especially over unreliable networks.
+    SW103k could potentially be layered on top of QUIC to introduce compression, making
+    it useful in high-latency networks like mobile or satellite. TLS: TLS ensures
+    security over transmission but doesn’t compress data. SW103k can work with TLS,
+    where compressed data is first encrypted before being transmitted, adding an additional
+    layer of bandwidth efficiency. SCTP: Like TCP, SCTP focuses on reliability, especially
+    for message-based communications. SW103k could work with SCTP when reliability
+    and bandwidth optimization are both critical. Why Choose SW103k Over Existing
+    Protocols? SW103k could be chosen over existing protocols when: Bandwidth Optimization
+    is Critical: In environments like IoT networks, satellite communications, or mobile
+    data transfer, where bandwidth is expensive or limited, SW103k reduces the overall
+    data transferred by compressing the payload before transmission. Minimal Processing
+    Overhead: SW103k has been designed to offer high levels of compression with low
+    computational overhead, making it ideal for low- power devices or systems with
+    limited resources. Easy Integration with Existing Protocols: SW103k is designed
+    to work alongside existing transport protocols (e.g., TCP, QUIC) without needing
+    major architectural changes. It acts as a lightweight add-on for compression and
+    decompression, simplifying adoption for legacy systems. Security Issues Raised
+    by Using This Protocol Using the SW103k protocol introduces a few potential security
+    considerations: Compression-related Attacks: Compression algorithms may be susceptible
+    to attacks such as the CRIME or BREACH attacks, which exploit the predictable
+    nature of compressed data. Implementing padding or randomized inputs to the compression
+    process could help mitigate these risks. Data Integrity and Tampering: Since the
+    protocol involves compressing and decompressing data, there's a risk that data
+    might be tampered with during transmission. SW103k addresses this by incorporating
+    checksum or CRC32 mechanisms to verify the integrity of each transmission block.
+    Encryption Considerations: If sensitive data is being transmitted using SW103k,
+    the protocol needs to ensure that the compression process doesn't leak information
+    about the original data. It’s recommended that data be encrypted before compression
+    or using TLS in conjunction with SW103k for secure transmissions. Denial-of-Service
+    (DoS) Vulnerabilities: Malicious users could flood the server with decompression
+    requests, consuming significant CPU resources. Implementing rate limiting or requiring
+    authenticated connections before processing requests can reduce the attack surface.
+    Concrete Examples of What is Missing When I refer to the current document not
+    containing anything concrete, I mean that the draft lacks crucial technical details
+    and implementation guidance that protocol implementers or reviewers need to understand
+    the protocol’s purpose and function. For example: Detailed Algorithm: Instead
+    of just saying “SW103k compresses data,” a concrete description would include
+    the actual algorithm (e.g., how the hybrid of LZ77 and Huffman encoding works)
+    and pseudocode to explain how compression and decompression happen. Message Formats:
+    In protocols like HTTP/2 or QUIC, message formats are clearly defined. Each byte
+    or bit has a meaning in the headers, body, and control information. SW103k should
+    include message diagrams showing what the protocol header looks like, how metadata
+    is transmitted, etc. State Machine or Flow Diagrams: Many transport protocols
+    include flow diagrams showing how the protocol handles different network events
+    (e.g., connection initiation, packet retransmission). SW103k should include this
+    to illustrate the typical lifecycle of a connection. Code Examples: Providing
+    actual working code that developers could use to implement SW103k would be useful.
+    This could be a Python or C library that demonstrates how compression is performed
+    and how the protocol interacts with the transport layer. Conclusion: Actionable
+    Next Steps for Internet Draft To move forward with SW103k as an Internet Draft
+    for the IETF: Develop a Detailed Specification: Include the detailed design and
+    behavior of the protocol, including the compression algorithm, transport layer
+    interaction, and flow control. Provide Concrete Examples: Add sample pseudocode
+    or protocol header diagrams that illustrate how the protocol works in practice.
+    Security Considerations: Detail the potential risks (e.g., CRIME/ BREACH attacks)
+    and provide mitigation strategies to secure the protocol. Test Cases and Implementation:
+    Provide a reference implementation or a set of test cases for developers to try
+    out the protocol in different environments.</p>"
   language:
   - en
   script:
@@ -42,6 +137,16 @@ relation:
       primary: true
     formattedref:
       content: draft-rfcxml-rfc-swl-103k-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-rfcxml-rfc-swl-103k-02
+    docid:
+    - id: draft-rfcxml-rfc-swl-103k-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-rfcxml-rfc-swl-103k-02
       format: text/plain
 ext:
   schema-version: v1.0.1

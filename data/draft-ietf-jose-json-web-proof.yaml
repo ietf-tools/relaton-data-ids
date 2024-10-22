@@ -17,13 +17,15 @@ abstract:
     for Keys, Signatures, and Encryption. They also established IANA registries to
     enable the algorithms and representations used for them to be extended. Since
     those were created, newer cryptographic algorithms that support selective disclosure
-    and unlinkability have matured and started seeing early market adoption. This
-    document defines a new container format similar in purpose and design to JSON
-    Web Signature (JWS) called a _JSON Web Proof (JWP)_. Unlike JWS, which integrity-protects
-    only a single payload, JWP can integrity-protect multiple payloads in one message.
-    It also specifies a new presentation form that supports selective disclosure of
-    individual payloads, enables additional proof computation, and adds a protected
-    header to prevent replay.</p>"
+    and unlinkability have matured and started seeing early market adoption. The COSE
+    set of standards likewise does this for CBOR-based containers, focusing on the
+    needs of environments which are better served using CBOR, such as constrained
+    devices and networks. This document defines a new container format similar in
+    purpose and design to JSON Web Signature (JWS) and COSE Signed Messages called
+    a _JSON Web Proof (JWP)_. Unlike JWS, which integrity-protects only a single payload,
+    JWP can integrity-protect multiple payloads in one message. It also specifies
+    a new presentation form that supports selective disclosure of individual payloads,
+    enables additional proof computation, and adds a protected header to prevent replay.</p>"
   language:
   - en
   script:
@@ -99,6 +101,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-jose-json-web-proof-06
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-jose-json-web-proof-07
+    docid:
+    - id: draft-ietf-jose-json-web-proof-07
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-jose-json-web-proof-07
       format: text/plain
 ext:
   schema-version: v1.0.1
