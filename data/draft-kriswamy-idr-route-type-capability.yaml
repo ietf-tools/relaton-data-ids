@@ -13,12 +13,14 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>BGP supports different route types, which defines the encoding of Network
-    Layer Reachability Information (NLRI) for a some of the Address Family Identifier
-    (AFI)/Subsequent Address Family Identifier (SAFI) like Ethernet VPN (EVPN), Multicast
-    VPN(MVPN) and so on. BGP speaker will reset the BGP session if a given route type
-    is not supported. This document defines an Optional Capabilities to exchange the
-    route types supported for a given AFI/SAFI such that session are not reset.</p>"
+- content: "<p>BGP supports different route types, which define the encoding of Network
+    Layer Reachability Information (NLRI) for some of the Address Family Identifier
+    (AFI)/Subsequent Address Family Identifier (SAFI), like Ethernet VPN (EVPN), Multicast
+    VPN(MVPN) and so on. BGP speaker MAY reset the BGP session if a given route type
+    in an NLRI is not supported instead of treat-as-withdraw. This document defines
+    Optional Capabilities pertaining to the exchange of route types that are supported
+    for a particular AFI and SAFI. This framework facilitates the maintenance of sessions
+    without necessitating resets or the inadvertent dropping of updates.</p>"
   language:
   - en
   script:
@@ -34,6 +36,16 @@ relation:
       primary: true
     formattedref:
       content: draft-kriswamy-idr-route-type-capability-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-kriswamy-idr-route-type-capability-01
+    docid:
+    - id: draft-kriswamy-idr-route-type-capability-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-kriswamy-idr-route-type-capability-01
       format: text/plain
 ext:
   schema-version: v1.0.1
