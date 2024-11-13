@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-ietf-wimse-workload-identity-bcp
 title:
-- content: Best Current Practice for OAuth 2.0 Client Authentication in Workload Environments
+- content: OAuth 2.0 Client Assertion in Workload Environments
   language:
   - en
   script:
@@ -13,13 +13,14 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: <p>The use of the OAuth 2.0 framework for container orchestration systems
+- content: "<p>The use of the OAuth 2.0 framework for container orchestration systems
     poses a challenge as managing secrets, such as client_id and client_secret, can
-    be complex and error-prone. "Service account token volume projection", a term
-    introduced by Kubernetes, provides a way of injecting JSON Web Tokens (JWTs) to
-    workloads. This document describes the current best practices to avoid client_secret
-    provisioning and leverage platform attestation to receive access tokens from an
-    OAuth 2.0 authorization server via RFC 7523.</p>
+    be complex and error-prone. Instead of manual provisioning these credentials the
+    industry has moved to a federation-based approach where credentials of the underlying
+    workload platform are used as assertions towards an OAuth authorization server
+    leveraging the Client Assertion Flow [RFC7521], in particular [RFC7523]. This
+    specification describes a meta flow in Section 3.1, gives security recommendations
+    in Section 4 and outlines concrete patterns in Appendix A.</p>"
   language:
   - en
   script:
@@ -45,6 +46,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-wimse-workload-identity-bcp-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-wimse-workload-identity-bcp-02
+    docid:
+    - id: draft-ietf-wimse-workload-identity-bcp-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-wimse-workload-identity-bcp-02
       format: text/plain
 ext:
   schema-version: v1.0.1
