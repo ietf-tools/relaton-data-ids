@@ -1,0 +1,253 @@
+---
+schema-version: v1.2.3
+id: draft-ietf-bess-evpn-unequal-lb-24
+title:
+- content: Weighted Multi-Path Procedures for EVPN Multi-Homing
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-bess-evpn-unequal-lb-24
+  type: src
+type: standard
+docid:
+- id: draft-ietf-bess-evpn-unequal-lb-24
+  type: Internet-Draft
+  primary: true
+- id: I-D.ietf-bess-evpn-unequal-lb
+  type: IETF
+  scope: anchor
+docnumber: I-D.ietf-bess-evpn-unequal-lb
+date:
+- type: published
+  value: '2024-11-12'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Neeraj
+          language:
+          - en
+        - language:
+          - en
+          initial: "N"
+        formatted_initials:
+          content: N.
+          language:
+          - en
+      surname:
+        content: Malhotra
+        language:
+        - en
+      completename:
+        content: Neeraj Malhotra
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Cisco Systems
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Ali
+          language:
+          - en
+        - language:
+          - en
+          initial: A
+        formatted_initials:
+          content: A.
+          language:
+          - en
+      surname:
+        content: Sajassi
+        language:
+        - en
+      completename:
+        content: Ali Sajassi
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Cisco Systems
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Jorge
+          language:
+          - en
+        - language:
+          - en
+          initial: J
+        formatted_initials:
+          content: J.
+          language:
+          - en
+      surname:
+        content: Rabadan
+        language:
+        - en
+      completename:
+        content: Jorge Rabadan
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Nokia
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: John
+          language:
+          - en
+        - language:
+          - en
+          initial: J
+        formatted_initials:
+          content: J.
+          language:
+          - en
+      surname:
+        content: Drake
+        language:
+        - en
+      completename:
+        content: John Drake
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Juniper
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Avinash
+          language:
+          - en
+        - language:
+          - en
+          initial: A
+        - language:
+          - en
+          initial: R
+        formatted_initials:
+          content: A. R.
+          language:
+          - en
+      surname:
+        content: Lingala
+        language:
+        - en
+      completename:
+        content: Avinash Reddy Lingala
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: ATT
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Samir
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Thoria
+        language:
+        - en
+      completename:
+        content: Samir Thoria
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Cisco Systems
+  role:
+  - type: author
+version:
+- draft: '24'
+revdate: '2024-11-12'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>EVPN enables all-active multi-homing for a CE (Customer Equipment)
+    device connected to two or more PE (Provider Equipment) devices via a LAG (Link
+    Aggregation), such that bridged and routed traffic from remote PEs to hosts attached
+    to the Ethernet Segment can be equally load balanced (it uses Equal Cost Multi
+    Path) across the multi-homing PEs. EVPN also enables multi-homing for IP subnets
+    advertised in IP Prefix routes, so that routed traffic from remote PEs to those
+    IP subnets can be load balanced. This document defines extensions to EVPN procedures
+    to optimally handle unequal access bandwidth distribution across a set of multi-homing
+    PEs in order to: * provide greater flexibility, with respect to adding or removing
+    individual multi-homed PE-CE links. * handle multi-homed PE-CE link failures that
+    can result in unequal PE-CE access bandwidth across a set of multi-homing PEs.
+    In order to achieve the above, it specifies signaling extensions and procedures
+    to: * Loadbalance bridged and routed traffic across egress PEs in proportion to
+    PE-CE link bandwidth or a generalized weight distribution. * Achieve BUM (Broadcast,
+    UnknownUnicast, Multicast) DF (Designated Forwarder) election distribution for
+    a given ES (Ethernet Segment) across the multi-homing PE set in proportion to
+    PE-CE link bandwidth. Section 6 of this document further updates RFC 8584, draft-ietf-bess-evpn-per-mcast-flow-df-election
+    and draft-ietf- bess-evpn-pref-df in order for the DF election extension defined
+    in this document to work across different DF election algorithms.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-ietf-bess-evpn-unequal-lb-11
+    docid:
+    - id: draft-ietf-bess-evpn-unequal-lb-11
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-bess-evpn-unequal-lb-11
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-ietf-bess-evpn-unequal-lb-24
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
