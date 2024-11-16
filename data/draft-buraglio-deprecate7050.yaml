@@ -2,8 +2,8 @@
 schema-version: v1.2.3
 id: draft-buraglio-deprecate7050
 title:
-- content: Deprecation of DNS64 for Discovery of IPv6 Prefix Used for IPv6 Address
-    Synthesis
+- content: Discouraging use of RFC7050 for Discovery of IPv6 Prefix Used for IPv6
+    Address Synthesis
   language:
   - en
   script:
@@ -15,12 +15,13 @@ docid:
   primary: true
 abstract:
 - content: <p>RFC7050 describes a method for detecting the presence of DNS64 and for
-    learning the IPv6 prefix used for protocol translation (RFC6145). This methodology
+    learning the IPv6 prefix used for protocol translation (RFC7915). This methodology
     depends on the existence of a well-known IPv4-only fully qualified domain name
     "ipv4only.arpa.". Because newer methods exist that lack the requirement of a higher
     level protocol, instead using existing operations in the form of native router
     advertisements, discovery of the IPv6 prefix used for protocol translation using
-    RFC7050 is deprecated to legacy status.</p>
+    RFC7050 should be discouraged. RFC7050 MAY only be used if other methods (such
+    as RFC8781]) can not be used.</p>
   language:
   - en
   script:
@@ -36,6 +37,16 @@ relation:
       primary: true
     formattedref:
       content: draft-buraglio-deprecate7050-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-buraglio-deprecate7050-01
+    docid:
+    - id: draft-buraglio-deprecate7050-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-buraglio-deprecate7050-01
       format: text/plain
 ext:
   schema-version: v1.0.1
