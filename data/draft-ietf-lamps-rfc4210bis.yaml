@@ -18,17 +18,17 @@ abstract:
     (PKI) Certificate Management Protocol (CMP). Protocol messages are defined for
     X.509v3 certificate creation and management. CMP provides interactions between
     client systems and PKI components such as a Registration Authority (RA) and a
-    Certification Authority (CA). This document obsoletes RFC 4210 by including the
-    updates specified by CMP Updates RFC 9480 Section 2 and Appendix A.2 maintaining
-    backward compatibility with CMP version 2 wherever possible and obsoletes both
-    documents. Updates to CMP version 2 are: improving crypto agility, extending the
-    polling mechanism, adding new general message types, and adding extended key usages
-    to identify special CMP server authorizations. Introducing CMP version 3 to be
-    used only for changes to the ASN.1 syntax, which are: support of EnvelopedData
-    instead of EncryptedValue, hashAlg for indicating a hash AlgorithmIdentifier in
-    certConf messages, and RootCaKeyUpdateContent in ckuann messages. In addition
-    to the changes specified in CMP Updates RFC 9480 this document adds support for
-    management of KEM certificates.</p>"
+    Certification Authority (CA). This document adds support for management of KEM
+    certificates and use EnvelopedData instead of EncryptedValue. This document also
+    includes the updates specified in Section 2 and Appendix A.2 of RFC 9480. The
+    updates maintain backward compatibility with CMP version 2 wherever possible.
+    Updates to CMP version 2 are improving crypto agility, extending the polling mechanism,
+    adding new general message types, and adding extended key usages to identify special
+    CMP server authorizations. CMP version 3 is introduced for changes to the ASN.1
+    syntax, which are support of EnvelopedData, certConf with hashAlg, POPOPrivKey
+    with agreeMAC, and RootCaKeyUpdateContent in ckuann messages. This document obsoletes
+    RFC 4210 and together with I-D.ietf-lamps- rfc6712bis and it also obsoletes RFC
+    9480. Appendix F of this document updates the Section 9 of RFC 5912.</p>"
   language:
   - en
   script:
@@ -184,6 +184,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-lamps-rfc4210bis-14
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-lamps-rfc4210bis-15
+    docid:
+    - id: draft-ietf-lamps-rfc4210bis-15
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-lamps-rfc4210bis-15
       format: text/plain
 ext:
   schema-version: v1.0.1
