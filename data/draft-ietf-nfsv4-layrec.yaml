@@ -17,7 +17,7 @@ abstract:
     (MDS) and data (DS) to be on different servers. When the metadata server is restarted,
     the client can still modify the data file component. During the recovery phase
     of startup, the metadata server and the data servers work together to recover
-    state (which files are open, last modification time, size, etc). If the client
+    state (which files are open, last modification time, size, etc.). If the client
     has not encountered errors with the data files, then the state can be recovered,
     avoiding resilvering of the data files. With any errors, there is no means by
     which the client can report errors to the metadata server. As such, the metadata
@@ -58,6 +58,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-nfsv4-layrec-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-nfsv4-layrec-03
+    docid:
+    - id: draft-ietf-nfsv4-layrec-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-nfsv4-layrec-03
       format: text/plain
 ext:
   schema-version: v1.0.1
