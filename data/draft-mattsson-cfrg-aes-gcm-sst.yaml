@@ -15,13 +15,15 @@ docid:
 abstract:
 - content: "<p>This document defines the Galois Counter Mode with Secure Short Tags
     (GCM-SST) Authenticated Encryption with Associated Data (AEAD) algorithm. GCM-SST
-    can be used with any keystream generator, not just a block cipher. The main differences
-    compared to GCM [GCM] is that GCM-SST uses an additional subkey Q, that fresh
-    subkeys H and Q are derived for each nonce, and that the POLYVAL function from
-    AES- GCM-SIV is used instead of GHASH. This enables short tags with forgery probabilities
-    close to ideal. This document also registers several instances of Advanced Encryption
-    Standard (AES) with Galois Counter Mode with Secure Short Tags (AES-GCM-SST).
-    This document is the product of the Crypto Forum Research Group.</p>"
+    can be used with any keystream generator, not just 128-bit block ciphers. The
+    main differences from GCM are the use of an additional subkey Q, the derivation
+    of fresh subkeys H and Q for each nonce, and the replacement of the GHASH function
+    with the POLYVAL function from AES-GCM-SIV. This enables truncated tags with near-ideal
+    forgery probabilities and significantly decreases the probability of multiple
+    forgeries. GCM-SST is designed for unicast security protocols with replay protection
+    and addresses the strong industry demand for fast encryption with secure short
+    tags. This document registers several instances of GCM-SST using Advanced Encryption
+    Standard (AES) and Rijndael-256-256.</p>"
   language:
   - en
   script:
@@ -67,6 +69,16 @@ relation:
       primary: true
     formattedref:
       content: draft-mattsson-cfrg-aes-gcm-sst-03
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-mattsson-cfrg-aes-gcm-sst-04
+    docid:
+    - id: draft-mattsson-cfrg-aes-gcm-sst-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-mattsson-cfrg-aes-gcm-sst-04
       format: text/plain
 ext:
   schema-version: v1.0.1
