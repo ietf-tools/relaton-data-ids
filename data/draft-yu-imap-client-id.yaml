@@ -13,11 +13,18 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: <p>This document defines an Internet Message Access Protocol (IMAP) service
-    extension called "CLIENTID" which provides a method for clients to indicate an
-    identity to the server. This identity is an additional token that may be used
-    for security and/or informational purposes, and with it a server may optionally
-    apply heuristics using this token.</p>
+- content: <p>Multi-Factor Authentication has rapidly become a driving requirement
+    for any internet based technology that requires authentication. While a large
+    number of initiatives are active for providing solutions to this requirement for
+    Web Browser based applications that can generally support real time human interaction
+    for providing a secondary method of identification, legacy protocols such as [IMAP]
+    have not yet been revised to provide such support despite being a high-risk target
+    for business email compromise, possibly as a result of [IMAP] activity generally
+    expecting to be non-interactive in nature outside of Webmail logins. This document
+    defines an extension to the [IMAP] service protocol called "CLIENTID" that an
+    [IMAP] client can provide an additional unique identification token prior to standard
+    credentials authentication that the server may then apply as an identity verification
+    method in a similar manner to other Multi-Factor authentication techniques.</p>
   language:
   - en
   script:
@@ -153,6 +160,16 @@ relation:
       primary: true
     formattedref:
       content: draft-yu-imap-client-id-12
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-yu-imap-client-id-13
+    docid:
+    - id: draft-yu-imap-client-id-13
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-yu-imap-client-id-13
       format: text/plain
 ext:
   schema-version: v1.0.1
