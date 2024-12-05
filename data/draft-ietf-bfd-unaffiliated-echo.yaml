@@ -13,14 +13,15 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>Bidirectional Forwarding Detection (BFD) is a fault detection protocol
-    that can quickly determine a communication failure between two forwarding engines.
-    This document defines a use of the BFD Echo where the local system supports BFD
-    but the adjacent system does not support BFD. BFD Control packet and its processing
-    procedures can be executed over the BFD Echo port where the adjacent system only
-    loops packets back to the local system. This document updates RFC 5880 by defining
-    a new method of BFD Echo- Only without requiring an implementation to support
-    the full BFD protocol.</p>"
+- content: <p>This document specifies an extension to the Bidirectional Forwarding
+    Detection (BFD) protocol that enables the use of the BFD Echo function without
+    the need for an associated BFD control session. This "Unaffiliated BFD Echo" mechanism
+    allows rapid detection of forwarding path failures in networks where establishing
+    BFD control sessions is impractical or undesirable. By decoupling the Echo function
+    from the control plane, network devices can utilize BFD's fast failure detection
+    capabilities in a simplified manner, enhancing network resiliency and operational
+    efficiency. This document updates RFC 5880 by defining a new Unaffiliated BFD
+    Echo mechanism.</p>
   language:
   - en
   script:
@@ -156,6 +157,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-bfd-unaffiliated-echo-12
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-bfd-unaffiliated-echo-13
+    docid:
+    - id: draft-ietf-bfd-unaffiliated-echo-13
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-bfd-unaffiliated-echo-13
       format: text/plain
 ext:
   schema-version: v1.0.1
