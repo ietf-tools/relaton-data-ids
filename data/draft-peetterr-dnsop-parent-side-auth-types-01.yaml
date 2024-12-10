@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-peetterr-dnsop-parent-side-auth-types-00
+id: draft-peetterr-dnsop-parent-side-auth-types-01
 title:
 - content: Parent-side authoritative DNS records for enhanced delegation
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-peetterr-dnsop-parent-side-auth-types-00
+- content: https://datatracker.ietf.org/doc/html/draft-peetterr-dnsop-parent-side-auth-types-01
   type: src
 type: standard
 docid:
-- id: draft-peetterr-dnsop-parent-side-auth-types-00
+- id: draft-peetterr-dnsop-parent-side-auth-types-01
   type: Internet-Draft
   primary: true
 - id: I-D.peetterr-dnsop-parent-side-auth-types
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.peetterr-dnsop-parent-side-auth-types
 date:
 - type: published
-  value: '2020-09-24'
+  value: '2024-12-10'
 contributor:
 - person:
     name:
@@ -77,38 +77,39 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: CZNIC
+        - content: ISC
   role:
   - type: author
 version:
-- draft: '00'
-revdate: '2020-09-24'
+- draft: '01'
+revdate: '2024-12-10'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>A DNS RRtype numeric range that behaves like DS is reserved. This means:
-    being authoritative on the parent side of a delegation; being signed by the parent;
-    being provided along with delegations by the parent. If this document had become
-    an RFC five years ago, deploying new types (along the lines of NS2/NS2T, DSPKI
-    or various other imagined things like DNS ('signed delegation NS')) would be easier
-    to deploy and experiment with today.</p>"
+- content: "<p>DNS RR types with numbers in the range 0xFA00-0xFDFF are now included
+    in special treatment like DS RR type specified in [RFC4035]. Authoritative servers,
+    DNSSEC signers, and recursive resolvers need to extend the conditions for DS special
+    handling to also include this range. This means: being authoritative on the parent
+    side of a delegation; being signed by the parent; being provided along with delegations
+    by the parent. DNSSEC validators also need to implement downgrade protection described
+    in Section 5.3.</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-peetterr-dnsop-parent-side-auth-types-01
+    id: draft-peetterr-dnsop-parent-side-auth-types-00
     docid:
-    - id: draft-peetterr-dnsop-parent-side-auth-types-01
+    - id: draft-peetterr-dnsop-parent-side-auth-types-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-peetterr-dnsop-parent-side-auth-types-01
+      content: draft-peetterr-dnsop-parent-side-auth-types-00
       format: text/plain
 series:
 - type: main
@@ -119,7 +120,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-peetterr-dnsop-parent-side-auth-types-00
+  number: draft-peetterr-dnsop-parent-side-auth-types-01
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

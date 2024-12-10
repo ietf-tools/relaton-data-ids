@@ -13,12 +13,13 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>A DNS RRtype numeric range that behaves like DS is reserved. This means:
-    being authoritative on the parent side of a delegation; being signed by the parent;
-    being provided along with delegations by the parent. If this document had become
-    an RFC five years ago, deploying new types (along the lines of NS2/NS2T, DSPKI
-    or various other imagined things like DNS ('signed delegation NS')) would be easier
-    to deploy and experiment with today.</p>"
+- content: "<p>DNS RR types with numbers in the range 0xFA00-0xFDFF are now included
+    in special treatment like DS RR type specified in [RFC4035]. Authoritative servers,
+    DNSSEC signers, and recursive resolvers need to extend the conditions for DS special
+    handling to also include this range. This means: being authoritative on the parent
+    side of a delegation; being signed by the parent; being provided along with delegations
+    by the parent. DNSSEC validators also need to implement downgrade protection described
+    in Section 5.3.</p>"
   language:
   - en
   script:
@@ -34,6 +35,16 @@ relation:
       primary: true
     formattedref:
       content: draft-peetterr-dnsop-parent-side-auth-types-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-peetterr-dnsop-parent-side-auth-types-01
+    docid:
+    - id: draft-peetterr-dnsop-parent-side-auth-types-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-peetterr-dnsop-parent-side-auth-types-01
       format: text/plain
 ext:
   schema-version: v1.0.1
