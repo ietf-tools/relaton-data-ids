@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-barnes-mls-appsync
 title:
-- content: Using Messaging Layer Security to Synchronize Application State
+- content: A Safe Application Interface to Messaging Layer Security
   language:
   - en
   script:
@@ -13,13 +13,13 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>One feature that the Messaging Layer Security (MLS) protocol provides
-    is that it allows the members of a group to confirm that they agree on certain
-    data. In this document, we define a mechanism for applications using MLS to exploit
-    this feature of MLS to ensure that the group members are in agreement on the state
-    of the application in addition to MLS-related state. We define a GroupContext
-    extension that captures the state of the application and an AppSync proposal that
-    can be used to update the application state.</p>"
+- content: "<p>The Messaging Layer Security protocol enables a group of participants
+    to negotiate a common cryptographic state. While the primary function of MLS is
+    to establish shared secret state for the group, an MLS group also captures authentication
+    information for group participants and information on which the group has confirmed
+    agreement. This document defines an interface interface by which multiple uncoordinated
+    application functions may safely reuse the cryptographic state of an MLS group
+    for application purposes.</p>"
   language:
   - en
   script:
@@ -35,6 +35,16 @@ relation:
       primary: true
     formattedref:
       content: draft-barnes-mls-appsync-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-barnes-mls-appsync-01
+    docid:
+    - id: draft-barnes-mls-appsync-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-barnes-mls-appsync-01
       format: text/plain
 ext:
   schema-version: v1.0.1
