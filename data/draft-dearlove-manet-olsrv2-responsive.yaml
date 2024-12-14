@@ -13,12 +13,15 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: <p>This specification indicates circumstances in which the sending of am
-    unscheduled TC message by an OLSRv2 router is recommended or required rather than
-    optional. It is motivated by the possible responsive use of OLSRv2 in a mostly
-    stable network. The cases in which the message sending would be required are limited
-    to such cases, and would require administrative configuration to establish such
-    a network. This specification updates RFC 7181 "The Optimized Link State Routing
+- content: <p>This specification describes an optional Topology Control (TC) message
+    that can be sent by an OLSRv2 router. This is permitted, but not suggested, by
+    the existing protocol, but is here recommended for use in some networks. The original
+    motivation for this message came from the circumstances of a mostly stable network,
+    in the most extreme case updated only by messages responding to the arrival and
+    departure of routers, in which case the additional TC message is not just recommended
+    but required. However, the additional message could be useful in reducing the
+    routing convergence time in any network in which messages are sent at lengthy
+    intervals. This specification updates RFC 7181 "The Optimized Link State Routing
     Protocol version 2 (OLSRv2)".</p>
   language:
   - en
@@ -35,6 +38,16 @@ relation:
       primary: true
     formattedref:
       content: draft-dearlove-manet-olsrv2-responsive-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-dearlove-manet-olsrv2-responsive-01
+    docid:
+    - id: draft-dearlove-manet-olsrv2-responsive-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-dearlove-manet-olsrv2-responsive-01
       format: text/plain
 ext:
   schema-version: v1.0.1
