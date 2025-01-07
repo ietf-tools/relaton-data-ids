@@ -1,0 +1,164 @@
+---
+schema-version: v1.2.3
+id: draft-white-linklocal-capability-04
+title:
+- content: Link-Local Next Hop Capability for BGP
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-white-linklocal-capability-04
+  type: src
+type: standard
+docid:
+- id: draft-white-linklocal-capability-04
+  type: Internet-Draft
+  primary: true
+- id: I-D.white-linklocal-capability
+  type: IETF
+  scope: anchor
+docnumber: I-D.white-linklocal-capability
+date:
+- type: published
+  value: '2025-01-06'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Russ
+          language:
+          - en
+        - language:
+          - en
+          initial: R
+        formatted_initials:
+          content: R.
+          language:
+          - en
+      surname:
+        content: White
+        language:
+        - en
+      completename:
+        content: Russ White
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Akamai Technologies
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Jeff
+          language:
+          - en
+        - language:
+          - en
+          initial: J
+        formatted_initials:
+          content: J.
+          language:
+          - en
+      surname:
+        content: Tantsura
+        language:
+        - en
+      completename:
+        content: Jeff Tantsura
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Nvidia
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Donatas
+          language:
+          - en
+        - language:
+          - en
+          initial: D
+        formatted_initials:
+          content: D.
+          language:
+          - en
+      surname:
+        content: Abraitis
+        language:
+        - en
+      completename:
+        content: Donatas Abraitis
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Hostinger
+  role:
+  - type: author
+version:
+- draft: '04'
+revdate: '2025-01-06'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>BGP[RFC4271], was originally designed to provide reachability between
+    domains and between the edges of a domain. As such, BGP assumes the next hop towards
+    any reachable destination may not reside on the advertising speaker, but rather
+    may either be through a router connected to the same subnet as the speaker, or
+    through a router only reachable by traversing multiple hops through the network.
+    Because of this, as per [RFC4291] - BGP does not recognize IPv6 link-local addresses,
+    as a valid next hop for the forwarding purposes. However, in many current deplyments,
+    BGP peering is often deployed on point-to-point links in networks where multihop
+    reachability of any kind is not assumed or desired (all next hops are assumed
+    to be the speaker reachable through a directly connected point-to-point link).
+    This is common, for instance, in data center fabrics[RFC7938]. In these situations,
+    a global IPv6 address is not required for the advertisement of reachability information;
+    in fact, providing global IPv6 addresses in these kinds of networks can be detrimental
+    to Zero Touch Provisioning (ZTP). This draft standardizes the operation of BGP
+    over a point-to-point link using link-local IPv6 addressing only. Since link-local
+    IPv6 addresses are not required to be globally unique, implementations must ensure
+    that they are strictly associated with a specific interface.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-white-linklocal-capability-01
+    docid:
+    - id: draft-white-linklocal-capability-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-white-linklocal-capability-01
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-white-linklocal-capability-04
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
