@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-6man-rfc6724-update-14
+id: draft-ietf-6man-rfc6724-update-16
 title:
 - content: Prioritizing known-local IPv6 ULAs through address selection policy
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-6man-rfc6724-update-14
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-6man-rfc6724-update-16
   type: src
 type: standard
 docid:
-- id: draft-ietf-6man-rfc6724-update-14
+- id: draft-ietf-6man-rfc6724-update-16
   type: Internet-Draft
   primary: true
 - id: I-D.ietf-6man-rfc6724-update
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.ietf-6man-rfc6724-update
 date:
 - type: published
-  value: '2024-11-04'
+  value: '2025-01-07'
 contributor:
 - person:
     name:
@@ -109,28 +109,24 @@ contributor:
   role:
   - type: author
 version:
-- draft: '14'
-revdate: '2024-11-04'
+- draft: '16'
+revdate: '2025-01-07'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: <p>When RFC 6724 was published it defined an address selection algorithm
-    along with a default policy table, and noted a number of examples where that policy
-    table might benefit from adjustment for specific scenarios. It also noted that
-    it is important for implementations to provide a way to change the default policies
-    as more experience is gained. This update draws on several years of such operational
-    experience to refine RFC 6724, with emphasis on preference for the use of ULA
-    addresses over IPv4 addresses and the clarification of mandatory support for Rule
-    5.5. It also defines the concept of "known-local" ULA prefixes and the means by
-    which nodes can identify them and insert them into their policy table such that
-    ULA-to-ULA communications within fd00::/8 become preferred over GUA-to-GUA for
-    local use. The update also demotes the preference for 6to4 addresses. These changes
-    to default behavior improve supportability of common use cases, including automatic
-    / unmanaged scenarios. It is recognized that some less common deployment scenarios
-    may require explicit configuration or custom changes to achieve desired operational
-    parameters.</p>
+- content: <p>This document draws on several years of operational experience to update
+    RFC 6724, defining the concept of "known-local" ULA prefixes that enable ULA-to-ULA
+    communications within fd00::/8 to become preferred over both IPv4-IPv4 and GUA-to-GUA
+    for local use. The document defines the means by which nodes can both identify
+    and insert such prefixes into their address selection policy table. It also clarifies
+    the mandatory, unconditional requirement for support for Rule 5.5 and demotes
+    the preference for 6to4 addresses. These changes to default behavior improve supportability
+    of common use cases, including automatic / unmanaged scenarios, and makes preference
+    for IPv6 over IPv4 consistent in local site networks for both ULA and GUA prefixes.
+    It is recognized that some less common deployment scenarios may require explicit
+    configuration or custom changes to achieve desired operational parameters.</p>
   language:
   - en
   script:
@@ -147,16 +143,6 @@ relation:
     formattedref:
       content: draft-ietf-6man-rfc6724-update-09
       format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-6man-rfc6724-update-16
-    docid:
-    - id: draft-ietf-6man-rfc6724-update-16
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-6man-rfc6724-update-16
-      format: text/plain
 series:
 - type: main
   title:
@@ -166,7 +152,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-6man-rfc6724-update-14
+  number: draft-ietf-6man-rfc6724-update-16
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
