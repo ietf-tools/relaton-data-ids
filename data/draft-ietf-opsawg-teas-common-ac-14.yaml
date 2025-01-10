@@ -1,91 +1,34 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-lamps-rfc6712bis-08
+id: draft-ietf-opsawg-teas-common-ac-14
 title:
-- content: Internet X.509 Public Key Infrastructure -- HTTP Transfer for the Certificate
-    Management Protocol (CMP)
+- content: A Common YANG Data Model for Attachment Circuits
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-lamps-rfc6712bis-08
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-teas-common-ac-14
   type: src
 type: standard
 docid:
-- id: draft-ietf-lamps-rfc6712bis-08
+- id: draft-ietf-opsawg-teas-common-ac-14
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-lamps-rfc6712bis
+- id: I-D.ietf-opsawg-teas-common-ac
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-lamps-rfc6712bis
+docnumber: I-D.ietf-opsawg-teas-common-ac
 date:
 - type: published
-  value: '2024-11-18'
+  value: '2025-01-09'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Hendrik
-          language:
-          - en
-        - language:
-          - en
-          initial: H
-        formatted_initials:
-          content: H.
-          language:
-          - en
-      surname:
-        content: Brockhaus
-        language:
-        - en
-      completename:
-        content: Hendrik Brockhaus
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Siemens
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: David
-          language:
-          - en
-        - language:
-          - en
-          initial: D
-        formatted_initials:
-          content: D.
-          language:
-          - en
-      surname:
-        content: von Oheimb
-        language:
-        - en
-      completename:
-        content: David von Oheimb
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Siemens
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Mike
+        - content: Mohamed
           language:
           - en
         - language:
@@ -96,59 +39,144 @@ contributor:
           language:
           - en
       surname:
-        content: Ounsworth
+        content: Boucadair
         language:
         - en
       completename:
-        content: Mike Ounsworth
+        content: Mohamed Boucadair
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Entrust
+        - content: Orange
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: John
+        - content: Richard
           language:
           - en
         - language:
           - en
-          initial: J
+          initial: R
         formatted_initials:
-          content: J.
+          content: R.
           language:
           - en
       surname:
-        content: Gray
+        content: Roberts
         language:
         - en
       completename:
-        content: John Gray
+        content: Richard Roberts
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Entrust
+        - content: Juniper
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Oscar
+          language:
+          - en
+        - language:
+          - en
+          initial: O
+        - language:
+          - en
+          initial: G
+        formatted_initials:
+          content: O. G.
+          language:
+          - en
+      surname:
+        content: de Dios
+        language:
+        - en
+      completename:
+        content: Oscar Gonzalez de Dios
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Telefonica
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Samier
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Barguil
+        language:
+        - en
+      completename:
+        content: Samier Barguil
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Nokia
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - language:
+          - en
+          initial: B
+        formatted_initials:
+          content: B.
+          language:
+          - en
+      surname:
+        content: Wu
+        language:
+        - en
+      completename:
+        content: Bo Wu
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei Technologies
   role:
   - type: author
 version:
-- draft: '08'
-revdate: '2024-11-18'
+- draft: '14'
+revdate: '2025-01-09'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document describes how to layer the Certificate Management Protocol
-    (CMP) over HTTP. It includes the updates to RFC 6712 specified in RFC 9480 Section
-    3. These updates introduce CMP URIs using a Well-known prefix. It obsoletes RFC
-    6712 and together with I-D.ietf-lamps-rfc4210bis and it also obsoletes RFC 9480.</p>"
+- content: "<p>The document specifies a common attachment circuits (ACs) YANG module,
+    which is designed with the intent to be reusable by other models. For example,
+    this common model can be reused by service models to expose ACs as a service,
+    service models that require binding a service to a set of ACs, network and device
+    models to provision ACs, etc.</p>"
   language:
   - en
   script:
@@ -157,23 +185,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-lamps-rfc6712bis-04
+    id: draft-ietf-opsawg-teas-common-ac-01
     docid:
-    - id: draft-ietf-lamps-rfc6712bis-04
+    - id: draft-ietf-opsawg-teas-common-ac-01
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-lamps-rfc6712bis-04
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-lamps-rfc6712bis-10
-    docid:
-    - id: draft-ietf-lamps-rfc6712bis-10
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-lamps-rfc6712bis-10
+      content: draft-ietf-opsawg-teas-common-ac-01
       format: text/plain
 series:
 - type: main
@@ -184,7 +202,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-lamps-rfc6712bis-08
+  number: draft-ietf-opsawg-teas-common-ac-14
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
