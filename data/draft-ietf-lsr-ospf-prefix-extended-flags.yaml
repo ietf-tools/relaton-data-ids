@@ -13,14 +13,12 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>Within OSPF, each prefix is advertised along with an 8-bit field of
-    capabilities, by using the Prefix Options (OSPFv3) and the flag flield in the
-    OSPFv2 Extended Prefix TLV (OSPFv2). However, for OSPFv3, all the bits of the
-    Prefix Options have already been assigned, and for OSPFv2, there are not many
-    undefined bits left in the OSPFv2 Extended Prefix TLV. This document solves the
-    problem of insufficient existing flags, and defines the variable length Prefix
-    Attribute Flags Sub-TLVs for OSPFv2 and OSPFv3 respectively for the extended flag
-    fields.</p>"
+- content: "<p>Each OSPF prefix is advertised with an 8-bit options field, using the
+    Prefix Options (OSPFv3) and the flag field in the OSPFv2 Extended Prefix TLV (OSPFv2).
+    However for OSPFv3, all the Prefix Options bits have already been assigned, and
+    for OSPFv2, there are not many bits left unassigned in the OSPFv2 Extended Prefix
+    TLV. This document solves the problem of insufficient options bit by defining
+    variable-length Prefix Attribute Flags Sub-TLVs for OSPFv2 and OSPFv3.</p>"
   language:
   - en
   script:
@@ -66,6 +64,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-lsr-ospf-prefix-extended-flags-03
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-lsr-ospf-prefix-extended-flags-04
+    docid:
+    - id: draft-ietf-lsr-ospf-prefix-extended-flags-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-lsr-ospf-prefix-extended-flags-04
       format: text/plain
 ext:
   schema-version: v1.0.1
