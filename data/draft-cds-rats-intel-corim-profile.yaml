@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-cds-rats-intel-corim-profile
 title:
-- content: Intel Profile for CoRIM
+- content: Intel Profile for Remote Attestation
   language:
   - en
   script:
@@ -13,16 +13,21 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document describes extensions to CoRIM that support Intel- specific
-    Attester implementations and corresponding Endorsements and Reference Values.
-    Multiple Evidence formats are anticipated, but all anticipated Evidence can be
-    mapped to Reference Values expressions based on CoRIM and the CoRIM extensions
-    found in this profile. The Evidence to Reference Values mappings are either documented
-    by industry specifications or by this profile. Reference Value Providers may use
-    this profile to author mainifests containing Reference Values and Endorsements.
-    Verifiers will recognize this profile by it's profile identifier and implement
-    support for the extentions defined or may identify a suitable Verifier, or will
-    refuse to process inputs.</p>"
+- content: "<p>This document is a profile of various IETF and TCG standards that support
+    remote attestation. The profile supports Intel-specific adaptations and extensions
+    for Evidence, Endorsements and Reference Values. This profile describes apticulareplication
+    of CoRIM, EAT, CMW, TCG concise evidence, and TCG DICE specifications. In particular,
+    CoRIM is extended to define measurement types that are unique to Intel and defines
+    Reference Values types that support matching Evidence based on range and subset
+    comparison. Multiple Evidence formats are anticipated, based on IETF and TCG specifications.
+    Evidence formats are mapped to Reference Values expressions based on CoRIM and
+    CoRIM extensions found in this profile. The Evidence to Reference Values mappings
+    are either documented by industry specifications or by this profile. Reference
+    Value Providers and Endorsers may use this profile to author mainifests containing
+    Reference Values and Endorsements that require Intel profile support from parser
+    implementations. Parser implementations can recognize the Intel profile by profile
+    identifier values contained within attestation conceptual mmessages and from profile
+    parameters to media types or profile specific content format identifiers.</p>"
   language:
   - en
   script:
@@ -58,6 +63,16 @@ relation:
       primary: true
     formattedref:
       content: draft-cds-rats-intel-corim-profile-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-cds-rats-intel-corim-profile-03
+    docid:
+    - id: draft-cds-rats-intel-corim-profile-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-cds-rats-intel-corim-profile-03
       format: text/plain
 ext:
   schema-version: v1.0.1
