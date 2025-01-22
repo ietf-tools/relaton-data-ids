@@ -16,12 +16,12 @@ abstract:
 - content: "<p>TCP slow start is designed to ramp up to the network congestion point
     quickly, doubling the congestion window each round-trip time until the congestion
     point is reached, whereupon TCP exits the slow start phase. Unfortunately, the
-    default Linux TCP slow start implementation -- TCP Cubic with HyStart -- can cause
-    premature exit from slow start, especially over wireless links, degrading link
-    utilization. However, without HyStart, TCP exits slow start too late, causing
+    default Linux TCP slow start implementation -- TCP Cubic with HyStart [HYSTART]
+    -- can cause premature exit from slow start, especially over wireless links, degrading
+    link utilization. However, without HyStart, TCP exits slow start too late, causing
     unnecessary packet loss. To improve TCP slow start performance, this document
-    proposes using the Slow start Exit At Right CHokepoint (SEARCH) algorithm where
-    the TCP sender determines the congestion point based on acknowledged deliveries
+    proposes using the Slow start Exit At Right CHokepoint (SEARCH) algorithm [KCL24]
+    where the TCP sender determines the congestion point based on acknowledged deliveries
     -- specifically, the sender computes the delivered bytes compared to the expected
     delivered bytes, smoothed to account for link latency variation and normalized
     to accommodate link capacities, and exits slow start if the delivered bytes are
@@ -74,6 +74,16 @@ relation:
       primary: true
     formattedref:
       content: draft-chung-ccwg-search-03
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-chung-ccwg-search-04
+    docid:
+    - id: draft-chung-ccwg-search-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-chung-ccwg-search-04
       format: text/plain
 ext:
   schema-version: v1.0.1
