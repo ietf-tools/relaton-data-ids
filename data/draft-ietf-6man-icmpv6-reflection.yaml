@@ -13,13 +13,16 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document describes the ICMPv6 Reflection utility. ICMPv6 Reflection
-    uses a request-response handshake that is similar to ICMPv6 Echo, except that
-    after a request is sent, the corresponding reply includes the request message
-    itself or a subset of its fields as specified in the request. Specifically, the
-    IPv6 header of the request message and its IPv6 extension headers, if they are
-    present, can be included in the reply. Network operators can use ICMPv6 Reflection
-    to determine how IPv6 extension headers have been altered by transit nodes.</p>"
+- content: "<p>This document describes the ICMPv6 Reflection utility. The ICMPv6 Reflection
+    utility is a diagnostic tool, similar to Ping and the ICMPv6 Probe utility. It
+    is similar to Ping and Probe because it relies on a stateless message exchange
+    between a probing node and a probed node. The probing node sends a query to the
+    probed node and the probed node responds appropriately. The ICMPv6 Reflection
+    utility differs from Ping and Probe because in the ICMPv6 Reflection utility,
+    the probing node requests a snapshot of the query, as it arrived at the probed
+    node. The probed node returns the requested snapshot. The ICMPv6 Reflection utility
+    is useful because it allows its user to see how the network modified the query
+    as it traveled from the probing node to the probed node.</p>"
   language:
   - en
   script:
@@ -35,6 +38,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-6man-icmpv6-reflection-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-6man-icmpv6-reflection-01
+    docid:
+    - id: draft-ietf-6man-icmpv6-reflection-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-6man-icmpv6-reflection-01
       format: text/plain
 ext:
   schema-version: v1.0.1
