@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-lamps-csr-attestation-14
+id: draft-ietf-lamps-csr-attestation-16
 title:
 - content: Use of Remote Attestation with Certification Signing Requests
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-lamps-csr-attestation-14
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-lamps-csr-attestation-16
   type: src
 type: standard
 docid:
-- id: draft-ietf-lamps-csr-attestation-14
+- id: draft-ietf-lamps-csr-attestation-16
   type: Internet-Draft
   primary: true
 - id: I-D.ietf-lamps-csr-attestation
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.ietf-lamps-csr-attestation
 date:
 - type: published
-  value: '2024-10-21'
+  value: '2025-02-01'
 contributor:
 - person:
     name:
@@ -165,8 +165,8 @@ contributor:
   role:
   - type: author
 version:
-- draft: '14'
-revdate: '2024-10-21'
+- draft: '16'
+revdate: '2025-02-01'
 language:
 - en
 script:
@@ -176,17 +176,13 @@ abstract:
     (CA) may wish to offer trustworthy claims about the platform generating the certification
     request and the environment associated with the corresponding private key, such
     as whether the private key resides on a hardware security module. This specification
-    defines an attribute and an extension that allow for conveyance of Evidence in
-    Certificate Signing Requests (CSRs) such as PKCS#10 or Certificate Request Message
-    Format (CRMF) payloads which provides an elegant and automatable mechanism for
-    transporting Evidence to a Certification Authority. Including Evidence along with
-    a CSR can help to improve the assessment of the security posture for the private
-    key, and can help the Certification Authority to assess whether it satisfies the
-    requested certificate profile. These Evidence Claims can include information about
-    the hardware component's manufacturer, the version of installed or running firmware,
-    the version of software installed or running in layers above the firmware, or
-    the presence of hardware components providing specific protection capabilities
-    or shielded locations (e.g., to protect keys).</p>"
+    defines an attribute and an extension that allow for conveyance of Evidence and
+    Attestation Results in Certificate Signing Requests (CSRs), such as PKCS#10 or
+    Certificate Request Message Format (CRMF) payloads. This provides an elegant and
+    automatable mechanism for transporting Evidence to a Certification Authority.
+    Including Evidence and Attestation Results along with a CSR can help to improve
+    the assessment of the security posture for the private key, and can help the Certification
+    Authority to assess whether it satisfies the requested certificate profile.</p>"
   language:
   - en
   script:
@@ -203,16 +199,6 @@ relation:
     formattedref:
       content: draft-ietf-lamps-csr-attestation-09
       format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-lamps-csr-attestation-16
-    docid:
-    - id: draft-ietf-lamps-csr-attestation-16
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-lamps-csr-attestation-16
-      format: text/plain
 series:
 - type: main
   title:
@@ -222,7 +208,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-lamps-csr-attestation-14
+  number: draft-ietf-lamps-csr-attestation-16
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
