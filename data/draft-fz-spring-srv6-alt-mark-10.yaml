@@ -1,19 +1,19 @@
 ---
 schema-version: v1.2.3
-id: draft-fz-spring-srv6-alt-mark-05
+id: draft-fz-spring-srv6-alt-mark-10
 title:
-- content: Segment Routing Header encapsulation for Alternate Marking Method
+- content: Application of the Alternate Marking Method to the Segment Routing Header
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-fz-spring-srv6-alt-mark-05
+- content: https://datatracker.ietf.org/doc/html/draft-fz-spring-srv6-alt-mark-10
   type: src
 type: standard
 docid:
-- id: draft-fz-spring-srv6-alt-mark-05
+- id: draft-fz-spring-srv6-alt-mark-10
   type: Internet-Draft
   primary: true
 - id: I-D.fz-spring-srv6-alt-mark
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.fz-spring-srv6-alt-mark
 date:
 - type: published
-  value: '2023-03-09'
+  value: '2025-02-03'
 contributor:
 - person:
     name:
@@ -167,18 +167,56 @@ contributor:
         - content: Ruijie
   role:
   - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Geng
+          language:
+          - en
+        - language:
+          - en
+          initial: G
+        formatted_initials:
+          content: G.
+          language:
+          - en
+      surname:
+        content: Zhang
+        language:
+        - en
+      completename:
+        content: Geng Zhang
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: China Mobile
+  role:
+  - type: author
 version:
-- draft: '05'
-revdate: '2023-03-09'
+- draft: '10'
+revdate: '2025-02-03'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document describes how the Alternate Marking Method can be used
-    as the passive performance measurement tool in an SRv6 network. It defines how
-    Alternate Marking data fields are transported as part of the Segment Routing with
-    IPv6 data plane (SRv6) header.</p>"
+- content: "<p>The Alternate Marking Method is a passive performance measurement method
+    based on marking consecutive batches of packets, which can be used to measure
+    packet loss, latency, and jitter of live traffic. This method requires a packet
+    marking method so that packet flows can be distinguished and identified. A mechanism
+    to carry suitable packet marking in the Hop-by-Hop Header and the Destination
+    Options Header of an IPv6 packet is described in RFC 9343 and is also applicable
+    to Segment Routing for IPv6 (SRv6). This document describes an alternative approach
+    that uses a new TLV in the Segment Routing Header (SRH) of an SRv6 packet. This
+    approach has been implemented and has potential scaling and simplification benefits
+    over the technique described in RFC 9343. This protocol extension has been developed
+    outside the IETF as an alternative to the IETF’s standards track specification
+    RFC 9343 and it does not have IETF consensus. It is published here to guide implementation,
+    ensure interoperability among implementations, and enable wide-scale deployment
+    to determine the potential benefits of this approach.</p>"
   language:
   - en
   script:
@@ -195,16 +233,6 @@ relation:
     formattedref:
       content: draft-fz-spring-srv6-alt-mark-00
       format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-fz-spring-srv6-alt-mark-10
-    docid:
-    - id: draft-fz-spring-srv6-alt-mark-10
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-fz-spring-srv6-alt-mark-10
-      format: text/plain
 series:
 - type: main
   title:
@@ -214,7 +242,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-fz-spring-srv6-alt-mark-05
+  number: draft-fz-spring-srv6-alt-mark-10
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
