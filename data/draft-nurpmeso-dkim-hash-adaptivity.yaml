@@ -14,10 +14,13 @@ docid:
   primary: true
 abstract:
 - content: <p>DKIM (RFC 6376, section 3.7) defines how "data-hash" is generated as
-    input to a RSA (RFC 8017) "sig-alg". Modern signature algorithms (for example
-    EdDSA, RFC 8032) include extensive data hashing as part of the signing process.
-    This memo allows DKIM signing algorithm "data-hash" adaptivity, taking advantage
-    of algorithm progress and digital signature API reality.</p>
+    input to a "sig-alg" for the purpose of generating a cryptographic signature.
+    Different to the RSA algorithm (RFC 8017) solely defined for and by DKIM at the
+    time of its creation, modern signature algorithms, for example EdDSA (RFC 8032),
+    include extensive data hashing as part of the signing process. For these algorithms
+    it may make sense not to create a "data-hash", but to use the entire data as input
+    to "sig-alg". This specification allows DKIM signing algorithms "data-hash" adaptivity,
+    taking advantage of algorithm design, and digital signature API reality.</p>
   language:
   - en
   script:
@@ -43,6 +46,16 @@ relation:
       primary: true
     formattedref:
       content: draft-nurpmeso-dkim-hash-adaptivity-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-nurpmeso-dkim-hash-adaptivity-02
+    docid:
+    - id: draft-nurpmeso-dkim-hash-adaptivity-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-nurpmeso-dkim-hash-adaptivity-02
       format: text/plain
 ext:
   schema-version: v1.0.1
