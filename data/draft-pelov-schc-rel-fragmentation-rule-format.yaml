@@ -1,0 +1,57 @@
+---
+schema-version: v1.2.3
+id: draft-pelov-schc-rel-fragmentation-rule-format
+title:
+- content: SCHC Rule Format for Reliability Fragmentation in Constrained Networks
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-pelov-schc-rel-fragmentation-rule-format
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This document specifies a new Rule Format for Reliability Fragmentation
+    within the SCHC framework. Building on the fragmentation mechanisms defined in
+    RFC8724, this rule format is tailored to ensure the reliable delivery of small
+    messages that do not trigger conventional fragmentation. A key enhancement is
+    the inclusion of a size field, indicating the total byte-length of the message,
+    and modifications to the state machine to support a persistent session with wrap-around
+    windows. Two operational modes are defined: * RelNoAck: A mode derived from SCHC
+    No-Ack fragmentation, where fragments are transmitted continuously without expecting
+    per- fragment acknowledgments. Losses are tolerated within a configured threshold.
+    * RelAckOnErr: A mode derived from SCHC Ack-On-Error fragmentation, where the
+    receiver actively monitors for missing fragments and initiates recovery through
+    explicit negative acknowledgments. These modes offer operators the flexibility
+    to balance recovery overhead against latency and reliability requirements in constrained
+    network environments.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-pelov-schc-rel-fragmentation-rule-format-00
+    docid:
+    - id: draft-pelov-schc-rel-fragmentation-rule-format-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-pelov-schc-rel-fragmentation-rule-format-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-pelov-schc-rel-fragmentation-rule-format-01
+    docid:
+    - id: draft-pelov-schc-rel-fragmentation-rule-format-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-pelov-schc-rel-fragmentation-rule-format-01
+      format: text/plain
+ext:
+  schema-version: v1.0.1
