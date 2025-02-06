@@ -1,105 +1,46 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-spring-srv6-srh-compression-20
+id: draft-ietf-teas-ietf-network-slice-nbi-yang-21
 title:
-- content: Compressed SRv6 Segment List Encoding (CSID)
+- content: A YANG Data Model for the RFC 9543 Network Slice Service
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-spring-srv6-srh-compression-20
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-teas-ietf-network-slice-nbi-yang-21
   type: src
 type: standard
 docid:
-- id: draft-ietf-spring-srv6-srh-compression-20
+- id: draft-ietf-teas-ietf-network-slice-nbi-yang-21
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-spring-srv6-srh-compression
+- id: I-D.ietf-teas-ietf-network-slice-nbi-yang
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-spring-srv6-srh-compression
+docnumber: I-D.ietf-teas-ietf-network-slice-nbi-yang
 date:
 - type: published
-  value: '2025-02-04'
+  value: '2025-02-06'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Weiqiang
-          language:
-          - en
         - language:
           - en
-          initial: W
+          initial: B
         formatted_initials:
-          content: W.
+          content: B.
           language:
           - en
       surname:
-        content: Cheng
+        content: Wu
         language:
         - en
       completename:
-        content: Weiqiang Cheng
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: China Mobile
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Clarence
-          language:
-          - en
-        - language:
-          - en
-          initial: C
-        formatted_initials:
-          content: C.
-          language:
-          - en
-      surname:
-        content: Filsfils
-        language:
-        - en
-      completename:
-        content: Clarence Filsfils
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Cisco Systems, Inc.
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Zhenbin
-          language:
-          - en
-        - language:
-          - en
-          initial: Z
-        formatted_initials:
-          content: Z.
-          language:
-          - en
-      surname:
-        content: Li
-        language:
-        - en
-      completename:
-        content: Zhenbin Li
+        content: Bo Wu
         language:
         - en
     affiliation:
@@ -112,71 +53,125 @@ contributor:
     name:
       given:
         forename:
-        - content: Bruno
+        - content: Dhruv
           language:
           - en
         - language:
           - en
-          initial: B
+          initial: D
         formatted_initials:
-          content: B.
+          content: D.
           language:
           - en
       surname:
-        content: Decraene
+        content: Dhody
         language:
         - en
       completename:
-        content: Bruno Decraene
+        content: Dhruv Dhody
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Orange
+        - content: Huawei Technologies
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Francois
+        - content: Reza
           language:
           - en
         - language:
           - en
-          initial: F
+          initial: R
         formatted_initials:
-          content: F.
+          content: R.
           language:
           - en
       surname:
-        content: Clad
+        content: Rokui
         language:
         - en
       completename:
-        content: Francois Clad
+        content: Reza Rokui
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems, Inc.
+        - content: Ciena
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Tarek
+          language:
+          - en
+        - language:
+          - en
+          initial: T
+        formatted_initials:
+          content: T.
+          language:
+          - en
+      surname:
+        content: Saad
+        language:
+        - en
+      completename:
+        content: Tarek Saad
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Cisco Systems, Inc
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: John
+          language:
+          - en
+        - language:
+          - en
+          initial: J
+        formatted_initials:
+          content: J.
+          language:
+          - en
+      surname:
+        content: Mullooly
+        language:
+        - en
+      completename:
+        content: John Mullooly
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Cisco Systems, Inc
   role:
   - type: author
 version:
-- draft: '20'
-revdate: '2025-02-04'
+- draft: '21'
+revdate: '2025-02-06'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>Segment Routing over IPv6 (SRv6) is the instantiation of Segment Routing
-    (SR) on the IPv6 dataplane. This document specifies new flavors for the SRv6 endpoint
-    behaviors defined in RFC 8986, which enable the compression of an SRv6 segment
-    list. Such compression significantly reduces the size of the SRv6 encapsulation
-    needed to steer packets over long segment lists.</p>"
+- content: "<p>This document defines a YANG data model for RFC 9543 Network Slice
+    Service. The model can be used in the Network Slice Service interface between
+    a customer and a provider that offers RFC 9543 Network Slice Services.</p>"
   language:
   - en
   script:
@@ -185,23 +180,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-spring-srv6-srh-compression-02
+    id: draft-ietf-teas-ietf-network-slice-nbi-yang-11
     docid:
-    - id: draft-ietf-spring-srv6-srh-compression-02
+    - id: draft-ietf-teas-ietf-network-slice-nbi-yang-11
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-spring-srv6-srh-compression-02
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-spring-srv6-srh-compression-22
-    docid:
-    - id: draft-ietf-spring-srv6-srh-compression-22
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-srv6-srh-compression-22
+      content: draft-ietf-teas-ietf-network-slice-nbi-yang-11
       format: text/plain
 series:
 - type: main
@@ -212,7 +197,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-spring-srv6-srh-compression-20
+  number: draft-ietf-teas-ietf-network-slice-nbi-yang-21
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

@@ -1,105 +1,105 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-spring-srv6-srh-compression-20
+id: draft-ietf-idr-bgp-ls-sr-policy-11
 title:
-- content: Compressed SRv6 Segment List Encoding (CSID)
+- content: Advertisement of Segment Routing Policies using BGP Link-State
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-spring-srv6-srh-compression-20
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-bgp-ls-sr-policy-11
   type: src
 type: standard
 docid:
-- id: draft-ietf-spring-srv6-srh-compression-20
+- id: draft-ietf-idr-bgp-ls-sr-policy-11
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-spring-srv6-srh-compression
+- id: I-D.ietf-idr-bgp-ls-sr-policy
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-spring-srv6-srh-compression
+docnumber: I-D.ietf-idr-bgp-ls-sr-policy
 date:
 - type: published
-  value: '2025-02-04'
+  value: '2025-02-05'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Weiqiang
+        - content: Stefano
           language:
           - en
         - language:
           - en
-          initial: W
+          initial: S
         formatted_initials:
-          content: W.
+          content: S.
           language:
           - en
       surname:
-        content: Cheng
+        content: Previdi
         language:
         - en
       completename:
-        content: Weiqiang Cheng
+        content: Stefano Previdi
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: China Mobile
+        - content: Individual
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Clarence
+        - content: Ketan
           language:
           - en
         - language:
           - en
-          initial: C
+          initial: K
         formatted_initials:
-          content: C.
+          content: K.
           language:
           - en
       surname:
-        content: Filsfils
+        content: Talaulikar
         language:
         - en
       completename:
-        content: Clarence Filsfils
+        content: Ketan Talaulikar
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems, Inc.
+        - content: Cisco Systems
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Zhenbin
+        - content: Jie
           language:
           - en
         - language:
           - en
-          initial: Z
+          initial: J
         formatted_initials:
-          content: Z.
+          content: J.
           language:
           - en
       surname:
-        content: Li
+        content: Dong
         language:
         - en
       completename:
-        content: Zhenbin Li
+        content: Jie Dong
         language:
         - en
     affiliation:
@@ -112,71 +112,71 @@ contributor:
     name:
       given:
         forename:
-        - content: Bruno
+        - content: Hannes
           language:
           - en
         - language:
           - en
-          initial: B
+          initial: H
         formatted_initials:
-          content: B.
+          content: H.
           language:
           - en
       surname:
-        content: Decraene
+        content: Gredler
         language:
         - en
       completename:
-        content: Bruno Decraene
+        content: Hannes Gredler
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Orange
+        - content: RtBrick Inc.
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Francois
+        - content: Jeff
           language:
           - en
         - language:
           - en
-          initial: F
+          initial: J
         formatted_initials:
-          content: F.
+          content: J.
           language:
           - en
       surname:
-        content: Clad
+        content: Tantsura
         language:
         - en
       completename:
-        content: Francois Clad
+        content: Jeff Tantsura
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems, Inc.
+        - content: Nvidia
   role:
   - type: author
 version:
-- draft: '20'
-revdate: '2025-02-04'
+- draft: '11'
+revdate: '2025-02-05'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>Segment Routing over IPv6 (SRv6) is the instantiation of Segment Routing
-    (SR) on the IPv6 dataplane. This document specifies new flavors for the SRv6 endpoint
-    behaviors defined in RFC 8986, which enable the compression of an SRv6 segment
-    list. Such compression significantly reduces the size of the SRv6 encapsulation
-    needed to steer packets over long segment lists.</p>"
+- content: "<p>This document describes a mechanism to collect the Segment Routing
+    Policy information that is locally available in a node and advertise it into BGP
+    Link-State (BGP-LS) updates. Such information can be used by external components
+    for path computation, re-optimization, service placement, network visualization,
+    etc.</p>"
   language:
   - en
   script:
@@ -185,23 +185,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-spring-srv6-srh-compression-02
+    id: draft-ietf-idr-bgp-ls-sr-policy-05
     docid:
-    - id: draft-ietf-spring-srv6-srh-compression-02
+    - id: draft-ietf-idr-bgp-ls-sr-policy-05
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-spring-srv6-srh-compression-02
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-spring-srv6-srh-compression-22
-    docid:
-    - id: draft-ietf-spring-srv6-srh-compression-22
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-srv6-srh-compression-22
+      content: draft-ietf-idr-bgp-ls-sr-policy-05
       format: text/plain
 series:
 - type: main
@@ -212,7 +202,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-spring-srv6-srh-compression-20
+  number: draft-ietf-idr-bgp-ls-sr-policy-11
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

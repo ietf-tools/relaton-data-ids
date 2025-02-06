@@ -1,55 +1,55 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-spring-srv6-srh-compression-20
+id: draft-ietf-idr-sr-policy-safi-12
 title:
-- content: Compressed SRv6 Segment List Encoding (CSID)
+- content: Advertising Segment Routing Policies in BGP
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-spring-srv6-srh-compression-20
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-sr-policy-safi-12
   type: src
 type: standard
 docid:
-- id: draft-ietf-spring-srv6-srh-compression-20
+- id: draft-ietf-idr-sr-policy-safi-12
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-spring-srv6-srh-compression
+- id: I-D.ietf-idr-sr-policy-safi
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-spring-srv6-srh-compression
+docnumber: I-D.ietf-idr-sr-policy-safi
 date:
 - type: published
-  value: '2025-02-04'
+  value: '2025-02-06'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Weiqiang
+        - content: Stefano
           language:
           - en
         - language:
           - en
-          initial: W
+          initial: S
         formatted_initials:
-          content: W.
+          content: S.
           language:
           - en
       surname:
-        content: Cheng
+        content: Previdi
         language:
         - en
       completename:
-        content: Weiqiang Cheng
+        content: Stefano Previdi
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: China Mobile
+        - content: Huawei Technologies
   role:
   - type: author
 - person:
@@ -77,106 +77,111 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems, Inc.
+        - content: Cisco Systems
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Zhenbin
+        - content: Ketan
           language:
           - en
         - language:
           - en
-          initial: Z
+          initial: K
         formatted_initials:
-          content: Z.
+          content: K.
           language:
           - en
       surname:
-        content: Li
+        content: Talaulikar
         language:
         - en
       completename:
-        content: Zhenbin Li
+        content: Ketan Talaulikar
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei Technologies
+        - content: Cisco Systems
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Bruno
+        - content: Paul
           language:
           - en
         - language:
           - en
-          initial: B
+          initial: P
         formatted_initials:
-          content: B.
+          content: P.
           language:
           - en
       surname:
-        content: Decraene
+        content: Mattes
         language:
         - en
       completename:
-        content: Bruno Decraene
+        content: Paul Mattes
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Orange
+        - content: Microsoft
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Francois
+        - content: Dhanendra
           language:
           - en
         - language:
           - en
-          initial: F
+          initial: D
         formatted_initials:
-          content: F.
+          content: D.
           language:
           - en
       surname:
-        content: Clad
+        content: Jain
         language:
         - en
       completename:
-        content: Francois Clad
+        content: Dhanendra Jain
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems, Inc.
+        - content: Google
   role:
   - type: author
 version:
-- draft: '20'
-revdate: '2025-02-04'
+- draft: '12'
+revdate: '2025-02-06'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>Segment Routing over IPv6 (SRv6) is the instantiation of Segment Routing
-    (SR) on the IPv6 dataplane. This document specifies new flavors for the SRv6 endpoint
-    behaviors defined in RFC 8986, which enable the compression of an SRv6 segment
-    list. Such compression significantly reduces the size of the SRv6 encapsulation
-    needed to steer packets over long segment lists.</p>"
+- content: "<p>A Segment Routing (SR) Policy is an ordered list of segments (also
+    referred to as instructions) that define a source-routed policy. An SR Policy
+    consists of one or more candidate paths, each comprising one or more segment lists.
+    A headend can be provisioned with these candidate paths using various mechanisms,
+    such as CLI, NETCONF, PCEP, or BGP. This document specifies how BGP can be used
+    to distribute SR Policy candidate paths. It introduces a BGP SAFI for advertising
+    a candidate path of an SR Policy and defines sub-TLVs for the Tunnel Encapsulation
+    Attribute to signal information related to these candidate paths. Furthermore,
+    this document updates RFC9012 by extending the Color Extended Community to support
+    additional steering modes over SR Policy.</p>"
   language:
   - en
   script:
@@ -185,23 +190,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-spring-srv6-srh-compression-02
+    id: draft-ietf-idr-sr-policy-safi-10
     docid:
-    - id: draft-ietf-spring-srv6-srh-compression-02
+    - id: draft-ietf-idr-sr-policy-safi-10
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-spring-srv6-srh-compression-02
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-spring-srv6-srh-compression-22
-    docid:
-    - id: draft-ietf-spring-srv6-srh-compression-22
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-srv6-srh-compression-22
+      content: draft-ietf-idr-sr-policy-safi-10
       format: text/plain
 series:
 - type: main
@@ -212,7 +207,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-spring-srv6-srh-compression-20
+  number: draft-ietf-idr-sr-policy-safi-12
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
