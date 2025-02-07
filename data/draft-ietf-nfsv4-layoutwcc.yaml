@@ -13,13 +13,15 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>The Parallel Network File System (pNFS) Flexible File Layout allows
-    for a file's metadata (MDS) and data (DS) to be on different servers. It does
-    not provide a mechanism for the data server to update the metadata server to changes
-    to the data part of the file. The client has knowledge of such updates, but lacks
-    the ability to update the metadata server. This document presents a refinement
-    to RFC8435 to allow the client to update the metadata server to changes on the
-    data server.</p>"
+- content: "<p>This document specifies extensions to the parallel Network File System
+    (NFS) version 4 (pNFS) for improving write cache consistency. These extensions
+    introduce mechanisms that ensure partial writes performed under a pNFS layout
+    remain coherent and correctly tracked. The solution addresses concurrency and
+    data integrity concerns that may arise when multiple clients write to the same
+    file through separate data servers. By defining additional interactions among
+    clients, metadata servers, and data servers, this specification enhances the reliability
+    of NFSv4 in parallel-access environments and ensures consistency across diverse
+    deployment scenarios.</p>"
   language:
   - en
   script:
@@ -85,6 +87,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-nfsv4-layoutwcc-05
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-nfsv4-layoutwcc-06
+    docid:
+    - id: draft-ietf-nfsv4-layoutwcc-06
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-nfsv4-layoutwcc-06
       format: text/plain
 ext:
   schema-version: v1.0.1
