@@ -1,0 +1,53 @@
+---
+schema-version: v1.2.3
+id: draft-leon-distributed-multi-signer
+title:
+- content: Distributed DNSSEC Multi-Signer Bootstrap
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-leon-distributed-multi-signer
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: '<p>This document presents an architecture for a distributed DNSSEC multi-signer
+    model that most closely resembles "model 2" in [RFC8901]. It defines two multi-signer
+    specific entities: the "multi-signer agent" (MSA) that is responsible for the
+    multi-signer process and the "combiner", which is responsible for "combining"
+    unsigned zone data from the zone owner with zone data under control of the MSA.
+    It introduces a new DNS RRtype, HSYNC, that is used by the zone owner to designate
+    the chosen DNS Providers (signing and/or serving the zone). Furthermore it describes
+    a mechanism for the MSAs to establish secure communication with each other, either
+    via “pure DNS” communication secured by DNS SIG(0) signatures on each message
+    or via a RESTful API secured by TLS. Finally, the document describes two models
+    for multi-signer process synchronization: “leader/follower mode” and “peer mode”
+    and the mechanism by which a set of MSAs decide which model to use for a given
+    zone. The scope of the document is only the distributed aspect of DNSSEC multi-signer
+    up to the point where secure communication and synchronization method between
+    MSAs has been established. The “multi-signer algorithms” that deal with the actual
+    synchronization required for multi-signer operation are described in [I-D.draft-ietf-dnsop-dnssec-automation].
+    TO BE REMOVED: This document is being collaborated on in Github at: https://github.com/johanix/draft-leon-dnsop-distributed-multi-signer
+    (https://github.com/johanix/draft-leon-dnsop-distributed-multi- signer). The most
+    recent working version of the document, open issues, etc, should all be available
+    there. The authors (gratefully) accept pull requests.</p>'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-leon-distributed-multi-signer-00
+    docid:
+    - id: draft-leon-distributed-multi-signer-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-leon-distributed-multi-signer-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
