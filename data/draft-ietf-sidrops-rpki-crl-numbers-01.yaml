@@ -1,28 +1,29 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-sidrops-rpki-ta-tiebreaker-00
+id: draft-ietf-sidrops-rpki-crl-numbers-01
 title:
-- content: Tiebreaking Resource Public Key Infrastructure (RPKI) Trust Anchors
+- content: Relying Party Handling of Resource Public Key Infrastructure (RPKI) Certificate
+    Revocation List (CRL) Number Extensions
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-sidrops-rpki-ta-tiebreaker-00
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-sidrops-rpki-crl-numbers-01
   type: src
 type: standard
 docid:
-- id: draft-ietf-sidrops-rpki-ta-tiebreaker-00
+- id: draft-ietf-sidrops-rpki-crl-numbers-01
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-sidrops-rpki-ta-tiebreaker
+- id: I-D.ietf-sidrops-rpki-crl-numbers
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-sidrops-rpki-ta-tiebreaker
+docnumber: I-D.ietf-sidrops-rpki-crl-numbers
 date:
 - type: published
-  value: '2024-11-04'
+  value: '2025-02-12'
 contributor:
 - person:
     name:
@@ -46,10 +47,34 @@ contributor:
         content: Job Snijders
         language:
         - en
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Ben
+          language:
+          - en
+        - language:
+          - en
+          initial: B
+        formatted_initials:
+          content: B.
+          language:
+          - en
+      surname:
+        content: Maddison
+        language:
+        - en
+      completename:
+        content: Ben Maddison
+        language:
+        - en
     affiliation:
     - organization:
         name:
-        - content: Fastly
+        - content: Workonline
   role:
   - type: author
 - person:
@@ -80,63 +105,32 @@ contributor:
         - content: OpenBSD
   role:
   - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Ties
-          language:
-          - en
-        - language:
-          - en
-          initial: T
-        formatted_initials:
-          content: T.
-          language:
-          - en
-      surname:
-        content: de Kock
-        language:
-        - en
-      completename:
-        content: Ties de Kock
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: RIPE NCC
-  role:
-  - type: author
 version:
-- draft: '00'
-revdate: '2024-11-04'
+- draft: '01'
+revdate: '2025-02-12'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>A Trust Anchor (TA) in the RPKI is represented by a self-signed X.509
-    Certification Authority (CA) certificate. Over time, Relying Parties (RP) may
-    have acquired multiple different issuances of valid TA certificates from the same
-    TA operator. This document proposes a tiebreaking scheme to be used by RPs to
-    select one TA certificate for certification path validation. This document updates
-    RFC 8630.</p>"
+- content: "<p>This document clarifies how Resource Public Key Infrastructure (RPKI)
+    Relying Parties (RPs) handle Certificate Revocation List (CRL) Number extensions.
+    This document updates RFC 6487.</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-ietf-sidrops-rpki-ta-tiebreaker-01
+    id: draft-ietf-sidrops-rpki-crl-numbers-00
     docid:
-    - id: draft-ietf-sidrops-rpki-ta-tiebreaker-01
+    - id: draft-ietf-sidrops-rpki-crl-numbers-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-sidrops-rpki-ta-tiebreaker-01
+      content: draft-ietf-sidrops-rpki-crl-numbers-00
       format: text/plain
 series:
 - type: main
@@ -147,7 +141,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-sidrops-rpki-ta-tiebreaker-00
+  number: draft-ietf-sidrops-rpki-crl-numbers-01
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
