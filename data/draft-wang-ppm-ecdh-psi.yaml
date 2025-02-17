@@ -14,12 +14,13 @@ docid:
   primary: true
 abstract:
 - content: "<p>This document describes Elliptic Curve Diffie-Hellman Private Set Intersection
-    (ECDH-PSI). It instantiates the classical Meadows match-making protocol with standard
-    elliptic curves and hash-to-curve methods. In ECDH-PSI, data items are encoded
-    to points on an elliptic curve, and masked by the private keys of both parties.
-    After collecting the mutually masked datasets from both parties, a participant
-    computes their intersection and outputs the corresponding original data items
-    as result.</p>"
+    (ECDH-PSI) for 2 participants. It instantiates the classical Meadows match-making
+    protocol with standard elliptic curves and hash-to-curve methods, enabling the
+    participants to find common records in a privacy-respecting way. In ECDH-PSI,
+    records are encoded to points on an elliptic curve, and masked by the private
+    keys of both participants. To compute the intersection, a participant only uses
+    the jointly masked datasets and its original dataset locally, which prevents its
+    partner from learning the private records not in the intersection.</p>"
   language:
   - en
   script:
@@ -35,6 +36,16 @@ relation:
       primary: true
     formattedref:
       content: draft-wang-ppm-ecdh-psi-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-wang-ppm-ecdh-psi-01
+    docid:
+    - id: draft-wang-ppm-ecdh-psi-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-wang-ppm-ecdh-psi-01
       format: text/plain
 ext:
   schema-version: v1.0.1
