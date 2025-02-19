@@ -13,17 +13,15 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>BIER is a scalable multicast overlay that utilizes a routing underlay,
-    e.g., IP, to build up its Bit Index Forwarding Tables (BIFTs). This document proposes
-    Fast Reroute for BIER (BIER-FRR). It protects BIER traffic after detecting the
-    failure of a link or node in the core of a BIER domain until affected BIFT entries
-    are recomputed after reconvergence of the routing underlay. BIER-FRR is applied
-    locally at the point of local repair (PLR) and does not introduce any per-flow
-    state. The document specifies nomenclature for BIER-FRR and gives examples for
-    its integration in BIER forwarding. Furthermore, it presents operation modes for
-    BIER-FRR. Link and node protection may be chosen as protection level. Moreover,
-    the backup strategies tunnel-based BIER-FRR and LFA-based BIER-FRR are defined
-    and compared.</p>"
+- content: "<p>This document describes a mechanism for Fast Reroute (FRR) in Bit Index
+    Explicit Replication (BIER) networks. The proposed solution enhances the resiliency
+    of BIER by providing a method to quickly reroute traffic in the event of a link
+    or node failure, thereby minimizing packet loss and service disruption. The document
+    details the procedures for detecting failures and selecting backup paths within
+    the BIER domain, ensuring that multicast traffic continues to reach its intended
+    destinations without requiring per-flow state or additional signaling. This FRR
+    mechanism is designed to integrate seamlessly with existing BIER operations, offering
+    a robust solution for improving network reliability.</p>"
   language:
   - en
   script:
@@ -79,6 +77,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-bier-frr-04
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-bier-frr-05
+    docid:
+    - id: draft-ietf-bier-frr-05
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-bier-frr-05
       format: text/plain
 ext:
   schema-version: v1.0.1
