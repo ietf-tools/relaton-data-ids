@@ -1,179 +1,163 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-opsawg-ipfix-alt-mark-01
+id: draft-mohanty-idr-secondary-label-01
 title:
-- content: IP Flow Information Export (IPFIX) Alternate-Marking Information Elements
+- content: The Secondary Label and its applications
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-ipfix-alt-mark-01
+- content: https://datatracker.ietf.org/doc/html/draft-mohanty-idr-secondary-label-01
   type: src
 type: standard
 docid:
-- id: draft-ietf-opsawg-ipfix-alt-mark-01
+- id: draft-mohanty-idr-secondary-label-01
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-opsawg-ipfix-alt-mark
+- id: I-D.mohanty-idr-secondary-label
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-opsawg-ipfix-alt-mark
+docnumber: I-D.mohanty-idr-secondary-label
 date:
 - type: published
-  value: '2024-11-03'
+  value: '2025-02-20'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Thomas
-          language:
-          - en
-        - language:
-          - en
-          initial: T
-        formatted_initials:
-          content: T.
-          language:
-          - en
-      surname:
-        content: Graf
-        language:
-        - en
-      completename:
-        content: Thomas Graf
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Swisscom
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Giuseppe
-          language:
-          - en
-        - language:
-          - en
-          initial: G
-        formatted_initials:
-          content: G.
-          language:
-          - en
-      surname:
-        content: Fioccola
-        language:
-        - en
-      completename:
-        content: Giuseppe Fioccola
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Huawei
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Tianran
-          language:
-          - en
-        - language:
-          - en
-          initial: T
-        formatted_initials:
-          content: T.
-          language:
-          - en
-      surname:
-        content: Zhou
-        language:
-        - en
-      completename:
-        content: Tianran Zhou
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Huawei
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Mauro
+        - content: SATYA
           language:
           - en
         - language:
           - en
           initial: M
+        - language:
+          - en
+          initial: R
         formatted_initials:
-          content: M.
+          content: M. R.
           language:
           - en
       surname:
-        content: Cociglio
+        content: Satya
         language:
         - en
       completename:
-        content: Mauro Cociglio
+        content: SATYA R MOHANTY
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Telecom Italia
+        - content: Zscaler
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Massimo
+        - content: Israel
           language:
           - en
         - language:
           - en
-          initial: M
+          initial: I
         formatted_initials:
-          content: M.
+          content: I.
           language:
           - en
       surname:
-        content: Nilo
+        content: Means
         language:
         - en
       completename:
-        content: Massimo Nilo
+        content: Israel Means
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Telecom Italia
+        - content: AT&T Labs, Inc.
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Praveen
+          language:
+          - en
+        - language:
+          - en
+          initial: P
+        formatted_initials:
+          content: P.
+          language:
+          - en
+      surname:
+        content: Ramadenu
+        language:
+        - en
+      completename:
+        content: Praveen Ramadenu
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: AT&T Labs, Inc.
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Mankamana
+          language:
+          - en
+        - language:
+          - en
+          initial: M
+        - language:
+          - en
+          initial: P
+        formatted_initials:
+          content: M. P.
+          language:
+          - en
+      surname:
+        content: Mishra
+        language:
+        - en
+      completename:
+        content: Mankamana Prasad Mishra
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Cisco Systems, Inc.
   role:
   - type: author
 version:
 - draft: '01'
-revdate: '2024-11-03'
+revdate: '2025-02-20'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document specifies the IP Flow Information Export (IPFIX) Information
-    Elements (IEs) to export Alternate Marking measurement data.</p>"
+- content: <p>This draft utilizes the concept of a secondary label to solve few cases
+    in L3VPN Deployments.In BGP VPN networks, BGP speakers associate a local MPLS
+    label when the next-hop is reset and advertise that label to other peers. The
+    receiving peer installs this "received" label in the forwarding and forwards traffic
+    to the sending router using this label. In some deployments, there arises need
+    where a different label is required to be sent. We illustrate with two use-cases.
+    This draft presents a method where this label is encoded in a newly defined attribute
+    that is advertised with the BGP updates targeting these specified use-cases</p>
   language:
   - en
   script:
@@ -182,23 +166,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-opsawg-ipfix-alt-mark-00
+    id: draft-mohanty-idr-secondary-label-00
     docid:
-    - id: draft-ietf-opsawg-ipfix-alt-mark-00
+    - id: draft-mohanty-idr-secondary-label-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-opsawg-ipfix-alt-mark-00
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-opsawg-ipfix-alt-mark-02
-    docid:
-    - id: draft-ietf-opsawg-ipfix-alt-mark-02
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-opsawg-ipfix-alt-mark-02
+      content: draft-mohanty-idr-secondary-label-00
       format: text/plain
 series:
 - type: main
@@ -209,7 +183,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-opsawg-ipfix-alt-mark-01
+  number: draft-mohanty-idr-secondary-label-01
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
