@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-liu-idr-sr-segment-list-optimize
 title:
-- content: BGP Extension for SR Segment List optimization
+- content: BGP Extension for SRv6 Policy Segment List optimization
   language:
   - en
   script:
@@ -13,13 +13,12 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document introduces an optimization method for segment list arrangement
-    the SR Policy TLV of the BGP Tunnel Encapsulation Attribute. This optimization
-    solves the problem of the Segment Routing's penultimate segment node being unable
-    to perform the penultimate Segment Pop (PSP) behavior when the egress node has
-    both End SID and service SID encapsulated in Segment Routing Header's segment
-    List. This solution adds an E-Flag to the SRv6 SID Endpoint Behavior sub-TLV carried
-    in Segment List Sub-TLV of the SR Policy TLV. This optimization can improve the
+- content: "<p>In some use cases, an SRv6 policy's segment list ends with the policy
+    endpoint's node SID, and the traffic steered (over policy) already ensures that
+    it is taken to the policy endpoint. In such cases, the SID list can be optimized
+    by excluding the endpoint Node SID when installing the policy. This document specifies
+    a BGP extension to indicate whether the endpoint's node SID needs to be included
+    or excluded when installing the SRv6 Policy. This optimization can improve the
     forwarding efficiency of data packets when End SID and Service SID are present.</p>"
   language:
   - en
@@ -36,6 +35,16 @@ relation:
       primary: true
     formattedref:
       content: draft-liu-idr-sr-segment-list-optimize-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-liu-idr-sr-segment-list-optimize-01
+    docid:
+    - id: draft-liu-idr-sr-segment-list-optimize-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-liu-idr-sr-segment-list-optimize-01
       format: text/plain
 ext:
   schema-version: v1.0.1
