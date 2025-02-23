@@ -13,19 +13,21 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>Manufacturer Usage Description (MUD) files and the MUD URI that point
+- content: "<p>Manufacturer Usage Description (MUD) files and the MUD URIs that point
     to them are defined in RFC 8520. This document introduces a new type of MUD file
     to be delivered in conjunction with a MUD file signature and/or to be referenced
-    via a MUD URI embedded in an IEEE 802.1AR Secure Device Identifier (DevID). A
-    DevID is a device specific pub- key identity document that can be presented to
-    other entities, e.g. a network management system. If this entity is also a verifier
-    as defined by the IETF Remote ATtestation procedureS (RATS) architecture, this
-    verifier can use the references found in the MUD file specified in this document
-    in order to discover appropriate Reference Integrity Measurements (RIM), Endorsement
-    Documents, or even globally suitable Remote Attestation Services (RAS). All three
-    types of theses resources are required to conduct RATS. Hence, the MUD file defined
-    in this document enables remote attestation procedures by supporting the discovery
-    of these required resources or services.</p>"
+    via a MUD URI embedded in other documents or messages, such as an IEEE 802.1AR
+    Secure Device Identifier (DevID) or a CBOR Web Token (CWT). These signed documents
+    can be presented to other entities, e.g., a network management system or network
+    path orchestrator. If this entity also takes on the role of a verifier as defined
+    by the IETF Remote ATtestation procedureS (RATS) architecture, this verifier can
+    use the references included in the MUD file specified in this document to discover,
+    for example, appropriate reference value providers, endorsement documents or endorsement
+    distribution APIs, trust anchor stores, remote verifier services (sometimes referred
+    to as Attestation Verification Services), or transparency logs. All theses references
+    in the MUD file pointing to resources and auxiliary RATS services can satisfy
+    general RATS prerequisite by enabling discovery or improve discovery resilience
+    of corresponding resources or services.</p>"
   language:
   - en
   script:
@@ -41,6 +43,16 @@ relation:
       primary: true
     formattedref:
       content: draft-birkholz-rats-mud-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-birkholz-rats-mud-01
+    docid:
+    - id: draft-birkholz-rats-mud-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-birkholz-rats-mud-01
       format: text/plain
 ext:
   schema-version: v1.0.1
