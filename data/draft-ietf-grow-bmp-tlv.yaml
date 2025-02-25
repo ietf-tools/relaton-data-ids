@@ -2,7 +2,8 @@
 schema-version: v1.2.3
 id: draft-ietf-grow-bmp-tlv
 title:
-- content: 'BMP v4: TLV support for BMP Route Monitoring and Peer Down Messages'
+- content: 'BMP v4: TLV Support for BGP Monitoring Prtoocol (BMP) Route Monitoring
+    and Peer Down Messages'
   language:
   - en
   script:
@@ -13,15 +14,14 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>Most of the message types defined by the BGP Monitoring Protocol (BMP)
-    make provision for data in TLV format. However, Route Monitoring messages (which
-    provide a snapshot of the monitored Routing Information Base) and Peer Down messages
-    (which indicate that a peering session was terminated) do not. Supporting (optional)
-    data in TLV format across all BMP message types allows for a homogeneous and extensible
-    structure that would be useful for the most different use-cases that need to convey
-    additional data to a BMP station. While it is not intended for this document to
-    cover any specific utilization scenario, it defines a consistent and simple way
-    to support TLV data in all message types.</p>"
+- content: "<p>Most of the BGP Monitoring Protocol (BMP) message types make provision
+    for data in Type, Length, Value (TLV) format. However, Route Monitoring messages
+    (which provide a snapshot of the monitored Routing Information Base) and Peer
+    Down messages (which indicate that a peering session was terminated) do not. Supporting
+    (optional) data in TLV format across all BMP message types provides consistent
+    and extensible structures that would be useful among the various use- cases where
+    conveying additional data to a monitoring station is required. This document updates
+    RFC 7854 [RFC7854] to support TLV data in all message types.</p>"
   language:
   - en
   script:
@@ -187,6 +187,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-grow-bmp-tlv-15
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-grow-bmp-tlv-16
+    docid:
+    - id: draft-ietf-grow-bmp-tlv-16
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-grow-bmp-tlv-16
       format: text/plain
 ext:
   schema-version: v1.0.1
