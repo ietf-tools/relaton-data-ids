@@ -1,0 +1,49 @@
+---
+schema-version: v1.2.3
+id: draft-hao-civ
+title:
+- content: Caller ID Verification In Session Initiation Protocol
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-hao-civ
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: <p>This document defines an extension to the INVITE header of the Session
+    Initiation Protocol (SIP) to support the Caller ID Verification (CIV) protocol
+    proposed by Wang et al. in ACM Transactions on Privacy and Security (2023). CIV
+    authenticates the caller ID of an incoming call through a challenge-and-response
+    process. When receiving a call with a claimed phone number, the called party holds
+    the call and sends an INVITE request to that number, carrying a short 4-digit
+    challenge embedded as part of the caller ID. A genuine caller should receive the
+    challenge and respond by echoing the same digits, e.g., through DTMF (Dual-Tone
+    Multi- Frequency). The proposed extension involves two changes to the INVITE header.
+    First, it adds a new options tag, "civ", in the Supported header field. This tag
+    indicates that the calling party supports CIV. Second, it adds a special value
+    "civ-veri-call" for the Purpose parameter of the Call-Info header field. This
+    value indicates that the purpose of the INVITE request is to verify the caller
+    ID based on CIV. Compared with STIR/SHAKEN, CIV authenticates the caller ID (not
+    the carrier), does not require trusted certificate authorities and works with
+    both IP and non-IP networks.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-hao-civ-00
+    docid:
+    - id: draft-hao-civ-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-hao-civ-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
