@@ -1,0 +1,161 @@
+---
+schema-version: v1.2.3
+id: draft-ietf-dnsop-ns-revalidation-09
+title:
+- content: Delegation Revalidation by DNS Resolvers
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-dnsop-ns-revalidation-09
+  type: src
+type: standard
+docid:
+- id: draft-ietf-dnsop-ns-revalidation-09
+  type: Internet-Draft
+  primary: true
+- id: I-D.ietf-dnsop-ns-revalidation
+  type: IETF
+  scope: anchor
+docnumber: I-D.ietf-dnsop-ns-revalidation
+date:
+- type: published
+  value: '2025-02-27'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Shumon
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Huque
+        language:
+        - en
+      completename:
+        content: Shumon Huque
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Salesforce
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Paul
+          language:
+          - en
+        - language:
+          - en
+          initial: P
+        - language:
+          - en
+          initial: A
+        formatted_initials:
+          content: P. A.
+          language:
+          - en
+      surname:
+        content: Vixie
+        language:
+        - en
+      completename:
+        content: Paul A. Vixie
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: SIE Europe, U.G.
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Willem
+          language:
+          - en
+        - language:
+          - en
+          initial: W
+        formatted_initials:
+          content: W.
+          language:
+          - en
+      surname:
+        content: Toorop
+        language:
+        - en
+      completename:
+        content: Willem Toorop
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: NLnet Labs
+  role:
+  - type: author
+version:
+- draft: '09'
+revdate: '2025-02-27'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>This document recommends improved DNS resolver behavior with respect
+    to the processing of Name Server (NS) resource record (RR) sets (RRsets) during
+    iterative resolution. When following a referral response from an authoritative
+    server to a child zone, DNS resolvers should explicitly query the authoritative
+    NS RRset at the apex of the child zone and cache this in preference to the NS
+    RRset on the parent side of the zone cut. The (A and AAAA) address RRsets in the
+    additional section from referral responses and authoritative NS answers for the
+    names of the NS RRset, should similarly be re-queried and used to replace the
+    entries with the lower trustworthiness ranking in cache. Resolvers should also
+    periodically revalidate the delegation by re-querying the parent zone at the expiration
+    of the TTL of either the parent or child NS RRset, whichever comes first.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-ietf-dnsop-ns-revalidation-08
+    docid:
+    - id: draft-ietf-dnsop-ns-revalidation-08
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-dnsop-ns-revalidation-08
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-ietf-dnsop-ns-revalidation-09
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

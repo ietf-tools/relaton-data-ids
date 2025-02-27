@@ -13,15 +13,18 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document extends RFC 6550, RFC 6553, and RFC 8138 to enable a
-    RPL Root to install and maintain Projected Routes within its domain. A Projected
-    Route is one that is computed by a central entity, such as a Path Computation
-    Engine (PCE) and installed in the routers that instantiate it, using the procedures
-    defined here. The routes are installed along a selected set of nodes that may
-    or may not include itself, for a chosen duration. This potentially enables routes
-    that are more optimized or resilient than those obtained with the classical distributed
-    operation of RPL, either in terms of the size of a Routing Header or in terms
-    of path length, which impacts both the latency and the packet delivery ratio.</p>"
+- content: "<p>The Routing Protocol for Low-Power and Lossy Networks (RPL, RFC 6550)
+    enables data packet routing along a Destination-Oriented Directed Acyclic Graph.
+    However, the default route establishment mechanism relies on hop-by-hop forwarding
+    along the DODAG, which may not always provide optimal routing efficiency. This
+    document introduces the concept of DAO Projection, a mechanism that allows a RPL
+    root or an external controller to install optimized routes within the RPL domain.
+    DAO Projections enable the creation of optimized unicast or multicast routes that
+    do not strictly follow the DODAG structure, thereby improving routing efficiency,
+    reliability, availability, and resource utilization in the RPL domain. The document
+    specifies two types of projected routes—storing mode and non-storing mode projections—and
+    outlines the signaling procedures necessary to establish, maintain, and remove
+    these routes. This document extends RFC 6550, RFC 6553, and RFC 8138.</p>"
   language:
   - en
   script:
@@ -417,6 +420,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-roll-dao-projection-38
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-roll-dao-projection-39
+    docid:
+    - id: draft-ietf-roll-dao-projection-39
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-roll-dao-projection-39
       format: text/plain
 ext:
   schema-version: v1.0.1

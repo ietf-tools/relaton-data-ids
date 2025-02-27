@@ -22,8 +22,8 @@ abstract:
     additional section from referral responses and authoritative NS answers for the
     names of the NS RRset, should similarly be re-queried and used to replace the
     entries with the lower trustworthiness ranking in cache. Resolvers should also
-    periodically revalidate the child delegation by re-querying the parent zone at
-    the expiration of the TTL of the parent side NS RRset.</p>"
+    periodically revalidate the delegation by re-querying the parent zone at the expiration
+    of the TTL of either the parent or child NS RRset, whichever comes first.</p>"
   language:
   - en
   script:
@@ -119,6 +119,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-dnsop-ns-revalidation-08
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-dnsop-ns-revalidation-09
+    docid:
+    - id: draft-ietf-dnsop-ns-revalidation-09
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-dnsop-ns-revalidation-09
       format: text/plain
 ext:
   schema-version: v1.0.1
