@@ -1,0 +1,48 @@
+---
+schema-version: v1.2.3
+id: draft-guo-privacypass-token-binding
+title:
+- content: Privacy Pass with Token Binding Extension
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-guo-privacypass-token-binding
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This document provides a token binding extension for the Privacy Pass
+    protocol. This extension allows a Client to cryptographically bind a Privacy Pass
+    token to its own generated one-time public key during the issuance flow, without
+    exposing the public key to the Issuer. Later, when spending the token during the
+    redemption flow, the Client must use the corresponding private key to generate
+    a binding proof that the Origin needs to additionally verify except the token
+    itself, where the proof generation can optionally support channel binding. This
+    proof constrains the legitimate presenter of the token to be only the Client who
+    holds the private key and further constrains the legitimate usage of the token
+    to be only the Client's specific channel when channel binding is used in the proof
+    generation, and thus can prevent token export and replay attacks. In addition,
+    the token binding extension does not introduce additional cryptographic primitives,
+    and only uses the primitives currently utilized in the issuance protocol to generate
+    the one-time public-private keypair as well as generate and verify the binding
+    proof.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-guo-privacypass-token-binding-00
+    docid:
+    - id: draft-guo-privacypass-token-binding-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-guo-privacypass-token-binding-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
