@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-lucente-grow-bmp-offline
 title:
-- content: Making BMP fruible offline
+- content: BMP State Summaries
   language:
   - en
   script:
@@ -13,15 +13,23 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>BMP (BGP Monitoring Protocol) [RFC7854] is perfectly suited for real-
-    time consumption but less ideal for off-wire historical purposes. The main issue
-    is the dependence that parsing BGP Update PDUs has on knowing which capabilities
-    have been agreed when establishing the BGP session with the peers, which could
-    have happened long time ago (days, weeks, months). This document defines a new
-    optional BMP message type, called Peer Summary, that carries a summary of the
-    established BGP sessions along with their capabilities and that is intended to
-    be injected in the BMP feed at configurable time intervals and/or ad-hoc whenever
-    it is felt necessary to improve fruition of BMP data offline.</p>"
+- content: "<p>BMP (BGP Monitoring Protocol) is perfectly suited for real-time consumption
+    but less ideal in stream processing and off-wire historical scenarios. The main
+    issue is that the ability to correctly parse BGP Update PDUs, carried in BMP Route
+    Monitoring messages, depends on the BGP Capabilities exchanged during the establishment
+    of the BGP session between the peers via BGP Open PDUs. The BGP Open PDUs, carried
+    in BMP Peer Up Notification messages, are exported at the establishment of the
+    BMP session. Similar to BGP, BMP sessions are typically long-lived, so the crucial
+    information to correctly parse subsequent messages of such sessions was possibly
+    sent a relatively long time ago (days, weeks, months). This document introduces
+    the concept of Summaries. It defines a new optional BMP message type, called State
+    Summary, and a new TLV, called Summary Id. A Summary is similar to the initial
+    synchronisation performed upon establishment of the BMP session: all BGP session
+    information is exported in Peer Up Notification messages, and all RIB contents
+    are exported in Route Monitoring messages. All the messages carry the new Summary
+    Id TLV, containing an ID uniquely identifying the summary these messages belong
+    to. The messages are preceded by a State Summary message carrying the same Summary
+    Id TLV, as well as meta-data describing the Summary.</p>"
   language:
   - en
   script:
@@ -37,6 +45,16 @@ relation:
       primary: true
     formattedref:
       content: draft-lucente-grow-bmp-offline-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-lucente-grow-bmp-offline-01
+    docid:
+    - id: draft-lucente-grow-bmp-offline-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-lucente-grow-bmp-offline-01
       format: text/plain
 ext:
   schema-version: v1.0.1

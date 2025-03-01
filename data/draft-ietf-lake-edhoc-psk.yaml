@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-ietf-lake-edhoc-psk
 title:
-- content: EDHOC PSK authentication
+- content: EDHOC Authenticated with Pre-Shred Keys (PSK)
   language:
   - en
   script:
@@ -13,10 +13,15 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document specifies the Pre-Shared Key (PSK) authentication method
-    for the Ephemeral Diffie-Hellman Over COSE (EDHOC) key exchange protocol. It describes
-    the authentication processes, message flows, and security considerations of this
-    authentication method.</p>"
+- content: "<p>This document specifies a Pre-Shared Key (PSK) authentication method
+    for the Ephemeral Diffie-Hellman Over COSE (EDHOC) key exchange protocol. The
+    PSK method enhances computational efficiency while providing mutual authentication,
+    ephemeral key exchange, identity protection, and quantum resistance. It is particularly
+    suited for systems where nodes share a PSK provided out-of-band (external PSK)
+    and enables efficient session resumption with less computational overhead when
+    the PSK is provided from a previous EDHOC session (resumption PSK). This document
+    details the PSK method flow, key derivation changes, message formatting, processing,
+    and security considerations.</p>"
   language:
   - en
   script:
@@ -52,6 +57,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-lake-edhoc-psk-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-lake-edhoc-psk-03
+    docid:
+    - id: draft-ietf-lake-edhoc-psk-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-lake-edhoc-psk-03
       format: text/plain
 ext:
   schema-version: v1.0.1

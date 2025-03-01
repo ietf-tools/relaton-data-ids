@@ -1,0 +1,192 @@
+---
+schema-version: v1.2.3
+id: draft-lucente-grow-bmp-offline-01
+title:
+- content: BMP State Summaries
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-lucente-grow-bmp-offline-01
+  type: src
+type: standard
+docid:
+- id: draft-lucente-grow-bmp-offline-01
+  type: Internet-Draft
+  primary: true
+- id: I-D.lucente-grow-bmp-offline
+  type: IETF
+  scope: anchor
+docnumber: I-D.lucente-grow-bmp-offline
+date:
+- type: published
+  value: '2025-03-01'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Paolo
+          language:
+          - en
+        - language:
+          - en
+          initial: P
+        formatted_initials:
+          content: P.
+          language:
+          - en
+      surname:
+        content: Lucente
+        language:
+        - en
+      completename:
+        content: Paolo Lucente
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: NTT
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Camilo
+          language:
+          - en
+        - language:
+          - en
+          initial: C
+        formatted_initials:
+          content: C.
+          language:
+          - en
+      surname:
+        content: Cardona
+        language:
+        - en
+      completename:
+        content: Camilo Cardona
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: NTT
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Colin
+          language:
+          - en
+        - language:
+          - en
+          initial: C
+        formatted_initials:
+          content: C.
+          language:
+          - en
+      surname:
+        content: Petrie
+        language:
+        - en
+      completename:
+        content: Colin Petrie
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: NTT
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Luuk
+          language:
+          - en
+        - language:
+          - en
+          initial: L
+        formatted_initials:
+          content: L.
+          language:
+          - en
+      surname:
+        content: Hendriks
+        language:
+        - en
+      completename:
+        content: Luuk Hendriks
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: NLnet Labs
+  role:
+  - type: author
+version:
+- draft: '01'
+revdate: '2025-03-01'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>BMP (BGP Monitoring Protocol) is perfectly suited for real-time consumption
+    but less ideal in stream processing and off-wire historical scenarios. The main
+    issue is that the ability to correctly parse BGP Update PDUs, carried in BMP Route
+    Monitoring messages, depends on the BGP Capabilities exchanged during the establishment
+    of the BGP session between the peers via BGP Open PDUs. The BGP Open PDUs, carried
+    in BMP Peer Up Notification messages, are exported at the establishment of the
+    BMP session. Similar to BGP, BMP sessions are typically long-lived, so the crucial
+    information to correctly parse subsequent messages of such sessions was possibly
+    sent a relatively long time ago (days, weeks, months). This document introduces
+    the concept of Summaries. It defines a new optional BMP message type, called State
+    Summary, and a new TLV, called Summary Id. A Summary is similar to the initial
+    synchronisation performed upon establishment of the BMP session: all BGP session
+    information is exported in Peer Up Notification messages, and all RIB contents
+    are exported in Route Monitoring messages. All the messages carry the new Summary
+    Id TLV, containing an ID uniquely identifying the summary these messages belong
+    to. The messages are preceded by a State Summary message carrying the same Summary
+    Id TLV, as well as meta-data describing the Summary.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-lucente-grow-bmp-offline-00
+    docid:
+    - id: draft-lucente-grow-bmp-offline-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-lucente-grow-bmp-offline-00
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-lucente-grow-bmp-offline-01
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
