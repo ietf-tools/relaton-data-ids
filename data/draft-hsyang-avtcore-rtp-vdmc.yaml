@@ -14,12 +14,13 @@ docid:
   primary: true
 abstract:
 - content: "<p>This memo outlines RTP payload formats for the Video-based Dynamic
-    Mesh Coding (V-DMC), which comprises several types of components, such as a base
-    mesh, a set of displacements, 2D representations of attributes, and an atlas.
-    New RTP payload formats are described for the base mesh and displacement components.
-    The RTP payload header formats enable the packetization of a video stream packet
-    within an RTP packet payload, as well as the fragmentation of a video stream packet
-    into multiple RTP packets.</p>"
+    Mesh Coding (V-DMC), which comprises several types of components, such as a basemesh,
+    AC-based displacements, 2D representations of attributes, and an atlas. This document
+    focuses on describing the basemesh and displacement, while the RTP payload formats
+    for the atlas and attributes are addressed in other documents. The RTP payload
+    header formats enable the packetization of a basemesh or displacement Network
+    Abstraction Layer (NAL) unit in an RTP packet payload as well as fragmentation
+    of a NAL unit into multiple RTP packets.</p>"
   language:
   - en
   script:
@@ -35,6 +36,16 @@ relation:
       primary: true
     formattedref:
       content: draft-hsyang-avtcore-rtp-vdmc-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-hsyang-avtcore-rtp-vdmc-01
+    docid:
+    - id: draft-hsyang-avtcore-rtp-vdmc-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-hsyang-avtcore-rtp-vdmc-01
       format: text/plain
 ext:
   schema-version: v1.0.1
