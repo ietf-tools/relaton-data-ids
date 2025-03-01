@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-ietf-intarea-extended-icmp-nodeid
 title:
-- content: Extending ICMP for Node Identification
+- content: Adding Extensions to ICMP Errors for Originating Node Identification
   language:
   - en
   script:
@@ -16,11 +16,12 @@ abstract:
 - content: "<p>RFC5837 describes a mechanism for Extending ICMP for Interface and
     Next-Hop Identification, which allows providing additional information in an ICMP
     error that helps identify interfaces participating in the path. This is especially
-    useful in environments where each interface may not have a unique IP address to
-    respond to, e.g., a traceroute. This document introduces a similar ICMP extension
+    useful in environments where a given interface may not have a unique IP address
+    to respond to, e.g., a traceroute. This document introduces a similar ICMP extension
     for Node Identification. It allows providing a unique IP address and/or a textual
     name for the node, in the case where each node may not have a unique IP address
-    (e.g., the IPv6 nexthop deployment case described in draft-chroboczek-intarea-v4-via-v6).</p>"
+    (e.g., a deployment in which all interfaces have IPv6 addresses and all nexthops
+    are IPv6 nexthops, even for IPv4 routes).</p>"
   language:
   - en
   script:
@@ -36,6 +37,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-intarea-extended-icmp-nodeid-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-intarea-extended-icmp-nodeid-01
+    docid:
+    - id: draft-ietf-intarea-extended-icmp-nodeid-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-intarea-extended-icmp-nodeid-01
       format: text/plain
 ext:
   schema-version: v1.0.1
