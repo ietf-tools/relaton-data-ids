@@ -14,15 +14,23 @@ docid:
   primary: true
 abstract:
 - content: "<p>This document describes the Kademlia-directed ID-based Routing Architecture
-    KIRA. KIRA offers highly scalable zero-touch IPv6 connectivity, i.e., it can connect
-    hundred thousands of routers and devices in a single network (without requiring
-    any form of hierarchy like areas). It is self-organizing to achieve a zero-touch
-    solution that provides resilient (control plane) IPv6 connectivity without requiring
-    any manual configuration by operators. It works well in various topologies and
-    is loop-free even during convergence. The architecture consists of the ID-based
-    network layer routing protocol R²/Kad in its routing tier and a Path-ID-based
-    forwarding tier. The topological independent IDs can be embedded into IPv6 addresses,
-    so that KIRA provides zero-touch IPv6 connectivity between KIRA nodes.</p>"
+    KIRA. KIRA is a scalable zero-touch distributed routing solution that is tailored
+    to control planes. It prioritizes scalable and resilient connectivity over route
+    efficiency (stretched paths are acceptable vs. routing protocol overhead). KIRA's
+    self-assigned topological independent IDs can be embedded into IPv6 addresses.
+    Combined with further self-organization mechanisms from Kademlia, KIRA achieves
+    a zero-touch solution that provides scalable IPv6 connectivity without requiring
+    any manual configuration. For example, it can connect hundreds of thousands of
+    routers and devices in a single network without requiring any form of hierarchy
+    (like areas). It works well in various topologies and is loop-free even during
+    convergence. This self-contained solution, and especially the independence from
+    any manual configuration, make it suitable as resilient base for all management
+    and control tasks, allowing to recover from the most complex failure scenarios.
+    The architecture consists of the ID-based network layer routing protocol R²/Kad
+    in its Routing Tier (using source routing) and a PathID-based Forwarding Tier
+    (using PathIDs as labels for paths). KIRA’s tightly integrated add-on services
+    (e.g., name resolution as well as fast and efficient topology discovery) provide
+    a perfect basis for autonomic network management solutions.</p>"
   language:
   - en
   script:
@@ -48,6 +56,16 @@ relation:
       primary: true
     formattedref:
       content: draft-bless-rtgwg-kira-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-bless-rtgwg-kira-02
+    docid:
+    - id: draft-bless-rtgwg-kira-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-bless-rtgwg-kira-02
       format: text/plain
 ext:
   schema-version: v1.0.1
