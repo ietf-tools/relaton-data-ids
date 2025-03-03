@@ -13,13 +13,16 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document extends the use of DNS NOTIFY (RFC 1996) beyond conventional
-    zone transfer hints, bringing the benefits of ad-hoc notifications to DNS delegation
-    maintenance in general. Use cases include DNSSEC bootstrapping and key rollovers
-    hints, and quicker changes to a delegation's NS record set. To enable this functionality,
-    a method for discovering the receiver endpoint for such notification message is
-    introduced, via the new DSYNC record type. TO BE REMOVED: This document is being
-    collaborated on in Github at: https://github.com/peterthomassen/draft-ietf-dnsop-generalized-notify
+- content: "<p>This document generalizes and extends the use of DNS NOTIFY (RFC 1996)
+    beyond conventional zone transfer hints, to allow triggering other types of actions
+    via the DNS that were previously lacking a trigger mechanism. Notifications merely
+    nudge the receiver to initiate a predefined action promptly (instead of on a schedule);
+    they do not alter the action itself (including any security checks it might employ).
+    To enable this functionality, a method for discovering the receiver endpoint for
+    such notification messages is introduced, via the new DSYNC record type. Notification
+    types are recorded in a new registry, with initial support for parental NS and
+    DS record updates including DNSSEC bootstrapping. TO BE REMOVED: This document
+    is being collaborated on in Github at: https://github.com/peterthomassen/draft-ietf-dnsop-generalized-notify
     (https://github.com/peterthomassen/draft-ietf-dnsop-generalized- notify). The
     most recent working version of the document, open issues, etc. should all be available
     there. The authors (gratefully) accept pull requests.</p>"
@@ -98,6 +101,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-dnsop-generalized-notify-06
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-dnsop-generalized-notify-07
+    docid:
+    - id: draft-ietf-dnsop-generalized-notify-07
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-dnsop-generalized-notify-07
       format: text/plain
 ext:
   schema-version: v1.0.1

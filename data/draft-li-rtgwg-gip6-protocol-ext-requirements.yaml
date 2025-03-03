@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-li-rtgwg-gip6-protocol-ext-requirements
 title:
-- content: Protocol Extension Requirements of Generalized IPv6 Tunnel
+- content: Scenarios and Protocol Extension Requirements of a Generalized IPv6 Tunnel
   language:
   - en
   script:
@@ -14,12 +14,20 @@ docid:
   primary: true
 abstract:
 - content: "<p>IPv6 provides extension header mechanism for additional functions.
-    There are emerging features based on the extension headers, such as SRv6, Slicing,
-    Alternate Marking, IOAM, DetNet, APN. However network devices have different capabilities
-    of IPv6 extension header processing which has much effect on the deployment of
-    these features. This document analyses the issues found during the deployment
-    of the above new features using IPv6 extension headers and the protocol extension
-    requirements for IPv6 capability advertisement are defined.</p>"
+    There are emerging features based on the extension headers, such as SRv6, Network
+    Slicing, Alternate Marking, iOAM, DetNet etc. In some networks, the operators
+    might want to leverage these new features but since the network system still using
+    some lagecy encapsulations other than IPv6 (e.g. VxLAN, GRE etc.), these features
+    are just not applicable for them. This document introduces some cases of such
+    scenarios, and discusses the potential requirement of defining a new Generalized
+    IPv6 Tunnel (GIP6). With GIP6, all the additional functions defined as IPv6 extension
+    headers could be easily supported, so that the legacy encapsulations could migrate
+    to a unified solution rather than sccaterred upgrade in each legacy technologies,
+    which is heavy burden for the industry. Considering network devices have different
+    capabilities of IPv6 extension header processing, this document also analyses
+    the issues found during the deployment of the above new features using IPv6 extension
+    headers and the protocol extension requirements for IPv6 capability advertisement
+    are defined.</p>"
   language:
   - en
   script:
@@ -55,6 +63,16 @@ relation:
       primary: true
     formattedref:
       content: draft-li-rtgwg-gip6-protocol-ext-requirements-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-li-rtgwg-gip6-protocol-ext-requirements-03
+    docid:
+    - id: draft-li-rtgwg-gip6-protocol-ext-requirements-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-li-rtgwg-gip6-protocol-ext-requirements-03
       format: text/plain
 ext:
   schema-version: v1.0.1
