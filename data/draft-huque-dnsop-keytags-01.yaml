@@ -1,0 +1,161 @@
+---
+schema-version: v1.2.3
+id: draft-huque-dnsop-keytags-01
+title:
+- content: Collision Free Keytags for DNSSEC
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-huque-dnsop-keytags-01
+  type: src
+type: standard
+docid:
+- id: draft-huque-dnsop-keytags-01
+  type: Internet-Draft
+  primary: true
+- id: I-D.huque-dnsop-keytags
+  type: IETF
+  scope: anchor
+docnumber: I-D.huque-dnsop-keytags
+date:
+- type: published
+  value: '2025-03-02'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Mark
+          language:
+          - en
+        - language:
+          - en
+          initial: M
+        - language:
+          - en
+          initial: P
+        formatted_initials:
+          content: M. P.
+          language:
+          - en
+      surname:
+        content: Andrews
+        language:
+        - en
+      completename:
+        content: Mark P. Andrews
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Internet Systems Consortium
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Shumon
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Huque
+        language:
+        - en
+      completename:
+        content: Shumon Huque
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Salesforce
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Yorgos
+          language:
+          - en
+        - language:
+          - en
+          initial: "Y"
+        formatted_initials:
+          content: Y.
+          language:
+          - en
+      surname:
+        content: Thessalonikefs
+        language:
+        - en
+      completename:
+        content: Yorgos Thessalonikefs
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: NLnet Labs
+  role:
+  - type: author
+version:
+- draft: '01'
+revdate: '2025-03-02'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>DNSSEC employs a Key Tag field in the RRSIG and DS resource records
+    in order to efficiently identify the key that produced a DNSSEC signature and
+    the key that should be used as a secure entry point into a delegated zone. The
+    Key Tag was not intended to be a unique identifier. Key tag collisions can occur
+    in practice for keys in the same zone, though they are relatively rare in normal
+    operation. Colliding key tags impose additional work on a validating resolver
+    because it then has to check signatures for each of the candidate set of keys
+    identified by the Key Tag. Furthermore, they open up resolvers to computational
+    denial of service attacks by adversaries deploying specially crafted zones with
+    many intentionally colliding key tags. This document specifies updates to the
+    DNSSEC protocol and the process of key generation to avoid colliding key tags.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-huque-dnsop-keytags-00
+    docid:
+    - id: draft-huque-dnsop-keytags-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-huque-dnsop-keytags-00
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-huque-dnsop-keytags-01
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
