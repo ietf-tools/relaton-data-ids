@@ -13,12 +13,16 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: <p>This document describes a simple "index table" data structure and its
-    associated Information Centric Networking (ICN) data objects for organizing a
-    set of primitive ICN data objects into a large, File- Like ICN Collection (FLIC).
-    At the core of this collection is a _manifest_ which acts as the collection's
-    root node. The manifest contains an index table with pointers, each pointer being
-    a hash value pointing to either a final data block or another index table node.</p>
+- content: <p>This document describes how to encode an application data objet into
+    a structured _manifest_ using Information Centric Networking (ICN) data objects,
+    creating a File-Like ICN Collection (FLIC). The manifest is an "index table" of
+    objects that make up the manifest itself and the application data. It records
+    the hash value (content object hash) of each item so a consumer using the manifest
+    may request each piece by a complete hash name. The manifest is hierarchical and
+    may be encoded into realtively small ICN objects to fit within network MTU sizes.
+    FLIC has several methods to guide a consumer in constructing appropriate Interest
+    names based on the manifest. It also supports encryption of the manifest data.
+    FLIC may be used in CCNx or Named Data Networking, or other ICNs.</p>
   language:
   - en
   script:
@@ -94,6 +98,16 @@ relation:
       primary: true
     formattedref:
       content: draft-irtf-icnrg-flic-06
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-irtf-icnrg-flic-07
+    docid:
+    - id: draft-irtf-icnrg-flic-07
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-irtf-icnrg-flic-07
       format: text/plain
 ext:
   schema-version: v1.0.1

@@ -1,0 +1,51 @@
+---
+schema-version: v1.2.3
+id: draft-white-intarea-reordering
+title:
+- content: Proposal for Updates to Guidance on Packet Reordering
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-white-intarea-reordering
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: <p>Several link technology standards mandate that equipment guarantee in-order
+    delivery of layer 2 frames, apparently due to a belief that this is required by
+    higher layer protocols. In addition, certain link types can introduce out-of-order
+    arrivals at the end of the layer 2 link, which the receiving equipment is required
+    to rectify by delaying higher sequenced frames until all lower sequenced frames
+    can be delivered or are deemed lost. The delaying of higher sequenced frames is
+    generally done without any knowledge of the higher layer protocols in use, let
+    alone any knowledge of higher layer protocol contexts (e.g. TCP connections) in
+    the case that the layer 2 link is carrying a multiplex of such contexts. It could,
+    for example, be the case that all of the higher sequenced frames being delayed
+    are carrying packets for different layer 4 contexts than a single lower- sequenced
+    frame that triggered the delay. The result is that this "re-sequencing" operation
+    can introduce delays that result in degradation of performance rather than improving
+    it. Moreover, modern, performant TCP and QUIC implementations support features
+    that significantly improve their tolerance to out-of-order delivery. This draft
+    is intended to promote an analysis and discussion of the sensitivity of modern
+    protocols to out-of-order delivery, and to potentially develop new guidance to
+    layer 2 technology standards regarding the need to assure in-order delivery.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-white-intarea-reordering-00
+    docid:
+    - id: draft-white-intarea-reordering-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-white-intarea-reordering-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
