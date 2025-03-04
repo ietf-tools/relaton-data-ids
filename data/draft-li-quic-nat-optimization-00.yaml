@@ -1,0 +1,146 @@
+---
+schema-version: v1.2.3
+id: draft-li-quic-nat-optimization-00
+title:
+- content: QUIC NAT
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-li-quic-nat-optimization-00
+  type: src
+type: standard
+docid:
+- id: draft-li-quic-nat-optimization-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.li-quic-nat-optimization
+  type: IETF
+  scope: anchor
+docnumber: I-D.li-quic-nat-optimization
+date:
+- type: published
+  value: '2025-03-03'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Zhiqiang
+          language:
+          - en
+        - language:
+          - en
+          initial: Z
+        formatted_initials:
+          content: Z.
+          language:
+          - en
+      surname:
+        content: Li
+        language:
+        - en
+      completename:
+        content: Zhiqiang Li
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: China Mobile
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Wei
+          language:
+          - en
+        - language:
+          - en
+          initial: W
+        formatted_initials:
+          content: W.
+          language:
+          - en
+      surname:
+        content: Cheng
+        language:
+        - en
+      completename:
+        content: Wei Cheng
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Centec
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Junjie
+          language:
+          - en
+        - language:
+          - en
+          initial: J
+        formatted_initials:
+          content: J.
+          language:
+          - en
+      surname:
+        content: Wang
+        language:
+        - en
+      completename:
+        content: Junjie Wang
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Centec
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2025-03-03'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>QUIC uses UDP as its transport layer protocol. Many existing NAT routers
+    rely on observing TCP SYN, ACK, and FIN packets to determine the establishment
+    and termination of connections, thereby precisely maintaining the lifecycle of
+    NAT mapping entries. For QUIC, NAT devices can only manage mapping entries based
+    on ordinary UDP aging mechanisms, which may cause NAT entries for long-lived QUIC
+    connections to be prematurely aged and re-bound, resulting in changes to source
+    ports. This document proposes a solution that extends the IP header options field
+    to identify QUIC connections, facilitating NAT devices that do not recognize QUIC
+    to accurately determine the lifecycle of QUIC connections and prevent random aging
+    and re-mapping of long-lived QUIC connections.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-li-quic-nat-optimization-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

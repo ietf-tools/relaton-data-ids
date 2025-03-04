@@ -1,0 +1,43 @@
+---
+schema-version: v1.2.3
+id: draft-li-quic-nat-optimization
+title:
+- content: QUIC NAT
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-li-quic-nat-optimization
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>QUIC uses UDP as its transport layer protocol. Many existing NAT routers
+    rely on observing TCP SYN, ACK, and FIN packets to determine the establishment
+    and termination of connections, thereby precisely maintaining the lifecycle of
+    NAT mapping entries. For QUIC, NAT devices can only manage mapping entries based
+    on ordinary UDP aging mechanisms, which may cause NAT entries for long-lived QUIC
+    connections to be prematurely aged and re-bound, resulting in changes to source
+    ports. This document proposes a solution that extends the IP header options field
+    to identify QUIC connections, facilitating NAT devices that do not recognize QUIC
+    to accurately determine the lifecycle of QUIC connections and prevent random aging
+    and re-mapping of long-lived QUIC connections.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-li-quic-nat-optimization-00
+    docid:
+    - id: draft-li-quic-nat-optimization-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-li-quic-nat-optimization-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

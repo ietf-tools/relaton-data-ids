@@ -2,8 +2,8 @@
 schema-version: v1.2.3
 id: draft-ietf-ace-workflow-and-params
 title:
-- content: Alternative Workflow and OAuth Parameters for the Authentication and Authorization
-    for Constrained Environments (ACE) Framework
+- content: Short Distribution Chain (SDC) Workflow and New OAuth Parameters for the
+    Authentication and Authorization for Constrained Environments (ACE) Framework
   language:
   - en
   script:
@@ -14,18 +14,21 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document updates the Authentication and Authorization for Constrained
-    Environments Framework (ACE, RFC 9200) as follows. First, it defines a new, alternative
-    workflow that the authorization server can use for uploading an access token to
-    a resource server on behalf of the client. Second, it defines new parameters and
-    encodings for the OAuth 2.0 token endpoint at the authorization server. Third,
-    it defines a method for the ACE framework to enforce bidirectional access control
-    by means of a single access token. Fourth, it amends two of the requirements on
-    profiles of the framework. Finally, it deprecates the original payload format
-    of error responses that convey an error code, when CBOR is used to encode message
-    payloads. For such error responses, it defines a new payload format aligned with
-    RFC 9290, thus updating in this respect also the profiles of ACE defined in RFC
-    9202, RFC 9203, and RFC 9431.</p>"
+- content: <p>This document updates the Authentication and Authorization for Constrained
+    Environments Framework (ACE, RFC 9200) as follows. (1) It defines the Short Distribution
+    Chain (SDC) workflow that the authorization server can use for uploading an access
+    token to a resource server on behalf of the client. (2) For the OAuth 2.0 token
+    endpoint, it defines new parameters and encodings, and extends the semantics of
+    the "ace_profile" parameter. (3) It defines how the client and the authorization
+    server can coordinate on the exchange of the client's and resource server's public
+    authentication credentials, when those can be transported by value or identified
+    by reference; this extends the semantics of the "rs_cnf" parameter for the OAuth
+    2.0 token endpoint, thus updating RFC 9201. (4) It amends two of the requirements
+    on profiles of the framework. (5) It deprecates the original payload format of
+    error responses conveying an error code, when CBOR is used to encode message payloads.
+    For those responses, it defines a new payload format aligned with RFC 9290, thus
+    updating in this respect also the profiles defined in RFC 9202, RFC 9203, and
+    RFC 9431.</p>
   language:
   - en
   script:
@@ -71,6 +74,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-ace-workflow-and-params-03
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-ace-workflow-and-params-04
+    docid:
+    - id: draft-ietf-ace-workflow-and-params-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-ace-workflow-and-params-04
       format: text/plain
 ext:
   schema-version: v1.0.1

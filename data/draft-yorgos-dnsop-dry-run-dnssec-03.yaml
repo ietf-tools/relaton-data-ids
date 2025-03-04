@@ -1,0 +1,157 @@
+---
+schema-version: v1.2.3
+id: draft-yorgos-dnsop-dry-run-dnssec-03
+title:
+- content: dry-run DNSSEC
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-yorgos-dnsop-dry-run-dnssec-03
+  type: src
+type: standard
+docid:
+- id: draft-yorgos-dnsop-dry-run-dnssec-03
+  type: Internet-Draft
+  primary: true
+- id: I-D.yorgos-dnsop-dry-run-dnssec
+  type: IETF
+  scope: anchor
+docnumber: I-D.yorgos-dnsop-dry-run-dnssec
+date:
+- type: published
+  value: '2025-03-03'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Yorgos
+          language:
+          - en
+        - language:
+          - en
+          initial: "Y"
+        formatted_initials:
+          content: Y.
+          language:
+          - en
+      surname:
+        content: Thessalonikefs
+        language:
+        - en
+      completename:
+        content: Yorgos Thessalonikefs
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: NLnet Labs
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Willem
+          language:
+          - en
+        - language:
+          - en
+          initial: W
+        formatted_initials:
+          content: W.
+          language:
+          - en
+      surname:
+        content: Toorop
+        language:
+        - en
+      completename:
+        content: Willem Toorop
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: NLnet Labs
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Roy
+          language:
+          - en
+        - language:
+          - en
+          initial: R
+        formatted_initials:
+          content: R.
+          language:
+          - en
+      surname:
+        content: Arends
+        language:
+        - en
+      completename:
+        content: Roy Arends
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: ICANN
+  role:
+  - type: author
+version:
+- draft: '03'
+revdate: '2025-03-03'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: <p>This document describes a method called "dry-run DNSSEC" that allows
+    for testing DNSSEC deployments without affecting the DNS service in case of DNSSEC
+    errors. It accomplishes that by introducing new DS Type Digest Algorithms that
+    when used in a DS record, referred to as dry-run DS, signal to validating resolvers
+    that dry-run DNSSEC is used for the zone. DNSSEC errors are then reported with
+    DNS Error Reporting, but any bogus responses to clients are withheld. Instead,
+    validating resolvers fallback from dry-run DNSSEC and provide the response that
+    would have been answered without the presence of a dry- run DS. A further EDNS
+    option is presented for clients to opt-in for dry-run DNSSEC errors and allow
+    for end-to-end DNSSEC testing.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-yorgos-dnsop-dry-run-dnssec-00
+    docid:
+    - id: draft-yorgos-dnsop-dry-run-dnssec-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-yorgos-dnsop-dry-run-dnssec-00
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-yorgos-dnsop-dry-run-dnssec-03
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
