@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-ietf-jose-json-proof-token
 title:
-- content: JSON Proof Token
+- content: JSON Proof Token and CBOR Proof Token
   language:
   - en
   script:
@@ -18,7 +18,9 @@ abstract:
     as base64url-encoded JSON objects that are used as the payloads of a JSON Web
     Proof (JWP) structure, enabling them to be digitally signed and selectively disclosed.
     JPTs also support reusability and unlinkability when using Zero-Knowledge Proofs
-    (ZKPs).</p>"
+    (ZKPs). A CBOR-based representation of JPTs is also defined, called a CBOR Proof
+    Token (CPT). It has the same properties of JPTs, but uses the JSON Web Proof (JWP)
+    CBOR Serialization, rather than the JSON-based JWP Compact Serialization.</p>"
   language:
   - en
   script:
@@ -104,6 +106,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-jose-json-proof-token-07
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-jose-json-proof-token-08
+    docid:
+    - id: draft-ietf-jose-json-proof-token-08
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-jose-json-proof-token-08
       format: text/plain
 ext:
   schema-version: v1.0.1
