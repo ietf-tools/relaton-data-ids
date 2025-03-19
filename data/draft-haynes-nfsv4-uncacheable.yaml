@@ -13,15 +13,15 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>The Network File System v4.2 (NFSv4.2) allows a client to cache both
-    the metadata and the data for a file object. It can also cache the metadata for
-    a directory object. Caching the dirents (i.e., the metadata) allows the client
-    to avoid querying the server to refresh information. But this defeats the server
-    checking to see if the user has permission to view the dirent's attributes. Caching
-    the data can cause performance impacts if the page cache hit rate is low.. This
-    document introduces a new file attribute called uncacheable which indicates that
-    the client MUST NOT cache the metadata or data for that dirent. This document
-    extends NFSv4.2 (see RFC7863).</p>"
+- content: "<p>The Network File System version 4.2 (NFSv4.2) allows a client to cache
+    both metadata and data for file objects, as well as metadata for directory objects.
+    While caching directory entries (dirents) can improve performance, it can also
+    prevent the server from enforcing access control on individual dirents. Similarly,
+    caching file data can lead to performance issues if the cache hit rate is low.
+    This document introduces a new uncacheable attribute for NFSv4. Files and dirents
+    marked as uncacheable MUST NOT be stored in client-side caches. This ensures data
+    consistency and integrity by requiring clients to always retrieve the most recent
+    data directly from the server. This document extends NFSv4.2 (see RFC7862).</p>"
   language:
   - en
   script:
@@ -47,6 +47,16 @@ relation:
       primary: true
     formattedref:
       content: draft-haynes-nfsv4-uncacheable-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-haynes-nfsv4-uncacheable-02
+    docid:
+    - id: draft-haynes-nfsv4-uncacheable-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-haynes-nfsv4-uncacheable-02
       format: text/plain
 ext:
   schema-version: v1.0.1
