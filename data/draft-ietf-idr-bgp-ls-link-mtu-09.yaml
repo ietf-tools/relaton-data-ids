@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-idr-bgp-ls-link-mtu-08
+id: draft-ietf-idr-bgp-ls-link-mtu-09
 title:
 - content: Signaling Maximum Transmission Unit (MTU) using BGP-LS
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-bgp-ls-link-mtu-08
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-bgp-ls-link-mtu-09
   type: src
 type: standard
 docid:
-- id: draft-ietf-idr-bgp-ls-link-mtu-08
+- id: draft-ietf-idr-bgp-ls-link-mtu-09
   type: Internet-Draft
   primary: true
 - id: I-D.ietf-idr-bgp-ls-link-mtu
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.ietf-idr-bgp-ls-link-mtu
 date:
 - type: published
-  value: '2024-09-17'
+  value: '2025-03-21'
 contributor:
 - person:
     name:
@@ -137,20 +137,22 @@ contributor:
   role:
   - type: author
 version:
-- draft: '08'
-revdate: '2024-09-17'
+- draft: '09'
+revdate: '2025-03-21'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>BGP Link State (BGP-LS) describes a mechanism by which link-state and
-    TE information can be collected from networks and shared with external components
-    using the BGP routing protocol. The centralized controller (PCE/SDN) completes
-    the service path calculation based on the information transmitted by the BGP-LS
-    and delivers the result to the Path Computation Client (PCC) through the PCEP
-    or BGP protocol. This document specifies the extensions to BGP Link State (BGP-LS)
-    to carry maximum transmission unit (MTU) messages of link. The PCE/SDN calculates
+- content: "<p>Segment Routing (SR) leverages the source routing paradigm, which can
+    be directly applied to the MPLS architecture and IPv6 architecture, with a new
+    type of routing header. Since multiple labels or SRv6 SIDs are pushed in the packets,
+    it is more likely that the packet size exceeds the path MTU of SR tunnel. However,
+    SR uses the IGP as the routing protocol and does not support the negotiation of
+    the Path MTU. BGP Link State (BGP-LS) describes a mechanism by which link-state
+    and TE information can be collected from networks and shared with external components
+    using the BGP routing protocol. This document specifies the extensions to BGP-LS
+    to carry MTU information of link. The centralized controller (PCE/SDN) calculates
     the Path MTU while completing the service path calculation based on the information
     transmitted by the BGP-LS.</p>"
   language:
@@ -169,16 +171,6 @@ relation:
     formattedref:
       content: draft-ietf-idr-bgp-ls-link-mtu-03
       format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-idr-bgp-ls-link-mtu-09
-    docid:
-    - id: draft-ietf-idr-bgp-ls-link-mtu-09
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-idr-bgp-ls-link-mtu-09
-      format: text/plain
 series:
 - type: main
   title:
@@ -188,7 +180,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-idr-bgp-ls-link-mtu-08
+  number: draft-ietf-idr-bgp-ls-link-mtu-09
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
