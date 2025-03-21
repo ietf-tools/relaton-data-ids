@@ -1,0 +1,102 @@
+---
+schema-version: v1.2.3
+id: draft-gueron-cfrg-dndkgcm-02
+title:
+- content: Double Nonce Derive Key AES-GCM (DNDK-GCM)
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-gueron-cfrg-dndkgcm-02
+  type: src
+type: standard
+docid:
+- id: draft-gueron-cfrg-dndkgcm-02
+  type: Internet-Draft
+  primary: true
+- id: I-D.gueron-cfrg-dndkgcm
+  type: IETF
+  scope: anchor
+docnumber: I-D.gueron-cfrg-dndkgcm
+date:
+- type: published
+  value: '2025-03-21'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Shay
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Gueron
+        language:
+        - en
+      completename:
+        content: Shay Gueron
+        language:
+        - en
+  role:
+  - type: author
+version:
+- draft: '02'
+revdate: '2025-03-21'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: <p>This document specifies an authenticated encryption algorithm called
+    Double Nonce Derive Key AES-GCM (DNDK-GCM). It operates with a 32- byte root key
+    and is designed to encrypt with a 24-byte random nonce and optionally to provide
+    for key commitment. Encryption takes the root key and a 15-byte portion of the
+    random nonce, and derives a fresh 32-byte encryption key and (optionally) a key
+    commitment value. Then, it invokes AES-GCM with the derived key and the remaining
+    bytes of the nonce, and outputs the ciphertext, authentication tag and the key
+    commitment value. Although this is not the primary use case, it is also possible
+    to use DNDK-GCM with a non-repeating but non-random nonce (i.e., a "counter- based
+    nonce"). The low collision probability in a collection of 24-byte random nonces
+    and the per-nonce derivation of an encryption key extend the lifetime of the root
+    key, and the scheme can support processing up to 2^64 bytes under a given root
+    key. DNDK-GCM introduces a relatively small overhead compared to using AES-GCM
+    directly, and its security relies only on the standard assumption that AES acts
+    as a pseudorandom permutation.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-gueron-cfrg-dndkgcm-00
+    docid:
+    - id: draft-gueron-cfrg-dndkgcm-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-gueron-cfrg-dndkgcm-00
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-gueron-cfrg-dndkgcm-02
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
