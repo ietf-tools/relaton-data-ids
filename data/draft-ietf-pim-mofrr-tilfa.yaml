@@ -3,7 +3,7 @@ schema-version: v1.2.3
 id: draft-ietf-pim-mofrr-tilfa
 title:
 - content: Multicast-only Fast Reroute Based on Topology Independent Loop-free Alternate
-    Fast Reroute
+    (TI-LFA) Fast Reroute
   language:
   - en
   script:
@@ -16,19 +16,13 @@ docid:
 abstract:
 - content: "<p>This document specifies the use of Topology Independent Loop-Free Alternate
     (TI-LFA) mechanisms with Multicast Only Fast ReRoute (MoFRR) for Protocol Independent
-    Multicast (PIM). The TI-LFA mechanism is designed for standard link-state Interior
-    Gateway Protocol (IGP) shortest path and Segment Routing (SR) scenarios. TI- LFA
-    provides fast reroute protection for unicast traffic in IP networks by precomputing
-    backup paths that avoid potential failures. By integrating TI-LFA with MoFRR,
-    this document extends the benefits of fast reroute mechanisms to multicast traffic,
-    enabling enhanced resilience and minimized packet loss in multicast networks.
-    The document outlines the necessary protocol extensions and operational considerations
-    to implement TI-LFA in conjunction with MoFRR for PIM, ensuring that multicast
-    traffic is rapidly rerouted in the event of a failure. This document uses the
-    backup path computed by TI-LFA through IGP as a secondary Upstream Multicast Hop
-    (UMH) for PIM. By using the TI-LFA backup path to send PIM secondary join messages
-    hop- by-hop, it achieves the generation of a fast reroute backup path for PIM
-    multicast.</p>"
+    Multicast (PIM). The TI-LFA provides fast reroute protection for unicast traffic
+    in IP networks by precomputing backup paths that avoid potential failures. By
+    integrating TI-LFA with MoFRR, this document extends the benefits of fast reroute
+    mechanisms to multicast traffic, enabling enhanced resilience and minimized packet
+    loss in multicast networks. The document outlines an optional approach to implement
+    TI-LFA in conjunction with MoFRR for PIM, ensuring that multicast traffic is rapidly
+    rerouted in the event of a failure.</p>"
   language:
   - en
   script:
@@ -134,6 +128,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-pim-mofrr-tilfa-09
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-pim-mofrr-tilfa-10
+    docid:
+    - id: draft-ietf-pim-mofrr-tilfa-10
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-pim-mofrr-tilfa-10
       format: text/plain
 ext:
   schema-version: v1.0.1
