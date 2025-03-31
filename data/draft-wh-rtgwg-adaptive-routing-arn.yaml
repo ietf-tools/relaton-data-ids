@@ -22,7 +22,10 @@ abstract:
     in a timely and accurate manner to enforce AR on other nodes, thus avoiding exacerbating
     congestion on the reported path. This document specifies Adaptive Routing Notification
     (ARN), a general mechanism to proactively disseminate congestion detection and
-    congestion elimination information for remote nodes to perform re-routing policies.</p>"
+    congestion elimination information for remote nodes to perform re-routing policies.
+    Particularly for AI workloads like DeepSeek's MoE models that exhibit dynamic
+    all-to-all communication patterns with bursty traffic characteristics, such mechanisms
+    become crucial to enable immediate network response to transient congestion conflicts.</p>"
   language:
   - en
   script:
@@ -68,6 +71,16 @@ relation:
       primary: true
     formattedref:
       content: draft-wh-rtgwg-adaptive-routing-arn-03
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-wh-rtgwg-adaptive-routing-arn-04
+    docid:
+    - id: draft-wh-rtgwg-adaptive-routing-arn-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-wh-rtgwg-adaptive-routing-arn-04
       format: text/plain
 ext:
   schema-version: v1.0.1
