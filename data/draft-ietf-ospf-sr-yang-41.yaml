@@ -1,35 +1,62 @@
 ---
 schema-version: v1.2.3
-id: draft-fregly-dnsop-slh-dsa-mtl-dnssec-02
+id: draft-ietf-ospf-sr-yang-41
 title:
-- content: Stateless Hash-Based Signatures in Merkle Tree Ladder Mode (SLH-DSA-MTL)
-    for DNSSEC
+- content: A YANG Data Model for OSPF Segment Routing over the MPLS Data Plane
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-fregly-dnsop-slh-dsa-mtl-dnssec-02
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-ospf-sr-yang-41
   type: src
 type: standard
 docid:
-- id: draft-fregly-dnsop-slh-dsa-mtl-dnssec-02
+- id: draft-ietf-ospf-sr-yang-41
   type: Internet-Draft
   primary: true
-- id: I-D.fregly-dnsop-slh-dsa-mtl-dnssec
+- id: I-D.ietf-ospf-sr-yang
   type: IETF
   scope: anchor
-docnumber: I-D.fregly-dnsop-slh-dsa-mtl-dnssec
+docnumber: I-D.ietf-ospf-sr-yang
 date:
 - type: published
-  value: '2024-07-08'
+  value: '2025-04-02'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Andrew
+        - content: Yingzhen
+          language:
+          - en
+        - language:
+          - en
+          initial: "Y"
+        formatted_initials:
+          content: Y.
+          language:
+          - en
+      surname:
+        content: Qu
+        language:
+        - en
+      completename:
+        content: Yingzhen Qu
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Futurewei Technologies
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Acee
           language:
           - en
         - language:
@@ -40,117 +67,85 @@ contributor:
           language:
           - en
       surname:
-        content: Fregly
+        content: Lindem
         language:
         - en
       completename:
-        content: Andrew Fregly
+        content: Acee Lindem
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Verisign Labs
+        - content: LabN Consulting, L.L.C.
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Joe
+        - content: Zhaohui
           language:
           - en
+        - language:
+          - en
+          initial: Z
         - language:
           - en
           initial: J
         formatted_initials:
-          content: J.
+          content: Z. J.
           language:
           - en
       surname:
-        content: Harvey
+        content: Zhang
         language:
         - en
       completename:
-        content: Joe Harvey
+        content: Zhaohui (Jeffrey) Zhang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Verisign Labs
+        - content: Juniper Networks
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Burt
-          language:
-          - en
         - language:
           - en
-          initial: B
+          initial: H
         formatted_initials:
-          content: B.
+          content: H.
           language:
           - en
       surname:
-        content: Kaliski
+        content: Chen
         language:
         - en
       completename:
-        content: Burt Kaliski
+        content: Ing-Wher (Helen) Chen
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Verisign Labs
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Duane
-          language:
-          - en
-        - language:
-          - en
-          initial: D
-        formatted_initials:
-          content: D.
-          language:
-          - en
-      surname:
-        content: Wessels
-        language:
-        - en
-      completename:
-        content: Duane Wessels
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Verisign Labs
+        - content: The MITRE Corporation
   role:
   - type: author
 version:
-- draft: '02'
-revdate: '2024-07-08'
+- draft: '41'
+revdate: '2025-04-02'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document describes how to apply the Stateless Hash-Based Digital
-    Signature Algorithm in Merkle Tree Ladder mode to the DNS Security Extensions.
-    This combination is referred to as the SLH-DSA-MTL Signature scheme. This document
-    describes how to specify SLH-DSA-MTL keys and signatures in DNSSEC. It uses both
-    the SHA2 and SHAKE family of hash functions. This document also provides guidance
-    for use of EDNS(0) in signature retrieval.</p>"
+- content: "<p>This document defines a YANG data model that can be used to manage
+    OSPF Extensions for Segment Routing over the MPLS data plane.</p>"
   language:
   - en
   script:
@@ -159,23 +154,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-fregly-dnsop-slh-dsa-mtl-dnssec-01
+    id: draft-ietf-ospf-sr-yang-12
     docid:
-    - id: draft-fregly-dnsop-slh-dsa-mtl-dnssec-01
+    - id: draft-ietf-ospf-sr-yang-12
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-fregly-dnsop-slh-dsa-mtl-dnssec-01
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-fregly-dnsop-slh-dsa-mtl-dnssec-04
-    docid:
-    - id: draft-fregly-dnsop-slh-dsa-mtl-dnssec-04
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-fregly-dnsop-slh-dsa-mtl-dnssec-04
+      content: draft-ietf-ospf-sr-yang-12
       format: text/plain
 series:
 - type: main
@@ -186,7 +171,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-fregly-dnsop-slh-dsa-mtl-dnssec-02
+  number: draft-ietf-ospf-sr-yang-41
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
