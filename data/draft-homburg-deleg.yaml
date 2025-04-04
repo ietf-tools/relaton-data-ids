@@ -18,14 +18,14 @@ abstract:
     a _deleg label in the apex of the delegating zone. This authoritative delegation
     point can be aliased to other names using CNAME and DNAME. This document proposes
     a new DNS resource record type, IDELEG, which is based on the SVCB and inherits
-    extensibility from it. Support in recursive resolvers suffices for the mechanism
-    to be fully functional. The number of subsequent interactions between the recursive
-    resolver and the authoritative name servers is comparable with those for DNS Query
-    Name Minimisation. Additionally, but not required, support in the authoritative
-    name servers enables optimized behavior with reduced (simultaneous) queries. None,
-    mixed or full deployment of the mechanism on authoritative name servers are all
-    fully functional, allowing for the mechanism to be incrementally deployed on the
-    authoritative name servers.</p>"
+    extensibility from it. IDELEG RRsets containing delegation information will be
+    returned in the authority section in referral responses from supportive authoritative
+    name servers. Lack of support in the authoritative name servers, forwarders or
+    other components, does not obstruct obtaining the delegation information for resolvers,
+    as it is originally authoritative information that can be queried for directly.
+    None, mixed or full deployment of the mechanism on authoritative name servers
+    are all fully functional, allowing for the mechanism to be incrementally deployed
+    on the authoritative name servers.</p>"
   language:
   - en
   script:
@@ -41,6 +41,16 @@ relation:
       primary: true
     formattedref:
       content: draft-homburg-deleg-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-homburg-deleg-01
+    docid:
+    - id: draft-homburg-deleg-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-homburg-deleg-01
       format: text/plain
 ext:
   schema-version: v1.0.1
