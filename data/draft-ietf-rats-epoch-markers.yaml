@@ -13,12 +13,16 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: <p>This document defines Epoch Markers as a way to establish a notion of
-    freshness among actors in a distributed system. Epoch Markers are similar to "time
-    ticks" and are produced and distributed by a dedicated system, the Epoch Bell.
-    Systems that receive Epoch Markers do not have to track freshness using their
-    own understanding of time (e.g., via a local real-time clock). Instead, the reception
-    of a certain Epoch Marker establishes a new epoch that is shared between all recipients.</p>
+- content: <p>This document defines Epoch Markers as a means to establish a notion
+    of freshness among actors in a distributed system. Epoch Markers are similar to
+    "time ticks" and are produced and distributed by a dedicated system known as the
+    Epoch Bell. Systems receiving Epoch Markers do not need to track freshness using
+    their own understanding of time (e.g., via a local real-time clock). Instead,
+    the reception of a specific Epoch Marker establishes a new epoch that is shared
+    among all recipients. This document defines Epoch Marker types, including CBOR
+    time tags, RFC 3161 TimeStampToken, nonce-like structures, and a CWT Claim to
+    embed Epoch Markers in RFC 8392 CBOR Web Tokens, which serve as vehicles for signed
+    protocol messages.</p>
   language:
   - en
   script:
@@ -34,6 +38,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-rats-epoch-markers-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-rats-epoch-markers-01
+    docid:
+    - id: draft-ietf-rats-epoch-markers-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-rats-epoch-markers-01
       format: text/plain
 ext:
   schema-version: v1.0.1
