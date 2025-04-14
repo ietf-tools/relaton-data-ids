@@ -2,8 +2,8 @@
 schema-version: v1.2.3
 id: draft-ietf-idr-bgpls-sr-vtn-mt
 title:
-- content: Applicability of BGP-LS with Multi-Topology (MT) for Segment Routing based
-    Network Resource Partitions (NRP)
+- content: Applicability of Border Gateway Protocol - Link State (BGP-LS) with Multi-Topology
+    (MT) for Segment Routing based Network Resource Partitions (NRPs)
   language:
   - en
   script:
@@ -16,19 +16,21 @@ docid:
 abstract:
 - content: "<p>Enhanced VPNs aim to deliver VPN services with enhanced characteristics
     to customers who have specific requirements on their connectivity, such as guaranteed
-    resources, latency, or jitter. Enhanced VPNs require integration between the overlay
-    VPN connectivity and the characteristics provided by the underlay network. A Network
-    Resource Partition (NRP) is a subset of the network resources and associated policies
-    on each of a connected set of links in the underlay network. An NRP could be used
-    as the underlay to support one or a group of enhanced VPN services. When Segment
-    Routing is used as the data plane of NRPs, each NRP can be allocated with a group
-    of Segment Identifiers (SIDs) to identify the topology and resource attributes
-    of network segments in the NRP. The association between the network topology,
-    the network resource attributes and the SR SIDs may need to be distributed to
-    a centralized network controller. In some network scenarios, each NRP can be associated
-    with a unique logical network topology. This document describes a mechanism to
-    distribute the information of SR based NRPs using BGP-Link State (BGP-LS) with
-    Multi-Topology (MT).</p>"
+    resources, and bounded latency or jitter. Enhanced VPNs require integration between
+    the overlay VPN connectivity and the characteristics provided by the underlay
+    network. A Network Resource Partition (NRP) is a subset of the network resources
+    and associated policies on each of a connected set of links in the underlay network.
+    An NRP could be used as the underlay to support one or a group of enhanced VPN
+    services. When Segment Routing (SR) is used for building NRPs, each NRP can be
+    allocated with a group of Segment Identifiers (SIDs) to identify the topology
+    and resource attributes of network segments in the NRP. In some network scenarios,
+    each NRP can be associated with a unique logical network topology. When a centralized
+    network controller is used for NRP-specific constraint-based path computation,
+    especially when an NRP spans multiple IGP areas or multiple Autonomous Systems
+    (ASes), Border Gateway Protocol - Link State (BGP-LS) is needed to advertise the
+    NRP topology and associated resource information to the network controller. This
+    document describes a mechanism to distribute the information of SR based NRPs
+    using BGP-Link State (BGP-LS) with Multi-Topology (MT).</p>"
   language:
   - en
   script:
@@ -114,6 +116,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-idr-bgpls-sr-vtn-mt-07
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-idr-bgpls-sr-vtn-mt-08
+    docid:
+    - id: draft-ietf-idr-bgpls-sr-vtn-mt-08
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-idr-bgpls-sr-vtn-mt-08
       format: text/plain
 ext:
   schema-version: v1.0.1
