@@ -2,8 +2,7 @@
 schema-version: v1.2.3
 id: draft-smyslov-ipsecme-ikev2-reliable-transport
 title:
-- content: Use of Reliable Transport in the Internet Key Exchange Protocol Version
-    2 (IKEv2)
+- content: Separate Transports for IKE and ESP
   language:
   - en
   script:
@@ -14,13 +13,13 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>The Internet Key Exchange protocol version 2 (IKE2) can operate either
+- content: "<p>The Internet Key Exchange protocol version 2 (IKEv2) can operate either
     over unreliable (UDP) transport or over reliable (TCP) transport. If TCP is used,
     then IPsec tunnels created by IKEv2 also use TCP. This document specifies how
-    to decouple IKEv2 and IPsec transports, so that IKEv2 can operate over TCP, while
+    to decouple IKEv2 and IPsec transports so that IKEv2 can operate over TCP, while
     IPsec tunnels use unreliable transport. This feature allows IKEv2 to effectively
-    exchange large blobs of data (e.g. when post-quantum algorithms are employed)
-    while avoiding performance problems which arise when TCP is used for IPsec.</p>"
+    exchange large blobs of data (e.g., when post-quantum algorithms are employed)
+    while avoiding performance problems that arise when IPsec uses TCP.</p>"
   language:
   - en
   script:
@@ -66,6 +65,16 @@ relation:
       primary: true
     formattedref:
       content: draft-smyslov-ipsecme-ikev2-reliable-transport-03
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-smyslov-ipsecme-ikev2-reliable-transport-04
+    docid:
+    - id: draft-smyslov-ipsecme-ikev2-reliable-transport-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-smyslov-ipsecme-ikev2-reliable-transport-04
       format: text/plain
 ext:
   schema-version: v1.0.1
