@@ -13,16 +13,16 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This specification defines an extension to the OAuth 2.0 Authorization
-    Framework [RFC6749] to enable AI agents to obtain delegated access tokens to act
-    on behalf of users. It introduces a new authorization request parameter, requested_agent,
-    and defines a grant type, urn:ietf:params:oauth:grant-type:agent- authorization_code,
-    specifically designed to facilitate explicit user consent for an agent's actions
-    and enable the agent to exchange an authorization code for a delegated access
-    token using its own authentication credentials (an agent token). The extension
-    ensures secure delegation, explicit user consent captured at the authorization
-    server, and enhanced auditability through specific token claims that document
-    the delegation path from the user to the agent acting via a client application.</p>"
+- content: "<p>This specification extends the OAuth 2.0 Authorization Framework [RFC6749]
+    to enable AI agents to securely obtain access tokens for acting on behalf of users.
+    It introduces the *requested_actor* parameter in authorization requests to identify
+    the specific agent requiring delegation and the *actor_token* parameter in token
+    requests to authenticate the agent during the exchange of an authorization code
+    for an access token. The flow can be initiated by a resource server challenge,
+    ensuring that user consent is obtained dynamically when access is attempted. This
+    extension ensures secure delegation with explicit user consent, streamlines the
+    authorization flow, and enhances auditability through access token claims that
+    document the delegation chain from the user to the agent via a client application.</p>"
   language:
   - en
   script:
@@ -38,6 +38,16 @@ relation:
       primary: true
     formattedref:
       content: draft-oauth-ai-agents-on-behalf-of-user-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-oauth-ai-agents-on-behalf-of-user-01
+    docid:
+    - id: draft-oauth-ai-agents-on-behalf-of-user-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-oauth-ai-agents-on-behalf-of-user-01
       format: text/plain
 ext:
   schema-version: v1.0.1
