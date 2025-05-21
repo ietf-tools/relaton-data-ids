@@ -1,0 +1,44 @@
+---
+schema-version: v1.2.3
+id: draft-ietf-lamps-keyusage-crl-validation
+title:
+- content: Clarification to processing Key Usage values during CRL validation
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-ietf-lamps-keyusage-crl-validation
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>RFC 5280 defines the profile of X.509 certificates and certificate
+    revocation lists (CRLs) for use in the Internet. This profile requires that certificates
+    which certify keys for signing CRLs contain the key usage extension with the cRLSign
+    bit asserted. Additionally, RFC 5280 defines steps for the validation of CRLs.
+    While there is a requirement for CRL validators to verify that the cRLSign bit
+    is asserted in the keyUsage extension of the CRL issuer's certificate, this document
+    clarifies the requirement for relying parties to also verify the presence of the
+    keyUsage extension in the CRL issuer's certificate. This check remediates a potential
+    security issue that arises when relying parties accept a CRL which is signed by
+    a certificate with no keyUsage extension, and therefore does not explicitly have
+    the cRLSign bit asserted.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-ietf-lamps-keyusage-crl-validation-00
+    docid:
+    - id: draft-ietf-lamps-keyusage-crl-validation-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-lamps-keyusage-crl-validation-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
