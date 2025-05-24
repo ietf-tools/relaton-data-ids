@@ -13,10 +13,17 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document describes an architecture to construct a Point-to- Multipoint
-    (P2MP) tree to deliver Multi-point services in a Segment Routing domain. A SR
-    P2MP tree is constructed by stitching a set of Replication segments. A SR Point-to-Multipoint
-    (SR P2MP) Policy defines a P2MP tree and a PCE computes and instantiates the tree.</p>"
+- content: "<p>Point-to-Multipoint (P2MP) policy enables creation of P2MP trees for
+    efficient multi-point packet delivery in a Segment Routing (SR) domain. A SR P2MP
+    Policy consists of Candidate Paths (CP) which define the topology of P2MP tree
+    instances in each Candidate Path. A P2MP tree instance is instantiated by a set
+    of Replication segments. This document specifies the architecture, signaling,
+    and procedures for SR P2MP Policies within Segment Routing over MPLS (SR-MPLS)
+    and Segment Routing over IPv6 (SRv6) dataplane. It defines the P2MP Policy construct,
+    the roles of the root and leaf nodes, Candidate Paths and and how P2MP trees using
+    Replication Segments are instantiated and maintained. Additionally, it describes
+    the required extensions for Path Computation Element (PCE) to support P2MP path
+    computation and provisioning.</p>"
   language:
   - en
   script:
@@ -142,6 +149,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-pim-sr-p2mp-policy-11
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-pim-sr-p2mp-policy-12
+    docid:
+    - id: draft-ietf-pim-sr-p2mp-policy-12
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-pim-sr-p2mp-policy-12
       format: text/plain
 ext:
   schema-version: v1.0.1
