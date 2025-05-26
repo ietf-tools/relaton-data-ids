@@ -1,19 +1,19 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-lamps-csr-attestation-08
+id: draft-ietf-lamps-csr-attestation-19
 title:
-- content: Use of Remote Attestation with Certificate Signing Requests
+- content: Use of Remote Attestation with Certification Signing Requests
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-lamps-csr-attestation-08
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-lamps-csr-attestation-19
   type: src
 type: standard
 docid:
-- id: draft-ietf-lamps-csr-attestation-08
+- id: draft-ietf-lamps-csr-attestation-19
   type: Internet-Draft
   primary: true
 - id: I-D.ietf-lamps-csr-attestation
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.ietf-lamps-csr-attestation
 date:
 - type: published
-  value: '2024-03-01'
+  value: '2025-05-25'
 contributor:
 - person:
     name:
@@ -108,28 +108,77 @@ contributor:
         - content: Fraunhofer SIT
   role:
   - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Monty
+          language:
+          - en
+        - language:
+          - en
+          initial: M
+        formatted_initials:
+          content: M.
+          language:
+          - en
+      surname:
+        content: Wiseman
+        language:
+        - en
+      completename:
+        content: Monty Wiseman
+        language:
+        - en
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Ned
+          language:
+          - en
+        - language:
+          - en
+          initial: "N"
+        formatted_initials:
+          content: N.
+          language:
+          - en
+      surname:
+        content: Smith
+        language:
+        - en
+      completename:
+        content: Ned Smith
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Intel Corporation
+  role:
+  - type: author
 version:
-- draft: '08'
-revdate: '2024-03-01'
+- draft: '19'
+revdate: '2025-05-25'
 language:
 - en
 script:
 - Latn
 abstract:
 - content: "<p>A PKI end entity requesting a certificate from a Certification Authority
-    (CA) may wish to offer believable claims about the protections afforded to the
-    corresponding private key, such as whether the private key resides on a hardware
-    security module or the protection capabilities provided by the hardware. This
-    document defines a new PKCS#10 attribute attr-evidence and CRMF extension ext-evidence
-    that allows placing any Evidence data, in any pre-existing format, along with
-    any certificates needed to validate it, into a PKCS#10 or CRMF CSR. Including
-    Evidence along with a CSR can help to improve the assessment of the security posture
-    for the private key, and the trustworthiness properties of the submitted key to
-    the requested certificate profile. These Evidence Claims can include information
-    about the hardware component's manufacturer, the version of installed or running
-    firmware, the version of software installed or running in layers above the firmware,
-    or the presence of hardware components providing specific protection capabilities
-    or shielded locations (e.g., to protect keys).</p>"
+    (CA) may wish to offer trustworthy claims about the platform generating the certification
+    request and the environment associated with the corresponding private key, such
+    as whether the private key resides on a hardware security module. This specification
+    defines an attribute and an extension that allow for conveyance of Evidence and
+    Attestation Results in Certificate Signing Requests (CSRs), such as PKCS#10 or
+    Certificate Request Message Format (CRMF) payloads. This provides an elegant and
+    automatable mechanism for transporting Evidence to a Certification Authority.
+    Including Evidence and Attestation Results along with a CSR can help to improve
+    the assessment of the security posture for the private key, and can help the Certification
+    Authority to assess whether it satisfies the requested certificate profile.</p>"
   language:
   - en
   script:
@@ -138,23 +187,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-lamps-csr-attestation-02
+    id: draft-ietf-lamps-csr-attestation-14
     docid:
-    - id: draft-ietf-lamps-csr-attestation-02
+    - id: draft-ietf-lamps-csr-attestation-14
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-lamps-csr-attestation-02
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-lamps-csr-attestation-19
-    docid:
-    - id: draft-ietf-lamps-csr-attestation-19
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-lamps-csr-attestation-19
+      content: draft-ietf-lamps-csr-attestation-14
       format: text/plain
 series:
 - type: main
@@ -165,7 +204,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-lamps-csr-attestation-08
+  number: draft-ietf-lamps-csr-attestation-19
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
