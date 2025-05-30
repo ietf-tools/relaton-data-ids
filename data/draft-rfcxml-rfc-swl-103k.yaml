@@ -13,209 +13,17 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>What Problems Does This Protocol Solve? The SW103k protocol addresses
-    several challenges that arise when transporting data over networks with limited
-    bandwidth, latency constraints, and data integrity concerns. Specifically, it
-    provides a compression and decompression mechanism designed to: Optimize Bandwidth
-    Utilization: In environments where bandwidth is limited, such as IoT networks,
-    satellite communications, and mobile data transfers, SW103k reduces the amount
-    of data sent over the wire by compressing data in transit, thus saving bandwidth.
-    SW103K Layer 2 Protocol Specification 1. Protocol Stack Positioning text +-----------------------+
-    | Application | +-----------------------+ | HAVI | (Packet Format Layer) +-----------------------+
-    | SW103K | (Data Link Layer) +-----------------------+ | Physical Layer | +-----------------------+
-    2. Frame Format 2.1 SW103K Header (Layer 2) text 0 1 2 3 0 1 2 3 4 5 6 7 8 9 0
-    1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-    | Version | QoS | Batch ID | +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-    | Destination MAC | +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-    | Source MAC | +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-    | EtherType (0x5W3K) | Payload Length | +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-    | merklesw103k Root Hash | | (256-bit) | +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-    2.2 HAVI Packet Format (Encapsulated) text 0 1 2 3 0 1 2 3 4 5 6 7 8 9 0 1 2 3
-    4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-    | HAVI Ver | Priority | Packet ID | +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-    | Timestamp | +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-    | Payload (972 bytes max) | | | +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-    | CRC-16 | +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+ 3. Layer 2 Implementation Examples
-    3.1 Linux Kernel Module (C) c struct sw103k_frame { u8 version; u8 qos; u16 batch_id;
-    u8 dest_mac[ETH_ALEN]; u8 src_mac[ETH_ALEN]; u16 ethertype; u16 payload_len; u8
-    merklesw103k_root[32]; u8 payload[]; } __attribute__((packed)); static netdev_tx_t
-    sw103k_xmit(struct sk_buff *skb, struct net_device *dev) { struct havi_packet
-    *hp = (struct havi_packet *)skb-&gt;data; struct sw103k_frame *sf; /* Batch 103
-    HAVI packets */ if (batch_count == 103) { sf = alloc_skb(sizeof(struct sw103k_frame)
-    + compressed_size); build_merklesw103k_tree(batch, sf-&gt;merklesw103k_root);
-    lz77_compress(batch, sf-&gt;payload); dev_queue_xmit(sf); } } 3.2 FPGA Implementation
-    (Verilog) verilog module sw103k_encoder ( input wire clk, input wire [972*8-1:0]
-    havi_payload, output reg [1518*8-1:0] l2_frame ); reg [31:0] merklesw103k_root;
-    always @(posedge clk) begin // merklesw103k tree computation merklesw103k_root
-    less or equal sha3_256(havi_payload); // Frame assembly l2_frame less or equal
-    { 8'h01, // Version 8'h00, // QoS 16'h0001, // Batch ID 48'hFFFFFFFFFFFF, // Dest
-    MAC 48'hAABBCCDDEEFF, // Source MAC 16'h5W3K, // EtherType merklesw103k_root,
-    lz77_compress(havi_payload) }; end endmodule 3.3 Userspace Daemon (Go) go func
-    processBatch(batch [103]HAVIPacket) []byte { var buf bytes.Buffer // Build merklesw103k
-    tree hashes:= make([][]byte, 103) for i, pkt:= range batch { hashes[i] = sha3.Sum256(pkt.Serialize())
-    } root:= buildmerklesw103kTree(hashes) // Compress comp:= lz77.NewCompressor()
-    for _, pkt:= range batch { comp.Write(pkt.Serialize()) } // Construct L2 frame
-    frame:= SW103KFrame{ Version: 0x1, QoS: 0, BatchID: nextBatchID(), DstMAC: net.HardwareAddr{0xFF,0xFF,0xFF,0xFF,0xFF,0xFF},
-    SrcMAC: localMAC, EtherType: 0x5W3K, merklesw103kRoot: root, Payload: comp.Finish(),
-    } return frame.Serialize() } 4. Layer 2 Specific Features 4.1 MAC Address Handling
-    Multicast Address: 01:23:45:67:89:5W for control frames Address Resolution: Custom
-    ARP-like protocol using batch IDs Promiscuous Mode: Special batch ID 0xFFFF for
-    monitoring 4.2 MTU Considerations table Network Type | Standard MTU | SW103K Effective
-    MTU | Batch Capacity -------------------|--------------|------------- ---------|---------------
-    Ethernet | 1500 | 1486 | 103 packets @ 14.4B each Wi-Fi 6 | 2304 | 2290 | 158
-    packets Industrial Ethernet| 9000 | 8986 | 623 packets 5. Layer 2 QoS Mechanisms
-    5.1 Priority Classes text QoS Field Bits: 7 6 5 4 3 2 1 0 ┌───┬───┬───┬───┬───┬───┬───┬───┐
-    │ P │ P │ D │ E │ R │ A │ T │ C │ └───┴───┴───┴───┴───┴───┴───┴───┘ P (2 bits):
-    Priority (0-3) D: Drop eligible E: Encryption requested R: Retransmission flag
-    A: Acknowledgment required T: Time-sensitive C: Congestion experienced 5.2 Traffic
-    Shaping Example Diagram Code 6. Layer 2 Security 6.1 Frame Protection Integrity:
-    merklesw103k root covers entire batch Confidentiality: Optional AES-256-GCM encryption
-    (indicated in QoS field) Replay Protection: Batch ID sequence validation 6.2 Key
-    Exchange text EAP-SW103K Authentication Flow: 1. Station → Authenticator: EAPOL-Start
-    2. Authenticator → Station: EAP-Request/ SW103K 3. Station → Authenticator: EAP-Response/SW103K
-    (contains batch ID 0) 4. Authenticator → Station: EAP-Success with PMK 7. Interoperability
-    with Layer 2 Technologies 7.1 VLAN Tagging Compatibility text Modified 802.1Q
-    Header: 0 1 2 3 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0
-    1 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+ | TPID 0x8100
-    | Priority |D|E| Batch ID | +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-    | Standard SW103K Header | 7.2 Industrial Protocol Mapping table Protocol | SW103K
-    Adaptation ------------|------------------ PROFINET | Batch ID → FrameID EtherCAT
-    | HAVI as EtherCAT PDU OPC UA PubSub| QoS → Publisher Priority 8. Physical Layer
-    Considerations 8.1 Synchronization Requirements Timestamp Accuracy: ±1μs for HAVI
-    packets Jitter Tolerance: less than 50μs for QoS class 3 Clock Sync: 1588 PTP
-    with SW103K extension 8.2 Error Handling text Error Recovery Process: 1. Receive
-    corrupted batch 2. Send NAK with bitmap of bad packets 3. Retransmit only affected
-    HAVI packets 4. Recompute merklesw103k root B. Terminology Section Expand to include
-    all key terms with clear definitions: SW103K: The compression/transport protocol
-    HAVI: The packet format used by SW103K Compression Window: Size of data blocks
-    processed merkelsw103k Root: The integrity verification mechanism 2. Technical
-    Depth Improvements A. Protocol Specification Add detailed message formats for
-    both protocols: SW103K Header (16 bytes): 0 1 2 3 0 1 2 3 4 5 6 7 8 9 0 1 2 3
-    4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-    | Version | Flags | Packet Length | +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-    | Compression Window | +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-    | merkelsw103k Root Hash | +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-    B. State Machine Diagrams Include detailed state diagrams for: Connection establishment
-    Compression/decompression flows Error recovery procedures C. Algorithm Specifications
-    Provide pseudocode for key algorithms: python def sw103k_compress(packets): #
-    Step 1: Batch 103 HAVI packets batch = packets[:103] # Step 2: Calculate merkelsw103k
-    tree merkelsw103k_root = calculate_merkelsw103k(batch) # Step 3: Apply Expansionsuite
-    hybrid compression compressed = expansionsuite_compress(batch) return SW103KPacket(merkelsw103k_root,
-    compressed) 3. Expansion Areas A. HAVI Packet Specification Add detailed HAVI
-    packet format: Header structure Payload constraints Special packet types (control,
-    ACK, etc.) B. Protocol Interactions Document how SW103K and HAVI work together:
-    How HAVI packets are batched How headers are preserved during compression How
-    integrity verification works across batches C. Performance Characteristics Include
-    expected performance metrics: Compression ratios for different data types CPU/memory
-    requirements Latency impacts 4. Security Enhancements A. Detailed Security Considerations
-    Expand to cover: Compression oracle attacks (CRIME/BREACH) merkelsw103k tree verification
-    limitations Denial of service protections Key management for encrypted streams
-    B. Security Protocol Options Define how to integrate with: TLS for encrypted transport
-    Cryptographic authentication Perfect forward secrecy options 5. Implementation
-    Guidance A. Reference Implementation Provide more complete code examples: c //
-    Example SW103K compression int sw103k_compress(struct havi_packet* packets, int
-    count, struct sw103k_packet* output) { if (count!= 103) return -EINVAL; // Calculate
-    merkelsw103k root calculate_merkelsw103k_root(packets, output-&gt;merkelsw103k_root);
-    // Compress packets lz77_huffman_compress(packets, output-&gt;compressed_data);
-    return 0; } B. Interoperability Requirements Define must-implement features Specify
-    optional extensions Include compliance test vectors 6. IANA Considerations Expansion
-    Reserve well-known ports if needed Register media types for SW103K streams Define
-    any needed code points or identifiers 7. Appendices A. Example Flows Complete
-    end-to-end examples showing: Connection setup Data transfer Error recovery Teardown
-    B. Comparison Tables Feature comparison with: QUIC HTTP/2 compression WebSocket
-    compression MQTT Improve Data Transfer Speeds: By compressing data before transmission,
-    the protocol reduces the volume of data that needs to be transferred, which improves
-    transfer speeds, especially in networks where bandwidth is a bottleneck. Ensure
-    Data Integrity: In addition to compression, SW103k integrates error-checking mechanisms
-    that ensure data arrives intact. This helps mitigate issues in unreliable network
-    conditions where packet loss or corruption might occur. Security Considerations:
-    The protocol incorporates optional encryption to provide confidentiality during
-    data transmission. This is especially useful in scenarios where sensitive data
-    needs to be transferred, like financial transactions or health data over potentially
-    insecure networks. How Does This Protocol Work? The SW103k protocol operates in
-    a client-server architecture, where the sender (client) compresses the payload
-    using a predefined compression algorithm before transmitting it to the receiver
-    (server). The receiver then decompresses the data back into its original form.
-    Key Components: Compression Algorithm: SW103k uses a hybrid compression algorithm
-    combining LZ77 and Huffman encoding, ensuring efficient data compression with
-    minimal overhead. The protocol negotiates the compression parameters (e.g., window
-    size) at the start of each connection. Decompression Mechanism: The receiver is
-    responsible for decompressing the data using the same parameters agreed upon during
-    the initial handshake. The decompression process is optimized for low-latency
-    environments to ensure the data is available with minimal delay. Transport Layer:
-    SW103k functions over standard transport layers such as TCP or QUIC, and adds
-    a lightweight layer that manages compression, decompression, and error-checking.
-    The protocol header contains metadata about the compression type and error-checking
-    mechanism used. Error Checking: SW103k includes a checksum or CRC32 in each transmission
-    block, ensuring that data corruption can be detected and retransmitted if necessary.
-    Comparison with Other Transport Protocols Compared to other transport protocols
-    like TCP or QUIC, SW103k doesn’t replace them but adds an additional layer of
-    compression and decompression to the transport process. Unlike raw TCP or QUIC,
-    which primarily focus on connection reliability and speed, SW103k introduces bandwidth
-    optimization through compression, which makes it particularly useful in constrained
-    environments. Here’s how SW103k compares with other protocols: TCP: TCP provides
-    reliable transmission, but it does not natively compress data. While you can use
-    application-layer compression with TCP, SW103k integrates compression at the transport
-    layer, optimizing both compression and transmission. QUIC: QUIC focuses on speed
-    and low-latency transmissions, especially over unreliable networks. SW103k could
-    potentially be layered on top of QUIC to introduce compression, making it useful
-    in high-latency networks like mobile or satellite. TLS: TLS ensures security over
-    transmission but doesn’t compress data. SW103k can work with TLS, where compressed
-    data is first encrypted before being transmitted, adding an additional layer of
-    bandwidth efficiency. SCTP: Like TCP, SCTP focuses on reliability, especially
-    for message-based communications. SW103k could work with SCTP when reliability
-    and bandwidth optimization are both critical. Why Choose SW103k Over Existing
-    Protocols? SW103k could be chosen over existing protocols when: Bandwidth Optimization
-    is Critical: In environments like IoT networks, satellite communications, or mobile
-    data transfer, where bandwidth is expensive or limited, SW103k reduces the overall
-    data transferred by compressing the payload before transmission. Minimal Processing
-    Overhead: SW103k has been designed to offer high levels of compression with low
-    computational overhead, making it ideal for low- power devices or systems with
-    limited resources. Easy Integration with Existing Protocols: SW103k is designed
-    to work alongside existing transport protocols (e.g., TCP, QUIC) without needing
-    major architectural changes. It acts as a lightweight add-on for compression and
-    decompression, simplifying adoption for legacy systems. Security Issues Raised
-    by Using This Protocol Using the SW103k protocol introduces a few potential security
-    considerations: Compression-related Attacks: Compression algorithms may be susceptible
-    to attacks such as the CRIME or BREACH attacks, which exploit the predictable
-    nature of compressed data. Implementing padding or randomized inputs to the compression
-    process could help mitigate these risks. Data Integrity and Tampering: Since the
-    protocol involves compressing and decompressing data, there's a risk that data
-    might be tampered with during transmission. SW103k addresses this by incorporating
-    checksum or CRC32 mechanisms to verify the integrity of each transmission block.
-    Encryption Considerations: If sensitive data is being transmitted using SW103k,
-    the protocol needs to ensure that the compression process doesn't leak information
-    about the original data. It’s recommended that data be encrypted before compression
-    or using TLS in conjunction with SW103k for secure transmissions. Denial-of-Service
-    (DoS) Vulnerabilities: Malicious users could flood the server with decompression
-    requests, consuming significant CPU resources. Implementing rate limiting or requiring
-    authenticated connections before processing requests can reduce the attack surface.
-    Concrete Examples of What is Missing When I refer to the current document not
-    containing anything concrete, I mean that the draft lacks crucial technical details
-    and implementation guidance that protocol implementers or reviewers need to understand
-    the protocol’s purpose and function. For example: Detailed Algorithm: Instead
-    of just saying “SW103k compresses data,” a concrete description would include
-    the actual algorithm (e.g., how the hybrid of LZ77 and Huffman encoding works)
-    and pseudocode to explain how compression and decompression happen. Message Formats:
-    In protocols like HTTP/2 or QUIC, message formats are clearly defined. Each byte
-    or bit has a meaning in the headers, body, and control information. SW103k should
-    include message diagrams showing what the protocol header looks like, how metadata
-    is transmitted, etc. State Machine or Flow Diagrams: Many transport protocols
-    include flow diagrams showing how the protocol handles different network events
-    (e.g., connection initiation, packet retransmission). SW103k should include this
-    to illustrate the typical lifecycle of a connection. Code Examples: Providing
-    actual working code that developers could use to implement SW103k would be useful.
-    This could be a Python or C library that demonstrates how compression is performed
-    and how the protocol interacts with the transport layer. Conclusion: Actionable
-    Next Steps for Internet Draft To move forward with SW103k as an Internet Draft
-    for the IETF: Develop a Detailed Specification: Include the detailed design and
-    behavior of the protocol, including the compression algorithm, transport layer
-    interaction, and flow control. Provide Concrete Examples: Add sample pseudocode
-    or protocol header diagrams that illustrate how the protocol works in practice.
-    Security Considerations: Detail the potential risks (e.g., CRIME/ BREACH attacks)
-    and provide mitigation strategies to secure the protocol. Test Cases and Implementation:
-    Provide a reference implementation or a set of test cases for developers to try
-    out the protocol in different environments.</p>"
+- content: "<p>The SW103k protocol addresses challenges in networks with limited bandwidth,
+    latency constraints, and data integrity concerns. It provides compression and
+    decompression to optimize bandwidth utilization in environments such as IoT, satellite,
+    and mobile communications. The protocol operates at the data link layer with a
+    custom frame format including SW103K and HAVI headers. Key features include: -
+    Batch processing of 103 packets with compression - Merkle tree- based integrity
+    verification (merklesw103k root hash) - QoS mechanisms with 8-bit priority field
+    - Security features including AES-256-GCM encryption - Physical layer synchronization
+    with +-1us accuracy Implementations include Linux kernel modules, FPGA encoders,
+    and userspace daemons. The protocol supports interoperability with industrial
+    standards like PROFINET and EtherCAT through custom mappings.</p>"
   language:
   - en
   script:
@@ -261,6 +69,16 @@ relation:
       primary: true
     formattedref:
       content: draft-rfcxml-rfc-swl-103k-03
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-rfcxml-rfc-swl-103k-04
+    docid:
+    - id: draft-rfcxml-rfc-swl-103k-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-rfcxml-rfc-swl-103k-04
       format: text/plain
 ext:
   schema-version: v1.0.1
