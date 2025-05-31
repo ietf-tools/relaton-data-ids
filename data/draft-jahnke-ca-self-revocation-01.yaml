@@ -1,0 +1,110 @@
+---
+schema-version: v1.2.3
+id: draft-jahnke-ca-self-revocation-01
+title:
+- content: Universal Trust Anchor Self-Revocation Extension for Critical Internet
+    Infrastructure
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-jahnke-ca-self-revocation-01
+  type: src
+type: standard
+docid:
+- id: draft-jahnke-ca-self-revocation-01
+  type: Internet-Draft
+  primary: true
+- id: I-D.jahnke-ca-self-revocation
+  type: IETF
+  scope: anchor
+docnumber: I-D.jahnke-ca-self-revocation
+date:
+- type: published
+  value: '2025-05-30'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Torsten
+          language:
+          - en
+        - language:
+          - en
+          initial: T
+        formatted_initials:
+          content: T.
+          language:
+          - en
+      surname:
+        content: Jahnke
+        language:
+        - en
+      completename:
+        content: Torsten Jahnke
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Aviontex GmbH
+  role:
+  - type: author
+version:
+- draft: '01'
+revdate: '2025-05-30'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: '<p>This document defines a cryptographically secure mechanism for Certificate
+    Authorities (CAs) and other self-signed trust anchors to perform controlled self-revocation
+    upon compromise detection. This addresses a fundamental architectural paradox
+    in current internet infrastructure: self-signed trust anchors (PKI Root CAs, DNSSEC
+    KSKs, Code Signing Roots, Government PKIs, Industrial Control System CAs, Mobile
+    Platform Roots, and Critical Infrastructure Trust Anchors) cannot be cryptographically
+    revoked because any revocation mechanism requires the anchor''s private key, but
+    if attackers possess that key (the primary threat), they control the revocation
+    process. This specification solves this 25-year-old "unsolvable" problem by making
+    attackers inadvertently help terminate their own attacks. The mechanism provides
+    automated detection with mandatory manual authorization, enabling trust anchor
+    operators to terminate anchor validity within hours instead of months while maintaining
+    strict dual-person control. This addresses fundamental architectural limitations
+    exposed by historical incidents such as the DigiNotar compromise in 2011 and Symantec
+    certificate missuance incidents, where extended cleanup periods affected millions
+    of users globally, as well as theoretical compromise scenarios affecting DNSSEC,
+    government PKI, industrial control systems, and other critical infrastructure
+    trust anchors.</p>'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-jahnke-ca-self-revocation-00
+    docid:
+    - id: draft-jahnke-ca-self-revocation-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-jahnke-ca-self-revocation-00
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-jahnke-ca-self-revocation-01
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

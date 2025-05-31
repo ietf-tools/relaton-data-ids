@@ -1,0 +1,164 @@
+---
+schema-version: v1.2.3
+id: draft-ietf-idr-linklocal-capability-01
+title:
+- content: Link-Local Next Hop Capability for BGP
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-linklocal-capability-01
+  type: src
+type: standard
+docid:
+- id: draft-ietf-idr-linklocal-capability-01
+  type: Internet-Draft
+  primary: true
+- id: I-D.ietf-idr-linklocal-capability
+  type: IETF
+  scope: anchor
+docnumber: I-D.ietf-idr-linklocal-capability
+date:
+- type: published
+  value: '2025-05-30'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Russ
+          language:
+          - en
+        - language:
+          - en
+          initial: R
+        formatted_initials:
+          content: R.
+          language:
+          - en
+      surname:
+        content: White
+        language:
+        - en
+      completename:
+        content: Russ White
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Akamai Technologies
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Jeff
+          language:
+          - en
+        - language:
+          - en
+          initial: J
+        formatted_initials:
+          content: J.
+          language:
+          - en
+      surname:
+        content: Tantsura
+        language:
+        - en
+      completename:
+        content: Jeff Tantsura
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Nvidia
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Donatas
+          language:
+          - en
+        - language:
+          - en
+          initial: D
+        formatted_initials:
+          content: D.
+          language:
+          - en
+      surname:
+        content: Abraitis
+        language:
+        - en
+      completename:
+        content: Donatas Abraitis
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Hostinger
+  role:
+  - type: author
+version:
+- draft: '01'
+revdate: '2025-05-30'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>BGP [RFC4271], was originally designed to provide reachability between
+    domains and between the edges of a domain. To support IPv6 reachability, BGP relies
+    heavily on its Multiprotocol Extensions as defined in [RFC2545], which is crucial
+    for enabling BGP-4 to advertise IPv6 routes alongside IPv4. This extension not
+    only permits the exchange of IPv6 routing information but also establishes the
+    structure for IPv6 next hop handling within BGP updates. As such, BGP assumes
+    the next hop towards any reachable destination may not reside on the advertising
+    speaker, but rather may either be through a router connected to the same subnet
+    as the speaker, or through a router only reachable by traversing multiple hops
+    through the network. [RFC2545] introduced the ability to advertise a global IPv6
+    address as the BGP next hop. When the advertising system is directly attached,
+    it may include both a global and an IPv6 link-local address or only a global address,
+    when next hop length is set to 16 bytes. This document updates the specification
+    to clarify the encoding of the BGP next hop when the advertising system is directly
+    attached and only an IPv6 link-local address is available. This clarification
+    applies specifically to IPv6 link-local addresses and does not pertain to IPv4
+    link-local addresses as defined in [RFC3927].</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-ietf-idr-linklocal-capability-00
+    docid:
+    - id: draft-ietf-idr-linklocal-capability-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-idr-linklocal-capability-00
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-ietf-idr-linklocal-capability-01
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
