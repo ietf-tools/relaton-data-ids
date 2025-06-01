@@ -1,19 +1,19 @@
 ---
 schema-version: v1.2.3
-id: draft-hao-civ-00
+id: draft-hao-civ-01
 title:
-- content: Caller ID Verification In Session Initiation Protocol
+- content: Caller ID Verification In Heterogeneous Telecommunication Networks
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-hao-civ-00
+- content: https://datatracker.ietf.org/doc/html/draft-hao-civ-01
   type: src
 type: standard
 docid:
-- id: draft-hao-civ-00
+- id: draft-hao-civ-01
   type: Internet-Draft
   primary: true
 - id: I-D.hao-civ
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.hao-civ
 date:
 - type: published
-  value: '2025-02-24'
+  value: '2025-05-31'
 contributor:
 - person:
     name:
@@ -140,44 +140,49 @@ contributor:
   role:
   - type: author
 version:
-- draft: '00'
-revdate: '2025-02-24'
+- draft: '01'
+revdate: '2025-05-31'
 language:
 - en
 script:
 - Latn
 abstract:
 - content: <p>This document defines an extension to the INVITE header of the Session
-    Initiation Protocol (SIP) to support the Caller ID Verification (CIV) protocol
-    proposed by Wang et al. in ACM Transactions on Privacy and Security (2023). CIV
+    Initiation Protocol (SIP) to support a Caller ID Verification (CIV) method. CIV
     authenticates the caller ID of an incoming call through a challenge-and-response
-    process. When receiving a call with a claimed phone number, the called party holds
-    the call and sends an INVITE request to that number, carrying a short 4-digit
-    challenge embedded as part of the caller ID. A genuine caller should receive the
-    challenge and respond by echoing the same digits, e.g., through DTMF (Dual-Tone
-    Multi- Frequency). The proposed extension involves two changes to the INVITE header.
-    First, it adds a new options tag, "civ", in the Supported header field. This tag
-    indicates that the calling party supports CIV. Second, it adds a special value
-    "civ-veri-call" for the Purpose parameter of the Call-Info header field. This
-    value indicates that the purpose of the INVITE request is to verify the caller
-    ID based on CIV. Compared with STIR/SHAKEN, CIV authenticates the caller ID (not
-    the carrier), does not require trusted certificate authorities and works with
-    both IP and non-IP networks.</p>
+    process across both IP and non-IP networks without requiring a trusted third party
+    or a public key infrastructure. When receiving a call with a claimed phone number,
+    the called party holds the call and sends a quickly terminated INVITE request
+    (like a flash call) to that number, carrying a short 4-digit challenge embedded
+    as part of the caller ID. A genuine caller would receive the challenge and respond
+    by echoing the same digits, e.g., through DTMF (Dual-Tone Multi-Frequency). The
+    proposed extension involves two changes to the INVITE header. First, it adds a
+    new option tag, "civ", in the Supported header field of the INVITE request. This
+    tag allows the calling party to indicate support for CIV in the initial call.
+    Second, it adds a special value "civ-veri- call" for the Purpose parameter of
+    the Call-Info header field. This value allows the called party to make a verification
+    call, indicating the purpose of the call is to transmit a challenge rather than
+    establish a phone conversation. CIV uses the standard Session-ID header in the
+    INVITE request to allow the calling party to explicitly match the verification
+    call with the initial call. Whilst this document focuses on IP networks, the same
+    CIV protocol also works with non-IP networks (e.g., SS7) by including the "civ"
+    tag, the "civ-veri-call" value and the session ID in the User-to-User Information
+    (UUI) parameter.</p>
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-hao-civ-01
+    id: draft-hao-civ-00
     docid:
-    - id: draft-hao-civ-01
+    - id: draft-hao-civ-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-hao-civ-01
+      content: draft-hao-civ-00
       format: text/plain
 series:
 - type: main
@@ -188,7 +193,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-hao-civ-00
+  number: draft-hao-civ-01
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
