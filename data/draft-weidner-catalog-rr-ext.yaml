@@ -1,0 +1,48 @@
+---
+schema-version: v1.2.3
+id: draft-weidner-catalog-rr-ext
+title:
+- content: CATALOG Authorization Transparency And Log Overlay for Graph-based DNS
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-weidner-catalog-rr-ext
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: <p>This document proposes an extension to the Certification Authority Authorization
+    (CAA) DNS Resource Record (RR) that enables the mandatory or optional binding
+    of Certificate Transparency (CT) Log URIs directly within DNS. By embedding CT-Log
+    endpoints in CAA RR, Certification Authorities (CAs) gain a standardized, discoverable
+    mechanism for retrieving preferred and permitted CT-Log endpoint information,
+    thereby enhancing the security and auditability of X.509 TLS certificate issuance.
+    The extension defines the syntax and semantics for a new CAA property tag, *"issuect"*,
+    and introduces a parameter set consisting of _"desc"_, _"critical"_, _"validfrom"_,
+    _"validtill"_, _"cturi"_, _"logid"_, and _"pubkey"_. It outlines validation and
+    processing rules, discusses deployment considerations, privacy implications, and
+    interoperability with existing DNS, CA, and CT infrastructures. Additionally,
+    the draft proposes an MTA-STS-like hardening mechanism, called *CAA-CT-STS*, for
+    the new property to further strengthen the PKI ecosystem. Finally, it introduces
+    the recursive acronym CATALOG (CATALOG Authorization Transparency And Log Overlay
+    for Graph-based DNS) as a mnemonic for the overall extension framework.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-weidner-catalog-rr-ext-00
+    docid:
+    - id: draft-weidner-catalog-rr-ext-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-weidner-catalog-rr-ext-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
