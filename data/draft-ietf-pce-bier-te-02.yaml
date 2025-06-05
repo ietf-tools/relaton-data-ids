@@ -1,118 +1,119 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-lsr-igp-ureach-prefix-announce-07
+id: draft-ietf-pce-bier-te-02
 title:
-- content: IGP Unreachable Prefix Announcement
+- content: PCEP Extensions for Tree Engineering for Bit Index Explicit Replication
+    (BIER-TE)
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-lsr-igp-ureach-prefix-announce-07
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-pce-bier-te-02
   type: src
 type: standard
 docid:
-- id: draft-ietf-lsr-igp-ureach-prefix-announce-07
+- id: draft-ietf-pce-bier-te-02
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-lsr-igp-ureach-prefix-announce
+- id: I-D.ietf-pce-bier-te
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-lsr-igp-ureach-prefix-announce
+docnumber: I-D.ietf-pce-bier-te
 date:
 - type: published
-  value: '2025-05-30'
+  value: '2025-06-04'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Peter
+        - content: Ran
           language:
           - en
         - language:
           - en
-          initial: P
+          initial: R
         formatted_initials:
-          content: P.
+          content: R.
           language:
           - en
       surname:
-        content: Psenak
+        content: Chen
         language:
         - en
       completename:
-        content: Peter Psenak
+        content: Ran Chen
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems
+        - content: ZTE Corporation
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Clarence
+        - content: Zheng
           language:
           - en
         - language:
           - en
-          initial: C
+          initial: Z
         formatted_initials:
-          content: C.
+          content: Z.
           language:
           - en
       surname:
-        content: Filsfils
+        content: Zhang
         language:
         - en
       completename:
-        content: Clarence Filsfils
+        content: Zheng Zhang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems
+        - content: ZTE Corporation
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Daniel
+        - content: Huaimo
           language:
           - en
         - language:
           - en
-          initial: D
+          initial: H
         formatted_initials:
-          content: D.
+          content: H.
           language:
           - en
       surname:
-        content: Voyer
+        content: Chen
         language:
         - en
       completename:
-        content: Daniel Voyer
+        content: Huaimo Chen
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems
+        - content: Futurewei
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Shraddha
+        - content: Senthil
           language:
           - en
         - language:
@@ -123,65 +124,90 @@ contributor:
           language:
           - en
       surname:
-        content: Hegde
+        content: Dhanaraj
         language:
         - en
       completename:
-        content: Shraddha Hegde
+        content: Senthil Dhanaraj
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Juniper Networks, Inc.
+        - content: Futurewei
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Gyan
+        - content: Fengwei
           language:
           - en
         - language:
           - en
-          initial: G
-        - language:
-          - en
-          initial: S
+          initial: F
         formatted_initials:
-          content: G. S.
+          content: F.
           language:
           - en
       surname:
-        content: Mishra
+        content: Qin
         language:
         - en
       completename:
-        content: Gyan Mishra
+        content: Fengwei Qin
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Verizon Inc.
+        - content: China Mobile
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Aijun
+          language:
+          - en
+        - language:
+          - en
+          initial: A
+        formatted_initials:
+          content: A.
+          language:
+          - en
+      surname:
+        content: Wang
+        language:
+        - en
+      completename:
+        content: Aijun Wang
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: China Telecom
   role:
   - type: author
 version:
-- draft: '07'
-revdate: '2025-05-30'
+- draft: '02'
+revdate: '2025-06-04'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>Summarization is often used in multi-area or multi-domain networks
-    to improve network efficiency and scalability. With summarization in place, there
-    is a need to signal loss of reachability to an individual prefix covered by the
-    summary. This enables fast convergence by steering traffic away from the node
-    which owns the prefix and is no longer reachable. This document describes how
-    to use the existing protocol mechanisms in IS-IS and OSPF, together with the two
-    new flags, to advertise such prefix reachability loss.</p>"
+- content: "<p>Tree Engineering for Bit Index Explicit Replication (BIER-TE) shares
+    architecture and packet formats with BIER. BIER-TE forwards and replicates packets
+    based on a BitString in the packet header, but every BitPosition of the BitString
+    of a BIER-TE packet indicates one or more adjacencies. BIER-TE Path can be derived
+    from a Path Computation Element (PCE). This document specifies extensions to the
+    Path Computation Element Protocol (PCEP) that allow a PCE to compute and initiate
+    the path for the Tree Engineering for Bit Index Explicit Replication (BIER-TE).</p>"
   language:
   - en
   script:
@@ -190,23 +216,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-lsr-igp-ureach-prefix-announce-06
+    id: draft-ietf-pce-bier-te-00
     docid:
-    - id: draft-ietf-lsr-igp-ureach-prefix-announce-06
+    - id: draft-ietf-pce-bier-te-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-lsr-igp-ureach-prefix-announce-06
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-lsr-igp-ureach-prefix-announce-08
-    docid:
-    - id: draft-ietf-lsr-igp-ureach-prefix-announce-08
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-lsr-igp-ureach-prefix-announce-08
+      content: draft-ietf-pce-bier-te-00
       format: text/plain
 series:
 - type: main
@@ -217,7 +233,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-lsr-igp-ureach-prefix-announce-07
+  number: draft-ietf-pce-bier-te-02
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

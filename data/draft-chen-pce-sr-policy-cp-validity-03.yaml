@@ -1,90 +1,62 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-lsr-igp-ureach-prefix-announce-07
+id: draft-chen-pce-sr-policy-cp-validity-03
 title:
-- content: IGP Unreachable Prefix Announcement
+- content: PCEP extension to support Candidate Paths validity
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-lsr-igp-ureach-prefix-announce-07
+- content: https://datatracker.ietf.org/doc/html/draft-chen-pce-sr-policy-cp-validity-03
   type: src
 type: standard
 docid:
-- id: draft-ietf-lsr-igp-ureach-prefix-announce-07
+- id: draft-chen-pce-sr-policy-cp-validity-03
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-lsr-igp-ureach-prefix-announce
+- id: I-D.chen-pce-sr-policy-cp-validity
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-lsr-igp-ureach-prefix-announce
+docnumber: I-D.chen-pce-sr-policy-cp-validity
 date:
 - type: published
-  value: '2025-05-30'
+  value: '2025-06-05'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Peter
+        - content: Ran
           language:
           - en
         - language:
           - en
-          initial: P
+          initial: R
         formatted_initials:
-          content: P.
+          content: R.
           language:
           - en
       surname:
-        content: Psenak
+        content: Chen
         language:
         - en
       completename:
-        content: Peter Psenak
+        content: Ran Chen
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems
+        - content: ZTE Corporation
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Clarence
-          language:
-          - en
-        - language:
-          - en
-          initial: C
-        formatted_initials:
-          content: C.
-          language:
-          - en
-      surname:
-        content: Filsfils
-        language:
-        - en
-      completename:
-        content: Clarence Filsfils
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Cisco Systems
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Daniel
+        - content: Detao
           language:
           - en
         - language:
@@ -95,24 +67,24 @@ contributor:
           language:
           - en
       surname:
-        content: Voyer
+        content: Zhao
         language:
         - en
       completename:
-        content: Daniel Voyer
+        content: Detao Zhao
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems
+        - content: ZTE Corporation
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Shraddha
+        - content: Samuel
           language:
           - en
         - language:
@@ -123,65 +95,85 @@ contributor:
           language:
           - en
       surname:
-        content: Hegde
+        content: Sidor
         language:
         - en
       completename:
-        content: Shraddha Hegde
+        content: Samuel Sidor
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Juniper Networks, Inc.
+        - content: Cisco Systems, Inc.
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Gyan
+        - content: Mike
           language:
           - en
         - language:
           - en
-          initial: G
-        - language:
-          - en
-          initial: S
+          initial: M
         formatted_initials:
-          content: G. S.
+          content: M.
           language:
           - en
       surname:
-        content: Mishra
+        content: Koldychev
         language:
         - en
       completename:
-        content: Gyan Mishra
+        content: Mike Koldychev
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Verizon Inc.
+        - content: Cisco Systems, Inc.
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Zafar
+          language:
+          - en
+        - language:
+          - en
+          initial: Z
+        formatted_initials:
+          content: Z.
+          language:
+          - en
+      surname:
+        content: Ali
+        language:
+        - en
+      completename:
+        content: Zafar Ali
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Cisco Systems, Inc.
   role:
   - type: author
 version:
-- draft: '07'
-revdate: '2025-05-30'
+- draft: '03'
+revdate: '2025-06-05'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>Summarization is often used in multi-area or multi-domain networks
-    to improve network efficiency and scalability. With summarization in place, there
-    is a need to signal loss of reachability to an individual prefix covered by the
-    summary. This enables fast convergence by steering traffic away from the node
-    which owns the prefix and is no longer reachable. This document describes how
-    to use the existing protocol mechanisms in IS-IS and OSPF, together with the two
-    new flags, to advertise such prefix reachability loss.</p>"
+- content: "<p>This document defines PCEP extensions for signaling the validity control
+    parameters of a candidate path for an SR Policy.</p>"
   language:
   - en
   script:
@@ -190,23 +182,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-lsr-igp-ureach-prefix-announce-06
+    id: draft-chen-pce-sr-policy-cp-validity-02
     docid:
-    - id: draft-ietf-lsr-igp-ureach-prefix-announce-06
+    - id: draft-chen-pce-sr-policy-cp-validity-02
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-lsr-igp-ureach-prefix-announce-06
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-lsr-igp-ureach-prefix-announce-08
-    docid:
-    - id: draft-ietf-lsr-igp-ureach-prefix-announce-08
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-lsr-igp-ureach-prefix-announce-08
+      content: draft-chen-pce-sr-policy-cp-validity-02
       format: text/plain
 series:
 - type: main
@@ -217,7 +199,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-lsr-igp-ureach-prefix-announce-07
+  number: draft-chen-pce-sr-policy-cp-validity-03
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
