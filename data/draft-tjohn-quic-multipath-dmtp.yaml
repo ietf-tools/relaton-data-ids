@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-tjohn-quic-multipath-dmtp
 title:
-- content: Deadline Aware Streams in MP-QUIC
+- content: Deadline Aware Streams in QUIC Multipath
   language:
   - en
   script:
@@ -14,15 +14,19 @@ docid:
   primary: true
 abstract:
 - content: "<p>This document proposes the Deadline-aware Multipath Transport Protocol
-    (DMTP) concept as an extension to the Multipath Extension for QUIC (MP-QUIC).
-    This extension aims to support data streams with strict latency requirements by
-    enabling the signaling of a stream's deadline and by combining multipath scheduling,
-    congestion control adaptations, and optional forward error correction (FEC). Moreover,
-    DMTP leverages MP-QUIC's path identifiers to distinguish different end-to-end
+    (DMTP) concept as an extension to the Multipath Extension for QUIC (QUIC-MULTIPATH)
+    as well as QUIC itself. This extension aims to support data streams with strict
+    latency requirements by enabling the signaling of a stream's deadline and ideally
+    by combining multipath scheduling, congestion control adaptations, and optional
+    forward error correction (FEC). Moreover, DMTP leverages the path identifiers
+    introduced by the Multipath Extension for QUIC to distinguish different end-to-end
     paths as they may be offered in a Path Aware Network (PAN) such as SCION. This
     allows an application to select its preferred paths while maintaining interoperability
-    with standard MP-QUIC endpoints. In combination, DMTP enables endpoints to exchange
-    and schedule deadline-aware streams across multiple network paths.</p>"
+    with standard endpoints using the Multipath Extension for QUIC. In combination,
+    DMTP enables endpoints to exchange and schedule deadline-aware streams across
+    multiple network paths. Additionally, this proposal also maintains compatibility
+    with QUIC itself, in order to deliver its benefits - albeit with limited effectiveness
+    - even in scenarios where only a single path can or should be used.</p>"
   language:
   - en
   script:
@@ -38,6 +42,16 @@ relation:
       primary: true
     formattedref:
       content: draft-tjohn-quic-multipath-dmtp-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-tjohn-quic-multipath-dmtp-01
+    docid:
+    - id: draft-tjohn-quic-multipath-dmtp-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-tjohn-quic-multipath-dmtp-01
       format: text/plain
 ext:
   schema-version: v1.0.1
