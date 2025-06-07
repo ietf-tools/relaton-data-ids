@@ -13,15 +13,19 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document describes a mechanism for Fast Reroute (FRR) in Bit Index
-    Explicit Replication (BIER) networks. The proposed solution enhances the resiliency
-    of BIER by providing a method to quickly reroute traffic in the event of a link
-    or node failure, thereby minimizing packet loss and service disruption. The document
-    details the procedures for detecting failures and selecting backup paths within
-    the BIER domain, ensuring that multicast traffic continues to reach its intended
-    destinations without requiring per-flow state or additional signaling. This FRR
-    mechanism is designed to integrate seamlessly with existing BIER operations, offering
-    a robust solution for improving network reliability.</p>"
+- content: "<p>This document describes BIER Fast Reroute (BIER-FRR) as a mechanism
+    for Fast Reroute (FRR) in Bit Index Explicit Replication (BIER) networks. It enhances
+    the resiliency of BIER by quickly rerouting BIER traffic in the event of a link
+    or node failure. This ensures that multicast traffic continues to reach its intended
+    destinations, thereby minimizing packet loss and service disruption. BIER-FRR
+    is designed to integrate seamlessly with existing BIER operations without requiring
+    per-flow state or additional signaling. The document suggests additional structures
+    for BIER to hold information for backup forwarding entries and to enable them
+    in case of detected failures. BIER-FRR can implement different protection levels,
+    e.g., link protection or node protection, and different protection strategies.
+    Tunnel-based BIER-FRR and LFA-based BIER-FRR are introduced as protection strategies
+    and their implementation with the proposed extensions. A comparison highlights
+    the differences between both approaches.</p>"
   language:
   - en
   script:
@@ -117,6 +121,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-bier-frr-08
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-bier-frr-09
+    docid:
+    - id: draft-ietf-bier-frr-09
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-bier-frr-09
       format: text/plain
 ext:
   schema-version: v1.0.1
