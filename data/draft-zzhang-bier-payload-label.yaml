@@ -1,0 +1,46 @@
+---
+schema-version: v1.2.3
+id: draft-zzhang-bier-payload-label
+title:
+- content: BIER Payload Label
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-zzhang-bier-payload-label
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: <p>The BIER Encapsulation RFC8296 specifies that the "Proto" field in the
+    BIER header is set to 1 if an MPLS label stack follows the BIER header and the
+    top of the stack label is a downstream-assigned label, and is set to 2 if the
+    top of stack label is an upstream-assigned label, which is looked up in the context-specific
+    label forwarding table that can be derived from the BIER header. The terms upstream/downstream-assignment
+    are inappropriate to describe the required forwarding for new MPLS label semantics
+    such as SRGB and DCB labels as defined in RFC8402 and RFC9573 respectively. This
+    can result in potentially inconsistent implementation choices causing potential
+    interoperability issues. This document rectifies this situation by changing the
+    IANA BIER Next Protocol Identifier semantic for MPLS code points from their label
+    semantic to the required LFIB in the forwarding plane, hence covering those new
+    type of labels without changing behavior for existing upstream/downstream-assigned
+    labels.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-zzhang-bier-payload-label-00
+    docid:
+    - id: draft-zzhang-bier-payload-label-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-zzhang-bier-payload-label-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
