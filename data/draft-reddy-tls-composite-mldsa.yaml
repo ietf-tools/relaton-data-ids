@@ -13,11 +13,11 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document specifies how the post-quantum signature scheme ML-DSA
-    [FIPS204], in combination with traditional algorithms RSA- PKCS#1v1.5,RSA-PSS,
-    ECDSA, Ed25519, and Ed448 can be used for authentication in TLS 1.3. The composite
-    ML-DSA approach is beneficial in deployments where operators seek additional protection
-    against potential breaks or catastrophic bugs in ML-DSA.</p>"
+- content: "<p>Compositing the post-quantum ML-DSA signature with traditional signature
+    algorithms provides protection against potential breaks or critical bugs in ML-DSA
+    or the ML-DSA implementation. This document specifies how such a composite signature
+    can be formed using ML-DSA with RSA-PKCS#1 v1.5, RSA-PSS, ECDSA, Ed25519, and
+    Ed448 to provide authentication in TLS 1.3.</p>"
   language:
   - en
   script:
@@ -63,6 +63,16 @@ relation:
       primary: true
     formattedref:
       content: draft-reddy-tls-composite-mldsa-03
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-reddy-tls-composite-mldsa-04
+    docid:
+    - id: draft-reddy-tls-composite-mldsa-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-reddy-tls-composite-mldsa-04
       format: text/plain
 ext:
   schema-version: v1.0.1
