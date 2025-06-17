@@ -16,13 +16,13 @@ abstract:
 - content: <p>This document describes a method called "dry-run DNSSEC" that allows
     for testing DNSSEC deployments without affecting the DNS service in case of DNSSEC
     errors. It accomplishes that by introducing new DS Type Digest Algorithms that
-    when used in a DS record, referred to as dry-run DS, signal to validating resolvers
-    that dry-run DNSSEC is used for the zone. DNSSEC errors are then reported with
-    DNS Error Reporting, but any bogus responses to clients are withheld. Instead,
-    validating resolvers fallback from dry-run DNSSEC and provide the response that
-    would have been answered without the presence of a dry- run DS. A further EDNS
-    option is presented for clients to opt-in for dry-run DNSSEC errors and allow
-    for end-to-end DNSSEC testing.</p>
+    when used in every record of a DS RRset, referred to as dry-run DS, signal to
+    validating resolvers that dry- run DNSSEC is used for the zone. DNSSEC errors
+    are then reported with DNS Error Reporting, but any bogus responses to clients
+    are withheld. Instead, validating resolvers fallback from dry-run DNSSEC and provide
+    the response that would have been answered without the presence of the dry-run
+    DS. A further EDNS option is presented for clients to opt-in for dry-run DNSSEC
+    errors and allow for end-to-end DNSSEC testing.</p>
   language:
   - en
   script:
@@ -68,6 +68,16 @@ relation:
       primary: true
     formattedref:
       content: draft-yorgos-dnsop-dry-run-dnssec-03
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-yorgos-dnsop-dry-run-dnssec-04
+    docid:
+    - id: draft-yorgos-dnsop-dry-run-dnssec-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-yorgos-dnsop-dry-run-dnssec-04
       format: text/plain
 ext:
   schema-version: v1.0.1

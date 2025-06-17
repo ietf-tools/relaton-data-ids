@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-yorgos-dnsop-dry-run-dnssec-03
+id: draft-yorgos-dnsop-dry-run-dnssec-04
 title:
 - content: dry-run DNSSEC
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-yorgos-dnsop-dry-run-dnssec-03
+- content: https://datatracker.ietf.org/doc/html/draft-yorgos-dnsop-dry-run-dnssec-04
   type: src
 type: standard
 docid:
-- id: draft-yorgos-dnsop-dry-run-dnssec-03
+- id: draft-yorgos-dnsop-dry-run-dnssec-04
   type: Internet-Draft
   primary: true
 - id: I-D.yorgos-dnsop-dry-run-dnssec
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.yorgos-dnsop-dry-run-dnssec
 date:
 - type: published
-  value: '2025-03-03'
+  value: '2025-06-17'
 contributor:
 - person:
     name:
@@ -109,8 +109,8 @@ contributor:
   role:
   - type: author
 version:
-- draft: '03'
-revdate: '2025-03-03'
+- draft: '04'
+revdate: '2025-06-17'
 language:
 - en
 script:
@@ -119,13 +119,13 @@ abstract:
 - content: <p>This document describes a method called "dry-run DNSSEC" that allows
     for testing DNSSEC deployments without affecting the DNS service in case of DNSSEC
     errors. It accomplishes that by introducing new DS Type Digest Algorithms that
-    when used in a DS record, referred to as dry-run DS, signal to validating resolvers
-    that dry-run DNSSEC is used for the zone. DNSSEC errors are then reported with
-    DNS Error Reporting, but any bogus responses to clients are withheld. Instead,
-    validating resolvers fallback from dry-run DNSSEC and provide the response that
-    would have been answered without the presence of a dry- run DS. A further EDNS
-    option is presented for clients to opt-in for dry-run DNSSEC errors and allow
-    for end-to-end DNSSEC testing.</p>
+    when used in every record of a DS RRset, referred to as dry-run DS, signal to
+    validating resolvers that dry- run DNSSEC is used for the zone. DNSSEC errors
+    are then reported with DNS Error Reporting, but any bogus responses to clients
+    are withheld. Instead, validating resolvers fallback from dry-run DNSSEC and provide
+    the response that would have been answered without the presence of the dry-run
+    DS. A further EDNS option is presented for clients to opt-in for dry-run DNSSEC
+    errors and allow for end-to-end DNSSEC testing.</p>
   language:
   - en
   script:
@@ -142,16 +142,6 @@ relation:
     formattedref:
       content: draft-yorgos-dnsop-dry-run-dnssec-02
       format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-yorgos-dnsop-dry-run-dnssec-04
-    docid:
-    - id: draft-yorgos-dnsop-dry-run-dnssec-04
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-yorgos-dnsop-dry-run-dnssec-04
-      format: text/plain
 series:
 - type: main
   title:
@@ -161,7 +151,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-yorgos-dnsop-dry-run-dnssec-03
+  number: draft-yorgos-dnsop-dry-run-dnssec-04
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
