@@ -1,0 +1,130 @@
+---
+schema-version: v1.2.3
+id: draft-jabley-dnsop-missing-mname-01
+title:
+- content: Indicating Non-Availability of Dynamic Updates in the DNS
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-jabley-dnsop-missing-mname-01
+  type: src
+type: standard
+docid:
+- id: draft-jabley-dnsop-missing-mname-01
+  type: Internet-Draft
+  primary: true
+- id: I-D.jabley-dnsop-missing-mname
+  type: IETF
+  scope: anchor
+docnumber: I-D.jabley-dnsop-missing-mname
+date:
+- type: published
+  value: '2025-06-18'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Joe
+          language:
+          - en
+        - language:
+          - en
+          initial: J
+        formatted_initials:
+          content: J.
+          language:
+          - en
+      surname:
+        content: Abley
+        language:
+        - en
+      completename:
+        content: Joe Abley
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Cloudflare
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Peter
+          language:
+          - en
+        - language:
+          - en
+          initial: P
+        formatted_initials:
+          content: P.
+          language:
+          - en
+      surname:
+        content: Thomassen
+        language:
+        - en
+      completename:
+        content: Peter Thomassen
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: deSEC, Secure Systems Engineering
+  role:
+  - type: author
+version:
+- draft: '01'
+revdate: '2025-06-18'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: <p>The Start of Authority Resource Record in the Domain Name System includes
+    various parameters related to the handling of data in DNS zones. These parameters
+    are variously used by authority-only servers, caching resolvers and DNS clients
+    to guide them in the way that data contained within particular zones should be
+    used. One particular field in the SOA RR is known as MNAME, which is used to specify
+    the "Primary Master" server for a zone. This is the server to which clients use
+    Dynamic Update to send DNS UPDATE messages. Many zones do not support the Dynamic
+    Update, and any such DNS UPDATE messages which are received provide no usual purpose.
+    For such zones it may be preferable not to receive updates from clients at all.
+    This document proposes a convention by which a zone operator can signal to clients
+    that a particular zone does not support Dynamic Update.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-jabley-dnsop-missing-mname-00
+    docid:
+    - id: draft-jabley-dnsop-missing-mname-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-jabley-dnsop-missing-mname-00
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-jabley-dnsop-missing-mname-01
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
