@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-davidben-tls-merkle-tree-certs
 title:
-- content: Merkle Tree Certificates for TLS
+- content: Merkle Tree Certificates
   language:
   - en
   script:
@@ -13,12 +13,15 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document describes Merkle Tree certificates, a new certificate
-    type for use with TLS. A relying party that regularly fetches information from
-    trusted mirrors can use this certificate type as a size optimization over more
-    conventional mechanisms with post-quantum signatures. Merkle Tree certificates
-    integrate the roles of X.509 and Certificate Transparency, achieving comparable
-    security properties with a smaller message size, at the cost of more limited applicability.</p>"
+- content: "<p>This document describes Merkle Tree certificates, a new form of X.509
+    certificates which integrate public logging of the certificate, in the style of
+    Certificate Transparency. The integrated design reduces logging overhead in the
+    face of both shorter-lived certificates and large post-quantum signature algorithms,
+    while still achieving comparable security properties to traditional X.509 and
+    Certificate Transparency. Merkle Tree certificates additionally admit an optional
+    signatureless optimization, which decreases the message size by avoiding signatures
+    altogether, at the cost of only applying to up-to-date relying parties and older
+    certificates.</p>"
   language:
   - en
   script:
@@ -74,6 +77,16 @@ relation:
       primary: true
     formattedref:
       content: draft-davidben-tls-merkle-tree-certs-04
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-davidben-tls-merkle-tree-certs-05
+    docid:
+    - id: draft-davidben-tls-merkle-tree-certs-05
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-davidben-tls-merkle-tree-certs-05
       format: text/plain
 ext:
   schema-version: v1.0.1
