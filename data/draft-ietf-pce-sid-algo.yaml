@@ -3,7 +3,7 @@ schema-version: v1.2.3
 id: draft-ietf-pce-sid-algo
 title:
 - content: Carrying SR-Algorithm in Path Computation Element Communication Protocol
-    (PCEP).
+    (PCEP)
   language:
   - en
   script:
@@ -18,15 +18,16 @@ abstract:
     Communication Protocol (PCEP) to enhance support for Segment Routing (SR) with
     a focus on the use of Segment Identifiers (SIDs) and SR- Algorithms in Traffic
     Engineering (TE). The SR-Algorithm associated with a SID defines the path computation
-    algorithm used by Interior Gateway Protocols (IGPs). This document proposes an
-    approach for informing PCEP peers about the SR-Algorithm associated with each
-    SID used, as well as signaling a specific SR-Algorithm as a constraint to the
-    Path Computation Element (PCE). The mechanisms for specifying an SR-Algorithm
-    constraint allow for refined path computations that meet specific operational
-    needs, such as low-latency or high-bandwidth paths based primarily on operator-defined
-    criteria using Flexible Algorithms. Additionally, this document updates RFC 8664
-    and RFC 9603 to allow encoding of SR-Algorithm of specific SID in Explicit Route
-    Object (ERO) subobjects.</p>"
+    algorithm used by Interior Gateway Protocols (IGPs). This document introduces
+    extensions in three main areas. Mechanisms for informing PCEP peers about the
+    SR-Algorithm associated with SIDs by encoding this information in Explicit Route
+    Object (ERO) and Record Route Object (RRO) subobjects. This document updates RFC
+    8664 and RFC 9603 to allow such extension. The document specifies SR-Algorithm
+    constraint, enabling refined path computations that can leverage IGP algorithm
+    logic, including Flexible Algorithms, and their associated constraints and optimization
+    metrics. It defines new metric types for the METRIC object required to support
+    SR-Algorithm based path computation, but also applicable to Label Switched Paths
+    (LSPs) setup using different Path Setup Types.</p>"
   language:
   - en
   script:
@@ -232,6 +233,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-pce-sid-algo-19
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-pce-sid-algo-20
+    docid:
+    - id: draft-ietf-pce-sid-algo-20
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-pce-sid-algo-20
       format: text/plain
 ext:
   schema-version: v1.0.1
