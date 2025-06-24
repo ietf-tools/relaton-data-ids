@@ -13,20 +13,20 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: <p>This document draws on several years of operational experience to update
-    the recommended process of Default Address Selection for Internet Protocol Version
-    6 (IPv6) defined in RFC6724, defining the concept of "known-local" Unique Local
-    Address (ULA) prefixes that enable ULA-to-ULA communications within fd00::/8 to
-    become preferred over both IPv4-IPv4 and GUA-to-GUA (Global Unicast Addresses)
-    for local use. The document defines the means by which nodes can both identify
-    and insert such prefixes into their address selection policy table. It also clarifies
-    the mandatory, unconditional requirement for support for Rule 5.5 defined in Section
-    5 of RFC6724 and demotes the preference for 6to4 addresses. These changes to default
-    behavior improve supportability of common use cases, including automatic / unmanaged
-    scenarios, and makes preference for IPv6 over IPv4 consistent in local site networks
-    for both ULA and GUA prefixes. It is recognized that some less common deployment
-    scenarios may require explicit configuration or custom changes to achieve desired
-    operational parameters.</p>
+- content: <p>This document updates the default address selection algorithm for Internet
+    Protocol Version 6 (IPv6), originally specified in RFC 6724, based on accumulated
+    operational experience. It introduces the concept of "known-local" Unique Local
+    Address (ULA) prefixes within the fd00::/8 block and specifies that ULA-to-ULA
+    communications using such prefixes should be preferred over both IPv4-to-IPv4
+    and GUA-to- GUA (Global Unicast Address) communications in local use scenarios.
+    The document defines mechanisms for nodes to identify and incorporate known-local
+    prefixes into their address selection policy tables. It further clarifies the
+    unconditional requirement for implementing Rule 5.5 of RFC 6724 and reduces the
+    default precedence for 6to4 addresses. These updates enhance the supportability
+    of typical deployment environments, including automatic and unmanaged configurations,
+    and promote consistent IPv6-over-IPv4 precedence behavior for both ULA and GUA
+    within local networks. The document acknowledges that certain atypical deployment
+    models may require explicit configuration to achieve intended operational outcomes.</p>
   language:
   - en
   script:
@@ -242,6 +242,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-6man-rfc6724-update-20
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-6man-rfc6724-update-21
+    docid:
+    - id: draft-ietf-6man-rfc6724-update-21
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-6man-rfc6724-update-21
       format: text/plain
 ext:
   schema-version: v1.0.1
