@@ -13,17 +13,18 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document recommends improved DNS resolver behavior with respect
-    to the processing of Name Server (NS) resource record (RR) sets (RRsets) during
-    iterative resolution. When following a referral response from an authoritative
-    server to a child zone, DNS resolvers should explicitly query the authoritative
-    NS RRset at the apex of the child zone and cache this in preference to the NS
-    RRset on the parent side of the zone cut. The (A and AAAA) address RRsets in the
-    additional section from referral responses and authoritative NS answers for the
-    names of the NS RRset, should similarly be re-queried and used to replace the
-    entries with the lower trustworthiness ranking in cache. Resolvers should also
-    periodically revalidate the delegation by re-querying the parent zone at the expiration
-    of the TTL of either the parent or child NS RRset, whichever comes first.</p>"
+- content: "<p>This document describes an optional algorithm for the processing of
+    Name Server (NS) resource record (RR) sets (RRsets) during iterative resolution,
+    and describes the benefits and considerations of using this approach. When following
+    a referral response from an authoritative server to a child zone, DNS resolvers
+    should explicitly query the authoritative NS RRset at the apex of the child zone
+    and cache this in preference to the NS RRset on the parent side of the zone cut.
+    The (A and AAAA) address RRsets in the additional section from referral responses
+    and authoritative NS answers for the names of the NS RRset, should similarly be
+    re-queried and used to replace the entries with the lower trustworthiness ranking
+    in cache. Resolvers should also periodically revalidate the delegation by re-querying
+    the parent zone at the expiration of the TTL of either the parent or child NS
+    RRset, whichever comes first.</p>"
   language:
   - en
   script:
@@ -129,6 +130,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-dnsop-ns-revalidation-09
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-dnsop-ns-revalidation-10
+    docid:
+    - id: draft-ietf-dnsop-ns-revalidation-10
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-dnsop-ns-revalidation-10
       format: text/plain
 ext:
   schema-version: v1.0.1
