@@ -1,0 +1,156 @@
+---
+schema-version: v1.2.3
+id: draft-xu-intarea-challenge-icmpv6-01
+title:
+- content: Enhancing ICMPv6 Error Message Authentication Using Challenge-Confirm Mechanism
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-xu-intarea-challenge-icmpv6-01
+  type: src
+type: standard
+docid:
+- id: draft-xu-intarea-challenge-icmpv6-01
+  type: Internet-Draft
+  primary: true
+- id: I-D.xu-intarea-challenge-icmpv6
+  type: IETF
+  scope: anchor
+docnumber: I-D.xu-intarea-challenge-icmpv6
+date:
+- type: published
+  value: '2025-06-30'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - language:
+          - en
+          initial: K
+        formatted_initials:
+          content: K.
+          language:
+          - en
+      surname:
+        content: Xu
+        language:
+        - en
+      completename:
+        content: Ke Xu
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Tsinghua University & Zhongguancun Laboratory
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Xuewei
+          language:
+          - en
+        - language:
+          - en
+          initial: X
+        formatted_initials:
+          content: X.
+          language:
+          - en
+      surname:
+        content: Feng
+        language:
+        - en
+      completename:
+        content: Xuewei Feng
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Tsinghua University
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - language:
+          - en
+          initial: A
+        formatted_initials:
+          content: A.
+          language:
+          - en
+      surname:
+        content: Wang
+        language:
+        - en
+      completename:
+        content: Ao Wang
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Southeast University
+  role:
+  - type: author
+version:
+- draft: '01'
+revdate: '2025-06-30'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: <p>The Internet Control Message Protocol for IPv6 (ICMPv6) is essential
+    for network diagnostics but is vulnerable to off-path spoofing attacks, especially
+    when error messages relate to stateless transport protocols like UDP. An attacker
+    can forge these messages to degrade performance or enable Man-in-the-Middle attacks.
+    This document explores solutions to this problem by first presenting a straightforward
+    but flawed stateful challenge-response mechanism. It explains how this "strawman"
+    approach, while preventing simple spoofing, introduces a severe vulnerability
+    to state-exhaustion Denial-of-Service (DoS) attacks. Building on this analysis,
+    the document then proposes a robust, stateless challenge-response mechanism inspired
+    by TCP SYN-Cookies. This proposal eliminates the need to store per-challenge state
+    by computationally generating challenges. It limits state management to minimal
+    flags on existing sockets or a bounded probabilistic data structure. This approach
+    effectively authenticates ICMPv6 error messages while inherently resisting both
+    off-path spoofing and state- exhaustion DoS attacks, thus improving the robustness
+    of ICMPv6.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-xu-intarea-challenge-icmpv6-00
+    docid:
+    - id: draft-xu-intarea-challenge-icmpv6-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-xu-intarea-challenge-icmpv6-00
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-xu-intarea-challenge-icmpv6-01
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

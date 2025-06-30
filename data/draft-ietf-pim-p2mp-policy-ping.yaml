@@ -13,14 +13,20 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>SR P2MP policies are set of policies that enable architecture for P2MP
-    service delivery. A P2MP Policy consists of a set of candidate paths that connects
-    the Root of the Tree to a set of Leaves. A candidate path can contain two path
-    instances for global optimization purposes. The P2MP policy is composed of replication
-    segments. A replication segment is a forwarding instruction for a candidate path
-    which is downloaded to the Root, transit nodes and the leaves. This document describes
-    a simple and efficient mechanism that can be used to detect data plane failures
-    in P2MP Policy Candidate Paths (CPs) and Path Instances (PIs).</p>"
+- content: "<p>SR Point-to-Multipoint (P2MP) Policies are used to define and manage
+    explicit P2MP paths within a network. These policies are typically calculated
+    via a controller-based mechanisms and installed via a Path Computation Element
+    (PCE). In other cases these policies can be installed manually via YANG modles
+    or CLI. They are used to steer multicast traffic along optimized paths from a
+    Root to a set of Leaf routers. This document defines extensions to Ping and Traceroute
+    mechanisms for Segment Routing (SR) P2MP Policy with MPLS encapsulation to provide
+    OAM (Operations, Administration, and Maintenance) capabilities. The proposed extensions
+    enable operators to verify connectivity, diagnose failures and troubleshoot forwarding
+    issues within P2MP Policy multicast trees. By introducing new mechanisms for detecting
+    failures and validating path integrity, this document enhances the operational
+    robustness of P2MP multicast deployments. Additionally, it ensures that existing
+    MPLS and SR-based OAM tools can be effectively applied to networks utilizing P2MP
+    Policies.</p>"
   language:
   - en
   script:
@@ -126,6 +132,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-pim-p2mp-policy-ping-09
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-pim-p2mp-policy-ping-10
+    docid:
+    - id: draft-ietf-pim-p2mp-policy-ping-10
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-pim-p2mp-policy-ping-10
       format: text/plain
 ext:
   schema-version: v1.0.1

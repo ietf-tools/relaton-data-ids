@@ -13,19 +13,21 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>As well as the Internet Control Message Protocol for IPv4 (ICMPv4),
-    the Internet Control Message Protocol for IPv6 (ICMPv6) is significant for network
-    diagnostics and error reporting. However, like ICMPv4, ICMPv6 is also vulnerable
-    to off-path forgery, making it difficult for the receiver to verify the legitimacy
-    of a received ICMPv6 error message, particularly when the message contains stateless
-    protocol data (e.g., the message includes a UDP/ICMPv6 packet). Consequently,
-    adversaries on the Internet can forge ICMPv6 error messages carrying stateless
-    protocol data, leading the receiver to erroneously accept the forged message and
-    respond to it. This document proposes enhancement to ICMPv6 by introducing a challenge-
-    confirm mechanism that leverages random numbers embedded in the IPv6 Extension
-    Headers. The enhancement aims to strengthen the authentication of ICMPv6 error
-    messages, thereby mitigating the risks associated with forged messages and improving
-    the overall robustness of the protocol.</p>"
+- content: <p>The Internet Control Message Protocol for IPv6 (ICMPv6) is essential
+    for network diagnostics but is vulnerable to off-path spoofing attacks, especially
+    when error messages relate to stateless transport protocols like UDP. An attacker
+    can forge these messages to degrade performance or enable Man-in-the-Middle attacks.
+    This document explores solutions to this problem by first presenting a straightforward
+    but flawed stateful challenge-response mechanism. It explains how this "strawman"
+    approach, while preventing simple spoofing, introduces a severe vulnerability
+    to state-exhaustion Denial-of-Service (DoS) attacks. Building on this analysis,
+    the document then proposes a robust, stateless challenge-response mechanism inspired
+    by TCP SYN-Cookies. This proposal eliminates the need to store per-challenge state
+    by computationally generating challenges. It limits state management to minimal
+    flags on existing sockets or a bounded probabilistic data structure. This approach
+    effectively authenticates ICMPv6 error messages while inherently resisting both
+    off-path spoofing and state- exhaustion DoS attacks, thus improving the robustness
+    of ICMPv6.</p>
   language:
   - en
   script:
@@ -41,6 +43,16 @@ relation:
       primary: true
     formattedref:
       content: draft-xu-intarea-challenge-icmpv6-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-xu-intarea-challenge-icmpv6-01
+    docid:
+    - id: draft-xu-intarea-challenge-icmpv6-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-xu-intarea-challenge-icmpv6-01
       format: text/plain
 ext:
   schema-version: v1.0.1
