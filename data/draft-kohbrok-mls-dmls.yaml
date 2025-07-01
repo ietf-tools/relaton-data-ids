@@ -13,18 +13,18 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>Messaging Layer Security provides strong end-to-end security guarantees
-    for group messaging including Forward Secrecy (FS) and Post-Compromise Security
-    (PCS). However, MLS requires a Delivery Service (DS) to facilitate agreement between
-    group members on the order of Commit messages. In decentralized settings the only
-    way to implement a functional DS is to require group members to retain key material
-    so they can process commits out-of-order. Retaining key material this way is in
-    violation of the MLS deletion schedule and significantly reduces the FS of the
-    protocol. This draft specifies Decentralized MLS, based on the the Fork-Resilient
-    Continuous Group Key Agreement protocol FREEK proposed by Alwen et al. [FRCGKA].
-    In essence, DMLS extends MLS such that key material can be retained to process
-    Commits out-of-order with minimal losses to FS, thus allowing safer deployment
-    in decentralized environments.</p>"
+- content: "<p>Messaging Layer Security (MLS) provides strong end-to-end security
+    guarantees for group messaging including Forward Secrecy (FS) and Post-Compromise
+    Security (PCS). MLS requires a Delivery Service (DS) component to facilitate agreement
+    between group members on the order of Commit messages. In decentralized settings
+    without an authoritative entity to enforce ordering, group members will likely
+    have to retain key material so they can process commits out-of-order. Retaining
+    key material, however, significantly reduces the FS of the protocol. This draft
+    specifies Decentralized MLS (DMLS), based on the the Fork-Resilient Continuous
+    Group Key Agreement protocol FREEK proposed by Alwen et al. [FRCGKA]. In essence,
+    DMLS extends MLS such that key material can be retained to process Commits out-of-
+    order with recuded impact to FS, thus allowing safer deployment in decentralized
+    environments.</p>"
   language:
   - en
   script:
@@ -40,6 +40,16 @@ relation:
       primary: true
     formattedref:
       content: draft-kohbrok-mls-dmls-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-kohbrok-mls-dmls-01
+    docid:
+    - id: draft-kohbrok-mls-dmls-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-kohbrok-mls-dmls-01
       format: text/plain
 ext:
   schema-version: v1.0.1

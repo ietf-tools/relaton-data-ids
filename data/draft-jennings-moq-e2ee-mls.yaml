@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-jennings-moq-e2ee-mls
 title:
-- content: Secure Group Key Agreement with MLS over MoQ
+- content: End-to-end Security for Media over QUIC
   language:
   - en
   script:
@@ -13,10 +13,12 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This specification defines a mechanism to use Message Layer Security
-    (MLS) to provide end-to-end group key agreement for Media over QUIC (MOQ) applications.
-    Almost all communications are done via the MOQ transport. MLS requires a small
-    degree of synchronization, which is provided by a simple counter service.</p>"
+- content: "<p>The Media over QUIC system allows relays to assist in the delivery
+    of real-time media. While these relays are trusted to facilitate media delivery,
+    they are not trusted to access the media content. The document describes an end-to-end
+    security system that prevents relays from accessing media content. MLS is used
+    to establish keys that are available only to legitimate participants in a session,
+    which are then used to protect media data using SFrame.</p>"
   language:
   - en
   script:
@@ -52,6 +54,16 @@ relation:
       primary: true
     formattedref:
       content: draft-jennings-moq-e2ee-mls-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-jennings-moq-e2ee-mls-03
+    docid:
+    - id: draft-jennings-moq-e2ee-mls-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-jennings-moq-e2ee-mls-03
       format: text/plain
 ext:
   schema-version: v1.0.1
