@@ -14,11 +14,11 @@ docid:
   primary: true
 abstract:
 - content: "<p>The UIDBATCHES extension of the Internet Message Access Protocol (IMAP)
-    allows clients to retrieve UIDs from the server such that these UIDs split the
-    messages of a mailbox into equally sized batches. It enables the client to perform
-    operations such as FETCH/SEARCH/STORE on these specific batches. This limits the
-    number of messages that each command operates on, enabling better control over
-    resource usage and response sizes.</p>"
+    allows clients to retrieve UID ranges that partition a mailbox's messages into
+    equally sized batches. This enables clients to perform operations such as FETCH,
+    SEARCH, and STORE on specific message batches, providing better control over resource
+    usage and response sizes. The extension is particularly useful with the UIDONLY
+    mode where sequence numbers are unavailable.</p>"
   language:
   - en
   script:
@@ -124,6 +124,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-mailmaint-imap-uidbatches-09
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-mailmaint-imap-uidbatches-10
+    docid:
+    - id: draft-ietf-mailmaint-imap-uidbatches-10
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-mailmaint-imap-uidbatches-10
       format: text/plain
 ext:
   schema-version: v1.0.1
