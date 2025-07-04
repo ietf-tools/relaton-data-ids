@@ -19,9 +19,11 @@ abstract:
     drawbacks (for details, refer to section 1). This document difines two new standard
     actions for the BGP Flowspec V2 protocol (FSv2) [I-D.ietf-idr-flowspec-v2]: Redirect
     to SR Policy Action and SRv6 SID Action. The former allows traffic to be directed
-    to a designated SR Policy, while the latter enables the encapsulation of an additional
-    SRv6 SID as needed during redirection. These extensions address the shortcomings
-    of existing solutions.</p>"
+    to a designated SR Policy, while the latter allows for the encapsulation of an
+    additional SRv6 SID as required during redirection. The Redirect to SR Policy
+    Action can be used independently or in conjunction with the SRv6 SID Action, depending
+    on the application scenario. Additionally, the SRv6 SID Action can be used together
+    with other actions defined in FSv2, such as Redirect to IPv6.</p>"
   language:
   - en
   script:
@@ -37,6 +39,16 @@ relation:
       primary: true
     formattedref:
       content: draft-li-idr-flowspec-sr-policy-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-li-idr-flowspec-sr-policy-01
+    docid:
+    - id: draft-li-idr-flowspec-sr-policy-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-li-idr-flowspec-sr-policy-01
       format: text/plain
 ext:
   schema-version: v1.0.1
