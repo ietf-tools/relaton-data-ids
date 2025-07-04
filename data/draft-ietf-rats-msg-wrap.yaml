@@ -13,16 +13,20 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: <p>Section 8 of RFC 9334 defines "conceptual messages" as abstract messages
-    exchanged by RATS roles such as Evidence, Attestation Results, Endorsements, and
-    Reference Values. This document defines a "conceptual message" wrapper (CMW) format
-    for any RATS conceptual message and describes a collection type that aggregates
-    one or more CMWs into a single message. In addition, this document specifies a
-    corresponding CBOR tag, JSON Web Tokens (JWT) and CBOR Web Tokens (CWT) claims,
-    and an X.509 extension. These mechanisms enable the embedding of enveloped conceptual
-    messages into CBOR-based protocols, web APIs, and PKIX formats and protocols.
-    Moreover, a Media Type and a CoAP Content- Format are defined for transporting
-    CMWs over HTTP, MIME, CoAP, and other Internet protocols.</p>
+- content: "<p>The Remote Attestation Procedures architecture (RFC 9334) defines several
+    types of conceptual messages, such as Evidence, Attestation Results, Endorsements,
+    and Reference Values. These messages can appear in different formats and be transported
+    via various protocols. This document introduces the Conceptual Message Wrapper
+    (CMW) that provides a common structure to encapsulate these messages. It defines
+    a dedicated CBOR tag, corresponding JSON Web Token (JWT) and CBOR Web Token (CWT)
+    claims, and an X.509 extension. This allows CMWs to be used in CBOR-based protocols,
+    web APIs using JWTs and CWTs, and PKIX artifacts like X.509 certificates. Additionally,
+    the draft defines a media type and a CoAP content format to transport CMWs over
+    protocols like HTTP, MIME, and CoAP. The goal is to improve the interoperability
+    and flexibility of remote attestation protocols. By introducing a shared message
+    format like the CMW, we can consistently support different attestation message
+    types, evolve message serialization formats without breaking compatibility, and
+    avoid having to redefine how messages are handled in each protocol.</p>"
   language:
   - en
   script:
@@ -188,6 +192,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-rats-msg-wrap-15
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-rats-msg-wrap-16
+    docid:
+    - id: draft-ietf-rats-msg-wrap-16
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-rats-msg-wrap-16
       format: text/plain
 ext:
   schema-version: v1.0.1

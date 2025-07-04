@@ -16,10 +16,12 @@ abstract:
 - content: "<p>On a multi-access network, one of the PIM routers is elected as a Designated
     Router (DR). On the last hop LAN, the PIM DR is responsible for tracking local
     multicast listeners and forwarding traffic to these listeners if the group is
-    operating in PIM-SM. In this document, we propose a mechanism to elect backup
-    DR on a shared LAN. A backup DR on LAN would be useful for faster convergence.
-    This draft introduces the concept of a Backup Designated Router (BDR) and the
-    procedure to implement it.</p>"
+    operating in PIM-SM. In this document, we propose mechanisms to minimize traffic
+    losses during DR re-election. This document introduces the concept of a Backup
+    Designated Router on a shared LAN and a procedure to perform Delayed DR election.
+    A backup DR on LAN would be useful for faster convergence, whereas a Delayed DR
+    election would be useful for minimizing traffic losses when new routers join a
+    LAN.</p>"
   language:
   - en
   script:
@@ -55,6 +57,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-pim-bdr-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-pim-bdr-03
+    docid:
+    - id: draft-ietf-pim-bdr-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-pim-bdr-03
       format: text/plain
 ext:
   schema-version: v1.0.1
