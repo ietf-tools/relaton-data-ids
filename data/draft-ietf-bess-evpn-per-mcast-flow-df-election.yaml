@@ -13,15 +13,18 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>[RFC7432] describes mechanism to elect designated forwarder (DF) at
-    the granularity of (ESI, EVI) which is per VLAN (or per group of VLANs in case
-    of VLAN bundle or VLAN-aware bundle service). However, the current level of granularity
-    of per-VLAN is not adequate for some applications.[RFC8584] improves base line
-    DF election by introducing HRW DF election. [RFC9251] introduces applicability
-    of EVPN to Multicast flows, routes to sync them and a default DF election. This
-    document is an extension to HRW base draft [RFC8584] and further enhances HRW
-    algorithm for the Multicast flows to do DF election at the granularity of (ESI,
-    VLAN, Mcast flow).</p>"
+- content: "<p>This document defines an enhancement to the Designated Forwarder (DF)
+    election process in Ethernet Virtual Private Network (EVPN) environments. While
+    traditional DF election operates at a per Virtual Local Area Network (VLAN) or
+    per group of VLANs (in case of VLAN bundle or VLAN-aware bundle service) level,
+    such granularity may not be sufficient for applications requiring optimized or
+    isolated multicast forwarding. This specification introduces a refined DF election
+    mechanism that extends existing hash-based methods to operate at a more granular
+    level specifically at the tuple of Ethernet Segment Identifier (ESI), VLAN, and
+    multicast flow. This approach enables improved traffic distribution, enhanced
+    load balancing, and greater deployment flexibility for multicast delivery in EVPN
+    based networks. The proposed method is designed to remain compatible with existing
+    DF election procedures while offering targeted improvements for multicast scenarios.</p>"
   language:
   - en
   script:
@@ -137,6 +140,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-bess-evpn-per-mcast-flow-df-election-10
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-bess-evpn-per-mcast-flow-df-election-11
+    docid:
+    - id: draft-ietf-bess-evpn-per-mcast-flow-df-election-11
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-bess-evpn-per-mcast-flow-df-election-11
       format: text/plain
 ext:
   schema-version: v1.0.1

@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-pelov-schclet-architecture
 title:
-- content: SCHClet - A Modular Approach to SCHC Architecture
+- content: SCHClet - Modular Use of the SCHC Framework
   language:
   - en
   script:
@@ -13,28 +13,22 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This draft introduces the concept of a SCHClet, a modular, atomic sub-function
-    within the SCHC (Static Context Header Compression) framework. Drawing an analogy
-    from chiplet technology in integrated circuits, a SCHClet is envisioned as a self-contained
-    unit that encapsulates a specific SCHC function or set of functions. This modular
-    approach allows for tailored implementations that can meet diverse use cases without
-    the overhead of a full SCHC apparatus. By decomposing SCHC functionality into
-    SCHClets, the framework becomes more adaptable, extensible, and easier to deploy
-    generic network environments, applicable, but not limited to constrained networks.
-    A technology which uses a SCHClet can be considered as built using the SCHC Framework.
-    A generic SCHC Framework implementation which has all SCHClets implemented MUST
-    be able to interoperate with any SCHClet, provided it has the corresponding configuration.
-    For example, if one IPsec end-point uses a minimal SCHClet implementation, the
-    other end-point may use a full SCHC implementation with the corresponding configuration.
-    It may be said that a SCHClet is the minimal sub-function corresponding to a given
-    SCHC Context. In this sense, we can see Ack-On-Err Fragmentation as a SCHClet.
-    We may consider the Ack- Always Fragmentation as a SCHClet. Or we may consider
-    the baseline fragmentations from RFC8724 (NoAck, AckAlways, AckOnErr) as a SCHClet,
-    with the parameters defining which fragmentation mode is used. In any case, a
-    developer may chose to use only the NoAck fragmentation (for example), and in
-    this case they are using the NoAck Fragmentation SCHClet, which can even be further
-    restricted to a fixed set of parameters, with different parameters unsupported
-    by the implementation.</p>"
+- content: "<p>This document introduces the concept of a SCHClet: a modular sub- function
+    within the SCHC (Static Context Header Compression) framework. Inspired by chiplet
+    architectures in hardware design, a SCHClet encapsulates a specific SCHC function—such
+    as compression, fragmentation, or acknowledgments—as a self-contained unit. This
+    modularization enables tailored implementations that avoid the overhead of deploying
+    a full SCHC stack. By decomposing SCHC functionality into SCHClets, the framework
+    becomes more adaptable, extensible, and suitable for a wider range of network
+    environments—including, but not limited to, constrained networks. A system using
+    SCHClets remains compliant with the SCHC framework and can interoperate with a
+    full SCHC implementation, provided compatible configuration parameters are used.
+    Each SCHClet is defined by the SCHC Profiles and configuration parameters necessary
+    for interoperability. It operates within a single Stratum and a single SCHC Instance.
+    For example, a device may implement only the NoAck fragmentation mode as a standalone
+    SCHClet, potentially with fixed parameters. This modular approach simplifies development,
+    reduces resource demands, and provides a framework for future extensibility of
+    the SCHC architecture.</p>"
   language:
   - en
   script:
@@ -50,6 +44,16 @@ relation:
       primary: true
     formattedref:
       content: draft-pelov-schclet-architecture-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-pelov-schclet-architecture-01
+    docid:
+    - id: draft-pelov-schclet-architecture-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-pelov-schclet-architecture-01
       format: text/plain
 ext:
   schema-version: v1.0.1
