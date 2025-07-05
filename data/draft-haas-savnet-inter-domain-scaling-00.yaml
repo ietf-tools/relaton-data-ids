@@ -1,0 +1,93 @@
+---
+schema-version: v1.2.3
+id: draft-haas-savnet-inter-domain-scaling-00
+title:
+- content: Inter-domain scaling considerations for source address validation (SAV)
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-haas-savnet-inter-domain-scaling-00
+  type: src
+type: standard
+docid:
+- id: draft-haas-savnet-inter-domain-scaling-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.haas-savnet-inter-domain-scaling
+  type: IETF
+  scope: anchor
+docnumber: I-D.haas-savnet-inter-domain-scaling
+date:
+- type: published
+  value: '2025-07-04'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Jeffrey
+          language:
+          - en
+        - language:
+          - en
+          initial: J
+        formatted_initials:
+          content: J.
+          language:
+          - en
+      surname:
+        content: Haas
+        language:
+        - en
+      completename:
+        content: Jeffrey Haas
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: HPE
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2025-07-04'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: <p>Source address validation (SAV) covers the general techniques to prevent
+    IP source address spoofing, which is often used in networking attacks. Two primary
+    problem spaces addressed in work on SAV include building the "source of truth"
+    for what IP networks should be permitted to source IP traffic behind a set of
+    network interfaces, and implementing the data plane enforcement for the validation.
+    Implementing data plane enforcement, especially for inter-domain networking for
+    the Internet carried by BGP-4 [RFC 4271] has a number of scaling considerations.
+    One consideration is the potentially large and often asymmetric sizes of the per-interface
+    SAV tables vs. the Forwarding Information Base (FIB). A second consideration is
+    synchronization issues between SAV enforcement mechanisms and the forwarding state
+    for the FIB where a lack of coordination may result in dropped or mis-forwarded
+    traffic. This draft explores these two considerations under the title, "The asymmetric
+    contract, and the broken promise."</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-haas-savnet-inter-domain-scaling-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
