@@ -21,13 +21,19 @@ abstract:
     gains in compactness when applying data compression. While traditional data compression
     techniques such as DEFLATE (RFC 1951) can work well for CBOR encoded data items,
     their disadvantage is that the recipient needs to decompress the compressed form
-    to make use of the data. This specification describes Packed CBOR, a set of CBOR
-    tags and simple values that enable a simple transformation of an original CBOR
-    data item into a Packed CBOR data item that is almost as easy to consume as the
-    original CBOR data item. A separate decompression step is therefore often not
-    required at the recipient. // This revision -15 is intended to serve as the input
-    for the // 2025-05-14 CBOR interim meeting; it still has the tunables A/B/C //
-    to be tuned.</p>"
+    before it can make use of the data. This specification describes Packed CBOR,
+    a set of CBOR tags and simple values that enable a simple transformation of an
+    original CBOR data item into a Packed CBOR data item that is almost as easy to
+    consume as the original CBOR data item. A separate decompression step is therefore
+    often not required at the recipient. // (This cref will be removed by the RFC
+    editor:) The present // revision -16 is intended as input to IETF 123, to address
+    the // discussion about the use of simple values as reference items // during
+    the 2025-06-11 CBOR interim meeting. It contains a number // of editorial improvements
+    as well as the new concept of an // integration tag; it is for discussion whether
+    the latter should or // should not be added to Packed CBOR. The wording of the
+    present // revision continues to make use of the tunables A/B/C to be set to //
+    specific numbers before completing the Packed CBOR specification; // not all the
+    examples may fully align yet.</p>"
   language:
   - en
   script:
@@ -193,6 +199,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-cbor-packed-15
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-cbor-packed-16
+    docid:
+    - id: draft-ietf-cbor-packed-16
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-cbor-packed-16
       format: text/plain
 ext:
   schema-version: v1.0.1
