@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-lundberg-cose-two-party-signing-algs
 title:
-- content: COSE Algorithms for Two-Party Signing
+- content: Split signing algorithms for COSE
   language:
   - en
   script:
@@ -13,16 +13,16 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This specification defines COSE algorithm identifiers used when the
-    signing operation is performed cooperatively between two parties. When performing
-    two-party signing, the first party typically hashes the data to be signed and
-    the second party signs the hashed data computed by the first party. This can be
-    useful when communication with the party holding the signing private key occurs
-    over a limited- bandwidth channel, such as NFC or Bluetooth Low Energy (BLE),
-    in which it is infeasible to send the complete set of data to be signed. The resulting
-    signatures are identical in structure to those computed by a single party, and
-    can be verified using the same verification procedure without additional steps
-    to preprocess the signed data.</p>"
+- content: "<p>This specification defines COSE algorithm identifiers used when one
+    signing operation is split between two cooperating parties. When performing split
+    signing, the first party typically hashes the data to be signed and the second
+    party signs the hashed data computed by the first party. This can be useful when
+    communication with the party holding the signing private key occurs over a limited-bandwidth
+    channel, such as NFC or Bluetooth Low Energy (BLE), in which it is infeasible
+    to send the complete set of data to be signed. The resulting signatures are identical
+    in structure to those computed by a single party, and can be verified using the
+    same verification algorithm without additional steps to preprocess the signed
+    data.</p>"
   language:
   - en
   script:
@@ -48,6 +48,16 @@ relation:
       primary: true
     formattedref:
       content: draft-lundberg-cose-two-party-signing-algs-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-lundberg-cose-two-party-signing-algs-02
+    docid:
+    - id: draft-lundberg-cose-two-party-signing-algs-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-lundberg-cose-two-party-signing-algs-02
       format: text/plain
 ext:
   schema-version: v1.0.1

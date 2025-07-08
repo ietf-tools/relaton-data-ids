@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-ietf-rats-pkix-key-attestation
 title:
-- content: PKIX Key Attestation
+- content: PKIX Evidence for Remote Attestation of Hardware Security Modules
   language:
   - en
   script:
@@ -13,16 +13,16 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: <p>This document specifies a vendor-agnostic format for attesting to the
-    protection properties of a symmetric or asymmetric cryptographic key within a
-    hardware cryptographic module to support applications such as providing evidence
-    to a Certification Authority that a key is being protected in accordance with
-    the requested certificate profile, or that HSMs can perform key import and maintain
-    the private key protection properties in a robust way even when migrating keys
-    across HSM vendors. This specification includes a format for requesting a key
-    attestation containing certain attributes. This specification is called "PKIX
-    Attestation" because it is designed to be easy to implement on top of a code base
-    that already supports X.509 and PKCS#11 data models.</p>
+- content: "<p>This document specifies a vendor-agnostic format for evidence produced
+    and verified within a PKIX context. The evidence produced this way includes claims
+    collected about a cryptographic module and elements found within it such as cryptographic
+    keys. One scenario envisaged is that the state information about the cryptographic
+    module can be securely presented to a remote operator or auditor in a vendor-agnostic
+    verifiable format. A more complex scenario would be to submit this evidence to
+    a Certification Authority to aid in determining whether the storage properties
+    of this key meet the requirements of a given certificate profile. This specification
+    also offers a format for requesting a cryptographic module to produce evidence
+    tailored for expected use.</p>"
   language:
   - en
   script:
@@ -38,6 +38,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-rats-pkix-key-attestation-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-rats-pkix-key-attestation-01
+    docid:
+    - id: draft-ietf-rats-pkix-key-attestation-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-rats-pkix-key-attestation-01
       format: text/plain
 ext:
   schema-version: v1.0.1

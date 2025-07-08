@@ -16,19 +16,20 @@ docid:
 abstract:
 - content: <p>This document updates the Authentication and Authorization for Constrained
     Environments Framework (ACE, RFC 9200) as follows. (1) It defines the Short Distribution
-    Chain (SDC) workflow that the authorization server can use for uploading an access
-    token to a resource server on behalf of the client. (2) For the OAuth 2.0 token
-    endpoint, it defines new parameters and encodings, and extends the semantics of
-    the "ace_profile" parameter. (3) It defines how the client and the authorization
-    server can coordinate on the exchange of the client's and resource server's public
+    Chain (SDC) workflow that the authorization server (AS) can use for uploading
+    an access token to a resource server on behalf of the client. (2) For the OAuth
+    2.0 token endpoint, it defines new parameters and encodings and it extends the
+    semantics of the "ace_profile" parameter. (3) It defines how the client and the
+    AS can coordinate on the exchange of the client's and resource server's public
     authentication credentials, when those can be transported by value or identified
     by reference; this extends the semantics of the "rs_cnf" parameter for the OAuth
-    2.0 token endpoint, thus updating RFC 9201. (4) It amends two of the requirements
-    on profiles of the framework. (5) It deprecates the original payload format of
-    error responses conveying an error code, when CBOR is used to encode message payloads.
-    For those responses, it defines a new payload format aligned with RFC 9290, thus
-    updating in this respect also the profiles defined in RFC 9202, RFC 9203, and
-    RFC 9431.</p>
+    2.0 token endpoint, thus updating RFC 9201. (4) It extends the error handling
+    at the AS, for which it defines a new error code. (5) It deprecates the original
+    payload format of error responses conveying an error code, when CBOR is used to
+    encode message payloads. For those responses, it defines a new payload format
+    aligned with RFC 9290, thus updating in this respect also the profiles defined
+    in RFC 9202, RFC 9203, and RFC 9431. (6) It amends two of the requirements on
+    profiles of the framework.</p>
   language:
   - en
   script:
@@ -84,6 +85,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-ace-workflow-and-params-04
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-ace-workflow-and-params-05
+    docid:
+    - id: draft-ietf-ace-workflow-and-params-05
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-ace-workflow-and-params-05
       format: text/plain
 ext:
   schema-version: v1.0.1

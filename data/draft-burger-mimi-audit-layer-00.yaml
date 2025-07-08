@@ -1,0 +1,125 @@
+---
+schema-version: v1.2.3
+id: draft-burger-mimi-audit-layer-00
+title:
+- content: Detecting the Presence of a Malicious Hub in MIMI Protocol
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-burger-mimi-audit-layer-00
+  type: src
+type: standard
+docid:
+- id: draft-burger-mimi-audit-layer-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.burger-mimi-audit-layer
+  type: IETF
+  scope: anchor
+docnumber: I-D.burger-mimi-audit-layer
+date:
+- type: published
+  value: '2025-07-07'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Harditya
+          language:
+          - en
+        - language:
+          - en
+          initial: H
+        formatted_initials:
+          content: H.
+          language:
+          - en
+      surname:
+        content: Sarvaiya
+        language:
+        - en
+      completename:
+        content: Harditya Sarvaiya
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Virginia Tech
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Eric
+          language:
+          - en
+        - language:
+          - en
+          initial: E
+        - language:
+          - en
+          initial: W
+        formatted_initials:
+          content: E. W.
+          language:
+          - en
+      surname:
+        content: Burger
+        language:
+        - en
+      completename:
+        content: Eric W Burger
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Virginia Tech
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2025-07-07'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>This document defines a Merkle-tree-based approach that can act as
+    an audit-layer detection mechanism to identify a malicious hub, responsible for
+    interoperable group communication between various messaging platforms. The proposed
+    approach is based on the MIMI protocol, which uses a central hub for timestamping
+    and broadcasting messages to clients operating on different platforms. Even though
+    all MLS ciphertexts are end-to-end encrypted, they are routed through the hub,
+    making it a lucrative attack surface for message reordering attacks. To detect
+    such attacks, the proposed approach suggests creating Merkle proofs of messages
+    and timestamps on the client-side, which can subsequently be broadcast to other
+    clients for verification with local Merkle proofs. The broadcast messages are
+    encrypted too and are sent probabilistically to avoid being dropped by the hub.
+    If any of the proofs do not match, an alert is broadcast to the room, indicating
+    a malicious hub. The approach has minimal communication overhead for practical
+    purposes.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-burger-mimi-audit-layer-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

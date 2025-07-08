@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-wendt-stir-vesper
 title:
-- content: VESPER PASSporT and Identity Tokens - VErifiable STI Personas
+- content: VESPER - Framework for VErifiable STI Personas
   language:
   - en
   script:
@@ -13,43 +13,27 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: <p>This document extends the STIR architecture by defining a Personal Assertion
-    Token (PASSporT) with a type of "vesper" (VErifiable Sti PERsona) and specifies
-    the use of PASSporTs as a JSON Web Tokens (JWT) and Selective Disclosure JWT (SD-JWT)
-    for representing verifiable claims related to a persona (a person or business
-    entity) associated with a Secure Telephone Identity (STI). This set of extensible
-    claims can include verifiable information such as the assignment of a telephone
-    number, the output of a Know Your Customer (KYC) or Know Your Business (KYB) type
-    of vetting process, Rich Call Data (RCD) or claims of consent provided to the
-    telephone number holder. The architecture, dependencies, and process flow of Vesper
-    includes logical roles that represent certain responsibilities for establishing
-    a secure telephone identity. These roles represent the basis for trusted relationships
-    to information that is being claimed and who is validating and taking responsibility
-    for the accuracy of that information. These roles begin with a Subject Entity
-    (SE) that is the end entity that intended to be represented by the STI telephone
-    number identifier. A Vetting Claim Agent (VCA) establishes the Subject Entity
-    as a vetted entity after performing the initial vetting and existence as a entity
-    that fulfills the criteria and policies of the ecosystem to be associated with
-    an STI. A Notary Agent (NA) is a neutral role that maintains a graph of relationships
-    among all roles, claims, and identities, but importantly, for protecting privacy,
-    doesn't hold any claim information other than the recording of claim events to
-    the STI telephone number. The NA records these claim event transactions with a
-    corresponding transparency log that generates verifiable receipts to "notarize"
-    the recording of these relationships and claims being established. Privacy is
-    enabled in this Notary role because the submitters have the option of submitting
-    hashes of claims to protect information, or may usefully want to publicly declare
-    their association to a claim to allow the public monitoring to avoid duplicate,
-    mistaken or negligent claims which can be identified before illegitimate usage
-    in the eco- system can occur. Other Claim Agents are defined producing claims
-    in the form of SD-JWT + receipts from the NA. There are multiple claim agent types
-    with corresponding extensible claim definitions with key value pairs that can
-    be required or optionally included. These SD- JWT + receipt claim objects are
-    then collected by the SE into a digital wallet that it can then use for selective
-    disclosure presentation and incorporate into a "vesper" PASSporT signed by the
-    a delegate certificate associated with STI telephone number to validate the SE
-    is indeed the authorized holder of the telephone number and vesper token at the
-    time the presentation is required and ties the SE to the STIR eco-system a STIR
-    certificates policy for use in communications.</p>
+- content: "<p>This document formalizes a profile and a framework for the use of delegate
+    certificates and authority tokens to strengthen the association between telephone
+    number assignments and the entities that have the authoritative right to use them.
+    It defines a model in which the TNAuthList Authority Token serves as a trusted
+    representation of telephone number assignment and right-to-use (RTU), anchored
+    by a Notary Agent that logs these associations through verifiable transparency
+    mechanisms. The framework also extends the use of authority tokens to support
+    other PASSporT claims like Rich Call Data (RCD) by defining a role for JWTClaimConstraints
+    Authority Tokens. These tokens are issued by authoritative or recognized and vetted
+    claim agents within the ecosystem to assert information associated with the entity
+    assigned a telephone number. The Notary Agent plays a critical role in recording
+    these claims and their provenance, enhancing transparency and accountability.
+    Delegate certificates encapsulate and incorporate both the telephone number and
+    associated information validated via authority tokens to the certification authority
+    issuing them, binding them to the authenticated telephone number of the calling
+    party. These certificates are published to a certificate transparency log, enabling
+    relying parties to independently verify the integrity and legitimacy of number
+    use and related claims. The VESPER (Verifiable STI PERsona) approach utilizes
+    STIR protocols and the ACME authority token to formalizing a verifiable, auditable,
+    and privacy-conscious foundation for associating telephone numbers with vetted
+    entities and validated assertion of associated metadata.</p>"
   language:
   - en
   script:
@@ -85,6 +69,26 @@ relation:
       primary: true
     formattedref:
       content: draft-wendt-stir-vesper-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-wendt-stir-vesper-03
+    docid:
+    - id: draft-wendt-stir-vesper-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-wendt-stir-vesper-03
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-wendt-stir-vesper-04
+    docid:
+    - id: draft-wendt-stir-vesper-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-wendt-stir-vesper-04
       format: text/plain
 ext:
   schema-version: v1.0.1

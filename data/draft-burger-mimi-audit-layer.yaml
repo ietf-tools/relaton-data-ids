@@ -1,0 +1,47 @@
+---
+schema-version: v1.2.3
+id: draft-burger-mimi-audit-layer
+title:
+- content: Detecting the Presence of a Malicious Hub in MIMI Protocol
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-burger-mimi-audit-layer
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This document defines a Merkle-tree-based approach that can act as
+    an audit-layer detection mechanism to identify a malicious hub, responsible for
+    interoperable group communication between various messaging platforms. The proposed
+    approach is based on the MIMI protocol, which uses a central hub for timestamping
+    and broadcasting messages to clients operating on different platforms. Even though
+    all MLS ciphertexts are end-to-end encrypted, they are routed through the hub,
+    making it a lucrative attack surface for message reordering attacks. To detect
+    such attacks, the proposed approach suggests creating Merkle proofs of messages
+    and timestamps on the client-side, which can subsequently be broadcast to other
+    clients for verification with local Merkle proofs. The broadcast messages are
+    encrypted too and are sent probabilistically to avoid being dropped by the hub.
+    If any of the proofs do not match, an alert is broadcast to the room, indicating
+    a malicious hub. The approach has minimal communication overhead for practical
+    purposes.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-burger-mimi-audit-layer-00
+    docid:
+    - id: draft-burger-mimi-audit-layer-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-burger-mimi-audit-layer-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
