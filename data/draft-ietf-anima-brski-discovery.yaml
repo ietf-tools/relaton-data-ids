@@ -13,26 +13,24 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document specifies how BRSKI entities, such as registrars, proxies,
-    pledges or others that are acting as responders, can be discovered and selected
-    by BRSKI entities acting as initiators, especially in the face of variations in
-    the protocols that can introduce non-interoperability when not equally supported
-    by both responder and initiator. This document does not define any new discovery
-    methods. Instead, it solves the challenges of announcing, discovering and selecting
-    an interoperable instance of a BRSKI responder by defining a data model and simple
-    string based encoding for BRSKI variations and by prescribing how to encode this
-    encoding of variations into multiple pre-existing discovery mechanisms: DNS-SD,
-    GRASP and CoAP discovery (CORE-LF). This document also defines the procedures
-    necessary for interoperable announcement, discovery and selection in the face
-    of redundant responder, making deployment more resilient by allowing easy and
-    automatic redundancy. BRSKI Proxies are a core element of BRSKI. This document
-    specifies how Proxies need to be implemented to support proxying of BRSKI variations,
-    even supporting possible future variations not in existance when the proxy was
-    implemented. Finally, this document defines the IANA registrities to track the
-    definition of variations and their encoding and hence allow easy introduction
-    of new variations, support of additional discovery protocols and even discovery
-    of additional BRKI roles (such as MASA). All with no or minimum additional specification
-    requirements other than new registry entries.</p>"
+- content: "<p>This document specifies how to make BRSKI communications autoconfiguring,
+    extensible and resilient in the face of simultaneous use of different variations
+    of the BRSKI protocol (BRSKI, BRSKI-AE, BRSKI-PRM, constrained BRSKI, stateless
+    constrained BRSKI proxies). This document specifies a data model, IANA registry
+    and BRSKI component procedures to achieve this. This document does not define
+    any new discovery methods. Instead, its data model allows to signal all current
+    (and future) variations of the BRSKI family of protocols consistently via different
+    existing network discovery mechanisms: DNS-SD, CoAP discovery (CORE-LF) and GRASP.
+    Additional/future discovery mechanisms can also be supported through the IANA
+    registry. Automatic resiliency and load-sharing are enabled through the use of
+    discovery mechanisms and the provisioning of multiple instances of BRSKI components
+    such as registrars and Join Proxies. This document specifies the procedures to
+    support load-sharing and (fast) failover under failure and recovery of redundant
+    components. Future proof deployments of BRSKI requires Join Proxies that automatically
+    support any current and future BRSKI variation. This document specifies the procedures
+    how Join Proxies can support this through specific Join Proxy protocol behavior
+    and the use of discovery mechanisms. The specification for discovery of pledges
+    by their IDevID as introduced by BRSKI-PRM is refined in this document.</p>"
   language:
   - en
   script:
@@ -108,6 +106,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-anima-brski-discovery-06
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-anima-brski-discovery-07
+    docid:
+    - id: draft-ietf-anima-brski-discovery-07
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-anima-brski-discovery-07
       format: text/plain
 ext:
   schema-version: v1.0.1

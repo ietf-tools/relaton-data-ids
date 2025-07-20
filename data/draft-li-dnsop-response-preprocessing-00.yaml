@@ -1,0 +1,123 @@
+---
+schema-version: v1.2.3
+id: draft-li-dnsop-response-preprocessing-00
+title:
+- content: 'DNS Response Pre-processing Security Guidelines: Awaiting Valid Responses'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-li-dnsop-response-preprocessing-00
+  type: src
+type: standard
+docid:
+- id: draft-li-dnsop-response-preprocessing-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.li-dnsop-response-preprocessing
+  type: IETF
+  scope: anchor
+docnumber: I-D.li-dnsop-response-preprocessing
+date:
+- type: published
+  value: '2025-07-19'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Xiang
+          language:
+          - en
+        - language:
+          - en
+          initial: X
+        formatted_initials:
+          content: X.
+          language:
+          - en
+      surname:
+        content: Li
+        language:
+        - en
+      completename:
+        content: Xiang Li
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Nankai University
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Yuqi
+          language:
+          - en
+        - language:
+          - en
+          initial: "Y"
+        formatted_initials:
+          content: Y.
+          language:
+          - en
+      surname:
+        content: Qiu
+        language:
+        - en
+      completename:
+        content: Yuqi Qiu
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Nankai University
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2025-07-19'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: <p>The security and robustness of the Domain Name System (DNS) significantly
+    depend on how resolvers handle received responses. Current DNS specifications
+    lack exhaustive and consistent guidance on response pre-processing, particularly
+    for malformed or unexpected packets. This specification gap has led to implementation
+    divergences and has been shown to introduce security vulnerabilities such as DNS
+    cache poisoning, Denial of Service (DoS), and resource exhaustion, as detailed
+    in the TUDOOR attack research. This document aims to clarify and standardize the
+    behavior of DNS resolvers when receiving and initially processing responses from
+    upstream servers. The core proposal is the "Awaiting Valid Responses" mechanism,
+    which mandates that a resolver, after issuing a query, MUST maintain a defined
+    waiting period to receive a well- formed, relevant, and validated response. During
+    this period, non- compliant incoming packets should be discarded, and the resolver
+    should continue to wait until a valid response is received or the query times
+    out. This document provides guidance for DNS implementers to mitigate security
+    risks arising from flaws in response pre-processing logic.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-li-dnsop-response-preprocessing-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
