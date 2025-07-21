@@ -2,7 +2,8 @@
 schema-version: v1.2.3
 id: draft-bunch-groupware-scopes
 title:
-- content: Standardized OAuth 2.0 Scopes for Mail, Calendar, and Contact Access
+- content: A Rich Authorization Request Framework for Groupware Services using OAuth
+    2.0
   language:
   - en
   script:
@@ -14,18 +15,18 @@ docid:
   primary: true
 abstract:
 - content: "<p>The OAuth 2.0 authorization framework is widely used to provide clients
-    with delegated access to user data. However, the core specification, The OAuth
-    2.0 Authorization Framework, leaves the definition of access scopes to individual
-    service providers. This has led to a fragmented ecosystem for common groupware
-    services (Mail, Calendaring, Contacts), where each provider uses proprietary,
-    non-interoperable scope identifiers. Client applications, such as desktop mail
-    clients, are forced to hardcode configurations for a small number of large providers,
-    stifling innovation and harming open ecosystems. This document proposes a standardized
-    set of scope values, using the IETF-controlled URN namespace, to represent granular
-    and aggregate permissions for common mail (IMAP/POP/SMTP/JMAP), calendar (CalDAV),
-    and contact (CardDAV) operations. Adopting these standard scopes would significantly
-    improve interoperability between clients and servers, enabling automatic client
-    configuration and a more seamless user experience.</p>"
+    with delegated access to user data. However, the core specification leaves the
+    definition of access scopes to individual service providers. This has led to a
+    fragmented ecosystem for common groupware services (Mail, Calendaring, Contacts),
+    where each provider uses proprietary, non-interoperable scope identifiers. Client
+    applications, such as desktop mail clients, are forced to hardcode configurations
+    for a small number of large providers, stifling innovation and harming open ecosystems.
+    This document proposes a framework that combines a minimal set of standardized
+    OAuth 2.0 scopes with a detailed structure for use with OAuth 2.0 Rich Authorization
+    Requests (RAR). This hybrid approach provides a simple baseline for legacy clients
+    while enabling powerful, granular, and privacy-preserving authorization for modern
+    clients. It defines RAR type values, actions, datatypes, and custom fields for
+    specifying fine-grained permissions for groupware resources.</p>"
   language:
   - en
   script:
@@ -41,6 +42,16 @@ relation:
       primary: true
     formattedref:
       content: draft-bunch-groupware-scopes-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-bunch-groupware-scopes-01
+    docid:
+    - id: draft-bunch-groupware-scopes-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-bunch-groupware-scopes-01
       format: text/plain
 ext:
   schema-version: v1.0.1
