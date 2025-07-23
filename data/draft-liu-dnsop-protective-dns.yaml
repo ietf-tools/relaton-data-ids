@@ -13,17 +13,18 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>Recent research work has delved deeply into a new type of DNS security
-    service, Protective DNS, through various measurement methods, and it has been
-    deployed in multiple DNS providers and even in national ISPs. Protective DNS identifies
-    whether the domain names requested by customers are in the threat intelligence
-    (blocklist) it maintains. For domain names listed in the blocklist, it rewrites
-    the resolution results to secure resources to prevent users from accessing malicious
-    resources, such as malicious servers (IP addresses), etc. This document summarizes
-    the conclusions of these research works and provides specific and practical considerations
-    and suggestions for the deployment and operation of Protective DNS. By following
-    these considerations, Protective DNS service providers can effectively enhance
-    the practicality and security of their services.</p>"
+- content: "<p>Protective DNS is a defense mechanism deployed on recursive resolvers
+    to prevent users from accessing malicious domains. For domain names in the blocklist,
+    it rewrites DNS resolution responses to point to secure destinations (e.g., safe
+    servers) to prevent users from accessing malicious entities. Owing to its effective
+    defenses against common cyber attack behaviors—such as command-and-control (C2)
+    communications of malware—Protective DNS deployment has surged via various initiatives.
+    Not only have renowned DNS service providers adopted this defense, but some countries
+    have also launched national-scale deployments. Meanwhile, studies analyzing Protective
+    DNS have identified implementation diversity. Thus, this document aims to provide
+    specific operational and security considerations for Protective DNS. It is intended
+    primarily for entities seeking to deploy Protective DNS for defensive purposes,
+    offering deployment and security considerations.</p>"
   language:
   - en
   script:
@@ -39,6 +40,16 @@ relation:
       primary: true
     formattedref:
       content: draft-liu-dnsop-protective-dns-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-liu-dnsop-protective-dns-01
+    docid:
+    - id: draft-liu-dnsop-protective-dns-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-liu-dnsop-protective-dns-01
       format: text/plain
 ext:
   schema-version: v1.0.1
