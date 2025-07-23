@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-ietf-calext-jscontact-uid
 title:
-- content: 'JSContact: Optional Unique Identifiers'
+- content: 'JSContact Version 2.0: Optional Unique Identifiers'
   language:
   - en
   script:
@@ -13,11 +13,12 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: <p>This document redefines the mandatory "uid" property of a Card object
-    to become optional. This is both for using JSContact in other protocols than CardDAV
-    and JMAP for Contacts, as well as to align the semantics of the vCard UID property
-    with JSContact. This is a breaking change, this document introduces version "2.0"
-    to replace the current JSContact version "1.0".</p>
+- content: <p>This document defines version "2.0" of JSContact. It redefines the previously
+    mandatory "uid" property of a Card object to be optional, which requires the major
+    version number of JSContact to change. Other than changing the "uid" property
+    as outlined in this document, all other definitions of JSContact version "1.0"
+    remain as defined in RFC 9553. In addition, this document redefines the conversion
+    rule for the "uid" property and accordingly updates RFC 9555.</p>
   language:
   - en
   script:
@@ -43,6 +44,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-calext-jscontact-uid-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-calext-jscontact-uid-02
+    docid:
+    - id: draft-ietf-calext-jscontact-uid-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-calext-jscontact-uid-02
       format: text/plain
 ext:
   schema-version: v1.0.1
