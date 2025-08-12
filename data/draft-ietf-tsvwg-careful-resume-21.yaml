@@ -1,183 +1,188 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-idr-vpn-prefix-orf-18
+id: draft-ietf-tsvwg-careful-resume-21
 title:
-- content: VPN Prefix Outbound Route Filter (VPN Prefix ORF) for BGP-4
+- content: Convergence of Congestion Control from Retained State
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-vpn-prefix-orf-18
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-tsvwg-careful-resume-21
   type: src
 type: standard
 docid:
-- id: draft-ietf-idr-vpn-prefix-orf-18
+- id: draft-ietf-tsvwg-careful-resume-21
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-idr-vpn-prefix-orf
+- id: I-D.ietf-tsvwg-careful-resume
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-idr-vpn-prefix-orf
+docnumber: I-D.ietf-tsvwg-careful-resume
 date:
 - type: published
-  value: '2025-08-07'
+  value: '2025-08-12'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Wei
+        - content: Nicolas
           language:
           - en
         - language:
           - en
-          initial: W
+          initial: "N"
         formatted_initials:
-          content: W.
+          content: N.
           language:
           - en
       surname:
-        content: Wang
+        content: Kuhn
         language:
         - en
       completename:
-        content: Wei Wang
+        content: Nicolas Kuhn
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: China Telecom
+        - content: Thales Alenia Space
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Aijun
+        - content: Emile
           language:
           - en
         - language:
           - en
-          initial: A
+          initial: E
         formatted_initials:
-          content: A.
+          content: E.
           language:
           - en
       surname:
-        content: Wang
+        content: Stephan
         language:
         - en
       completename:
-        content: Aijun Wang
+        content: Emile Stephan
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: China Telecom
+        - content: Orange
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Haibo
-          language:
-          - en
-        - language:
-          - en
-          initial: H
-        formatted_initials:
-          content: H.
-          language:
-          - en
-      surname:
-        content: Wang
-        language:
-        - en
-      completename:
-        content: Haibo Wang
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Huawei Technologies
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Gyan
+        - content: Gorry
           language:
           - en
         - language:
           - en
           initial: G
-        - language:
-          - en
-          initial: S
         formatted_initials:
-          content: G. S.
+          content: G.
           language:
           - en
       surname:
-        content: Mishra
+        content: Fairhurst
         language:
         - en
       completename:
-        content: Gyan Mishra
+        content: Gorry Fairhurst
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Verizon Inc.
+        - content: University of Aberdeen
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Jie
+        - content: Raffaello
           language:
           - en
         - language:
           - en
-          initial: J
+          initial: R
         formatted_initials:
-          content: J.
+          content: R.
           language:
           - en
       surname:
-        content: Dong
+        content: Secchi
         language:
         - en
       completename:
-        content: Jie Dong
+        content: Raffaello Secchi
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei Technologies
+        - content: University of Aberdeen
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Christian
+          language:
+          - en
+        - language:
+          - en
+          initial: C
+        formatted_initials:
+          content: C.
+          language:
+          - en
+      surname:
+        content: Huitema
+        language:
+        - en
+      completename:
+        content: Christian Huitema
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Private Octopus Inc.
   role:
   - type: author
 version:
-- draft: '18'
-revdate: '2025-08-07'
+- draft: '21'
+revdate: '2025-08-12'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This draft defines a new type of Outbound Route Filter (ORF), known
-    as the VPN Prefix ORF. The VPN Prefix ORF mechanism is applicable when VPN routes
-    from different VRFs are exchanged through a single shared BGP session.</p>"
+- content: <p>This document specifies a cautious method for IETF transports that enables
+    fast startup of congestion control for a wide range of connections, known as "Careful
+    Resume". It reuses a set of computed congestion control parameters that are based
+    on previously observed path characteristics between the same pair of transport
+    endpoints. These parameters are saved, allowing them to be later used to modify
+    the congestion control behaviour of a subsequent connection. It describes assumptions
+    and defines requirements for how a sender utilises these parameters to provide
+    opportunities for a connection to more rapidly get up to speed and rapidly utilise
+    available capacity. It discusses how use of this method impacts the capacity at
+    a shared network bottleneck and the safe response that is needed after any indication
+    that the new rate is inappropriate.</p>
   language:
   - en
   script:
@@ -186,23 +191,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-idr-vpn-prefix-orf-11
+    id: draft-ietf-tsvwg-careful-resume-19
     docid:
-    - id: draft-ietf-idr-vpn-prefix-orf-11
+    - id: draft-ietf-tsvwg-careful-resume-19
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-idr-vpn-prefix-orf-11
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-idr-vpn-prefix-orf-20
-    docid:
-    - id: draft-ietf-idr-vpn-prefix-orf-20
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-idr-vpn-prefix-orf-20
+      content: draft-ietf-tsvwg-careful-resume-19
       format: text/plain
 series:
 - type: main
@@ -213,7 +208,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-idr-vpn-prefix-orf-18
+  number: draft-ietf-tsvwg-careful-resume-21
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

@@ -1,144 +1,29 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-idr-vpn-prefix-orf-18
+id: draft-ietf-spring-resource-aware-segments-14
 title:
-- content: VPN Prefix Outbound Route Filter (VPN Prefix ORF) for BGP-4
+- content: Introducing Resource Awareness to SR Segments
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-vpn-prefix-orf-18
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-spring-resource-aware-segments-14
   type: src
 type: standard
 docid:
-- id: draft-ietf-idr-vpn-prefix-orf-18
+- id: draft-ietf-spring-resource-aware-segments-14
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-idr-vpn-prefix-orf
+- id: I-D.ietf-spring-resource-aware-segments
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-idr-vpn-prefix-orf
+docnumber: I-D.ietf-spring-resource-aware-segments
 date:
 - type: published
-  value: '2025-08-07'
+  value: '2025-08-12'
 contributor:
-- person:
-    name:
-      given:
-        forename:
-        - content: Wei
-          language:
-          - en
-        - language:
-          - en
-          initial: W
-        formatted_initials:
-          content: W.
-          language:
-          - en
-      surname:
-        content: Wang
-        language:
-        - en
-      completename:
-        content: Wei Wang
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: China Telecom
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Aijun
-          language:
-          - en
-        - language:
-          - en
-          initial: A
-        formatted_initials:
-          content: A.
-          language:
-          - en
-      surname:
-        content: Wang
-        language:
-        - en
-      completename:
-        content: Aijun Wang
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: China Telecom
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Haibo
-          language:
-          - en
-        - language:
-          - en
-          initial: H
-        formatted_initials:
-          content: H.
-          language:
-          - en
-      surname:
-        content: Wang
-        language:
-        - en
-      completename:
-        content: Haibo Wang
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Huawei Technologies
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Gyan
-          language:
-          - en
-        - language:
-          - en
-          initial: G
-        - language:
-          - en
-          initial: S
-        formatted_initials:
-          content: G. S.
-          language:
-          - en
-      surname:
-        content: Mishra
-        language:
-        - en
-      completename:
-        content: Gyan Mishra
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Verizon Inc.
-  role:
-  - type: author
 - person:
     name:
       given:
@@ -167,17 +52,133 @@ contributor:
         - content: Huawei Technologies
   role:
   - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Takuya
+          language:
+          - en
+        - language:
+          - en
+          initial: T
+        formatted_initials:
+          content: T.
+          language:
+          - en
+      surname:
+        content: Miyasaka
+        language:
+        - en
+      completename:
+        content: Takuya Miyasaka
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: KDDI Corporation
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Yongqing
+          language:
+          - en
+        - language:
+          - en
+          initial: "Y"
+        formatted_initials:
+          content: Y.
+          language:
+          - en
+      surname:
+        content: Zhu
+        language:
+        - en
+      completename:
+        content: Yongqing Zhu
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: China Telecom
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Fengwei
+          language:
+          - en
+        - language:
+          - en
+          initial: F
+        formatted_initials:
+          content: F.
+          language:
+          - en
+      surname:
+        content: Qin
+        language:
+        - en
+      completename:
+        content: Fengwei Qin
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: China Mobile
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Zhenqiang
+          language:
+          - en
+        - language:
+          - en
+          initial: Z
+        formatted_initials:
+          content: Z.
+          language:
+          - en
+      surname:
+        content: Li
+        language:
+        - en
+      completename:
+        content: Zhenqiang Li
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: China Mobile
+  role:
+  - type: author
 version:
-- draft: '18'
-revdate: '2025-08-07'
+- draft: '14'
+revdate: '2025-08-12'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This draft defines a new type of Outbound Route Filter (ORF), known
-    as the VPN Prefix ORF. The VPN Prefix ORF mechanism is applicable when VPN routes
-    from different VRFs are exchanged through a single shared BGP session.</p>"
+- content: "<p>This document describes a mechanism to allocate network resources to
+    one or a set of Segment Routing Identifiers (SIDs). Such SIDs are referred to
+    as resource-aware SIDs. The resource-aware SIDs retain their original forwarding
+    semantics, with the additional semantics to identify the set of network resources
+    available for the packet processing and forwarding action. The proposed mechanism
+    is applicable to both segment routing with MPLS data plane (SR-MPLS) and segment
+    routing with IPv6 data plane (SRv6).</p>"
   language:
   - en
   script:
@@ -186,23 +187,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-idr-vpn-prefix-orf-11
+    id: draft-ietf-spring-resource-aware-segments-06
     docid:
-    - id: draft-ietf-idr-vpn-prefix-orf-11
+    - id: draft-ietf-spring-resource-aware-segments-06
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-idr-vpn-prefix-orf-11
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-idr-vpn-prefix-orf-20
-    docid:
-    - id: draft-ietf-idr-vpn-prefix-orf-20
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-idr-vpn-prefix-orf-20
+      content: draft-ietf-spring-resource-aware-segments-06
       format: text/plain
 series:
 - type: main
@@ -213,7 +204,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-idr-vpn-prefix-orf-18
+  number: draft-ietf-spring-resource-aware-segments-14
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
