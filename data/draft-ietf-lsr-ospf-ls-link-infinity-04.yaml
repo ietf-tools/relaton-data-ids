@@ -1,62 +1,92 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-bier-te-yang-08
+id: draft-ietf-lsr-ospf-ls-link-infinity-04
 title:
-- content: A YANG data model for Tree Engineering for Bit Index Explicit Replication
-    (BIER-TE)
+- content: Advertising Unreachable Links in OSPF
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-bier-te-yang-08
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-lsr-ospf-ls-link-infinity-04
   type: src
 type: standard
 docid:
-- id: draft-ietf-bier-te-yang-08
+- id: draft-ietf-lsr-ospf-ls-link-infinity-04
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-bier-te-yang
+- id: I-D.ietf-lsr-ospf-ls-link-infinity
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-bier-te-yang
+docnumber: I-D.ietf-lsr-ospf-ls-link-infinity
 date:
 - type: published
-  value: '2025-01-20'
+  value: '2025-08-14'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Zheng
+        - content: Liyan
           language:
           - en
         - language:
           - en
-          initial: Z
+          initial: L
         formatted_initials:
-          content: Z.
+          content: L.
           language:
           - en
       surname:
-        content: Zhang
+        content: Gong
         language:
         - en
       completename:
-        content: Zheng Zhang
+        content: Liyan Gong
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: ZTE Corporation
+        - content: China Mobile
   role:
   - type: author
 - person:
     name:
       given:
         forename:
+        - content: Weiqiang
+          language:
+          - en
+        - language:
+          - en
+          initial: W
+        formatted_initials:
+          content: W.
+          language:
+          - en
+      surname:
+        content: Cheng
+        language:
+        - en
+      completename:
+        content: Weiqiang Cheng
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: China Mobile
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Changwang
+          language:
+          - en
         - language:
           - en
           initial: C
@@ -65,17 +95,45 @@ contributor:
           language:
           - en
       surname:
-        content: Wang
+        content: Lin
         language:
         - en
       completename:
-        content: Cui(Linda) Wang
+        content: Changwang Lin
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Individual
+        - content: New H3C Technologies
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Acee
+          language:
+          - en
+        - language:
+          - en
+          initial: A
+        formatted_initials:
+          content: A.
+          language:
+          - en
+      surname:
+        content: Lindem
+        language:
+        - en
+      completename:
+        content: Acee Lindem
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Arrcus, Inc.
   role:
   - type: author
 - person:
@@ -106,92 +164,22 @@ contributor:
         - content: ZTE Corporation
   role:
   - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: fangwei
-          language:
-          - en
-        - language:
-          - en
-          initial: F
-        formatted_initials:
-          content: F.
-          language:
-          - en
-      surname:
-        content: hu
-        language:
-        - en
-      completename:
-        content: fangwei hu
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Individual
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Mahesh
-          language:
-          - en
-        - language:
-          - en
-          initial: M
-        formatted_initials:
-          content: M.
-          language:
-          - en
-      surname:
-        content: Sivakumar
-        language:
-        - en
-      completename:
-        content: Mahesh Sivakumar
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Juniper networks
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        formatted_initials:
-          language:
-          - en
-      surname:
-        content: chenhuanan
-        language:
-        - en
-      completename:
-        content: chenhuanan
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: China Telecom
-  role:
-  - type: author
 version:
-- draft: '08'
-revdate: '2025-01-20'
+- draft: '04'
+revdate: '2025-08-14'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document defines a YANG data module for Tree Engineering for Bit
-    Index Explicit Replication (BIER-TE) configuration and operation.</p>"
+- content: "<p>In certain scenarios, it is necessary to advertise unreachable links
+    in OSPF, which should be explicitly excluded from the related SPF calculation.
+    This document specifies using LSLinkInfinity(0xffff) to advertise an OSPF link
+    as unreachable. Stub Router Advertisement (RFC 6987) defines MaxLinkMetric (0xffff)
+    to indicate a router-LSA link should not be used for transit traffic. This document
+    updates RFC 6987 and RFC 8770. When an OSPFv2 router supports the Unreachable
+    Link support capability defined in this document, the OSPFv2 stub router MaxLinkMetric(0xffff)
+    MUST be updated to MaxReachableLinkMetric(0xfffe).</p>"
   language:
   - en
   script:
@@ -200,23 +188,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-bier-te-yang-03
+    id: draft-ietf-lsr-ospf-ls-link-infinity-01
     docid:
-    - id: draft-ietf-bier-te-yang-03
+    - id: draft-ietf-lsr-ospf-ls-link-infinity-01
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-bier-te-yang-03
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-bier-te-yang-09
-    docid:
-    - id: draft-ietf-bier-te-yang-09
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-bier-te-yang-09
+      content: draft-ietf-lsr-ospf-ls-link-infinity-01
       format: text/plain
 series:
 - type: main
@@ -227,7 +205,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-bier-te-yang-08
+  number: draft-ietf-lsr-ospf-ls-link-infinity-04
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
