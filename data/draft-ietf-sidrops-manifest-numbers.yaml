@@ -14,16 +14,9 @@ docid:
   primary: true
 abstract:
 - content: <p>The Resource Public Key Infrastructure (RPKI) makes use of signed objects
-    called manifests. A manifest lists each file that an issuer intends to include
-    within an RPKI repository, and can be used to detect certain forms of attack against
-    a repository. Manifests include a "manifest number" (manifestNumber), which an
-    issuer must increment whenever it issues a new manifest, and Relying Parties (RPs)
-    are required to verify that a newly-retrieved manifest for a given Certification
-    Authority (CA) has a higher manifestNumber than the previously-validated manifest.
-    However, the manifestNumber field is 20 octets in length (i.e. bounded), and no
-    behaviour is specified for when a manifestNumber reaches the largest possible
-    value. This document updates RFC9286 by specifying issuer and RP behaviour for
-    this scenario.</p>
+    called manifests, each of which includes a "manifest number". This document updates
+    RFC9286 by specifying issuer and RP behaviour when a manifest number reaches the
+    largest possible value, a situation not considered in RFC9286.</p>
   language:
   - en
   script:
@@ -109,6 +102,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-sidrops-manifest-numbers-07
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-sidrops-manifest-numbers-08
+    docid:
+    - id: draft-ietf-sidrops-manifest-numbers-08
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-sidrops-manifest-numbers-08
       format: text/plain
 ext:
   schema-version: v1.0.1
