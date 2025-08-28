@@ -13,20 +13,23 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>With the widespread deployment of Route Origin Authorization (ROA)
-    and Route Origin Validation (ROV), Resource Public Key Infrastructure (RPKI) is
-    vital for securing inter-domain routing. RPKI uses cryptographic certificates
-    to verify the authenticity and authorization of IP address and AS number allocations
-    and the certificates are stored in the RPKI Repository. This document conducts
-    the data-driven analysis of the RPKI Repository, including a survey of worldwide
-    AS administrators and a measurement and analysis of the existing RPKI Repository.
-    This document finds that the current RPKI Repository architecture is sensitive
-    to failures and lacks of scalability. An attack or downtime of any repository
-    Publication Point (PP) will prevent RPs from obtaining complete RPKI object views.
-    Furthermore, since the current RPKI Repository is not tamper-resistant, RPKI authorities
-    can easily manipulate RPKI objects without consent from subordinate INR holders.
-    This document also defines the key requirements for a reliable, scalable, and
-    secure RPKI Repository.</p>"
+- content: "<p>With the increasing deployment of Route Origin Authorizations (ROAs)
+    and Route Origin Validation (ROV), the Resource Public Key Infrastructure (RPKI)
+    has become a critical component for securing inter-domain routing. RPKI leverages
+    cryptographic certificates to validate the authenticity and authorization of IP
+    address and AS number allocations. All RPKI objects are stored in distributed
+    repositories and periodically retrieved by relying parties (RPs). This document
+    presents a data-driven analysis of the current RPKI repository system, including
+    a global survey of AS administrators and an empirical evaluation of repository
+    operations. The analysis reveals that the existing repository architecture suffers
+    from limited scalability and suboptimal efficiency, and is highly sensitive to
+    failures. As the number of ROAs and RPs increases, the growing number of point-to-point
+    connections between repositories and RPs, coupled with the pull-based data synchronization
+    model, significantly degrades the system's scalability and performance. Moreover,
+    a failure or attack on any Publication Point (PP) can prevent RPs from obtaining
+    a complete and up-to-date view of RPKI data. This document further outlines the
+    fundamental requirements for building a scalable, resilient,and efficient RPKI
+    repository architecture to address these limitations.</p>"
   language:
   - en
   script:
@@ -52,6 +55,16 @@ relation:
       primary: true
     formattedref:
       content: draft-li-sidrops-rpki-repository-problem-statement-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-li-sidrops-rpki-repository-problem-statement-02
+    docid:
+    - id: draft-li-sidrops-rpki-repository-problem-statement-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-li-sidrops-rpki-repository-problem-statement-02
       format: text/plain
 ext:
   schema-version: v1.0.1
