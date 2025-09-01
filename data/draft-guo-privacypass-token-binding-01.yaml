@@ -1,0 +1,187 @@
+---
+schema-version: v1.2.3
+id: draft-guo-privacypass-token-binding-01
+title:
+- content: Privacy Pass with Token Binding Extension
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-guo-privacypass-token-binding-01
+  type: src
+type: standard
+docid:
+- id: draft-guo-privacypass-token-binding-01
+  type: Internet-Draft
+  primary: true
+- id: I-D.guo-privacypass-token-binding
+  type: IETF
+  scope: anchor
+docnumber: I-D.guo-privacypass-token-binding
+date:
+- type: published
+  value: '2025-08-31'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Wei
+          language:
+          - en
+        - language:
+          - en
+          initial: W
+        formatted_initials:
+          content: W.
+          language:
+          - en
+      surname:
+        content: Guo
+        language:
+        - en
+      completename:
+        content: Wei Guo
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei Technologies
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Liang
+          language:
+          - en
+        - language:
+          - en
+          initial: L
+        formatted_initials:
+          content: L.
+          language:
+          - en
+      surname:
+        content: Xia
+        language:
+        - en
+      completename:
+        content: Liang Xia
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei Technologies
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - language:
+          - en
+          initial: J
+        formatted_initials:
+          content: J.
+          language:
+          - en
+      surname:
+        content: Li
+        language:
+        - en
+      completename:
+        content: Ji Li
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei Technologies
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Yong
+          language:
+          - en
+        - language:
+          - en
+          initial: "Y"
+        formatted_initials:
+          content: Y.
+          language:
+          - en
+      surname:
+        content: Li
+        language:
+        - en
+      completename:
+        content: Yong Li
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei Technologies
+  role:
+  - type: author
+version:
+- draft: '01'
+revdate: '2025-08-31'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>This document provides a token binding extension for the Privacy Pass
+    protocol. This extension allows a Client to cryptographically bind a Privacy Pass
+    token to its own generated one-time public key during the issuance flow, without
+    exposing the public key to the Issuer. Later, when spending the token during the
+    redemption flow, the Client must use the corresponding private key to generate
+    a binding proof that the Origin needs to additionally verify except the token
+    itself, where the proof generation can optionally support channel binding. This
+    proof constrains the legitimate presenter of the token to be only the Client who
+    holds the private key and further constrains the legitimate usage of the token
+    to be only the Client's specific channel when channel binding is used in the proof
+    generation, and thus can prevent token export and replay attacks. In addition,
+    the token binding extension does not introduce additional cryptographic primitives,
+    and only uses the primitives currently utilized in the issuance protocol to generate
+    the one-time public-private keypair as well as generate and verify the binding
+    proof.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-guo-privacypass-token-binding-00
+    docid:
+    - id: draft-guo-privacypass-token-binding-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-guo-privacypass-token-binding-00
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-guo-privacypass-token-binding-01
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
