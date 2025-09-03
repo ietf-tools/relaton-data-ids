@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-ietf-idr-flowspec-interfaceset
 title:
-- content: Applying BGP flowspec rules on a specific interface set
+- content: Applying BGP flowspec rules on a specific interface-set
   language:
   - en
   script:
@@ -14,18 +14,18 @@ docid:
   primary: true
 abstract:
 - content: <p>The BGP Flow Specification (flowspec) Network Layer Reachability Information
-    (BGP NLRI) extension (draft-ietf-idr-rfc5575bis) is used to distribute traffic
-    flow specifications into BGP. The primary application of this extension is the
-    distribution of traffic filtering policies for the mitigation of distributed denial
-    of service (DDoS) attacks. By default, flow specification filters are applied
-    on all forwarding interfaces that are enabled for use by the BGP flowspec extension.
-    A network operator may wish to apply a given filter selectively to a subset of
-    interfaces based on an internal classification scheme. Examples of this include
-    "all customer interfaces", "all peer interfaces", "all transit interfaces", etc.
-    This document defines BGP Extended Communities (RFC4360) that allow such filters
-    to be selectively applied to sets of forwarding interfaces sharing a common group
-    identifier. The BGP Extended Communities carrying this group identifier are referred
-    to as the BGP Flowspec "interface-set" Extended Communities.</p>
+    (BGP NLRI) extension ([RFC8955]) is used to distribute traffic flow specifications
+    into BGP. The primary application of this extension is the distribution of traffic
+    filtering policies for the mitigation of distributed denial of service (DDoS)
+    attacks. By default, flow specification filters are applied on all forwarding
+    interfaces that are enabled for use by the BGP flowspec extension. A network operator
+    may wish to apply a given filter selectively to a subset of interfaces based on
+    an internal classification scheme. Examples of this include "all customer interfaces",
+    "all peer interfaces", "all transit interfaces", etc. This document defines BGP
+    Extended Communities ([RFC4360]) that permit such filters to be selectively applied
+    to sets of forwarding interfaces sharing a common group identifier. The BGP Extended
+    Communities carrying this group identifier are referred to as the BGP Flowspec
+    "interface-set" Extended Communities.</p>
   language:
   - en
   script:
@@ -91,6 +91,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-idr-flowspec-interfaceset-05
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-idr-flowspec-interfaceset-06
+    docid:
+    - id: draft-ietf-idr-flowspec-interfaceset-06
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-idr-flowspec-interfaceset-06
       format: text/plain
 ext:
   schema-version: v1.0.1

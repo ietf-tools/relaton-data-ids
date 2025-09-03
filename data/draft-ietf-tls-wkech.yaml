@@ -14,12 +14,13 @@ docid:
   primary: true
 abstract:
 - content: "<p>We define a well-known URI at which an HTTP origin can inform an authoritative
-    DNS server, or other interested parties, about its Service Bindings. The data
-    can include Encrypted ClientHello (ECH) configurations, allowing the origin, in
-    collaboration with DNS infrastructure elements, to publish and rotate its own
-    ECH keys. Note This note is to be removed before publishing as an RFC. The source
-    for this draft is in https://github.com/sftcd/wkesni/ Issues and PRs are welcome
-    there too.</p>"
+    DNS server, or other interested parties, about its Service Bindings. Service binding
+    data can include Encrypted ClientHello (ECH) configurations, that may change frequently.
+    This allows the origin, in collaboration with DNS infrastructure elements, to
+    publish and rotate its own ECH keys. Other service bindng data such as information
+    about TLS supported groups is unlikely to change quickly, but the origin is much
+    more likely to have accurate information when changes do occur. Service data published
+    via this mechanism is typically available via an HTTPS or SVCB resource record.</p>"
   language:
   - en
   script:
@@ -115,6 +116,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-tls-wkech-08
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-tls-wkech-09
+    docid:
+    - id: draft-ietf-tls-wkech-09
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-tls-wkech-09
       format: text/plain
 ext:
   schema-version: v1.0.1
