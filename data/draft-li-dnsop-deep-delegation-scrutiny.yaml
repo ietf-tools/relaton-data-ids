@@ -1,0 +1,45 @@
+---
+schema-version: v1.2.3
+id: draft-li-dnsop-deep-delegation-scrutiny
+title:
+- content: Best Practices for Handling Deeply Nested Domain Delegations in Recursive
+    Resolvers
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-li-dnsop-deep-delegation-scrutiny
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>The Domain Name System (DNS) relies on caching to ensure its scalability
+    and performance. However, certain behaviors in the DNS delegation and caching
+    mechanisms can be exploited to circumvent domain name revocation. A recently discovered
+    attack, named PHOENIX DOMAIN T2, allows a malicious domain that has been revoked
+    at its parent zone to remain resolvable for an extended period. This is achieved
+    by creating a chain of deeply nested subdomains, effectively keeping the delegation
+    information alive in recursive resolver caches. This document describes the PHOENIX
+    DOMAIN T2 attack mechanism and proposes a set of operational best practices for
+    DNS recursive resolver operators to mitigate this threat. The primary recommendation
+    is for resolvers to apply additional scrutiny to domain names with an excessive
+    number of labels, which is a key characteristic of this attack.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-li-dnsop-deep-delegation-scrutiny-00
+    docid:
+    - id: draft-li-dnsop-deep-delegation-scrutiny-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-li-dnsop-deep-delegation-scrutiny-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
