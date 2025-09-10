@@ -2,8 +2,8 @@
 schema-version: v1.2.3
 id: draft-zhang-dnsop-zb
 title:
-- content: A Technique for Quering the Designated Authoritative Server Directlly on
-    the Local Resolver
+- content: A Technique for Querying the Designated Authoritative Server Directly on
+    the Recursive Server at the Enterprise Level
   language:
   - en
   script:
@@ -14,17 +14,18 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>A DNS lookup usually requires the local resolver to start an iterative
+- content: "<p>A DNS lookup usually requires the recursive server to start an iterative
     query process from the DNS root server to the bottom authoritative server. Attacks
     may occur at any level when querying authoritative servers. If the DNS recursive
     resolver operator can obtain the IP addresses of the authoritative servers for
-    the queried domain, they may want to query the authoritative server directlly
-    on the local resolver. In such a way, the resolver can start the iterative query
+    the queried domain, they may want to query the authoritative server directly on
+    the recursive server. In such a way, the resolver can start the iterative query
     process from the designated authoritative server, greatly decreasing the round-trip
     time, avoiding the attacks on the upper-level and preventing snooping by third
     parties of requests sent to upper-level authoritative servers. This document shows
-    a technique for quering the designated authoritative server directlly on the local
-    recursive server, at the cost of adding some operational fragility for the operator.</p>"
+    a technique for querying the designated authoritative server directly on the recursive
+    server at the enterprise level, at the cost of adding some operational fragility
+    for the operator.</p>"
   language:
   - en
   script:
@@ -40,6 +41,16 @@ relation:
       primary: true
     formattedref:
       content: draft-zhang-dnsop-zb-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-zhang-dnsop-zb-01
+    docid:
+    - id: draft-zhang-dnsop-zb-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-zhang-dnsop-zb-01
       format: text/plain
 ext:
   schema-version: v1.0.1
