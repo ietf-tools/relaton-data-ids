@@ -1,62 +1,34 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-idr-link-bandwidth-14
+id: draft-ietf-bess-mvpn-evpn-sr-p2mp-15
 title:
-- content: BGP Link Bandwidth Extended Community
+- content: Multicast and Ethernet VPN with Segment Routing P2MP and Ingress Replication
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-link-bandwidth-14
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-bess-mvpn-evpn-sr-p2mp-15
   type: src
 type: standard
 docid:
-- id: draft-ietf-idr-link-bandwidth-14
+- id: draft-ietf-bess-mvpn-evpn-sr-p2mp-15
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-idr-link-bandwidth
+- id: I-D.ietf-bess-mvpn-evpn-sr-p2mp
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-idr-link-bandwidth
+docnumber: I-D.ietf-bess-mvpn-evpn-sr-p2mp
 date:
 - type: published
-  value: '2025-08-01'
+  value: '2025-09-10'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Prodosh
-          language:
-          - en
-        - language:
-          - en
-          initial: P
-        formatted_initials:
-          content: P.
-          language:
-          - en
-      surname:
-        content: Mohapatra
-        language:
-        - en
-      completename:
-        content: Prodosh Mohapatra
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Sproute Networks
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Reshma
+        - content: Rishabh
           language:
           - en
         - language:
@@ -67,147 +39,146 @@ contributor:
           language:
           - en
       surname:
-        content: Das
+        content: Parekh
         language:
         - en
       completename:
-        content: Reshma Das
+        content: Rishabh Parekh (editor)
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Juniper Networks, Inc.
+        - content: Arrcus
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: SATYA
+        - content: Daniel
           language:
           - en
         - language:
           - en
-          initial: M
-        - language:
-          - en
-          initial: R
+          initial: D
         formatted_initials:
-          content: M. R.
+          content: D.
           language:
           - en
       surname:
-        content: Satya
+        content: Voyer
         language:
         - en
       completename:
-        content: SATYA R MOHANTY
+        content: Daniel Voyer
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Zscaler
+        - content: Cisco Systems, Inc.
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Serge
+        - content: Clarence
           language:
           - en
         - language:
           - en
-          initial: S
+          initial: C
         formatted_initials:
-          content: S.
+          content: C.
           language:
           - en
       surname:
-        content: Krier
+        content: Filsfils
         language:
         - en
       completename:
-        content: Serge Krier
+        content: Clarence Filsfils
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems
+        - content: Cisco Systems, Inc.
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Rafal
+        - content: Hooman
           language:
           - en
         - language:
           - en
-          initial: R
+          initial: H
+        formatted_initials:
+          content: H.
+          language:
+          - en
+      surname:
+        content: Bidgoli
+        language:
+        - en
+      completename:
+        content: Hooman Bidgoli
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Nokia
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Zhaohui
+          language:
+          - en
+        - language:
+          - en
+          initial: Z
         - language:
           - en
           initial: J
         formatted_initials:
-          content: R. J.
+          content: Z. J.
           language:
           - en
       surname:
-        content: Szarecki
+        content: Zhang
         language:
         - en
       completename:
-        content: Rafal Jan Szarecki
+        content: Zhaohui (Jeffrey) Zhang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Google LLC
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Akshay
-          language:
-          - en
-        - language:
-          - en
-          initial: A
-        formatted_initials:
-          content: A.
-          language:
-          - en
-      surname:
-        content: Gattani
-        language:
-        - en
-      completename:
-        content: Akshay Gattani
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Arista Networks
+        - content: Juniper Networks
   role:
   - type: author
 version:
-- draft: '14'
-revdate: '2025-08-01'
+- draft: '15'
+revdate: '2025-09-10'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document describes an application of BGP extended communities
-    that allows a router to perform WECMP (Weighted Equal-Cost Multipath).</p>"
+- content: "<p>A Point-to-Multipoint (P2MP) Tree in a Segment Routing domain carries
+    traffic from a Root to a set of Leaves. This document describes extensions to
+    BGP encodings and procedures for P2MP trees and Ingress Replication used in BGP/MPLS
+    IP VPNs and Ethernet VPNs in a Segment Routing domain.</p>"
   language:
   - en
   script:
@@ -216,23 +187,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-idr-link-bandwidth-12
+    id: draft-ietf-bess-mvpn-evpn-sr-p2mp-13
     docid:
-    - id: draft-ietf-idr-link-bandwidth-12
+    - id: draft-ietf-bess-mvpn-evpn-sr-p2mp-13
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-idr-link-bandwidth-12
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-idr-link-bandwidth-17
-    docid:
-    - id: draft-ietf-idr-link-bandwidth-17
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-idr-link-bandwidth-17
+      content: draft-ietf-bess-mvpn-evpn-sr-p2mp-13
       format: text/plain
 series:
 - type: main
@@ -243,7 +204,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-idr-link-bandwidth-14
+  number: draft-ietf-bess-mvpn-evpn-sr-p2mp-15
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
