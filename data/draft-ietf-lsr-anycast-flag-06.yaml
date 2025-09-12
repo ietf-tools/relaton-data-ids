@@ -1,90 +1,34 @@
 ---
 schema-version: v1.2.3
-id: draft-cx-mpls-mna-inband-pm-06
+id: draft-ietf-lsr-anycast-flag-06
 title:
-- content: MNA for Performance Measurement with Alternate Marking Method
+- content: OSPFv2 Anycast Property Advertisement
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-cx-mpls-mna-inband-pm-06
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-lsr-anycast-flag-06
   type: src
 type: standard
 docid:
-- id: draft-cx-mpls-mna-inband-pm-06
+- id: draft-ietf-lsr-anycast-flag-06
   type: Internet-Draft
   primary: true
-- id: I-D.cx-mpls-mna-inband-pm
+- id: I-D.ietf-lsr-anycast-flag
   type: IETF
   scope: anchor
-docnumber: I-D.cx-mpls-mna-inband-pm
+docnumber: I-D.ietf-lsr-anycast-flag
 date:
 - type: published
-  value: '2025-03-02'
+  value: '2025-09-11'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Weiqiang
-          language:
-          - en
-        - language:
-          - en
-          initial: W
-        formatted_initials:
-          content: W.
-          language:
-          - en
-      surname:
-        content: Cheng
-        language:
-        - en
-      completename:
-        content: Weiqiang Cheng
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: China Mobile
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Xiao
-          language:
-          - en
-        - language:
-          - en
-          initial: X
-        formatted_initials:
-          content: X.
-          language:
-          - en
-      surname:
-        content: Min
-        language:
-        - en
-      completename:
-        content: Xiao Min
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: ZTE Corp.
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Rakesh
+        - content: Ran
           language:
           - en
         - language:
@@ -95,88 +39,143 @@ contributor:
           language:
           - en
       surname:
-        content: Gandhi
+        content: Chen
         language:
         - en
       completename:
-        content: Rakesh Gandhi
+        content: Ran Chen
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems, Inc.
+        - content: ZTE Corporation
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Greg
+        - content: Detao
           language:
           - en
         - language:
           - en
-          initial: G
+          initial: D
         formatted_initials:
-          content: G.
+          content: D.
           language:
           - en
       surname:
-        content: Mirsky
+        content: Zhao
         language:
         - en
       completename:
-        content: Greg Mirsky
+        content: Detao Zhao
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Ericsson
+        - content: ZTE Corporation
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Giuseppe
+        - content: Peter
           language:
           - en
         - language:
           - en
-          initial: G
+          initial: P
         formatted_initials:
-          content: G.
+          content: P.
           language:
           - en
       surname:
-        content: Fioccola
+        content: Psenak
         language:
         - en
       completename:
-        content: Giuseppe Fioccola
+        content: Peter Psenak
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei
+        - content: Cisco Systems
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Ketan
+          language:
+          - en
+        - language:
+          - en
+          initial: K
+        formatted_initials:
+          content: K.
+          language:
+          - en
+      surname:
+        content: Talaulikar
+        language:
+        - en
+      completename:
+        content: Ketan Talaulikar
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Cisco Systems
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Changwang
+          language:
+          - en
+        - language:
+          - en
+          initial: C
+        formatted_initials:
+          content: C.
+          language:
+          - en
+      surname:
+        content: Lin
+        language:
+        - en
+      completename:
+        content: Changwang Lin
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: H3C
   role:
   - type: author
 version:
 - draft: '06'
-revdate: '2025-03-02'
+revdate: '2025-09-11'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>MPLS Network Action (MNA) is used to indicate action for Label Switched
-    Paths (LSPs) and/or MPLS packets, and to transfer data needed for the action.
-    This document defines MNA encoding for MPLS performance measurement with alternate
-    marking method, which performs flow-based packet loss, delay, and jitter measurements
-    on MPLS live traffic.</p>"
+- content: "<p>An IP prefix may be configured as anycast and as such the same value
+    can be advertised by multiple routers. It is useful for other routers to know
+    that the advertisement is for an anycast identifier. This document defines a new
+    flag in the OSPFv2 Extended Prefix TLV Flags to advertise the anycast property.</p>"
   language:
   - en
   script:
@@ -185,23 +184,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-cx-mpls-mna-inband-pm-00
+    id: draft-ietf-lsr-anycast-flag-04
     docid:
-    - id: draft-cx-mpls-mna-inband-pm-00
+    - id: draft-ietf-lsr-anycast-flag-04
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-cx-mpls-mna-inband-pm-00
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-cx-mpls-mna-inband-pm-07
-    docid:
-    - id: draft-cx-mpls-mna-inband-pm-07
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-cx-mpls-mna-inband-pm-07
+      content: draft-ietf-lsr-anycast-flag-04
       format: text/plain
 series:
 - type: main
@@ -212,7 +201,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-cx-mpls-mna-inband-pm-06
+  number: draft-ietf-lsr-anycast-flag-06
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
