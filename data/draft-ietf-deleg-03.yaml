@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-deleg-00
+id: draft-ietf-deleg-03
 title:
 - content: Extensible Delegation for DNS
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-deleg-00
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-deleg-03
   type: src
 type: standard
 docid:
-- id: draft-ietf-deleg-00
+- id: draft-ietf-deleg-03
   type: Internet-Draft
   primary: true
 - id: I-D.ietf-deleg
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.ietf-deleg
 date:
 - type: published
-  value: '2025-05-06'
+  value: '2025-09-15'
 contributor:
 - person:
     name:
@@ -133,38 +133,35 @@ contributor:
   role:
   - type: author
 version:
-- draft: '00'
-revdate: '2025-05-06'
+- draft: '03'
+revdate: '2025-09-15'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>A delegation in the Domain Name System (DNS) is a mechanism that enables
-    efficient and distributed management of the DNS namespace. It involves delegating
-    authority over subdomains to specific DNS servers via NS records, allowing for
-    a hierarchical structure and distributing the responsibility for maintaining DNS
-    records. An NS record contains the hostname of the nameserver for the delegated
-    namespace. Any facilities of that nameserver must be discovered through other
-    mechanisms. This document proposes a new extensible DNS record type, DELEG, for
-    delegation the authority for a domain. Future documents then can use this mechanism
-    to use additional information about the delegated namespace and the capabilities
-    of authoritative nameservers for the delegated namespace.</p>"
+- content: "<p>This document proposes a new extensible method for the delegation of
+    authority for a domain in the Domain Name System (DNS) using DELEG and DELEGI
+    records. A delegation in the DNS enables efficient and distributed management
+    of the DNS namespace. The traditional DNS delegation is based on NS records which
+    contain only hostnames of servers and no other parameters. The new delegation
+    records are extensible, can be secured with DNSSEC, and eliminate the problem
+    of having two sources of truth for delegation information.</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-ietf-deleg-03
+    id: draft-ietf-deleg-02
     docid:
-    - id: draft-ietf-deleg-03
+    - id: draft-ietf-deleg-02
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-deleg-03
+      content: draft-ietf-deleg-02
       format: text/plain
 series:
 - type: main
@@ -175,7 +172,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-deleg-00
+  number: draft-ietf-deleg-03
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

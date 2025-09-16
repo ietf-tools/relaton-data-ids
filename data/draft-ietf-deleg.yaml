@@ -13,16 +13,13 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>A delegation in the Domain Name System (DNS) is a mechanism that enables
-    efficient and distributed management of the DNS namespace. It involves delegating
-    authority over subdomains to specific DNS servers via NS records, allowing for
-    a hierarchical structure and distributing the responsibility for maintaining DNS
-    records. An NS record contains the hostname of the nameserver for the delegated
-    namespace. Any facilities of that nameserver must be discovered through other
-    mechanisms. This document proposes a new extensible DNS record type, DELEG, for
-    delegation of the authority for a domain. Future documents then can use this mechanism
-    to use additional information about the delegated namespace and the capabilities
-    of authoritative nameservers for the delegated namespace.</p>"
+- content: "<p>This document proposes a new extensible method for the delegation of
+    authority for a domain in the Domain Name System (DNS) using DELEG and DELEGI
+    records. A delegation in the DNS enables efficient and distributed management
+    of the DNS namespace. The traditional DNS delegation is based on NS records which
+    contain only hostnames of servers and no other parameters. The new delegation
+    records are extensible, can be secured with DNSSEC, and eliminate the problem
+    of having two sources of truth for delegation information.</p>"
   language:
   - en
   script:
@@ -58,6 +55,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-deleg-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-deleg-03
+    docid:
+    - id: draft-ietf-deleg-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-deleg-03
       format: text/plain
 ext:
   schema-version: v1.0.1

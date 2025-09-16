@@ -1,62 +1,121 @@
 ---
 schema-version: v1.2.3
-id: draft-tomas-openroaming-05
+id: draft-ietf-rtgwg-net2cloud-problem-statement-43
 title:
-- content: WBA OpenRoaming Wireless Federation
+- content: 'Networks to Cloud DCs: Challenges and Mitigation Practices'
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-tomas-openroaming-05
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-rtgwg-net2cloud-problem-statement-43
   type: src
 type: standard
 docid:
-- id: draft-tomas-openroaming-05
+- id: draft-ietf-rtgwg-net2cloud-problem-statement-43
   type: Internet-Draft
   primary: true
-- id: I-D.tomas-openroaming
+- id: I-D.ietf-rtgwg-net2cloud-problem-statement
   type: IETF
   scope: anchor
-docnumber: I-D.tomas-openroaming
+docnumber: I-D.ietf-rtgwg-net2cloud-problem-statement
 date:
 - type: published
-  value: '2025-04-15'
+  value: '2025-09-15'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Bruno
+        - content: Linda
           language:
           - en
         - language:
           - en
-          initial: B
+          initial: L
         formatted_initials:
-          content: B.
+          content: L.
           language:
           - en
       surname:
-        content: Tomas
+        content: Dunbar
         language:
         - en
       completename:
-        content: Bruno Tomas
+        content: Linda Dunbar
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Wireless Broadband Alliance, Inc.
+        - content: Futurewei
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Mark
+        - content: Andrew
+          language:
+          - en
+        - language:
+          - en
+          initial: A
+        - language:
+          - en
+          initial: G
+        formatted_initials:
+          content: A. G.
+          language:
+          - en
+      surname:
+        content: Malis
+        language:
+        - en
+      completename:
+        content: Andrew G. Malis
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Malis Consulting
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Christian
+          language:
+          - en
+        - language:
+          - en
+          initial: C
+        formatted_initials:
+          content: C.
+          language:
+          - en
+      surname:
+        content: Jacquenet
+        language:
+        - en
+      completename:
+        content: Christian Jacquenet
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Orange
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Mehmet
           language:
           - en
         - language:
@@ -67,123 +126,65 @@ contributor:
           language:
           - en
       surname:
-        content: Grayson
+        content: Toy
         language:
         - en
       completename:
-        content: Mark Grayson
+        content: Mehmet Toy
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems
+        - content: Verizon
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Necati
+        - content: Kausik
           language:
           - en
         - language:
           - en
-          initial: "N"
+          initial: K
         formatted_initials:
-          content: N.
+          content: K.
           language:
           - en
       surname:
-        content: Canpolat
+        content: Majumdar
         language:
         - en
       completename:
-        content: Necati Canpolat
+        content: Kausik Majumdar
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Intel Corporation
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Betty
-          language:
-          - en
-        - language:
-          - en
-          initial: B
-        - language:
-          - en
-          initial: A
-        formatted_initials:
-          content: B. A.
-          language:
-          - en
-      surname:
-        content: Cockrell
-        language:
-        - en
-      completename:
-        content: Betty A. Cockrell
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: SingleDigits
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Sri
-          language:
-          - en
-        - language:
-          - en
-          initial: S
-        formatted_initials:
-          content: S.
-          language:
-          - en
-      surname:
-        content: Gundavelli
-        language:
-        - en
-      completename:
-        content: Sri Gundavelli
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Cisco Systems
+        - content: Oracle
   role:
   - type: author
 version:
-- draft: '05'
-revdate: '2025-04-15'
+- draft: '43'
+revdate: '2025-09-15'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document describes the Wireless Broadband Alliance's OpenRoaming
-    system. The OpenRoaming architectures enables a seamless onboarding experience
-    for devices connecting to access networks that are part of the federation of access
-    networks and identity providers. The primary objective of this document is to
-    describe the protocols that form the foundation for this architecture, enabling
-    providers to correctly configure their equipment to support interoperable OpenRoaming
-    signalling exchanges. In addition, the topic of OpenRoaming has been raised in
-    different IETF working groups, and therefore a secondary objective is to assist
-    those discussions by describing the federation organization and framework.</p>"
+- content: "<p>This document describes a set of network-related problems enterprises
+    face when interconnecting their branch offices with dynamic workloads in third-party
+    data centers (DCs) (a.k.a. Cloud DCs). These challenges are particularly relevant
+    to enterprises with conventional VPN services that want to leverage those networks
+    (instead of altogether abandoning them). The document also outlines various mitigation
+    approaches, including those already developed within the IETF. For challenges
+    that do not yet have established solutions, it identifies the IETF drafts that
+    have been proposed to address these issues. The intent is to provide a cohesive
+    view of problems and solution approaches that have been documented or proposed
+    within the IETF.</p>"
   language:
   - en
   script:
@@ -192,23 +193,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-tomas-openroaming-01
+    id: draft-ietf-rtgwg-net2cloud-problem-statement-29
     docid:
-    - id: draft-tomas-openroaming-01
+    - id: draft-ietf-rtgwg-net2cloud-problem-statement-29
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-tomas-openroaming-01
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-tomas-openroaming-06
-    docid:
-    - id: draft-tomas-openroaming-06
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-tomas-openroaming-06
+      content: draft-ietf-rtgwg-net2cloud-problem-statement-29
       format: text/plain
 series:
 - type: main
@@ -219,7 +210,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-tomas-openroaming-05
+  number: draft-ietf-rtgwg-net2cloud-problem-statement-43
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
