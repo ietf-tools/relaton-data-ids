@@ -1,177 +1,184 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-spring-srv6-security-02
+id: draft-ietf-core-dns-over-coap-20
 title:
-- content: Segment Routing IPv6 Security Considerations
+- content: DNS over CoAP (DoC)
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-spring-srv6-security-02
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-core-dns-over-coap-20
   type: src
 type: standard
 docid:
-- id: draft-ietf-spring-srv6-security-02
+- id: draft-ietf-core-dns-over-coap-20
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-spring-srv6-security
+- id: I-D.ietf-core-dns-over-coap
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-spring-srv6-security
+docnumber: I-D.ietf-core-dns-over-coap
 date:
 - type: published
-  value: '2025-02-26'
+  value: '2025-09-16'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Nick
+        - content: Martine
           language:
           - en
         - language:
           - en
-          initial: "N"
+          initial: M
+        - language:
+          - en
+          initial: S
         formatted_initials:
-          content: N.
+          content: M. S.
           language:
           - en
       surname:
-        content: Buraglio
+        content: Lenders
         language:
         - en
       completename:
-        content: Nick Buraglio
+        content: Martine Sophie Lenders
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Energy Sciences Network
+        - content: TUD Dresden University of Technology
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Tal
+        - content: Christian
+          language:
+          - en
+        - language:
+          - en
+          initial: C
+        formatted_initials:
+          content: C.
+          language:
+          - en
+      surname:
+        content: Amsüss
+        language:
+        - en
+      completename:
+        content: Christian Amsüss
+        language:
+        - en
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Cenk
+          language:
+          - en
+        - language:
+          - en
+          initial: C
+        formatted_initials:
+          content: C.
+          language:
+          - en
+      surname:
+        content: Gündoğan
+        language:
+        - en
+      completename:
+        content: Cenk Gündoğan
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: NeuralAgent GmbH
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Thomas
           language:
           - en
         - language:
           - en
           initial: T
+        - language:
+          - en
+          initial: C
         formatted_initials:
-          content: T.
+          content: T. C.
           language:
           - en
       surname:
-        content: Mizrahi
+        content: Schmidt
         language:
         - en
       completename:
-        content: Tal Mizrahi
+        content: Thomas C. Schmidt
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        formatted_initials:
-          language:
-          - en
-      surname:
-        content: tongtian124
-        language:
-        - en
-      completename:
-        content: tongtian124
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: China Unicom
+        - content: HAW Hamburg
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Luis
+        - content: Matthias
           language:
           - en
-        - language:
-          - en
-          initial: L
         - language:
           - en
           initial: M
         formatted_initials:
-          content: L. M.
+          content: M.
           language:
           - en
       surname:
-        content: Contreras
+        content: Wählisch
         language:
         - en
       completename:
-        content: Luis M. Contreras
+        content: Matthias Wählisch
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Telefonica
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Fernando
-          language:
-          - en
-        - language:
-          - en
-          initial: F
-        formatted_initials:
-          content: F.
-          language:
-          - en
-      surname:
-        content: Gont
-        language:
-        - en
-      completename:
-        content: Fernando Gont
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: SI6 Networks
+        - content: TUD Dresden University of Technology & Barkhausen Institut
   role:
   - type: author
 version:
-- draft: '02'
-revdate: '2025-02-26'
+- draft: '20'
+revdate: '2025-09-16'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>SRv6 is a traffic engineering, encapsulation and steering mechanism
-    utilizing IPv6 addresses to identify segments in a pre-defined policy. This document
-    discusses security considerations in SRv6 networks, including the potential threats
-    and the possible mitigation methods. The document does not define any new security
-    protocols or extensions to existing protocols.</p>"
+- content: "<p>This document defines a protocol for exchanging DNS queries (OPCODE
+    0) over the Constrained Application Protocol (CoAP). These CoAP messages can be
+    protected by (D)TLS-Secured CoAP (CoAPS) or Object Security for Constrained RESTful
+    Environments (OSCORE) to provide encrypted DNS message exchange for constrained
+    devices in the Internet of Things (IoT).</p>"
   language:
   - en
   script:
@@ -180,23 +187,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-spring-srv6-security-00
+    id: draft-ietf-core-dns-over-coap-00
     docid:
-    - id: draft-ietf-spring-srv6-security-00
+    - id: draft-ietf-core-dns-over-coap-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-spring-srv6-security-00
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-spring-srv6-security-06
-    docid:
-    - id: draft-ietf-spring-srv6-security-06
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-srv6-security-06
+      content: draft-ietf-core-dns-over-coap-00
       format: text/plain
 series:
 - type: main
@@ -207,7 +204,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-spring-srv6-security-02
+  number: draft-ietf-core-dns-over-coap-20
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
