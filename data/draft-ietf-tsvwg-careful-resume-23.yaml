@@ -1,180 +1,188 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-rtgwg-multisegment-sdwan-08
+id: draft-ietf-tsvwg-careful-resume-23
 title:
-- content: Multi-segment SD-WAN via Cloud DCs
+- content: Convergence of Congestion Control from Retained State
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-rtgwg-multisegment-sdwan-08
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-tsvwg-careful-resume-23
   type: src
 type: standard
 docid:
-- id: draft-ietf-rtgwg-multisegment-sdwan-08
+- id: draft-ietf-tsvwg-careful-resume-23
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-rtgwg-multisegment-sdwan
+- id: I-D.ietf-tsvwg-careful-resume
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-rtgwg-multisegment-sdwan
+docnumber: I-D.ietf-tsvwg-careful-resume
 date:
 - type: published
-  value: '2025-09-12'
+  value: '2025-09-17'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Kausik
+        - content: Nicolas
           language:
           - en
         - language:
           - en
-          initial: K
+          initial: "N"
         formatted_initials:
-          content: K.
+          content: N.
           language:
           - en
       surname:
-        content: Majumdar
+        content: Kuhn
         language:
         - en
       completename:
-        content: Kausik Majumdar
+        content: Nicolas Kuhn
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Oracle
+        - content: Thales Alenia Space
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Linda
+        - content: Emile
           language:
           - en
         - language:
           - en
-          initial: L
+          initial: E
         formatted_initials:
-          content: L.
+          content: E.
           language:
           - en
       surname:
-        content: Dunbar
+        content: Stephan
         language:
         - en
       completename:
-        content: Linda Dunbar
+        content: Emile Stephan
         language:
         - en
+    affiliation:
+    - organization:
+        name:
+        - content: Orange
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Venkit
+        - content: Gorry
           language:
           - en
         - language:
           - en
-          initial: V
+          initial: G
         formatted_initials:
-          content: V.
+          content: G.
           language:
           - en
       surname:
-        content: Kasiviswanathan
+        content: Fairhurst
         language:
         - en
       completename:
-        content: Venkit Kasiviswanathan
+        content: Gorry Fairhurst
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Arista
+        - content: University of Aberdeen
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Ashok
+        - content: Raffaello
           language:
           - en
         - language:
           - en
-          initial: A
+          initial: R
         formatted_initials:
-          content: A.
+          content: R.
           language:
           - en
       surname:
-        content: Ramchandra
+        content: Secchi
         language:
         - en
       completename:
-        content: Ashok Ramchandra
+        content: Raffaello Secchi
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Google
+        - content: University of Aberdeen
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Aseem
+        - content: Christian
           language:
           - en
         - language:
           - en
-          initial: A
+          initial: C
         formatted_initials:
-          content: A.
+          content: C.
           language:
           - en
       surname:
-        content: Choudhary
+        content: Huitema
         language:
         - en
       completename:
-        content: Aseem Choudhary
+        content: Christian Huitema
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Aviatrix
+        - content: Private Octopus Inc.
   role:
   - type: author
 version:
-- draft: '08'
-revdate: '2025-09-12'
+- draft: '23'
+revdate: '2025-09-17'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document describes a method for seamlessly interconnecting geographically
-    separated SD-WAN segments via a Cloud Backbone without requiring Cloud Gateways
-    (GWs) to decrypt and re-encrypt traffic. By encapsulating IPsec- encrypted payloads
-    within GENEVE headers (RFC 8926), the approach enables Cloud GWs to forward encrypted
-    traffic directly between distant Customer Premises Equipment (CPEs). This reduces
-    processing overhead, improves scalability, and preserves the confidentiality of
-    enterprise data while ensuring secure and efficient multi-segment SD-WAN. connectivity.</p>"
+- content: <p>This document specifies a cautious method for Internet transports that
+    enables fast startup of congestion control for a wide range of connections, known
+    as "Careful Resume". It reuses a set of computed congestion control parameters
+    that are based on previously observed path characteristics between the same pair
+    of transport endpoints. These parameters are saved, allowing them to be later
+    used to modify the congestion control behaviour of a subsequent connection. It
+    describes assumptions and defines requirements for how a sender utilises these
+    parameters to provide opportunities for a connection to more rapidly get up to
+    speed and rapidly utilise available capacity. It discusses how use of this method
+    impacts the capacity at a shared network bottleneck and the safe response that
+    is needed after any indication that the new rate is inappropriate.</p>
   language:
   - en
   script:
@@ -183,23 +191,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-rtgwg-multisegment-sdwan-03
+    id: draft-ietf-tsvwg-careful-resume-21
     docid:
-    - id: draft-ietf-rtgwg-multisegment-sdwan-03
+    - id: draft-ietf-tsvwg-careful-resume-21
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-rtgwg-multisegment-sdwan-03
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-rtgwg-multisegment-sdwan-09
-    docid:
-    - id: draft-ietf-rtgwg-multisegment-sdwan-09
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-rtgwg-multisegment-sdwan-09
+      content: draft-ietf-tsvwg-careful-resume-21
       format: text/plain
 series:
 - type: main
@@ -210,7 +208,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-rtgwg-multisegment-sdwan-08
+  number: draft-ietf-tsvwg-careful-resume-23
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
