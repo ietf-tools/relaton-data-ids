@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-idr-bgp-ls-link-mtu-00
+id: draft-ietf-idr-bgp-ls-link-mtu-10
 title:
 - content: Signaling Maximum Transmission Unit (MTU) using BGP-LS
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-bgp-ls-link-mtu-00
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-bgp-ls-link-mtu-10
   type: src
 type: standard
 docid:
-- id: draft-ietf-idr-bgp-ls-link-mtu-00
+- id: draft-ietf-idr-bgp-ls-link-mtu-10
   type: Internet-Draft
   primary: true
 - id: I-D.ietf-idr-bgp-ls-link-mtu
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.ietf-idr-bgp-ls-link-mtu
 date:
 - type: published
-  value: '2020-11-19'
+  value: '2025-09-18'
 contributor:
 - person:
     name:
@@ -137,44 +137,39 @@ contributor:
   role:
   - type: author
 version:
-- draft: '00'
-revdate: '2020-11-19'
+- draft: '10'
+revdate: '2025-09-18'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>BGP Link State (BGP-LS) describes a mechanism by which link-state and
-    TE information can be collected from networks and shared with external components
-    using the BGP routing protocol. The centralized controller (PCE/SDN) completes
-    the service path calculation based on the information transmitted by the BGP-LS
-    and delivers the result to the Path Computation Client (PCC) through the PCEP
-    or BGP protocol. Segment Routing (SR) leverages the source routing paradigm, which
-    can be directly applied to the MPLS architecture with no change on the forwarding
-    plane and applied to the IPv6 architecture, with a new type of routing header,
-    called SRH. The SR uses the IGP protocol as the control protocol. Compared to
-    the MPLS tunneling technology, the SR does not require additional signaling. Therefore,
-    the SR does not support the negotiation of the Path MTU. Since multiple labels
-    or SRv6 SIDs are pushed in the packets, it is more likely that the packet size
-    exceeds the path mtu of SR tunnel. This document specifies the extensions to BGP
-    Link State (BGP-LS) to carry maximum transmission unit (MTU) messages of link.
-    The PCE/SDN calculates the Path MTU while completing the service path calculation
-    based on the information transmitted by the BGP-LS.</p>"
+- content: "<p>Segment Routing (SR) leverages the source routing paradigm, which can
+    be directly applied to the MPLS architecture and IPv6 architecture, with a new
+    type of routing header. Since multiple labels or SRv6 SIDs are pushed in the packets,
+    it is more likely that the packet size exceeds the path MTU of SR tunnel. However,
+    SR uses the IGP as the routing protocol and does not support the negotiation of
+    the Path MTU. BGP Link State (BGP-LS) describes a mechanism by which link-state
+    and TE information can be collected from networks and shared with external components
+    using the BGP routing protocol. This document specifies the extensions to BGP-LS
+    to carry MTU information of link. The centralized controller (PCE/SDN) calculates
+    the Path MTU while completing the service path calculation based on the information
+    transmitted by the BGP-LS.</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-ietf-idr-bgp-ls-link-mtu-10
+    id: draft-ietf-idr-bgp-ls-link-mtu-01
     docid:
-    - id: draft-ietf-idr-bgp-ls-link-mtu-10
+    - id: draft-ietf-idr-bgp-ls-link-mtu-01
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-idr-bgp-ls-link-mtu-10
+      content: draft-ietf-idr-bgp-ls-link-mtu-01
       format: text/plain
 series:
 - type: main
@@ -185,7 +180,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-idr-bgp-ls-link-mtu-00
+  number: draft-ietf-idr-bgp-ls-link-mtu-10
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

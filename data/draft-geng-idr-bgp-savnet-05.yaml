@@ -1,62 +1,62 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-idr-bgp-ls-link-mtu-08
+id: draft-geng-idr-bgp-savnet-05
 title:
-- content: Signaling Maximum Transmission Unit (MTU) using BGP-LS
+- content: BGP Extensions for Source Address Validation Networks (BGP SAVNET)
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-bgp-ls-link-mtu-08
+- content: https://datatracker.ietf.org/doc/html/draft-geng-idr-bgp-savnet-05
   type: src
 type: standard
 docid:
-- id: draft-ietf-idr-bgp-ls-link-mtu-08
+- id: draft-geng-idr-bgp-savnet-05
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-idr-bgp-ls-link-mtu
+- id: I-D.geng-idr-bgp-savnet
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-idr-bgp-ls-link-mtu
+docnumber: I-D.geng-idr-bgp-savnet
 date:
 - type: published
-  value: '2024-09-17'
+  value: '2025-09-18'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Yongqing
+        - content: Nan
           language:
           - en
         - language:
           - en
-          initial: "Y"
+          initial: "N"
         formatted_initials:
-          content: Y.
+          content: N.
           language:
           - en
       surname:
-        content: Zhu
+        content: Geng
         language:
         - en
       completename:
-        content: Yongqing Zhu
+        content: Nan Geng
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: China Telecom
+        - content: Huawei Technologies
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Zhibo
+        - content: Zhenbin
           language:
           - en
         - language:
@@ -67,11 +67,11 @@ contributor:
           language:
           - en
       surname:
-        content: Hu
+        content: Li
         language:
         - en
       completename:
-        content: Zhibo Hu
+        content: Zhenbin Li
         language:
         - en
     affiliation:
@@ -84,22 +84,22 @@ contributor:
     name:
       given:
         forename:
-        - content: Shuping
+        - content: Zhen
           language:
           - en
         - language:
           - en
-          initial: S
+          initial: Z
         formatted_initials:
-          content: S.
+          content: Z.
           language:
           - en
       surname:
-        content: Peng
+        content: Tan
         language:
         - en
       completename:
-        content: Shuping Peng
+        content: Zhen Tan
         language:
         - en
     affiliation:
@@ -112,47 +112,70 @@ contributor:
     name:
       given:
         forename:
-        - content: Robbins
+        - content: Mingxing
           language:
           - en
-        - language:
-          - en
-          initial: R
         formatted_initials:
-          content: R.
           language:
           - en
       surname:
-        content: Mwehair
+        content: Liu
         language:
         - en
       completename:
-        content: Robbins Mwehair
+        content: Mingxing Liu
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: MTN Uganda Ltd.
+        - content: Huawei Technologies
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Dan
+          language:
+          - en
+        - language:
+          - en
+          initial: D
+        formatted_initials:
+          content: D.
+          language:
+          - en
+      surname:
+        content: Li
+        language:
+        - en
+      completename:
+        content: Dan Li
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Tsinghua University
   role:
   - type: author
 version:
-- draft: '08'
-revdate: '2024-09-17'
+- draft: '05'
+revdate: '2025-09-18'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>BGP Link State (BGP-LS) describes a mechanism by which link-state and
-    TE information can be collected from networks and shared with external components
-    using the BGP routing protocol. The centralized controller (PCE/SDN) completes
-    the service path calculation based on the information transmitted by the BGP-LS
-    and delivers the result to the Path Computation Client (PCC) through the PCEP
-    or BGP protocol. This document specifies the extensions to BGP Link State (BGP-LS)
-    to carry maximum transmission unit (MTU) messages of link. The PCE/SDN calculates
-    the Path MTU while completing the service path calculation based on the information
-    transmitted by the BGP-LS.</p>"
+- content: "<p>Many source address validation (SAV) mechanisms have been proposed
+    for preventing source address spoofing. However, existing SAV mechanisms are faced
+    with the problems of inaccurate validation or high operational overhead in some
+    scenarios. This document proposes BGP SAVNET by extending BGP protocol for SAV.
+    This protocol can propagate SAV-related information through BGP messages. The
+    propagated information will help edge/border routers automatically generate accurate
+    SAV rules. These rules construct a validation boundary for the network and help
+    check the validity of source addresses of arrival data packets.</p>"
   language:
   - en
   script:
@@ -161,23 +184,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-idr-bgp-ls-link-mtu-01
+    id: draft-geng-idr-bgp-savnet-02
     docid:
-    - id: draft-ietf-idr-bgp-ls-link-mtu-01
+    - id: draft-geng-idr-bgp-savnet-02
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-idr-bgp-ls-link-mtu-01
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-idr-bgp-ls-link-mtu-10
-    docid:
-    - id: draft-ietf-idr-bgp-ls-link-mtu-10
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-idr-bgp-ls-link-mtu-10
+      content: draft-geng-idr-bgp-savnet-02
       format: text/plain
 series:
 - type: main
@@ -188,7 +201,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-idr-bgp-ls-link-mtu-08
+  number: draft-geng-idr-bgp-savnet-05
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
