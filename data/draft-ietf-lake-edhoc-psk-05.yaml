@@ -1,146 +1,114 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-lsr-ospf-ls-link-infinity-07
+id: draft-ietf-lake-edhoc-psk-05
 title:
-- content: Advertising Unreachable Links in OSPF
+- content: EDHOC Authenticated with Pre-Shared Keys (PSK)
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-lsr-ospf-ls-link-infinity-07
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-lake-edhoc-psk-05
   type: src
 type: standard
 docid:
-- id: draft-ietf-lsr-ospf-ls-link-infinity-07
+- id: draft-ietf-lake-edhoc-psk-05
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-lsr-ospf-ls-link-infinity
+- id: I-D.ietf-lake-edhoc-psk
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-lsr-ospf-ls-link-infinity
+docnumber: I-D.ietf-lake-edhoc-psk
 date:
 - type: published
-  value: '2025-08-22'
+  value: '2025-09-17'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Liyan
+        - content: Elsa
           language:
           - en
-        - language:
-          - en
-          initial: L
         formatted_initials:
-          content: L.
           language:
           - en
       surname:
-        content: Gong
+        content: Lopez-Perez
         language:
         - en
       completename:
-        content: Liyan Gong
+        content: Elsa Lopez-Perez
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: China Mobile
+        - content: Inria
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Weiqiang
-          language:
-          - en
         - language:
           - en
-          initial: W
+          initial: G
         formatted_initials:
-          content: W.
+          content: G.
           language:
           - en
       surname:
-        content: Cheng
+        content: Selander
         language:
         - en
       completename:
-        content: Weiqiang Cheng
+        content: Göran Selander
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: China Mobile
+        - content: Ericsson
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Changwang
+        - content: John
           language:
           - en
         - language:
           - en
-          initial: C
+          initial: J
+        - language:
+          - en
+          initial: P
         formatted_initials:
-          content: C.
+          content: J. P.
           language:
           - en
       surname:
-        content: Lin
+        content: Mattsson
         language:
         - en
       completename:
-        content: Changwang Lin
+        content: John Preuß Mattsson
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: New H3C Technologies
+        - content: Ericsson
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Acee
-          language:
-          - en
-        - language:
-          - en
-          initial: A
-        formatted_initials:
-          content: A.
-          language:
-          - en
-      surname:
-        content: Lindem
-        language:
-        - en
-      completename:
-        content: Acee Lindem
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Arrcus, Inc.
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Ran
+        - content: Rafael
           language:
           - en
         - language:
@@ -151,35 +119,64 @@ contributor:
           language:
           - en
       surname:
-        content: Chen
+        content: Marin-Lopez
         language:
         - en
       completename:
-        content: Ran Chen
+        content: Rafael Marin-Lopez
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: ZTE Corporation
+        - content: University of Murcia
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Francisco
+          language:
+          - en
+        - language:
+          - en
+          initial: F
+        formatted_initials:
+          content: F.
+          language:
+          - en
+      surname:
+        content: Lopez-Gomez
+        language:
+        - en
+      completename:
+        content: Francisco Lopez-Gomez
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: University of Murcia
   role:
   - type: author
 version:
-- draft: '07'
-revdate: '2025-08-22'
+- draft: '05'
+revdate: '2025-09-17'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>In certain scenarios, it is necessary to advertise unreachable links
-    in OSPF, which should be explicitly excluded from the related SPF calculation.
-    This document specifies using LSLinkInfinity(0xffff) to advertise an OSPF link
-    as unreachable. Stub Router Advertisement (RFC 6987) defines MaxLinkMetric (0xffff)
-    to indicate a router-LSA link should not be used for transit traffic. This document
-    updates RFC 6987 and RFC 8770. When an OSPFv2 router supports the Unreachable
-    Link support capability defined in this document, the OSPFv2 stub router MaxLinkMetric(0xffff)
-    MUST be updated to MaxReachableLinkMetric(0xfffe).</p>"
+- content: "<p>This document specifies a Pre-Shared Key (PSK) authentication method
+    for the Ephemeral Diffie-Hellman Over COSE (EDHOC) key exchange protocol. The
+    PSK method enhances computational efficiency while providing mutual authentication,
+    ephemeral key exchange, identity protection, and quantum resistance. It is particularly
+    suited for systems where nodes share a PSK provided out-of-band (external PSK)
+    and enables efficient session resumption with less computational overhead when
+    the PSK is provided from a previous EDHOC session (resumption PSK). This document
+    details the PSK method flow, key derivation changes, message formatting, processing,
+    and security considerations.</p>"
   language:
   - en
   script:
@@ -188,23 +185,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-lsr-ospf-ls-link-infinity-02
+    id: draft-ietf-lake-edhoc-psk-04
     docid:
-    - id: draft-ietf-lsr-ospf-ls-link-infinity-02
+    - id: draft-ietf-lake-edhoc-psk-04
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-lsr-ospf-ls-link-infinity-02
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-lsr-ospf-ls-link-infinity-08
-    docid:
-    - id: draft-ietf-lsr-ospf-ls-link-infinity-08
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-lsr-ospf-ls-link-infinity-08
+      content: draft-ietf-lake-edhoc-psk-04
       format: text/plain
 series:
 - type: main
@@ -215,7 +202,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-lsr-ospf-ls-link-infinity-07
+  number: draft-ietf-lake-edhoc-psk-05
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
