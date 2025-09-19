@@ -1,34 +1,34 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-idr-5g-edge-service-metadata-28
+id: draft-ietf-lsr-ospf-ls-link-infinity-09
 title:
-- content: BGP Extension for 5G Edge Service Metadata
+- content: Advertising Unreachable Links in OSPF
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-5g-edge-service-metadata-28
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-lsr-ospf-ls-link-infinity-09
   type: src
 type: standard
 docid:
-- id: draft-ietf-idr-5g-edge-service-metadata-28
+- id: draft-ietf-lsr-ospf-ls-link-infinity-09
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-idr-5g-edge-service-metadata
+- id: I-D.ietf-lsr-ospf-ls-link-infinity
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-idr-5g-edge-service-metadata
+docnumber: I-D.ietf-lsr-ospf-ls-link-infinity
 date:
 - type: published
-  value: '2025-04-28'
+  value: '2025-09-18'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Linda
+        - content: Liyan
           language:
           - en
         - language:
@@ -39,52 +39,52 @@ contributor:
           language:
           - en
       surname:
-        content: Dunbar
+        content: Gong
         language:
         - en
       completename:
-        content: Linda Dunbar
+        content: Liyan Gong
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Futurewei
+        - content: China Mobile
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Kausik
+        - content: Weiqiang
           language:
           - en
         - language:
           - en
-          initial: K
+          initial: W
         formatted_initials:
-          content: K.
+          content: W.
           language:
           - en
       surname:
-        content: Majumdar
+        content: Cheng
         language:
         - en
       completename:
-        content: Kausik Majumdar
+        content: Weiqiang Cheng
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Oracle
+        - content: China Mobile
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Cheng
+        - content: Changwang
           language:
           - en
         - language:
@@ -95,95 +95,93 @@ contributor:
           language:
           - en
       surname:
-        content: Li
+        content: Lin
         language:
         - en
       completename:
-        content: Cheng Li
+        content: Changwang Lin
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei Technologies
+        - content: New H3C Technologies
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Gyan
+        - content: Acee
           language:
           - en
         - language:
           - en
-          initial: G
-        - language:
-          - en
-          initial: S
+          initial: A
         formatted_initials:
-          content: G. S.
+          content: A.
           language:
           - en
       surname:
-        content: Mishra
+        content: Lindem
         language:
         - en
       completename:
-        content: Gyan Mishra
+        content: Acee Lindem
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Verizon
+        - content: Arrcus, Inc.
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Zongpeng
+        - content: Ran
           language:
           - en
         - language:
           - en
-          initial: Z
+          initial: R
         formatted_initials:
-          content: Z.
+          content: R.
           language:
           - en
       surname:
-        content: Du
+        content: Chen
         language:
         - en
       completename:
-        content: Zongpeng Du
+        content: Ran Chen
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: China Mobile
+        - content: ZTE Corporation
   role:
   - type: author
 version:
-- draft: '28'
-revdate: '2025-04-28'
+- draft: '09'
+revdate: '2025-09-18'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This draft describes a new Edge Metadata Path Attribute and some Sub-
-    TLVs for egress routers to advertise the Edge Metadata about the attached edge
-    services (ES). The edge service Metadata can be used by the ingress routers in
-    the 5G Local Data Network to make path selections not only based on the routing
-    cost but also the running environment of the edge services. The goal is to improve
-    latency and performance for 5G edge services. The extension enables an edge service
-    at one specific location to be more preferred than the others with the same IP
-    address (ANYCAST) to receive data flow from a specific source, like a specific
-    User Equipment (UE).</p>"
+- content: "<p>In certain scenarios, it is necessary to advertise OSPF links that
+    are not applicable to the default SPF (Shortest Path First) calculation for other
+    purposes. In order to advertise these links and not use them in the base SPF calculation,
+    the metric LSLinkInfinity (0xffff) is used to specify that the link is unreachable.
+    Stub Router Advertisement (RFC 6987) defines MaxLinkMetric (0xffff) to indicate
+    a router-LSA link should not be used for transit traffic. When an OSPFv2 router
+    supports the Unreachable Link support capability defined in this document, OSPFv2
+    Stub Router links are advertised as MaxReachableLinkMetric (0xfffe) rather than
+    MaxLinkMetric (0xffff). This document updates RFC 6987 and RFC 8770 with respect
+    to the advertisement of MaxReachableLinkMetric rather than MaxLinkMetric.</p>"
   language:
   - en
   script:
@@ -192,23 +190,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-idr-5g-edge-service-metadata-11
+    id: draft-ietf-lsr-ospf-ls-link-infinity-02
     docid:
-    - id: draft-ietf-idr-5g-edge-service-metadata-11
+    - id: draft-ietf-lsr-ospf-ls-link-infinity-02
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-idr-5g-edge-service-metadata-11
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-idr-5g-edge-service-metadata-30
-    docid:
-    - id: draft-ietf-idr-5g-edge-service-metadata-30
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-idr-5g-edge-service-metadata-30
+      content: draft-ietf-lsr-ospf-ls-link-infinity-02
       format: text/plain
 series:
 - type: main
@@ -219,7 +207,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-idr-5g-edge-service-metadata-28
+  number: draft-ietf-lsr-ospf-ls-link-infinity-09
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

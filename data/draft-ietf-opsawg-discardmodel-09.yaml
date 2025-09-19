@@ -1,189 +1,183 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-idr-5g-edge-service-metadata-28
+id: draft-ietf-opsawg-discardmodel-09
 title:
-- content: BGP Extension for 5G Edge Service Metadata
+- content: Information and Data Models for Packet Discard Reporting
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-5g-edge-service-metadata-28
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-discardmodel-09
   type: src
 type: standard
 docid:
-- id: draft-ietf-idr-5g-edge-service-metadata-28
+- id: draft-ietf-opsawg-discardmodel-09
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-idr-5g-edge-service-metadata
+- id: I-D.ietf-opsawg-discardmodel
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-idr-5g-edge-service-metadata
+docnumber: I-D.ietf-opsawg-discardmodel
 date:
 - type: published
-  value: '2025-04-28'
+  value: '2025-09-18'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Linda
+        - content: John
           language:
           - en
         - language:
           - en
-          initial: L
+          initial: J
         formatted_initials:
-          content: L.
+          content: J.
           language:
           - en
       surname:
-        content: Dunbar
+        content: Evans
         language:
         - en
       completename:
-        content: Linda Dunbar
+        content: John Evans
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Futurewei
+        - content: Amazon
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Kausik
+        - content: Oleksandr
           language:
           - en
         - language:
           - en
-          initial: K
+          initial: O
         formatted_initials:
-          content: K.
+          content: O.
           language:
           - en
       surname:
-        content: Majumdar
+        content: Pylypenko
         language:
         - en
       completename:
-        content: Kausik Majumdar
+        content: Oleksandr Pylypenko
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Oracle
+        - content: Amazon
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Cheng
+        - content: Jeffrey
           language:
           - en
         - language:
           - en
-          initial: C
+          initial: J
         formatted_initials:
-          content: C.
+          content: J.
           language:
           - en
       surname:
-        content: Li
+        content: Haas
         language:
         - en
       completename:
-        content: Cheng Li
+        content: Jeffrey Haas
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei Technologies
+        - content: Juniper Networks
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Gyan
+        - content: Aviran
           language:
           - en
         - language:
           - en
-          initial: G
-        - language:
-          - en
-          initial: S
+          initial: A
         formatted_initials:
-          content: G. S.
+          content: A.
           language:
           - en
       surname:
-        content: Mishra
+        content: Kadosh
         language:
         - en
       completename:
-        content: Gyan Mishra
+        content: Aviran Kadosh
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Verizon
+        - content: Cisco Systems, Inc.
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Zongpeng
+        - content: Mohamed
           language:
           - en
         - language:
           - en
-          initial: Z
+          initial: M
         formatted_initials:
-          content: Z.
+          content: M.
           language:
           - en
       surname:
-        content: Du
+        content: Boucadair
         language:
         - en
       completename:
-        content: Zongpeng Du
+        content: Mohamed Boucadair
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: China Mobile
+        - content: Orange
   role:
   - type: author
 version:
-- draft: '28'
-revdate: '2025-04-28'
+- draft: '09'
+revdate: '2025-09-18'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This draft describes a new Edge Metadata Path Attribute and some Sub-
-    TLVs for egress routers to advertise the Edge Metadata about the attached edge
-    services (ES). The edge service Metadata can be used by the ingress routers in
-    the 5G Local Data Network to make path selections not only based on the routing
-    cost but also the running environment of the edge services. The goal is to improve
-    latency and performance for 5G edge services. The extension enables an edge service
-    at one specific location to be more preferred than the others with the same IP
-    address (ANYCAST) to receive data flow from a specific source, like a specific
-    User Equipment (UE).</p>"
+- content: "<p>This document defines an Information Model and specifies a corresponding
+    YANG data model for packet discard reporting. The Information Model provides an
+    implementation-independent framework for classifying packet loss — both intended
+    (e.g., due to policy) and unintended (e.g., due to congestion or errors) — to
+    enable automated network mitigation of unintended packet loss. The YANG data model
+    specifies an implementation of this framework for network elements.</p>"
   language:
   - en
   script:
@@ -192,23 +186,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-idr-5g-edge-service-metadata-11
+    id: draft-ietf-opsawg-discardmodel-03
     docid:
-    - id: draft-ietf-idr-5g-edge-service-metadata-11
+    - id: draft-ietf-opsawg-discardmodel-03
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-idr-5g-edge-service-metadata-11
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-idr-5g-edge-service-metadata-30
-    docid:
-    - id: draft-ietf-idr-5g-edge-service-metadata-30
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-idr-5g-edge-service-metadata-30
+      content: draft-ietf-opsawg-discardmodel-03
       format: text/plain
 series:
 - type: main
@@ -219,7 +203,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-idr-5g-edge-service-metadata-28
+  number: draft-ietf-opsawg-discardmodel-09
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
