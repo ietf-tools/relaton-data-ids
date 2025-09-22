@@ -1,146 +1,180 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-pim-igmp-mld-snooping-yang-l2vpn-ext-02
+id: draft-ietf-idr-link-bandwidth-18
 title:
-- content: IGMP and MLD Snooping Yang Module Extension for L2VPN
+- content: BGP Link Bandwidth Extended Community
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-pim-igmp-mld-snooping-yang-l2vpn-ext-02
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-link-bandwidth-18
   type: src
 type: standard
 docid:
-- id: draft-ietf-pim-igmp-mld-snooping-yang-l2vpn-ext-02
+- id: draft-ietf-idr-link-bandwidth-18
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-pim-igmp-mld-snooping-yang-l2vpn-ext
+- id: I-D.ietf-idr-link-bandwidth
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-pim-igmp-mld-snooping-yang-l2vpn-ext
+docnumber: I-D.ietf-idr-link-bandwidth
 date:
 - type: published
-  value: '2023-04-06'
+  value: '2025-09-21'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Hongji
+        - content: Pradosh
           language:
           - en
         - language:
           - en
-          initial: H
+          initial: P
         formatted_initials:
-          content: H.
+          content: P.
           language:
           - en
       surname:
-        content: Zhao
+        content: Mohapatra
         language:
         - en
       completename:
-        content: Hongji Zhao
+        content: Pradosh Mohapatra
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Ericsson
+        - content: Google LLC
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Xufeng
+        - content: Reshma
           language:
           - en
         - language:
           - en
-          initial: X
+          initial: R
         formatted_initials:
-          content: X.
+          content: R.
           language:
           - en
       surname:
-        content: Liu
+        content: Das
         language:
         - en
       completename:
-        content: Xufeng Liu
+        content: Reshma Das
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: IBM Corporation
+        - content: Juniper Networks, Inc.
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Yisong
-          language:
-          - en
-        - language:
-          - en
-          initial: "Y"
-        formatted_initials:
-          content: Y.
-          language:
-          - en
-      surname:
-        content: Liu
-        language:
-        - en
-      completename:
-        content: Yisong Liu
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: China Mobile
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Mahesh
+        - content: SATYA
           language:
           - en
         - language:
           - en
           initial: M
+        - language:
+          - en
+          initial: R
         formatted_initials:
-          content: M.
+          content: M. R.
           language:
           - en
       surname:
-        content: Sivakumar
+        content: Satya
         language:
         - en
       completename:
-        content: Mahesh Sivakumar
+        content: SATYA R MOHANTY
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Juniper
+        - content: Zscaler
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Anish
+        - content: Serge
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Krier
+        language:
+        - en
+      completename:
+        content: Serge Krier
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Cisco Systems
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Rafal
+          language:
+          - en
+        - language:
+          - en
+          initial: R
+        - language:
+          - en
+          initial: J
+        formatted_initials:
+          content: R. J.
+          language:
+          - en
+      surname:
+        content: Szarecki
+        language:
+        - en
+      completename:
+        content: Rafal Jan Szarecki
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Google LLC
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Akshay
           language:
           - en
         - language:
@@ -151,32 +185,29 @@ contributor:
           language:
           - en
       surname:
-        content: Peter
+        content: Gattani
         language:
         - en
       completename:
-        content: Anish Peter
+        content: Akshay Gattani
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Individual
+        - content: Arista Networks
   role:
   - type: author
 version:
-- draft: '02'
-revdate: '2023-04-06'
+- draft: '18'
+revdate: '2025-09-21'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>Internet Group Management Protocol (IGMP) and Multicast Listener Discovery
-    (MLD) Snooping could be used in both bridge service and L2VPN service. The old
-    ietf-igmp-mld-snooping yang module just describes the bridge service. In this
-    document we extend the existing ietf-igmp-mld- snooping yang module and make it
-    could be used in L2VPN service.</p>"
+- content: "<p>This document specifies a type of BGP Extended Community that enables
+    routers to perform weighted load-balancing in multipath scenarios.</p>"
   language:
   - en
   script:
@@ -185,23 +216,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-pim-igmp-mld-snooping-yang-l2vpn-ext-00
+    id: draft-ietf-idr-link-bandwidth-12
     docid:
-    - id: draft-ietf-pim-igmp-mld-snooping-yang-l2vpn-ext-00
+    - id: draft-ietf-idr-link-bandwidth-12
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-pim-igmp-mld-snooping-yang-l2vpn-ext-00
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-pim-igmp-mld-snooping-yang-l2vpn-ext-07
-    docid:
-    - id: draft-ietf-pim-igmp-mld-snooping-yang-l2vpn-ext-07
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-pim-igmp-mld-snooping-yang-l2vpn-ext-07
+      content: draft-ietf-idr-link-bandwidth-12
       format: text/plain
 series:
 - type: main
@@ -212,7 +233,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-pim-igmp-mld-snooping-yang-l2vpn-ext-02
+  number: draft-ietf-idr-link-bandwidth-18
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
