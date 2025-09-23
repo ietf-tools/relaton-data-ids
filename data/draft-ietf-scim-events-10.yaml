@@ -1,118 +1,34 @@
 ---
 schema-version: v1.2.3
-id: draft-irtf-cfrg-vdaf-15
+id: draft-ietf-scim-events-10
 title:
-- content: Verifiable Distributed Aggregation Functions
+- content: SCIM Profile for Security Event Tokens
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-irtf-cfrg-vdaf-15
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-scim-events-10
   type: src
 type: standard
 docid:
-- id: draft-irtf-cfrg-vdaf-15
+- id: draft-ietf-scim-events-10
   type: Internet-Draft
   primary: true
-- id: I-D.irtf-cfrg-vdaf
+- id: I-D.ietf-scim-events
   type: IETF
   scope: anchor
-docnumber: I-D.irtf-cfrg-vdaf
+docnumber: I-D.ietf-scim-events
 date:
 - type: published
-  value: '2025-06-17'
+  value: '2025-09-22'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Richard
-          language:
-          - en
-        - language:
-          - en
-          initial: R
-        formatted_initials:
-          content: R.
-          language:
-          - en
-      surname:
-        content: Barnes
-        language:
-        - en
-      completename:
-        content: Richard Barnes
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Cisco
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: David
-          language:
-          - en
-        - language:
-          - en
-          initial: D
-        formatted_initials:
-          content: D.
-          language:
-          - en
-      surname:
-        content: Cook
-        language:
-        - en
-      completename:
-        content: David Cook
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: ISRG
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Christopher
-          language:
-          - en
-        - language:
-          - en
-          initial: C
-        formatted_initials:
-          content: C.
-          language:
-          - en
-      surname:
-        content: Patton
-        language:
-        - en
-      completename:
-        content: Christopher Patton
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Cloudflare
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Phillipp
+        - content: Phillip
           language:
           - en
         - language:
@@ -123,35 +39,116 @@ contributor:
           language:
           - en
       surname:
-        content: Schoppmann
+        content: Hunt
         language:
         - en
       completename:
-        content: Phillipp Schoppmann
+        content: Phillip Hunt
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Google
+        - content: Independent Identity Inc
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Nancy
+          language:
+          - en
+        - language:
+          - en
+          initial: "N"
+        formatted_initials:
+          content: N.
+          language:
+          - en
+      surname:
+        content: Cam-Winget
+        language:
+        - en
+      completename:
+        content: Nancy Cam-Winget
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Cisco Systems
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Mike
+          language:
+          - en
+        - language:
+          - en
+          initial: M
+        formatted_initials:
+          content: M.
+          language:
+          - en
+      surname:
+        content: Kiser
+        language:
+        - en
+      completename:
+        content: Mike Kiser
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Sailpoint Technologies
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Jen
+          language:
+          - en
+        - language:
+          - en
+          initial: J
+        formatted_initials:
+          content: J.
+          language:
+          - en
+      surname:
+        content: Schreiber
+        language:
+        - en
+      completename:
+        content: Jen Schreiber
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Workday, Inc.
   role:
   - type: author
 version:
-- draft: '15'
-revdate: '2025-06-17'
+- draft: '10'
+revdate: '2025-09-22'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document describes Verifiable Distributed Aggregation Functions
-    (VDAFs), a family of multi-party protocols for computing aggregate statistics
-    over user measurements. These protocols are designed to ensure that, as long as
-    at least one aggregation server executes the protocol honestly, individual measurements
-    are never seen by any server in the clear. At the same time, VDAFs allow the servers
-    to detect if a malicious or misconfigured client submitted an invalid measurement.
-    Two concrete VDAFs are specified, one for general- purpose aggregation (Prio3)
-    and another for heavy hitters (Poplar1).</p>"
+- content: "<p>This specification defines a set of SCIM Security Events using the
+    Security Event Token Specification RFC8417 to enable the asynchronous exchange
+    of messages between SCIM Service Providers and receivers. SCIM Security Events
+    are typically used for: asynchronous request completion, resource replication,
+    and provisioning co-ordination.</p>"
   language:
   - en
   script:
@@ -160,23 +157,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-irtf-cfrg-vdaf-07
+    id: draft-ietf-scim-events-09
     docid:
-    - id: draft-irtf-cfrg-vdaf-07
+    - id: draft-ietf-scim-events-09
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-irtf-cfrg-vdaf-07
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-irtf-cfrg-vdaf-16
-    docid:
-    - id: draft-irtf-cfrg-vdaf-16
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-irtf-cfrg-vdaf-16
+      content: draft-ietf-scim-events-09
       format: text/plain
 series:
 - type: main
@@ -187,7 +174,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-irtf-cfrg-vdaf-15
+  number: draft-ietf-scim-events-10
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
