@@ -1,49 +1,50 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-idr-vpn-prefix-orf-19
+id: draft-ietf-idr-bgpls-sr-vtn-mt-13
 title:
-- content: VPN Prefix Outbound Route Filter (VPN Prefix ORF) for BGP-4
+- content: Applicability of Border Gateway Protocol - Link State (BGP-LS) with Multi-Topology
+    (MT) for Segment Routing based Network Resource Partitions (NRPs)
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-vpn-prefix-orf-19
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-bgpls-sr-vtn-mt-13
   type: src
 type: standard
 docid:
-- id: draft-ietf-idr-vpn-prefix-orf-19
+- id: draft-ietf-idr-bgpls-sr-vtn-mt-13
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-idr-vpn-prefix-orf
+- id: I-D.ietf-idr-bgpls-sr-vtn-mt
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-idr-vpn-prefix-orf
+docnumber: I-D.ietf-idr-bgpls-sr-vtn-mt
 date:
 - type: published
-  value: '2025-08-07'
+  value: '2025-09-29'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Wei
+        - content: Chongfeng
           language:
           - en
         - language:
           - en
-          initial: W
+          initial: C
         formatted_initials:
-          content: W.
+          content: C.
           language:
           - en
       surname:
-        content: Wang
+        content: Xie
         language:
         - en
       completename:
-        content: Wei Wang
+        content: Chongfeng Xie
         language:
         - en
     affiliation:
@@ -56,87 +57,28 @@ contributor:
     name:
       given:
         forename:
-        - content: Aijun
+        - content: Cong
           language:
           - en
         - language:
           - en
-          initial: A
+          initial: C
         formatted_initials:
-          content: A.
+          content: C.
           language:
           - en
       surname:
-        content: Wang
+        content: Li
         language:
         - en
       completename:
-        content: Aijun Wang
+        content: Cong Li
         language:
         - en
     affiliation:
     - organization:
         name:
         - content: China Telecom
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Haibo
-          language:
-          - en
-        - language:
-          - en
-          initial: H
-        formatted_initials:
-          content: H.
-          language:
-          - en
-      surname:
-        content: Wang
-        language:
-        - en
-      completename:
-        content: Haibo Wang
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Huawei Technologies
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Gyan
-          language:
-          - en
-        - language:
-          - en
-          initial: G
-        - language:
-          - en
-          initial: S
-        formatted_initials:
-          content: G. S.
-          language:
-          - en
-      surname:
-        content: Mishra
-        language:
-        - en
-      completename:
-        content: Gyan Mishra
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Verizon Inc.
   role:
   - type: author
 - person:
@@ -167,17 +109,50 @@ contributor:
         - content: Huawei Technologies
   role:
   - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Zhenbin
+          language:
+          - en
+        - language:
+          - en
+          initial: Z
+        formatted_initials:
+          content: Z.
+          language:
+          - en
+      surname:
+        content: Li
+        language:
+        - en
+      completename:
+        content: Zhenbin Li
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei Technologies
+  role:
+  - type: author
 version:
-- draft: '19'
-revdate: '2025-08-07'
+- draft: '13'
+revdate: '2025-09-29'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This draft defines a new type of Outbound Route Filter (ORF), known
-    as the VPN Prefix ORF. The VPN Prefix ORF mechanism is applicable when VPN routes
-    from different VRFs are exchanged through a single shared BGP session.</p>"
+- content: "<p>When Segment Routing (SR) is used for building Network Resource Partitions
+    (NRPs), each NRP can be allocated with a group of Segment Identifiers (SIDs) to
+    identify the topology and resource attributes of network segments in the NRP.
+    This document describes how BGP-Link State (BGP-LS) with Multi-Topology (MT) can
+    be used to distribute the information of SR based NRPs to a network controller
+    when each NRP is associated with a separate logical network topology identified
+    by a Multi-Topology ID (MT-ID). This document sets out the targeted scenarios
+    for the approach suggested, and presents the scalability limitations that arise.</p>"
   language:
   - en
   script:
@@ -186,23 +161,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-idr-vpn-prefix-orf-09
+    id: draft-ietf-idr-bgpls-sr-vtn-mt-10
     docid:
-    - id: draft-ietf-idr-vpn-prefix-orf-09
+    - id: draft-ietf-idr-bgpls-sr-vtn-mt-10
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-idr-vpn-prefix-orf-09
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-idr-vpn-prefix-orf-22
-    docid:
-    - id: draft-ietf-idr-vpn-prefix-orf-22
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-idr-vpn-prefix-orf-22
+      content: draft-ietf-idr-bgpls-sr-vtn-mt-10
       format: text/plain
 series:
 - type: main
@@ -213,7 +178,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-idr-vpn-prefix-orf-19
+  number: draft-ietf-idr-bgpls-sr-vtn-mt-13
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
