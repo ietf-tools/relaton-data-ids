@@ -1,183 +1,187 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-lamps-pq-composite-sigs-08
+id: draft-ietf-lsr-ospf-ls-link-infinity-11
 title:
-- content: Composite ML-DSA for use in X.509 Public Key Infrastructure
+- content: Advertising Unreachable Links in OSPF
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-lamps-pq-composite-sigs-08
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-lsr-ospf-ls-link-infinity-11
   type: src
 type: standard
 docid:
-- id: draft-ietf-lamps-pq-composite-sigs-08
+- id: draft-ietf-lsr-ospf-ls-link-infinity-11
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-lamps-pq-composite-sigs
+- id: I-D.ietf-lsr-ospf-ls-link-infinity
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-lamps-pq-composite-sigs
+docnumber: I-D.ietf-lsr-ospf-ls-link-infinity
 date:
 - type: published
-  value: '2025-09-20'
+  value: '2025-09-28'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Mike
+        - content: Liyan
           language:
           - en
         - language:
           - en
-          initial: M
+          initial: L
         formatted_initials:
-          content: M.
+          content: L.
           language:
           - en
       surname:
-        content: Ounsworth
+        content: Gong
         language:
         - en
       completename:
-        content: Mike Ounsworth
+        content: Liyan Gong
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Entrust Limited
+        - content: China Mobile
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: John
+        - content: Weiqiang
           language:
           - en
         - language:
           - en
-          initial: J
+          initial: W
         formatted_initials:
-          content: J.
+          content: W.
           language:
           - en
       surname:
-        content: Gray
+        content: Cheng
         language:
         - en
       completename:
-        content: John Gray
+        content: Weiqiang Cheng
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Entrust Limited
+        - content: China Mobile
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Massimiliano
+        - content: Changwang
           language:
           - en
         - language:
           - en
-          initial: M
+          initial: C
         formatted_initials:
-          content: M.
+          content: C.
           language:
           - en
       surname:
-        content: Pala
+        content: Lin
         language:
         - en
       completename:
-        content: Massimiliano Pala
+        content: Changwang Lin
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: OpenCA Labs
+        - content: New H3C Technologies
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Jan
+        - content: Acee
           language:
           - en
         - language:
           - en
-          initial: J
+          initial: A
         formatted_initials:
-          content: J.
+          content: A.
           language:
           - en
       surname:
-        content: Klaußner
+        content: Lindem
         language:
         - en
       completename:
-        content: Jan Klaußner
+        content: Acee Lindem
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Bundesdruckerei GmbH
+        - content: Arrcus, Inc.
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Scott
+        - content: Ran
           language:
           - en
         - language:
           - en
-          initial: S
+          initial: R
         formatted_initials:
-          content: S.
+          content: R.
           language:
           - en
       surname:
-        content: Fluhrer
+        content: Chen
         language:
         - en
       completename:
-        content: Scott Fluhrer
+        content: Ran Chen
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems
+        - content: ZTE Corporation
   role:
   - type: author
 version:
-- draft: '08'
-revdate: '2025-09-20'
+- draft: '11'
+revdate: '2025-09-28'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document defines combinations of ML-DSA [FIPS.204] in hybrid with
-    traditional algorithms RSASSA-PKCS1-v1.5, RSASSA-PSS, ECDSA, Ed25519, and Ed448.
-    These combinations are tailored to meet security best practices and regulatory
-    guidelines. Composite ML-DSA is applicable in any application that uses X.509
-    or PKIX data structures that accept ML-DSA, but where the operator wants extra
-    protection against breaks or catastrophic bugs in ML-DSA.</p>"
+- content: "<p>In certain scenarios, it is necessary to advertise OSPF links that
+    are not applicable to the default SPF (Shortest Path First) calculation for other
+    purposes. In order to advertise these links and not use them in the base SPF calculation,
+    the metric LSLinkInfinity (0xffff) is used to specify that the link is unreachable.
+    Stub Router Advertisement (RFC 6987) defines MaxLinkMetric (0xffff) to indicate
+    a router-LSA link should not be used for transit traffic. When an OSPFv2 router
+    supports the Unreachable Link support capability defined in this document, OSPFv2
+    Stub Router links are advertised as MaxReachableLinkMetric (0xfffe) rather than
+    MaxLinkMetric (0xffff). This document updates RFC 6987 and RFC 8770 with respect
+    to the advertisement of MaxReachableLinkMetric rather than MaxLinkMetric.</p>"
   language:
   - en
   script:
@@ -186,23 +190,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-lamps-pq-composite-sigs-07
+    id: draft-ietf-lsr-ospf-ls-link-infinity-04
     docid:
-    - id: draft-ietf-lamps-pq-composite-sigs-07
+    - id: draft-ietf-lsr-ospf-ls-link-infinity-04
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-lamps-pq-composite-sigs-07
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-lamps-pq-composite-sigs-09
-    docid:
-    - id: draft-ietf-lamps-pq-composite-sigs-09
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-lamps-pq-composite-sigs-09
+      content: draft-ietf-lsr-ospf-ls-link-infinity-04
       format: text/plain
 series:
 - type: main
@@ -213,7 +207,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-lamps-pq-composite-sigs-08
+  number: draft-ietf-lsr-ospf-ls-link-infinity-11
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
