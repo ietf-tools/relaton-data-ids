@@ -1,28 +1,28 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-netconf-netconf-client-server-39
+id: draft-ietf-netconf-restconf-client-server-44
 title:
-- content: A YANG Data Model for NETCONF Clients and Servers
+- content: A YANG Data Model for RESTCONF Clients and Servers
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-netconf-netconf-client-server-39
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-netconf-restconf-client-server-44
   type: src
 type: standard
 docid:
-- id: draft-ietf-netconf-netconf-client-server-39
+- id: draft-ietf-netconf-restconf-client-server-44
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-netconf-netconf-client-server
+- id: I-D.ietf-netconf-restconf-client-server
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-netconf-netconf-client-server
+docnumber: I-D.ietf-netconf-restconf-client-server
 date:
 - type: published
-  value: '2025-04-24'
+  value: '2025-09-29'
 contributor:
 - person:
     name:
@@ -53,17 +53,19 @@ contributor:
   role:
   - type: author
 version:
-- draft: '39'
-revdate: '2025-04-24'
+- draft: '44'
+revdate: '2025-09-29'
 language:
 - en
 script:
 - Latn
 abstract:
 - content: "<p>This document presents two YANG modules, one module to configure a
-    NETCONF client and the other module to configure a NETCONF server. Both modules
-    support both the SSH and TLS transport protocols, and support both standard NETCONF
-    and NETCONF Call Home connections.</p>"
+    RESTCONF client and the other module to configure a RESTCONF server. These modules
+    support both standard and call home RESTCONF connections. For initiating connections,
+    both modules configure HTTPS. For listening for connections, both modules configure
+    HTTPS and HTTP. Whilst RESTCONF supports only HTTPS, HTTP may be configured for
+    when a TLS-terminator is deployed in front of the listener.</p>"
   language:
   - en
   script:
@@ -72,23 +74,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-netconf-netconf-client-server-13
+    id: draft-ietf-netconf-restconf-client-server-27
     docid:
-    - id: draft-ietf-netconf-netconf-client-server-13
+    - id: draft-ietf-netconf-restconf-client-server-27
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-netconf-netconf-client-server-13
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-netconf-netconf-client-server-40
-    docid:
-    - id: draft-ietf-netconf-netconf-client-server-40
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-netconf-netconf-client-server-40
+      content: draft-ietf-netconf-restconf-client-server-27
       format: text/plain
 series:
 - type: main
@@ -99,7 +91,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-netconf-netconf-client-server-39
+  number: draft-ietf-netconf-restconf-client-server-44
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
