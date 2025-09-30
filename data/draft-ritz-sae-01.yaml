@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-ritz-sae-00
+id: draft-ritz-sae-01
 title:
 - content: Static Artifact Exchange (SAE) Protocol
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ritz-sae-00
+- content: https://datatracker.ietf.org/doc/html/draft-ritz-sae-01
   type: src
 type: standard
 docid:
-- id: draft-ritz-sae-00
+- id: draft-ritz-sae-01
   type: Internet-Draft
   primary: true
 - id: I-D.ritz-sae
@@ -53,39 +53,38 @@ contributor:
   role:
   - type: author
 version:
-- draft: '00'
+- draft: '01'
 revdate: '2025-09-29'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document specifies the Static Artifact Exchange (SAE) protocol,
-    an asynchronous protocol for exchanging cryptographic artifacts between two parties
-    via a shared, stateless repository. SAE uses a pull-only communication model where
-    peers poll for the presence of immutable, pre-computed artifacts to coordinate
-    a sequenced exchange. By design, this static artifact model avoids dynamic request
-    processing, reducing common attack surfaces like injection and parser vulnerabilities.
-    The protocol is transport-agnostic, allowing each party to access the repository
-    using different underlying mechanisms (e.g., cloud APIs or standard HTTPS). SAE
-    is intended as a foundational transport pattern for protocols like Ephemeral Compute
-    Attestation (ECA), which require a secure, minimal channel where trust is derived
-    from the cryptographic content of the artifacts, not from the channel itself.</p>"
+- content: <p>This document specifies the Static Artifact Exchange (SAE) protocol,
+    an asynchronous transport pattern for exchanging cryptographic artifacts between
+    two parties via a shared, stateless repository. SAE uses a "publish-then-poll,"
+    pull-only communication model where peers use the presence and size of immutable
+    artifacts to coordinate a sequenced exchange. By enforcing a strict set of invariants,
+    including a prohibition on parsing arbitrary content to drive the transport's
+    state machine, SAE is designed to minimize common attack surfaces like injection
+    and parser vulnerabilities. The pattern is transport-agnostic and is intended
+    for use by higher-level cryptographic protocols, like Ephemeral Compute Attestation
+    (ECA), that require a secure, minimal channel.</p>
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-ritz-sae-01
+    id: draft-ritz-sae-00
     docid:
-    - id: draft-ritz-sae-01
+    - id: draft-ritz-sae-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ritz-sae-01
+      content: draft-ritz-sae-00
       format: text/plain
 series:
 - type: main
@@ -96,7 +95,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ritz-sae-00
+  number: draft-ritz-sae-01
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
