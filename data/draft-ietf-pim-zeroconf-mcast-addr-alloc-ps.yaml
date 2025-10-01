@@ -13,15 +13,18 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document describes a network that requires unique multicast addresses
-    to distribute data. Various challenges are discussed, such as the use of multicast
-    snooping to ensure efficient use of bandwidth, limitations of switch hardware,
-    problems associated with address collisions, and the need to avoid user configuration.
-    After all limitations were considered it was determined that multicast addresses
-    need to be dynamically-assigned by a decentralized, zero- configuration protocol.
-    Requirements and recommendations for suitable protocols are listed and specific
-    considerations for assigning IPv4 and IPv6 addresses are reviewed. The document
-    closes with several solutions that are precluded from consideration.</p>"
+- content: <p>This document defines the problem space and associated requirements
+    for automatically assigning multicast addresses in zero-configuration ("zeroconf")
+    networking environments. It addresses key challenges, such as address collisions,
+    hardware limitations, multicast snooping inefficiencies, and the need to avoid
+    manual configuration. Based on these challenges, it derives requirements for a
+    lightweight, decentralized protocol capable of dynamically allocating unique multicast
+    group addresses without central coordination. The document presents explicit requirements
+    covering discovery, allocation, conflict detection and resolution, and lease management.
+    It also evaluates considerations specific to IPv6 and IPv4 multicast address ranges,
+    and identifies approaches that are unsuited for zeroconf deployment. This foundation
+    serves as a reference for developing future multicast address allocation protocols
+    that operate autonomously within local networks.</p>
   language:
   - en
   script:
@@ -97,6 +100,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-pim-zeroconf-mcast-addr-alloc-ps-06
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-pim-zeroconf-mcast-addr-alloc-ps-07
+    docid:
+    - id: draft-ietf-pim-zeroconf-mcast-addr-alloc-ps-07
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-pim-zeroconf-mcast-addr-alloc-ps-07
       format: text/plain
 ext:
   schema-version: v1.0.1

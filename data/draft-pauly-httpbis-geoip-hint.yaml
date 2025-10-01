@@ -18,10 +18,12 @@ abstract:
     to determine client location. Maintaining a geographically relevant user experience
     requires large pools of IP addresses, which can be costly. Additionally, users
     often receive inaccurate geolocation results because servers rely on geo-IP feeds
-    that can be outdated. To address these challenges, we can allow clients to actively
-    send their network geolocation directly to the origin server via an HTTP Client
-    Hint. This approach will not only enhance geolocation accuracy and reduce IP costs,
-    but it also gives clients more transparency regarding their perceived geolocation.</p>"
+    that can be outdated. To address these challenges, we can allow HTTP clients to
+    actively send their network geolocation to an HTTP server via an HTTP header field.
+    This approach will not only enhance geolocation accuracy and reduce IP costs,
+    but it also gives clients more transparency regarding their perceived geolocation.
+    This is also particularly useful in the case of HTTP intermediaries that hide
+    client IP addresses, such as Oblivious HTTP (OHTTP) relays.</p>"
   language:
   - en
   script:
@@ -47,6 +49,16 @@ relation:
       primary: true
     formattedref:
       content: draft-pauly-httpbis-geoip-hint-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-pauly-httpbis-geoip-hint-02
+    docid:
+    - id: draft-pauly-httpbis-geoip-hint-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-pauly-httpbis-geoip-hint-02
       format: text/plain
 ext:
   schema-version: v1.0.1
