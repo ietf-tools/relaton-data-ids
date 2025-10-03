@@ -1,49 +1,50 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-ccamp-rfc9093-bis-16
+id: draft-ietf-jose-hpke-encrypt-12
 title:
-- content: Common YANG Data Types for Layer 0 Optical Networks
+- content: Use of Hybrid Public Key Encryption (HPKE) with JSON Object Signing and
+    Encryption (JOSE)
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-rfc9093-bis-16
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-jose-hpke-encrypt-12
   type: src
 type: standard
 docid:
-- id: draft-ietf-ccamp-rfc9093-bis-16
+- id: draft-ietf-jose-hpke-encrypt-12
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-ccamp-rfc9093-bis
+- id: I-D.ietf-jose-hpke-encrypt
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-ccamp-rfc9093-bis
+docnumber: I-D.ietf-jose-hpke-encrypt
 date:
 - type: published
-  value: '2025-08-07'
+  value: '2025-10-02'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Sergio
+        - content: Tirumaleswar
           language:
           - en
         - language:
           - en
-          initial: S
+          initial: T
         formatted_initials:
-          content: S.
+          content: T.
           language:
           - en
       surname:
-        content: Belotti
+        content: Reddy.K
         language:
         - en
       completename:
-        content: Sergio Belotti
+        content: Tirumaleswar Reddy.K
         language:
         - en
     affiliation:
@@ -56,91 +57,35 @@ contributor:
     name:
       given:
         forename:
-        - content: Italo
+        - content: Hannes
           language:
           - en
         - language:
           - en
-          initial: I
+          initial: H
         formatted_initials:
-          content: I.
+          content: H.
           language:
           - en
       surname:
-        content: Busi
+        content: Tschofenig
         language:
         - en
       completename:
-        content: Italo Busi
+        content: Hannes Tschofenig
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei
+        - content: University of Applied Sciences Bonn-Rhein-Sieg
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Dieter
-          language:
-          - en
-        - language:
-          - en
-          initial: D
-        formatted_initials:
-          content: D.
-          language:
-          - en
-      surname:
-        content: Beller
-        language:
-        - en
-      completename:
-        content: Dieter Beller
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Nokia
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Esther
-          language:
-          - en
-        - language:
-          - en
-          initial: E
-        formatted_initials:
-          content: E.
-          language:
-          - en
-      surname:
-        content: Le Rouzic
-        language:
-        - en
-      completename:
-        content: Esther Le Rouzic
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Orange
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Aihua
+        - content: Aritra
           language:
           - en
         - language:
@@ -151,35 +96,93 @@ contributor:
           language:
           - en
       surname:
-        content: Guo
+        content: Banerjee
         language:
         - en
       completename:
-        content: Aihua Guo
+        content: Aritra Banerjee
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Futurewei Technologies
+        - content: Nokia
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Orie
+          language:
+          - en
+        - language:
+          - en
+          initial: O
+        formatted_initials:
+          content: O.
+          language:
+          - en
+      surname:
+        content: Steele
+        language:
+        - en
+      completename:
+        content: Orie Steele
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Tradeverifyd
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Michael
+          language:
+          - en
+        - language:
+          - en
+          initial: M
+        - language:
+          - en
+          initial: B
+        formatted_initials:
+          content: M. B.
+          language:
+          - en
+      surname:
+        content: Jones
+        language:
+        - en
+      completename:
+        content: Michael B. Jones
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Self-Issued Consulting
   role:
   - type: author
 version:
-- draft: '16'
-revdate: '2025-08-07'
+- draft: '12'
+revdate: '2025-10-02'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document defines a collection of common data types, identities,
-    and groupings in the YANG data modeling language. These common types and groupings,
-    derived from the built-in YANG data types, identities, and groupings are intended
-    to be imported by modules that model Optical Layer 0 configuration and state capabilities,
-    such as Wavelength Switched Optical Networks (WSONs) and flexi-grid Dense Wavelength
-    Division Multiplexing (DWDM) networks. This document obsoletes RFC 9093 by replacing
-    the YANG module it contained with a new revision that includes additional YANG
-    data types, identities and groupings.</p>"
+- content: "<p>This specification defines Hybrid Public Key Encryption (HPKE) for
+    use with JSON Object Signing and Encryption (JOSE). HPKE offers a variant of public
+    key encryption of arbitrary-sized plaintexts for a recipient public key. HPKE
+    is a general encryption framework utilizing an asymmetric key encapsulation mechanism
+    (KEM), a key derivation function (KDF), and an Authenticated Encryption with Associated
+    Data (AEAD) algorithm. This document defines the use of HPKE with JOSE. The specification
+    chooses a specific subset of the HPKE features to use with JOSE.</p>"
   language:
   - en
   script:
@@ -188,23 +191,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-ccamp-rfc9093-bis-01
+    id: draft-ietf-jose-hpke-encrypt-04
     docid:
-    - id: draft-ietf-ccamp-rfc9093-bis-01
+    - id: draft-ietf-jose-hpke-encrypt-04
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-ccamp-rfc9093-bis-01
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-ccamp-rfc9093-bis-17
-    docid:
-    - id: draft-ietf-ccamp-rfc9093-bis-17
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-ccamp-rfc9093-bis-17
+      content: draft-ietf-jose-hpke-encrypt-04
       format: text/plain
 series:
 - type: main
@@ -215,7 +208,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-ccamp-rfc9093-bis-16
+  number: draft-ietf-jose-hpke-encrypt-12
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
