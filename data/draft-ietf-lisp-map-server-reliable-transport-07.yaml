@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-lisp-map-server-reliable-transport-06
+id: draft-ietf-lisp-map-server-reliable-transport-07
 title:
 - content: LISP Map Server Reliable Transport
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-lisp-map-server-reliable-transport-06
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-lisp-map-server-reliable-transport-07
   type: src
 type: standard
 docid:
-- id: draft-ietf-lisp-map-server-reliable-transport-06
+- id: draft-ietf-lisp-map-server-reliable-transport-07
   type: Internet-Draft
   primary: true
 - id: I-D.ietf-lisp-map-server-reliable-transport
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.ietf-lisp-map-server-reliable-transport
 date:
 - type: published
-  value: '2025-05-08'
+  value: '2025-10-02'
 contributor:
 - person:
     name:
@@ -165,8 +165,8 @@ contributor:
   role:
   - type: author
 version:
-- draft: '06'
-revdate: '2025-05-08'
+- draft: '07'
+revdate: '2025-10-02'
 language:
 - en
 script:
@@ -175,10 +175,10 @@ abstract:
 - content: "<p>The communication between LISP ETRs and Map-Servers is based on unreliable
     UDP message exchange coupled with periodic message transmission in order to maintain
     soft state. The drawback of periodic messaging is the constant load imposed on
-    both the ETR and the Map-Server. New use cases for LISP have increased the amount
-    of state that needs to be communicated with requirements that are not satisfied
-    by the current mechanism. This document introduces the use of a reliable transport
-    for ETR to Map-Server communication in order to eliminate the periodic messaging
+    both the ETR and the Map-Server. New LISP use cases increase the amount of state
+    that needs to be communicated and challenge the scalability of the system when
+    using the UDP exchange. This document introduces the use of a reliable transport
+    for ETR to Map-Server communications in order to eliminate the periodic messaging
     overhead, while providing reliability, flow-control and endpoint liveness detection.</p>"
   language:
   - en
@@ -196,16 +196,6 @@ relation:
     formattedref:
       content: draft-ietf-lisp-map-server-reliable-transport-01
       format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-lisp-map-server-reliable-transport-07
-    docid:
-    - id: draft-ietf-lisp-map-server-reliable-transport-07
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-lisp-map-server-reliable-transport-07
-      format: text/plain
 series:
 - type: main
   title:
@@ -215,7 +205,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-lisp-map-server-reliable-transport-06
+  number: draft-ietf-lisp-map-server-reliable-transport-07
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
