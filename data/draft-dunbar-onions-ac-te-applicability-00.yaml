@@ -1,34 +1,63 @@
 ---
 schema-version: v1.2.3
-id: draft-ybam-rfc8561bis-02
+id: draft-dunbar-onions-ac-te-applicability-00
 title:
-- content: A YANG Data Model for Microwave Radio Link
+- content: Applying Attachmet Circuit and Traffic Engineering YANG Data Model to Edge
+    AI Use Case
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ybam-rfc8561bis-02
+- content: https://datatracker.ietf.org/doc/html/draft-dunbar-onions-ac-te-applicability-00
   type: src
 type: standard
 docid:
-- id: draft-ybam-rfc8561bis-02
+- id: draft-dunbar-onions-ac-te-applicability-00
   type: Internet-Draft
   primary: true
-- id: I-D.ybam-rfc8561bis
+- id: I-D.dunbar-onions-ac-te-applicability
   type: IETF
   scope: anchor
-docnumber: I-D.ybam-rfc8561bis
+docnumber: I-D.dunbar-onions-ac-te-applicability
 date:
 - type: published
-  value: '2025-04-04'
+  value: '2025-10-03'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Scott
+        - content: Linda
+          language:
+          - en
+        - language:
+          - en
+          initial: L
+        formatted_initials:
+          content: L.
+          language:
+          - en
+      surname:
+        content: Dunbar
+        language:
+        - en
+      completename:
+        content: Linda Dunbar
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Futurewei
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Sun
           language:
           - en
         - language:
@@ -39,171 +68,126 @@ contributor:
           language:
           - en
       surname:
-        content: Mansfield
+        content: Qiong
         language:
         - en
       completename:
-        content: Scott Mansfield
+        content: Sun Qiong
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Ericsson
+        - content: China Telecom
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Jonas
+        - language:
+          - en
+          initial: B
+        formatted_initials:
+          content: B.
+          language:
+          - en
+      surname:
+        content: Wu
+        language:
+        - en
+      completename:
+        content: Bo Wu
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Luis
           language:
           - en
         - language:
           - en
-          initial: J
-        formatted_initials:
-          content: J.
-          language:
-          - en
-      surname:
-        content: Ahlberg
-        language:
-        - en
-      completename:
-        content: Jonas Ahlberg
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Ericsson AB
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Min
-          language:
-          - en
+          initial: L
         - language:
           - en
           initial: M
         formatted_initials:
-          content: M.
+          content: L. M.
           language:
           - en
       surname:
-        content: Ye
+        content: Contreras
         language:
         - en
       completename:
-        content: Min Ye
+        content: Luis M. Contreras
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei Technologies
+        - content: Telefornica
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Daniela
+        - content: Chongfeng
           language:
           - en
         - language:
           - en
-          initial: D
+          initial: C
         formatted_initials:
-          content: D.
+          content: C.
           language:
           - en
       surname:
-        content: Spreafico
+        content: Xie
         language:
         - en
       completename:
-        content: Daniela Spreafico
+        content: Chongfeng Xie
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Nokia - IT
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Danilo
-          language:
-          - en
-        - language:
-          - en
-          initial: D
-        formatted_initials:
-          content: D.
-          language:
-          - en
-      surname:
-        content: Pala
-        language:
-        - en
-      completename:
-        content: Danilo Pala
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: SIAE
+        - content: China Telecom
   role:
   - type: author
 version:
-- draft: '02'
-revdate: '2025-04-04'
+- draft: '00'
+revdate: '2025-10-03'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document defines a YANG data model for control and management
-    of radio link interfaces and their connectivity to packet (typically Ethernet)
-    interfaces in a microwave/millimeter wave node. The data nodes for management
-    of the interface protection functionality is broken out into a separate and generic
-    YANG data model in order to make it available for other interface types as well.
-    This document obsoletes RFC 8561.</p>"
+- content: "<p>This document explores how existing IETF YANG data models, specifically
+    the Attachment Circuit (AC)-as-a-Service (ACaaS) and Traffic Engineering (TE)
+    topology data models, can be applied to support a use case involving dynamic AI
+    model placement at Edge Cloud sites. The use case involves selecting optimal Edge
+    locations for real-time AI inference based on end-to-end network performance between
+    street-level cameras and Edge Cloud compute nodes. By mapping the use case across
+    multiple network segments and applying relevant YANG data models to retrieve and
+    request specific services objectives such as bandwidth, latency, and reliability,
+    this document serves as a practical exercise to evaluate model applicability and
+    identify gaps, if any.</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
-relation:
-- type: updates
-  bibitem:
-    id: draft-ybam-rfc8561bis-01
-    docid:
-    - id: draft-ybam-rfc8561bis-01
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ybam-rfc8561bis-01
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ybam-rfc8561bis-03
-    docid:
-    - id: draft-ybam-rfc8561bis-03
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ybam-rfc8561bis-03
-      format: text/plain
 series:
 - type: main
   title:
@@ -213,7 +197,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ybam-rfc8561bis-02
+  number: draft-dunbar-onions-ac-te-applicability-00
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

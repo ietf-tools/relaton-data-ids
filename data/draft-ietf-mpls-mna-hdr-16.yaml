@@ -1,62 +1,34 @@
 ---
 schema-version: v1.2.3
-id: draft-ybam-rfc8561bis-02
+id: draft-ietf-mpls-mna-hdr-16
 title:
-- content: A YANG Data Model for Microwave Radio Link
+- content: MPLS Network Action (MNA) Sub-Stack Solution
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ybam-rfc8561bis-02
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-mpls-mna-hdr-16
   type: src
 type: standard
 docid:
-- id: draft-ybam-rfc8561bis-02
+- id: draft-ietf-mpls-mna-hdr-16
   type: Internet-Draft
   primary: true
-- id: I-D.ybam-rfc8561bis
+- id: I-D.ietf-mpls-mna-hdr
   type: IETF
   scope: anchor
-docnumber: I-D.ybam-rfc8561bis
+docnumber: I-D.ietf-mpls-mna-hdr
 date:
 - type: published
-  value: '2025-04-04'
+  value: '2025-10-03'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Scott
-          language:
-          - en
-        - language:
-          - en
-          initial: S
-        formatted_initials:
-          content: S.
-          language:
-          - en
-      surname:
-        content: Mansfield
-        language:
-        - en
-      completename:
-        content: Scott Mansfield
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Ericsson
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Jonas
+        - content: Jaganbabu
           language:
           - en
         - language:
@@ -67,117 +39,147 @@ contributor:
           language:
           - en
       surname:
-        content: Ahlberg
+        content: Rajamanickam
         language:
         - en
       completename:
-        content: Jonas Ahlberg
+        content: Jaganbabu Rajamanickam
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Ericsson AB
+        - content: Cisco Systems, Inc.
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Min
+        - content: Rakesh
           language:
           - en
         - language:
           - en
-          initial: M
+          initial: R
         formatted_initials:
-          content: M.
+          content: R.
           language:
           - en
       surname:
-        content: Ye
+        content: Gandhi
         language:
         - en
       completename:
-        content: Min Ye
+        content: Rakesh Gandhi
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei Technologies
+        - content: Cisco Systems, Inc.
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Daniela
+        - content: Royi
           language:
           - en
         - language:
           - en
-          initial: D
+          initial: R
         formatted_initials:
-          content: D.
+          content: R.
           language:
           - en
       surname:
-        content: Spreafico
+        content: Zigler
         language:
         - en
       completename:
-        content: Daniela Spreafico
+        content: Royi Zigler
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Nokia - IT
+        - content: Broadcom
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Danilo
+        - content: Haoyu
           language:
           - en
         - language:
           - en
-          initial: D
+          initial: H
         formatted_initials:
-          content: D.
+          content: H.
           language:
           - en
       surname:
-        content: Pala
+        content: Song
         language:
         - en
       completename:
-        content: Danilo Pala
+        content: Haoyu Song
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: SIAE
+        - content: Futurewei Technologies
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Kireeti
+          language:
+          - en
+        - language:
+          - en
+          initial: K
+        formatted_initials:
+          content: K.
+          language:
+          - en
+      surname:
+        content: Kompella
+        language:
+        - en
+      completename:
+        content: Kireeti Kompella
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Juniper Networks
   role:
   - type: author
 version:
-- draft: '02'
-revdate: '2025-04-04'
+- draft: '16'
+revdate: '2025-10-03'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document defines a YANG data model for control and management
-    of radio link interfaces and their connectivity to packet (typically Ethernet)
-    interfaces in a microwave/millimeter wave node. The data nodes for management
-    of the interface protection functionality is broken out into a separate and generic
-    YANG data model in order to make it available for other interface types as well.
-    This document obsoletes RFC 8561.</p>"
+- content: <p>This document defines the MPLS Network Actions (MNA) sub-stack solution
+    for carrying Network Actions and Ancillary Data in the MPLS label stack. MNA can
+    be used to influence packet forwarding decisions, carry additional Operations,
+    Administration, and Maintenance information in the MPLS packet or perform user-defined
+    operations. The solution specified in this document addresses the requirements
+    for In-stack network action and In-stack data found in "Requirements for MPLS
+    Network Actions". This document follows the architectural framework for the MNA
+    technologies specified in "MPLS Network Actions (MNA) Framework".</p>
   language:
   - en
   script:
@@ -186,23 +188,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ybam-rfc8561bis-01
+    id: draft-ietf-mpls-mna-hdr-13
     docid:
-    - id: draft-ybam-rfc8561bis-01
+    - id: draft-ietf-mpls-mna-hdr-13
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ybam-rfc8561bis-01
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ybam-rfc8561bis-03
-    docid:
-    - id: draft-ybam-rfc8561bis-03
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ybam-rfc8561bis-03
+      content: draft-ietf-mpls-mna-hdr-13
       format: text/plain
 series:
 - type: main
@@ -213,7 +205,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ybam-rfc8561bis-02
+  number: draft-ietf-mpls-mna-hdr-16
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
