@@ -1,28 +1,28 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-lamps-csr-attestation-20
+id: draft-ietf-lamps-pq-composite-sigs-10
 title:
-- content: Use of Remote Attestation with Certification Signing Requests
+- content: Composite ML-DSA for use in X.509 Public Key Infrastructure
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-lamps-csr-attestation-20
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-lamps-pq-composite-sigs-10
   type: src
 type: standard
 docid:
-- id: draft-ietf-lamps-csr-attestation-20
+- id: draft-ietf-lamps-pq-composite-sigs-10
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-lamps-csr-attestation
+- id: I-D.ietf-lamps-pq-composite-sigs
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-lamps-csr-attestation
+docnumber: I-D.ietf-lamps-pq-composite-sigs
 date:
 - type: published
-  value: '2025-07-07'
+  value: '2025-10-05'
 contributor:
 - person:
     name:
@@ -56,63 +56,35 @@ contributor:
     name:
       given:
         forename:
-        - content: Hannes
+        - content: John
           language:
           - en
         - language:
           - en
-          initial: H
+          initial: J
         formatted_initials:
-          content: H.
+          content: J.
           language:
           - en
       surname:
-        content: Tschofenig
+        content: Gray
         language:
         - en
       completename:
-        content: Hannes Tschofenig
+        content: John Gray
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Siemens
+        - content: Entrust Limited
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Henk
-          language:
-          - en
-        - language:
-          - en
-          initial: H
-        formatted_initials:
-          content: H.
-          language:
-          - en
-      surname:
-        content: Birkholz
-        language:
-        - en
-      completename:
-        content: Henk Birkholz
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Fraunhofer SIT
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Monty
+        - content: Massimiliano
           language:
           - en
         - language:
@@ -123,62 +95,89 @@ contributor:
           language:
           - en
       surname:
-        content: Wiseman
+        content: Pala
         language:
         - en
       completename:
-        content: Monty Wiseman
+        content: Massimiliano Pala
         language:
         - en
+    affiliation:
+    - organization:
+        name:
+        - content: OpenCA Labs
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Ned
+        - content: Jan
           language:
           - en
         - language:
           - en
-          initial: "N"
+          initial: J
         formatted_initials:
-          content: N.
+          content: J.
           language:
           - en
       surname:
-        content: Smith
+        content: Klaußner
         language:
         - en
       completename:
-        content: Ned Smith
+        content: Jan Klaußner
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Intel Corporation
+        - content: Bundesdruckerei GmbH
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Scott
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Fluhrer
+        language:
+        - en
+      completename:
+        content: Scott Fluhrer
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Cisco Systems
   role:
   - type: author
 version:
-- draft: '20'
-revdate: '2025-07-07'
+- draft: '10'
+revdate: '2025-10-05'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>A PKI end entity requesting a certificate from a Certification Authority
-    (CA) may wish to offer trustworthy claims about the platform generating the certification
-    request and the environment associated with the corresponding private key, such
-    as whether the private key resides on a hardware security module. This specification
-    defines an attribute and an extension that allow for conveyance of Evidence and
-    Attestation Results in Certificate Signing Requests (CSRs), such as PKCS#10 or
-    Certificate Request Message Format (CRMF) payloads. This provides an elegant and
-    automatable mechanism for transporting Evidence to a Certification Authority.
-    Including Evidence and Attestation Results along with a CSR can help to improve
-    the assessment of the security posture for the private key, and can help the Certification
-    Authority to assess whether it satisfies the requested certificate profile.</p>"
+- content: "<p>This document defines combinations of ML-DSA [FIPS.204] in hybrid with
+    traditional algorithms RSASSA-PKCS1-v1.5, RSASSA-PSS, ECDSA, Ed25519, and Ed448.
+    These combinations are tailored to meet security best practices and regulatory
+    guidelines. Composite ML-DSA is applicable in any application that uses X.509
+    or PKIX data structures that accept ML-DSA, but where the operator wants extra
+    protection against breaks or catastrophic bugs in ML-DSA.</p>"
   language:
   - en
   script:
@@ -187,23 +186,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-lamps-csr-attestation-11
+    id: draft-ietf-lamps-pq-composite-sigs-07
     docid:
-    - id: draft-ietf-lamps-csr-attestation-11
+    - id: draft-ietf-lamps-pq-composite-sigs-07
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-lamps-csr-attestation-11
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-lamps-csr-attestation-21
-    docid:
-    - id: draft-ietf-lamps-csr-attestation-21
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-lamps-csr-attestation-21
+      content: draft-ietf-lamps-pq-composite-sigs-07
       format: text/plain
 series:
 - type: main
@@ -214,7 +203,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-lamps-csr-attestation-20
+  number: draft-ietf-lamps-pq-composite-sigs-10
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
