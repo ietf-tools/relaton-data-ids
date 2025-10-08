@@ -1,144 +1,158 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-deleg-requirements-01
+id: draft-ietf-opsawg-ucl-acl-09
 title:
-- content: 'Problem Statement and Requirements for an Improved DNS Delegation Mechanism
-    abbrev: DNS DELEG Requirements'
+- content: A YANG Data Model and RADIUS Extension for Policy-based Network Access
+    Control
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-deleg-requirements-01
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-ucl-acl-09
   type: src
 type: standard
 docid:
-- id: draft-ietf-deleg-requirements-01
+- id: draft-ietf-opsawg-ucl-acl-09
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-deleg-requirements
+- id: I-D.ietf-opsawg-ucl-acl
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-deleg-requirements
+docnumber: I-D.ietf-opsawg-ucl-acl
 date:
 - type: published
-  value: '2024-10-05'
+  value: '2025-10-07'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: David
+        - content: Qiufang
           language:
           - en
+        - language:
+          - en
+          initial: Q
         formatted_initials:
+          content: Q.
           language:
           - en
       surname:
-        content: Lawrence
+        content: Ma
         language:
         - en
       completename:
-        content: David C Lawrence
+        content: Qiufang Ma
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Salesforce
+        - content: Huawei
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Edward
+        - content: Qin
           language:
           - en
         - language:
           - en
-          initial: E
+          initial: Q
         formatted_initials:
-          content: E.
+          content: Q.
           language:
           - en
       surname:
-        content: Lewis
+        content: Wu
         language:
         - en
       completename:
-        content: Edward Lewis
-        language:
-        - en
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Jim
-          language:
-          - en
-        - language:
-          - en
-          initial: J
-        formatted_initials:
-          content: J.
-          language:
-          - en
-      surname:
-        content: Reid
-        language:
-        - en
-      completename:
-        content: Jim Reid
-        language:
-        - en
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Tim
-          language:
-          - en
-        - language:
-          - en
-          initial: T
-        formatted_initials:
-          content: T.
-          language:
-          - en
-      surname:
-        content: Wicinski
-        language:
-        - en
-      completename:
-        content: Tim Wicinski
+        content: Qin Wu
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cox Communications
+        - content: Huawei
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Mohamed
+          language:
+          - en
+        - language:
+          - en
+          initial: M
+        formatted_initials:
+          content: M.
+          language:
+          - en
+      surname:
+        content: Boucadair
+        language:
+        - en
+      completename:
+        content: Mohamed Boucadair
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Orange
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Daniel
+          language:
+          - en
+        - language:
+          - en
+          initial: D
+        formatted_initials:
+          content: D.
+          language:
+          - en
+      surname:
+        content: King
+        language:
+        - en
+      completename:
+        content: Daniel King
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Lancaster University
   role:
   - type: author
 version:
-- draft: '01'
-revdate: '2024-10-05'
+- draft: '09'
+revdate: '2025-10-07'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>Authoritative control of parts of the Domain Name System namespace
-    are indicated with a special record type, the NS record, that can only indicate
-    the name of the server which a client resolver should contact for more information.
-    Any other features of that server must then be discovered through other mechanisms.
-    This draft considers the limitations of the current system, benefits that could
-    be gained by changing it, and what requirements constrain an updated design.</p>"
+- content: "<p>This document defines a YANG data model for policy-based network access
+    control, which provides consistent and efficient enforcement of network access
+    control policies based on group identity. Moreover, this document defines a mechanism
+    to ease the maintenance of the mapping between a user group identifier and a set
+    of IP/MAC addresses to enforce policy-based network access control. In addition,
+    the document defines a Remote Authentication Dial-in User Service (RADIUS) attribute
+    that is used to communicate the user group identifier as part of identification
+    and authorization information.</p>"
   language:
   - en
   script:
@@ -147,23 +161,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-deleg-requirements-00
+    id: draft-ietf-opsawg-ucl-acl-05
     docid:
-    - id: draft-ietf-deleg-requirements-00
+    - id: draft-ietf-opsawg-ucl-acl-05
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-deleg-requirements-00
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-deleg-requirements-04
-    docid:
-    - id: draft-ietf-deleg-requirements-04
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-deleg-requirements-04
+      content: draft-ietf-opsawg-ucl-acl-05
       format: text/plain
 series:
 - type: main
@@ -174,7 +178,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-deleg-requirements-01
+  number: draft-ietf-opsawg-ucl-acl-09
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

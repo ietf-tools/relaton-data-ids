@@ -1,144 +1,157 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-deleg-requirements-01
+id: draft-ietf-oauth-rfc7523bis-03
 title:
-- content: 'Problem Statement and Requirements for an Improved DNS Delegation Mechanism
-    abbrev: DNS DELEG Requirements'
+- content: Updates to OAuth 2.0 JSON Web Token (JWT) Client Authentication and Assertion-Based
+    Authorization Grants
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-deleg-requirements-01
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-oauth-rfc7523bis-03
   type: src
 type: standard
 docid:
-- id: draft-ietf-deleg-requirements-01
+- id: draft-ietf-oauth-rfc7523bis-03
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-deleg-requirements
+- id: I-D.ietf-oauth-rfc7523bis
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-deleg-requirements
+docnumber: I-D.ietf-oauth-rfc7523bis
 date:
 - type: published
-  value: '2024-10-05'
+  value: '2025-10-07'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: David
+        - content: Michael
           language:
           - en
+        - language:
+          - en
+          initial: M
+        - language:
+          - en
+          initial: B
         formatted_initials:
+          content: M. B.
           language:
           - en
       surname:
-        content: Lawrence
+        content: Jones
         language:
         - en
       completename:
-        content: David C Lawrence
+        content: Michael B. Jones
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Salesforce
+        - content: Self-Issued Consulting
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Edward
+        - content: Brian
           language:
           - en
         - language:
           - en
-          initial: E
+          initial: B
         formatted_initials:
-          content: E.
+          content: B.
           language:
           - en
       surname:
-        content: Lewis
+        content: Campbell
         language:
         - en
       completename:
-        content: Edward Lewis
-        language:
-        - en
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Jim
-          language:
-          - en
-        - language:
-          - en
-          initial: J
-        formatted_initials:
-          content: J.
-          language:
-          - en
-      surname:
-        content: Reid
-        language:
-        - en
-      completename:
-        content: Jim Reid
-        language:
-        - en
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Tim
-          language:
-          - en
-        - language:
-          - en
-          initial: T
-        formatted_initials:
-          content: T.
-          language:
-          - en
-      surname:
-        content: Wicinski
-        language:
-        - en
-      completename:
-        content: Tim Wicinski
+        content: Brian Campbell
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cox Communications
+        - content: Ping Identity
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Chuck
+          language:
+          - en
+        - language:
+          - en
+          initial: C
+        formatted_initials:
+          content: C.
+          language:
+          - en
+      surname:
+        content: Mortimore
+        language:
+        - en
+      completename:
+        content: Chuck Mortimore
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Disney
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Filip
+          language:
+          - en
+        - language:
+          - en
+          initial: F
+        formatted_initials:
+          content: F.
+          language:
+          - en
+      surname:
+        content: Skokan
+        language:
+        - en
+      completename:
+        content: Filip Skokan
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Okta
   role:
   - type: author
 version:
-- draft: '01'
-revdate: '2024-10-05'
+- draft: '03'
+revdate: '2025-10-07'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>Authoritative control of parts of the Domain Name System namespace
-    are indicated with a special record type, the NS record, that can only indicate
-    the name of the server which a client resolver should contact for more information.
-    Any other features of that server must then be discovered through other mechanisms.
-    This draft considers the limitations of the current system, benefits that could
-    be gained by changing it, and what requirements constrain an updated design.</p>"
+- content: "<p>This specification updates the requirements for audience values in
+    OAuth 2.0 Client Assertion Authentication and Assertion-based Authorization Grants
+    to address a security vulnerability identified in the previous requirements for
+    those audience values in multiple OAuth 2.0 specifications.</p>"
   language:
   - en
   script:
@@ -147,23 +160,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-deleg-requirements-00
+    id: draft-ietf-oauth-rfc7523bis-00
     docid:
-    - id: draft-ietf-deleg-requirements-00
+    - id: draft-ietf-oauth-rfc7523bis-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-deleg-requirements-00
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-deleg-requirements-04
-    docid:
-    - id: draft-ietf-deleg-requirements-04
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-deleg-requirements-04
+      content: draft-ietf-oauth-rfc7523bis-00
       format: text/plain
 series:
 - type: main
@@ -174,7 +177,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-deleg-requirements-01
+  number: draft-ietf-oauth-rfc7523bis-03
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
