@@ -1,90 +1,63 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-mboned-amt-yang-04
+id: draft-ietf-pce-sid-algo-27
 title:
-- content: YANG Data Model for Automatic Multicast Tunneling
+- content: Carrying SR-Algorithm in Path Computation Element Communication Protocol
+    (PCEP)
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-mboned-amt-yang-04
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-pce-sid-algo-27
   type: src
 type: standard
 docid:
-- id: draft-ietf-mboned-amt-yang-04
+- id: draft-ietf-pce-sid-algo-27
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-mboned-amt-yang
+- id: I-D.ietf-pce-sid-algo
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-mboned-amt-yang
+docnumber: I-D.ietf-pce-sid-algo
 date:
 - type: published
-  value: '2025-07-07'
+  value: '2025-10-09'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Yisong
+        - content: Samuel
           language:
           - en
         - language:
           - en
-          initial: "Y"
+          initial: S
         formatted_initials:
-          content: Y.
+          content: S.
           language:
           - en
       surname:
-        content: Liu
+        content: Sidor
         language:
         - en
       completename:
-        content: Yisong Liu
+        content: Samuel Sidor
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: China Mobile
+        - content: Cisco Systems, Inc.
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Changwang
-          language:
-          - en
-        - language:
-          - en
-          initial: C
-        formatted_initials:
-          content: C.
-          language:
-          - en
-      surname:
-        content: Lin
-        language:
-        - en
-      completename:
-        content: Changwang Lin
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: New H3C Technologies
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Zheng
+        - content: Zoey
           language:
           - en
         - language:
@@ -95,88 +68,125 @@ contributor:
           language:
           - en
       surname:
-        content: Zhang
+        content: Rose
         language:
         - en
       completename:
-        content: Zheng Zhang
+        content: Zoey Rose
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: ZTE
+        - content: Cisco Systems, Inc.
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Xuesong
+        - content: Shaofu
           language:
           - en
         - language:
           - en
-          initial: X
+          initial: S
         formatted_initials:
-          content: X.
+          content: S.
           language:
           - en
       surname:
-        content: Geng
+        content: Peng
         language:
         - en
       completename:
-        content: Xuesong Geng
+        content: Shaofu Peng
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei
+        - content: ZTE Corporation
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Vinod
+        - content: Shuping
           language:
           - en
         - language:
           - en
-          initial: V
-        - language:
-          - en
-          initial: K
+          initial: S
         formatted_initials:
-          content: V. K.
+          content: S.
           language:
           - en
       surname:
-        content: Nagaraj
+        content: Peng
         language:
         - en
       completename:
-        content: Vinod Kumar Nagaraj
+        content: Shuping Peng
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Juniper Networks
+        - content: Huawei Technologies
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Andrew
+          language:
+          - en
+        - language:
+          - en
+          initial: A
+        formatted_initials:
+          content: A.
+          language:
+          - en
+      surname:
+        content: Stone
+        language:
+        - en
+      completename:
+        content: Andrew Stone
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Nokia
   role:
   - type: author
 version:
-- draft: '04'
-revdate: '2025-07-07'
+- draft: '27'
+revdate: '2025-10-09'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document defines YANG data models for the configuration and management
-    of Automatic Multicast Tunneling (AMT) protocol operations.</p>"
+- content: "<p>This document specifies extensions to the Path Computation Element
+    Communication Protocol (PCEP) to enhance support for Segment Routing (SR) with
+    a focus on the use of Segment Identifiers (SIDs) and SR- Algorithms in Traffic
+    Engineering (TE). The SR-Algorithm associated with a SID defines the path computation
+    algorithm used by Interior Gateway Protocols (IGPs). This document introduces
+    extensions in three main areas. Mechanisms for informing PCEP peers about the
+    SR-Algorithm associated with SIDs by encoding this information in Explicit Route
+    Object (ERO) and Record Route Object (RRO) subobjects. This document updates RFC
+    8664 and RFC 9603 to allow such extension. The document specifies SR-Algorithm
+    constraint, enabling refined path computations that can leverage IGP algorithm
+    logic, including Flexible Algorithms, and their associated constraints and optimization
+    metrics. It defines new metric types for the METRIC object required to support
+    SR-Algorithm based path computation, but also applicable to Label Switched Paths
+    (LSPs) setup using different Path Setup Types.</p>"
   language:
   - en
   script:
@@ -185,23 +195,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-mboned-amt-yang-02
+    id: draft-ietf-pce-sid-algo-03
     docid:
-    - id: draft-ietf-mboned-amt-yang-02
+    - id: draft-ietf-pce-sid-algo-03
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-mboned-amt-yang-02
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-mboned-amt-yang-05
-    docid:
-    - id: draft-ietf-mboned-amt-yang-05
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-mboned-amt-yang-05
+      content: draft-ietf-pce-sid-algo-03
       format: text/plain
 series:
 - type: main
@@ -212,7 +212,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-mboned-amt-yang-04
+  number: draft-ietf-pce-sid-algo-27
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
