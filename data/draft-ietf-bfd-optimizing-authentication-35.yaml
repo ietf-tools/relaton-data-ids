@@ -1,34 +1,34 @@
 ---
 schema-version: v1.2.3
-id: draft-grayson-connectinfo-00
+id: draft-ietf-bfd-optimizing-authentication-35
 title:
-- content: A syntax for the RADIUS Connect-Info attribute used in Wi-Fi networks
+- content: Optimizing BFD Authentication
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-grayson-connectinfo-00
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-bfd-optimizing-authentication-35
   type: src
 type: standard
 docid:
-- id: draft-grayson-connectinfo-00
+- id: draft-ietf-bfd-optimizing-authentication-35
   type: Internet-Draft
   primary: true
-- id: I-D.grayson-connectinfo
+- id: I-D.ietf-bfd-optimizing-authentication
   type: IETF
   scope: anchor
-docnumber: I-D.grayson-connectinfo
+docnumber: I-D.ietf-bfd-optimizing-authentication
 date:
 - type: published
-  value: '2024-10-14'
+  value: '2025-10-08'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Mark
+        - content: Mahesh
           language:
           - en
         - language:
@@ -39,24 +39,52 @@ contributor:
           language:
           - en
       surname:
-        content: Grayson
+        content: Jethanandani
         language:
         - en
       completename:
-        content: Mark Grayson
+        content: Mahesh Jethanandani
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems
+        - content: Arrcus
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Joshua
+        - content: Ashesh
+          language:
+          - en
+        - language:
+          - en
+          initial: A
+        formatted_initials:
+          content: A.
+          language:
+          - en
+      surname:
+        content: Mishra
+        language:
+        - en
+      completename:
+        content: Ashesh Mishra
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Aalyria Technologies
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Jeffrey
           language:
           - en
         - language:
@@ -67,80 +95,52 @@ contributor:
           language:
           - en
       surname:
-        content: Redmore
+        content: Haas
         language:
         - en
       completename:
-        content: Joshua Redmore
+        content: Jeffrey Haas
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: CableLabs
+        - content: HPE
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Sri
+        - content: Ankur
           language:
           - en
         - language:
           - en
-          initial: S
+          initial: A
         formatted_initials:
-          content: S.
+          content: A.
           language:
           - en
       surname:
-        content: Gundavelli
+        content: Saxena
         language:
         - en
       completename:
-        content: Sri Gundavelli
+        content: Ankur Saxena
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems
+        - content: Ciena Corporation
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Bruno
-          language:
-          - en
-        - language:
-          - en
-          initial: B
-        formatted_initials:
-          content: B.
-          language:
-          - en
-      surname:
-        content: Tomas
-        language:
-        - en
-      completename:
-        content: Bruno Tomas
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Wireless Broadband Alliance
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Michael
+        - content: Manav
           language:
           - en
         - language:
@@ -151,46 +151,49 @@ contributor:
           language:
           - en
       surname:
-        content: Sym
+        content: Bhatia
         language:
         - en
       completename:
-        content: Michael Sym
+        content: Manav Bhatia
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Single Digits
+        - content: Google
   role:
   - type: author
 version:
-- draft: '00'
-revdate: '2024-10-14'
+- draft: '35'
+revdate: '2025-10-08'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document describes a syntax for the Connect-Info attribute used
-    with the Remote Authentication Dial In User Service (RADIUS) protocol, enabling
-    clients to provide servers information pertaining to the operation of an IEEE
-    802.11 wireless network.</p>"
+- content: "<p>This document describes an experimental optimization to BFD Authentication.
+    This optimization enables BFD to scale better when there is a desire to use authentication
+    where applying the same authentication mechanism to every BFD Control Packet may
+    adversely impact performance. This optimization partitions BFD Authentication
+    into a more computationally intensive mechanism that is applied to BFD significant
+    changes, and a less computationally intensive mechanism applied to the majority
+    of BFD Control Packets.</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-grayson-connectinfo-05
+    id: draft-ietf-bfd-optimizing-authentication-16
     docid:
-    - id: draft-grayson-connectinfo-05
+    - id: draft-ietf-bfd-optimizing-authentication-16
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-grayson-connectinfo-05
+      content: draft-ietf-bfd-optimizing-authentication-16
       format: text/plain
 series:
 - type: main
@@ -201,7 +204,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-grayson-connectinfo-00
+  number: draft-ietf-bfd-optimizing-authentication-35
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
