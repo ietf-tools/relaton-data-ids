@@ -1,90 +1,91 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-scitt-architecture-20
+id: draft-li-savnet-sav-yang-07
 title:
-- content: An Architecture for Trustworthy and Transparent Digital Supply Chains
+- content: YANG Data Model for Intra-domain and Inter-domain Source Address Validation
+    (SAVNET)
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-scitt-architecture-20
+- content: https://datatracker.ietf.org/doc/html/draft-li-savnet-sav-yang-07
   type: src
 type: standard
 docid:
-- id: draft-ietf-scitt-architecture-20
+- id: draft-li-savnet-sav-yang-07
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-scitt-architecture
+- id: I-D.li-savnet-sav-yang
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-scitt-architecture
+docnumber: I-D.li-savnet-sav-yang
 date:
 - type: published
-  value: '2025-09-02'
+  value: '2025-10-09'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Henk
+        - content: Dan
           language:
           - en
         - language:
           - en
-          initial: H
+          initial: D
         formatted_initials:
-          content: H.
+          content: D.
           language:
           - en
       surname:
-        content: Birkholz
+        content: Li
         language:
         - en
       completename:
-        content: Henk Birkholz
+        content: Dan Li
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Fraunhofer SIT
+        - content: Tsinghua University
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Antoine
+        - content: Libin
           language:
           - en
         - language:
           - en
-          initial: A
+          initial: L
         formatted_initials:
-          content: A.
+          content: L.
           language:
           - en
       surname:
-        content: Delignat-Lavaud
+        content: Liu
         language:
         - en
       completename:
-        content: Antoine Delignat-Lavaud
+        content: Libin Liu
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Microsoft Research
+        - content: Zhongguancun Laboratory
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Cedric
+        - content: Changwang
           language:
           - en
         - language:
@@ -95,86 +96,116 @@ contributor:
           language:
           - en
       surname:
-        content: Fournet
+        content: Lin
         language:
         - en
       completename:
-        content: Cedric Fournet
+        content: Changwang Lin
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Microsoft Research
+        - content: New H3C Technologies
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Yogesh
+        - content: Jianping
           language:
           - en
         - language:
           - en
-          initial: "Y"
+          initial: J
         formatted_initials:
-          content: Y.
+          content: J.
           language:
           - en
       surname:
-        content: Deshpande
+        content: Wu
         language:
         - en
       completename:
-        content: Yogesh Deshpande
+        content: Jianping Wu
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: ARM
+        - content: Tsinghua University
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Steve
+        - content: Tianhao
           language:
           - en
         - language:
           - en
-          initial: S
+          initial: T
         formatted_initials:
-          content: S.
+          content: T.
           language:
           - en
       surname:
-        content: Lasker
+        content: Wu
         language:
         - en
       completename:
-        content: Steve Lasker
+        content: Tianhao Wu
         language:
         - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Weiqiang
+          language:
+          - en
+        - language:
+          - en
+          initial: W
+        formatted_initials:
+          content: W.
+          language:
+          - en
+      surname:
+        content: Cheng
+        language:
+        - en
+      completename:
+        content: Weiqiang Cheng
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: China Mobile
   role:
   - type: author
 version:
-- draft: '20'
-revdate: '2025-09-02'
+- draft: '07'
+revdate: '2025-10-09'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>Traceability in supply chains is a growing security concern. While
-    verifiable data structures have addressed specific issues, such as equivocation
-    over digital certificates, they lack a universal architecture for all supply chains.
-    This document proposes a scalable architecture for single-issuer signed statement
-    transparency applicable to any supply chain. It ensures flexibility, interoperability
-    between different transparency services, and compliance with various auditing
-    procedures and regulatory requirements.</p>"
+- content: "<p>This document describes a YANG data model for Intra-domain and Inter-domain
+    Source Address Validation (SAVNET). The model serves as a base framework for configuring
+    and managing an SAV subsystem, including SAV rule and SAV Tables, and expected
+    to be augmented by other SAV technology models accordingly. Additionally, this
+    document also specifies the model for the SAV Static application.</p>"
   language:
   - en
   script:
@@ -183,23 +214,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-scitt-architecture-05
+    id: draft-li-savnet-sav-yang-01
     docid:
-    - id: draft-ietf-scitt-architecture-05
+    - id: draft-li-savnet-sav-yang-01
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-scitt-architecture-05
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-scitt-architecture-22
-    docid:
-    - id: draft-ietf-scitt-architecture-22
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-scitt-architecture-22
+      content: draft-li-savnet-sav-yang-01
       format: text/plain
 series:
 - type: main
@@ -210,7 +231,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-scitt-architecture-20
+  number: draft-li-savnet-sav-yang-07
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

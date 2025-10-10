@@ -1,180 +1,178 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-scitt-architecture-20
+id: draft-ietf-savnet-general-sav-capabilities-02
 title:
-- content: An Architecture for Trustworthy and Transparent Digital Supply Chains
+- content: General Source Address Validation Capabilities
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-scitt-architecture-20
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-savnet-general-sav-capabilities-02
   type: src
 type: standard
 docid:
-- id: draft-ietf-scitt-architecture-20
+- id: draft-ietf-savnet-general-sav-capabilities-02
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-scitt-architecture
+- id: I-D.ietf-savnet-general-sav-capabilities
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-scitt-architecture
+docnumber: I-D.ietf-savnet-general-sav-capabilities
 date:
 - type: published
-  value: '2025-09-02'
+  value: '2025-10-10'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Henk
-          language:
-          - en
         - language:
           - en
-          initial: H
+          initial: M
         formatted_initials:
-          content: H.
+          content: M.
           language:
           - en
       surname:
-        content: Birkholz
+        content: Huang
         language:
         - en
       completename:
-        content: Henk Birkholz
+        content: Mingqing(Michael) Huang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Fraunhofer SIT
+        - content: Zhongguancun Laboratory
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Antoine
+        - content: Weiqiang
           language:
           - en
         - language:
           - en
-          initial: A
+          initial: W
         formatted_initials:
-          content: A.
+          content: W.
           language:
           - en
       surname:
-        content: Delignat-Lavaud
+        content: Cheng
         language:
         - en
       completename:
-        content: Antoine Delignat-Lavaud
+        content: Weiqiang Cheng
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Microsoft Research
+        - content: China Mobile
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Cedric
+        - content: Dan
           language:
           - en
         - language:
           - en
-          initial: C
+          initial: D
         formatted_initials:
-          content: C.
+          content: D.
           language:
           - en
       surname:
-        content: Fournet
+        content: Li
         language:
         - en
       completename:
-        content: Cedric Fournet
+        content: Dan Li
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Microsoft Research
+        - content: Tsinghua University
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Yogesh
+        - content: Nan
           language:
           - en
         - language:
           - en
-          initial: "Y"
+          initial: "N"
         formatted_initials:
-          content: Y.
+          content: N.
           language:
           - en
       surname:
-        content: Deshpande
+        content: Geng
         language:
         - en
       completename:
-        content: Yogesh Deshpande
+        content: Nan Geng
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: ARM
+        - content: Huawei Technologies
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Steve
-          language:
-          - en
         - language:
           - en
-          initial: S
+          initial: L
         formatted_initials:
-          content: S.
+          content: L.
           language:
           - en
       surname:
-        content: Lasker
+        content: Chen
         language:
         - en
       completename:
-        content: Steve Lasker
+        content: Li Chen
         language:
         - en
+    affiliation:
+    - organization:
+        name:
+        - content: Zhongguancun Laboratory
   role:
   - type: author
 version:
-- draft: '20'
-revdate: '2025-09-02'
+- draft: '02'
+revdate: '2025-10-10'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>Traceability in supply chains is a growing security concern. While
-    verifiable data structures have addressed specific issues, such as equivocation
-    over digital certificates, they lack a universal architecture for all supply chains.
-    This document proposes a scalable architecture for single-issuer signed statement
-    transparency applicable to any supply chain. It ensures flexibility, interoperability
-    between different transparency services, and compliance with various auditing
-    procedures and regulatory requirements.</p>"
+- content: "<p>The SAV rules of existing source address validation (SAV) mechanisms,
+    are derived from other core data structures, e.g., FIB-based uRPF, which are not
+    dedicatedly designed for source filtering. Therefore there are some limitations
+    related to deployable scenarios and traffic handling policies. To overcome these
+    limitations, this document introduces the general SAV capabilities from data plane
+    perspective. How to implement the capabilities and how to generate SAV rules are
+    not in the scope of this document.</p>"
   language:
   - en
   script:
@@ -183,23 +181,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-scitt-architecture-05
+    id: draft-ietf-savnet-general-sav-capabilities-01
     docid:
-    - id: draft-ietf-scitt-architecture-05
+    - id: draft-ietf-savnet-general-sav-capabilities-01
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-scitt-architecture-05
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-scitt-architecture-22
-    docid:
-    - id: draft-ietf-scitt-architecture-22
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-scitt-architecture-22
+      content: draft-ietf-savnet-general-sav-capabilities-01
       format: text/plain
 series:
 - type: main
@@ -210,7 +198,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-scitt-architecture-20
+  number: draft-ietf-savnet-general-sav-capabilities-02
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

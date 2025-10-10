@@ -1,146 +1,146 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-scitt-architecture-20
+id: draft-ietf-lamps-pq-composite-sigs-11
 title:
-- content: An Architecture for Trustworthy and Transparent Digital Supply Chains
+- content: Composite ML-DSA for use in X.509 Public Key Infrastructure
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-scitt-architecture-20
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-lamps-pq-composite-sigs-11
   type: src
 type: standard
 docid:
-- id: draft-ietf-scitt-architecture-20
+- id: draft-ietf-lamps-pq-composite-sigs-11
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-scitt-architecture
+- id: I-D.ietf-lamps-pq-composite-sigs
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-scitt-architecture
+docnumber: I-D.ietf-lamps-pq-composite-sigs
 date:
 - type: published
-  value: '2025-09-02'
+  value: '2025-10-09'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Henk
+        - content: Mike
           language:
           - en
         - language:
           - en
-          initial: H
+          initial: M
         formatted_initials:
-          content: H.
+          content: M.
           language:
           - en
       surname:
-        content: Birkholz
+        content: Ounsworth
         language:
         - en
       completename:
-        content: Henk Birkholz
+        content: Mike Ounsworth
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Fraunhofer SIT
+        - content: Entrust Limited
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Antoine
+        - content: John
           language:
           - en
         - language:
           - en
-          initial: A
+          initial: J
         formatted_initials:
-          content: A.
+          content: J.
           language:
           - en
       surname:
-        content: Delignat-Lavaud
+        content: Gray
         language:
         - en
       completename:
-        content: Antoine Delignat-Lavaud
+        content: John Gray
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Microsoft Research
+        - content: Entrust Limited
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Cedric
+        - content: Massimiliano
           language:
           - en
         - language:
           - en
-          initial: C
+          initial: M
         formatted_initials:
-          content: C.
+          content: M.
           language:
           - en
       surname:
-        content: Fournet
+        content: Pala
         language:
         - en
       completename:
-        content: Cedric Fournet
+        content: Massimiliano Pala
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Microsoft Research
+        - content: OpenCA Labs
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Yogesh
+        - content: Jan
           language:
           - en
         - language:
           - en
-          initial: "Y"
+          initial: J
         formatted_initials:
-          content: Y.
+          content: J.
           language:
           - en
       surname:
-        content: Deshpande
+        content: Klaußner
         language:
         - en
       completename:
-        content: Yogesh Deshpande
+        content: Jan Klaußner
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: ARM
+        - content: Bundesdruckerei GmbH
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Steve
+        - content: Scott
           language:
           - en
         - language:
@@ -151,30 +151,33 @@ contributor:
           language:
           - en
       surname:
-        content: Lasker
+        content: Fluhrer
         language:
         - en
       completename:
-        content: Steve Lasker
+        content: Scott Fluhrer
         language:
         - en
+    affiliation:
+    - organization:
+        name:
+        - content: Cisco Systems
   role:
   - type: author
 version:
-- draft: '20'
-revdate: '2025-09-02'
+- draft: '11'
+revdate: '2025-10-09'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>Traceability in supply chains is a growing security concern. While
-    verifiable data structures have addressed specific issues, such as equivocation
-    over digital certificates, they lack a universal architecture for all supply chains.
-    This document proposes a scalable architecture for single-issuer signed statement
-    transparency applicable to any supply chain. It ensures flexibility, interoperability
-    between different transparency services, and compliance with various auditing
-    procedures and regulatory requirements.</p>"
+- content: "<p>This document defines combinations of ML-DSA [FIPS.204] in hybrid with
+    traditional algorithms RSASSA-PKCS1-v1.5, RSASSA-PSS, ECDSA, Ed25519, and Ed448.
+    These combinations are tailored to meet security best practices and regulatory
+    guidelines. Composite ML-DSA is applicable in any application that uses X.509
+    or PKIX data structures that accept ML-DSA, but where the operator wants extra
+    protection against breaks or catastrophic bugs in ML-DSA.</p>"
   language:
   - en
   script:
@@ -183,23 +186,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-scitt-architecture-05
+    id: draft-ietf-lamps-pq-composite-sigs-07
     docid:
-    - id: draft-ietf-scitt-architecture-05
+    - id: draft-ietf-lamps-pq-composite-sigs-07
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-scitt-architecture-05
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-scitt-architecture-22
-    docid:
-    - id: draft-ietf-scitt-architecture-22
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-scitt-architecture-22
+      content: draft-ietf-lamps-pq-composite-sigs-07
       format: text/plain
 series:
 - type: main
@@ -210,7 +203,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-scitt-architecture-20
+  number: draft-ietf-lamps-pq-composite-sigs-11
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
