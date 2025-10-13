@@ -1,34 +1,62 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-cose-falcon-02
+id: draft-bastian-jose-dvs-02
 title:
-- content: FN-DSA for JOSE and COSE
+- content: Public Key Derived HMAC for JOSE
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-cose-falcon-02
+- content: https://datatracker.ietf.org/doc/html/draft-bastian-jose-dvs-02
   type: src
 type: standard
 docid:
-- id: draft-ietf-cose-falcon-02
+- id: draft-bastian-jose-dvs-02
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-cose-falcon
+- id: I-D.bastian-jose-dvs
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-cose-falcon
+docnumber: I-D.bastian-jose-dvs
 date:
 - type: published
-  value: '2025-10-11'
+  value: '2025-10-12'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Michael
+        - content: Paul
+          language:
+          - en
+        - language:
+          - en
+          initial: P
+        formatted_initials:
+          content: P.
+          language:
+          - en
+      surname:
+        content: Bastian
+        language:
+        - en
+      completename:
+        content: Paul Bastian
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Bundesdruckerei GmbH
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Micha
           language:
           - en
         - language:
@@ -39,88 +67,90 @@ contributor:
           language:
           - en
       surname:
-        content: Prorock
+        content: Kraus
         language:
         - en
       completename:
-        content: Michael Prorock
+        content: Micha Kraus
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: mesur.io
+        - content: Bundesdruckerei GmbH
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Orie
+        - content: Stefan
           language:
           - en
         - language:
           - en
-          initial: O
+          initial: S
         formatted_initials:
-          content: O.
+          content: S.
           language:
           - en
       surname:
-        content: Steele
+        content: Santesson
         language:
         - en
       completename:
-        content: Orie Steele
+        content: Stefan Santesson
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Tradeverifyd
+        - content: IDsec Solutions
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Hannes
+        - content: Peter
           language:
           - en
         - language:
           - en
-          initial: H
+          initial: P
+        - language:
+          - en
+          initial: L
         formatted_initials:
-          content: H.
+          content: P. L.
           language:
           - en
       surname:
-        content: Tschofenig
+        content: Altmann
         language:
         - en
       completename:
-        content: Hannes Tschofenig
+        content: Peter Lee Altmann
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: University of Applied Sciences Bonn-Rhein-Sieg
+        - content: The Agency for Digital Government
   role:
   - type: author
 version:
 - draft: '02'
-revdate: '2025-10-11'
+revdate: '2025-10-12'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document specifies JSON Object Signing and Encryption (JOSE) and
-    CBOR Object Signing and Encryption (COSE) serializations for FFT (fast-Fourier
-    transform) over NTRU-Lattice-Based Digital Signature Algorithm (FN-DSA), a Post-Quantum
-    Cryptography (PQC) digital signature scheme defined in US NIST FIPS 206 (expected
-    to be published in late 2026 early 2027).</p>"
+- content: "<p>This specification defines the use of a Diffie-Hellman key agreement
+    (DH-KA) protocol combined with a key derivation function (KDF) to derive a symmetric
+    Message Authentication Code (MAC) key from public information conveyed within
+    a JSON Web Signature (JWS).</p>"
   language:
   - en
   script:
@@ -129,23 +159,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-cose-falcon-00
+    id: draft-bastian-jose-dvs-00
     docid:
-    - id: draft-ietf-cose-falcon-00
+    - id: draft-bastian-jose-dvs-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-cose-falcon-00
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-cose-falcon-03
-    docid:
-    - id: draft-ietf-cose-falcon-03
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-cose-falcon-03
+      content: draft-bastian-jose-dvs-00
       format: text/plain
 series:
 - type: main
@@ -156,7 +176,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-cose-falcon-02
+  number: draft-bastian-jose-dvs-02
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
