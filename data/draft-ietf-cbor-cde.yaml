@@ -13,15 +13,21 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: <p>CBOR (STD 94, RFC 8949) defines "Deterministically Encoded CBOR" in
-    its Section 4.2, providing some flexibility for application specific decisions.
-    To facilitate Deterministic Encoding to be offered as a selectable feature of
-    generic encoders, the present document documents the Best Current Practice for
-    CBOR Common Deterministic Encoding (CDE), which can be shared by a large set of
-    applications with potentially diverging detailed requirements. It also defines
-    the term "Basic Serialization", which stops short of the potentially more onerous
-    requirements that make CDE fully deterministic, while employing most of its reductions
-    of the variability needing to be handled by decoders.</p>
+- content: <p>CBOR (STD 94, RFC 8949) defines the concept of "Deterministically Encoded
+    CBOR" in its Section 4.2, determining one specific way to encode each particular
+    CBOR value. This definition is instantiated by "core requirements", providing
+    some flexibility for application specific decisions; this makes it harder than
+    necessary to offer Deterministic Encoding as a selectable feature of generic CBOR
+    encoders. The present specification documents the Best Current Practice for CBOR
+    _Common Deterministic Encoding_ (CDE), which can be shared by a large set of applications
+    with potentially diverging detailed application requirements. The document also
+    discusses the desire for partial implementations, which can be another reason
+    for constraining CBOR encoders, and singles out the encoding constraint "definite-length-only"
+    as a likely constraint to be used in application protocol and media type definitions.
+    This specification updates RFC 8949 in that it provides clarifications and definitions
+    of additional terms as well as more examples and explanatory text; it does not
+    make technical changes to RFC 8949. // This revision -13 merges all active pull
+    requests in preparation // for the 2025-cbor-17 interim on 2025-10-15.</p>
   language:
   - en
   script:
@@ -157,6 +163,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-cbor-cde-12
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-cbor-cde-13
+    docid:
+    - id: draft-ietf-cbor-cde-13
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-cbor-cde-13
       format: text/plain
 ext:
   schema-version: v1.0.1

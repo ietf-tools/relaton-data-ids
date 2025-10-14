@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-joetansey-alvc-schc-lpwan
 title:
-- content: 'ALVC over LPWAN: SCHC Fragmentation, Priority, and Security'
+- content: Carrying ALVC over LPWAN using SCHC Fragmentation and Priorities
   language:
   - en
   script:
@@ -13,12 +13,16 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document specifies a transport profile for carrying the Adaptive
-    Layered Voice Codec (ALVC) over constrained Low-Power Wide-Area Networks (LPWANs)
-    using Static Context Header Compression and fragmentation (SCHC). It defines an
-    ALVC object model, fragment headers, priority scheduling, unequal error protection,
-    receiver behavior, and a CoAP mapping supporting progressive playback under regional
-    duty-cycle limitations.</p>"
+- content: "<p>This document specifies how to carry the Adaptive Layered Voice Container
+    (ALVC) over Low-Power Wide-Area Networks (LPWAN) using Static Context Header Compression
+    (SCHC). ALVC is codec-agnostic and progressive: a sub-kilobit Base stream provides
+    immediate intelligibility while optional Enhancement streams improve quality when
+    bandwidth allows. This document defines SCHC rules, fragmentation parameters,
+    and unequal error protection (UEP) so that Base traffic is delivered promptly
+    and reliably, while Enhancements are sent opportunistically. The specification
+    targets constrained networks with small payloads, duty-cycle limits, and loss,
+    and does not define a new speech coding bitstream. A companion Internet-Draft
+    describes the codec-agnostic ALVC container, and SCHC is specified in RFC 8724.</p>"
   language:
   - en
   script:
@@ -34,6 +38,16 @@ relation:
       primary: true
     formattedref:
       content: draft-joetansey-alvc-schc-lpwan-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-joetansey-alvc-schc-lpwan-01
+    docid:
+    - id: draft-joetansey-alvc-schc-lpwan-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-joetansey-alvc-schc-lpwan-01
       format: text/plain
 ext:
   schema-version: v1.0.1

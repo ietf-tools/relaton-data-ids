@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-joetansey-alvc-codec
 title:
-- content: 'draft:'
+- content: Adaptive Layered Voice Container (ALVC) for Constrained Networks
   language:
   - en
   script:
@@ -13,12 +13,15 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>-------- This document specifies the Adaptive Layered Voice Codec (ALVC),
-    a scalable speech codec optimized for extremely constrained low-power wide-area
-    networks (LPWANs). ALVC enables intelligible base layer playback at sub-kilobit
-    rates and progressive quality improvement via enhancement layers delivered asynchronously.
-    The design supports store- and-forward operation, fragmentation, unequal error
-    protection, and monotonic refinement from partial reception.</p>"
+- content: "<p>This document specifies the Adaptive Layered Voice Container (ALVC),
+    a codec-agnostic framing and metadata container that enables progressive voice
+    delivery in constrained and lossy networks. ALVC defines a Base layer that is
+    intelligible on its own at sub-kilobit rates, and optional Enhancement layers
+    that improve quality when additional capacity is available. The container supports
+    store-and- forward operation, progressive enhancement, unequal error protection
+    signaling, and receiver behavior for seamless splice-and-improve playback. ALVC
+    does not define a new speech coding algorithm; it multiplexes existing voice coders
+    within a layered container.</p>"
   language:
   - en
   script:
@@ -44,6 +47,16 @@ relation:
       primary: true
     formattedref:
       content: draft-joetansey-alvc-codec-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-joetansey-alvc-codec-02
+    docid:
+    - id: draft-joetansey-alvc-codec-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-joetansey-alvc-codec-02
       format: text/plain
 ext:
   schema-version: v1.0.1
