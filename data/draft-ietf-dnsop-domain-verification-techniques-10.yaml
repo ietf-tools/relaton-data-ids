@@ -1,181 +1,188 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-spring-dhc-distribute-srv6-locator-dhcp-08
+id: draft-ietf-dnsop-domain-verification-techniques-10
 title:
-- content: Distribute SRv6 Locator by DHCP
+- content: Domain Control Validation using DNS
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-spring-dhc-distribute-srv6-locator-dhcp-08
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-dnsop-domain-verification-techniques-10
   type: src
 type: standard
 docid:
-- id: draft-ietf-spring-dhc-distribute-srv6-locator-dhcp-08
+- id: draft-ietf-dnsop-domain-verification-techniques-10
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-spring-dhc-distribute-srv6-locator-dhcp
+- id: I-D.ietf-dnsop-domain-verification-techniques
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-spring-dhc-distribute-srv6-locator-dhcp
+docnumber: I-D.ietf-dnsop-domain-verification-techniques
 date:
 - type: published
-  value: '2025-04-30'
+  value: '2025-10-13'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Weiqiang
+        - content: Shivan
           language:
           - en
         - language:
           - en
-          initial: W
+          initial: S
+        - language:
+          - en
+          initial: K
         formatted_initials:
-          content: W.
+          content: S. K.
           language:
           - en
       surname:
-        content: Cheng
+        content: Sahib
         language:
         - en
       completename:
-        content: Weiqiang Cheng
+        content: Shivan Kaul Sahib
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: China Mobile
+        - content: Brave Software
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Ruibo
+        - content: Shumon
           language:
           - en
         - language:
           - en
-          initial: R
+          initial: S
         formatted_initials:
-          content: R.
+          content: S.
           language:
           - en
       surname:
-        content: Han
+        content: Huque
         language:
         - en
       completename:
-        content: Ruibo Han
+        content: Shumon Huque
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: China Mobile
+        - content: Salesforce
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Changwang
+        - content: Paul
           language:
           - en
         - language:
           - en
-          initial: C
+          initial: P
         formatted_initials:
-          content: C.
+          content: P.
           language:
           - en
       surname:
-        content: Lin
+        content: Wouters
         language:
         - en
       completename:
-        content: Changwang Lin
+        content: Paul Wouters
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: New H3C Technologies
+        - content: Aiven
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Daniel
+        - content: Erik
           language:
           - en
         - language:
           - en
-          initial: D
+          initial: E
         formatted_initials:
-          content: D.
+          content: E.
           language:
           - en
       surname:
-        content: Voyer
+        content: Nygren
         language:
         - en
       completename:
-        content: Daniel Voyer
+        content: Erik Nygren
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Bell Canada
+        - content: Akamai Technologies
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Geng
+        - content: Tim
           language:
           - en
         - language:
           - en
-          initial: G
+          initial: T
         formatted_initials:
-          content: G.
+          content: T.
           language:
           - en
       surname:
-        content: Zhang
+        content: Wicinski
         language:
         - en
       completename:
-        content: Geng Zhang
+        content: Tim Wicinski
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: China Mobile
+        - content: Cox Communications
   role:
   - type: author
 version:
-- draft: '08'
-revdate: '2025-04-30'
+- draft: '10'
+revdate: '2025-10-13'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>In an SRv6 network, each SRv6 Segment Endpoint Node must be assigned
-    an SRv6 locator, and segment IDs are generated within the address space of this
-    SRv6 locator. This document describes a method for assigning SRv6 locators to
-    SRv6 Segment Endpoint Nodes through DHCPv6.</p>"
+- content: <p>Many application services on the Internet need to verify ownership or
+    control of a domain in the Domain Name System (DNS). The general term for this
+    process is "Domain Control Validation", and can be done using a variety of methods
+    such as email, HTTP/HTTPS, or the DNS itself. This document focuses only on DNS-based
+    methods, which typically involve the Application Service Provider requesting a
+    DNS record with a specific format and content to be visible in the domain to be
+    verified. There is wide variation in the details of these methods today. This
+    document provides some best practices to avoid known problems.</p>
   language:
   - en
   script:
@@ -184,23 +191,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-spring-dhc-distribute-srv6-locator-dhcp-05
+    id: draft-ietf-dnsop-domain-verification-techniques-07
     docid:
-    - id: draft-ietf-spring-dhc-distribute-srv6-locator-dhcp-05
+    - id: draft-ietf-dnsop-domain-verification-techniques-07
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-spring-dhc-distribute-srv6-locator-dhcp-05
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-spring-dhc-distribute-srv6-locator-dhcp-10
-    docid:
-    - id: draft-ietf-spring-dhc-distribute-srv6-locator-dhcp-10
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-dhc-distribute-srv6-locator-dhcp-10
+      content: draft-ietf-dnsop-domain-verification-techniques-07
       format: text/plain
 series:
 - type: main
@@ -211,7 +208,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-spring-dhc-distribute-srv6-locator-dhcp-08
+  number: draft-ietf-dnsop-domain-verification-techniques-10
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
