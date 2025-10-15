@@ -13,17 +13,19 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>Maintenance of DNS delegations requires occasional changes of the DS
+- content: <p>Maintenance of DNS delegations requires occasional changes of the DS
     and NS record sets on the parent side of the delegation. For the case of DS records,
-    RFC 7344 provides automation by allowing the child to publish CDS and/or CDNSKEY
-    records holding the prospective DS parameters which the parent can ingest. Similarly,
-    RFC 7477 specifies CSYNC records to indicate a desired update of the delegation's
-    NS (and glue) records. Parent-side entities (e.g. Registries, Registrars) can
-    query these records from the child and, after validation, use them to update the
-    parent-side RRsets of the delegation. This document specifies that when performing
-    such queries, parent- side entities MUST ensure that updates triggered via CDS/CDNSKEY
-    and CSYNC records are consistent across the child's authoritative nameservers,
-    before taking any action based on these records.</p>"
+    "Automating DNSSEC Delegation Trust Maintenance" (RFC 7344) provides automation
+    by allowing the child to publish CDS and/or CDNSKEY records holding the prospective
+    DS parameters which the parent can ingest. Similarly, "Child-to-Parent Synchronization
+    in DNS" (RFC 7477) specifies CSYNC records to indicate a desired update of the
+    delegation's NS (and glue) records. Parent-side entities (e.g., Registries and
+    Registrars) can query these records from the child and, after validation, use
+    them to update the parent- side Resource Record Sets (RRsets) of the delegation.
+    This document specifies that when performing such queries, parent- side entities
+    has to ensure that updates triggered via CDS/CDNSKEY and CSYNC records are consistent
+    across the child's authoritative nameservers, before taking any action based on
+    these records. This document updates RFC 7344 and RFC 7477.</p>
   language:
   - en
   script:
@@ -119,6 +121,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-dnsop-cds-consistency-08
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-dnsop-cds-consistency-09
+    docid:
+    - id: draft-ietf-dnsop-cds-consistency-09
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-dnsop-cds-consistency-09
       format: text/plain
 ext:
   schema-version: v1.0.1
