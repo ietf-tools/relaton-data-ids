@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-ietf-bess-ebgp-dmz
 title:
-- content: Cumulative DMZ Link Bandwidth and load-balancing
+- content: BGP link bandwidth extended community use cases
   language:
   - en
   script:
@@ -13,18 +13,11 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>The DMZ Link Bandwidth draft provides a way to load-balance traffic
-    to a destination which is reachable via more than one path according to the weight
-    attahced. Typically, the link bandwidth (either configured on the link of the
-    EBGP egress interface or set via a policy) is encoded in an extended community
-    and then sent to the IBGP peer that employs multi-path. The link-bandwidth value
-    is then extracted from the extended community and is used as a weight in the RIB/FIB,
-    which does the load-balancing. This draft extends the usage of the DMZ link bandwidth
-    to another setting where the ingress BGP speaker requires knowledge of the cumulative
-    bandwidth while doing the load-balancing. The draft also proposes neighbor-level
-    knobs to enable the link bandwidth extended community to be regenerated and then
-    advertised to EBGP peers to override the default behavior of not advertising optional
-    non-transitive attributes to EBGP peers.</p>"
+- content: "<p>BGP link bandwidth extended community provides a way to signal a value
+    along with a BGP path that can be used to perform weighted load-balancing in multipath
+    scenarios. This document details various use cases of the BGP link bandwidth extended
+    community. It also describes local mechanisms to dynamically adjust the BGP link
+    bandwidth value or the multipath weights based on different considerations.</p>"
   language:
   - en
   script:
@@ -110,6 +103,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-bess-ebgp-dmz-07
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-bess-ebgp-dmz-08
+    docid:
+    - id: draft-ietf-bess-ebgp-dmz-08
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-bess-ebgp-dmz-08
       format: text/plain
 ext:
   schema-version: v1.0.1

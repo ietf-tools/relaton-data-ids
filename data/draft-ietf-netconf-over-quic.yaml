@@ -14,10 +14,11 @@ docid:
   primary: true
 abstract:
 - content: "<p>This document specifies how to use QUIC as a secure transport for exchanging
-    Network Configuration Protocol (NETCONF) messages. QUIC provides encryption properties
-    similar to TLS, while eliminating TCP head-of-line blocking issues and also providing
-    more loss detection and congestion control than UDP. NETCONF over QUIC has privacy
-    properties similar to NETCONF over TLS. Editorial note (to be removed by the RFC
+    Network Configuration Protocol (NETCONF) messages. NETCONF over QUIC allows to
+    take advantage of QUIC streams, for example, to eliminate some TCP head-of-line
+    blocking issues. NETCONF over QUIC provides security properties similar to NETCONF
+    over TLS. This document also defines a YANG module which augments the ietf- netconf-client
+    and ietf-netconf-server YANG modules. Editorial note (to be removed by the RFC
     Editor This draft contains placeholder values that need to be replaced with finalized
     values at the time of publication. This note summarizes all of the substitutions
     that are needed. No other RFC Editor instructions are specified elsewhere in this
@@ -81,6 +82,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-netconf-over-quic-04
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-netconf-over-quic-05
+    docid:
+    - id: draft-ietf-netconf-over-quic-05
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-netconf-over-quic-05
       format: text/plain
 ext:
   schema-version: v1.0.1

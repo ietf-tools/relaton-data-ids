@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-ietf-bier-frr
 title:
-- content: BIER Fast Reroute (BIER-FRR)
+- content: A Framework for Fast Reroute with Bit Index Explicit Replication (BIER-FRR)
   language:
   - en
   script:
@@ -13,21 +13,20 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document describes BIER Fast Reroute (BIER-FRR) as a mechanism
-    for Fast Reroute (FRR) in Bit Index Explicit Replication (BIER) networks. It enhances
-    the resiliency of BIER by quickly rerouting BIER traffic in the event of a link
-    or node failure. This ensures that multicast traffic continues to reach its intended
-    destinations, thereby minimizing packet loss and service disruption. BIER-FRR
-    is designed to integrate seamlessly with existing BIER operations without requiring
-    per-flow state or additional signaling. The document suggests additional structures
-    for BIER to hold information for backup forwarding entries and to enable them
-    in case of detected failures. BIER-FRR can implement different protection levels,
-    e.g., link protection or node protection, and different protection strategies.
-    Tunnel-based BIER-FRR and LFA-based BIER-FRR are introduced as protection strategies
-    and their implementation with the proposed extensions. A comparison highlights
-    the differences between both approaches. This document serves as an introductory
-    primer to support future, more comprehensive, BIER Fast Reroute analysis and solution
-    development.</p>"
+- content: <p>This document provides a framework for the development of Fast Reroute
+    (FRR) mechanisms for Bit Index Explicit Replication forwarding (BIER-FRR). BIER-FRR
+    can provide protection against link or BFR failure by invoking locally pre-determined
+    repair paths that can react in the same time-scales as (unicast) FRR for MPLS
+    or IP networks - "sub 50msec", and without the creation of additional per- path
+    or per-flow state coordinated across multiple routers/LSR. BIER-FRR can be implemed
+    locally within a router/LSR with minimal interoperability requirements against
+    other router/LSR. It can therefore easily be introduced incrementally or selectively
+    where needed. BIER-FRR implementing nodes only need to understand the routing
+    topology of the network for calculation of repair paths and know what type of
+    unicast encapsulation can be used to send ("tunnel") BIER packets to remote BFR.
+    This document proposes and discusses different options for BIER forwardng (BIFT)
+    extensions to support BIER-FRR. These are exemplary and non-normative. This document
+    does not specify any standards or experiments but aims to support such efforts.</p>
   language:
   - en
   script:
@@ -143,6 +142,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-bier-frr-10
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-bier-frr-11
+    docid:
+    - id: draft-ietf-bier-frr-11
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-bier-frr-11
       format: text/plain
 ext:
   schema-version: v1.0.1
