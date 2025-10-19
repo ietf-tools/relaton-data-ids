@@ -1,0 +1,120 @@
+---
+schema-version: v1.2.3
+id: draft-sheffer-tls-pqc-continuity-00
+title:
+- content: 'PQC Continuity: Downgrade Protection for TLS Servers Migrating to PQC'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-sheffer-tls-pqc-continuity-00
+  type: src
+type: standard
+docid:
+- id: draft-sheffer-tls-pqc-continuity-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.sheffer-tls-pqc-continuity
+  type: IETF
+  scope: anchor
+docnumber: I-D.sheffer-tls-pqc-continuity
+date:
+- type: published
+  value: '2025-10-18'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Yaron
+          language:
+          - en
+        - language:
+          - en
+          initial: "Y"
+        formatted_initials:
+          content: Y.
+          language:
+          - en
+      surname:
+        content: Sheffer
+        language:
+        - en
+      completename:
+        content: Yaron Sheffer
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Intuit
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Tirumaleswar
+          language:
+          - en
+        - language:
+          - en
+          initial: T
+        formatted_initials:
+          content: T.
+          language:
+          - en
+      surname:
+        content: Reddy.K
+        language:
+        - en
+      completename:
+        content: Tirumaleswar Reddy.K
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Nokia
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2025-10-18'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>As the Internet transitions toward post-quantum cryptography (PQC),
+    many TLS servers will continue supporting traditional certificates to maintain
+    compatibility with legacy clients. However, this coexistence introduces a significant
+    vulnerability: an undetected rollback attack, where a malicious actor strips the
+    PQC or Composite certificate and forces the use of a traditional certificate once
+    quantum-capable adversaries exist. To defend against this, this document defines
+    a TLS extension that allows a client to cache a server's declared commitment to
+    present PQC or composite certificates for a specified duration. On subsequent
+    connections, clients enforce that cached commitment and reject traditional-only
+    certificates that conflict with it. This mechanism, inspired by HTTP Strict Transport
+    Security (HSTS) but operating at the TLS layer provides PQC downgrade protection
+    without requiring changes to certificate authority (CA) infrastructure.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-sheffer-tls-pqc-continuity-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

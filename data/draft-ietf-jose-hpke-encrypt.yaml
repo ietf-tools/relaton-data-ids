@@ -16,11 +16,13 @@ docid:
 abstract:
 - content: "<p>This specification defines Hybrid Public Key Encryption (HPKE) for
     use with JSON Object Signing and Encryption (JOSE). HPKE offers a variant of public
-    key encryption of arbitrary-sized plaintexts for a recipient public key. HPKE
-    is a general encryption framework utilizing an asymmetric key encapsulation mechanism
-    (KEM), a key derivation function (KDF), and an Authenticated Encryption with Associated
-    Data (AEAD) algorithm. This document defines the use of HPKE with JOSE. The specification
-    chooses a specific subset of the HPKE features to use with JOSE.</p>"
+    key encryption of arbitrary-sized plaintexts for a recipient public key, and provides
+    security against adaptive chosen ciphertext attacks (IND-CCA2-secure). HPKE also
+    includes a variant that authenticates possession of a pre- shared key. HPKE works
+    for any combination of an asymmetric KEM, key derivation function (KDF), and authenticated
+    encryption with additional data (AEAD) encryption function. This document defines
+    the use of HPKE with JOSE. The specification chooses a specific subset of the
+    HPKE features to use with JOSE.</p>"
   language:
   - en
   script:
@@ -156,6 +158,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-jose-hpke-encrypt-12
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-jose-hpke-encrypt-13
+    docid:
+    - id: draft-ietf-jose-hpke-encrypt-13
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-jose-hpke-encrypt-13
       format: text/plain
 ext:
   schema-version: v1.0.1

@@ -1,0 +1,45 @@
+---
+schema-version: v1.2.3
+id: draft-sheffer-tls-pqc-continuity
+title:
+- content: 'PQC Continuity: Downgrade Protection for TLS Servers Migrating to PQC'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-sheffer-tls-pqc-continuity
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>As the Internet transitions toward post-quantum cryptography (PQC),
+    many TLS servers will continue supporting traditional certificates to maintain
+    compatibility with legacy clients. However, this coexistence introduces a significant
+    vulnerability: an undetected rollback attack, where a malicious actor strips the
+    PQC or Composite certificate and forces the use of a traditional certificate once
+    quantum-capable adversaries exist. To defend against this, this document defines
+    a TLS extension that allows a client to cache a server's declared commitment to
+    present PQC or composite certificates for a specified duration. On subsequent
+    connections, clients enforce that cached commitment and reject traditional-only
+    certificates that conflict with it. This mechanism, inspired by HTTP Strict Transport
+    Security (HSTS) but operating at the TLS layer provides PQC downgrade protection
+    without requiring changes to certificate authority (CA) infrastructure.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-sheffer-tls-pqc-continuity-00
+    docid:
+    - id: draft-sheffer-tls-pqc-continuity-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-sheffer-tls-pqc-continuity-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
