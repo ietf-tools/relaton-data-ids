@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-wang-ipsecme-kem-auth-ikev2
 title:
-- content: KEM based Authentication for the IKEv2 with Post-quantum Security
+- content: KEM-based Authentication for IKEv2 with Post-quantum Security
   language:
   - en
   script:
@@ -13,20 +13,11 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This draft specifies a new authentication mechanism, called KEM based
-    authentication, for the Internet Key Exchange Protocol Version 2 (IKEv2) [RFC7296].
-    This is motivated by the fact that ML-KEM is much more efficient that ML-DSA,
-    which are the post-quantum algoirhtms for mitigating the pontential security threats
-    again quantum computers. The KEM based authenticationth for the IKV2 is achieved
-    via introduing a new value of the IKEv2 Authentication Method registry mantained
-    by IANA. For using the new authentication method, two peers MUST send the SUPPORTED_AUTH_METHODS
-    Notify, defined by [RFC9593]，to negotiate the supported KEM algorithms. After
-    that, the correponding KEM certificates and cipthertext are exchanged via the
-    INTERMEDIATE Exchange. Finally，the IKE messages are authenticated via the shared
-    secret encapsulated between the two peers. This documents also specifies the instantiation
-    with ML-KEM for this new general authenticaiton method for the IKEv2. [EDNOTE:
-    Code points for KEM-based authentication may need to be assigned in the IKEv2
-    Authenticaion Method registry, maintained by IANA]</p>"
+- content: "<p>This draft specifies a new authentication mechanism, called KEM (Key
+    Encapsulation Mechanism) -based authentication, for the Internet Key Exchange
+    Protocol Version 2 (IKEv2). This is motivated by the fact that some post-quantum
+    KEMs (like ML-KEM) are more efficient than post-quantum signature algorithms (like
+    ML-DSA).</p>"
   language:
   - en
   script:
@@ -52,6 +43,16 @@ relation:
       primary: true
     formattedref:
       content: draft-wang-ipsecme-kem-auth-ikev2-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-wang-ipsecme-kem-auth-ikev2-02
+    docid:
+    - id: draft-wang-ipsecme-kem-auth-ikev2-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-wang-ipsecme-kem-auth-ikev2-02
       format: text/plain
 ext:
   schema-version: v1.0.1
