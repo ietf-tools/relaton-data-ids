@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-lucente-grow-bmp-offline
 title:
-- content: BMP State Summaries
+- content: BMP Snapshots
   language:
   - en
   script:
@@ -14,22 +14,12 @@ docid:
   primary: true
 abstract:
 - content: "<p>BMP (BGP Monitoring Protocol) is perfectly suited for real-time consumption
-    but less ideal in stream processing and off-wire historical scenarios. The main
-    issue is that the ability to correctly parse BGP Update PDUs, carried in BMP Route
-    Monitoring messages, depends on the BGP Capabilities exchanged during the establishment
-    of the BGP session between the peers via BGP Open PDUs. The BGP Open PDUs, carried
-    in BMP Peer Up Notification messages, are exported at the establishment of the
-    BMP session. Similar to BGP, BMP sessions are typically long-lived, so the crucial
-    information to correctly parse subsequent messages of such sessions was possibly
-    sent a relatively long time ago (days, weeks, months). This document introduces
-    the concept of Summaries. It defines a new optional BMP message type, called State
-    Summary, and a new TLV, called Summary Id. A Summary is similar to the initial
-    synchronisation performed upon establishment of the BMP session: all BGP session
-    information is exported in Peer Up Notification messages, and all RIB contents
-    are exported in Route Monitoring messages. All the messages carry the new Summary
-    Id TLV, containing an ID uniquely identifying the summary these messages belong
-    to. The messages are preceded by a State Summary message carrying the same Summary
-    Id TLV, as well as meta-data describing the Summary.</p>"
+    but less ideal in stream processing and off-wire historical scenarios. The issue
+    is that the necessary information to produce a complete view and enabling correct
+    processing of all messages in the stream, is only sent out at the beginning of
+    the BMP session. This document introduces the concept of BMP Snapshots, enabling
+    BMP stations to synchronize mid-stream, and, providing the basis for self-contained,
+    time-binned archiving of BMP data.</p>"
   language:
   - en
   script:
@@ -55,6 +45,16 @@ relation:
       primary: true
     formattedref:
       content: draft-lucente-grow-bmp-offline-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-lucente-grow-bmp-offline-02
+    docid:
+    - id: draft-lucente-grow-bmp-offline-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-lucente-grow-bmp-offline-02
       format: text/plain
 ext:
   schema-version: v1.0.1
