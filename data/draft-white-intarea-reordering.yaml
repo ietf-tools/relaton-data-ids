@@ -15,23 +15,12 @@ docid:
 abstract:
 - content: <p>Several link technology standards mandate that equipment guarantee in-order
     delivery of layer 2 frames, apparently due to a belief that this is required by
-    higher layer protocols. In addition, certain link types can introduce out-of-order
-    arrivals at the end of the layer 2 link, which the receiving equipment is required
-    to rectify by delaying higher sequenced frames until all lower sequenced frames
-    can be delivered or are deemed lost. The delaying of higher sequenced frames is
-    generally done without any knowledge of the higher layer protocols in use, let
-    alone any knowledge of higher layer protocol contexts (e.g. TCP connections) in
-    the case that the layer 2 link is carrying a multiplex of such contexts. It could,
-    for example, be the case that all of the higher sequenced frames being delayed
-    are carrying packets for different layer 4 contexts than a single lower- sequenced
-    frame that triggered the delay. The result is that this "re-sequencing" operation
-    can introduce delays that result in degradation of performance rather than improving
-    it. Moreover, modern, performant TCP and QUIC implementations support features
-    that significantly improve their tolerance to out-of-order delivery. This draft
-    is intended to promote an analysis and discussion of the sensitivity of modern
-    IETF protocols to out-of-order delivery, and to potentially develop new information
-    for layer 2 technology standards regarding the need to assure in-order delivery
-    to support IETF protocols.</p>
+    higher layer protocols. To meet this requirement they implement a "resequencing"
+    operation to restore the original packet order. This can introduce delays that
+    result in net degradation of performance. Modern TCP and QUIC implementations
+    support features that significantly improve their tolerance to out- of-order delivery.
+    This draft is intended to provide new information for layer 2 technology standards
+    regarding the need to assure in- order delivery to support IETF protocols.</p>
   language:
   - en
   script:
@@ -57,6 +46,16 @@ relation:
       primary: true
     formattedref:
       content: draft-white-intarea-reordering-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-white-intarea-reordering-02
+    docid:
+    - id: draft-white-intarea-reordering-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-white-intarea-reordering-02
       format: text/plain
 ext:
   schema-version: v1.0.1

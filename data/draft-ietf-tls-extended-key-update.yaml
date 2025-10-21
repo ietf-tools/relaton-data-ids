@@ -16,12 +16,13 @@ abstract:
 - content: "<p>TLS 1.3 ensures forward secrecy by performing an ephemeral Diffie-
     Hellman key exchange during the initial handshake, protecting past communications
     even if a party's long-term keys are later compromised. While the built-in KeyUpdate
-    mechanism allows traffic keys to be refreshed during a session, it does not introduce
-    new forward-secret key material. This limitation can pose a security risk in long-lived
-    sessions, such as those found in industrial IoT or telecommunications environments.
-    To address this, this specification defines an extended key update mechanism that
-    performs a fresh Diffie-Hellman exchange within an active session, thereby re-establishing
-    forward secrecy beyond the initial handshake. By forcing attackers to exfiltrate
+    mechanism allows application traffic keys to be refreshed during a session, it
+    does not incorporate fresh entropy from a new key exchange and therefore does
+    not provide post-compromise security. This limitation can pose a security risk
+    in long-lived sessions, such as those found in industrial IoT or telecommunications
+    environments. To address this, this specification defines an extended key update
+    mechanism that performs a fresh Diffie-Hellman exchange within an active session,
+    thereby ensuring post-compromise security. By forcing attackers to exfiltrate
     new key material repeatedly, this approach mitigates the risks associated with
     static key compromise. Regular renewal of session keys helps contain the impact
     of such compromises. The extension is applicable to both TLS 1.3 and DTLS 1.3.</p>"
@@ -90,6 +91,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-tls-extended-key-update-05
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-tls-extended-key-update-06
+    docid:
+    - id: draft-ietf-tls-extended-key-update-06
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-tls-extended-key-update-06
       format: text/plain
 ext:
   schema-version: v1.0.1

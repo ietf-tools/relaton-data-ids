@@ -2,8 +2,8 @@
 schema-version: v1.2.3
 id: draft-tiloca-core-oscore-piv-enc
 title:
-- content: Encrypted Partial IV in the Constrained Application Protocol (CoAP) OSCORE
-    Option
+- content: Stand-in Key Identifier and Encrypted Partial IV in the Constrained Application
+    Protocol (CoAP) OSCORE Option
   language:
   - en
   script:
@@ -14,19 +14,18 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>The security protocol Object Security for Constrained RESTful Environments
+- content: <p>The security protocol Object Security for Constrained RESTful Environments
     (OSCORE) provides end-to-end protection of messages exchanged with the Constrained
     Application Protocol (CoAP). Messages protected with OSCORE include a CoAP OSCORE
-    option, where the field Partial IV specifies the sequence number value used by
-    the message sender. In the interest of encrypting as much information as reasonably
-    possible, this document defines a lightweight add-on method for encrypting the
-    Partial IV within the OSCORE option. Therefore, it updates RFC 8613. Combined
-    with the update of OSCORE identifiers, the encryption of Partial IV values helps
-    counteracting on-path adversaries that attempt to correlate the sequence numbers
-    observed in different network paths, in order to track OSCORE endpoints that perform
-    a network path migration. The defined encryption method is applicable also to
-    the security protocol Group Object Security for Constrained RESTful Environments
-    (Group OSCORE).</p>"
+    option, where the "Partial IV" field specifies the sequence number value used
+    by the message sender and the "kid" field specifies the identifier of the message
+    sender. In order to reduce the information exposed on the wire that can be used
+    for fingerprinting traffic and for tracking endpoints, this document defines a
+    lightweight add-on method that obfuscates certain fields of the OSCORE option,
+    by encrypting the "Partial IV" field and overwriting the "kid" field with a stand-in
+    identifier. Therefore, it updates RFC 8613. With minor adaptations, the defined
+    method is applicable also to the security protocol Group Object Security for Constrained
+    RESTful Environments (Group OSCORE) that protects group communication for CoAP.</p>
   language:
   - en
   script:
@@ -42,6 +41,16 @@ relation:
       primary: true
     formattedref:
       content: draft-tiloca-core-oscore-piv-enc-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-tiloca-core-oscore-piv-enc-01
+    docid:
+    - id: draft-tiloca-core-oscore-piv-enc-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-tiloca-core-oscore-piv-enc-01
       format: text/plain
 ext:
   schema-version: v1.0.1

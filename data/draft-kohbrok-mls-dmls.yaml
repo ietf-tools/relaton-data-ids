@@ -15,16 +15,16 @@ docid:
 abstract:
 - content: "<p>Messaging Layer Security (MLS) provides strong end-to-end security
     guarantees for group messaging including Forward Secrecy (FS) and Post-Compromise
-    Security (PCS). MLS requires a Delivery Service (DS) component to facilitate agreement
-    between group members on the order of Commit messages. In decentralized settings
-    without an authoritative entity to enforce ordering, group members will likely
-    have to retain key material so they can process commits out-of-order. Retaining
-    key material, however, significantly reduces the FS of the protocol. This draft
-    specifies Decentralized MLS (DMLS), based on the the Fork-Resilient Continuous
-    Group Key Agreement protocol FREEK proposed by Alwen et al. [FRCGKA]. In essence,
-    DMLS extends MLS such that key material can be retained to process Commits out-of-
-    order with recuded impact to FS, thus allowing safer deployment in decentralized
-    environments.</p>"
+    Security (PCS). To facilitate agreement between group members, MLS requires a
+    Delivery Service (DS) component that orders of the handshake messages (Commits)
+    that allow changes to the group state. In decentralized settings without a central
+    authoritative entity to enforce ordering, group members will likely have to retain
+    key material so they can process Commits out-of-order. Retaining key material,
+    however, significantly reduces the FS of the protocol. This draft specifies Decentralized
+    MLS (DMLS), based on the Fork-Resilient Continuous Group Key Agreement protocol
+    FREEK proposed by Alwen et al. [FRCGKA]. In essence, DMLS extends MLS such that
+    key material can be retained to process Commits out-of- order with recuded impact
+    to FS, thus allowing safer deployment in decentralized environments.</p>"
   language:
   - en
   script:
@@ -60,6 +60,16 @@ relation:
       primary: true
     formattedref:
       content: draft-kohbrok-mls-dmls-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-kohbrok-mls-dmls-03
+    docid:
+    - id: draft-kohbrok-mls-dmls-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-kohbrok-mls-dmls-03
       format: text/plain
 ext:
   schema-version: v1.0.1

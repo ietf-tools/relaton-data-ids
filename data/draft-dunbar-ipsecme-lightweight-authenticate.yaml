@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-dunbar-ipsecme-lightweight-authenticate
 title:
-- content: Lightweight Authentication Methods for IP Header
+- content: Lightweight Authentication for Encapsulation Header
   language:
   - en
   script:
@@ -13,10 +13,10 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document specifies a lightweight method for authenticating encapsulation
-    headers, such as GENEVE, SRH, and UDP options, used to steer encrypted IPsec traffic
-    across a Cloud Backbone, ensuring forwarding integrity without Cloud GWs decrypting
-    the payloads.</p>"
+- content: "<p>This document specifies a lightweight authentication mechanism (KeyID,
+    anti-replay, algorithms, truncation, and keying) intended to be reused by multiple
+    protocol profiles. Concrete profiles define where the authentication data is carried
+    and the exact coverage rules for header fields.</p>"
   language:
   - en
   script:
@@ -42,6 +42,16 @@ relation:
       primary: true
     formattedref:
       content: draft-dunbar-ipsecme-lightweight-authenticate-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-dunbar-ipsecme-lightweight-authenticate-02
+    docid:
+    - id: draft-dunbar-ipsecme-lightweight-authenticate-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-dunbar-ipsecme-lightweight-authenticate-02
       format: text/plain
 ext:
   schema-version: v1.0.1

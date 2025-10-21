@@ -14,17 +14,27 @@ docid:
   primary: true
 abstract:
 - content: '<p>This document proposes a mechanism for authoritative DNS servers to
-    opportunistically signal their support for alternative transport protocols (e.g.,
-    DNS over TLS (DoT), DNS over HTTPS (DoH) and DNS over QUIC (DoQ)) directly within
-    the Additional section of authoritative DNS responses. This "hint-based" approach
-    aims to enable resolvers to discover and upgrade transport connections more efficiently,
-    thereby improving privacy, security, and performance for subsequent interactions.
-    The mechanism is designed to not require any protocol change. It is safe, backward-compatible,
+    signal their support for alternative transport protocols (e.g., DNS over TLS (DoT),
+    DNS over HTTPS (DoH) and DNS over QUIC (DoQ)). This signaling may either be provided
+    within the Additional section of authoritative DNS responses or be the result
+    of direct DNS queries. The former, "opportunistic mode" is hint-based and aims
+    to enable resolvers to discover alternative transports efficiently and then opportunistically
+    upgrade connections to the authoritative, thereby improving privacy, security,
+    and performance for subsequent interactions. The mechanism is designed to not
+    require any protocol change or additional queries. It is safe, backward-compatible,
     and effective even when DNSSEC validation of the hint is not possible or desired.
-    This document proposes an improvement on the opportunistic (but blind) testing
-    of alternative transports suggested in RFC9539 by providing a mechanism by which
-    a responding authoritative server may signal what alternative transports it supports.
-    TO BE REMOVED: This document is being collaborated on in Github at: https://github.com/johanix/draft-johani-dnsop-transport-signaling
+    In certain circumstances and with additional overhead it is also possible to use
+    direct queries to securely obtain authentication information for the authoritative
+    that can then be used to authenticate an encrypted connection. It is also possible
+    to establish a "validated mode" where the communication between the resolver and
+    the authoritative server is provably both secure and authentic. Validated mode
+    may not always be possible, depending on whether the resolver is able to DNSSEC
+    validate the signal or not. When Validated mode is possible it does provide a
+    stronger and more trustworthy connection. This document proposes an improvement
+    to the opportunistic (but blind) testing of alternative transports suggested in
+    RFC9539 by providing a mechanism by which a responding authoritative server may
+    signal what alternative transports it supports. TO BE REMOVED: This document is
+    being collaborated on in Github at: https://github.com/johanix/draft-johani-dnsop-transport-signaling
     (https://github.com/johanix/draft-johani-dnsop-transport-signaling). The most
     recent working version of the document, open issues, etc, should all be available
     there. The authors (gratefully) accept pull requests.</p>'
@@ -53,6 +63,16 @@ relation:
       primary: true
     formattedref:
       content: draft-johani-dnsop-transport-signaling-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-johani-dnsop-transport-signaling-02
+    docid:
+    - id: draft-johani-dnsop-transport-signaling-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-johani-dnsop-transport-signaling-02
       format: text/plain
 ext:
   schema-version: v1.0.1
