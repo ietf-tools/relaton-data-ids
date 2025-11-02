@@ -1,0 +1,90 @@
+---
+schema-version: v1.2.3
+id: draft-mcnally-cbor-nan-bstr-00
+title:
+- content: A CBOR Tag for Lossless Transport of IEEE-754 NaN Bit Patterns
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-mcnally-cbor-nan-bstr-00
+  type: src
+type: standard
+docid:
+- id: draft-mcnally-cbor-nan-bstr-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.mcnally-cbor-nan-bstr
+  type: IETF
+  scope: anchor
+docnumber: I-D.mcnally-cbor-nan-bstr
+date:
+- type: published
+  value: '2025-11-01'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Wolf
+          language:
+          - en
+        - language:
+          - en
+          initial: W
+        formatted_initials:
+          content: W.
+          language:
+          - en
+      surname:
+        content: McNally
+        language:
+        - en
+      completename:
+        content: Wolf McNally
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Blockchain Commons
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2025-11-01'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: <p>IEEE-754 NaN formations are not numbers and have no equivalence class.
+    They are not comparable to anything, including reflexively, and therefore each
+    attribute - sign bit, signaling/quiet bit, payload bits, and representation width
+    (binary16, binary32, binary64) - can carry meaning for an implementation. CBOR
+    permits encoding NaNs as floating-point values, but generic processing, preferred
+    serialization, and deterministic profiles may canonicalize or otherwise alter
+    NaN encodings, losing information. This document defines a CBOR tag, colloquially
+    "nan-bstr", whose content is a byte string carrying the exact IEEE-754 NaN bit
+    pattern so that all attributes are preserved across encode/decode, enabling use
+    cases like NaN boxing, platform-specific error signaling, diagnostics, and forensics.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-mcnally-cbor-nan-bstr-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

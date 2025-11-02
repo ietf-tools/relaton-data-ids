@@ -1,0 +1,43 @@
+---
+schema-version: v1.2.3
+id: draft-mcnally-cbor-nan-bstr
+title:
+- content: A CBOR Tag for Lossless Transport of IEEE-754 NaN Bit Patterns
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-mcnally-cbor-nan-bstr
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: <p>IEEE-754 NaN formations are not numbers and have no equivalence class.
+    They are not comparable to anything, including reflexively, and therefore each
+    attribute - sign bit, signaling/quiet bit, payload bits, and representation width
+    (binary16, binary32, binary64) - can carry meaning for an implementation. CBOR
+    permits encoding NaNs as floating-point values, but generic processing, preferred
+    serialization, and deterministic profiles may canonicalize or otherwise alter
+    NaN encodings, losing information. This document defines a CBOR tag, colloquially
+    "nan-bstr", whose content is a byte string carrying the exact IEEE-754 NaN bit
+    pattern so that all attributes are preserved across encode/decode, enabling use
+    cases like NaN boxing, platform-specific error signaling, diagnostics, and forensics.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-mcnally-cbor-nan-bstr-00
+    docid:
+    - id: draft-mcnally-cbor-nan-bstr-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-mcnally-cbor-nan-bstr-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
