@@ -1,28 +1,28 @@
 ---
 schema-version: v1.2.3
-id: draft-wiggers-tls-authkem-psk-03
+id: draft-ietf-pquip-hbs-state-01
 title:
-- content: KEM-based pre-shared-key handshakes for TLS 1.3
+- content: 'Hash-based Signatures: State and Backup Management'
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-wiggers-tls-authkem-psk-03
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-pquip-hbs-state-01
   type: src
 type: standard
 docid:
-- id: draft-wiggers-tls-authkem-psk-03
+- id: draft-ietf-pquip-hbs-state-01
   type: Internet-Draft
   primary: true
-- id: I-D.wiggers-tls-authkem-psk
+- id: I-D.ietf-pquip-hbs-state
   type: IETF
   scope: anchor
-docnumber: I-D.wiggers-tls-authkem-psk
+docnumber: I-D.ietf-pquip-hbs-state
 date:
 - type: published
-  value: '2025-04-22'
+  value: '2025-11-04'
 contributor:
 - person:
     name:
@@ -56,7 +56,35 @@ contributor:
     name:
       given:
         forename:
-        - content: Sofia
+        - content: Kaveh
+          language:
+          - en
+        - language:
+          - en
+          initial: K
+        formatted_initials:
+          content: K.
+          language:
+          - en
+      surname:
+        content: Bashiri
+        language:
+        - en
+      completename:
+        content: Kaveh Bashiri
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: BSI
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Stefan
           language:
           - en
         - language:
@@ -67,113 +95,94 @@ contributor:
           language:
           - en
       surname:
-        content: Celi
+        content: Kölbl
         language:
         - en
       completename:
-        content: Sofia Celi
+        content: Stefan Kölbl
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Brave Software
+        - content: Google
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Peter
+        - content: Jim
           language:
           - en
         - language:
           - en
-          initial: P
+          initial: J
         formatted_initials:
-          content: P.
+          content: J.
           language:
           - en
       surname:
-        content: Schwabe
+        content: Goodman
         language:
         - en
       completename:
-        content: Peter Schwabe
+        content: Jim Goodman
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Radboud University and MPI-SP
+        - content: Crypto4A Technologies
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Douglas
+        - content: Stavros
           language:
           - en
         - language:
           - en
-          initial: D
+          initial: S
         formatted_initials:
-          content: D.
+          content: S.
           language:
           - en
       surname:
-        content: Stebila
+        content: Kousidis
         language:
         - en
       completename:
-        content: Douglas Stebila
+        content: Stavros Kousidis
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: University of Waterloo
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Nick
-          language:
-          - en
-        - language:
-          - en
-          initial: "N"
-        formatted_initials:
-          content: N.
-          language:
-          - en
-      surname:
-        content: Sullivan
-        language:
-        - en
-      completename:
-        content: Nick Sullivan
-        language:
-        - en
+        - content: BSI
   role:
   - type: author
 version:
-- draft: '03'
-revdate: '2025-04-22'
+- draft: '01'
+revdate: '2025-11-04'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document gives a construction in which (long-term) KEM public
-    keys are used in the place of TLS PSK keys, avoiding concerns that may affect
-    systems that use symmetric-key-based PSK, such as requiring key diversification
-    and protection of symmetric-keys' confidentiality. This mechanism is inspired
-    by AuthKEM (and could use AuthKEM certificate public keys for resumption), but
-    can be independently implemented.</p>"
+- content: "<p>Stateful Hash-Based Signature Schemes (Stateful HBS) such as LMS, HSS,
+    XMSS and XMSS^MT combine Merkle trees with One-Time Signatures (OTS) to provide
+    signatures that are resistant against attacks using large-scale quantum computers.
+    Unlike conventional stateless digital signature schemes, Stateful HBS have a state
+    to keep track of which OTS keys have been used, as double-signing with the same
+    OTS key allows forgeries. This document provides guidance and documents security
+    considerations for the operational and technical aspects of deploying systems
+    that rely on Stateful HBS. Management of the state of the Stateful HBS, including
+    any handling of redundant key material, is a sensitive topic, and we discuss some
+    approaches to handle the associated challenges. We also describe the challenges
+    that need to be resolved before certain approaches should be considered.</p>"
   language:
   - en
   script:
@@ -182,23 +191,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-wiggers-tls-authkem-psk-02
+    id: draft-ietf-pquip-hbs-state-00
     docid:
-    - id: draft-wiggers-tls-authkem-psk-02
+    - id: draft-ietf-pquip-hbs-state-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-wiggers-tls-authkem-psk-02
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-wiggers-tls-authkem-psk-04
-    docid:
-    - id: draft-wiggers-tls-authkem-psk-04
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-wiggers-tls-authkem-psk-04
+      content: draft-ietf-pquip-hbs-state-00
       format: text/plain
 series:
 - type: main
@@ -209,7 +208,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-wiggers-tls-authkem-psk-03
+  number: draft-ietf-pquip-hbs-state-01
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

@@ -1,205 +1,193 @@
 ---
 schema-version: v1.2.3
-id: draft-wiggers-tls-authkem-psk-03
+id: draft-ietf-wimse-workload-creds-00
 title:
-- content: KEM-based pre-shared-key handshakes for TLS 1.3
+- content: WIMSE Workload Credentials
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-wiggers-tls-authkem-psk-03
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-wimse-workload-creds-00
   type: src
 type: standard
 docid:
-- id: draft-wiggers-tls-authkem-psk-03
+- id: draft-ietf-wimse-workload-creds-00
   type: Internet-Draft
   primary: true
-- id: I-D.wiggers-tls-authkem-psk
+- id: I-D.ietf-wimse-workload-creds
   type: IETF
   scope: anchor
-docnumber: I-D.wiggers-tls-authkem-psk
+docnumber: I-D.ietf-wimse-workload-creds
 date:
 - type: published
-  value: '2025-04-22'
+  value: '2025-11-03'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Thom
+        - content: Brian
           language:
           - en
         - language:
           - en
-          initial: T
+          initial: B
         formatted_initials:
-          content: T.
+          content: B.
           language:
           - en
       surname:
-        content: Wiggers
+        content: Campbell
         language:
         - en
       completename:
-        content: Thom Wiggers
+        content: Brian Campbell
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: PQShield
+        - content: Ping Identity
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Sofia
+        - content: Joseph
           language:
           - en
         - language:
           - en
-          initial: S
+          initial: J
+        - language:
+          - en
+          initial: A
         formatted_initials:
-          content: S.
+          content: J. A.
           language:
           - en
       surname:
-        content: Celi
+        content: Salowey
         language:
         - en
       completename:
-        content: Sofia Celi
+        content: Joseph A. Salowey
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Brave Software
+        - content: CyberArk
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Peter
+        - content: Arndt
           language:
           - en
         - language:
           - en
-          initial: P
+          initial: A
         formatted_initials:
-          content: P.
+          content: A.
           language:
           - en
       surname:
-        content: Schwabe
+        content: Schwenkschuster
         language:
         - en
       completename:
-        content: Peter Schwabe
+        content: Arndt Schwenkschuster
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Radboud University and MPI-SP
+        - content: Defakto Security
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Douglas
+        - content: Yaron
           language:
           - en
         - language:
           - en
-          initial: D
+          initial: "Y"
         formatted_initials:
-          content: D.
+          content: Y.
           language:
           - en
       surname:
-        content: Stebila
+        content: Sheffer
         language:
         - en
       completename:
-        content: Douglas Stebila
+        content: Yaron Sheffer
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: University of Waterloo
+        - content: Intuit
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Nick
+        - content: Yaroslav
           language:
           - en
         - language:
           - en
-          initial: "N"
+          initial: "Y"
         formatted_initials:
-          content: N.
+          content: Y.
           language:
           - en
       surname:
-        content: Sullivan
+        content: Rosomakho
         language:
         - en
       completename:
-        content: Nick Sullivan
+        content: Yaroslav Rosomakho
         language:
         - en
+    affiliation:
+    - organization:
+        name:
+        - content: Zscaler
   role:
   - type: author
 version:
-- draft: '03'
-revdate: '2025-04-22'
+- draft: '00'
+revdate: '2025-11-03'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document gives a construction in which (long-term) KEM public
-    keys are used in the place of TLS PSK keys, avoiding concerns that may affect
-    systems that use symmetric-key-based PSK, such as requiring key diversification
-    and protection of symmetric-keys' confidentiality. This mechanism is inspired
-    by AuthKEM (and could use AuthKEM certificate public keys for resumption), but
-    can be independently implemented.</p>"
+- content: "<p>The WIMSE architecture defines authentication and authorization for
+    software workloads in a variety of runtime environments, from the most basic ones
+    up to complex multi-service, multi-cloud, multi- tenant deployments. This document
+    defines the credentials that workloads use to represent their identity. They can
+    be used in various protocols to authenticate workloads to each other. To use these
+    credentials, workloads must provide proof of possession of the associated private
+    key material, which is covered in other documents. This document focuses on the
+    credentials alone, independent of the proof-of- possession mechanism.</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
-relation:
-- type: updates
-  bibitem:
-    id: draft-wiggers-tls-authkem-psk-02
-    docid:
-    - id: draft-wiggers-tls-authkem-psk-02
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-wiggers-tls-authkem-psk-02
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-wiggers-tls-authkem-psk-04
-    docid:
-    - id: draft-wiggers-tls-authkem-psk-04
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-wiggers-tls-authkem-psk-04
-      format: text/plain
 series:
 - type: main
   title:
@@ -209,7 +197,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-wiggers-tls-authkem-psk-03
+  number: draft-ietf-wimse-workload-creds-00
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
