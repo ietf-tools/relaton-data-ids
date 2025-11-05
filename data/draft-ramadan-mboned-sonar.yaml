@@ -14,22 +14,18 @@ docid:
   primary: true
 abstract:
 - content: "<p>This document specifies SONAR (Statistical Observation Network for
-    Attestation and Reach), a protocol combining three technical constructs to enable
-    verifiable multicast distribution: (1) Physical layer efficiency through native
-    IP multicast transmission achieving O(1) network bandwidth regardless of receiver
-    population, (2) Cryptoeconomic receiver accountability via on-chain stake deposits,
-    Verifiable Random Functions (VRF) for unpredictable sampling, and blockchain-recorded
-    attestation reporting, and (3) Multicast source authentication through ALTA-based
-    asymmetric loss-tolerant packet verification enabling real-time content integrity
-    proofs. SONAR achieves constant 6% bandwidth overhead through separation of content
-    authentication (broadcast to all receivers) from coverage verification (statistical
-    sampling with German Tank Problem estimation). The protocol employs zero-knowledge
-    proof aggregation via zkSNARKs for sample sizes exceeding 1,000 users, providing
-    privacy protection (preventing on-chain correlation attacks), cost efficiency
-    (80-90% reduction), and maintaining O(1) on-chain verification cost while scaling
-    to populations exceeding 10^8 receivers. SONAR enables cryptographically verifiable
-    multicast distribution without trusted intermediaries or per-receiver encryption
-    overhead.</p>"
+    Attestation and Reach), a protocol for verifiable multicast delivery claims without
+    trusted intermediaries. SONAR combines: (1) O(1) IP multicast efficiency versus
+    O(N) unicast to detect cheating, (2) cryptoeconomic accountability via on-chain
+    stake deposits, VRF-based unpredictable sampling, and blockchain attestations,
+    and (3) ALTA- based real-time multicast authentication. SONAR separates content
+    authentication from coverage verification: ALTA authenticates all packets with
+    ~6% bandwidth overhead, while statistical coverage verification adds minimal overhead
+    (320 KB challenge messages per 15-60 minute test period, 0.7-2.8 Kbps). Coverage
+    estimation samples 0.1% of receivers using German Tank Problem inference. For
+    privacy and cost efficiency at scale, zkSNARK proof aggregation (recommended for
+    &gt;1,000 sampled users) maintains O(1) on-chain verification cost, enabling populations
+    exceeding 10^8 receivers.</p>"
   language:
   - en
   script:
@@ -45,6 +41,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ramadan-mboned-sonar-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ramadan-mboned-sonar-01
+    docid:
+    - id: draft-ramadan-mboned-sonar-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ramadan-mboned-sonar-01
       format: text/plain
 ext:
   schema-version: v1.0.1
