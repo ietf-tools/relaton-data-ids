@@ -1,28 +1,28 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-jose-json-proof-algorithms-11
+id: draft-ietf-jose-json-proof-token-12
 title:
-- content: JSON Proof Algorithms
+- content: JSON Proof Token and CBOR Proof Token
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-jose-json-proof-algorithms-11
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-jose-json-proof-token-12
   type: src
 type: standard
 docid:
-- id: draft-ietf-jose-json-proof-algorithms-11
+- id: draft-ietf-jose-json-proof-token-12
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-jose-json-proof-algorithms
+- id: I-D.ietf-jose-json-proof-token
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-jose-json-proof-algorithms
+docnumber: I-D.ietf-jose-json-proof-token
 date:
 - type: published
-  value: '2025-10-20'
+  value: '2025-11-04'
 contributor:
 - person:
     name:
@@ -112,16 +112,21 @@ contributor:
   role:
   - type: author
 version:
-- draft: '11'
-revdate: '2025-10-20'
+- draft: '12'
+revdate: '2025-11-04'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>The JSON Proof Algorithms (JPA) specification registers cryptographic
-    algorithms and identifiers to be used with the JSON Web Proof, JSON Web Key (JWK),
-    and COSE specifications. It defines IANA registries for these identifiers.</p>"
+- content: "<p>JSON Proof Token (JPT) is a compact, URL-safe, privacy-preserving representation
+    of claims to be transferred between three parties. The claims in a JPT are encoded
+    as base64url-encoded JSON objects that are used as the payloads of a JSON Web
+    Proof (JWP) structure, enabling them to be digitally signed and selectively disclosed.
+    JPTs also support reusability and unlinkability when using Zero-Knowledge Proofs
+    (ZKPs). A CBOR-based representation of JPTs is also defined, called a CBOR Proof
+    Token (CPT). It has the same properties as JPTs, but uses the JSON Web Proof (JWP)
+    CBOR Serialization, rather than the JSON-based JWP Compact Serialization.</p>"
   language:
   - en
   script:
@@ -130,23 +135,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-jose-json-proof-algorithms-03
+    id: draft-ietf-jose-json-proof-token-00
     docid:
-    - id: draft-ietf-jose-json-proof-algorithms-03
+    - id: draft-ietf-jose-json-proof-token-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-jose-json-proof-algorithms-03
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-jose-json-proof-algorithms-12
-    docid:
-    - id: draft-ietf-jose-json-proof-algorithms-12
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-jose-json-proof-algorithms-12
+      content: draft-ietf-jose-json-proof-token-00
       format: text/plain
 series:
 - type: main
@@ -157,7 +152,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-jose-json-proof-algorithms-11
+  number: draft-ietf-jose-json-proof-token-12
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
