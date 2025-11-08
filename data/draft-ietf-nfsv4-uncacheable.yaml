@@ -1,0 +1,42 @@
+---
+schema-version: v1.2.3
+id: draft-ietf-nfsv4-uncacheable
+title:
+- content: Adding an Uncacheable Attribute to NFSv4.2
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-ietf-nfsv4-uncacheable
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>The Network File System version 4.2 (NFSv4.2) allows a client to cache
+    both metadata and data for file objects, as well as metadata for directory objects.
+    While caching directory entries (dirents) can improve performance, it can also
+    prevent the server from enforcing access control on individual dirents. Similarly,
+    caching file data can lead to performance issues if the cache hit rate is low.
+    This document introduces a new uncacheable attribute for NFSv4. Files and dirents
+    marked as uncacheable MUST NOT be stored in client-side caches. This ensures data
+    consistency and integrity by requiring clients to always retrieve the most recent
+    data directly from the server. This document extends NFSv4.2 (see RFC7862).</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-ietf-nfsv4-uncacheable-00
+    docid:
+    - id: draft-ietf-nfsv4-uncacheable-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-nfsv4-uncacheable-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
