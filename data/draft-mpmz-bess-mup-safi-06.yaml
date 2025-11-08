@@ -1,146 +1,90 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-bess-bgp-sdwan-usage-26
+id: draft-mpmz-bess-mup-safi-06
 title:
-- content: BGP Usage for SD-WAN Overlay Networks
+- content: BGP Extensions for the Mobile User Plane (MUP) SAFI
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-bess-bgp-sdwan-usage-26
+- content: https://datatracker.ietf.org/doc/html/draft-mpmz-bess-mup-safi-06
   type: src
 type: standard
 docid:
-- id: draft-ietf-bess-bgp-sdwan-usage-26
+- id: draft-mpmz-bess-mup-safi-06
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-bess-bgp-sdwan-usage
+- id: I-D.mpmz-bess-mup-safi
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-bess-bgp-sdwan-usage
+docnumber: I-D.mpmz-bess-mup-safi
 date:
 - type: published
-  value: '2025-07-28'
+  value: '2025-11-07'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Linda
+        - content: Tetsuya
           language:
           - en
         - language:
           - en
-          initial: L
+          initial: T
         formatted_initials:
-          content: L.
+          content: T.
           language:
           - en
       surname:
-        content: Dunbar
+        content: Murakami
         language:
         - en
       completename:
-        content: Linda Dunbar
+        content: Tetsuya Murakami
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Futurewei
+        - content: Arrcus, Inc.
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Ali
+        - content: Keyur
           language:
           - en
         - language:
           - en
-          initial: A
+          initial: K
         formatted_initials:
-          content: A.
+          content: K.
           language:
           - en
       surname:
-        content: Sajassi
+        content: Patel
         language:
         - en
       completename:
-        content: Ali Sajassi
+        content: Keyur Patel
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cisco
+        - content: Arrcus, Inc.
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: John
-          language:
-          - en
-        - language:
-          - en
-          initial: J
-        formatted_initials:
-          content: J.
-          language:
-          - en
-      surname:
-        content: Drake
-        language:
-        - en
-      completename:
-        content: John Drake
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Independent
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Basil
-          language:
-          - en
-        - language:
-          - en
-          initial: B
-        formatted_initials:
-          content: B.
-          language:
-          - en
-      surname:
-        content: Najem
-        language:
-        - en
-      completename:
-        content: Basil Najem
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Bell Canada
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Susan
+        - content: Satoru
           language:
           - en
         - language:
@@ -151,28 +95,120 @@ contributor:
           language:
           - en
       surname:
-        content: Hares
+        content: Matsushima
         language:
         - en
       completename:
-        content: Susan Hares
+        content: Satoru Matsushima
         language:
         - en
+    affiliation:
+    - organization:
+        name:
+        - content: SoftBank
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Zhaohui
+          language:
+          - en
+        - language:
+          - en
+          initial: Z
+        - language:
+          - en
+          initial: J
+        formatted_initials:
+          content: Z. J.
+          language:
+          - en
+      surname:
+        content: Zhang
+        language:
+        - en
+      completename:
+        content: Zhaohui (Jeffrey) Zhang
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Juniper Networks
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Swadesh
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Agrawal
+        language:
+        - en
+      completename:
+        content: Swadesh Agrawal
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Cisco Systems
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Daniel
+          language:
+          - en
+        - language:
+          - en
+          initial: D
+        formatted_initials:
+          content: D.
+          language:
+          - en
+      surname:
+        content: Voyer
+        language:
+        - en
+      completename:
+        content: Daniel Voyer
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Cisco Systems
   role:
   - type: author
 version:
-- draft: '26'
-revdate: '2025-07-28'
+- draft: '06'
+revdate: '2025-11-07'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document explores the complexities involved in managing large
-    scale Software Defined WAN (SD-WAN) overlay networks, along with various SD-WAN
-    scenarios. Its objective is to illustrate how a BGP-based control plane can effectively
-    manage these overlay networks by distributing edge service reachability information,
-    WAN port attributes, and underlay path details, thereby minimizing manual provisioning.</p>"
+- content: "<p>This document defines a new SAFI known as a BGP Mobile User Plane (BGP-MUP)
+    SAFI to support MUP Extensions and a extended community for BGP. This document
+    also provides BGP signaling and procedures for the new SAFI to convert mobile
+    session information into appropriate IP forwarding information. These extensions
+    can be used by operators between a PE, and a Controller for integrating mobile
+    user plane into BGP MUP network using the IP based routing.</p>"
   language:
   - en
   script:
@@ -181,23 +217,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-bess-bgp-sdwan-usage-16
+    id: draft-mpmz-bess-mup-safi-04
     docid:
-    - id: draft-ietf-bess-bgp-sdwan-usage-16
+    - id: draft-mpmz-bess-mup-safi-04
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-bess-bgp-sdwan-usage-16
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-bess-bgp-sdwan-usage-27
-    docid:
-    - id: draft-ietf-bess-bgp-sdwan-usage-27
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-bess-bgp-sdwan-usage-27
+      content: draft-mpmz-bess-mup-safi-04
       format: text/plain
 series:
 - type: main
@@ -208,7 +234,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-bess-bgp-sdwan-usage-26
+  number: draft-mpmz-bess-mup-safi-06
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
