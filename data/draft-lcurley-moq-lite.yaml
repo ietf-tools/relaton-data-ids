@@ -13,12 +13,11 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>moq-lite is designed to fanout live content from publishers to any
-    number of subscribers across the internet. Liveliness is achieved by using QUIC
-    to prioritize the most important content, potentially starving or dropping other
-    content, to avoid head-of-line blocking while respecting encoding dependencies.
-    While designed for media, it is an agnostic transport, allowing relays and CDNs
-    to forward content without knowledge of codecs, containers, or encryption keys.</p>"
+- content: "<p>moq-lite is designed to fanout live content 1-&gt;N across the internet.
+    It leverages QUIC to prioritize important content, avoiding head-of- line blocking
+    while respecting encoding dependencies. While primarily designed for media, the
+    transport is payload agnostic and can be proxied by relays/CDNs without knowledge
+    of codecs, containers, or encryption keys.</p>"
   language:
   - en
   script:
@@ -44,6 +43,16 @@ relation:
       primary: true
     formattedref:
       content: draft-lcurley-moq-lite-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-lcurley-moq-lite-02
+    docid:
+    - id: draft-lcurley-moq-lite-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-lcurley-moq-lite-02
       format: text/plain
 ext:
   schema-version: v1.0.1
