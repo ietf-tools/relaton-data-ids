@@ -13,15 +13,20 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>In edge computing, a service may be deployed on multiple instances
-    within one or more sites, called edge service. The edge service is associated
-    with an ANYCAST IP address. Its routes along with service metadata can be collected
-    by a central controller. The controller may process the metadata and distribute
-    the result to ingress routers using BGP FlowSpec. The service metadata can be
-    used by ingress routers to make path selections not only based on the routing
-    cost but also on the running environment of the edge services. This document describes
-    a mechanism to distribute the information of the service routes and related service
-    metadata using BGP FlowSpec.</p>"
+- content: "<p>In edge computing and distributed cloud environments, a service may
+    be deployed on multiple instances across one or more sites, referred to as edge
+    service. The edge service is typically associated with an ANYCAST IP address.
+    With the emergence of Computing-Aware Traffic Steering (CATS) requirements, there
+    is a growing need to consider both network and computing metrics when making traffic
+    steering decisions. Traditional routing protocols lack the capability to convey
+    compute-related information, necessitating extensions to existing protocols. This
+    draft defines a mechanism to distribute service routes along with computing-related
+    metadata using BGP FlowSpec. The service metadata, including compute resource
+    status and performance metrics, can be collected by a central controller, processed,
+    and then distributed to ingress routers using BGP FlowSpec extensions. This enables
+    ingress routers to make path selections based not only on routing cost but also
+    on the running environment and resource availability of edge services, thereby
+    optimizing Quality of Experience (QoE).</p>"
   language:
   - en
   script:
@@ -77,6 +82,16 @@ relation:
       primary: true
     formattedref:
       content: draft-yi-idr-bgp-fs-edge-service-metadata-04
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-yi-idr-bgp-fs-edge-service-metadata-05
+    docid:
+    - id: draft-yi-idr-bgp-fs-edge-service-metadata-05
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-yi-idr-bgp-fs-edge-service-metadata-05
       format: text/plain
 ext:
   schema-version: v1.0.1
