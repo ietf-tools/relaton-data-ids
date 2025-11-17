@@ -1,61 +1,36 @@
 ---
 schema-version: v1.2.3
-id: draft-li-quic-minimum-rtt-estimation-00
+id: draft-yl-bmwg-cats-02
 title:
-- content: Minimum RTT Estimation Under Low ACK Frequency
+- content: Benchmarking Methodology for Computing-aware Traffic Steering
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-li-quic-minimum-rtt-estimation-00
+- content: https://datatracker.ietf.org/doc/html/draft-yl-bmwg-cats-02
   type: src
 type: standard
 docid:
-- id: draft-li-quic-minimum-rtt-estimation-00
+- id: draft-yl-bmwg-cats-02
   type: Internet-Draft
   primary: true
-- id: I-D.li-quic-minimum-rtt-estimation
+- id: I-D.yl-bmwg-cats
   type: IETF
   scope: anchor
-docnumber: I-D.li-quic-minimum-rtt-estimation
+docnumber: I-D.yl-bmwg-cats
 date:
 - type: published
-  value: '2025-11-08'
+  value: '2025-11-16'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Tong
+        - content: Kehan
           language:
           - en
-        - language:
-          - en
-          initial: T
-        formatted_initials:
-          content: T.
-          language:
-          - en
-      surname:
-        content: Li
-        language:
-        - en
-      completename:
-        content: Tong Li
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Renmin University of China
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
         - language:
           - en
           initial: K
@@ -64,17 +39,101 @@ contributor:
           language:
           - en
       surname:
-        content: Xu
+        content: Yao
         language:
         - en
       completename:
-        content: Ke Xu
+        content: Kehan Yao
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Tsinghua University
+        - content: China Mobile
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Peng
+          language:
+          - en
+        - language:
+          - en
+          initial: P
+        formatted_initials:
+          content: P.
+          language:
+          - en
+      surname:
+        content: Liu
+        language:
+        - en
+      completename:
+        content: Peng Liu
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: China Mobile
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Xinxin
+          language:
+          - en
+        - language:
+          - en
+          initial: X
+        formatted_initials:
+          content: X.
+          language:
+          - en
+      surname:
+        content: Yi
+        language:
+        - en
+      completename:
+        content: Xinxin Yi
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: China Unicom
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Quan
+          language:
+          - en
+        - language:
+          - en
+          initial: Q
+        formatted_initials:
+          content: Q.
+          language:
+          - en
+      surname:
+        content: Xiong
+        language:
+        - en
+      completename:
+        content: Quan Xiong
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: ZTE
   role:
   - type: author
 - person:
@@ -83,85 +142,54 @@ contributor:
         forename:
         - language:
           - en
-          initial: B
-        formatted_initials:
-          content: B.
-          language:
-          - en
-      surname:
-        content: Wu
-        language:
-        - en
-      completename:
-        content: Bo Wu
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Tencent
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Youjian
-          language:
-          - en
+          initial: T
         - language:
           - en
-          initial: "Y"
+          initial: M
         formatted_initials:
-          content: Y.
+          content: T. M.
           language:
           - en
       surname:
-        content: Zhao
+        content: Ngọc
         language:
         - en
       completename:
-        content: Youjian Zhao
+        content: Trần Minh Ngọc
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Tsinghua University
+        - content: ETRI
   role:
   - type: author
 version:
-- draft: '00'
-revdate: '2025-11-08'
+- draft: '02'
+revdate: '2025-11-16'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: <p>In traditional acknowledgment mechanisms, the sender frequently "pulls"
-    ACK packets, resulting in significant protocol control overhead. This leads to
-    wasted CPU and I/O resources, contention for packet spectrum on half-duplex links
-    (e.g., WLAN), and reverse-path congestion in asymmetric links (e.g., satellite
-    network). Reducing the number of ACKs is essential in scenarios where ACK overhead
-    is non-negligible. However, a lower ACK frequency can introduce biases in delay
-    estimation, such as overestimating the minimum round-trip time (minRTT). This
-    document proposes how to calibrate the estimation of the minRTT under low ACK
-    frequency conditions.</p>
+- content: "<p>Computing-aware traffic steering(CATS) is a traffic engineering approach
+    based on the awareness of both computing and network information. This document
+    proposes benchmarking methodologies for CATS.</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-li-quic-minimum-rtt-estimation-01
+    id: draft-yl-bmwg-cats-00
     docid:
-    - id: draft-li-quic-minimum-rtt-estimation-01
+    - id: draft-yl-bmwg-cats-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-li-quic-minimum-rtt-estimation-01
+      content: draft-yl-bmwg-cats-00
       format: text/plain
 series:
 - type: main
@@ -172,7 +200,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-li-quic-minimum-rtt-estimation-00
+  number: draft-yl-bmwg-cats-02
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
