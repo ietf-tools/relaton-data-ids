@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-pim-zeroconf-mcast-addr-alloc-ps-03
+id: draft-ietf-pim-zeroconf-mcast-addr-alloc-ps-08
 title:
 - content: Zeroconf Multicast Address Allocation Problem Statement and Requirements
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-pim-zeroconf-mcast-addr-alloc-ps-03
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-pim-zeroconf-mcast-addr-alloc-ps-08
   type: src
 type: standard
 docid:
-- id: draft-ietf-pim-zeroconf-mcast-addr-alloc-ps-03
+- id: draft-ietf-pim-zeroconf-mcast-addr-alloc-ps-08
   type: Internet-Draft
   primary: true
 - id: I-D.ietf-pim-zeroconf-mcast-addr-alloc-ps
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.ietf-pim-zeroconf-mcast-addr-alloc-ps
 date:
 - type: published
-  value: '2025-02-16'
+  value: '2025-11-18'
 contributor:
 - person:
     name:
@@ -49,7 +49,7 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Garmin International
+        - content: Garmin International, Inc.
   role:
   - type: author
 - person:
@@ -109,22 +109,25 @@ contributor:
   role:
   - type: author
 version:
-- draft: '03'
-revdate: '2025-02-16'
+- draft: '08'
+revdate: '2025-11-18'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document describes a network that requires unique multicast addresses
-    to distribute data. Various challenges are discussed, such as the use of multicast
-    snooping to ensure efficient use of bandwidth, limitations of switch hardware,
-    problems associated with address collisions, and the need to avoid user configuration.
-    After all limitations were considered it was determined that multicast addresses
-    need to be dynamically-assigned by a decentralized, zero- configuration protocol.
-    Requirements and recommendations for suitable protocols are listed and specific
-    considerations for assigning IPv4 and IPv6 addresses are reviewed. The document
-    closes with several solutions that are precluded from consideration.</p>"
+- content: <p>This document surveys current problems with existing protocols for automatically
+    assigning multicast IP addresses in zero-configuration ("zeroconf") networking
+    environments. It addresses key challenges, such as link-layer address collisions,
+    hardware limitations, multicast snooping inefficiencies, and the need to avoid
+    manual configuration. Based on these challenges, it derives requirements for a
+    lightweight, decentralized protocol capable of dynamically allocating unique multicast
+    group addresses without central coordination. The document presents explicit requirements
+    covering discovery, allocation, conflict detection and resolution, and lease management.
+    It also evaluates considerations specific to IPv6 and IPv4 multicast address ranges,
+    and identifies approaches that are unsuited for zeroconf deployment. This foundation
+    serves as a reference for developing future multicast address allocation protocols
+    that operate autonomously within local networks.</p>
   language:
   - en
   script:
@@ -133,23 +136,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-pim-zeroconf-mcast-addr-alloc-ps-01
+    id: draft-ietf-pim-zeroconf-mcast-addr-alloc-ps-03
     docid:
-    - id: draft-ietf-pim-zeroconf-mcast-addr-alloc-ps-01
+    - id: draft-ietf-pim-zeroconf-mcast-addr-alloc-ps-03
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-pim-zeroconf-mcast-addr-alloc-ps-01
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-pim-zeroconf-mcast-addr-alloc-ps-08
-    docid:
-    - id: draft-ietf-pim-zeroconf-mcast-addr-alloc-ps-08
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-pim-zeroconf-mcast-addr-alloc-ps-08
+      content: draft-ietf-pim-zeroconf-mcast-addr-alloc-ps-03
       format: text/plain
 series:
 - type: main
@@ -160,7 +153,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-pim-zeroconf-mcast-addr-alloc-ps-03
+  number: draft-ietf-pim-zeroconf-mcast-addr-alloc-ps-08
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
