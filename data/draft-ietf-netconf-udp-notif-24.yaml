@@ -1,184 +1,187 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-cats-framework-18
+id: draft-ietf-netconf-udp-notif-24
 title:
-- content: A Framework for Computing-Aware Traffic Steering (CATS)
+- content: UDP-based Transport for Configured Subscriptions
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-cats-framework-18
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-netconf-udp-notif-24
   type: src
 type: standard
 docid:
-- id: draft-ietf-cats-framework-18
+- id: draft-ietf-netconf-udp-notif-24
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-cats-framework
+- id: I-D.ietf-netconf-udp-notif
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-cats-framework
+docnumber: I-D.ietf-netconf-udp-notif
 date:
 - type: published
-  value: '2025-11-03'
+  value: '2025-11-20'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Cheng
+        - content: Alex
           language:
           - en
         - language:
           - en
-          initial: C
+          initial: A
+        - language:
+          - en
+          initial: H
         formatted_initials:
-          content: C.
+          content: A. H.
           language:
           - en
       surname:
-        content: Li
+        content: Feng
         language:
         - en
       completename:
-        content: Cheng Li
+        content: Alex Huang Feng
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei Technologies
+        - content: INSA-Lyon
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Zongpeng
+        - content: Pierre
           language:
           - en
         - language:
           - en
-          initial: Z
+          initial: P
         formatted_initials:
-          content: Z.
+          content: P.
           language:
           - en
       surname:
-        content: Du
+        content: Francois
         language:
         - en
       completename:
-        content: Zongpeng Du
+        content: Pierre Francois
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: China Mobile
+        - content: INSA-Lyon
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Mohamed
+        - content: Tianran
           language:
           - en
         - language:
           - en
-          initial: M
+          initial: T
         formatted_initials:
-          content: M.
+          content: T.
           language:
           - en
       surname:
-        content: Boucadair
+        content: Zhou
         language:
         - en
       completename:
-        content: Mohamed Boucadair
+        content: Tianran Zhou
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Orange
+        - content: Huawei
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Luis
+        - content: Thomas
           language:
           - en
         - language:
           - en
-          initial: L
-        - language:
-          - en
-          initial: M
+          initial: T
         formatted_initials:
-          content: L. M.
+          content: T.
           language:
           - en
       surname:
-        content: Contreras
+        content: Graf
         language:
         - en
       completename:
-        content: Luis M. Contreras
+        content: Thomas Graf
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Telefonica
+        - content: Swisscom
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: John
+        - content: Paolo
           language:
           - en
         - language:
           - en
-          initial: J
+          initial: P
         formatted_initials:
-          content: J.
+          content: P.
           language:
           - en
       surname:
-        content: Drake
+        content: Lucente
         language:
         - en
       completename:
-        content: John Drake
+        content: Paolo Lucente
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Independent
+        - content: NTT
   role:
   - type: author
 version:
-- draft: '18'
-revdate: '2025-11-03'
+- draft: '24'
+revdate: '2025-11-20'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document describes a framework for Computing-Aware Traffic Steering
-    (CATS). Specifically, the document identifies a set of CATS components, describes
-    their interactions, and provides illustrative workflows of the control and data
-    planes.</p>"
+- content: "<p>This document describes a UDP-based transport for YANG notifications
+    to collect data from network nodes. A shim header is defined to facilitate the
+    data streaming directly from a publishing process on a network device to telemetry
+    receivers. Such a design enables higher frequency updates and less performance
+    overhead on publisher and receiver processes compared to already established notification
+    mechanisms. A YANG data model is also defined for management of the described
+    UDP-based transport.</p>"
   language:
   - en
   script:
@@ -187,23 +190,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-cats-framework-06
+    id: draft-ietf-netconf-udp-notif-21
     docid:
-    - id: draft-ietf-cats-framework-06
+    - id: draft-ietf-netconf-udp-notif-21
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-cats-framework-06
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-cats-framework-19
-    docid:
-    - id: draft-ietf-cats-framework-19
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-cats-framework-19
+      content: draft-ietf-netconf-udp-notif-21
       format: text/plain
 series:
 - type: main
@@ -214,7 +207,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-cats-framework-18
+  number: draft-ietf-netconf-udp-notif-24
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
