@@ -1,0 +1,91 @@
+---
+schema-version: v1.2.3
+id: draft-powers-dnsop-expire-00
+title:
+- content: Authenticated Cache-Expiration Opcode (EXPIRE)
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-powers-dnsop-expire-00
+  type: src
+type: standard
+docid:
+- id: draft-powers-dnsop-expire-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.powers-dnsop-expire
+  type: IETF
+  scope: anchor
+docnumber: I-D.powers-dnsop-expire
+date:
+- type: published
+  value: '2025-11-20'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Duane
+          language:
+          - en
+        - language:
+          - en
+          initial: D
+        formatted_initials:
+          content: D.
+          language:
+          - en
+      surname:
+        content: Powers
+        language:
+        - en
+      completename:
+        content: Duane Powers
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: cnTnc LLC
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2025-11-20'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>This document defines a new DNS message opcode, EXPIRE, which enables
+    an authenticated authoritative operator to request immediate deletion of a specific
+    RRset from a resolver's cache. EXPIRE messages may be authenticated either through
+    DNSSEC signatures or through resolver control-channel authentication (for example
+    TSIG, mutually authenticated TLS, IPsec, or local trust policy). EXPIRE applies
+    only to resolver cache and MUST NOT modify authoritative data. Resolvers validate
+    authority, apply mandatory replay protection using SOA serials when available
+    or equivalent replay-mitigation mechanisms, and flush the targeted RRset upon
+    successful validation. EXPIRE provides a deterministic, authenticated mechanism
+    for cache rollback and correction across both signed (DNSSEC) and unsigned (internal)
+    DNS deployments.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-powers-dnsop-expire-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
