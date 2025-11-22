@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-bess-evpn-ipvpn-interworking-14
+id: draft-ietf-bess-evpn-ipvpn-interworking-15
 title:
 - content: EVPN Interworking with IPVPN
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-bess-evpn-ipvpn-interworking-14
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-bess-evpn-ipvpn-interworking-15
   type: src
 type: standard
 docid:
-- id: draft-ietf-bess-evpn-ipvpn-interworking-14
+- id: draft-ietf-bess-evpn-ipvpn-interworking-15
   type: Internet-Draft
   primary: true
 - id: I-D.ietf-bess-evpn-ipvpn-interworking
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.ietf-bess-evpn-ipvpn-interworking
 date:
 - type: published
-  value: '2025-06-18'
+  value: '2025-11-21'
 contributor:
 - person:
     name:
@@ -143,9 +143,6 @@ contributor:
     name:
       given:
         forename:
-        - content: Wen
-          language:
-          - en
         - language:
           - en
           initial: W
@@ -158,13 +155,13 @@ contributor:
         language:
         - en
       completename:
-        content: Wen Lin
+        content: W. Lin
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Juniper
+        - content: HPE
   role:
   - type: author
 - person:
@@ -224,26 +221,25 @@ contributor:
   role:
   - type: author
 version:
-- draft: '14'
-revdate: '2025-06-18'
+- draft: '15'
+revdate: '2025-11-21'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>Ethernet Virtual Private Network (EVPN) is used as a unified control
-    plane for tenant network intra and inter-subnet forwarding. When a tenant network
-    spans not only EVPN domains but also domains where BGP VPN-IP or IP families provide
-    inter-subnet forwarding, there is a need to specify the interworking aspects between
-    BGP domains of type EVPN, VPN-IP and IP, so that the end-to-end tenant connectivity
-    can be accomplished. This document specifies how EVPN interworks with VPN-IPv4/VPN-IPv6
-    and IPv4/IPv6 BGP families for inter-subnet forwarding. The document also addresses
-    the interconnect of EVPN domains for Inter-Subnet Forwarding routes. In addition,
-    this specification defines a new BGP Path Attribute called D-PATH (Domain PATH)
-    that protects gateways against control plane loops. D-PATH modifies the BGP best
-    path selection for multiprotocol BGP routes of SAFI 128 and EVPN IP Prefix routes,
-    and therefore this document updates the BGP best path selection specification,
-    but only for IPVPN and EVPN families.</p>"
+- content: "<p>Ethernet Virtual Private Network (EVPN) provides a unified BGP control
+    plane for both intra- and inter-subnet forwarding within tenant networks. When
+    a tenant network spans multiple domains — including EVPN domains as well as domains
+    that use BGP VPN-IP or IP address families for inter-subnet forwarding — it becomes
+    necessary to define the interworking mechanisms among these BGP domains (EVPN,
+    VPN-IP, and IP) to ensure seamless end-to-end tenant connectivity. In addition,
+    this document defines a new BGP Path Attribute, referred to as D-PATH (Domain
+    PATH), which provides loop prevention for gateway nodes by protecting against
+    control plane loops. The introduction of D-PATH modifies the BGP best path selection
+    process for Multiprotocol BGP routes of SAFI 128 (IPVPN) and EVPN IP Prefix routes.
+    As a result, this specification updates the BGP best path selection procedure,
+    but only in the context of IPVPN and EVPN route families.</p>"
   language:
   - en
   script:
@@ -260,16 +256,6 @@ relation:
     formattedref:
       content: draft-ietf-bess-evpn-ipvpn-interworking-09
       format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-bess-evpn-ipvpn-interworking-15
-    docid:
-    - id: draft-ietf-bess-evpn-ipvpn-interworking-15
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-bess-evpn-ipvpn-interworking-15
-      format: text/plain
 series:
 - type: main
   title:
@@ -279,7 +265,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-bess-evpn-ipvpn-interworking-14
+  number: draft-ietf-bess-evpn-ipvpn-interworking-15
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
