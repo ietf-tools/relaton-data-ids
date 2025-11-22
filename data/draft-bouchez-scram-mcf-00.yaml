@@ -1,0 +1,89 @@
+---
+schema-version: v1.2.3
+id: draft-bouchez-scram-mcf-00
+title:
+- content: SCRAM with Modular Crypt Format (SCRAM-MCF)
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-bouchez-scram-mcf-00
+  type: src
+type: standard
+docid:
+- id: draft-bouchez-scram-mcf-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.bouchez-scram-mcf
+  type: IETF
+  scope: anchor
+docnumber: I-D.bouchez-scram-mcf
+date:
+- type: published
+  value: '2025-11-22'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Arnaud
+          language:
+          - en
+        - language:
+          - en
+          initial: A
+        formatted_initials:
+          content: A.
+          language:
+          - en
+      surname:
+        content: Bouchez
+        language:
+        - en
+      completename:
+        content: Arnaud Bouchez
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Tranquil IT SAS
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2025-11-22'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>This document specifies SCRAM-MCF, an extension to the Salted Challenge
+    Response Authentication Mechanism (SCRAM) family of SASL mechanisms ([RFC5802])
+    and HTTP Digest extensions ([RFC7616], [RFC7677]). The extension replaces the
+    PBKDF2-specific iteration count attributes i= and s= in the server-first-message
+    with a generic Modular Crypt Format (MCF) descriptor mcf=. This allows servers
+    to use modern memory-hard key derivation functions such as Argon2, SCrypt, or
+    bcrypt while preserving the full security properties and message flow of SCRAM.
+    The change is fully backward compatible: servers can continue sending i= and s=
+    for legacy clients and only send mcf= (or both) when the client advertises support.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-bouchez-scram-mcf-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
