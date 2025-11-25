@@ -1,118 +1,34 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-grow-bmp-bgp-rib-stats-15
+id: draft-zhang-qoe-driven-transport-requirement-01
 title:
-- content: Advanced BGP Monitoring Protocol (BMP) Statistics Types
+- content: QoE-Driven Application-Transport Cooperation Requirements
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-grow-bmp-bgp-rib-stats-15
+- content: https://datatracker.ietf.org/doc/html/draft-zhang-qoe-driven-transport-requirement-01
   type: src
 type: standard
 docid:
-- id: draft-ietf-grow-bmp-bgp-rib-stats-15
+- id: draft-zhang-qoe-driven-transport-requirement-01
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-grow-bmp-bgp-rib-stats
+- id: I-D.zhang-qoe-driven-transport-requirement
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-grow-bmp-bgp-rib-stats
+docnumber: I-D.zhang-qoe-driven-transport-requirement
 date:
 - type: published
-  value: '2025-11-19'
+  value: '2025-11-24'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Mukul
-          language:
-          - en
-        - language:
-          - en
-          initial: M
-        formatted_initials:
-          content: M.
-          language:
-          - en
-      surname:
-        content: Srivastava
-        language:
-        - en
-      completename:
-        content: Mukul Srivastava
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Hewlett Packard Enterprise
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Yisong
-          language:
-          - en
-        - language:
-          - en
-          initial: "Y"
-        formatted_initials:
-          content: Y.
-          language:
-          - en
-      surname:
-        content: Liu
-        language:
-        - en
-      completename:
-        content: Yisong Liu
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: China Mobile
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Changwang
-          language:
-          - en
-        - language:
-          - en
-          initial: C
-        formatted_initials:
-          content: C.
-          language:
-          - en
-      surname:
-        content: Lin
-        language:
-        - en
-      completename:
-        content: Changwang Lin
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: New H3C Technologies
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Jinming
+        - content: Jiaxing
           language:
           - en
         - language:
@@ -123,31 +39,116 @@ contributor:
           language:
           - en
       surname:
-        content: Li
+        content: Zhang
         language:
         - en
       completename:
-        content: Jinming Li
+        content: Jiaxing Zhang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: China Mobile
+        - content: Chinese Academy of Sciences
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - language:
+          - en
+          initial: G
+        formatted_initials:
+          content: G.
+          language:
+          - en
+      surname:
+        content: 吕格瑞
+        language:
+        - en
+      completename:
+        content: 吕格瑞
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Chinese Academy of Sciences
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Qinghua
+          language:
+          - en
+        - language:
+          - en
+          initial: Q
+        formatted_initials:
+          content: Q.
+          language:
+          - en
+      surname:
+        content: Wu
+        language:
+        - en
+      completename:
+        content: Qinghua Wu
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Chinese Academy of Sciences
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Zhenyu
+          language:
+          - en
+        - language:
+          - en
+          initial: Z
+        formatted_initials:
+          content: Z.
+          language:
+          - en
+      surname:
+        content: Li
+        language:
+        - en
+      completename:
+        content: Zhenyu Li
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Chinese Academy of Sciences
   role:
   - type: author
 version:
-- draft: '15'
-revdate: '2025-11-19'
+- draft: '01'
+revdate: '2025-11-24'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>RFC 7854 defines different BGP Monitoring Protocol (BMP) statistics
-    message types to observe events that occur on a monitored router. This document
-    defines new statistics type to monitor BMP Adj-RIB-In and Adj-RIB-Out Routing
-    Information Bases (RIBs).</p>"
+- content: "<p>This document specifies requirements for a QoE-driven transport system,
+    which enables network stack to adjust its transport strategy according to the
+    QoE intent expressed by applications. The Application Layer MUST provide a structured
+    QoE Intent Signal detailing performance objectives to the transport layer. A QoE
+    Mapping Engine is required to translate this intent into adaptive transport strategies.
+    The Transport Protocol Stack SHOULD continuously feed a Transport Feedback Signal
+    on current performance and network status back to the Application Layer, thereby
+    closing the control loop essential for continuous QoE optimization.</p>"
   language:
   - en
   script:
@@ -156,23 +157,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-grow-bmp-bgp-rib-stats-01
+    id: draft-zhang-qoe-driven-transport-requirement-00
     docid:
-    - id: draft-ietf-grow-bmp-bgp-rib-stats-01
+    - id: draft-zhang-qoe-driven-transport-requirement-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-grow-bmp-bgp-rib-stats-01
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-grow-bmp-bgp-rib-stats-16
-    docid:
-    - id: draft-ietf-grow-bmp-bgp-rib-stats-16
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-grow-bmp-bgp-rib-stats-16
+      content: draft-zhang-qoe-driven-transport-requirement-00
       format: text/plain
 series:
 - type: main
@@ -183,7 +174,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-grow-bmp-bgp-rib-stats-15
+  number: draft-zhang-qoe-driven-transport-requirement-01
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
