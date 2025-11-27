@@ -1,34 +1,90 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-deleg-04
+id: draft-ietf-opsawg-ipfix-gtpu-07
 title:
-- content: Extensible Delegation for DNS
+- content: Export of GTP-U Information in IP Flow Information Export (IPFIX)
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-deleg-04
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-ipfix-gtpu-07
   type: src
 type: standard
 docid:
-- id: draft-ietf-deleg-04
+- id: draft-ietf-opsawg-ipfix-gtpu-07
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-deleg
+- id: I-D.ietf-opsawg-ipfix-gtpu
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-deleg
+docnumber: I-D.ietf-opsawg-ipfix-gtpu
 date:
 - type: published
-  value: '2025-10-16'
+  value: '2025-11-26'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Tim
+        - content: Daniel
+          language:
+          - en
+        - language:
+          - en
+          initial: D
+        formatted_initials:
+          content: D.
+          language:
+          - en
+      surname:
+        content: Voyer
+        language:
+        - en
+      completename:
+        content: Daniel Voyer
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Cisco Systems
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Sriram
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Gopalakrishnan
+        language:
+        - en
+      completename:
+        content: Sriram Gopalakrishnan
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Cisco Systems
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Thomas
           language:
           - en
         - language:
@@ -39,114 +95,87 @@ contributor:
           language:
           - en
       surname:
-        content: April
+        content: Graf
         language:
         - en
       completename:
-        content: Tim April
+        content: Thomas Graf
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Google, LLC
+        - content: Swisscom
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Petr
+        - content: Vyasraj
           language:
           - en
         - language:
           - en
-          initial: P
+          initial: V
         formatted_initials:
-          content: P.
+          content: V.
           language:
           - en
       surname:
-        content: Špaček
+        content: Satyanarayana
         language:
         - en
       completename:
-        content: Petr Špaček
+        content: Vyasraj Satyanarayana
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: ISC
+        - content: Juniper Networks
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Ralf
+        - content: Cristian
           language:
           - en
         - language:
           - en
-          initial: R
+          initial: C
         formatted_initials:
-          content: R.
+          content: C.
           language:
           - en
       surname:
-        content: Weber
+        content: Staicu
         language:
         - en
       completename:
-        content: Ralf Weber
+        content: Cristian Staicu
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Akamai Technologies
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: David
-          language:
-          - en
-        formatted_initials:
-          language:
-          - en
-      surname:
-        content: Lawrence
-        language:
-        - en
-      completename:
-        content: David C Lawrence
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Salesforce
+        - content: Bell Canada
   role:
   - type: author
 version:
-- draft: '04'
-revdate: '2025-10-16'
+- draft: '07'
+revdate: '2025-11-26'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document proposes a new extensible method for the delegation of
-    authority for a domain in the Domain Name System (DNS) using DELEG and DELEGI
-    records. A delegation in the DNS enables efficient and distributed management
-    of the DNS namespace. The traditional DNS delegation is based on NS records which
-    contain only hostnames of servers and no other parameters. The new delegation
-    records are extensible, can be secured with DNSSEC, and eliminate the problem
-    of having two sources of truth for delegation information.</p>"
+- content: "<p>This document introduces IP Flow Information Export (IPFIX) Information
+    Elements to report information contained in the Generic Packet Radio Service Tunneling
+    Protocol(GTP) User Plane header such as Tunnel Endpoint Identifier, and data contained
+    in its session container extension header.</p>"
   language:
   - en
   script:
@@ -155,23 +184,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-deleg-00
+    id: draft-ietf-opsawg-ipfix-gtpu-03
     docid:
-    - id: draft-ietf-deleg-00
+    - id: draft-ietf-opsawg-ipfix-gtpu-03
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-deleg-00
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-deleg-06
-    docid:
-    - id: draft-ietf-deleg-06
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-deleg-06
+      content: draft-ietf-opsawg-ipfix-gtpu-03
       format: text/plain
 series:
 - type: main
@@ -182,7 +201,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-deleg-04
+  number: draft-ietf-opsawg-ipfix-gtpu-07
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
