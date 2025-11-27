@@ -1,74 +1,49 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-6man-icmpv6-reflection-09
+id: draft-ietf-v6ops-framework-md-ipv6only-underlay-15
 title:
-- content: Internet Control Message Protocol (ICMPv6) Reflection
+- content: Framework for Multi-domain IPv6-only Underlay Network and IPv4-as-a-Service
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-6man-icmpv6-reflection-09
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-v6ops-framework-md-ipv6only-underlay-15
   type: src
 type: standard
 docid:
-- id: draft-ietf-6man-icmpv6-reflection-09
+- id: draft-ietf-v6ops-framework-md-ipv6only-underlay-15
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-6man-icmpv6-reflection
+- id: I-D.ietf-v6ops-framework-md-ipv6only-underlay
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-6man-icmpv6-reflection
+docnumber: I-D.ietf-v6ops-framework-md-ipv6only-underlay
 date:
 - type: published
-  value: '2025-08-13'
+  value: '2025-11-27'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Tal
+        - content: Chongfeng
           language:
           - en
         - language:
           - en
-          initial: T
+          initial: C
         formatted_initials:
-          content: T.
+          content: C.
           language:
           - en
       surname:
-        content: Mizrahi
+        content: Xie
         language:
         - en
       completename:
-        content: Tal Mizrahi
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Huawei
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - language:
-          - en
-          initial: X
-        formatted_initials:
-          content: X.
-          language:
-          - en
-      surname:
-        content: hexiaoming
-        language:
-        - en
-      completename:
-        content: hexiaoming
+        content: Chongfeng Xie
         language:
         - en
     affiliation:
@@ -81,63 +56,35 @@ contributor:
     name:
       given:
         forename:
-        - content: Tianran
+        - content: Chenhao
           language:
           - en
         - language:
           - en
-          initial: T
+          initial: C
         formatted_initials:
-          content: T.
+          content: C.
           language:
           - en
       surname:
-        content: Zhou
+        content: Ma
         language:
         - en
       completename:
-        content: Tianran Zhou
+        content: Chenhao Ma
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei
+        - content: China Telecom
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Ron
-          language:
-          - en
-        - language:
-          - en
-          initial: R
-        formatted_initials:
-          content: R.
-          language:
-          - en
-      surname:
-        content: Bonica
-        language:
-        - en
-      completename:
-        content: Ron Bonica
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: HPE
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Xiao
+        - content: Xing
           language:
           - en
         - language:
@@ -148,38 +95,97 @@ contributor:
           language:
           - en
       surname:
-        content: Min
+        content: Li
         language:
         - en
       completename:
-        content: Xiao Min
+        content: Xing Li
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: ZTE Corp.
+        - content: CERNET Center/Tsinghua University
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Gyan
+          language:
+          - en
+        - language:
+          - en
+          initial: G
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: G. S.
+          language:
+          - en
+      surname:
+        content: Mishra
+        language:
+        - en
+      completename:
+        content: Gyan Mishra
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Verizon Inc
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Thomas
+          language:
+          - en
+        - language:
+          - en
+          initial: T
+        formatted_initials:
+          content: T.
+          language:
+          - en
+      surname:
+        content: Graf
+        language:
+        - en
+      completename:
+        content: Thomas Graf
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Swisscom
   role:
   - type: author
 version:
-- draft: '09'
-revdate: '2025-08-13'
+- draft: '15'
+revdate: '2025-11-27'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document describes the ICMPv6 Reflection utility. The ICMPv6 Reflection
-    utility is a diagnostic tool, similar to Ping and the ICMPv6 Probe utility. It
-    is similar to Ping and Probe in that it relies on a stateless message exchange
-    between a probing node and a probed node. The probing node sends a request to
-    the probed node and the probed node responds to the request. The ICMPv6 Reflection
-    utility differs from Ping and Probe because, in the ICMPv6 Reflection utility,
-    the probing node requests a snapshot of the message that it sent, as it was when
-    arrived at the probed node. The probed node returns the requested snapshot. The
-    ICMPv6 Reflection utility is useful because it allows the user to see how the
-    network modified the request as it traveled from the probing node to the probed
-    node.</p>"
+- content: "<p>For the IPv6 transition, IPv6-only is considered the final stage where
+    only IPv6 protocol is used for transport while maintaining global reachability
+    for both IPv6 and IPv4 services. This document introduces a framework for a multi-domain
+    IPv6-only underlay network from the perspective of network operators. In particular,
+    it proposes stateless address mapping as the basis for enabling IPv4 service data
+    transmission in a multi-domain IPv6-only environment (i.e., IPv4-as-a-Service).
+    It describes the methodology of stateless IPv4/IPv6 mapping, illustrates the behaviors
+    of network devices, analyzes the options of IPv6 mapping prefix allocation, and
+    discusses the security considerations. This framework is not intended to replace
+    existing IPv6-only technologies, but rather to leverage or remain compatible with
+    them.</p>"
   language:
   - en
   script:
@@ -188,23 +194,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-6man-icmpv6-reflection-03
+    id: draft-ietf-v6ops-framework-md-ipv6only-underlay-09
     docid:
-    - id: draft-ietf-6man-icmpv6-reflection-03
+    - id: draft-ietf-v6ops-framework-md-ipv6only-underlay-09
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-6man-icmpv6-reflection-03
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-6man-icmpv6-reflection-14
-    docid:
-    - id: draft-ietf-6man-icmpv6-reflection-14
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-6man-icmpv6-reflection-14
+      content: draft-ietf-v6ops-framework-md-ipv6only-underlay-09
       format: text/plain
 series:
 - type: main
@@ -215,7 +211,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-6man-icmpv6-reflection-09
+  number: draft-ietf-v6ops-framework-md-ipv6only-underlay-15
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

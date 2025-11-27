@@ -1,115 +1,118 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-6man-icmpv6-reflection-09
+id: draft-ietf-spring-srv6-inter-layer-programming-01
 title:
-- content: Internet Control Message Protocol (ICMPv6) Reflection
+- content: SRv6 for Inter-Layer Network Programming
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-6man-icmpv6-reflection-09
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-spring-srv6-inter-layer-programming-01
   type: src
 type: standard
 docid:
-- id: draft-ietf-6man-icmpv6-reflection-09
+- id: draft-ietf-spring-srv6-inter-layer-programming-01
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-6man-icmpv6-reflection
+- id: I-D.ietf-spring-srv6-inter-layer-programming
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-6man-icmpv6-reflection
+docnumber: I-D.ietf-spring-srv6-inter-layer-programming
 date:
 - type: published
-  value: '2025-08-13'
+  value: '2025-11-27'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Tal
+        - content: Liuyan
           language:
           - en
         - language:
           - en
-          initial: T
+          initial: L
         formatted_initials:
-          content: T.
+          content: L.
           language:
           - en
       surname:
-        content: Mizrahi
+        content: Han
         language:
         - en
       completename:
-        content: Tal Mizrahi
+        content: Liuyan Han
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei
+        - content: China Mobile
   role:
   - type: author
 - person:
     name:
       given:
         forename:
+        - content: Jie
+          language:
+          - en
         - language:
           - en
-          initial: X
+          initial: J
         formatted_initials:
-          content: X.
+          content: J.
           language:
           - en
       surname:
-        content: hexiaoming
+        content: Dong
         language:
         - en
       completename:
-        content: hexiaoming
+        content: Jie Dong
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: China Telecom
+        - content: Huawei Technologies
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Tianran
+        - content: Minxue
           language:
           - en
         - language:
           - en
-          initial: T
+          initial: M
         formatted_initials:
-          content: T.
+          content: M.
           language:
           - en
       surname:
-        content: Zhou
+        content: Wang
         language:
         - en
       completename:
-        content: Tianran Zhou
+        content: Minxue Wang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei
+        - content: China Mobile
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Ron
+        - content: Ran
           language:
           - en
         - language:
@@ -120,66 +123,63 @@ contributor:
           language:
           - en
       surname:
-        content: Bonica
+        content: Chen
         language:
         - en
       completename:
-        content: Ron Bonica
+        content: Ran Chen
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: HPE
+        - content: ZTE Corporation
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Xiao
+        - content: Zongpeng
           language:
           - en
         - language:
           - en
-          initial: X
+          initial: Z
         formatted_initials:
-          content: X.
+          content: Z.
           language:
           - en
       surname:
-        content: Min
+        content: Du
         language:
         - en
       completename:
-        content: Xiao Min
+        content: Zongpeng Du
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: ZTE Corp.
+        - content: China Mobile
   role:
   - type: author
 version:
-- draft: '09'
-revdate: '2025-08-13'
+- draft: '01'
+revdate: '2025-11-27'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document describes the ICMPv6 Reflection utility. The ICMPv6 Reflection
-    utility is a diagnostic tool, similar to Ping and the ICMPv6 Probe utility. It
-    is similar to Ping and Probe in that it relies on a stateless message exchange
-    between a probing node and a probed node. The probing node sends a request to
-    the probed node and the probed node responds to the request. The ICMPv6 Reflection
-    utility differs from Ping and Probe because, in the ICMPv6 Reflection utility,
-    the probing node requests a snapshot of the message that it sent, as it was when
-    arrived at the probed node. The probed node returns the requested snapshot. The
-    ICMPv6 Reflection utility is useful because it allows the user to see how the
-    network modified the request as it traveled from the probing node to the probed
-    node.</p>"
+- content: "<p>The Segment Routing over IPv6 (SRv6) Network Programming framework
+    enables a network operator or an application to specify a packet processing program
+    by encoding a sequence of instructions in the IPv6 packet header. Following the
+    SRv6 Network Programming concept, this document defines SRv6 based mechanisms
+    for inter-layer network programming, which can help to integrate the packet network
+    layer with its underlying layers efficiently. For inter-layer path programming,
+    a new SRv6 behavior is defined for steering packets to underlay network connections.
+    The applicability of this new SRv6 behavior in typical scenarios is illustrated.</p>"
   language:
   - en
   script:
@@ -188,23 +188,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-6man-icmpv6-reflection-03
+    id: draft-ietf-spring-srv6-inter-layer-programming-00
     docid:
-    - id: draft-ietf-6man-icmpv6-reflection-03
+    - id: draft-ietf-spring-srv6-inter-layer-programming-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-6man-icmpv6-reflection-03
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-6man-icmpv6-reflection-14
-    docid:
-    - id: draft-ietf-6man-icmpv6-reflection-14
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-6man-icmpv6-reflection-14
+      content: draft-ietf-spring-srv6-inter-layer-programming-00
       format: text/plain
 series:
 - type: main
@@ -215,7 +205,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-6man-icmpv6-reflection-09
+  number: draft-ietf-spring-srv6-inter-layer-programming-01
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
