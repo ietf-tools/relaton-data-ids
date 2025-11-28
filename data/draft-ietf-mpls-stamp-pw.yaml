@@ -2,8 +2,8 @@
 schema-version: v1.2.3
 id: draft-ietf-mpls-stamp-pw
 title:
-- content: Encapsulation of Simple Two-Way Active Measurement Protocol for Pseudowires
-    and LSPs in MPLS Networks
+- content: Encapsulation of Simple Two-Way Active Measurement Protocol for LSPs and
+    Pseudowires in MPLS Networks
   language:
   - en
   script:
@@ -14,13 +14,14 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>Pseudowires (PWs) and Label Switched Paths (LSPs) are used in MPLS
-    networks for various services including carrying layer 2 and layer 3 data packets.
-    This document describes the procedure for encapsulation of the Simple Two-Way
-    Active Measurement Protocol (STAMP) defined in RFC 8762 and its optional extensions
-    defined in RFC 8972 for PWs and LSPs in MPLS networks. The procedure uses Generic
-    Associated Channel (G-ACh) to encapsulate the STAMP test packets with or without
-    adding an IP/UDP header for PWs and LSPs.</p>"
+- content: "<p>This document describes the procedure for encapsulation of the Simple
+    Two-Way Active Measurement Protocol (STAMP) defined in RFC 8762 and its optional
+    extensions defined in RFC 8972 in MPLS networks. Label Switched Paths (LSPs) and
+    Pseudowires (PWs) are used in MPLS networks for various services including carrying
+    Layer 2 and Layer 3 data packets and may optionally carry Control Word (CW). The
+    procedure described uses the Generic Associated Channel (G-ACh) to encapsulate
+    the STAMP test packets with or without an IP/UDP header for the LSPs and PWs that
+    carry CW.</p>"
   language:
   - en
   script:
@@ -46,6 +47,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-mpls-stamp-pw-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-mpls-stamp-pw-02
+    docid:
+    - id: draft-ietf-mpls-stamp-pw-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-mpls-stamp-pw-02
       format: text/plain
 ext:
   schema-version: v1.0.1
