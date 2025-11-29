@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-storey-smtp-client-id-17
+id: draft-storey-smtp-client-id-20
 title:
 - content: SMTP Service Extension for Client Identity
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-storey-smtp-client-id-17
+- content: https://datatracker.ietf.org/doc/html/draft-storey-smtp-client-id-20
   type: src
 type: standard
 docid:
-- id: draft-storey-smtp-client-id-17
+- id: draft-storey-smtp-client-id-20
   type: Internet-Draft
   primary: true
 - id: I-D.storey-smtp-client-id
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.storey-smtp-client-id
 date:
 - type: published
-  value: '2024-05-29'
+  value: '2025-11-28'
 contributor:
 - person:
     name:
@@ -44,34 +44,6 @@ contributor:
         - en
       completename:
         content: William Storey
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: LinuxMagic
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Shaun
-          language:
-          - en
-        - language:
-          - en
-          initial: S
-        formatted_initials:
-          content: S.
-          language:
-          - en
-      surname:
-        content: Johnson
-        language:
-        - en
-      completename:
-        content: Shaun Johnson
         language:
         - en
     affiliation:
@@ -108,19 +80,55 @@ contributor:
         - content: LinuxMagic
   role:
   - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Shaun
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Johnson
+        language:
+        - en
+      completename:
+        content: Shaun Johnson
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: LinuxMagic
+  role:
+  - type: author
 version:
-- draft: '17'
-revdate: '2024-05-29'
+- draft: '20'
+revdate: '2025-11-28'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: <p>This document defines an extension for the Simple Mail Transfer Protocol
-    (SMTP) called "CLIENTID" to provide a method for clients to indicate an identity
-    to the server. This identity is an additional token that may be used for security
-    and/or informational purposes, and with it a server may optionally apply heuristics
-    using this token.</p>
+- content: <p>Multi-Factor Authentication has rapidly become a driving requirement
+    for any internet based technology that requires authentication. While a large
+    number of initiatives are active for providing solutions to this requirement for
+    Web Browser based applications that can generally support real time human interaction
+    for providing a secondary method of identification, legacy protocols such as SMTP
+    authentication have not yet been revised to provide such support despite being
+    a high-risk target for business email compromise, possibly as a result of authenticated
+    SMTP activity generally expecting to be non-interactive in nature outside of Webmail
+    logins. This document defines an extension to the SMTP service protocol called
+    "CLIENTID" that a SMTP client can provide an additional unique identification
+    token prior to standard credentials authentication that the server may then apply
+    as an identify verification method in a similar manner to other Multi-Factor authentication
+    techniques.</p>
   language:
   - en
   script:
@@ -137,16 +145,6 @@ relation:
     formattedref:
       content: draft-storey-smtp-client-id-02
       format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-storey-smtp-client-id-20
-    docid:
-    - id: draft-storey-smtp-client-id-20
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-storey-smtp-client-id-20
-      format: text/plain
 series:
 - type: main
   title:
@@ -156,7 +154,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-storey-smtp-client-id-17
+  number: draft-storey-smtp-client-id-20
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
