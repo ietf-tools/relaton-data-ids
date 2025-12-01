@@ -1,28 +1,28 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-spring-srv6-path-segment-13
+id: draft-ls-ipsecme-ipcomp-exclude-transport-layer-02
 title:
-- content: Path Segment Identifier (PSID) in SRv6 (Segment Routing in IPv6)
+- content: IP Payload Compression excluding transport layer
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-spring-srv6-path-segment-13
+- content: https://datatracker.ietf.org/doc/html/draft-ls-ipsecme-ipcomp-exclude-transport-layer-02
   type: src
 type: standard
 docid:
-- id: draft-ietf-spring-srv6-path-segment-13
+- id: draft-ls-ipsecme-ipcomp-exclude-transport-layer-02
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-spring-srv6-path-segment
+- id: I-D.ls-ipsecme-ipcomp-exclude-transport-layer
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-spring-srv6-path-segment
+docnumber: I-D.ls-ipsecme-ipcomp-exclude-transport-layer
 date:
 - type: published
-  value: '2025-10-13'
+  value: '2025-11-30'
 contributor:
 - person:
     name:
@@ -56,35 +56,35 @@ contributor:
     name:
       given:
         forename:
-        - content: Weiqiang
+        - content: Guanming
           language:
           - en
         - language:
           - en
-          initial: W
+          initial: G
         formatted_initials:
-          content: W.
+          content: G.
           language:
           - en
       surname:
-        content: Cheng
+        content: Zeng
         language:
         - en
       completename:
-        content: Weiqiang Cheng
+        content: Guanming Zeng
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: China Mobile
+        - content: Huawei Technologies
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Mach
+        - content: Meng
           language:
           - en
         - language:
@@ -95,11 +95,11 @@ contributor:
           language:
           - en
       surname:
-        content: Chen
+        content: Zhang
         language:
         - en
       completename:
-        content: Mach Chen
+        content: Meng Zhang
         language:
         - en
     affiliation:
@@ -112,73 +112,50 @@ contributor:
     name:
       given:
         forename:
-        - content: Dhruv
+        - content: Xiaobo
           language:
           - en
         - language:
           - en
-          initial: D
+          initial: X
         formatted_initials:
-          content: D.
+          content: X.
           language:
           - en
       surname:
-        content: Dhody
+        content: Ding
         language:
         - en
       completename:
-        content: Dhruv Dhody
+        content: Xiaobo Ding
         language:
         - en
     affiliation:
     - organization:
         name:
         - content: Huawei Technologies
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Yongqing
-          language:
-          - en
-        - language:
-          - en
-          initial: "Y"
-        formatted_initials:
-          content: Y.
-          language:
-          - en
-      surname:
-        content: Zhu
-        language:
-        - en
-      completename:
-        content: Yongqing Zhu
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: China Telecom
   role:
   - type: author
 version:
-- draft: '13'
-revdate: '2025-10-13'
+- draft: '02'
+revdate: '2025-11-30'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: <p>Segment Routing (SR) allows for a flexible definition of end-to-end
-    paths by encoding an ordered list of instructions, called "segments". The SR architecture
-    can be implemented over an MPLS data plane as well as an IPv6 data plane. Currently,
-    Path Segment Identifier (PSID) has been defined to identify an SR path in SR-MPLS
-    networks, and is used for various use- cases such as end-to-end SR Path Protection
-    and Performance Measurement (PM) of an SR path. This document defines the PSID
-    to identify an SRv6 path in an IPv6 network.</p>
+- content: "<p>IP Payload Compression Protocol (IPComp) is used for compressing the
+    IP payload in transmission to increase communication performance. The IPComp is
+    applied to the payload of the IP datagram, starting with the first octet immediately
+    after the IP header in IPv4, and the first octet after the excluded IPv6 Extension
+    headers. However, transport layer information such as source port and destination
+    port are useful in many network functions in transmission. This document defines
+    extensions of IP payload compression protocol (IPComp) to support compressing
+    the payload excluding the transport layer information, to enable network functions
+    using transport layer information (e.g., ECMP) working together with the payload
+    compression. This document also defines an extension of IPComp to indicate the
+    payload is not compressed to solve the out-of-order problems between the compressed
+    and uncompressed packets.</p>"
   language:
   - en
   script:
@@ -187,23 +164,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-spring-srv6-path-segment-07
+    id: draft-ls-ipsecme-ipcomp-exclude-transport-layer-01
     docid:
-    - id: draft-ietf-spring-srv6-path-segment-07
+    - id: draft-ls-ipsecme-ipcomp-exclude-transport-layer-01
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-spring-srv6-path-segment-07
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-spring-srv6-path-segment-14
-    docid:
-    - id: draft-ietf-spring-srv6-path-segment-14
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-srv6-path-segment-14
+      content: draft-ls-ipsecme-ipcomp-exclude-transport-layer-01
       format: text/plain
 series:
 - type: main
@@ -214,7 +181,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-spring-srv6-path-segment-13
+  number: draft-ls-ipsecme-ipcomp-exclude-transport-layer-02
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

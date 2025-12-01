@@ -1,28 +1,28 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-spring-srv6-path-segment-13
+id: draft-ietf-idr-sr-policy-path-mtu-13
 title:
-- content: Path Segment Identifier (PSID) in SRv6 (Segment Routing in IPv6)
+- content: Segment Routing Path MTU in BGP
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-spring-srv6-path-segment-13
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-sr-policy-path-mtu-13
   type: src
 type: standard
 docid:
-- id: draft-ietf-spring-srv6-path-segment-13
+- id: draft-ietf-idr-sr-policy-path-mtu-13
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-spring-srv6-path-segment
+- id: I-D.ietf-idr-sr-policy-path-mtu
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-spring-srv6-path-segment
+docnumber: I-D.ietf-idr-sr-policy-path-mtu
 date:
 - type: published
-  value: '2025-10-13'
+  value: '2025-11-30'
 contributor:
 - person:
     name:
@@ -44,90 +44,6 @@ contributor:
         - en
       completename:
         content: Cheng Li
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Huawei Technologies
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Weiqiang
-          language:
-          - en
-        - language:
-          - en
-          initial: W
-        formatted_initials:
-          content: W.
-          language:
-          - en
-      surname:
-        content: Cheng
-        language:
-        - en
-      completename:
-        content: Weiqiang Cheng
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: China Mobile
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Mach
-          language:
-          - en
-        - language:
-          - en
-          initial: M
-        formatted_initials:
-          content: M.
-          language:
-          - en
-      surname:
-        content: Chen
-        language:
-        - en
-      completename:
-        content: Mach Chen
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Huawei Technologies
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Dhruv
-          language:
-          - en
-        - language:
-          - en
-          initial: D
-        formatted_initials:
-          content: D.
-          language:
-          - en
-      surname:
-        content: Dhody
-        language:
-        - en
-      completename:
-        content: Dhruv Dhody
         language:
         - en
     affiliation:
@@ -164,21 +80,108 @@ contributor:
         - content: China Telecom
   role:
   - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Ahmed
+          language:
+          - en
+        - language:
+          - en
+          initial: A
+        formatted_initials:
+          content: A.
+          language:
+          - en
+      surname:
+        content: El Sawaf
+        language:
+        - en
+      completename:
+        content: Ahmed El Sawaf
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Saudi Telecom Company
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Zhenbin
+          language:
+          - en
+        - language:
+          - en
+          initial: Z
+        formatted_initials:
+          content: Z.
+          language:
+          - en
+      surname:
+        content: Li
+        language:
+        - en
+      completename:
+        content: Zhenbin Li
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei Technologies
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Guanming
+          language:
+          - en
+        - language:
+          - en
+          initial: G
+        formatted_initials:
+          content: G.
+          language:
+          - en
+      surname:
+        content: Zeng
+        language:
+        - en
+      completename:
+        content: Guanming Zeng
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei Technologies
+  role:
+  - type: author
 version:
 - draft: '13'
-revdate: '2025-10-13'
+revdate: '2025-11-30'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: <p>Segment Routing (SR) allows for a flexible definition of end-to-end
-    paths by encoding an ordered list of instructions, called "segments". The SR architecture
-    can be implemented over an MPLS data plane as well as an IPv6 data plane. Currently,
-    Path Segment Identifier (PSID) has been defined to identify an SR path in SR-MPLS
-    networks, and is used for various use- cases such as end-to-end SR Path Protection
-    and Performance Measurement (PM) of an SR path. This document defines the PSID
-    to identify an SRv6 path in an IPv6 network.</p>
+- content: "<p>Segment Routing is a source routing paradigm that explicitly indicates
+    the forwarding path for packets at the ingress node. An SR policy is a set of
+    SR Policy candidate paths consisting of one or more segments with the appropriate
+    SR path attributes. BGP distributes each SR Policy candidate path as combination
+    of an prefix plus a the BGP Tunnel Encapsulation(Tunnel-Encaps) attribute containing
+    an SR Policy Tunnel TLV with information on the SR Policy candidate path as a
+    tunnel. However, the path maximum transmission unit (MTU) information for a segment
+    list for SR path is not currently passed in the BGP Tunnel-Encaps attribute..
+    This document defines extensions to BGP to distribute path MTU information within
+    SR policies.</p>"
   language:
   - en
   script:
@@ -187,23 +190,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-spring-srv6-path-segment-07
+    id: draft-ietf-idr-sr-policy-path-mtu-00
     docid:
-    - id: draft-ietf-spring-srv6-path-segment-07
+    - id: draft-ietf-idr-sr-policy-path-mtu-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-spring-srv6-path-segment-07
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-spring-srv6-path-segment-14
-    docid:
-    - id: draft-ietf-spring-srv6-path-segment-14
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-srv6-path-segment-14
+      content: draft-ietf-idr-sr-policy-path-mtu-00
       format: text/plain
 series:
 - type: main
@@ -214,7 +207,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-spring-srv6-path-segment-13
+  number: draft-ietf-idr-sr-policy-path-mtu-13
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

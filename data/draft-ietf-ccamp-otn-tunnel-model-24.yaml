@@ -1,49 +1,50 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-spring-srv6-path-segment-13
+id: draft-ietf-ccamp-otn-tunnel-model-24
 title:
-- content: Path Segment Identifier (PSID) in SRv6 (Segment Routing in IPv6)
+- content: A YANG Data Model for Optical Transport Network (OTN) Tunnels and Label
+    Switched Paths
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-spring-srv6-path-segment-13
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-otn-tunnel-model-24
   type: src
 type: standard
 docid:
-- id: draft-ietf-spring-srv6-path-segment-13
+- id: draft-ietf-ccamp-otn-tunnel-model-24
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-spring-srv6-path-segment
+- id: I-D.ietf-ccamp-otn-tunnel-model
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-spring-srv6-path-segment
+docnumber: I-D.ietf-ccamp-otn-tunnel-model
 date:
 - type: published
-  value: '2025-10-13'
+  value: '2025-12-01'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Cheng
+        - content: Haomian
           language:
           - en
         - language:
           - en
-          initial: C
+          initial: H
         formatted_initials:
-          content: C.
+          content: H.
           language:
           - en
       surname:
-        content: Li
+        content: Zheng
         language:
         - en
       completename:
-        content: Cheng Li
+        content: Haomian Zheng
         language:
         - en
     affiliation:
@@ -56,50 +57,22 @@ contributor:
     name:
       given:
         forename:
-        - content: Weiqiang
+        - content: Italo
           language:
           - en
         - language:
           - en
-          initial: W
+          initial: I
         formatted_initials:
-          content: W.
+          content: I.
           language:
           - en
       surname:
-        content: Cheng
+        content: Busi
         language:
         - en
       completename:
-        content: Weiqiang Cheng
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: China Mobile
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Mach
-          language:
-          - en
-        - language:
-          - en
-          initial: M
-        formatted_initials:
-          content: M.
-          language:
-          - en
-      surname:
-        content: Chen
-        language:
-        - en
-      completename:
-        content: Mach Chen
+        content: Italo Busi
         language:
         - en
     affiliation:
@@ -112,35 +85,63 @@ contributor:
     name:
       given:
         forename:
-        - content: Dhruv
+        - content: Sergio
           language:
           - en
         - language:
           - en
-          initial: D
+          initial: S
         formatted_initials:
-          content: D.
+          content: S.
           language:
           - en
       surname:
-        content: Dhody
+        content: Belotti
         language:
         - en
       completename:
-        content: Dhruv Dhody
+        content: Sergio Belotti
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei Technologies
+        - content: Nokia
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Yongqing
+        - content: Victor
+          language:
+          - en
+        - language:
+          - en
+          initial: V
+        formatted_initials:
+          content: V.
+          language:
+          - en
+      surname:
+        content: Lopez
+        language:
+        - en
+      completename:
+        content: Victor Lopez
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Nokia
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Yunbin
           language:
           - en
         - language:
@@ -151,34 +152,30 @@ contributor:
           language:
           - en
       surname:
-        content: Zhu
+        content: Xu
         language:
         - en
       completename:
-        content: Yongqing Zhu
+        content: Yunbin Xu
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: China Telecom
+        - content: CAICT
   role:
   - type: author
 version:
-- draft: '13'
-revdate: '2025-10-13'
+- draft: '24'
+revdate: '2025-12-01'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: <p>Segment Routing (SR) allows for a flexible definition of end-to-end
-    paths by encoding an ordered list of instructions, called "segments". The SR architecture
-    can be implemented over an MPLS data plane as well as an IPv6 data plane. Currently,
-    Path Segment Identifier (PSID) has been defined to identify an SR path in SR-MPLS
-    networks, and is used for various use- cases such as end-to-end SR Path Protection
-    and Performance Measurement (PM) of an SR path. This document defines the PSID
-    to identify an SRv6 path in an IPv6 network.</p>
+- content: "<p>This document describes the YANG data model for tunnels in OTN TE networks.
+    The model can be used to do the configuration in order to establish the tunnel
+    in OTN network. This work is independent with the control plane protocols.</p>"
   language:
   - en
   script:
@@ -187,23 +184,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-spring-srv6-path-segment-07
+    id: draft-ietf-ccamp-otn-tunnel-model-18
     docid:
-    - id: draft-ietf-spring-srv6-path-segment-07
+    - id: draft-ietf-ccamp-otn-tunnel-model-18
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-spring-srv6-path-segment-07
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-spring-srv6-path-segment-14
-    docid:
-    - id: draft-ietf-spring-srv6-path-segment-14
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-srv6-path-segment-14
+      content: draft-ietf-ccamp-otn-tunnel-model-18
       format: text/plain
 series:
 - type: main
@@ -214,7 +201,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-spring-srv6-path-segment-13
+  number: draft-ietf-ccamp-otn-tunnel-model-24
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

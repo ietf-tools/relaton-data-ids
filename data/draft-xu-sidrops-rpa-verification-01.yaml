@@ -1,34 +1,118 @@
 ---
 schema-version: v1.2.3
-id: draft-li-savnet-srsav-01
+id: draft-xu-sidrops-rpa-verification-01
 title:
-- content: Segment Routing Policy-Based Source Address Validation (SAV) Mechanism
+- content: BGP AS_PATH Verification Based on Route Path Authorizations (RPA) Objects
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-li-savnet-srsav-01
+- content: https://datatracker.ietf.org/doc/html/draft-xu-sidrops-rpa-verification-01
   type: src
 type: standard
 docid:
-- id: draft-li-savnet-srsav-01
+- id: draft-xu-sidrops-rpa-verification-01
   type: Internet-Draft
   primary: true
-- id: I-D.li-savnet-srsav
+- id: I-D.xu-sidrops-rpa-verification
   type: IETF
   scope: anchor
-docnumber: I-D.li-savnet-srsav
+docnumber: I-D.xu-sidrops-rpa-verification
 date:
 - type: published
-  value: '2025-04-08'
+  value: '2025-11-30'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Xueting
+        - language:
+          - en
+          initial: K
+        formatted_initials:
+          content: K.
+          language:
+          - en
+      surname:
+        content: Xu
+        language:
+        - en
+      completename:
+        content: Ke Xu
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Tsinghua University
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Shenglin
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Jiang
+        language:
+        - en
+      completename:
+        content: Shenglin Jiang
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Zhongguancun Laboratory
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Yangfei
+          language:
+          - en
+        - language:
+          - en
+          initial: "Y"
+        - language:
+          - en
+          initial: B
+        formatted_initials:
+          content: Y. B.
+          language:
+          - en
+      surname:
+        content: Guo
+        language:
+        - en
+      completename:
+        content: Yangfei (Basil) Guo
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Zhongguancun Laboratory
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Xiaoliang
           language:
           - en
         - language:
@@ -39,118 +123,34 @@ contributor:
           language:
           - en
       surname:
-        content: Li
-        language:
-        - en
-      completename:
-        content: Xueting Li
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: China Telecom
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Aijun
-          language:
-          - en
-        - language:
-          - en
-          initial: A
-        formatted_initials:
-          content: A.
-          language:
-          - en
-      surname:
         content: Wang
         language:
         - en
       completename:
-        content: Aijun Wang
+        content: Xiaoliang Wang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: China Telecom
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Wei
-          language:
-          - en
-        - language:
-          - en
-          initial: W
-        formatted_initials:
-          content: W.
-          language:
-          - en
-      surname:
-        content: Wang
-        language:
-        - en
-      completename:
-        content: Wei Wang
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: China Telecom
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Yuanyuan
-          language:
-          - en
-        - language:
-          - en
-          initial: "Y"
-        formatted_initials:
-          content: Y.
-          language:
-          - en
-      surname:
-        content: Zhang
-        language:
-        - en
-      completename:
-        content: Yuanyuan Zhang
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Zhongguancun Laboratory
+        - content: Tsinghua University
   role:
   - type: author
 version:
 - draft: '01'
-revdate: '2025-04-08'
+revdate: '2025-11-30'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This draft proposes a novel mechanism for Source Address Validation
-    (SAV) message propagation based on Segment Routing policies (SR- policy). Traditional
-    SAV mechanisms often rely on routing tables (RIB) and Policy-Based Routing (PBR),
-    but these methods lack the flexibility and granularity needed for some network
-    environments. By leveraging the flexibility and control capabilities of SR-policy,
-    the proposed mechanism ensures that SAV messages are propagated along well-defined
-    paths, ensuring efficient, secure, and accurate source address validation.</p>"
+- content: "<p>The Route Path Authorizations (RPA) is an RPKI object that attests
+    to the routing paths description which an Autonomous System (AS) would obey in
+    Border Gateway Protocol (BGP) route propagation. This document specifies an RPA-based
+    AS Path Verification methodology to mitigate, even solve, AS Path forgery and
+    route leaks. This document also explains the various BGP security threats that
+    RPA can help address and provides operational considerations associated with RPA
+    deployment.</p>"
   language:
   - en
   script:
@@ -159,23 +159,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-li-savnet-srsav-00
+    id: draft-xu-sidrops-rpa-verification-00
     docid:
-    - id: draft-li-savnet-srsav-00
+    - id: draft-xu-sidrops-rpa-verification-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-li-savnet-srsav-00
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-li-savnet-srsav-02
-    docid:
-    - id: draft-li-savnet-srsav-02
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-li-savnet-srsav-02
+      content: draft-xu-sidrops-rpa-verification-00
       format: text/plain
 series:
 - type: main
@@ -186,7 +176,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-li-savnet-srsav-01
+  number: draft-xu-sidrops-rpa-verification-01
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
