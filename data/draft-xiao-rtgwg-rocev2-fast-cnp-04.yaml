@@ -1,181 +1,200 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-rtgwg-srv6-egress-protection-12
+id: draft-xiao-rtgwg-rocev2-fast-cnp-04
 title:
-- content: SRv6 Path Egress Protection
+- content: Fast Congestion Notification Packet (CNP) in RoCEv2 Networks
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-rtgwg-srv6-egress-protection-12
+- content: https://datatracker.ietf.org/doc/html/draft-xiao-rtgwg-rocev2-fast-cnp-04
   type: src
 type: standard
 docid:
-- id: draft-ietf-rtgwg-srv6-egress-protection-12
+- id: draft-xiao-rtgwg-rocev2-fast-cnp-04
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-rtgwg-srv6-egress-protection
+- id: I-D.xiao-rtgwg-rocev2-fast-cnp
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-rtgwg-srv6-egress-protection
+docnumber: I-D.xiao-rtgwg-rocev2-fast-cnp
 date:
 - type: published
-  value: '2023-08-05'
+  value: '2025-12-02'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Zhibo
+        - content: Xiao
           language:
           - en
         - language:
           - en
-          initial: Z
+          initial: X
         formatted_initials:
-          content: Z.
+          content: X.
           language:
           - en
       surname:
-        content: Hu
+        content: Min
         language:
         - en
       completename:
-        content: Zhibo Hu
+        content: Xiao Min
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei
+        - content: ZTE Corp.
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        formatted_initials:
+          language:
+          - en
+      surname:
+        content: lihesong
+        language:
+        - en
+      completename:
+        content: lihesong
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: ZTE Corp.
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Huaimo
+        - content: Kan
           language:
           - en
         - language:
           - en
-          initial: H
+          initial: K
         formatted_initials:
-          content: H.
+          content: K.
           language:
           - en
       surname:
-        content: Chen
+        content: Zhang
         language:
         - en
       completename:
-        content: Huaimo Chen
+        content: Kan Zhang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Futurewei
+        - content: China Mobile
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Mehmet
+        - content: Weiqiang
           language:
           - en
         - language:
           - en
-          initial: M
+          initial: W
         formatted_initials:
-          content: M.
+          content: W.
           language:
           - en
       surname:
-        content: Toy
+        content: Cheng
         language:
         - en
       completename:
-        content: Mehmet Toy
+        content: Weiqiang Cheng
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Verizon
+        - content: China Mobile
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Chang
+        - content: Jin
           language:
           - en
         - language:
           - en
-          initial: C
+          initial: J
         formatted_initials:
-          content: C.
+          content: J.
           language:
           - en
       surname:
-        content: Cao
+        content: Yang
         language:
         - en
       completename:
-        content: Chang Cao
+        content: Jin Yang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: China Unicom
+        - content: China Mobile
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Tao
-          language:
-          - en
         - language:
           - en
-          initial: T
+          initial: X
         formatted_initials:
-          content: T.
+          content: X.
           language:
           - en
       surname:
-        content: He
+        content: hexiaoming
         language:
         - en
       completename:
-        content: Tao He
+        content: hexiaoming
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: China Unicom
+        - content: China Telecom
   role:
   - type: author
 version:
-- draft: '12'
-revdate: '2023-08-05'
+- draft: '04'
+revdate: '2025-12-02'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>TI-LFA specifies fast protections for transit nodes and links of an
-    SR path. However, it does not present any fast protections for the egress node
-    of the SR path. This document describes protocol extensions for fast protecting
-    the egress node and link of a Segment Routing for IPv6 (SRv6) path.</p>"
+- content: "<p>This document describes a Remote Direct Memory Access (RDMA) over Converged
+    Ethernet version 2 (RoCEv2) congestion control mechanism, which is inspired by
+    Really Explicit Congestion Notification (RECN) described in RFC 7514, also known
+    as Fast Congestion Notification Packet (Fast CNP). By extending the RoCEv2 CNP,
+    Fast CNP can be sent by the switch directly to the sender, advising the sender
+    to reduce the transmission rate at which it sends the flow of RoCEv2 data traffic.</p>"
   language:
   - en
   script:
@@ -184,23 +203,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-rtgwg-srv6-egress-protection-11
+    id: draft-xiao-rtgwg-rocev2-fast-cnp-01
     docid:
-    - id: draft-ietf-rtgwg-srv6-egress-protection-11
+    - id: draft-xiao-rtgwg-rocev2-fast-cnp-01
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-rtgwg-srv6-egress-protection-11
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-rtgwg-srv6-egress-protection-22
-    docid:
-    - id: draft-ietf-rtgwg-srv6-egress-protection-22
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-rtgwg-srv6-egress-protection-22
+      content: draft-xiao-rtgwg-rocev2-fast-cnp-01
       format: text/plain
 series:
 - type: main
@@ -211,7 +220,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-rtgwg-srv6-egress-protection-12
+  number: draft-xiao-rtgwg-rocev2-fast-cnp-04
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

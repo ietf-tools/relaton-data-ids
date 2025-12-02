@@ -1,26 +1,25 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-sidrops-rpki-ccr-00
+id: draft-prabel-jose-pq-composite-sigs-05
 title:
-- content: A Profile for Resource Public Key Infrastructure (RPKI) Canonical Cache
-    Representation (CCR)
+- content: PQ/T Hybrid Composite Signatures for JOSE and COSE
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-sidrops-rpki-ccr-00
+- content: https://datatracker.ietf.org/doc/html/draft-prabel-jose-pq-composite-sigs-05
   type: src
 type: standard
 docid:
-- id: draft-ietf-sidrops-rpki-ccr-00
+- id: draft-prabel-jose-pq-composite-sigs-05
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-sidrops-rpki-ccr
+- id: I-D.prabel-jose-pq-composite-sigs
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-sidrops-rpki-ccr
+docnumber: I-D.prabel-jose-pq-composite-sigs
 date:
 - type: published
   value: '2025-12-01'
@@ -29,7 +28,63 @@ contributor:
     name:
       given:
         forename:
-        - content: Job
+        - content: Lucas
+          language:
+          - en
+        - language:
+          - en
+          initial: L
+        formatted_initials:
+          content: L.
+          language:
+          - en
+      surname:
+        content: Prabel
+        language:
+        - en
+      completename:
+        content: Lucas Prabel
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Sun
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Shuzhou
+        language:
+        - en
+      completename:
+        content: Sun Shuzhou
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: John
           language:
           - en
         - language:
@@ -40,52 +95,24 @@ contributor:
           language:
           - en
       surname:
-        content: Snijders
+        content: Gray
         language:
         - en
       completename:
-        content: Job Snijders
+        content: John Gray
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: BSD Software Development
+        - content: Entrust Limited
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Bart
-          language:
-          - en
-        - language:
-          - en
-          initial: B
-        formatted_initials:
-          content: B.
-          language:
-          - en
-      surname:
-        content: Bakker
-        language:
-        - en
-      completename:
-        content: Bart Bakker
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: RIPE NCC
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Tim
+        - content: Tirumaleswar
           language:
           - en
         - language:
@@ -96,76 +123,46 @@ contributor:
           language:
           - en
       surname:
-        content: Bruijnzeels
+        content: Reddy.K
         language:
         - en
       completename:
-        content: Tim Bruijnzeels
+        content: Tirumaleswar Reddy.K
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: RIPE NCC
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Theo
-          language:
-          - en
-        - language:
-          - en
-          initial: T
-        formatted_initials:
-          content: T.
-          language:
-          - en
-      surname:
-        content: Buehler
-        language:
-        - en
-      completename:
-        content: Theo Buehler
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: OpenBSD
+        - content: Nokia
   role:
   - type: author
 version:
-- draft: '00'
+- draft: '05'
 revdate: '2025-12-01'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document specifies a Canonical Cache Representation (CCR) content
-    type for use with the Resource Public Key Infrastructure (RPKI). CCR is a DER-encoded
-    data interchange format which can be used to represent various aspects of the
-    state of a validated cache at a particular point in time. The CCR profile is a
-    compact and versatile format well-suited for a diverse set of applications such
-    as audit trail keeping, validated payload dissemination, and analytics pipelines.</p>"
+- content: "<p>This document describes JSON Object Signing and Encryption (JOSE) and
+    CBOR Object Signing and Encryption (COSE) serializations for PQ/T hybrid composite
+    signatures. The composite algorithms described combine ML-DSA as the post-quantum
+    component and either ECDSA or EdDSA as the traditional component.</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-ietf-sidrops-rpki-ccr-01
+    id: draft-prabel-jose-pq-composite-sigs-00
     docid:
-    - id: draft-ietf-sidrops-rpki-ccr-01
+    - id: draft-prabel-jose-pq-composite-sigs-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-sidrops-rpki-ccr-01
+      content: draft-prabel-jose-pq-composite-sigs-00
       format: text/plain
 series:
 - type: main
@@ -176,7 +173,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-sidrops-rpki-ccr-00
+  number: draft-prabel-jose-pq-composite-sigs-05
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
