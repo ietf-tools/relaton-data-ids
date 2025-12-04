@@ -1,34 +1,34 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-grow-bmp-bgp-rib-stats-15
+id: draft-ietf-lamps-pq-composite-kem-11
 title:
-- content: Advanced BGP Monitoring Protocol (BMP) Statistics Types
+- content: Composite ML-KEM for use in X.509 Public Key Infrastructure
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-grow-bmp-bgp-rib-stats-15
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-lamps-pq-composite-kem-11
   type: src
 type: standard
 docid:
-- id: draft-ietf-grow-bmp-bgp-rib-stats-15
+- id: draft-ietf-lamps-pq-composite-kem-11
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-grow-bmp-bgp-rib-stats
+- id: I-D.ietf-lamps-pq-composite-kem
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-grow-bmp-bgp-rib-stats
+docnumber: I-D.ietf-lamps-pq-composite-kem
 date:
 - type: published
-  value: '2025-11-19'
+  value: '2025-12-03'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Mukul
+        - content: Mike
           language:
           - en
         - language:
@@ -39,80 +39,24 @@ contributor:
           language:
           - en
       surname:
-        content: Srivastava
+        content: Ounsworth
         language:
         - en
       completename:
-        content: Mukul Srivastava
+        content: Mike Ounsworth
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Hewlett Packard Enterprise
+        - content: Entrust Limited
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Yisong
-          language:
-          - en
-        - language:
-          - en
-          initial: "Y"
-        formatted_initials:
-          content: Y.
-          language:
-          - en
-      surname:
-        content: Liu
-        language:
-        - en
-      completename:
-        content: Yisong Liu
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: China Mobile
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Changwang
-          language:
-          - en
-        - language:
-          - en
-          initial: C
-        formatted_initials:
-          content: C.
-          language:
-          - en
-      surname:
-        content: Lin
-        language:
-        - en
-      completename:
-        content: Changwang Lin
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: New H3C Technologies
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Jinming
+        - content: John
           language:
           - en
         - language:
@@ -123,31 +67,117 @@ contributor:
           language:
           - en
       surname:
-        content: Li
+        content: Gray
         language:
         - en
       completename:
-        content: Jinming Li
+        content: John Gray
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: China Mobile
+        - content: Entrust Limited
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Massimiliano
+          language:
+          - en
+        - language:
+          - en
+          initial: M
+        formatted_initials:
+          content: M.
+          language:
+          - en
+      surname:
+        content: Pala
+        language:
+        - en
+      completename:
+        content: Massimiliano Pala
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: OpenCA Labs
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Jan
+          language:
+          - en
+        - language:
+          - en
+          initial: J
+        formatted_initials:
+          content: J.
+          language:
+          - en
+      surname:
+        content: Klaußner
+        language:
+        - en
+      completename:
+        content: Jan Klaußner
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Bundesdruckerei GmbH
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Scott
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Fluhrer
+        language:
+        - en
+      completename:
+        content: Scott Fluhrer
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Cisco Systems
   role:
   - type: author
 version:
-- draft: '15'
-revdate: '2025-11-19'
+- draft: '11'
+revdate: '2025-12-03'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>RFC 7854 defines different BGP Monitoring Protocol (BMP) statistics
-    message types to observe events that occur on a monitored router. This document
-    defines new statistics type to monitor BMP Adj-RIB-In and Adj-RIB-Out Routing
-    Information Bases (RIBs).</p>"
+- content: "<p>This document defines combinations of ML-KEM [FIPS.203] in hybrid with
+    traditional algorithms RSA-OAEP, ECDH, X25519, and X448. These combinations are
+    tailored to meet security best practices and regulatory guidelines. Composite
+    ML-KEM is applicable in any application that uses X.509 or PKIX data structures
+    that accept ML- KEM, but where the operator wants extra protection against breaks
+    or catastrophic bugs in ML-KEM.</p>"
   language:
   - en
   script:
@@ -156,23 +186,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-grow-bmp-bgp-rib-stats-01
+    id: draft-ietf-lamps-pq-composite-kem-01
     docid:
-    - id: draft-ietf-grow-bmp-bgp-rib-stats-01
+    - id: draft-ietf-lamps-pq-composite-kem-01
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-grow-bmp-bgp-rib-stats-01
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-grow-bmp-bgp-rib-stats-17
-    docid:
-    - id: draft-ietf-grow-bmp-bgp-rib-stats-17
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-grow-bmp-bgp-rib-stats-17
+      content: draft-ietf-lamps-pq-composite-kem-01
       format: text/plain
 series:
 - type: main
@@ -183,7 +203,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-grow-bmp-bgp-rib-stats-15
+  number: draft-ietf-lamps-pq-composite-kem-11
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
