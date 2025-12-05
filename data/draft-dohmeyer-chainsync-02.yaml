@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-dohmeyer-chainsync-00
+id: draft-dohmeyer-chainsync-02
 title:
 - content: 'ChainSync: A Synchronization Protocol for Strict Sequential Execution
     in Linear Distributed Pipelines'
@@ -10,11 +10,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-dohmeyer-chainsync-00
+- content: https://datatracker.ietf.org/doc/html/draft-dohmeyer-chainsync-02
   type: src
 type: standard
 docid:
-- id: draft-dohmeyer-chainsync-00
+- id: draft-dohmeyer-chainsync-02
   type: Internet-Draft
   primary: true
 - id: I-D.dohmeyer-chainsync
@@ -23,7 +23,7 @@ docid:
 docnumber: I-D.dohmeyer-chainsync
 date:
 - type: published
-  value: '2025-12-02'
+  value: '2025-12-04'
 contributor:
 - person:
     name:
@@ -57,33 +57,36 @@ contributor:
   role:
   - type: author
 version:
-- draft: '00'
-revdate: '2025-12-02'
+- draft: '02'
+revdate: '2025-12-04'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>ChainSync is a lightweight application-layer protocol that runs over
+- content: '<p>ChainSync is a lightweight application-layer protocol that runs over
     reliable TCP connections to synchronize a fixed linear chain of distributed processes
-    (labeled A, B, C,..., N) such that they execute their local tasks in strict sequential
-    order (A -&gt; B -&gt; C -&gt;... -&gt; N) *and only after every process in the
-    chain has confirmed it is ready*. The protocol uses three distinct phases:</p>"
+    such that they execute their local tasks in strict sequential order and only after
+    every process in the chain has confirmed it is ready. The protocol has four phases:
+    1) a forward "readiness" wave, 2) a backward "start" wave, 3) a forward "execution"
+    wave, and 4) a backward exit wave. The design guarantees strict ordering even
+    when nodes become ready at very different times and requires only point-to-point
+    TCP connections along the chain, thus no central coordinator is needed.</p>'
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-dohmeyer-chainsync-01
+    id: draft-dohmeyer-chainsync-00
     docid:
-    - id: draft-dohmeyer-chainsync-01
+    - id: draft-dohmeyer-chainsync-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-dohmeyer-chainsync-01
+      content: draft-dohmeyer-chainsync-00
       format: text/plain
 series:
 - type: main
@@ -94,7 +97,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-dohmeyer-chainsync-00
+  number: draft-dohmeyer-chainsync-02
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

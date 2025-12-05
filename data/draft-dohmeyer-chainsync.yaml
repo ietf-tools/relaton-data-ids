@@ -14,11 +14,14 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>ChainSync is a lightweight application-layer protocol that runs over
+- content: '<p>ChainSync is a lightweight application-layer protocol that runs over
     reliable TCP connections to synchronize a fixed linear chain of distributed processes
-    (labeled A, B, C,..., N) such that they execute their local tasks in strict sequential
-    order (A -&gt; B -&gt; C -&gt;... -&gt; N) *and only after every process in the
-    chain has confirmed it is ready*. The protocol uses three distinct phases:</p>"
+    such that they execute their local tasks in strict sequential order and only after
+    every process in the chain has confirmed it is ready. The protocol has four phases:
+    1) a forward "readiness" wave, 2) a backward "start" wave, 3) a forward "execution"
+    wave, and 4) a backward exit wave. The design guarantees strict ordering even
+    when nodes become ready at very different times and requires only point-to-point
+    TCP connections along the chain, thus no central coordinator is needed.</p>'
   language:
   - en
   script:
@@ -34,6 +37,26 @@ relation:
       primary: true
     formattedref:
       content: draft-dohmeyer-chainsync-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-dohmeyer-chainsync-01
+    docid:
+    - id: draft-dohmeyer-chainsync-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-dohmeyer-chainsync-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-dohmeyer-chainsync-02
+    docid:
+    - id: draft-dohmeyer-chainsync-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-dohmeyer-chainsync-02
       format: text/plain
 ext:
   schema-version: v1.0.1

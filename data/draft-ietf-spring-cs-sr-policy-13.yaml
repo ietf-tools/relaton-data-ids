@@ -1,34 +1,90 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-idr-link-bandwidth-21
+id: draft-ietf-spring-cs-sr-policy-13
 title:
-- content: BGP Link Bandwidth Extended Community
+- content: Circuit Style Segment Routing Policy
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-link-bandwidth-21
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-spring-cs-sr-policy-13
   type: src
 type: standard
 docid:
-- id: draft-ietf-idr-link-bandwidth-21
+- id: draft-ietf-spring-cs-sr-policy-13
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-idr-link-bandwidth
+- id: I-D.ietf-spring-cs-sr-policy
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-idr-link-bandwidth
+docnumber: I-D.ietf-spring-cs-sr-policy
 date:
 - type: published
-  value: '2025-11-17'
+  value: '2025-12-05'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Pradosh
+        - content: Christian
+          language:
+          - en
+        - language:
+          - en
+          initial: C
+        formatted_initials:
+          content: C.
+          language:
+          - en
+      surname:
+        content: Schmutzer
+        language:
+        - en
+      completename:
+        content: Christian Schmutzer
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Cisco Systems, Inc.
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Zafar
+          language:
+          - en
+        - language:
+          - en
+          initial: Z
+        formatted_initials:
+          content: Z.
+          language:
+          - en
+      surname:
+        content: Ali
+        language:
+        - en
+      completename:
+        content: Zafar Ali
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Cisco Systems, Inc.
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Praveen
           language:
           - en
         - language:
@@ -39,24 +95,24 @@ contributor:
           language:
           - en
       surname:
-        content: Mohapatra
+        content: Maheshwari
         language:
         - en
       completename:
-        content: Pradosh Mohapatra
+        content: Praveen Maheshwari
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Google LLC
+        - content: Airtel India
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Reshma
+        - content: Reza
           language:
           - en
         - language:
@@ -67,114 +123,24 @@ contributor:
           language:
           - en
       surname:
-        content: Das
+        content: Rokui
         language:
         - en
       completename:
-        content: Reshma Das
+        content: Reza Rokui
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Juniper Networks, Inc.
+        - content: Ciena
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: SATYA
-          language:
-          - en
-        - language:
-          - en
-          initial: M
-        - language:
-          - en
-          initial: R
-        formatted_initials:
-          content: M. R.
-          language:
-          - en
-      surname:
-        content: Satya
-        language:
-        - en
-      completename:
-        content: SATYA R MOHANTY
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Zscaler
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Serge
-          language:
-          - en
-        - language:
-          - en
-          initial: S
-        formatted_initials:
-          content: S.
-          language:
-          - en
-      surname:
-        content: Krier
-        language:
-        - en
-      completename:
-        content: Serge Krier
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Cisco Systems
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Rafal
-          language:
-          - en
-        - language:
-          - en
-          initial: R
-        - language:
-          - en
-          initial: J
-        formatted_initials:
-          content: R. J.
-          language:
-          - en
-      surname:
-        content: Szarecki
-        language:
-        - en
-      completename:
-        content: Rafal Jan Szarecki
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Google LLC
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Akshay
+        - content: Andrew
           language:
           - en
         - language:
@@ -185,31 +151,32 @@ contributor:
           language:
           - en
       surname:
-        content: Gattani
+        content: Stone
         language:
         - en
       completename:
-        content: Akshay Gattani
+        content: Andrew Stone
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Arista Networks
+        - content: Nokia
   role:
   - type: author
 version:
-- draft: '21'
-revdate: '2025-11-17'
+- draft: '13'
+revdate: '2025-12-05'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document defines a BGP Extended Community, the Link Bandwidth
-    Extended Community, which carries link bandwidth information to enable weighted
-    load-balancing in multipath scenarios. It specifies the format and processing
-    rules for this extended community type.</p>"
+- content: <p>This document describes how Segment Routing (SR) policies can be used
+    to satisfy the requirements for bandwidth, end-to-end recovery and persistent
+    paths within a SR network. The association of two co- routed unidirectional SR
+    Policies satisfying these requirements is called "circuit-style" SR Policy (CS-SR
+    Policy).</p>
   language:
   - en
   script:
@@ -218,23 +185,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-idr-link-bandwidth-13
+    id: draft-ietf-spring-cs-sr-policy-01
     docid:
-    - id: draft-ietf-idr-link-bandwidth-13
+    - id: draft-ietf-spring-cs-sr-policy-01
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-idr-link-bandwidth-13
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-idr-link-bandwidth-22
-    docid:
-    - id: draft-ietf-idr-link-bandwidth-22
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-idr-link-bandwidth-22
+      content: draft-ietf-spring-cs-sr-policy-01
       format: text/plain
 series:
 - type: main
@@ -245,7 +202,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-idr-link-bandwidth-21
+  number: draft-ietf-spring-cs-sr-policy-13
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
