@@ -1,53 +1,58 @@
 ---
 schema-version: v1.2.3
-id: draft-wang-sidrops-bgpsec-transition-00
+id: draft-guo-sidrops-rpa-profile-01
 title:
-- content: 'Transition to Full BGPsec Deployment: Transitive-BGPsec is Incompatible
-    with BGPsec'
+- content: A Profile for Route Path Authorizations (RPAs)
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-wang-sidrops-bgpsec-transition-00
+- content: https://datatracker.ietf.org/doc/html/draft-guo-sidrops-rpa-profile-01
   type: src
 type: standard
 docid:
-- id: draft-wang-sidrops-bgpsec-transition-00
+- id: draft-guo-sidrops-rpa-profile-01
   type: Internet-Draft
   primary: true
-- id: I-D.wang-sidrops-bgpsec-transition
+- id: I-D.guo-sidrops-rpa-profile
   type: IETF
   scope: anchor
-docnumber: I-D.wang-sidrops-bgpsec-transition
+docnumber: I-D.guo-sidrops-rpa-profile
 date:
 - type: published
-  value: '2025-06-08'
+  value: '2025-12-07'
 contributor:
 - person:
     name:
       given:
         forename:
+        - content: Yangfei
+          language:
+          - en
         - language:
           - en
-          initial: K
+          initial: "Y"
+        - language:
+          - en
+          initial: B
         formatted_initials:
-          content: K.
+          content: Y. B.
           language:
           - en
       surname:
-        content: Xu
+        content: Guo
         language:
         - en
       completename:
-        content: Ke Xu
+        content: Yangfei (Basil) Guo
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Tsinghua University
+        - content: Zhongguancun Laboratory
   role:
   - type: author
 - person:
@@ -70,6 +75,31 @@ contributor:
         - en
       completename:
         content: Xiaoliang Wang
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Tsinghua University
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - language:
+          - en
+          initial: K
+        formatted_initials:
+          content: K.
+          language:
+          - en
+      surname:
+        content: Xu
+        language:
+        - en
+      completename:
+        content: Ke Xu
         language:
         - en
     affiliation:
@@ -131,61 +161,37 @@ contributor:
         - content: Tsinghua University
   role:
   - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Yangfei
-          language:
-          - en
-        - language:
-          - en
-          initial: "Y"
-        formatted_initials:
-          content: Y.
-          language:
-          - en
-      surname:
-        content: Guo
-        language:
-        - en
-      completename:
-        content: Yangfei Guo
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Zhongguancun Laboratory
-  role:
-  - type: author
 version:
-- draft: '00'
-revdate: '2025-06-08'
+- draft: '01'
+revdate: '2025-12-07'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document elaborates on the reasons why it is unfeasible to reconstruct
-    the native-BGPsec as a transitive approach, such that a BGP update with a correctly
-    signed BGPsec_PATH attribute can traverse legacy areas and afterwards it can still
-    be properly processed by subsequent native-BGPsec speakers.</p>"
+- content: "<p>This document defines a Cryptographic Message Syntax (CMS) protected
+    content type for Route Path Authorizations (RPA) objects used in Resource Public
+    Key Infrastructure (RPKI). An RPA is a digitally signed object that provides a
+    means of verifying whether an IP address block is received from AS a to AS b and
+    announced from AS b to AS c. When validated, an RPA's eContent can be used for
+    the detection and mitigation of route hijacking, especially providing protection
+    for the AS_PATH attribute in BGP-UPDATE. This object is a variant of the aut-num
+    object in the Internet Routing Registry (IRR).</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-wang-sidrops-bgpsec-transition-01
+    id: draft-guo-sidrops-rpa-profile-00
     docid:
-    - id: draft-wang-sidrops-bgpsec-transition-01
+    - id: draft-guo-sidrops-rpa-profile-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-wang-sidrops-bgpsec-transition-01
+      content: draft-guo-sidrops-rpa-profile-00
       format: text/plain
 series:
 - type: main
@@ -196,7 +202,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-wang-sidrops-bgpsec-transition-00
+  number: draft-guo-sidrops-rpa-profile-01
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
