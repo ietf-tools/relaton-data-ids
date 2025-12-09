@@ -1,179 +1,210 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-suit-firmware-encryption-18
+id: draft-ietf-quic-multipath-18
 title:
-- content: Encrypted Payloads in SUIT Manifests
+- content: Managing multiple paths for a QUIC connection
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-suit-firmware-encryption-18
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-quic-multipath-18
   type: src
 type: standard
 docid:
-- id: draft-ietf-suit-firmware-encryption-18
+- id: draft-ietf-quic-multipath-18
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-suit-firmware-encryption
+- id: I-D.ietf-quic-multipath
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-suit-firmware-encryption
+docnumber: I-D.ietf-quic-multipath
 date:
 - type: published
-  value: '2023-10-23'
+  value: '2025-12-08'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Hannes
+        - content: Yanmei
           language:
           - en
         - language:
           - en
-          initial: H
+          initial: "Y"
         formatted_initials:
-          content: H.
+          content: Y.
           language:
           - en
       surname:
-        content: Tschofenig
+        content: Liu
         language:
         - en
       completename:
-        content: Hannes Tschofenig
+        content: Yanmei Liu
         language:
         - en
+    affiliation:
+    - organization:
+        name:
+        - content: Alibaba Inc.
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Russ
+        - content: Yunfei
           language:
           - en
         - language:
           - en
-          initial: R
+          initial: "Y"
         formatted_initials:
-          content: R.
+          content: Y.
           language:
           - en
       surname:
-        content: Housley
+        content: Ma
         language:
         - en
       completename:
-        content: Russ Housley
+        content: Yunfei Ma
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Vigil Security, LLC
+        - content: Uber Technologies Inc.
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Brendan
+        - content: Quentin
           language:
           - en
         - language:
           - en
-          initial: B
+          initial: Q
         formatted_initials:
-          content: B.
+          content: Q.
           language:
           - en
       surname:
-        content: Moran
+        content: De Coninck
         language:
         - en
       completename:
-        content: Brendan Moran
+        content: Quentin De Coninck
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Arm Limited
+        - content: University of Mons (UMONS)
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: David
+        - content: Olivier
           language:
           - en
         - language:
           - en
-          initial: D
+          initial: O
         formatted_initials:
-          content: D.
+          content: O.
           language:
           - en
       surname:
-        content: Brown
+        content: Bonaventure
         language:
         - en
       completename:
-        content: David Brown
+        content: Olivier Bonaventure
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Linaro
+        - content: UCLouvain and Tessares
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Ken
+        - content: Christian
           language:
           - en
         - language:
           - en
-          initial: K
+          initial: C
         formatted_initials:
-          content: K.
+          content: C.
           language:
           - en
       surname:
-        content: Takayama
+        content: Huitema
         language:
         - en
       completename:
-        content: Ken Takayama
+        content: Christian Huitema
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: SECOM CO., LTD.
+        - content: Private Octopus Inc.
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Mirja
+          language:
+          - en
+        - language:
+          - en
+          initial: M
+        formatted_initials:
+          content: M.
+          language:
+          - en
+      surname:
+        content: Kühlewind
+        language:
+        - en
+      completename:
+        content: Mirja Kühlewind
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Ericsson
   role:
   - type: author
 version:
 - draft: '18'
-revdate: '2023-10-23'
+revdate: '2025-12-08'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document specifies techniques for encrypting software, firmware,
-    machine learning models, and personalization data by utilizing the IETF SUIT manifest.
-    Key agreement is provided by ephemeral-static (ES) Diffie-Hellman (DH) and AES
-    Key Wrap (AES-KW). ES-DH uses public key cryptography while AES-KW uses a pre-shared
-    key. Encryption of the plaintext is accomplished with conventional symmetric key
-    cryptography.</p>"
+- content: "<p>This document specifies a multipath extension for the QUIC protocol
+    to enable the simultaneous usage of multiple paths for a single connection. It
+    proposes a standard way to create, delete, and manage paths using identifiers.
+    It does not specify address discovery or management, nor how applications using
+    QUIC schedule traffic over multiple paths.</p>"
   language:
   - en
   script:
@@ -182,23 +213,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-suit-firmware-encryption-02
+    id: draft-ietf-quic-multipath-17
     docid:
-    - id: draft-ietf-suit-firmware-encryption-02
+    - id: draft-ietf-quic-multipath-17
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-suit-firmware-encryption-02
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-suit-firmware-encryption-26
-    docid:
-    - id: draft-ietf-suit-firmware-encryption-26
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-suit-firmware-encryption-26
+      content: draft-ietf-quic-multipath-17
       format: text/plain
 series:
 - type: main
@@ -209,7 +230,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-suit-firmware-encryption-18
+  number: draft-ietf-quic-multipath-18
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
