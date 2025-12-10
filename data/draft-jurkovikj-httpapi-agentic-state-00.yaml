@@ -1,0 +1,90 @@
+---
+schema-version: v1.2.3
+id: draft-jurkovikj-httpapi-agentic-state-00
+title:
+- content: HTTP Profile for Synchronized Resource State (Agentic State Transfer)
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-jurkovikj-httpapi-agentic-state-00
+  type: src
+type: standard
+docid:
+- id: draft-jurkovikj-httpapi-agentic-state-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.jurkovikj-httpapi-agentic-state
+  type: IETF
+  scope: anchor
+docnumber: I-D.jurkovikj-httpapi-agentic-state
+date:
+- type: published
+  value: '2025-12-09'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Antun
+          language:
+          - en
+        - language:
+          - en
+          initial: A
+        formatted_initials:
+          content: A.
+          language:
+          - en
+      surname:
+        content: Jurkovikj
+        language:
+        - en
+      completename:
+        content: Antun Jurkovikj
+        language:
+        - en
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2025-12-09'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: <p>HTTP resources are frequently exposed in multiple representations (e.g.,
+    text/html for rendering and application/json for processing) via Content Negotiation.
+    However, standard HTTP concurrency controls (such as ETags) are typically scoped
+    to the byte sequence of a specific representation. This creates a synchronization
+    gap where a client modifying one representation cannot guarantee consistency with
+    the underlying state of another representation, leading to race conditions and
+    "lost updates" in multi-client environments. This document specifies _Agentic
+    State Transfer_ (AST), an HTTP profile for managing _Canonical Resource State_
+    (CRS) across multiple synchronized representations of the same resource. It defines
+    the use of _Semantic Validators_ (Content Identity) to track the logical state
+    of a resource independent of its serialization. It further mandates the use of
+    Optimistic Concurrency Control via If-Match headers for state-changing operations,
+    ensuring that mutations applied by automated agents are atomic and consistent
+    across all views.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-jurkovikj-httpapi-agentic-state-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
