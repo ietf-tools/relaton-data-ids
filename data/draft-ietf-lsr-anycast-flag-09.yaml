@@ -1,178 +1,181 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-bess-bgp-sdwan-usage-28
+id: draft-ietf-lsr-anycast-flag-09
 title:
-- content: BGP Usage for SD-WAN Overlay Networks
+- content: OSPFv2 Anycast Property Advertisement
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-bess-bgp-sdwan-usage-28
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-lsr-anycast-flag-09
   type: src
 type: standard
 docid:
-- id: draft-ietf-bess-bgp-sdwan-usage-28
+- id: draft-ietf-lsr-anycast-flag-09
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-bess-bgp-sdwan-usage
+- id: I-D.ietf-lsr-anycast-flag
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-bess-bgp-sdwan-usage
+docnumber: I-D.ietf-lsr-anycast-flag
 date:
 - type: published
-  value: '2025-11-14'
+  value: '2025-12-10'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Linda
+        - content: Ran
           language:
           - en
         - language:
           - en
-          initial: L
+          initial: R
         formatted_initials:
-          content: L.
+          content: R.
           language:
           - en
       surname:
-        content: Dunbar
+        content: Chen
         language:
         - en
       completename:
-        content: Linda Dunbar
+        content: Ran Chen
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Futurewei
+        - content: ZTE Corporation
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Ali
+        - content: Detao
           language:
           - en
         - language:
           - en
-          initial: A
+          initial: D
         formatted_initials:
-          content: A.
+          content: D.
           language:
           - en
       surname:
-        content: Sajassi
+        content: Zhao
         language:
         - en
       completename:
-        content: Ali Sajassi
+        content: Detao Zhao
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cisco
+        - content: ZTE Corporation
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: John
+        - content: Peter
           language:
           - en
         - language:
           - en
-          initial: J
+          initial: P
         formatted_initials:
-          content: J.
+          content: P.
           language:
           - en
       surname:
-        content: Drake
+        content: Psenak
         language:
         - en
       completename:
-        content: John Drake
+        content: Peter Psenak
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Independent
+        - content: Cisco Systems
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Basil
+        - content: Ketan
           language:
           - en
         - language:
           - en
-          initial: B
+          initial: K
         formatted_initials:
-          content: B.
+          content: K.
           language:
           - en
       surname:
-        content: Najem
+        content: Talaulikar
         language:
         - en
       completename:
-        content: Basil Najem
+        content: Ketan Talaulikar
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Bell Canada
+        - content: Cisco Systems
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Susan
+        - content: Changwang
           language:
           - en
         - language:
           - en
-          initial: S
+          initial: C
         formatted_initials:
-          content: S.
+          content: C.
           language:
           - en
       surname:
-        content: Hares
+        content: Lin
         language:
         - en
       completename:
-        content: Susan Hares
+        content: Changwang Lin
         language:
         - en
+    affiliation:
+    - organization:
+        name:
+        - content: H3C
   role:
   - type: author
 version:
-- draft: '28'
-revdate: '2025-11-14'
+- draft: '09'
+revdate: '2025-12-10'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document explores the complexities involved in managing large
-    scale Software Defined WAN (SD-WAN) overlay networks, along with various SD-WAN
-    scenarios. Its objective is to illustrate how a BGP-based control plane can effectively
-    manage these overlay networks by distributing edge service reachability information,
-    WAN port attributes, and underlay path details, thereby minimizing manual provisioning.</p>"
+- content: "<p>An IP prefix may be configured as anycast and as such the same value
+    can be advertised by multiple routers. It is useful for other routers to know
+    that the advertisement is for an anycast identifier. This document defines a new
+    flag in the OSPFv2 Extended Prefix TLV Flags to advertise the anycast property.</p>"
   language:
   - en
   script:
@@ -181,23 +184,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-bess-bgp-sdwan-usage-16
+    id: draft-ietf-lsr-anycast-flag-03
     docid:
-    - id: draft-ietf-bess-bgp-sdwan-usage-16
+    - id: draft-ietf-lsr-anycast-flag-03
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-bess-bgp-sdwan-usage-16
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-bess-bgp-sdwan-usage-29
-    docid:
-    - id: draft-ietf-bess-bgp-sdwan-usage-29
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-bess-bgp-sdwan-usage-29
+      content: draft-ietf-lsr-anycast-flag-03
       format: text/plain
 series:
 - type: main
@@ -208,7 +201,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-bess-bgp-sdwan-usage-28
+  number: draft-ietf-lsr-anycast-flag-09
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
