@@ -13,15 +13,13 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document specifies the architectural model and core protocol behaviors
-    for the Artificial Intelligence Internet Protocol (AIIP). AIIP provides a uniform
-    way for agents, robots, tools, models, and services to be addressed and invoked
-    either natively or through an HTTPS gateway. Beyond addressing, AIIP defines a
-    _stateless compute_ profile in which endpoints do not retain caller data and each
-    invocation returns a signed _execution receipt_. Receipts are REQUIRED to be attested
-    with Trusted Execution Environment (TEE) evidence and MAY additionally include
-    zero-knowledge proofs (ZKPs). Receipts MAY also be anchored to external settlement
-    systems without exposing user data.</p>"
+- content: "<p>This document defines the architectural model and byte-precise envelope
+    framing for the Artificial Intelligence Internet Protocol (AIIP). AIIP enables
+    stateless, verifiable invocation of autonomous systems using a resolve-invoke-receipt
+    pattern over authenticated transports (mutual TLS, QUIC, or an optional HTTPS
+    gateway). Native AIIP is the default for machine-to-machine operation; HTTPS gateways
+    are optional for human-facing access. Each invocation produces a cryptographically
+    verifiable execution receipt, optionally including attestation evidence.</p>"
   language:
   - en
   script:
@@ -47,6 +45,16 @@ relation:
       primary: true
     formattedref:
       content: draft-sogomonian-aiip-architecture-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-sogomonian-aiip-architecture-02
+    docid:
+    - id: draft-sogomonian-aiip-architecture-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-sogomonian-aiip-architecture-02
       format: text/plain
 ext:
   schema-version: v1.0.1
