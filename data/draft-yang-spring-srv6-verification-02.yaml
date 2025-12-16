@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-yang-spring-srv6-verification-01
+id: draft-yang-spring-srv6-verification-02
 title:
 - content: SRv6 Path Verification
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-yang-spring-srv6-verification-01
+- content: https://datatracker.ietf.org/doc/html/draft-yang-spring-srv6-verification-02
   type: src
 type: standard
 docid:
-- id: draft-yang-spring-srv6-verification-01
+- id: draft-yang-spring-srv6-verification-02
   type: Internet-Draft
   primary: true
 - id: I-D.yang-spring-srv6-verification
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.yang-spring-srv6-verification
 date:
 - type: published
-  value: '2025-06-17'
+  value: '2025-12-15'
 contributor:
 - person:
     name:
@@ -137,24 +137,22 @@ contributor:
   role:
   - type: author
 version:
-- draft: '01'
-revdate: '2025-06-17'
+- draft: '02'
+revdate: '2025-12-15'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document proposes a path verification mechanism for SRv6, which
-    adopts a hop-by-hop cryptographic computation on the destination segment identifier
-    at each node, combined with an end-to-end verification at the last hop. Although
-    the HMAC mechanism specified in RFC 8754 can verify the integrity of the entire
-    SID List, if we want to force the SRv6 endpoints the packet must pass through
-    during forwarding, it is necessary to retain some information each time the packet
-    passes through an SRv6 endpoint. This draft proposes an enhancement to HMAC specificed
-    by RFC 8754 that provides the capability to enforce the packet's forwarding path
-    to go through all or certain SRv6 endpoints in the SID List. And this approach
-    also significantly reduces the processing overhead associated with hop-by- hop
-    path verification.</p>"
+- content: "<p>SRv6 is being rapidly deployed and is currently primarily used in trusted-domain
+    backbone networks. However, we have also observed that SRv6 is beginning to extend
+    toward end-user devices, e.g., in SD-WAN deployments. SD-WAN can be deployed in
+    third-party clouds or at customer sites, causing the physical boundary of SRv6
+    to become blurred. This introduces certain security risks, such as packet injection
+    and path manipulation attacks. Section 6 of [I-D.draft-ietf-spring-srv6-security]
+    identifies these risks as well, including Section 6.2.1 on Modification Attacks
+    and Section 6.2.3 on Packet Insertion. This proposal mitigates these risks by
+    enhancing the HMAC mechanism defined in [RFC8754].</p>"
   language:
   - en
   script:
@@ -171,16 +169,6 @@ relation:
     formattedref:
       content: draft-yang-spring-srv6-verification-00
       format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-yang-spring-srv6-verification-02
-    docid:
-    - id: draft-yang-spring-srv6-verification-02
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-yang-spring-srv6-verification-02
-      format: text/plain
 series:
 - type: main
   title:
@@ -190,7 +178,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-yang-spring-srv6-verification-01
+  number: draft-yang-spring-srv6-verification-02
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
