@@ -1,162 +1,130 @@
 ---
 schema-version: v1.2.3
-id: draft-yusef-tls-pqt-dual-certs-00
+id: draft-ietf-opsawg-rfc5706bis-01
 title:
-- content: Post-Quantum Traditional (PQ/T) Hybrid Authentication with Dual Certificates
-    in TLS 1.3
+- content: Guidelines for Considering Operations and Management in IETF Specifications
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-yusef-tls-pqt-dual-certs-00
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-rfc5706bis-01
   type: src
 type: standard
 docid:
-- id: draft-yusef-tls-pqt-dual-certs-00
+- id: draft-ietf-opsawg-rfc5706bis-01
   type: Internet-Draft
   primary: true
-- id: I-D.yusef-tls-pqt-dual-certs
+- id: I-D.ietf-opsawg-rfc5706bis
   type: IETF
   scope: anchor
-docnumber: I-D.yusef-tls-pqt-dual-certs
+docnumber: I-D.ietf-opsawg-rfc5706bis
 date:
 - type: published
-  value: '2025-06-18'
+  value: '2025-12-17'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Rifaat
-          language:
-          - en
         - language:
           - en
-          initial: R
+          initial: B
         formatted_initials:
-          content: R.
+          content: B.
           language:
           - en
       surname:
-        content: Shekh-Yusef
+        content: Claise
         language:
         - en
       completename:
-        content: Rifaat Shekh-Yusef
+        content: Benoît Claise
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Ciena
+        - content: Everything OPS
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Hannes
+        - content: Joe
           language:
           - en
         - language:
           - en
-          initial: H
+          initial: J
         formatted_initials:
-          content: H.
+          content: J.
           language:
           - en
       surname:
-        content: Tschofenig
+        content: Clarke
         language:
         - en
       completename:
-        content: Hannes Tschofenig
+        content: Joe Clarke
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: University of Applied Sciences Bonn-Rhein-Sieg
+        - content: Cisco
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Mike
+        - content: Adrian
           language:
           - en
         - language:
           - en
-          initial: M
+          initial: A
         formatted_initials:
-          content: M.
+          content: A.
           language:
           - en
       surname:
-        content: Ounsworth
+        content: Farrel
         language:
         - en
       completename:
-        content: Mike Ounsworth
+        content: Adrian Farrel
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Entrust
+        - content: Old Dog Consulting
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Yaron
+        - content: Samier
           language:
           - en
         - language:
           - en
-          initial: "Y"
+          initial: S
         formatted_initials:
-          content: Y.
+          content: S.
           language:
           - en
       surname:
-        content: Sheffer
+        content: Barguil
         language:
         - en
       completename:
-        content: Yaron Sheffer
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Intuit
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Tirumaleswar
-          language:
-          - en
-        - language:
-          - en
-          initial: T
-        formatted_initials:
-          content: T.
-          language:
-          - en
-      surname:
-        content: Reddy.K
-        language:
-        - en
-      completename:
-        content: Tirumaleswar Reddy.K
+        content: Samier Barguil
         language:
         - en
     affiliation:
@@ -169,59 +137,90 @@ contributor:
     name:
       given:
         forename:
-        - content: Yaroslav
+        - content: Carlos
           language:
           - en
         - language:
           - en
-          initial: "Y"
+          initial: C
         formatted_initials:
-          content: Y.
+          content: C.
           language:
           - en
       surname:
-        content: Rosomakho
+        content: Pignataro
         language:
         - en
       completename:
-        content: Yaroslav Rosomakho
+        content: Carlos Pignataro
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Zscaler
+        - content: Blue Fern Consulting
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Ran
+          language:
+          - en
+        - language:
+          - en
+          initial: R
+        formatted_initials:
+          content: R.
+          language:
+          - en
+      surname:
+        content: Chen
+        language:
+        - en
+      completename:
+        content: Ran Chen
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: ZTE
   role:
   - type: author
 version:
-- draft: '00'
-revdate: '2025-06-18'
+- draft: '01'
+revdate: '2025-12-17'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document extends the TLS 1.3 authentication mechanism to allow
-    the negotiation and use of two signature algorithms to enable dual- algorithm
-    hybrid authentication, ensuring that an attacker would need to break both algorithms
-    to compromise the session. The two signature algorithms come from two independent
-    certificates that together produce a single Certificate and CertificateVerify
-    message.</p>"
+- content: <p>New Protocols or Protocol Extensions are best designed with due consideration
+    of the functionality needed to operate and manage them. Retrofitting operations
+    and management considerations is suboptimal. The purpose of this document is to
+    provide guidance to authors and reviewers on what operational and management aspects
+    should be addressed when defining New Protocols or Protocol Extensions. This document
+    obsoletes RFC 5706, replacing it completely and updating it with new operational
+    and management techniques and mechanisms. It also updates RFC 2360 to obsolete
+    mandatory MIB creation and introduces a requirement to include an "Operational
+    Considerations" section in new RFCs in the IETF Stream.</p>
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-yusef-tls-pqt-dual-certs-01
+    id: draft-ietf-opsawg-rfc5706bis-00
     docid:
-    - id: draft-yusef-tls-pqt-dual-certs-01
+    - id: draft-ietf-opsawg-rfc5706bis-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-yusef-tls-pqt-dual-certs-01
+      content: draft-ietf-opsawg-rfc5706bis-00
       format: text/plain
 series:
 - type: main
@@ -232,7 +231,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-yusef-tls-pqt-dual-certs-00
+  number: draft-ietf-opsawg-rfc5706bis-01
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

@@ -1,19 +1,19 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-avtcore-rtp-haptics-01
+id: draft-ietf-avtcore-rtp-haptics-13
 title:
-- content: RTP Payload for Haptics
+- content: RTP Payload Format for Haptics
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-avtcore-rtp-haptics-01
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-avtcore-rtp-haptics-13
   type: src
 type: standard
 docid:
-- id: draft-ietf-avtcore-rtp-haptics-01
+- id: draft-ietf-avtcore-rtp-haptics-13
   type: Internet-Draft
   primary: true
 - id: I-D.ietf-avtcore-rtp-haptics
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.ietf-avtcore-rtp-haptics
 date:
 - type: published
-  value: '2024-07-05'
+  value: '2025-12-17'
 contributor:
 - person:
     name:
@@ -81,18 +81,22 @@ contributor:
   role:
   - type: author
 version:
-- draft: '01'
-revdate: '2024-07-05'
+- draft: '13'
+revdate: '2025-12-17'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This memo describes an RTP payload format for the MPEG-I haptic data.
-    A haptic media stream is composed of MIHS units including a MIHS(MPEG-I Haptic
+- content: "<p>This memo specifies an RTP payload format for the MPEG-I haptic data.
+    A haptic media stream is composed of MIHS units including a MIHS (MPEG-I Haptic
     Stream) unit header and zero or more MIHS packets. The RTP payload header format
     allows for packetization of a MIHS unit in an RTP packet payload as well as fragmentation
-    of a MIHS unit into multiple RTP packets.</p>"
+    of a MIHS unit into multiple RTP packets. The original subtype registration for
+    haptics/ hmpg, registered with IANA in RFC9695, did not include any required or
+    optional parameters. This memo updates RFC9695 and the haptics/ hmpg registration
+    to add optional parameters. It also provides SDP usage information for the haptics
+    media type.</p>"
   language:
   - en
   script:
@@ -101,23 +105,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-avtcore-rtp-haptics-00
+    id: draft-ietf-avtcore-rtp-haptics-03
     docid:
-    - id: draft-ietf-avtcore-rtp-haptics-00
+    - id: draft-ietf-avtcore-rtp-haptics-03
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-avtcore-rtp-haptics-00
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-avtcore-rtp-haptics-13
-    docid:
-    - id: draft-ietf-avtcore-rtp-haptics-13
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-avtcore-rtp-haptics-13
+      content: draft-ietf-avtcore-rtp-haptics-03
       format: text/plain
 series:
 - type: main
@@ -128,7 +122,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-avtcore-rtp-haptics-01
+  number: draft-ietf-avtcore-rtp-haptics-13
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
