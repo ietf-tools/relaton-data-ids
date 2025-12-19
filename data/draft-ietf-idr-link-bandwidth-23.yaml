@@ -1,58 +1,62 @@
 ---
 schema-version: v1.2.3
-id: draft-jiang-spring-sr-policy-nrp-04
+id: draft-ietf-idr-link-bandwidth-23
 title:
-- content: Segment Routing Policy Extension for Network Resource Partition
+- content: BGP Link Bandwidth Extended Community
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-jiang-spring-sr-policy-nrp-04
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-link-bandwidth-23
   type: src
 type: standard
 docid:
-- id: draft-jiang-spring-sr-policy-nrp-04
+- id: draft-ietf-idr-link-bandwidth-23
   type: Internet-Draft
   primary: true
-- id: I-D.jiang-spring-sr-policy-nrp
+- id: I-D.ietf-idr-link-bandwidth
   type: IETF
   scope: anchor
-docnumber: I-D.jiang-spring-sr-policy-nrp
+docnumber: I-D.ietf-idr-link-bandwidth
 date:
 - type: published
-  value: '2025-12-07'
+  value: '2025-12-18'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Shengnan
+        - content: Pradosh
           language:
           - en
+        - language:
+          - en
+          initial: P
         formatted_initials:
+          content: P.
           language:
           - en
       surname:
-        content: Yue
+        content: Mohapatra
         language:
         - en
       completename:
-        content: Shengnan Yue
+        content: Pradosh Mohapatra
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: China Mobile
+        - content: Google LLC
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Ran
+        - content: Reshma
           language:
           - en
         - language:
@@ -63,121 +67,149 @@ contributor:
           language:
           - en
       surname:
-        content: Chen
+        content: Das
         language:
         - en
       completename:
-        content: Ran Chen
+        content: Reshma Das
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: ZTE Corporation
+        - content: Juniper Networks, Inc.
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Jie
+        - content: SATYA
           language:
           - en
+        - language:
+          - en
+          initial: M
+        - language:
+          - en
+          initial: R
+        formatted_initials:
+          content: M. R.
+          language:
+          - en
+      surname:
+        content: Satya
+        language:
+        - en
+      completename:
+        content: SATYA R MOHANTY
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Zscaler
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Serge
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Krier
+        language:
+        - en
+      completename:
+        content: Serge Krier
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Cisco Systems
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Rafal
+          language:
+          - en
+        - language:
+          - en
+          initial: R
         - language:
           - en
           initial: J
         formatted_initials:
-          content: J.
+          content: R. J.
           language:
           - en
       surname:
-        content: Dong
+        content: Szarecki
         language:
         - en
       completename:
-        content: Jie Dong
+        content: Rafal Jan Szarecki
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei Technologies
+        - content: Google LLC
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Changwang
+        - content: Akshay
           language:
           - en
         - language:
           - en
-          initial: C
+          initial: A
         formatted_initials:
-          content: C.
+          content: A.
           language:
           - en
       surname:
-        content: Lin
+        content: Gattani
         language:
         - en
       completename:
-        content: Changwang Lin
+        content: Akshay Gattani
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: New H3C Technologies
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Jiang
-          language:
-          - en
-        - language:
-          - en
-          initial: J
-        formatted_initials:
-          content: J.
-          language:
-          - en
-      surname:
-        content: Wenying
-        language:
-        - en
-      completename:
-        content: Jiang Wenying
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: China Mobile
+        - content: Arista Networks
   role:
   - type: author
 version:
-- draft: '04'
-revdate: '2025-12-07'
+- draft: '23'
+revdate: '2025-12-18'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>Segment Routing (SR) Policy is a set of candidate paths, each consisting
-    of one or more segment lists and the associated information. A Network Resource
-    Partition (NRP), is a subset of the resources and associated policies in the underlay
-    network. In SR networks with multiple NRPs, an SR Policy can be associated with
-    a particular NRP. In that case, SR Policy can be used for steering and forwarding
-    traffic which is mapped to the NRP, so that the packets can be processed with
-    the subset of network resources and policy of the NRP for guaranteed performance.
-    Thus the association between SR Policy and NRP needs to be specified. This document
-    defines extensions to the SR Policy Architecture to allow the association of the
-    SR Policy candidate paths with NRPs.</p>"
+- content: "<p>This document defines a BGP Extended Community, the Link Bandwidth
+    Extended Community, which carries bandwidth information to enable weighted load-balancing
+    in multipath scenarios. It specifies the format and processing rules for this
+    extended community type.</p>"
   language:
   - en
   script:
@@ -186,23 +218,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-jiang-spring-sr-policy-nrp-03
+    id: draft-ietf-idr-link-bandwidth-22
     docid:
-    - id: draft-jiang-spring-sr-policy-nrp-03
+    - id: draft-ietf-idr-link-bandwidth-22
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-jiang-spring-sr-policy-nrp-03
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-jiang-spring-sr-policy-nrp-05
-    docid:
-    - id: draft-jiang-spring-sr-policy-nrp-05
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-jiang-spring-sr-policy-nrp-05
+      content: draft-ietf-idr-link-bandwidth-22
       format: text/plain
 series:
 - type: main
@@ -213,7 +235,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-jiang-spring-sr-policy-nrp-04
+  number: draft-ietf-idr-link-bandwidth-23
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
