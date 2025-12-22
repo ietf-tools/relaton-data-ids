@@ -1,56 +1,55 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-teas-actn-poi-applicability-16
+id: draft-joung-detnet-stateless-fair-queuing-06
 title:
-- content: Applicability of Abstraction and Control of Traffic Engineered Networks
-    (ACTN) to Packet Optical Integration (POI)
+- content: Latency Guarantee with Stateless Fair Queuing
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-teas-actn-poi-applicability-16
+- content: https://datatracker.ietf.org/doc/html/draft-joung-detnet-stateless-fair-queuing-06
   type: src
 type: standard
 docid:
-- id: draft-ietf-teas-actn-poi-applicability-16
+- id: draft-joung-detnet-stateless-fair-queuing-06
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-teas-actn-poi-applicability
+- id: I-D.joung-detnet-stateless-fair-queuing
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-teas-actn-poi-applicability
+docnumber: I-D.joung-detnet-stateless-fair-queuing
 date:
 - type: published
-  value: '2025-10-09'
+  value: '2025-12-22'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Fabio
+        - content: Jinoo
           language:
           - en
         - language:
           - en
-          initial: F
+          initial: J
         formatted_initials:
-          content: F.
+          content: J.
           language:
           - en
       surname:
-        content: Peruzzini
+        content: Joung
         language:
         - en
       completename:
-        content: Fabio Peruzzini
+        content: Jinoo Joung
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: FiberCop
+        - content: Sangmyung University
   role:
   - type: author
 - person:
@@ -65,39 +64,67 @@ contributor:
           language:
           - en
       surname:
-        content: Bouquier
+        content: Ryoo
         language:
         - en
       completename:
-        content: Jean-Francois Bouquier
+        content: Jeong-dong Ryoo
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Vodafone
+        - content: ETRI
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Italo
+        - content: Taesik
           language:
           - en
         - language:
           - en
-          initial: I
+          initial: T
         formatted_initials:
-          content: I.
+          content: T.
           language:
           - en
       surname:
-        content: Busi
+        content: Cheung
         language:
         - en
       completename:
-        content: Italo Busi
+        content: Taesik Cheung
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: ETRI
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Yizhou
+          language:
+          - en
+        - language:
+          - en
+          initial: "Y"
+        formatted_initials:
+          content: Y.
+          language:
+          - en
+      surname:
+        content: Li
+        language:
+        - en
+      completename:
+        content: Yizhou Li
         language:
         - en
     affiliation:
@@ -110,74 +137,51 @@ contributor:
     name:
       given:
         forename:
-        - content: Daniel
+        - content: Peng
           language:
           - en
         - language:
           - en
-          initial: D
+          initial: P
         formatted_initials:
-          content: D.
+          content: P.
           language:
           - en
       surname:
-        content: King
+        content: Liu
         language:
         - en
       completename:
-        content: Daniel King
+        content: Peng Liu
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Old Dog Consulting
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Daniele
-          language:
-          - en
-        - language:
-          - en
-          initial: D
-        formatted_initials:
-          content: D.
-          language:
-          - en
-      surname:
-        content: Ceccarelli
-        language:
-        - en
-      completename:
-        content: Daniele Ceccarelli
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Cisco
+        - content: China Mobile
   role:
   - type: author
 version:
-- draft: '16'
-revdate: '2025-10-09'
+- draft: '06'
+revdate: '2025-12-22'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document explores the applicability of the Abstraction and Control
-    of TE Networks (ACTN) architecture to Packet Optical Integration (POI) within
-    the context of IP/MPLS and optical internetworking. It examines the YANG data
-    models defined by the IETF that enable an ACTN-based deployment architecture and
-    highlights specific scenarios pertinent to Service Providers. Existing IETF protocols
-    and data models are identified for each multi-technology scenario (packet over
-    optical), particularly emphasising the Multi-Domain Service Coordinator to Provisioning
-    Network Controller Interface (MPI) within the ACTN architecture</p>"
+- content: "<p>This document specifies the framework and the operational procedure
+    for deterministic networking with a set of rate based work conserving packet schedulers.
+    The framework guarantees end-to-end (E2E) latency bounds to flows. The schedulers
+    in core nodes do not need to maintain flow states. Instead, the entrance node
+    of a flow marks an ideal service completion time according to a fluid model, called
+    Finish Time (FT), of a packet in the packet header. The subsequent core nodes
+    update FT by adding delay factors, which are functions of the flow and the nodes.
+    The packets in the queue of the scheduler are served in the ascending order of
+    FT. This mechanism is called the stateless fair queuing. The result is that flows
+    are isolated from each other almost perfectly. The latency bound of a flow depends
+    only on the flow's intrinsic parameters such as the maximum burst size and the
+    service rate, except the link capacities and the maximum packet length among other
+    flows sharing each output link with the flow.</p>"
   language:
   - en
   script:
@@ -186,23 +190,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-teas-actn-poi-applicability-05
+    id: draft-joung-detnet-stateless-fair-queuing-01
     docid:
-    - id: draft-ietf-teas-actn-poi-applicability-05
+    - id: draft-joung-detnet-stateless-fair-queuing-01
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-teas-actn-poi-applicability-05
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-teas-actn-poi-applicability-17
-    docid:
-    - id: draft-ietf-teas-actn-poi-applicability-17
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-teas-actn-poi-applicability-17
+      content: draft-joung-detnet-stateless-fair-queuing-01
       format: text/plain
 series:
 - type: main
@@ -213,7 +207,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-teas-actn-poi-applicability-16
+  number: draft-joung-detnet-stateless-fair-queuing-06
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
