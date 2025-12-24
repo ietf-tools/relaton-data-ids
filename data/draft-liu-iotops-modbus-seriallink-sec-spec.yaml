@@ -2,7 +2,8 @@
 schema-version: v1.2.3
 id: draft-liu-iotops-modbus-seriallink-sec-spec
 title:
-- content: Modbus Serial Link Communication Security Protocol Specification
+- content: Modbus Serial Link Communication Security Protocol Reference Specification
+    and implementation guide
   language:
   - en
   script:
@@ -13,25 +14,21 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>Currently, the industry has only standardized TLS-based security protocol
-    for Modbus TCP communication. However, for EIA/TIA-485 multi-point systems, whether
-    in 2-wire or 4-wire configurations, cables with a maximum baud rate of 9600 bit/s
-    and AWG26 (or thicker) specifications can reach lengths over 1000m. For RS485
-    Modbus, sufficient cable diameter supports lengths over 1000m, and Category 5
-    cables can reach up to 600m. Despite its widespread use, Modbus serial link communication
-    lacks standardized security mechanisms. As an application-layer industrial communication
-    protocol, Modbus urgently requires targeted security standards for different deployment
-    scenarios to enhance its security framework and ecosystem. For instance, in scenarios
-    involving hardware side-channel attacks or long-distance relay and bridged networks,
-    transmitting plaintext Modbus data over serial links risks data leakage or malicious
-    modification by intermediaries, posing significant data and command security threats.
-    To address this, it is critical to improve the communication security of Modbus
-    in serial link mode by introducing proper encryption and authentication mechanisms.
-    A proposed Modbus serial link security reference document defines simple encryption
-    and authentication methods to significantly enhance security while maintaining
-    compatibility. This provides a straightforward upgrade path reference for existing
-    Modbus-based devices, ensuring secure and practical applications in industrial
-    control systems.</p>"
+- content: "<p>The Modbus TCP protocol has adopted TLS-based security standards; however,
+    Modbus serial communication over EIA/TIA-485 multi-point systems, commonly used
+    in 2-wire or 4-wire configurations, lacks standardized security mechanisms. These
+    systems support cable lengths exceeding 1000m at baud rates up to 9600 bit/s with
+    AWG26 or thicker cables, while Category 5 cables can reach up to 600m. As an application
+    layer protocol, despite its widespread application, the absence of encryption
+    and authentication in Modbus protocol via serial links exposes plaintext data
+    to risks such as MIM interception, modification under attacks such as side-channel
+    analysis etc., particularly in long-distance or bridged network scenarios. Enhancing
+    Modbus serial link security requires introducing proper encryption and authentication
+    methods tailored to varied deployment environments onsidering the characteristics
+    of serial links. A proposed security standard guide outlines lightweight encryption
+    and authentication mechanisms to improve confidentiality and integrity while maintaining
+    compatibility with existing Modbus devices, offering a practical upgrade path
+    for secure industrial control systems.</p>"
   language:
   - en
   script:
@@ -97,6 +94,16 @@ relation:
       primary: true
     formattedref:
       content: draft-liu-iotops-modbus-seriallink-sec-spec-05
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-liu-iotops-modbus-seriallink-sec-spec-06
+    docid:
+    - id: draft-liu-iotops-modbus-seriallink-sec-spec-06
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-liu-iotops-modbus-seriallink-sec-spec-06
       format: text/plain
 ext:
   schema-version: v1.0.1

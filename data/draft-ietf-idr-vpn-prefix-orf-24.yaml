@@ -1,181 +1,187 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-lsr-anycast-flag-08
+id: draft-ietf-idr-vpn-prefix-orf-24
 title:
-- content: OSPFv2 Anycast Property Advertisement
+- content: VPN Prefix Outbound Route Filter (VPN Prefix ORF) for BGP-4
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-lsr-anycast-flag-08
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-vpn-prefix-orf-24
   type: src
 type: standard
 docid:
-- id: draft-ietf-lsr-anycast-flag-08
+- id: draft-ietf-idr-vpn-prefix-orf-24
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-lsr-anycast-flag
+- id: I-D.ietf-idr-vpn-prefix-orf
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-lsr-anycast-flag
+docnumber: I-D.ietf-idr-vpn-prefix-orf
 date:
 - type: published
-  value: '2025-11-18'
+  value: '2025-12-23'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Ran
+        - content: Wei
           language:
           - en
         - language:
           - en
-          initial: R
+          initial: W
         formatted_initials:
-          content: R.
+          content: W.
           language:
           - en
       surname:
-        content: Chen
+        content: Wang
         language:
         - en
       completename:
-        content: Ran Chen
+        content: Wei Wang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: ZTE Corporation
+        - content: China Telecom
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Detao
+        - content: Aijun
           language:
           - en
         - language:
           - en
-          initial: D
+          initial: A
         formatted_initials:
-          content: D.
+          content: A.
           language:
           - en
       surname:
-        content: Zhao
+        content: Wang
         language:
         - en
       completename:
-        content: Detao Zhao
+        content: Aijun Wang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: ZTE Corporation
+        - content: China Telecom
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Peter
+        - content: Haibo
           language:
           - en
         - language:
           - en
-          initial: P
+          initial: H
         formatted_initials:
-          content: P.
+          content: H.
           language:
           - en
       surname:
-        content: Psenak
+        content: Wang
         language:
         - en
       completename:
-        content: Peter Psenak
+        content: Haibo Wang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems
+        - content: Huawei Technologies
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Ketan
+        - content: Gyan
           language:
           - en
         - language:
           - en
-          initial: K
+          initial: G
+        - language:
+          - en
+          initial: S
         formatted_initials:
-          content: K.
+          content: G. S.
           language:
           - en
       surname:
-        content: Talaulikar
+        content: Mishra
         language:
         - en
       completename:
-        content: Ketan Talaulikar
+        content: Gyan Mishra
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems
+        - content: Verizon Inc.
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Changwang
+        - content: Jie
           language:
           - en
         - language:
           - en
-          initial: C
+          initial: J
         formatted_initials:
-          content: C.
+          content: J.
           language:
           - en
       surname:
-        content: Lin
+        content: Dong
         language:
         - en
       completename:
-        content: Changwang Lin
+        content: Jie Dong
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: H3C
+        - content: Huawei Technologies
   role:
   - type: author
 version:
-- draft: '08'
-revdate: '2025-11-18'
+- draft: '24'
+revdate: '2025-12-23'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>An IP prefix may be configured as anycast and as such the same value
-    can be advertised by multiple routers. It is useful for other routers to know
-    that the advertisement is for an anycast identifier. This document defines a new
-    flag in the OSPFv2 Extended Prefix TLV Flags to advertise the anycast property.</p>"
+- content: "<p>This draft defines a new type of Outbound Route Filter (ORF), known
+    as the Virtual Private Network (VPN) Prefix ORF. The VPN Prefix ORF mechanism
+    is applicable when VPN routes from different Virtual Routing and Forwarding (VRF)
+    instances are exchanged through a single shared Border Gateway Protocol (BGP)
+    session.The purpose of VPN Prefix ORF mechanism is to control the overload of
+    VPN routes based on RT. With this mechanism, the overload can be limited within
+    the minimum range.</p>"
   language:
   - en
   script:
@@ -184,23 +190,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-lsr-anycast-flag-03
+    id: draft-ietf-idr-vpn-prefix-orf-09
     docid:
-    - id: draft-ietf-lsr-anycast-flag-03
+    - id: draft-ietf-idr-vpn-prefix-orf-09
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-lsr-anycast-flag-03
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-lsr-anycast-flag-10
-    docid:
-    - id: draft-ietf-lsr-anycast-flag-10
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-lsr-anycast-flag-10
+      content: draft-ietf-idr-vpn-prefix-orf-09
       format: text/plain
 series:
 - type: main
@@ -211,7 +207,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-lsr-anycast-flag-08
+  number: draft-ietf-idr-vpn-prefix-orf-24
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

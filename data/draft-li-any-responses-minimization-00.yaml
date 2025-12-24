@@ -1,207 +1,186 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-lsr-anycast-flag-08
+id: draft-li-any-responses-minimization-00
 title:
-- content: OSPFv2 Anycast Property Advertisement
+- content: Minimizing ANY-Query Responses at Recursive Resolvers
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-lsr-anycast-flag-08
+- content: https://datatracker.ietf.org/doc/html/draft-li-any-responses-minimization-00
   type: src
 type: standard
 docid:
-- id: draft-ietf-lsr-anycast-flag-08
+- id: draft-li-any-responses-minimization-00
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-lsr-anycast-flag
+- id: I-D.li-any-responses-minimization
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-lsr-anycast-flag
+docnumber: I-D.li-any-responses-minimization
 date:
 - type: published
-  value: '2025-11-18'
+  value: '2025-12-23'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Ran
-          language:
-          - en
         - language:
           - en
-          initial: R
+          initial: Z
         formatted_initials:
-          content: R.
+          content: Z.
           language:
           - en
       surname:
-        content: Chen
+        content: 李子涵
         language:
         - en
       completename:
-        content: Ran Chen
+        content: 李子涵
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: ZTE Corporation
+        - content: Chinese Academy of Sciences
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Detao
+        - content: Wenhao
           language:
           - en
         - language:
           - en
-          initial: D
+          initial: W
         formatted_initials:
-          content: D.
+          content: W.
           language:
           - en
       surname:
-        content: Zhao
+        content: Wu
         language:
         - en
       completename:
-        content: Detao Zhao
+        content: Wenhao Wu
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: ZTE Corporation
+        - content: Chinese Academy of Sciences
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Peter
+        - content: Jin
           language:
           - en
         - language:
           - en
-          initial: P
+          initial: J
         formatted_initials:
-          content: P.
+          content: J.
           language:
           - en
       surname:
-        content: Psenak
+        content: Yan
         language:
         - en
       completename:
-        content: Peter Psenak
+        content: Jin Yan
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems
+        - content: China Internet Network Information Center
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Ketan
+        - content: Zhenyu
           language:
           - en
         - language:
           - en
-          initial: K
+          initial: Z
         formatted_initials:
-          content: K.
+          content: Z.
           language:
           - en
       surname:
-        content: Talaulikar
+        content: Li
         language:
         - en
       completename:
-        content: Ketan Talaulikar
+        content: Zhenyu Li
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems
+        - content: Chinese Academy of Sciences
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Changwang
+        - content: Zhiwei
           language:
           - en
         - language:
           - en
-          initial: C
+          initial: Z
         formatted_initials:
-          content: C.
+          content: Z.
           language:
           - en
       surname:
-        content: Lin
+        content: Yan
         language:
         - en
       completename:
-        content: Changwang Lin
+        content: Zhiwei Yan
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: H3C
+        - content: China Internet Network Information Center
   role:
   - type: author
 version:
-- draft: '08'
-revdate: '2025-11-18'
+- draft: '00'
+revdate: '2025-12-23'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>An IP prefix may be configured as anycast and as such the same value
-    can be advertised by multiple routers. It is useful for other routers to know
-    that the advertisement is for an anycast identifier. This document defines a new
-    flag in the OSPFv2 Extended Prefix TLV Flags to advertise the anycast property.</p>"
+- content: <p>The " ANY " query type in DNS requests the server to return all available
+    resource records for a given domain name. While RFC 8482 defines a mechanism for
+    authoritative servers to minimize ANY responses, a recursive resolver may still
+    generate an ANY query response directly from its cache, thereby bypassing the
+    authoritative side's ANY query minimization strategy. This document provides supplementary
+    guidance for recursive resolvers on processing ANY queries to mitigate potential
+    operational and security issues.</p>
   language:
   - en
   script:
   - Latn
   format: text/html
-relation:
-- type: updates
-  bibitem:
-    id: draft-ietf-lsr-anycast-flag-03
-    docid:
-    - id: draft-ietf-lsr-anycast-flag-03
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-lsr-anycast-flag-03
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-lsr-anycast-flag-10
-    docid:
-    - id: draft-ietf-lsr-anycast-flag-10
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-lsr-anycast-flag-10
-      format: text/plain
 series:
 - type: main
   title:
@@ -211,7 +190,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-lsr-anycast-flag-08
+  number: draft-li-any-responses-minimization-00
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
