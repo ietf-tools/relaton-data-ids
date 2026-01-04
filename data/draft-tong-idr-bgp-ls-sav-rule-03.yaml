@@ -1,108 +1,97 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-nmop-network-incident-yang-06
+id: draft-tong-idr-bgp-ls-sav-rule-03
 title:
-- content: A YANG Data Model for Network Incident Management
+- content: Advertisement of Multi-Sourced SAV Rules using BGP Link-State
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-nmop-network-incident-yang-06
+- content: https://datatracker.ietf.org/doc/html/draft-tong-idr-bgp-ls-sav-rule-03
   type: src
 type: standard
 docid:
-- id: draft-ietf-nmop-network-incident-yang-06
+- id: draft-tong-idr-bgp-ls-sav-rule-03
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-nmop-network-incident-yang
+- id: I-D.tong-idr-bgp-ls-sav-rule
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-nmop-network-incident-yang
+docnumber: I-D.tong-idr-bgp-ls-sav-rule
 date:
 - type: published
-  value: '2025-10-12'
+  value: '2026-01-03'
 contributor:
 - person:
     name:
       given:
-        forename:
-        - content: Tong
-          language:
-          - en
-        - language:
-          - en
-          initial: T
         formatted_initials:
-          content: T.
           language:
           - en
       surname:
-        content: Hu
+        content: tongtian124
         language:
         - en
       completename:
-        content: Tong Hu
+        content: tongtian124
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: CMCC
+        - content: China Unicom
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Luis
+        - content: Dan
           language:
           - en
         - language:
           - en
-          initial: L
-        - language:
-          - en
-          initial: M
+          initial: D
         formatted_initials:
-          content: L. M.
+          content: D.
           language:
           - en
       surname:
-        content: Contreras
+        content: Li
         language:
         - en
       completename:
-        content: Luis M. Contreras
+        content: Dan Li
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Telefonica
+        - content: Tsinghua University
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Qin
+        - content: Nan
           language:
           - en
         - language:
           - en
-          initial: Q
+          initial: "N"
         formatted_initials:
-          content: Q.
+          content: N.
           language:
           - en
       surname:
-        content: Wu
+        content: Geng
         language:
         - en
       completename:
-        content: Qin Wu
+        content: Nan Geng
         language:
         - en
     affiliation:
@@ -115,7 +104,7 @@ contributor:
     name:
       given:
         forename:
-        - content: Nigel
+        - content: Nan
           language:
           - en
         - language:
@@ -126,59 +115,86 @@ contributor:
           language:
           - en
       surname:
-        content: Davis
+        content: Wang
         language:
         - en
       completename:
-        content: Nigel Davis
+        content: Nan Wang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Ciena
+        - content: China Unicom
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Chong
+        - content: Shunwan
           language:
           - en
         - language:
           - en
-          initial: C
+          initial: S
         formatted_initials:
-          content: C.
+          content: S.
           language:
           - en
       surname:
-        content: Feng
+        content: Zhuang
         language:
         - en
       completename:
-        content: Chong Feng
+        content: Shunwan Zhuang
         language:
         - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Jing
+          language:
+          - en
+        - language:
+          - en
+          initial: J
+        formatted_initials:
+          content: J.
+          language:
+          - en
+      surname:
+        content: Zhao
+        language:
+        - en
+      completename:
+        content: Jing Zhao
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: China Unicom
   role:
   - type: author
 version:
-- draft: '06'
-revdate: '2025-10-12'
+- draft: '03'
+revdate: '2026-01-03'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>A network incident refers to an unexpected interruption of a network
-    service, degradation of a network service quality, or sub-health of a network
-    service. Different data sources including alarms, metrics, and other anomaly information
-    can be aggregated into a few of network incidents through data correlation analysis
-    and the service impact analysis. This document defines a YANG Module for the network
-    incident lifecycle management. This YANG module is meant to provide a standard
-    way to report, diagnose, and help resolve network incidents for the sake of network
-    service health and probable cause analysis.</p>"
+- content: "<p>This document describes the protocol extensions of BGP Link-State to
+    collect source address validation (SAV) rules generated by different protocols/mechanisms,
+    to facilitate multi-sourced SAV rules monitoring and management.</p>"
   language:
   - en
   script:
@@ -187,23 +203,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-nmop-network-incident-yang-01
+    id: draft-tong-idr-bgp-ls-sav-rule-01
     docid:
-    - id: draft-ietf-nmop-network-incident-yang-01
+    - id: draft-tong-idr-bgp-ls-sav-rule-01
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-nmop-network-incident-yang-01
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-nmop-network-incident-yang-07
-    docid:
-    - id: draft-ietf-nmop-network-incident-yang-07
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-nmop-network-incident-yang-07
+      content: draft-tong-idr-bgp-ls-sav-rule-01
       format: text/plain
 series:
 - type: main
@@ -214,7 +220,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-nmop-network-incident-yang-06
+  number: draft-tong-idr-bgp-ls-sav-rule-03
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

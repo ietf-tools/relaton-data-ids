@@ -1,108 +1,130 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-nmop-network-incident-yang-06
+id: draft-he-idr-bgp-flowspec-ifit-02
 title:
-- content: A YANG Data Model for Network Incident Management
+- content: BGP Extensions to Enable BGP FlowSpec based IFIT
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-nmop-network-incident-yang-06
+- content: https://datatracker.ietf.org/doc/html/draft-he-idr-bgp-flowspec-ifit-02
   type: src
 type: standard
 docid:
-- id: draft-ietf-nmop-network-incident-yang-06
+- id: draft-he-idr-bgp-flowspec-ifit-02
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-nmop-network-incident-yang
+- id: I-D.he-idr-bgp-flowspec-ifit
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-nmop-network-incident-yang
+docnumber: I-D.he-idr-bgp-flowspec-ifit
 date:
 - type: published
-  value: '2025-10-12'
+  value: '2026-01-03'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Tong
-          language:
-          - en
         - language:
           - en
-          initial: T
+          initial: X
         formatted_initials:
-          content: T.
+          content: X.
           language:
           - en
       surname:
-        content: Hu
+        content: hexiaoming
         language:
         - en
       completename:
-        content: Tong Hu
+        content: hexiaoming
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: CMCC
+        - content: China Telecom
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Luis
+        - content: Aijun
           language:
           - en
         - language:
           - en
-          initial: L
-        - language:
-          - en
-          initial: M
+          initial: A
         formatted_initials:
-          content: L. M.
+          content: A.
           language:
           - en
       surname:
-        content: Contreras
+        content: Wang
         language:
         - en
       completename:
-        content: Luis M. Contreras
+        content: Aijun Wang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Telefonica
+        - content: China Telecom
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Qin
+        - content: Weiqiang
           language:
           - en
         - language:
           - en
-          initial: Q
+          initial: W
         formatted_initials:
-          content: Q.
+          content: W.
           language:
           - en
       surname:
-        content: Wu
+        content: Cheng
         language:
         - en
       completename:
-        content: Qin Wu
+        content: Weiqiang Cheng
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: China Mobile
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Jie
+          language:
+          - en
+        - language:
+          - en
+          initial: J
+        formatted_initials:
+          content: J.
+          language:
+          - en
+      surname:
+        content: Dong
+        language:
+        - en
+      completename:
+        content: Jie Dong
         language:
         - en
     affiliation:
@@ -115,70 +137,46 @@ contributor:
     name:
       given:
         forename:
-        - content: Nigel
+        - content: Xiao
           language:
           - en
         - language:
           - en
-          initial: "N"
+          initial: X
         formatted_initials:
-          content: N.
+          content: X.
           language:
           - en
       surname:
-        content: Davis
+        content: Min
         language:
         - en
       completename:
-        content: Nigel Davis
+        content: Xiao Min
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Ciena
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Chong
-          language:
-          - en
-        - language:
-          - en
-          initial: C
-        formatted_initials:
-          content: C.
-          language:
-          - en
-      surname:
-        content: Feng
-        language:
-        - en
-      completename:
-        content: Chong Feng
-        language:
-        - en
+        - content: ZTE Corp.
   role:
   - type: author
 version:
-- draft: '06'
-revdate: '2025-10-12'
+- draft: '02'
+revdate: '2026-01-03'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>A network incident refers to an unexpected interruption of a network
-    service, degradation of a network service quality, or sub-health of a network
-    service. Different data sources including alarms, metrics, and other anomaly information
-    can be aggregated into a few of network incidents through data correlation analysis
-    and the service impact analysis. This document defines a YANG Module for the network
-    incident lifecycle management. This YANG module is meant to provide a standard
-    way to report, diagnose, and help resolve network incidents for the sake of network
-    service health and probable cause analysis.</p>"
+- content: "<p>Border Gateway Protocol (BGP) Flow Specification (FlowSpec) is an extension
+    to BGP that supports the dissemination of traffic flow specifications and resulting
+    actions to be taken on packets in a specified flow. In-situ Flow Information Telemetry
+    (IFIT) denotes a family of flow-oriented on-path telemetry techniques, which can
+    provide high-precision flow insight and real-time network issue notification.
+    This document defines BGP extensions to distribute BGP FlowSpec based traffic
+    filtering carrying IFIT information. So IFIT behavior can be applied to the specified
+    flow automatically.</p>"
   language:
   - en
   script:
@@ -187,23 +185,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-nmop-network-incident-yang-01
+    id: draft-he-idr-bgp-flowspec-ifit-00
     docid:
-    - id: draft-ietf-nmop-network-incident-yang-01
+    - id: draft-he-idr-bgp-flowspec-ifit-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-nmop-network-incident-yang-01
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-nmop-network-incident-yang-07
-    docid:
-    - id: draft-ietf-nmop-network-incident-yang-07
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-nmop-network-incident-yang-07
+      content: draft-he-idr-bgp-flowspec-ifit-00
       format: text/plain
 series:
 - type: main
@@ -214,7 +202,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-nmop-network-incident-yang-06
+  number: draft-he-idr-bgp-flowspec-ifit-02
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
