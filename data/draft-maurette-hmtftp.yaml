@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-maurette-hmtftp
 title:
-- content: HMTFTP - HMAC-based Trivial File Transfer Protocol (v0.1)
+- content: 'HMTFTP: HMAC-Derived TFTP with Optional AEAD Protection (v0.2)'
   language:
   - en
   script:
@@ -13,13 +13,12 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>HMTFTP ([RFC1350]) is a lightweight UDP file transfer protocol that
-    preserves TFTP-style simplicity (block-and-ACK) while adding an optional authenticated
-    encryption mode using AEAD AES-256-GCM with pre-shared keys derived via HKDF-SHA-256.
-    The protocol targets managed environments (e.g., CPEs, OpenWrt, embedded devices)
-    where provisioning and configuration have constrained requirements. This document
-    specifies v0.1, including message formats, negotiation, cryptographic processing,
-    timers, and security considerations.</p>"
+- content: "<p>HMTFTP is a lightweight UDP file transfer protocol that preserves the
+    simplicity of TFTP (block-and-ACK) while adding a structured TLV extension mechanism
+    and an optional authenticated-encryption mode. When negotiated, DATA payloads
+    are protected with AEAD AES-256-GCM and keys are derived with HKDF-SHA-256 from
+    a pre-shared key (PSK). HMTFTP uses UDP port TBD by default (requested: 6369;
+    configurable).</p>"
   language:
   - en
   script:
@@ -35,6 +34,16 @@ relation:
       primary: true
     formattedref:
       content: draft-maurette-hmtftp-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-maurette-hmtftp-01
+    docid:
+    - id: draft-maurette-hmtftp-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-maurette-hmtftp-01
       format: text/plain
 ext:
   schema-version: v1.0.1
