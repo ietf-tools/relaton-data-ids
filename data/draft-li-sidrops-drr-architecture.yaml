@@ -15,20 +15,20 @@ docid:
 abstract:
 - content: "<p>The Resource Public Key Infrastructure (RPKI) plays a crucial role
     in securing inter-domain routing. However, the current RPKI Repository system
-    suffers from fundamental limitations in reliability, scalability, and security.
+    suffers from fundamental limitations in reliability, scalability, and consistency.
     In particular, single-point failures at repository publication points (PPs), the
-    growing number of bidirectional connections with relying parties (RPs), and the
-    lack of mechanisms to mitigate misbehavior by certification authorities (CAs)
-    pose significant risks to the integrity, authority, and resilience of the global
-    RPKI ecosystem. This document proposes the Decentralized RPKI Repository (dRR),
-    a novel repository architecture that decouples RPKI object signing from data distribution.
-    dRR introduces a distributed federation of certificate servers (CSs) and a layer
-    of Monitors to achieve robust, scalable, and auditable RPKI data management. The
-    architecture maintains full compatibility with the existing RPKI trust model rooted
-    in the five RIR trust anchors, enabling incremental deployment without disrupting
-    current relying parties (RPs) validation semantics. By doing so, dRR addresses
-    longstanding repository challenges and enhances the overall trustworthiness and
-    efficiency of RPKI-based routing security.</p>"
+    growing number of bidirectional connections between PPs and relying parties (RPs),
+    and the lack of a globally consistent historical RPKI data view pose significant
+    risks to the resilience, integrity, and authority of the global RPKI ecosystem.
+    This document proposes the Decentralized RPKI Repository (dRR), a novel repository
+    architecture that decouples RPKI object signing authority from RPKI object management
+    authority (e.g., storage and distribution). dRR introduces a distributed group
+    of certificate servers (CSs) and a layer of Monitors to achieve robust, scalable,
+    and auditable RPKI data management. The architecture maintains full compatibility
+    with the existing RPKI trust model rooted in the five RIR trust anchors, enabling
+    incremental deployment without disrupting current relying parties (RPs) validation
+    semantics. By doing so, dRR addresses longstanding repository challenges and enhances
+    the overall efficiency and trustworthiness of RPKI-based routing security.</p>"
   language:
   - en
   script:
@@ -44,6 +44,16 @@ relation:
       primary: true
     formattedref:
       content: draft-li-sidrops-drr-architecture-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-li-sidrops-drr-architecture-01
+    docid:
+    - id: draft-li-sidrops-drr-architecture-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-li-sidrops-drr-architecture-01
       format: text/plain
 ext:
   schema-version: v1.0.1
