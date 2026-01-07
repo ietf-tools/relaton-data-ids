@@ -1,62 +1,90 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-openpgp-pqc-13
+id: draft-ietf-lamps-macaddress-on-01
 title:
-- content: Post-Quantum Cryptography in OpenPGP
+- content: Media Access Control (MAC) Addresses in X.509 Certificates
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-openpgp-pqc-13
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-lamps-macaddress-on-01
   type: src
 type: standard
 docid:
-- id: draft-ietf-openpgp-pqc-13
+- id: draft-ietf-lamps-macaddress-on-01
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-openpgp-pqc
+- id: I-D.ietf-lamps-macaddress-on
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-openpgp-pqc
+docnumber: I-D.ietf-lamps-macaddress-on
 date:
 - type: published
-  value: '2025-10-14'
+  value: '2026-01-06'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Stavros
+        - content: Russ
           language:
           - en
         - language:
           - en
-          initial: S
+          initial: R
         formatted_initials:
-          content: S.
+          content: R.
           language:
           - en
       surname:
-        content: Kousidis
+        content: Housley
         language:
         - en
       completename:
-        content: Stavros Kousidis
+        content: Russ Housley
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: BSI
+        - content: Vigil Security, LLC
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Johannes
+        - content: Corey
+          language:
+          - en
+        - language:
+          - en
+          initial: C
+        formatted_initials:
+          content: C.
+          language:
+          - en
+      surname:
+        content: Bonnell
+        language:
+        - en
+      completename:
+        content: Corey Bonnell
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: DigiCert, Inc.
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Joe
           language:
           - en
         - language:
@@ -67,91 +95,61 @@ contributor:
           language:
           - en
       surname:
-        content: Roth
+        content: Mandel
         language:
         - en
       completename:
-        content: Johannes Roth
+        content: Joe Mandel
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: MTG AG
+        - content: AKAYLA, Inc.
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Falko
+        - content: Tomofumi
           language:
           - en
         - language:
           - en
-          initial: F
+          initial: T
         formatted_initials:
-          content: F.
+          content: T.
           language:
           - en
       surname:
-        content: Strenzke
+        content: Okubo
         language:
         - en
       completename:
-        content: Falko Strenzke
+        content: Tomofumi Okubo
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: MTG AG
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Aron
-          language:
-          - en
-        - language:
-          - en
-          initial: A
-        formatted_initials:
-          content: A.
-          language:
-          - en
-      surname:
-        content: Wussler
-        language:
-        - en
-      completename:
-        content: Aron Wussler
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Proton AG
+        - content: Penguin Securities Pte. Ltd.
   role:
   - type: author
 version:
-- draft: '13'
-revdate: '2025-10-14'
+- draft: '01'
+revdate: '2026-01-06'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document defines a post-quantum public-key algorithm extension
-    for the OpenPGP protocol. Given the generally assumed threat of a cryptographically
-    relevant quantum computer, this extension provides a basis for long-term secure
-    OpenPGP signatures and ciphertexts. Specifically, it defines composite public-key
-    encryption based on ML- KEM (formerly CRYSTALS-Kyber), composite public-key signatures
-    based on ML-DSA (formerly CRYSTALS-Dilithium), both in combination with elliptic
-    curve cryptography, and SLH-DSA (formerly SPHINCS+) as a standalone public key
-    signature scheme.</p>"
+- content: "<p>This document defines a new otherName for inclusion in the X.509 Subject
+    Alternative Name (SAN) and Issuer Alternative Name (IAN) extensions to carry an
+    IEEE Media Access Control (MAC) address. The new name form makes it possible to
+    bind a layer-2 interface identifier to a public key certificate. Additionally,
+    this document defines how constraints on this name form can be encoded and processed
+    in the X.509 Name Constraints extension.</p>"
   language:
   - en
   script:
@@ -160,23 +158,23 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-openpgp-pqc-10
+    id: draft-ietf-lamps-macaddress-on-00
     docid:
-    - id: draft-ietf-openpgp-pqc-10
+    - id: draft-ietf-lamps-macaddress-on-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-openpgp-pqc-10
+      content: draft-ietf-lamps-macaddress-on-00
       format: text/plain
 - type: updatedBy
   bibitem:
-    id: draft-ietf-openpgp-pqc-16
+    id: draft-ietf-lamps-macaddress-on-02
     docid:
-    - id: draft-ietf-openpgp-pqc-16
+    - id: draft-ietf-lamps-macaddress-on-02
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-openpgp-pqc-16
+      content: draft-ietf-lamps-macaddress-on-02
       format: text/plain
 series:
 - type: main
@@ -187,7 +185,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-openpgp-pqc-13
+  number: draft-ietf-lamps-macaddress-on-01
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

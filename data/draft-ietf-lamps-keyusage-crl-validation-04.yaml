@@ -1,57 +1,30 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-lamps-macaddress-on-00
+id: draft-ietf-lamps-keyusage-crl-validation-04
 title:
-- content: Media Access Control (MAC) Addresses in X.509 Certificates
+- content: Clarification to Processing Key Usage Values During Certificate Revocation
+    List (CRL) Validation
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-lamps-macaddress-on-00
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-lamps-keyusage-crl-validation-04
   type: src
 type: standard
 docid:
-- id: draft-ietf-lamps-macaddress-on-00
+- id: draft-ietf-lamps-keyusage-crl-validation-04
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-lamps-macaddress-on
+- id: I-D.ietf-lamps-keyusage-crl-validation
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-lamps-macaddress-on
+docnumber: I-D.ietf-lamps-keyusage-crl-validation
 date:
 - type: published
-  value: '2025-11-04'
+  value: '2026-01-06'
 contributor:
-- person:
-    name:
-      given:
-        forename:
-        - content: Russ
-          language:
-          - en
-        - language:
-          - en
-          initial: R
-        formatted_initials:
-          content: R.
-          language:
-          - en
-      surname:
-        content: Housley
-        language:
-        - en
-      completename:
-        content: Russ Housley
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Vigil Security, LLC
-  role:
-  - type: author
 - person:
     name:
       given:
@@ -84,28 +57,28 @@ contributor:
     name:
       given:
         forename:
-        - content: Joe
+        - content: Tadahiko
           language:
           - en
         - language:
           - en
-          initial: J
+          initial: T
         formatted_initials:
-          content: J.
+          content: T.
           language:
           - en
       surname:
-        content: Mandel
+        content: Ito
         language:
         - en
       completename:
-        content: Joe Mandel
+        content: Tadahiko Ito
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: AKAYLA, Inc.
+        - content: SECOM CO., LTD.
   role:
   - type: author
 - person:
@@ -137,34 +110,35 @@ contributor:
   role:
   - type: author
 version:
-- draft: '00'
-revdate: '2025-11-04'
+- draft: '04'
+revdate: '2026-01-06'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document defines a new otherName for inclusion in the X.509 Subject
-    Alternative Name (SAN) and Issuer Alternative Name (IAN) extensions to carry an
-    IEEE Media Access Control (MAC) address. The new name form makes it possible to
-    bind a layer-2 interface identifier to a public key certificate. Additionally,
-    this document defines how constraints on this name form can be encoded and processed
-    in the X.509 Name Constraints extension.</p>"
+- content: "<p>RFC 5280 (Internet X.509 Public Key Infrastructure Certificate and
+    Certificate Revocation List (CRL) Profile) defines the profile of X.509 certificates
+    and CRLs for use in the Internet. Section 4.2.1.3 of RFC 5280 requires CRL issuer
+    certificates to contain the keyUsage extension with the cRLSign bit asserted.
+    However, the CRL validation algorithm specified in Section 6.3 of RFC 5280 does
+    not explicitly include a corresponding check for the presence of the keyUsage
+    certificate extension. This document updates RFC 5280 to require that check.</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-ietf-lamps-macaddress-on-01
+    id: draft-ietf-lamps-keyusage-crl-validation-01
     docid:
-    - id: draft-ietf-lamps-macaddress-on-01
+    - id: draft-ietf-lamps-keyusage-crl-validation-01
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-lamps-macaddress-on-01
+      content: draft-ietf-lamps-keyusage-crl-validation-01
       format: text/plain
 series:
 - type: main
@@ -175,7 +149,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-lamps-macaddress-on-00
+  number: draft-ietf-lamps-keyusage-crl-validation-04
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
