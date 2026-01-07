@@ -1,28 +1,28 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-pce-bier-te-00
+id: draft-ietf-bier-bgp-ls-bier-ext-21
 title:
-- content: PCEP Extensions for BIER-TE
+- content: BGP Link-State extensions for BIER
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-pce-bier-te-00
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-bier-bgp-ls-bier-ext-21
   type: src
 type: standard
 docid:
-- id: draft-ietf-pce-bier-te-00
+- id: draft-ietf-bier-bgp-ls-bier-ext-21
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-pce-bier-te
+- id: I-D.ietf-bier-bgp-ls-bier-ext
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-pce-bier-te
+docnumber: I-D.ietf-bier-bgp-ls-bier-ext
 date:
 - type: published
-  value: '2023-11-04'
+  value: '2026-01-06'
 contributor:
 - person:
     name:
@@ -84,144 +84,131 @@ contributor:
     name:
       given:
         forename:
-        - content: Huaimo
+        - content: Vengada
           language:
           - en
         - language:
           - en
-          initial: H
+          initial: V
+        - language:
+          - en
+          initial: P
         formatted_initials:
-          content: H.
+          content: V. P.
           language:
           - en
       surname:
-        content: Chen
+        content: Govindan
         language:
         - en
       completename:
-        content: Huaimo Chen
+        content: Vengada Prasad Govindan
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Futurewei
+        - content: Cisco
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Senthil
+        - content: IJsbrand
           language:
           - en
         - language:
           - en
-          initial: S
+          initial: I
         formatted_initials:
-          content: S.
+          content: I.
           language:
           - en
       surname:
-        content: Dhanaraj
+        content: Wijnands
         language:
         - en
       completename:
-        content: Senthil Dhanaraj
+        content: IJsbrand Wijnands
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Futurewei
+        - content: Individual
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Fengwei
+        - content: Zhaohui
           language:
           - en
         - language:
           - en
-          initial: F
+          initial: Z
+        - language:
+          - en
+          initial: J
         formatted_initials:
-          content: F.
+          content: Z. J.
           language:
           - en
       surname:
-        content: Qin
+        content: Zhang
         language:
         - en
       completename:
-        content: Fengwei Qin
+        content: Zhaohui (Jeffrey) Zhang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: China Mobile
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Aijun
-          language:
-          - en
-        - language:
-          - en
-          initial: A
-        formatted_initials:
-          content: A.
-          language:
-          - en
-      surname:
-        content: Wang
-        language:
-        - en
-      completename:
-        content: Aijun Wang
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: China Telecom
+        - content: Juniper Networks
   role:
   - type: author
 version:
-- draft: '00'
-revdate: '2023-11-04'
+- draft: '21'
+revdate: '2026-01-06'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>Bit Index Explicit Replication (BIER)-TE shares architecture and packet
-    formats with BIER as described in [RFC8279]. BIER-TE forwards and replicates packets
-    based on a BitString in the packet header, but every BitPosition of the BitString
-    of a BIER-TE packet indicates one or more adjacencies as described in [RFC9262].
-    BIER-TE Path can be derived from a Path Computation Element (PCE). This document
-    specifies extensions to the Path Computation Element Protocol (PCEP) that allow
-    a PCE to compute and initiate the path for the BIER-TE.</p>"
+- content: <p>Bit Index Explicit Replication (BIER) is an architecture that provides
+    optimal multicast forwarding through a "BIER domain" without requiring intermediate
+    routers to maintain any multicast related per- flow state. BIER also does not
+    require any explicit tree-building protocol for its operation. A multicast data
+    packet enters a BIER domain at a "Bit-Forwarding Ingress Router" (BFIR), and leaves
+    the BIER domain at one or more "Bit-Forwarding Egress Routers" (BFERs). The BFIR
+    router adds a BIER header to the packet. The BIER header contains a bitstring
+    in which each bit represents exactly one BFER to forward the packet to. The set
+    of BFERs to which the multicast packet needs to be forwarded is expressed by setting
+    the bits that correspond to those routers in the BIER header. BGP Link-State (BGP-LS)
+    enables the collection of various topology informations from the network, and
+    the topology informations are used by the controller to calculate the fowarding
+    tables and then propagate them onto the BFRs(instead of having each node to calculate
+    on its own) and that can be for both inter-as and intra-as situations. This document
+    specifies extensions to the BGP Link-state address- family in order to advertise
+    the BIER informations.</p>
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-ietf-pce-bier-te-03
+    id: draft-ietf-bier-bgp-ls-bier-ext-05
     docid:
-    - id: draft-ietf-pce-bier-te-03
+    - id: draft-ietf-bier-bgp-ls-bier-ext-05
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-pce-bier-te-03
+      content: draft-ietf-bier-bgp-ls-bier-ext-05
       format: text/plain
 series:
 - type: main
@@ -232,7 +219,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-pce-bier-te-00
+  number: draft-ietf-bier-bgp-ls-bier-ext-21
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

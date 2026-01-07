@@ -1,62 +1,63 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-opsawg-ipfix-path-segment-00
+id: draft-ietf-pce-bier-te-03
 title:
-- content: Export of Path Segment Identifier Information in IPFIX
+- content: PCEP Extensions for Tree Engineering for Bit Index Explicit Replication
+    (BIER-TE)
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-ipfix-path-segment-00
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-pce-bier-te-03
   type: src
 type: standard
 docid:
-- id: draft-ietf-opsawg-ipfix-path-segment-00
+- id: draft-ietf-pce-bier-te-03
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-opsawg-ipfix-path-segment
+- id: I-D.ietf-pce-bier-te
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-opsawg-ipfix-path-segment
+docnumber: I-D.ietf-pce-bier-te
 date:
 - type: published
-  value: '2025-09-23'
+  value: '2026-01-06'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Yao
+        - content: Ran
           language:
           - en
         - language:
           - en
-          initial: "Y"
+          initial: R
         formatted_initials:
-          content: Y.
+          content: R.
           language:
           - en
       surname:
-        content: Liu
+        content: Chen
         language:
         - en
       completename:
-        content: Yao Liu
+        content: Ran Chen
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: ZTE
+        - content: ZTE Corporation
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Zhenqiang
+        - content: Zheng
           language:
           - en
         - language:
@@ -67,11 +68,95 @@ contributor:
           language:
           - en
       surname:
-        content: Li
+        content: Zhang
         language:
         - en
       completename:
-        content: Zhenqiang Li
+        content: Zheng Zhang
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: ZTE Corporation
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Huaimo
+          language:
+          - en
+        - language:
+          - en
+          initial: H
+        formatted_initials:
+          content: H.
+          language:
+          - en
+      surname:
+        content: Chen
+        language:
+        - en
+      completename:
+        content: Huaimo Chen
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Futurewei
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Senthil
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Dhanaraj
+        language:
+        - en
+      completename:
+        content: Senthil Dhanaraj
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Futurewei
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Fengwei
+          language:
+          - en
+        - language:
+          - en
+          initial: F
+        formatted_initials:
+          content: F.
+          language:
+          - en
+      surname:
+        content: Qin
+        language:
+        - en
+      completename:
+        content: Fengwei Qin
         language:
         - en
     affiliation:
@@ -84,78 +169,22 @@ contributor:
     name:
       given:
         forename:
-        - content: Yisong
+        - content: Aijun
           language:
           - en
         - language:
           - en
-          initial: "Y"
+          initial: A
         formatted_initials:
-          content: Y.
+          content: A.
           language:
           - en
       surname:
-        content: Liu
+        content: Wang
         language:
         - en
       completename:
-        content: Yisong Liu
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: China Mobile
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Changwang
-          language:
-          - en
-        - language:
-          - en
-          initial: C
-        formatted_initials:
-          content: C.
-          language:
-          - en
-      surname:
-        content: Lin
-        language:
-        - en
-      completename:
-        content: Changwang Lin
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: New H3C Technologies
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Guozhen
-          language:
-          - en
-        - language:
-          - en
-          initial: G
-        formatted_initials:
-          content: G.
-          language:
-          - en
-      surname:
-        content: Dong
-        language:
-        - en
-      completename:
-        content: Guozhen Dong
+        content: Aijun Wang
         language:
         - en
     affiliation:
@@ -165,30 +194,35 @@ contributor:
   role:
   - type: author
 version:
-- draft: '00'
-revdate: '2025-09-23'
+- draft: '03'
+revdate: '2026-01-06'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document introduces new IPFIX Information Elements to identify
-    the Path Segment Identifier(PSID)s for SR-MPLS and SRv6 paths identification.</p>"
+- content: "<p>Tree Engineering for Bit Index Explicit Replication (BIER-TE) shares
+    architecture and packet formats with BIER. BIER-TE forwards and replicates packets
+    based on a BitString in the packet header, but every BitPosition of the BitString
+    of a BIER-TE packet indicates one or more adjacencies. BIER-TE Path can be derived
+    from a Path Computation Element (PCE). This document specifies extensions to the
+    Path Computation Element Protocol (PCEP) that allow a PCE to compute and initiate
+    the path for the Tree Engineering for Bit Index Explicit Replication (BIER-TE).</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-ietf-opsawg-ipfix-path-segment-02
+    id: draft-ietf-pce-bier-te-01
     docid:
-    - id: draft-ietf-opsawg-ipfix-path-segment-02
+    - id: draft-ietf-pce-bier-te-01
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-opsawg-ipfix-path-segment-02
+      content: draft-ietf-pce-bier-te-01
       format: text/plain
 series:
 - type: main
@@ -199,7 +233,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-opsawg-ipfix-path-segment-00
+  number: draft-ietf-pce-bier-te-03
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
