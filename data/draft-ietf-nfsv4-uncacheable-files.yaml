@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-ietf-nfsv4-uncacheable-files
 title:
-- content: Adding an Uncacheable File Attribute to NFSv4.2
+- content: Adding an Uncacheable File Data Attribute to NFSv4.2
   language:
   - en
   script:
@@ -14,10 +14,11 @@ docid:
   primary: true
 abstract:
 - content: "<p>The Network File System version 4.2 (NFSv4.2) allows a client to cache
-    data for file objects. Caching file data can lead to performance issues if the
-    cache hit rate is low. This document introduces a new uncacheable file attribute
-    for NFSv4.2. Files marked as uncacheable MUST NOT be stored in client-side caches.
-    This document extends NFSv4.2 (see RFC7862).</p>"
+    data for file objects. Applications on some clients can control the caching of
+    data, but there is no way to achieve this at a system level. This document introduces
+    a new uncacheable file data attribute for NFSv4.2. Files marked as uncacheable
+    file data SHOULD NOT have their data stored in client-side caches. This document
+    extends NFSv4.2 (see RFC7862).</p>"
   language:
   - en
   script:
@@ -33,6 +34,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-nfsv4-uncacheable-files-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-nfsv4-uncacheable-files-01
+    docid:
+    - id: draft-ietf-nfsv4-uncacheable-files-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-nfsv4-uncacheable-files-01
       format: text/plain
 ext:
   schema-version: v1.0.1
