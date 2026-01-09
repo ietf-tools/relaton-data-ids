@@ -16,14 +16,15 @@ docid:
 abstract:
 - content: "<p>The Path Computation Element Communication Protocol (PCEP) provides
     mechanisms for Path Computation Elements (PCEs) to perform path computations in
-    response to Path Computation Clients (PCCs) requests. Segment Routing (SR) leverages
-    the source routing and tunneling paradigms. The Stateful PCEP extensions allow
-    stateful control of Segment Routing Traffic Engineering (TE) paths. Furthermore,
-    PCEP can be used to allow a PCE to compute SR TE paths in the network. This document
-    defines PCEP extensions for grouping two unidirectional SR paths (one in each
-    direction in the network) into a single associated bidirectional SR path. The
-    mechanisms defined in this document are applicable to both stateless and stateful
-    PCEs for PCE- initiated and PCC-initiated LSPs.</p>"
+    response to Path Computation Clients (PCCs) requests. Segment Routing (SR) can
+    be used to steer packets through a network employing the source routing paradigm.
+    Stateful PCEP extensions for SR allow a PCE to maintain state and to control and
+    initiate SR Traffic Engineering (TE) paths. PCEP supports grouping of two unidirectional
+    MPLS-TE Label Switched Paths (LSPs), signaled via RSVP-TE, using association.
+    This document defines PCEP extensions for grouping two unidirectional SR paths
+    (one in each direction in the network) into a single associated bidirectional
+    SR path. The mechanisms defined in this document are applicable to both stateless
+    and stateful PCEs for PCE-initiated and PCC-initiated LSPs.</p>"
   language:
   - en
   script:
@@ -229,6 +230,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-pce-sr-bidir-path-19
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-pce-sr-bidir-path-20
+    docid:
+    - id: draft-ietf-pce-sr-bidir-path-20
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-pce-sr-bidir-path-20
       format: text/plain
 ext:
   schema-version: v1.0.1
