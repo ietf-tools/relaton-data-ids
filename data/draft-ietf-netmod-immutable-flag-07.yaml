@@ -1,34 +1,115 @@
 ---
 schema-version: v1.2.3
-id: draft-wang-ippm-ipv6-flow-measurement-00
+id: draft-ietf-netmod-immutable-flag-07
 title:
-- content: Flow Measurement in IPv6 Network
+- content: YANG Metadata Annotation for Immutable Flag
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-wang-ippm-ipv6-flow-measurement-00
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-netmod-immutable-flag-07
   type: src
 type: standard
 docid:
-- id: draft-wang-ippm-ipv6-flow-measurement-00
+- id: draft-ietf-netmod-immutable-flag-07
   type: Internet-Draft
   primary: true
-- id: I-D.wang-ippm-ipv6-flow-measurement
+- id: I-D.ietf-netmod-immutable-flag
   type: IETF
   scope: anchor
-docnumber: I-D.wang-ippm-ipv6-flow-measurement
+docnumber: I-D.ietf-netmod-immutable-flag
 date:
 - type: published
-  value: '2021-10-25'
+  value: '2026-01-12'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Haojie
+        - content: Qiufang
+          language:
+          - en
+        - language:
+          - en
+          initial: Q
+        formatted_initials:
+          content: Q.
+          language:
+          - en
+      surname:
+        content: Ma
+        language:
+        - en
+      completename:
+        content: Qiufang Ma
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Qin
+          language:
+          - en
+        - language:
+          - en
+          initial: Q
+        formatted_initials:
+          content: Q.
+          language:
+          - en
+      surname:
+        content: Wu
+        language:
+        - en
+      completename:
+        content: Qin Wu
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - language:
+          - en
+          initial: B
+        formatted_initials:
+          content: B.
+          language:
+          - en
+      surname:
+        content: Lengyel
+        language:
+        - en
+      completename:
+        content: Balázs Lengyel
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Ericsson
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Hongwei
           language:
           - en
         - language:
@@ -39,134 +120,50 @@ contributor:
           language:
           - en
       surname:
-        content: Wang
+        content: Li
         language:
         - en
       completename:
-        content: Haojie Wang
+        content: Hongwei Li
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: China Mobile
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Yisong
-          language:
-          - en
-        - language:
-          - en
-          initial: "Y"
-        formatted_initials:
-          content: Y.
-          language:
-          - en
-      surname:
-        content: Liu
-        language:
-        - en
-      completename:
-        content: Yisong Liu
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: China Mobile
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Changwang
-          language:
-          - en
-        - language:
-          - en
-          initial: C
-        formatted_initials:
-          content: C.
-          language:
-          - en
-      surname:
-        content: Lin
-        language:
-        - en
-      completename:
-        content: Changwang Lin
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: New H3C Technologies
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Xiao
-          language:
-          - en
-        - language:
-          - en
-          initial: X
-        formatted_initials:
-          content: X.
-          language:
-          - en
-      surname:
-        content: Min
-        language:
-        - en
-      completename:
-        content: Xiao Min
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: ZTE Corporation
+        - content: HPE
   role:
   - type: author
 version:
-- draft: '00'
-revdate: '2021-10-25'
+- draft: '07'
+revdate: '2026-01-12'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>In-situ Operations, Administration, and Maintenance (OAM) need carrying
-    necessary measurement information in the packet while the packet transverses a
-    path between two points in the network to mark the packet. The Alternate-Marking
-    is a kind of marking method and is presented in RFC 8321, Alternate-Marking Method
-    for Passive and Hybrid Performance Monitoring, and RFC 8889, Multipoint Alternate-
-    Marking Method for Passive and Hybrid Performance Monitoring. This document describes
-    how to deploy in-situ flow performance measurement based on Alternate-Marking
-    method in IPv6 domain.</p>"
+- content: <p>This document defines a way to formally document an existing behavior,
+    implemented by servers in production, on the immutability of some system-provided
+    nodes, using a YANG metadata annotation called "immutable" to flag which nodes
+    are immutable. Clients may use "immutable" annotations provided by the server,
+    to know beforehand why certain otherwise valid configuration requests will cause
+    the server to return an error. The immutable flag is descriptive, documenting
+    an existing behavior, not proscriptive, dictating server behaviors. This document
+    updates RFC 8040 and RFC 8526.</p>
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-wang-ippm-ipv6-flow-measurement-09
+    id: draft-ietf-netmod-immutable-flag-06
     docid:
-    - id: draft-wang-ippm-ipv6-flow-measurement-09
+    - id: draft-ietf-netmod-immutable-flag-06
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-wang-ippm-ipv6-flow-measurement-09
+      content: draft-ietf-netmod-immutable-flag-06
       format: text/plain
 series:
 - type: main
@@ -177,7 +174,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-wang-ippm-ipv6-flow-measurement-00
+  number: draft-ietf-netmod-immutable-flag-07
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
