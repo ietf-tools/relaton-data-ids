@@ -15,17 +15,18 @@ docid:
 abstract:
 - content: "<p>TLS 1.3 ensures forward secrecy by performing an ephemeral Diffie-
     Hellman key exchange during the initial handshake, protecting past communications
-    even if a party's long-term keys are later compromised. While the built-in KeyUpdate
-    mechanism allows application traffic keys to be refreshed during a session, it
-    does not incorporate fresh entropy from a new key exchange and therefore does
-    not provide post-compromise security. This limitation can pose a security risk
-    in long-lived sessions, such as those found in industrial IoT or telecommunications
-    environments. To address this, this specification defines an extended key update
-    mechanism that performs a fresh Diffie-Hellman exchange within an active session,
-    thereby ensuring post-compromise security. By forcing attackers to exfiltrate
-    new key material repeatedly, this approach mitigates the risks associated with
-    static key compromise. Regular renewal of session keys helps contain the impact
-    of such compromises. The extension is applicable to both TLS 1.3 and DTLS 1.3.</p>"
+    even if a party's long-term keys (typically a private key with a corresponding
+    certificate) are later compromised. While the built-in KeyUpdate mechanism allows
+    application traffic keys to be refreshed during a session, it does not incorporate
+    fresh entropy from a new key exchange and therefore does not provide post- compromise
+    security. This limitation can pose a security risk in long-lived sessions, such
+    as those found in industrial IoT or telecommunications environments. To address
+    this, this specification defines an extended key update mechanism that performs
+    a fresh Diffie-Hellman exchange within an active session, thereby ensuring post-compromise
+    security. By forcing attackers to exfiltrate new key material repeatedly, this
+    approach mitigates the risks associated with static key compromise. Regular renewal
+    of session keys helps contain the impact of such compromises. The extension is
+    applicable to both TLS 1.3 and DTLS 1.3.</p>"
   language:
   - en
   script:
@@ -111,6 +112,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-tls-extended-key-update-07
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-tls-extended-key-update-08
+    docid:
+    - id: draft-ietf-tls-extended-key-update-08
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-tls-extended-key-update-08
       format: text/plain
 ext:
   schema-version: v1.0.1
