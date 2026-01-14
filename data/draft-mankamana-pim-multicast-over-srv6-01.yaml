@@ -1,105 +1,83 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-opsawg-discardmodel-10
+id: draft-mankamana-pim-multicast-over-srv6-01
 title:
-- content: Information and Data Models for Packet Discard Reporting
+- content: Multicast over SRv6 networks
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-discardmodel-10
+- content: https://datatracker.ietf.org/doc/html/draft-mankamana-pim-multicast-over-srv6-01
   type: src
 type: standard
 docid:
-- id: draft-ietf-opsawg-discardmodel-10
+- id: draft-mankamana-pim-multicast-over-srv6-01
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-opsawg-discardmodel
+- id: I-D.mankamana-pim-multicast-over-srv6
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-opsawg-discardmodel
+docnumber: I-D.mankamana-pim-multicast-over-srv6
 date:
 - type: published
-  value: '2025-11-26'
+  value: '2026-01-13'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: John
+        - content: Mankamana
           language:
           - en
         - language:
           - en
-          initial: J
+          initial: M
+        - language:
+          - en
+          initial: P
         formatted_initials:
-          content: J.
+          content: M. P.
           language:
           - en
       surname:
-        content: Evans
+        content: Mishra
         language:
         - en
       completename:
-        content: John Evans
+        content: Mankamana Prasad Mishra
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Amazon
+        - content: Cisco Systems
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Oleksandr
+        - content: Zhaohui
           language:
           - en
         - language:
           - en
-          initial: O
-        formatted_initials:
-          content: O.
-          language:
-          - en
-      surname:
-        content: Pylypenko
-        language:
-        - en
-      completename:
-        content: Oleksandr Pylypenko
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Amazon
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Jeffrey
-          language:
-          - en
+          initial: Z
         - language:
           - en
           initial: J
         formatted_initials:
-          content: J.
+          content: Z. J.
           language:
           - en
       surname:
-        content: Haas
+        content: Zhang
         language:
         - en
       completename:
-        content: Jeffrey Haas
+        content: Zhaohui (Jeffrey) Zhang
         language:
         - en
     affiliation:
@@ -112,35 +90,35 @@ contributor:
     name:
       given:
         forename:
-        - content: Aviran
+        - content: Hooman
           language:
           - en
         - language:
           - en
-          initial: A
+          initial: H
         formatted_initials:
-          content: A.
+          content: H.
           language:
           - en
       surname:
-        content: Kadosh
+        content: Bidgoli
         language:
         - en
       completename:
-        content: Aviran Kadosh
+        content: Hooman Bidgoli
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems, Inc.
+        - content: Nokia
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Mohamed
+        - content: Mudashiru
           language:
           - en
         - language:
@@ -151,33 +129,62 @@ contributor:
           language:
           - en
       surname:
-        content: Boucadair
+        content: Busari
         language:
         - en
       completename:
-        content: Mohamed Boucadair
+        content: Mudashiru Busari
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Orange
+        - content: Aramco
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Luay
+          language:
+          - en
+        - language:
+          - en
+          initial: L
+        formatted_initials:
+          content: L.
+          language:
+          - en
+      surname:
+        content: Jalil
+        language:
+        - en
+      completename:
+        content: Luay Jalil
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Verizon
   role:
   - type: author
 version:
-- draft: '10'
-revdate: '2025-11-26'
+- draft: '01'
+revdate: '2026-01-13'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document defines an Information Model and specifies a corresponding
-    YANG data model for packet discard reporting. The Information Model provides an
-    implementation-independent framework for classifying packet loss — both intended
-    (e.g., due to policy) and unintended (e.g., due to congestion or errors) — to
-    enable automated network mitigation of unintended packet loss. The YANG data model
-    specifies an implementation of this Information Model for network elements.</p>"
+- content: "<p>This document presents solutions for deploying multicast in SRv6 networks.
+    It explores the use of the native IPv6 multicast data plane for multicast distribution.
+    The document discusses distributed control plane mechanisms, including PIM, and
+    its integration with IGP Flex-Algo to optimize multicast delivery. The document
+    also addresses overlay multicast solutions for both the Global Table Multicast
+    (GTM) and Multicast VPNs (MVPNs), utilizing IP-in- IPv6 encapsulation without
+    requiring additional shim layers.</p>"
   language:
   - en
   script:
@@ -186,23 +193,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-opsawg-discardmodel-09
+    id: draft-mankamana-pim-multicast-over-srv6-00
     docid:
-    - id: draft-ietf-opsawg-discardmodel-09
+    - id: draft-mankamana-pim-multicast-over-srv6-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-opsawg-discardmodel-09
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-opsawg-discardmodel-11
-    docid:
-    - id: draft-ietf-opsawg-discardmodel-11
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-opsawg-discardmodel-11
+      content: draft-mankamana-pim-multicast-over-srv6-00
       format: text/plain
 series:
 - type: main
@@ -213,7 +210,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-opsawg-discardmodel-10
+  number: draft-mankamana-pim-multicast-over-srv6-01
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
