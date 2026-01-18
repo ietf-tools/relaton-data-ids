@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-wkumari-dnsop-localroot-bcp
 title:
-- content: Making LocalRoot a Best Current Practice
+- content: Populating resolvers with the root zone
   language:
   - en
   script:
@@ -13,16 +13,15 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: '<p>RFC 8806 (often called "LocalRoot") defines a mechanism whereby a recursive
-    resolver can fetch the contents of an entire zone and place this information into
-    the resolver''s cache. This has several benefits, including increased reliability,
-    increased performance, improved privacy, and decreased or mitigation of the effect
-    of some types of DoS attacks. While the majority of DNS resolver implementations
-    natively support RFC 8806, it remains tricky to configure and maintain. This document
-    recommends that DNS resolver software simplify this configuration, and further
-    suggests that configuration becomes the default. This document updates Section
-    2 of RFC8806 by relaxing the requirement that implementations MUST run an authoritative
-    service. /* Ed (WK): Open questions / ToDo / Notes (to be removed before publication):</p>'
+- content: "<p>DNS recursive resolver operators need to provide the best service possible
+    for their users, which includes providing an operationally robust and privacy
+    protecting service. Challenges to these deployment goals include difficulty of
+    getting responses from the root servers (such as during a network attack), longer-than-desired
+    round-trip times to the closest DNS root server, and privacy issues relating to
+    queries sent to the DNS root servers. Resolvers can solve all of these issues
+    by simply serving an already cached a copy of the full root zone. This document
+    shows how resolvers can fetch, cache and maintain a copy of the root zone, how
+    to detect if the contents becomes stale, and procedures for handling error conditions.</p>"
   language:
   - en
   script:
@@ -48,6 +47,16 @@ relation:
       primary: true
     formattedref:
       content: draft-wkumari-dnsop-localroot-bcp-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-wkumari-dnsop-localroot-bcp-02
+    docid:
+    - id: draft-wkumari-dnsop-localroot-bcp-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-wkumari-dnsop-localroot-bcp-02
       format: text/plain
 ext:
   schema-version: v1.0.1
