@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-ippm-encrypted-pdmv2-12
+id: draft-ietf-ippm-encrypted-pdmv2-13
 title:
 - content: IPv6 Performance and Diagnostic Metrics Version 2 (PDMv2) Destination Option
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-ippm-encrypted-pdmv2-12
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-ippm-encrypted-pdmv2-13
   type: src
 type: standard
 docid:
-- id: draft-ietf-ippm-encrypted-pdmv2-12
+- id: draft-ietf-ippm-encrypted-pdmv2-13
   type: Internet-Draft
   primary: true
 - id: I-D.ietf-ippm-encrypted-pdmv2
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.ietf-ippm-encrypted-pdmv2
 date:
 - type: published
-  value: '2025-11-20'
+  value: '2026-01-18'
 contributor:
 - person:
     name:
@@ -49,7 +49,7 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Inside Products, Inc.
+        - content: Inside Products
   role:
   - type: author
 - person:
@@ -193,20 +193,25 @@ contributor:
   role:
   - type: author
 version:
-- draft: '12'
-revdate: '2025-11-20'
+- draft: '13'
+revdate: '2026-01-18'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>RFC8250 describes an optional Destination Option (DO) header embedded
-    in each packet to provide sequence numbers and timing information as a basis for
-    measurements. As this data is sent in clear-text, this may create an opportunity
-    for malicious actors to get information for subsequent attacks. This document
-    defines PDMv2 which has a lightweight handshake (registration procedure) and encryption
-    to secure this data. Additional performance metrics which may be of use are also
-    defined.</p>"
+- content: "<p>RFC 8250 defines an IPv6 Destination Option that carries Performance
+    and Diagnostic Metrics (PDM) such as sequence numbers and timing information.
+    While useful for measurement and troubleshooting, clear-text PDM data may expose
+    operational characteristics of endpoints and networks. This document defines PDMv2,
+    a revised version of PDM that introduces a registration-based security model.
+    Instead of specifying cryptographic algorithms or inline key negotiation, PDMv2
+    relies on a prior registration process to authenticate entities, authorize participation,
+    and establish shared secrets. These secrets are then used by endpoints and authorized
+    analyzers to protect and interpret PDMv2 data according to local policy. This
+    document specifies the PDMv2 semantics, header structure, and operational model.
+    Cryptographic algorithms, key derivation functions, and cipher negotiation are
+    explicitly out of scope.</p>"
   language:
   - en
   script:
@@ -223,16 +228,6 @@ relation:
     formattedref:
       content: draft-ietf-ippm-encrypted-pdmv2-08
       format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-ippm-encrypted-pdmv2-13
-    docid:
-    - id: draft-ietf-ippm-encrypted-pdmv2-13
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-ippm-encrypted-pdmv2-13
-      format: text/plain
 series:
 - type: main
   title:
@@ -242,7 +237,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-ippm-encrypted-pdmv2-12
+  number: draft-ietf-ippm-encrypted-pdmv2-13
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
