@@ -1,34 +1,90 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-tvr-schedule-yang-06
+id: draft-ietf-idr-sr-policy-seglist-id-07
 title:
-- content: YANG Data Model for Scheduled Attributes
+- content: BGP SR Policy Extensions for Segment List Identifier
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-tvr-schedule-yang-06
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-sr-policy-seglist-id-07
   type: src
 type: standard
 docid:
-- id: draft-ietf-tvr-schedule-yang-06
+- id: draft-ietf-idr-sr-policy-seglist-id-07
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-tvr-schedule-yang
+- id: I-D.ietf-idr-sr-policy-seglist-id
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-tvr-schedule-yang
+docnumber: I-D.ietf-idr-sr-policy-seglist-id
 date:
 - type: published
-  value: '2026-01-04'
+  value: '2026-01-19'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Yingzhen
+        - content: Changwang
+          language:
+          - en
+        - language:
+          - en
+          initial: C
+        formatted_initials:
+          content: C.
+          language:
+          - en
+      surname:
+        content: Lin
+        language:
+        - en
+      completename:
+        content: Changwang Lin
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: New H3C Technologies
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Weiqiang
+          language:
+          - en
+        - language:
+          - en
+          initial: W
+        formatted_initials:
+          content: W.
+          language:
+          - en
+      surname:
+        content: Cheng
+        language:
+        - en
+      completename:
+        content: Weiqiang Cheng
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: China Mobile
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Yao
           language:
           - en
         - language:
@@ -39,108 +95,52 @@ contributor:
           language:
           - en
       surname:
-        content: Qu
+        content: Liu
         language:
         - en
       completename:
-        content: Yingzhen Qu
+        content: Yao Liu
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Futurewei Technologies
+        - content: ZTE
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Acee
+        - content: Ketan
           language:
           - en
         - language:
           - en
-          initial: A
+          initial: K
         formatted_initials:
-          content: A.
+          content: K.
           language:
           - en
       surname:
-        content: Lindem
+        content: Talaulikar
         language:
         - en
       completename:
-        content: Acee Lindem
+        content: Ketan Talaulikar
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Arrcus, Inc.
+        - content: Cisco Systems
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Eric
-          language:
-          - en
-        - language:
-          - en
-          initial: E
-        formatted_initials:
-          content: E.
-          language:
-          - en
-      surname:
-        content: Kinzie
-        language:
-        - en
-      completename:
-        content: Eric Kinzie
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: LabN Consulting, L.L.C.
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Don
-          language:
-          - en
-        - language:
-          - en
-          initial: D
-        formatted_initials:
-          content: D.
-          language:
-          - en
-      surname:
-        content: Fedyk
-        language:
-        - en
-      completename:
-        content: Don Fedyk
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: LabN Consulting, L.L.C.
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Marc
+        - content: Mengxiao
           language:
           - en
         - language:
@@ -151,31 +151,31 @@ contributor:
           language:
           - en
       surname:
-        content: Blanchet
+        content: Chen
         language:
         - en
       completename:
-        content: Marc Blanchet
+        content: Mengxiao Chen
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Viagenie
+        - content: New H3C Technologies
   role:
   - type: author
 version:
-- draft: '06'
-revdate: '2026-01-04'
+- draft: '07'
+revdate: '2026-01-19'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>The YANG model in this document includes three modules, and can be
-    used to manage network resources and topologies with scheduled attributes, such
-    as predictable link loss and link connectivity as a function of time. The intent
-    is to have this information be utilized by Time-Variant Routing systems.</p>"
+- content: "<p>Segment Routing is a source routing paradigm that explicitly indicates
+    the forwarding path for packets at the ingress node. An SR Policy is a set of
+    candidate paths, each consisting of one or more segment lists. This document defines
+    extensions to BGP SR Policy to specify the identifier of segment list.</p>"
   language:
   - en
   script:
@@ -184,23 +184,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-tvr-schedule-yang-04
+    id: draft-ietf-idr-sr-policy-seglist-id-02
     docid:
-    - id: draft-ietf-tvr-schedule-yang-04
+    - id: draft-ietf-idr-sr-policy-seglist-id-02
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-tvr-schedule-yang-04
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-tvr-schedule-yang-07
-    docid:
-    - id: draft-ietf-tvr-schedule-yang-07
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-tvr-schedule-yang-07
+      content: draft-ietf-idr-sr-policy-seglist-id-02
       format: text/plain
 series:
 - type: main
@@ -211,7 +201,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-tvr-schedule-yang-06
+  number: draft-ietf-idr-sr-policy-seglist-id-07
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

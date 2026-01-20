@@ -1,34 +1,90 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-tvr-schedule-yang-06
+id: draft-ietf-spring-resource-aware-segments-17
 title:
-- content: YANG Data Model for Scheduled Attributes
+- content: Introducing Resource Awareness to SR Segments
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-tvr-schedule-yang-06
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-spring-resource-aware-segments-17
   type: src
 type: standard
 docid:
-- id: draft-ietf-tvr-schedule-yang-06
+- id: draft-ietf-spring-resource-aware-segments-17
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-tvr-schedule-yang
+- id: I-D.ietf-spring-resource-aware-segments
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-tvr-schedule-yang
+docnumber: I-D.ietf-spring-resource-aware-segments
 date:
 - type: published
-  value: '2026-01-04'
+  value: '2026-01-19'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Yingzhen
+        - content: Jie
+          language:
+          - en
+        - language:
+          - en
+          initial: J
+        formatted_initials:
+          content: J.
+          language:
+          - en
+      surname:
+        content: Dong
+        language:
+        - en
+      completename:
+        content: Jie Dong
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei Technologies
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Takuya
+          language:
+          - en
+        - language:
+          - en
+          initial: T
+        formatted_initials:
+          content: T.
+          language:
+          - en
+      surname:
+        content: Miyasaka
+        language:
+        - en
+      completename:
+        content: Takuya Miyasaka
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: KDDI Corporation
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Yongqing
           language:
           - en
         - language:
@@ -39,143 +95,90 @@ contributor:
           language:
           - en
       surname:
-        content: Qu
+        content: Zhu
         language:
         - en
       completename:
-        content: Yingzhen Qu
+        content: Yongqing Zhu
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Futurewei Technologies
+        - content: China Telecom
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Acee
+        - content: Fengwei
           language:
           - en
         - language:
           - en
-          initial: A
+          initial: F
         formatted_initials:
-          content: A.
+          content: F.
           language:
           - en
       surname:
-        content: Lindem
+        content: Qin
         language:
         - en
       completename:
-        content: Acee Lindem
+        content: Fengwei Qin
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Arrcus, Inc.
+        - content: China Mobile
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Eric
+        - content: Zhenqiang
           language:
           - en
         - language:
           - en
-          initial: E
+          initial: Z
         formatted_initials:
-          content: E.
+          content: Z.
           language:
           - en
       surname:
-        content: Kinzie
+        content: Li
         language:
         - en
       completename:
-        content: Eric Kinzie
+        content: Zhenqiang Li
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: LabN Consulting, L.L.C.
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Don
-          language:
-          - en
-        - language:
-          - en
-          initial: D
-        formatted_initials:
-          content: D.
-          language:
-          - en
-      surname:
-        content: Fedyk
-        language:
-        - en
-      completename:
-        content: Don Fedyk
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: LabN Consulting, L.L.C.
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Marc
-          language:
-          - en
-        - language:
-          - en
-          initial: M
-        formatted_initials:
-          content: M.
-          language:
-          - en
-      surname:
-        content: Blanchet
-        language:
-        - en
-      completename:
-        content: Marc Blanchet
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Viagenie
+        - content: China Mobile
   role:
   - type: author
 version:
-- draft: '06'
-revdate: '2026-01-04'
+- draft: '17'
+revdate: '2026-01-19'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>The YANG model in this document includes three modules, and can be
-    used to manage network resources and topologies with scheduled attributes, such
-    as predictable link loss and link connectivity as a function of time. The intent
-    is to have this information be utilized by Time-Variant Routing systems.</p>"
+- content: "<p>This document describes a mechanism to allocate network resources to
+    one or a set of Segment Routing Identifiers (SIDs). Such SIDs are referred to
+    as resource-aware SIDs. The resource-aware SIDs retain their original forwarding
+    semantics, with the additional semantics to identify the set of network resources
+    available for the packet processing and forwarding action. The proposed mechanism
+    is applicable to both segment routing with MPLS data plane (SR-MPLS) and segment
+    routing with IPv6 data plane (SRv6).</p>"
   language:
   - en
   script:
@@ -184,23 +187,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-tvr-schedule-yang-04
+    id: draft-ietf-spring-resource-aware-segments-14
     docid:
-    - id: draft-ietf-tvr-schedule-yang-04
+    - id: draft-ietf-spring-resource-aware-segments-14
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-tvr-schedule-yang-04
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-tvr-schedule-yang-07
-    docid:
-    - id: draft-ietf-tvr-schedule-yang-07
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-tvr-schedule-yang-07
+      content: draft-ietf-spring-resource-aware-segments-14
       format: text/plain
 series:
 - type: main
@@ -211,7 +204,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-tvr-schedule-yang-06
+  number: draft-ietf-spring-resource-aware-segments-17
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

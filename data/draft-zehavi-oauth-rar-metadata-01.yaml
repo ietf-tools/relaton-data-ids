@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-zehavi-oauth-rar-metadata-00
+id: draft-zehavi-oauth-rar-metadata-01
 title:
 - content: OAuth 2.0 RAR Metadata and Error Signaling
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-zehavi-oauth-rar-metadata-00
+- content: https://datatracker.ietf.org/doc/html/draft-zehavi-oauth-rar-metadata-01
   type: src
 type: standard
 docid:
-- id: draft-zehavi-oauth-rar-metadata-00
+- id: draft-zehavi-oauth-rar-metadata-01
   type: Internet-Draft
   primary: true
 - id: I-D.zehavi-oauth-rar-metadata
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.zehavi-oauth-rar-metadata
 date:
 - type: published
-  value: '2026-01-07'
+  value: '2026-01-19'
 contributor:
 - person:
     name:
@@ -53,38 +53,42 @@ contributor:
   role:
   - type: author
 version:
-- draft: '00'
-revdate: '2026-01-07'
+- draft: '01'
+revdate: '2026-01-19'
 language:
 - en
 script:
 - Latn
 abstract:
 - content: "<p>OAuth 2.0 Rich Authorization Requests (RAR), as defined in [RFC9396],
-    enables clients to request fine-grained authorization using structured JSON objects.
-    While RAR [RFC9396] standardizes the exchange and handling of authorization details,
+    enables fine-grained authorization requests, using structured JSON objects. While
+    RAR [RFC9396] standardizes the exchange and handling of authorization details,
     it does not define a mechanism for clients to discover how to construct valid
     authorization details types. This document defines a machine-readable metadata
-    structure for advertising authorization details type documentation and JSON Schema
-    [JSON.Schema] definitions via OAuth Authorization Server Metadata [RFC8414] and
-    OAuth Resource Server Metadata [RFC9728]. In addition, this document defines a
-    new OAuth error code, insufficient_authorization_details, enabling resource servers
-    to return actionable authorization details objects to clients.</p>"
+    format for authorization servers to provide authorization details type documentation
+    and JSON Schema [JSON.Schema] definitions, as well as interoperable discovery
+    via OAuth Resource Server Metadata [RFC9728]. This document also defines a new
+    WWW-Authenticate normative OAuth error code, insufficient_authorization_details,
+    enabling resource servers to indicate inadequate authorization details as the
+    cause of failure. It also defines an OPTIONAL response body which MAY be returned
+    alongside the insufficient_authorization_details error, providing an informative
+    yet actionable authorization details object, which can be used directly in a subsequent
+    OAuth request.</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-zehavi-oauth-rar-metadata-01
+    id: draft-zehavi-oauth-rar-metadata-00
     docid:
-    - id: draft-zehavi-oauth-rar-metadata-01
+    - id: draft-zehavi-oauth-rar-metadata-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-zehavi-oauth-rar-metadata-01
+      content: draft-zehavi-oauth-rar-metadata-00
       format: text/plain
 series:
 - type: main
@@ -95,7 +99,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-zehavi-oauth-rar-metadata-00
+  number: draft-zehavi-oauth-rar-metadata-01
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
