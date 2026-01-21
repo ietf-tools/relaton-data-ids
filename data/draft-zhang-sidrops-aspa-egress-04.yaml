@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-zhang-sidrops-aspa-egress-03
+id: draft-zhang-sidrops-aspa-egress-04
 title:
 - content: ASPA-based AS_PATH Verification for BGP Export
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-zhang-sidrops-aspa-egress-03
+- content: https://datatracker.ietf.org/doc/html/draft-zhang-sidrops-aspa-egress-04
   type: src
 type: standard
 docid:
-- id: draft-zhang-sidrops-aspa-egress-03
+- id: draft-zhang-sidrops-aspa-egress-04
   type: Internet-Draft
   primary: true
 - id: I-D.zhang-sidrops-aspa-egress
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.zhang-sidrops-aspa-egress
 date:
 - type: published
-  value: '2025-07-21'
+  value: '2026-01-20'
 contributor:
 - person:
     name:
@@ -136,21 +136,78 @@ contributor:
         - content: Tsinghua University
   role:
   - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Kotikalapudi
+          language:
+          - en
+        - language:
+          - en
+          initial: K
+        formatted_initials:
+          content: K.
+          language:
+          - en
+      surname:
+        content: Sriram
+        language:
+        - en
+      completename:
+        content: Kotikalapudi Sriram
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: USA National Institute of Standards and Technology
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Nan
+          language:
+          - en
+        - language:
+          - en
+          initial: "N"
+        formatted_initials:
+          content: N.
+          language:
+          - en
+      surname:
+        content: Geng
+        language:
+        - en
+      completename:
+        content: Nan Geng
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei
+  role:
+  - type: author
 version:
-- draft: '03'
-revdate: '2025-07-21'
+- draft: '04'
+revdate: '2026-01-20'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document describes that a BGP speaker may perform AS_PATH verification
-    on the routes it sends to BGP neighbors at external BGP (eBGP) egress based on
-    Autonomous System Provider Authorization (ASPA) objects in the Resource Public
-    Key Infrastructure (RPKI). Before BGP speakers advertise routes to external peers
-    at eBGP egress, performing ASPA-based AS_PATH verification can prevent route leaks
-    to external peers, check for local misconfigurations and detect ASPA registration
-    errors, thus avoiding the advertisement of invalid routes.</p>"
+- content: "<p>This document describes AS_PATH verification based on Autonomous System
+    Provider Authorization (ASPA) for egress eBGP speakers. ASPA is a Resource Public
+    Key Infrastructure (RPKI) object that allows an AS to register its transit provider
+    ASes. Performing ASPA-based AS_PATH verification at egress can prevent the propagation
+    of route leaks to external peers, check for local misconfigurations, and help
+    detect potential ASPA registration errors. This approach complements ingress-side
+    verification; it ensures coverage should ASPA deployment be absent at the ingress
+    eBGP router of the AS.</p>"
   language:
   - en
   script:
@@ -167,16 +224,6 @@ relation:
     formattedref:
       content: draft-zhang-sidrops-aspa-egress-02
       format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-zhang-sidrops-aspa-egress-04
-    docid:
-    - id: draft-zhang-sidrops-aspa-egress-04
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-zhang-sidrops-aspa-egress-04
-      format: text/plain
 series:
 - type: main
   title:
@@ -186,7 +233,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-zhang-sidrops-aspa-egress-03
+  number: draft-zhang-sidrops-aspa-egress-04
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
