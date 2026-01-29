@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-lsr-ospf-ls-link-infinity-12
+id: draft-ietf-lsr-ospf-ls-link-infinity-15
 title:
 - content: Advertising Unreachable Links in OSPF
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-lsr-ospf-ls-link-infinity-12
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-lsr-ospf-ls-link-infinity-15
   type: src
 type: standard
 docid:
-- id: draft-ietf-lsr-ospf-ls-link-infinity-12
+- id: draft-ietf-lsr-ospf-ls-link-infinity-15
   type: Internet-Draft
   primary: true
 - id: I-D.ietf-lsr-ospf-ls-link-infinity
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.ietf-lsr-ospf-ls-link-infinity
 date:
 - type: published
-  value: '2025-12-03'
+  value: '2026-01-28'
 contributor:
 - person:
     name:
@@ -165,8 +165,8 @@ contributor:
   role:
   - type: author
 version:
-- draft: '12'
-revdate: '2025-12-03'
+- draft: '15'
+revdate: '2026-01-28'
 language:
 - en
 script:
@@ -176,17 +176,10 @@ abstract:
     are not applicable to the default SPF (Shortest Path First) calculation for other
     purposes. In order to advertise these links and not use them in the base SPF calculation,
     the metric LSLinkInfinity (0xffff) is used to specify that the link is unreachable.
-    Stub Router Advertisement (RFC 6987) defines MaxLinkMetric (0xffff) to indicate
-    a router-LSA link should not be used for transit IP traffic. When an OSPF router
-    supports the Unreachable Link support capability defined in this document, OSPF
-    Stub Router links are advertised as MaxReachableLinkMetric (0xfffe) rather than
-    MaxLinkMetric (0xffff). This document updates RFC 6987 and RFC 8770 with respect
-    to the advertisement of MaxReachableLinkMetric rather than MaxLinkMetric. Similarily,
-    Label Distribution Protocol (LDP) IGP Synchronization (RFC5443) specifies OSPF
-    advertisement of MaxLinkMetric (0xffff) to indicate that while the OSPF adjacency
-    is in FULL state, LDP has not been synchronized between the two neighbors and
-    transit traffic is discouraged. This document updates RFC 5433 with respect to
-    the advertisement of MaxReachableLinkMetric rather than MaxLinkMetric.</p>"
+    MaxReachableLinkMetric (0xfffe) is defined to provide backward compatible reachability
+    in specifications that previously specified advertisement of MaxLinkMetric (0xffff).
+    This document updates RFC 5443, RFC 6987, and RFC 8770 with respect to the advertisement
+    of MaxReachableLinkMetric (0xfffe) rather than MaxLinkMetric (0xffff).</p>"
   language:
   - en
   script:
@@ -222,7 +215,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-lsr-ospf-ls-link-infinity-12
+  number: draft-ietf-lsr-ospf-ls-link-infinity-15
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
