@@ -1,108 +1,105 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-netconf-udp-notif-22
+id: draft-xu-idr-neighbor-autodiscovery-13
 title:
-- content: UDP-based Transport for Configured Subscriptions
+- content: BGP Neighbor Discovery
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-netconf-udp-notif-22
+- content: https://datatracker.ietf.org/doc/html/draft-xu-idr-neighbor-autodiscovery-13
   type: src
 type: standard
 docid:
-- id: draft-ietf-netconf-udp-notif-22
+- id: draft-xu-idr-neighbor-autodiscovery-13
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-netconf-udp-notif
+- id: I-D.xu-idr-neighbor-autodiscovery
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-netconf-udp-notif
+docnumber: I-D.xu-idr-neighbor-autodiscovery
 date:
 - type: published
-  value: '2025-07-03'
+  value: '2026-01-28'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Alex
+        - content: Xiaohu
           language:
           - en
         - language:
           - en
-          initial: A
-        - language:
-          - en
-          initial: H
+          initial: X
         formatted_initials:
-          content: A. H.
+          content: X.
           language:
           - en
       surname:
-        content: Feng
+        content: Xu
         language:
         - en
       completename:
-        content: Alex Huang Feng
+        content: Xiaohu Xu
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: INSA-Lyon
+        - content: China Mobile
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Pierre
+        - content: Ketan
           language:
           - en
         - language:
           - en
-          initial: P
+          initial: K
         formatted_initials:
-          content: P.
+          content: K.
           language:
           - en
       surname:
-        content: Francois
+        content: Talaulikar
         language:
         - en
       completename:
-        content: Pierre Francois
+        content: Ketan Talaulikar
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: INSA-Lyon
+        - content: Individual
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Tianran
+        - content: Kunyang
           language:
           - en
         - language:
           - en
-          initial: T
+          initial: K
         formatted_initials:
-          content: T.
+          content: K.
           language:
           - en
       surname:
-        content: Zhou
+        content: Bi
         language:
         - en
       completename:
-        content: Tianran Zhou
+        content: Kunyang Bi
         language:
         - en
     affiliation:
@@ -115,73 +112,101 @@ contributor:
     name:
       given:
         forename:
-        - content: Thomas
+        - content: Jeff
           language:
           - en
         - language:
           - en
-          initial: T
+          initial: J
         formatted_initials:
-          content: T.
+          content: J.
           language:
           - en
       surname:
-        content: Graf
+        content: Tantsura
         language:
         - en
       completename:
-        content: Thomas Graf
+        content: Jeff Tantsura
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Swisscom
+        - content: Apstra
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Paolo
+        - content: Nikos
           language:
           - en
         - language:
           - en
-          initial: P
+          initial: "N"
         formatted_initials:
-          content: P.
+          content: N.
           language:
           - en
       surname:
-        content: Lucente
+        content: Triantafillis
         language:
         - en
       completename:
-        content: Paolo Lucente
+        content: Nikos Triantafillis
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: NTT
+        - content: Amazon Web Services
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Xiang
+          language:
+          - en
+        - language:
+          - en
+          initial: X
+        formatted_initials:
+          content: X.
+          language:
+          - en
+      surname:
+        content: Chen
+        language:
+        - en
+      completename:
+        content: Xiang Chen
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: IEIT System
   role:
   - type: author
 version:
-- draft: '22'
-revdate: '2025-07-03'
+- draft: '13'
+revdate: '2026-01-28'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document describes a UDP-based transport for YANG notifications
-    to collect data from network nodes. A shim header is defined to facilitate the
-    data streaming directly from a publishing process on a network device to telemetry
-    receivers. Such a design enables higher frequency updates and less performance
-    overhead on publisher and receiver processes compared to already established notification
-    mechanisms. A YANG data model is also defined for management of the described
-    UDP-based transport.</p>"
+- content: "<p>BGP is being used as the underlay routing protocol in some large- scaled
+    data centers (DCs). Most popular design followed is to do hop-by-hop external
+    BGP (EBGP) session configurations between neighboring routers on a per link basis.
+    The provisioning of BGP neighbors in routers across such a DC brings its own operational
+    complexity. This document introduces a BGP neighbor discovery mechanism that greatly
+    simplifies BGP operations in such DC and other networks by automatic setup of
+    BGP sessions between neighbor routers using this mechanism.</p>"
   language:
   - en
   script:
@@ -190,23 +215,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-netconf-udp-notif-21
+    id: draft-xu-idr-neighbor-autodiscovery-02
     docid:
-    - id: draft-ietf-netconf-udp-notif-21
+    - id: draft-xu-idr-neighbor-autodiscovery-02
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-netconf-udp-notif-21
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-netconf-udp-notif-25
-    docid:
-    - id: draft-ietf-netconf-udp-notif-25
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-netconf-udp-notif-25
+      content: draft-xu-idr-neighbor-autodiscovery-02
       format: text/plain
 series:
 - type: main
@@ -217,7 +232,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-netconf-udp-notif-22
+  number: draft-xu-idr-neighbor-autodiscovery-13
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

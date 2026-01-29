@@ -1,187 +1,187 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-netconf-udp-notif-22
+id: draft-ietf-idr-vpn-prefix-orf-25
 title:
-- content: UDP-based Transport for Configured Subscriptions
+- content: VPN Prefix Outbound Route Filter (VPN Prefix ORF) for BGP-4
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-netconf-udp-notif-22
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-vpn-prefix-orf-25
   type: src
 type: standard
 docid:
-- id: draft-ietf-netconf-udp-notif-22
+- id: draft-ietf-idr-vpn-prefix-orf-25
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-netconf-udp-notif
+- id: I-D.ietf-idr-vpn-prefix-orf
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-netconf-udp-notif
+docnumber: I-D.ietf-idr-vpn-prefix-orf
 date:
 - type: published
-  value: '2025-07-03'
+  value: '2026-01-29'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Alex
+        - content: Wei
+          language:
+          - en
+        - language:
+          - en
+          initial: W
+        formatted_initials:
+          content: W.
+          language:
+          - en
+      surname:
+        content: Wang
+        language:
+        - en
+      completename:
+        content: Wei Wang
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: China Telecom
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Aijun
           language:
           - en
         - language:
           - en
           initial: A
+        formatted_initials:
+          content: A.
+          language:
+          - en
+      surname:
+        content: Wang
+        language:
+        - en
+      completename:
+        content: Aijun Wang
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: China Telecom
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Haibo
+          language:
+          - en
         - language:
           - en
           initial: H
         formatted_initials:
-          content: A. H.
+          content: H.
           language:
           - en
       surname:
-        content: Feng
+        content: Wang
         language:
         - en
       completename:
-        content: Alex Huang Feng
+        content: Haibo Wang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: INSA-Lyon
+        - content: Huawei Technologies
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Pierre
+        - content: Gyan
           language:
           - en
         - language:
           - en
-          initial: P
+          initial: G
+        - language:
+          - en
+          initial: S
         formatted_initials:
-          content: P.
+          content: G. S.
           language:
           - en
       surname:
-        content: Francois
+        content: Mishra
         language:
         - en
       completename:
-        content: Pierre Francois
+        content: Gyan Mishra
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: INSA-Lyon
+        - content: Verizon Inc.
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Tianran
+        - content: Jie
           language:
           - en
         - language:
           - en
-          initial: T
+          initial: J
         formatted_initials:
-          content: T.
+          content: J.
           language:
           - en
       surname:
-        content: Zhou
+        content: Dong
         language:
         - en
       completename:
-        content: Tianran Zhou
+        content: Jie Dong
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Thomas
-          language:
-          - en
-        - language:
-          - en
-          initial: T
-        formatted_initials:
-          content: T.
-          language:
-          - en
-      surname:
-        content: Graf
-        language:
-        - en
-      completename:
-        content: Thomas Graf
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Swisscom
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Paolo
-          language:
-          - en
-        - language:
-          - en
-          initial: P
-        formatted_initials:
-          content: P.
-          language:
-          - en
-      surname:
-        content: Lucente
-        language:
-        - en
-      completename:
-        content: Paolo Lucente
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: NTT
+        - content: Huawei Technologies
   role:
   - type: author
 version:
-- draft: '22'
-revdate: '2025-07-03'
+- draft: '25'
+revdate: '2026-01-29'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document describes a UDP-based transport for YANG notifications
-    to collect data from network nodes. A shim header is defined to facilitate the
-    data streaming directly from a publishing process on a network device to telemetry
-    receivers. Such a design enables higher frequency updates and less performance
-    overhead on publisher and receiver processes compared to already established notification
-    mechanisms. A YANG data model is also defined for management of the described
-    UDP-based transport.</p>"
+- content: "<p>This draft defines a new type of Outbound Route Filter (ORF), known
+    as the Virtual Private Network (VPN) Prefix ORF. The VPN Prefix ORF mechanism
+    is applicable when VPN routes from different Virtual Routing and Forwarding (VRF)
+    instances are exchanged through a single shared Border Gateway Protocol (BGP)
+    session.The purpose of VPN Prefix ORF mechanism is to control the overload of
+    VPN routes based on RT. With this mechanism, the overload can be limited within
+    the minimum range.</p>"
   language:
   - en
   script:
@@ -190,23 +190,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-netconf-udp-notif-21
+    id: draft-ietf-idr-vpn-prefix-orf-09
     docid:
-    - id: draft-ietf-netconf-udp-notif-21
+    - id: draft-ietf-idr-vpn-prefix-orf-09
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-netconf-udp-notif-21
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-netconf-udp-notif-25
-    docid:
-    - id: draft-ietf-netconf-udp-notif-25
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-netconf-udp-notif-25
+      content: draft-ietf-idr-vpn-prefix-orf-09
       format: text/plain
 series:
 - type: main
@@ -217,7 +207,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-netconf-udp-notif-22
+  number: draft-ietf-idr-vpn-prefix-orf-25
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

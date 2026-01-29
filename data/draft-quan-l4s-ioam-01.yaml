@@ -1,187 +1,197 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-netconf-udp-notif-22
+id: draft-quan-l4s-ioam-01
 title:
-- content: UDP-based Transport for Configured Subscriptions
+- content: IOAM network awareness for Low Latency, Low Loss, and Scalable Throughput
+    (L4S)
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-netconf-udp-notif-22
+- content: https://datatracker.ietf.org/doc/html/draft-quan-l4s-ioam-01
   type: src
 type: standard
 docid:
-- id: draft-ietf-netconf-udp-notif-22
+- id: draft-quan-l4s-ioam-01
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-netconf-udp-notif
+- id: I-D.quan-l4s-ioam
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-netconf-udp-notif
+docnumber: I-D.quan-l4s-ioam
 date:
 - type: published
-  value: '2025-07-03'
+  value: '2026-01-29'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Alex
+        - content: Wei
           language:
           - en
         - language:
           - en
-          initial: A
-        - language:
-          - en
-          initial: H
+          initial: W
         formatted_initials:
-          content: A. H.
+          content: W.
           language:
           - en
       surname:
-        content: Feng
+        content: Quan
         language:
         - en
       completename:
-        content: Alex Huang Feng
+        content: Wei Quan
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: INSA-Lyon
+        - content: |-
+            Beijing Jiaotong
+                  University
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Pierre
+        - content: Wei
           language:
           - en
         - language:
           - en
-          initial: P
+          initial: W
         formatted_initials:
-          content: P.
+          content: W.
           language:
           - en
       surname:
-        content: Francois
+        content: Su
         language:
         - en
       completename:
-        content: Pierre Francois
+        content: Wei Su
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: INSA-Lyon
+        - content: |-
+            Beijing Jiaotong
+                  University
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Tianran
+        - content: Shuaihao
           language:
           - en
         - language:
           - en
-          initial: T
+          initial: S
         formatted_initials:
-          content: T.
+          content: S.
           language:
           - en
       surname:
-        content: Zhou
+        content: Pan
         language:
         - en
       completename:
-        content: Tianran Zhou
+        content: Shuaihao Pan
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei
+        - content: |-
+            Beijing Jiaotong
+                  University
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Thomas
+        - content: Xiaobin
           language:
           - en
         - language:
           - en
-          initial: T
+          initial: X
         formatted_initials:
-          content: T.
+          content: X.
           language:
           - en
       surname:
-        content: Graf
+        content: Liang
         language:
         - en
       completename:
-        content: Thomas Graf
+        content: Xiaobin Liang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Swisscom
+        - content: |-
+            China Telecom Research
+                  Institute
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Paolo
+        - content: Jie
           language:
           - en
         - language:
           - en
-          initial: P
+          initial: J
         formatted_initials:
-          content: P.
+          content: J.
           language:
           - en
       surname:
-        content: Lucente
+        content: Liang
         language:
         - en
       completename:
-        content: Paolo Lucente
+        content: Jie Liang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: NTT
+        - content: |-
+            China Telecom Research
+                  Institute
   role:
   - type: author
 version:
-- draft: '22'
-revdate: '2025-07-03'
+- draft: '01'
+revdate: '2026-01-29'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document describes a UDP-based transport for YANG notifications
-    to collect data from network nodes. A shim header is defined to facilitate the
-    data streaming directly from a publishing process on a network device to telemetry
-    receivers. Such a design enables higher frequency updates and less performance
-    overhead on publisher and receiver processes compared to already established notification
-    mechanisms. A YANG data model is also defined for management of the described
-    UDP-based transport.</p>"
+- content: "<p>This specification defines a framework how to update L4S Dual-Queue
+    Coupled AQM with In Situ Operations, Administration, and Maintenance (IOAM). These
+    are designed for consistently very low queuing latency, very low congestion loss,
+    and scaling of perflow throughput by using Explicit Congestion Notification (ECN)
+    using the operational and telemetry information collected by IOAM. Since L4S lacks
+    information about the use of network status and network nodes, which also affect
+    network performance in practice, it is considered to use direct export mode for
+    information collection of L4S-IOAM to strengthen the AQM regulation of L4S. It
+    then gives the normative requirements that are necessary.</p>"
   language:
   - en
   script:
@@ -190,23 +200,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-netconf-udp-notif-21
+    id: draft-quan-l4s-ioam-00
     docid:
-    - id: draft-ietf-netconf-udp-notif-21
+    - id: draft-quan-l4s-ioam-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-netconf-udp-notif-21
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-netconf-udp-notif-25
-    docid:
-    - id: draft-ietf-netconf-udp-notif-25
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-netconf-udp-notif-25
+      content: draft-quan-l4s-ioam-00
       format: text/plain
 series:
 - type: main
@@ -217,7 +217,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-netconf-udp-notif-22
+  number: draft-quan-l4s-ioam-01
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

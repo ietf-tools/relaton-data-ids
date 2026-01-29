@@ -1,93 +1,118 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-netconf-udp-notif-22
+id: draft-ls-idr-bgp-ls-service-metadata-07
 title:
-- content: UDP-based Transport for Configured Subscriptions
+- content: Distribution of Service Metadata in BGP-LS
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-netconf-udp-notif-22
+- content: https://datatracker.ietf.org/doc/html/draft-ls-idr-bgp-ls-service-metadata-07
   type: src
 type: standard
 docid:
-- id: draft-ietf-netconf-udp-notif-22
+- id: draft-ls-idr-bgp-ls-service-metadata-07
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-netconf-udp-notif
+- id: I-D.ls-idr-bgp-ls-service-metadata
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-netconf-udp-notif
+docnumber: I-D.ls-idr-bgp-ls-service-metadata
 date:
 - type: published
-  value: '2025-07-03'
+  value: '2026-01-29'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Alex
+        - content: Mengyao
           language:
           - en
         - language:
           - en
-          initial: A
-        - language:
-          - en
-          initial: H
+          initial: M
         formatted_initials:
-          content: A. H.
+          content: M.
           language:
           - en
       surname:
-        content: Feng
+        content: Han
         language:
         - en
       completename:
-        content: Alex Huang Feng
+        content: Mengyao Han
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: INSA-Lyon
+        - content: China Unicom
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Pierre
+        - content: Xinxin
           language:
           - en
         - language:
           - en
-          initial: P
+          initial: X
         formatted_initials:
-          content: P.
+          content: X.
           language:
           - en
       surname:
-        content: Francois
+        content: Yi
         language:
         - en
       completename:
-        content: Pierre Francois
+        content: Xinxin Yi
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: INSA-Lyon
+        - content: China Unicom
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Tianran
+        - content: Zheng
+          language:
+          - en
+        - language:
+          - en
+          initial: Z
+        formatted_initials:
+          content: Z.
+          language:
+          - en
+      surname:
+        content: Ruan
+        language:
+        - en
+      completename:
+        content: Zheng Ruan
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: China Unicom
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Tao
           language:
           - en
         - language:
@@ -98,11 +123,35 @@ contributor:
           language:
           - en
       surname:
-        content: Zhou
+        content: He
         language:
         - en
       completename:
-        content: Tianran Zhou
+        content: Tao He
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: China Unicom
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Liu
+          language:
+          - en
+        formatted_initials:
+          language:
+          - en
+      surname:
+        content: Ying
+        language:
+        - en
+      completename:
+        content: Liu Ying
         language:
         - en
     affiliation:
@@ -111,77 +160,23 @@ contributor:
         - content: Huawei
   role:
   - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Thomas
-          language:
-          - en
-        - language:
-          - en
-          initial: T
-        formatted_initials:
-          content: T.
-          language:
-          - en
-      surname:
-        content: Graf
-        language:
-        - en
-      completename:
-        content: Thomas Graf
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Swisscom
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Paolo
-          language:
-          - en
-        - language:
-          - en
-          initial: P
-        formatted_initials:
-          content: P.
-          language:
-          - en
-      surname:
-        content: Lucente
-        language:
-        - en
-      completename:
-        content: Paolo Lucente
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: NTT
-  role:
-  - type: author
 version:
-- draft: '22'
-revdate: '2025-07-03'
+- draft: '07'
+revdate: '2026-01-29'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document describes a UDP-based transport for YANG notifications
-    to collect data from network nodes. A shim header is defined to facilitate the
-    data streaming directly from a publishing process on a network device to telemetry
-    receivers. Such a design enables higher frequency updates and less performance
-    overhead on publisher and receiver processes compared to already established notification
-    mechanisms. A YANG data model is also defined for management of the described
-    UDP-based transport.</p>"
+- content: "<p>In edge computing, a service may be deployed on multiple instances
+    within one or more sites, called edge service. The edge service is associated
+    with an ANYCAST address in the IP layer, and the route of it with potential service
+    metadata will be distributed to the network. The Edge Service Metadata can be
+    used by ingress routers to make path selections not only based on the routing
+    cost but also the running environment of the edge services. The service route
+    with metadata can be collected by a PCE(Path Compute Element) or an analyzer for
+    calculating the best path to the best site/instance. This draft describes a mechanism
+    to collect information of the service routes and related service metadata in BGP-LS.</p>"
   language:
   - en
   script:
@@ -190,23 +185,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-netconf-udp-notif-21
+    id: draft-ls-idr-bgp-ls-service-metadata-00
     docid:
-    - id: draft-ietf-netconf-udp-notif-21
+    - id: draft-ls-idr-bgp-ls-service-metadata-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-netconf-udp-notif-21
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-netconf-udp-notif-25
-    docid:
-    - id: draft-ietf-netconf-udp-notif-25
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-netconf-udp-notif-25
+      content: draft-ls-idr-bgp-ls-service-metadata-00
       format: text/plain
 series:
 - type: main
@@ -217,7 +202,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-netconf-udp-notif-22
+  number: draft-ls-idr-bgp-ls-service-metadata-07
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
