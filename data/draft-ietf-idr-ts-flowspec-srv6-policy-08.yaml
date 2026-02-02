@@ -1,124 +1,62 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-ccamp-flexigrid-yang-18
+id: draft-ietf-idr-ts-flowspec-srv6-policy-08
 title:
-- content: A YANG Data Model for Flexi-Grid Optical Networks
+- content: Traffic Steering using BGP FlowSpec with SR Policy
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-flexigrid-yang-18
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-ts-flowspec-srv6-policy-08
   type: src
 type: standard
 docid:
-- id: draft-ietf-ccamp-flexigrid-yang-18
+- id: draft-ietf-idr-ts-flowspec-srv6-policy-08
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-ccamp-flexigrid-yang
+- id: I-D.ietf-idr-ts-flowspec-srv6-policy
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-ccamp-flexigrid-yang
+docnumber: I-D.ietf-idr-ts-flowspec-srv6-policy
 date:
 - type: published
-  value: '2025-03-17'
+  value: '2026-02-01'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Universidad
+        - content: Jiang
           language:
           - en
         - language:
           - en
-          initial: U
-        - language:
-          - en
-          initial: A
+          initial: J
         formatted_initials:
-          content: U. A.
+          content: J.
           language:
           - en
       surname:
-        content: de Madrid
+        content: Wenying
         language:
         - en
       completename:
-        content: Universidad Autonoma de Madrid
+        content: Jiang Wenying
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Naudit HPCN
+        - content: China Mobile
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Daniel
-          language:
-          - en
-        - language:
-          - en
-          initial: D
-        - language:
-          - en
-          initial: P
-        formatted_initials:
-          content: D. P.
-          language:
-          - en
-      surname:
-        content: Burrero
-        language:
-        - en
-      completename:
-        content: Daniel Perdices Burrero
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Universidad Autonoma de Madrid
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Daniel
-          language:
-          - en
-        - language:
-          - en
-          initial: D
-        formatted_initials:
-          content: D.
-          language:
-          - en
-      surname:
-        content: King
-        language:
-        - en
-      completename:
-        content: Daniel King
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Old Dog Consulting
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Young
+        - content: Yisong
           language:
           - en
         - language:
@@ -129,39 +67,98 @@ contributor:
           language:
           - en
       surname:
-        content: Lee
+        content: Liu
         language:
         - en
       completename:
-        content: Young Lee
+        content: Yisong Liu
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Samsung
+        - content: China Mobile
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Haomian
+        - content: Shunwan
           language:
           - en
         - language:
           - en
-          initial: H
+          initial: S
         formatted_initials:
-          content: H.
+          content: S.
           language:
           - en
       surname:
-        content: Zheng
+        content: Zhuang
         language:
         - en
       completename:
-        content: Haomian Zheng
+        content: Shunwan Zhuang
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei Technologies
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Gyan
+          language:
+          - en
+        - language:
+          - en
+          initial: G
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: G. S.
+          language:
+          - en
+      surname:
+        content: Mishra
+        language:
+        - en
+      completename:
+        content: Gyan Mishra
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Verizon Communications Inc.
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Shuanglong
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Chen
+        language:
+        - en
+      completename:
+        content: Shuanglong Chen
         language:
         - en
     affiliation:
@@ -171,18 +168,19 @@ contributor:
   role:
   - type: author
 version:
-- draft: '18'
-revdate: '2025-03-17'
+- draft: '08'
+revdate: '2026-02-01'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document defines a YANG module for managing flexi-grid optical
-    networks. The model defined in this document specifies a flexi-grid traffic engineering
-    database that is used to describe the topology of a flexi-grid network. It is
-    based on and augments existing YANG models that describe network and traffic engineering
-    topologies.</p>"
+- content: "<p>BGP Flow Specification (FlowSpec) [RFC8955] and [RFC8956] has been
+    proposed to distribute BGP [RFC4271] FlowSpec NLRI to FlowSpec clients to mitigate
+    (distributed) denial-of-service attacks, and to provide traffic filtering in the
+    context of a BGP/MPLS VPN service. Recently, traffic steering applications in
+    the context of SR-MPLS and SRv6 using FlowSpec are being used in networks. This
+    document introduces the usage of BGP FlowSpec to steer packets into an SR Policy.</p>"
   language:
   - en
   script:
@@ -191,23 +189,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-ccamp-flexigrid-yang-16
+    id: draft-ietf-idr-ts-flowspec-srv6-policy-04
     docid:
-    - id: draft-ietf-ccamp-flexigrid-yang-16
+    - id: draft-ietf-idr-ts-flowspec-srv6-policy-04
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-ccamp-flexigrid-yang-16
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-ccamp-flexigrid-yang-19
-    docid:
-    - id: draft-ietf-ccamp-flexigrid-yang-19
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-ccamp-flexigrid-yang-19
+      content: draft-ietf-idr-ts-flowspec-srv6-policy-04
       format: text/plain
 series:
 - type: main
@@ -218,7 +206,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-ccamp-flexigrid-yang-18
+  number: draft-ietf-idr-ts-flowspec-srv6-policy-08
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

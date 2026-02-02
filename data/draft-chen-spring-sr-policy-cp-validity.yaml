@@ -13,13 +13,14 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>An SR Policy comprises one or more candidate paths (CP) of which at
-    a given time one and only one may be active (i.e., installed in forwarding and
-    usable for steering of traffic). Each CP in turn may have one or more SID-List
-    of which one or more may be active; when multiple SID-List are active then traffic
-    is load balanced over them. However, a candidate path is valid when at least one
-    SID-List is active. This candidate path validity criterion cannot meet the needs
-    of some scenarios. This document defines the new candidate path validity criterion.</p>"
+- content: "<p>An SR Policy comprises one or more candidate paths of which at a given
+    time one and only one may be active (i.e., installed in forwarding plane and usable
+    for steering of traffic). Each candidate path, in turn, may have one or more segment
+    lists of which one or more may be active. When multiple segment lists are active,
+    traffic is load balanced over them. Currently, a candidate path is valid as long
+    as at least one of its segment lists is active. However, this default validity
+    criterion does not meet the requirements of some scenarios. This document defines
+    the new candidate path validity criterion.</p>"
   language:
   - en
   script:
@@ -85,6 +86,26 @@ relation:
       primary: true
     formattedref:
       content: draft-chen-spring-sr-policy-cp-validity-05
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-chen-spring-sr-policy-cp-validity-06
+    docid:
+    - id: draft-chen-spring-sr-policy-cp-validity-06
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-chen-spring-sr-policy-cp-validity-06
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-chen-spring-sr-policy-cp-validity-07
+    docid:
+    - id: draft-chen-spring-sr-policy-cp-validity-07
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-chen-spring-sr-policy-cp-validity-07
       format: text/plain
 ext:
   schema-version: v1.0.1

@@ -1,57 +1,29 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-dnsop-structured-dns-error-15
+id: draft-reddy-tls-composite-mldsa-08
 title:
-- content: Structured Error Data for Filtered DNS
+- content: Use of Composite ML-DSA in TLS 1.3
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-dnsop-structured-dns-error-15
+- content: https://datatracker.ietf.org/doc/html/draft-reddy-tls-composite-mldsa-08
   type: src
 type: standard
 docid:
-- id: draft-ietf-dnsop-structured-dns-error-15
+- id: draft-reddy-tls-composite-mldsa-08
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-dnsop-structured-dns-error
+- id: I-D.reddy-tls-composite-mldsa
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-dnsop-structured-dns-error
+docnumber: I-D.reddy-tls-composite-mldsa
 date:
 - type: published
-  value: '2025-05-05'
+  value: '2026-02-01'
 contributor:
-- person:
-    name:
-      given:
-        forename:
-        - content: Dan
-          language:
-          - en
-        - language:
-          - en
-          initial: D
-        formatted_initials:
-          content: D.
-          language:
-          - en
-      surname:
-        content: Wing
-        language:
-        - en
-      completename:
-        content: Dan Wing
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Citrix Systems, Inc.
-  role:
-  - type: author
 - person:
     name:
       given:
@@ -84,74 +56,99 @@ contributor:
     name:
       given:
         forename:
-        - content: Neil
+        - content: Tim
           language:
           - en
         - language:
           - en
-          initial: "N"
+          initial: T
         formatted_initials:
-          content: N.
+          content: T.
           language:
           - en
       surname:
-        content: Cook
+        content: Hollebeek
         language:
         - en
       completename:
-        content: Neil Cook
+        content: Tim Hollebeek
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Open-Xchange
+        - content: DigiCert
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Mohamed
+        - content: John
           language:
           - en
         - language:
           - en
-          initial: M
+          initial: J
         formatted_initials:
-          content: M.
+          content: J.
           language:
           - en
       surname:
-        content: Boucadair
+        content: Gray
         language:
         - en
       completename:
-        content: Mohamed Boucadair
+        content: John Gray
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Orange
+        - content: Entrust Limited
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Scott
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Fluhrer
+        language:
+        - en
+      completename:
+        content: Scott Fluhrer
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Cisco Systems
   role:
   - type: author
 version:
-- draft: '15'
-revdate: '2025-05-05'
+- draft: '08'
+revdate: '2026-02-01'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>DNS filtering is widely deployed for various reasons, including network
-    security. However, filtered DNS responses lack structured information for end
-    users to understand the reason for the filtering. Existing mechanisms to provide
-    explanatory details to end users cause harm especially if the blocked DNS response
-    is for HTTPS resources. This document updates RFC 8914 by signaling client support
-    for structuring the EXTRA-TEXT field of the Extended DNS Error to provide details
-    on the DNS filtering. Such details can be parsed by the client and displayed,
-    logged, or used for other purposes.</p>"
+- content: "<p>Compositing the post-quantum ML-DSA signature with traditional signature
+    algorithms provides protection against potential breaks or critical bugs in ML-DSA
+    or the ML-DSA implementation. This document specifies how such a composite signature
+    can be formed using ML-DSA with RSA-PKCS#1 v1.5, RSA-PSS, ECDSA, Ed25519, and
+    Ed448 to provide authentication in TLS 1.3.</p>"
   language:
   - en
   script:
@@ -160,23 +157,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-dnsop-structured-dns-error-13
+    id: draft-reddy-tls-composite-mldsa-01
     docid:
-    - id: draft-ietf-dnsop-structured-dns-error-13
+    - id: draft-reddy-tls-composite-mldsa-01
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-dnsop-structured-dns-error-13
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-dnsop-structured-dns-error-16
-    docid:
-    - id: draft-ietf-dnsop-structured-dns-error-16
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-dnsop-structured-dns-error-16
+      content: draft-reddy-tls-composite-mldsa-01
       format: text/plain
 series:
 - type: main
@@ -187,7 +174,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-dnsop-structured-dns-error-15
+  number: draft-reddy-tls-composite-mldsa-08
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

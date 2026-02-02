@@ -1,124 +1,62 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-ccamp-flexigrid-yang-18
+id: draft-chen-spring-sr-policy-cp-validity-06
 title:
-- content: A YANG Data Model for Flexi-Grid Optical Networks
+- content: Validity of SR Policy Candidate Path
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-flexigrid-yang-18
+- content: https://datatracker.ietf.org/doc/html/draft-chen-spring-sr-policy-cp-validity-06
   type: src
 type: standard
 docid:
-- id: draft-ietf-ccamp-flexigrid-yang-18
+- id: draft-chen-spring-sr-policy-cp-validity-06
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-ccamp-flexigrid-yang
+- id: I-D.chen-spring-sr-policy-cp-validity
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-ccamp-flexigrid-yang
+docnumber: I-D.chen-spring-sr-policy-cp-validity
 date:
 - type: published
-  value: '2025-03-17'
+  value: '2026-02-01'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Universidad
+        - content: Ran
           language:
           - en
         - language:
           - en
-          initial: U
-        - language:
-          - en
-          initial: A
+          initial: R
         formatted_initials:
-          content: U. A.
+          content: R.
           language:
           - en
       surname:
-        content: de Madrid
+        content: Chen
         language:
         - en
       completename:
-        content: Universidad Autonoma de Madrid
+        content: Ran Chen
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Naudit HPCN
+        - content: ZTE Corporation
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Daniel
-          language:
-          - en
-        - language:
-          - en
-          initial: D
-        - language:
-          - en
-          initial: P
-        formatted_initials:
-          content: D. P.
-          language:
-          - en
-      surname:
-        content: Burrero
-        language:
-        - en
-      completename:
-        content: Daniel Perdices Burrero
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Universidad Autonoma de Madrid
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Daniel
-          language:
-          - en
-        - language:
-          - en
-          initial: D
-        formatted_initials:
-          content: D.
-          language:
-          - en
-      surname:
-        content: King
-        language:
-        - en
-      completename:
-        content: Daniel King
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Old Dog Consulting
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Young
+        - content: Yisong
           language:
           - en
         - language:
@@ -129,60 +67,118 @@ contributor:
           language:
           - en
       surname:
-        content: Lee
+        content: Liu
         language:
         - en
       completename:
-        content: Young Lee
+        content: Yisong Liu
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Samsung
+        - content: China Mobile
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Haomian
+        - content: Ketan
           language:
           - en
         - language:
           - en
-          initial: H
+          initial: K
         formatted_initials:
-          content: H.
+          content: K.
           language:
           - en
       surname:
-        content: Zheng
+        content: Talaulikar
         language:
         - en
       completename:
-        content: Haomian Zheng
+        content: Ketan Talaulikar
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei Technologies
+        - content: Cisco Systems, Inc.
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Detao
+          language:
+          - en
+        - language:
+          - en
+          initial: D
+        formatted_initials:
+          content: D.
+          language:
+          - en
+      surname:
+        content: Zhao
+        language:
+        - en
+      completename:
+        content: Detao Zhao
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: ZTE Corporation
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Zafar
+          language:
+          - en
+        - language:
+          - en
+          initial: Z
+        formatted_initials:
+          content: Z.
+          language:
+          - en
+      surname:
+        content: Ali
+        language:
+        - en
+      completename:
+        content: Zafar Ali
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Cisco Systems, Inc.
   role:
   - type: author
 version:
-- draft: '18'
-revdate: '2025-03-17'
+- draft: '06'
+revdate: '2026-02-01'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document defines a YANG module for managing flexi-grid optical
-    networks. The model defined in this document specifies a flexi-grid traffic engineering
-    database that is used to describe the topology of a flexi-grid network. It is
-    based on and augments existing YANG models that describe network and traffic engineering
-    topologies.</p>"
+- content: "<p>An SR Policy comprises one or more candidate paths (CP) of which at
+    a given time one and only one may be active (i.e., installed in forwarding and
+    usable for steering of traffic). Each CP in turn may have one or more SID-List
+    of which one or more may be active; when multiple SID-List are active then traffic
+    is load balanced over them. However, a candidate path is valid when at least one
+    SID-List is active. This candidate path validity criterion cannot meet the needs
+    of some scenarios. This document defines the new candidate path validity criterion.</p>"
   language:
   - en
   script:
@@ -191,23 +187,23 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-ccamp-flexigrid-yang-16
+    id: draft-chen-spring-sr-policy-cp-validity-02
     docid:
-    - id: draft-ietf-ccamp-flexigrid-yang-16
+    - id: draft-chen-spring-sr-policy-cp-validity-02
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-ccamp-flexigrid-yang-16
+      content: draft-chen-spring-sr-policy-cp-validity-02
       format: text/plain
 - type: updatedBy
   bibitem:
-    id: draft-ietf-ccamp-flexigrid-yang-19
+    id: draft-chen-spring-sr-policy-cp-validity-07
     docid:
-    - id: draft-ietf-ccamp-flexigrid-yang-19
+    - id: draft-chen-spring-sr-policy-cp-validity-07
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-ccamp-flexigrid-yang-19
+      content: draft-chen-spring-sr-policy-cp-validity-07
       format: text/plain
 series:
 - type: main
@@ -218,7 +214,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-ccamp-flexigrid-yang-18
+  number: draft-chen-spring-sr-policy-cp-validity-06
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
