@@ -1,25 +1,25 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-teep-protocol-22
+id: draft-ietf-dnsop-domain-verification-techniques-11
 title:
-- content: Trusted Execution Environment Provisioning (TEEP) Protocol
+- content: Domain Control Validation using DNS
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-teep-protocol-22
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-dnsop-domain-verification-techniques-11
   type: src
 type: standard
 docid:
-- id: draft-ietf-teep-protocol-22
+- id: draft-ietf-dnsop-domain-verification-techniques-11
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-teep-protocol
+- id: I-D.ietf-dnsop-domain-verification-techniques
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-teep-protocol
+docnumber: I-D.ietf-dnsop-domain-verification-techniques
 date:
 - type: published
   value: '2026-02-01'
@@ -28,157 +28,161 @@ contributor:
     name:
       given:
         forename:
-        - content: Hannes
+        - content: Shivan
           language:
           - en
         - language:
           - en
-          initial: H
+          initial: S
+        - language:
+          - en
+          initial: K
         formatted_initials:
-          content: H.
+          content: S. K.
           language:
           - en
       surname:
-        content: Tschofenig
+        content: Sahib
         language:
         - en
       completename:
-        content: Hannes Tschofenig
+        content: Shivan Kaul Sahib
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: University of Applied Sciences Bonn-Rhein-Sieg
+        - content: Brave Software
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Mingliang
+        - content: Shumon
           language:
           - en
         - language:
           - en
-          initial: M
+          initial: S
         formatted_initials:
-          content: M.
+          content: S.
           language:
           - en
       surname:
-        content: Pei
+        content: Huque
         language:
         - en
       completename:
-        content: Mingliang Pei
+        content: Shumon Huque
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Broadcom
+        - content: Salesforce
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Dave
+        - content: Paul
           language:
           - en
         - language:
           - en
-          initial: D
-        - language:
-          - en
-          initial: M
+          initial: P
         formatted_initials:
-          content: D. M.
+          content: P.
           language:
           - en
       surname:
-        content: Wheeler
+        content: Wouters
         language:
         - en
       completename:
-        content: Dave Wheeler
+        content: Paul Wouters
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Amazon
+        - content: Aiven
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Dave
+        - content: Erik
           language:
           - en
         - language:
           - en
-          initial: D
+          initial: E
         formatted_initials:
-          content: D.
+          content: E.
           language:
           - en
       surname:
-        content: Thaler
+        content: Nygren
         language:
         - en
       completename:
-        content: Dave Thaler
+        content: Erik Nygren
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Microsoft
+        - content: Akamai Technologies
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Akira
+        - content: Tim
           language:
           - en
         - language:
           - en
-          initial: A
+          initial: T
         formatted_initials:
-          content: A.
+          content: T.
           language:
           - en
       surname:
-        content: Tsukamoto
+        content: Wicinski
         language:
         - en
       completename:
-        content: Akira Tsukamoto
+        content: Tim Wicinski
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Openchip & Software Technologies, S.L.
+        - content: Cox Communications
   role:
   - type: author
 version:
-- draft: '22'
+- draft: '11'
 revdate: '2026-02-01'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document specifies a protocol that installs, updates, and deletes
-    Trusted Components in a device with a Trusted Execution Environment (TEE). This
-    specification defines an interoperable protocol for managing the lifecycle of
-    Trusted Components.</p>"
+- content: <p>Many application services on the Internet need to verify ownership or
+    control of a domain in the Domain Name System (DNS). The general term for this
+    process is "Domain Control Validation", and can be done using a variety of methods
+    such as email, HTTP/HTTPS, or the DNS itself. This document focuses only on DNS-based
+    methods, which typically involve the Application Service Provider requesting a
+    DNS record with a specific format and content to be visible in the domain to be
+    verified. There is wide variation in the details of these methods today. This
+    document provides some best practices to avoid known problems.</p>
   language:
   - en
   script:
@@ -187,23 +191,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-teep-protocol-13
+    id: draft-ietf-dnsop-domain-verification-techniques-07
     docid:
-    - id: draft-ietf-teep-protocol-13
+    - id: draft-ietf-dnsop-domain-verification-techniques-07
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-teep-protocol-13
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-teep-protocol-23
-    docid:
-    - id: draft-ietf-teep-protocol-23
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-teep-protocol-23
+      content: draft-ietf-dnsop-domain-verification-techniques-07
       format: text/plain
 series:
 - type: main
@@ -214,7 +208,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-teep-protocol-22
+  number: draft-ietf-dnsop-domain-verification-techniques-11
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
