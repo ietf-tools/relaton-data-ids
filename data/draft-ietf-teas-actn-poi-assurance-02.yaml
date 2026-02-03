@@ -1,162 +1,159 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-teas-actn-pm-telemetry-autonomics-13
+id: draft-ietf-teas-actn-poi-assurance-02
 title:
-- content: YANG models for Virtual Network (VN)/TE Performance Monitoring Telemetry
-    and Scaling Intent Autonomics
+- content: Applicability of Abstraction and Control of Traffic Engineered Networks
+    (ACTN) for Packet Optical Integration (POI) service assurance
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-teas-actn-pm-telemetry-autonomics-13
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-teas-actn-poi-assurance-02
   type: src
 type: standard
 docid:
-- id: draft-ietf-teas-actn-pm-telemetry-autonomics-13
+- id: draft-ietf-teas-actn-poi-assurance-02
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-teas-actn-pm-telemetry-autonomics
+- id: I-D.ietf-teas-actn-poi-assurance
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-teas-actn-pm-telemetry-autonomics
+docnumber: I-D.ietf-teas-actn-poi-assurance
 date:
 - type: published
-  value: '2024-10-01'
+  value: '2026-02-02'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Young
+        - content: Italo
           language:
           - en
         - language:
           - en
-          initial: "Y"
+          initial: I
         formatted_initials:
-          content: Y.
+          content: I.
           language:
           - en
       surname:
-        content: Lee
+        content: Busi
         language:
         - en
       completename:
-        content: Young Lee
+        content: Italo Busi
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Samsung Electronics
+        - content: Huawei Technologies
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Dhruv
-          language:
-          - en
         - language:
           - en
-          initial: D
+          initial: J
         formatted_initials:
-          content: D.
+          content: J.
           language:
           - en
       surname:
-        content: Dhody
+        content: Bouquier
         language:
         - en
       completename:
-        content: Dhruv Dhody
+        content: Jean-Francois Bouquier
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei
+        - content: Vodafone
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Ricard
+        - content: Fabio
           language:
           - en
         - language:
           - en
-          initial: R
+          initial: F
         formatted_initials:
-          content: R.
+          content: F.
           language:
           - en
       surname:
-        content: Vilalta
+        content: Peruzzini
         language:
         - en
       completename:
-        content: Ricard Vilalta
+        content: Fabio Peruzzini
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: CTTC
+        - content: FiberCop
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Daniel
+        - content: Paolo
           language:
           - en
         - language:
           - en
-          initial: D
+          initial: P
         formatted_initials:
-          content: D.
+          content: P.
           language:
           - en
       surname:
-        content: King
+        content: Volpato
         language:
         - en
       completename:
-        content: Daniel King
+        content: Paolo Volpato
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Lancaster University
+        - content: Huawei Technologies
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Daniele
+        - content: Prasenjit
           language:
           - en
         - language:
           - en
-          initial: D
+          initial: P
         formatted_initials:
-          content: D.
+          content: P.
           language:
           - en
       surname:
-        content: Ceccarelli
+        content: Manna
         language:
         - en
       completename:
-        content: Daniele Ceccarelli
+        content: Prasenjit Manna
         language:
         - en
     affiliation:
@@ -166,20 +163,23 @@ contributor:
   role:
   - type: author
 version:
-- draft: '13'
-revdate: '2024-10-01'
+- draft: '02'
+revdate: '2026-02-02'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document provides YANG data models that describe performance monitoring
-    parameters and scaling intent mechanisms for TE-tunnels and Virtual Networks (VNs).
-    There performance monitoring parameters are exposed as the key telemetry data
-    for tunnels and VN. The models presented in this document allow customers to subscribe
-    to and monitor the key performance data of the TE-tunnel or the VN. The models
-    also provide customers with the ability to program autonomic scaling intent mechanisms
-    on the level of TE-tunnel as well as VN.</p>"
+- content: "<p>This document extends the analysis of the applicability of Abstraction
+    and Control of TE Networks (ACTN) architecture to Packet Optical Integration (POI)
+    to cover multi-layer service assurance scenarios. Specifically, the ACTN architecture
+    enables the detection and handling of different failures that may happen either
+    at the optical or the packet layer. It is assumed that the underlying transport
+    optical network carries end-to-end IP services such as L2VPN or L3VPN connectivity
+    services, with specific Service Level Agreement (SLA) requirements. Existing IETF
+    protocols and data models are identified for each multi-layer (packet over optical)
+    service assurance scenario with a specific focus on the MPI (Multi-Domain Service
+    Coordinator to Provisioning Network Controllers Interface) in the ACTN architecture.</p>"
   language:
   - en
   script:
@@ -188,23 +188,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-teas-actn-pm-telemetry-autonomics-01
+    id: draft-ietf-teas-actn-poi-assurance-01
     docid:
-    - id: draft-ietf-teas-actn-pm-telemetry-autonomics-01
+    - id: draft-ietf-teas-actn-poi-assurance-01
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-teas-actn-pm-telemetry-autonomics-01
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-teas-actn-pm-telemetry-autonomics-17
-    docid:
-    - id: draft-ietf-teas-actn-pm-telemetry-autonomics-17
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-teas-actn-pm-telemetry-autonomics-17
+      content: draft-ietf-teas-actn-poi-assurance-01
       format: text/plain
 series:
 - type: main
@@ -215,7 +205,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-teas-actn-pm-telemetry-autonomics-13
+  number: draft-ietf-teas-actn-poi-assurance-02
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
