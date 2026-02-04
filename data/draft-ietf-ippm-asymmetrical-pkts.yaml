@@ -2,7 +2,8 @@
 schema-version: v1.2.3
 id: draft-ietf-ippm-asymmetrical-pkts
 title:
-- content: Performance Measurement with Asymmetrical Traffic Using STAMP
+- content: Performance Measurement with Asymmetrical Traffic Using Simple Two-Way
+    Active Measurement Protocol (STAMP)
   language:
   - en
   script:
@@ -13,15 +14,22 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document describes an optional extension to a Simple Two-way Active
-    Measurement Protocol (STAMP) that enables control of the length and/or number
-    of reflected packets during a single STAMP test session. In some use cases, the
-    use of asymmetrical test packets allow for the creation of more realistic flows
-    of test packets and, thus, a closer approximation between active performance measurements
-    and conditions experienced by the monitored application. Also, the document includes
-    an analysis of challenges related to performance monitoring in a multicast network.
-    It defines procedures and STAMP extensions to achieve more efficient measurements
-    with a lesser impact on a network.</p>"
+- content: "<p>This document specifies an optional extension to the Simple Two-way
+    Active Measurement Protocol (STAMP) to control the length and/or number of packets
+    sent by a Session-Reflector in response to a single test packet from the Session-Sender
+    during a STAMP test session. By default, a STAMP Session-Sender and Session-Reflector
+    exchange packets symmetrically: the number of packets sent by the Session- Reflector
+    and the Session-Sender are the same as is the length of the packets sent by the
+    Session-Reflector and the Session-Sender. However, there are cases where a Session-Reflector
+    responding with Asymmetrical Packets would ensure a closer approximation between
+    active performance measurements and the conditions experienced by monitored application.
+    The STAMP extension proposed in this document allows the operator to establish
+    tests where a Session-Reflector sends Asymmetrical Packets, packets whose length
+    is not symmetrical to test packet sent by the Session-Sender and/or packets that
+    are not sent in direct response to a packet received from a Session-Sender. The
+    document also includes an analysis of challenges related to performance monitoring
+    in a multicast network. It specifies procedures and STAMP extensions to achieve
+    more efficient measurements with a lesser impact on a network.</p>"
   language:
   - en
   script:
@@ -117,6 +125,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-ippm-asymmetrical-pkts-08
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-ippm-asymmetrical-pkts-09
+    docid:
+    - id: draft-ietf-ippm-asymmetrical-pkts-09
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-ippm-asymmetrical-pkts-09
       format: text/plain
 ext:
   schema-version: v1.0.1
