@@ -1,62 +1,92 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-teas-actn-poi-assurance-00
+id: draft-ietf-lamps-macaddress-on-05
 title:
-- content: Applicability of Abstraction and Control of Traffic Engineered Networks
-    (ACTN) for Packet Optical Integration (POI) service assurance
+- content: Media Access Control (MAC) Addresses in X.509 Certificates
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-teas-actn-poi-assurance-00
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-lamps-macaddress-on-05
   type: src
 type: standard
 docid:
-- id: draft-ietf-teas-actn-poi-assurance-00
+- id: draft-ietf-lamps-macaddress-on-05
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-teas-actn-poi-assurance
+- id: I-D.ietf-lamps-macaddress-on
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-teas-actn-poi-assurance
+docnumber: I-D.ietf-lamps-macaddress-on
 date:
 - type: published
-  value: '2025-07-28'
+  value: '2026-02-04'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Italo
+        - content: Russ
           language:
           - en
         - language:
           - en
-          initial: I
+          initial: R
         formatted_initials:
-          content: I.
+          content: R.
           language:
           - en
       surname:
-        content: Busi
+        content: Housley
         language:
         - en
       completename:
-        content: Italo Busi
+        content: Russ Housley
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei Technologies
+        - content: Vigil Security, LLC
   role:
   - type: author
 - person:
     name:
       given:
         forename:
+        - content: Corey
+          language:
+          - en
+        - language:
+          - en
+          initial: C
+        formatted_initials:
+          content: C.
+          language:
+          - en
+      surname:
+        content: Bonnell
+        language:
+        - en
+      completename:
+        content: Corey Bonnell
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: DigiCert, Inc.
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Joe
+          language:
+          - en
         - language:
           - en
           initial: J
@@ -65,136 +95,104 @@ contributor:
           language:
           - en
       surname:
-        content: Bouquier
+        content: Mandel
         language:
         - en
       completename:
-        content: Jean-Francois Bouquier
+        content: Joe Mandel
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Vodafone
+        - content: AKAYLA, Inc.
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Fabio
+        - content: Tomofumi
           language:
           - en
         - language:
           - en
-          initial: F
+          initial: T
         formatted_initials:
-          content: F.
+          content: T.
           language:
           - en
       surname:
-        content: Peruzzini
+        content: Okubo
         language:
         - en
       completename:
-        content: Fabio Peruzzini
+        content: Tomofumi Okubo
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: TIM
+        - content: Penguin Securities Pte. Ltd.
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Paolo
+        - content: Michael
           language:
           - en
         - language:
           - en
-          initial: P
+          initial: M
         formatted_initials:
-          content: P.
+          content: M.
           language:
           - en
       surname:
-        content: Volpato
+        content: StJohns
         language:
         - en
       completename:
-        content: Paolo Volpato
+        content: Michael StJohns
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei Technologies
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Prasenjit
-          language:
-          - en
-        - language:
-          - en
-          initial: P
-        formatted_initials:
-          content: P.
-          language:
-          - en
-      surname:
-        content: Manna
-        language:
-        - en
-      completename:
-        content: Prasenjit Manna
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Cisco
+        - content: NthPermutation Security LLC
   role:
   - type: author
 version:
-- draft: '00'
-revdate: '2025-07-28'
+- draft: '05'
+revdate: '2026-02-04'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document extends the analysis of the applicability of Abstraction
-    and Control of TE Networks (ACTN) architecture to Packet Optical Integration (POI)
-    to cover multi-layer service assurance scenarios. Specifically, the ACTN architecture
-    enables the detection and handling of different failures that may happen either
-    at the optical or the packet layer. It is assumed that the underlying transport
-    optical network carries end-to-end IP services such as L2VPN or L3VPN connectivity
-    services, with specific Service Level Agreement (SLA) requirements. Existing IETF
-    protocols and data models are identified for each multi-layer (packet over optical)
-    service assurance scenario with a specific focus on the MPI (Multi-Domain Service
-    Coordinator to Provisioning Network Controllers Interface) in the ACTN architecture.</p>"
+- content: "<p>This document defines a new GeneralName.otherName for inclusion in
+    the X.509 Subject Alternative Name (SAN) and Issuer Alternative Name (IAN) extensions
+    to carry an IEEE Media Access Control (MAC) address. The new name form makes it
+    possible to bind a layer-2 interface identifier to a public key certificate. Additionally,
+    this document defines how constraints on this name form can be encoded and processed
+    in the X.509 Name Constraints extension (NCE).</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-ietf-teas-actn-poi-assurance-03
+    id: draft-ietf-lamps-macaddress-on-00
     docid:
-    - id: draft-ietf-teas-actn-poi-assurance-03
+    - id: draft-ietf-lamps-macaddress-on-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-teas-actn-poi-assurance-03
+      content: draft-ietf-lamps-macaddress-on-00
       format: text/plain
 series:
 - type: main
@@ -205,7 +203,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-teas-actn-poi-assurance-00
+  number: draft-ietf-lamps-macaddress-on-05
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

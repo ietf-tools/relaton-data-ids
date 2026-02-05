@@ -3,7 +3,7 @@ schema-version: v1.2.3
 id: draft-ietf-pce-sr-bidir-path
 title:
 - content: Path Computation Element Communication Protocol (PCEP) Extensions for Associated
-    Bidirectional Segment Routing (SR) Paths
+    Bidirectional Segment Routing (SR) LSPs
   language:
   - en
   script:
@@ -18,12 +18,13 @@ abstract:
     mechanisms for Path Computation Elements (PCEs) to perform path computations in
     response to Path Computation Clients (PCCs) requests. Segment Routing (SR) can
     be used to steer packets through a network employing the source routing paradigm.
-    Stateful PCEP extensions for SR allow a PCE to maintain state and to control and
-    initiate SR Traffic Engineering (TE) paths. PCEP supports grouping of two unidirectional
+    SR can be applied to both MPLS (SR-MPLS) and IPv6 (SRv6) data planes. Stateful
+    PCEP extensions for SR allow a PCE to maintain state and to control and initiate
+    SR Traffic Engineering (TE) LSPs. PCEP supports grouping of two unidirectional
     MPLS-TE Label Switched Paths (LSPs), signaled via RSVP-TE, using association.
-    This document defines PCEP extensions for grouping two unidirectional SR paths
+    This document defines PCEP extensions for grouping two unidirectional SR LSPs
     (one in each direction in the network) into a single associated bidirectional
-    SR path. The mechanisms defined in this document are applicable to both stateless
+    SR LSP. The mechanisms defined in this document are applicable to both stateless
     and stateful PCEs for PCE-initiated and PCC-initiated LSPs.</p>"
   language:
   - en
@@ -240,6 +241,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-pce-sr-bidir-path-20
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-pce-sr-bidir-path-21
+    docid:
+    - id: draft-ietf-pce-sr-bidir-path-21
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-pce-sr-bidir-path-21
       format: text/plain
 ext:
   schema-version: v1.0.1
