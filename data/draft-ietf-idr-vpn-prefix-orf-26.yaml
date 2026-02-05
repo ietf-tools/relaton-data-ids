@@ -1,49 +1,105 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-ivy-network-inventory-yang-12
+id: draft-ietf-idr-vpn-prefix-orf-26
 title:
-- content: A Base YANG Data Model for Network Inventory
+- content: VPN Prefix Outbound Route Filter (VPN Prefix ORF) for BGP-4
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-ivy-network-inventory-yang-12
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-vpn-prefix-orf-26
   type: src
 type: standard
 docid:
-- id: draft-ietf-ivy-network-inventory-yang-12
+- id: draft-ietf-idr-vpn-prefix-orf-26
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-ivy-network-inventory-yang
+- id: I-D.ietf-idr-vpn-prefix-orf
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-ivy-network-inventory-yang
+docnumber: I-D.ietf-idr-vpn-prefix-orf
 date:
 - type: published
-  value: '2025-12-22'
+  value: '2026-02-04'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Chaode
+        - content: Wei
           language:
           - en
         - language:
           - en
-          initial: C
+          initial: W
         formatted_initials:
-          content: C.
+          content: W.
           language:
           - en
       surname:
-        content: Yu
+        content: Wang
         language:
         - en
       completename:
-        content: Chaode Yu
+        content: Wei Wang
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: China Telecom
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Aijun
+          language:
+          - en
+        - language:
+          - en
+          initial: A
+        formatted_initials:
+          content: A.
+          language:
+          - en
+      surname:
+        content: Wang
+        language:
+        - en
+      completename:
+        content: Aijun Wang
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: China Telecom
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Haibo
+          language:
+          - en
+        - language:
+          - en
+          initial: H
+        formatted_initials:
+          content: H.
+          language:
+          - en
+      surname:
+        content: Wang
+        language:
+        - en
+      completename:
+        content: Haibo Wang
         language:
         - en
     affiliation:
@@ -56,34 +112,40 @@ contributor:
     name:
       given:
         forename:
-        - content: Sergio
+        - content: Gyan
           language:
           - en
         - language:
           - en
+          initial: G
+        - language:
+          - en
           initial: S
         formatted_initials:
-          content: S.
+          content: G. S.
           language:
           - en
       surname:
-        content: Belotti
+        content: Mishra
         language:
         - en
       completename:
-        content: Sergio Belotti
+        content: Gyan Mishra
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Nokia
+        - content: Verizon Inc.
   role:
   - type: author
 - person:
     name:
       given:
         forename:
+        - content: Jie
+          language:
+          - en
         - language:
           - en
           initial: J
@@ -92,87 +154,34 @@ contributor:
           language:
           - en
       surname:
-        content: Bouquier
+        content: Dong
         language:
         - en
       completename:
-        content: Jean-Francois Bouquier
+        content: Jie Dong
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Vodafone
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Fabio
-          language:
-          - en
-        - language:
-          - en
-          initial: F
-        formatted_initials:
-          content: F.
-          language:
-          - en
-      surname:
-        content: Peruzzini
-        language:
-        - en
-      completename:
-        content: Fabio Peruzzini
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: FiberCop
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Phil
-          language:
-          - en
-        - language:
-          - en
-          initial: P
-        formatted_initials:
-          content: P.
-          language:
-          - en
-      surname:
-        content: Bedard
-        language:
-        - en
-      completename:
-        content: Phil Bedard
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Cisco
+        - content: Huawei Technologies
   role:
   - type: author
 version:
-- draft: '12'
-revdate: '2025-12-22'
+- draft: '26'
+revdate: '2026-02-04'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document defines a base YANG data model for reporting network
-    inventory. The scope of this base model is set to be application- and technology-agnostic.
-    The base data model can be augmented with application- and technology-specific
-    details.</p>"
+- content: "<p>This draft defines a new type of Outbound Route Filter (ORF), known
+    as the Virtual Private Network (VPN) Prefix ORF. The VPN Prefix ORF mechanism
+    is applicable when VPN routes from different Virtual Routing and Forwarding (VRF)
+    instances are exchanged through a single shared Border Gateway Protocol (BGP)
+    session.The purpose of VPN Prefix ORF mechanism is to control the overload of
+    VPN routes based on RT. With this mechanism, the overload can be limited within
+    the minimum range.</p>"
   language:
   - en
   script:
@@ -181,23 +190,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-ivy-network-inventory-yang-06
+    id: draft-ietf-idr-vpn-prefix-orf-09
     docid:
-    - id: draft-ietf-ivy-network-inventory-yang-06
+    - id: draft-ietf-idr-vpn-prefix-orf-09
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-ivy-network-inventory-yang-06
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-ivy-network-inventory-yang-14
-    docid:
-    - id: draft-ietf-ivy-network-inventory-yang-14
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-ivy-network-inventory-yang-14
+      content: draft-ietf-idr-vpn-prefix-orf-09
       format: text/plain
 series:
 - type: main
@@ -208,7 +207,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-ivy-network-inventory-yang-12
+  number: draft-ietf-idr-vpn-prefix-orf-26
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

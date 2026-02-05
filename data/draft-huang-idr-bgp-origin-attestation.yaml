@@ -1,0 +1,50 @@
+---
+schema-version: v1.2.3
+id: draft-huang-idr-bgp-origin-attestation
+title:
+- content: RPKI-based BGP Origin Attestation
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-huang-idr-bgp-origin-attestation
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: '<p>The Resource Public Key Infrastructure (RPKI) provides a framework
+    for Route Origin Validation (ROV), but its deployment faces two critical challenges:
+    1) high false positive rates for "invalid" states and the operational burden these
+    create; 2) incremental deployment has been hindered by limited immediate value
+    when ROA coverage is incomplete and ROV deployment remains sparse. This document
+    proposes a paradigm shift from reactive ROV validation to proactive origin attestation.
+    We introduce two complementary mechanisms: 1) "Pre-validation before propagation"
+    where routers validate self-originated routes against local RPKI Verified ROA
+    Payload (VRP) cache before advertisement, holding invalid routes for operator
+    intervention; and 2) A BGP extension that carries cryptographically signed origin
+    attestation in BGP UPDATE messages. Unlike traditional ROV which only validates
+    against outband RPKI- based ROAs, this approach enables originating ASes to actively
+    attest to the legitimacy of their routes. This provides immediate security benefits
+    even with partial deployment: each deploying AS gains stronger protection for
+    its own prefixes, and downstream ASes receive clearer signals to distinguish legitimate
+    routes from potential hijacks. The mechanisms dramatically reduce false positives
+    while creating a deployable path toward comprehensive route origin security.</p>'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-huang-idr-bgp-origin-attestation-00
+    docid:
+    - id: draft-huang-idr-bgp-origin-attestation-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-huang-idr-bgp-origin-attestation-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
