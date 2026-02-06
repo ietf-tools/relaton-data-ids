@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-dekater-scion-dataplane-04
+id: draft-dekater-scion-dataplane-11
 title:
 - content: SCION Data Plane
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-dekater-scion-dataplane-04
+- content: https://datatracker.ietf.org/doc/html/draft-dekater-scion-dataplane-11
   type: src
 type: standard
 docid:
-- id: draft-dekater-scion-dataplane-04
+- id: draft-dekater-scion-dataplane-11
   type: Internet-Draft
   primary: true
 - id: I-D.dekater-scion-dataplane
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.dekater-scion-dataplane
 date:
 - type: published
-  value: '2024-12-24'
+  value: '2026-02-06'
 contributor:
 - person:
     name:
@@ -49,7 +49,7 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: SCION Association
+        - content: Independent
   role:
   - type: author
 - person:
@@ -102,7 +102,7 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: SCION Association
+        - content: Independent
   role:
   - type: author
 - person:
@@ -134,27 +134,27 @@ contributor:
   role:
   - type: author
 version:
-- draft: '04'
-revdate: '2024-12-24'
+- draft: '11'
+revdate: '2026-02-06'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document describes the data plane of the path-aware, inter- domain
-    network architecture SCION (Scalability, Control, and Isolation On Next-generation
-    networks). One of the basic characteristics of SCION is that it gives path control
-    to endpoints. The SCION Control Plane is responsible for discovering these paths
-    and making them available as path segments to the endpoints. The role of the SCION
-    Data Plane is to combine the path segments into end-to-end paths, and forward
-    data between endpoints according to the specified path. The SCION Data Plane fundamentally
-    differs from today's IP-based data plane in that it is _path-aware_: In SCION,
-    interdomain forwarding directives are embedded in the packet header. This document
-    provides a detailed specification of the SCION data packet format as well as the
-    structure of the SCION header. SCION also supports extension headers, which are
-    additionally described. The document continues with the life cycle of a SCION
-    packet while traversing the SCION Internet, followed by a specification of the
-    SCION path authorization mechanisms and the packet processing at routers.</p>"
+- content: "<p>This document describes the Data Plane of SCION (Scalability, Control,
+    and Isolation On Next-generation networks), a path-aware, inter-domain network
+    architecture. Unlike IP-based forwarding, SCION embeds inter-domain forwarding
+    directives in the packet header, enabling endpoints to construct and select end-to-end
+    paths from segments discovered by the Control Plane. The role of the Data Plane
+    is to combine such segments into end-to-end paths, and to forward data according
+    to the specified path. This document describes the SCION packet format, header
+    structure, and extension headers. It also describes the cryptographic mechanisms
+    used for path authorization, processing at routers including a life of a packet
+    example. This document contains new approaches to secure path aware networking.
+    It is not an Internet Standard, has not received any formal review of the IETF,
+    nor was the work developed through the rough consensus process. The approaches
+    offered in this work are offered to the community for its consideration in the
+    further evolution of the Internet.</p>"
   language:
   - en
   script:
@@ -171,16 +171,6 @@ relation:
     formattedref:
       content: draft-dekater-scion-dataplane-02
       format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-dekater-scion-dataplane-11
-    docid:
-    - id: draft-dekater-scion-dataplane-11
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-dekater-scion-dataplane-11
-      format: text/plain
 series:
 - type: main
   title:
@@ -190,7 +180,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-dekater-scion-dataplane-04
+  number: draft-dekater-scion-dataplane-11
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
