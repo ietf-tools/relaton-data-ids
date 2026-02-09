@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-ayerbe-trip-protocol-00
+id: draft-ayerbe-trip-protocol-01
 title:
 - content: 'TRIP: Trajectory-based Recognition of Identity Proof'
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ayerbe-trip-protocol-00
+- content: https://datatracker.ietf.org/doc/html/draft-ayerbe-trip-protocol-01
   type: src
 type: standard
 docid:
-- id: draft-ayerbe-trip-protocol-00
+- id: draft-ayerbe-trip-protocol-01
   type: Internet-Draft
   primary: true
 - id: I-D.ayerbe-trip-protocol
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.ayerbe-trip-protocol
 date:
 - type: published
-  value: '2026-02-01'
+  value: '2026-02-08'
 contributor:
 - person:
     name:
@@ -56,8 +56,8 @@ contributor:
   role:
   - type: author
 version:
-- draft: '00'
-revdate: '2026-02-01'
+- draft: '01'
+revdate: '2026-02-08'
 language:
 - en
 script:
@@ -68,26 +68,31 @@ abstract:
     presence through cryptographically signed, spatially quantized location attestations
     called "breadcrumbs." Breadcrumbs are chained into an append-only log, bundled
     into verifiable epochs, and distilled into a Trajectory Identity Token (TIT) that
-    serves as a persistent pseudonymous identifier. Trust in a TIT accumulates through
-    spatiotemporal diversity of the underlying trajectory rather than through biometric
-    capture or centralized credential issuance. TRIP is designed to be transport-agnostic
-    and operates independently of any particular naming system, blockchain, or application
-    layer.</p>
+    serves as a persistent pseudonymous identifier. This revision introduces a formal
+    trust-scoring framework grounded in statistical physics. A Criticality Engine
+    evaluates the Power Spectral Density (PSD) of movement trajectories for the 1/f
+    signature characteristic of biological Self-Organized Criticality (SOC). A mobility
+    model based on truncated Levy flights and Markov anchor transition matrices enforces
+    known constraints of human movement. A six-component Hamiltonian energy function
+    detects anomalies in real time by combining spatial, temporal, kinetic, flock-alignment,
+    contextual, and structural analysis of each breadcrumb against the identity's
+    learned behavioral profile. TRIP is designed to be transport-agnostic and operates
+    independently of any particular naming system, blockchain, or application layer.</p>
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-ayerbe-trip-protocol-01
+    id: draft-ayerbe-trip-protocol-00
     docid:
-    - id: draft-ayerbe-trip-protocol-01
+    - id: draft-ayerbe-trip-protocol-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ayerbe-trip-protocol-01
+      content: draft-ayerbe-trip-protocol-00
       format: text/plain
 series:
 - type: main
@@ -98,7 +103,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ayerbe-trip-protocol-00
+  number: draft-ayerbe-trip-protocol-01
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
