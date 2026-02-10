@@ -13,11 +13,12 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document describes an end-to-end authenticated encryption scheme
-    for application objects intended to be delivered over Media over QUIC Transport
-    (MOQT). We reuse the SFrame scheme for authenticated encryption of media objects,
-    while suppressing data that would be redundant between SFrame and MOQT, for an
-    efficient on-the-wire representation.</p>"
+- content: "<p>This document specifies an end-to-end authenticated encryption scheme
+    for application objects transmitted via Media over QUIC (MoQ) Transport. The scheme
+    enables original publishers to securely share a symmetric key with end subscribers,
+    ensuring that MoQ relays are unable to decrypt object contents. Additionally,
+    subscribers can verify the integrity and authenticity of received objects, confirming
+    that the content has not been modified in transit.</p>"
   language:
   - en
   script:
@@ -63,6 +64,16 @@ relation:
       primary: true
     formattedref:
       content: draft-jennings-moq-secure-objects-03
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-jennings-moq-secure-objects-04
+    docid:
+    - id: draft-jennings-moq-secure-objects-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-jennings-moq-secure-objects-04
       format: text/plain
 ext:
   schema-version: v1.0.1

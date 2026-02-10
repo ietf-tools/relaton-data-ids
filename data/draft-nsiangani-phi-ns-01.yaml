@@ -1,0 +1,110 @@
+---
+schema-version: v1.2.3
+id: draft-nsiangani-phi-ns-01
+title:
+- content: Phi-Ns Cryptosystem
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-nsiangani-phi-ns-01
+  type: src
+type: standard
+docid:
+- id: draft-nsiangani-phi-ns-01
+  type: Internet-Draft
+  primary: true
+- id: I-D.nsiangani-phi-ns
+  type: IETF
+  scope: anchor
+docnumber: I-D.nsiangani-phi-ns
+date:
+- type: published
+  value: '2026-02-09'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Junior
+          language:
+          - en
+        - language:
+          - en
+          initial: J
+        formatted_initials:
+          content: J.
+          language:
+          - en
+      surname:
+        content: Nsiangani
+        language:
+        - en
+      completename:
+        content: Junior Nsiangani
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: draft-nsiangani-phi-ns-01
+  role:
+  - type: author
+version:
+- draft: '01'
+revdate: '2026-02-09'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>This document describes Phi-Ns, a new asymmetric cryptographic primitive
+    based on the structured decomposition of the quadratic gap between two primes.
+    Phi-Ns defines a public key q and a private key p such that the difference q^2
+    - p^2 is expressed as a composite value T. The value T is then factored into small
+    controlled components noted a, b, and R, and the final secret structure abR is
+    encoded through a randomized serialization process. The security of Phi-Ns does
+    not rely on integer factorization, the discrete logarithm problem, or elliptic
+    curves. Instead, it depends on the difficulty of recovering p from q when the
+    attacker has no oracle, no structural anchor, and no method to determine whether
+    a candidate p is correct. Because T can be recursively decomposed and reassembled
+    into multiple unpredictable forms, the resulting search space grows combinatorially.
+    Phi-Ns further supports recursive expansion of the internal abR structure, allowing
+    the construction of high-entropy secret states even when p and q have relatively
+    small bit lengths. This enables compact public keys, efficient computation, and
+    strong post-quantum resistance based on a non-factorization hardness assumption.
+    This document specifies the algorithmic model of Phi-Ns, its parameter choices,
+    and the serialization rules used to encode the abR structure. It also outlines
+    two public-key variants, PK-p and PK-q, which expose either p or q as the public
+    value depending on deployment constraints.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-nsiangani-phi-ns-00
+    docid:
+    - id: draft-nsiangani-phi-ns-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-nsiangani-phi-ns-00
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-nsiangani-phi-ns-01
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
