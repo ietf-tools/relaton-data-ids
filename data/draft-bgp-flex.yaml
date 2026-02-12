@@ -1,0 +1,53 @@
+---
+schema-version: v1.2.3
+id: draft-bgp-flex
+title:
+- content: BGP FLEX
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-bgp-flex
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>The Border Gateway Protocol (BGP) is a very important protocol in the
+    Internet to exchange routing information between network domains. BGP populates
+    the routing table with valid routes, sometimes the routes populated by BGP are
+    not the best choices specially when a ISP provides IP Transit service to an other
+    ISP, and the two ISP are peering at an Internet Exchange Point. Let us assume
+    that ISP A provides IP Transit to ISP B, and the two are peering at an Internet
+    Exchange Point. The return traffic from Internet to ISP B via ISP A will be routed
+    over the Internet Exchange Point instead of the IP Transit link between the two
+    ISP, because of BGP Local preference which has usually a higher value on Internet
+    Exchange links. This will lead to an issue because the return traffic IP Transit
+    service is now passing over the Internet Exchange link. An other issue faced in
+    Internet Exchange Point, is the sub-optimal routing caused by the advertisment
+    of the most specific routes over Internet by ISP. Let us assume that ISP A wants
+    to advertise most specific routes to Internet for traffic Engineering, the peers
+    of ISP A at the Internet Exchange Point could also receive the most specific routes
+    over Internet. This will mean that traffic from the peers of ISP A towards ISP
+    A will now go through Internet because of most specific routes which is not suppposed
+    to be the case. To solve that ISP A will have to send the same specific routes
+    over the Internet Exchange Point which will increase complexity. This document
+    provides aletrnative solutions that can be used to solve the above problems</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-bgp-flex-00
+    docid:
+    - id: draft-bgp-flex-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-bgp-flex-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

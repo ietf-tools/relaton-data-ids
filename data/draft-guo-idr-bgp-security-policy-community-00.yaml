@@ -1,0 +1,151 @@
+---
+schema-version: v1.2.3
+id: draft-guo-idr-bgp-security-policy-community-00
+title:
+- content: Using BGP Community for Inter-AS Security Policy Signaling
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-guo-idr-bgp-security-policy-community-00
+  type: src
+type: standard
+docid:
+- id: draft-guo-idr-bgp-security-policy-community-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.guo-idr-bgp-security-policy-community
+  type: IETF
+  scope: anchor
+docnumber: I-D.guo-idr-bgp-security-policy-community
+date:
+- type: published
+  value: '2026-02-11'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Yangfei
+          language:
+          - en
+        - language:
+          - en
+          initial: "Y"
+        - language:
+          - en
+          initial: B
+        formatted_initials:
+          content: Y. B.
+          language:
+          - en
+      surname:
+        content: Guo
+        language:
+        - en
+      completename:
+        content: Yangfei (Basil) Guo
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Zhongguancun Laboratory
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - language:
+          - en
+          initial: K
+        formatted_initials:
+          content: K.
+          language:
+          - en
+      surname:
+        content: Xu
+        language:
+        - en
+      completename:
+        content: Ke Xu
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Tsinghua University
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Xiaoliang
+          language:
+          - en
+        - language:
+          - en
+          initial: X
+        formatted_initials:
+          content: X.
+          language:
+          - en
+      surname:
+        content: Wang
+        language:
+        - en
+      completename:
+        content: Xiaoliang Wang
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Capital Normal University
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-02-11'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: <p>This document specifies a set of standardized BGP communities to signal
+    inter-AS routing security policy intent. Current mechanisms such as ROA [RFC6482]
+    [RFC9582] and ASPA [ASPA-Profile] [ASPA-Verification] provide validation outcomes,
+    but leave "NotFound" or "Unknown" states operationally ambiguous. This document
+    defines transitive communities that allow an Origin AS to explicitly express its
+    security policy expectations, such as a preference for strict handling of ROA
+    or ASPA validation ambiguity, to downstream Autonomous Systems (AS). Unlike validation
+    states, these communities do not assert correctness or authorization. Instead,
+    they communicate origin-declared policy intent to all downstream ASes, enabling
+    them to correlate this intent with locally derived validation results. By enabling
+    explicit signaling of security expectations without exporting validation state,
+    this mechanism allows downstream ASes to make more informed policy decisions while
+    reducing the risk of accidental outages caused by misinterpretation of ambiguous
+    validation outcomes. This mechanism is orthogonal to existing routing security
+    validation technologies and does not alter their semantics or deployment models.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-guo-idr-bgp-security-policy-community-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
