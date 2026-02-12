@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-condrey-rats-pop-schema
 title:
-- content: Proof of Process CDDL Schema
+- content: Proof of Process (PoP) CDDL Schema
   language:
   - en
   script:
@@ -14,9 +14,12 @@ docid:
   primary: true
 abstract:
 - content: "<p>This document provides the normative Concise Data Definition Language
-    (CDDL) schema for the Proof of Process specification. The schema defines the complete
-    wire format for Evidence Packets (.pop files) and Attestation Results (.war files)
-    as specified in the companion architecture document.</p>"
+    (CDDL) schema for the Proof of Process (PoP) protocol. The schema defines the
+    CBOR-encoded wire format for PoP evidence packets, semantic editing event transcripts,
+    time anchors, signed tool receipts, compact evidence references, and verifier-produced
+    attestation results. The schema is published separately to enable independent
+    tooling, validation, and schema versioning decoupled from narrative specification
+    text.</p>"
   language:
   - en
   script:
@@ -32,6 +35,16 @@ relation:
       primary: true
     formattedref:
       content: draft-condrey-rats-pop-schema-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-condrey-rats-pop-schema-01
+    docid:
+    - id: draft-condrey-rats-pop-schema-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-condrey-rats-pop-schema-01
       format: text/plain
 ext:
   schema-version: v1.0.1

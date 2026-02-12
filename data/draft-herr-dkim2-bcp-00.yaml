@@ -1,0 +1,100 @@
+---
+schema-version: v1.2.3
+id: draft-herr-dkim2-bcp-00
+title:
+- content: DKIM2 Best Practices
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-herr-dkim2-bcp-00
+  type: src
+type: standard
+docid:
+- id: draft-herr-dkim2-bcp-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.herr-dkim2-bcp
+  type: IETF
+  scope: anchor
+docnumber: I-D.herr-dkim2-bcp
+date:
+- type: published
+  value: '2026-02-11'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Todd
+          language:
+          - en
+        - language:
+          - en
+          initial: T
+        formatted_initials:
+          content: T.
+          language:
+          - en
+      surname:
+        content: Herr
+        language:
+        - en
+      completename:
+        content: Todd Herr
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: GreenArrow Email
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-02-11'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: <p>[DKIM2] and associated documents describe the DomainKeys Identified
+    Mail v2 (DKIM2) email authentication protocol. DKIM2 is designed to address shortcomings
+    in email authentication protocols and mechanisms released prior to DKIM2, specifically
+    SPF [RFC7208], DKIM [RFC6376], DMARC [RFC7489], and ARC [RFC8617]. Those shortcomings
+    most commonly manifested themselves in email messages that passed through one
+    or more intermediary hosts (e.g., forwarders or mailing list servers) while transiting
+    from origination to final destination. Although these messages were properly authenticated
+    when sent, the alteration of their path and/or content by the intermediary hosts
+    would cause authentication checks to fail at the final destination. In addition,
+    DKIM was susceptible to "replay" of signatures, when attackers would construct
+    abusive messages in such a way that they would pass validation checks for a DKIM
+    signature that had been imported from another message entirely. To address these
+    shortcomings, DKIM2 provides methods not only for intermediary systems to provide
+    details of the changes that they make to a message in transit, but also for receiving
+    hosts to validate those changes in addition to the original message. DKIM2 also
+    allows recipients to detect when messages have been unexpectedly "replayed" and
+    can also ensure that delivery status notifications (DSNs) are only sent to entities
+    that were involved in the transmission of a message. This document describes the
+    recommended usage of the DKIM2 protocol for sending hosts, intermediary hosts,
+    and receiving hosts.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-herr-dkim2-bcp-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
