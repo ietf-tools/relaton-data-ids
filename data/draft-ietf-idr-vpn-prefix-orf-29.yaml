@@ -1,34 +1,90 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-pce-flexible-grid-11
+id: draft-ietf-idr-vpn-prefix-orf-29
 title:
-- content: PCEP Extension for Flexible Grid Networks
+- content: VPN Prefix Outbound Route Filter (VPN Prefix ORF) for BGP-4
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-pce-flexible-grid-11
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-vpn-prefix-orf-29
   type: src
 type: standard
 docid:
-- id: draft-ietf-pce-flexible-grid-11
+- id: draft-ietf-idr-vpn-prefix-orf-29
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-pce-flexible-grid
+- id: I-D.ietf-idr-vpn-prefix-orf
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-pce-flexible-grid
+docnumber: I-D.ietf-idr-vpn-prefix-orf
 date:
 - type: published
-  value: '2024-11-30'
+  value: '2026-02-13'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Haomian
+        - content: Wei
+          language:
+          - en
+        - language:
+          - en
+          initial: W
+        formatted_initials:
+          content: W.
+          language:
+          - en
+      surname:
+        content: Wang
+        language:
+        - en
+      completename:
+        content: Wei Wang
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: China Telecom
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Aijun
+          language:
+          - en
+        - language:
+          - en
+          initial: A
+        formatted_initials:
+          content: A.
+          language:
+          - en
+      surname:
+        content: Wang
+        language:
+        - en
+      completename:
+        content: Aijun Wang
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: China Telecom
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Haibo
           language:
           - en
         - language:
@@ -39,142 +95,93 @@ contributor:
           language:
           - en
       surname:
-        content: Zheng
+        content: Wang
         language:
         - en
       completename:
-        content: Haomian Zheng
+        content: Haibo Wang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei Technologies Co., Ltd.
+        - content: Huawei Technologies
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Young
+        - content: Gyan
           language:
           - en
         - language:
           - en
-          initial: "Y"
+          initial: G
+        - language:
+          - en
+          initial: S
         formatted_initials:
-          content: Y.
+          content: G. S.
           language:
           - en
       surname:
-        content: Lee
+        content: Mishra
         language:
         - en
       completename:
-        content: Young Lee
+        content: Gyan Mishra
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Samsung
+        - content: Verizon Inc.
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Ramon
+        - content: Jie
           language:
           - en
         - language:
           - en
-          initial: R
+          initial: J
         formatted_initials:
-          content: R.
+          content: J.
           language:
           - en
       surname:
-        content: Casellas
+        content: Dong
         language:
         - en
       completename:
-        content: Ramon Casellas
+        content: Jie Dong
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: CTTC
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Daniele
-          language:
-          - en
-        - language:
-          - en
-          initial: D
-        formatted_initials:
-          content: D.
-          language:
-          - en
-      surname:
-        content: Ceccarelli
-        language:
-        - en
-      completename:
-        content: Daniele Ceccarelli
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Cisco
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Francesco
-          language:
-          - en
-        - language:
-          - en
-          initial: F
-        formatted_initials:
-          content: F.
-          language:
-          - en
-      surname:
-        content: Lazzeri
-        language:
-        - en
-      completename:
-        content: Francesco Lazzeri
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Ericsson
+        - content: Huawei Technologies
   role:
   - type: author
 version:
-- draft: '11'
-revdate: '2024-11-30'
+- draft: '29'
+revdate: '2026-02-13'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document provides the Path Computation Element Communication Protocol
-    (PCEP) extensions for the support of Routing and Spectrum Assignment (RSA) in
-    Flexible Grid networks.</p>"
+- content: "<p>This draft defines a new type of Outbound Route Filter (ORF), known
+    as the Virtual Private Network (VPN) Prefix ORF. The VPN Prefix ORF mechanism
+    is applicable when VPN routes from different Virtual Routing and Forwarding (VRF)
+    instances are exchanged through a single shared Border Gateway Protocol (BGP)
+    session.The purpose of VPN Prefix ORF mechanism is to control the overload of
+    VPN routes based on RT. With this mechanism, the overload can be limited within
+    the minimum range.</p>"
   language:
   - en
   script:
@@ -183,23 +190,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-pce-flexible-grid-09
+    id: draft-ietf-idr-vpn-prefix-orf-28
     docid:
-    - id: draft-ietf-pce-flexible-grid-09
+    - id: draft-ietf-idr-vpn-prefix-orf-28
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-pce-flexible-grid-09
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-pce-flexible-grid-13
-    docid:
-    - id: draft-ietf-pce-flexible-grid-13
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-pce-flexible-grid-13
+      content: draft-ietf-idr-vpn-prefix-orf-28
       format: text/plain
 series:
 - type: main
@@ -210,7 +207,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-pce-flexible-grid-11
+  number: draft-ietf-idr-vpn-prefix-orf-29
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
