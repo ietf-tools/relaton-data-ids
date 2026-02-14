@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-guo-idr-bgp-security-policy-community
 title:
-- content: Using BGP Community for Inter-AS Security Policy Signaling
+- content: BGP Communities for Security Policy Intent
   language:
   - en
   script:
@@ -13,21 +13,26 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: <p>This document specifies a set of standardized BGP communities to signal
-    inter-AS routing security policy intent. Current mechanisms such as ROA [RFC6482]
-    [RFC9582] and ASPA [ASPA-Profile] [ASPA-Verification] provide validation outcomes,
-    but leave "NotFound" or "Unknown" states operationally ambiguous. This document
-    defines transitive communities that allow an Origin AS to explicitly express its
-    security policy expectations, such as a preference for strict handling of ROA
-    or ASPA validation ambiguity, to downstream Autonomous Systems (AS). Unlike validation
-    states, these communities do not assert correctness or authorization. Instead,
-    they communicate origin-declared policy intent to all downstream ASes, enabling
-    them to correlate this intent with locally derived validation results. By enabling
-    explicit signaling of security expectations without exporting validation state,
-    this mechanism allows downstream ASes to make more informed policy decisions while
-    reducing the risk of accidental outages caused by misinterpretation of ambiguous
-    validation outcomes. This mechanism is orthogonal to existing routing security
-    validation technologies and does not alter their semantics or deployment models.</p>
+- content: <p>This document specifies a set of standardized BGP community to signal
+    inter-AS routing security policy intent. The initial focus is on RPKI-based Route
+    Origin Validation (ROV) using ROAs [RFC6482] [RFC6811] [RFC9582]. ROV produces
+    validation outcomes such as "Valid", "Invalid", and "NotFound", but the operational
+    treatment of "NotFound" and similar ambiguous cases is entirely a matter of local
+    policy and often differs across networks. This document defines transitive community
+    that allows an Origin AS to explicitly express its security policy expectations
+    regarding how its own originated routes SHOULD be treated when downstream Autonomous
+    Systems (ASes) perform ROA-based origin validation. A typical example is an Origin
+    AS indicating a preference for strict handling of ambiguous validation outcomes
+    (e.g., NotFound) for its prefixes. Unlike validation states, these community does
+    not assert correctness, authorization, or RPKI deployment status, which is confront
+    to [AVOID-RPKI-STATE-IN-BGP]. Instead, they communicate origin-declared policy
+    intent to all downstream ASes, enabling them to correlate this intent with locally
+    derived validation results. By enabling explicit signaling of security expectations
+    without exporting validation state, this mechanism allows downstream ASes to make
+    more informed policy decisions while reducing the risk of accidental outages caused
+    by misalignment between origin expectations and downstream local policies. The
+    mechanism is orthogonal to existing routing security validation technologies and
+    does not alter their semantics or deployment models.</p>
   language:
   - en
   script:
@@ -43,6 +48,16 @@ relation:
       primary: true
     formattedref:
       content: draft-guo-idr-bgp-security-policy-community-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-guo-idr-bgp-security-policy-community-01
+    docid:
+    - id: draft-guo-idr-bgp-security-policy-community-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-guo-idr-bgp-security-policy-community-01
       format: text/plain
 ext:
   schema-version: v1.0.1
