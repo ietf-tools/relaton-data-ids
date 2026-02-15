@@ -1,28 +1,28 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-pim-updt-ipv6-dyn-mcast-addr-grp-id-09
+id: draft-ietf-intarea-multicast-application-port-04
 title:
-- content: Updates to Dynamic IPv6 Multicast Address Group IDs
+- content: The Multicast Application Port
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-pim-updt-ipv6-dyn-mcast-addr-grp-id-09
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-intarea-multicast-application-port-04
   type: src
 type: standard
 docid:
-- id: draft-ietf-pim-updt-ipv6-dyn-mcast-addr-grp-id-09
+- id: draft-ietf-intarea-multicast-application-port-04
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-pim-updt-ipv6-dyn-mcast-addr-grp-id
+- id: I-D.ietf-intarea-multicast-application-port
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-pim-updt-ipv6-dyn-mcast-addr-grp-id
+docnumber: I-D.ietf-intarea-multicast-application-port
 date:
 - type: published
-  value: '2026-01-25'
+  value: '2026-02-14'
 contributor:
 - person:
     name:
@@ -56,28 +56,28 @@ contributor:
     name:
       given:
         forename:
-        - content: Dino
+        - content: Stuart
           language:
           - en
         - language:
           - en
-          initial: D
+          initial: S
         formatted_initials:
-          content: D.
+          content: S.
           language:
           - en
       surname:
-        content: Farinacci
+        content: Cheshire
         language:
         - en
       completename:
-        content: Dino Farinacci
+        content: Stuart Cheshire
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: lispers.net
+        - content: Apple Inc.
   role:
   - type: author
 - person:
@@ -109,19 +109,22 @@ contributor:
   role:
   - type: author
 version:
-- draft: '09'
-revdate: '2026-01-25'
+- draft: '04'
+revdate: '2026-02-14'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document describes limitations of the existing range of dynamic
-    IPv6 multicast addresses specified in RFC3307. It recommends replacing these allocations
-    with a new registry in the IPv6 Multicast Address Space Registry registry group.
-    The document also suggests initial contents of the new registry: a reduced allocation
-    for MADCAP (RFC2730), a range for SSM, a Private Use range, and Solicited-Node
-    multicast addresses (which were not previously noted in RFC3307).</p>"
+- content: "<p>This document discusses the drawbacks of the current practice of assigning
+    a UDP port to each multicast application. Such assignments are redundant because
+    the multicast address already uniquely identifies the data. The document proposes
+    assigning a UDP port specifically for use with multicast applications and lists
+    requirements for using this port. This method does not require modification to
+    existing protocol stacks, though recommended updates to make the port easier to
+    use are included. This approach provides immediate compatibility with existing
+    protocol stacks, while also requiring improvements to make the port easier to
+    use.</p>"
   language:
   - en
   script:
@@ -130,23 +133,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-pim-updt-ipv6-dyn-mcast-addr-grp-id-08
+    id: draft-ietf-intarea-multicast-application-port-02
     docid:
-    - id: draft-ietf-pim-updt-ipv6-dyn-mcast-addr-grp-id-08
+    - id: draft-ietf-intarea-multicast-application-port-02
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-pim-updt-ipv6-dyn-mcast-addr-grp-id-08
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-pim-updt-ipv6-dyn-mcast-addr-grp-id-10
-    docid:
-    - id: draft-ietf-pim-updt-ipv6-dyn-mcast-addr-grp-id-10
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-pim-updt-ipv6-dyn-mcast-addr-grp-id-10
+      content: draft-ietf-intarea-multicast-application-port-02
       format: text/plain
 series:
 - type: main
@@ -157,7 +150,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-pim-updt-ipv6-dyn-mcast-addr-grp-id-09
+  number: draft-ietf-intarea-multicast-application-port-04
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
