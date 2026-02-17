@@ -1,20 +1,19 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-jose-hpke-encrypt-02
+id: draft-ietf-jose-hpke-encrypt-16
 title:
-- content: Use of Hybrid Public Key Encryption (HPKE) with JSON Object Signing and
-    Encryption (JOSE)
+- content: Use of Hybrid Public Key Encryption (HPKE) with JSON Web Encryption (JWE)
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-jose-hpke-encrypt-02
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-jose-hpke-encrypt-16
   type: src
 type: standard
 docid:
-- id: draft-ietf-jose-hpke-encrypt-02
+- id: draft-ietf-jose-hpke-encrypt-16
   type: Internet-Draft
   primary: true
 - id: I-D.ietf-jose-hpke-encrypt
@@ -23,7 +22,7 @@ docid:
 docnumber: I-D.ietf-jose-hpke-encrypt
 date:
 - type: published
-  value: '2024-11-02'
+  value: '2026-02-16'
 contributor:
 - person:
     name:
@@ -75,6 +74,10 @@ contributor:
         content: Hannes Tschofenig
         language:
         - en
+    affiliation:
+    - organization:
+        name:
+        - content: University of Applied Sciences Bonn-Rhein-Sieg
   role:
   - type: author
 - person:
@@ -130,7 +133,7 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Transmute
+        - content: Tradeverifyd
   role:
   - type: author
 - person:
@@ -165,21 +168,19 @@ contributor:
   role:
   - type: author
 version:
-- draft: '02'
-revdate: '2024-11-02'
+- draft: '16'
+revdate: '2026-02-16'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This specification defines Hybrid Public Key Encryption (HPKE) for
-    use with JSON Object Signing and Encryption (JOSE). HPKE offers a variant of public
-    key encryption of arbitrary-sized plaintexts for a recipient public key. HPKE
-    works for any combination of an asymmetric key encapsulation mechanism (KEM),
-    key derivation function (KDF), and authenticated encryption with additional data
-    (AEAD) function. Authentication for HPKE in JOSE is provided by JOSE-native security
-    mechanisms or by one of the authenticated variants of HPKE. This document defines
-    the use of the HPKE with JOSE.</p>"
+- content: "<p>This specification defines how to use Hybrid Public Key Encryption
+    (HPKE) with JSON Web Encryption (JWE). HPKE enables public key encryption of arbitrary-sized
+    plaintexts to a recipient's public key, and provides security against adaptive
+    chosen ciphertext attacks. This specification chooses a specific subset of the
+    HPKE features to use with JWE. This specification updates RFC 7516 (JWE) to enable
+    use of Integrated Encryption as a Key Management Mode.</p>"
   language:
   - en
   script:
@@ -188,23 +189,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-jose-hpke-encrypt-01
+    id: draft-ietf-jose-hpke-encrypt-15
     docid:
-    - id: draft-ietf-jose-hpke-encrypt-01
+    - id: draft-ietf-jose-hpke-encrypt-15
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-jose-hpke-encrypt-01
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-jose-hpke-encrypt-16
-    docid:
-    - id: draft-ietf-jose-hpke-encrypt-16
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-jose-hpke-encrypt-16
+      content: draft-ietf-jose-hpke-encrypt-15
       format: text/plain
 series:
 - type: main
@@ -215,7 +206,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-jose-hpke-encrypt-02
+  number: draft-ietf-jose-hpke-encrypt-16
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

@@ -1,19 +1,19 @@
 ---
 schema-version: v1.2.3
-id: draft-maurette-hmtftp-00
+id: draft-maurette-hmtftp-04
 title:
-- content: HMTFTP - HMAC-based Trivial File Transfer Protocol (v0.1)
+- content: 'HMTFTP: HMAC-Derived TFTP with Optional AEAD Protection (v0.4)'
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-maurette-hmtftp-00
+- content: https://datatracker.ietf.org/doc/html/draft-maurette-hmtftp-04
   type: src
 type: standard
 docid:
-- id: draft-maurette-hmtftp-00
+- id: draft-maurette-hmtftp-04
   type: Internet-Draft
   primary: true
 - id: I-D.maurette-hmtftp
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.maurette-hmtftp
 date:
 - type: published
-  value: '2025-12-22'
+  value: '2026-02-16'
 contributor:
 - person:
     name:
@@ -41,39 +41,37 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: IUT R&T Bethune
+        - content: IUT R&T Béthune
   role:
   - type: author
 version:
-- draft: '00'
-revdate: '2025-12-22'
+- draft: '04'
+revdate: '2026-02-16'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>HMTFTP ([RFC1350]) is a lightweight UDP file transfer protocol that
-    preserves TFTP-style simplicity (block-and-ACK) while adding an optional authenticated
-    encryption mode using AEAD AES-256-GCM with pre-shared keys derived via HKDF-SHA-256.
-    The protocol targets managed environments (e.g., CPEs, OpenWrt, embedded devices)
-    where provisioning and configuration have constrained requirements. This document
-    specifies v0.1, including message formats, negotiation, cryptographic processing,
-    timers, and security considerations.</p>"
+- content: "<p>HMTFTP is a lightweight UDP file transfer protocol derived from TFTP
+    that adds TLV-based negotiation and an optional AEAD protection mode for DATA
+    payloads. This version (v0.4) requests IANA actions: a service name and UDP port
+    assignment (suggested: 6369/udp) and registries for TLV Types, OpCodes, and Ciphersuites.
+    Until IANA assigns a port, this document uses TBD1 as the default port value.</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-maurette-hmtftp-04
+    id: draft-maurette-hmtftp-01
     docid:
-    - id: draft-maurette-hmtftp-04
+    - id: draft-maurette-hmtftp-01
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-maurette-hmtftp-04
+      content: draft-maurette-hmtftp-01
       format: text/plain
 series:
 - type: main
@@ -84,7 +82,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-maurette-hmtftp-00
+  number: draft-maurette-hmtftp-04
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
