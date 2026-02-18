@@ -1,19 +1,19 @@
 ---
 schema-version: v1.2.3
-id: draft-condrey-rats-pop-protocol-01
+id: draft-condrey-rats-pop-protocol-06
 title:
-- content: 'Proof of Process (PoP): Architecture, Evidence Format, and VDF'
+- content: 'Proof of Process (PoP): Architecture and Evidence Format'
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-condrey-rats-pop-protocol-01
+- content: https://datatracker.ietf.org/doc/html/draft-condrey-rats-pop-protocol-06
   type: src
 type: standard
 docid:
-- id: draft-condrey-rats-pop-protocol-01
+- id: draft-condrey-rats-pop-protocol-06
   type: Internet-Draft
   primary: true
 - id: I-D.condrey-rats-pop-protocol
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.condrey-rats-pop-protocol
 date:
 - type: published
-  value: '2026-02-14'
+  value: '2026-02-18'
 contributor:
 - person:
     name:
@@ -56,19 +56,23 @@ contributor:
   role:
   - type: author
 version:
-- draft: '01'
-revdate: '2026-02-14'
+- draft: '06'
+revdate: '2026-02-18'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: <p>This document specifies the Proof of Process (PoP) protocol, a specialized
-    profile of Remote Attestation Procedures (RATS) designed to validate digital authorship
-    through a "provenance of effort." It defines the core architecture, the RATS role
-    mappings, the normative CBOR-encoded Evidence Format (including EAT integration),
-    and the Verifiable Delay Function (VDF) mechanisms used to prove temporal and
-    physical creation constraints.</p>
+- content: "<p>This document specifies the Proof of Process (PoP) Evidence Framework,
+    a specialized profile of Remote Attestation Procedures (RATS) designed to validate
+    the provenance of effort in digital authorship. Unlike traditional provenance,
+    which tracks file custody, PoP attests to the continuous physical process of creation.
+    The protocol defines a cryptographic mechanism for generating Evidence Packets
+    utilizing a composite Sequential Work Function (SWF) based on Proof of Biological
+    Space-Time (PoBST) to enforce temporal monotonicity and Cross-Domain Constraint
+    Entanglement (CDCE) to bind behavioral entropy (human jitter) and physical state
+    to the document. Technical specifications for wire formats, sequential work functions,
+    and hardware-anchored trust are provided.</p>"
   language:
   - en
   script:
@@ -77,23 +81,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-condrey-rats-pop-protocol-00
+    id: draft-condrey-rats-pop-protocol-04
     docid:
-    - id: draft-condrey-rats-pop-protocol-00
+    - id: draft-condrey-rats-pop-protocol-04
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-condrey-rats-pop-protocol-00
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-condrey-rats-pop-protocol-05
-    docid:
-    - id: draft-condrey-rats-pop-protocol-05
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-condrey-rats-pop-protocol-05
+      content: draft-condrey-rats-pop-protocol-04
       format: text/plain
 series:
 - type: main
@@ -104,7 +98,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-condrey-rats-pop-protocol-01
+  number: draft-condrey-rats-pop-protocol-06
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
