@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-joung-detnet-stateless-fair-queuing-05
+id: draft-joung-detnet-stateless-fair-queuing-07
 title:
 - content: Latency Guarantee with Stateless Fair Queuing
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-joung-detnet-stateless-fair-queuing-05
+- content: https://datatracker.ietf.org/doc/html/draft-joung-detnet-stateless-fair-queuing-07
   type: src
 type: standard
 docid:
-- id: draft-joung-detnet-stateless-fair-queuing-05
+- id: draft-joung-detnet-stateless-fair-queuing-07
   type: Internet-Draft
   primary: true
 - id: I-D.joung-detnet-stateless-fair-queuing
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.joung-detnet-stateless-fair-queuing
 date:
 - type: published
-  value: '2025-06-20'
+  value: '2026-02-20'
 contributor:
 - person:
     name:
@@ -162,8 +162,8 @@ contributor:
   role:
   - type: author
 version:
-- draft: '05'
-revdate: '2025-06-20'
+- draft: '07'
+revdate: '2026-02-20'
 language:
 - en
 script:
@@ -175,13 +175,16 @@ abstract:
     in core nodes do not need to maintain flow states. Instead, the entrance node
     of a flow marks an ideal service completion time according to a fluid model, called
     Finish Time (FT), of a packet in the packet header. The subsequent core nodes
-    update FT by adding delay factors, which are functions of the flow and the nodes.
-    The packets in the queue of the scheduler are served in the ascending order of
-    FT. This mechanism is called the stateless fair queuing. The result is that flows
-    are isolated from each other almost perfectly. The latency bound of a flow depends
-    only on the flow's intrinsic parameters such as the maximum burst size and the
-    service rate, except the link capacities and the maximum packet length among other
-    flows sharing each output link with the flow.</p>"
+    update the FT by adding the delay factor, which is a function of the flow and
+    the nodes. The packets in the queue of the scheduler are served in the ascending
+    order of FT. This mechanism is called the stateless fair queuing. The result is
+    that flows are isolated from each other almost perfectly. The latency bound of
+    a flow depends only on the flow's intrinsic parameters such as the maximum burst
+    size and the service rate, except the link capacities and the maximum packet length
+    among other flows sharing each output link with the flow. Furthermore, this document
+    specifies an approximation of stateless fair queuing implemented via a strict
+    priority (SP) scheduler. This approach maintains a guaranteed end- to-end (E2E)
+    latency bound.</p>"
   language:
   - en
   script:
@@ -198,16 +201,6 @@ relation:
     formattedref:
       content: draft-joung-detnet-stateless-fair-queuing-01
       format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-joung-detnet-stateless-fair-queuing-07
-    docid:
-    - id: draft-joung-detnet-stateless-fair-queuing-07
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-joung-detnet-stateless-fair-queuing-07
-      format: text/plain
 series:
 - type: main
   title:
@@ -217,7 +210,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-joung-detnet-stateless-fair-queuing-05
+  number: draft-joung-detnet-stateless-fair-queuing-07
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

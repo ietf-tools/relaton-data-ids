@@ -1,0 +1,49 @@
+---
+schema-version: v1.2.3
+id: draft-drake-email-tpm-attestation
+title:
+- content: Hardware Attestation for Email Sender Verification
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-drake-email-tpm-attestation
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This document defines a mechanism for email senders to include hardware
+    attestation evidence in message headers, enabling receiving mail servers to cryptographically
+    verify that an email was composed on a machine containing a genuine Trusted Platform
+    Module (TPM) from a known manufacturer (Intel, AMD, Infineon, or similar). The
+    verification chain runs from the email header directly to the TPM manufacturer's
+    root Certificate Authority, requiring no trust in any intermediary identity service.
+    As a companion mechanism, this document also defines a privacy- preserving alternative
+    using SD-JWT (Selective Disclosure JWT, RFC 9901) where the sender can prove specific
+    claims about their hardware trust level without revealing their hardware identity.
+    Together, these mechanisms provide Sybil-resistant email authentication: each
+    sender requires a unique physical security chip, making large-scale automated
+    spam economically infeasible regardless of advances in artificial intelligence.
+    While this document specifies these mechanisms for email message headers, the
+    attestation formats defined herein - both the CMS attestation bundle and the SD-JWT
+    trust proof - are self-contained, transport-independent data structures applicable
+    to HTTP headers, agent-to-agent messaging, and other Internet protocols.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-drake-email-tpm-attestation-00
+    docid:
+    - id: draft-drake-email-tpm-attestation-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-drake-email-tpm-attestation-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
