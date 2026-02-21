@@ -1,62 +1,35 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-idr-sdwan-edge-discovery-25
+id: draft-ietf-pce-pcep-pmtu-09
 title:
-- content: BGP UPDATE for SD-WAN Edge Discovery
+- content: Support for Path MTU (PMTU) in the Path Computation Element (PCE) Communication
+    Protocol (PCEP)
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-sdwan-edge-discovery-25
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-pce-pcep-pmtu-09
   type: src
 type: standard
 docid:
-- id: draft-ietf-idr-sdwan-edge-discovery-25
+- id: draft-ietf-pce-pcep-pmtu-09
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-idr-sdwan-edge-discovery
+- id: I-D.ietf-pce-pcep-pmtu
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-idr-sdwan-edge-discovery
+docnumber: I-D.ietf-pce-pcep-pmtu
 date:
 - type: published
-  value: '2025-07-22'
+  value: '2026-02-20'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Linda
-          language:
-          - en
-        - language:
-          - en
-          initial: L
-        formatted_initials:
-          content: L.
-          language:
-          - en
-      surname:
-        content: Dunbar
-        language:
-        - en
-      completename:
-        content: Linda Dunbar
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Futurewei
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Susan
+        - content: Shuping
           language:
           - en
         - language:
@@ -67,119 +40,148 @@ contributor:
           language:
           - en
       surname:
-        content: Hares
+        content: Peng
         language:
         - en
       completename:
-        content: Susan Hares
+        content: Shuping Peng
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei
+        - content: Huawei Technologies
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Kausik
+        - content: Cheng
           language:
           - en
         - language:
           - en
-          initial: K
+          initial: C
         formatted_initials:
-          content: K.
+          content: C.
           language:
           - en
       surname:
-        content: Majumdar
+        content: Li
         language:
         - en
       completename:
-        content: Kausik Majumdar
+        content: Cheng Li
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Oracle
+        - content: Huawei Technologies
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Robert
+        - content: Liuyan
           language:
           - en
         - language:
           - en
-          initial: R
+          initial: L
         formatted_initials:
-          content: R.
+          content: L.
           language:
           - en
       surname:
-        content: Raszuk
+        content: Han
         language:
         - en
       completename:
-        content: Robert Raszuk
+        content: Liuyan Han
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Arrcus
+        - content: China Mobile
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Venkit
-          language:
-          - en
         - language:
           - en
-          initial: V
+          initial: L
         formatted_initials:
-          content: V.
+          content: L.
           language:
           - en
       surname:
-        content: Kasiviswanathan
+        content: Ndifor
         language:
         - en
       completename:
-        content: Venkit Kasiviswanathan
+        content: Luc-Fabrice Ndifor
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Arista
+        - content: MTN Cameroon
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Samuel
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Sidor
+        language:
+        - en
+      completename:
+        content: Samuel Sidor
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Cisco
   role:
   - type: author
 version:
-- draft: '25'
-revdate: '2025-07-22'
+- draft: '09'
+revdate: '2026-02-20'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>The document describes the BGP mechanisms for SD-WAN (Software Defined
-    Wide Area Network) edge node attribute discovery. These mechanisms include a new
-    tunnel type and sub-TLVs for the BGP Tunnel- Encapsulation Attribute [RFC9012]
-    and set of NLRI (network layer reachability information) for SD-WAN underlay information.
-    In the context of this document, BGP Route Reflector (RR) is the component of
-    the SD-WAN Controller that receives the BGP UPDATE from SD-WAN edges and in turn
-    propagates the information to the intended peers that are authorized to communicate
-    via the SD-WAN overlay network.</p>"
+- content: "<p>The Path Computation Element (PCE) provides path computation functions
+    in support of traffic engineering in Multiprotocol Label Switching (MPLS) and
+    Generalized MPLS (GMPLS) networks. The Source Packet Routing in Networking (SPRING)
+    architecture describes how Segment Routing (SR) can be used to steer packets through
+    an IPv6 or MPLS network using the source routing paradigm. A Segment Routed Path
+    can be derived from a variety of mechanisms, including an IGP Shortest Path Tree
+    (SPT), explicit configuration, or a Path Computation Element (PCE). Since the
+    SR does not require signaling, the path maximum transmission unit (MTU) information
+    for the SR path is unavailable at the headend. This document specifies the extension
+    to PCE Communication Protocol (PCEP) to carry path MTU as a new metric type in
+    the PCEP messages for SR, but not limited to it. This document also updates RFC
+    5440 to allow metric bounds to be minimum as needed in the case of path MTU.</p>"
   language:
   - en
   script:
@@ -188,23 +190,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-idr-sdwan-edge-discovery-12
+    id: draft-ietf-pce-pcep-pmtu-01
     docid:
-    - id: draft-ietf-idr-sdwan-edge-discovery-12
+    - id: draft-ietf-pce-pcep-pmtu-01
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-idr-sdwan-edge-discovery-12
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-idr-sdwan-edge-discovery-26
-    docid:
-    - id: draft-ietf-idr-sdwan-edge-discovery-26
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-idr-sdwan-edge-discovery-26
+      content: draft-ietf-pce-pcep-pmtu-01
       format: text/plain
 series:
 - type: main
@@ -215,7 +207,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-idr-sdwan-edge-discovery-25
+  number: draft-ietf-pce-pcep-pmtu-09
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
