@@ -1,148 +1,90 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-spring-cs-sr-policy-10
+id: draft-ietf-cose-hpke-22
 title:
-- content: Circuit Style Segment Routing Policy
+- content: Use of Hybrid Public-Key Encryption (HPKE) with CBOR Object Signing and
+    Encryption (COSE)
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-spring-cs-sr-policy-10
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-cose-hpke-22
   type: src
 type: standard
 docid:
-- id: draft-ietf-spring-cs-sr-policy-10
+- id: draft-ietf-cose-hpke-22
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-spring-cs-sr-policy
+- id: I-D.ietf-cose-hpke
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-spring-cs-sr-policy
+docnumber: I-D.ietf-cose-hpke
 date:
 - type: published
-  value: '2025-06-24'
+  value: '2026-02-23'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Christian
+        - content: Hannes
           language:
           - en
         - language:
           - en
-          initial: C
+          initial: H
         formatted_initials:
-          content: C.
+          content: H.
           language:
           - en
       surname:
-        content: Schmutzer
+        content: Tschofenig
         language:
         - en
       completename:
-        content: Christian Schmutzer
+        content: Hannes Tschofenig
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems, Inc.
+        - content: University of Applied Sciences Bonn-Rhein-Sieg
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Zafar
+        - content: Orie
           language:
           - en
         - language:
           - en
-          initial: Z
+          initial: O
         formatted_initials:
-          content: Z.
+          content: O.
           language:
           - en
       surname:
-        content: Ali
+        content: Steele
         language:
         - en
       completename:
-        content: Zafar Ali
+        content: Orie Steele
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems, Inc.
+        - content: Tradeverifyd
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Praveen
-          language:
-          - en
-        - language:
-          - en
-          initial: P
-        formatted_initials:
-          content: P.
-          language:
-          - en
-      surname:
-        content: Maheshwari
-        language:
-        - en
-      completename:
-        content: Praveen Maheshwari
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Airtel India
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Reza
-          language:
-          - en
-        - language:
-          - en
-          initial: R
-        formatted_initials:
-          content: R.
-          language:
-          - en
-      surname:
-        content: Rokui
-        language:
-        - en
-      completename:
-        content: Reza Rokui
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Ciena
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Andrew
-          language:
-          - en
         - language:
           - en
           initial: A
@@ -151,32 +93,94 @@ contributor:
           language:
           - en
       surname:
-        content: Stone
+        content: Daisuke
         language:
         - en
       completename:
-        content: Andrew Stone
+        content: Ajitomi, Daisuke
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Nokia
+        - content: bibital
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Laurence
+          language:
+          - en
+        - language:
+          - en
+          initial: L
+        formatted_initials:
+          content: L.
+          language:
+          - en
+      surname:
+        content: Lundblade
+        language:
+        - en
+      completename:
+        content: Laurence Lundblade
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Security Theory LLC
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Michael
+          language:
+          - en
+        - language:
+          - en
+          initial: M
+        - language:
+          - en
+          initial: B
+        formatted_initials:
+          content: M. B.
+          language:
+          - en
+      surname:
+        content: Jones
+        language:
+        - en
+      completename:
+        content: Michael B. Jones
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Self-Issued Consulting
   role:
   - type: author
 version:
-- draft: '10'
-revdate: '2025-06-24'
+- draft: '22'
+revdate: '2026-02-23'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: <p>This document describes how Segment Routing (SR) policies can be used
-    to satisfy the requirements for bandwidth, end-to-end recovery and persistent
-    paths within a SR network. The association of two co- routed unidirectional SR
-    Policies satisfying these requirements is called "circuit-style" SR Policy (CS-SR
-    Policy).</p>
+- content: "<p>This specification defines hybrid public-key encryption (HPKE) for
+    use with CBOR Object Signing and Encryption (COSE). HPKE offers a variant of public-key
+    encryption of arbitrary-sized plaintexts for a recipient public key. HPKE is a
+    general encryption framework utilizing an asymmetric key encapsulation mechanism
+    (KEM), a key derivation function (KDF), and an Authenticated Encryption with Associated
+    Data (AEAD) algorithm. This document defines the use of HPKE with COSE. Authentication
+    for HPKE in COSE is provided by COSE-native security mechanisms or by the pre-shared
+    key authenticated variant of HPKE.</p>"
   language:
   - en
   script:
@@ -185,23 +189,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-spring-cs-sr-policy-01
+    id: draft-ietf-cose-hpke-11
     docid:
-    - id: draft-ietf-spring-cs-sr-policy-01
+    - id: draft-ietf-cose-hpke-11
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-spring-cs-sr-policy-01
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-spring-cs-sr-policy-16
-    docid:
-    - id: draft-ietf-spring-cs-sr-policy-16
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-cs-sr-policy-16
+      content: draft-ietf-cose-hpke-11
       format: text/plain
 series:
 - type: main
@@ -212,7 +206,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-spring-cs-sr-policy-10
+  number: draft-ietf-cose-hpke-22
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

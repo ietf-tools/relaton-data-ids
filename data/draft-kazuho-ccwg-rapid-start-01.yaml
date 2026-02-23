@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-kazuho-ccwg-rapid-start-00
+id: draft-kazuho-ccwg-rapid-start-01
 title:
 - content: Rapid Startup of Congestion Control
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-kazuho-ccwg-rapid-start-00
+- content: https://datatracker.ietf.org/doc/html/draft-kazuho-ccwg-rapid-start-01
   type: src
 type: standard
 docid:
-- id: draft-kazuho-ccwg-rapid-start-00
+- id: draft-kazuho-ccwg-rapid-start-01
   type: Internet-Draft
   primary: true
 - id: I-D.kazuho-ccwg-rapid-start
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.kazuho-ccwg-rapid-start
 date:
 - type: published
-  value: '2025-11-03'
+  value: '2026-02-22'
 contributor:
 - person:
     name:
@@ -53,34 +53,36 @@ contributor:
   role:
   - type: author
 version:
-- draft: '00'
-revdate: '2025-11-03'
+- draft: '01'
+revdate: '2026-02-22'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document defines Rapid Start, a congestion-control startup algorithm
-    that grows the window by 3× per RTT until queue buildup is observed, so that a
-    sender can reach the path BDP faster than with classic 2× slow start. When congestion
-    is observed, Rapid Start immediately scales the window relative to the bytes that
-    have passed through the bottleneck and then hands over to normal recovery and
-    congestion avoidance.</p>"
+- content: "<p>This document defines Rapid Start, a congestion-control startup algorithm.
+    It starts by pacing the transmission of the initial congestion window over a full
+    RTT, allowing an initial window up to 2× that of classic paced slow start at a
+    comparable sending rate. It then grows the window by 3× per RTT until queue buildup
+    is observed, after which it reverts to classic 2× slow start growth. When congestion
+    is signaled, Rapid Start smoothly converges the window based on delivered data,
+    avoiding bursts and underutilization, before handing over to ordinary congestion
+    avoidance.</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-kazuho-ccwg-rapid-start-01
+    id: draft-kazuho-ccwg-rapid-start-00
     docid:
-    - id: draft-kazuho-ccwg-rapid-start-01
+    - id: draft-kazuho-ccwg-rapid-start-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-kazuho-ccwg-rapid-start-01
+      content: draft-kazuho-ccwg-rapid-start-00
       format: text/plain
 series:
 - type: main
@@ -91,7 +93,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-kazuho-ccwg-rapid-start-00
+  number: draft-kazuho-ccwg-rapid-start-01
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

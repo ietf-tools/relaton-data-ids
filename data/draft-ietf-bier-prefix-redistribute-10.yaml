@@ -1,62 +1,34 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-spring-cs-sr-policy-10
+id: draft-ietf-bier-prefix-redistribute-10
 title:
-- content: Circuit Style Segment Routing Policy
+- content: BIER Prefix Redistribute
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-spring-cs-sr-policy-10
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-bier-prefix-redistribute-10
   type: src
 type: standard
 docid:
-- id: draft-ietf-spring-cs-sr-policy-10
+- id: draft-ietf-bier-prefix-redistribute-10
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-spring-cs-sr-policy
+- id: I-D.ietf-bier-prefix-redistribute
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-spring-cs-sr-policy
+docnumber: I-D.ietf-bier-prefix-redistribute
 date:
 - type: published
-  value: '2025-06-24'
+  value: '2026-02-22'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Christian
-          language:
-          - en
-        - language:
-          - en
-          initial: C
-        formatted_initials:
-          content: C.
-          language:
-          - en
-      surname:
-        content: Schmutzer
-        language:
-        - en
-      completename:
-        content: Christian Schmutzer
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Cisco Systems, Inc.
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Zafar
+        - content: Zheng
           language:
           - en
         - language:
@@ -67,95 +39,151 @@ contributor:
           language:
           - en
       surname:
-        content: Ali
+        content: Zhang
         language:
         - en
       completename:
-        content: Zafar Ali
+        content: Zheng Zhang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems, Inc.
+        - content: ZTE Corporation
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Praveen
-          language:
-          - en
         - language:
           - en
-          initial: P
+          initial: B
         formatted_initials:
-          content: P.
+          content: B.
           language:
           - en
       surname:
-        content: Maheshwari
+        content: Wu
         language:
         - en
       completename:
-        content: Praveen Maheshwari
+        content: Bo Wu
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Airtel India
+        - content: Individual
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Reza
+        - content: Zhaohui
           language:
           - en
         - language:
           - en
-          initial: R
+          initial: Z
+        - language:
+          - en
+          initial: J
         formatted_initials:
-          content: R.
+          content: Z. J.
           language:
           - en
       surname:
-        content: Rokui
+        content: Zhang
         language:
         - en
       completename:
-        content: Reza Rokui
+        content: Zhaohui (Jeffrey) Zhang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Ciena
+        - content: Juniper Networks
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Andrew
+        - content: IJsbrand
           language:
           - en
         - language:
           - en
-          initial: A
+          initial: I
         formatted_initials:
-          content: A.
+          content: I.
           language:
           - en
       surname:
-        content: Stone
+        content: Wijnands
         language:
         - en
       completename:
-        content: Andrew Stone
+        content: IJsbrand Wijnands
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Individual
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Yisong
+          language:
+          - en
+        - language:
+          - en
+          initial: "Y"
+        formatted_initials:
+          content: Y.
+          language:
+          - en
+      surname:
+        content: Liu
+        language:
+        - en
+      completename:
+        content: Yisong Liu
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: China Mobile
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Hooman
+          language:
+          - en
+        - language:
+          - en
+          initial: H
+        formatted_initials:
+          content: H.
+          language:
+          - en
+      surname:
+        content: Bidgoli
+        language:
+        - en
+      completename:
+        content: Hooman Bidgoli
         language:
         - en
     affiliation:
@@ -166,17 +194,16 @@ contributor:
   - type: author
 version:
 - draft: '10'
-revdate: '2025-06-24'
+revdate: '2026-02-22'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: <p>This document describes how Segment Routing (SR) policies can be used
-    to satisfy the requirements for bandwidth, end-to-end recovery and persistent
-    paths within a SR network. The association of two co- routed unidirectional SR
-    Policies satisfying these requirements is called "circuit-style" SR Policy (CS-SR
-    Policy).</p>
+- content: "<p>This document defines a BIER proxy function to support one single BIER
+    sub-domain over multiple underlay routing protocol regions (Autonomous Systems
+    or IGP areas). A new BIER proxy range sub-TLV is defined to redistribute BIER
+    BFR-id information across the routing regions.</p>"
   language:
   - en
   script:
@@ -185,23 +212,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-spring-cs-sr-policy-01
+    id: draft-ietf-bier-prefix-redistribute-04
     docid:
-    - id: draft-ietf-spring-cs-sr-policy-01
+    - id: draft-ietf-bier-prefix-redistribute-04
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-spring-cs-sr-policy-01
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-spring-cs-sr-policy-16
-    docid:
-    - id: draft-ietf-spring-cs-sr-policy-16
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-cs-sr-policy-16
+      content: draft-ietf-bier-prefix-redistribute-04
       format: text/plain
 series:
 - type: main
@@ -212,7 +229,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-spring-cs-sr-policy-10
+  number: draft-ietf-bier-prefix-redistribute-10
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

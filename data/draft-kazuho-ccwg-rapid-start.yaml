@@ -13,12 +13,14 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document defines Rapid Start, a congestion-control startup algorithm
-    that grows the window by 3× per RTT until queue buildup is observed, so that a
-    sender can reach the path BDP faster than with classic 2× slow start. When congestion
-    is observed, Rapid Start immediately scales the window relative to the bytes that
-    have passed through the bottleneck and then hands over to normal recovery and
-    congestion avoidance.</p>"
+- content: "<p>This document defines Rapid Start, a congestion-control startup algorithm.
+    It starts by pacing the transmission of the initial congestion window over a full
+    RTT, allowing an initial window up to 2× that of classic paced slow start at a
+    comparable sending rate. It then grows the window by 3× per RTT until queue buildup
+    is observed, after which it reverts to classic 2× slow start growth. When congestion
+    is signaled, Rapid Start smoothly converges the window based on delivered data,
+    avoiding bursts and underutilization, before handing over to ordinary congestion
+    avoidance.</p>"
   language:
   - en
   script:
@@ -34,6 +36,16 @@ relation:
       primary: true
     formattedref:
       content: draft-kazuho-ccwg-rapid-start-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-kazuho-ccwg-rapid-start-01
+    docid:
+    - id: draft-kazuho-ccwg-rapid-start-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-kazuho-ccwg-rapid-start-01
       format: text/plain
 ext:
   schema-version: v1.0.1
