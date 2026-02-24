@@ -1,0 +1,89 @@
+---
+schema-version: v1.2.3
+id: draft-asadi-tcp-spa-00
+title:
+- content: TCP In-Band Single Packet Authentication (TCP-SPA)
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-asadi-tcp-spa-00
+  type: src
+type: standard
+docid:
+- id: draft-asadi-tcp-spa-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.asadi-tcp-spa
+  type: IETF
+  scope: anchor
+docnumber: I-D.asadi-tcp-spa
+date:
+- type: published
+  value: '2026-02-23'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Amin
+          language:
+          - en
+        - language:
+          - en
+          initial: A
+        formatted_initials:
+          content: A.
+          language:
+          - en
+      surname:
+        content: Asadi
+        language:
+        - en
+      completename:
+        content: Amin Asadi
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Individual
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-02-23'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>This document describes a mechanism called TCP In-Band Single Packet
+    Authentication (TCP-SPA). A client that wishes to open a TCP connection to a protected
+    server embeds a compact Message Authentication Code (MAC) inside the TCP SYN packet
+    itself, carried as an experimental TCP option (kind 253, per [RFC6994]). The server
+    verifies the MAC at the earliest possible point in the network stack — before
+    a socket is allocated or the TCP handshake proceeds — and drops the SYN if verification
+    fails. This approach differs from existing Single Packet Authentication (SPA)
+    systems in that no out-of-band authentication packet is required: authentication
+    and connection establishment are a single atomic step.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-asadi-tcp-spa-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
