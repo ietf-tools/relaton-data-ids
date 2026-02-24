@@ -16,7 +16,8 @@ abstract:
 - content: "<p>This document describes a mechanism called TCP In-Band Single Packet
     Authentication (TCP-SPA). A client that wishes to open a TCP connection to a protected
     server embeds a compact Message Authentication Code (MAC) inside the TCP SYN packet
-    itself, carried as an experimental TCP option (kind 253, per [RFC6994]). The server
+    itself, carried as an experimental TCP option (kind 253, per [RFC6994]), with
+    an ExID (Experiment Identifier) value of TBD to be assigned by IANA. The server
     verifies the MAC at the earliest possible point in the network stack — before
     a socket is allocated or the TCP handshake proceeds — and drops the SYN if verification
     fails. This approach differs from existing Single Packet Authentication (SPA)
@@ -37,6 +38,16 @@ relation:
       primary: true
     formattedref:
       content: draft-asadi-tcp-spa-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-asadi-tcp-spa-01
+    docid:
+    - id: draft-asadi-tcp-spa-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-asadi-tcp-spa-01
       format: text/plain
 ext:
   schema-version: v1.0.1
