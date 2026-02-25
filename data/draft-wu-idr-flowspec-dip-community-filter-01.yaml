@@ -1,90 +1,34 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-ippm-alt-mark-deployment-01
+id: draft-wu-idr-flowspec-dip-community-filter-01
 title:
-- content: Alternate Marking Deployment Framework
+- content: Destination-IP-Community Filter for BGP Flow Specification
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-ippm-alt-mark-deployment-01
+- content: https://datatracker.ietf.org/doc/html/draft-wu-idr-flowspec-dip-community-filter-01
   type: src
 type: standard
 docid:
-- id: draft-ietf-ippm-alt-mark-deployment-01
+- id: draft-wu-idr-flowspec-dip-community-filter-01
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-ippm-alt-mark-deployment
+- id: I-D.wu-idr-flowspec-dip-community-filter
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-ippm-alt-mark-deployment
+docnumber: I-D.wu-idr-flowspec-dip-community-filter
 date:
 - type: published
-  value: '2024-07-03'
+  value: '2026-02-25'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Giuseppe
-          language:
-          - en
-        - language:
-          - en
-          initial: G
-        formatted_initials:
-          content: G.
-          language:
-          - en
-      surname:
-        content: Fioccola
-        language:
-        - en
-      completename:
-        content: Giuseppe Fioccola
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Huawei
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Zhu
-          language:
-          - en
-        - language:
-          - en
-          initial: Z
-        formatted_initials:
-          content: Z.
-          language:
-          - en
-      surname:
-        content: Keyi
-        language:
-        - en
-      completename:
-        content: Zhu Keyi
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Huawei
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Thomas
+        - content: Tianhao
           language:
           - en
         - language:
@@ -95,85 +39,117 @@ contributor:
           language:
           - en
       surname:
-        content: Graf
+        content: Wu
         language:
         - en
       completename:
-        content: Thomas Graf
+        content: Tianhao Wu
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Swisscom
+        - content: Huawei
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Massimo
+        - content: Jun
           language:
           - en
         - language:
           - en
-          initial: M
+          initial: J
         formatted_initials:
-          content: M.
+          content: J.
           language:
           - en
       surname:
-        content: Nilo
+        content: Ge
         language:
         - en
       completename:
-        content: Massimo Nilo
+        content: Jun Ge
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Telecom Italia
+        - content: Huawei
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Lin
+        - content: Xiangfeng
           language:
           - en
         - language:
           - en
-          initial: L
+          initial: X
         formatted_initials:
-          content: L.
+          content: X.
           language:
           - en
       surname:
-        content: Zhang
+        content: Ding
         language:
         - en
       completename:
-        content: Lin Zhang
+        content: Xiangfeng Ding
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: China Mobile
+        - content: Huawei
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Haibo
+          language:
+          - en
+        - language:
+          - en
+          initial: H
+        formatted_initials:
+          content: H.
+          language:
+          - en
+      surname:
+        content: Wang
+        language:
+        - en
+      completename:
+        content: Haibo Wang
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei
   role:
   - type: author
 version:
 - draft: '01'
-revdate: '2024-07-03'
+revdate: '2026-02-25'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document provides a framework for Alternate Marking deployment
-    and includes considerations and guidance for the deployment of the methodology.</p>"
+- content: "<p>BGP Flowspec mechanism (BGP-FS) propagates both traffic Flow Specifications
+    and Traffic Filtering Actions by making use of the BGP NLRI and the BGP Extended
+    Community encoding formats. This document specifies a new BGP-FS component type
+    to support community-level filtering. The match field is the community of the
+    destination IP address that is encoded in the Flowspec NLRI. This function is
+    applied in a single administrative domain.</p>"
   language:
   - en
   script:
@@ -182,23 +158,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-ippm-alt-mark-deployment-00
+    id: draft-wu-idr-flowspec-dip-community-filter-00
     docid:
-    - id: draft-ietf-ippm-alt-mark-deployment-00
+    - id: draft-wu-idr-flowspec-dip-community-filter-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-ippm-alt-mark-deployment-00
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-ippm-alt-mark-deployment-05
-    docid:
-    - id: draft-ietf-ippm-alt-mark-deployment-05
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-ippm-alt-mark-deployment-05
+      content: draft-wu-idr-flowspec-dip-community-filter-00
       format: text/plain
 series:
 - type: main
@@ -209,7 +175,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-ippm-alt-mark-deployment-01
+  number: draft-wu-idr-flowspec-dip-community-filter-01
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
