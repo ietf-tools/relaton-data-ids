@@ -1,0 +1,52 @@
+---
+schema-version: v1.2.3
+id: draft-barney-caam
+title:
+- content: Contextual Agent Authorization Mesh (CAAM)
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-barney-caam
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: '<p>This document specifies the Contextual Agent Authorization Mesh (CAAM),
+    an authorization profile composable with the Agent Registration and Discovery
+    Protocol (ARDP) I-D.pioli-agent-discovery and other discovery mechanisms. CAAM
+    defines the Post-Discovery Authorization Handshake: the runtime authorization
+    layer that governs agent behavior after an agent has been discovered through ARDP
+    but before it is permitted to execute tool calls or delegate authority. CAAM provides
+    a sidecar-based authorization mediator for enforcing Relationship-Based Access
+    Control (ReBAC), purpose-bound delegation, and cryptographically verifiable intent
+    propagation in Human-to-Agent (H2A) and Agent-to-Agent (A2A) flows. It bridges
+    identity provenance frameworks -- the Interoperability Profiling for Secure Identity
+    in the Enterprise (IPSIE) IPSIE and the Secure Production Identity Framework for
+    Everyone (SPIFFE) SPIFFE -- with the ARDP control plane, leveraging OpenID XAA
+    for coarse-grained delegation, a Knowledge Graph for real-time relationship inference,
+    and the Remote ATtestation procedureS (RATS) architecture RFC9334 for cryptographically
+    verifiable attestation of agent execution environments. The Session Context Object
+    (SCO) defined herein is encoded as a JSON Web Token (JWT) RFC7519 or a CBOR Web
+    Token (CWT) RFC8392, and carries a new "ctx" (Contextual Assertion) claim that
+    binds the agent''s delegated authority to a specific purpose, session, and trust
+    chain.</p>'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-barney-caam-00
+    docid:
+    - id: draft-barney-caam-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-barney-caam-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
