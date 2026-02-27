@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-ruan-spring-priority-flow-control-sid
 title:
-- content: Priority-based Flow Control SID in SRv6
+- content: SRv6 behavior extention for Flow Control in WAN
   language:
   - en
   script:
@@ -13,16 +13,34 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>To address the issue of lossless transmission for cross-data center
-    services, the PFC (Priority-based Flow Control) mechanism can be extended to wide-area
-    networks (WANs) to solve packet loss caused by network congestion and the problem
-    of backpressure signal transmission between WAN and RoCEv2 network in data centers.
-    By leveraging SRv6 and slicing technologies, it is possible to effectively control
-    the propagation range and path of PFC backpressure signals in wide-area networks,
+- content: "<p>In the wake of the continuous emergence of novel AI technologies, including
+    collaborative training, distributed inference and the like, the scenario in which
+    different data centers communicate via the RDMA (Remote Direct Memory Access)
+    protocol has emerged as a new requirement. similar to data center networks, wide
+    area networks (WANs) should also be equipped with certain flow control capabilities,
+    nodes in the wide area network (WAN) need to quickly and accurately notify upstream
+    traffic nodes of their congestion status. Upon receiving the congestion notification,
+    upstream nodes can take responsive actions to mitigate network congestion. By
+    extending SRv6[RFC 8986] technology, specific services can be carried over SRv6
+    policies, which enables the precise delivery and response of congestion signals.
+    For traffic carried over SRv6 policies, the service traffic path is explicitly
+    orchestrated via the Segment List in the SRH header. By parsing the sequence of
+    the Segment List, downstream nodes or controllers can accurately identify the
+    upstream nodes and interfaces corresponding to the current traffic, thus enabling
+    the rapid notification of congestion information to the upstream. Since each SID
+    in the Segment List is a 128-bit IPv6 address that represents a specific behaviour
+    (e.g., End, End.X), extending existing behaviours to mark their capability to
+    receive and process congestion signals allows flexible control over the delivery
+    mode of congestion signals in the WAN. The specific packet formats and contents
+    of congestion signals vary in various ways and are continuously being updated.
+    This document takes the most commonly used PFC backpressure notification mechanism
+    as an example to elaborate on the overall workflow of WAN congestion information
+    notification and the extensions to the SRv6 protocol. PFC technology is widely
+    deployed in RoCEv2 networks within data centers to report congestion signals.
+    By leveraging SRv6 and NRP technologies, it is possible to effectively control
+    the propagation range and path of PFC backpressure signals in wide area networks,
     thereby avoiding issues such as deadlocks and the excessive propagation of congestion
-    scope. PFC is a hop-by-hop mechanism. Given that most current WAN devices do not
-    support PFC function, this document proposes defining a new type of SRv6 SID End.X.PFC
-    to indicate the PFC-capable interface in the WAN network.</p>"
+    scope.</p>"
   language:
   - en
   script:
@@ -58,6 +76,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ruan-spring-priority-flow-control-sid-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ruan-spring-priority-flow-control-sid-03
+    docid:
+    - id: draft-ruan-spring-priority-flow-control-sid-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ruan-spring-priority-flow-control-sid-03
       format: text/plain
 ext:
   schema-version: v1.0.1
