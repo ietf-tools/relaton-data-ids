@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-rosomakho-httpbis-h3-unbound-data
 title:
-- content: Unbound DATA Frames in HTTP/3
+- content: Unbound DATA for CONNECT in HTTP/3
   language:
   - en
   script:
@@ -15,12 +15,12 @@ docid:
 abstract:
 - content: "<p>This document defines a new HTTP/3 frame type, UNBOUND_DATA, and a
     corresponding SETTINGS parameter that enables endpoints to negotiate its use.
-    When an endpoint sends an UNBOUND_DATA frame on a request or response stream,
-    it indicates that all subsequent octets on that stream are interpreted as data.
-    This applies both to message body data and to octets transmitted after CONNECT
-    or extended CONNECT. The use of UNBOUND_DATA removes the need to encapsulate each
-    portion of the data in DATA frames, reducing framing overhead and simplifying
-    transmission of long-lived or indeterminate-length payloads.</p>"
+    When an endpoint sends an UNBOUND_DATA frame on a CONNECT request or response
+    stream, it indicates that all subsequent octets on that stream are interpreted
+    as tunneled bytes. This applies both to octets transmitted after CONNECT or extended
+    CONNECT. The use of UNBOUND_DATA removes the need to encapsulate each portion
+    of the data in DATA frames, reducing framing overhead and simplifying transmission
+    of long-lived CONNECT tunnels.</p>"
   language:
   - en
   script:
@@ -36,6 +36,16 @@ relation:
       primary: true
     formattedref:
       content: draft-rosomakho-httpbis-h3-unbound-data-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-rosomakho-httpbis-h3-unbound-data-01
+    docid:
+    - id: draft-rosomakho-httpbis-h3-unbound-data-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-rosomakho-httpbis-h3-unbound-data-01
       format: text/plain
 ext:
   schema-version: v1.0.1
