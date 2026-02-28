@@ -16,12 +16,19 @@ abstract:
 - content: <p>This document specifies BGP Failure Propagation (BGP-FP), an infrastructure
     and protocol that improves inter-domain routing convergence by accelerating the
     removal of stale (invalid) routes. BGP-FP uses (1) an Agent deployed per Autonomous
-    System (AS) to detect eBGP link/policy/prefix failures and to configure local
-    routers, (2) a logically centralized (potentially distributed) Repository to store
-    and selectively forward failure information, and (3) BGP Large Communities as
-    a "route freshness" marker. Agents validate and apply Repository updates to filter
-    routes that traverse failed eBGP links or otherwise violate the originating AS’s
-    forwarding intent, reducing route flap propagation in the control plane.</p>
+    System (AS) to detect inter-AS reachability changes and to configure local routers,
+    (2) a logically centralized Repository to store and selectively forward AS reachability
+    state, and (3) BGP Large Communities as a "route freshness" marker. Agents validate
+    and apply Repository updates to filter routes that traverse AS pairs whose reachability
+    has been lost or that violate the originating AS's forwarding intent, reducing
+    route-flap propagation in the control plane. This document clarifies that "AS
+    reachability" refers to the reachability between two ASes, not to the state of
+    individual physical or logical links within an AS. If multiple links exist between
+    two ASes, the failure of a single link that does not break overall AS-to-AS reachability
+    does not trigger the BGP-FP mechanism. A new Repository deployment model is introduced,
+    suggesting that the Repository be operated by a newly established organization
+    composed of Tier-1 ASes and Regional Internet Registries (RIRs), using a distributed
+    deployment with Byzantine fault-tolerant consensus and rotating leadership.</p>
   language:
   - en
   script:
@@ -37,6 +44,16 @@ relation:
       primary: true
     formattedref:
       content: draft-li-idr-bgp-failure-propagation-convergence-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-li-idr-bgp-failure-propagation-convergence-01
+    docid:
+    - id: draft-li-idr-bgp-failure-propagation-convergence-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-li-idr-bgp-failure-propagation-convergence-01
       format: text/plain
 ext:
   schema-version: v1.0.1

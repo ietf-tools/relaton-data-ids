@@ -20,12 +20,16 @@ abstract:
     attackers to force a resolver to issue multiple simultaneous queries for the same
     domain name by crafting queries with different ECS options. This vulnerability
     revives the classic DNS Birthday Attack, posing a significant threat to DNS resolvers
-    and the clients they serve. This document specifies a stricter and more coherent
-    processing model for the ECS option in DNS resolvers. It introduces a mechanism
-    for resolvers to track the ECS support state of authoritative nameservers and
-    mandates query aggregation for zones determined to not support ECS. These changes
-    are designed to close the identified vulnerability and restore the effectiveness
-    of query aggregation as a defense mechanism.</p>
+    and the clients they serve. While Section 11.2 of RFC 7871 notes the general risk
+    of Birthday Attacks and suggests marking whether responding nameservers support
+    ECS, it stops short of providing a concrete normative state machine or explicit
+    mitigation process. This document specifies a stricter and more coherent processing
+    model for the ECS option in DNS resolvers to formalize that detection concept.
+    It introduces a mechanism for resolvers to track the ECS support state of authoritative
+    nameservers ("no-ECS-support" state) and mandates strict query aggregation for
+    zones determined to not support ECS. These changes are designed to close the identified
+    vulnerability and restore the effectiveness of query aggregation as a practical
+    defense mechanism.</p>
   language:
   - en
   script:
@@ -41,6 +45,16 @@ relation:
       primary: true
     formattedref:
       content: draft-li-dnsop-ecs-aggregation-fix-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-li-dnsop-ecs-aggregation-fix-01
+    docid:
+    - id: draft-li-dnsop-ecs-aggregation-fix-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-li-dnsop-ecs-aggregation-fix-01
       format: text/plain
 ext:
   schema-version: v1.0.1
