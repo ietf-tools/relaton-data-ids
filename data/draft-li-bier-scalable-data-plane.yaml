@@ -1,0 +1,47 @@
+---
+schema-version: v1.2.3
+id: draft-li-bier-scalable-data-plane
+title:
+- content: Scalable Data Plane Architecture for Bit Index Explicit Replication (BIER)
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-li-bier-scalable-data-plane
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This document describes an optimized data plane forwarding architecture
+    for Bit Index Explicit Replication (BIER). The standard BIER forwarding procedures,
+    as conceptually described in RFC 8279, imply a per-bit evaluation of the BitString
+    against the Bit Index Forwarding Table (BIFT) on each Bit Forwarding Router (BFR).
+    When the BitStringLength is large (e.g., 256 bits or more), this conceptual model
+    presents implementation challenges for high-speed ASIC/NPU forwarding engines
+    in terms of processing latency and hardware table resources. This document defines
+    two conceptual data structures -- a Replication Member Table and an Interface
+    BitMask Table -- that decouple the multicast replication decision from per-bit
+    BitString parsing. The resulting forwarding pipeline operates in time proportional
+    to the number of egress interfaces rather than the BitString length, enabling
+    deterministic and scalable hardware processing. This mechanism is semantically
+    equivalent to the forwarding procedures of RFC 8279 and does not modify the BIER
+    encapsulation or introduce new protocol signaling.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-li-bier-scalable-data-plane-00
+    docid:
+    - id: draft-li-bier-scalable-data-plane-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-li-bier-scalable-data-plane-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

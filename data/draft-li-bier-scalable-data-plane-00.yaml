@@ -1,0 +1,206 @@
+---
+schema-version: v1.2.3
+id: draft-li-bier-scalable-data-plane-00
+title:
+- content: Scalable Data Plane Architecture for Bit Index Explicit Replication (BIER)
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-li-bier-scalable-data-plane-00
+  type: src
+type: standard
+docid:
+- id: draft-li-bier-scalable-data-plane-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.li-bier-scalable-data-plane
+  type: IETF
+  scope: anchor
+docnumber: I-D.li-bier-scalable-data-plane
+date:
+- type: published
+  value: '2026-02-28'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Zhiqiang
+          language:
+          - en
+        - language:
+          - en
+          initial: Z
+        formatted_initials:
+          content: Z.
+          language:
+          - en
+      surname:
+        content: Li
+        language:
+        - en
+      completename:
+        content: Zhiqiang Li
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: China Mobile
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Zongpeng
+          language:
+          - en
+        - language:
+          - en
+          initial: Z
+        formatted_initials:
+          content: Z.
+          language:
+          - en
+      surname:
+        content: Du
+        language:
+        - en
+      completename:
+        content: Zongpeng Du
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: China Mobile
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Wei
+          language:
+          - en
+        - language:
+          - en
+          initial: W
+        formatted_initials:
+          content: W.
+          language:
+          - en
+      surname:
+        content: Cheng
+        language:
+        - en
+      completename:
+        content: Wei Cheng
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Centec Networks
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Junjie
+          language:
+          - en
+        - language:
+          - en
+          initial: J
+        formatted_initials:
+          content: J.
+          language:
+          - en
+      surname:
+        content: Wang
+        language:
+        - en
+      completename:
+        content: Junjie Wang
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Centec Networks
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Guoying
+          language:
+          - en
+        - language:
+          - en
+          initial: G
+        formatted_initials:
+          content: G.
+          language:
+          - en
+      surname:
+        content: Zhang
+        language:
+        - en
+      completename:
+        content: Guoying Zhang
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Centec Networks
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-02-28'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>This document describes an optimized data plane forwarding architecture
+    for Bit Index Explicit Replication (BIER). The standard BIER forwarding procedures,
+    as conceptually described in RFC 8279, imply a per-bit evaluation of the BitString
+    against the Bit Index Forwarding Table (BIFT) on each Bit Forwarding Router (BFR).
+    When the BitStringLength is large (e.g., 256 bits or more), this conceptual model
+    presents implementation challenges for high-speed ASIC/NPU forwarding engines
+    in terms of processing latency and hardware table resources. This document defines
+    two conceptual data structures -- a Replication Member Table and an Interface
+    BitMask Table -- that decouple the multicast replication decision from per-bit
+    BitString parsing. The resulting forwarding pipeline operates in time proportional
+    to the number of egress interfaces rather than the BitString length, enabling
+    deterministic and scalable hardware processing. This mechanism is semantically
+    equivalent to the forwarding procedures of RFC 8279 and does not modify the BIER
+    encapsulation or introduce new protocol signaling.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-li-bier-scalable-data-plane-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

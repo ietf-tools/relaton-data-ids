@@ -14,16 +14,22 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document provides a performance analysis on various congestion
-    control algorithms(CCAs) in an operational low-earth orbit (LEO) satellite network
-    (LSN). Internet CCAs are expected to perform well in any Internet path, including
-    those paths with LEO satellite links. Our analysis results reveal that existing
-    CCAs struggle to deal with the drastic network variations caused by the mobility
-    of LEO satellites, resulting in poor link utilization or high latency. Further,
-    this document discusses the key challenges of achieving high throughput and low
-    latency for end-to-end connections over an LSN, and provides useful information
-    when the LSN-specific congestion control principles for the Internet is standardized
-    in the future.</p>"
+- content: '<p>Low-earth-orbit (LEO) satellite networks (LSNs) are increasingly used
+    to carry Internet traffic. However, the fast time-varying conditions induced by
+    LEO mobility can significantly impair the performance of end-to-end Internet congestion
+    control algorithms (CCAs). This document summarizes and analyzes how mobility-driven
+    (often non- congestive) variations in capacity, delay, and loss can mislead representative
+    classes of CCAs, using Starlink as an operational case study. In addition, this
+    document highlights recently-validated measurement and design considerations that
+    treat connection reconfiguration as a phase boundary observable at endpoints,
+    which can improve the interpretation of network signals without requiring changes
+    to the network infrastructure. This document also proposes a transport-agnostic
+    "Path Phase Boundary" (PPB) abstraction and corresponding endpoint behavior considerations
+    for safely using such hints across diverse CCAs. Finally, it outlines a reference
+    endpoint probing profile that can be used to infer PPBs in a deployable, best-
+    effort manner. The goal of this document is informational: to clarify the problem
+    space and to inform future standardization and engineering efforts for congestion
+    control over LSN paths.</p>'
   language:
   - en
   script:
@@ -39,6 +45,16 @@ relation:
       primary: true
     formattedref:
       content: draft-lai-ccwg-lsncc-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-lai-ccwg-lsncc-01
+    docid:
+    - id: draft-lai-ccwg-lsncc-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-lai-ccwg-lsncc-01
       format: text/plain
 ext:
   schema-version: v1.0.1
