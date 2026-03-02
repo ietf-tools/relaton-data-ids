@@ -14,16 +14,13 @@ docid:
   primary: true
 abstract:
 - content: "<p>With the rapid development of Large Language Models (LLMs), many emerging
-    AI services require lossless transmission of RDMA packets over tunnels in Wide
-    Area Network(WAN). To meet the stringent performance demands of these services,
-    WAN should support the real- time network state notification to ensure high throughput,
-    low latency, and zero packet loss. The current reactive notification mechanisms
-    are limited by responsiveness, coverage, and operational efficiency. Therefore,
-    a faster and proactive notification mechanism is needed to enable more responsive
-    Traffic Engineering (TE) and Load Balancing (LB). This draft describes typical
-    scenarios for transmitting RDMA packets over WAN tunnels, specifies the fast notification
-    framework to support key TE areas (e.g., congestion control, protection, and load
-    balance), and defines the packet format for fast notification.</p>"
+    AI services require lossless transmission of RDMA traffic over tunnels in Wide
+    Area Network(WAN). Existing network mechanisms were not designed for the responsiveness
+    and scale required by these dynamic services. WAN should support the real-time,
+    lightweight network notification to enhance the responsiveness for traffic engineering,
+    congestion mitigation, and failure protection. This document analyzes typical
+    scenarios where RDMA traffic need to be tunneled across WAN, and proposes fast
+    network notification solutions based on ICMPv6 or UDP.</p>"
   language:
   - en
   script:
@@ -49,6 +46,16 @@ relation:
       primary: true
     formattedref:
       content: draft-hzh-fantel-wan-tunnel-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-hzh-fantel-wan-tunnel-02
+    docid:
+    - id: draft-hzh-fantel-wan-tunnel-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-hzh-fantel-wan-tunnel-02
       format: text/plain
 ext:
   schema-version: v1.0.1

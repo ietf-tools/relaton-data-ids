@@ -1,0 +1,63 @@
+---
+schema-version: v1.2.3
+id: draft-krickert-pipestream
+title:
+- content: 'PipeStream: A Recursive Entity Streaming Protocol for Distributed Processing
+    over QUIC'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-krickert-pipestream
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: '<p>This document specifies PipeStream, a recursive entity streaming protocol
+    designed for distributed document processing over QUIC transport. PipeStream enables
+    the decomposition ("dehydration") of documents into constituent entities, their
+    transmission across distributed processing nodes, and subsequent rehydration at
+    destination endpoints. The protocol employs a dual-stream architecture consisting
+    of a data stream for entity payload transmission and a control stream for tracking
+    entity completion status and maintaining consistency. PipeStream defines four
+    hierarchical data layers for entity representation: BlobBag for raw binary data,
+    SemanticLayer for annotated content with metadata, ParsedData for structured extracted
+    information, and CustomEntity for application-specific extensions. PipeStream
+    is organized into three protocol layers: Layer 0 (Core) provides basic streaming
+    with dehydrate/rehydrate semantics; Layer 1 (Recursive) adds hierarchical scoping
+    and digest propagation; Layer 2 (Resilience) adds yield/resume, claim checks,
+    and completion policies. Implementations MUST support Layer 0 and MAY support
+    Layers 1 and 2. To ensure consistency across distributed processing pipelines,
+    PipeStream implements checkpoint blocking, whereby processing nodes MUST synchronize
+    at defined points before proceeding. This mechanism guarantees that all constituent
+    parts of a dehydrated document are successfully processed before rehydration operations
+    commence.</p>'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-krickert-pipestream-00
+    docid:
+    - id: draft-krickert-pipestream-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-krickert-pipestream-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-krickert-pipestream-01
+    docid:
+    - id: draft-krickert-pipestream-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-krickert-pipestream-01
+      format: text/plain
+ext:
+  schema-version: v1.0.1

@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-ietf-detnet-nscore
 title:
-- content: On-time Forwarding with Non-work Conserving Stateless Core Fair Queuing
+- content: On-time Forwarding with Non-Work Conserving Stateless Core Fair Queuing
   language:
   - en
   script:
@@ -17,15 +17,16 @@ abstract:
     deterministic networking that guarantees maximum and minimum end-to- end latency
     bounds to flows. The solution has non-periodic, asynchronous, flow-level, non-work
     conserving, on-time, and rate- based functional characteristics, according to
-    the taxonomy suggested by [draft-ietf-detnet-dataplane-taxonomy-03]. The packets
-    are stored in the queue in ascending order of the ideal service start time, called
+    the taxonomy suggested by [I-D.ietf-detnet-dataplane-taxonomy]. The packets are
+    stored in the queue in ascending order of the ideal service start time, called
     Eligible Time (ET), and the ideal service completion time, called Finish Time
-    (FT). The queued packets were forwarded between ET and FT in a non-work conserving
-    manner. The ET and FT are calculated at the entrance node according to the packet
-    size and rate of the flow. All subsequent core nodes are stateless and asynchronously
-    compute ET and FT based on metadata received via packet headers. This mechanism
-    is called non-work-preserving stateless fair queuing, which guarantees both E2E
-    latency upper and lower bounds.</p>"
+    (FT). The queued packets were forwarded after ET, in ascending ordering of FT,
+    in a non-work conserving manner. The ET and FT are calculated at the entrance
+    node according to the packet size and rate of the flow. All subsequent core nodes
+    are stateless and asynchronously update ET and FT based on metadata received via
+    packet headers. This mechanism is called non- work conserving stateless fair queuing
+    (N-SCORE), which guarantees both E2E latency upper and lower bounds, thus E2E
+    jitter bound.</p>"
   language:
   - en
   script:
@@ -41,6 +42,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-detnet-nscore-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-detnet-nscore-01
+    docid:
+    - id: draft-ietf-detnet-nscore-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-detnet-nscore-01
       format: text/plain
 ext:
   schema-version: v1.0.1
