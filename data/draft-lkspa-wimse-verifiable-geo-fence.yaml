@@ -2,8 +2,8 @@
 schema-version: v1.2.3
 id: draft-lkspa-wimse-verifiable-geo-fence
 title:
-- content: 'Zero-Trust Sovereign AI: Verifiable Geofencing & Residency Proofs for
-    Cybersecure Workloads'
+- content: Privacy Preserving Verifiable Geofencing with Residency Proofs for Sovereign
+    Workloads
   language:
   - en
   script:
@@ -14,17 +14,25 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>Modern cloud and distributed environments face significant risks from
-    stolen bearer tokens, protocol replay, and trust gaps in transit. This document
-    presents a framework for modernizing workload security through cryptographically
-    verifiable geofencing, proof-of-possession, and protocol-aware residency enforcement.
-    By binding workload identity to both geographic and host attributes, and supplementing
-    bearer tokens with verifiable, location- and host- bound claims, the framework
-    addresses the challenges of bearer token theft, proof-of-possession and trust-in-transit
-    for all networking protocols. Leveraging trusted hardware, attestation protocols,
-    and geolocation services, this approach ensures that only authorized workloads
-    in approved locations and environments can access sensitive data or services,
-    even in the presence of advanced threats.</p>"
+- content: <p>Modern cloud and distributed computing rely heavily on software-only
+    identities and bearer tokens that are easily stolen, replayed, or used from unauthorized
+    locations. Furthermore, traditional methods of location verification - such as
+    IP-address-based geolocation - are easily spoofed via VPNs or proxies and significantly
+    compromise infrastructure security and privacy for *Sovereign Workloads* and high-assurance
+    environments. This document defines a *High-Assurance Profile* designed to solve
+    these challenges through hardware-rooted cryptographic verifiability. A host machine
+    runs a workload identity agent for managing the workload identities on that platform.
+    This proposal replaces implicit trust and spoofable indicators with cryptographically
+    verifiable hardware-rooted evidence of integrity and location for this agent.
+    Critically, this framework prioritizes *Location Privacy* by utilizing Zero-Knowledge
+    Proofs (ZKP), allowing a workload to prove it is within a compliant "Sovereign
+    Zone" without disclosing precise coordinates that could be used for tracking or
+    exploitation. By binding software identities to persistent silicon identities
+    and verified physical residency, this solution establishes a "Silicon-to- Workload"
+    chain of trust. It ensures that sensitive operations are only performed by authorized
+    workloads running on untampered hardware in cryptographically verified, privacy-preserving
+    geographic boundaries, fulfilling the high-assurance requirements of the *WIMSE
+    Architecture* [[I-D.ietf-wimse-architecture]].</p>
   language:
   - en
   script:
@@ -70,6 +78,16 @@ relation:
       primary: true
     formattedref:
       content: draft-lkspa-wimse-verifiable-geo-fence-03
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-lkspa-wimse-verifiable-geo-fence-04
+    docid:
+    - id: draft-lkspa-wimse-verifiable-geo-fence-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-lkspa-wimse-verifiable-geo-fence-04
       format: text/plain
 ext:
   schema-version: v1.0.1

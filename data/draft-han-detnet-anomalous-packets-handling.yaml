@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-han-detnet-anomalous-packets-handling
 title:
-- content: Anomalous Packets Handling for DetNet
+- content: Anomalous Traffic Handling for DetNet
   language:
   - en
   script:
@@ -13,17 +13,20 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>In deterministic networking (DetNet), resource conflicts at flow aggregation
-    nodes can lead to network anomalies. Existing data plane mechanisms for handling
+- content: "<p>In deterministic networking (DetNet), strict resource reservation and
+    scheduling assumptions may encounter anomalous traffic conditions at flow aggregation
+    nodes due to microbursts, packet size variations, or control plane orchestration
+    limitations. These conditions represent deviations from the ideal deterministic
+    service model rather than network faults. Existing data plane mechanisms for handling
     anomalous packets, such as simple discarding or treating them as Best-Effort (BE)
     flows, are insufficient. Consequently, the network performance can degrade to
     a level inferior to of traditional QoS approaches.Therefore, in order to handle
     the anomalous traffic, the data plane should implement an enhanced handling mechanism.
-    This document proposes an enhanced anomalous packet handling solution for DetNet.
-    This solution specifies two policies: the packet squeezing policy and the packet
-    degrading policy. These policies provide a flexible, enhanced mechanism applicable
-    to various queuing mechanisms, ensuring the preferential scheduling and preservation
-    of deterministic service traffic under anomalous conditions.</p>"
+    This document proposes an enhanced anomalous traffic handling solution for DetNet.
+    This solution specifies two policies for handling traffic under anomalous conditions:
+    the squeezing policy and the degrading policy. These policies provide a flexible,
+    enhanced mechanism applicable to various queuing mechanisms, ensuring the preferential
+    scheduling and preservation of deterministic service traffic under anomalous conditions.</p>"
   language:
   - en
   script:
@@ -49,6 +52,16 @@ relation:
       primary: true
     formattedref:
       content: draft-han-detnet-anomalous-packets-handling-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-han-detnet-anomalous-packets-handling-02
+    docid:
+    - id: draft-han-detnet-anomalous-packets-handling-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-han-detnet-anomalous-packets-handling-02
       format: text/plain
 ext:
   schema-version: v1.0.1

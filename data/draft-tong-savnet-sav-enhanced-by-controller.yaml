@@ -16,7 +16,10 @@ abstract:
 - content: "<p>Many newly proposed Source Address Validation (SAV) mechanisms such
     as IGP-based and BGP-based SAVNET solutions take a distributed manner to generate
     SAV rules, but they are faced with accuracy and managability challenges in incremental/partial
-    deployment scenarios. This document proposes a network controller-based solution
+    deployment scenarios. RFC 8704 stipulates the use of Adj-RIBs-In to construct
+    AS sets and prefix sets.A centralized approach is essential: collecting Pre- Policy
+    Adj-RIBs-In from ASBRs, performing necessary filtering, and distributing SAV rules
+    via a central controller. This document proposes a network controller-based solution
     for enhancing SAVNET capability in intra-domain and inter-domain networks, which
     supports accurate verification, automated configuration, threat analysis, traceability
     and visualization.</p>"
@@ -65,6 +68,16 @@ relation:
       primary: true
     formattedref:
       content: draft-tong-savnet-sav-enhanced-by-controller-03
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-tong-savnet-sav-enhanced-by-controller-04
+    docid:
+    - id: draft-tong-savnet-sav-enhanced-by-controller-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-tong-savnet-sav-enhanced-by-controller-04
       format: text/plain
 ext:
   schema-version: v1.0.1

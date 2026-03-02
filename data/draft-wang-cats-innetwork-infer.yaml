@@ -2,7 +2,8 @@
 schema-version: v1.2.3
 id: draft-wang-cats-innetwork-infer
 title:
-- content: In-Network Intelligence for Distributed Collaborative Inference Acceleration
+- content: An Open, Decentralized, and Scalable Framework for Large Language Model
+    Inference
   language:
   - en
   script:
@@ -13,17 +14,26 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>The rapid proliferation of deep learning models has led to growing
-    demands for low-latency and high-throughput inference across heterogeneous environments.
-    While edge devices often host data sources, their limited compute and network
-    resources restrict efficient model inference. Cloud servers provide abundant capacity
-    but suffer from transmission delays and bottlenecks. Emerging programmable in-network
-    devices (e.g., switches, FPGAs, SmartNICs) offer a unique opportunity to accelerate
-    inference by processing tasks directly along data paths. This document introduces
-    an architecture for _Distributed Collaborative Inference Acceleration_. It proposes
-    mechanisms to split, offload, and coordinate inference workloads across edge devices,
-    in-network resources, and cloud servers, enabling reduced response time and improved
-    utilization.</p>"
+- content: "<p>Large Language Model (LLM) inference is increasingly deployed as a
+    networked service, yet existing deployments rely primarily on centralized infrastructure
+    and trusted operators. Such designs limit openness, concentrate resource ownership,
+    and constrain scalability to the capacity of individual providers. At the same
+    time, LLM inference introduces execution characteristics (e.g., strict sequential
+    dependencies, large intermediate activations, and tight latency requirements)
+    that are not well supported by existing network, transport, or coordination mechanisms
+    in open environments. This document specifies an open, decentralized, and scalable
+    framework for executing LLM inference across independently operated and mutually
+    untrusted participants. The framework treats inference as a distributed, layer-wise
+    execution process subject to explicit deadlines, rather than as a monolithic computation
+    or best-effort service. It combines layer-aware activation transport and routing,
+    decentralized coordination among heterogeneous compute resources, and security
+    mechanisms that provide accountability and correctness without assuming trusted
+    execution. This document focuses on the architectural framework, design rationale,
+    problem definition, challenges, and solution space of the Open, Decentralized,
+    and Scalable Inference framework (ODSI). It does not specify concrete wire protocols,
+    message formats, or protocol state machines. Such protocol-level specifications
+    are to be defined in separate documents that build upon the framework described
+    herein.</p>"
   language:
   - en
   script:
@@ -39,6 +49,16 @@ relation:
       primary: true
     formattedref:
       content: draft-wang-cats-innetwork-infer-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-wang-cats-innetwork-infer-01
+    docid:
+    - id: draft-wang-cats-innetwork-infer-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-wang-cats-innetwork-infer-01
       format: text/plain
 ext:
   schema-version: v1.0.1

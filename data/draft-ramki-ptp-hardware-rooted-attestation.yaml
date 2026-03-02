@@ -2,8 +2,8 @@
 schema-version: v1.2.3
 id: draft-ramki-ptp-hardware-rooted-attestation
 title:
-- content: 'Hardware-Rooted Attestation for Precision Time Protocol: Verifiable Residency
-    and Proximity proofs'
+- content: 'Hardware-Rooted Attestation for Precision Time Protocol: Scalable Workload
+    Identity and Phased PQC Readiness'
   language:
   - en
   script:
@@ -14,15 +14,17 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: '<p>This document defines an extension to Precision Time Protocol (PTP)
-    that provides per-event cryptographic attestation using non-exportable asymmetric
-    keys resident in TPMs or HSMs, and an optional PTP-in-HTTPS/MTLS encapsulation
-    mode. When combined with freshness and multi-observer correlation, this provides
-    defensible proof of proximity for timing events. PTP-in-HTTPS/MTLS adds end-to-end
-    confidentiality for timing payloads across untrusted fabrics. NOTE: This note
-    is a placeholder to show the correct structure that avoids the "setup generated"
-    error (Line 53). All paragraphs inside a note must be separated by a blank line.
-    *setup generated*</p>'
+- content: "<p>This document defines a scalable framework for hardware-rooted cryptographic
+    attestation in the Precision Time Protocol (PTP). Standard PTP security mechanisms
+    rely on symmetric keys, which suffer from identity ambiguity and source non-repudiation
+    failures—vulnerabilities that allow any node possessing the shared secret to impersonate
+    a Grandmaster. To resolve these issues while overcoming the silicon throughput
+    limits of traditional TPMs and the overhead of Post-Quantum Cryptography (PQC),
+    this draft specifies a tiered trust model. A Hardware Root (e.g., TPM) establishes
+    a long- term PQC identity, while a workload identity management plane (e.g., SPIFFE/SPIRE)
+    manages the frequent rotation of short-lived operational keys. These keys perform
+    amortized signing of PTP message batches via Merkle Trees, ensuring wire-speed
+    synchronization and irrefutable provenance for regulated environments.</p>"
   language:
   - en
   script:
@@ -38,6 +40,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ramki-ptp-hardware-rooted-attestation-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ramki-ptp-hardware-rooted-attestation-01
+    docid:
+    - id: draft-ramki-ptp-hardware-rooted-attestation-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ramki-ptp-hardware-rooted-attestation-01
       format: text/plain
 ext:
   schema-version: v1.0.1

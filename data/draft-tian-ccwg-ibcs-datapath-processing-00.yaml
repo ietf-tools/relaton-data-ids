@@ -1,0 +1,234 @@
+---
+schema-version: v1.2.3
+id: draft-tian-ccwg-ibcs-datapath-processing-00
+title:
+- content: Datapath Processing Architecture for In-Band Congestion Signaling (IBCS)
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-tian-ccwg-ibcs-datapath-processing-00
+  type: src
+type: standard
+docid:
+- id: draft-tian-ccwg-ibcs-datapath-processing-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.tian-ccwg-ibcs-datapath-processing
+  type: IETF
+  scope: anchor
+docnumber: I-D.tian-ccwg-ibcs-datapath-processing
+date:
+- type: published
+  value: '2026-03-02'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Yuchi
+          language:
+          - en
+        - language:
+          - en
+          initial: "Y"
+        formatted_initials:
+          content: Y.
+          language:
+          - en
+      surname:
+        content: Tian
+        language:
+        - en
+      completename:
+        content: Yuchi Tian
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: China Mobile
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Weiqiang
+          language:
+          - en
+        - language:
+          - en
+          initial: W
+        formatted_initials:
+          content: W.
+          language:
+          - en
+      surname:
+        content: Cheng
+        language:
+        - en
+      completename:
+        content: Weiqiang Cheng
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: China Mobile
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Jin
+          language:
+          - en
+        - language:
+          - en
+          initial: J
+        formatted_initials:
+          content: J.
+          language:
+          - en
+      surname:
+        content: Yang
+        language:
+        - en
+      completename:
+        content: Jin Yang
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: China Mobile
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Junjie
+          language:
+          - en
+        - language:
+          - en
+          initial: J
+        formatted_initials:
+          content: J.
+          language:
+          - en
+      surname:
+        content: Wang
+        language:
+        - en
+      completename:
+        content: Junjie Wang
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Centec
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Guoying
+          language:
+          - en
+        - language:
+          - en
+          initial: G
+        formatted_initials:
+          content: G.
+          language:
+          - en
+      surname:
+        content: Zhang
+        language:
+        - en
+      completename:
+        content: Guoying Zhang
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Centec
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Kan
+          language:
+          - en
+        - language:
+          - en
+          initial: K
+        formatted_initials:
+          content: K.
+          language:
+          - en
+      surname:
+        content: Zhang
+        language:
+        - en
+      completename:
+        content: Kan Zhang
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: China Mobile
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-03-02'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: <p>In-band congestion signaling protocols, such as Congestion Signaling
+    (CSIG) and High Precision Congestion Control (HPCC++), require intermediate Network
+    Elements (NEs) to actively parse scalar congestion metrics from packet headers,
+    evaluate them against local link states, and conditionally rewrite these fields
+    before transmission. To ensure end-to-end algorithmic consistency and avoid unintended
+    interactions with routing topologies (e.g., packet reordering), the datapath of
+    these NEs must adhere to a standardized logical processing model. This document
+    defines the normative datapath processing architecture for Network Elements participating
+    in In-Band Congestion Signaling (IBCS). By establishing abstract topological roles
+    (Edge vs. Transit NEs) and standardizing the "Compare-and-Replace" operational
+    paradigm, this specification abstracts the signal update logic from hardware-specific
+    pipelines. It guarantees strict orthogonality between congestion signaling and
+    Equal-Cost Multi-Path (ECMP) routing invariants, supporting diverse congestion
+    metrics across multi-vendor deployments.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-tian-ccwg-ibcs-datapath-processing-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

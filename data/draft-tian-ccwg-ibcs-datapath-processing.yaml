@@ -1,0 +1,47 @@
+---
+schema-version: v1.2.3
+id: draft-tian-ccwg-ibcs-datapath-processing
+title:
+- content: Datapath Processing Architecture for In-Band Congestion Signaling (IBCS)
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-tian-ccwg-ibcs-datapath-processing
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: <p>In-band congestion signaling protocols, such as Congestion Signaling
+    (CSIG) and High Precision Congestion Control (HPCC++), require intermediate Network
+    Elements (NEs) to actively parse scalar congestion metrics from packet headers,
+    evaluate them against local link states, and conditionally rewrite these fields
+    before transmission. To ensure end-to-end algorithmic consistency and avoid unintended
+    interactions with routing topologies (e.g., packet reordering), the datapath of
+    these NEs must adhere to a standardized logical processing model. This document
+    defines the normative datapath processing architecture for Network Elements participating
+    in In-Band Congestion Signaling (IBCS). By establishing abstract topological roles
+    (Edge vs. Transit NEs) and standardizing the "Compare-and-Replace" operational
+    paradigm, this specification abstracts the signal update logic from hardware-specific
+    pipelines. It guarantees strict orthogonality between congestion signaling and
+    Equal-Cost Multi-Path (ECMP) routing invariants, supporting diverse congestion
+    metrics across multi-vendor deployments.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-tian-ccwg-ibcs-datapath-processing-00
+    docid:
+    - id: draft-tian-ccwg-ibcs-datapath-processing-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-tian-ccwg-ibcs-datapath-processing-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
