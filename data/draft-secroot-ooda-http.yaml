@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-secroot-ooda-http
 title:
-- content: 'OODA-HTTP: Adaptive Security Framework for HTTP Communications'
+- content: Enforcement-Action HTTP Header Field
   language:
   - en
   script:
@@ -13,18 +13,15 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document defines OODA-HTTP, a protocol extension and adaptive
-    security framework that applies the Observe-Orient-Decide-Act (OODA) loop to HTTP/HTTPS
-    communications. Each HTTP request is transformed into an observation signal, a
-    decision vector, and an opportunity for active defense. OODA-HTTP extends the
-    traditional 4-phase loop into 7 phases: Observe, Orient, Decide, Act, Memorize,
-    Adjust, and Cooperate - allowing systems to evolve and adapt during communication.
-    The protocol introduces a structured header, 'OODA-Action', that carries context-driven
-    actions between endpoints. OODA-HTTP offers compatibility with existing infrastructure
-    (e.g., TLS, HTTP/2/3), while enabling resilience against classical, behavioral,
-    and quantum threats. It supports inter-protocol cooperation with DOTS, STAMP,
-    SIEMs, and behavioral inference engines such as SVDD and PSLPSO. This document
-    defines protocol behavior, header format, core logic, and interoperability strategy.</p>"
+- content: "<p>This document defines the Enforcement-Action HTTP response header field.
+    The field provides a minimal, interoperable mechanism for signaling advisory enforcement
+    coordination between cooperating components operating within a defined administrative
+    or policy trust boundary. The header conveys a single action token and optional
+    parameters without modifying HTTP status code semantics or representation meaning.
+    The field is designed to be safely ignored by recipients that do not recognize
+    it and to operate over existing HTTP deployments without changes to transport
+    protocols. This specification defines the syntax, semantics, processing rules,
+    and IANA registration for the header field.</p>"
   language:
   - en
   script:
@@ -60,6 +57,16 @@ relation:
       primary: true
     formattedref:
       content: draft-secroot-ooda-http-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-secroot-ooda-http-03
+    docid:
+    - id: draft-secroot-ooda-http-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-secroot-ooda-http-03
       format: text/plain
 ext:
   schema-version: v1.0.1

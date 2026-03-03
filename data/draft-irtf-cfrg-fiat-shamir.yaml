@@ -15,15 +15,15 @@ docid:
 abstract:
 - content: "<p>This document describes how to construct a non-interactive proof via
     the Fiat–Shamir transformation, using a generic procedure that compiles an interactive
-    proof into a non-interactive one by relying on a stateful hash object that provides
-    a duplex sponge interface. The duplex sponge interface requires two methods: absorb
-    and squeeze, which respectively read and write elements of a specified base type.
-    The absorb operation incrementally updates the sponge's internal hash state, while
-    the squeeze operation produces variable-length, unpredictable outputs. This interface
-    can be instantiated with various hash functions based on permutation or compression
-    functions. This specification also defines codecs to securely map elements from
-    the prover into the duplex sponge domain, and from the duplex sponge domain into
-    verifier messages.</p>"
+    proof into a non-interactive one by relying on a stateful duplex sponge object.
+    The duplex sponge interface requires two methods: absorb and squeeze, which respectively
+    read and write elements of a specified base type. The absorb operation incrementally
+    updates the duplex sponge's internal state, while the squeeze operation produces
+    variable-length, unpredictable outputs. This interface can be instantiated with
+    different constructions based on permutation or compression functions. This specification
+    also defines codecs to securely map prover messages into the duplex sponge domain,
+    from the duplex sponge domain into verifier messages. It also establishes how
+    the non-interactive argument string should be serialized.</p>"
   language:
   - en
   script:
@@ -49,6 +49,16 @@ relation:
       primary: true
     formattedref:
       content: draft-irtf-cfrg-fiat-shamir-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-irtf-cfrg-fiat-shamir-02
+    docid:
+    - id: draft-irtf-cfrg-fiat-shamir-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-irtf-cfrg-fiat-shamir-02
       format: text/plain
 ext:
   schema-version: v1.0.1

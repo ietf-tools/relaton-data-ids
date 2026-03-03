@@ -17,11 +17,12 @@ abstract:
     path. SR Policy is an ordered list of segments (i.e., instructions) that represent
     a source-routed policy. The packets steered into an SR Policy carry an ordered
     list of segments associated with that SR Policy. An SR Policy can be instantiated
-    SR-MPLS and SRv6 data planes. Maximum SID Depth (MSD) specifies the maximum number
-    of SIDs that a Path Computation Client (PCC) is capable of imposing on a packet.
-    The number of SIDs in an SR-TE path computed by the PCE on behalf of a PCC is
-    dictated by the MSD value at the PCC. This draft specifies some MSD considerations
-    PCE needs to take into account when computing the number of SIDs in an SR-TE path.</p>"
+    SR-MPLS and SRv6 data planes. Maximum SID Depth (MSD) is first introduced for
+    SR-MPLS to indicate the number of SIDs supported by a node or a link on a node.
+    This concept is further extended for SRv6 with more types of MSD. MSD may become
+    one of the limitations that need to be considered when computing an SR-TE path
+    for PCE. This draft specifies some MSD considerations PCE needs to take into account
+    when computing an SR-TE path.</p>"
   language:
   - en
   script:
@@ -37,6 +38,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ali-pce-sr-policy-msd-consideration-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ali-pce-sr-policy-msd-consideration-01
+    docid:
+    - id: draft-ali-pce-sr-policy-msd-consideration-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ali-pce-sr-policy-msd-consideration-01
       format: text/plain
 ext:
   schema-version: v1.0.1

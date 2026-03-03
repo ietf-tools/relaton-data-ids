@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-rosomakho-tls-wimse-cert-hint
 title:
-- content: Workload Identifier Scope Hint for TLS ClientHello
+- content: Workload Identifier Origin Hint for TLS ClientHello
   language:
   - en
   script:
@@ -14,10 +14,10 @@ docid:
   primary: true
 abstract:
 - content: "<p>This document defines a TLS extension that allows clients to indicate
-    one or more workload identifier scopes in the ClientHello message. Each scope
+    one or more workload identifier origins in the ClientHello message. Each origin
     consists of a URI scheme and trust domain component, representing the administrative
     domain and identifier namespace in which the client operates. These identifier
-    scopes serve as hints to enable the server to determine whether client authentication
+    origins serve as hints to enable the server to determine whether client authentication
     is required and which policies or trust anchors should apply. This mechanism improves
     efficiency in mutual TLS deployments while minimising the exposure of sensitive
     identifier information. To protect confidentiality, this extension can be used
@@ -47,6 +47,16 @@ relation:
       primary: true
     formattedref:
       content: draft-rosomakho-tls-wimse-cert-hint-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-rosomakho-tls-wimse-cert-hint-02
+    docid:
+    - id: draft-rosomakho-tls-wimse-cert-hint-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-rosomakho-tls-wimse-cert-hint-02
       format: text/plain
 ext:
   schema-version: v1.0.1

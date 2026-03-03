@@ -15,12 +15,12 @@ docid:
 abstract:
 - content: "<p>Encrypted ClientHello (ECH) requires clients to have the server's ECH
     configuration before connecting. Currently, when ECH fails, servers can send updated
-    configurations but clients cannot authenticate them without a certificate for
-    the public name, limiting deployment flexibility. This document specifies an authenticated
-    ECH configuration update mechanism. Servers can deliver signed ECH configurations
-    during the TLS handshake, allowing clients to authenticate and immediately use
-    them for retry. The mechanism decouples ECH key distribution from transport, enabling
-    the same signed configuration to work via DNS or TLS delivery.</p>"
+    configurations but clients cannot authenticate them unless the server has a valid
+    certificate for the public name, limiting deployment flexibility. This document
+    specifies a new mechanism for authenticating ECH configurations. Servers include
+    additional information in their initial ECH configurations, which enables clients
+    to authenticate updated configurations without relying on a valid certificate
+    for the public name.</p>"
   language:
   - en
   script:
@@ -36,6 +36,16 @@ relation:
       primary: true
     formattedref:
       content: draft-sullivan-tls-signed-ech-updates-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-sullivan-tls-signed-ech-updates-01
+    docid:
+    - id: draft-sullivan-tls-signed-ech-updates-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-sullivan-tls-signed-ech-updates-01
       format: text/plain
 ext:
   schema-version: v1.0.1

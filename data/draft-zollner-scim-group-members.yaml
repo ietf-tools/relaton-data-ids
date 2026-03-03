@@ -1,0 +1,46 @@
+---
+schema-version: v1.2.3
+id: draft-zollner-scim-group-members
+title:
+- content: SCIM 2.0 Group Member Resource
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-zollner-scim-group-members
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: <p>This document extends the System for Cross-domain Identity Management
+    (SCIM) 2.0 standard by defining a new "GroupMember" top-level resource. Under
+    the existing model defined in [RFC7643], group memberships are represented as
+    values in a multi-valued attribute within a Group resource. This architecture
+    lacks native support for server-side pagination, filtering, or sorting of individual
+    members. In deployments managing large-scale groups (e.g., 100,000 to 1,000,000
+    members or more), retrieving a Group resource results in massive HTTP response
+    payloads that can exceed 100MB in size. This can lead to service timeouts, memory
+    exhaustion, and network instability, and has led to many major SCIM implementations
+    choosing to not support returning the value of the "members" attribute for Group
+    resources. This extension introduces a flattened resource model that enables group
+    memberships to benefit from pagination and other SCIM protocol features, ensuring
+    interoperability and performance at scale.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-zollner-scim-group-members-00
+    docid:
+    - id: draft-zollner-scim-group-members-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-zollner-scim-group-members-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
