@@ -17,14 +17,12 @@ abstract:
     plane for both intra- and inter-subnet forwarding within tenant networks. When
     a tenant network spans multiple domains, including any combination of EVPN and
     IPVPN domains, it becomes necessary to define the interworking mechanisms among
-    these BGP domains (EVPN and VPN-IP) to ensure seamless end-to-end tenant connectivity.
+    these BGP domains (EVPN and IPVPN) to ensure seamless end-to-end tenant connectivity.
     This document defines these interworking procedures. In addition, this document
     defines a new BGP Path Attribute, referred to as D-PATH (Domain PATH), which provides
     loop prevention for gateway nodes by protecting against control plane loops. The
     introduction of D-PATH modifies the BGP best path selection process for Multiprotocol
-    BGP inter-subnet forwarding routes of SAFI 128 (IPVPN) and SAFI 70 (EVPN). As
-    a result, this specification updates the BGP best path selection procedure, but
-    only in the context of IPVPN and EVPN route families.</p>"
+    BGP inter-subnet forwarding routes of SAFI 128 (IPVPN) and SAFI 70 (EVPN).</p>"
   language:
   - en
   script:
@@ -200,6 +198,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-bess-evpn-ipvpn-interworking-16
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-bess-evpn-ipvpn-interworking-17
+    docid:
+    - id: draft-ietf-bess-evpn-ipvpn-interworking-17
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-bess-evpn-ipvpn-interworking-17
       format: text/plain
 ext:
   schema-version: v1.0.1
