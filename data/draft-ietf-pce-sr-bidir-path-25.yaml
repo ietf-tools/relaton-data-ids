@@ -1,49 +1,134 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-pce-circuit-style-pcep-extensions-04
+id: draft-ietf-pce-sr-bidir-path-25
 title:
-- content: PCEP extensions for Circuit Style Policies
+- content: Path Computation Element Communication Protocol (PCEP) Extensions for Associated
+    Bidirectional Segment Routing (SR) LSPs
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-pce-circuit-style-pcep-extensions-04
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-pce-sr-bidir-path-25
   type: src
 type: standard
 docid:
-- id: draft-ietf-pce-circuit-style-pcep-extensions-04
+- id: draft-ietf-pce-sr-bidir-path-25
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-pce-circuit-style-pcep-extensions
+- id: I-D.ietf-pce-sr-bidir-path
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-pce-circuit-style-pcep-extensions
+docnumber: I-D.ietf-pce-sr-bidir-path
 date:
 - type: published
-  value: '2024-02-26'
+  value: '2026-03-06'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Samuel
+        - content: Cheng
           language:
           - en
         - language:
           - en
-          initial: S
+          initial: C
         formatted_initials:
-          content: S.
+          content: C.
           language:
           - en
       surname:
-        content: Sidor
+        content: Li
         language:
         - en
       completename:
-        content: Samuel Sidor
+        content: Cheng Li
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei Technologies
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Mach
+          language:
+          - en
+        - language:
+          - en
+          initial: M
+        formatted_initials:
+          content: M.
+          language:
+          - en
+      surname:
+        content: Chen
+        language:
+        - en
+      completename:
+        content: Mach Chen
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei Technologies
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Weiqiang
+          language:
+          - en
+        - language:
+          - en
+          initial: W
+        formatted_initials:
+          content: W.
+          language:
+          - en
+      surname:
+        content: Cheng
+        language:
+        - en
+      completename:
+        content: Weiqiang Cheng
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: China Mobile
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Rakesh
+          language:
+          - en
+        - language:
+          - en
+          initial: R
+        formatted_initials:
+          content: R.
+          language:
+          - en
+      surname:
+        content: Gandhi
+        language:
+        - en
+      completename:
+        content: Rakesh Gandhi
         language:
         - en
     affiliation:
@@ -56,127 +141,46 @@ contributor:
     name:
       given:
         forename:
-        - content: Praveen
+        - content: Quan
           language:
           - en
         - language:
           - en
-          initial: P
+          initial: Q
         formatted_initials:
-          content: P.
+          content: Q.
           language:
           - en
       surname:
-        content: Maheshwari
+        content: Xiong
         language:
         - en
       completename:
-        content: Praveen Maheshwari
+        content: Quan Xiong
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Airtel India
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Andrew
-          language:
-          - en
-        - language:
-          - en
-          initial: A
-        formatted_initials:
-          content: A.
-          language:
-          - en
-      surname:
-        content: Stone
-        language:
-        - en
-      completename:
-        content: Andrew Stone
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Nokia
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Luay
-          language:
-          - en
-        - language:
-          - en
-          initial: L
-        formatted_initials:
-          content: L.
-          language:
-          - en
-      surname:
-        content: Jalil
-        language:
-        - en
-      completename:
-        content: Luay Jalil
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Verizon
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Shuping
-          language:
-          - en
-        - language:
-          - en
-          initial: S
-        formatted_initials:
-          content: S.
-          language:
-          - en
-      surname:
-        content: Peng
-        language:
-        - en
-      completename:
-        content: Shuping Peng
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Huawei Technologies
+        - content: ZTE Corporation
   role:
   - type: author
 version:
-- draft: '04'
-revdate: '2024-02-26'
+- draft: '25'
+revdate: '2026-03-06'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document proposes a set of extensions for Path Computation Element
-    Communication Protocol (PCEP) for Circuit Style Policies - Segment-Routing Policy
-    designed to satisfy requirements for connection-oriented transport services. New
-    TLV is introduced to control path recomputation and new flag to add ability to
-    request path with strict hops only.</p>"
+- content: "<p>Segment Routing (SR) steers packets through a network using the IPv6
+    or MPLS data planes via source routing. Stateful Path Computation Element Communication
+    Protocol (PCEP) extensions are defined for SR Traffic Engineering (TE) LSPs. PCEP
+    supports grouping two RSVP-TE signaled, unidirectional MPLS-TE Label-Switched
+    Paths (LSPs) with one in each direction in a network into an associated bidirectional
+    LSP. This document extends PCEP support to group two unidirectional SR LSPs into
+    an associated bidirectional SR LSP. The mechanisms defined in this document apply
+    to both stateless and stateful PCEs for PCE-initiated and PCC- initiated LSPs.</p>"
   language:
   - en
   script:
@@ -185,23 +189,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-pce-circuit-style-pcep-extensions-01
+    id: draft-ietf-pce-sr-bidir-path-14
     docid:
-    - id: draft-ietf-pce-circuit-style-pcep-extensions-01
+    - id: draft-ietf-pce-sr-bidir-path-14
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-pce-circuit-style-pcep-extensions-01
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-pce-circuit-style-pcep-extensions-15
-    docid:
-    - id: draft-ietf-pce-circuit-style-pcep-extensions-15
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-pce-circuit-style-pcep-extensions-15
+      content: draft-ietf-pce-sr-bidir-path-14
       format: text/plain
 series:
 - type: main
@@ -212,7 +206,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-pce-circuit-style-pcep-extensions-04
+  number: draft-ietf-pce-sr-bidir-path-25
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
