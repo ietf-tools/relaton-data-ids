@@ -13,17 +13,14 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document updates [RFC3501] (IMAP4rev1) with persistent identifiers
-    on mailboxes and messages to allow clients to more efficiently reuse cached data
-    when resources have changed location on the server. This document obsoletes [RFC8474]
-    by making all object identifier types optional, introducing the OBJECTIDBIS capability
-    with mandatory ENABLE negotiation, and extending the framework to include account-
-    level context through the ACCOUNTID identifier. The ENABLE requirement ensures
-    that servers can implement the extension without altering the IMAP grammar for
-    clients that do not understand the extension. The account identifier extension
-    enables IMAP servers to provide account-level context for mailboxes when multiple
-    accounts are accessible through a single IMAP connection, facilitating interoperability
-    with the JSON Meta Application Protocol (JMAP) in multi-account scenarios.</p>"
+- content: "<p>This document updates [RFC3501] (IMAP4rev1) and [RFC9051] (IMAP4rev2)
+    with persistent identifiers on mailboxes and messages to allow clients to more
+    efficiently reuse cached data when resources have changed location on the server.
+    This document obsoletes [RFC8474] by adding the OBJECTID+ extension, which introduces
+    compound OBJECTID responses containing key-value pairs of identifiers and an ACCOUNTID
+    identifier for account-level context. The OBJECTID+ extension is implicitly activated
+    when a client uses any OBJECTID+-specific feature, ensuring backward compatibility
+    with clients that do not understand the extension.</p>"
   language:
   - en
   script:
@@ -39,6 +36,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-mailmaint-imap-objectid-bis-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-mailmaint-imap-objectid-bis-01
+    docid:
+    - id: draft-ietf-mailmaint-imap-objectid-bis-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-mailmaint-imap-objectid-bis-01
       format: text/plain
 ext:
   schema-version: v1.0.1

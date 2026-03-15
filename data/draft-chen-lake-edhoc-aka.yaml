@@ -13,14 +13,17 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document defines the EDHOC-AKA authentication method based on
-    the Authentication and Key Agreement(AKA) protocol and the Ephemeral Diffie-Hellman
-    Over COSE(EDHOC) key exchange protocol. This method is designed to provide efficient
-    mobile communication network access authentication for scenarios with limited
-    computing and network resources (such as Non-Terrestrial Network, NTN). EDHOC-AKA
-    utilizes the pre-shared long-term key and employs symmetric cryptography techniques
-    to achieve mutual authentication and key derivation. It ensures security while
-    significantly enhancing the authentication efficiency.</p>"
+- content: "<p>This document defines an Authentication and Key Agreement (AKA) authentication
+    method for the Ephemeral Diffie-Hellman Over COSE (EDHOC) key exchange protocol.
+    This method, named EDHOC-AKA, is designed as a specific profile of the EDHOC Pre-Shared
+    Key (PSK) authentication method defined in [draft-ietf-lake-edhoc-psk-06]. EDHOC-AKA
+    leverages the 3GPP AKA protocol to dynamically generate a session-specific Pre-Shared
+    Key, which is then used to run the EDHOC- PSK protocol flow. The AKA-specific
+    parameters are transported within the External Authorization Data (EAD) fields
+    of the EDHOC messages. This approach provides efficient mobile communication network
+    access authentication for resource-constrained scenarios (such as Non-Terrestrial
+    Networks, NTN) while inheriting the security properties of EDHOC-PSK, including
+    mutual authentication, identity protection, and forward secrecy.</p>"
   language:
   - en
   script:
@@ -46,6 +49,16 @@ relation:
       primary: true
     formattedref:
       content: draft-chen-lake-edhoc-aka-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-chen-lake-edhoc-aka-02
+    docid:
+    - id: draft-chen-lake-edhoc-aka-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-chen-lake-edhoc-aka-02
       format: text/plain
 ext:
   schema-version: v1.0.1

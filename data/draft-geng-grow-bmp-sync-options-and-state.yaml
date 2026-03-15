@@ -2,7 +2,8 @@
 schema-version: v1.2.3
 id: draft-geng-grow-bmp-sync-options-and-state
 title:
-- content: Synchronizing BMP Monitoring Options and State
+- content: BGP Monitoring Protocol (BMP) Enhancements for RIB View Synchronization
+    and Monitoring Options Notification
   language:
   - en
   script:
@@ -13,9 +14,24 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document proposes methods to facilitate correction of BGP Routing
-    Information Base inconsistencies in a non-disruptive manner from the BMP Sender
-    to the BMP Collector.</p>"
+- content: "<p>The BGP Monitoring Protocol (BMP) is a widely deployed operational
+    tool that allows BMP collectors to obtain per-address-family BGP Routing Information
+    Base (RIB) entries, runtime statistics, events, and other critical BGP state data
+    from BMP sender routers, enabling full visibility into BGP routing status and
+    supporting core network operations such as troubleshooting, security monitoring,
+    and traffic auditing. However, two key limitations exist in the current BMP specification
+    during practical deployment. First, transient faults, message loss, or session
+    interruptions may cause inconsistencies between the RIB views of the BMP sender
+    and collector, and the existing protocol lacks a non-disruptive mechanism to resolve
+    such mismatches. Second, there is no standardized notification mechanism for senders
+    to inform collectors of modified or updated monitoring reporting options, leading
+    collectors to store stale or invalid BGP information as reporting configurations
+    change. This document defines two new backward-compatible BMP message types to
+    address these issues: a Route-Refresh message for non-disruptive RIB view synchronization
+    between senders and collectors, and a Monitoring Options (MO) message to notify
+    collectors of active and disabled reporting parameters. These extensions enhance
+    the reliability and accuracy of BMP-based BGP monitoring without disrupting existing
+    deployment workflows.</p>"
   language:
   - en
   script:
@@ -51,6 +67,16 @@ relation:
       primary: true
     formattedref:
       content: draft-geng-grow-bmp-sync-options-and-state-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-geng-grow-bmp-sync-options-and-state-03
+    docid:
+    - id: draft-geng-grow-bmp-sync-options-and-state-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-geng-grow-bmp-sync-options-and-state-03
       format: text/plain
 ext:
   schema-version: v1.0.1

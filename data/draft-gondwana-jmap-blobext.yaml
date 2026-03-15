@@ -13,13 +13,15 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: <p>The JMAP base protocol (RFC8620) provides the ability to upload and
+- content: '<p>The JMAP base protocol (RFC8620) provides the ability to upload and
     download arbitrary binary data. This binary data is called a "blob", and can be
     used in all other JMAP extensions. The JMAP blob extension (RFC9404) added additional
     ways to create and access blobs by making inline method calls within a standard
     JMAP request. This extension adds more methods to work with blobs, including handling
-    large blobs by processing them in chunks (building on RFC9404's blob construction
-    support), and providing ways to efficiently describe small changes.</p>
+    large blobs by processing them in chunks (building on RFC9404''s blob construction
+    support), and providing server-side blob conversion operations: image format conversion,
+    archive creation and extraction (zip, tar, cpio), compression and decompression,
+    and binary delta (rdiff) operations.</p>'
   language:
   - en
   script:
@@ -35,6 +37,16 @@ relation:
       primary: true
     formattedref:
       content: draft-gondwana-jmap-blobext-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-gondwana-jmap-blobext-01
+    docid:
+    - id: draft-gondwana-jmap-blobext-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-gondwana-jmap-blobext-01
       format: text/plain
 ext:
   schema-version: v1.0.1

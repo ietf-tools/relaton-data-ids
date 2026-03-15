@@ -15,13 +15,14 @@ docid:
 abstract:
 - content: "<p>SAFE defines an encryption envelope that encrypts a payload once for
     multiple recipients. Decryption can require multiple credentials in sequence (public
-    keys, passphrases, or other registered methods), so no single factor suffices.
-    The format is designed for large, writable files: it supports streaming decryption,
-    random-access reads at block granularity, and selective re-encryption of modified
-    blocks without re-keying. Recipient privacy modes allow locks to omit identifying
-    metadata. SAFE accommodates post-quantum key encapsulation without format changes,
-    provides algorithm agility through IANA registries, and defines a mandatory-to-implement
-    profile for interoperability.</p>"
+    keys, passphrases, or other registered methods), so that no single compromise
+    reveals content. The format targets large, writable files: it supports streaming
+    decryption, random-access reads at block granularity, and selective re-encryption
+    of modified blocks without re-keying. Per-block Authenticated Encryption with
+    Associated Data (AEAD) provides confidentiality and integrity and detects reordering,
+    truncation, and extension. SAFE accommodates post-quantum key encapsulation without
+    format changes, provides algorithm agility through IANA registries, supports recipient
+    privacy, and defines application profiles for common deployment scenarios.</p>"
   language:
   - en
   script:
@@ -37,6 +38,16 @@ relation:
       primary: true
     formattedref:
       content: draft-sullivan-safe-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-sullivan-safe-01
+    docid:
+    - id: draft-sullivan-safe-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-sullivan-safe-01
       format: text/plain
 ext:
   schema-version: v1.0.1
