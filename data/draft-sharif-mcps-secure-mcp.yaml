@@ -1,0 +1,50 @@
+---
+schema-version: v1.2.3
+id: draft-sharif-mcps-secure-mcp
+title:
+- content: 'MCPS: Cryptographic Security Layer for the Model Context Protocol'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-sharif-mcps-secure-mcp
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This document specifies MCPS (MCP Secure), a cryptographic security
+    layer for the Model Context Protocol (MCP). MCPS adds agent identity verification,
+    per-message signing, tool definition integrity, and replay protection to MCP communications
+    without modifying the core protocol. MCPS operates as an envelope around existing
+    JSON-RPC messages. It introduces four primitives: (1) Agent Passports for cryptographic
+    identity bound to a specific origin, (2) signed message envelopes for integrity
+    and non-repudiation, (3) tool definition signatures covering the full tool object
+    for detecting poisoning and tampering, and (4) nonce-plus-timestamp replay protection
+    with transcript binding to prevent downgrade attacks. The design is fully backward-compatible.
+    MCPS-unaware clients and servers continue to function normally. MCPS-aware endpoints
+    progressively negotiate security capabilities through trust levels L0 (no verification)
+    through L4 (full mutual authentication with revocation checking). All cryptographic
+    operations use ECDSA P-256 (NIST FIPS 186-5). Signatures use IEEE P1363 fixed-length
+    r||s encoding per RFC 7518 Section 3.4 with low-S normalization to prevent signature
+    malleability. Canonical serialization uses JSON Canonicalization Scheme (JCS)
+    per RFC 8785. The Trust Authority component is self-hostable with no external
+    service dependency.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-sharif-mcps-secure-mcp-00
+    docid:
+    - id: draft-sharif-mcps-secure-mcp-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-sharif-mcps-secure-mcp-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

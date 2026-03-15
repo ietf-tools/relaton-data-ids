@@ -22,13 +22,13 @@ abstract:
     unnecessary packet loss. To improve TCP slow start performance, this document
     proposes using the Slow start Exit At Right CHokepoint (SEARCH) algorithm [KCL24]
     where the TCP sender determines the congestion point based on acknowledged deliveries
-    -- specifically, the sender computes the delivered bytes compared to the expected
-    delivered bytes, smoothed to account for link latency variation and normalized
-    to accommodate link capacities, and exits slow start if the delivered bytes are
-    lower than expected. We implemented SEARCH as a Linux kernel v5.16 module and
-    evaluated it over WiFi, 4G/LTE, and low earth orbit (LEO) and geosynchronous (GEO)
-    satellite links. Analysis of the results show that the SEARCH reliably exits from
-    slow start after the congestion point is reached but before inducing packet loss.</p>"
+    -- specifically, the sender computes the delivered bytes compared to the sent
+    bytes, smoothed to account for link latency variation and normalized to accommodate
+    link capacities, and initiates exits slow start if the delivered bytes are lower
+    than expected. We implemented SEARCH in Linux, FreeBSD, and QUIC and evaluated
+    it over WiFi, 4G/ LTE, and low earth orbit (LEO) and geosynchronous (GEO) satellite
+    links. Analysis of the results show that SEARCH reliably exits from slow start
+    after the congestion point is reached but before inducing packet loss.</p>"
   language:
   - en
   script:
@@ -114,6 +114,16 @@ relation:
       primary: true
     formattedref:
       content: draft-chung-ccwg-search-07
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-chung-ccwg-search-08
+    docid:
+    - id: draft-chung-ccwg-search-08
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-chung-ccwg-search-08
       format: text/plain
 ext:
   schema-version: v1.0.1

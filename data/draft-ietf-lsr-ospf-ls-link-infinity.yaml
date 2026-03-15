@@ -19,11 +19,14 @@ abstract:
     in RFC 9350, advertised OSPF links are used in the default SPF computation even
     if this is not intended. In order to advertise these links and not use them in
     the base SPF calculation, the metric LSLinkInfinity (0xffff) is used to specify
-    that the link is unreachable. MaxReachableLinkMetric (0xfffe) is defined to provide
-    backward compatible reachability in specifications that previously specified advertisement
-    of MaxLinkMetric (0xffff). This document updates RFC 5443, RFC 6987, and RFC 8770
-    with respect to the advertisement of MaxReachableLinkMetric (0xfffe) rather than
-    MaxLinkMetric (0xffff).</p>"
+    that the link is unreachable. If all OSPF routers in an OSPF area support this
+    functionality and have advertised the capability via an area-scoped OSPF Router-Information
+    LSA, then links advertised with a metric of LSLinkInfinity are considered unreachable.
+    MaxReachableLinkMetric (0xfffe) is defined to provide backward compatible reachability
+    in specifications that previously specified advertisement of MaxLinkMetric (0xffff).
+    This document updates RFC 5443, RFC 6987, RFC 8379, and RFC 8770 with respect
+    to the advertisement of MaxReachableLinkMetric (0xfffe) rather than MaxLinkMetric
+    (0xffff).</p>"
   language:
   - en
   script:
@@ -279,6 +282,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-lsr-ospf-ls-link-infinity-24
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-lsr-ospf-ls-link-infinity-25
+    docid:
+    - id: draft-ietf-lsr-ospf-ls-link-infinity-25
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-lsr-ospf-ls-link-infinity-25
       format: text/plain
 ext:
   schema-version: v1.0.1
