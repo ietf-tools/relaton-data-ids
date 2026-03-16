@@ -1,0 +1,98 @@
+---
+schema-version: v1.2.3
+id: draft-kazuho-ccwg-rapid-start-02
+title:
+- content: Rapid Startup of Congestion Control
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-kazuho-ccwg-rapid-start-02
+  type: src
+type: standard
+docid:
+- id: draft-kazuho-ccwg-rapid-start-02
+  type: Internet-Draft
+  primary: true
+- id: I-D.kazuho-ccwg-rapid-start
+  type: IETF
+  scope: anchor
+docnumber: I-D.kazuho-ccwg-rapid-start
+date:
+- type: published
+  value: '2026-03-15'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Kazuho
+          language:
+          - en
+        - language:
+          - en
+          initial: K
+        formatted_initials:
+          content: K.
+          language:
+          - en
+      surname:
+        content: Oku
+        language:
+        - en
+      completename:
+        content: Kazuho Oku
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Fastly
+  role:
+  - type: author
+version:
+- draft: '02'
+revdate: '2026-03-15'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>This document defines Rapid Start, a congestion-control startup algorithm.
+    It starts by pacing first full flight over a full RTT, allowing an initial window
+    up to 2× that of classic paced slow start at a comparable sending rate. It then
+    grows the window by 3× per RTT until queue buildup is observed, after which it
+    reverts to classic 2× slow start growth. When congestion is signaled, Rapid Start
+    smoothly converges the window based on delivered data, avoiding bursts and underutilization,
+    before handing over to ordinary congestion avoidance.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-kazuho-ccwg-rapid-start-00
+    docid:
+    - id: draft-kazuho-ccwg-rapid-start-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-kazuho-ccwg-rapid-start-00
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-kazuho-ccwg-rapid-start-02
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

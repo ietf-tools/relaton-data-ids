@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-mw-spice-actor-chain
 title:
-- content: Cryptographically Verifiable Actor Chain for OAuth 2.0 Token Exchange
+- content: Cryptographically Verifiable Actor Chains for OAuth 2.0 Token Exchange
   language:
   - en
   script:
@@ -13,17 +13,17 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: <p>This document defines an extension to OAuth 2.0 Token Exchange [[RFC8693]]
-    that addresses the problem of *Delegation Auditability Gaps* in multi-hop service
-    environments. Current standards treat prior actors in a delegation chain as "informational
-    only," providing no cryptographic proof of the actual delegation path. This document
-    proposes a new actor_chain claim — a *Cryptographically Verifiable Actor Chain*
-    — that replaces the informational-only nested act claim with a tamper-evident,
-    ordered record of all actors. This solution enables high-assurance data-plane
-    policy enforcement and forensic auditability, particularly for dynamic AI agent-to-agent
-    workloads—where susceptibility to *prompt injection attacks* can lead to unauthorized
-    delegation paths — the security posture of the entire delegation chain is critical
-    for authorization decisions.</p>
+- content: "<p>This document defines five actor-chain profiles for OAuth 2.0 Token
+    Exchange {{!RFC8693}}. {{!RFC8693}} permits nested act claims, but prior actors
+    remain informational only and token exchange does not define how a delegation
+    path is preserved and validated across successive exchanges. This document defines
+    profile-specific processing for linear multi- hop workflows. The profiles are
+    Asserted Delegation Path, Selectively Disclosed Asserted Delegation Path, Committed
+    Delegation Path, Commitment-Only Delegation Path, and Selectively Disclosed Committed
+    Delegation Path. These profiles preserve the existing meanings of sub and act,
+    support same- domain and cross-domain delegation, require sender-constrained tokens,
+    and provide different tradeoffs among readable chain-based authorization, cryptographic
+    accountability, auditability, privacy, and long-running workflow support.</p>"
   language:
   - en
   script:
@@ -39,6 +39,16 @@ relation:
       primary: true
     formattedref:
       content: draft-mw-spice-actor-chain-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-mw-spice-actor-chain-01
+    docid:
+    - id: draft-mw-spice-actor-chain-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-mw-spice-actor-chain-01
       format: text/plain
 ext:
   schema-version: v1.0.1

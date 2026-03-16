@@ -1,0 +1,94 @@
+---
+schema-version: v1.2.3
+id: draft-chen-httpbis-server-delivery-origin-boundary-00
+title:
+- content: Origin-Bound Validation for HTTP Server-Initiated Delivery
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-chen-httpbis-server-delivery-origin-boundary-00
+  type: src
+type: standard
+docid:
+- id: draft-chen-httpbis-server-delivery-origin-boundary-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.chen-httpbis-server-delivery-origin-boundary
+  type: IETF
+  scope: anchor
+docnumber: I-D.chen-httpbis-server-delivery-origin-boundary
+date:
+- type: published
+  value: '2026-03-15'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Jianjun
+          language:
+          - en
+        - language:
+          - en
+          initial: J
+        formatted_initials:
+          content: J.
+          language:
+          - en
+      surname:
+        content: Chen
+        language:
+        - en
+      completename:
+        content: Jianjun Chen
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Tsinghua University
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-03-15'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>This document describes origin-binding considerations for HTTP server-initiated
+    delivery mechanisms that can cause a user agent to associate a delivered representation
+    with an origin other than the origin that established the underlying transport
+    connection. The motivation is a class of cross-origin attacks demonstrated against
+    HTTP/2 server push and Signed HTTP Exchange (SXG), in which a server that is authorized
+    by a shared TLS certificate for multiple Subject Alternative Name (SAN) entries
+    can cause content to be accepted under the authority of a different origin. This
+    document provides security guidance for user agents, origin servers, intermediaries,
+    and deployment operators. In particular, it recommends that user agents reject
+    server-initiated deliveries whose asserted authority is not origin-consistent
+    with the active request context, and that implementations avoid using multi-domain
+    shared certificates as a basis for SXG attribution across unrelated origins. It
+    also outlines operational considerations for certificate lifecycle management
+    where shared certificates are unavoidable.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-chen-httpbis-server-delivery-origin-boundary-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

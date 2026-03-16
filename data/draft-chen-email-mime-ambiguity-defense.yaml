@@ -1,0 +1,44 @@
+---
+schema-version: v1.2.3
+id: draft-chen-email-mime-ambiguity-defense
+title:
+- content: Defensive Handling of MIME Parsing Ambiguities in Email Delivery
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-chen-email-mime-ambiguity-defense
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: <p>Email security gateways and endpoint mail clients frequently rely on
+    different MIME parsers, decoders, and error-recovery behavior. An attacker can
+    exploit those differences so that a security control fails to extract or scan
+    an attachment that a downstream client later exposes to a user. This document
+    describes defensive processing guidance for SMTP receivers, mail gateways, and
+    message stores that handle MIME messages with malformed or ambiguous structure.
+    This document provides operational guidance for ingress validation, strict decoding
+    floors, ambiguity detection, multi-view extraction, union scanning, logging, and
+    policy handling. It also defines an optional "MIME-Ambiguity-Results" header field
+    for conveying receiver-generated ambiguity assessments to downstream components
+    inside an administrative domain.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-chen-email-mime-ambiguity-defense-00
+    docid:
+    - id: draft-chen-email-mime-ambiguity-defense-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-chen-email-mime-ambiguity-defense-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
