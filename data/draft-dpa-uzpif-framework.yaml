@@ -17,13 +17,19 @@ abstract:
 - content: "<p>The Universal Zero-Port Interconnect Framework (UZPIF) describes a
     post-port networking model in which communication is established via outbound,
     identity-bound sessions to Rendezvous Nodes (RNs). By removing publicly reachable
-    listening ports at endpoints, UZPIF aims to reduce exposure to Internet-wide scanning
-    and unsolicited ingress, and to constrain a broad class of lateral-movement vectors.
-    This document outlines architectural motivation, a high-level security model,
-    operational and economic considerations, a governance concept (Pantheon), and
-    an incremental migration approach. UZPIF is intended to be read alongside companion
-    work describing the Universal Zero-Port Transport Protocol (UZP; [UZP]) and TLS-UZP
-    ([TLS-DPA]).</p>"
+    listening ports at endpoints, UZPIF changes exposure assumptions and can reduce
+    unsolicited ingress and Internet-wide scanning pressure, but it does not by itself
+    guarantee privacy, decentralisation, or availability. This document outlines architectural
+    motivation, a high-level security model, operational and economic considerations,
+    a Pantheon trust and policy plane baseline, and an incremental migration approach.
+    It is part of an experimental, research-oriented Independent Stream suite and
+    defines the current normative baseline for trust objects, validation rules, and
+    security semantics within the suite framework. Hard interoperability is expected
+    for shared object semantics and validation rules. Full wire-level, clustering,
+    and proof-family interoperability is not claimed everywhere yet; the remaining
+    details are intentionally profile-defined or deferred in companion drafts or profiles.
+    UZPIF is intended to be read alongside companion work describing the Universal
+    Zero-Port Transport Protocol (UZP; [UZP]) and TLS-DPA ([TLS-DPA]).</p>"
   language:
   - en
   script:
@@ -39,6 +45,16 @@ relation:
       primary: true
     formattedref:
       content: draft-dpa-uzpif-framework-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-dpa-uzpif-framework-01
+    docid:
+    - id: draft-dpa-uzpif-framework-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-dpa-uzpif-framework-01
       format: text/plain
 ext:
   schema-version: v1.0.1

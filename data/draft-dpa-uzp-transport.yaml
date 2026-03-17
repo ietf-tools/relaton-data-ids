@@ -18,13 +18,15 @@ abstract:
     Framework (UZPIF; [UZPIF]). Instead of exposing IP:port listeners, both endpoints
     establish outbound, identity-bound sessions to one or more Rendezvous Nodes (RNs).
     The RN performs flow stitching but never terminates end-to-end cryptography or
-    holds long- term secrets. All application data is carried over an authenticated
-    encryption (AEAD) channel keyed by a handshake based on modern and post-quantum-capable
-    primitives. Reliability is expressed at the block level, rather than at the TCP
-    segment or stream level, enabling selective retransmission and deterministic pacing.
-    This document specifies the UZP wire format, handshake, cryptographic negotiation,
-    exporter interface, 0-RTT rules, replay model, and RN behaviour, and its relationship
-    to UZPIF ([UZPIF]), QUIC ([RFC9000]), HIP ([RFC7401]), and TLS 1.3 ([RFC8446]).</p>"
+    holds long- term secrets. Application data is carried over an authenticated encryption
+    (AEAD) channel keyed by a handshake based on modern and post-quantum-capable primitives,
+    and reliability is expressed at the block level rather than at the TCP segment
+    or stream level. This document is part of an experimental, research-oriented Independent
+    Stream suite. It defines the current normative baseline for trust objects, validation
+    rules, and security semantics within its scope. Hard interoperability is expected
+    for shared object semantics and validation rules. Full wire-level, clustering,
+    and proof-family interoperability is not claimed everywhere yet; the remaining
+    details are intentionally profile-defined or deferred where noted.</p>"
   language:
   - en
   script:
@@ -40,6 +42,16 @@ relation:
       primary: true
     formattedref:
       content: draft-dpa-uzp-transport-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-dpa-uzp-transport-01
+    docid:
+    - id: draft-dpa-uzp-transport-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-dpa-uzp-transport-01
       format: text/plain
 ext:
   schema-version: v1.0.1

@@ -17,7 +17,9 @@ abstract:
     have been received and decoded by a remote peer. It comprises an RTCP feedback
     message and an RTP header extension used to request said feedback. One of the
     main use cases for this data is to implement various forms of Long Term Reference
-    (LTR) reference structures.</p>"
+    (LTR) reference structures. Additionally, the mechanism provides a way for receivers
+    to request resynchronization frames that reference acknowledged frames, enabling
+    efficient recovery from partial or full frame loss without requiring a full keyframe.</p>"
   language:
   - en
   script:
@@ -43,6 +45,16 @@ relation:
       primary: true
     formattedref:
       content: draft-sprang-avtcore-frame-acknowledgement-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-sprang-avtcore-frame-acknowledgement-02
+    docid:
+    - id: draft-sprang-avtcore-frame-acknowledgement-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-sprang-avtcore-frame-acknowledgement-02
       format: text/plain
 ext:
   schema-version: v1.0.1
