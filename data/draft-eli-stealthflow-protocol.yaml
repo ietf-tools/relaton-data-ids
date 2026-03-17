@@ -13,15 +13,11 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>The StealthFlow Protocol (SFP) is a low-observability, stateless pre-authentication
-    and transport armor mechanism designed to precede existing TLS or QUIC sessions.
-    SFP aims to reduce handshake fingerprinting, limit asymmetric denial-of-service
-    amplification, and minimize early plaintext metadata exposure, while preserving
-    compatibility with the existing PKI and TLS ecosystems. SFP does not replace TLS
-    or QUIC. Instead, it provides an optional single-round pre-filtering and authentication
-    layer that enables servers to reject illegitimate traffic with minimal computational
-    cost and minimal network observability. This document supersedes the prior informal
-    specification known as draft-eli-z-protocol-00.</p>"
+- content: "<p>This document specifies the StealthFlow Protocol (SFP), a pre-transport
+    security layer designed to operate before TLS or QUIC. SFP introduces a zero-handshake
+    mechanism with reduced observability and asymmetric cost properties to mitigate
+    denial-of-service attacks and traffic analysis, while remaining compatible with
+    existing PKI infrastructure.</p>"
   language:
   - en
   script:
@@ -37,6 +33,16 @@ relation:
       primary: true
     formattedref:
       content: draft-eli-stealthflow-protocol-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-eli-stealthflow-protocol-01
+    docid:
+    - id: draft-eli-stealthflow-protocol-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-eli-stealthflow-protocol-01
       format: text/plain
 ext:
   schema-version: v1.0.1

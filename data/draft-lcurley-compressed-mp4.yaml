@@ -1,0 +1,42 @@
+---
+schema-version: v1.2.3
+id: draft-lcurley-compressed-mp4
+title:
+- content: Compressed MP4
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-lcurley-compressed-mp4
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>Fragmented MP4 (fMP4) is widely used for live streaming, but the ISO
+    Base Media File Format (ISOBMFF) box structure imposes significant per-fragment
+    overhead. Each box header requires 8 bytes (4-byte size + 4-byte type), and payload
+    fields use fixed-width integers (u32/ u64). For low-latency streaming with single-frame
+    fragments, this overhead can exceed the media payload itself. This document defines
+    a compression scheme for ISO BMFF that replaces box headers with compact varint-encoded
+    identifiers and sizes, and defines compressed variants of commonly used boxes
+    with varint payload fields. The scheme reduces per-fragment overhead from ~100
+    bytes to ~20 bytes while preserving the full box hierarchy.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-lcurley-compressed-mp4-00
+    docid:
+    - id: draft-lcurley-compressed-mp4-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-lcurley-compressed-mp4-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

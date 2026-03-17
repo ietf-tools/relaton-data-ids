@@ -1,0 +1,85 @@
+---
+schema-version: v1.2.3
+id: draft-lcurley-compressed-mp4-00
+title:
+- content: Compressed MP4
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-lcurley-compressed-mp4-00
+  type: src
+type: standard
+docid:
+- id: draft-lcurley-compressed-mp4-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.lcurley-compressed-mp4
+  type: IETF
+  scope: anchor
+docnumber: I-D.lcurley-compressed-mp4
+date:
+- type: published
+  value: '2026-03-16'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Luke
+          language:
+          - en
+        - language:
+          - en
+          initial: L
+        formatted_initials:
+          content: L.
+          language:
+          - en
+      surname:
+        content: Curley
+        language:
+        - en
+      completename:
+        content: Luke Curley
+        language:
+        - en
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-03-16'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>Fragmented MP4 (fMP4) is widely used for live streaming, but the ISO
+    Base Media File Format (ISOBMFF) box structure imposes significant per-fragment
+    overhead. Each box header requires 8 bytes (4-byte size + 4-byte type), and payload
+    fields use fixed-width integers (u32/ u64). For low-latency streaming with single-frame
+    fragments, this overhead can exceed the media payload itself. This document defines
+    a compression scheme for ISO BMFF that replaces box headers with compact varint-encoded
+    identifiers and sizes, and defines compressed variants of commonly used boxes
+    with varint payload fields. The scheme reduces per-fragment overhead from ~100
+    bytes to ~20 bytes while preserving the full box hierarchy.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-lcurley-compressed-mp4-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
