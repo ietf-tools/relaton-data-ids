@@ -15,10 +15,10 @@ docid:
 abstract:
 - content: <p>This document defines the "Payment" HTTP authentication scheme, enabling
     HTTP resources to require a payment challenge to be fulfilled before access. The
-    scheme uses the HTTP 402 "Payment Required" status code with the WWW-Authenticate
-    and Authorization headers to negotiate payment between clients and servers. The
-    protocol is payment-method agnostic; specific payment methods are defined in separate
-    specifications.</p>
+    scheme extends HTTP Authentication, using the HTTP 402 "Payment Required" status
+    code. The protocol is payment-method agnostic, supporting any payment network
+    or currency through registered payment method identifiers. Specific payment methods
+    are defined in separate payment method specifications.</p>
   language:
   - en
   script:
@@ -34,6 +34,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ryan-httpauth-payment-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ryan-httpauth-payment-01
+    docid:
+    - id: draft-ryan-httpauth-payment-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ryan-httpauth-payment-01
       format: text/plain
 ext:
   schema-version: v1.0.1
