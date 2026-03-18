@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-ihlesong-mpls-mna-signaling
 title:
-- content: Signaling MNA Capabilities Using IGP
+- content: Signaling MNA Capabilities Using LSP Ping
   language:
   - en
   script:
@@ -13,12 +13,16 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document defines capabilities of nodes supporting MPLS Network
-    Actions (MNA) and how to signal them using IS-IS and OSPF. The capabilities include
-    the Readable Label Depth (RLD), supported network action opcodes, and the maximum
-    sizes of differently scoped Network Action Sub-stacks (NAS), called the NAS_MLD.
-    For IS-IS and OSPF signaling, sub-TLV encodings based on existing mechanisms to
-    signal node- and link-specific capabilities are leveraged.</p>"
+- content: "<p>This document defines a mechanism for discovering MPLS Network Actions
+    (MNA) capabilities along a Label Switched Path (LSP) using the LSP Ping echo request/reply
+    mechanism defined in RFC 8029. The In-Stack MNA capabilities include the Readable
+    Label Depth (RLD), the maximum sizes of differently scoped Network Action Sub-stacks
+    (MLD_NAS), and supported In-Stack network action opcodes. The Post- Stack MNA
+    capabilities include the maximum Post-Stack MPLS Header size (MLD_PSMH), the Readable
+    Label Depth including the Post-Stack MPLS Header (RLD_PSMH), and supported Post-Stack
+    network action opcodes. This mechanism allows the ingress Label Edge Router (LER)
+    to discover MNA capabilities of each transit and egress node on the path, enabling
+    correct construction of MPLS label stacks containing MNA network actions.</p>"
   language:
   - en
   script:
@@ -34,6 +38,26 @@ relation:
       primary: true
     formattedref:
       content: draft-ihlesong-mpls-mna-signaling-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ihlesong-mpls-mna-signaling-01
+    docid:
+    - id: draft-ihlesong-mpls-mna-signaling-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ihlesong-mpls-mna-signaling-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ihlesong-mpls-mna-signaling-02
+    docid:
+    - id: draft-ihlesong-mpls-mna-signaling-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ihlesong-mpls-mna-signaling-02
       format: text/plain
 ext:
   schema-version: v1.0.1
