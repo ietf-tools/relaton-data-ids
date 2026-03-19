@@ -13,14 +13,16 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>Network File System version 4.2 (NFSv4.2) clients commonly cache directory
-    entries (dirents) to improve performance. While effective in many cases, such
-    caching can prevent servers from enforcing per- user access controls on directory
-    entries and up-to-date directory entry attributes such as size and timestamps.
-    This document introduces a new uncacheable dirent metadata attribute for NFSv4.2
-    that allows servers to advise clients that caching of directory entry metadata
-    is unsuitable. This enables servers to present directory contents based on user-specific
-    access permissions while remaining compatible with existing NFSv4.2 clients.</p>"
+- content: "<p>Network File System version 4.2 (NFSv4.2) clients may cache directory-entry
+    (dirent) metadata returned by READDIR to improve performance. Such caching typically
+    assumes that directory-entry metadata and visibility are identical for all users
+    of a client. In some deployments, however, servers may present directory entries
+    or associated metadata based on the identity of the requesting user. Reuse of
+    cached directory-entry metadata across users can therefore result in clients presenting
+    directory contents or attributes that do not reflect the server's current access
+    control decisions. This document introduces an uncacheable dirent metadata attribute
+    for NFSv4.2 that allows servers to advise clients that directory-entry metadata
+    returned by READDIR and related operations should not be reused across users.</p>"
   language:
   - en
   script:
@@ -76,6 +78,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-nfsv4-uncacheable-directories-04
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-nfsv4-uncacheable-directories-05
+    docid:
+    - id: draft-ietf-nfsv4-uncacheable-directories-05
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-nfsv4-uncacheable-directories-05
       format: text/plain
 ext:
   schema-version: v1.0.1

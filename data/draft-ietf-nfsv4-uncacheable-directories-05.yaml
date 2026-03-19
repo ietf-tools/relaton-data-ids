@@ -1,0 +1,101 @@
+---
+schema-version: v1.2.3
+id: draft-ietf-nfsv4-uncacheable-directories-05
+title:
+- content: Adding an Uncacheable Directory-Entry Metadata Attribute to NFSv4.2
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-nfsv4-uncacheable-directories-05
+  type: src
+type: standard
+docid:
+- id: draft-ietf-nfsv4-uncacheable-directories-05
+  type: Internet-Draft
+  primary: true
+- id: I-D.ietf-nfsv4-uncacheable-directories
+  type: IETF
+  scope: anchor
+docnumber: I-D.ietf-nfsv4-uncacheable-directories
+date:
+- type: published
+  value: '2026-03-18'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Thomas
+          language:
+          - en
+        - language:
+          - en
+          initial: T
+        formatted_initials:
+          content: T.
+          language:
+          - en
+      surname:
+        content: Haynes
+        language:
+        - en
+      completename:
+        content: Thomas Haynes
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Hammerspace
+  role:
+  - type: author
+version:
+- draft: '05'
+revdate: '2026-03-18'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>Network File System version 4.2 (NFSv4.2) clients may cache directory-entry
+    (dirent) metadata returned by READDIR to improve performance. Such caching typically
+    assumes that directory-entry metadata and visibility are identical for all users
+    of a client. In some deployments, however, servers may present directory entries
+    or associated metadata based on the identity of the requesting user. Reuse of
+    cached directory-entry metadata across users can therefore result in clients presenting
+    directory contents or attributes that do not reflect the server's current access
+    control decisions. This document introduces an uncacheable dirent metadata attribute
+    for NFSv4.2 that allows servers to advise clients that directory-entry metadata
+    returned by READDIR and related operations should not be reused across users.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-ietf-nfsv4-uncacheable-directories-02
+    docid:
+    - id: draft-ietf-nfsv4-uncacheable-directories-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-nfsv4-uncacheable-directories-02
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-ietf-nfsv4-uncacheable-directories-05
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
