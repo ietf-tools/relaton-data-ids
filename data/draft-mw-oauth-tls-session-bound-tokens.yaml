@@ -1,0 +1,42 @@
+---
+schema-version: v1.2.3
+id: draft-mw-oauth-tls-session-bound-tokens
+title:
+- content: TLS-Session-Bound Access Tokens for OAuth 2.0
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-mw-oauth-tls-session-bound-tokens
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This document defines a mechanism for binding OAuth 2.0 access tokens
+    to a specific mutual TLS (mTLS) session. The binding is achieved through a per-request
+    proof token that incorporates the TLS Exporter value {{!RFC5705}} derived from
+    the current session and an access token hash, signed by the client's private key
+    corresponding to its mTLS certificate. This mechanism prevents stolen bearer tokens
+    from being replayed on a different TLS connection. While applicable to any OAuth
+    2.0 access token presented over mTLS, this specification is primarily motivated
+    by the Token Exchange protocol {{!RFC8693}}, where multi-hop delegation chains
+    in autonomous, agent-driven architectures create elevated replay risk.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-mw-oauth-tls-session-bound-tokens-00
+    docid:
+    - id: draft-mw-oauth-tls-session-bound-tokens-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-mw-oauth-tls-session-bound-tokens-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

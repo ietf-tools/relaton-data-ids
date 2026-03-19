@@ -13,14 +13,13 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document updates [RFC3501] (IMAP4rev1) and [RFC9051] (IMAP4rev2)
-    with persistent identifiers on mailboxes and messages to allow clients to more
-    efficiently reuse cached data when resources have changed location on the server.
-    This document obsoletes [RFC8474] by adding the OBJECTID+ extension, which introduces
-    compound OBJECTID responses containing key-value pairs of identifiers and an ACCOUNTID
-    identifier for account-level context. The OBJECTID+ extension is implicitly activated
-    when a client uses any OBJECTID+-specific feature, ensuring backward compatibility
-    with clients that do not understand the extension.</p>"
+- content: "<p>This document defines the OBJECTID+ extension for IMAP, which obsoletes
+    [RFC8474]. OBJECTID+ introduces a compound OBJECTID response format that bundles
+    object identifiers into key-value pairs, an ACCOUNTID identifier for account-level
+    context, OBJECTID response codes for the RENAME command, and identifier-based
+    mailbox selection via SELECT and EXAMINE. The OBJECTID+ extension is activated
+    implicitly when a client uses any OBJECTID+-specific feature, ensuring backward
+    compatibility with clients that only support [RFC8474].</p>"
   language:
   - en
   script:
@@ -46,6 +45,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-mailmaint-imap-objectid-bis-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-mailmaint-imap-objectid-bis-02
+    docid:
+    - id: draft-ietf-mailmaint-imap-objectid-bis-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-mailmaint-imap-objectid-bis-02
       format: text/plain
 ext:
   schema-version: v1.0.1
