@@ -13,13 +13,16 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document defines HJS (Human Judgment System), a standalone accountability
-    layer for AI agents. HJS provides four primitives (Judgment/Delegation/Termination/Verification)
-    for recording complete responsibility chains, and uses OTS (Open Timestamp) proofs
-    anchored to the Bitcoin blockchain to create immutable, court- admissible evidence.
-    While HJS can complement other protocols (e.g., AIIP) by providing the evidence
-    they require, it is designed to be independent and usable with any AI agent communication
-    framework.</p>"
+- content: "<p>This document defines the Human Judgment Structure (HJS), a minimal
+    and infrastructure‑grade accountability layer for AI agents, built on the Judgment
+    Event Protocol (JEP) [draft-wang-jep-judgment-event-protocol-01]. HJS provides
+    a cryptographic mechanism to manage and verify responsibility for AI agent judgment
+    behaviors across heterogeneous platforms. Its core design consists of four primitives
+    (Judge, Delegate, Terminate, Verify) inherited from JEP, a minimal receipt structure
+    with responsibility chaining, and a three‑tier privacy architecture for accountability
+    governance. All advanced features (state machines, compliance proofs, governance
+    mechanisms) are defined as optional extensions or informative appendices, preserving
+    the structure’s narrow‑waist stability and compatibility with JEP.</p>"
   language:
   - en
   script:
@@ -35,6 +38,16 @@ relation:
       primary: true
     formattedref:
       content: draft-wang-hjs-accountability-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-wang-hjs-accountability-01
+    docid:
+    - id: draft-wang-hjs-accountability-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-wang-hjs-accountability-01
       format: text/plain
 ext:
   schema-version: v1.0.1

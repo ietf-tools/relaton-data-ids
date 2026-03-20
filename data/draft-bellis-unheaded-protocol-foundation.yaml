@@ -1,0 +1,55 @@
+---
+schema-version: v1.2.3
+id: draft-bellis-unheaded-protocol-foundation
+title:
+- content: 'Unheaded: Protocol Foundation -- A Mapped Data Bus over IPv6 Hop-by-Hop
+    Options'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-bellis-unheaded-protocol-foundation
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>The Unheaded Protocol defines a mapped data bus model that transforms
+    IPv6 packets into addressable memory by encoding a small register file directly
+    in the IPv6 Hop-by-Hop Options extension header. We introduce a 20-byte Monad
+    (register file) that carries program state through the network. At each hop, a
+    BPF program (the Shim) performs computation on the Monad. The packet itself becomes
+    the working memory, using exponent-encoded fields to pack rich metadata into the
+    IPv6 option while remaining fully backward-compatible with existing networks.
+    To support programs larger than what fits in a single Monad, we introduce Wotan,
+    a memory and I/O bus that bridges Monad computation to per-flow ring-buffer storage
+    and external topics. This decouples the Monad (pure, 20-byte compute) from memory
+    (Wotan's configurable data planes). This memo extends the packet format with two
+    additional capabilities: (1) Kingdom Mode Address Reclamation, which recovers
+    up to 224 bits of deterministic address space from IPv6 addresses within a controlled
+    L2 fabric for use as extended computational and cryptographic registers; and (2)
+    Post-Quantum Cryptographic Identity Binding, which cryptographically binds each
+    service identifier in the Monad to a post-quantum keypair via the Sophia dictionary
+    system, providing quantum-resistant authentication of per-packet metadata without
+    increasing wire overhead. This memo defines the normative packet format, exponent-encoding
+    scheme, per-hop processing semantics, address reclamation model, post-quantum
+    identity binding, optional chaos injection for resilience testing, and the complete
+    computational model (Turing- complete with memory paging).</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-bellis-unheaded-protocol-foundation-00
+    docid:
+    - id: draft-bellis-unheaded-protocol-foundation-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-bellis-unheaded-protocol-foundation-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

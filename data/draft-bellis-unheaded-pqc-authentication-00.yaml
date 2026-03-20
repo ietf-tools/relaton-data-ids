@@ -1,0 +1,96 @@
+---
+schema-version: v1.2.3
+id: draft-bellis-unheaded-pqc-authentication-00
+title:
+- content: Post-Quantum Packet Authentication for the Unheaded Protocol
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-bellis-unheaded-pqc-authentication-00
+  type: src
+type: standard
+docid:
+- id: draft-bellis-unheaded-pqc-authentication-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.bellis-unheaded-pqc-authentication
+  type: IETF
+  scope: anchor
+docnumber: I-D.bellis-unheaded-pqc-authentication
+date:
+- type: published
+  value: '2026-03-19'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Stevie
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Bellis
+        language:
+        - en
+      completename:
+        content: Stevie Bellis
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Unheaded
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-03-19'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: '<p>This document specifies a post-quantum cryptographic (PQC) authentication
+    mechanism for the Unheaded Protocol Foundation. It defines a multi-algorithm,
+    dual-layer, tiered authentication architecture integrating three NIST PQC digital
+    signature standards -- FIPS 205 (SLH-DSA), FIPS 204 (ML-DSA), and FIPS 206 (FN-DSA)
+    -- plus two NIST PQC key-encapsulation mechanisms -- FIPS 203 (ML-KEM) and FIPS
+    207 (HQC) -- with the Monad wire format, Sophia BPF map dictionaries, and Wotan
+    per-flow memory model. Layer 1 (Wire-Level, REQUIRED): Full PQC signatures are
+    stored in Sophia BPF maps via a "signature-by-reference" scheme. The Monad register
+    carries compact 12-byte references (SigRef, KeyRef, SeqNum, HashPfx). Shield verifies
+    signatures at the network perimeter and strips Monad Hop-by-Hop headers at ingress
+    -- internal kingdom traffic never carries PQC wire overhead. Layer 2 (Application-Level,
+    OPTIONAL): User applications MAY define verification requirements in Sophia application
+    policy dictionaries. After wire-level authentication succeeds, the application
+    reads Wotan per-flow PQC state and matches it against its own policy. Four PQC
+    compliance tiers -- NONE, STANDARD, ENHANCED, and SOVEREIGN -- are signaled via
+    Kingdom Mode bits in the Monad flags byte.</p>'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-bellis-unheaded-pqc-authentication-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
