@@ -14,14 +14,17 @@ docid:
   primary: true
 abstract:
 - content: "<p>This document defines a mechanism for binding OAuth 2.0 access tokens
-    to a specific mutual TLS (mTLS) session. The binding is achieved through a per-request
-    proof token that incorporates the TLS Exporter value {{!RFC5705}} derived from
-    the current session and an access token hash, signed by the client's private key
-    corresponding to its mTLS certificate. This mechanism prevents stolen bearer tokens
-    from being replayed on a different TLS connection. While applicable to any OAuth
-    2.0 access token presented over mTLS, this specification is primarily motivated
-    by the Token Exchange protocol {{!RFC8693}}, where multi-hop delegation chains
-    in autonomous, agent-driven architectures create elevated replay risk.</p>"
+    to a specific mutual TLS (mTLS) session. The binding is achieved through a proof
+    token that incorporates the TLS Exporter value [RFC5705] derived from the current
+    connection and an access token hash, signed by the client's private key corresponding
+    to its mTLS certificate. This mechanism prevents stolen bearer tokens from being
+    replayed on a different TLS connection. The proof is constructed once per (token,
+    connection) pair and reused across all requests on that connection, delivering
+    session binding with no per-request signing overhead and no additional key management
+    beyond what mTLS already provides. While applicable to any OAuth 2.0 access token
+    presented over mTLS, this specification is primarily motivated by the Token Exchange
+    protocol [RFC8693], where multi-hop delegation chains in autonomous, agent-driven
+    architectures create elevated replay risk.</p>"
   language:
   - en
   script:
@@ -37,6 +40,16 @@ relation:
       primary: true
     formattedref:
       content: draft-mw-oauth-tls-session-bound-tokens-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-mw-oauth-tls-session-bound-tokens-01
+    docid:
+    - id: draft-mw-oauth-tls-session-bound-tokens-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-mw-oauth-tls-session-bound-tokens-01
       format: text/plain
 ext:
   schema-version: v1.0.1

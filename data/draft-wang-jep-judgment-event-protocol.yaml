@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-wang-jep-judgment-event-protocol
 title:
-- content: 'JEP: A Judgment Event Protocol'
+- content: Judgment Event Protocol (JEP)
   language:
   - en
   script:
@@ -13,22 +13,13 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: '<p>This document defines the Judgment Event Protocol (JEP), an accountability
-    attribution framework for distributed AI systems. JEP provides a responsibility
-    tracing mechanism for judgment behaviors, operating with identity verification
-    (OAuth/DID) and environmental trust (RATS). Core Design: - Four-primitive model:
-    $Judge, $Delegate, $Terminate, $Verify, covering the complete judgment lifecycle.
-    - Three-tier privacy architecture: Public Governance Tier (Tier 1), Logical Accountability
-    Tier (Tier 2), Private Payload Tier (Tier 3), balancing transparency and privacy.
-    - Minimal core fields: eight fields (verb, who, when, what, based_on, nonce, signature,
-    time_anchor) form the atomic evidence set for accountability. - Progressive verification
-    strategy: from open mode (local verification) to platform mode (platform-enhanced),
-    adapting to different scenarios. - Compliance-friendly design: cryptographic erasure
-    mechanism supports GDPR "right to be forgotten" and similar requirements, with
-    specific policies configured via IANA‑registered extensions. JEP follows a "minimal
-    intrusion, maximum compatibility" philosophy, adding verifiable accountability
-    capabilities to critical judgment nodes without reconstructing AI systems, working
-    with IETF standards including SCITT, RATS, and OAuth.</p>'
+- content: "<p>This document specifies the Judgment Event Protocol (JEP), a minimal,
+    verifiable format for logging judgment-related actions in distributed systems.
+    It defines four immutable event verbs (J, D, T, V), a signed JSON event structure
+    with replay protection, and standardized signature verification rules. The protocol
+    is designed to be interoperable across platforms and autonomous agents, and may
+    be used either natively or as a foundation for extended accountability, audit,
+    and decision provenance frameworks.</p>"
   language:
   - en
   script:
@@ -44,6 +35,16 @@ relation:
       primary: true
     formattedref:
       content: draft-wang-jep-judgment-event-protocol-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-wang-jep-judgment-event-protocol-01
+    docid:
+    - id: draft-wang-jep-judgment-event-protocol-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-wang-jep-judgment-event-protocol-01
       format: text/plain
 ext:
   schema-version: v1.0.1

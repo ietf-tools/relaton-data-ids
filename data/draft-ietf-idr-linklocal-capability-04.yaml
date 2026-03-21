@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-idr-linklocal-capability-00
+id: draft-ietf-idr-linklocal-capability-04
 title:
 - content: Link-Local Next Hop Capability for BGP
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-linklocal-capability-00
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-linklocal-capability-04
   type: src
 type: standard
 docid:
-- id: draft-ietf-idr-linklocal-capability-00
+- id: draft-ietf-idr-linklocal-capability-04
   type: Internet-Draft
   primary: true
 - id: I-D.ietf-idr-linklocal-capability
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.ietf-idr-linklocal-capability
 date:
 - type: published
-  value: '2025-04-27'
+  value: '2026-03-19'
 contributor:
 - person:
     name:
@@ -108,37 +108,67 @@ contributor:
         - content: Hostinger
   role:
   - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Biswajit
+          language:
+          - en
+        - language:
+          - en
+          initial: B
+        formatted_initials:
+          content: B.
+          language:
+          - en
+      surname:
+        content: Sadhu
+        language:
+        - en
+      completename:
+        content: Biswajit Sadhu
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Ciena
+  role:
+  - type: author
 version:
-- draft: '00'
-revdate: '2025-04-27'
+- draft: '04'
+revdate: '2026-03-19'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>BGP [RFC4271], was originally designed to provide reachability between
-    domains and between the edges of a domain. As such, BGP assumes the next hop towards
-    any reachable destination may not reside on the advertising speaker, but rather
-    may either be through a router connected to the same subnet as the speaker, or
-    through a router only reachable by traversing multiple hops through the network.
-    Because of this, as per [RFC4291] - BGP does not recognize IPv6 link-local addresses,
-    as a valid next hop for the forwarding purposes. This draft standardizes the operation
-    of BGP over a point-to-point link using link-local IPv6 addressing only.</p>"
+- content: "<p>To support IPv6 [RFC4291] reachability, BGP [RFC4271] relies on the
+    Multiprotocol Extensions as defined in [RFC4760]. [RFC2545] defines the structure
+    of IPv6 next hops. These IPv6 next hops may contain a Global IPv6 address, and
+    optionally can contain an IPv6 Link-Local address when the BGP peer is directly
+    attached and shares a common subnet with the IPv6 Global address. This document
+    updates [RFC2545] to clarify the encoding of the BGP next hop when the advertising
+    system is directly attached and only an IPv6 Link-Local address is available.
+    A new BGP Capability [RFC5492] is defined to signal support for this updated encoding.
+    This clarification applies specifically to IPv6 Link-Local addresses and does
+    not pertain to IPv4 Link-Local addresses as defined in [RFC3927].</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-ietf-idr-linklocal-capability-04
+    id: draft-ietf-idr-linklocal-capability-03
     docid:
-    - id: draft-ietf-idr-linklocal-capability-04
+    - id: draft-ietf-idr-linklocal-capability-03
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-idr-linklocal-capability-04
+      content: draft-ietf-idr-linklocal-capability-03
       format: text/plain
 series:
 - type: main
@@ -149,7 +179,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-idr-linklocal-capability-00
+  number: draft-ietf-idr-linklocal-capability-04
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
