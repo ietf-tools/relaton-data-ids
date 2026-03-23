@@ -1,0 +1,58 @@
+---
+schema-version: v1.2.3
+id: draft-veridom-omp
+title:
+- content: 'Operating Model Protocol (OMP): A Deterministic Routing and Evidence Architecture
+    for AI Decision Accountability in Regulated Industries'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-veridom-omp
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>Regulated institutions deploying AI face a structural evidence problem:
+    the gap between what their systems claim to do and what they can prove happened
+    at the level of an individual decision. Existing compliance infrastructure addresses
+    this problem observationally -- monitoring, dashboards, retrospective reporting
+    -- but does not close it structurally. This specification defines the Operating
+    Model Protocol (OMP), a deterministic routing invariant that classifies every
+    interaction in a regulated operation to exactly one of three outcome states --
+    AUTONOMOUS, ASSISTED, or ESCALATED -- and generates a tamper-evident audit trace
+    at the point of every decision. The routing decision is a deterministic function
+    of a composite Confidence Score, Watchtower enforcement evaluations, and domain-specific
+    thresholds. Given identical inputs, the protocol produces identical outputs. This
+    invariance is the architectural basis of the regulatory claim. Each audit trace
+    is sealed using a three-layer cryptographic integrity architecture: SHA-256 content
+    hash, RFC 3161 trusted timestamp from an accredited third-party Timestamp Authority,
+    and institution signature. The chain forms a Merkle structure in which modification
+    of any historical trace invalidates all subsequent chain hashes. Per-decision
+    accountability is therefore verifiable by any third party without access to the
+    institution's or Veridom's infrastructure. The protocol has been independently
+    instantiated across four regulated domains -- digital credit under the Kenya CBK
+    NDTCP framework, FCA Consumer Duty, FCA agent distribution oversight, and US legal
+    AI supervision under ABA Rule 5.3 -- with the same two invariants holding in each:
+    deterministic classification and immutable audit trail. Domain-specific profiles
+    for digital credit and cooperative lending are published separately as draft-veridom-
+    omp-ndtcp and draft-veridom-omp-sacco.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-veridom-omp-00
+    docid:
+    - id: draft-veridom-omp-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-veridom-omp-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
