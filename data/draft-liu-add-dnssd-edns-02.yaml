@@ -1,19 +1,19 @@
 ---
 schema-version: v1.2.3
-id: draft-liu-add-dnssd-edns-00
+id: draft-liu-add-dnssd-edns-02
 title:
-- content: Multicast DNS-Based Service Discovery for Encrypted DNS Services
+- content: DNS-Based Service Discovery for Encrypted DNS Services
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-liu-add-dnssd-edns-00
+- content: https://datatracker.ietf.org/doc/html/draft-liu-add-dnssd-edns-02
   type: src
 type: standard
 docid:
-- id: draft-liu-add-dnssd-edns-00
+- id: draft-liu-add-dnssd-edns-02
   type: Internet-Draft
   primary: true
 - id: I-D.liu-add-dnssd-edns
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.liu-add-dnssd-edns
 date:
 - type: published
-  value: '2025-07-22'
+  value: '2026-03-23'
 contributor:
 - person:
     name:
@@ -137,34 +137,37 @@ contributor:
   role:
   - type: author
 version:
-- draft: '00'
-revdate: '2025-07-22'
+- draft: '02'
+revdate: '2026-03-23'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document defines a multicast DNS (mDNS) and DNS-Based Service
-    Discovery (DNS-SD) mechanism for discovering encrypted DNS services in local networks.
-    It specifies new service types (_dot, _doh, _doq) and associated TXT record parameters
-    to enable zero-configuration discovery of DNS over TLS (DoT), DNS over HTTPS (DoH),
-    and DNS over QUIC (DoQ) resolvers. This extension addresses critical privacy gaps
-    in local networks while maintaining backward compatibility with RFC 6763.</p>"
+- content: "<p>This document defines a DNS-Based Service Discovery (DNS-SD) mechanism
+    for discovering encrypted DNS services in local networks. It specifies new service
+    types (_dot, _doh, _doq) and associated service parameters to enable zero-configuration
+    discovery of DNS over TLS (DoT), DNS over HTTPS (DoH), and DNS over QUIC (DoQ)
+    resolvers. The mechanism works over both multicast DNS (mDNS) and unicast DNS-
+    SD, addressing critical privacy gaps in local networks while maintaining backward
+    compatibility with RFC 6763. This document leverages SVCB and HTTPS resource records
+    (RFC 9460) for parameter negotiation, with TXT records provided for compatibility
+    with legacy implementations.</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-liu-add-dnssd-edns-02
+    id: draft-liu-add-dnssd-edns-00
     docid:
-    - id: draft-liu-add-dnssd-edns-02
+    - id: draft-liu-add-dnssd-edns-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-liu-add-dnssd-edns-02
+      content: draft-liu-add-dnssd-edns-00
       format: text/plain
 series:
 - type: main
@@ -175,7 +178,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-liu-add-dnssd-edns-00
+  number: draft-liu-add-dnssd-edns-02
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
