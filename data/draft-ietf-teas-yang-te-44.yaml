@@ -1,184 +1,188 @@
 ---
 schema-version: v1.2.3
-id: draft-axu-dnsop-catalog-zone-xfr-properties-01
+id: draft-ietf-teas-yang-te-44
 title:
-- content: DNS Catalog Zone Properties for Zone Transfers
+- content: A YANG Data Model for Traffic Engineering Tunnels, Label Switched Paths,
+    and Interfaces
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-axu-dnsop-catalog-zone-xfr-properties-01
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-teas-yang-te-44
   type: src
 type: standard
 docid:
-- id: draft-axu-dnsop-catalog-zone-xfr-properties-01
+- id: draft-ietf-teas-yang-te-44
   type: Internet-Draft
   primary: true
-- id: I-D.axu-dnsop-catalog-zone-xfr-properties
+- id: I-D.ietf-teas-yang-te
   type: IETF
   scope: anchor
-docnumber: I-D.axu-dnsop-catalog-zone-xfr-properties
+docnumber: I-D.ietf-teas-yang-te
 date:
 - type: published
-  value: '2025-09-26'
+  value: '2026-03-26'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Aleksi
+        - content: Tarek
           language:
           - en
         - language:
           - en
-          initial: A
+          initial: T
         formatted_initials:
-          content: A.
+          content: T.
           language:
           - en
       surname:
-        content: Suhonen
+        content: Saad
         language:
         - en
       completename:
-        content: Aleksi Suhonen
+        content: Tarek Saad
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: TREX Regional Exchanges Oy
+        - content: Cisco Systems Inc
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Willem
+        - content: Rakesh
           language:
           - en
         - language:
           - en
-          initial: W
+          initial: R
         formatted_initials:
-          content: W.
+          content: R.
           language:
           - en
       surname:
-        content: Toorop
+        content: Gandhi
         language:
         - en
       completename:
-        content: Willem Toorop
+        content: Rakesh Gandhi
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: NLnet Labs
+        - content: Cisco Systems Inc
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Anand
+        - content: Xufeng
           language:
           - en
         - language:
           - en
-          initial: A
+          initial: X
         formatted_initials:
-          content: A.
+          content: X.
           language:
           - en
       surname:
-        content: Buddhdev
+        content: Liu
         language:
         - en
       completename:
-        content: Anand Buddhdev
+        content: Xufeng Liu
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: RIPE NCC
+        - content: Alef Edge
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Karl
+        - content: Vishnu
           language:
           - en
         - language:
           - en
-          initial: K
+          initial: V
+        - language:
+          - en
+          initial: P
         formatted_initials:
-          content: K.
+          content: V. P.
           language:
           - en
       surname:
-        content: Dyson
+        content: Beeram
         language:
         - en
       completename:
-        content: Karl Dyson
+        content: Vishnu Pavan Beeram
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Nominet UK
+        - content: Juniper Networks
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Aram
+        - content: Igor
           language:
           - en
         - language:
           - en
-          initial: A
+          initial: I
         formatted_initials:
-          content: A.
+          content: I.
           language:
           - en
       surname:
-        content: Sargsyan
+        content: Bryskin
         language:
         - en
       completename:
-        content: Aram Sargsyan
+        content: Igor Bryskin
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Internet Systems Consortium
+        - content: Individual
   role:
   - type: author
 version:
-- draft: '01'
-revdate: '2025-09-26'
+- draft: '44'
+revdate: '2026-03-26'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document specifies DNS Catalog Zones Properties that define the
-    primary name servers from which specific or all member zones can transfer their
-    associated zone, as well as properties related to zone transfers such as access
-    control. This document also defines a groups property, for the apex of the catalog
-    zone, as a location to assign the additional properties to certain catalog zone
-    groups. Besides the additional properties, this document updates RFC9432 by explicitly
-    allowing CNAMEs and DNAMEs.</p>"
+- content: "<p>This document defines a YANG data model for the provisioning and management
+    of Traffic Engineering (TE) tunnels, Label Switched Paths (LSPs), and interfaces.
+    The model covers data pertinent to TE tunnels, TE LSPs, and TE interfaces that
+    are independent of any technology or dataplane encapsulation. The model is divided
+    into two YANG modules that address both device-specific and device-independent
+    data, supporting configuration, operational state, Remote Procedure Calls (RPCs),
+    and event notifications.</p>"
   language:
   - en
   script:
@@ -187,23 +191,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-axu-dnsop-catalog-zone-xfr-properties-00
+    id: draft-ietf-teas-yang-te-03
     docid:
-    - id: draft-axu-dnsop-catalog-zone-xfr-properties-00
+    - id: draft-ietf-teas-yang-te-03
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-axu-dnsop-catalog-zone-xfr-properties-00
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-axu-dnsop-catalog-zone-xfr-properties-02
-    docid:
-    - id: draft-axu-dnsop-catalog-zone-xfr-properties-02
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-axu-dnsop-catalog-zone-xfr-properties-02
+      content: draft-ietf-teas-yang-te-03
       format: text/plain
 series:
 - type: main
@@ -214,7 +208,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-axu-dnsop-catalog-zone-xfr-properties-01
+  number: draft-ietf-teas-yang-te-44
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-mw-spice-actor-chain-02
+id: draft-mw-spice-actor-chain-04
 title:
 - content: Cryptographically Verifiable Actor Chains for OAuth 2.0 Token Exchange
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-mw-spice-actor-chain-02
+- content: https://datatracker.ietf.org/doc/html/draft-mw-spice-actor-chain-04
   type: src
 type: standard
 docid:
-- id: draft-mw-spice-actor-chain-02
+- id: draft-mw-spice-actor-chain-04
   type: Internet-Draft
   primary: true
 - id: I-D.mw-spice-actor-chain
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.mw-spice-actor-chain
 date:
 - type: published
-  value: '2026-03-17'
+  value: '2026-03-26'
 contributor:
 - person:
     name:
@@ -134,25 +134,28 @@ contributor:
   role:
   - type: author
 version:
-- draft: '02'
-revdate: '2026-03-17'
+- draft: '04'
+revdate: '2026-03-26'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document defines five actor-chain profiles for OAuth 2.0 Token
+- content: "<p>Multi-hop service-to-service and agentic workflows need a standardized
+    way to preserve and validate delegation-path continuity across successive token
+    exchanges. This document defines six actor- chain profiles for OAuth 2.0 Token
     Exchange {{!RFC8693}}. {{!RFC8693}} permits nested act claims, but prior actors
     remain informational only and token exchange does not define how a delegation
-    path is preserved and validated across successive exchanges. This document defines
-    profile-specific processing for linear multi- hop workflows. The five profiles
-    are: Asserted Chain with Full Disclosure; Asserted Chain with Subset Disclosure;
-    Committed Chain with Full Disclosure; Committed Chain with Subset Disclosure;
-    and Committed Chain with No Chain Disclosure. These profiles preserve the existing
-    meanings of sub and act, support same-domain and cross-domain delegation, require
-    sender-constrained tokens, and provide different tradeoffs among readable chain-based
-    authorization, cryptographic accountability, auditability, privacy, and long-running
-    workflow support.</p>"
+    path is preserved and validated across successive exchanges. This document profiles
+    delegation-chain tokens and defines profile- specific processing for multi-hop
+    workflows. The six profiles are: Declared Full Disclosure; Declared Subset Disclosure;
+    Declared Actor- Only Disclosure; Verified Full Disclosure; Verified Subset Disclosure;
+    and Verified Actor-Only Disclosure. These profiles preserve the existing meanings
+    of sub, act, and may_act. They support same-domain and cross-domain delegation
+    and provide different tradeoffs among visible chain-based authorization, cryptographic
+    accountability, auditability, privacy, and long-running workflow support. Plain
+    RFC 8693 impersonation-shaped outputs remain valid RFC 8693 behavior but are outside
+    this profile family.</p>"
   language:
   - en
   script:
@@ -169,16 +172,6 @@ relation:
     formattedref:
       content: draft-mw-spice-actor-chain-01
       format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-mw-spice-actor-chain-04
-    docid:
-    - id: draft-mw-spice-actor-chain-04
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-mw-spice-actor-chain-04
-      format: text/plain
 series:
 - type: main
   title:
@@ -188,7 +181,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-mw-spice-actor-chain-02
+  number: draft-mw-spice-actor-chain-04
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
