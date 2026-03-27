@@ -13,17 +13,21 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This memo defines a data structure that can be appended to selected
-    ICMP messages. The ICMP extension defined herein can be used to identify any combination
-    of the following: the IP interface upon which a datagram arrived, the sub-IP component
-    of an IP interface upon which a datagram arrived, the IP interface through which
-    the datagram would have been forwarded had it been forwardable, the sub- IP component
-    of an IP interface through which the datagram would have been forwarded had it
-    been forwardable, and the IP next hop to which the datagram would have been forwarded.
-    This document obsoletes RFC 5837. Devices can use this ICMP extension to identify
-    interfaces and their components by any combination of the following: ifIndex,
-    IPv4 address, IPv6 address, name, and MTU. ICMP-aware devices can use these extensions
-    to identify both numbered and unnumbered interfaces.</p>"
+- content: "<p>This memo defines data structures that can be appended to selected
+    ICMP messages. The ICMP extensions defined herein can be used to identify any
+    combination of the following: the IP interface upon which a datagram arrived,
+    the sub-IP component of an IP interface upon which a datagram arrived, the IP
+    interface through which the datagram would have been forwarded had it been forwardable,
+    the sub- IP component of an IP interface through which the datagram would have
+    been forwarded had it been forwardable, and the IP next hop to which the datagram
+    would have been forwarded. Devices can use this ICMP extension to identify interfaces
+    and their components by any combination of the following: ifIndex, IPv4 address,
+    IPv6 address, name, and MTU. ICMP-aware devices can use these extensions to identify
+    both numbered and unnumbered interfaces. This document obsoletes RFC 5837. To
+    preserve strict backward compatibility with legacy implementations, it preserves
+    the original Interface Information Object (Class-Num 2) as defined in RFC 5837,
+    and introduces a new Extended Interface Information Object to accommodate new
+    interface roles.</p>"
   language:
   - en
   script:
@@ -39,6 +43,16 @@ relation:
       primary: true
     formattedref:
       content: draft-mitchell-intarea-rfc5837bis-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-mitchell-intarea-rfc5837bis-01
+    docid:
+    - id: draft-mitchell-intarea-rfc5837bis-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-mitchell-intarea-rfc5837bis-01
       format: text/plain
 ext:
   schema-version: v1.0.1
