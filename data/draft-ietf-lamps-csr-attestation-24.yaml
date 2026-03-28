@@ -1,93 +1,34 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-bess-evpn-bfd-11
+id: draft-ietf-lamps-csr-attestation-24
 title:
-- content: EVPN Network Layer Fault Management
+- content: Use of Remote Attestation with Certification Signing Requests
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-bess-evpn-bfd-11
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-lamps-csr-attestation-24
   type: src
 type: standard
 docid:
-- id: draft-ietf-bess-evpn-bfd-11
+- id: draft-ietf-lamps-csr-attestation-24
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-bess-evpn-bfd
+- id: I-D.ietf-lamps-csr-attestation
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-bess-evpn-bfd
+docnumber: I-D.ietf-lamps-csr-attestation
 date:
 - type: published
-  value: '2025-09-09'
+  value: '2026-03-27'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Vengada
-          language:
-          - en
-        - language:
-          - en
-          initial: V
-        - language:
-          - en
-          initial: P
-        formatted_initials:
-          content: V. P.
-          language:
-          - en
-      surname:
-        content: Govindan
-        language:
-        - en
-      completename:
-        content: Vengada Prasad Govindan
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Cisco Systems
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Ali
-          language:
-          - en
-        - language:
-          - en
-          initial: A
-        formatted_initials:
-          content: A.
-          language:
-          - en
-      surname:
-        content: Sajassi
-        language:
-        - en
-      completename:
-        content: Ali Sajassi
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Cisco Systems
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Mudigonda
+        - content: Mike
           language:
           - en
         - language:
@@ -98,91 +39,143 @@ contributor:
           language:
           - en
       surname:
-        content: Mallik
+        content: Ounsworth
         language:
         - en
       completename:
-        content: Mudigonda Mallik
+        content: Mike Ounsworth
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Celestica Inc.
+        - content: Cryptic Forest Software
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Greg
+        - content: Hannes
           language:
           - en
         - language:
           - en
-          initial: G
+          initial: H
         formatted_initials:
-          content: G.
+          content: H.
           language:
           - en
       surname:
-        content: Mirsky
+        content: Tschofenig
         language:
         - en
       completename:
-        content: Greg Mirsky
+        content: Hannes Tschofenig
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Ericsson
+        - content: Siemens
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Donald
+        - content: Henk
           language:
           - en
         - language:
           - en
-          initial: D
-        - language:
-          - en
-          initial: E
+          initial: H
         formatted_initials:
-          content: D. E.
+          content: H.
           language:
           - en
       surname:
-        content: Eastlake
+        content: Birkholz
         language:
         - en
       completename:
-        content: Donald E. Eastlake 3rd
+        content: Henk Birkholz
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Independent
+        - content: Fraunhofer SIT
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Monty
+          language:
+          - en
+        - language:
+          - en
+          initial: M
+        formatted_initials:
+          content: M.
+          language:
+          - en
+      surname:
+        content: Wiseman
+        language:
+        - en
+      completename:
+        content: Monty Wiseman
+        language:
+        - en
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Ned
+          language:
+          - en
+        - language:
+          - en
+          initial: "N"
+        formatted_initials:
+          content: N.
+          language:
+          - en
+      surname:
+        content: Smith
+        language:
+        - en
+      completename:
+        content: Ned Smith
+        language:
+        - en
   role:
   - type: author
 version:
-- draft: '11'
-revdate: '2025-09-09'
+- draft: '24'
+revdate: '2026-03-27'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document specifies proactive, in-band network layer OAM (RFC 9062)
-    mechanisms to detect loss of continuity faults that affect unicast and multi-destination
-    paths (used by Broadcast, Unknown Unicast, and Multicast traffic) in an Ethernet
-    VPN (EVPN, RFC 7432bis) network. The mechanisms specified in this document use
-    the widely adopted Bidirectional Forwarding Detection (RFC 5880) protocol.</p>"
+- content: "<p>Certification Authorities (CAs) issuing certificates to Public Key
+    Infrastructure (PKI) end entities may require a certificate signing request (CSR)
+    to include additional verifiable information to confirm policy compliance. For
+    example, a CA may require an end entity to demonstrate that the private key corresponding
+    to a CSR's public key is secured by a hardware security module (HSM), is not exportable,
+    etc. The process of generating, transmitting, and verifying additional information
+    required by the CA is called remote attestation. While work is currently underway
+    to standardize various aspects of remote attestation, a variety of proprietary
+    mechanisms have been in use for years, particularly regarding protection of private
+    keys. This specification defines ASN.1 structures which may carry attestation
+    data for PKCS#10 and Certificate Request Message Format (CRMF) messages. Both
+    standardized and proprietary attestation formats are supported by this specification.</p>"
   language:
   - en
   script:
@@ -191,23 +184,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-bess-evpn-bfd-03
+    id: draft-ietf-lamps-csr-attestation-12
     docid:
-    - id: draft-ietf-bess-evpn-bfd-03
+    - id: draft-ietf-lamps-csr-attestation-12
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-bess-evpn-bfd-03
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-bess-evpn-bfd-13
-    docid:
-    - id: draft-ietf-bess-evpn-bfd-13
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-bess-evpn-bfd-13
+      content: draft-ietf-lamps-csr-attestation-12
       format: text/plain
 series:
 - type: main
@@ -218,7 +201,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-bess-evpn-bfd-11
+  number: draft-ietf-lamps-csr-attestation-24
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

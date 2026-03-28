@@ -16,13 +16,14 @@ abstract:
 - content: "<p>Network File System version 4.2 (NFSv4.2) clients may cache directory-entry
     (dirent) metadata returned by READDIR to improve performance. Such caching typically
     assumes that directory-entry metadata and visibility are identical for all users
-    of a client. In some deployments, however, servers may present directory entries
-    or associated metadata based on the identity of the requesting user. Reuse of
-    cached directory-entry metadata across users can therefore result in clients presenting
-    directory contents or attributes that do not reflect the server's current access
-    control decisions. This document introduces an uncacheable dirent metadata attribute
-    for NFSv4.2 that allows servers to advise clients that directory-entry metadata
-    returned by READDIR and related operations should not be reused across users.</p>"
+    of a client. In some deployments, however, directory-entry metadata or visibility
+    observed by a client may vary over time or across clients due to server policy
+    or other factors. Reuse of cached directory-entry metadata across users can therefore
+    result in clients presenting directory contents or attributes that do not reflect
+    the current state of the server. This document introduces an uncacheable dirent
+    metadata attribute for NFSv4.2 that allows servers to advise clients that directory-entry
+    metadata returned by READDIR and related operations should not be reused across
+    users.</p>"
   language:
   - en
   script:
@@ -88,6 +89,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-nfsv4-uncacheable-directories-05
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-nfsv4-uncacheable-directories-06
+    docid:
+    - id: draft-ietf-nfsv4-uncacheable-directories-06
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-nfsv4-uncacheable-directories-06
       format: text/plain
 ext:
   schema-version: v1.0.1
