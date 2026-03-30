@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-joung-detnet-stateless-fair-queuing-08
+id: draft-joung-detnet-stateless-fair-queuing-09
 title:
 - content: Latency Guarantee with Stateless Fair Queuing
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-joung-detnet-stateless-fair-queuing-08
+- content: https://datatracker.ietf.org/doc/html/draft-joung-detnet-stateless-fair-queuing-09
   type: src
 type: standard
 docid:
-- id: draft-joung-detnet-stateless-fair-queuing-08
+- id: draft-joung-detnet-stateless-fair-queuing-09
   type: Internet-Draft
   primary: true
 - id: I-D.joung-detnet-stateless-fair-queuing
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.joung-detnet-stateless-fair-queuing
 date:
 - type: published
-  value: '2026-02-28'
+  value: '2026-03-30'
 contributor:
 - person:
     name:
@@ -162,29 +162,28 @@ contributor:
   role:
   - type: author
 version:
-- draft: '08'
-revdate: '2026-02-28'
+- draft: '09'
+revdate: '2026-03-30'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document specifies the framework and the operational procedure
-    for deterministic networking with a set of rate based work conserving packet schedulers.
-    The framework guarantees end-to-end (E2E) latency bounds to flows. The schedulers
-    in core nodes do not need to maintain flow states. Instead, the entrance node
-    of a flow marks an ideal service completion time according to a fluid model, called
-    Finish Time (FT), of a packet in the packet header. The subsequent core nodes
-    update the FT by adding the delay factor, which is a function of the flow and
-    the nodes. The packets in the queue of the scheduler are served in the ascending
-    order of FT. This mechanism is called the stateless fair queuing. The result is
-    that flows are isolated from each other almost perfectly. The latency bound of
-    a flow depends only on the flow's intrinsic parameters such as the maximum burst
-    size and the service rate, except the link capacities and the maximum packet length
-    among other flows sharing each output link with the flow. Furthermore, this document
-    specifies an approximation of stateless fair queuing implemented via a strict
-    priority (SP) scheduler. This approach maintains a guaranteed end- to-end (E2E)
-    latency bound.</p>"
+- content: "<p>This document specifies the implementation details for the framework
+    specified in ITU-T Y.3129 [Y.3129] and ITU-T Y.3148 [Y.3148]. The framework guarantees
+    end-to-end (E2E) latency bounds to flows. The schedulers in core nodes do not
+    need to maintain flow states. Instead, the entrance node of a flow marks an ideal
+    service completion time according to a fluid model, called Finish Time (FT), of
+    a packet in the packet header. The subsequent core nodes update the FT by adding
+    a delay factor, which is a function of the flow and the nodes. The packets in
+    the queue of the scheduler are served in the ascending order of FT. This mechanism
+    is called the stateless fair queuing. The result is that flows are isolated from
+    each other almost perfectly. The latency bound of a flow depends only on the flow's
+    intrinsic parameters such as the maximum burst size and the service rate, except
+    the link capacities and the maximum packet length among other flows sharing each
+    output link with the flow. This document specifies the metadata, formats of metadata,
+    the admission control procedure, and an approximation of stateless fair queuing
+    implemented via a strict priority (SP) scheduler.</p>"
   language:
   - en
   script:
@@ -201,16 +200,6 @@ relation:
     formattedref:
       content: draft-joung-detnet-stateless-fair-queuing-01
       format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-joung-detnet-stateless-fair-queuing-09
-    docid:
-    - id: draft-joung-detnet-stateless-fair-queuing-09
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-joung-detnet-stateless-fair-queuing-09
-      format: text/plain
 series:
 - type: main
   title:
@@ -220,7 +209,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-joung-detnet-stateless-fair-queuing-08
+  number: draft-joung-detnet-stateless-fair-queuing-09
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

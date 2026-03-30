@@ -1,90 +1,146 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-idr-vpn-prefix-orf-32
+id: draft-ietf-bier-source-protection-10
 title:
-- content: VPN Prefix Outbound Route Filter (VPN Prefix ORF) for BGP-4
+- content: BIER (Bit Index Explicit Replication) Redundant Ingress Router Failover
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-vpn-prefix-orf-32
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-bier-source-protection-10
   type: src
 type: standard
 docid:
-- id: draft-ietf-idr-vpn-prefix-orf-32
+- id: draft-ietf-bier-source-protection-10
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-idr-vpn-prefix-orf
+- id: I-D.ietf-bier-source-protection
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-idr-vpn-prefix-orf
+docnumber: I-D.ietf-bier-source-protection
 date:
 - type: published
-  value: '2026-03-15'
+  value: '2026-03-29'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Wei
+        - content: Zheng
           language:
           - en
         - language:
           - en
-          initial: W
+          initial: Z
         formatted_initials:
-          content: W.
+          content: Z.
           language:
           - en
       surname:
-        content: Wang
+        content: Zhang
         language:
         - en
       completename:
-        content: Wei Wang
+        content: Zheng Zhang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: China Telecom
+        - content: ZTE Corporation
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Aijun
+        - content: Greg
           language:
           - en
         - language:
           - en
-          initial: A
+          initial: G
         formatted_initials:
-          content: A.
+          content: G.
           language:
           - en
       surname:
-        content: Wang
+        content: Mirsky
         language:
         - en
       completename:
-        content: Aijun Wang
+        content: Greg Mirsky
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: China Telecom
+        - content: Ericsson
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Haibo
+        - content: Quan
+          language:
+          - en
+        - language:
+          - en
+          initial: Q
+        formatted_initials:
+          content: Q.
+          language:
+          - en
+      surname:
+        content: Xiong
+        language:
+        - en
+      completename:
+        content: Quan Xiong
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: ZTE Corporation
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Yisong
+          language:
+          - en
+        - language:
+          - en
+          initial: "Y"
+        formatted_initials:
+          content: Y.
+          language:
+          - en
+      surname:
+        content: Liu
+        language:
+        - en
+      completename:
+        content: Yisong Liu
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: China Mobile
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Huanan
           language:
           - en
         - language:
@@ -95,93 +151,29 @@ contributor:
           language:
           - en
       surname:
-        content: Wang
+        content: Li
         language:
         - en
       completename:
-        content: Haibo Wang
+        content: Huanan Li
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei Technologies
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Gyan
-          language:
-          - en
-        - language:
-          - en
-          initial: G
-        - language:
-          - en
-          initial: S
-        formatted_initials:
-          content: G. S.
-          language:
-          - en
-      surname:
-        content: Mishra
-        language:
-        - en
-      completename:
-        content: Gyan Mishra
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Verizon Inc.
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Jie
-          language:
-          - en
-        - language:
-          - en
-          initial: J
-        formatted_initials:
-          content: J.
-          language:
-          - en
-      surname:
-        content: Dong
-        language:
-        - en
-      completename:
-        content: Jie Dong
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Huawei Technologies
+        - content: China Telecom
   role:
   - type: author
 version:
-- draft: '32'
-revdate: '2026-03-15'
+- draft: '10'
+revdate: '2026-03-29'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This draft defines a new type of Outbound Route Filter (ORF), known
-    as the Virtual Private Network (VPN) Prefix ORF. The VPN Prefix ORF mechanism
-    is applicable when VPN routes from different Virtual Routing and Forwarding (VRF)
-    instances are exchanged through a single shared Border Gateway Protocol (BGP)
-    session.The purpose of VPN Prefix ORF mechanism is to control the overload of
-    VPN routes based on RT. With this mechanism, the overload can be limited within
-    the minimum range.</p>"
+- content: "<p>This document describes a failover in the Bit Index Explicit Replication
+    domain with a redundant ingress router.</p>"
   language:
   - en
   script:
@@ -190,23 +182,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-idr-vpn-prefix-orf-03
+    id: draft-ietf-bier-source-protection-08
     docid:
-    - id: draft-ietf-idr-vpn-prefix-orf-03
+    - id: draft-ietf-bier-source-protection-08
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-idr-vpn-prefix-orf-03
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-idr-vpn-prefix-orf-33
-    docid:
-    - id: draft-ietf-idr-vpn-prefix-orf-33
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-idr-vpn-prefix-orf-33
+      content: draft-ietf-bier-source-protection-08
       format: text/plain
 series:
 - type: main
@@ -217,7 +199,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-idr-vpn-prefix-orf-32
+  number: draft-ietf-bier-source-protection-10
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
