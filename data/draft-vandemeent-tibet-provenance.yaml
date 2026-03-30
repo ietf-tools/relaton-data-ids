@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-vandemeent-tibet-provenance
 title:
-- content: 'TIBET: Evidence Trail Protocol'
+- content: 'TIBET: Transaction/Interaction-Based Evidence Trail'
   language:
   - en
   script:
@@ -13,12 +13,16 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document specifies TIBET (Transaction/Interaction-Based Evidence
-    Trail), a protocol for establishing complete provenance chains in AI- to-AI and
-    AI-to-human interactions. TIBET provides a standardized token structure capturing
-    WHAT happened (ERIN), WHAT was attached (ERAAN), the CONTEXT around it (EROMHEEN),
-    and WHY it happened (ERACHTER). This enables audit trails that meet emerging regulatory
-    requirements for AI transparency.</p>"
+- content: "<p>This document defines TIBET (Transaction/Interaction-Based Evidence
+    Trail), a data model and protocol for constructing cryptographically linked provenance
+    chains over interactions between autonomous agents, human actors, and automated
+    processes. A TIBET token captures four dimensions of provenance: content (ERIN),
+    references (ERAAN), context (EROMHEEN), and intent (ERACHTER). Tokens are cryptographically
+    signed, hash-chained, and designed for append-only storage. TIBET is transport-agnostic
+    and encoding-flexible, with JSON over HTTPS as the baseline serialization. This
+    document specifies the token data model, chain semantics, canonicalization rules,
+    verification procedures, and integration points with companion protocols JIS [JIS],
+    UPIP [UPIP], RVP [RVP], and AINS [AINS].</p>"
   language:
   - en
   script:
@@ -34,6 +38,16 @@ relation:
       primary: true
     formattedref:
       content: draft-vandemeent-tibet-provenance-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-vandemeent-tibet-provenance-01
+    docid:
+    - id: draft-vandemeent-tibet-provenance-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-vandemeent-tibet-provenance-01
       format: text/plain
 ext:
   schema-version: v1.0.1

@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-maurette-hmtftp
 title:
-- content: 'HMTFTP: HKDF-Derived TFTP with Optional AEAD Protection'
+- content: 'HMTFTP: HKDF-Derived TFTP with Optional AEAD Protection (v0.7)'
   language:
   - en
   script:
@@ -13,10 +13,15 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>HMTFTP is a lightweight UDP file transfer protocol derived from TFTP
-    that adds TLV-based negotiation and an optional AEAD protection mode for DATA
-    payloads. This document requests IANA actions: assignment of a service name and
-    UDP port, and creation of registries for TLV Types, OpCodes, and Ciphersuites.</p>"
+- content: "<p>HMTFTP is a lightweight UDP file transfer protocol derived from TFTP.
+    It preserves the TFTP transfer model (RRQ/WRQ, DATA, ACK, ERROR, and OACK option
+    acknowledgment) and replaces text options with binary TLVs. HMTFTP defines optional
+    AEAD protection for DATA payloads using HKDF-derived keys from a pre-shared key
+    (PSK). This document describes transfer behavior, extension processing rules,
+    key derivation, nonce construction, and operational guidance for experimental
+    implementations intended to facilitate interoperability. This document requests
+    IANA actions for a UDP service name/port and registries for TLV Types and Ciphersuites.
+    Until assignment, TBD1 is used as the default UDP port value.</p>"
   language:
   - en
   script:
@@ -82,6 +87,16 @@ relation:
       primary: true
     formattedref:
       content: draft-maurette-hmtftp-05
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-maurette-hmtftp-06
+    docid:
+    - id: draft-maurette-hmtftp-06
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-maurette-hmtftp-06
       format: text/plain
 ext:
   schema-version: v1.0.1

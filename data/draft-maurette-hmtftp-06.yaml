@@ -1,19 +1,19 @@
 ---
 schema-version: v1.2.3
-id: draft-maurette-hmtftp-05
+id: draft-maurette-hmtftp-06
 title:
-- content: 'HMTFTP: HKDF-Derived TFTP with Optional AEAD Protection'
+- content: 'HMTFTP: HKDF-Derived TFTP with Optional AEAD Protection (v0.7)'
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-maurette-hmtftp-05
+- content: https://datatracker.ietf.org/doc/html/draft-maurette-hmtftp-06
   type: src
 type: standard
 docid:
-- id: draft-maurette-hmtftp-05
+- id: draft-maurette-hmtftp-06
   type: Internet-Draft
   primary: true
 - id: I-D.maurette-hmtftp
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.maurette-hmtftp
 date:
 - type: published
-  value: '2026-03-02'
+  value: '2026-03-29'
 contributor:
 - person:
     name:
@@ -41,21 +41,26 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: IUT R&T Béthune
+        - content: IUT R&T Bethune
   role:
   - type: author
 version:
-- draft: '05'
-revdate: '2026-03-02'
+- draft: '06'
+revdate: '2026-03-29'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>HMTFTP is a lightweight UDP file transfer protocol derived from TFTP
-    that adds TLV-based negotiation and an optional AEAD protection mode for DATA
-    payloads. This document requests IANA actions: assignment of a service name and
-    UDP port, and creation of registries for TLV Types, OpCodes, and Ciphersuites.</p>"
+- content: "<p>HMTFTP is a lightweight UDP file transfer protocol derived from TFTP.
+    It preserves the TFTP transfer model (RRQ/WRQ, DATA, ACK, ERROR, and OACK option
+    acknowledgment) and replaces text options with binary TLVs. HMTFTP defines optional
+    AEAD protection for DATA payloads using HKDF-derived keys from a pre-shared key
+    (PSK). This document describes transfer behavior, extension processing rules,
+    key derivation, nonce construction, and operational guidance for experimental
+    implementations intended to facilitate interoperability. This document requests
+    IANA actions for a UDP service name/port and registries for TLV Types and Ciphersuites.
+    Until assignment, TBD1 is used as the default UDP port value.</p>"
   language:
   - en
   script:
@@ -72,16 +77,6 @@ relation:
     formattedref:
       content: draft-maurette-hmtftp-02
       format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-maurette-hmtftp-06
-    docid:
-    - id: draft-maurette-hmtftp-06
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-maurette-hmtftp-06
-      format: text/plain
 series:
 - type: main
   title:
@@ -91,7 +86,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-maurette-hmtftp-05
+  number: draft-maurette-hmtftp-06
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
