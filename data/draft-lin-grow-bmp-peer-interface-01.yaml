@@ -1,177 +1,183 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-spring-srv6-security-12
+id: draft-lin-grow-bmp-peer-interface-01
 title:
-- content: Segment Routing IPv6 Security Considerations
+- content: Extension for BMP Peer Interface
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-spring-srv6-security-12
+- content: https://datatracker.ietf.org/doc/html/draft-lin-grow-bmp-peer-interface-01
   type: src
 type: standard
 docid:
-- id: draft-ietf-spring-srv6-security-12
+- id: draft-lin-grow-bmp-peer-interface-01
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-spring-srv6-security
+- id: I-D.lin-grow-bmp-peer-interface
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-spring-srv6-security
+docnumber: I-D.lin-grow-bmp-peer-interface
 date:
 - type: published
-  value: '2026-03-26'
+  value: '2026-03-31'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Nick
+        - content: Changwang
           language:
           - en
         - language:
           - en
-          initial: "N"
+          initial: C
         formatted_initials:
-          content: N.
+          content: C.
           language:
           - en
       surname:
-        content: Buraglio
+        content: Lin
         language:
         - en
       completename:
-        content: Nick Buraglio
+        content: Changwang Lin
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Energy Sciences Network
+        - content: New H3C Technologies
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Tal
+        - content: Yisong
           language:
           - en
         - language:
           - en
-          initial: T
+          initial: "Y"
         formatted_initials:
-          content: T.
+          content: Y.
           language:
           - en
       surname:
-        content: Mizrahi
+        content: Liu
         language:
         - en
       completename:
-        content: Tal Mizrahi
+        content: Yisong Liu
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        formatted_initials:
-          language:
-          - en
-      surname:
-        content: tongtian124
-        language:
-        - en
-      completename:
-        content: tongtian124
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: China Unicom
+        - content: China Mobile
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Luis
+        - content: Mukul
           language:
           - en
         - language:
           - en
-          initial: L
+          initial: M
+        - language:
+          - en
+          initial: K
+        formatted_initials:
+          content: M. K.
+          language:
+          - en
+      surname:
+        content: Srivastava
+        language:
+        - en
+      completename:
+        content: Mukul Kumar Srivastava
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Hewlett Packard Enterprise
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Pierre
+          language:
+          - en
+        - language:
+          - en
+          initial: P
+        formatted_initials:
+          content: P.
+          language:
+          - en
+      surname:
+        content: Francois
+        language:
+        - en
+      completename:
+        content: Pierre Francois
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: INSA-Lyon
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Maxence
+          language:
+          - en
         - language:
           - en
           initial: M
         formatted_initials:
-          content: L. M.
+          content: M.
           language:
           - en
       surname:
-        content: Contreras
+        content: Younsi
         language:
         - en
       completename:
-        content: Luis M. Contreras
+        content: Maxence Younsi
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Telefonica
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Fernando
-          language:
-          - en
-        - language:
-          - en
-          initial: F
-        formatted_initials:
-          content: F.
-          language:
-          - en
-      surname:
-        content: Gont
-        language:
-        - en
-      completename:
-        content: Fernando Gont
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: SI6 Networks
+        - content: INSA-Lyon
   role:
   - type: author
 version:
-- draft: '12'
-revdate: '2026-03-26'
+- draft: '01'
+revdate: '2026-03-31'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>SRv6 is a traffic engineering, encapsulation and steering mechanism
-    utilizing IPv6 addresses to identify segments in a pre-defined policy. This document
-    discusses security considerations in SRv6 networks, including the potential threats
-    and the possible mitigation methods. The document does not define any new security
-    protocols or extensions to existing protocols.</p>"
+- content: "<p>This document introduces an option to allow BMP messages with the per-peer
+    header to carry interface information for the established peer session, especially
+    in order to distinguish BGP peers established based on interfaces.</p>"
   language:
   - en
   script:
@@ -180,23 +186,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-spring-srv6-security-05
+    id: draft-lin-grow-bmp-peer-interface-00
     docid:
-    - id: draft-ietf-spring-srv6-security-05
+    - id: draft-lin-grow-bmp-peer-interface-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-spring-srv6-security-05
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-spring-srv6-security-13
-    docid:
-    - id: draft-ietf-spring-srv6-security-13
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-srv6-security-13
+      content: draft-lin-grow-bmp-peer-interface-00
       format: text/plain
 series:
 - type: main
@@ -207,7 +203,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-spring-srv6-security-12
+  number: draft-lin-grow-bmp-peer-interface-01
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
