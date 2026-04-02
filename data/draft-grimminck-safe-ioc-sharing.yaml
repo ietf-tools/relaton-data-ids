@@ -18,8 +18,11 @@ abstract:
     indicators of compromise (IOCs), such as URLs, IP addresses, email addresses,
     and domain names. It describes a safe obfuscation format that reduces the risk
     of accidental execution or activation when IOCs are displayed or transmitted.
-    These conventions aim to improve interoperability among tools and feeds that exchange
-    threat intelligence data.</p>"
+    The recommended form brackets the URI scheme name (for example, [http]) so that
+    the string is not syntactically a valid URI per generic URI parsers; legacy scheme-substitution
+    tokens are defined for de-obfuscation interoperability. These conventions aim
+    to improve interoperability among tools and feeds that exchange threat intelligence
+    data.</p>"
   language:
   - en
   script:
@@ -105,6 +108,16 @@ relation:
       primary: true
     formattedref:
       content: draft-grimminck-safe-ioc-sharing-07
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-grimminck-safe-ioc-sharing-08
+    docid:
+    - id: draft-grimminck-safe-ioc-sharing-08
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-grimminck-safe-ioc-sharing-08
       format: text/plain
 ext:
   schema-version: v1.0.1
