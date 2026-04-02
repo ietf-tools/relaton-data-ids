@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-geng-acme-public-key-04
+id: draft-geng-acme-public-key-05
 title:
 - content: Automated Certificate Management Environment (ACME) Extension for Public
     Key Challenges
@@ -10,11 +10,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-geng-acme-public-key-04
+- content: https://datatracker.ietf.org/doc/html/draft-geng-acme-public-key-05
   type: src
 type: standard
 docid:
-- id: draft-geng-acme-public-key-04
+- id: draft-geng-acme-public-key-05
   type: Internet-Draft
   primary: true
 - id: I-D.geng-acme-public-key
@@ -23,7 +23,7 @@ docid:
 docnumber: I-D.geng-acme-public-key
 date:
 - type: published
-  value: '2026-03-02'
+  value: '2026-04-01'
 contributor:
 - person:
     name:
@@ -109,36 +109,53 @@ contributor:
         - content: Huawei Technologies
   role:
   - type: author
+- person:
+    name:
+      given:
+        forename:
+        - language:
+          - en
+          initial: C
+        formatted_initials:
+          content: C.
+          language:
+          - en
+      surname:
+        content: 陈鑫
+        language:
+        - en
+      completename:
+        content: 陈鑫
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: TrustAsia
+  role:
+  - type: author
 version:
-- draft: '04'
-revdate: '2026-03-02'
+- draft: '05'
+revdate: '2026-04-01'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: <p>This document implements automated certificate provisioning through
-    "public key identity challenge + private key ownership verification" by introducing
-    the pk-01 challenge to the ACME protocol [RFC8555]. It serves as a valuable complement
-    to existing external resource verification challenge types such as DNS/HTTP, extending
-    the ACME protocol's applicability beyond Web-PKI to other scenarios. This enables
-    automated certificate issuance for devices and accounts. The core design objective
-    of this document's extension to ACME's pk-01 challenge is to introduce a trusted
-    identity provider (IdP) during the digital certificate application process. This
-    provider verifies the certificate applicant's identity and obtains the corresponding
-    identity public key. It enables the ACME server to use public key identity authentication
-    protocols (e.g., WebAuthn and Opaque [RFC9807]) to verify whether the genuine
-    application behind the ACME client controls the public key. It ensures strong
-    consistency between the public key used during the challenge phase and the public
-    key ultimately used to sign the certificate, preventing tampering with the public
-    key during the CSR submission phase. This enhances the security of the digital
-    certificate issuance process. Similar related work can be found in [RFC9883].
-    This document also defines an optional process extension that allows removal of
-    the CSR under the pk-01 challenge, enabling the ACME server to issue a certificate
-    directly after successful public key verification. This document provides an example
-    of practical application at the end, illustrating the integration of the OPAQUE
-    [RFC9807], strong asymmetric password authenticated key exchange (saPAKE) protocol
-    with the pk-01 challenge.</p>
+- content: '<p>The current ACME protocol [RFC8555] requires applicants to submit a
+    PKCS#10 Certificate Signing Request (CSR) during the finalization phase. The construction,
+    ASN.1 encoding, and transmission of the CSR impose additional implementation burdens
+    on both the client (especially resource-constrained devices) and the server. Moreover,
+    the CSR cannot prevent a public key from being replaced by an intermediary at
+    the protocol level. This document introduces the "pk-01" challenge extension based
+    on the ACME protocol. Its core mechanism is as follows: the applicant declares
+    the public key to be authenticated during the "newOrder" phase and completes the
+    Proof of Possession (PoP) by signing with the private key during the challenge
+    phase. Since the public key is declared when the order is created and verified
+    during the challenge phase, there is no need to submit a CSR during the finalization
+    phase; the ACME server can issue the certificate directly based on the verified
+    public key, thereby eliminating the CSR at the protocol level. The "pk-01" challenge
+    supports two verification modes via the pop_mode field:</p>'
   language:
   - en
   script:
@@ -155,16 +172,6 @@ relation:
     formattedref:
       content: draft-geng-acme-public-key-00
       format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-geng-acme-public-key-05
-    docid:
-    - id: draft-geng-acme-public-key-05
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-geng-acme-public-key-05
-      format: text/plain
 series:
 - type: main
   title:
@@ -174,7 +181,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-geng-acme-public-key-04
+  number: draft-geng-acme-public-key-05
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
