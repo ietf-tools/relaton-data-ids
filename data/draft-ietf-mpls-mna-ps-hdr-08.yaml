@@ -1,30 +1,57 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-spring-stamp-srpm-mpls-00
+id: draft-ietf-mpls-mna-ps-hdr-08
 title:
-- content: Performance Measurement Using Simple Two-Way Active Measurement Protocol
-    (STAMP) for Segment Routing over the MPLS Data Plane
+- content: Post-Stack MPLS Network Action (MNA) Header Specification
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-spring-stamp-srpm-mpls-00
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-mpls-mna-ps-hdr-08
   type: src
 type: standard
 docid:
-- id: draft-ietf-spring-stamp-srpm-mpls-00
+- id: draft-ietf-mpls-mna-ps-hdr-08
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-spring-stamp-srpm-mpls
+- id: I-D.ietf-mpls-mna-ps-hdr
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-spring-stamp-srpm-mpls
+docnumber: I-D.ietf-mpls-mna-ps-hdr
 date:
 - type: published
-  value: '2025-10-02'
+  value: '2026-04-02'
 contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Jaganbabu
+          language:
+          - en
+        - language:
+          - en
+          initial: J
+        formatted_initials:
+          content: J.
+          language:
+          - en
+      surname:
+        content: Rajamanickam
+        language:
+        - en
+      completename:
+        content: Jaganbabu Rajamanickam
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Cisco Systems, Inc.
+  role:
+  - type: author
 - person:
     name:
       given:
@@ -57,22 +84,78 @@ contributor:
     name:
       given:
         forename:
-        - content: Clarence
+        - content: Royi
           language:
           - en
         - language:
           - en
-          initial: C
+          initial: R
         formatted_initials:
-          content: C.
+          content: R.
           language:
           - en
       surname:
-        content: Filsfils
+        content: Zigler
         language:
         - en
       completename:
-        content: Clarence Filsfils
+        content: Royi Zigler
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Broadcom
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Jie
+          language:
+          - en
+        - language:
+          - en
+          initial: J
+        formatted_initials:
+          content: J.
+          language:
+          - en
+      surname:
+        content: Dong
+        language:
+        - en
+      completename:
+        content: Jie Dong
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei Technologies
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Jisu
+          language:
+          - en
+        - language:
+          - en
+          initial: J
+        formatted_initials:
+          content: J.
+          language:
+          - en
+      surname:
+        content: Bhattacharya
+        language:
+        - en
+      completename:
+        content: Jisu Bhattacharya
         language:
         - en
     affiliation:
@@ -81,124 +164,36 @@ contributor:
         - content: Cisco Systems, Inc.
   role:
   - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Bart
-          language:
-          - en
-        - language:
-          - en
-          initial: B
-        formatted_initials:
-          content: B.
-          language:
-          - en
-      surname:
-        content: Janssens
-        language:
-        - en
-      completename:
-        content: Bart Janssens
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Colt
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Mach
-          language:
-          - en
-        - language:
-          - en
-          initial: M
-        formatted_initials:
-          content: M.
-          language:
-          - en
-      surname:
-        content: Chen
-        language:
-        - en
-      completename:
-        content: Mach Chen
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Huawei
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Richard
-          language:
-          - en
-        - language:
-          - en
-          initial: R
-        - language:
-          - en
-          initial: F
-        formatted_initials:
-          content: R. F.
-          language:
-          - en
-      surname:
-        content: Foote
-        language:
-        - en
-      completename:
-        content: Richard "Footer" Foote
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Nokia
-  role:
-  - type: author
 version:
-- draft: '00'
-revdate: '2025-10-02'
+- draft: '08'
+revdate: '2026-04-02'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>Segment Routing (SR) leverages the source routing paradigm. SR is applicable
-    to both Multiprotocol Label Switching (SR-MPLS) and IPv6 (SRv6) data planes. This
-    document describes the procedures for Performance Measurement in SR-MPLS networks
-    using the Simple Two-Way Active Measurement Protocol (STAMP), as defined in RFC
-    8762, along with its optional extensions defined in RFC 8972 and further augmented
-    in RFC 9503. The described procedure is used for SR-MPLS paths (including SR-MPLS
-    Policies, SR-MPLS IGP best paths, and SR- MPLS IGP Flexible Algorithm paths),
-    as well as Layer-3 and Layer-2 services over the SR-MPLS paths.</p>"
+- content: <p>This document defines the Post-Stack MPLS Network Action (MNA) Header
+    Specification for carrying Network Actions encodings and Ancillary Data after
+    the MPLS label stack, based on the In-Stack MNA Specification defined in "MPLS
+    Network Action (MNA) Sub-Stack Specification." MPLS Network Actions can be used
+    to influence packet forwarding decisions, carry additional Operations, Administration,
+    and Maintenance information in the MPLS packet, or perform user- defined operations.
+    This document follows the framework specified in RFC 9789.</p>
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-ietf-spring-stamp-srpm-mpls-01
+    id: draft-ietf-mpls-mna-ps-hdr-03
     docid:
-    - id: draft-ietf-spring-stamp-srpm-mpls-01
+    - id: draft-ietf-mpls-mna-ps-hdr-03
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-spring-stamp-srpm-mpls-01
+      content: draft-ietf-mpls-mna-ps-hdr-03
       format: text/plain
 series:
 - type: main
@@ -209,7 +204,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-spring-stamp-srpm-mpls-00
+  number: draft-ietf-mpls-mna-ps-hdr-08
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
