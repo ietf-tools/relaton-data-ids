@@ -14,12 +14,13 @@ docid:
   primary: true
 abstract:
 - content: "<p>This document defines the Signature-Key HTTP header field for distributing
-    public keys used to verify HTTP Message Signatures as defined in RFC 9421. Four
+    public keys used to verify HTTP Message Signatures as defined in RFC 9421. Five
     initial key distribution schemes are defined: pseudonymous inline keys (hwk),
-    identified signers with JWKS URI discovery (jwks_uri), X.509 certificate chains
-    (x509), and JWT- based delegation (jwt). These schemes enable flexible trust models
-    ranging from privacy-preserving pseudonymous verification to PKI- based identity
-    chains and horizontally-scalable delegated authentication.</p>"
+    self-issued key delegation via JWK Thumbprint JWTs (jkt-jwt), identified signers
+    with JWKS URI discovery (jwks_uri), JWT-based delegation (jwt), and X.509 certificate
+    chains (x509). These schemes enable flexible trust models ranging from privacy-preserving
+    pseudonymous verification to PKI-based identity chains and horizontally-scalable
+    delegated authentication.</p>"
   language:
   - en
   script:
@@ -55,6 +56,16 @@ relation:
       primary: true
     formattedref:
       content: draft-hardt-httpbis-signature-key-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-hardt-httpbis-signature-key-03
+    docid:
+    - id: draft-hardt-httpbis-signature-key-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-hardt-httpbis-signature-key-03
       format: text/plain
 ext:
   schema-version: v1.0.1
