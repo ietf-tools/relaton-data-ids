@@ -1,62 +1,34 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-idr-bgpls-inter-as-topology-ext-20
+id: draft-zhang-sidrops-rpki-roa-bcp-02
 title:
-- content: BGP-LS Extension for Inter-AS Topology Retrieval
+- content: Best Current Practice for ROA Issuance Restrictions in RPKI
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-bgpls-inter-as-topology-ext-20
+- content: https://datatracker.ietf.org/doc/html/draft-zhang-sidrops-rpki-roa-bcp-02
   type: src
 type: standard
 docid:
-- id: draft-ietf-idr-bgpls-inter-as-topology-ext-20
+- id: draft-zhang-sidrops-rpki-roa-bcp-02
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-idr-bgpls-inter-as-topology-ext
+- id: I-D.zhang-sidrops-rpki-roa-bcp
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-idr-bgpls-inter-as-topology-ext
+docnumber: I-D.zhang-sidrops-rpki-roa-bcp
 date:
 - type: published
-  value: '2026-02-11'
+  value: '2026-04-06'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Aijun
-          language:
-          - en
-        - language:
-          - en
-          initial: A
-        formatted_initials:
-          content: A.
-          language:
-          - en
-      surname:
-        content: Wang
-        language:
-        - en
-      completename:
-        content: Aijun Wang
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: China Telecom
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Huaimo
+        - content: Heng
           language:
           - en
         - language:
@@ -67,120 +39,170 @@ contributor:
           language:
           - en
       surname:
-        content: Chen
+        content: Zhang
         language:
         - en
       completename:
-        content: Huaimo Chen
+        content: Heng Zhang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Individual
+        - content: CNNIC
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Ketan
+        - content: Hui
           language:
           - en
         - language:
           - en
-          initial: K
+          initial: H
         formatted_initials:
-          content: K.
+          content: H.
           language:
           - en
       surname:
-        content: Talaulikar
+        content: Zou
         language:
         - en
       completename:
-        content: Ketan Talaulikar
+        content: Hui Zou
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems
+        - content: CNIC
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Shunwan
+        - content: Likun
           language:
           - en
         - language:
           - en
-          initial: S
+          initial: L
         formatted_initials:
-          content: S.
+          content: L.
           language:
           - en
       surname:
-        content: Zhuang
+        content: Zhang
         language:
         - en
       completename:
-        content: Shunwan Zhuang
+        content: Likun Zhang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei Technologies
+        - content: CNNIC
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Changwang
+        - content: Xue
           language:
           - en
         - language:
           - en
-          initial: C
+          initial: X
         formatted_initials:
-          content: C.
+          content: X.
           language:
           - en
       surname:
-        content: Lin
+        content: Yang
         language:
         - en
       completename:
-        content: Changwang Lin
+        content: Xue Yang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: New H3C Technologies
+        - content: CNNIC
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - language:
+          - en
+          initial: D
+        formatted_initials:
+          content: D.
+          language:
+          - en
+      surname:
+        content: Ma
+        language:
+        - en
+      completename:
+        content: Di Ma
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: ZDNS
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Yanbiao
+          language:
+          - en
+        - language:
+          - en
+          initial: "Y"
+        formatted_initials:
+          content: Y.
+          language:
+          - en
+      surname:
+        content: Li
+        language:
+        - en
+      completename:
+        content: Yanbiao Li
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: CNIC
   role:
   - type: author
 version:
-- draft: '20'
-revdate: '2026-02-11'
+- draft: '02'
+revdate: '2026-04-06'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document specifies the procedure for distributing Border Gateway
-    Protocol-Link State (BGP-LS) key parameters for inter-domain links between two
-    Autonomous Systems (ASes). It defines a new type within the BGP-LS Network Layer
-    Reachability Information (NLRI) for a Stub Link, as well as three new type-length-values
-    (TLVs) for the BGP-LS Link descriptor. These BGP-LS extensions enable Software-Defined
-    Networking (SDN) controllers to automatically retrieve network topology across
-    diverse inter-AS environments. These extensions and procedures allow network operators
-    to collect inter-domain interconnect information and automatically compute the
-    end-to-end network topology using information provided by the BGP-LS protocol.</p>"
+- content: "<p>This document specifies best current practices for Resource Public
+    Key Infrastructure (RPKI) operators regarding Route Origin Authorizations (ROAs).
+    It RECOMMENDS that a parent Certification Authority (CA) void issuing ROAs for
+    Internet number resources delegated to a child CA. RPKI certification authorities(CA
+    software) and relying party software are expected to support these practices by
+    appropiate warning.</p>"
   language:
   - en
   script:
@@ -189,23 +211,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-idr-bgpls-inter-as-topology-ext-18
+    id: draft-zhang-sidrops-rpki-roa-bcp-01
     docid:
-    - id: draft-ietf-idr-bgpls-inter-as-topology-ext-18
+    - id: draft-zhang-sidrops-rpki-roa-bcp-01
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-idr-bgpls-inter-as-topology-ext-18
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-idr-bgpls-inter-as-topology-ext-22
-    docid:
-    - id: draft-ietf-idr-bgpls-inter-as-topology-ext-22
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-idr-bgpls-inter-as-topology-ext-22
+      content: draft-zhang-sidrops-rpki-roa-bcp-01
       format: text/plain
 series:
 - type: main
@@ -216,7 +228,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-idr-bgpls-inter-as-topology-ext-20
+  number: draft-zhang-sidrops-rpki-roa-bcp-02
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

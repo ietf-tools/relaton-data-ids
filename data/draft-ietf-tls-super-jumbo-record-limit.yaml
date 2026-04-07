@@ -14,11 +14,10 @@ docid:
   primary: true
 abstract:
 - content: "<p>TLS 1.3 records limit the inner plaintext (TLSInnerPlaintext) size
-    to 2^14 + 1 bytes, which includes one byte for the content type. Records also
-    have a 3-byte overhead due to the fixed opaque_type and legacy_record_version
-    fields. This document defines a TLS extension that allows endpoints to negotiate
-    a larger maximum inner plaintext size, up to 2^30 - 256 bytes, while reducing
-    overhead.</p>"
+    to 2^14 + 1 bytes, which includes one byte for the content type. DTLS 1.3 uses
+    the same plaintext size limit. This document defines a TLS extension that allows
+    endpoints to advertise larger per-direction maximum inner plaintext sizes, up
+    to 2^30 - 256 bytes, while reducing overhead in TLS 1.3 and DTLS 1.3 record headers.</p>"
   language:
   - en
   script:
@@ -54,6 +53,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-tls-super-jumbo-record-limit-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-tls-super-jumbo-record-limit-03
+    docid:
+    - id: draft-ietf-tls-super-jumbo-record-limit-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-tls-super-jumbo-record-limit-03
       format: text/plain
 ext:
   schema-version: v1.0.1

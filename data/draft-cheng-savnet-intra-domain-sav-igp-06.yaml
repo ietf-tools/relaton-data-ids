@@ -1,110 +1,142 @@
 ---
 schema-version: v1.2.3
-id: draft-zhang-sidrops-rpki-roa-bcp-00
+id: draft-cheng-savnet-intra-domain-sav-igp-06
 title:
-- content: Best Current Practice for ROA Issuance Restrictions in RPKI
+- content: Intra-domain SAVNET Support via IGP
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-zhang-sidrops-rpki-roa-bcp-00
+- content: https://datatracker.ietf.org/doc/html/draft-cheng-savnet-intra-domain-sav-igp-06
   type: src
 type: standard
 docid:
-- id: draft-zhang-sidrops-rpki-roa-bcp-00
+- id: draft-cheng-savnet-intra-domain-sav-igp-06
   type: Internet-Draft
   primary: true
-- id: I-D.zhang-sidrops-rpki-roa-bcp
+- id: I-D.cheng-savnet-intra-domain-sav-igp
   type: IETF
   scope: anchor
-docnumber: I-D.zhang-sidrops-rpki-roa-bcp
+docnumber: I-D.cheng-savnet-intra-domain-sav-igp
 date:
 - type: published
-  value: '2025-10-13'
+  value: '2026-04-07'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Heng
+        - content: Weiqiang
           language:
           - en
         - language:
           - en
-          initial: H
+          initial: W
         formatted_initials:
-          content: H.
+          content: W.
           language:
           - en
       surname:
-        content: Zhang
+        content: Cheng
         language:
         - en
       completename:
-        content: Heng Zhang
+        content: Weiqiang Cheng
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: CNNIC
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        formatted_initials:
-          language:
-          - en
-      surname:
-        content: zouhui
-        language:
-        - en
-      completename:
-        content: zouhui
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: CNIC
+        - content: China Mobile
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Likun
+        - content: Dan
           language:
           - en
         - language:
           - en
-          initial: L
+          initial: D
         formatted_initials:
-          content: L.
+          content: D.
           language:
           - en
       surname:
-        content: Zhang
+        content: Li
         language:
         - en
       completename:
-        content: Likun Zhang
+        content: Dan Li
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: CNNIC
+        - content: Tsinghua University
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Xue
+        - content: Changwang
+          language:
+          - en
+        - language:
+          - en
+          initial: C
+        formatted_initials:
+          content: C.
+          language:
+          - en
+      surname:
+        content: Lin
+        language:
+        - en
+      completename:
+        content: Changwang Lin
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: New H3C Technologies
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Shengnan
+          language:
+          - en
+        formatted_initials:
+          language:
+          - en
+      surname:
+        content: Yue
+        language:
+        - en
+      completename:
+        content: Shengnan Yue
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: China Mobile
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Xueyan
           language:
           - en
         - language:
@@ -115,101 +147,45 @@ contributor:
           language:
           - en
       surname:
-        content: Yang
+        content: Song
         language:
         - en
       completename:
-        content: Xue Yang
+        content: Xueyan Song
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: CNNIC
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - language:
-          - en
-          initial: D
-        formatted_initials:
-          content: D.
-          language:
-          - en
-      surname:
-        content: Ma
-        language:
-        - en
-      completename:
-        content: Di Ma
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: ZDNS
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Yanbiao
-          language:
-          - en
-        - language:
-          - en
-          initial: "Y"
-        formatted_initials:
-          content: Y.
-          language:
-          - en
-      surname:
-        content: Li
-        language:
-        - en
-      completename:
-        content: Yanbiao Li
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: CNIC
+        - content: ZTE Corporation
   role:
   - type: author
 version:
-- draft: '00'
-revdate: '2025-10-13'
+- draft: '06'
+revdate: '2026-04-07'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document specifies best current practices for Resource Public
-    Key Infrastructure (RPKI) operators regarding Route Origin Authorizations (ROAs).
-    It mandates that a parent Certification Authority (CA) MUST NOT issue ROAs for
-    Internet number resources delegated to a child CA. RPKI certification authorities(CA
-    software) and relying party software are required to enforce this restriction
-    by rejecting or flagging invalid ROAs issued outside of resource allocations.</p>"
+- content: "<p>This document introduces a new method for generating SAV rules based
+    on the SAVNET mechanism. This method generates SAV rules layer by layer through
+    the topology of the link state database formed by the IGP protocol.</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-zhang-sidrops-rpki-roa-bcp-02
+    id: draft-cheng-savnet-intra-domain-sav-igp-02
     docid:
-    - id: draft-zhang-sidrops-rpki-roa-bcp-02
+    - id: draft-cheng-savnet-intra-domain-sav-igp-02
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-zhang-sidrops-rpki-roa-bcp-02
+      content: draft-cheng-savnet-intra-domain-sav-igp-02
       format: text/plain
 series:
 - type: main
@@ -220,7 +196,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-zhang-sidrops-rpki-roa-bcp-00
+  number: draft-cheng-savnet-intra-domain-sav-igp-06
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
