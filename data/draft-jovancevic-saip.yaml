@@ -13,13 +13,17 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>The modern web lacks a reliable mechanism for verifying the identity
-    of HTTP user agents. Existing methods such as User-Agent strings and IP-based
-    attribution are insufficient due to spoofing, shared infrastructure (NAT), and
-    the rise of automated agents. This document specifies SAIP (Signed Agent Identity
+- content: "<p>The modern internet lacks a reliable mechanism for verifying the identity
+    of automated software agents. Existing methods such as User-Agent strings and
+    IP-based attribution are insufficient due to spoofing, shared infrastructure (NAT),
+    and the rapid growth of automated agents including AI crawlers, IoT devices, and
+    enterprise automation systems. This document specifies SAIP (Signed Agent Identity
     Protocol), a lightweight, opt-in mechanism for verifiable client identity at the
-    application layer. SAIP enables servers to distinguish between legitimate automated
-    traffic and malicious actors.</p>"
+    application layer. SAIP enables servers to distinguish legitimate automated traffic
+    from malicious actors through cryptographic identity at three levels of granularity:
+    vendor, agent type, and individual instance. SAIP is protocol-agnostic and applicable
+    to HTTP, SMTP, and other header-based protocols. The design rationale, extended
+    use cases, and implementation guidance are documented in [GENESIS].</p>"
   language:
   - en
   script:
@@ -35,6 +39,16 @@ relation:
       primary: true
     formattedref:
       content: draft-jovancevic-saip-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-jovancevic-saip-01
+    docid:
+    - id: draft-jovancevic-saip-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-jovancevic-saip-01
       format: text/plain
 ext:
   schema-version: v1.0.1

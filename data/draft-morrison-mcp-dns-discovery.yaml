@@ -14,12 +14,19 @@ docid:
   primary: true
 abstract:
 - content: "<p>This document defines a DNS-based mechanism for the discovery of Model
-    Context Protocol (MCP) servers. A TXT resource record published at the underscore-prefixed
-    label _mcp.&lt;domain&gt; advertises the presence, endpoint URL, transport protocol,
-    cryptographic identity, and capability profile of an MCP server associated with
-    a domain name. The mechanism complements existing HTTPS-based discovery (.well-known/mcp/server-card.json)
-    by providing a lightweight, resolver-cached bootstrap that requires no HTTPS round-
-    trip. The design follows the precedent established by DKIM [RFC6376], SPF [RFC7208],
+    Context Protocol (MCP) servers and the identity properties of the organisations
+    that operate them. Two TXT resource records are defined. The _mcp.&lt;domain&gt;
+    record (defined in v01 of this document) advertises the presence, endpoint URL,
+    transport protocol, cryptographic identity, and capability profile of an MCP server
+    associated with a domain name. The _org-alter.&lt;domain&gt; record (introduced
+    in this revision) advertises the canonical organisational identity of the domain
+    operator: legal entity name, registry identifier, founding date, primary regions
+    of operation, and any regulatory frameworks under which the operator is bound
+    to refuse external automated access. Together, the two records provide both service
+    discovery and identity bootstrap from a single canonical source -- the domain's
+    own DNS zone. The mechanism complements HTTPS-based discovery (.well-known/mcp/server-card.json)
+    by providing a lightweight, resolver-cached bootstrap that requires no HTTPS round-trip.
+    The design follows the precedent established by DKIM [RFC6376], SPF [RFC7208],
     DMARC [RFC7489], and MTA-STS [RFC8461], all of which use DNS TXT records at underscore-prefixed
     labels to advertise domain-scoped policy and service metadata.</p>"
   language:
@@ -47,6 +54,16 @@ relation:
       primary: true
     formattedref:
       content: draft-morrison-mcp-dns-discovery-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-morrison-mcp-dns-discovery-02
+    docid:
+    - id: draft-morrison-mcp-dns-discovery-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-morrison-mcp-dns-discovery-02
       format: text/plain
 ext:
   schema-version: v1.0.1

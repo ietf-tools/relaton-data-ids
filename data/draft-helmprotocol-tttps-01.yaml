@@ -1,0 +1,113 @@
+---
+schema-version: v1.2.3
+id: draft-helmprotocol-tttps-01
+title:
+- content: The TLS TimeToken Secure Protocol (tttps://)
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-helmprotocol-tttps-01
+  type: src
+type: standard
+docid:
+- id: draft-helmprotocol-tttps-01
+  type: Internet-Draft
+  primary: true
+- id: I-D.helmprotocol-tttps
+  type: IETF
+  scope: anchor
+docnumber: I-D.helmprotocol-tttps
+date:
+- type: published
+  value: '2026-04-08'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - language:
+          - en
+          initial: D
+        formatted_initials:
+          content: D.
+          language:
+          - en
+      surname:
+        content: 장동호
+        language:
+        - en
+      completename:
+        content: 장동호
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Kenosian
+  role:
+  - type: author
+version:
+- draft: '01'
+revdate: '2026-04-08'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>This document specifies the TLS TimeToken Secure Protocol (tttps://),
+    a protocol extension that augments TLS 1.3 [RFC8446] with cryptographically verifiable
+    temporal ordering. Internet infrastructure assumes that channels are passive:
+    noise is random and channel operators have no ordering preferences. This assumption
+    is structurally violated when ordering has economic value -- NTP servers, BGP
+    routing authorities, DNS resolvers, and transaction sequencers all have incentive
+    to misrepresent ordering. This document formalises the problem as the Strategic
+    Channel Controller Problem (SCCP), absent from classical information theory. Temporal
+    ordering attacks are structurally more acute for autonomous AI agents than for
+    human participants: as agent reaction times converge toward symmetry, ordering
+    advantage can no longer be earned through superior human latency. No existing
+    protocol -- including O(n^2) BFT consensus, which tolerates but does not eliminate
+    Byzantine nodes -- provides a cryptographic pre-ingestion defense for this case.
+    TTTPS introduces Proof-of-Time (PoT): a multi-source synthesised timestamp protected
+    by the GRG integrity pipeline (Golomb-Rice -&gt; Reed-Solomon -&gt; Golay(23,12,7)
+    -&gt; HMAC), whose stage ordering is mathematically necessary (Theorems 1-3 of
+    the companion paper [POT2026]). PoT achieves Byzantine temporal elimination at
+    O(1) per record, independent of network size. An AdaptiveSwitch mechanism makes
+    ordering manipulation economically self-defeating; the equilibrium threshold is
+    derived in closed form and empirically calibrated from deployed data (Section
+    6.4). Deployment on Base Sepolia produces 70,000+ verified records; 55% are generated
+    by autonomous AI agents -- an unanticipated finding that confirms the structural
+    severity of the ordering problem in agent economies. This document has Experimental
+    status. The GRG pipeline specification will be published upon conclusion of pending
+    patent proceedings (Section 12).</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-helmprotocol-tttps-00
+    docid:
+    - id: draft-helmprotocol-tttps-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-helmprotocol-tttps-00
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-helmprotocol-tttps-01
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
