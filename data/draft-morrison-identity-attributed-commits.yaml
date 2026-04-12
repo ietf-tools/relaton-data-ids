@@ -1,0 +1,45 @@
+---
+schema-version: v1.2.3
+id: draft-morrison-identity-attributed-commits
+title:
+- content: Identity-Attributed Git Commits via Tier-Structured Trailers
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-morrison-identity-attributed-commits
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This document defines a git commit trailer grammar for identity- attributed
+    contributions using the ~handle identity primitive defined in [MCPDNS]. The grammar
+    binds sovereign actors, automated bots, and AI instruments to specific commits
+    via three tier-structured trailers (Acted-By, Executed-By, Drafted-With) and three
+    optional cryptographic trailers (Identity-Signature, Identity-Key-Id, Identity-Anchor).
+    The signature is computed with Ed25519 over the commit's tree hash rather than
+    its commit hash, preserving attribution across rebase, cherry-pick, and squash
+    merge operations. Conformant parsers reject cross-tier category errors (e.g.,
+    an Instrument-tier handle in an Acted-By slot) as malformed. The mechanism is
+    provider-neutral, depends only on DNS [RFC1035] and the ~handle resolution algorithm
+    of [MCPDNS], and requires no central authority or platform-specific verification
+    service.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-morrison-identity-attributed-commits-00
+    docid:
+    - id: draft-morrison-identity-attributed-commits-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-morrison-identity-attributed-commits-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
