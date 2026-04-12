@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-oauth-transaction-tokens-for-agents-04
+id: draft-oauth-transaction-tokens-for-agents-06
 title:
 - content: Transaction Tokens For Agents
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-oauth-transaction-tokens-for-agents-04
+- content: https://datatracker.ietf.org/doc/html/draft-oauth-transaction-tokens-for-agents-06
   type: src
 type: standard
 docid:
-- id: draft-oauth-transaction-tokens-for-agents-04
+- id: draft-oauth-transaction-tokens-for-agents-06
   type: Internet-Draft
   primary: true
 - id: I-D.oauth-transaction-tokens-for-agents
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.oauth-transaction-tokens-for-agents
 date:
 - type: published
-  value: '2026-02-10'
+  value: '2026-04-11'
 contributor:
 - person:
     name:
@@ -53,22 +53,24 @@ contributor:
   role:
   - type: author
 version:
-- draft: '04'
-revdate: '2026-02-10'
+- draft: '06'
+revdate: '2026-04-11'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document specifies an extension to the OAuth Transaction Tokens
-    framework (https://drafts.oauth.net/oauth-transaction-tokens/draft- ietf-oauth-transaction-tokens.html)
-    to support agent context propagation within Transaction Tokens for agent-based
-    workloads. The extension defines two new context fields: 'actor' and 'principal'.
-    The 'actor' field identifies the agent performing the action, while the 'principal'
-    field identifies the human or system entity that initiated the agent's action.
-    For autonomous agents operating independently, the 'principal' field MAY be omitted.
-    These additional context fields enable services within the call graph to make
-    more granular access control decisions, thereby enhancing security.</p>"
+- content: "<p>This document specifies an extension to the OAUTH-TXN-TOKENS (https://drafts.oauth.net/oauth-transaction-tokens/draft-ietf-oauth-
+    transaction-tokens.html) to support agent context propagation within Transaction
+    Tokens for agent-based workloads. The extension defines the use of the act field
+    to identify the agent performing the action, and leverages the existing sub field
+    (as defined in the base Transaction Tokens specification) to represent the principal.
+    The sub field is populated according to the rules specified in OAUTH-TXN- TOKENS
+    (https://drafts.oauth.net/oauth-transaction-tokens/draft-ietf- oauth-transaction-tokens.html),
+    based on the 'subject_token' provided in the token request. For autonomous agents
+    operating independently, the sub field represents the agent itself. These mechanisms
+    enable services within the call graph to make more granular access control decisions,
+    thereby enhancing security.</p>"
   language:
   - en
   script:
@@ -85,16 +87,6 @@ relation:
     formattedref:
       content: draft-oauth-transaction-tokens-for-agents-03
       format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-oauth-transaction-tokens-for-agents-06
-    docid:
-    - id: draft-oauth-transaction-tokens-for-agents-06
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-oauth-transaction-tokens-for-agents-06
-      format: text/plain
 series:
 - type: main
   title:
@@ -104,7 +96,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-oauth-transaction-tokens-for-agents-04
+  number: draft-oauth-transaction-tokens-for-agents-06
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
