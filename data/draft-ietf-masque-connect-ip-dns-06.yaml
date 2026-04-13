@@ -1,19 +1,19 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-masque-connect-ip-dns-04
+id: draft-ietf-masque-connect-ip-dns-06
 title:
-- content: DNS Configuration for Proxying IP in HTTP
+- content: DNS and PREF64 Configuration for Proxying IP in HTTP
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-masque-connect-ip-dns-04
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-masque-connect-ip-dns-06
   type: src
 type: standard
 docid:
-- id: draft-ietf-masque-connect-ip-dns-04
+- id: draft-ietf-masque-connect-ip-dns-06
   type: Internet-Draft
   primary: true
 - id: I-D.ietf-masque-connect-ip-dns
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.ietf-masque-connect-ip-dns
 date:
 - type: published
-  value: '2025-07-07'
+  value: '2026-04-12'
 contributor:
 - person:
     name:
@@ -81,19 +81,20 @@ contributor:
   role:
   - type: author
 version:
-- draft: '04'
-revdate: '2025-07-07'
+- draft: '06'
+revdate: '2026-04-12'
 language:
 - en
 script:
 - Latn
 abstract:
 - content: "<p>Proxying IP in HTTP allows building a VPN through HTTP load balancers.
-    However, at the time of writing, that mechanism doesn't offer a mechanism for
-    communicating DNS configuration information inline. In contrast, most existing
-    VPN protocols provide a mechanism to exchange DNS configuration information. This
-    document describes an extension that exchanges this information using HTTP capsules.
-    This mechanism supports encrypted DNS transports.</p>"
+    However, at the time of writing, that mechanism lacks a way to communicate network
+    configuration details such as DNS information or IPv6 NAT64 prefixes (PREF64).
+    In contrast, most existing VPN protocols provide mechanisms to exchange such configuration
+    information. This document defines extensions that convey DNS and PREF64 configuration
+    using HTTP capsules. This mechanism supports encrypted DNS transports and can
+    be used to inform peers about network translation prefixes for IPv6/IPv4 synthesis.</p>"
   language:
   - en
   script:
@@ -110,16 +111,6 @@ relation:
     formattedref:
       content: draft-ietf-masque-connect-ip-dns-00
       format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-masque-connect-ip-dns-06
-    docid:
-    - id: draft-ietf-masque-connect-ip-dns-06
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-masque-connect-ip-dns-06
-      format: text/plain
 series:
 - type: main
   title:
@@ -129,7 +120,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-masque-connect-ip-dns-04
+  number: draft-ietf-masque-connect-ip-dns-06
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
