@@ -1,197 +1,206 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-regext-epp-quic-03
+id: draft-narajala-courtney-ansv2-00
 title:
-- content: Extensible Provisioning Protocol (EPP) Transport over QUIC
+- content: 'Agent Name Service v2 (ANS): A Domain-Anchored Trust Layer for Autonomous
+    AI Agent Identity'
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-regext-epp-quic-03
+- content: https://datatracker.ietf.org/doc/html/draft-narajala-courtney-ansv2-00
   type: src
 type: standard
 docid:
-- id: draft-ietf-regext-epp-quic-03
+- id: draft-narajala-courtney-ansv2-00
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-regext-epp-quic
+- id: I-D.narajala-courtney-ansv2
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-regext-epp-quic
+docnumber: I-D.narajala-courtney-ansv2
 date:
 - type: published
-  value: '2026-02-02'
+  value: '2026-04-13'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Jiankang
+        - content: Scott
           language:
           - en
         - language:
           - en
-          initial: J
+          initial: S
         formatted_initials:
-          content: J.
+          content: S.
           language:
           - en
       surname:
-        content: Yao
+        content: Courtney
         language:
         - en
       completename:
-        content: Jiankang Yao
+        content: Scott Courtney
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: CNNIC
+        - content: GoDaddy
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Hongtao
+        - content: Vineeth
           language:
           - en
         - language:
           - en
-          initial: H
+          initial: V
+        - language:
+          - en
+          initial: S
         formatted_initials:
-          content: H.
+          content: V. S.
           language:
           - en
       surname:
-        content: Li
+        content: Narajala
         language:
         - en
       completename:
-        content: Hongtao Li
+        content: Vineeth Sai Narajala
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: CNNIC
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        formatted_initials:
-          language:
-          - en
-      surname:
-        content: Zhang
-        language:
-        - en
-      completename:
-        content: Zhang
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: CNNIC
+        - content: OWASP
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Dan
+        - content: Ken
           language:
           - en
         - language:
           - en
-          initial: D
+          initial: K
         formatted_initials:
-          content: D.
+          content: K.
           language:
           - en
       surname:
-        content: Keathley
+        content: Huang
         language:
         - en
       completename:
-        content: Dan Keathley
+        content: Ken Huang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: VeriSign, Inc.
+        - content: DistributedApps.ai
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: James
+        - content: Idan
           language:
           - en
         - language:
           - en
-          initial: J
+          initial: I
         formatted_initials:
-          content: J.
+          content: I.
           language:
           - en
       surname:
-        content: Gould
+        content: Habler
         language:
         - en
       completename:
-        content: James Gould
+        content: Idan Habler
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: VeriSign, Inc.
+        - content: OWASP
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Akram
+          language:
+          - en
+        - language:
+          - en
+          initial: A
+        formatted_initials:
+          content: A.
+          language:
+          - en
+      surname:
+        content: Sheriff
+        language:
+        - en
+      completename:
+        content: Akram Sheriff
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Cisco Systems
   role:
   - type: author
 version:
-- draft: '03'
-revdate: '2026-02-02'
+- draft: '00'
+revdate: '2026-04-13'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document describes how an Extensible Provisioning Protocol (EPP)
-    session is mapped onto a QUIC connection. EPP over QUIC (EoQ) leverages the performance
-    and security features of the QUIC protocol as an EPP transport.</p>"
+- content: "<p>Autonomous AI agents execute transactions across organizational boundaries.
+    No single agent platform provides the trust infrastructure they need. This document
+    defines the Agent Name Service (ANS) v2 protocol, which anchors every agent identity
+    to a DNS domain name. A Registration Authority (RA) verifies domain ownership
+    via ACME, issues dual certificates (a Server Certificate from a public CA and
+    an Identity Certificate from a private CA binding a version-specific ANSName),
+    and seals every lifecycle event into an append-only Transparency Log aligned with
+    IETF SCITT. Three verification tiers -- Bronze (PKI), Silver (PKI + DANE), and
+    Gold (PKI + DANE + Transparency Log) -- let clients choose assurance levels appropriate
+    to transaction risk.</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updates
-  bibitem:
-    id: draft-ietf-regext-epp-quic-02
-    docid:
-    - id: draft-ietf-regext-epp-quic-02
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-regext-epp-quic-02
-      format: text/plain
 - type: updatedBy
   bibitem:
-    id: draft-ietf-regext-epp-quic-05
+    id: draft-narajala-courtney-ansv2-01
     docid:
-    - id: draft-ietf-regext-epp-quic-05
+    - id: draft-narajala-courtney-ansv2-01
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-regext-epp-quic-05
+      content: draft-narajala-courtney-ansv2-01
       format: text/plain
 series:
 - type: main
@@ -202,7 +211,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-regext-epp-quic-03
+  number: draft-narajala-courtney-ansv2-00
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

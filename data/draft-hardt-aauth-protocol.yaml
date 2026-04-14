@@ -13,13 +13,12 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document defines the AAuth authorization protocol, in which agents
-    obtain proof-of-possession tokens from auth servers to access resources on behalf
-    of users and organizations. It specifies three token types (agent, resource, and
-    auth), a unified token endpoint with deferred response support, and cross-domain
-    federation between auth servers. It builds on the AAuth Headers specification
-    ([I-D.hardt-aauth-headers]), which defines the AAuth-Requirement response header
-    and HTTP Message Signatures profile.</p>"
+- content: "<p>This document defines the AAuth authorization protocol for agent-to-
+    resource authorization and identity claim retrieval. The protocol supports four
+    resource access modes — identity-based, resource- managed (two-party), PS-managed
+    (three-party), and federated (four- party) — with agent governance as an orthogonal
+    layer. It builds on the HTTP Signature Keys specification ([I-D.hardt-httpbis-signature-key])
+    for HTTP Message Signatures and key discovery.</p>"
   language:
   - en
   script:
@@ -35,6 +34,16 @@ relation:
       primary: true
     formattedref:
       content: draft-hardt-aauth-protocol-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-hardt-aauth-protocol-01
+    docid:
+    - id: draft-hardt-aauth-protocol-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-hardt-aauth-protocol-01
       format: text/plain
 ext:
   schema-version: v1.0.1
