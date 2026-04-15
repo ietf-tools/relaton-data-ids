@@ -1,34 +1,34 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-intarea-rfc8335bis-02
+id: draft-ietf-idr-nhc-03
 title:
-- content: 'PROBE: A Utility for Probing Interfaces'
+- content: BGP Next Hop Dependent Characteristics Attribute
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-intarea-rfc8335bis-02
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-nhc-03
   type: src
 type: standard
 docid:
-- id: draft-ietf-intarea-rfc8335bis-02
+- id: draft-ietf-idr-nhc-03
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-intarea-rfc8335bis
+- id: I-D.ietf-idr-nhc
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-intarea-rfc8335bis
+docnumber: I-D.ietf-idr-nhc
 date:
 - type: published
-  value: '2026-01-25'
+  value: '2026-04-14'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Bill
+        - content: Bruno
           language:
           - en
         - language:
@@ -39,80 +39,111 @@ contributor:
           language:
           - en
       surname:
-        content: Fenner
+        content: Decraene
         language:
         - en
       completename:
-        content: Bill Fenner
+        content: Bruno Decraene
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Arista Networks
+        - content: Orange
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Ron
+        - content: Kireeti
           language:
           - en
         - language:
           - en
-          initial: R
+          initial: K
         formatted_initials:
-          content: R.
+          content: K.
           language:
           - en
       surname:
-        content: Bonica
+        content: Kompella
         language:
         - en
       completename:
-        content: Ron Bonica
+        content: Kireeti Kompella
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Juniper Networks
+        - content: HPE
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Reji
+        - content: Serge
           language:
           - en
         - language:
           - en
-          initial: R
+          initial: S
         formatted_initials:
-          content: R.
+          content: S.
           language:
           - en
       surname:
-        content: Thomas
+        content: Krier
         language:
         - en
       completename:
-        content: Reji Thomas
+        content: Serge Krier
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Arista Networks
+        - content: Cisco Systems
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Jen
+        - content: SATYA
+          language:
+          - en
+        - language:
+          - en
+          initial: M
+        - language:
+          - en
+          initial: R
+        formatted_initials:
+          content: M. R.
+          language:
+          - en
+      surname:
+        content: Satya
+        language:
+        - en
+      completename:
+        content: SATYA R MOHANTY
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Zscaler
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: John
           language:
           - en
         - language:
@@ -123,91 +154,91 @@ contributor:
           language:
           - en
       surname:
-        content: Linkova
+        content: Scudder
         language:
         - en
       completename:
-        content: Jen Linkova
+        content: John Scudder
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Google
+        - content: HPE
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Chris
+        - content: Kevin
           language:
           - en
         - language:
           - en
-          initial: C
+          initial: K
         formatted_initials:
-          content: C.
+          content: K.
           language:
           - en
       surname:
-        content: Lenart
+        content: Wang
         language:
         - en
       completename:
-        content: Chris Lenart
+        content: Kevin Wang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Verizon
+        - content: HPE
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Mohamed
+        - content: Bin
           language:
           - en
         - language:
           - en
-          initial: M
+          initial: B
         formatted_initials:
-          content: M.
+          content: B.
           language:
           - en
       surname:
-        content: Boucadair
+        content: Wen
         language:
         - en
       completename:
-        content: Mohamed Boucadair
+        content: Bin Wen
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Orange
+        - content: Comcast
   role:
   - type: author
 version:
-- draft: '02'
-revdate: '2026-01-25'
+- draft: '03'
+revdate: '2026-04-14'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document describes a network diagnostic tool called PROBE. PROBE
-    is similar to PING in that it can be used to query the status of a probed interface,
-    but it differs from PING in that it does not require bidirectional connectivity
-    between the probing and probed interfaces. Instead, PROBE requires bidirectional
-    connectivity between the probing interface and a proxy interface. The proxy interface
-    can reside on the same node as the probed interface, or it can reside on a node
-    to which the probed interface is directly connected. This document updates RFC
-    4884 and obsoletes RFC 8335.</p>"
+- content: <p>RFC 5492 allows a BGP speaker to advertise its capabilities to its peer.
+    When a route is propagated beyond the immediate peer, it is useful to allow certain
+    characteristics to be conveyed further. In particular, it is useful to advertise
+    forwarding plane features. This specification defines a BGP transitive attribute
+    to carry such information, the "Next Hop Dependent Characteristics Attribute,"
+    or NHC. Unlike the capabilities defined by RFC 5492, the characteristics conveyed
+    in the NHC apply solely to the routes advertised by the BGP UPDATE that contains
+    the particular NHC.</p>
   language:
   - en
   script:
@@ -216,23 +247,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-intarea-rfc8335bis-00
+    id: draft-ietf-idr-nhc-02
     docid:
-    - id: draft-ietf-intarea-rfc8335bis-00
+    - id: draft-ietf-idr-nhc-02
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-intarea-rfc8335bis-00
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-intarea-rfc8335bis-03
-    docid:
-    - id: draft-ietf-intarea-rfc8335bis-03
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-intarea-rfc8335bis-03
+      content: draft-ietf-idr-nhc-02
       format: text/plain
 series:
 - type: main
@@ -243,7 +264,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-intarea-rfc8335bis-02
+  number: draft-ietf-idr-nhc-03
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

@@ -13,15 +13,14 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>The Virtual Router Redundancy Protocol (VRRP) protocol depends on the
-    availability of layer three (3) IPvX connectivity between redundant peers and
-    it can interact with the variant of Seamless Bidirectional Forwarding Detection
-    (S-BFD) protocol to achieve a much faster failure detection. This document describes
-    how to extend the VRRP protocol to support S-BFD as a detection system for Primary
-    Router failures. To announce the use of this implementation, a new VRRP packet
-    type and a new timer are defined. To facilitate and increase the user experience
-    while deploying this implementation, an auto-calculation algorithm for the S-BFD
-    Discriminators is also implemented.</p>"
+- content: "<p>The Virtual Router Redundancy Protocol (VRRP) protocol depends on IPv4
+    or IPv6 connectivity between redundant peers and can use Seamless Bidirectional
+    Forwarding Detection (S-BFD) to detect a Primary Router failure faster than the
+    base VRRP advertisement timers. This document describes an extension that allows
+    VRRP to use S-BFD as an additional failure-detection mechanism. It defines a new
+    VRRP packet type, a dedicated timer, and a mechanism for a VRRP Primary Router
+    to advertise an S-BFD reflector discriminator to Backup Routers. Local discriminator
+    allocation is left to the implementation.</p>"
   language:
   - en
   script:
@@ -47,6 +46,16 @@ relation:
       primary: true
     formattedref:
       content: draft-nser-vrrp-sbfd-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-nser-vrrp-sbfd-02
+    docid:
+    - id: draft-nser-vrrp-sbfd-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-nser-vrrp-sbfd-02
       format: text/plain
 ext:
   schema-version: v1.0.1
