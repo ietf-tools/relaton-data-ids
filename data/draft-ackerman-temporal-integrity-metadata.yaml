@@ -1,0 +1,49 @@
+---
+schema-version: v1.2.3
+id: draft-ackerman-temporal-integrity-metadata
+title:
+- content: Temporal Integrity Metadata (TIM) for Infrastructure Telemetry
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-ackerman-temporal-integrity-metadata
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>Distributed computing systems generate timestamped events from components
+    whose clocks operate under fundamentally different synchronization conditions.
+    Existing logging and observability standards -- including RFC 3164, RFC 5424,
+    SNMP, NETCONF, and OpenTelemetry -- define message formats and telemetry schemas
+    but provide no standard mechanism for an event source to declare the provenance,
+    confidence, or synchronization state of its timestamps. Every platform that must
+    correlate events across components independently invents a proprietary temporal
+    reconciliation layer. These systems fail silently, cannot be validated against
+    a published standard, and are not interoperable. This document defines Temporal
+    Integrity Metadata (TIM): a transport- agnostic structure that any event-emitting
+    system may attach to its telemetry to declare how its timestamp was generated,
+    the synchronization state of its clock, a bounded uncertainty interval, the temporal
+    reference domain, and a monotonic sequence token for ordering events when wall-clock
+    time is unavailable. TIM is backward-compatible with existing protocols, implementable
+    on constrained embedded hardware, and applicable from internet-scale distributed
+    services to air-gapped and orbital deployments.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-ackerman-temporal-integrity-metadata-00
+    docid:
+    - id: draft-ackerman-temporal-integrity-metadata-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ackerman-temporal-integrity-metadata-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

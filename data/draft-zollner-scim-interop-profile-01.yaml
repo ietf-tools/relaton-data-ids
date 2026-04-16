@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-zollner-scim-interop-profile-00
+id: draft-zollner-scim-interop-profile-01
 title:
 - content: SCIM 2.0 Interoperability Profile
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-zollner-scim-interop-profile-00
+- content: https://datatracker.ietf.org/doc/html/draft-zollner-scim-interop-profile-01
   type: src
 type: standard
 docid:
-- id: draft-zollner-scim-interop-profile-00
+- id: draft-zollner-scim-interop-profile-01
   type: Internet-Draft
   primary: true
 - id: I-D.zollner-scim-interop-profile
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.zollner-scim-interop-profile
 date:
 - type: published
-  value: '2026-03-02'
+  value: '2026-04-15'
 contributor:
 - person:
     name:
@@ -53,34 +53,39 @@ contributor:
   role:
   - type: author
 version:
-- draft: '00'
-revdate: '2026-03-02'
+- draft: '01'
+revdate: '2026-04-15'
 language:
 - en
 script:
 - Latn
 abstract:
 - content: "<p>This document defines an implementation profile for the System for
-    Cross-domain Identity Management (SCIM) 2.0. The goal of this profile is to increase
-    interoperability between identity providers and service providers by reducing
-    the number of optional features and providing clear guidance on implementing a
-    common subset of the SCIM standard. It deprecates certain features that have proven
-    to be problematic for interoperability or are considered insecure.</p>"
+    Cross-domain Identity Management (SCIM) 2.0. In the typical deployment model,
+    an identity provider acting as a SCIM Client provisions and manages identities
+    at multiple downstream service providers, while each service provider (commonly
+    a multi-tenant application serving many customers) accepts provisioning connections
+    from multiple different identity providers. This many-to-many integration model
+    compounds the interoperability challenges arising from the wide range of optional
+    features and implementation variations permitted by the base specification. This
+    profile addresses those challenges by restricting the optional features and protocol
+    variations permitted under the base specification and by establishing normative
+    requirements for a common implementation baseline.</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-zollner-scim-interop-profile-01
+    id: draft-zollner-scim-interop-profile-00
     docid:
-    - id: draft-zollner-scim-interop-profile-01
+    - id: draft-zollner-scim-interop-profile-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-zollner-scim-interop-profile-01
+      content: draft-zollner-scim-interop-profile-00
       format: text/plain
 series:
 - type: main
@@ -91,7 +96,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-zollner-scim-interop-profile-00
+  number: draft-zollner-scim-interop-profile-01
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

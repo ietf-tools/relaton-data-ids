@@ -14,11 +14,16 @@ docid:
   primary: true
 abstract:
 - content: "<p>This document defines an implementation profile for the System for
-    Cross-domain Identity Management (SCIM) 2.0. The goal of this profile is to increase
-    interoperability between identity providers and service providers by reducing
-    the number of optional features and providing clear guidance on implementing a
-    common subset of the SCIM standard. It deprecates certain features that have proven
-    to be problematic for interoperability or are considered insecure.</p>"
+    Cross-domain Identity Management (SCIM) 2.0. In the typical deployment model,
+    an identity provider acting as a SCIM Client provisions and manages identities
+    at multiple downstream service providers, while each service provider (commonly
+    a multi-tenant application serving many customers) accepts provisioning connections
+    from multiple different identity providers. This many-to-many integration model
+    compounds the interoperability challenges arising from the wide range of optional
+    features and implementation variations permitted by the base specification. This
+    profile addresses those challenges by restricting the optional features and protocol
+    variations permitted under the base specification and by establishing normative
+    requirements for a common implementation baseline.</p>"
   language:
   - en
   script:
@@ -34,6 +39,16 @@ relation:
       primary: true
     formattedref:
       content: draft-zollner-scim-interop-profile-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-zollner-scim-interop-profile-01
+    docid:
+    - id: draft-zollner-scim-interop-profile-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-zollner-scim-interop-profile-01
       format: text/plain
 ext:
   schema-version: v1.0.1

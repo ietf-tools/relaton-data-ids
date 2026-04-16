@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-mora-oauth-entity-profiles-00
+id: draft-mora-oauth-entity-profiles-01
 title:
 - content: OAuth 2.0 Entity Profiles
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-mora-oauth-entity-profiles-00
+- content: https://datatracker.ietf.org/doc/html/draft-mora-oauth-entity-profiles-01
   type: src
 type: standard
 docid:
-- id: draft-mora-oauth-entity-profiles-00
+- id: draft-mora-oauth-entity-profiles-01
   type: Internet-Draft
   primary: true
 - id: I-D.mora-oauth-entity-profiles
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.mora-oauth-entity-profiles
 date:
 - type: published
-  value: '2025-10-17'
+  value: '2026-04-15'
 contributor:
 - person:
     name:
@@ -83,9 +83,37 @@ contributor:
         - content: Microsoft Corporation
   role:
   - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Karl
+          language:
+          - en
+        - language:
+          - en
+          initial: K
+        formatted_initials:
+          content: K.
+          language:
+          - en
+      surname:
+        content: McGuinness
+        language:
+        - en
+      completename:
+        content: Karl McGuinness
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Independent
+  role:
+  - type: author
 version:
-- draft: '00'
-revdate: '2025-10-17'
+- draft: '01'
+revdate: '2026-04-15'
 language:
 - en
 script:
@@ -95,23 +123,26 @@ abstract:
     OAuth 2.0 entities—clients and subjects—based on their operational context. Entity
     Profiles provide structured descriptors for the client initiating the OAuth flow
     and the subject represented in tokens. This document defines new JWT Claim names
-    and metadata parameters for use in access tokens, ID tokens, token introspection
-    responses, dynamic client registration, and Authorization Server metadata.</p>"
+    and metadata parameters for use in JWTs issued or consumed in OAuth flows, including
+    but not limited to access tokens, ID tokens, JWT authorization grant assertions,
+    and transaction tokens, as well as in token introspection responses, dynamic client
+    registration, and Authorization Server metadata. It also defines vocabulary for
+    classifying acting entities within delegation chains.</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-mora-oauth-entity-profiles-01
+    id: draft-mora-oauth-entity-profiles-00
     docid:
-    - id: draft-mora-oauth-entity-profiles-01
+    - id: draft-mora-oauth-entity-profiles-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-mora-oauth-entity-profiles-01
+      content: draft-mora-oauth-entity-profiles-00
       format: text/plain
 series:
 - type: main
@@ -122,7 +153,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-mora-oauth-entity-profiles-00
+  number: draft-mora-oauth-entity-profiles-01
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
