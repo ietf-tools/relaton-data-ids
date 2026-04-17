@@ -1,55 +1,139 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-mboned-amt-yang-06
+id: draft-ietf-idr-bgpls-inter-as-topology-ext-24
 title:
-- content: A YANG Data Model for Automatic Multicast Tunneling (AMT)
+- content: BGP-LS Extension for Inter-AS Topology Retrieval
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-mboned-amt-yang-06
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-bgpls-inter-as-topology-ext-24
   type: src
 type: standard
 docid:
-- id: draft-ietf-mboned-amt-yang-06
+- id: draft-ietf-idr-bgpls-inter-as-topology-ext-24
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-mboned-amt-yang
+- id: I-D.ietf-idr-bgpls-inter-as-topology-ext
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-mboned-amt-yang
+docnumber: I-D.ietf-idr-bgpls-inter-as-topology-ext
 date:
 - type: published
-  value: '2026-03-24'
+  value: '2026-04-16'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Yisong
+        - content: Aijun
           language:
           - en
         - language:
           - en
-          initial: "Y"
+          initial: A
         formatted_initials:
-          content: Y.
+          content: A.
           language:
           - en
       surname:
-        content: Liu
+        content: Wang
         language:
         - en
       completename:
-        content: Yisong Liu
+        content: Aijun Wang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: China Mobile
+        - content: China Telecom
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Huaimo
+          language:
+          - en
+        - language:
+          - en
+          initial: H
+        formatted_initials:
+          content: H.
+          language:
+          - en
+      surname:
+        content: Chen
+        language:
+        - en
+      completename:
+        content: Huaimo Chen
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Individual
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Ketan
+          language:
+          - en
+        - language:
+          - en
+          initial: K
+        formatted_initials:
+          content: K.
+          language:
+          - en
+      surname:
+        content: Talaulikar
+        language:
+        - en
+      completename:
+        content: Ketan Talaulikar
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Cisco Systems
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Shunwan
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Zhuang
+        language:
+        - en
+      completename:
+        content: Shunwan Zhuang
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei Technologies
   role:
   - type: author
 - person:
@@ -80,103 +164,23 @@ contributor:
         - content: New H3C Technologies
   role:
   - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Zheng
-          language:
-          - en
-        - language:
-          - en
-          initial: Z
-        formatted_initials:
-          content: Z.
-          language:
-          - en
-      surname:
-        content: Zhang
-        language:
-        - en
-      completename:
-        content: Zheng Zhang
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: ZTE Corporation
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Xuesong
-          language:
-          - en
-        - language:
-          - en
-          initial: X
-        formatted_initials:
-          content: X.
-          language:
-          - en
-      surname:
-        content: Geng
-        language:
-        - en
-      completename:
-        content: Xuesong Geng
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Huawei Technologies
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Vinod
-          language:
-          - en
-        - language:
-          - en
-          initial: V
-        - language:
-          - en
-          initial: K
-        formatted_initials:
-          content: V. K.
-          language:
-          - en
-      surname:
-        content: Nagaraj
-        language:
-        - en
-      completename:
-        content: Vinod Kumar Nagaraj
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Juniper Networks
-  role:
-  - type: author
 version:
-- draft: '06'
-revdate: '2026-03-24'
+- draft: '24'
+revdate: '2026-04-16'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document defines a YANG data model for the management of Automatic
-    Multicast Tunneling (AMT) protocol operations.</p>"
+- content: "<p>This document specifies the procedure for distributing Border Gateway
+    Protocol-Link State (BGP-LS) key parameters for inter-domain links between two
+    Autonomous Systems (ASes). It defines a new type within the BGP-LS Network Layer
+    Reachability Information (NLRI) for a Stub Link, as well as three new type-length-values
+    (TLVs) for the BGP-LS Stub Link descriptor. These BGP-LS extensions enable Software-
+    Defined Networking (SDN) controllers to retrieve network topology across inter-AS
+    environments. These extensions and procedures allow network operators to collect
+    inter-domain interconnect information and automatically compute the end-to-end
+    network topology using information provided by the BGP-LS protocol.</p>"
   language:
   - en
   script:
@@ -185,23 +189,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-mboned-amt-yang-02
+    id: draft-ietf-idr-bgpls-inter-as-topology-ext-08
     docid:
-    - id: draft-ietf-mboned-amt-yang-02
+    - id: draft-ietf-idr-bgpls-inter-as-topology-ext-08
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-mboned-amt-yang-02
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-mboned-amt-yang-09
-    docid:
-    - id: draft-ietf-mboned-amt-yang-09
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-mboned-amt-yang-09
+      content: draft-ietf-idr-bgpls-inter-as-topology-ext-08
       format: text/plain
 series:
 - type: main
@@ -212,7 +206,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-mboned-amt-yang-06
+  number: draft-ietf-idr-bgpls-inter-as-topology-ext-24
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

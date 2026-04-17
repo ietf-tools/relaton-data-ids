@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-ahearn-seal-00
+id: draft-ahearn-seal-01
 title:
 - content: Signed Email Authentication Layer (SEAL)
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ahearn-seal-00
+- content: https://datatracker.ietf.org/doc/html/draft-ahearn-seal-01
   type: src
 type: standard
 docid:
-- id: draft-ahearn-seal-00
+- id: draft-ahearn-seal-01
   type: Internet-Draft
   primary: true
 - id: I-D.ahearn-seal
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.ahearn-seal
 date:
 - type: published
-  value: '2026-04-01'
+  value: '2026-04-16'
 contributor:
 - person:
     name:
@@ -53,8 +53,8 @@ contributor:
   role:
   - type: author
 version:
-- draft: '00'
-revdate: '2026-04-01'
+- draft: '01'
+revdate: '2026-04-16'
 language:
 - en
 script:
@@ -63,25 +63,30 @@ abstract:
 - content: "<p>This document defines the Signed Email Authentication Layer (SEAL),
     a cryptographically signed identity envelope carried within a new message header
     field, SEAL-Envelope. SEAL provides a stable, forwarding-resilient identity assertion
-    that is independent of the mutable RFC 5322 header block and message body. SEAL
-    is designed to complement or replace DKIM and ARC by eliminating their dependency
-    on mutable message components and by providing a canonical, tamper- evident identity
-    layer that survives transit through intermediaries.</p>"
+    that binds the origin domain to a specific message instance using the SEAL-MSGID
+    header, which contains a SEAL-protected copy of the [RFC5322] Message-ID present
+    at message creation time. After SEAL-MSGID is set, intermediaries may modify or
+    discard the visible [RFC5322] Message-ID header without affecting SEAL validity.
+    SEAL also records the canonical [RFC5322] From header value in the envelope, enabling
+    detection of From rewriting without affecting SEAL validity. SEAL is designed
+    to complement current approaches such as DKIM, DMARC, and ARC by reducing their
+    dependency on mutable message components and by providing a canonical, tamper-evident
+    identity layer that can remain valid across many common transformations.</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-ahearn-seal-01
+    id: draft-ahearn-seal-00
     docid:
-    - id: draft-ahearn-seal-01
+    - id: draft-ahearn-seal-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ahearn-seal-01
+      content: draft-ahearn-seal-00
       format: text/plain
 series:
 - type: main
@@ -92,7 +97,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ahearn-seal-00
+  number: draft-ahearn-seal-01
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

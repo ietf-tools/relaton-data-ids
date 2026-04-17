@@ -16,10 +16,15 @@ abstract:
 - content: "<p>This document defines the Signed Email Authentication Layer (SEAL),
     a cryptographically signed identity envelope carried within a new message header
     field, SEAL-Envelope. SEAL provides a stable, forwarding-resilient identity assertion
-    that is independent of the mutable RFC 5322 header block and message body. SEAL
-    is designed to complement or replace DKIM and ARC by eliminating their dependency
-    on mutable message components and by providing a canonical, tamper- evident identity
-    layer that survives transit through intermediaries.</p>"
+    that binds the origin domain to a specific message instance using the SEAL-MSGID
+    header, which contains a SEAL-protected copy of the [RFC5322] Message-ID present
+    at message creation time. After SEAL-MSGID is set, intermediaries may modify or
+    discard the visible [RFC5322] Message-ID header without affecting SEAL validity.
+    SEAL also records the canonical [RFC5322] From header value in the envelope, enabling
+    detection of From rewriting without affecting SEAL validity. SEAL is designed
+    to complement current approaches such as DKIM, DMARC, and ARC by reducing their
+    dependency on mutable message components and by providing a canonical, tamper-evident
+    identity layer that can remain valid across many common transformations.</p>"
   language:
   - en
   script:
@@ -35,6 +40,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ahearn-seal-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ahearn-seal-01
+    docid:
+    - id: draft-ahearn-seal-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ahearn-seal-01
       format: text/plain
 ext:
   schema-version: v1.0.1

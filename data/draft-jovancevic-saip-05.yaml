@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-jovancevic-saip-01
+id: draft-jovancevic-saip-05
 title:
 - content: 'SAIP: Signed Agent Identity Protocol'
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-jovancevic-saip-01
+- content: https://datatracker.ietf.org/doc/html/draft-jovancevic-saip-05
   type: src
 type: standard
 docid:
-- id: draft-jovancevic-saip-01
+- id: draft-jovancevic-saip-05
   type: Internet-Draft
   primary: true
 - id: I-D.jovancevic-saip
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.jovancevic-saip
 date:
 - type: published
-  value: '2026-04-09'
+  value: '2026-04-17'
 contributor:
 - person:
     name:
@@ -49,8 +49,8 @@ contributor:
   role:
   - type: author
 version:
-- draft: '01'
-revdate: '2026-04-09'
+- draft: '05'
+revdate: '2026-04-17'
 language:
 - en
 script:
@@ -62,11 +62,13 @@ abstract:
     and the rapid growth of automated agents including AI crawlers, IoT devices, and
     enterprise automation systems. This document specifies SAIP (Signed Agent Identity
     Protocol), a lightweight, opt-in mechanism for verifiable client identity at the
-    application layer. SAIP enables servers to distinguish legitimate automated traffic
-    from malicious actors through cryptographic identity at three levels of granularity:
-    vendor, agent type, and individual instance. SAIP is protocol-agnostic and applicable
-    to HTTP, SMTP, and other header-based protocols. The design rationale, extended
-    use cases, and implementation guidance are documented in [GENESIS].</p>"
+    application layer. SAIP implements the principles defined in the Verifiable Identity
+    Claims and Delegation Model [VICDM] and enables servers to distinguish legitimate
+    automated traffic from malicious actors through cryptographic identity at three
+    levels of granularity: vendor, agent type, and individual instance. SAIP is protocol-agnostic
+    and applicable to HTTP, SMTP, and other header-based protocols. It introduces
+    DNS-based Attestation Discovery as a lightweight alternative to registry-based
+    key lookup, making deployment accessible to organizations of any size.</p>"
   language:
   - en
   script:
@@ -75,23 +77,23 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-jovancevic-saip-00
+    id: draft-jovancevic-saip-02
     docid:
-    - id: draft-jovancevic-saip-00
+    - id: draft-jovancevic-saip-02
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-jovancevic-saip-00
+      content: draft-jovancevic-saip-02
       format: text/plain
 - type: updatedBy
   bibitem:
-    id: draft-jovancevic-saip-04
+    id: draft-jovancevic-saip-06
     docid:
-    - id: draft-jovancevic-saip-04
+    - id: draft-jovancevic-saip-06
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-jovancevic-saip-04
+      content: draft-jovancevic-saip-06
       format: text/plain
 series:
 - type: main
@@ -102,7 +104,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-jovancevic-saip-01
+  number: draft-jovancevic-saip-05
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
