@@ -1,62 +1,34 @@
 ---
 schema-version: v1.2.3
-id: draft-uttaro-idr-bgp-oad-07
+id: draft-ietf-bess-evpn-first-hop-security-00
 title:
-- content: One Administrative Domain using BGP
+- content: EVPN First Hop Security
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-uttaro-idr-bgp-oad-07
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-bess-evpn-first-hop-security-00
   type: src
 type: standard
 docid:
-- id: draft-uttaro-idr-bgp-oad-07
+- id: draft-ietf-bess-evpn-first-hop-security-00
   type: Internet-Draft
   primary: true
-- id: I-D.uttaro-idr-bgp-oad
+- id: I-D.ietf-bess-evpn-first-hop-security
   type: IETF
   scope: anchor
-docnumber: I-D.uttaro-idr-bgp-oad
+docnumber: I-D.ietf-bess-evpn-first-hop-security
 date:
 - type: published
-  value: '2025-10-14'
+  value: '2026-04-17'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Jim
-          language:
-          - en
-        - language:
-          - en
-          initial: J
-        formatted_initials:
-          content: J.
-          language:
-          - en
-      surname:
-        content: Uttaro
-        language:
-        - en
-      completename:
-        content: Jim Uttaro
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Individual Contributor
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Alvaro
+        - content: Ali
           language:
           - en
         - language:
@@ -67,52 +39,52 @@ contributor:
           language:
           - en
       surname:
-        content: Retana
+        content: Sajassi
         language:
         - en
       completename:
-        content: Alvaro Retana
+        content: Ali Sajassi
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Futurewei Technologies, Inc.
+        - content: Cisco
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Pradosh
+        - content: Lukas
           language:
           - en
         - language:
           - en
-          initial: P
+          initial: L
         formatted_initials:
-          content: P.
+          content: L.
           language:
           - en
       surname:
-        content: Mohapatra
+        content: Krattiger
         language:
         - en
       completename:
-        content: Pradosh Mohapatra
+        content: Lukas Krattiger
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Google
+        - content: Cisco
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Keyur
+        - content: Krishnaswamy
           language:
           - en
         - language:
@@ -123,84 +95,97 @@ contributor:
           language:
           - en
       surname:
-        content: Patel
+        content: Ananthamurthy
         language:
         - en
       completename:
-        content: Keyur Patel
+        content: Krishnaswamy Ananthamurthy
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Arrcus, Inc.
+        - content: Cisco
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Bin
+        - content: Jorge
           language:
           - en
         - language:
           - en
-          initial: B
+          initial: J
         formatted_initials:
-          content: B.
+          content: J.
           language:
           - en
       surname:
-        content: Wen
+        content: Rabadan
         language:
         - en
       completename:
-        content: Bin Wen
+        content: Jorge Rabadan
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Comcast
+        - content: Nokia
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Wen
+          language:
+          - en
+        - language:
+          - en
+          initial: W
+        formatted_initials:
+          content: W.
+          language:
+          - en
+      surname:
+        content: Lin
+        language:
+        - en
+      completename:
+        content: Wen Lin
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Juniper Networks, Inc.
   role:
   - type: author
 version:
-- draft: '07'
-revdate: '2025-10-14'
+- draft: '00'
+revdate: '2026-04-17'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document defines a new External BGP (EBGP) peering type known
-    as EBGP-OAD, which is used between two EBGP peers that belong to One Administrative
-    Domain (OAD).</p>"
+- content: "<p>The Dynamic Host Configuration Protocol (DHCP) snoop database stores
+    valid IPv4-to-MAC and IPv6-to-MAC bindings by snooping on DHCP messages. These
+    bindings are used by security functions like Dynamic Address Resolution Protocol
+    Inspection (DAI), Neighbor Discovery Inspection (NDI), IPv4 Source Guard, and
+    IPv6 Source Guard to safeguard against traffic received with a spoofed address.
+    These functions are collectively referred to as First Hop Security (FHS). This
+    document proposes BGP extensions and new procedures for Ethernet VPN (EVPN) will
+    distribute and synchronize the DHCP snoop database to support FHS. Such synchronization
+    is needed to support EVPN host mobility and multi-homing.</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
-relation:
-- type: updates
-  bibitem:
-    id: draft-uttaro-idr-bgp-oad-01
-    docid:
-    - id: draft-uttaro-idr-bgp-oad-01
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-uttaro-idr-bgp-oad-01
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-uttaro-idr-bgp-oad-08
-    docid:
-    - id: draft-uttaro-idr-bgp-oad-08
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-uttaro-idr-bgp-oad-08
-      format: text/plain
 series:
 - type: main
   title:
@@ -210,7 +195,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-uttaro-idr-bgp-oad-07
+  number: draft-ietf-bess-evpn-first-hop-security-00
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

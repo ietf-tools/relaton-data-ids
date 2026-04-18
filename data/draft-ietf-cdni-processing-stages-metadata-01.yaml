@@ -1,57 +1,29 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-cdni-metadata-expression-language-00
+id: draft-ietf-cdni-processing-stages-metadata-01
 title:
-- content: CDNI Metadata Expression Language
+- content: CDNI Processing Stages Metadata
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-cdni-metadata-expression-language-00
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-cdni-processing-stages-metadata-01
   type: src
 type: standard
 docid:
-- id: draft-ietf-cdni-metadata-expression-language-00
+- id: draft-ietf-cdni-processing-stages-metadata-01
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-cdni-metadata-expression-language
+- id: I-D.ietf-cdni-processing-stages-metadata
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-cdni-metadata-expression-language
+docnumber: I-D.ietf-cdni-processing-stages-metadata
 date:
 - type: published
-  value: '2025-10-17'
+  value: '2026-04-17'
 contributor:
-- person:
-    name:
-      given:
-        forename:
-        - content: Will
-          language:
-          - en
-        - language:
-          - en
-          initial: W
-        formatted_initials:
-          content: W.
-          language:
-          - en
-      surname:
-        content: Power
-        language:
-        - en
-      completename:
-        content: Will Power
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Lumen Technologies
-  role:
-  - type: author
 - person:
     name:
       given:
@@ -72,6 +44,34 @@ contributor:
         - en
       completename:
         content: Glenn Goldstein
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Lumen Technologies
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Will
+          language:
+          - en
+        - language:
+          - en
+          initial: W
+        formatted_initials:
+          content: W.
+          language:
+          - en
+      surname:
+        content: Power
+        language:
+        - en
+      completename:
+        content: Will Power
         language:
         - en
     affiliation:
@@ -109,34 +109,38 @@ contributor:
   role:
   - type: author
 version:
-- draft: '00'
-revdate: '2025-10-17'
+- draft: '01'
+revdate: '2026-04-17'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document specifies the syntax and provides usage examples for
-    an expression language to be used within Content Delivery Network Interconnection
-    (CDNI) Metadata Interface (MI) objects. The purpose of this expression language
-    is to enable metadata to be applied conditionally (based on aspects of an HTTP
-    request), and to enable Hypertext Transfer Protocol (HTTP) responses to be generated
-    or altered dynamically.</p>"
+- content: "<p>This document specifies a set of objects extending the Content Delivery
+    Network Interconnection (CDNI) metadata model to allow for metadata to be applied
+    conditionally and at various points in a dCDNs processing of requests. The concept
+    of Processing Stages are introduced, where each stage in a CDN's processing pipeline
+    presents an opportunity to examine requests and responses and make alterations
+    as needed. Metadata, such as caching rules, can be applied conditionally (based
+    on aspects of an HTTP request header), and HTTP responses from a source can be
+    altered dynamically (such as adding or dropping an HTTP header). This standard
+    leverages the expression language documented in the Metadata Expression Language
+    (MEL) Specification.</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-ietf-cdni-metadata-expression-language-01
+    id: draft-ietf-cdni-processing-stages-metadata-00
     docid:
-    - id: draft-ietf-cdni-metadata-expression-language-01
+    - id: draft-ietf-cdni-processing-stages-metadata-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-cdni-metadata-expression-language-01
+      content: draft-ietf-cdni-processing-stages-metadata-00
       format: text/plain
 series:
 - type: main
@@ -147,7 +151,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-cdni-metadata-expression-language-00
+  number: draft-ietf-cdni-processing-stages-metadata-01
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
