@@ -1,30 +1,57 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-sidrops-aspa-verification-23
+id: draft-ietf-sidrops-aspa-profile-26
 title:
-- content: BGP AS_PATH Verification Based on Autonomous System Provider Authorization
-    (ASPA) Objects
+- content: A Profile for Autonomous System Provider Authorization
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-sidrops-aspa-verification-23
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-sidrops-aspa-profile-26
   type: src
 type: standard
 docid:
-- id: draft-ietf-sidrops-aspa-verification-23
+- id: draft-ietf-sidrops-aspa-profile-26
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-sidrops-aspa-verification
+- id: I-D.ietf-sidrops-aspa-profile
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-sidrops-aspa-verification
+docnumber: I-D.ietf-sidrops-aspa-profile
 date:
 - type: published
-  value: '2025-09-22'
+  value: '2026-04-19'
 contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Job
+          language:
+          - en
+        - language:
+          - en
+          initial: J
+        formatted_initials:
+          content: J.
+          language:
+          - en
+      surname:
+        content: Snijders
+        language:
+        - en
+      completename:
+        content: Job Snijders
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: BSD Software Development
+  role:
+  - type: author
 - person:
     name:
       given:
@@ -68,17 +95,17 @@ contributor:
           language:
           - en
       surname:
-        content: Bogomazov
+        content: Uskov
         language:
         - en
       completename:
-        content: Eugene Bogomazov
+        content: Eugene Uskov
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Qrator Labs
+        - content: JetLend
   role:
   - type: author
 - person:
@@ -106,102 +133,80 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Internet Initiative Japan & Arrcus, Inc.
+        - content: Internet Initiative Japan
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Keyur
+        - content: Russ
           language:
           - en
         - language:
           - en
-          initial: K
+          initial: R
         formatted_initials:
-          content: K.
+          content: R.
           language:
           - en
       surname:
-        content: Patel
+        content: Housley
         language:
         - en
       completename:
-        content: Keyur Patel
+        content: Russ Housley
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Arrcus
+        - content: Vigil Security, LLC
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Job
+        - content: Ben
           language:
           - en
         - language:
           - en
-          initial: J
+          initial: B
         formatted_initials:
-          content: J.
+          content: B.
           language:
           - en
       surname:
-        content: Snijders
+        content: Maddison
         language:
         - en
       completename:
-        content: Job Snijders
-        language:
-        - en
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Kotikalapudi
-          language:
-          - en
-        - language:
-          - en
-          initial: K
-        formatted_initials:
-          content: K.
-          language:
-          - en
-      surname:
-        content: Sriram
-        language:
-        - en
-      completename:
-        content: Kotikalapudi Sriram
+        content: Ben Maddison
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: USA National Institute of Standards and Technology
+        - content: Workonline
   role:
   - type: author
 version:
-- draft: '23'
-revdate: '2025-09-22'
+- draft: '26'
+revdate: '2026-04-19'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document describes procedures that make use of Autonomous System
-    Provider Authorization (ASPA) objects in the Resource Public Key Infrastructure
-    (RPKI) to verify the Border Gateway Protocol (BGP) AS_PATH attribute of advertised
-    routes. This AS_PATH verification enhances routing security by adding means to
-    detect and mitigate route leaks and AS_PATH manipulations.</p>"
+- content: "<p>This document defines a Cryptographic Message Syntax (CMS) protected
+    content type for Autonomous System Provider Authorization (ASPA) objects for use
+    with the Resource Public Key Infrastructure (RPKI). An ASPA is a digitally signed
+    object through which the issuer (the holder of an Autonomous System identifier),
+    can authorize one or more other Autonomous Systems (ASes) as its transit providers.
+    When validated, an ASPA's eContent can be used for detection and mitigation of
+    route leaks.</p>"
   language:
   - en
   script:
@@ -210,23 +215,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-sidrops-aspa-verification-03
+    id: draft-ietf-sidrops-aspa-profile-10
     docid:
-    - id: draft-ietf-sidrops-aspa-verification-03
+    - id: draft-ietf-sidrops-aspa-profile-10
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-sidrops-aspa-verification-03
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-sidrops-aspa-verification-25
-    docid:
-    - id: draft-ietf-sidrops-aspa-verification-25
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-sidrops-aspa-verification-25
+      content: draft-ietf-sidrops-aspa-profile-10
       format: text/plain
 series:
 - type: main
@@ -237,7 +232,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-sidrops-aspa-verification-23
+  number: draft-ietf-sidrops-aspa-profile-26
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
