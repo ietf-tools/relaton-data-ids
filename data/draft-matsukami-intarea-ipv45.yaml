@@ -1,0 +1,49 @@
+---
+schema-version: v1.2.3
+id: draft-matsukami-intarea-ipv45
+title:
+- content: 'IPv4.5: A Locator/Identifier-Separated Extension to IPv4 with Post-Quantum
+    Session Security'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-matsukami-intarea-ipv45
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>The global IPv4 address space was exhausted at the IANA level in 2011,
+    and Carrier-Grade NAT (CGN) has since served as the primary operational workaround.
+    CGN preserves connectivity but violates the end-to-end principle, complicates
+    application development, and introduces substantial operational overhead. This
+    document specifies IPv4.5, a pragmatic extension of IPv4 that introduces a 96-bit
+    address space organized as a Locator/Identifier separation: a 32-bit IPv4 Locator,
+    a 16-bit Site Identifier, and a 48-bit Endpoint Identifier. IPv4.5 packets are
+    encapsulated in UDP (port 4242) for transparent transit through existing IPv4
+    routers, NAT devices, and firewalls without requiring infrastructure changes.
+    Session security is established through a hybrid post-quantum key exchange combining
+    ML-KEM-768 [FIPS203] and X25519 [RFC7748], performed once per session. Subsequent
+    data protection uses symmetric AEAD ciphers (AES-256-GCM or ChaCha20-Poly1305).
+    The design enforces strict separation of concerns across four independent planes:
+    data, control, identity, and cryptographic. Higher-level functions such as semantic
+    routing and self-sovereign identity are explicitly out of scope for this specification.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-matsukami-intarea-ipv45-00
+    docid:
+    - id: draft-matsukami-intarea-ipv45-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-matsukami-intarea-ipv45-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
