@@ -16,17 +16,16 @@ abstract:
 - content: "<p>This document presents the trust concept and design of the SCION _Control
     Plane Public Key Infrastructure (CP-PKI)_. SCION (Scalability, Control, and Isolation
     On Next-generation networks) is a path-aware, inter-domain network architecture
-    where the Control Plane PKI handles cryptographic material and is the foundation
-    of the authentication procedures in SCION. It is used by SCION's Control Plane
-    ([I-D.dekater-scion-controlplane]) to authenticate and verify path information,
-    and provisions SCION's trust model based on Isolation Domains. This document describes
-    the trust model behind the SCION Control Plane PKI, including the specifications
-    of the different types of certificates and the Trust Root Configuration. It also
-    describes how to deploy the Control Plane PKI infrastructure. This document contains
-    new approaches to secure path aware networking. It is not an Internet Standard,
-    has not received any formal review of the IETF, nor was the work developed through
-    the rough consensus process. The approaches offered in this work are offered to
-    the community for its consideration in the further evolution of the Internet.</p>"
+    that relies on the CP-PKI to handle cryptographic material, authenticate control
+    plane messages used to securely disseminate path information. This specification
+    introduces its localized trust model, anchored in Isolation Domains (ISDs). It
+    defines the distinct certificate types, and specifies the structure, format and
+    lifecycle of the Trust Root Configuration (TRC). Furthermore, it provides practical
+    guidelines for deploying and maintaining the CP-PKI infrastructure. This document
+    contains new approaches to secure path aware networking. It is not an Internet
+    Standard, has not received any formal review of the IETF, nor was the work developed
+    through the rough consensus process. The approaches offered in this work are offered
+    to the community for its consideration in the further evolution of the Internet.</p>"
   language:
   - en
   script:
@@ -152,6 +151,16 @@ relation:
       primary: true
     formattedref:
       content: draft-dekater-scion-pki-11
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-dekater-scion-pki-12
+    docid:
+    - id: draft-dekater-scion-pki-12
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-dekater-scion-pki-12
       format: text/plain
 ext:
   schema-version: v1.0.1

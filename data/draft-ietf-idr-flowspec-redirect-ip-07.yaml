@@ -1,93 +1,34 @@
 ---
 schema-version: v1.2.3
-id: draft-zzhang-bess-mcast-in-evpn-signaled-l3vpn-01
+id: draft-ietf-idr-flowspec-redirect-ip-07
 title:
-- content: Multicast in L3VPNs Signaled by EVPN SAFI
+- content: BGP Flow-Spec Redirect-to-IP Action
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-zzhang-bess-mcast-in-evpn-signaled-l3vpn-01
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-flowspec-redirect-ip-07
   type: src
 type: standard
 docid:
-- id: draft-zzhang-bess-mcast-in-evpn-signaled-l3vpn-01
+- id: draft-ietf-idr-flowspec-redirect-ip-07
   type: Internet-Draft
   primary: true
-- id: I-D.zzhang-bess-mcast-in-evpn-signaled-l3vpn
+- id: I-D.ietf-idr-flowspec-redirect-ip
   type: IETF
   scope: anchor
-docnumber: I-D.zzhang-bess-mcast-in-evpn-signaled-l3vpn
+docnumber: I-D.ietf-idr-flowspec-redirect-ip
 date:
 - type: published
-  value: '2020-10-13'
+  value: '2026-04-20'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Zhaohui
-          language:
-          - en
-        - language:
-          - en
-          initial: Z
-        - language:
-          - en
-          initial: J
-        formatted_initials:
-          content: Z. J.
-          language:
-          - en
-      surname:
-        content: Zhang
-        language:
-        - en
-      completename:
-        content: Zhaohui (Jeffrey) Zhang
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Juniper Networks
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Wen
-          language:
-          - en
-        - language:
-          - en
-          initial: W
-        formatted_initials:
-          content: W.
-          language:
-          - en
-      surname:
-        content: Lin
-        language:
-        - en
-      completename:
-        content: Wen Lin
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Juniper Networks
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Jorge
+        - content: Jeff
           language:
           - en
         - language:
@@ -98,11 +39,67 @@ contributor:
           language:
           - en
       surname:
-        content: Rabadan
+        content: Haas
         language:
         - en
       completename:
-        content: Jorge Rabadan
+        content: Jeff Haas
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: HPE
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Wim
+          language:
+          - en
+        - language:
+          - en
+          initial: W
+        formatted_initials:
+          content: W.
+          language:
+          - en
+      surname:
+        content: Henderickx
+        language:
+        - en
+      completename:
+        content: Wim Henderickx
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Nokia
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Adam
+          language:
+          - en
+        - language:
+          - en
+          initial: A
+        formatted_initials:
+          content: A.
+          language:
+          - en
+      surname:
+        content: Simpson
+        language:
+        - en
+      completename:
+        content: Adam Simpson
         language:
         - en
     affiliation:
@@ -112,16 +109,22 @@ contributor:
   role:
   - type: author
 version:
-- draft: '01'
-revdate: '2020-10-13'
+- draft: '07'
+revdate: '2026-04-20'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>[ietf-bess-evpn-prefix-advertisement] specifies an EVPN SAFI Type-5
-    route that can be used to signal L3VPNs. This document specifies procedures for
-    multicast in such an L3VPN.</p>"
+- content: "<p>Flow-spec is an extension to BGP that allows for the dissemination
+    of traffic flow specification rules. This has many possible applications, but
+    the primary one for many network operators is the distribution of traffic filtering
+    actions for distributed denial of service (DDoS) mitigation. The flow-spec standard
+    [RFC8955] defines a redirect-to-VRF action for policy-based forwarding. This mechanism
+    can be difficult to use, particularly in networks without L3 VPN infrastructure.
+    This draft defines a new redirect-to-IP flow-spec action that provides a simpler
+    method of policy-based forwarding. The details of the action, including the IPv4
+    or IPv6 target address, are encoded in newly defined BGP extended communities.</p>"
   language:
   - en
   script:
@@ -130,23 +133,23 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-zzhang-bess-mcast-in-evpn-signaled-l3vpn-00
+    id: draft-ietf-idr-flowspec-redirect-ip-05
     docid:
-    - id: draft-zzhang-bess-mcast-in-evpn-signaled-l3vpn-00
+    - id: draft-ietf-idr-flowspec-redirect-ip-05
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-zzhang-bess-mcast-in-evpn-signaled-l3vpn-00
+      content: draft-ietf-idr-flowspec-redirect-ip-05
       format: text/plain
 - type: updatedBy
   bibitem:
-    id: draft-zzhang-bess-mcast-in-evpn-signaled-l3vpn-02
+    id: draft-ietf-idr-flowspec-redirect-ip-08
     docid:
-    - id: draft-zzhang-bess-mcast-in-evpn-signaled-l3vpn-02
+    - id: draft-ietf-idr-flowspec-redirect-ip-08
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-zzhang-bess-mcast-in-evpn-signaled-l3vpn-02
+      content: draft-ietf-idr-flowspec-redirect-ip-08
       format: text/plain
 series:
 - type: main
@@ -157,7 +160,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-zzhang-bess-mcast-in-evpn-signaled-l3vpn-01
+  number: draft-ietf-idr-flowspec-redirect-ip-07
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

@@ -1,182 +1,185 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-plants-merkle-tree-certs-01
+id: draft-zhang-sidrops-prioritized-route-validation-01
 title:
-- content: Merkle Tree Certificates
+- content: RPKI-based Validation with Prioritized Resource Data
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-plants-merkle-tree-certs-01
+- content: https://datatracker.ietf.org/doc/html/draft-zhang-sidrops-prioritized-route-validation-01
   type: src
 type: standard
 docid:
-- id: draft-ietf-plants-merkle-tree-certs-01
+- id: draft-zhang-sidrops-prioritized-route-validation-01
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-plants-merkle-tree-certs
+- id: I-D.zhang-sidrops-prioritized-route-validation
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-plants-merkle-tree-certs
+docnumber: I-D.zhang-sidrops-prioritized-route-validation
 date:
 - type: published
-  value: '2026-02-18'
+  value: '2026-04-20'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: David
+        - content: Jia
           language:
           - en
         - language:
           - en
-          initial: D
+          initial: J
         formatted_initials:
-          content: D.
+          content: J.
           language:
           - en
       surname:
-        content: Benjamin
+        content: Zhang
         language:
         - en
       completename:
-        content: David Benjamin
+        content: Jia Zhang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Google LLC
+        - content: Zhongguancun Laboratory
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Devon
+        - content: Mingwei
           language:
           - en
         - language:
           - en
-          initial: D
+          initial: M
         formatted_initials:
-          content: D.
+          content: M.
           language:
           - en
       surname:
-        content: O'Brien
+        content: Xu
         language:
         - en
       completename:
-        content: Devon O'Brien
+        content: Mingwei Xu
         language:
         - en
+    affiliation:
+    - organization:
+        name:
+        - content: CERNET
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Bas
+        - content: Nan
           language:
           - en
         - language:
           - en
-          initial: B
+          initial: "N"
         formatted_initials:
-          content: B.
+          content: N.
           language:
           - en
       surname:
-        content: Westerbaan
+        content: Geng
         language:
         - en
       completename:
-        content: Bas Westerbaan
+        content: Nan Geng
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cloudflare
+        - content: Huawei
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Luke
+        - content: Chongfeng
           language:
           - en
         - language:
           - en
-          initial: L
+          initial: C
         formatted_initials:
-          content: L.
+          content: C.
           language:
           - en
       surname:
-        content: Valenta
+        content: Xie
         language:
         - en
       completename:
-        content: Luke Valenta
+        content: Chongfeng Xie
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cloudflare
+        - content: China Telecom
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Filippo
+        - content: Yangyang
           language:
           - en
         - language:
           - en
-          initial: F
+          initial: "Y"
         formatted_initials:
-          content: F.
+          content: Y.
           language:
           - en
       surname:
-        content: Valsorda
+        content: Wang
         language:
         - en
       completename:
-        content: Filippo Valsorda
+        content: Yangyang Wang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Geomys
+        - content: Tsinghua University
   role:
   - type: author
 version:
 - draft: '01'
-revdate: '2026-02-18'
+revdate: '2026-04-20'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document describes Merkle Tree certificates, a new form of X.509
-    certificates which integrate public logging of the certificate, in the style of
-    Certificate Transparency. The integrated design reduces logging overhead in the
-    face of both shorter-lived certificates and large post-quantum signature algorithms,
-    while still achieving comparable security properties to traditional X.509 and
-    Certificate Transparency. Merkle Tree certificates additionally admit an optional
-    signatureless optimization, which decreases the message size by avoiding signatures
-    altogether, at the cost of only applying to up-to-date relying parties and older
-    certificates.</p>"
+- content: "<p>RPKI ROAs and other digitally signed objects provide a practical solution
+    to validate BGP routes for preventing route hijacks and leaks. During ROV operations,
+    validation data may be sourced not only from issued ROAs but also from other local
+    sources. As these data sources vary in credibility, ROV operations may therefore
+    require different response actions for invalid or unknown routes. This document
+    takes ROV as an example to describe a flexible RPKI- based route validation mechanism
+    with multi-priority data, and outlines relevant use cases, framework, and requirements
+    for ROV operations that involve multi-priority data.</p>"
   language:
   - en
   script:
@@ -185,23 +188,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-plants-merkle-tree-certs-00
+    id: draft-zhang-sidrops-prioritized-route-validation-00
     docid:
-    - id: draft-ietf-plants-merkle-tree-certs-00
+    - id: draft-zhang-sidrops-prioritized-route-validation-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-plants-merkle-tree-certs-00
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-plants-merkle-tree-certs-03
-    docid:
-    - id: draft-ietf-plants-merkle-tree-certs-03
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-plants-merkle-tree-certs-03
+      content: draft-zhang-sidrops-prioritized-route-validation-00
       format: text/plain
 series:
 - type: main
@@ -212,7 +205,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-plants-merkle-tree-certs-01
+  number: draft-zhang-sidrops-prioritized-route-validation-01
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

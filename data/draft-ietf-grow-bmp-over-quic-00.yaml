@@ -1,198 +1,193 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-plants-merkle-tree-certs-00
+id: draft-ietf-grow-bmp-over-quic-00
 title:
-- content: Merkle Tree Certificates
+- content: Using BMP over QUIC connection
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-plants-merkle-tree-certs-00
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-grow-bmp-over-quic-00
   type: src
 type: standard
 docid:
-- id: draft-ietf-plants-merkle-tree-certs-00
+- id: draft-ietf-grow-bmp-over-quic-00
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-plants-merkle-tree-certs
+- id: I-D.ietf-grow-bmp-over-quic
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-plants-merkle-tree-certs
+docnumber: I-D.ietf-grow-bmp-over-quic
 date:
 - type: published
-  value: '2026-02-18'
+  value: '2026-04-20'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: David
+        - content: Yisong
           language:
           - en
         - language:
           - en
-          initial: D
+          initial: "Y"
         formatted_initials:
-          content: D.
+          content: Y.
           language:
           - en
       surname:
-        content: Benjamin
+        content: Liu
         language:
         - en
       completename:
-        content: David Benjamin
+        content: Yisong Liu
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Google LLC
+        - content: China Mobile
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Devon
+        - content: Changwang
           language:
           - en
         - language:
           - en
-          initial: D
+          initial: C
         formatted_initials:
-          content: D.
+          content: C.
           language:
           - en
       surname:
-        content: O'Brien
+        content: Lin
         language:
         - en
       completename:
-        content: Devon O'Brien
+        content: Changwang Lin
         language:
         - en
+    affiliation:
+    - organization:
+        name:
+        - content: New H3C Technologies
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Bas
+        - content: Thomas
           language:
           - en
         - language:
           - en
-          initial: B
+          initial: T
         formatted_initials:
-          content: B.
+          content: T.
           language:
           - en
       surname:
-        content: Westerbaan
+        content: Graf
         language:
         - en
       completename:
-        content: Bas Westerbaan
+        content: Thomas Graf
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cloudflare
+        - content: Swisscom
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Luke
+        - content: Paolo
           language:
           - en
         - language:
           - en
-          initial: L
+          initial: P
         formatted_initials:
-          content: L.
+          content: P.
           language:
           - en
       surname:
-        content: Valenta
+        content: Lucente
         language:
         - en
       completename:
-        content: Luke Valenta
+        content: Paolo Lucente
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cloudflare
+        - content: NTT
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Filippo
+        - content: Mukul
           language:
           - en
         - language:
           - en
-          initial: F
+          initial: M
+        - language:
+          - en
+          initial: K
         formatted_initials:
-          content: F.
+          content: M. K.
           language:
           - en
       surname:
-        content: Valsorda
+        content: Srivastava
         language:
         - en
       completename:
-        content: Filippo Valsorda
+        content: Mukul Kumar Srivastava
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Geomys
+        - content: Hewlett Packard Enterprise
   role:
   - type: author
 version:
 - draft: '00'
-revdate: '2026-02-18'
+revdate: '2026-04-20'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document describes Merkle Tree certificates, a new form of X.509
-    certificates which integrate public logging of the certificate, in the style of
-    Certificate Transparency. The integrated design reduces logging overhead in the
-    face of both shorter-lived certificates and large post-quantum signature algorithms,
-    while still achieving comparable security properties to traditional X.509 and
-    Certificate Transparency. Merkle Tree certificates additionally admit an optional
-    signatureless optimization, which decreases the message size by avoiding signatures
-    altogether, at the cost of only applying to up-to-date relying parties and older
-    certificates.</p>"
+- content: "<p>The BGP Monitoring Protocol (BMP) provides a convenient interface for
+    obtaining route views by monitoring BGP sessions. BMP operates over TCP and is
+    unidirectional (from client to server). QUIC provides multiple simultaneous streams
+    to carry data in one direction, enabling much better efficiency and performance
+    for both peers, in particular unidirectional streams can provide reverse data
+    protection for the sender. QUIC also provides shorter handshake and includes TLS.
+    This document describes how to use BMP over the QUIC transport protocol, named
+    BMPoQUIC.</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
-relation:
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-plants-merkle-tree-certs-03
-    docid:
-    - id: draft-ietf-plants-merkle-tree-certs-03
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-plants-merkle-tree-certs-03
-      format: text/plain
 series:
 - type: main
   title:
@@ -202,7 +197,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-plants-merkle-tree-certs-00
+  number: draft-ietf-grow-bmp-over-quic-00
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
