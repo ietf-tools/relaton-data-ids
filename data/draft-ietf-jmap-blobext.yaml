@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-ietf-jmap-blobext
 title:
-- content: JMAP Blob Extensions
+- content: JMAP Blob Management
   language:
   - en
   script:
@@ -13,15 +13,15 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: '<p>The JMAP base protocol (RFC8620) provides the ability to upload and
-    download arbitrary binary data. This binary data is called a "blob", and can be
-    used in all other JMAP extensions. The JMAP blob extension (RFC9404) added additional
-    ways to create and access blobs by making inline method calls within a standard
-    JMAP request. This extension adds more methods to work with blobs, including handling
-    large blobs by processing them in chunks (building on RFC9404''s blob construction
-    support), and providing server-side blob conversion operations: image format conversion,
-    archive creation and extraction (zip, tar, cpio), compression and decompression,
-    and delta/patch operations.</p>'
+- content: <p>The JSON Meta Application Protocol (JMAP) base protocol ([JMAP-CORE])
+    provides the ability to upload and download arbitrary binary data via HTTP POST
+    and GET on a defined endpoint. This binary data is called a "blob". This extension
+    adds additional ways to create and access blobs by making inline method calls
+    within a standard JMAP request. It also adds a reverse lookup mechanism to discover
+    where blobs are referenced within other data types, support for large blobs via
+    chunked construction with server-side optimisation, and server-side blob conversion
+    operations including image format conversion, archive creation and extraction,
+    compression and decompression, and delta/ patch operations.</p>
   language:
   - en
   script:
@@ -37,6 +37,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-jmap-blobext-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-jmap-blobext-01
+    docid:
+    - id: draft-ietf-jmap-blobext-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-jmap-blobext-01
       format: text/plain
 ext:
   schema-version: v1.0.1
