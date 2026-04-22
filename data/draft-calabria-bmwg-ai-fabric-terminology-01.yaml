@@ -1,28 +1,28 @@
 ---
 schema-version: v1.2.3
-id: draft-calabria-bmwg-ai-fabric-inference-bench-00
+id: draft-calabria-bmwg-ai-fabric-terminology-01
 title:
-- content: Benchmarking Methodology for AI Inference Serving Network Fabrics
+- content: Benchmarking Terminology for AI Network Fabrics
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-calabria-bmwg-ai-fabric-inference-bench-00
+- content: https://datatracker.ietf.org/doc/html/draft-calabria-bmwg-ai-fabric-terminology-01
   type: src
 type: standard
 docid:
-- id: draft-calabria-bmwg-ai-fabric-inference-bench-00
+- id: draft-calabria-bmwg-ai-fabric-terminology-01
   type: Internet-Draft
   primary: true
-- id: I-D.calabria-bmwg-ai-fabric-inference-bench
+- id: I-D.calabria-bmwg-ai-fabric-terminology
   type: IETF
   scope: anchor
-docnumber: I-D.calabria-bmwg-ai-fabric-inference-bench
+docnumber: I-D.calabria-bmwg-ai-fabric-terminology
 date:
 - type: published
-  value: '2026-02-26'
+  value: '2026-04-21'
 contributor:
 - person:
     name:
@@ -137,43 +137,40 @@ contributor:
   role:
   - type: author
 version:
-- draft: '00'
-revdate: '2026-02-26'
+- draft: '01'
+revdate: '2026-04-21'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document defines benchmarking terminology, methodologies, and
-    Key Performance Indicators (KPIs) for evaluating Ethernet-based AI inference serving
-    network fabrics. As Large Language Model (LLM) inference deployments scale to
-    disaggregated prefill/decode architectures spanning hundreds or thousands of accelerators
-    (GPUs/ XPUs), the interconnect fabric becomes the critical bottleneck determining
-    Time to First Token (TTFT), Inter-Token Latency (ITL), and aggregate throughput
-    in tokens per second (TPS). This document establishes vendor-independent, reproducible
-    test procedures for benchmarking fabric-level performance under realistic AI inference
-    workloads. Coverage includes RDMA-based KV cache transfer between disaggregated
-    prefill and decode workers, Mixture-of-Experts (MoE) expert parallelism AllToAll
-    communication, request routing and load balancing for inference serving, congestion
-    management under bursty inference traffic patterns, and scale/soak testing. The
-    methodology enables apples-to-apples comparison across implementations, NIC transport
-    stacks (RoCEv2, UET), and fabric architectures. This document is a companion to
-    [TRAINING-BENCH], which addresses training workloads.</p>"
+- content: "<p>This document defines benchmarking terminology for evaluating Ethernet-based
+    network fabrics used in distributed Artificial Intelligence (AI) training and
+    inference workloads. It provides a unified vocabulary consolidating and extending
+    terms from RFC 1242, RFC 8238, and the companion AI fabric methodology documents,
+    establishing precise, vendor-neutral definitions for collective communication
+    primitives, RDMA transport mechanisms (RoCEv2 and Ultra Ethernet Transport), congestion
+    control behaviors, AI-specific Key Performance Indicators (KPIs), and fabric topology
+    concepts. This document is a companion to [I-D.calabria-bmwg-ai-fabric-training-bench]
+    and [I-D.calabria-bmwg-ai-fabric-inference-bench]. Those documents SHOULD NOT
+    be applied without first consulting the terminology defined herein. Where definitions
+    herein overlap with RFC 1242 or RFC 8238, the AI fabric context definition in
+    this document takes precedence.</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-calabria-bmwg-ai-fabric-inference-bench-01
+    id: draft-calabria-bmwg-ai-fabric-terminology-00
     docid:
-    - id: draft-calabria-bmwg-ai-fabric-inference-bench-01
+    - id: draft-calabria-bmwg-ai-fabric-terminology-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-calabria-bmwg-ai-fabric-inference-bench-01
+      content: draft-calabria-bmwg-ai-fabric-terminology-00
       format: text/plain
 series:
 - type: main
@@ -184,7 +181,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-calabria-bmwg-ai-fabric-inference-bench-00
+  number: draft-calabria-bmwg-ai-fabric-terminology-01
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
