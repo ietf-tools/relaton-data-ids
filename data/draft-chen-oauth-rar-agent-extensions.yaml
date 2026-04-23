@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-chen-oauth-rar-agent-extensions
 title:
-- content: Policy and Lifecycle Extensions for OAuth Rich Authorization Requests
+- content: Policy, Lifecycle, and Intent Extensions for OAuth Rich Authorization Requests
   language:
   - en
   script:
@@ -13,21 +13,20 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: '<p>OAuth 2.0 Rich Authorization Requests (RAR), as defined in RFC 9396,
-    provides a mechanism for clients to request fine-grained, structured authorization
-    details. However, in emerging ecosystems of collaborating AI agents and long-running
-    automated tasks, two critical authorization dimensions remain implicit: the required
-    security assurance level of the authorization policy and the strict binding of
-    authorization lifetime to a task''s lifecycle. This document extends the "authorization_details"
-    object of RAR by introducing two new members: "policy_context" and "lifecycle_binding".
-    The "policy_context" member allows a client to explicitly request that the authorization
-    be evaluated and granted under a specific policy assurance level, mitigating policy
-    downgrade attacks and enhancing user consent. The "lifecycle_binding" member enables
-    the validity of an authorization grant to be tied directly to the state of an
-    external entity, such as an automated task, ensuring permissions are automatically
-    and immediately revoked upon task completion. These extensions provide a standardized
-    way to achieve more secure, transparent, and context-aware authorization in complex,
-    automated environments.</p>'
+- content: "<p>OAuth 2.0 Rich Authorization Requests (RAR) [RFC9396] defines a syntax
+    for clients to request fine-grained permissions. While powerful, this mechanism
+    lacks standardized methods for clients to express three critical contextual dimensions
+    prevalent in modern automated systems: the high-level user intent driving the
+    request, the required security policy under which the request should be evaluated,
+    and the binding of the authorization's lifecycle to an external process. This
+    document extends the RAR framework to address these gaps. It first defines a new
+    authorization_details type, *intent_request*, to facilitate goal-oriented authorization.
+    Second, it introduces two new parameters for the authorization_details object:
+    *policy_context*, to request authorization under a specific assurance level, and
+    *lifecycle_binding*, to tie the validity of the authorization grant to the state
+    of an external entity. These extensions enable authorization servers to make more
+    intelligent, secure, and context-aware decisions, particularly in ecosystems involving
+    autonomous agents and complex, long-running tasks.</p>"
   language:
   - en
   script:
@@ -43,6 +42,16 @@ relation:
       primary: true
     formattedref:
       content: draft-chen-oauth-rar-agent-extensions-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-chen-oauth-rar-agent-extensions-01
+    docid:
+    - id: draft-chen-oauth-rar-agent-extensions-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-chen-oauth-rar-agent-extensions-01
       format: text/plain
 ext:
   schema-version: v1.0.1

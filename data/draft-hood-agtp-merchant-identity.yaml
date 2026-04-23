@@ -13,22 +13,28 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>The Agent Transfer Protocol (AGTP) specifies the sending side of an
+- content: '<p>The Agent Transfer Protocol (AGTP) specifies the sending side of an
     agentic transaction: agent identity, Authority-Scope enforcement, Budget- Limit
     declaration, and a signed Attribution-Record on every method invocation. The receiving
     side of a PURCHASE transaction -- the merchant or service provider -- has no equivalent
     protocol-level identity or verification mechanism. This is the merchant identity
     gap. This document specifies the AGTP Merchant Identity and Agentic Commerce Binding.
     It defines the Merchant Manifest Document, a signed identity record structurally
-    parallel to the Agent Manifest Document; the Merchant Birth Certificate, the genesis
-    record from which a merchant's canonical identifier is derived; Merchant Trust
-    Tiers aligned with AGTP Trust Tier semantics; and the protocol integration points
-    at which merchant identity is verified. These include the PURCHASE method handshake,
+    parallel to the Agent Manifest Document; the Merchant Genesis, the origin document
+    from which a merchant''s canonical identifier is derived; Merchant Trust Tiers
+    aligned with AGTP Trust Tier semantics; and the protocol integration points at
+    which merchant identity is verified. These include the PURCHASE method handshake,
     the DISCOVER method result surface, and the Attribution-Record. This document
-    also defines the Intent-Assertion header for portable, detached principal- authorized
+    also defines the Intent- Assertion header for portable, detached principal- authorized
     intent, the Cart-Digest mechanism for multi-line-item transactions, and the 455
     Counterparty Unverified status code. Together these mechanisms close the verification
-    loop between agent and merchant within AGTP's governance model.</p>"
+    loop between agent and merchant within AGTP''s governance model. Version 01 aligns
+    the merchant identity model with AGTP v05. Merchant Trust Tier 1 now supports
+    three equivalent verification paths (dns- anchored, log-anchored, hybrid) matching
+    the base AGTP verification paths, replacing v00''s DNS-only Tier 1 requirement.
+    Version 01 also adopts the Agent Genesis taxonomy introduced in [AGTP-LOG]: the
+    merchant origin document is the Merchant Genesis, superseding the "Merchant Birth
+    Certificate" terminology in v00.</p>'
   language:
   - en
   script:
@@ -44,6 +50,16 @@ relation:
       primary: true
     formattedref:
       content: draft-hood-agtp-merchant-identity-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-hood-agtp-merchant-identity-01
+    docid:
+    - id: draft-hood-agtp-merchant-identity-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-hood-agtp-merchant-identity-01
       format: text/plain
 ext:
   schema-version: v1.0.1

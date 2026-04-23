@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-haynes-nfsv4-recalldevice
 title:
-- content: Add CB_LAYOUTRECLL_DEVICE to NFSv4.2
+- content: Deviceid-Scoped Layout Recall for NFSv4.2
   language:
   - en
   script:
@@ -15,10 +15,10 @@ docid:
 abstract:
 - content: "<p>The Parallel Network File System (pNFS) allows for the metadata server
     to use CB_LAYOUTRECALL to recall a layout from a client by file id or file system
-    id or all. It also allows the server to use CB_NOTIFY_DEVICEID to delete a devicid.
+    id or all. It also allows the server to use CB_NOTIFY_DEVICEID to delete a deviceid.
     It does not provide a mechanism for the metadata server to recall all layouts
     that have a data file on a specific deviceid. This document presents an extension
-    to RFC8881 to allow the server recall layouts from clients based on deviceid.</p>"
+    to RFC7862 to allow the server to recall layouts from clients based on deviceid.</p>"
   language:
   - en
   script:
@@ -34,6 +34,16 @@ relation:
       primary: true
     formattedref:
       content: draft-haynes-nfsv4-recalldevice-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-haynes-nfsv4-recalldevice-01
+    docid:
+    - id: draft-haynes-nfsv4-recalldevice-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-haynes-nfsv4-recalldevice-01
       format: text/plain
 ext:
   schema-version: v1.0.1
