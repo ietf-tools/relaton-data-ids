@@ -1,59 +1,34 @@
 ---
 schema-version: v1.2.3
-id: draft-bortzmeyer-dnsop-poisonlicious-02
+id: draft-ietf-idr-vpn-prefix-orf-36
 title:
-- content: Synchronizing caches of DNS resolvers
+- content: VPN Prefix Outbound Route Filter (VPN Prefix ORF) for BGP-4
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-bortzmeyer-dnsop-poisonlicious-02
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-vpn-prefix-orf-36
   type: src
 type: standard
 docid:
-- id: draft-bortzmeyer-dnsop-poisonlicious-02
+- id: draft-ietf-idr-vpn-prefix-orf-36
   type: Internet-Draft
   primary: true
-- id: I-D.bortzmeyer-dnsop-poisonlicious
+- id: I-D.ietf-idr-vpn-prefix-orf
   type: IETF
   scope: anchor
-docnumber: I-D.bortzmeyer-dnsop-poisonlicious
+docnumber: I-D.ietf-idr-vpn-prefix-orf
 date:
 - type: published
-  value: '2026-01-07'
+  value: '2026-04-23'
 contributor:
 - person:
     name:
       given:
         forename:
-        - language:
-          - en
-          initial: S
-        formatted_initials:
-          content: S.
-          language:
-          - en
-      surname:
-        content: Bortzmeyer
-        language:
-        - en
-      completename:
-        content: Stéphane Bortzmeyer
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Afnic
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Willem
+        - content: Wei
           language:
           - en
         - language:
@@ -64,139 +39,149 @@ contributor:
           language:
           - en
       surname:
-        content: Toorop
+        content: Wang
         language:
         - en
       completename:
-        content: Willem Toorop
+        content: Wei Wang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: NLnet Labs
+        - content: China Telecom
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Babak
+        - content: Aijun
           language:
           - en
         - language:
           - en
-          initial: B
+          initial: A
         formatted_initials:
-          content: B.
+          content: A.
           language:
           - en
       surname:
-        content: Farrokhi
+        content: Wang
         language:
         - en
       completename:
-        content: Babak Farrokhi
+        content: Aijun Wang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Quad9
+        - content: China Telecom
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Moin
+        - content: Haibo
           language:
           - en
         - language:
           - en
-          initial: M
+          initial: H
         formatted_initials:
-          content: M.
+          content: H.
           language:
           - en
       surname:
-        content: Rahman
+        content: Wang
         language:
         - en
       completename:
-        content: Moin Rahman
+        content: Haibo Wang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: The FreeBSD Foundation
+        - content: Huawei Technologies
   role:
   - type: author
 - person:
     name:
       given:
         forename:
+        - content: Gyan
+          language:
+          - en
         - language:
           - en
-          initial: O
+          initial: G
+        - language:
+          - en
+          initial: S
         formatted_initials:
-          content: O.
+          content: G. S.
           language:
           - en
       surname:
-        content: Surý
+        content: Mishra
         language:
         - en
       completename:
-        content: Ondřej Surý
+        content: Gyan Mishra
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Internet Systems Consortium
+        - content: Verizon Inc.
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Otto
+        - content: Jie
           language:
           - en
         - language:
           - en
-          initial: O
+          initial: J
         formatted_initials:
-          content: O.
+          content: J.
           language:
           - en
       surname:
-        content: Moerbeek
+        content: Dong
         language:
         - en
       completename:
-        content: Otto Moerbeek
+        content: Jie Dong
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: PowerDNS
+        - content: Huawei Technologies
   role:
   - type: author
 version:
-- draft: '02'
-revdate: '2026-01-07'
+- draft: '36'
+revdate: '2026-04-23'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>Network of cooperating and mutually trusting DNS resolvers could benefit
-    from cache sharing, where one resolver would distribute the result of a resolution
-    to other resolvers. This document standardizes a protocol to do so.</p>"
+- content: "<p>This draft defines a new type of Outbound Route Filter (ORF), known
+    as the Virtual Private Network (VPN) Prefix ORF. The VPN Prefix ORF mechanism
+    is applicable when VPN routes from different Virtual Routing and Forwarding (VRF)
+    instances are exchanged through a single shared Border Gateway Protocol (BGP)
+    session.The purpose of VPN Prefix ORF mechanism is to control the overload of
+    VPN routes based on RT. With this mechanism, the overload can be limited within
+    the minimum range.</p>"
   language:
   - en
   script:
@@ -205,23 +190,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-bortzmeyer-dnsop-poisonlicious-01
+    id: draft-ietf-idr-vpn-prefix-orf-32
     docid:
-    - id: draft-bortzmeyer-dnsop-poisonlicious-01
+    - id: draft-ietf-idr-vpn-prefix-orf-32
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-bortzmeyer-dnsop-poisonlicious-01
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-bortzmeyer-dnsop-poisonlicious-03
-    docid:
-    - id: draft-bortzmeyer-dnsop-poisonlicious-03
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-bortzmeyer-dnsop-poisonlicious-03
+      content: draft-ietf-idr-vpn-prefix-orf-32
       format: text/plain
 series:
 - type: main
@@ -232,7 +207,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-bortzmeyer-dnsop-poisonlicious-02
+  number: draft-ietf-idr-vpn-prefix-orf-36
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

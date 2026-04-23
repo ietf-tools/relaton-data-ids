@@ -1,0 +1,47 @@
+---
+schema-version: v1.2.3
+id: draft-wu-grow-bmp-multi-instance
+title:
+- content: BMP Extension for Monitoring Multiple BGP Instances
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-wu-grow-bmp-multi-instance
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>The BGP Monitoring Protocol (BMP), as defined in RFC 7854, provides
+    a means for monitoring BGP sessions. In deployments where a single device runs
+    multiple BGP instances simultaneously - typically a base instance together with
+    one or more additional instances, each identified by an Instance Name and potentially
+    running in a separate process with an independent Router-ID and Autonomous System
+    (AS) number - the existing BMP message format does not allow a Monitoring Station
+    to distinguish peers or routes belonging to different BGP instances on the same
+    monitored router. This document defines a new BMP Type-Length-Value (TLV) element,
+    the BGP Instance Name TLV, that carries the Instance Name of the BGP instance
+    associated with a given peer or route. Following the TLV extension framework defined
+    in [I-D.ietf-grow-bmp-tlv], the new TLV MAY appear in Peer Up Notification, Peer
+    Down Notification, Route Monitoring, Statistics Report, and Route Mirroring messages.
+    The TLV enables a Monitoring Station to unambiguously attribute monitored BGP
+    information to the correct BGP instance on the monitored router.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-wu-grow-bmp-multi-instance-00
+    docid:
+    - id: draft-wu-grow-bmp-multi-instance-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-wu-grow-bmp-multi-instance-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

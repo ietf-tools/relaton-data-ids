@@ -1,59 +1,118 @@
 ---
 schema-version: v1.2.3
-id: draft-bortzmeyer-dnsop-poisonlicious-02
+id: draft-ietf-netconf-adaptive-subscription-18
 title:
-- content: Synchronizing caches of DNS resolvers
+- content: Adaptive Subscription to YANG Notifications
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-bortzmeyer-dnsop-poisonlicious-02
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-netconf-adaptive-subscription-18
   type: src
 type: standard
 docid:
-- id: draft-bortzmeyer-dnsop-poisonlicious-02
+- id: draft-ietf-netconf-adaptive-subscription-18
   type: Internet-Draft
   primary: true
-- id: I-D.bortzmeyer-dnsop-poisonlicious
+- id: I-D.ietf-netconf-adaptive-subscription
   type: IETF
   scope: anchor
-docnumber: I-D.bortzmeyer-dnsop-poisonlicious
+docnumber: I-D.ietf-netconf-adaptive-subscription
 date:
 - type: published
-  value: '2026-01-07'
+  value: '2026-04-22'
 contributor:
 - person:
     name:
       given:
         forename:
+        - content: Qin
+          language:
+          - en
         - language:
           - en
-          initial: S
+          initial: Q
         formatted_initials:
-          content: S.
+          content: Q.
           language:
           - en
       surname:
-        content: Bortzmeyer
+        content: Wu
         language:
         - en
       completename:
-        content: Stéphane Bortzmeyer
+        content: Qin Wu
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Afnic
+        - content: Huawei
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Willem
+        - content: Peng
+          language:
+          - en
+        - language:
+          - en
+          initial: P
+        formatted_initials:
+          content: P.
+          language:
+          - en
+      surname:
+        content: Liu
+        language:
+        - en
+      completename:
+        content: Peng Liu
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: China Mobile
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Qiufang
+          language:
+          - en
+        - language:
+          - en
+          initial: Q
+        formatted_initials:
+          content: Q.
+          language:
+          - en
+      surname:
+        content: Ma
+        language:
+        - en
+      completename:
+        content: Qiufang Ma
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Wei
           language:
           - en
         - language:
@@ -64,139 +123,61 @@ contributor:
           language:
           - en
       surname:
-        content: Toorop
+        content: Wang
         language:
         - en
       completename:
-        content: Willem Toorop
+        content: Wei Wang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: NLnet Labs
+        - content: China Telecom
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Babak
+        - content: Zhixiong
           language:
           - en
         - language:
           - en
-          initial: B
+          initial: Z
         formatted_initials:
-          content: B.
+          content: Z.
           language:
           - en
       surname:
-        content: Farrokhi
+        content: Niu
         language:
         - en
       completename:
-        content: Babak Farrokhi
+        content: Zhixiong Niu
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Quad9
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Moin
-          language:
-          - en
-        - language:
-          - en
-          initial: M
-        formatted_initials:
-          content: M.
-          language:
-          - en
-      surname:
-        content: Rahman
-        language:
-        - en
-      completename:
-        content: Moin Rahman
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: The FreeBSD Foundation
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - language:
-          - en
-          initial: O
-        formatted_initials:
-          content: O.
-          language:
-          - en
-      surname:
-        content: Surý
-        language:
-        - en
-      completename:
-        content: Ondřej Surý
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Internet Systems Consortium
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Otto
-          language:
-          - en
-        - language:
-          - en
-          initial: O
-        formatted_initials:
-          content: O.
-          language:
-          - en
-      surname:
-        content: Moerbeek
-        language:
-        - en
-      completename:
-        content: Otto Moerbeek
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: PowerDNS
+        - content: Microsoft
   role:
   - type: author
 version:
-- draft: '02'
-revdate: '2026-01-07'
+- draft: '18'
+revdate: '2026-04-22'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>Network of cooperating and mutually trusting DNS resolvers could benefit
-    from cache sharing, where one resolver would distribute the result of a resolution
-    to other resolvers. This document standardizes a protocol to do so.</p>"
+- content: "<p>This document defines an experimental mechanism and its companion YANG
+    data model to enable adaptive subscriptions to YANG notifications. The publisher
+    can dynamically adjust the periodic update interval based on the evaluation of
+    pre-configured conditions (e.g., thresholds or expressions). This allows for finer-grained
+    telemetry by increasing update frequency when certain criteria are met, and reducing
+    it otherwise.</p>"
   language:
   - en
   script:
@@ -205,23 +186,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-bortzmeyer-dnsop-poisonlicious-01
+    id: draft-ietf-netconf-adaptive-subscription-08
     docid:
-    - id: draft-bortzmeyer-dnsop-poisonlicious-01
+    - id: draft-ietf-netconf-adaptive-subscription-08
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-bortzmeyer-dnsop-poisonlicious-01
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-bortzmeyer-dnsop-poisonlicious-03
-    docid:
-    - id: draft-bortzmeyer-dnsop-poisonlicious-03
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-bortzmeyer-dnsop-poisonlicious-03
+      content: draft-ietf-netconf-adaptive-subscription-08
       format: text/plain
 series:
 - type: main
@@ -232,7 +203,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-bortzmeyer-dnsop-poisonlicious-02
+  number: draft-ietf-netconf-adaptive-subscription-18
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

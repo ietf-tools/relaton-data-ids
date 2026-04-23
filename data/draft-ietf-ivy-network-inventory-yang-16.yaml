@@ -1,33 +1,64 @@
 ---
 schema-version: v1.2.3
-id: draft-bortzmeyer-dnsop-poisonlicious-02
+id: draft-ietf-ivy-network-inventory-yang-16
 title:
-- content: Synchronizing caches of DNS resolvers
+- content: A Base YANG Data Model for Network Inventory
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-bortzmeyer-dnsop-poisonlicious-02
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-ivy-network-inventory-yang-16
   type: src
 type: standard
 docid:
-- id: draft-bortzmeyer-dnsop-poisonlicious-02
+- id: draft-ietf-ivy-network-inventory-yang-16
   type: Internet-Draft
   primary: true
-- id: I-D.bortzmeyer-dnsop-poisonlicious
+- id: I-D.ietf-ivy-network-inventory-yang
   type: IETF
   scope: anchor
-docnumber: I-D.bortzmeyer-dnsop-poisonlicious
+docnumber: I-D.ietf-ivy-network-inventory-yang
 date:
 - type: published
-  value: '2026-01-07'
+  value: '2026-04-23'
 contributor:
 - person:
     name:
       given:
         forename:
+        - content: Chaode
+          language:
+          - en
+        - language:
+          - en
+          initial: C
+        formatted_initials:
+          content: C.
+          language:
+          - en
+      surname:
+        content: Yu
+        language:
+        - en
+      completename:
+        content: Chaode Yu
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei Technologies
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Sergio
+          language:
+          - en
         - language:
           - en
           initial: S
@@ -36,101 +67,17 @@ contributor:
           language:
           - en
       surname:
-        content: Bortzmeyer
+        content: Belotti
         language:
         - en
       completename:
-        content: Stéphane Bortzmeyer
+        content: Sergio Belotti
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Afnic
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Willem
-          language:
-          - en
-        - language:
-          - en
-          initial: W
-        formatted_initials:
-          content: W.
-          language:
-          - en
-      surname:
-        content: Toorop
-        language:
-        - en
-      completename:
-        content: Willem Toorop
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: NLnet Labs
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Babak
-          language:
-          - en
-        - language:
-          - en
-          initial: B
-        formatted_initials:
-          content: B.
-          language:
-          - en
-      surname:
-        content: Farrokhi
-        language:
-        - en
-      completename:
-        content: Babak Farrokhi
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Quad9
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Moin
-          language:
-          - en
-        - language:
-          - en
-          initial: M
-        formatted_initials:
-          content: M.
-          language:
-          - en
-      surname:
-        content: Rahman
-        language:
-        - en
-      completename:
-        content: Moin Rahman
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: The FreeBSD Foundation
+        - content: Nokia
   role:
   - type: author
 - person:
@@ -139,64 +86,93 @@ contributor:
         forename:
         - language:
           - en
-          initial: O
+          initial: J
         formatted_initials:
-          content: O.
+          content: J.
           language:
           - en
       surname:
-        content: Surý
+        content: Bouquier
         language:
         - en
       completename:
-        content: Ondřej Surý
+        content: Jean-Francois Bouquier
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Internet Systems Consortium
+        - content: Vodafone
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Otto
+        - content: Fabio
           language:
           - en
         - language:
           - en
-          initial: O
+          initial: F
         formatted_initials:
-          content: O.
+          content: F.
           language:
           - en
       surname:
-        content: Moerbeek
+        content: Peruzzini
         language:
         - en
       completename:
-        content: Otto Moerbeek
+        content: Fabio Peruzzini
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: PowerDNS
+        - content: FiberCop
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Phil
+          language:
+          - en
+        - language:
+          - en
+          initial: P
+        formatted_initials:
+          content: P.
+          language:
+          - en
+      surname:
+        content: Bedard
+        language:
+        - en
+      completename:
+        content: Phil Bedard
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Cisco
   role:
   - type: author
 version:
-- draft: '02'
-revdate: '2026-01-07'
+- draft: '16'
+revdate: '2026-04-23'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>Network of cooperating and mutually trusting DNS resolvers could benefit
-    from cache sharing, where one resolver would distribute the result of a resolution
-    to other resolvers. This document standardizes a protocol to do so.</p>"
+- content: "<p>This document defines a base YANG data model for reporting network
+    inventory. The scope of this base model is set to be application- and technology-agnostic.
+    The base data model can be augmented with application- and technology-specific
+    details.</p>"
   language:
   - en
   script:
@@ -205,23 +181,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-bortzmeyer-dnsop-poisonlicious-01
+    id: draft-ietf-ivy-network-inventory-yang-02
     docid:
-    - id: draft-bortzmeyer-dnsop-poisonlicious-01
+    - id: draft-ietf-ivy-network-inventory-yang-02
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-bortzmeyer-dnsop-poisonlicious-01
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-bortzmeyer-dnsop-poisonlicious-03
-    docid:
-    - id: draft-bortzmeyer-dnsop-poisonlicious-03
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-bortzmeyer-dnsop-poisonlicious-03
+      content: draft-ietf-ivy-network-inventory-yang-02
       format: text/plain
 series:
 - type: main
@@ -232,7 +198,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-bortzmeyer-dnsop-poisonlicious-02
+  number: draft-ietf-ivy-network-inventory-yang-16
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
