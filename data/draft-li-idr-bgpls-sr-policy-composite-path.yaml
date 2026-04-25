@@ -13,11 +13,12 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>Segment Routing is a source routing paradigm that explicitly indicates
-    the forwarding path for packets at the ingress node. An SR Policy is associated
-    with one or more candidate paths, and each candidate path is either dynamic, explicit
-    or composite. This document specifies the extensions to BGP Link State (BGP-LS)
-    to carry composite candidate path information in the advertisement of an SR policy.</p>"
+- content: "<p>SR Policy Architecture [RFC9256] defines the concept of a Composite
+    Candidate Path. A regular SR Policy Candidate Path outputs traffic to a set of
+    Segment Lists, while an SR Policy Composite Candidate Path outputs traffic recursively
+    to a set of SR Policies on the same headend. This document specifies the extensions
+    to BGP Link State (BGP-LS) to carry composite candidate path information in the
+    advertisement of an SR policy.</p>"
   language:
   - en
   script:
@@ -123,6 +124,16 @@ relation:
       primary: true
     formattedref:
       content: draft-li-idr-bgpls-sr-policy-composite-path-09
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-li-idr-bgpls-sr-policy-composite-path-10
+    docid:
+    - id: draft-li-idr-bgpls-sr-policy-composite-path-10
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-li-idr-bgpls-sr-policy-composite-path-10
       format: text/plain
 ext:
   schema-version: v1.0.1
