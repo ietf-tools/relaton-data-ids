@@ -1,57 +1,29 @@
 ---
 schema-version: v1.2.3
-id: draft-liu-grow-bmp-multiple-peer-header-00
+id: draft-lin-grow-bmp-cap-notification-01
 title:
-- content: Definition for BMP Multiple Peer Header
+- content: Peer Capability Update Notification in BGP Monitoring Protocol (BMP)
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-liu-grow-bmp-multiple-peer-header-00
+- content: https://datatracker.ietf.org/doc/html/draft-lin-grow-bmp-cap-notification-01
   type: src
 type: standard
 docid:
-- id: draft-liu-grow-bmp-multiple-peer-header-00
+- id: draft-lin-grow-bmp-cap-notification-01
   type: Internet-Draft
   primary: true
-- id: I-D.liu-grow-bmp-multiple-peer-header
+- id: I-D.lin-grow-bmp-cap-notification
   type: IETF
   scope: anchor
-docnumber: I-D.liu-grow-bmp-multiple-peer-header
+docnumber: I-D.lin-grow-bmp-cap-notification
 date:
 - type: published
-  value: '2025-10-20'
+  value: '2026-04-25'
 contributor:
-- person:
-    name:
-      given:
-        forename:
-        - content: Yisong
-          language:
-          - en
-        - language:
-          - en
-          initial: "Y"
-        formatted_initials:
-          content: Y.
-          language:
-          - en
-      surname:
-        content: Liu
-        language:
-        - en
-      completename:
-        content: Yisong Liu
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: China Mobile
-  role:
-  - type: author
 - person:
     name:
       given:
@@ -105,7 +77,7 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems
+        - content: Cisco
   role:
   - type: author
 - person:
@@ -118,8 +90,11 @@ contributor:
         - language:
           - en
           initial: M
+        - language:
+          - en
+          initial: K
         formatted_initials:
-          content: M.
+          content: M. K.
           language:
           - en
       surname:
@@ -127,7 +102,7 @@ contributor:
         language:
         - en
       completename:
-        content: Mukul Srivastava
+        content: Mukul Kumar Srivastava
         language:
         - en
     affiliation:
@@ -136,33 +111,64 @@ contributor:
         - content: Juniper Networks
   role:
   - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Jinming
+          language:
+          - en
+        - language:
+          - en
+          initial: J
+        formatted_initials:
+          content: J.
+          language:
+          - en
+      surname:
+        content: Li
+        language:
+        - en
+      completename:
+        content: Jinming Li
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: China Mobile
+  role:
+  - type: author
 version:
-- draft: '00'
-revdate: '2025-10-20'
+- draft: '01'
+revdate: '2026-04-25'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document proposes a format of multiple peer header for aggregating
-    BMP messages. It can be used to compress multiple BMP messages with per-peer header
-    into one aggregated BMP message, which could reduce the amount of reported BMP
-    messages and reduce network overhead.</p>"
+- content: "<p>When BGP Dynamic Capability is supported, dynamic updates of capabilities
+    are allowed over an established BGP session. At present, after the BGP session
+    is established, the monitored router sends a BMP Peer Up Notification message
+    first, containing the initial capabilities. If BGP Dynamic Capability is supported,
+    using BMP Peer Up Notification messages to report subsequent capability changes
+    for a BGP session becomes inappropriate. This document defines a new Peer Capability
+    Update Notification message type in BMP to report peer capability changes.</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-liu-grow-bmp-multiple-peer-header-01
+    id: draft-lin-grow-bmp-cap-notification-00
     docid:
-    - id: draft-liu-grow-bmp-multiple-peer-header-01
+    - id: draft-lin-grow-bmp-cap-notification-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-liu-grow-bmp-multiple-peer-header-01
+      content: draft-lin-grow-bmp-cap-notification-00
       format: text/plain
 series:
 - type: main
@@ -173,7 +179,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-liu-grow-bmp-multiple-peer-header-00
+  number: draft-lin-grow-bmp-cap-notification-01
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
