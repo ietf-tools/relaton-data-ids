@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-mcconnell-software-status-wellknown-01
+id: draft-mcconnell-software-status-wellknown-02
 title:
 - content: A Well-Known URI for Software Lifecycle Status
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-mcconnell-software-status-wellknown-01
+- content: https://datatracker.ietf.org/doc/html/draft-mcconnell-software-status-wellknown-02
   type: src
 type: standard
 docid:
-- id: draft-mcconnell-software-status-wellknown-01
+- id: draft-mcconnell-software-status-wellknown-02
   type: Internet-Draft
   primary: true
 - id: I-D.mcconnell-software-status-wellknown
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.mcconnell-software-status-wellknown
 date:
 - type: published
-  value: '2026-04-22'
+  value: '2026-04-25'
 contributor:
 - person:
     name:
@@ -53,8 +53,8 @@ contributor:
   role:
   - type: author
 version:
-- draft: '01'
-revdate: '2026-04-22'
+- draft: '02'
+revdate: '2026-04-25'
 language:
 - en
 script:
@@ -67,9 +67,15 @@ abstract:
     platforms, vulnerability scanners, and system administrators — to programmatically
     determine whether a specific version of a software product is actively supported,
     in long-term support (LTS), under security-only maintenance, or at end-of-life
-    (EOL). This document also describes, in Appendix A (#appendix-a), a companion
-    convention for open-source projects hosted on version- control platforms to publish
-    equivalent information within the repository at.github/software-status.json.</p>"
+    (EOL). This revision (-02) extends the schema to support multi-product vendors
+    — organizations that ship multiple distinct products or SKUs under a single domain.
+    A new optional products array at the root of the resource allows a single software-status.json
+    endpoint to serve lifecycle declarations for an entire product catalog, including
+    firmware-based devices such as routers, switches, and IoT appliances. This extension
+    is fully backward compatible: existing single-product resources require no modification.
+    This document also describes, in Appendix B (#appendix-b), a companion convention
+    for open-source projects hosted on version- control platforms to publish equivalent
+    information within the repository at.github/software-status.json.</p>"
   language:
   - en
   script:
@@ -86,16 +92,6 @@ relation:
     formattedref:
       content: draft-mcconnell-software-status-wellknown-00
       format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-mcconnell-software-status-wellknown-02
-    docid:
-    - id: draft-mcconnell-software-status-wellknown-02
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-mcconnell-software-status-wellknown-02
-      format: text/plain
 series:
 - type: main
   title:
@@ -105,7 +101,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-mcconnell-software-status-wellknown-01
+  number: draft-mcconnell-software-status-wellknown-02
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

@@ -20,9 +20,15 @@ abstract:
     platforms, vulnerability scanners, and system administrators — to programmatically
     determine whether a specific version of a software product is actively supported,
     in long-term support (LTS), under security-only maintenance, or at end-of-life
-    (EOL). This document also describes, in Appendix A (#appendix-a), a companion
-    convention for open-source projects hosted on version- control platforms to publish
-    equivalent information within the repository at.github/software-status.json.</p>"
+    (EOL). This revision (-02) extends the schema to support multi-product vendors
+    — organizations that ship multiple distinct products or SKUs under a single domain.
+    A new optional products array at the root of the resource allows a single software-status.json
+    endpoint to serve lifecycle declarations for an entire product catalog, including
+    firmware-based devices such as routers, switches, and IoT appliances. This extension
+    is fully backward compatible: existing single-product resources require no modification.
+    This document also describes, in Appendix B (#appendix-b), a companion convention
+    for open-source projects hosted on version- control platforms to publish equivalent
+    information within the repository at.github/software-status.json.</p>"
   language:
   - en
   script:
@@ -48,6 +54,16 @@ relation:
       primary: true
     formattedref:
       content: draft-mcconnell-software-status-wellknown-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-mcconnell-software-status-wellknown-02
+    docid:
+    - id: draft-mcconnell-software-status-wellknown-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-mcconnell-software-status-wellknown-02
       format: text/plain
 ext:
   schema-version: v1.0.1
