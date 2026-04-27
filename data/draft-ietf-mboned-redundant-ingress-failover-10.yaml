@@ -1,186 +1,188 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-idr-bgpls-inter-as-topology-ext-07
+id: draft-ietf-mboned-redundant-ingress-failover-10
 title:
-- content: BGP-LS Extension for Inter-AS Topology Retrieval
+- content: Multicast Redundant Ingress Router Failover
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-bgpls-inter-as-topology-ext-07
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-mboned-redundant-ingress-failover-10
   type: src
 type: standard
 docid:
-- id: draft-ietf-idr-bgpls-inter-as-topology-ext-07
+- id: draft-ietf-mboned-redundant-ingress-failover-10
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-idr-bgpls-inter-as-topology-ext
+- id: I-D.ietf-mboned-redundant-ingress-failover
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-idr-bgpls-inter-as-topology-ext
+docnumber: I-D.ietf-mboned-redundant-ingress-failover
 date:
 - type: published
-  value: '2019-09-29'
+  value: '2026-04-26'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Aijun
+        - content: Greg
           language:
           - en
         - language:
           - en
-          initial: A
+          initial: G
         formatted_initials:
-          content: A.
+          content: G.
           language:
           - en
       surname:
-        content: Wang
+        content: Shepherd
         language:
         - en
       completename:
-        content: Aijun Wang
+        content: Greg Shepherd
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: China Telecom
+        - content: Cisco Systems, Inc.
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Huaimo
+        - content: Zheng
           language:
           - en
         - language:
           - en
-          initial: H
+          initial: Z
         formatted_initials:
-          content: H.
+          content: Z.
           language:
           - en
       surname:
-        content: Chen
+        content: Zhang
         language:
         - en
       completename:
-        content: Huaimo Chen
+        content: Zheng Zhang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Futurewei
+        - content: ZTE Corporation
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Ketan
+        - content: Yisong
           language:
           - en
         - language:
           - en
-          initial: K
+          initial: "Y"
         formatted_initials:
-          content: K.
+          content: Y.
           language:
           - en
       surname:
-        content: Talaulikar
+        content: Liu
         language:
         - en
       completename:
-        content: Ketan Talaulikar
+        content: Yisong Liu
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems
+        - content: China Mobile
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Shunwan
+        - content: Ying
           language:
           - en
+        - language:
+          - en
+          initial: "Y"
+        formatted_initials:
+          content: Y.
+          language:
+          - en
+      surname:
+        content: Cheng
+        language:
+        - en
+      completename:
+        content: Ying Cheng
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: China Unicom
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Gyan
+          language:
+          - en
+        - language:
+          - en
+          initial: G
         - language:
           - en
           initial: S
         formatted_initials:
-          content: S.
+          content: G. S.
           language:
           - en
       surname:
-        content: Zhuang
+        content: Mishra
         language:
         - en
       completename:
-        content: Shunwan Zhuang
+        content: Gyan Mishra
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei Technologies
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Shaowen
-          language:
-          - en
-        - language:
-          - en
-          initial: S
-        formatted_initials:
-          content: S.
-          language:
-          - en
-      surname:
-        content: Ma
-        language:
-        - en
-      completename:
-        content: Shaowen Ma
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Mellanox Technologies
+        - content: Verizon Inc.
   role:
   - type: author
 version:
-- draft: '07'
-revdate: '2019-09-29'
+- draft: '10'
+revdate: '2026-04-26'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document describes the process to build Border Gateway Protocol-
-    Link State (BGP-LS) key parameters in inter-domain scenario, defines one new BGP-LS
-    Network Layer Reachability Information (NLRI) type (Stub Link NLRI) and some new
-    inter Autonomous (inter-AS) Traffic Engineering (TE) related Type-Length-Values
-    (TLVs) for BGP-LS to let Software Definition Network (SDN) controller retrieve
-    the network topology automatically under various inter-AS environments. Such extension
-    and process can enable the network operator to collect the interconnect information
-    between different domains and then calculate the overall network topology automatically
-    based on the information provided by BGP-LS protocol.</p>"
+- content: "<p>This document is intended to serve as a guide for multicast network
+    operators of various replication technologies to evaluate the options and tradeoffs
+    in deploying redundant ingress router failover. Section 5 of RFC9026 details the
+    hot root standby solution for MVPN networks. Here we attempt to extend the discussion
+    to cover additional multicast deployment solutions beyond MVPNs. This document
+    compares cold, warm, and hot standby modes, listing their advantages, limitations
+    and deployment considerations to help identify the appropriate solution for any
+    network.</p>"
   language:
   - en
   script:
@@ -189,23 +191,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-idr-bgpls-inter-as-topology-ext-06
+    id: draft-ietf-mboned-redundant-ingress-failover-04
     docid:
-    - id: draft-ietf-idr-bgpls-inter-as-topology-ext-06
+    - id: draft-ietf-mboned-redundant-ingress-failover-04
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-idr-bgpls-inter-as-topology-ext-06
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-idr-bgpls-inter-as-topology-ext-26
-    docid:
-    - id: draft-ietf-idr-bgpls-inter-as-topology-ext-26
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-idr-bgpls-inter-as-topology-ext-26
+      content: draft-ietf-mboned-redundant-ingress-failover-04
       format: text/plain
 series:
 - type: main
@@ -216,7 +208,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-idr-bgpls-inter-as-topology-ext-07
+  number: draft-ietf-mboned-redundant-ingress-failover-10
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
