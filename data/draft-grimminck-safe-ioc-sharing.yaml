@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-grimminck-safe-ioc-sharing
 title:
-- content: A Standard for Safe and Reversible Sharing of Malicious URLs and Indicators
+- content: Safe and Reversible Sharing of Malicious URLs and Indicators
   language:
   - en
   script:
@@ -18,11 +18,14 @@ abstract:
     indicators of compromise (IOCs), such as URLs, IP addresses, email addresses,
     and domain names. It describes a safe obfuscation format that reduces the risk
     of accidental execution or activation when IOCs are displayed or transmitted.
-    The recommended form brackets the URI scheme name (for example, [http]) so that
-    the string is not syntactically a valid URI per generic URI parsers; legacy scheme-substitution
-    tokens are defined for de-obfuscation interoperability. These conventions aim
-    to improve interoperability among tools and feeds that exchange threat intelligence
-    data.</p>"
+    The recommended form brackets the URI scheme name so that the string is not syntactically
+    a valid URI per generic URI parsers, and extends the same bracket treatment to
+    colons inside IPv6 literals; recognizable nested indicators within the Path, Query,
+    or Fragment of a URI are obfuscated in place, and legacy scheme-substitution tokens
+    are defined for de-obfuscation interoperability. Safe-IOC strings are a textual
+    rendering convention, not URIs, and are not intended to be processed by generic
+    URI parsers. These conventions aim to improve interoperability among tools and
+    feeds that exchange threat intelligence data.</p>"
   language:
   - en
   script:
@@ -118,6 +121,16 @@ relation:
       primary: true
     formattedref:
       content: draft-grimminck-safe-ioc-sharing-08
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-grimminck-safe-ioc-sharing-09
+    docid:
+    - id: draft-grimminck-safe-ioc-sharing-09
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-grimminck-safe-ioc-sharing-09
       format: text/plain
 ext:
   schema-version: v1.0.1

@@ -14,10 +14,17 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This draft proposes a lightweight security enhancement scheme based
-    on integration of remote attestation with key negotiation and key distribution.
-    Correctly integrating the main steps of end-to-end key negotiation into the remote
-    attestation process may provide more security and flexibility.</p>"
+- content: "<p>This document describes a generic way to integrate Remote Attestation
+    (RA) with key distribution and key negotiation, so that cryptographic keys are
+    only released to or accepted from attested and policy- compliant environments.
+    It defines an attestation-bound key management mechanism that can be applied on
+    top of existing secure channel and key management protocols, and illustrates it
+    with three representative scenarios: public-cloud KMS, end-user to AI data- center
+    communication, and enterprise-operated KMS. A format-agnostic key binding claim
+    is introduced to express the binding between an Attester’s environment, its public
+    keys, and a session identifier, enabling Relying Parties to use Attestation Results
+    as an input to key distribution and key agreement decisions without changing underlying
+    protocols.</p>"
   language:
   - en
   script:
@@ -43,6 +50,16 @@ relation:
       primary: true
     formattedref:
       content: draft-xia-rats-key-negotiation-integration-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-xia-rats-key-negotiation-integration-02
+    docid:
+    - id: draft-xia-rats-key-negotiation-integration-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-xia-rats-key-negotiation-integration-02
       format: text/plain
 ext:
   schema-version: v1.0.1
