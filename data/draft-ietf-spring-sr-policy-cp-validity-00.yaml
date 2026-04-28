@@ -1,90 +1,62 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-idr-sr-policy-seglist-id-06
+id: draft-ietf-spring-sr-policy-cp-validity-00
 title:
-- content: BGP SR Policy Extensions for Segment List Identifier
+- content: Validity of SR Policy Candidate Path
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-sr-policy-seglist-id-06
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-spring-sr-policy-cp-validity-00
   type: src
 type: standard
 docid:
-- id: draft-ietf-idr-sr-policy-seglist-id-06
+- id: draft-ietf-spring-sr-policy-cp-validity-00
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-idr-sr-policy-seglist-id
+- id: I-D.ietf-spring-sr-policy-cp-validity
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-idr-sr-policy-seglist-id
+docnumber: I-D.ietf-spring-sr-policy-cp-validity
 date:
 - type: published
-  value: '2025-09-24'
+  value: '2026-04-27'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Changwang
+        - content: Ran
           language:
           - en
         - language:
           - en
-          initial: C
+          initial: R
         formatted_initials:
-          content: C.
+          content: R.
           language:
           - en
       surname:
-        content: Lin
+        content: Chen
         language:
         - en
       completename:
-        content: Changwang Lin
+        content: Ran Chen
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: New H3C Technologies
+        - content: ZTE Corporation
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Weiqiang
-          language:
-          - en
-        - language:
-          - en
-          initial: W
-        formatted_initials:
-          content: W.
-          language:
-          - en
-      surname:
-        content: Cheng
-        language:
-        - en
-      completename:
-        content: Weiqiang Cheng
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: China Mobile
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Yao
+        - content: Yisong
           language:
           - en
         - language:
@@ -99,13 +71,13 @@ contributor:
         language:
         - en
       completename:
-        content: Yao Liu
+        content: Yisong Liu
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: ZTE
+        - content: China Mobile
   role:
   - type: author
 - person:
@@ -133,75 +105,86 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems
+        - content: Cisco Systems, Inc.
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Mengxiao
+        - content: Detao
           language:
           - en
         - language:
           - en
-          initial: M
+          initial: D
         formatted_initials:
-          content: M.
+          content: D.
           language:
           - en
       surname:
-        content: Chen
+        content: Zhao
         language:
         - en
       completename:
-        content: Mengxiao Chen
+        content: Detao Zhao
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: New H3C Technologies
+        - content: ZTE Corporation
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Zafar
+          language:
+          - en
+        - language:
+          - en
+          initial: Z
+        formatted_initials:
+          content: Z.
+          language:
+          - en
+      surname:
+        content: Ali
+        language:
+        - en
+      completename:
+        content: Zafar Ali
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Cisco Systems, Inc.
   role:
   - type: author
 version:
-- draft: '06'
-revdate: '2025-09-24'
+- draft: '00'
+revdate: '2026-04-27'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>Segment Routing is a source routing paradigm that explicitly indicates
-    the forwarding path for packets at the ingress node. An SR Policy is a set of
-    candidate paths, each consisting of one or more segment lists. This document defines
-    extensions to BGP SR Policy to specify the identifier of segment list.</p>"
+- content: "<p>An SR Policy comprises one or more candidate paths of which at a given
+    time one and only one may be active (i.e., installed in forwarding plane and usable
+    for steering of traffic). Each candidate path, in turn, may have one or more segment
+    lists of which one or more may be active. When multiple segment lists are active,
+    traffic is load balanced over them. Currently, a candidate path is valid as long
+    as at least one of its segment lists is active. However, this default validity
+    criterion does not meet the requirements of some scenarios. This document defines
+    the new candidate path validity criterion.</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
-relation:
-- type: updates
-  bibitem:
-    id: draft-ietf-idr-sr-policy-seglist-id-03
-    docid:
-    - id: draft-ietf-idr-sr-policy-seglist-id-03
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-idr-sr-policy-seglist-id-03
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-idr-sr-policy-seglist-id-09
-    docid:
-    - id: draft-ietf-idr-sr-policy-seglist-id-09
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-idr-sr-policy-seglist-id-09
-      format: text/plain
 series:
 - type: main
   title:
@@ -211,7 +194,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-idr-sr-policy-seglist-id-06
+  number: draft-ietf-spring-sr-policy-cp-validity-00
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
