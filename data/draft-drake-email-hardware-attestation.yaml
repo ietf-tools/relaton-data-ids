@@ -15,29 +15,29 @@ docid:
 abstract:
 - content: '<p>This document defines a mechanism for automated email senders (AI agents,
     bots, and autonomous systems) to include hardware attestation evidence in message
-    headers, enabling receiving mail servers to cryptographically verify that an email
-    was composed on a device containing a genuine hardware security component -- such
-    as a Trusted Platform Module (TPM), a PIV smart card (e.g., YubiKey), a virtual
-    TPM, or a software-managed key -- from a known manufacturer or issuer. The verification
-    chain runs from the email header to a manufacturer''s root Certificate Authority
-    (for hardware-backed attestation) or to an issuer''s verification key (for issuer-certified
-    attestation), requiring no trust in any single intermediary identity service.
-    Each automated sender is assigned a persistent agent identity, expressed as a
-    URN in the "aid" (Agent Identity) namespace ([RFC8141]), enabling federated issuance
-    by multiple independent identity providers and persistent reputation tracking
-    across protocols and platforms. As a companion mechanism, this document defines
-    a privacy-preserving alternative using SD-JWT (Selective Disclosure JWT, [RFC9901])
-    where the sender can prove specific claims about their hardware trust level without
-    revealing their hardware identity. Together, these mechanisms provide both Sybil-resistant
-    authentication and a foundation for reputation building: each identity requires
-    a unique hardware security component, making large- scale automated abuse economically
-    infeasible regardless of advances in artificial intelligence, while the persistent
-    hardware-anchored identity enables receiving systems to accumulate trust signals
-    over time. Software-only agents MAY participate at a lower trust tier, building
-    reputation from an initial baseline rather than from a hardware-anchored starting
-    point. While this document specifies these mechanisms for email message headers,
-    the attestation formats defined herein -- both the CMS attestation bundle and
-    the SD-JWT trust proof -- are self-contained, transport-independent data structures
+    headers, enabling receiving mail servers to cryptographically verify that the
+    sending system has access to a genuine hardware security component -- such as
+    a Trusted Platform Module (TPM), a PIV smart card (e.g., YubiKey), a virtual TPM,
+    or a software-managed key -- from a known manufacturer or issuer. The attestation
+    proves hardware presence, not message composition locale. The verification chain
+    runs from the email header to a manufacturer''s root Certificate Authority (for
+    hardware-backed attestation) or to an issuer''s verification key (for issuer-certified
+    attestation). Each automated sender is assigned a persistent agent identity, expressed
+    as a URN in the "aid" (Agent Identity) namespace ([RFC8141]), enabling federated
+    issuance by multiple independent identity providers and persistent reputation
+    tracking across protocols and platforms. As a companion mechanism, this document
+    defines a privacy-preserving alternative using SD-JWT (Selective Disclosure JWT,
+    [RFC9901]) where the sender can prove specific claims about their hardware trust
+    level without revealing their hardware identity. Together, these mechanisms provide
+    both Sybil-resistant authentication and a foundation for reputation building:
+    each identity requires a unique hardware security component, making large- scale
+    automated abuse economically infeasible regardless of advances in artificial intelligence,
+    while the persistent hardware-anchored identity enables receiving systems to accumulate
+    trust signals over time. Software-only agents MAY participate at a lower trust
+    tier, building reputation from an initial baseline rather than from a hardware-anchored
+    starting point. While this document specifies these mechanisms for email message
+    headers, the attestation formats defined herein -- both the CMS attestation bundle
+    and the SD-JWT trust proof -- are self-contained, transport-independent data structures
     applicable to HTTP headers, agent-to-agent messaging, payment authorisation, and
     other Internet protocols.</p>'
   language:
@@ -55,6 +55,16 @@ relation:
       primary: true
     formattedref:
       content: draft-drake-email-hardware-attestation-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-drake-email-hardware-attestation-01
+    docid:
+    - id: draft-drake-email-hardware-attestation-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-drake-email-hardware-attestation-01
       format: text/plain
 ext:
   schema-version: v1.0.1

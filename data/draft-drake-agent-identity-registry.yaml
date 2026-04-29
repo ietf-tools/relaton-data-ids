@@ -38,14 +38,14 @@ abstract:
     tokens, and serve as the primary interface for autonomous entities. The system
     issues standard OIDC/OAuth2 tokens, enabling any Relying Party -- email services,
     API gateways, agent-to-agent platforms, reputation services, certification bodies,
-    or any service that needs to verify agent identity -- to do so with zero custom
-    code. A companion specification ([I-D.drake-email-hardware-attestation]) defines
-    transport-level attestation headers for email and other protocols; this document
-    defines the identity infrastructure that underpins those attestations. The architecture
-    anticipates a future in which reliable, indelible identity for autonomous entities
-    -- from cloud software agents through embodied robots that interact physically
-    with humans -- is as fundamental to infrastructure as the domain name system is
-    today.</p>'
+    or any service that needs to verify agent identity -- to verify token signatures
+    using existing OIDC libraries. A companion specification ([I-D.drake-email-hardware-attestation])
+    defines transport-level attestation headers for email and other protocols; this
+    document defines the identity infrastructure that underpins those attestations.
+    The architecture anticipates a future in which reliable, indelible identity for
+    autonomous entities -- from cloud software agents through embodied robots that
+    interact physically with humans -- is as fundamental to infrastructure as the
+    domain name system is today.</p>'
   language:
   - en
   script:
@@ -71,6 +71,16 @@ relation:
       primary: true
     formattedref:
       content: draft-drake-agent-identity-registry-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-drake-agent-identity-registry-02
+    docid:
+    - id: draft-drake-agent-identity-registry-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-drake-agent-identity-registry-02
       format: text/plain
 ext:
   schema-version: v1.0.1

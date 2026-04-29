@@ -23,19 +23,23 @@ abstract:
     isogeny-based post-quantum signature scheme that provides the most compact signature
     and public key sizes of any candidate in the NIST Post-Quantum Cryptography (PQC)
     standardization and on-ramp-to-standardization processes. The standardization
-    of SQIsign is critical to addressing immediate infrastructure bottlenecks, specifically
-    the FIDO2 CTAP2 specification used by an estimated 6.25 billion in-service devices
-    and browser installations. CTAP2 enforces a 1024-byte default limit for external
-    key communication. Most standardized post-quantum signatures exceed this limit,
-    so cannot easily be deployed in these ecosystems without prohibitive protocol
-    renegotiation, complex message fragmentation or hardware replacement. SQIsign-L1
-    signatures are small enough to enable delivery over highly constrained networks
-    like 802.15.4 with minimal fragmentation. This document clarifies that SQIsign's
-    security relies on the general supersingular isogeny problem and is fundamentally
-    unaffected by the torsion-point attacks that deprecated the SIDH/SIKE key exchange.
-    By establishing stable COSE and JOSE identifiers, this document ensures the interoperability
-    required for the seamless integration of post- quantum security into high-density,
-    bandwidth-constrained, and legacy-compatible hardware environments.</p>"
+    of SQIsign will be helpful to address current infrastructure bottlenecks, specifically
+    the FIDO2 CTAP2 specification used by billions of in-service devices and browser
+    installations. Depending on authenticator implementation, transport (USB/NFC/BLE)
+    and message fragmentation support. Some deployments of CTAP2-based authenticators
+    enforce limits near 1024 bytes for external key communication, and some standardized
+    post-quantum signature schemes increase message sizes and may stress constrained
+    authenticators or transports. As a result CBOR-encoded messages may hit limits
+    in some authenticators. SQIsign-L1, L2 and L5 signatures are small enough to enable
+    delivery over constrained networks like 802.15.4 and may be more suitable for
+    constrained networks due to smaller signature sizes. This document clarifies that
+    SQIsign does not expose the auxiliary torsion-point information exploited in the
+    SIDH/SIKE attacks. Consequently, the specific attack techniques of Castryck–Decru
+    do not directly apply. However, the scheme remains subject to ongoing cryptanalysis
+    of isogeny-based constructions. By establishing stable COSE and JOSE identifiers,
+    this document ensures the interoperability required for the seamless integration
+    of post-quantum security into high-density, bandwidth-constrained, and legacy-compatible
+    hardware environments.</p>"
   language:
   - en
   script:
@@ -51,6 +55,26 @@ relation:
       primary: true
     formattedref:
       content: draft-mott-cose-sqisign-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-mott-cose-sqisign-01
+    docid:
+    - id: draft-mott-cose-sqisign-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-mott-cose-sqisign-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-mott-cose-sqisign-02
+    docid:
+    - id: draft-mott-cose-sqisign-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-mott-cose-sqisign-02
       format: text/plain
 ext:
   schema-version: v1.0.1

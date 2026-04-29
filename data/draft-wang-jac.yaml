@@ -2,7 +2,8 @@
 schema-version: v1.2.3
 id: draft-wang-jac
 title:
-- content: 'JAC: Judgment Accountability Chain'
+- content: 'JAC: Declared Dependency Chains for Agent Receipts A JEP/HJS Extension
+    Profile for Chain Infrastructure'
   language:
   - en
   script:
@@ -13,15 +14,19 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document defines the Judgment Accountability Chain (JAC) v0.1,
-    a minimal infrastructure layer for tracking judgment chains in AI and agent systems.
-    Built on JEP [draft-wang-jep-judgment-event-protocol-04] and HJS [draft-wang-hjs-accountability-04],
-    JAC adds a single field—task_based_on—to establish verifiable causality between
-    judgments across agents, platforms, and trust domains. JAC follows the same narrow-waist
-    design philosophy as JEP and HJS: a minimal mandatory core with all advanced features
-    defined as optional extensions. JAC fully inherits the privacy protections of
-    JEP and HJS, including digest-only anonymity, TTL data expiration, identity rotation,
-    and data minimization.</p>"
+- content: "<p>This document defines JAC v0.5, a minimal declared-dependency chain
+    infrastructure for agent and AI-agent receipt systems. JAC is a profile over the
+    Judgment Event Protocol (JEP) and, when AI-agent behavior receipts are used, over
+    HJS. JAC does not define an independent event format, signature syntax, hash format,
+    replay mechanism, identity framework, or governance framework. JAC uses JEP extension
+    fields to bind a signed event or receipt element to a declared parent dependency.
+    The core is intentionally small: a single chain extension records a declared dependency
+    link. Optional extensions can record state declarations, assignment references,
+    handoff references, result references, capability claims, input/output references,
+    and declared chain breaks. JAC provides infrastructure only. It records signed
+    dependency declarations; it does not determine factual causality, responsibility,
+    fault, authorization validity, assignment validity, handoff validity, task correctness,
+    fairness, entitlement, legal effect, or regulatory compliance.</p>"
   language:
   - en
   script:
@@ -47,6 +52,16 @@ relation:
       primary: true
     formattedref:
       content: draft-wang-jac-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-wang-jac-02
+    docid:
+    - id: draft-wang-jac-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-wang-jac-02
       format: text/plain
 ext:
   schema-version: v1.0.1

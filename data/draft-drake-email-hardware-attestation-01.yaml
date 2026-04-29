@@ -1,0 +1,118 @@
+---
+schema-version: v1.2.3
+id: draft-drake-email-hardware-attestation-01
+title:
+- content: Hardware Attestation for Email Sender Verification
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-drake-email-hardware-attestation-01
+  type: src
+type: standard
+docid:
+- id: draft-drake-email-hardware-attestation-01
+  type: Internet-Draft
+  primary: true
+- id: I-D.drake-email-hardware-attestation
+  type: IETF
+  scope: anchor
+docnumber: I-D.drake-email-hardware-attestation
+date:
+- type: published
+  value: '2026-04-28'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Christopher
+          language:
+          - en
+        - language:
+          - en
+          initial: C
+        formatted_initials:
+          content: C.
+          language:
+          - en
+      surname:
+        content: Drake
+        language:
+        - en
+      completename:
+        content: Christopher Drake
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: 1id.com
+  role:
+  - type: author
+version:
+- draft: '01'
+revdate: '2026-04-28'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: '<p>This document defines a mechanism for automated email senders (AI agents,
+    bots, and autonomous systems) to include hardware attestation evidence in message
+    headers, enabling receiving mail servers to cryptographically verify that the
+    sending system has access to a genuine hardware security component -- such as
+    a Trusted Platform Module (TPM), a PIV smart card (e.g., YubiKey), a virtual TPM,
+    or a software-managed key -- from a known manufacturer or issuer. The attestation
+    proves hardware presence, not message composition locale. The verification chain
+    runs from the email header to a manufacturer''s root Certificate Authority (for
+    hardware-backed attestation) or to an issuer''s verification key (for issuer-certified
+    attestation). Each automated sender is assigned a persistent agent identity, expressed
+    as a URN in the "aid" (Agent Identity) namespace ([RFC8141]), enabling federated
+    issuance by multiple independent identity providers and persistent reputation
+    tracking across protocols and platforms. As a companion mechanism, this document
+    defines a privacy-preserving alternative using SD-JWT (Selective Disclosure JWT,
+    [RFC9901]) where the sender can prove specific claims about their hardware trust
+    level without revealing their hardware identity. Together, these mechanisms provide
+    both Sybil-resistant authentication and a foundation for reputation building:
+    each identity requires a unique hardware security component, making large- scale
+    automated abuse economically infeasible regardless of advances in artificial intelligence,
+    while the persistent hardware-anchored identity enables receiving systems to accumulate
+    trust signals over time. Software-only agents MAY participate at a lower trust
+    tier, building reputation from an initial baseline rather than from a hardware-anchored
+    starting point. While this document specifies these mechanisms for email message
+    headers, the attestation formats defined herein -- both the CMS attestation bundle
+    and the SD-JWT trust proof -- are self-contained, transport-independent data structures
+    applicable to HTTP headers, agent-to-agent messaging, payment authorisation, and
+    other Internet protocols.</p>'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-drake-email-hardware-attestation-00
+    docid:
+    - id: draft-drake-email-hardware-attestation-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-drake-email-hardware-attestation-00
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-drake-email-hardware-attestation-01
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

@@ -2,8 +2,8 @@
 schema-version: v1.2.3
 id: draft-wang-hjs-accountability
 title:
-- content: 'HJS: An Accountability Layer for AI Agents(v0.4) Event Recording Layer
-    for AI Agents'
+- content: 'HJS: Accountability Receipts for AI Agents A Minimal JEP Profile for Exportable
+    AI Receipts'
   language:
   - en
   script:
@@ -14,14 +14,21 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document defines the HJS: An Accountability Layer for AI Agents
-    v0.4, an event recording layer designed for AI decision-making systems. HJS implements
-    strict traceability and immutability of AI machine behavior, with configurable
-    human identity protection, enabling AI decision chains that are cryptographically
-    verifiable and fully auditable. HJS does not assign legal liability, enforce monitoring,
-    or manage authorization distribution. It provides only verifiable records of AI
-    behavior and optional privacy protection for human participants to balance transparency
-    with individual rights.</p>"
+- content: "<p>This document defines HJS, a minimal accountability receipt infrastructure
+    for AI agents. HJS is a profile of the Judgment Event Protocol (JEP) and does
+    not define an independent event signing protocol. HJS uses JEP events to bind
+    signed event claims to AI-agent behavior records, receipt manifests, optional
+    privacy-preserving human participant references, and optional deployment-specific
+    evidence references. The HJS core is intentionally small. It defines behavior-record
+    digest binding, receipt manifests, receipt bundles, and validation of cryptographic
+    and structural consistency. All other capabilities, including human privacy modes,
+    participant-supplied references, post- event review references, explanation-material
+    references, risk descriptors, model evidence, tool-call evidence, policy-check
+    evidence, multi-party export, and cryptographic capability profiles, are optional
+    extensions or deployment profiles. HJS is infrastructure. It does not assign legal
+    liability, prove subjective intent, define governance rules, enforce monitoring,
+    define fairness, define appeal rights, define explanation rights, determine authorization
+    validity, or establish regulatory compliance.</p>"
   language:
   - en
   script:
@@ -77,6 +84,16 @@ relation:
       primary: true
     formattedref:
       content: draft-wang-hjs-accountability-04
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-wang-hjs-accountability-05
+    docid:
+    - id: draft-wang-hjs-accountability-05
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-wang-hjs-accountability-05
       format: text/plain
 ext:
   schema-version: v1.0.1
