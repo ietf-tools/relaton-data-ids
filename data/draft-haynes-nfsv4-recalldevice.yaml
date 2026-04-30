@@ -13,12 +13,17 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>The Parallel Network File System (pNFS) allows for the metadata server
-    to use CB_LAYOUTRECALL to recall a layout from a client by file id or file system
-    id or all. It also allows the server to use CB_NOTIFY_DEVICEID to delete a deviceid.
-    It does not provide a mechanism for the metadata server to recall all layouts
-    that have a data file on a specific deviceid. This document presents an extension
-    to RFC7862 to allow the server to recall layouts from clients based on deviceid.</p>"
+- content: "<p>The Parallel Network File System (pNFS) allows the metadata server
+    to recall a layout from a client by file id, by file system id, or across all
+    of a client's layouts. It also lets the server delete a deviceid via CB_NOTIFY_DEVICEID.
+    It does not provide a mechanism for the metadata server to recall, in a single
+    operation, all layouts that reference a specific deviceid. This document presents
+    an extension to RFC7862 that adds a deviceid-scoped layout recall: a single CB_LAYOUTRECALL
+    operation recalls every layout a client holds that references a given deviceid,
+    leaving unrelated layouts in place. Without this capability, device unavailability
+    can trigger large volumes of failed WRITE and LAYOUTERROR traffic, and administrators
+    lack a surgical way to retire a deviceid without disturbing layouts that reference
+    healthy devices.</p>"
   language:
   - en
   script:
@@ -44,6 +49,16 @@ relation:
       primary: true
     formattedref:
       content: draft-haynes-nfsv4-recalldevice-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-haynes-nfsv4-recalldevice-02
+    docid:
+    - id: draft-haynes-nfsv4-recalldevice-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-haynes-nfsv4-recalldevice-02
       format: text/plain
 ext:
   schema-version: v1.0.1
