@@ -1,28 +1,28 @@
 ---
 schema-version: v1.2.3
-id: draft-celi-wiggers-tls-authkem-03
+id: draft-wiggers-tls-authkem-psk-05
 title:
-- content: KEM-based Authentication for TLS 1.3
+- content: KEM-based pre-shared-key handshakes for TLS 1.3
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-celi-wiggers-tls-authkem-03
+- content: https://datatracker.ietf.org/doc/html/draft-wiggers-tls-authkem-psk-05
   type: src
 type: standard
 docid:
-- id: draft-celi-wiggers-tls-authkem-03
+- id: draft-wiggers-tls-authkem-psk-05
   type: Internet-Draft
   primary: true
-- id: I-D.celi-wiggers-tls-authkem
+- id: I-D.wiggers-tls-authkem-psk
   type: IETF
   scope: anchor
-docnumber: I-D.celi-wiggers-tls-authkem
+docnumber: I-D.wiggers-tls-authkem-psk
 date:
 - type: published
-  value: '2024-04-15'
+  value: '2026-05-04'
 contributor:
 - person:
     name:
@@ -161,16 +161,19 @@ contributor:
   role:
   - type: author
 version:
-- draft: '03'
-revdate: '2024-04-15'
+- draft: '05'
+revdate: '2026-05-04'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document gives a construction for a Key Encapsulation Mechanism
-    (KEM)-based authentication mechanism in TLS 1.3. This proposal authenticates peers
-    via a key exchange protocol, using their long- term (KEM) public keys.</p>"
+- content: "<p>This document gives a construction in which (long-term) KEM public
+    keys are used in the place of TLS PSK keys, avoiding concerns that may affect
+    systems that use symmetric-key-based PSK, such as requiring key diversification
+    and protection of symmetric-keys' confidentiality. This mechanism is inspired
+    by AuthKEM (and could use AuthKEM certificate public keys for resumption), but
+    can be independently implemented.</p>"
   language:
   - en
   script:
@@ -179,23 +182,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-celi-wiggers-tls-authkem-00
+    id: draft-wiggers-tls-authkem-psk-02
     docid:
-    - id: draft-celi-wiggers-tls-authkem-00
+    - id: draft-wiggers-tls-authkem-psk-02
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-celi-wiggers-tls-authkem-00
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-celi-wiggers-tls-authkem-07
-    docid:
-    - id: draft-celi-wiggers-tls-authkem-07
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-celi-wiggers-tls-authkem-07
+      content: draft-wiggers-tls-authkem-psk-02
       format: text/plain
 series:
 - type: main
@@ -206,7 +199,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-celi-wiggers-tls-authkem-03
+  number: draft-wiggers-tls-authkem-psk-05
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
