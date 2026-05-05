@@ -13,14 +13,17 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>PIM Flooding Mechanism is a generic PIM message exchange mechanism
-    that allows multicast information to be exchanged between PIM routers hop-by-hop.
-    One example is PIM Flooding Mechanism and Source Discovery which allows last hop
-    routers to learn about new sources using PFM messages, without the need for initial
-    data registers, Rendezvous Points or shared trees. This document defines a new
-    TLV for announcing sources that allows for Sub-TLVs that can be used to provide
-    various types of information. This document also defines methodologies that enhance
-    forwarding efficiency in PFM deployments.</p>"
+- content: "<p>The Protocol Independent Multicast (PIM) Flooding Mechanism (PFM) provides
+    a generic hop-by-hop message exchange framework for distributing multicast information
+    among PIM routers. Existing PFM procedures enable efficient source discovery without
+    reliance on Rendezvous Points, shared trees, or initial data registers. This document
+    specifies enhancements to PFM forwarding behavior to improve efficiency and scalability.
+    In particular, it introduces mechanisms to reduce redundant message transmission
+    over multiple parallel links and extends the encoding of multicast information
+    through additional Type-Length-Value (TLV) structures and sub-TLVs to convey richer
+    flow-related data. These enhancements optimize control-plane overhead while preserving
+    interoperability with existing PFM procedures, enabling more efficient dissemination
+    of multicast state in PIM networks.</p>"
   language:
   - en
   script:
@@ -66,6 +69,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-pim-pfm-forwarding-enhancements-03
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-pim-pfm-forwarding-enhancements-04
+    docid:
+    - id: draft-ietf-pim-pfm-forwarding-enhancements-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-pim-pfm-forwarding-enhancements-04
       format: text/plain
 ext:
   schema-version: v1.0.1

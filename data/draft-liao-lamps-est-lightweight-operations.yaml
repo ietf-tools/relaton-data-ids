@@ -17,7 +17,7 @@ abstract:
     Secure Transport (EST) protocol specified in RFC 7030: ucacaps, ucacert, ucacerts,
     ucrlinfo, ucrl, usimpleenroll, usimplereenroll, and userverkeygen. These operations
     deliver PKI objects, including CA certificates, certificate chains, CRLs, and
-    enrolled certificates, directly as raw DER or PEM, without the CMS encapsulation
+    enrolled certificates, as Base64-encoded DER or PEM, without the CMS encapsulation
     used by the corresponding EST operations in RFC 7030. The ucacaps operation enables
     EST clients to discover which operations the EST server supports. Eliminating
     the CMS wrapper for these responses reduces code size and parsing complexity.
@@ -37,6 +37,16 @@ relation:
       primary: true
     formattedref:
       content: draft-liao-lamps-est-lightweight-operations-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-liao-lamps-est-lightweight-operations-01
+    docid:
+    - id: draft-liao-lamps-est-lightweight-operations-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-liao-lamps-est-lightweight-operations-01
       format: text/plain
 ext:
   schema-version: v1.0.1
