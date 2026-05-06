@@ -1,190 +1,188 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-nmop-rfc3535-20years-later-03
+id: draft-ietf-idr-vpn-prefix-orf-40
 title:
-- content: An Update of Operators Requirements on Network Management Protocols and
-    Modelling
+- content: VPN Prefix Outbound Route Filter (VPN Prefix ORF) for BGP-4
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-nmop-rfc3535-20years-later-03
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-vpn-prefix-orf-40
   type: src
 type: standard
 docid:
-- id: draft-ietf-nmop-rfc3535-20years-later-03
+- id: draft-ietf-idr-vpn-prefix-orf-40
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-nmop-rfc3535-20years-later
+- id: I-D.ietf-idr-vpn-prefix-orf
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-nmop-rfc3535-20years-later
+docnumber: I-D.ietf-idr-vpn-prefix-orf
 date:
 - type: published
-  value: '2026-03-20'
+  value: '2026-05-05'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Mohamed
+        - content: Wei
           language:
           - en
         - language:
           - en
-          initial: M
+          initial: W
         formatted_initials:
-          content: M.
+          content: W.
           language:
           - en
       surname:
-        content: Boucadair
+        content: Wang
         language:
         - en
       completename:
-        content: Mohamed Boucadair
+        content: Wei Wang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Orange
+        - content: China Telecom
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Luis
+        - content: Aijun
           language:
           - en
         - language:
           - en
-          initial: L
-        - language:
-          - en
-          initial: M
+          initial: A
         formatted_initials:
-          content: L. M.
+          content: A.
           language:
           - en
       surname:
-        content: Contreras
+        content: Wang
         language:
         - en
       completename:
-        content: Luis M. Contreras
+        content: Aijun Wang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Telefonica
+        - content: China Telecom
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Oscar
+        - content: Haibo
           language:
           - en
         - language:
           - en
-          initial: O
+          initial: H
+        formatted_initials:
+          content: H.
+          language:
+          - en
+      surname:
+        content: Wang
+        language:
+        - en
+      completename:
+        content: Haibo Wang
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei Technologies
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Gyan
+          language:
+          - en
         - language:
           - en
           initial: G
+        - language:
+          - en
+          initial: S
         formatted_initials:
-          content: O. G.
+          content: G. S.
           language:
           - en
       surname:
-        content: de Dios
+        content: Mishra
         language:
         - en
       completename:
-        content: Oscar Gonzalez de Dios
+        content: Gyan Mishra
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Telefonica
+        - content: Verizon Inc.
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Thomas
+        - content: Jie
           language:
           - en
         - language:
           - en
-          initial: T
+          initial: J
         formatted_initials:
-          content: T.
+          content: J.
           language:
           - en
       surname:
-        content: Graf
+        content: Dong
         language:
         - en
       completename:
-        content: Thomas Graf
+        content: Jie Dong
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Swisscom
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Reshad
-          language:
-          - en
-        - language:
-          - en
-          initial: R
-        formatted_initials:
-          content: R.
-          language:
-          - en
-      surname:
-        content: Rahman
-        language:
-        - en
-      completename:
-        content: Reshad Rahman
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Equinix
+        - content: Huawei Technologies
   role:
   - type: author
 version:
-- draft: '03'
-revdate: '2026-03-20'
+- draft: '40'
+revdate: '2026-05-05'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: <p>This document identifies a list of operators requirements for network
-    management operations. These requirements reflect advances in this field since
-    the publication of "IAB Network Management Workshop" (RFC 3535), which was instrumental
-    for developing many key technologies that are widely deployed. Discussion Venues
-    This note is to be removed before publishing as an RFC. Source for this draft
-    and an issue tracker can be found at https://github.com/boucadair/rfc3535-20years-later.</p>
+- content: "<p>This document defines an experimental specification for a new type
+    of Outbound Route Filter (ORF), known as the Virtual Private Network (VPN) Prefix
+    ORF. The VPN Prefix ORF mechanism is applicable when VPN routes from different
+    Virtual Routing and Forwarding (VRF) instances are exchanged through a single
+    shared Border Gateway Protocol (BGP) session. The purpose of the VPN Prefix ORF
+    mechanism is to control the overload of VPN routes based on Route Distinguisher
+    (RD), Route Target (RT) and other necessary routing information. This mechanism
+    is applicable to intra-domain scenarios.</p>"
   language:
   - en
   script:
@@ -193,23 +191,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-nmop-rfc3535-20years-later-02
+    id: draft-ietf-idr-vpn-prefix-orf-32
     docid:
-    - id: draft-ietf-nmop-rfc3535-20years-later-02
+    - id: draft-ietf-idr-vpn-prefix-orf-32
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-nmop-rfc3535-20years-later-02
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-nmop-rfc3535-20years-later-04
-    docid:
-    - id: draft-ietf-nmop-rfc3535-20years-later-04
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-nmop-rfc3535-20years-later-04
+      content: draft-ietf-idr-vpn-prefix-orf-32
       format: text/plain
 series:
 - type: main
@@ -220,7 +208,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-nmop-rfc3535-20years-later-03
+  number: draft-ietf-idr-vpn-prefix-orf-40
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

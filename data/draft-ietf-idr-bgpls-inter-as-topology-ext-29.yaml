@@ -1,190 +1,186 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-nmop-rfc3535-20years-later-03
+id: draft-ietf-idr-bgpls-inter-as-topology-ext-29
 title:
-- content: An Update of Operators Requirements on Network Management Protocols and
-    Modelling
+- content: BGP-LS Extension for Inter-AS Topology Retrieval
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-nmop-rfc3535-20years-later-03
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-bgpls-inter-as-topology-ext-29
   type: src
 type: standard
 docid:
-- id: draft-ietf-nmop-rfc3535-20years-later-03
+- id: draft-ietf-idr-bgpls-inter-as-topology-ext-29
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-nmop-rfc3535-20years-later
+- id: I-D.ietf-idr-bgpls-inter-as-topology-ext
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-nmop-rfc3535-20years-later
+docnumber: I-D.ietf-idr-bgpls-inter-as-topology-ext
 date:
 - type: published
-  value: '2026-03-20'
+  value: '2026-05-05'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Mohamed
+        - content: Aijun
           language:
           - en
         - language:
           - en
-          initial: M
+          initial: A
         formatted_initials:
-          content: M.
+          content: A.
           language:
           - en
       surname:
-        content: Boucadair
+        content: Wang
         language:
         - en
       completename:
-        content: Mohamed Boucadair
+        content: Aijun Wang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Orange
+        - content: China Telecom
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Luis
+        - content: Huaimo
           language:
           - en
         - language:
           - en
-          initial: L
-        - language:
-          - en
-          initial: M
+          initial: H
         formatted_initials:
-          content: L. M.
+          content: H.
           language:
           - en
       surname:
-        content: Contreras
+        content: Chen
         language:
         - en
       completename:
-        content: Luis M. Contreras
+        content: Huaimo Chen
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Telefonica
+        - content: Individual
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Oscar
+        - content: Ketan
           language:
           - en
         - language:
           - en
-          initial: O
-        - language:
-          - en
-          initial: G
+          initial: K
         formatted_initials:
-          content: O. G.
+          content: K.
           language:
           - en
       surname:
-        content: de Dios
+        content: Talaulikar
         language:
         - en
       completename:
-        content: Oscar Gonzalez de Dios
+        content: Ketan Talaulikar
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Telefonica
+        - content: Cisco Systems
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Thomas
+        - content: Shunwan
           language:
           - en
         - language:
           - en
-          initial: T
+          initial: S
         formatted_initials:
-          content: T.
+          content: S.
           language:
           - en
       surname:
-        content: Graf
+        content: Zhuang
         language:
         - en
       completename:
-        content: Thomas Graf
+        content: Shunwan Zhuang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Swisscom
+        - content: Huawei Technologies
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Reshad
+        - content: Changwang
           language:
           - en
         - language:
           - en
-          initial: R
+          initial: C
         formatted_initials:
-          content: R.
+          content: C.
           language:
           - en
       surname:
-        content: Rahman
+        content: Lin
         language:
         - en
       completename:
-        content: Reshad Rahman
+        content: Changwang Lin
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Equinix
+        - content: New H3C Technologies
   role:
   - type: author
 version:
-- draft: '03'
-revdate: '2026-03-20'
+- draft: '29'
+revdate: '2026-05-05'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: <p>This document identifies a list of operators requirements for network
-    management operations. These requirements reflect advances in this field since
-    the publication of "IAB Network Management Workshop" (RFC 3535), which was instrumental
-    for developing many key technologies that are widely deployed. Discussion Venues
-    This note is to be removed before publishing as an RFC. Source for this draft
-    and an issue tracker can be found at https://github.com/boucadair/rfc3535-20years-later.</p>
+- content: "<p>This document specifies the procedure for distributing Border Gateway
+    Protocol-Link State (BGP-LS) key parameters for inter-domain links between two
+    Autonomous Systems (ASes). It defines a new type within the BGP-LS Network Layer
+    Reachability Information (NLRI) for an Inter-AS Link, as well as three new type-length-values
+    (TLVs) for the BGP-LS Inter-AS Link descriptor. These BGP-LS extensions enable
+    Software-Defined Networking (SDN) controllers to retrieve network topology across
+    inter-AS environments. These extensions and procedures allow network operators
+    to collect inter-domain interconnect information and automatically compute the
+    end-to-end network topology using information provided by the BGP-LS protocol.</p>"
   language:
   - en
   script:
@@ -193,23 +189,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-nmop-rfc3535-20years-later-02
+    id: draft-ietf-idr-bgpls-inter-as-topology-ext-08
     docid:
-    - id: draft-ietf-nmop-rfc3535-20years-later-02
+    - id: draft-ietf-idr-bgpls-inter-as-topology-ext-08
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-nmop-rfc3535-20years-later-02
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-nmop-rfc3535-20years-later-04
-    docid:
-    - id: draft-ietf-nmop-rfc3535-20years-later-04
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-nmop-rfc3535-20years-later-04
+      content: draft-ietf-idr-bgpls-inter-as-topology-ext-08
       format: text/plain
 series:
 - type: main
@@ -220,7 +206,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-nmop-rfc3535-20years-later-03
+  number: draft-ietf-idr-bgpls-inter-as-topology-ext-29
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
