@@ -13,23 +13,27 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: <p>This document specifies the Trajectory-based Recognition of Identity
+- content: '<p>This document specifies the Trajectory-based Recognition of Identity
     Proof (TRIP) protocol, a decentralized mechanism for establishing claims of physical-world
     presence through cryptographically signed, spatially quantized location attestations
     called "breadcrumbs." Breadcrumbs are chained into an append-only log, bundled
     into verifiable epochs, and distilled into a Trajectory Identity Token (TIT) that
     serves as a persistent pseudonymous identifier. The protocol employs a Criticality
     Engine grounded in statistical physics to distinguish biological movement from
-    synthetic trajectories. Power Spectral Density analysis detects the 1/f signature
-    of Self-Organized Criticality in human mobility. A six- component Hamiltonian
-    energy function scores each breadcrumb against the identity's learned behavioral
-    profile in real time. This revision formalizes the mapping to the RATS Architecture
-    (RFC 9334), clarifies the Verifier trust model including support for multiple
-    independent Verifiers, introduces an active challenge- response verification protocol
-    that binds Attestation Results to specific Relying Party requests with cryptographic
-    freshness, and corrects the privacy model to accurately describe the flow of Evidence
-    between Attester and Verifier. TRIP is designed to be transport-agnostic and operates
-    independently of any particular naming system, blockchain, or application layer.</p>
+    synthetic trajectories. Power Spectral Density (PSD) analysis detects the 1/f
+    signature of Self-Organized Criticality in human mobility through the PSD scaling
+    exponent alpha. A six-component Hamiltonian energy function scores each breadcrumb
+    against the identity''s learned behavioral profile in real time. This revision
+    (-03) addresses three areas identified through expert review by researchers in
+    the statistical physics community: it replaces informal terminology with standard
+    spectral analysis nomenclature; it provides the analytical and numerical bridge
+    between the Levy flight displacement exponent and the PSD scaling exponent; and
+    it introduces a convergence analysis framework for quantifying the minimum trajectory
+    length required for reliable single-trajectory classification. Additionally, this
+    revision removes Passive Verification mode entirely, requiring all Attestation
+    Results to be bound to Relying Party nonces via the Active Verification Protocol.
+    TRIP is designed to be transport-agnostic and operates independently of any particular
+    naming system, blockchain, or application layer.</p>'
   language:
   - en
   script:
@@ -65,6 +69,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ayerbe-trip-protocol-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ayerbe-trip-protocol-03
+    docid:
+    - id: draft-ayerbe-trip-protocol-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ayerbe-trip-protocol-03
       format: text/plain
 ext:
   schema-version: v1.0.1
