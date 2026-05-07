@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-hardt-aauth-bootstrap
 title:
-- content: AAuth Bootstrap
+- content: AAuth Bootstrap Guidance
   language:
   - en
   script:
@@ -13,20 +13,12 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document defines AAuth Bootstrap, an extension to the AAuth Protocol
-    ([I-D.hardt-aauth-protocol]) that specifies how an agent server and an agent bootstrap
-    the agent to be bound to a person at the person's Person Server (PS). Bootstrap
-    establishes the binding between a user (as vouched for by the user's PS) and an
-    agent identity (aauth:local@domain) hosted by an agent server. The specification
-    covers self-hosted agents (where the agent and agent server are co-located under
-    a domain the user controls), web apps, and mobile agents. The agent MAY pass account
-    hints on the PS /bootstrap request to help the PS resolve the user when the user
-    has more than one account at the PS or when the agent already knows something
-    about the user. Identity claims and scoped authorization are obtained separately
-    through the standard three-party flow defined in AAuth Protocol. This specification
-    defines the bootstrap_token, the bootstrap_endpoint on the PS and agent server,
-    the signature schemes used at each step, and renewal flows that bypass the PS
-    after the initial binding is established.</p>"
+- content: "<p>This document provides informational guidance for agent providers (APs)
+    on enrolling agents and issuing AAuth agent tokens defined in [I-D.hardt-oauth-aauth-protocol].
+    It covers per-platform key handling, optional platform attestation, agent identifier
+    strategies, and refresh patterns. The mechanisms described here are not normative
+    protocol — they are common patterns that interoperable AP implementations can
+    adopt or adapt.</p>"
   language:
   - en
   script:
@@ -42,6 +34,16 @@ relation:
       primary: true
     formattedref:
       content: draft-hardt-aauth-bootstrap-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-hardt-aauth-bootstrap-01
+    docid:
+    - id: draft-hardt-aauth-bootstrap-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-hardt-aauth-bootstrap-01
       format: text/plain
 ext:
   schema-version: v1.0.1
