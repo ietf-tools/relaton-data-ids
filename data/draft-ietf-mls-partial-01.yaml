@@ -1,62 +1,90 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-netmod-yang-semver-24
+id: draft-ietf-mls-partial-01
 title:
-- content: YANG Semantic Versioning
+- content: Partial MLS
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-netmod-yang-semver-24
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-mls-partial-01
   type: src
 type: standard
 docid:
-- id: draft-ietf-netmod-yang-semver-24
+- id: draft-ietf-mls-partial-01
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-netmod-yang-semver
+- id: I-D.ietf-mls-partial
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-netmod-yang-semver
+docnumber: I-D.ietf-mls-partial
 date:
 - type: published
-  value: '2025-09-29'
+  value: '2026-05-07'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Joe
+        - content: Franziskus
           language:
           - en
         - language:
           - en
-          initial: J
+          initial: F
         formatted_initials:
-          content: J.
+          content: F.
           language:
           - en
       surname:
-        content: Clarke
+        content: Kiefer
         language:
         - en
       completename:
-        content: Joe Clarke
+        content: Franziskus Kiefer
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems, Inc.
+        - content: Cryspen
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Robert
+        - content: Karthikeyan
+          language:
+          - en
+        - language:
+          - en
+          initial: K
+        formatted_initials:
+          content: K.
+          language:
+          - en
+      surname:
+        content: Bhargavan
+        language:
+        - en
+      completename:
+        content: Karthikeyan Bhargavan
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Cryspen
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Richard
           language:
           - en
         - language:
@@ -67,138 +95,86 @@ contributor:
           language:
           - en
       surname:
-        content: Wilton
+        content: Barnes
         language:
         - en
       completename:
-        content: Robert Wilton
+        content: Richard Barnes
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems, Inc.
+        - content: Cisco
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        formatted_initials:
+          language:
+          - en
+      surname:
+        content: Joël
+        language:
+        - en
+      completename:
+        content: Joël
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: AWS Wickr
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Reshad
+        - content: Marta
           language:
           - en
         - language:
           - en
-          initial: R
+          initial: M
         formatted_initials:
-          content: R.
+          content: M.
           language:
           - en
       surname:
-        content: Rahman
+        content: Mularczyk
         language:
         - en
       completename:
-        content: Reshad Rahman
+        content: Marta Mularczyk
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Equinix
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - language:
-          - en
-          initial: B
-        formatted_initials:
-          content: B.
-          language:
-          - en
-      surname:
-        content: Lengyel
-        language:
-        - en
-      completename:
-        content: Balázs Lengyel
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Ericsson
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Jason
-          language:
-          - en
-        - language:
-          - en
-          initial: J
-        formatted_initials:
-          content: J.
-          language:
-          - en
-      surname:
-        content: Sterne
-        language:
-        - en
-      completename:
-        content: Jason Sterne
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Nokia
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - language:
-          - en
-          initial: B
-        formatted_initials:
-          content: B.
-          language:
-          - en
-      surname:
-        content: Claise
-        language:
-        - en
-      completename:
-        content: Benoît Claise
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Everything OPS
+        - content: AWS Wickr
   role:
   - type: author
 version:
-- draft: '24'
-revdate: '2025-09-29'
+- draft: '01'
+revdate: '2026-05-07'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document specifies a YANG extension along with guidelines for
-    applying an extended set of semantic versioning rules to revisions of YANG artifacts
-    (e.g., modules and packages). Additionally, this document defines a YANG extension
-    for controlling module imports based on these modified semantic versioning rules.
-    This document updates RFCs 7950, 8407bis, and 8525.</p>"
+- content: <p>The Messaging Layer Security (MLS) protocol provides efficient asynchronous
+    group key establishment for large groups with up to thousands of clients. In MLS,
+    any member can commit a change to the group, and consequently, all members must
+    download, validate, and maintain the full group state, which can incur a significant
+    communication and computational costs, especially when joining a group. This document
+    defines an MLS extension to support "partial MLS clients" that don't undertake
+    these costs. A partial client cannot commit changes to the group, and only has
+    partial authentication information for the other members of the group, but is
+    otherwise able to participate in the group. In exchange for these limitations,
+    a partial MLS client can participate in an MLS group with significantly lower
+    requirements in terms of download, memory, and processing.</p>
   language:
   - en
   script:
@@ -207,23 +183,23 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-netmod-yang-semver-19
+    id: draft-ietf-mls-partial-00
     docid:
-    - id: draft-ietf-netmod-yang-semver-19
+    - id: draft-ietf-mls-partial-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-netmod-yang-semver-19
+      content: draft-ietf-mls-partial-00
       format: text/plain
 - type: updatedBy
   bibitem:
-    id: draft-ietf-netmod-yang-semver-26
+    id: draft-ietf-mls-partial-02
     docid:
-    - id: draft-ietf-netmod-yang-semver-26
+    - id: draft-ietf-mls-partial-02
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-netmod-yang-semver-26
+      content: draft-ietf-mls-partial-02
       format: text/plain
 series:
 - type: main
@@ -234,7 +210,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-netmod-yang-semver-24
+  number: draft-ietf-mls-partial-01
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
