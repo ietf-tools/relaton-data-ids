@@ -18,11 +18,12 @@ abstract:
     server level. Unlike existing email authentication protocols (SPF, DKIM, DMARC),
     which operate at the domain level, ZI2 Certified operates at the server-instance
     level, enabling definitive identification of the specific server that dispatched
-    a given email message. The protocol introduces two custom mail headers (X-ZI2-Certified
-    and X-ZI2-Verified), a DNS TXT record publication format, a graduated trust model
-    with four levels, and an integration interface for AI-based email classification
-    systems. The protocol operates complementarily to existing email authentication
-    infrastructure and does not require modification of SPF, DKIM, or DMARC.</p>"
+    a given email message. The protocol introduces two custom mail headers, a DNS
+    TXT record publication format, a graduated trust model with four levels, and an
+    integration interface for AI-based email classification systems. The protocol
+    operates complementarily to existing email authentication infrastructure and introduces
+    an ARC-Delegated Trust mechanism to preserve origin attestation across legitimate
+    transit modifications.</p>"
   language:
   - en
   script:
@@ -38,6 +39,16 @@ relation:
       primary: true
     formattedref:
       content: draft-kadjo-zi2cert-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-kadjo-zi2cert-01
+    docid:
+    - id: draft-kadjo-zi2cert-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-kadjo-zi2cert-01
       format: text/plain
 ext:
   schema-version: v1.0.1
