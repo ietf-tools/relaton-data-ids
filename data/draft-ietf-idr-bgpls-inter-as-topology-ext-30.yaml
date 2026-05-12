@@ -1,90 +1,34 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-jose-hpke-encrypt-15
+id: draft-ietf-idr-bgpls-inter-as-topology-ext-30
 title:
-- content: Use of Hybrid Public Key Encryption (HPKE) with JSON Web Encryption (JWE)
+- content: BGP-LS Extension for Inter-AS Topology Retrieval
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-jose-hpke-encrypt-15
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-bgpls-inter-as-topology-ext-30
   type: src
 type: standard
 docid:
-- id: draft-ietf-jose-hpke-encrypt-15
+- id: draft-ietf-idr-bgpls-inter-as-topology-ext-30
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-jose-hpke-encrypt
+- id: I-D.ietf-idr-bgpls-inter-as-topology-ext
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-jose-hpke-encrypt
+docnumber: I-D.ietf-idr-bgpls-inter-as-topology-ext
 date:
 - type: published
-  value: '2025-11-30'
+  value: '2026-05-11'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Tirumaleswar
-          language:
-          - en
-        - language:
-          - en
-          initial: T
-        formatted_initials:
-          content: T.
-          language:
-          - en
-      surname:
-        content: Reddy.K
-        language:
-        - en
-      completename:
-        content: Tirumaleswar Reddy.K
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Nokia
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Hannes
-          language:
-          - en
-        - language:
-          - en
-          initial: H
-        formatted_initials:
-          content: H.
-          language:
-          - en
-      surname:
-        content: Tschofenig
-        language:
-        - en
-      completename:
-        content: Hannes Tschofenig
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: University of Applied Sciences Bonn-Rhein-Sieg
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Aritra
+        - content: Aijun
           language:
           - en
         - language:
@@ -95,92 +39,148 @@ contributor:
           language:
           - en
       surname:
-        content: Banerjee
+        content: Wang
         language:
         - en
       completename:
-        content: Aritra Banerjee
+        content: Aijun Wang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Nokia
+        - content: China Telecom
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Orie
+        - content: Huaimo
           language:
           - en
         - language:
           - en
-          initial: O
+          initial: H
         formatted_initials:
-          content: O.
+          content: H.
           language:
           - en
       surname:
-        content: Steele
+        content: Chen
         language:
         - en
       completename:
-        content: Orie Steele
+        content: Huaimo Chen
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Tradeverifyd
+        - content: Individual
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Michael
+        - content: Ketan
           language:
           - en
         - language:
           - en
-          initial: M
-        - language:
-          - en
-          initial: B
+          initial: K
         formatted_initials:
-          content: M. B.
+          content: K.
           language:
           - en
       surname:
-        content: Jones
+        content: Talaulikar
         language:
         - en
       completename:
-        content: Michael B. Jones
+        content: Ketan Talaulikar
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Self-Issued Consulting
+        - content: Cisco Systems
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Shunwan
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Zhuang
+        language:
+        - en
+      completename:
+        content: Shunwan Zhuang
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei Technologies
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Changwang
+          language:
+          - en
+        - language:
+          - en
+          initial: C
+        formatted_initials:
+          content: C.
+          language:
+          - en
+      surname:
+        content: Lin
+        language:
+        - en
+      completename:
+        content: Changwang Lin
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: New H3C Technologies
   role:
   - type: author
 version:
-- draft: '15'
-revdate: '2025-11-30'
+- draft: '30'
+revdate: '2026-05-11'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This specification defines how to use Hybrid Public Key Encryption
-    (HPKE) with JSON Web Encryption (JWE). HPKE enables public key encryption of arbitrary-sized
-    plaintexts to a recipient's public key, and provides security against adaptive
-    chosen ciphertext attacks. This specification chooses a specific subset of the
-    HPKE features to use with JWE. This specification updates RFC 7516 (JWE) to enable
-    use of the Integrated Encryption Key Establishment Mode.</p>"
+- content: "<p>This document specifies the procedure for distributing Border Gateway
+    Protocol-Link State (BGP-LS) key parameters for inter-domain links between two
+    Autonomous Systems (ASes). It defines a new type within the BGP-LS Network Layer
+    Reachability Information (NLRI) for an inter-AS Link, as well as three new type-length-values
+    (TLVs) for the BGP-LS inter-AS Link descriptor. These BGP-LS extensions enable
+    Software-Defined Networking (SDN) controllers to retrieve network topology across
+    inter-AS environments. These extensions and procedures allow network operators
+    to collect inter-domain interconnect information and automatically compute the
+    end-to-end network topology using information provided by the BGP-LS protocol.</p>"
   language:
   - en
   script:
@@ -189,23 +189,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-jose-hpke-encrypt-10
+    id: draft-ietf-idr-bgpls-inter-as-topology-ext-08
     docid:
-    - id: draft-ietf-jose-hpke-encrypt-10
+    - id: draft-ietf-idr-bgpls-inter-as-topology-ext-08
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-jose-hpke-encrypt-10
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-jose-hpke-encrypt-17
-    docid:
-    - id: draft-ietf-jose-hpke-encrypt-17
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-jose-hpke-encrypt-17
+      content: draft-ietf-idr-bgpls-inter-as-topology-ext-08
       format: text/plain
 series:
 - type: main
@@ -216,7 +206,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-jose-hpke-encrypt-15
+  number: draft-ietf-idr-bgpls-inter-as-topology-ext-30
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
