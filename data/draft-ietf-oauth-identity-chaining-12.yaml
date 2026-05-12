@@ -1,34 +1,62 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-rats-coserv-05
+id: draft-ietf-oauth-identity-chaining-12
 title:
-- content: Concise Selector for Endorsements and Reference Values
+- content: OAuth Identity and Authorization Chaining Across Domains
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-rats-coserv-05
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-oauth-identity-chaining-12
   type: src
 type: standard
 docid:
-- id: draft-ietf-rats-coserv-05
+- id: draft-ietf-oauth-identity-chaining-12
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-rats-coserv
+- id: I-D.ietf-oauth-identity-chaining
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-rats-coserv
+docnumber: I-D.ietf-oauth-identity-chaining
 date:
 - type: published
-  value: '2026-03-02'
+  value: '2026-05-11'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Paul
+        - content: Arndt
+          language:
+          - en
+        - language:
+          - en
+          initial: A
+        formatted_initials:
+          content: A.
+          language:
+          - en
+      surname:
+        content: Schwenkschuster
+        language:
+        - en
+      completename:
+        content: Arndt Schwenkschuster
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Defakto Security
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Pieter
           language:
           - en
         - language:
@@ -39,174 +67,148 @@ contributor:
           language:
           - en
       surname:
-        content: Howard
+        content: Kasselman
         language:
         - en
       completename:
-        content: Paul Howard
+        content: Pieter Kasselman
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Arm
+        - content: Defakto Security
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Thomas
+        - content: Kelley
           language:
           - en
         - language:
           - en
-          initial: T
+          initial: K
         formatted_initials:
-          content: T.
+          content: K.
           language:
           - en
       surname:
-        content: Fossati
+        content: Burgin
         language:
         - en
       completename:
-        content: Thomas Fossati
+        content: Kelley Burgin
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Linaro
+        - content: MITRE
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Henk
+        - content: Michael
           language:
           - en
         - language:
           - en
-          initial: H
+          initial: M
+        - language:
+          - en
+          initial: J
         formatted_initials:
-          content: H.
+          content: M. J.
           language:
           - en
       surname:
-        content: Birkholz
+        content: Jenkins
         language:
         - en
       completename:
-        content: Henk Birkholz
+        content: Michael J. Jenkins
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Fraunhofer SIT
+        - content: NSA-CCSS
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Shefali
+        - content: Brian
           language:
           - en
         - language:
           - en
-          initial: S
+          initial: B
         formatted_initials:
-          content: S.
+          content: B.
           language:
           - en
       surname:
-        content: Kamal
+        content: Campbell
         language:
         - en
       completename:
-        content: Shefali Kamal
+        content: Brian Campbell
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Fujitsu
+        - content: Ping Identity
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Giridhar
+        - content: Aaron
           language:
           - en
         - language:
           - en
-          initial: G
+          initial: A
         formatted_initials:
-          content: G.
+          content: A.
           language:
           - en
       surname:
-        content: Mandyam
+        content: Parecki
         language:
         - en
       completename:
-        content: Giridhar Mandyam
+        content: Aaron Parecki
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: AMD
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Ding
-          language:
-          - en
-        - language:
-          - en
-          initial: D
-        formatted_initials:
-          content: D.
-          language:
-          - en
-      surname:
-        content: Ma
-        language:
-        - en
-      completename:
-        content: Ding Ma
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Alibaba Cloud
+        - content: Okta
   role:
   - type: author
 version:
-- draft: '05'
-revdate: '2026-03-02'
+- draft: '12'
+revdate: '2026-05-11'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>In the Remote Attestation Procedures (RATS) architecture, Verifiers
-    require Endorsements and Reference Values to assess the trustworthiness of Attesters.
-    This document specifies the Concise Selector for Endorsements and Reference Values
-    (CoSERV), a structured query/result format designed to facilitate the discovery
-    and retrieval of these artifacts from various providers. CoSERV defines a query
-    language and corresponding result structure using CDDL, which can be serialized
-    in CBOR format, enabling efficient interoperability across diverse systems.</p>"
+- content: "<p>This specification defines a mechanism to preserve identity and authorization
+    information across trust domains that use the OAuth 2.0 Framework. Discussion
+    Venues This note is to be removed before publishing as an RFC. Discussion of this
+    document takes place on the Web Authorization Protocol Working Group mailing list
+    (oauth@ietf.org), which is archived at https://mailarchive.ietf.org/arch/browse/oauth/.
+    Source for this draft and an issue tracker can be found at https://github.com/oauth-wg/oauth-identity-chaining.</p>"
   language:
   - en
   script:
@@ -215,23 +217,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-rats-coserv-04
+    id: draft-ietf-oauth-identity-chaining-08
     docid:
-    - id: draft-ietf-rats-coserv-04
+    - id: draft-ietf-oauth-identity-chaining-08
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-rats-coserv-04
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-rats-coserv-06
-    docid:
-    - id: draft-ietf-rats-coserv-06
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-rats-coserv-06
+      content: draft-ietf-oauth-identity-chaining-08
       format: text/plain
 series:
 - type: main
@@ -242,7 +234,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-rats-coserv-05
+  number: draft-ietf-oauth-identity-chaining-12
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
