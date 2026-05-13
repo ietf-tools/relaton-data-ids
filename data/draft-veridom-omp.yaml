@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-veridom-omp
 title:
-- content: 'Operating Model Protocol (OMP) Core -- Version 01: Invariant 3 -- Verifiable
+- content: 'Operating Model Protocol (OMP) Core -- Version 02: Invariant 3 -- Verifiable
     Delegation Binding'
   language:
   - en
@@ -14,22 +14,14 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This -01 version of the Operating Model Protocol (OMP) Core specification
-    introduces Invariant 3: Verifiable Delegation Binding. OMP version -00 establishes
-    two invariants: (1) deterministic routing and (2) immutable trail. These invariants
-    are necessary but not sufficient for adversarial evidentiary defensibility. A
-    tamper- evident record of an unauthorised decision is still an unauthorised decision.
-    This amendment adds Invariant 3, which closes the gap between record existence
-    and authority validity by requiring that every ASSISTED or ESCALATED routing state
-    bind the Named Accountable Officer field to a verifiable DelegationInstrument
-    object at the moment of decision. When no valid binding can be established, the
-    system sets authority_binding_result to AUTHORITY_UNBOUND -- a sealed, positive
-    evidentiary declaration of the absence, not a silent failure. The routing_state
-    is preserved; execution_permission is set to BLOCKED. Three axes are orthogonal:
-    routing_state, authority_binding_result, and execution_permission. This amendment
-    is additive and non-breaking. All twelve existing OMP profile drafts inherit Invariant
-    3 from the core specification. AUTONOMOUS routing states are exempt unless a profile-specific
-    Watchtower gate requires binding.</p>"
+- content: "<p>This document obsoletes draft-veridom-omp-00. The Operating Model Protocol
+    (OMP) defines a deterministic routing and tamper-evident evidence architecture
+    for consequential AI decisions. This document specifies OMP Core version 01, which
+    adds Invariant 3: Verifiable Delegation Binding. Every ASSISTED or ESCALATED routing
+    state must bind the Named Accountable Officer to a verifiable DelegationInstrument
+    at the time of decision. When valid binding cannot be established, the system
+    records AUTHORITY_UNBOUND -- a sealed, positive evidentiary state. This update
+    is additive and backward-compatible with OMP Core version 00.</p>"
   language:
   - en
   script:
@@ -55,6 +47,16 @@ relation:
       primary: true
     formattedref:
       content: draft-veridom-omp-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-veridom-omp-02
+    docid:
+    - id: draft-veridom-omp-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-veridom-omp-02
       format: text/plain
 ext:
   schema-version: v1.0.1
