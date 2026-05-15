@@ -18,17 +18,19 @@ abstract:
     for cryptographic identity, faceted authority attenuation, and governance for
     AI agent systems. APS introduces Ed25519-based agent passports, scoped delegation
     chains with monotonic narrowing across seven constraint dimensions (scope, spend,
-    depth, time, reputation, values, reversibility), cascade revocation, a three-signature
-    policy chain (intent, evaluation, receipt), Bayesian reputation-gated authority,
-    and institutional governance primitives (charters, offices, approval policies,
-    federation). Authority is modeled as an element of a product lattice, and delegation
+    depth, time, reputation, values floor, reversibility), cascade revocation, a three-signature
+    policy chain (intent, evaluation, receipt), and signed receipts that record what
+    an agent declared, what a policy engine decided, and what an enforcement boundary
+    observed. Authority is modeled as an element of a product lattice, and delegation
     is a monotone function on that lattice, ensuring that delegated capabilities can
-    only be attenuated, never amplified. The protocol addresses authentication and
-    authorization gaps in current AI agent infrastructure including MCP and A2A. Reference
-    implementations are provided in TypeScript and Python with 1,634 tests across
-    85 modules, published as open- source SDKs under Apache-2.0. Protocol bindings
-    are specified for MCP (120 tools), with cross-protocol validation through a five-member
-    working group on production infrastructure.</p>"
+    only be attenuated, never amplified. APS also defines key rotation with identity
+    continuity, and recognizes institutional governance primitives (charters, offices,
+    approval policies, federation) that compose with the delegation lattice; their
+    normative specification is companion work. The protocol is intended to complement
+    current AI agent infrastructure, including MCP and A2A, with cryptographic identity,
+    delegated authority, and verifiable enforcement evidence. A protocol binding is
+    specified for MCP. Reference implementations are available in TypeScript and Python
+    under Apache-2.0; see the Implementation Status section.</p>"
   language:
   - en
   script:
@@ -44,6 +46,16 @@ relation:
       primary: true
     formattedref:
       content: draft-pidlisnyi-aps-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-pidlisnyi-aps-01
+    docid:
+    - id: draft-pidlisnyi-aps-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-pidlisnyi-aps-01
       format: text/plain
 ext:
   schema-version: v1.0.1
