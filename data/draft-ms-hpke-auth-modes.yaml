@@ -13,16 +13,23 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>The standards-track [I-D.ietf-hpke-hpke] supersedes the informational
+- content: <p>The standards-track [I-D.ietf-hpke-hpke] supersedes the informational
     [RFC9180], omitting its authenticated modes mode_auth and mode_auth_psk. This
-    document restores those two modes as a strict extension, requiring only the addition
-    of AuthEncap()/AuthDecap() to the DHKEM, the definition of four setup functions,
-    and a change in VerifyPSKInputs(). The extension does not alter the externally
-    observable behavior of the existing HPKE modes standardized in [I-D.ietf-hpke-hpke].
-    This document also illustrates, informatively, how the restored modes can be used.
-    One such application uses mode_auth_psk with a post- quantum KEM (PQ-KEM) shared
-    secret as the PSK, providing hybrid PQ/T confidentiality. This material is provided
-    to motivate the extension and may be developed as separate work.</p>"
+    document restores mode_auth_psk mode as a strict extension and illustrates how
+    the restored mode can be used with a post-quantum "shared secret" as the PSK in
+    order to achieve hybrid PQ/T confidentiality while transitioning to quantum-resistant
+    encryption, without deprecating the classical implicit authentication on which
+    many applications still rely. This extension requires only the addition of AuthEncap()/AuthDecap()
+    to the DHKEM, the definition of four setup functions, and a change in VerifyPSKInputs().
+    The extension does not alter the externally observable behavior of the existing
+    HPKE modes standardized in [I-D.ietf-hpke-hpke]. Although AuthEncap()/AuthDecap()
+    reintroduce the functionality of mode_auth, the mode itself is not restored, since
+    it cannot provide quantum resistance. This document discusses the transitional
+    nature of the AuthPSK construction and its security properties as a transitional
+    step towards quantum resistance. In particular, this document illustrates how
+    the restored mode_auth_psk can be used to provide ready-made KEM combiner-like
+    functionality ([I-D.ounsworth-cfrg-kem-combiners]) without requiring downstream
+    API users to manage their own encryption context.</p>
   language:
   - en
   script:
@@ -38,6 +45,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ms-hpke-auth-modes-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ms-hpke-auth-modes-01
+    docid:
+    - id: draft-ms-hpke-auth-modes-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ms-hpke-auth-modes-01
       format: text/plain
 ext:
   schema-version: v1.0.1

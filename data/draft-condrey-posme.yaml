@@ -1,0 +1,46 @@
+---
+schema-version: v1.2.3
+id: draft-condrey-posme
+title:
+- content: Proof of Sequential Memory Execution (PoSME)
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-condrey-posme
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This document defines Proof of Sequential Memory Execution (PoSME),
+    a cryptographic primitive combining mutable arena state, data- dependent pointer-chase
+    addressing, and per-block causal hash binding in a single step function. A Prover
+    executes K sequential steps over a mutable N-block arena. Each step reads d blocks
+    at addresses determined by the previous read's result (pointer chasing), writes
+    one block with spatial neighborhood entanglement (incorporating A\\[w-1\\] and
+    A\\[w+1\\]), and advances a transcript chain. The construction provides three
+    properties: (1) unconditional sequential time enforcement anchored in physics-bounded
+    latency floors, (2) forgery prevention via causal hashes (reduces to collision
+    resistance of H), and (3) TMTO resistance scaling as $1/\\alpha$ with spatial
+    entanglement, where $\\alpha$ is the adversary's storage fraction. Verification
+    requires O(Q * d^R * log N) hash evaluations with no arena allocation. No trusted
+    setup is required.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-condrey-posme-00
+    docid:
+    - id: draft-condrey-posme-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-condrey-posme-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

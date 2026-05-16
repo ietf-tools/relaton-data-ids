@@ -13,7 +13,7 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document specifies the AI Manifest protocol, a JSON-based format
+- content: '<p>This document specifies the AI Manifest protocol, a JSON-based format
     for websites to declare step-by-step user interface (UI) workflow instructions
     readable by autonomous AI agents. By embedding the manifest, website operators
     allow AI agents using browser-automation tools to execute multi-step transactions
@@ -24,7 +24,23 @@ abstract:
     results from a reference implementation demonstrate an 81.9% reduction in input
     tokens consumed by the AI agent and an increase in task success rate from 20%
     to 100% on a representative multi-step transaction, compared with conventional
-    DOM-analysis approaches.</p>"
+    DOM-analysis approaches. This document also documents an empirical finding (-01
+    update, 2026-04-28) that manifest embedding alone is insufficient for autonomous
+    execution by modern LLM agents due to prompt-injection defenses in their system
+    policies. A deterministic execution runtime (referred to herein as the "SDK")
+    is required to consume the verified manifest outside the LLM reasoning loop and
+    return only the structured outcome to the agent. Without such a runtime, an embedded
+    manifest may produce negative value (slower than baseline) due to user-approval-gate
+    latency. A -01 update (2026-05-15) introduces two additions. First, the manifest
+    schema is extended to the AI Friction-Recovery Manifest (AFRM) three-part model:
+    frameworkHints, knownTraps (primary content), and shortcuts. This aligns with
+    the independently observed structure of real-world practitioner documents and
+    with the companion position paper (IUI 2027). Second, a fifth discovery mechanism
+    is specified -- Method E (AI-side curation) -- in which the user places a manifest
+    at a vendor-conventional file-system path (e.g., ~/.claude/afrm/{domain}.json);
+    the AI runtime loads it on domain match without prompt-injection screening because
+    the file originates from the user''s authored context. A new trap category, native-
+    dialog-trap, is also registered.</p>'
   language:
   - en
   script:
@@ -40,6 +56,16 @@ relation:
       primary: true
     formattedref:
       content: draft-han-ai-manifest-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-han-ai-manifest-01
+    docid:
+    - id: draft-han-ai-manifest-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-han-ai-manifest-01
       format: text/plain
 ext:
   schema-version: v1.0.1

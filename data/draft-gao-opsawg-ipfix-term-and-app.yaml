@@ -2,8 +2,7 @@
 schema-version: v1.2.3
 id: draft-gao-opsawg-ipfix-term-and-app
 title:
-- content: Requirements and Information Elements for Application Layer Information
-    Export in IP Flow Information Export (IPFIX)
+- content: Export of TLS Handshake Information in IPFIX
   language:
   - en
   script:
@@ -14,9 +13,12 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document explains the requirements for exporting application layer
-    information and specifies the information elements used in IPFIX (IP Flow Information
-    Export).</p>"
+- content: "<p>This document defines a set of new Information Elements (IEs) in the
+    IPFIX Information Model for exporting raw TLS ClientHello handshake fields. These
+    IEs enable the collection of standardized client behavioral fingerprints from
+    network traffic without decryption of the encrypted payload. The exported fields
+    facilitate network anomaly detection, threat identification, and fault diagnosis
+    in encrypted traffic environments.</p>"
   language:
   - en
   script:
@@ -42,6 +44,16 @@ relation:
       primary: true
     formattedref:
       content: draft-gao-opsawg-ipfix-term-and-app-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-gao-opsawg-ipfix-term-and-app-02
+    docid:
+    - id: draft-gao-opsawg-ipfix-term-and-app-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-gao-opsawg-ipfix-term-and-app-02
       format: text/plain
 ext:
   schema-version: v1.0.1
