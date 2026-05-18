@@ -1,0 +1,103 @@
+---
+schema-version: v1.2.3
+id: draft-morrison-identity-attributed-commits-01
+title:
+- content: Identity-Attributed Git Commits via Tier-Structured Trailers
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-morrison-identity-attributed-commits-01
+  type: src
+type: standard
+docid:
+- id: draft-morrison-identity-attributed-commits-01
+  type: Internet-Draft
+  primary: true
+- id: I-D.morrison-identity-attributed-commits
+  type: IETF
+  scope: anchor
+docnumber: I-D.morrison-identity-attributed-commits
+date:
+- type: published
+  value: '2026-05-17'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Blake
+          language:
+          - en
+        - language:
+          - en
+          initial: B
+        formatted_initials:
+          content: B.
+          language:
+          - en
+      surname:
+        content: Morrison
+        language:
+        - en
+      completename:
+        content: Blake Morrison
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Alter Meridian Pty Ltd
+  role:
+  - type: author
+version:
+- draft: '01'
+revdate: '2026-05-17'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>This document defines a git commit trailer grammar for identity- attributed
+    contributions using the ~handle identity primitive defined in [MCPDNS]. The grammar
+    binds sovereign actors, automated bots, and AI instruments to specific commits
+    via three tier-structured trailers (Acted-By, Executed-By, Drafted-With) and three
+    optional cryptographic trailers (Identity-Signature, Identity-Key-Id, Identity-Anchor).
+    The signature is computed with Ed25519 over the commit's tree hash rather than
+    its commit hash, preserving attribution across rebase, cherry-pick, and squash
+    merge operations. Conformant parsers reject cross-tier category errors (e.g.,
+    an Instrument-tier handle in an Acted-By slot) as malformed. The mechanism is
+    provider-neutral, depends only on DNS [RFC1035] and the ~handle resolution algorithm
+    of [MCPDNS], and requires no central authority or platform-specific verification
+    service.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-morrison-identity-attributed-commits-00
+    docid:
+    - id: draft-morrison-identity-attributed-commits-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-morrison-identity-attributed-commits-00
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-morrison-identity-attributed-commits-01
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
