@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-wang-tls-service-affinity-01
+id: draft-wang-tls-service-affinity-02
 title:
 - content: Service Affinity Solution based on Transport Layer Security (TLS)
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-wang-tls-service-affinity-01
+- content: https://datatracker.ietf.org/doc/html/draft-wang-tls-service-affinity-02
   type: src
 type: standard
 docid:
-- id: draft-wang-tls-service-affinity-01
+- id: draft-wang-tls-service-affinity-02
   type: Internet-Draft
   primary: true
 - id: I-D.wang-tls-service-affinity
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.wang-tls-service-affinity
 date:
 - type: published
-  value: '2026-04-08'
+  value: '2026-05-18'
 contributor:
 - person:
     name:
@@ -84,6 +84,31 @@ contributor:
     name:
       given:
         forename:
+        - language:
+          - en
+          initial: P
+        formatted_initials:
+          content: P.
+          language:
+          - en
+      surname:
+        content: 汪宗斌
+        language:
+        - en
+      completename:
+        content: 汪宗斌
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Beijing Infosec Technologies Co., LTD.
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
         - content: Mohit
           language:
           - en
@@ -137,8 +162,8 @@ contributor:
   role:
   - type: author
 version:
-- draft: '01'
-revdate: '2026-04-08'
+- draft: '02'
+revdate: '2026-05-18'
 language:
 - en
 script:
@@ -148,7 +173,12 @@ abstract:
     server based on Transport Layer Security (TLS). An extension to Transport Layer
     Security (TLS) 1.3 to enable session migration. This mechanism is designed for
     network architectures, particularly for multi-homed servers that possess multiple
-    network interfaces and IP addresses.</p>"
+    network interfaces and IP addresses. This document also introduces a Reliable
+    Framing Layer that operates above the TLS record layer to provide message framing,
+    sequence numbering, acknowledgment tracking, and automatic retransmission. The
+    Framing Layer ensures zero application data loss during TLS session migration
+    by buffering unacknowledged data frames and retransmitting them to the new server
+    endpoint after migration completes.</p>"
   language:
   - en
   script:
@@ -157,23 +187,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-wang-tls-service-affinity-00
+    id: draft-wang-tls-service-affinity-01
     docid:
-    - id: draft-wang-tls-service-affinity-00
+    - id: draft-wang-tls-service-affinity-01
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-wang-tls-service-affinity-00
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-wang-tls-service-affinity-02
-    docid:
-    - id: draft-wang-tls-service-affinity-02
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-wang-tls-service-affinity-02
+      content: draft-wang-tls-service-affinity-01
       format: text/plain
 series:
 - type: main
@@ -184,7 +204,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-wang-tls-service-affinity-01
+  number: draft-wang-tls-service-affinity-02
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
