@@ -1,0 +1,158 @@
+---
+schema-version: v1.2.3
+id: draft-lee-tcpm-stateful-tcp-00
+title:
+- content: 'Stateful-TCP: Bypassing TCP Slow-Start Using Cached Per-Destination Path
+    Bandwidth'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-lee-tcpm-stateful-tcp-00
+  type: src
+type: standard
+docid:
+- id: draft-lee-tcpm-stateful-tcp-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.lee-tcpm-stateful-tcp
+  type: IETF
+  scope: anchor
+docnumber: I-D.lee-tcpm-stateful-tcp
+date:
+- type: published
+  value: '2026-05-18'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Lingfeng
+          language:
+          - en
+        - language:
+          - en
+          initial: L
+        formatted_initials:
+          content: L.
+          language:
+          - en
+      surname:
+        content: Guo
+        language:
+        - en
+      completename:
+        content: Lingfeng Guo
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: The Chinese University of Hong Kong
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Feiyu
+          language:
+          - en
+        - language:
+          - en
+          initial: F
+        formatted_initials:
+          content: F.
+          language:
+          - en
+      surname:
+        content: Xue
+        language:
+        - en
+      completename:
+        content: Feiyu Xue
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: The Chinese University of Hong Kong
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Jack
+          language:
+          - en
+        - language:
+          - en
+          initial: J
+        - language:
+          - en
+          initial: "Y"
+        - language:
+          - en
+          initial: B
+        formatted_initials:
+          content: J. Y. B.
+          language:
+          - en
+      surname:
+        content: Lee
+        language:
+        - en
+      completename:
+        content: Jack Yiu Bun Lee
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: The Chinese University of Hong Kong
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-05-18'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>This document specifies Stateful-TCP, an experimental sender-side mechanism
+    that accelerates the startup of TCP connections by reusing path-bandwidth information
+    estimated from earlier connections to the same destination. When a usable estimate
+    is available, the sender bypasses Slow-Start and instead enters a paced startup
+    phase whose initial congestion window and pacing rate are derived from the cached
+    estimate. When no usable estimate is available, the sender falls back to standard
+    Slow-Start. Stateful-TCP is sender-only and does not require any change to the
+    TCP receiver or to the wire format. It is orthogonal to the congestion control
+    algorithm in use after the first round-trip time and may therefore be combined
+    with existing TCP variants such as CUBIC. This document also specifies a Gap-Compensated
+    Bandwidth Estimation (GCBE) procedure used to produce the cached per- destination
+    estimate. Stateful-TCP extends the framework of TCP Control Block Interdependence
+    (RFC 9040) by sharing additional per-destination state across connections. The
+    mechanism is published as Experimental to enable independent implementation, evaluation,
+    and review.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-lee-tcpm-stateful-tcp-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
