@@ -1,0 +1,153 @@
+---
+schema-version: v1.2.3
+id: draft-geng-acme-idp-00
+title:
+- content: Automated Certificate Management Environment (ACME) Identity-Controlled
+    Validation Extension
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-geng-acme-idp-00
+  type: src
+type: standard
+docid:
+- id: draft-geng-acme-idp-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.geng-acme-idp
+  type: IETF
+  scope: anchor
+docnumber: I-D.geng-acme-idp
+date:
+- type: published
+  value: '2026-05-19'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Feng
+          language:
+          - en
+        - language:
+          - en
+          initial: F
+        formatted_initials:
+          content: F.
+          language:
+          - en
+      surname:
+        content: Geng
+        language:
+        - en
+      completename:
+        content: Feng Geng
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei Technologies
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Panyu
+          language:
+          - en
+        - language:
+          - en
+          initial: P
+        formatted_initials:
+          content: P.
+          language:
+          - en
+      surname:
+        content: Wu
+        language:
+        - en
+      completename:
+        content: Panyu Wu
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei Technologies
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - language:
+          - en
+          initial: C
+        formatted_initials:
+          content: C.
+          language:
+          - en
+      surname:
+        content: 陈鑫
+        language:
+        - en
+      completename:
+        content: 陈鑫
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: TrustAsia
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-05-19'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: '<p>This document defines an Identity Control Validation (ICV) framework
+    for the ACME protocol [RFC8555], introducing a new ACME identifier type "idp"
+    and a new challenge type "idp-01". The ICV framework allows ACME servers to delegate
+    trusted Identity Providers (IdPs) to verify certificate applicants’ control over
+    the claimed identities. This document also defines an optional X.509 certificate
+    extension, the Trust-Domain-Restricted Certificate Extension, which explicitly
+    indicates that certificates issued via the ICV framework are backed by a specific
+    IdP trust domain and whose trustworthiness depends on the current status and policies
+    of that IdP, preventing trust leakage into contexts outside the IdP’s trust domain.
+    This extension is parallel to Domain Control Validation (DCV) [RFC8555]; either
+    can independently verify an applicant’s control over identities/resources and
+    request certificates. Proof-of-Possession (PoP) [I-D.geng-acme-public-key] serves
+    as an auxiliary enhancement framework. Based on this architecture, two standardized
+    certificate enrollment models are formed: the Domain Validation model (DCV + optional
+    PoP) and the Identity Validation model (ICV + optional PoP). This document focuses
+    on the latter. This document defines three deployment models: the IdP-Operated
+    Certificate Model, the Intra-PKI Domain Mutual-Trust Model, and the CA-Integrated
+    IdP Model. It supports multiple authentication protocols via the extensible idp_method
+    parameter, covering both device and account identities.</p>'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-geng-acme-idp-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

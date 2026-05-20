@@ -1,0 +1,104 @@
+---
+schema-version: v1.2.3
+id: draft-ambekar-oauth-epop-01
+title:
+- content: JSON Web Token (JWT) Profile for OAuth 2.0 Enveloped Proof of Possession
+    (EPOP)
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-ambekar-oauth-epop-01
+  type: src
+type: standard
+docid:
+- id: draft-ambekar-oauth-epop-01
+  type: Internet-Draft
+  primary: true
+- id: I-D.ambekar-oauth-epop
+  type: IETF
+  scope: anchor
+docnumber: I-D.ambekar-oauth-epop
+date:
+- type: published
+  value: '2026-05-19'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Ashwin
+          language:
+          - en
+        - language:
+          - en
+          initial: A
+        formatted_initials:
+          content: A.
+          language:
+          - en
+      surname:
+        content: Ambekar
+        language:
+        - en
+      completename:
+        content: Ashwin Ambekar
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: eBay
+  role:
+  - type: author
+version:
+- draft: '01'
+revdate: '2026-05-19'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>This specification defines a profile for OAuth 2.0 sender-constrained
+    credentials in which authorization codes, access tokens, and refresh tokens are
+    cryptographically bound to the client's private key as a single inseparable envelope.
+    The profile extends sender-constraining beyond HTTP to non-HTTP transports including
+    MQTT, Kafka, the Model Context Protocol (MCP), gRPC, and SASL-based protocols
+    such as those defined in [RFC7628]. It introduces atomic proof-of-possession key
+    rotation, enabling clients to rotate key pairs without disrupting active sessions,
+    and an offline-derived client nonce (cnonce) that eliminates the server-issued
+    nonce round-trip required by existing mechanisms — enabling stateless proof validation
+    critical for non- HTTP and high-throughput deployments. Authorization servers,
+    resource servers, and clients from different vendors can implement this profile
+    interoperably.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-ambekar-oauth-epop-00
+    docid:
+    - id: draft-ambekar-oauth-epop-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ambekar-oauth-epop-00
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-ambekar-oauth-epop-01
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

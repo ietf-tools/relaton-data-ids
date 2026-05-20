@@ -13,7 +13,7 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document defines a multi-jurisdiction compliance profile of the
+- content: '<p>This document defines a multi-jurisdiction compliance profile of the
     signed action receipt format used by AI agents to record machine- readable evidence
     of access-control decisions. The profile binds receipt fields to two regulatory
     surfaces: the European Union obligations of Articles 12 and 26 of Regulation (EU)
@@ -24,10 +24,16 @@ abstract:
     Regulation (23 NYCRR Part 500), the HIPAA Security Rule (45 CFR Part 164, Subpart
     C), SEC Rule 17a-4 (17 CFR 240.17a-4), and the Cyber Incident Reporting for Critical
     Infrastructure Act of 2022 (CIRCIA). It does not redefine the wire format, the
-    canonicalization rule, or the signing algorithms of the underlying receipt format.
-    It tightens a subset of the OPTIONAL fields to REQUIRED, imposes a retention floor,
-    requires at least one timestamping anchor (RFC 3161 or OpenTimestamps; both RECOMMENDED),
-    and adds two extension fields.</p>"
+    canonicalization transformation, or the signing algorithms of the underlying receipt
+    format; it narrows the set of values to which the canonicalization rule is applied
+    (IEEE-754 floating-point numbers MUST NOT appear in digest-covered fields) and
+    tightens a small number of pre-existing wire surfaces under this revision (see
+    Appendix "draft-marques-asqav-compliance-receipts-04"). It tightens a subset of
+    the OPTIONAL fields to REQUIRED, imposes a retention floor, requires at least
+    one timestamping anchor (RFC 3161 or OpenTimestamps; both RECOMMENDED), and adds
+    three extension fields. The third, counterparty_binding, is added in this revision
+    to provide cryptographic cross-agent byte-equality evidence under a compromised
+    intermediary.</p>'
   language:
   - en
   script:
@@ -73,6 +79,16 @@ relation:
       primary: true
     formattedref:
       content: draft-marques-asqav-compliance-receipts-03
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-marques-asqav-compliance-receipts-04
+    docid:
+    - id: draft-marques-asqav-compliance-receipts-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-marques-asqav-compliance-receipts-04
       format: text/plain
 ext:
   schema-version: v1.0.1
