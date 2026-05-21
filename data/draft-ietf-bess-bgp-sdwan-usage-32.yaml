@@ -1,91 +1,34 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-savnet-intra-domain-problem-statement-24
+id: draft-ietf-bess-bgp-sdwan-usage-32
 title:
-- content: Problem Statement, Gap Analysis, and Requirements for Intra-domain Source
-    Address Validation
+- content: BGP Usage for SD-WAN Overlay Networks
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-savnet-intra-domain-problem-statement-24
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-bess-bgp-sdwan-usage-32
   type: src
 type: standard
 docid:
-- id: draft-ietf-savnet-intra-domain-problem-statement-24
+- id: draft-ietf-bess-bgp-sdwan-usage-32
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-savnet-intra-domain-problem-statement
+- id: I-D.ietf-bess-bgp-sdwan-usage
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-savnet-intra-domain-problem-statement
+docnumber: I-D.ietf-bess-bgp-sdwan-usage
 date:
 - type: published
-  value: '2026-05-09'
+  value: '2026-05-20'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Dan
-          language:
-          - en
-        - language:
-          - en
-          initial: D
-        formatted_initials:
-          content: D.
-          language:
-          - en
-      surname:
-        content: Li
-        language:
-        - en
-      completename:
-        content: Dan Li
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Tsinghua University
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Jianping
-          language:
-          - en
-        - language:
-          - en
-          initial: J
-        formatted_initials:
-          content: J.
-          language:
-          - en
-      surname:
-        content: Wu
-        language:
-        - en
-      completename:
-        content: Jianping Wu
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Tsinghua University
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Lancheng
+        - content: Linda
           language:
           - en
         - language:
@@ -96,84 +39,140 @@ contributor:
           language:
           - en
       surname:
-        content: Qin
+        content: Dunbar
         language:
         - en
       completename:
-        content: Lancheng Qin
+        content: Linda Dunbar
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Zhongguancun Laboratory
+        - content: Futurewei
   role:
   - type: author
 - person:
     name:
       given:
         forename:
+        - content: Ali
+          language:
+          - en
         - language:
           - en
-          initial: M
+          initial: A
         formatted_initials:
-          content: M.
+          content: A.
           language:
           - en
       surname:
-        content: Huang
+        content: Sajassi
         language:
         - en
       completename:
-        content: Mingqing(Michael) Huang
+        content: Ali Sajassi
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Zhongguancun Laboratory
+        - content: Cisco
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Nan
+        - content: John
           language:
           - en
         - language:
           - en
-          initial: "N"
+          initial: J
         formatted_initials:
-          content: N.
+          content: J.
           language:
           - en
       surname:
-        content: Geng
+        content: Drake
         language:
         - en
       completename:
-        content: Nan Geng
+        content: John Drake
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei
+        - content: Independent
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Basil
+          language:
+          - en
+        - language:
+          - en
+          initial: B
+        formatted_initials:
+          content: B.
+          language:
+          - en
+      surname:
+        content: Najem
+        language:
+        - en
+      completename:
+        content: Basil Najem
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Bell Canada
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Susan
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Hares
+        language:
+        - en
+      completename:
+        content: Susan Hares
+        language:
+        - en
   role:
   - type: author
 version:
-- draft: '24'
-revdate: '2026-05-09'
+- draft: '32'
+revdate: '2026-05-20'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>Source address validation (SAV) is an important means to mitigate IP
-    source address spoofing [RFC2827]. This document analyzes the gaps in current
-    operational mechanisms for intra-domain SAV. It also identifies the properties
-    that new intra-domain SAV mechanisms are expected to provide.</p>"
+- content: "<p>This document explores the complexities involved in managing large
+    scale Software Defined WAN (SD-WAN) overlay networks, along with various SD-WAN
+    scenarios. Its objective is to illustrate how a BGP-based control plane can effectively
+    manage these overlay networks by distributing edge service reachability information,
+    WAN port attributes, and underlay path details, thereby minimizing manual provisioning.</p>"
   language:
   - en
   script:
@@ -182,23 +181,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-savnet-intra-domain-problem-statement-12
+    id: draft-ietf-bess-bgp-sdwan-usage-07
     docid:
-    - id: draft-ietf-savnet-intra-domain-problem-statement-12
+    - id: draft-ietf-bess-bgp-sdwan-usage-07
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-savnet-intra-domain-problem-statement-12
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-savnet-intra-domain-problem-statement-25
-    docid:
-    - id: draft-ietf-savnet-intra-domain-problem-statement-25
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-savnet-intra-domain-problem-statement-25
+      content: draft-ietf-bess-bgp-sdwan-usage-07
       format: text/plain
 series:
 - type: main
@@ -209,7 +198,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-savnet-intra-domain-problem-statement-24
+  number: draft-ietf-bess-bgp-sdwan-usage-32
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

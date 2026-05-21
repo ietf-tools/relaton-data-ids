@@ -1,179 +1,186 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-savnet-intra-domain-problem-statement-24
+id: draft-ietf-idr-bgpls-inter-as-topology-ext-32
 title:
-- content: Problem Statement, Gap Analysis, and Requirements for Intra-domain Source
-    Address Validation
+- content: BGP-LS Extension for Inter-AS Topology Retrieval
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-savnet-intra-domain-problem-statement-24
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-bgpls-inter-as-topology-ext-32
   type: src
 type: standard
 docid:
-- id: draft-ietf-savnet-intra-domain-problem-statement-24
+- id: draft-ietf-idr-bgpls-inter-as-topology-ext-32
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-savnet-intra-domain-problem-statement
+- id: I-D.ietf-idr-bgpls-inter-as-topology-ext
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-savnet-intra-domain-problem-statement
+docnumber: I-D.ietf-idr-bgpls-inter-as-topology-ext
 date:
 - type: published
-  value: '2026-05-09'
+  value: '2026-05-20'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Dan
+        - content: Aijun
           language:
           - en
         - language:
           - en
-          initial: D
+          initial: A
         formatted_initials:
-          content: D.
+          content: A.
           language:
           - en
       surname:
-        content: Li
+        content: Wang
         language:
         - en
       completename:
-        content: Dan Li
+        content: Aijun Wang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Tsinghua University
+        - content: China Telecom
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Jianping
+        - content: Huaimo
           language:
           - en
         - language:
           - en
-          initial: J
+          initial: H
         formatted_initials:
-          content: J.
+          content: H.
           language:
           - en
       surname:
-        content: Wu
+        content: Chen
         language:
         - en
       completename:
-        content: Jianping Wu
+        content: Huaimo Chen
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Tsinghua University
+        - content: Individual
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Lancheng
+        - content: Ketan
           language:
           - en
         - language:
           - en
-          initial: L
+          initial: K
         formatted_initials:
-          content: L.
+          content: K.
           language:
           - en
       surname:
-        content: Qin
+        content: Talaulikar
         language:
         - en
       completename:
-        content: Lancheng Qin
+        content: Ketan Talaulikar
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Zhongguancun Laboratory
+        - content: Cisco Systems
   role:
   - type: author
 - person:
     name:
       given:
         forename:
+        - content: Shunwan
+          language:
+          - en
         - language:
           - en
-          initial: M
+          initial: S
         formatted_initials:
-          content: M.
+          content: S.
           language:
           - en
       surname:
-        content: Huang
+        content: Zhuang
         language:
         - en
       completename:
-        content: Mingqing(Michael) Huang
+        content: Shunwan Zhuang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Zhongguancun Laboratory
+        - content: Huawei Technologies
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Nan
+        - content: Changwang
           language:
           - en
         - language:
           - en
-          initial: "N"
+          initial: C
         formatted_initials:
-          content: N.
+          content: C.
           language:
           - en
       surname:
-        content: Geng
+        content: Lin
         language:
         - en
       completename:
-        content: Nan Geng
+        content: Changwang Lin
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei
+        - content: New H3C Technologies
   role:
   - type: author
 version:
-- draft: '24'
-revdate: '2026-05-09'
+- draft: '32'
+revdate: '2026-05-20'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>Source address validation (SAV) is an important means to mitigate IP
-    source address spoofing [RFC2827]. This document analyzes the gaps in current
-    operational mechanisms for intra-domain SAV. It also identifies the properties
-    that new intra-domain SAV mechanisms are expected to provide.</p>"
+- content: "<p>This document specifies the procedure for distributing Border Gateway
+    Protocol-Link State (BGP-LS) key parameters for inter-domain links between two
+    Autonomous Systems (ASes). It defines a new type within the BGP-LS Network Layer
+    Reachability Information (NLRI) for an inter-AS Link, as well as three new type-length-values
+    (TLVs) for the BGP-LS inter-AS Link descriptor. These BGP-LS extensions enable
+    Software-Defined Networking (SDN) controllers to retrieve network topology across
+    inter-AS environments. These extensions and procedures allow network operators
+    to collect inter-domain interconnect information and automatically compute the
+    end-to-end network topology using information provided by the BGP-LS protocol.</p>"
   language:
   - en
   script:
@@ -182,23 +189,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-savnet-intra-domain-problem-statement-12
+    id: draft-ietf-idr-bgpls-inter-as-topology-ext-04
     docid:
-    - id: draft-ietf-savnet-intra-domain-problem-statement-12
+    - id: draft-ietf-idr-bgpls-inter-as-topology-ext-04
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-savnet-intra-domain-problem-statement-12
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-savnet-intra-domain-problem-statement-25
-    docid:
-    - id: draft-ietf-savnet-intra-domain-problem-statement-25
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-savnet-intra-domain-problem-statement-25
+      content: draft-ietf-idr-bgpls-inter-as-topology-ext-04
       format: text/plain
 series:
 - type: main
@@ -209,7 +206,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-savnet-intra-domain-problem-statement-24
+  number: draft-ietf-idr-bgpls-inter-as-topology-ext-32
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

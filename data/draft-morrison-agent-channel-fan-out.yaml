@@ -1,0 +1,50 @@
+---
+schema-version: v1.2.3
+id: draft-morrison-agent-channel-fan-out
+title:
+- content: An Agent-Channel Frame for Identity-Keyed Fan-Out Delivery to Concurrent
+    Sessions
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-morrison-agent-channel-fan-out
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This memo specifies an application-layer frame format and a delivery
+    model by which the several concurrent agentic sessions of a single identity-bound
+    principal, and the recognised members of an organisational identity substrate,
+    exchange short structured messages. The frame, termed the agent-channel frame,
+    is a transport envelope: it carries a closed-catalogue kind discriminator, a structured
+    per-kind payload, an identity attribution pair, and an inline provenance block.
+    Delivery is fan-out: a sender names a recipient scope rather than a single endpoint,
+    and the scope is expanded at delivery time against the recipient's subscriptions.
+    Recipients receive frames over a per-handle Server-Sent Events stream and MAY
+    narrow what they receive with a subscribe-time filter expression. Frames are ephemeral
+    routing units; the memo specifies only the wire envelope, the scope-expansion
+    grammar, the subscribe filter grammar, and the delivery semantics. Frame persistence,
+    where an implementation chooses to retain frames for replay, is out of scope and
+    is not specified. The memo composes with the handle namespace of [IDPRONOUNS],
+    the discovery surface of [MCPDNS], and the cross-organisational ceremony of [IDACCORD];
+    no new transport and no new handle category is introduced.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-morrison-agent-channel-fan-out-00
+    docid:
+    - id: draft-morrison-agent-channel-fan-out-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-morrison-agent-channel-fan-out-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
