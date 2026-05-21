@@ -13,13 +13,16 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document defines the core vocabulary and extension model used
-    by Privacy Preference Declarations (PPDs) to describe data handling in home networks.
-    It complements [I-D.draft-dsmullen-ppd-architecture] and [I-D.draft-dsmullen-ppd-protocol]
-    by standardizing term spaces for data types, purposes, actions, sources, destinations,
-    and selected constraints. Stable term identifiers are the primary semantic hook.
-    Baseline participant-facing protocol messages use compact identifiers plus taxonomy
-    context rather than requiring full ontology exchange on the wire.</p>"
+- content: "<p>This document defines the core vocabulary, comparison model, and extension
+    discipline used by Privacy Preference Declarations (PPDs) to express atomic privacy-relevant
+    dataflows in home networks. It complements the companion PPD architecture and
+    protocol work by standardizing the core fields used in participant declarations
+    and household policy rules. The core vocabulary is the mandatory shared semantic
+    floor for baseline participant-facing interoperability. Richer ecosystem-specific
+    vocabularies remain possible, but comparison-relevant non-core terms need explicit
+    relationships to the shared core so they remain computable. Baseline participant-facing
+    protocol messages use compact identifiers plus taxonomy context rather than requiring
+    full ontology exchange on the wire.</p>"
   language:
   - en
   script:
@@ -65,6 +68,16 @@ relation:
       primary: true
     formattedref:
       content: draft-dsmullen-ppd-taxonomy-03
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-dsmullen-ppd-taxonomy-04
+    docid:
+    - id: draft-dsmullen-ppd-taxonomy-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-dsmullen-ppd-taxonomy-04
       format: text/plain
 ext:
   schema-version: v1.0.1

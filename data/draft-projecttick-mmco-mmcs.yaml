@@ -1,0 +1,47 @@
+---
+schema-version: v1.2.3
+id: draft-projecttick-mmco-mmcs
+title:
+- content: The MMCO Module Component Object and MMCS Composite Security Format
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-projecttick-mmco-mmcs
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This document specifies two cooperating formats used by the MeshMC
+    launcher to discover, validate, and load third-party native code modules at run
+    time: * MMCO (MMCO Module Component Object), a host-native dynamic library container
+    with a fixed C ABI describing the module's metadata, dependencies, lifecycle entry
+    points, and runtime context. * MMCS (MMCO Module Composite Security), an OpenPGP-based
+    detached signature trailer appended to an MMCO file, together with the license-driven
+    verification policy that decides whether a given module is permitted to load.
+    The two formats are layered: MMCS is defined strictly on top of MMCO and never
+    modifies the bytes that the host operating system parses as a shared object. A
+    conforming MMCO implementation MAY ignore MMCS and still load OSI-approved open-source
+    modules; a conforming MMCS implementation MUST refuse to load a module whose trailer
+    is present but does not verify against a trusted key. This document is intended
+    as a stable reference for independent implementers of MMCO toolchains, plugin
+    authors, and packagers.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-projecttick-mmco-mmcs-00
+    docid:
+    - id: draft-projecttick-mmco-mmcs-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-projecttick-mmco-mmcs-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
