@@ -1,41 +1,41 @@
 ---
 schema-version: v1.2.3
-id: draft-li-dmsc-inf-architecture-06
+id: draft-ietf-idr-sr-policy-path-segment-15
 title:
-- content: Dynamic Multi-agent Secured Collaboration Infrastructure Architecture
+- content: SR Policy Extensions for Path Segment and Bidirectional Path
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-li-dmsc-inf-architecture-06
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-sr-policy-path-segment-15
   type: src
 type: standard
 docid:
-- id: draft-li-dmsc-inf-architecture-06
+- id: draft-ietf-idr-sr-policy-path-segment-15
   type: Internet-Draft
   primary: true
-- id: I-D.li-dmsc-inf-architecture
+- id: I-D.ietf-idr-sr-policy-path-segment
   type: IETF
   scope: anchor
-docnumber: I-D.li-dmsc-inf-architecture
+docnumber: I-D.ietf-idr-sr-policy-path-segment
 date:
 - type: published
-  value: '2026-03-14'
+  value: '2026-05-22'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Xueting
+        - content: Cheng
           language:
           - en
         - language:
           - en
-          initial: X
+          initial: C
         formatted_initials:
-          content: X.
+          content: C.
           language:
           - en
       surname:
@@ -43,63 +43,7 @@ contributor:
         language:
         - en
       completename:
-        content: Xueting Li
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: China Telecom
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Aijun
-          language:
-          - en
-        - language:
-          - en
-          initial: A
-        formatted_initials:
-          content: A.
-          language:
-          - en
-      surname:
-        content: Wang
-        language:
-        - en
-      completename:
-        content: Aijun Wang
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: China Telecom
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Bing
-          language:
-          - en
-        - language:
-          - en
-          initial: B
-        formatted_initials:
-          content: B.
-          language:
-          - en
-      surname:
-        content: Liu
-        language:
-        - en
-      completename:
-        content: Bing Liu
+        content: Cheng Li
         language:
         - en
     affiliation:
@@ -112,44 +56,127 @@ contributor:
     name:
       given:
         forename:
-        - content: Changwang
+        - content: Zhenbin
           language:
           - en
         - language:
           - en
-          initial: C
+          initial: Z
         formatted_initials:
-          content: C.
+          content: Z.
           language:
           - en
       surname:
-        content: Lin
+        content: Li
         language:
         - en
       completename:
-        content: Changwang Lin
+        content: Zhenbin Li
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: New H3C Technologies
+        - content: Huawei Technologies
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Yuanyang
+          language:
+          - en
+        - language:
+          - en
+          initial: "Y"
+        formatted_initials:
+          content: Y.
+          language:
+          - en
+      surname:
+        content: Yin
+        language:
+        - en
+      completename:
+        content: Yuanyang Yin
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: China Telecom
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Weiqiang
+          language:
+          - en
+        - language:
+          - en
+          initial: W
+        formatted_initials:
+          content: W.
+          language:
+          - en
+      surname:
+        content: Cheng
+        language:
+        - en
+      completename:
+        content: Weiqiang Cheng
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: China Mobile
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Ketan
+          language:
+          - en
+        - language:
+          - en
+          initial: K
+        formatted_initials:
+          content: K.
+          language:
+          - en
+      surname:
+        content: Talaulikar
+        language:
+        - en
+      completename:
+        content: Ketan Talaulikar
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Cisco Systems
   role:
   - type: author
 version:
-- draft: '06'
-revdate: '2026-03-14'
+- draft: '15'
+revdate: '2026-05-22'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document presents an architectural framework for dynamic multi-
-    agent collaboration from an infrastructure perspective. It outlines the network
-    requirements introduced by large-scale agents collaboration, and proposes a systematic
-    approach to enabling Dynamic Multi-agent Secured Collaboration (DMSC) through
-    infrastructure capabilities. The architecture focuses on how network control and
-    forwarding functions can actively participate in agent collaboration.</p>"
+- content: "<p>BGP SR Policy address-family is used for signaling of individual candidate
+    paths of a Segment Routing Policy. This document specifies extensions for the
+    signaling of a Path Segment Identifier associated with the Segment List(s) of
+    a candidate path. It also specifies extensions for the signaling of the Segment
+    List(s) in the reverse direction when Bidirectional SR Policies are used.</p>"
   language:
   - en
   script:
@@ -158,23 +185,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-li-dmsc-inf-architecture-03
+    id: draft-ietf-idr-sr-policy-path-segment-10
     docid:
-    - id: draft-li-dmsc-inf-architecture-03
+    - id: draft-ietf-idr-sr-policy-path-segment-10
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-li-dmsc-inf-architecture-03
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-li-dmsc-inf-architecture-07
-    docid:
-    - id: draft-li-dmsc-inf-architecture-07
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-li-dmsc-inf-architecture-07
+      content: draft-ietf-idr-sr-policy-path-segment-10
       format: text/plain
 series:
 - type: main
@@ -185,7 +202,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-li-dmsc-inf-architecture-06
+  number: draft-ietf-idr-sr-policy-path-segment-15
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

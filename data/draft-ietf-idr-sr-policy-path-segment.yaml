@@ -13,17 +13,11 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>A Segment Routing(SR) policy identifies a set of candidate SR paths
-    Each SR path is passed in BGP as the SR Policy SAFI NLRI accompanied with the
-    Tunnel Encapsulation attribute (Tunnel-encaps). Each SR Path (tunnel) uses a set
-    of TLVs in the Tunnel-encaps attribute to describe the characteristics of the
-    SR Policy tunnel. One of the TLVs that describes the tunnel is the Segment list
-    TLV which provides a list of segments contained in the tunnel. This document specifies
-    a new Path Segment Sub-TLV to associate a Path Segment ID to the SR Segment List.
-    The Path Segment ID can be used for performance measurement, path correlation,
-    and end-2-end path protection. This Path Segment identifier can be also be used
-    to correlate two unidirectional SR paths into a bidirectional SR path. Bidirection
-    SR path may be required in some scenarios such as mobile backhaul transport network.</p>"
+- content: "<p>BGP SR Policy address-family is used for signaling of individual candidate
+    paths of a Segment Routing Policy. This document specifies extensions for the
+    signaling of a Path Segment Identifier associated with the Segment List(s) of
+    a candidate path. It also specifies extensions for the signaling of the Segment
+    List(s) in the reverse direction when Bidirectional SR Policies are used.</p>"
   language:
   - en
   script:
@@ -179,6 +173,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-idr-sr-policy-path-segment-14
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-idr-sr-policy-path-segment-15
+    docid:
+    - id: draft-ietf-idr-sr-policy-path-segment-15
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-idr-sr-policy-path-segment-15
       format: text/plain
 ext:
   schema-version: v1.0.1
