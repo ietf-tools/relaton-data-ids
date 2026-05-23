@@ -1,0 +1,96 @@
+---
+schema-version: v1.2.3
+id: draft-vauban-x402-stark-receipts-00
+title:
+- content: x402 STARK Receipt Format Extension
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-vauban-x402-stark-receipts-00
+  type: src
+type: standard
+docid:
+- id: draft-vauban-x402-stark-receipts-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.vauban-x402-stark-receipts
+  type: IETF
+  scope: anchor
+docnumber: I-D.vauban-x402-stark-receipts
+date:
+- type: published
+  value: '2026-05-22'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Vauban
+          language:
+          - en
+        - language:
+          - en
+          initial: V
+        formatted_initials:
+          content: V.
+          language:
+          - en
+      surname:
+        content: Research
+        language:
+        - en
+      completename:
+        content: Vauban Research
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Vauban Research
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-05-22'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>The x402 PAYMENT-RESPONSE carries a facilitator-issued settlement reference
+    but does not provide a self-contained, offline-verifiable payment-condition proof.
+    A verifier must today contact the facilitator to confirm whether a specific amount,
+    currency, and payer attestation were satisfied at the time of payment. This gap
+    prevents compliance with EU AI Act Art. 12 (transparency and documentation) and
+    MiCA Art. 76 (settlement record-keeping) in automated payment pipelines. This
+    document defines the receipt-format extension for x402 V2. The extension introduces
+    a negotiable receipt format selection mechanism that allows resource servers,
+    facilitators, and clients to agree on which cryptographic receipt variant to produce
+    and verify, without altering the core PAYMENT-RESPONSE wire structure. Three variants
+    are defined: a Stwo Circle STARK proof of payment conditions (post- quantum sound,
+    offline verifiable), a hybrid ES256K + ML-DSA-65 dual- signature receipt (receipt
+    integrity under quantum adversary), and a classical ES256K fallback. A canonical
+    preimage discipline using JCS ([RFC8785]) ensures cross-implementation digest
+    consistency. This specification reflects three-implementation consensus established
+    in [X402-2357].</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-vauban-x402-stark-receipts-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

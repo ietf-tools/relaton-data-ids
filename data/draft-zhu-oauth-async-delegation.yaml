@@ -1,0 +1,47 @@
+---
+schema-version: v1.2.3
+id: draft-zhu-oauth-async-delegation
+title:
+- content: Sender-Constrained Delegation Handle for Asynchronous OAuth 2.0 Identity
+    Chaining
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-zhu-oauth-async-delegation
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: '<p>This document defines an extension to OAuth 2.0 Token Exchange [RFC8693]
+    and the OAuth Identity Chaining draft [I-D.ietf-oauth-identity-chaining] for delegated
+    workflows that must continue after the end user has gone offline. When a chained
+    access token expires while the end user is unavailable to re-authenticate (for
+    example, to satisfy a multi-factor authentication or a touch-to-engage gesture),
+    the acting client today has no standards- defined way to obtain a refreshed chained
+    token without either widening privileges, breaking the identity chain, or impersonating
+    the user as a service. This specification introduces the "Delegation Handle":
+    a sender-constrained, audience-locked, scope- frozen JSON Web Token issued by
+    the authorization server alongside a chained access token, that the original acting
+    client MAY present back to the authorization server to refresh the chained access
+    token within strict, server-side policy bounds and without re-prompting the end
+    user.</p>'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-zhu-oauth-async-delegation-00
+    docid:
+    - id: draft-zhu-oauth-async-delegation-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-zhu-oauth-async-delegation-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
