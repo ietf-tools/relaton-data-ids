@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-sato-soos-idp-02
+id: draft-sato-soos-idp-03
 title:
 - content: The Intent Declaration Primitive (IDP) for Agentic AI Systems
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-sato-soos-idp-02
+- content: https://datatracker.ietf.org/doc/html/draft-sato-soos-idp-03
   type: src
 type: standard
 docid:
-- id: draft-sato-soos-idp-02
+- id: draft-sato-soos-idp-03
   type: Internet-Draft
   primary: true
 - id: I-D.sato-soos-idp
@@ -49,7 +49,7 @@ contributor:
   role:
   - type: author
 version:
-- draft: '02'
+- draft: '03'
 revdate: '2026-05-23'
 language:
 - en
@@ -62,20 +62,27 @@ abstract:
     agent believes it is doing, on what reasoning basis, and with what level of confidence,
     at the moment of action. This document defines the Intent Declaration Primitive
     (IDP): a structured per-transition declaration submitted by an AI agent to the
-    governing OS kernel at each action step of an execution loop. The IDP is committed
-    to a tamper-evident Event Log before the action executes, enabling post-hoc review
-    of agent reasoning, richer authorization policy evaluation, and enriched denial
-    responses that guide agent behaviour. The IDP also provides the technical basis
-    for compliance with EU AI Act Article 12 logging requirements for high- risk AI
-    systems. This document adds the IDP Commitment Verification mechanism, by which
-    the kernel verifies at each state transition that the agent's actual action matches
-    its declared intent. This document also adds the RETRY_CONTINUATION reasoning
+    Governing Enforcement Component (GEC) at each action step of an execution loop.
+    The IDP is committed to a tamper-evident Event Log before the action executes,
+    enabling post-hoc review of agent reasoning, richer authorization policy evaluation,
+    and enriched denial responses that guide agent behaviour. The IDP also provides
+    the technical basis for compliance with EU AI Act Article 12 logging requirements
+    for high-risk AI systems. This document adds the IDP Commitment Verification mechanism,
+    by which the GEC verifies at each state transition that the agent's actual action
+    matches its declared intent. This document also adds the RETRY_CONTINUATION reasoning
     basis type and the prior_denial_count Cedar context attribute, which together
     address computational inefficiency arising from uninformed agent retry loops.
     This document further defines, in Section 5.6, the schemas of the outcome Event
     Log entries (STATE_TRANSITIONED, CEDAR_DENY_RECORDED, and ACTION_RESULT_RECORDED)
-    that record the result of each governed transition, completing the pre-action/post-action
-    audit pair that gives the IDP its full auditability property.</p>"
+    that record the result of each governed transition, completing the pre-action/post-
+    action audit pair that gives the IDP its full auditability property. This document
+    renames the Governing Kernel role to Governing Enforcement Component (GEC) to
+    accommodate application-layer, isolated-process, and kernel-level implementations
+    under a common conformance model. A Conformance Levels section (Section 9) defines
+    three implementation profiles (Application, Isolated, and Kernel) with graduated
+    non-suppressibility guarantees. A data_residency field is added to the IDP structure
+    (Section 4.1) governing analytics tier eligibility. Section 3.5 states the Event
+    Log as Operational Intelligence design intent.</p>"
   language:
   - en
   script:
@@ -92,16 +99,6 @@ relation:
     formattedref:
       content: draft-sato-soos-idp-00
       format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-sato-soos-idp-03
-    docid:
-    - id: draft-sato-soos-idp-03
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-sato-soos-idp-03
-      format: text/plain
 series:
 - type: main
   title:
@@ -111,7 +108,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-sato-soos-idp-02
+  number: draft-sato-soos-idp-03
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

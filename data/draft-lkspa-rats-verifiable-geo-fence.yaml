@@ -2,8 +2,7 @@
 schema-version: v1.2.3
 id: draft-lkspa-rats-verifiable-geo-fence
 title:
-- content: Privacy Preserving Verifiable Geofencing with Residency Proofs for Sovereign
-    Workloads
+- content: Verifiable Proof of Environment Attestation Profile
   language:
   - en
   script:
@@ -14,25 +13,30 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>Modern cloud and distributed computing rely heavily on software-only
-    identities and bearer tokens that are easily stolen, replayed, or used from unauthorized
-    locations. Furthermore, traditional methods of location verification — such as
-    IP-address-based geolocation — are easily spoofed via VPNs or proxies and significantly
-    compromise infrastructure security and privacy for sovereign workloads and high-
-    assurance environments. This document defines the *Verifiable Geofencing Attestation
-    Profile (V-GAP)*, a profile of the RATS Architecture {{!RFC9334}}, that solves
-    these challenges through hardware-rooted cryptographic verifiability. A host machine
-    runs a Workload Identity Agent for managing the workload identities on that platform.
-    This profile replaces implicit trust and spoofable indicators with cryptographically
-    verifiable hardware-rooted Evidence of integrity and location for this agent.
-    Critically, this framework prioritizes location privacy by utilizing Zero-Knowledge
-    Proofs (ZKPs), allowing a workload to prove it is within a compliant zone without
-    disclosing precise coordinates. By binding software identities to persistent silicon
-    identities and verified physical residency, V-GAP establishes a silicon-to-workload
-    chain of trust. It ensures that sensitive operations are only performed by authorized
-    workloads running on untampered hardware in cryptographically verified, privacy-preserving
-    geographic boundaries, fulfilling the high-assurance requirements of the WIMSE
-    Architecture {{!I-D.ietf-wimse-architecture}}.</p>"
+- content: "<p>Operators of regulated, sovereign, and high-assurance deployments require
+    hardware-rooted, machine-verifiable proof that a workload executes in its approved
+    environment. Current remote attestation mechanisms address two relevant properties
+    in isolation: platform integrity — that the hardware and software stack are in
+    an approved, untampered state — and physical residency — that the hardware resides
+    within an approved geographic boundary. Neither property alone is sufficient:
+    integrity without residency permits a valid platform to operate outside approved
+    boundaries; residency without integrity permits a compromised platform to claim
+    valid placement. This document defines the *Verifiable Proof of Environment Attestation
+    Profile (V-PEA)*, a profile of the RATS Architecture {{!RFC9334}} that fuses both
+    properties into a single TPM-sealed Evidence structure (lah-bundle). V-PEA defines
+    two Evidence dimensions: *WHAT* — hardware provenance (TPM Attestation Key registered
+    and manufacturer-endorsed), platform integrity (firmware and OS state matching
+    reference values), and workload agent software integrity (binary digest matching
+    an approved value); and *WHERE* — physical residency within an approved geographic
+    boundary. A TPM quote seal binds WHAT and WHERE into a single unforgeable statement:
+    neither dimension can be forged or transplanted without invalidating the other.
+    For the WHERE dimension, V-PEA supports Transparent Zero-Knowledge Proofs (ZKPs),
+    enabling an Attester to prove geographic compliance without disclosing precise
+    coordinates. A positive V-PEA Attestation Result enables a Relying Party to issue
+    hardware-rooted credentials or authorize operations — combining verified execution
+    environment (WHAT) with verified physical placement (WHERE) — before releasing
+    sensitive assets or granting access. Integration with workload identity systems
+    is described in the WIMSE Integration appendix.</p>"
   language:
   - en
   script:
@@ -58,6 +62,16 @@ relation:
       primary: true
     formattedref:
       content: draft-lkspa-rats-verifiable-geo-fence-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-lkspa-rats-verifiable-geo-fence-02
+    docid:
+    - id: draft-lkspa-rats-verifiable-geo-fence-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-lkspa-rats-verifiable-geo-fence-02
       format: text/plain
 ext:
   schema-version: v1.0.1
