@@ -1,0 +1,57 @@
+---
+schema-version: v1.2.3
+id: draft-hopley-x402-refund-receipt
+title:
+- content: Categorical Refund Receipt Format for Agentic-Payment Flows
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-hopley-x402-refund-receipt
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This document specifies a categorical refund receipt format for agentic-payment
+    flows. The format is the post-settlement counterpart to the admission-time compliance
+    receipt format specified in draft- hopley-x402-compliance-receipt: where the compliance
+    receipt records an admission decision under regulatory screening obligations,
+    the refund receipt records a reversal-of-funds event with the same canonicalisation
+    discipline and the same audit-chain semantics. The receipt format uses a closed
+    enumeration of categorical outcomes (FULL, PARTIAL, REJECTED) rather than a continuous
+    percentage or amount-only representation. The categorical outcome is load-bearing
+    for downstream regulatory obligations: under PSD2 (Directive 2015/2366) Article
+    89 a REJECTED outcome carries dispute-evidence obligations that a PARTIAL refund
+    does not, and the categorical distinction must be preserved at the canonical-bytes
+    level rather than collapsed to a percentage projection of the original amount.
+    Receipts are canonicalised under RFC 8785 (JSON Canonicalization Scheme) with
+    an in-band canonicalisation rule pin (canon_version). The pin enables year-N re-verification
+    from retained bytes alone, without dependence on an out-of-band rule registry
+    that the operator must continue to publish. The refund receipt format composes
+    with the compliance receipt format via the original_payment_ref field, a content-addressed
+    reference to the original payment record. A verifier walking the audit chain can
+    confirm the full payment lifecycle from admission-time screening through settlement
+    to refund event under one byte-deterministic canonicalisation pin. This document
+    is complementary to draft-vauban-x402-stark-receipts (which covers cryptographic
+    settlement-time payment-condition proofs) and to draft-hopley-x402-compliance-receipt
+    (which covers admission- time compliance screening receipts). The three documents
+    pin the same urn:x402:canonicalisation:jcs-rfc8785-v1 canonicalisation discipline.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-hopley-x402-refund-receipt-00
+    docid:
+    - id: draft-hopley-x402-refund-receipt-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-hopley-x402-refund-receipt-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

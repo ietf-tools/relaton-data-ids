@@ -1,0 +1,99 @@
+---
+schema-version: v1.2.3
+id: draft-hopley-x402-canonicalisation-jcs-v1-00
+title:
+- content: JCS Canonicalisation Discipline for Agentic-Payment Receipts
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-hopley-x402-canonicalisation-jcs-v1-00
+  type: src
+type: standard
+docid:
+- id: draft-hopley-x402-canonicalisation-jcs-v1-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.hopley-x402-canonicalisation-jcs-v1
+  type: IETF
+  scope: anchor
+docnumber: I-D.hopley-x402-canonicalisation-jcs-v1
+date:
+- type: published
+  value: '2026-05-24'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - language:
+          - en
+          initial: H
+        - language:
+          - en
+          initial: C
+        formatted_initials:
+          content: H. C.
+          language:
+          - en
+      surname:
+        content: Mr
+        language:
+        - en
+      completename:
+        content: MR CHRISTOPHER HOPLEY
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: AlgoVoi
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-05-24'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>This document specifies a canonicalisation discipline for agentic-
+    payment receipt formats. The discipline pins JSON Canonicalization Scheme (JCS,
+    RFC 8785) as the canonical preimage form, plus a small set of schema-normalisation
+    rules that must be applied before canonicalisation to preserve byte-determinism
+    across independent implementations and across statutory retention periods. The
+    discipline is identified by the URN urn:x402:canonicalisation:jcs-rfc8785-v1.
+    Receipt formats that reference this discipline carry an in-band canon_version
+    field recording the version under which they were emitted, enabling year-N re-verification
+    of retained bytes without dependence on an out-of- band rule registry. The discipline
+    is byte-for-byte cross-validated across eight independent JCS implementations
+    in eight programming languages: Python (rfc8785), TypeScript (canonicalize), Go
+    (gowebpki/jcs), Rust (serde_jcs), Java (cyberphone/json-canonicalization, by the
+    RFC 8785 editor), PHP (root23/php-json-canonicalization), C#/.NET (Baqhub.Packages.JsonCanonicalization),
+    and Ruby (json- canonicalization). The attestation record covering 192 byte-for-byte
+    agreements is published at the AlgoVoi conformance vectors repository. This document
+    is normatively referenced by [draft-hopley-x402- compliance-receipt], [draft-hopley-x402-refund-receipt],
+    and successor AlgoVoi-authored receipt-format Internet-Drafts. It is complementary
+    to [draft-vauban-x402-stark-receipts], which uses a compatible canonicalisation
+    discipline for its cryptographic settlement proofs.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-hopley-x402-canonicalisation-jcs-v1-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
