@@ -1,0 +1,111 @@
+---
+schema-version: v1.2.3
+id: draft-hopley-x402-compliance-receipt-01
+title:
+- content: Categorical Compliance Screening Receipt Format for Agentic-Payment Flows
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-hopley-x402-compliance-receipt-01
+  type: src
+type: standard
+docid:
+- id: draft-hopley-x402-compliance-receipt-01
+  type: Internet-Draft
+  primary: true
+- id: I-D.hopley-x402-compliance-receipt
+  type: IETF
+  scope: anchor
+docnumber: I-D.hopley-x402-compliance-receipt
+date:
+- type: published
+  value: '2026-05-24'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - language:
+          - en
+          initial: H
+        - language:
+          - en
+          initial: C
+        formatted_initials:
+          content: H. C.
+          language:
+          - en
+      surname:
+        content: Mr
+        language:
+        - en
+      completename:
+        content: MR CHRISTOPHER HOPLEY
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: AlgoVoi
+  role:
+  - type: author
+version:
+- draft: '01'
+revdate: '2026-05-24'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>This document specifies a categorical compliance screening receipt
+    format for agentic-payment flows. The format is designed for use by AI agents
+    and agentic-payment gateways that perform regulatory screening at admission time
+    and must retain the screening decision under framework-bound retention obligations
+    (UK Money Laundering Regulations 2017; Proceeds of Crime Act 2002 Section 330;
+    EU Anti- Money Laundering Directives 5 and 6; Markets in Crypto-Assets Regulation
+    Article 80; Anti-Money Laundering Regulation Article 56; Digital Operational Resilience
+    Act Article 14). The receipt format uses a closed enumeration of categorical outcomes
+    (ALLOW, REFER, DENY) rather than a continuous score or tier projection. The categorical
+    outcome is load-bearing for downstream regulatory obligations: under UK POCA 2002
+    Section 330, a REFER carries a mandatory Suspicious Activity Report obligation
+    that a DENY does not. A score or tier projection collapses this distinction. Receipts
+    are canonicalised under RFC 8785 (JSON Canonicalization Scheme) with an in-band
+    canonicalisation rule pin (canon_version). The pin enables year-five re-verification
+    from retained bytes alone, without dependence on an out-of-band rule registry
+    that the operator must continue to publish. This document is complementary to
+    draft-vauban-x402-stark-receipts: that document covers cryptographic settlement-time
+    payment-condition proofs; this document covers admission-time compliance screening
+    receipts. The two compose via the composite trust-query algorithm specified in
+    specs/composite-trust-query.md in x402-foundation/x402.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-hopley-x402-compliance-receipt-00
+    docid:
+    - id: draft-hopley-x402-compliance-receipt-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-hopley-x402-compliance-receipt-00
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-hopley-x402-compliance-receipt-01
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

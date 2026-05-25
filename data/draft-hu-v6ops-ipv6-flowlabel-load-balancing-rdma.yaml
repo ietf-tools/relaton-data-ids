@@ -1,0 +1,46 @@
+---
+schema-version: v1.2.3
+id: draft-hu-v6ops-ipv6-flowlabel-load-balancing-rdma
+title:
+- content: A RoCEv2 Flow-Level Load Balancing Method Based on the IPv6 Flow Label
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-hu-v6ops-ipv6-flowlabel-load-balancing-rdma
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: <p>This document proposes a method for achieving flow-level load balancing
+    in RoCEv2 (RDMA over Converged Ethernet version 2) networks. Traditional per-flow
+    load balancing based on the 5-tuple cannot distinguish between different RDMA
+    sessions that share the same 5-tuple. This causes "elephant flows" to be hashed
+    to the same path, leading to network congestion. This method resolves this issue
+    by parsing the QP (Queue Pair) information from the IB BTH (Base Transport Header)
+    and IB DETH (Datagram Extended Transport Header) headers of the RoCEv2 packet.
+    By combining this with portions of the IPv6 source and destination addresses as
+    an entropy source, a CRC32 hash algorithm generates a 20-bit value, which is then
+    written into the Flow Label field of the IPv6 header. Network devices can subsequently
+    use the updated "5-tuple + Flow Label" for more granular flow-level load balancing,
+    thereby effectively improving transmission efficiency in high-performance networks
+    such as AI computing.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-hu-v6ops-ipv6-flowlabel-load-balancing-rdma-00
+    docid:
+    - id: draft-hu-v6ops-ipv6-flowlabel-load-balancing-rdma-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-hu-v6ops-ipv6-flowlabel-load-balancing-rdma-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
