@@ -1,0 +1,55 @@
+---
+schema-version: v1.2.3
+id: draft-hopley-x402-cancellation-receipt
+title:
+- content: Categorical Mandate Cancellation Receipt Format for Agentic-Payment Flows
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-hopley-x402-cancellation-receipt
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This document specifies a categorical mandate cancellation receipt
+    format for agentic-payment flows. The format records that a recurring-payment
+    mandate or other standing payer-to-payee authorisation has been cancelled, by
+    whom, for what reason, and with what effective date. The receipt format uses a
+    closed four-element enumeration of categorical outcomes (USER_REQUESTED, MERCHANT_REQUESTED,
+    COMPLIANCE_TERMINATED, EXPIRED). The four-state enumeration preserves the regulatorily-load-bearing
+    distinction between payer- initiated revocation, payee-initiated termination,
+    operator/ compliance-forced termination, and time-based expiry. A collapse to
+    a three-state or binary representation loses operational distinctions that drive
+    PSD2 (Directive 2015/2366) Article 64 refund-window obligations, Article 72 contractual-termination
+    record-keeping, and POCA/AML evidence-chain linkage on compliance-forced terminations.
+    The format records two distinct timestamps -- when the cancellation was observed
+    (cancellation_timestamp_ms) and when it takes legal effect (effective_from_ms)
+    -- to support PSD2 Article 64(3)(a) direct-debit revocation timing, where the
+    effective time is typically end-of-business-day prior to the next scheduled execution.
+    The format composes with the AlgoVoi-authored compliance receipt (draft-hopley-x402-compliance-receipt),
+    settlement attestation (draft-hopley-x402-settlement-attestation), and refund
+    receipt (draft-hopley-x402-refund-receipt) formats under the same canonicalisation
+    discipline (draft-hopley-x402-canonicalisation-jcs). A verifier walking the audit
+    chain confirms the full mandate lifecycle from admission through recurring execution
+    to cancellation, and (where owed) onward to refund of revoked settled debits,
+    under one byte-deterministic canonicalisation pin.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-hopley-x402-cancellation-receipt-00
+    docid:
+    - id: draft-hopley-x402-cancellation-receipt-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-hopley-x402-cancellation-receipt-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

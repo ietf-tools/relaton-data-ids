@@ -27,8 +27,10 @@ abstract:
     offline verifiable), a hybrid ES256K + ML-DSA-65 dual- signature receipt (receipt
     integrity under quantum adversary), and a classical ES256K fallback. A canonical
     preimage discipline using JCS ([RFC8785]) ensures cross-implementation digest
-    consistency. This specification reflects three-implementation consensus established
-    in [X402-2357].</p>"
+    consistency. The canonical preimage discipline in this document is cross-validated
+    against the x402 canonicalisation conformance set, which is checked byte-for-byte
+    across five independent RFC 8785 ([RFC8785]) implementations in five languages
+    (Python, TypeScript, Go, Java, Rust).</p>"
   language:
   - en
   script:
@@ -44,6 +46,16 @@ relation:
       primary: true
     formattedref:
       content: draft-vauban-x402-stark-receipts-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-vauban-x402-stark-receipts-01
+    docid:
+    - id: draft-vauban-x402-stark-receipts-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-vauban-x402-stark-receipts-01
       format: text/plain
 ext:
   schema-version: v1.0.1

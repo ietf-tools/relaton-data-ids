@@ -1,0 +1,54 @@
+---
+schema-version: v1.2.3
+id: draft-hopley-x402-settlement-attestation
+title:
+- content: Categorical Settlement Attestation Format for Agentic-Payment Flows
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-hopley-x402-settlement-attestation
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This document specifies a categorical settlement attestation format
+    for agentic-payment flows. The format records that a payment has reached a particular
+    settlement state on a particular chain, at a particular instant, under the attesting
+    party's risk model. The receipt format uses a closed enumeration of categorical
+    outcomes (SETTLED, PENDING_FINALITY, REVERSED). The categorical outcome is load-bearing
+    for downstream regulatory obligations: SETTLED triggers settlement-finality record-keeping
+    obligations under EU Markets in Crypto-Assets Regulation Article 80 and Anti-Money
+    Laundering Regulation Article 56; the PSD2 (Directive 2015/2366) Article 89 unauthorised-payment
+    refund-window clock begins at SETTLED. PENDING_FINALITY records an inclusion-without-finality
+    state where the refund-window has not yet started. REVERSED records chain- reorganisation,
+    fraud-reversal, or operator-initiated reversal events for chain-of-custody audit.
+    The format is multi-chain: a single settlement_chain string field identifies the
+    chain on which settlement occurred, using a flat identifier convention (&lt;chain_family&gt;
+    for default mainnets, &lt;chain_family&gt;:&lt;network&gt; for non-default networks).
+    The receipt does not encode chain-specific finality semantics; those are applied
+    at verification time by a verifier that knows the chain. The format composes with
+    the AlgoVoi-authored compliance receipt format ([I-D.hopley-x402-compliance-receipt])
+    and refund receipt format ([I-D.hopley-x402-refund-receipt]) under the same canonicalisation
+    discipline ([I-D.hopley-x402-canonicalisation-jcs]). A verifier walking the audit
+    chain confirms the full payment lifecycle from admission through settlement to
+    refund (or non-refund) under one byte-deterministic canonicalisation pin.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-hopley-x402-settlement-attestation-00
+    docid:
+    - id: draft-hopley-x402-settlement-attestation-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-hopley-x402-settlement-attestation-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

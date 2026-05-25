@@ -14,11 +14,13 @@ docid:
   primary: true
 abstract:
 - content: "<p>This document defines a well-known URI, /.well-known/api- advisory.json,
-    at which API providers MAY publish a machine-readable JSON file listing change
-    advisories that affect their API. The file enables automated scanners and API
-    consumers to discover pricing changes, deprecations, security advisories, and
-    other relevant events without relying on manual monitoring of blogs or mailing
-    lists.</p>"
+    at which API providers MAY publish a machine-readable JSON discovery file. That
+    file identifies the API and provides the URL of an Atom Syndication Format feed
+    carrying structured change advisories. The Atom feed enables automated scanners
+    and API consumers to discover pricing changes, deprecations, security advisories,
+    and other relevant events without relying on manual monitoring of blogs or mailing
+    lists. Advisory metadata is conveyed through a dedicated XML namespace defined
+    in this document.</p>"
   language:
   - en
   script:
@@ -34,6 +36,16 @@ relation:
       primary: true
     formattedref:
       content: draft-callec-api-advisory-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-callec-api-advisory-01
+    docid:
+    - id: draft-callec-api-advisory-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-callec-api-advisory-01
       format: text/plain
 ext:
   schema-version: v1.0.1
