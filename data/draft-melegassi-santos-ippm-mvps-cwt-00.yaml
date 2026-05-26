@@ -1,0 +1,140 @@
+---
+schema-version: v1.2.3
+id: draft-melegassi-santos-ippm-mvps-cwt-00
+title:
+- content: 'MVPS Trust Profile: Lightweight Authentication via HMAC-SHA256, Operator
+    Epoch Anchors, and Independent Witness Cosignatures for Multi-Vantage Path Snapshots'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-melegassi-santos-ippm-mvps-cwt-00
+  type: src
+type: standard
+docid:
+- id: draft-melegassi-santos-ippm-mvps-cwt-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.melegassi-santos-ippm-mvps-cwt
+  type: IETF
+  scope: anchor
+docnumber: I-D.melegassi-santos-ippm-mvps-cwt
+date:
+- type: published
+  value: '2026-05-25'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Leonardo
+          language:
+          - en
+        - language:
+          - en
+          initial: L
+        - language:
+          - en
+          initial: M
+        formatted_initials:
+          content: L. M.
+          language:
+          - en
+      surname:
+        content: Costa
+        language:
+        - en
+      completename:
+        content: Leonardo Melegassi Costa
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Catellix
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Joas
+          language:
+          - en
+        - language:
+          - en
+          initial: J
+        - language:
+          - en
+          initial: A
+        - language:
+          - en
+          initial: D
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: J. A. D. S.
+          language:
+          - en
+      surname:
+        content: Barbosa
+        language:
+        - en
+      completename:
+        content: Joas Antonio dos Santos Barbosa
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: RedTeamLeaders
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-05-25'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>The Multi-Vantage Path Snapshot (MVPS) bundle format [I-D.melegassi-ippm-mvps-bundle]
+    specifies a deterministic wire envelope but defers cryptographic binding of vantage
+    reports. This document specifies the MVPS Trust Profile, named Coherent-Witness
+    Trust (CWT), which closes that gap with minimal cryptographic overhead: HMAC-SHA256
+    per-snapshot authentication under an epoch-bound vantage session key, anchored
+    every epoch by an Ed25519-signed Operator Epoch Manifest, and cosigned by independent
+    witnesses on a bundle Merkle checkpoint. The measured per-snapshot crypto cost
+    is 2.1 us -- strictly less than the 4.2 us required to parse the JSON snapshot
+    it protects. At N = 1000 vantages and 1 Hz tick, the total verification load is
+    0.21 % of one CPU core. The profile inherits the full MVPS v4.0 theorem catalogue
+    and proves two theorems not available in simpler per-snapshot signature designs:
+    T-COAL-1 (multi-operator coalition resistance via witness independence) and T-SPLIT-1
+    (collector split-view resistance via cosignature quorum). Numerical receipts are
+    in evidence/mvps_cwt_overhead_receipt.json and scripts/validate_cwt_theorems.py
+    (12/12 PASS). The design draws on two production precedents: the HMAC- personalized
+    authentication of the Tesla vehicle-command protocol [TESLA-VEHICLE-CMD] and the
+    witness-cosignature model of the Sigsum / tlog-witness ecosystem [C2SP-TLOG-WITNESS].
+    Neither codebase is reused; constructs are independently composed for the multi-vantage
+    measurement setting.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-melegassi-santos-ippm-mvps-cwt-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
