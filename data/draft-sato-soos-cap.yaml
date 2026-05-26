@@ -13,17 +13,24 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document specifies the Constitutional AI Protocol (CAP), a kernel-enforced
-    prohibition architecture for agentic AI systems. CAP defines a three-tier prohibition
-    model: Tier 0 absolute prohibitions derived from near-universal treaty consensus,
-    Tier 1 jurisdiction-specific prohibitions declared by operators and verified by
-    auditors, and Tier 2 voluntary operator ethical standards. CAP evaluates every
-    action request twice -- once on the AI agent's action before Cedar policy evaluation,
-    and once on the human principal's decision before kernel execution -- ensuring
-    that neither agents nor human principals can authorize absolutely prohibited actions.
-    This document also specifies Jurisdictional Conflict Resolution (JCR), the mechanism
-    by which the kernel surfaces irreconcilable jurisdictional conflicts to human
-    principals via the Human Escalation Mechanism [I-D.sato-soos-hem].</p>"
+- content: '<p>An AI agent''s authorization system determines what it is permitted
+    to do. A human principal''s escalation decision determines what they authorize.
+    Neither of these is sufficient on its own: a Cedar policy can permit market manipulation;
+    a human principal can authorize fraud. Authorization systems answer the question
+    "who decided?" The Constitutional AI Protocol answers a different question: "was
+    that decision lawful?" CAP defines a Constitutional Layer that evaluates every
+    AI action request and every human authorization decision against a three-tier
+    prohibition model -- before Cedar evaluates the action and before the system executes
+    the human''s decision. Tier 0 prohibitions are derived from near-universal treaty
+    consensus and are unconditional: no agent, operator, or human principal can authorize
+    them. Tier 1 prohibitions are jurisdiction-specific and operator-declared. Tier
+    2 prohibitions are voluntary operator ethical standards. This document also specifies
+    the Prohibition Clearance Mechanism (PCM): the process by which specific Tier
+    0 and Tier 1 prohibition classes may be cleared for specific deployment contexts
+    -- either at implementation time by the operator or by formal regulatory authority
+    -- while preserving an absolute prohibition floor for CSAM and genocide facilitation
+    under any circumstances. The Sovereign Object OS (SOOS) is the reference implementation
+    of the Governance Execution Controller (GEC) pattern on which CAP is built.</p>'
   language:
   - en
   script:
@@ -39,6 +46,16 @@ relation:
       primary: true
     formattedref:
       content: draft-sato-soos-cap-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-sato-soos-cap-01
+    docid:
+    - id: draft-sato-soos-cap-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-sato-soos-cap-01
       format: text/plain
 ext:
   schema-version: v1.0.1

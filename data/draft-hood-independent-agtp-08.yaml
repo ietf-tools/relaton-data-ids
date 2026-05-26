@@ -1,0 +1,134 @@
+---
+schema-version: v1.2.3
+id: draft-hood-independent-agtp-08
+title:
+- content: Agent Transfer Protocol (AGTP)
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-hood-independent-agtp-08
+  type: src
+type: standard
+docid:
+- id: draft-hood-independent-agtp-08
+  type: Internet-Draft
+  primary: true
+- id: I-D.hood-independent-agtp
+  type: IETF
+  scope: anchor
+docnumber: I-D.hood-independent-agtp
+date:
+- type: published
+  value: '2026-05-25'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Chris
+          language:
+          - en
+        - language:
+          - en
+          initial: C
+        formatted_initials:
+          content: C.
+          language:
+          - en
+      surname:
+        content: Hood
+        language:
+        - en
+      completename:
+        content: Chris Hood
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Nomotic, Inc.
+  role:
+  - type: author
+version:
+- draft: '08'
+revdate: '2026-05-25'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: '<p>AI agents and agentic systems generate a growing volume of intent-
+    driven, unstructured, and undifferentiated traffic that flows through HTTP indistinguishably
+    from human-initiated requests. HTTP lacks the semantic vocabulary, observability
+    primitives, and identity mechanisms required by agent systems operating at scale.
+    Existing protocols described as Agent Group Messaging Protocols (AGMP), including
+    MCP, ACP, A2A, and ANP, are messaging-layer constructs that presuppose HTTP as
+    their transport. They do not address the underlying transport problem. This document
+    defines the Agent Transfer Protocol (AGTP): a dedicated application-layer protocol
+    for AI agent traffic. AGTP is a runtime contract negotiation substrate (RCNS):
+    a transport that fixes only a eighteen-method protocol floor and negotiates any
+    additional method surface at runtime between agent and server in a single round-trip,
+    governed by the AGTP-API companion specification [AGTP-API], which defines the
+    curated method catalog, path grammar, endpoint primitive, and synthesis semantics.
+    Version 07 confirms the IANA-registered agtp:// URI scheme and IANA-assigned port
+    4480 for TCP/TLS and QUIC, formalizes Form 1a URI grammar (agtp://{agent-id}@{host})
+    for direct addressing, renames the Agent Manifest Document to the Agent Identity
+    Document with an enumerated schema, redesigns the protocol-defined method floor
+    to a 12-method set organized as six cognitive verbs (QUERY, DISCOVER, DESCRIBE,
+    SUMMARIZE, PLAN, PROPOSE) and six mechanics verbs (EXECUTE, DELEGATE, ESCALATE,
+    CONFIRM, SUSPEND, NOTIFY), establishes AGTP as a substrate for higher-level agent
+    frameworks (MCP, A2A, ACP) carried as content types inside AGTP method invocations,
+    renumbers AGTP-specific status codes out of HTTP- assigned space to avoid semantic
+    collision, mandates explicit Content-Length framing with a prohibition on TLS
+    socket-level half- close, adds a.well-known/agtp bootstrap convention per RFC
+    8615, deprecates the AGIS reference and the proposed AGTP-Methods specification
+    by folding both into the unified AGTP-API contract layer, adds status codes 405
+    (Method Not Allowed), 459 (Method Violation), and 460 (Endpoint Violation) per
+    the AGTP-API contract model, and adopts "Agent Genesis" as the canonical term
+    for the permanent signed origin document. Version 06 prepared the IANA Service
+    Name and Port Number application and consolidated the URI scheme registration.
+    Version 05 restored the canonical Agent-ID as the primary identity primitive and
+    decoupled Trust Tier 1 verification from DNS as a sole requirement. A canonical
+    Agent-ID is derived from the agent''s Agent Genesis hash and is authoritative
+    in every AGTP protocol operation. Three equivalent verification paths are recognized
+    for Trust Tier 1: DNS-anchored verification via RFC 8555 ACME challenge, log-anchored
+    verification via Agent Genesis inclusion in an append-only transparency log aligned
+    with RFC 9162 and RFC 9943 (SCITT), and hybrid verification combining DNS control
+    with blockchain address ownership. Version 04 introduced normative integration
+    hooks for the AGTP Merchant Identity and Agentic Commerce Binding specification
+    [AGTP-MERCHANT], which defines the merchant- side identity model that complements
+    AGTP''s agent-side identity model. AGTP SHOULD prefer QUIC for new implementations
+    and MUST support TCP/TLS for compatibility and fallback. It is designed to be
+    composable with existing agent frameworks, not to replace them.</p>'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-hood-independent-agtp-00
+    docid:
+    - id: draft-hood-independent-agtp-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-hood-independent-agtp-00
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-hood-independent-agtp-08
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
