@@ -1,0 +1,48 @@
+---
+schema-version: v1.2.3
+id: draft-melegassi-dispatch-mvps-snap-backup
+title:
+- content: 'SNAP: Simple Native Archive Protocol'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-melegassi-dispatch-mvps-snap-backup
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: <p>SNAP (Simple Native Archive Protocol) defines a minimal, self- describing
+    backup object encoded as a single JSON document, modeled in YANG [RFC7950] and
+    encoded per [RFC7951]. A SNAP object contains a manifest of files with per-file
+    cryptographic hashes, integrity- verified metadata, and a compressed binary payload
+    -- all within one atomic, transport-agnostic JSON document. Any agent capable
+    of parsing JSON and applying standard decompression can produce or restore a SNAP
+    backup without proprietary tooling, side-channel metadata, or multi-phase handshakes.
+    This document defines the YANG module "snap", its JSON encoding, integrity verification
+    procedure, bindings to common transports, and its role as the atomic transport
+    substrate for the Multi-Vantage Path State (MVPS) family of Internet-Drafts. When
+    a SNAP Object carries an MVPS Bundle [I-D.melegassi-ippm-mvps-bundle], the canonical-form
+    determinism of SNAP (Theorem 1 of this document) composes with the MVPS Architecture
+    axioms A1..A5 [I-D.melegassi-iab-mvps-architecture] to inherit the full coherence
+    algebra of [MVPS-v4] (Theorems 1, 2, 3, 3', 4, 5, 9 and Stein's Lemma [Stein52]
+    [CoverThomas2006]) without alteration.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-melegassi-dispatch-mvps-snap-backup-00
+    docid:
+    - id: draft-melegassi-dispatch-mvps-snap-backup-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-melegassi-dispatch-mvps-snap-backup-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
