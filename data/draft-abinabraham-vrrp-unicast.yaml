@@ -13,15 +13,14 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>The Virtual Router Redundancy Protocol (VRRP) is specified for multicast
-    operation on a shared LAN in RFC 9568. Some deployments, including virtualized
-    and cloud environments, require VRRP-like first-hop redundancy but cannot use
-    multicast delivery for VRRP advertisements. This document updates RFC 9568 by
-    defining an optional unicast mode for VRRP. In unicast mode, VRRP advertisements
-    are sent to configured peer addresses rather than to the VRRP multicast group.
-    This document preserves the VRRP packet format, protocol number, virtual IP semantics,
-    and host-facing forwarding behavior defined in RFC 9568, while adding explicit
-    peer configuration and receive-side source validation for unicast operation.</p>"
+- content: "<p>The Virtual Router Redundancy Protocol (VRRP) Version 3 as specified
+    in RFC 9568 assumes multicast operation on a shared LAN. Some deployments require
+    the VRRP first-hop redundancy function but cannot use multicast delivery for VRRP
+    advertisements. This document updates RFC 9568 by defining an optional configured
+    unicast mode for VRRP Version 3 in which advertisements are sent to configured
+    peer addresses rather than to the VRRP multicast group. The VRRP packet format,
+    state machine, protocol number, virtual IP semantics, and Virtual Router MAC behavior
+    remain unchanged from RFC 9568.</p>"
   language:
   - en
   script:
@@ -37,6 +36,16 @@ relation:
       primary: true
     formattedref:
       content: draft-abinabraham-vrrp-unicast-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-abinabraham-vrrp-unicast-01
+    docid:
+    - id: draft-abinabraham-vrrp-unicast-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-abinabraham-vrrp-unicast-01
       format: text/plain
 ext:
   schema-version: v1.0.1
