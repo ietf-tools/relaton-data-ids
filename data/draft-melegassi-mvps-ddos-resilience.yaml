@@ -1,0 +1,72 @@
+---
+schema-version: v1.2.3
+id: draft-melegassi-mvps-ddos-resilience
+title:
+- content: 'Volume-Independent DDoS Detection via Coherence-BFD: The MVPS DDoS Resilience
+    Profile'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-melegassi-mvps-ddos-resilience
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: '<p>This document specifies how the Multi-Vantage Path Synchrony (MVPS)
+    framework [I-D.melegassi-ippm-mvps-bundle] and its sub-tick variant Coherence-BFD
+    [I-D.melegassi-coherence-bfd] detect volumetric and distributed Denial-of-Service
+    (DDoS) attacks in time bounded by (M-1)*T_tick, INDEPENDENT of the attack rate
+    in packets-per-second or bits-per-second. We prove three theorems: Theorem D1
+    (Volume-Independence). Detection latency is a function of the control-tick period
+    T_tick and the M-multiplier confirmation count alone; it does not grow with attack
+    volume. Theorem D2 (Distributed-Attack Bound). The framework detects up to floor((k-1)/2)
+    simultaneous regional attacks under cell-aware minimax aggregation, where k is
+    the number of coherence cells. Theorem D3 (Broker NIC Sizing). Under the three
+    architectural invariants of Section 3, broker NIC sizing is independent of attack
+    volume; it is determined only by the legitimate telemetry packets-per-second.
+    These claims are supported by empirical results on 11 scenarios ranging from 10
+    Mpps to 5 Tbps equivalent (Section 6). NOTE ON DATA PROVENANCE. Section 6 numerical
+    results are obtained from synthetic simulations under controlled conditions (reproducibility
+    script scripts/simulate_ddos_extreme.py). EVIDENCE UPDATE (v5.0 unified proof,
+    2026-05-22). Theorem D1 (Volume-Independence) is now also supported by real-world
+    data collected from the RIPE Stat BGP-updates API: R6 (multi-prefix BGP sweep).
+    Five anycast DNS prefixes (Google 8.8.8.0/24, Cloudflare 1.1.1.0/24, Quad9 9.9.9.0/24,
+    OpenDNS 208.67.222.0/24, Level3 4.2.2.0/24), 30 days, baseline update counts spanning
+    approximately 9x across prefixes. Alarms fire on RELATIVE D^2 spike, never on
+    absolute volume: - Google DNS baseline 82 upd/day, alarm peaks at 1899 (ratio
+    14.2x): 3 alarm days; - Cloudflare baseline 24 upd/day, peak 51 (ratio 2.1x):
+    0 alarm days despite low baseline; - Quad9 baseline 11 upd/day, peak 432 (ratio
+    39.3x): 3 alarm days at low absolute volume; - OpenDNS baseline 31 upd/day, peak
+    686 (ratio 22.1x): 3 alarm days; - Level3 baseline 0 upd/day, peak 0: 0 alarm
+    days. The fact that Quad9 + OpenDNS alarm AT LOW ABSOLUTE VOLUME while Cloudflare
+    DOES NOT ALARM at higher absolute volume empirically refutes any "volume-driven"
+    interpretation of the detector. D1 is now both theoretically proved (Section 4.1)
+    AND empirically observed on real Internet routing data. R7 (tau_C SIR cascade).
+    All 12 alarm events from R2 + R6 localise within &lt;= 2 days (mean burst width
+    1.33 days). This confirms the SIR macroscopic prediction underlying the detection-latency
+    bound of Theorem D1. Validation against operational *attack* data (Cloudflare
+    Radar, CAIDA Telescope, or commercial scrubber traces) remains required future
+    work in Section 9. A REFERENCE IMPLEMENTATION of the cell-aware minimax detector
+    used in Theorem D2 is provided at &lt;https://catellix.com/static/download/reference-impl/&gt;.
+    It exhibits the "perfect Byzantine hiding" regime documented in Section 7.2 of
+    this draft.</p>'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-melegassi-mvps-ddos-resilience-00
+    docid:
+    - id: draft-melegassi-mvps-ddos-resilience-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-melegassi-mvps-ddos-resilience-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

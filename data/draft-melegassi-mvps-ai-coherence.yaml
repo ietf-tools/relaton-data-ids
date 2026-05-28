@@ -1,0 +1,90 @@
+---
+schema-version: v1.2.3
+id: draft-melegassi-mvps-ai-coherence
+title:
+- content: 'MVPS AI-Coherence Extension: Semantic, Byzantine, and Infrastructure-Cognitive
+    Coherence for AI-Serving Network Deployments'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-melegassi-mvps-ai-coherence
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>The Multi-Vantage Path Synchrony (MVPS) framework (draft-melegassi-ippm-mvps-bundle-00)
+    defines a three-axis coherence measurement framework for network observability.
+    Its informational axis C_2 uses Jensen-Shannon Divergence over a discrete label
+    alphabet, and its topological axis C_3 uses Jaccard similarity on touched-object
+    sets. Both constructions are optimal when the alphabet carries no metric structure.
+    This document extends the MVPS framework to three domains where the metric structure
+    of the observation space is non-trivial and operationally significant: (A) Semantic
+    coherence for language-model serving: replaces C_2 with the 2-Wasserstein distance
+    on embedding-weighted token measures (C_2^W2), replaces C_3 with Centered Kernel
+    Alignment on attention matrices (C_3^CKA), introduces a fourth axis C_4 (falsifiability
+    coherence via perturbation stability), and a lateral phase label COHERENT_BUT_FALSE
+    (CBF) for hallucination consensus detection. (B) Byzantine-robust coherence: replaces
+    the arithmetic-mean centroid with the geometric median (C_2^gm), introduces minimax
+    coherence C^mm(f), a minimum-covariance-determinant phase distance Phi_D^byz,
+    a fifth phase label SUSPECTED_BYZANTINE, and a cascade-time model tau_C for detection-window
+    quantification under BGP hijack. (C) Infrastructure-Cognitive coupling: defines
+    the joint coherence vector z(t) in [0,1]^6, the cross-surface correlation matrix
+    R_cross, the drift transfer function from network routing perturbations to semantic
+    drift, and a five-phase IC phase diagram that detects coupled failure modes invisible
+    to either standalone monitor. All constructions are proved or formally stated
+    to the same evidential standard as the MVPS math companion (v1.1), with explicit
+    status labels (THEOREM / CONJECTURE / HYPOTHESIS / DEFINITION) and honest caveats
+    for each claim. NOTE ON DATA PROVENANCE. Worked examples in Sections 9 and 16
+    use synthetic data generated under controlled conditions. Validation against operational
+    LM-serving traces or BGP monitoring feeds is identified as required future work.
+    EVIDENCE UPDATE (v5.0 unified proof, 2026-05-22). Three real-data experiments
+    have been performed since this draft was first produced; their results are summarised
+    here for the reviewer's convenience. Full disclosure with SHA-256 receipts is
+    in docs/MVPS_V5_UNIFIED_PROOF.txt of the reference implementation bundle (available
+    on request from the author; a public reference implementation is planned but not
+    yet released). * R5 (T_CBF / CONJ-A, semantic axis). 200 LM calls against a local
+    Ollama backend (qwen2.5:3b, 3.1B Q4_K_M), 10 BAU + 10 CBF prompts x 5 vantages
+    x 2 perturbations. Mann- Whitney U on CBF vs BAU: D^2 AUC = 0.900, CBF_score AUC
+    = 0.800; C_2, C_3, C_4 all collapse from mean 1.000 (BAU) to mean 0.41/0.26/0.35
+    (CBF), yielding AUC = 0.000 (anti- direction = perfect separator via 1 - metric).
+    This is empirical real-world evidence for the signature CBF_signal:= { D^2 high,
+    C_2 low, C_4 low } as a sufficient indicator of coherent fabrication. CAVEAT (generalisation).
+    R5 was measured on ONE model family (qwen2.5:3b, n_models = 1, n_calls = 200,
+    single prompt domain). CONJ-A is therefore established empirically on a single
+    point in (model, prompt-domain, decoding-temperature) space. Multi-model and multi-
+    domain replication is open question AI9.7 (Section 26); the protocol required
+    for CONJ-A to be considered broadly supported is n_models &gt;= 3 (mixing open-
+    and closed-weight families), n_calls &gt;= 1000 per (model, domain) cell, and
+    &gt;= 2 prompt domains. * R6 (T_DDoS, BGP routing axis). RIPE Stat BGP updates,
+    5 anycast DNS prefixes (Google, Cloudflare, Quad9, OpenDNS, Level3), 30 days,
+    baseline counts spanning 9x. Alarms fire on RELATIVE D^2 spike (peak-to-baseline
+    ratio up to 14.2x for Google DNS) and NOT on absolute volume: Cloudflare 0 alarms
+    despite high baseline; Quad9 + OpenDNS alarm despite low baseline. * R7 (tau_C
+    SIR cascade, Section 15). 12 BGP alarm events retrieved at day granularity (R2
+    + R6 union). All 12 events localise within &lt;= 2 days (mean burst width 1.33
+    days), confirming the SIR macroscopic prediction. Three of the 12 events were
+    retrieved at minute resolution from RIPE Stat; Gaussian pulse fit yields tau_C
+    in [11.8, 29.4] minutes, consistent with the BGP propagation literature. These
+    results are reproducible via scripts/v5_numerical_receipts.py in the reference
+    implementation and do not change any normative construction of this draft; they
+    validate empirically what was previously labelled CONJECTURE.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-melegassi-mvps-ai-coherence-00
+    docid:
+    - id: draft-melegassi-mvps-ai-coherence-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-melegassi-mvps-ai-coherence-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

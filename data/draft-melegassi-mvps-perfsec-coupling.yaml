@@ -1,0 +1,59 @@
+---
+schema-version: v1.2.3
+id: draft-melegassi-mvps-perfsec-coupling
+title:
+- content: 'MVPS Performance-Security Coupling Profile: Joint Volume- Independence
+    and Authentication Guarantees for Coherence-BFD with Coherent-Witness Trust (CWT)'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-melegassi-mvps-perfsec-coupling
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This document specifies the MVPS Performance-Security Coupling Profile,
+    a Profile-of-Profiles binding three previously specified profiles into a single
+    deployable contract: o MVPS Coherent-Witness Trust (CWT) [I-D.melegassi-santos-ippm-mvps-cwt],
+    o Coherence-BFD [I-D.melegassi-coherence-bfd], and o MVPS DDoS Resilience [I-D.melegassi-mvps-ddos-resilience].
+    Each composed profile proves its own theorems and reports its own measured numbers
+    under its own scale assumption. When deployed together, those scale assumptions
+    diverge by 1-2 orders of magnitude and create five composition holes: a numerical
+    cost- rescaling gap, a double replay-counter rule, an under-specified key-derivation
+    step, an insider verification-DoS gap, and a joint Byzantine-at-limit / collector-split-view
+    gap. This profile closes all five with three theorems: T-JCOST-1. Closed-form
+    joint broker CPU cost as a function of (N, T_tick, q, bundle_period); two-path
+    decomposition (CWT path + Coherence-BFD path) avoids double-count; numerical receipt
+    at four scale points. T-VDOS-1. Per-vantage rate-limit at NIC/XDP fast-path bounds
+    the attacked-broker CPU by a near-constant factor (rate_limit_factor + flood *
+    c_xdp / c_path) instead of the linear blow-up of the unprotected case. T-RC-1.
+    Acceptance is the AND of the BFD sequence rule and the CWT counter rule; rejection
+    cases are enumerated. A normative HKDF info-string for cross-profile key separation
+    closes the under-specification of CWT Section 13. The dual-mode aggregation values
+    (D_minimax, D_max) defined in DDoS-Resilience Section 7.2 are bound INTO the cosigned
+    checkpoint of CWT Section 8.2, closing the joint Byzantine + split-view gap. The
+    profile inherits the full v4.0 theorem catalogue and is conformant to the MVPS
+    Architecture Invariance Theorem [I-D.melegassi-iab-mvps-architecture]. Full proofs
+    are recorded in [PERFSEC-PROOF]; numerical receipts are in evidence/perfsec_joint_cost_receipt.json
+    and evidence/perfsec_verification_dos_receipt.json; the validator scripts/validate_perfsec_coupling.py
+    returns 12/12 PASS.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-melegassi-mvps-perfsec-coupling-00
+    docid:
+    - id: draft-melegassi-mvps-perfsec-coupling-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-melegassi-mvps-perfsec-coupling-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

@@ -13,18 +13,26 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: <p>This document specifies a method for utilizing the Domain Name System
-    (DNS) to facilitate scalable and interoperable discovery between AI agents. The
-    proposed mechanism, referred to as "DNS AI agent Discovery (DNS-AID)", defines
-    a structured DNS namespace and record usage model to support metadata exchange
-    and capability advertisement. This will allow organisations to publish information
-    about their AI agents on the Internet or internal networks using a well-known
-    label within the organisation's own DNS namespace. This document does not define
-    how the published agent information is accessed or the exact structure of that
-    information. Instead, it specifies a mechanism for indicating which access protocol
-    should be used and what format the agent information will be provided in. This
-    document proposes no change to the structure of DNS messages, and no new operation
-    codes, response codes, resource record types, or any other new DNS protocol values.</p>
+- content: "<p>The document standardizes an approach for publishing AI agents in the
+    Domain Name System (DNS) so that other agents can discover them. Discovery is
+    then initiated based on one of three generic use cases, in increasing computational
+    and latency cost: (1) the requestor knows both the organization and agent (2)
+    the requestor knows the organization that provides a capability, but not the specific
+    agent (3) the requestor knows the required capability, but not the organization
+    or agent. Of these use cases only (1) and (2) are in scope for this document,
+    although (3) can be derived from this specification. DNS for AI Discovery (DNS-AID)
+    is designed so that, once a client has learned an organization's agents, subsequent
+    transactions can utilize the first use case with the benefit of cacheable connectivity
+    information that is learnable as an agentic skill. The mechanism uses Service
+    Binding (SVCB) records for connectivity information and key meta data, a well
+    known entry point using DNS-Based Service Discovery (DNS-SD) labels into an organization's
+    agent index, and optionally DNS Security Extensions (DNSSEC) and DNS-Based Authentication
+    of Named Entities (DANE) TLSA records for trust and security. DNS-AID provides
+    consumers of agent services with a direct connection method for agentic workloads
+    not mediated by a third party. Organizations can use the same approach across
+    public and private networks networks, providing consistency and common operational
+    models, including publishing agents that are hosted in service provider domains.
+    This document introduces no new resource record types, opcodes, or response codes.</p>"
   language:
   - en
   script:
@@ -50,6 +58,16 @@ relation:
       primary: true
     formattedref:
       content: draft-mozleywilliams-dnsop-dnsaid-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-mozleywilliams-dnsop-dnsaid-02
+    docid:
+    - id: draft-mozleywilliams-dnsop-dnsaid-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-mozleywilliams-dnsop-dnsaid-02
       format: text/plain
 ext:
   schema-version: v1.0.1

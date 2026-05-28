@@ -13,15 +13,15 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document defines a new extension to the JSON Meta Application
-    Protocol (JMAP) that introduces a standardized mechanism for managing metadata
-    associated with JMAP objects. The JMAP Object Metadata extension allows clients
-    and servers to store, retrieve, and synchronize arbitrary metadata and annotations
-    on any JMAP data type in a consistent manner. It defines a generic annotation
-    model as well as specific mappings for accessing IMAP metadata and WebDAV “dead
-    properties” where applicable. This extension facilitates interoperability between
-    JMAP and existing metadata frameworks while allowing vendor-specific extensions
-    in a structured and discoverable way.</p>"
+- content: "<p>This document defines an extension to the JSON Meta Application Protocol
+    (JMAP) that lets clients and servers attach metadata to existing JMAP data types.
+    Each opted-in data type gains two new properties, metadata and privateMetadata,
+    whose values are objects keyed by _namespace identifier_. A namespace identifier
+    is either a name registered with IANA or a domain name controlled by the vendor
+    providing the namespace; the latter allows vendors and applications to extend
+    the metadata schema without prior coordination. Because metadata is carried as
+    a property on the related object, clients use the existing /get, /set, /changes,
+    and /query methods to read, modify, and synchronize it.</p>"
   language:
   - en
   script:
@@ -47,6 +47,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-jmap-metadata-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-jmap-metadata-02
+    docid:
+    - id: draft-ietf-jmap-metadata-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-jmap-metadata-02
       format: text/plain
 ext:
   schema-version: v1.0.1

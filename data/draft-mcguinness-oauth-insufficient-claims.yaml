@@ -1,0 +1,48 @@
+---
+schema-version: v1.2.3
+id: draft-mcguinness-oauth-insufficient-claims
+title:
+- content: OAuth 2.0 Insufficient Claims Challenge
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-mcguinness-oauth-insufficient-claims
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This specification defines an OAuth 2.0 challenge mechanism by which
+    an Authorization Server or Protected Resource signals that a credential presented
+    by a Client is otherwise acceptable but lacks claims required to fulfill the request.
+    A new error code, insufficient_claims, together with a required_claims parameter
+    that enumerates the missing claims, lets the recipient signal what is needed.
+    The same challenge is used in Token Endpoint error responses, in Bearer authentication
+    challenges at Protected Resources, and (optionally) in OAuth 2.0 Protected Resource
+    Metadata. The challenge is intentionally decoupled from how the Client responds.
+    For back-channel re-issuance grants (OAuth 2.0 Token Exchange and Refresh Token),
+    a Client uses the requested_claims Token Endpoint request parameter defined here.
+    For grants that may require end-user interaction (authorization_code, device_code,
+    CIBA), a Client uses an applicable front-channel claims request mechanism, such
+    as the OpenID Connect claims request parameter. A motivating use case is just-in-time
+    account provisioning by a Resource Authorization Server receiving an identity
+    assertion under the Identity Assertion Authorization Grant.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-mcguinness-oauth-insufficient-claims-00
+    docid:
+    - id: draft-mcguinness-oauth-insufficient-claims-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-mcguinness-oauth-insufficient-claims-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
