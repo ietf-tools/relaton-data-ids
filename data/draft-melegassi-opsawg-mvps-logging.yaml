@@ -1,0 +1,47 @@
+---
+schema-version: v1.2.3
+id: draft-melegassi-opsawg-mvps-logging
+title:
+- content: 'The MVPS Operational Log Format: Append-Only, Hash-Chained, Externally-Anchored
+    Audit Logs'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-melegassi-opsawg-mvps-logging
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>Multi-Vantage Path Snapshot (MVPS) deployments run in critical environments
+    where the operational record must be auditable: an investigator, regulator, or
+    independent witness must be able to detect any after-the-fact alteration of what
+    the system observed and did. This document specifies the MVPS operational log
+    format: an append-only stream of structured records, each cryptographically chained
+    to its predecessor, with completeness guaranteed by an external anchor reusing
+    the Coherent-Witness Trust (CWT) checkpoint and the MVPS Proof Envelope. The format
+    guarantees that recorded events cannot be silently edited, reordered, or interior-deleted,
+    and -- once a head is anchored -- that the exact log prefix is pinned and tail
+    truncation is exposed. The document is explicit about the limits: a bare hash
+    chain cannot prove its own completeness (an anchor is REQUIRED); the chain is
+    binding, not confidential. Every property is validated by scripts/validate_logging_format.py
+    (8/8 PASS, exit 0) and recorded in evidence/logging_format_receipt.json.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-melegassi-opsawg-mvps-logging-00
+    docid:
+    - id: draft-melegassi-opsawg-mvps-logging-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-melegassi-opsawg-mvps-logging-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

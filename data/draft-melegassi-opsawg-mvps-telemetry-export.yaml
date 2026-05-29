@@ -1,0 +1,48 @@
+---
+schema-version: v1.2.3
+id: draft-melegassi-opsawg-mvps-telemetry-export
+title:
+- content: Exporting MVPS Coherence Events over Standard Telemetry Channels (syslog,
+    IPFIX, YANG-Push)
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-melegassi-opsawg-mvps-telemetry-export
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>Multi-Vantage Path Snapshot (MVPS) deployments raise coherence events
+    -- ALARM, BYZANTINE EVENT, and phase transitions such as MPLS_CAMOUFLAGE_SUSPECTED
+    -- that operators must ingest into existing monitoring systems (Network Management
+    Systems, SIEMs, time-series collectors). This document specifies a single canonical
+    MVPS event object and three NORMATIVE, lossless mappings of that object onto standard,
+    vendor-neutral telemetry channels: structured syslog (RFC 5424), IP Flow Information
+    Export (IPFIX, RFC 7011), and YANG-Push subscribed notifications (RFC 8639, RFC
+    8641) carried over NETCONF or RESTCONF. A consumer MAY ingest MVPS events from
+    any one channel without loss of the fields required to reproduce the alarm decision,
+    and the same stable event identifier is carried on every channel so that deduplication
+    across channels is consistent. This document specifies CHANNELS, not products.
+    No monitoring product is named normatively; a non-normative companion guide demonstrates
+    ingestion into one open-source system. Every mapping property is validated by
+    scripts/validate_telemetry_export.py (8/8 PASS, exit 0) and recorded in evidence/telemetry_export_receipt.json.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-melegassi-opsawg-mvps-telemetry-export-00
+    docid:
+    - id: draft-melegassi-opsawg-mvps-telemetry-export-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-melegassi-opsawg-mvps-telemetry-export-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

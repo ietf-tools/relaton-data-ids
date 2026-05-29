@@ -1,0 +1,94 @@
+---
+schema-version: v1.2.3
+id: draft-urien-tls-im-trusted-exporter-00
+title:
+- content: TLS 1.3 Identity Module Trusted Exporter
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-urien-tls-im-trusted-exporter-00
+  type: src
+type: standard
+docid:
+- id: draft-urien-tls-im-trusted-exporter-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.urien-tls-im-trusted-exporter
+  type: IETF
+  scope: anchor
+docnumber: I-D.urien-tls-im-trusted-exporter
+date:
+- type: published
+  value: '2026-05-28'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Pascal
+          language:
+          - en
+        - language:
+          - en
+          initial: P
+        formatted_initials:
+          content: P.
+          language:
+          - en
+      surname:
+        content: Urien
+        language:
+        - en
+      completename:
+        content: Pascal Urien
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Telecom Paris
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-05-28'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: <p>The Transport Layer Security (TLS) 1.3 protocol supports external Pre-Shared
+    Keys (PSKs), which are provisioned out of band. A PSK binder, included in the
+    ClientHello message, is computed as an HMAC over a transcript hash using a key
+    called the Finished External Key (FEK). For the "PSK with (EC)DHE" key exchange
+    mode, where Diffie- Hellman is performed over either finite fields or elliptic
+    curves, the Handshake Secret (HS) is computed from the (EC)DHE shared secret using
+    HKDF-Extract with a key called the Derived Secret Key (DSK), which is derived
+    from the PSK. A TLS identity module SHOULD be used to protect procedures involving
+    keys bound to the PSK, such as the FEK or the DSK. TLS defines keying material
+    exporters, which rely on secrets produced during the handshake protocol. This
+    draft introduces an Exporter Trusted Key (ETK), which is securely stored and used
+    within a TLS identity module. The ETK transforms exporter secrets into trusted
+    values that cannot be recovered by TLS software. A trusted exporter is similar
+    to the legacy TLS exporter, but it uses an additional trusted secret.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-urien-tls-im-trusted-exporter-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

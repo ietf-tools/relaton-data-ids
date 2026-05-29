@@ -13,15 +13,31 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document specifies the Multi-Agent Delegation (MAD) protocol for
-    the Sovereign Object OS (SOOS) governance architecture. It defines how authority
-    is structured, propagated, and enforced when multiple AI agents coordinate in
-    a SOOS-governed execution environment. The specification covers the Narrowing
-    Property invariant for mandate delegation chains, SO Instance Topology types for
-    multi-agent workflow patterns, SO Cluster coordination primitives for parallel
-    and dynamic agent topologies, and the Orchestrator-Specialist interaction model.
-    MAD is the multi-agent coordination complement to the governance primitives defined
-    in draft-sato-soos-aep, draft-sato-soos-sov, and draft-sato-soos-mjwt.</p>"
+- content: "<p>When a consequential task requires multiple AI agents -- one to coordinate,
+    others to execute, each operating on different objects in a shared workflow --
+    who is responsible for the outcome? Which agent caused which state change? Under
+    whose authority? If the coordinating agent's authorization is revoked, does the
+    authority of every sub-agent it delegated to immediately expire? If one agent
+    in a parallel workflow exceeds its scope, can that excess propagate to others?
+    Today, no protocol ensures the answers to these questions are knowable. Multi-agent
+    AI systems can produce accountability black holes: chains of delegation where
+    the authority at each hop is unclear, where revocation does not cascade reliably,
+    and where the audit record cannot reconstruct which agent caused which outcome
+    under which authorization. This document defines the Multi-Agent Delegation (MAD)
+    protocol: a normative specification ensuring that authority in multi-agent AI
+    workflows is structured, verifiable, and reconstructable. MAD specifies three
+    mechanisms. The Narrowing Property (INV-4) ensures that authority can only attenuate
+    across a delegation hop -- a sub-agent can never acquire capabilities its orchestrator
+    does not itself hold. SO Instance Topology Types provide five formally defined
+    patterns for how governed objects relate at runtime. SO Cluster Coordination Primitives
+    (L1-16) enable parallel fan-out topologies in which multiple specialist agents
+    execute simultaneously, with aggregation rules that let the orchestrator proceed
+    as soon as a quorum of specialists complete. For human principals, MAD provides
+    a single recoverable property: the accountability chain is always reconstructable
+    from the GEC- signed audit record alone. Cascade revocation means one decision
+    stops the entire tree. For AI agents, MAD provides machine-speed delegation authority
+    and the parallel execution efficiency that sequential single-agent approaches
+    cannot achieve.</p>"
   language:
   - en
   script:
@@ -37,6 +53,16 @@ relation:
       primary: true
     formattedref:
       content: draft-sato-soos-mad-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-sato-soos-mad-01
+    docid:
+    - id: draft-sato-soos-mad-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-sato-soos-mad-01
       format: text/plain
 ext:
   schema-version: v1.0.1
