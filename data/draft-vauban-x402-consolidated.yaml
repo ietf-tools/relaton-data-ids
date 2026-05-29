@@ -1,0 +1,54 @@
+---
+schema-version: v1.2.3
+id: draft-vauban-x402-consolidated
+title:
+- content: 'x402 Cryptographic Receipts: Format, Post-Quantum Discipline, and Starknet
+    Anchor'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-vauban-x402-consolidated
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>The x402 V2 protocol defines HTTP-native payment flows but leaves three
+    gaps that block compliance use cases. First, the PAYMENT- RESPONSE carries a facilitator-issued
+    reference rather than a self- contained, offline-verifiable cryptographic receipt;
+    an auditor cannot validate a retained receipt without contacting the facilitator.
+    Second, classical signatures alone (ES256K) do not satisfy the post-quantum migration
+    horizon set by NIST SP 800-208, ANSSI, BSI, and EU eIDAS 2.0 for high-value or
+    long-retention material. Third, off-chain receipts alone do not provide ledger-
+    anchored finality required by frameworks such as MiCA Art. 76 (settlement record-keeping)
+    and EU AI Act Art. 12 (transparency-and- documentation). This document consolidates
+    three previously separate extensions into a single specification. It defines (a)
+    a negotiable receipt-format extension with three variants (Stwo Circle STARK proof,
+    hybrid ES256K + ML-DSA-65 dual-signature, classical ES256K fallback) over a JCS
+    canonical preimage discipline grounded in RFC 8785; (b) a two-axis post-quantum
+    discipline mapping hash-based proving and hybrid signatures to the NIST PQC migration
+    roadmap; and (c) a Starknet on- chain anchor format with a canonical anchor tuple,
+    Cairo event layout, RPC endpoint convention, and block explorer reference for
+    human-readable audit. Topics under active coalition discussion are explicitly
+    out of scope: the VPSF composability claim algebra, the payment lifecycle finite
+    state machine, and the delegation binding extension are deferred to companion
+    documents not included in this consolidated submission.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-vauban-x402-consolidated-00
+    docid:
+    - id: draft-vauban-x402-consolidated-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-vauban-x402-consolidated-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

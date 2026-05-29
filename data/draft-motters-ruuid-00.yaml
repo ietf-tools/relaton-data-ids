@@ -1,0 +1,88 @@
+---
+schema-version: v1.2.3
+id: draft-motters-ruuid-00
+title:
+- content: Resolvable Universally Unique Identifiers (RUUID)
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-motters-ruuid-00
+  type: src
+type: standard
+docid:
+- id: draft-motters-ruuid-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.motters-ruuid
+  type: IETF
+  scope: anchor
+docnumber: I-D.motters-ruuid
+date:
+- type: published
+  value: '2026-05-29'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Brian
+          language:
+          - en
+        - language:
+          - en
+          initial: B
+        formatted_initials:
+          content: B.
+          language:
+          - en
+      surname:
+        content: Mottershead
+        language:
+        - en
+      completename:
+        content: Brian Mottershead
+        language:
+        - en
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-05-29'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: '<p>This document defines Resolvable Universally Unique Identifiers (RUUIDs):
+    a UUID format encoding a 64-bit IPv6 network prefix, a 48-bit identifier, and
+    a 10-bit type. A resolver uses reverse DNS on the network prefix to discover the
+    associated domain and, via that domain''s "UUID document", constructs a URI of
+    the referent. Defaults for both the document location and the referent URI template
+    mean that when URLs follow the canonical convention, nothing beyond a reverse-DNS
+    PTR record needs to be published; resolution degrades gracefully when configuration
+    is missing. The 64-bit network field carries an IPv6 /64 prefix directly. An IPv4
+    /32 is encoded as the corresponding 6to4 prefix (RFC 3056). RUUIDs are 128 bits
+    in the standard UUID textual form. Pending a dedicated UUID version, they use
+    the RFC 9562 experimental version 8 with variant 10, so existing UUID parsers
+    recognise them as well- formed UUIDs.</p>'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-motters-ruuid-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

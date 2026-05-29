@@ -1,0 +1,45 @@
+---
+schema-version: v1.2.3
+id: draft-robert-mls-slim
+title:
+- content: SlimMLS
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-robert-mls-slim
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This document defines SlimMLS, an extension to the Messaging Layer
+    Security (MLS) protocol for reducing wire and per-client storage overhead in groups
+    that use ciphersuites with large public keys, ciphertexts, signatures, and credentials.
+    SlimMLS replaces many large objects that appear in MLS authenticated or transcript-hashed
+    structures with typed hash references. Clients resolve the referenced objects
+    only when needed, using a per-message carrier, a local cache, or an application-specific
+    retrieval channel. The extension is most useful when an independent Delivery Service
+    can assist with retrieval and per-recipient delivery, although local caching and
+    delayed fetching also help without such assistance. SlimMLS defines slim variants
+    of KeyPackage, Commit, Welcome, GroupInfo, and message framing. When placing a
+    signature outside an encrypted envelope would reveal the signer, SlimMLS keeps
+    the signature inside the ciphertext.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-robert-mls-slim-00
+    docid:
+    - id: draft-robert-mls-slim-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-robert-mls-slim-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
