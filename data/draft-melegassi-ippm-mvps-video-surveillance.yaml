@@ -1,0 +1,50 @@
+---
+schema-version: v1.2.3
+id: draft-melegassi-ippm-mvps-video-surveillance
+title:
+- content: 'MVPS Video-Surveillance and CCTV Profile: Fleet-Coherence Detection of
+    Feed Replay and Loop Injection Across IP Cameras'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-melegassi-ippm-mvps-video-surveillance
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This document defines a Multi-Vantage Path Snapshot (MVPS) domain profile
+    for video surveillance: fleets of IP cameras, NVR/VMS recorders, and cloud video-surveillance-as-a-service
+    (VSaaS) endpoints treated as MVPS vantages. Its target threat is the feed-replay
+    (loop) attack -- an on-path adversary that substitutes a live camera stream with
+    previously recorded footage so that operators and single-camera analytics see
+    nothing wrong. The profile re-establishes the bounded-joint-skew axiom A1 under
+    the video pipeline (camera NTP/PTP residual, encoder and GOP buffering, recorder
+    jitter buffer, frame-interval quantization), gives a closed-form maximum pipeline
+    budget, and proves the headline result: with capture timestamps authenticated
+    at the sensor, any replayed loop older than a closed-form, strictly positive minimum
+    age leaves the coherence ball and is flagged by core Theorem T2. The core detection
+    and Byzantine theorems are inherited via the MVPS Architecture-Invariance Theorem.
+    The profile is DEFENSIVE: it detects coherence anomalies (feed replay, loop, tamper,
+    rogue ingest). It defines no facial recognition, biometric, tracking, or identification
+    function. All properties are validated by scripts/validate_video_surveillance.py
+    (7/7 PASS, exit 0) and recorded in evidence/video_surveillance_receipt.json.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-melegassi-ippm-mvps-video-surveillance-00
+    docid:
+    - id: draft-melegassi-ippm-mvps-video-surveillance-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-melegassi-ippm-mvps-video-surveillance-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

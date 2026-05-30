@@ -14,12 +14,12 @@ docid:
   primary: true
 abstract:
 - content: "<p>RFC5926 creates a list of cryptographic algorithms that can be used
-    with TCP-AO. This document expands that list, adding two Key Derivation Functions
-    (KDFs) and two Message Authentication Code (MAC) Algorithms. They are called HKDF-SHA256,
-    KMAC256-KDF, HMAC- SHA256-128, and KMAC256-128. The algorithms described by this
-    document produce 128-bit (i.e., 16-byte) MACs. When 16-byte MACs are encoded in
-    TCP-AO, the TCP-AO consumes 20 bytes. This does not challenge TCP's 40-byte option
-    size limitation.</p>"
+    with TCP-AO. This document expands that list, adding two Message Authentication
+    Code (MAC) algorithms, HMAC-SHA256-128 and KMAC256-128. For each MAC algorithm,
+    a corresponding Key Derivation Function (KDF) is also added. The MAC algorithms
+    described by this document produce 128-bit (i.e., 16-byte) MACs. When 16-byte
+    MACs are encoded in TCP-AO, the TCP-AO consumes 20 bytes. This does not challenge
+    TCP's 40-byte option size limitation.</p>"
   language:
   - en
   script:
@@ -55,6 +55,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-tcpm-tcp-ao-algs-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-tcpm-tcp-ao-algs-03
+    docid:
+    - id: draft-ietf-tcpm-tcp-ao-algs-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-tcpm-tcp-ao-algs-03
       format: text/plain
 ext:
   schema-version: v1.0.1

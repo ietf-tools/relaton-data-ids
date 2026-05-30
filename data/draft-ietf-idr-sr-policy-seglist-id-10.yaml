@@ -1,90 +1,34 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-idr-5g-edge-service-metadata-32
+id: draft-ietf-idr-sr-policy-seglist-id-10
 title:
-- content: BGP Extension for 5G Edge Service Metadata
+- content: BGP SR Policy Extensions for Segment List Identifier
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-5g-edge-service-metadata-32
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-sr-policy-seglist-id-10
   type: src
 type: standard
 docid:
-- id: draft-ietf-idr-5g-edge-service-metadata-32
+- id: draft-ietf-idr-sr-policy-seglist-id-10
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-idr-5g-edge-service-metadata
+- id: I-D.ietf-idr-sr-policy-seglist-id
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-idr-5g-edge-service-metadata
+docnumber: I-D.ietf-idr-sr-policy-seglist-id
 date:
 - type: published
-  value: '2026-04-27'
+  value: '2026-05-29'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Linda
-          language:
-          - en
-        - language:
-          - en
-          initial: L
-        formatted_initials:
-          content: L.
-          language:
-          - en
-      surname:
-        content: Dunbar
-        language:
-        - en
-      completename:
-        content: Linda Dunbar
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Futurewei
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Kausik
-          language:
-          - en
-        - language:
-          - en
-          initial: K
-        formatted_initials:
-          content: K.
-          language:
-          - en
-      surname:
-        content: Majumdar
-        language:
-        - en
-      completename:
-        content: Kausik Majumdar
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Oracle
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Cheng
+        - content: Changwang
           language:
           - en
         - language:
@@ -95,70 +39,39 @@ contributor:
           language:
           - en
       surname:
-        content: Li
+        content: Lin
         language:
         - en
       completename:
-        content: Cheng Li
+        content: Changwang Lin
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei Technologies
+        - content: New H3C Technologies
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Gyan
+        - content: Weiqiang
           language:
           - en
         - language:
           - en
-          initial: G
-        - language:
-          - en
-          initial: S
+          initial: W
         formatted_initials:
-          content: G. S.
+          content: W.
           language:
           - en
       surname:
-        content: Mishra
+        content: Cheng
         language:
         - en
       completename:
-        content: Gyan Mishra
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Verizon
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Zongpeng
-          language:
-          - en
-        - language:
-          - en
-          initial: Z
-        formatted_initials:
-          content: Z.
-          language:
-          - en
-      surname:
-        content: Du
-        language:
-        - en
-      completename:
-        content: Zongpeng Du
+        content: Weiqiang Cheng
         language:
         - en
     affiliation:
@@ -167,23 +80,102 @@ contributor:
         - content: China Mobile
   role:
   - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Yao
+          language:
+          - en
+        - language:
+          - en
+          initial: "Y"
+        formatted_initials:
+          content: Y.
+          language:
+          - en
+      surname:
+        content: Liu
+        language:
+        - en
+      completename:
+        content: Yao Liu
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: ZTE
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Ketan
+          language:
+          - en
+        - language:
+          - en
+          initial: K
+        formatted_initials:
+          content: K.
+          language:
+          - en
+      surname:
+        content: Talaulikar
+        language:
+        - en
+      completename:
+        content: Ketan Talaulikar
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Cisco Systems
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Mengxiao
+          language:
+          - en
+        - language:
+          - en
+          initial: M
+        formatted_initials:
+          content: M.
+          language:
+          - en
+      surname:
+        content: Chen
+        language:
+        - en
+      completename:
+        content: Mengxiao Chen
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: New H3C Technologies
+  role:
+  - type: author
 version:
-- draft: '32'
-revdate: '2026-04-27'
+- draft: '10'
+revdate: '2026-05-29'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This draft describes a new Edge Metadata Path Attribute and some Sub-
-    TLVs for egress routers to advertise the Edge Metadata about the attached edge
-    services (ES). The edge service Metadata can be used by the ingress routers in
-    the 5G Local Data Network to make path selections not only based on the routing
-    cost but also the running environment of the edge services. The goal is to improve
-    latency and performance for 5G edge services. The extension enables an edge service
-    at one specific location to be more preferred than the others with the same IP
-    address (ANYCAST) to receive data flow from a specific source, like a specific
-    User Equipment (UE).</p>"
+- content: "<p>Segment Routing (SR) is a source routing paradigm that explicitly indicates
+    the forwarding path for packets at the ingress node. An SR Policy is a set of
+    candidate paths, each consisting of one or more segment lists. This document defines
+    extensions to BGP SR Policy to specify the identifier of a segment list.</p>"
   language:
   - en
   script:
@@ -192,23 +184,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-idr-5g-edge-service-metadata-05
+    id: draft-ietf-idr-sr-policy-seglist-id-01
     docid:
-    - id: draft-ietf-idr-5g-edge-service-metadata-05
+    - id: draft-ietf-idr-sr-policy-seglist-id-01
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-idr-5g-edge-service-metadata-05
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-idr-5g-edge-service-metadata-33
-    docid:
-    - id: draft-ietf-idr-5g-edge-service-metadata-33
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-idr-5g-edge-service-metadata-33
+      content: draft-ietf-idr-sr-policy-seglist-id-01
       format: text/plain
 series:
 - type: main
@@ -219,7 +201,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-idr-5g-edge-service-metadata-32
+  number: draft-ietf-idr-sr-policy-seglist-id-10
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

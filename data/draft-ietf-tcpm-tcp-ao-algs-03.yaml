@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-tcpm-tcp-ao-algs-02
+id: draft-ietf-tcpm-tcp-ao-algs-03
 title:
 - content: Additional Cryptographic Algorithms For Use With TCP-AO
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-tcpm-tcp-ao-algs-02
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-tcpm-tcp-ao-algs-03
   type: src
 type: standard
 docid:
-- id: draft-ietf-tcpm-tcp-ao-algs-02
+- id: draft-ietf-tcpm-tcp-ao-algs-03
   type: Internet-Draft
   primary: true
 - id: I-D.ietf-tcpm-tcp-ao-algs
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.ietf-tcpm-tcp-ao-algs
 date:
 - type: published
-  value: '2026-05-28'
+  value: '2026-05-29'
 contributor:
 - person:
     name:
@@ -84,20 +84,20 @@ contributor:
   role:
   - type: author
 version:
-- draft: '02'
-revdate: '2026-05-28'
+- draft: '03'
+revdate: '2026-05-29'
 language:
 - en
 script:
 - Latn
 abstract:
 - content: "<p>RFC5926 creates a list of cryptographic algorithms that can be used
-    with TCP-AO. This document expands that list, adding two Key Derivation Functions
-    (KDFs) and two Message Authentication Code (MAC) Algorithms. They are called HKDF-SHA256,
-    KMAC256-KDF, HMAC- SHA256-128, and KMAC256-128. The algorithms described by this
-    document produce 128-bit (i.e., 16-byte) MACs. When 16-byte MACs are encoded in
-    TCP-AO, the TCP-AO consumes 20 bytes. This does not challenge TCP's 40-byte option
-    size limitation.</p>"
+    with TCP-AO. This document expands that list, adding two Message Authentication
+    Code (MAC) algorithms, HMAC-SHA256-128 and KMAC256-128. For each MAC algorithm,
+    a corresponding Key Derivation Function (KDF) is also added. The MAC algorithms
+    described by this document produce 128-bit (i.e., 16-byte) MACs. When 16-byte
+    MACs are encoded in TCP-AO, the TCP-AO consumes 20 bytes. This does not challenge
+    TCP's 40-byte option size limitation.</p>"
   language:
   - en
   script:
@@ -106,23 +106,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-tcpm-tcp-ao-algs-00
+    id: draft-ietf-tcpm-tcp-ao-algs-02
     docid:
-    - id: draft-ietf-tcpm-tcp-ao-algs-00
+    - id: draft-ietf-tcpm-tcp-ao-algs-02
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-tcpm-tcp-ao-algs-00
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-tcpm-tcp-ao-algs-03
-    docid:
-    - id: draft-ietf-tcpm-tcp-ao-algs-03
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-tcpm-tcp-ao-algs-03
+      content: draft-ietf-tcpm-tcp-ao-algs-02
       format: text/plain
 series:
 - type: main
@@ -133,7 +123,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-tcpm-tcp-ao-algs-02
+  number: draft-ietf-tcpm-tcp-ao-algs-03
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
