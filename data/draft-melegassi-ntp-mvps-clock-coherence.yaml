@@ -1,0 +1,68 @@
+---
+schema-version: v1.2.3
+id: draft-melegassi-ntp-mvps-clock-coherence
+title:
+- content: Cross-Vantage Clock-Offset Coherence Bounds for NTP-Disciplined Measurement
+    Vantages
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-melegassi-ntp-mvps-clock-coherence
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: '<p>The Network Time Protocol version 4 (NTPv4) [RFC5905] specifies how
+    a host disciplines its clock to a reference time scale; Network Time Security
+    [RFC8915] and the Message Authentication Code [RFC8573] authenticate the client-server
+    exchange; and the NTP Best Current Practices [RFC8633] direct operators to "monitor
+    their NTP instances to detect attacks" (Section 5.3) without specifying a quantitative,
+    cross-host monitoring procedure. The Security Requirements document [RFC7384]
+    establishes that an on-path adversary can impose a clock offset (Sections 3.2.2,
+    3.2.3, 3.2.6) and that a single client cannot always detect such an offset by
+    itself. This document makes ONE contribution and proves it: given two or more
+    measurement vantages disciplined to a common reference and each declaring an NTP-tier
+    offset bound, a deterministic cross-vantage detector exists that (a) NEVER fires
+    on offsets that are legitimate under the [RFC5905] / [RFC8633] synchronization
+    envelope, and (b) is GUARANTEED to fire on an injected single-clock offset above
+    a closed- form threshold. Both properties are theorems with elementary proofs;
+    no statistical assumption, no protocol change, and no claim about the NTP wire
+    format are required. The detector is the cross-vantage clock-skew axis of the
+    Multi-Vantage Path Snapshot (MVPS) framework [I-D.melegassi-ippm-mvps-bundle];
+    this document isolates and proves the part that is purely a consequence of [RFC5905]''s
+    error envelope. A second result governs what happens AFTER detection, when the
+    environment itself collapses (vantages go dark, telemetry thins). We prove (i)
+    that the false-positive-free property survives any telemetry collapse with two
+    or more surviving vantages, and (ii) a data-processing ceiling: an AI/LLM analysis
+    layer riding the gated signal cannot recover information the surviving vantages
+    did not observe. The LLM''s role is therefore provably EXPLANATION of an already-detected
+    collapse, never detection itself; its operating envelope (decision tiers, classification
+    accuracy) is given honestly as a stated model, not a theorem. A third result governs
+    SPEED. Driving the same cross-vantage comparison at a Bidirectional Forwarding
+    Detection (BFD, [RFC5880]) cadence instead of the legacy 60-second coherence tick
+    gives a closed-form detection-latency window (the L_DL lemma) whose worst case
+    equals the BFD detection time plus one signalling delay. Because the false-positive-free
+    property (Theorem 1) is independent of the sampling rate, the gate may run at
+    the fastest BFD cadence (multiplier 1) WITHOUT trading away its zero-false-alarm
+    guarantee, detecting an injected offset in tens of milliseconds rather than tens
+    of seconds.</p>'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-melegassi-ntp-mvps-clock-coherence-00
+    docid:
+    - id: draft-melegassi-ntp-mvps-clock-coherence-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-melegassi-ntp-mvps-clock-coherence-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

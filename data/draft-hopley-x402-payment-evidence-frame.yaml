@@ -1,0 +1,49 @@
+---
+schema-version: v1.2.3
+id: draft-hopley-x402-payment-evidence-frame
+title:
+- content: Payment Evidence Frame for Agentic-Payment Lifecycle Receipts
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-hopley-x402-payment-evidence-frame
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This document specifies a Payment Evidence Frame (PEF): a transport-
+    agnostic envelope that wraps any payment lifecycle receipt from the x402 agentic-payment
+    receipt stack under a named claim type, a deterministic frame identifier, and
+    an optional transport-layer signature. The frame introduces three properties that
+    the inner receipt types do not individually provide: (1) a stable cross-system
+    identifier (frame_id) derived deterministically from the receipt content by SHA-256
+    over the JCS-canonical preimage, so the same payment evidence can be referenced
+    by identifier across HTTP headers, agent-to-agent task artifacts, audit logs,
+    and on-chain memo fields without re- serialising the full receipt; (2) a taxonomy
+    label (claim_type) that tells a consumer what class of evidence a frame carries
+    before the inner receipt format is parsed; and (3) a receipt integrity hash (receipt_hash)
+    that allows any downstream party to confirm the inner receipt is unaltered without
+    deserialising its full structure. The format uses the same JCS canonicalisation
+    discipline (draft- hopley-x402-canonicalisation-jcs) as the five inner receipt
+    formats it envelopes, so implementations require only one canonicalisation primitive
+    for the full receipt stack.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-hopley-x402-payment-evidence-frame-00
+    docid:
+    - id: draft-hopley-x402-payment-evidence-frame-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-hopley-x402-payment-evidence-frame-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
