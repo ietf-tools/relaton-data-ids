@@ -1,90 +1,34 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-spice-sd-cwt-07
+id: draft-ietf-pce-sr-p2mp-policy-15
 title:
-- content: Selective Disclosure CBOR Web Tokens (SD-CWT)
+- content: PCEP extensions for SR P2MP Policy
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-spice-sd-cwt-07
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-pce-sr-p2mp-policy-15
   type: src
 type: standard
 docid:
-- id: draft-ietf-spice-sd-cwt-07
+- id: draft-ietf-pce-sr-p2mp-policy-15
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-spice-sd-cwt
+- id: I-D.ietf-pce-sr-p2mp-policy
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-spice-sd-cwt
+docnumber: I-D.ietf-pce-sr-p2mp-policy
 date:
 - type: published
-  value: '2026-03-02'
+  value: '2026-05-31'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Michael
-          language:
-          - en
-        - language:
-          - en
-          initial: M
-        formatted_initials:
-          content: M.
-          language:
-          - en
-      surname:
-        content: Prorock
-        language:
-        - en
-      completename:
-        content: Michael Prorock
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: mesur.io
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Orie
-          language:
-          - en
-        - language:
-          - en
-          initial: O
-        formatted_initials:
-          content: O.
-          language:
-          - en
-      surname:
-        content: Steele
-        language:
-        - en
-      completename:
-        content: Orie Steele
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Tradeverifyd
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Henk
+        - content: Hooman
           language:
           - en
         - language:
@@ -95,24 +39,80 @@ contributor:
           language:
           - en
       surname:
-        content: Birkholz
+        content: Bidgoli
         language:
         - en
       completename:
-        content: Henk Birkholz
+        content: Hooman Bidgoli
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Fraunhofer SIT
+        - content: Nokia
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Rohan
+        - content: Daniel
+          language:
+          - en
+        - language:
+          - en
+          initial: D
+        formatted_initials:
+          content: D.
+          language:
+          - en
+      surname:
+        content: Voyer
+        language:
+        - en
+      completename:
+        content: Daniel Voyer
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Cisco Systems
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Anuj
+          language:
+          - en
+        - language:
+          - en
+          initial: A
+        formatted_initials:
+          content: A.
+          language:
+          - en
+      surname:
+        content: Budhiraja
+        language:
+        - en
+      completename:
+        content: Anuj Budhiraja
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Cisco System
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Rishabh
           language:
           - en
         - language:
@@ -123,27 +123,60 @@ contributor:
           language:
           - en
       surname:
-        content: Mahy
+        content: Parekh
         language:
         - en
       completename:
-        content: Rohan Mahy
+        content: Rishabh Parekh (editor)
         language:
         - en
+    affiliation:
+    - organization:
+        name:
+        - content: Arrcus
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Siva
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Sivabalan
+        language:
+        - en
+      completename:
+        content: Siva Sivabalan
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Ciena
   role:
   - type: author
 version:
-- draft: '07'
-revdate: '2026-03-02'
+- draft: '15'
+revdate: '2026-05-31'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This specification describes a data minimization technique for use
-    with CBOR Web Tokens (CWTs). The approach is inspired by the Selective Disclosure
-    JSON Web Token (SD-JWT), with changes to align with CBOR Object Signing and Encryption
-    (COSE) and CWTs.</p>"
+- content: "<p>Segment Routing (SR) Point-to-Multipoint (P2MP) Policies are a set
+    of policies that enable architecture for P2MP service delivery. This document
+    specifies extensions to the Path Computation Element Communication Protocol (PCEP)
+    that allow a stateful PCE to compute and initiate P2MP paths with MPLS encap from
+    a Root to a set of Leaf nodes.</p>"
   language:
   - en
   script:
@@ -152,23 +185,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-spice-sd-cwt-05
+    id: draft-ietf-pce-sr-p2mp-policy-14
     docid:
-    - id: draft-ietf-spice-sd-cwt-05
+    - id: draft-ietf-pce-sr-p2mp-policy-14
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-spice-sd-cwt-05
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-spice-sd-cwt-08
-    docid:
-    - id: draft-ietf-spice-sd-cwt-08
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spice-sd-cwt-08
+      content: draft-ietf-pce-sr-p2mp-policy-14
       format: text/plain
 series:
 - type: main
@@ -179,7 +202,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-spice-sd-cwt-07
+  number: draft-ietf-pce-sr-p2mp-policy-15
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

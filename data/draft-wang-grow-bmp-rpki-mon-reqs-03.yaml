@@ -1,34 +1,62 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-spice-sd-cwt-07
+id: draft-wang-grow-bmp-rpki-mon-reqs-03
 title:
-- content: Selective Disclosure CBOR Web Tokens (SD-CWT)
+- content: Requirements for Monitoring RPKI-Related Processes on Routers Using BMP
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-spice-sd-cwt-07
+- content: https://datatracker.ietf.org/doc/html/draft-wang-grow-bmp-rpki-mon-reqs-03
   type: src
 type: standard
 docid:
-- id: draft-ietf-spice-sd-cwt-07
+- id: draft-wang-grow-bmp-rpki-mon-reqs-03
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-spice-sd-cwt
+- id: I-D.wang-grow-bmp-rpki-mon-reqs
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-spice-sd-cwt
+docnumber: I-D.wang-grow-bmp-rpki-mon-reqs
 date:
 - type: published
-  value: '2026-03-02'
+  value: '2026-05-31'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Michael
+        - content: Shuhe
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Wang
+        language:
+        - en
+      completename:
+        content: Shuhe Wang
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Beijing Zhongguancun Laboratory
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Mingwei
           language:
           - en
         - language:
@@ -39,111 +67,91 @@ contributor:
           language:
           - en
       surname:
-        content: Prorock
+        content: Xu
         language:
         - en
       completename:
-        content: Michael Prorock
+        content: Mingwei Xu
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: mesur.io
+        - content: Beijing Zhongguancun Laboratory
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Orie
+        - content: Yangyang
           language:
           - en
         - language:
           - en
-          initial: O
+          initial: "Y"
         formatted_initials:
-          content: O.
+          content: Y.
           language:
           - en
       surname:
-        content: Steele
+        content: Wang
         language:
         - en
       completename:
-        content: Orie Steele
+        content: Yangyang Wang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Tradeverifyd
+        - content: Beijing Zhongguancun Laboratory
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Henk
+        - content: Jia
           language:
           - en
         - language:
           - en
-          initial: H
+          initial: J
         formatted_initials:
-          content: H.
+          content: J.
           language:
           - en
       surname:
-        content: Birkholz
+        content: Zhang
         language:
         - en
       completename:
-        content: Henk Birkholz
+        content: Jia Zhang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Fraunhofer SIT
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Rohan
-          language:
-          - en
-        - language:
-          - en
-          initial: R
-        formatted_initials:
-          content: R.
-          language:
-          - en
-      surname:
-        content: Mahy
-        language:
-        - en
-      completename:
-        content: Rohan Mahy
-        language:
-        - en
+        - content: Beijing Zhongguancun Laboratory
   role:
   - type: author
 version:
-- draft: '07'
-revdate: '2026-03-02'
+- draft: '03'
+revdate: '2026-05-31'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This specification describes a data minimization technique for use
-    with CBOR Web Tokens (CWTs). The approach is inspired by the Selective Disclosure
-    JSON Web Token (SD-JWT), with changes to align with CBOR Object Signing and Encryption
-    (COSE) and CWTs.</p>"
+- content: "<p>This document outlines requirements for extending the BGP Monitoring
+    Protocol (BMP) to provide comprehensive monitoring of RPKI-related processes on
+    routers, including RPKI data acquisition, RPKI-related policy configuration, route
+    validation, and the impact of validation on routing decisions. The proposed extensions
+    aim to standardize router-side monitoring of RPKI within BMP, focusing specifically
+    on RPKI's effect on BGP routing decisions while maintaining a clear scope boundary
+    with other monitoring mechanisms such as YANG modeling and streaming telemetry
+    for RPKI-to-Router (RTR) protocol operations.</p>"
   language:
   - en
   script:
@@ -152,23 +160,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-spice-sd-cwt-05
+    id: draft-wang-grow-bmp-rpki-mon-reqs-02
     docid:
-    - id: draft-ietf-spice-sd-cwt-05
+    - id: draft-wang-grow-bmp-rpki-mon-reqs-02
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-spice-sd-cwt-05
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-spice-sd-cwt-08
-    docid:
-    - id: draft-ietf-spice-sd-cwt-08
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spice-sd-cwt-08
+      content: draft-wang-grow-bmp-rpki-mon-reqs-02
       format: text/plain
 series:
 - type: main
@@ -179,7 +177,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-spice-sd-cwt-07
+  number: draft-wang-grow-bmp-rpki-mon-reqs-03
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
