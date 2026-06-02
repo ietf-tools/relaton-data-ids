@@ -1,42 +1,69 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-savnet-intra-domain-problem-statement-23
+id: draft-ietf-idr-bgp-ls-sr-epe-over-l2bundle-03
 title:
-- content: Source Address Validation in Intra-domain Networks Gap Analysis, Problem
-    Statement, and Requirements
+- content: Segment Routing BGP Egress Peer Engineering over Layer 2 Bundle Members
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-savnet-intra-domain-problem-statement-23
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-bgp-ls-sr-epe-over-l2bundle-03
   type: src
 type: standard
 docid:
-- id: draft-ietf-savnet-intra-domain-problem-statement-23
+- id: draft-ietf-idr-bgp-ls-sr-epe-over-l2bundle-03
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-savnet-intra-domain-problem-statement
+- id: I-D.ietf-idr-bgp-ls-sr-epe-over-l2bundle
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-savnet-intra-domain-problem-statement
+docnumber: I-D.ietf-idr-bgp-ls-sr-epe-over-l2bundle
 date:
 - type: published
-  value: '2026-04-14'
+  value: '2026-06-01'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Dan
+        - content: Changwang
           language:
           - en
         - language:
           - en
-          initial: D
+          initial: C
         formatted_initials:
-          content: D.
+          content: C.
+          language:
+          - en
+      surname:
+        content: Lin
+        language:
+        - en
+      completename:
+        content: Changwang Lin
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: New H3C Technologies
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Zhenqiang
+          language:
+          - en
+        - language:
+          - en
+          initial: Z
+        formatted_initials:
+          content: Z.
           language:
           - en
       surname:
@@ -44,134 +71,117 @@ contributor:
         language:
         - en
       completename:
-        content: Dan Li
+        content: Zhenqiang Li
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Tsinghua University
+        - content: China Mobile
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Jianping
+        - content: Ran
           language:
           - en
         - language:
           - en
-          initial: J
+          initial: R
         formatted_initials:
-          content: J.
+          content: R.
           language:
           - en
       surname:
-        content: Wu
+        content: Pang
         language:
         - en
       completename:
-        content: Jianping Wu
+        content: Ran Pang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Tsinghua University
+        - content: China Unicom
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Lancheng
+        - content: Ketan
           language:
           - en
         - language:
           - en
-          initial: L
+          initial: K
         formatted_initials:
-          content: L.
+          content: K.
           language:
           - en
       surname:
-        content: Qin
+        content: Talaulikar
         language:
         - en
       completename:
-        content: Lancheng Qin
+        content: Ketan Talaulikar
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Zhongguancun Laboratory
+        - content: Cisco Systems
   role:
   - type: author
 - person:
     name:
       given:
         forename:
+        - content: Ran
+          language:
+          - en
         - language:
           - en
-          initial: M
+          initial: R
         formatted_initials:
-          content: M.
+          content: R.
           language:
           - en
       surname:
-        content: Huang
+        content: Chen
         language:
         - en
       completename:
-        content: Mingqing(Michael) Huang
+        content: Ran Chen
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Zhongguancun Laboratory
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Nan
-          language:
-          - en
-        - language:
-          - en
-          initial: "N"
-        formatted_initials:
-          content: N.
-          language:
-          - en
-      surname:
-        content: Geng
-        language:
-        - en
-      completename:
-        content: Nan Geng
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Huawei
+        - content: ZTE Corporation
   role:
   - type: author
 version:
-- draft: '23'
-revdate: '2026-04-14'
+- draft: '03'
+revdate: '2026-06-01'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document provides a gap analysis of the current operational intra-domain
-    SAV mechanisms and identifies requirements for new intra-domain SAV solutions.</p>"
+- content: "<p>There are deployments where the Layer 3 interface on which a BGP peer
+    session is established is a Layer 2 interface bundle. In order to allow BGP-EPE
+    to control traffic flows on individual member links of the underlying Layer 2
+    bundle, BGP Peering SIDs need to be allocated to individual bundle member links,
+    and advertisement of such BGP Peering SIDs in BGP-LS is required. This document
+    describes how to support Segment Routing BGP Egress Peer Engineering over Layer
+    2 bundle members. This document updates RFC9085 to allow the L2 Bundle Member
+    Attributes TLV to be added to the BGP-LS Attribute associated with the Link NLRI
+    of BGP peering link. This document updates RFC9085 and RFC9086 to allow the PeerAdj
+    SID TLV to be included as a sub-TLV of the L2 Bundle Member Attributes TLV.</p>"
   language:
   - en
   script:
@@ -180,23 +190,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-savnet-intra-domain-problem-statement-14
+    id: draft-ietf-idr-bgp-ls-sr-epe-over-l2bundle-02
     docid:
-    - id: draft-ietf-savnet-intra-domain-problem-statement-14
+    - id: draft-ietf-idr-bgp-ls-sr-epe-over-l2bundle-02
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-savnet-intra-domain-problem-statement-14
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-savnet-intra-domain-problem-statement-26
-    docid:
-    - id: draft-ietf-savnet-intra-domain-problem-statement-26
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-savnet-intra-domain-problem-statement-26
+      content: draft-ietf-idr-bgp-ls-sr-epe-over-l2bundle-02
       format: text/plain
 series:
 - type: main
@@ -207,7 +207,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-savnet-intra-domain-problem-statement-23
+  number: draft-ietf-idr-bgp-ls-sr-epe-over-l2bundle-03
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
