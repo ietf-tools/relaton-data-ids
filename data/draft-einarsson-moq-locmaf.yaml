@@ -1,0 +1,44 @@
+---
+schema-version: v1.2.3
+id: draft-einarsson-moq-locmaf
+title:
+- content: Low Overhead CMAF for Media over QUIC (LOCMAF)
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-einarsson-moq-locmaf
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This document specifies LOCMAF (Low Overhead CMAF for Media over QUIC),
+    a compact wire format for streaming low-latency CMAF media over the MoQ Transport
+    protocol (MOQT) with per-object overhead comparable to the Low Overhead Container
+    (LOC). LOCMAF carries the CMAF chunk head metadata from a single moof (movie fragment)
+    — as a small set of tagged fields inside one of two LOCMAF object kinds, while
+    leaving the sample data (mdat) untouched. In addition, it can carry the optional
+    styp (segment type), prft (producer reference time), any number of emsg (event
+    message) boxes. The first object of each MOQT group carries a full reference;
+    subsequent objects in the same group carry only the differences. The receiver
+    reconstructs CMAF chunks that are semantically equivalent to the sender input,
+    including encryption metadata required by CMAF DRM (Common Encryption) pipelines.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-einarsson-moq-locmaf-00
+    docid:
+    - id: draft-einarsson-moq-locmaf-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-einarsson-moq-locmaf-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

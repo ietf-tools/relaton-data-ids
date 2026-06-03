@@ -1,121 +1,62 @@
 ---
 schema-version: v1.2.3
-id: draft-stone-spring-mpte-sr-01
+id: draft-ietf-opsawg-ipfix-gtpu-10
 title:
-- content: Multipath Traffic Engineering for Segment Routing
+- content: Export of GTP-U Information in IP Flow Information Export (IPFIX)
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-stone-spring-mpte-sr-01
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-ipfix-gtpu-10
   type: src
 type: standard
 docid:
-- id: draft-stone-spring-mpte-sr-01
+- id: draft-ietf-opsawg-ipfix-gtpu-10
   type: Internet-Draft
   primary: true
-- id: I-D.stone-spring-mpte-sr
+- id: I-D.ietf-opsawg-ipfix-gtpu
   type: IETF
   scope: anchor
-docnumber: I-D.stone-spring-mpte-sr
+docnumber: I-D.ietf-opsawg-ipfix-gtpu
 date:
 - type: published
-  value: '2025-10-20'
+  value: '2026-06-02'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Andrew
+        - content: Daniel
           language:
           - en
         - language:
           - en
-          initial: A
+          initial: D
         formatted_initials:
-          content: A.
+          content: D.
           language:
           - en
       surname:
-        content: Stone
+        content: Voyer
         language:
         - en
       completename:
-        content: Andrew Stone
+        content: Daniel Voyer
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Nokia
+        - content: Cisco Systems
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Vishnu
-          language:
-          - en
-        - language:
-          - en
-          initial: V
-        - language:
-          - en
-          initial: P
-        formatted_initials:
-          content: V. P.
-          language:
-          - en
-      surname:
-        content: Beeram
-        language:
-        - en
-      completename:
-        content: Vishnu Pavan Beeram
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Juniper Networks
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Nick
-          language:
-          - en
-        - language:
-          - en
-          initial: "N"
-        formatted_initials:
-          content: N.
-          language:
-          - en
-      surname:
-        content: Buraglio
-        language:
-        - en
-      completename:
-        content: Nick Buraglio
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Energy Sciences Network
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Shaofu
+        - content: Sriram
           language:
           - en
         - language:
@@ -126,33 +67,115 @@ contributor:
           language:
           - en
       surname:
-        content: Peng
+        content: Gopalakrishnan
         language:
         - en
       completename:
-        content: Shaofu Peng
+        content: Sriram Gopalakrishnan
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: ZTE Corporation
+        - content: Cisco Systems
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Thomas
+          language:
+          - en
+        - language:
+          - en
+          initial: T
+        formatted_initials:
+          content: T.
+          language:
+          - en
+      surname:
+        content: Graf
+        language:
+        - en
+      completename:
+        content: Thomas Graf
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Swisscom
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Vyasraj
+          language:
+          - en
+        - language:
+          - en
+          initial: V
+        formatted_initials:
+          content: V.
+          language:
+          - en
+      surname:
+        content: Satyanarayana
+        language:
+        - en
+      completename:
+        content: Vyasraj Satyanarayana
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: HPE
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Cristian
+          language:
+          - en
+        - language:
+          - en
+          initial: C
+        formatted_initials:
+          content: C.
+          language:
+          - en
+      surname:
+        content: Staicu
+        language:
+        - en
+      completename:
+        content: Cristian Staicu
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Bell Canada
   role:
   - type: author
 version:
-- draft: '01'
-revdate: '2025-10-20'
+- draft: '10'
+revdate: '2026-06-02'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document describes a mechanism to achieve Multipath Traffic Engineering
-    for Segment Routing based networks. Discussion Venues This note is to be removed
-    before publishing as an RFC. Discussion of this document takes place on the Source
-    Packet Routing in Networking Working Group mailing list (spring@ietf.org), which
-    is archived at https://mailarchive.ietf.org/arch/browse/spring/. Source for this
-    draft and an issue tracker can be found at https://github.com/astone282/draft-stone-spring-mpte-sr.</p>"
+- content: "<p>This document introduces IP Flow Information Export (IPFIX) Information
+    Elements to report information contained in the Generic Packet Radio Service Tunneling
+    Protocol(GTP) User Plane header such as Tunnel Endpoint Identifier, and data contained
+    in its session container extension header.</p>"
   language:
   - en
   script:
@@ -161,23 +184,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-stone-spring-mpte-sr-00
+    id: draft-ietf-opsawg-ipfix-gtpu-09
     docid:
-    - id: draft-stone-spring-mpte-sr-00
+    - id: draft-ietf-opsawg-ipfix-gtpu-09
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-stone-spring-mpte-sr-00
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-stone-spring-mpte-sr-02
-    docid:
-    - id: draft-stone-spring-mpte-sr-02
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-stone-spring-mpte-sr-02
+      content: draft-ietf-opsawg-ipfix-gtpu-09
       format: text/plain
 series:
 - type: main
@@ -188,7 +201,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-stone-spring-mpte-sr-01
+  number: draft-ietf-opsawg-ipfix-gtpu-10
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

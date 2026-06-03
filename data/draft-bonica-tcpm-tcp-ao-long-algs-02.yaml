@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-bonica-tcpm-tcp-ao-long-algs-01
+id: draft-bonica-tcpm-tcp-ao-long-algs-02
 title:
 - content: 384-bit Cryptographic Algorithms For Use With TCP-AO
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-bonica-tcpm-tcp-ao-long-algs-01
+- content: https://datatracker.ietf.org/doc/html/draft-bonica-tcpm-tcp-ao-long-algs-02
   type: src
 type: standard
 docid:
-- id: draft-bonica-tcpm-tcp-ao-long-algs-01
+- id: draft-bonica-tcpm-tcp-ao-long-algs-02
   type: Internet-Draft
   primary: true
 - id: I-D.bonica-tcpm-tcp-ao-long-algs
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.bonica-tcpm-tcp-ao-long-algs
 date:
 - type: published
-  value: '2026-05-28'
+  value: '2026-06-02'
 contributor:
 - person:
     name:
@@ -84,19 +84,20 @@ contributor:
   role:
   - type: author
 version:
-- draft: '01'
-revdate: '2026-05-28'
+- draft: '02'
+revdate: '2026-06-02'
 language:
 - en
 script:
 - Latn
 abstract:
 - content: "<p>RFC5926 creates a list of cryptographic algorithms that can be used
-    with TCP-AO. This document expands that list, adding two Key Derivation Functions
-    (KDFs) and two Message Authentication Code (MAC) Algorithms. They are called HKDF-SHA384,
-    KMAC384-KDF, HMAC-SHA384, and KMAC384. The algorithms described by this document
-    produce 384-bit (i.e., 48-byte) MACs. When 48-byte MACs are encoded in TCP-AO,
-    the TCP-AO consumes 52 bytes. This exceeds TCP's current 40-byte option size limitation.</p>"
+    with TCP-AO. This document expands that list, adding two Message Authentication
+    Code (MAC) algorithms, HMAC-SHA384 and KMAC384. For each MAC algorithm, a corresponding
+    Key Derivation Function (KDF) is also added. The MAC algorithms described by this
+    document produce 384-bit (i.e., 16-byte) MACs. When 16-byte MACs are encoded in
+    TCP-AO, the TCP-AO consumes 20 bytes. This exceeds TCP's 40-byte option size limitation.
+    Therefore, it depends on a solution that extends TCP Option space.</p>"
   language:
   - en
   script:
@@ -132,7 +133,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-bonica-tcpm-tcp-ao-long-algs-01
+  number: draft-bonica-tcpm-tcp-ao-long-algs-02
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

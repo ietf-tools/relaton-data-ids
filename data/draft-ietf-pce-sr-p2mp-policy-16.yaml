@@ -1,49 +1,49 @@
 ---
 schema-version: v1.2.3
-id: draft-stone-spring-mpte-sr-01
+id: draft-ietf-pce-sr-p2mp-policy-16
 title:
-- content: Multipath Traffic Engineering for Segment Routing
+- content: PCEP extensions for SR P2MP Policy
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-stone-spring-mpte-sr-01
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-pce-sr-p2mp-policy-16
   type: src
 type: standard
 docid:
-- id: draft-stone-spring-mpte-sr-01
+- id: draft-ietf-pce-sr-p2mp-policy-16
   type: Internet-Draft
   primary: true
-- id: I-D.stone-spring-mpte-sr
+- id: I-D.ietf-pce-sr-p2mp-policy
   type: IETF
   scope: anchor
-docnumber: I-D.stone-spring-mpte-sr
+docnumber: I-D.ietf-pce-sr-p2mp-policy
 date:
 - type: published
-  value: '2025-10-20'
+  value: '2026-06-02'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Andrew
+        - content: Hooman
           language:
           - en
         - language:
           - en
-          initial: A
+          initial: H
         formatted_initials:
-          content: A.
+          content: H.
           language:
           - en
       surname:
-        content: Stone
+        content: Bidgoli
         language:
         - en
       completename:
-        content: Andrew Stone
+        content: Hooman Bidgoli
         language:
         - en
     affiliation:
@@ -56,66 +56,91 @@ contributor:
     name:
       given:
         forename:
-        - content: Vishnu
+        - content: Daniel
           language:
           - en
         - language:
           - en
-          initial: V
-        - language:
-          - en
-          initial: P
+          initial: D
         formatted_initials:
-          content: V. P.
+          content: D.
           language:
           - en
       surname:
-        content: Beeram
+        content: Voyer
         language:
         - en
       completename:
-        content: Vishnu Pavan Beeram
+        content: Daniel Voyer
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Juniper Networks
+        - content: Cisco Systems
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Nick
+        - content: Anuj
           language:
           - en
         - language:
           - en
-          initial: "N"
+          initial: A
         formatted_initials:
-          content: N.
+          content: A.
           language:
           - en
       surname:
-        content: Buraglio
+        content: Budhiraja
         language:
         - en
       completename:
-        content: Nick Buraglio
+        content: Anuj Budhiraja
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Energy Sciences Network
+        - content: Cisco System
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Shaofu
+        - content: Rishabh
+          language:
+          - en
+        - language:
+          - en
+          initial: R
+        formatted_initials:
+          content: R.
+          language:
+          - en
+      surname:
+        content: Parekh
+        language:
+        - en
+      completename:
+        content: Rishabh Parekh (editor)
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Arrcus
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Siva
           language:
           - en
         - language:
@@ -126,33 +151,32 @@ contributor:
           language:
           - en
       surname:
-        content: Peng
+        content: Sivabalan
         language:
         - en
       completename:
-        content: Shaofu Peng
+        content: Siva Sivabalan
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: ZTE Corporation
+        - content: Ciena
   role:
   - type: author
 version:
-- draft: '01'
-revdate: '2025-10-20'
+- draft: '16'
+revdate: '2026-06-02'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document describes a mechanism to achieve Multipath Traffic Engineering
-    for Segment Routing based networks. Discussion Venues This note is to be removed
-    before publishing as an RFC. Discussion of this document takes place on the Source
-    Packet Routing in Networking Working Group mailing list (spring@ietf.org), which
-    is archived at https://mailarchive.ietf.org/arch/browse/spring/. Source for this
-    draft and an issue tracker can be found at https://github.com/astone282/draft-stone-spring-mpte-sr.</p>"
+- content: "<p>Segment Routing (SR) Point-to-Multipoint (P2MP) Policies are a set
+    of policies that enable architecture for P2MP service delivery. This document
+    specifies extensions to the Path Computation Element Communication Protocol (PCEP)
+    that allow a stateful PCE to compute and initiate P2MP paths with MPLS encap from
+    a Root to a set of Leaf nodes.</p>"
   language:
   - en
   script:
@@ -161,23 +185,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-stone-spring-mpte-sr-00
+    id: draft-ietf-pce-sr-p2mp-policy-14
     docid:
-    - id: draft-stone-spring-mpte-sr-00
+    - id: draft-ietf-pce-sr-p2mp-policy-14
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-stone-spring-mpte-sr-00
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-stone-spring-mpte-sr-02
-    docid:
-    - id: draft-stone-spring-mpte-sr-02
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-stone-spring-mpte-sr-02
+      content: draft-ietf-pce-sr-p2mp-policy-14
       format: text/plain
 series:
 - type: main
@@ -188,7 +202,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-stone-spring-mpte-sr-01
+  number: draft-ietf-pce-sr-p2mp-policy-16
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

@@ -14,11 +14,12 @@ docid:
   primary: true
 abstract:
 - content: "<p>RFC5926 creates a list of cryptographic algorithms that can be used
-    with TCP-AO. This document expands that list, adding two Key Derivation Functions
-    (KDFs) and two Message Authentication Code (MAC) Algorithms. They are called HKDF-SHA384,
-    KMAC384-KDF, HMAC-SHA384, and KMAC384. The algorithms described by this document
-    produce 384-bit (i.e., 48-byte) MACs. When 48-byte MACs are encoded in TCP-AO,
-    the TCP-AO consumes 52 bytes. This exceeds TCP's current 40-byte option size limitation.</p>"
+    with TCP-AO. This document expands that list, adding two Message Authentication
+    Code (MAC) algorithms, HMAC-SHA384 and KMAC384. For each MAC algorithm, a corresponding
+    Key Derivation Function (KDF) is also added. The MAC algorithms described by this
+    document produce 384-bit (i.e., 48-byte) MACs. When 48-byte MACs are encoded in
+    TCP-AO, the TCP-AO consumes 52 bytes. This exceeds TCP's 40-byte option size limitation.
+    Therefore, it depends on a solution that extends TCP Option space.</p>"
   language:
   - en
   script:
@@ -44,6 +45,26 @@ relation:
       primary: true
     formattedref:
       content: draft-bonica-tcpm-tcp-ao-long-algs-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-bonica-tcpm-tcp-ao-long-algs-02
+    docid:
+    - id: draft-bonica-tcpm-tcp-ao-long-algs-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-bonica-tcpm-tcp-ao-long-algs-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-bonica-tcpm-tcp-ao-long-algs-03
+    docid:
+    - id: draft-bonica-tcpm-tcp-ao-long-algs-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-bonica-tcpm-tcp-ao-long-algs-03
       format: text/plain
 ext:
   schema-version: v1.0.1
