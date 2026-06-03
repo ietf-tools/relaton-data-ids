@@ -18,13 +18,15 @@ abstract:
     are commonly translated into executable directives and propagated across multiple
     entities (clients, agents, authorization components, orchestration functions,
     and execution endpoints). This multi-hop processing expands the attack surface
-    for tampering, privilege escalation, constraint bypass, and intent drift. This
-    document provides a solution-agnostic security analysis for intent-based requests
-    across agentic systems. It introduces a reference model and scenarios to guide
-    protocol and system design, and also presents threats and requirements. The document
-    emphasizes constraint validation, invocation validation, multi-hop chain-of- custody,
-    and policy-driven responses to drift, while remaining independent of any specific
-    deployment domain.</p>"
+    for tampering, privilege escalation, constraint bypass, and intent drift. In addition,
+    at the point where an intent enters the system, a forged or unauthorized origin
+    may cause actions to be taken without valid consent. This document provides a
+    solution-agnostic security analysis for intent-based requests across agentic systems.
+    It introduces a reference model and scenarios to guide protocol and system design,
+    and also presents threats and requirements. The document emphasizes origin authentication
+    and admission control, constraint validation, invocation validation, multi-hop
+    chain-of-custody, and policy-driven responses to drift, while remaining independent
+    of any specific deployment domain.</p>"
   language:
   - en
   script:
@@ -40,6 +42,16 @@ relation:
       primary: true
     formattedref:
       content: draft-jiang-intent-security-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-jiang-intent-security-01
+    docid:
+    - id: draft-jiang-intent-security-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-jiang-intent-security-01
       format: text/plain
 ext:
   schema-version: v1.0.1

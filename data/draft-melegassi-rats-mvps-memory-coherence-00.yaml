@@ -1,0 +1,109 @@
+---
+schema-version: v1.2.3
+id: draft-melegassi-rats-mvps-memory-coherence-00
+title:
+- content: 'MVPS-Memory: Multi-Vantage Coherence Detection of Memory-Resident Malware,
+    Anchored in Remote Attestation'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-melegassi-rats-mvps-memory-coherence-00
+  type: src
+type: standard
+docid:
+- id: draft-melegassi-rats-mvps-memory-coherence-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.melegassi-rats-mvps-memory-coherence
+  type: IETF
+  scope: anchor
+docnumber: I-D.melegassi-rats-mvps-memory-coherence
+date:
+- type: published
+  value: '2026-06-03'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Leonardo
+          language:
+          - en
+        - language:
+          - en
+          initial: L
+        - language:
+          - en
+          initial: M
+        formatted_initials:
+          content: L. M.
+          language:
+          - en
+      surname:
+        content: Costa
+        language:
+        - en
+      completename:
+        content: Leonardo Melegassi Costa
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Catellix
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-06-03'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: '<p>Memory-resident ("fileless", in-memory) malware -- reflective code
+    injection, page-cache.text patching, process hollowing, RX-&gt;RWX permission
+    flips, unbacked-memory thread starts, token theft, and patchless AMSI/ETW suppression
+    -- leaves the on-disk image unchanged and is therefore structurally invisible
+    to signature and file-integrity detectors. This document explains why, and what
+    removes the blind spot, using the Multi-Vantage Path Synchrony (MVPS) observability
+    model y = H x: each detection facility is a row (a projection) of one observation
+    operator H over an interior runtime-memory state x, and a purely in-memory implant
+    is an attack whose damage direction c lies in the NULL SPACE of any single on-disk
+    vantage. The contribution uses no new mathematics. It (1) instantiates the already-proved
+    MVPS results -- the Stealth-Manifold Lemma, the coordination-stealth duality,
+    the Stealth Conservation Law max(0, k - rho), the reflexive tower, the data-processing
+    ceiling, the non-blinding invariant (stealth + effect = ||a||^2), and the silent-effect
+    ceiling (E &lt; tau^2) -- verbatim on the runtime-memory surface; (2) anchors
+    the meta-observer in the RATS architecture [RFC9334], whose Attester is defined
+    to collect Claims by "taking measurements on code, memory, or other security related
+    assets", with TPM-based Remote Integrity Verification [RFC9683], the Entity Attestation
+    Token [RFC9711], the Concise Reference Integrity Manifest [I-D.ietf-rats-corim],
+    and Concise Software Identification [RFC9393] as the evidence/reference-value
+    layer; and (3) closes the vantage-forgery channel with post-quantum eye identity
+    (ML-DSA, FIPS 204, via [I-D.ietf-cose-dilithium] and [I-D.ietf-lamps-dilithium-certificates]).
+    A live threat anchor -- the 2025-2026 surge in BYOVD EDR-killers (e.g. CVE-2025-68947)
+    and patchless AMSI/ETW suppression -- is shown to be a textbook instance of the
+    eye-silencing law. All theorem-level claims carry a machine-checkable numerical
+    receipt.</p>'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-melegassi-rats-mvps-memory-coherence-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

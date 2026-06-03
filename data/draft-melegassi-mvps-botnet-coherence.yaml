@@ -1,0 +1,100 @@
+---
+schema-version: v1.2.3
+id: draft-melegassi-mvps-botnet-coherence
+title:
+- content: 'Botnet Identification by Coordination-Coherence and Coherence-Driven Remediation
+    Signaling: The MVPS Botnet Profile'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-melegassi-mvps-botnet-coherence
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: '<p>This document specifies how the Multi-Vantage Path Synchrony (MVPS)
+    framework [I-D.melegassi-ippm-mvps-bundle] and its DDoS profile [I-D.melegassi-mvps-ddos-resilience]
+    are extended to IDENTIFY the participating sources of a botnet by their coordination-coherence
+    signature, and to EMIT corroborated, signed evidence that DRIVES existing, standardised
+    remediation ("sanitization") machinery. The central design constraint is honesty
+    about scope. MVPS does NOT itself clean, quarantine, sinkhole, or take down infected
+    hosts. Remediation is performed by the mechanisms already defined by the IETF:
+    o RFC 6561 (Recommendations for the Remediation of Bots in ISP Networks) -- the
+    notification/remediation workflow; o RFC 9132 / RFC 8783 / RFC 8811 (DOTS) --
+    mitigation request signaling; o RFC 8520 (Manufacturer Usage Description, MUD)
+    -- containment of compromised constrained/IoT devices; o BCP 38 / BCP 84 (RFC
+    2827 / RFC 3704) -- source-address validation against spoofed botnet traffic;
+    o RFC 7970 / RFC 8727 (IODEF) and RFC 6545 (RID) -- the exchange and inter-domain
+    coordination formats; o RFC 9424 -- the Indicator-of-Compromise (IoC) framing
+    for what MVPS exports. What MVPS contributes is precisely the gap RFC 6561 Section
+    4 names: it asks operators to "confirm a bot infection through the use of a combination
+    of multiple bot detection data points... to corroborate information of varying
+    dependability... [and] avoid or minimize the possibility of false-positive identification
+    of hosts." MVPS is exactly such a corroboration engine, with the addition of a
+    provable false-positive bound (Theorem B2) and a coordination-coherence test (Theorem
+    B1) that distinguishes a genuinely coordinated population (a botnet) from an equal
+    number of independently misbehaving hosts. We state three results: Theorem B1
+    (Coordination Signature). A population of S sources driven by a common controller
+    produces a low-rank deformation of the cross-vantage coherence covariance; independent
+    legitimate sources do not. The leading eigenvalue ratio is therefore a detector
+    of coordination, not of volume. Theorem B2 (Corroboration / False-Positive Bound).
+    If a single vantage flags a candidate source with per-vantage false-positive rate
+    p, then requiring agreement across V independent vantages drives the host-level
+    false-positive probability to at most p^V under vantage independence, and to a
+    stated mixture bound under partial correlation. Theorem B3 (No Unilateral Action
+    / Remediation Soundness). MVPS emits evidence only. Every enforcement step is
+    taken by an existing standardised control point (RFC 6561 / DOTS / MUD / BCP 38).
+    No host is quarantined on single-vantage evidence. Theorem B4 (Falsifiability
+    / coherence-collapse axis). The corroboration bound of B2 COLLAPSES on a correlated
+    benign population: a legitimate flash crowd is coordinated-but-benign, the botnet
+    analogue of the COHERENT_BUT_FALSE failure mode of the MVPS AI-Coherence extension
+    [I-D.melegassi-mvps-ai-coherence]. When the coherence environment so collapses,
+    that extension''s falsifiability axis enters: re-test the apparent coordination
+    on the machine-regularity subspace -- features a human crowd cannot fake. A flash
+    crowd collapses to the independent floor there; a real bot fleet does not. Theorem
+    B5 (No Free Decorrelation). Spreading the botnet''s coordination across many sources
+    to drop each per-vantage signal cannot lower what the multi-vantage aggregate
+    sees: the coherent statistic is spread-INVARIANT (T_agg = sqrt(E)) with NO compute
+    term, so the multi-vantage advantage GROWS with the spread and the silent-coordination
+    cap is E &lt; tau^2. This is the exact form of the B1 evasion corollary. Theorem
+    B6 (Non-Blinding of the corroboration set). Silently hiding the coordination by
+    corrupting the vantages is impossible while the redundancy rho = V - d_eff &gt;=
+    1 with diverse vantages: any such blinding needs k &gt; rho corruptions and is
+    FLAGGED by the vantage-integrity monitor (a non-zero stealth-gap), and the only
+    un-flagged corruption -- forging vantage reports -- is gated by a post-quantum
+    signature (ML-DSA, FIPS 204). "Blind" implies "known-blind". THE THESIS IN ONE
+    LINE. Cross-vantage agreement is necessary but not sufficient: the coherence environment
+    can collapse (correlated benign crowds, or Byzantine vantages), and where it collapses
+    the AI-coherence axes -- falsifiability (B4) and Byzantine-robust geometric-median
+    aggregation [I-D.melegassi-mvps-ai-coherence] -- are what keep the identification
+    sound. NOTE ON DATA PROVENANCE. Section 7 reports two kinds of result, each tagged.
+    Section 7.1 is a LABELLED SYNTHETIC ground-truth experiment (script scripts/simulate_botnet_coherence.py).
+    Sections 7.2 and 7.3 are measured on REAL labelled botnet traffic: the CTU-13
+    dataset of the Stratosphere IPS Laboratory (bidirectional NetFlow [RFC5103] /
+    IPFIX [RFC7011] records labelled Botnet / Normal / Background), across three malware
+    families (Neris, Rbot, Virut). On that real data the detector separates botnet
+    from normal traffic with held-out AUC 0.85-0.999, and the multi-vantage advantage
+    (Theorem B5) is instantiated with the MEASURED per-flow effect size. What remains
+    REQUIRED future work (Section 10) is corroboration across THREE OR MORE INDEPENDENT
+    REAL VANTAGES observing the same event (the real-data form of Theorem B2): CTU-13
+    is a single capture point. No claim of operational botnet takedown is made.</p>'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-melegassi-mvps-botnet-coherence-00
+    docid:
+    - id: draft-melegassi-mvps-botnet-coherence-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-melegassi-mvps-botnet-coherence-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

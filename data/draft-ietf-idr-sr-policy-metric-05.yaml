@@ -1,19 +1,19 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-idr-sr-policy-metric-04
+id: draft-ietf-idr-sr-policy-metric-05
 title:
-- content: BGP SR Policy Extensions for metric
+- content: BGP SR Policy Extensions for Metric
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-sr-policy-metric-04
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-sr-policy-metric-05
   type: src
 type: standard
 docid:
-- id: draft-ietf-idr-sr-policy-metric-04
+- id: draft-ietf-idr-sr-policy-metric-05
   type: Internet-Draft
   primary: true
 - id: I-D.ietf-idr-sr-policy-metric
@@ -22,8 +22,36 @@ docid:
 docnumber: I-D.ietf-idr-sr-policy-metric
 date:
 - type: published
-  value: '2026-02-05'
+  value: '2026-06-02'
 contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Zhenqiang
+          language:
+          - en
+        - language:
+          - en
+          initial: Z
+        formatted_initials:
+          content: Z.
+          language:
+          - en
+      surname:
+        content: Li
+        language:
+        - en
+      completename:
+        content: Zhenqiang Li
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: China Mobile
+  role:
+  - type: author
 - person:
     name:
       given:
@@ -100,24 +128,52 @@ contributor:
         - content: Cisco Systems
   role:
   - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Rui
+          language:
+          - en
+        - language:
+          - en
+          initial: R
+        formatted_initials:
+          content: R.
+          language:
+          - en
+      surname:
+        content: Gu
+        language:
+        - en
+      completename:
+        content: Rui Gu
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei
+  role:
+  - type: author
 version:
-- draft: '04'
-revdate: '2026-02-05'
+- draft: '05'
+revdate: '2026-06-02'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>SR Policy candidate paths can be represented in BGP UPDATE messages.
-    BGP can then be used to propagate the SR Policy candidate paths to the headend
-    nodes in the network. After SR Policy is installed on the ingress node, the packets
-    can be steered into SR Policy through route selection. Therefore, route selection
-    may be performed on the ingress node of the SR Policy. If there are multiple routes
-    to the same destination, the route selection node can select routes based on the
-    local policy. The local policy may use the IGP metric of the selected path, which
-    is the IGP Metric of the SR Policy. Thus the BGP UPDATE message needs to carry
-    the metric of each segment list of the SR Policy Candidate Path, which can be
-    used in path selection of routing.</p>"
+- content: "<p>An SR Policy consists of one or more Candidate Paths (CPs), each comprising
+    one or more segment lists. BGP can be used to propogate SR Policy CPs to the SR
+    Policy headend nodes in the network. After an SR Policy CP is installed on the
+    headend node, packets can be steered into the SR Policy. For a particular BGP
+    destination, if there are multiple BGP routes with different next-hops, BGP best
+    path selection is performed and the IGP metric to the next-hop node may be used
+    for tie-breaking to select the best path. When the path to the next-hop is resolved
+    over an SR Policy, the IGP metric of the SR policy is needed for BGP path selection.
+    This document defines the BGP extensions to carry the IGP metric of segment lists
+    when BGP is used to propagate SR Policy CPs.</p>"
   language:
   - en
   script:
@@ -134,16 +190,6 @@ relation:
     formattedref:
       content: draft-ietf-idr-sr-policy-metric-02
       format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-idr-sr-policy-metric-05
-    docid:
-    - id: draft-ietf-idr-sr-policy-metric-05
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-idr-sr-policy-metric-05
-      format: text/plain
 series:
 - type: main
   title:
@@ -153,7 +199,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-idr-sr-policy-metric-04
+  number: draft-ietf-idr-sr-policy-metric-05
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
