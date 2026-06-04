@@ -1,118 +1,62 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-netconf-list-pagination-11
+id: draft-ietf-opsawg-discardmodel-13
 title:
-- content: List Pagination for YANG-driven Protocols
+- content: Information and Data Models for Packet Discard Reporting
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-netconf-list-pagination-11
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-discardmodel-13
   type: src
 type: standard
 docid:
-- id: draft-ietf-netconf-list-pagination-11
+- id: draft-ietf-opsawg-discardmodel-13
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-netconf-list-pagination
+- id: I-D.ietf-opsawg-discardmodel
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-netconf-list-pagination
+docnumber: I-D.ietf-opsawg-discardmodel
 date:
 - type: published
-  value: '2026-04-01'
+  value: '2026-06-04'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Kent
+        - content: John
           language:
           - en
         - language:
           - en
-          initial: K
+          initial: J
         formatted_initials:
-          content: K.
+          content: J.
           language:
           - en
       surname:
-        content: Watsen
+        content: Evans
         language:
         - en
       completename:
-        content: Kent Watsen
+        content: John Evans
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Watsen Networks
+        - content: Amazon
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Qin
-          language:
-          - en
-        - language:
-          - en
-          initial: Q
-        formatted_initials:
-          content: Q.
-          language:
-          - en
-      surname:
-        content: Wu
-        language:
-        - en
-      completename:
-        content: Qin Wu
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Huawei Technologies
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Per
-          language:
-          - en
-        - language:
-          - en
-          initial: P
-        formatted_initials:
-          content: P.
-          language:
-          - en
-      surname:
-        content: Andersson
-        language:
-        - en
-      completename:
-        content: Per Andersson
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Ionio Systems
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Olof
+        - content: Oleksandr
           language:
           - en
         - language:
@@ -123,62 +67,118 @@ contributor:
           language:
           - en
       surname:
-        content: Hagsand
+        content: Pylypenko
         language:
         - en
       completename:
-        content: Olof Hagsand
+        content: Oleksandr Pylypenko
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: SUNET
+        - content: Nvidia
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Hongwei
+        - content: Jeffrey
           language:
           - en
         - language:
           - en
-          initial: H
+          initial: J
         formatted_initials:
-          content: H.
+          content: J.
           language:
           - en
       surname:
-        content: Li
+        content: Haas
         language:
         - en
       completename:
-        content: Hongwei Li
+        content: Jeffrey Haas
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Hewlett Packard Enterprise
+        - content: Juniper Networks
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Aviran
+          language:
+          - en
+        - language:
+          - en
+          initial: A
+        formatted_initials:
+          content: A.
+          language:
+          - en
+      surname:
+        content: Kadosh
+        language:
+        - en
+      completename:
+        content: Aviran Kadosh
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Cisco Systems, Inc.
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Mohamed
+          language:
+          - en
+        - language:
+          - en
+          initial: M
+        formatted_initials:
+          content: M.
+          language:
+          - en
+      surname:
+        content: Boucadair
+        language:
+        - en
+      completename:
+        content: Mohamed Boucadair
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Orange
   role:
   - type: author
 version:
-- draft: '11'
-revdate: '2026-04-01'
+- draft: '13'
+revdate: '2026-06-04'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: <p>In some circumstances, instances of YANG modeled "list" and "leaf- list"
-    nodes may contain numerous entries. Retrieval of all the entries can lead to inefficiencies
-    in the server, the client, and the network in between. This document defines a
-    model for list pagination that can be implemented by YANG-driven management protocols
-    such as NETCONF and RESTCONF. The model supports paging over optionally filtered
-    and/or sorted entries. The solution additionally enables servers to constrain
-    query expressions on some "config false" lists or leaf- lists.</p>
+- content: "<p>This document defines an Information Model and specifies a corresponding
+    YANG data model for packet discard reporting. The Information Model provides an
+    implementation-independent framework for classifying packet loss - both intended
+    (e.g., due to policy) and unintended (e.g., due to congestion or errors) - to
+    enable automated network mitigation of unintended packet loss. The YANG data model
+    specifies an implementation of this Information Model for network elements with
+    a focus on the interface, device, and control-plane discards.</p>"
   language:
   - en
   script:
@@ -187,23 +187,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-netconf-list-pagination-02
+    id: draft-ietf-opsawg-discardmodel-00
     docid:
-    - id: draft-ietf-netconf-list-pagination-02
+    - id: draft-ietf-opsawg-discardmodel-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-netconf-list-pagination-02
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-netconf-list-pagination-12
-    docid:
-    - id: draft-ietf-netconf-list-pagination-12
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-netconf-list-pagination-12
+      content: draft-ietf-opsawg-discardmodel-00
       format: text/plain
 series:
 - type: main
@@ -214,7 +204,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-netconf-list-pagination-11
+  number: draft-ietf-opsawg-discardmodel-13
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

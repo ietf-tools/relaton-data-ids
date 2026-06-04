@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-jiang-intent-security-00
+id: draft-jiang-intent-security-02
 title:
 - content: Security Considerations for Intent-Based Requests in Agentic Systems
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-jiang-intent-security-00
+- content: https://datatracker.ietf.org/doc/html/draft-jiang-intent-security-02
   type: src
 type: standard
 docid:
-- id: draft-jiang-intent-security-00
+- id: draft-jiang-intent-security-02
   type: Internet-Draft
   primary: true
 - id: I-D.jiang-intent-security
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.jiang-intent-security
 date:
 - type: published
-  value: '2026-04-01'
+  value: '2026-06-03'
 contributor:
 - person:
     name:
@@ -137,8 +137,8 @@ contributor:
   role:
   - type: author
 version:
-- draft: '00'
-revdate: '2026-04-01'
+- draft: '02'
+revdate: '2026-06-03'
 language:
 - en
 script:
@@ -149,28 +149,30 @@ abstract:
     are commonly translated into executable directives and propagated across multiple
     entities (clients, agents, authorization components, orchestration functions,
     and execution endpoints). This multi-hop processing expands the attack surface
-    for tampering, privilege escalation, constraint bypass, and intent drift. This
-    document provides a solution-agnostic security analysis for intent-based requests
-    across agentic systems. It introduces a reference model and scenarios to guide
-    protocol and system design, and also presents threats and requirements. The document
-    emphasizes constraint validation, invocation validation, multi-hop chain-of- custody,
-    and policy-driven responses to drift, while remaining independent of any specific
-    deployment domain.</p>"
+    for tampering, privilege escalation, constraint bypass, and intent drift. In addition,
+    at the point where an intent enters the system, a forged or unauthorized origin
+    may cause actions to be taken without valid consent. This document provides a
+    solution-agnostic security analysis for intent-based requests across agentic systems.
+    It introduces a reference model and scenarios to guide protocol and system design,
+    and also presents threats and requirements. The document emphasizes origin authentication
+    and admission control, constraint validation, invocation validation, multi-hop
+    chain-of-custody, and policy-driven responses to drift, while remaining independent
+    of any specific deployment domain.</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-jiang-intent-security-02
+    id: draft-jiang-intent-security-01
     docid:
-    - id: draft-jiang-intent-security-02
+    - id: draft-jiang-intent-security-01
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-jiang-intent-security-02
+      content: draft-jiang-intent-security-01
       format: text/plain
 series:
 - type: main
@@ -181,7 +183,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-jiang-intent-security-00
+  number: draft-jiang-intent-security-02
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

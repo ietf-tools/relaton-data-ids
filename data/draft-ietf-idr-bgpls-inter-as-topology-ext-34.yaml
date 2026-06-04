@@ -1,34 +1,90 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-netconf-list-pagination-11
+id: draft-ietf-idr-bgpls-inter-as-topology-ext-34
 title:
-- content: List Pagination for YANG-driven Protocols
+- content: BGP-LS Extension for Inter-AS Topology Retrieval
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-netconf-list-pagination-11
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-bgpls-inter-as-topology-ext-34
   type: src
 type: standard
 docid:
-- id: draft-ietf-netconf-list-pagination-11
+- id: draft-ietf-idr-bgpls-inter-as-topology-ext-34
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-netconf-list-pagination
+- id: I-D.ietf-idr-bgpls-inter-as-topology-ext
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-netconf-list-pagination
+docnumber: I-D.ietf-idr-bgpls-inter-as-topology-ext
 date:
 - type: published
-  value: '2026-04-01'
+  value: '2026-06-03'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Kent
+        - content: Aijun
+          language:
+          - en
+        - language:
+          - en
+          initial: A
+        formatted_initials:
+          content: A.
+          language:
+          - en
+      surname:
+        content: Wang
+        language:
+        - en
+      completename:
+        content: Aijun Wang
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: China Telecom
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Huaimo
+          language:
+          - en
+        - language:
+          - en
+          initial: H
+        formatted_initials:
+          content: H.
+          language:
+          - en
+      surname:
+        content: Chen
+        language:
+        - en
+      completename:
+        content: Huaimo Chen
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Individual
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Ketan
           language:
           - en
         - language:
@@ -39,39 +95,39 @@ contributor:
           language:
           - en
       surname:
-        content: Watsen
+        content: Talaulikar
         language:
         - en
       completename:
-        content: Kent Watsen
+        content: Ketan Talaulikar
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Watsen Networks
+        - content: Cisco Systems
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Qin
+        - content: Shunwan
           language:
           - en
         - language:
           - en
-          initial: Q
+          initial: S
         formatted_initials:
-          content: Q.
+          content: S.
           language:
           - en
       surname:
-        content: Wu
+        content: Zhuang
         language:
         - en
       completename:
-        content: Qin Wu
+        content: Shunwan Zhuang
         language:
         - en
     affiliation:
@@ -84,101 +140,47 @@ contributor:
     name:
       given:
         forename:
-        - content: Per
+        - content: Changwang
           language:
           - en
         - language:
           - en
-          initial: P
+          initial: C
         formatted_initials:
-          content: P.
+          content: C.
           language:
           - en
       surname:
-        content: Andersson
+        content: Lin
         language:
         - en
       completename:
-        content: Per Andersson
+        content: Changwang Lin
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Ionio Systems
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Olof
-          language:
-          - en
-        - language:
-          - en
-          initial: O
-        formatted_initials:
-          content: O.
-          language:
-          - en
-      surname:
-        content: Hagsand
-        language:
-        - en
-      completename:
-        content: Olof Hagsand
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: SUNET
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Hongwei
-          language:
-          - en
-        - language:
-          - en
-          initial: H
-        formatted_initials:
-          content: H.
-          language:
-          - en
-      surname:
-        content: Li
-        language:
-        - en
-      completename:
-        content: Hongwei Li
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Hewlett Packard Enterprise
+        - content: New H3C Technologies
   role:
   - type: author
 version:
-- draft: '11'
-revdate: '2026-04-01'
+- draft: '34'
+revdate: '2026-06-03'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: <p>In some circumstances, instances of YANG modeled "list" and "leaf- list"
-    nodes may contain numerous entries. Retrieval of all the entries can lead to inefficiencies
-    in the server, the client, and the network in between. This document defines a
-    model for list pagination that can be implemented by YANG-driven management protocols
-    such as NETCONF and RESTCONF. The model supports paging over optionally filtered
-    and/or sorted entries. The solution additionally enables servers to constrain
-    query expressions on some "config false" lists or leaf- lists.</p>
+- content: "<p>This document specifies the procedure for distributing Border Gateway
+    Protocol-Link State (BGP-LS) key parameters for inter-domain links between two
+    Autonomous Systems (ASes). It defines a new type within the BGP-LS Network Layer
+    Reachability Information (NLRI) for an inter-AS Link, as well as three new type-length-values
+    (TLVs) for the BGP-LS inter-AS Link descriptor. These BGP-LS extensions enable
+    Software-Defined Networking (SDN) controllers to retrieve network topology across
+    inter-AS environments. These extensions and procedures allow network operators
+    to collect inter-domain interconnect information and automatically compute the
+    end-to-end network topology using information provided by the BGP-LS protocol.</p>"
   language:
   - en
   script:
@@ -187,23 +189,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-netconf-list-pagination-02
+    id: draft-ietf-idr-bgpls-inter-as-topology-ext-21
     docid:
-    - id: draft-ietf-netconf-list-pagination-02
+    - id: draft-ietf-idr-bgpls-inter-as-topology-ext-21
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-netconf-list-pagination-02
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-netconf-list-pagination-12
-    docid:
-    - id: draft-ietf-netconf-list-pagination-12
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-netconf-list-pagination-12
+      content: draft-ietf-idr-bgpls-inter-as-topology-ext-21
       format: text/plain
 series:
 - type: main
@@ -214,7 +206,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-netconf-list-pagination-11
+  number: draft-ietf-idr-bgpls-inter-as-topology-ext-34
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
