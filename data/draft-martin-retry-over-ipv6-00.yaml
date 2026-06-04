@@ -1,0 +1,92 @@
+---
+schema-version: v1.2.3
+id: draft-martin-retry-over-ipv6-00
+title:
+- content: HTTP Signaling of Planned IPv4 Unavailability
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-martin-retry-over-ipv6-00
+  type: src
+type: standard
+docid:
+- id: draft-martin-retry-over-ipv6-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.martin-retry-over-ipv6
+  type: IETF
+  scope: anchor
+docnumber: I-D.martin-retry-over-ipv6
+date:
+- type: published
+  value: '2026-06-03'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Franck
+          language:
+          - en
+        - language:
+          - en
+          initial: F
+        formatted_initials:
+          content: F.
+          language:
+          - en
+      surname:
+        content: Martin
+        language:
+        - en
+      completename:
+        content: Franck Martin
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Peachymango.org
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-06-03'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>As operators transition services to IPv6-only, planned IPv4 outages
+    help identify remaining dependencies before permanent decommission. Such outages
+    must be measurable, reversible, and understandable to end users. This document
+    defines the 566 (IPv4 Unavailable) HTTP response status code and associated header
+    fields that signal an intentional, often time-bounded IPv4 outage, instruct aware
+    clients to retry over IPv6 after closing the IPv4 connection, and allow clients
+    to confirm successful IPv6 recovery via an optional correlation token so operators
+    can distinguish soft failures from hard failures in centralized logs. The mechanism
+    supports coordinated events (for example, 6/6 IPv6 Day drills), staged enterprise
+    rollouts, and permanent IPv6-only migration. Legacy clients that do not implement
+    this specification treat an unrecognized 566 status code as an internal server
+    error and MAY use the response body for human-readable guidance.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-martin-retry-over-ipv6-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

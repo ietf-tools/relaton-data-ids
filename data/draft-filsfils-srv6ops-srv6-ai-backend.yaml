@@ -13,9 +13,12 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document describes the use of SRv6 to enable deterministic path
-    placement in AI backends, optimizing load balancing and congestion control for
-    predictable GPU workloads.</p>"
+- content: "<p>This document describes how SRv6 uSID (NEXT-CSID) enables deterministic
+    path placement in AI backend fabrics through L3-L4 integration: the transport
+    stack on the NIC encodes each path as an ordered list of segments (a uSID network
+    program) in the packet header, while the fabric forwards statelessly. It explains
+    operational benefits including deterministic probing and alignment with hyperscale
+    production deployments.</p>"
   language:
   - en
   script:
@@ -61,6 +64,16 @@ relation:
       primary: true
     formattedref:
       content: draft-filsfils-srv6ops-srv6-ai-backend-03
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-filsfils-srv6ops-srv6-ai-backend-04
+    docid:
+    - id: draft-filsfils-srv6ops-srv6-ai-backend-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-filsfils-srv6ops-srv6-ai-backend-04
       format: text/plain
 ext:
   schema-version: v1.0.1

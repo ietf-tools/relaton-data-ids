@@ -15,13 +15,14 @@ docid:
 abstract:
 - content: "<p>The SRv6 Network Programming architecture allows an application to
     control the end-to-end journey of traffic flows through different network domains
-    in a unified and stateless manner, meaning intermediate network devices do not
-    store per-flow information. This document covers its application to the integration
-    of data center (DC) and wide area network (WAN) architectures using SRv6 with
-    uSID (NEXT-CSID). This eliminates the complexities and inefficiencies associated
-    with traditional fragmented network designs. The solution enhances scalability
-    and enables flexible stateless service insertion by unifying the DC and WAN under
-    a single SRv6 domain.</p>"
+    in a unified and stateless manner, without requiring intermediate network devices
+    to maintain per-flow information. This document covers its application to the
+    integration of data center (DC) and wide area network (WAN) architectures using
+    SRv6 with uSID (NEXT-CSID). It describes a unified IPv6 data plane from tenant
+    workloads through the DC frontend to Internet peering, replacing designs that
+    stitch separate overlay protocols at the Data Center Interconnect (DCI). The solution
+    enhances scalability and enables flexible stateless service insertion by unifying
+    underlay, overlay, and service steering under SRv6.</p>"
   language:
   - en
   script:
@@ -47,6 +48,16 @@ relation:
       primary: true
     formattedref:
       content: draft-filsfils-srv6ops-srv6-e2e-dc-frontend-wan-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-filsfils-srv6ops-srv6-e2e-dc-frontend-wan-02
+    docid:
+    - id: draft-filsfils-srv6ops-srv6-e2e-dc-frontend-wan-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-filsfils-srv6ops-srv6-e2e-dc-frontend-wan-02
       format: text/plain
 ext:
   schema-version: v1.0.1
