@@ -15,18 +15,22 @@ docid:
 abstract:
 - content: "<p>This document defines benchmarking terminology, methodologies, and
     Key Performance Indicators (KPIs) for evaluating Ethernet-based AI training network
-    fabrics. As large-scale distributed AI/ML training clusters grow to tens of thousands
-    of accelerators (GPUs/XPUs), the backend network fabric becomes the critical bottleneck
-    determining job completion time (JCT), training throughput, and accelerator utilization.
-    This document establishes vendor-independent, reproducible test procedures for
-    benchmarking fabric-level performance under realistic AI training workloads, covering
-    RDMA/RoCEv2 transport, the Ultra Ethernet Transport (UET) protocol defined by
-    the UEC Specification 1.0 [UEC-1.0], congestion management (PFC, ECN, DCQCN, CBFC),
-    load balancing strategies (ECMP, DLB, packet spraying), collective communication
-    patterns (AllReduce, AlltoAll, AllGather), and scale/ soak testing. The methodology
-    enables direct, reproducible comparison across different switch ASICs, vendor
-    implementations, NIC transport stacks (RoCEv2 vs. UET), and fabric architectures
-    (2-tier Clos, 3-tier Clos, rail-optimized).</p>"
+    fabrics. As large-scale distributed Artificial Intelligence / Machine Learning
+    (AI/ML) training clusters grow to tens of thousands of accelerators (GPUs or generic
+    accelerator processing units (XPUs)), the backend network fabric becomes the critical
+    bottleneck determining Job Completion Time (JCT), training throughput, and accelerator
+    utilization. This document establishes vendor-independent, reproducible test procedures
+    for benchmarking fabric-level performance under realistic AI training workloads,
+    covering Remote Direct Memory Access (RDMA) over Converged Ethernet version 2
+    (RoCEv2) transport, the Ultra Ethernet Transport (UET) protocol defined by the
+    Ultra Ethernet Consortium (UEC) Specification 1.0 [UEC-1.0], congestion management
+    (Priority Flow Control (PFC), Explicit Congestion Notification (ECN), Data Center
+    Quantized Congestion Notification (DCQCN), Credit-Based Flow Control (CBFC)),
+    load balancing strategies (Equal-Cost Multi- Path (ECMP), Dynamic Load Balancing
+    (DLB), packet spraying), collective communication patterns (AllReduce, AllToAll,
+    AllGather), and scale/soak testing. The methodology enables direct, reproducible
+    comparison across different switch ASICs, vendor implementations, NIC transport
+    stacks (RoCEv2 vs. UET), and fabric architectures (2-tier Clos, 3-tier Clos, rail-optimized).</p>"
   language:
   - en
   script:
@@ -52,6 +56,16 @@ relation:
       primary: true
     formattedref:
       content: draft-calabria-bmwg-ai-fabric-training-bench-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-calabria-bmwg-ai-fabric-training-bench-02
+    docid:
+    - id: draft-calabria-bmwg-ai-fabric-training-bench-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-calabria-bmwg-ai-fabric-training-bench-02
       format: text/plain
 ext:
   schema-version: v1.0.1

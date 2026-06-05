@@ -1,0 +1,42 @@
+---
+schema-version: v1.2.3
+id: draft-hopley-x402-federation-zkp
+title:
+- content: Cross-Issuer ZKP Federation for Post-Quantum Agentic Payment Credentials
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-hopley-x402-federation-zkp
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This document defines a protocol for composing independently-issued
+    post-quantum ZKP credentials from different issuers into a single federation token,
+    without requiring a shared trust root between issuers. Each credential is a Falcon-1024
+    (NIST FIPS 206) or ML-DSA-65 (NIST FIPS 204) signed Bulletproofs range proof asserting
+    that an agent's trust score meets a threshold. A federation validator independently
+    verifies each credential against its issuer's public key, then computes a composite
+    commitment binding all verified proofs. The resulting federation token is signed
+    by the validator alone. No issuer needs to know about the others. This solves
+    the cross-issuer attestation composition problem in agentic payment networks.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-hopley-x402-federation-zkp-00
+    docid:
+    - id: draft-hopley-x402-federation-zkp-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-hopley-x402-federation-zkp-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

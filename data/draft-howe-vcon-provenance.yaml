@@ -1,0 +1,46 @@
+---
+schema-version: v1.2.3
+id: draft-howe-vcon-provenance
+title:
+- content: vCon Generation Provenance
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-howe-vcon-provenance
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: '<p>This document defines a "provenance" extension for Virtualized Conversations
+    (vCon) that records how a piece of generated content was produced by a generative
+    model: the model and provider, the decoding parameters (for example temperature
+    and top_p), the prompt or a hash of it, the vCon elements that were given to the
+    model as input, and a hash of the output. The record is carried as a named provenance
+    member on the analysis object it describes (and, for machine-generated dialog,
+    on the dialog object), so that an analysis has a real, named home for "how this
+    was generated" rather than overloading the analysis body or schema. The extension
+    is a Compatible vCon extension. It introduces no new top-level fields and does
+    not alter the semantics of existing ones. Because the provenance record binds
+    an output to its model, prompt, and inputs by hash, a signed vCon, or a SCITT
+    transparency receipt over it, can attest to a verifiable derivation: not only
+    that the analysis exists, but how it came to be.</p>'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-howe-vcon-provenance-00
+    docid:
+    - id: draft-howe-vcon-provenance-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-howe-vcon-provenance-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

@@ -2,8 +2,7 @@
 schema-version: v1.2.3
 id: draft-ietf-sidrops-avoid-rpki-state-in-bgp
 title:
-- content: Guidance to Avoid Carrying RPKI Validation States in Transitive BGP Path
-    Attributes
+- content: Guidance to Avoid Carrying RPKI Validation States in BGP Path Attributes
   language:
   - en
   script:
@@ -16,15 +15,16 @@ docid:
 abstract:
 - content: "<p>This document provides guidance to avoid carrying Resource Public Key
     Infrastructure (RPKI) derived validation states in Border Gateway Protocol (BGP)
-    Path Attributes carried across external BGP sessions. Annotating routes with BGP
-    Path Attributes carried across external BGP sessions signaling validation states
-    may cause needless flooding of BGP UPDATE messages through the global Internet
-    routing system, for example when Route Origin Authorizations (ROAs) are issued,
-    or are revoked, or when RPKI-To-Router sessions are terminated. Operators should
-    ensure RPKI-derived validation states are not signaled in BGP Path Attributes
-    carried across external BGP sessions. Specifically, operators should not associate
-    Prefix Origin Validation state with BGP routes using any form of BGP Communities
-    carried across EBGP session.</p>"
+    Path Attributes whose change triggers a BGP UPDATE being sent across external
+    BGP sessions. Annotating routes with BGP Path Attributes carried across external
+    BGP sessions signaling validation states may cause needless flooding of BGP UPDATE
+    messages through the global Internet routing system, for example when Route Origin
+    Authorizations (ROAs) are issued, or are revoked, or when RPKI-To-Router sessions
+    are terminated. Operators should ensure RPKI-derived validation states are not
+    signaled in BGP Path Attributes whose change triggers a BGP UPDATE being sent
+    across external BGP sessions. Specifically, operators should not associate Prefix
+    Origin Validation state with BGP routes using any form of BGP Communities carried
+    across EBGP session. This document updates RFC 8097.</p>"
   language:
   - en
   script:
@@ -130,6 +130,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-sidrops-avoid-rpki-state-in-bgp-09
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-sidrops-avoid-rpki-state-in-bgp-10
+    docid:
+    - id: draft-ietf-sidrops-avoid-rpki-state-in-bgp-10
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-sidrops-avoid-rpki-state-in-bgp-10
       format: text/plain
 ext:
   schema-version: v1.0.1

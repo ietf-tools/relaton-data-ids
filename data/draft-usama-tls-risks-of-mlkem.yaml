@@ -14,19 +14,28 @@ docid:
   primary: true
 abstract:
 - content: "<p>We attest that standalone ML-KEM in TLS 1.3 breaks the existing formal
-    proofs of TLS in state-of-the-art symbolic security analysis tool, ProVerif. In
-    this draft, we show *exactly* where the ProVerif proofs break, namely transition
-    from symmetric DHKE to asymmetric KEM. More specifically, the existing proofs
-    of TLS in ProVerif are based on commutativity property, whereas commutativity
-    does not apply to standalone ML-KEM in TLS. We also attest that from a formal
-    analysis perspective, this is a much bigger change than RFC8773bis, which indeed
-    went for FATT review (cf. [TLS-FATT]). We, therefore, formally request the chairs
-    to initiate the FATT review of standalone ML-KEM in TLS. A few WG participants
-    have already volunteered to do formal analysis in ProVerif. This draft also offers
-    some preliminary discussion to help the developers and policy makers make informed
-    choices. Finally, the draft also aims to reduce the endless repitition of arguments
-    from both sides presented on several lists by documenting these arguments so they
-    can simply be referred to.</p>"
+    proofs of TLS in state-of-the-art symbolic security analysis tool, ProVerif. We
+    believe this requires a new symbolic proof in ProVerif. To help inform the analysis,
+    we share our understanding of *exactly* where the ProVerif proofs break, namely
+    transition from symmetric DHKE to asymmetric KEM. More specifically, our understanding
+    is that the existing proofs of TLS in ProVerif are based on commutativity property,
+    whereas commutativity does not apply to standalone ML-KEM in TLS. In general,
+    we see no reason to believe that hybrid key exchanges are not _at least_ as strong
+    as the stronger of the two components. We invite collaborations or independent
+    analysis to extend the ProVerif models to perform such analysis and offer a statement
+    for security considerations of [I-D.ietf-tls-mlkem]. In our understanding, a couple
+    of WG participants have already started formal analysis in ProVerif. We also attest
+    that from a formal analysis perspective, this is a much bigger change than RFC8773bis,
+    which indeed went for FATT review (cf. [TLS-FATT]). We, therefore, formally request
+    the chairs to initiate the FATT review of standalone ML-KEM in TLS. This draft
+    also offers some preliminary discussion to help the developers and policy makers
+    make informed choices. Finally, the draft also aims to reduce the endless repitition
+    of arguments from both sides presented on several lists by documenting these arguments
+    so they can simply be referred to. We sincerely believe this will help to focus
+    the discussion on technical matters, such as system model, threat model, security
+    properties, and deployments. We acknowledge several IETF participants who have
+    contributed to this draft with their insights. This draft captures what _we_ understand
+    them to be saying.</p>"
   language:
   - en
   script:
@@ -52,6 +61,16 @@ relation:
       primary: true
     formattedref:
       content: draft-usama-tls-risks-of-mlkem-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-usama-tls-risks-of-mlkem-02
+    docid:
+    - id: draft-usama-tls-risks-of-mlkem-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-usama-tls-risks-of-mlkem-02
       format: text/plain
 ext:
   schema-version: v1.0.1
