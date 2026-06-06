@@ -13,15 +13,11 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document specifies QUIP (QUIC Identity Protocol), a federated
-    application protocol providing portable cryptographic identity, verifiable server
-    trust, deterministic state synchronization, and built-in accountability. QUIP
-    runs over QUIC (RFC 9000) and uses a strict deterministic CBOR profile (QUIP-CBOR).
-    Three conformance profiles are defined: Basic (messaging), Documents (content
-    addressing), and Media (real-time transport). The protocol enables users to own
-    a portable NodeId independent of service providers, servers to authenticate via
-    DANE+DNSSEC with deployable fallback modes, and peers to detect and throttle misbehavior
-    through signed violation receipts propagated via gossip.</p>"
+- content: "<p>QUIP is a brokerless federation protocol over QUIC. It provides portable
+    Ed25519 identities, causal consistency via Dotted Version Vectors, and queueless
+    transport via four explicit tiers with backpressure. QUIP replaces DNSSEC-based
+    trust with Key Transparency + Trust-On-First-Use, enabling 99% deployability while
+    improving security against registrar compromise.</p>"
   language:
   - en
   script:
@@ -37,6 +33,16 @@ relation:
       primary: true
     formattedref:
       content: draft-mututi-quip-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-mututi-quip-01
+    docid:
+    - id: draft-mututi-quip-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-mututi-quip-01
       format: text/plain
 ext:
   schema-version: v1.0.1
