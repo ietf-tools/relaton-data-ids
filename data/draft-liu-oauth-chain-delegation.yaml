@@ -1,0 +1,46 @@
+---
+schema-version: v1.2.3
+id: draft-liu-oauth-chain-delegation
+title:
+- content: Delegation Chain for OAuth 2.0
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-liu-oauth-chain-delegation
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>RFC 8693 defines the act claim for expressing delegation semantics
+    in JWTs, including nested multi-hop actor identification. However, act captures
+    only the identity of each actor in the chain, not the authorization constraints
+    applied at each hop, and is constructed unilaterally by the Authorization Server
+    without cryptographic confirmation from the delegating agent. This specification
+    defines the delegation_chain JWT claim as a structured delegation record companion
+    to act: an ordered array of delegation records, each capturing the Authorization
+    Server's attestation and, when present, the delegated policy constraints, and
+    optionally carrying the delegator's cryptographic confirmation. Together, act
+    and delegation_chain provide both runtime authorization and verifiable delegation
+    lineage for multi-hop agent delegation. The specification supports cross-domain
+    delegation by composing with the identity chaining transport pattern, and integrates
+    a user interaction mechanism for explicit consent when required by policy or regulation.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-liu-oauth-chain-delegation-00
+    docid:
+    - id: draft-liu-oauth-chain-delegation-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-liu-oauth-chain-delegation-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
