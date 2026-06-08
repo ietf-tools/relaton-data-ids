@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-reddy-rats-key-binding-00
+id: draft-reddy-rats-key-binding-01
 title:
 - content: Key Attestation for Entity Attestation Tokens (EAT)
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-reddy-rats-key-binding-00
+- content: https://datatracker.ietf.org/doc/html/draft-reddy-rats-key-binding-01
   type: src
 type: standard
 docid:
-- id: draft-reddy-rats-key-binding-00
+- id: draft-reddy-rats-key-binding-01
   type: Internet-Draft
   primary: true
 - id: I-D.reddy-rats-key-binding
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.reddy-rats-key-binding
 date:
 - type: published
-  value: '2026-03-15'
+  value: '2026-06-07'
 contributor:
 - person:
     name:
@@ -80,21 +80,75 @@ contributor:
         - content: University of the Bundeswehr Munich
   role:
   - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Thomas
+          language:
+          - en
+        - language:
+          - en
+          initial: T
+        formatted_initials:
+          content: T.
+          language:
+          - en
+      surname:
+        content: Fossati
+        language:
+        - en
+      completename:
+        content: Thomas Fossati
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Linaro
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - language:
+          - en
+          initial: I
+        formatted_initials:
+          content: I.
+          language:
+          - en
+      surname:
+        content: Mihalcea
+        language:
+        - en
+      completename:
+        content: Ionuț Mihalcea
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Arm Limited
+  role:
+  - type: author
 version:
-- draft: '00'
-revdate: '2026-03-15'
+- draft: '01'
+revdate: '2026-06-07'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document defines a CWT-based Entity Attestation Token (EAT) profile
-    and a new EAT claim that cryptographically bind a private key used to sign a certificate
-    signing request (CSR), or the private key corresponding to an end-entity certificate
-    used for TLS authentication, to an attested execution environment. The subject
-    public key is conveyed using the EAT cnf claim defined in [RFC8747], and freshness
-    uses the EAT nonce claim defined in [RFC9711]. The proof of possession of the
-    subject key is obtained from the surrounding protocol, such as TLS certificate-based
+- content: "<p>This document defines an Entity Attestation Token (EAT) profile and
+    a new EAT claim that convey the subject public key and its protection properties
+    within attestation evidence. Combined with protocol-level proof of possession
+    from the surrounding protocol, this establishes a cryptographic binding between
+    a private key and an attested execution environment. The subject public key is
+    conveyed using the EAT cnf claim defined in [RFC8747] and [RFC7800], and freshness
+    uses the EAT eat_nonce claim defined in [RFC9711]. The proof of possession of
+    the subject key is obtained from the surrounding protocol, such as TLS certificate-based
     authentication or CSR signature verification. Because the EAT is signed by a hardware-backed
     Attestation Key (AK), successful verification of the EAT signature together with
     protocol-level proof of possession establishes a cryptographic binding between
@@ -107,15 +161,15 @@ abstract:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-reddy-rats-key-binding-01
+    id: draft-reddy-rats-key-binding-00
     docid:
-    - id: draft-reddy-rats-key-binding-01
+    - id: draft-reddy-rats-key-binding-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-reddy-rats-key-binding-01
+      content: draft-reddy-rats-key-binding-00
       format: text/plain
 series:
 - type: main
@@ -126,7 +180,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-reddy-rats-key-binding-00
+  number: draft-reddy-rats-key-binding-01
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

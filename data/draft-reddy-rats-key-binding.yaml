@@ -13,13 +13,14 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document defines a CWT-based Entity Attestation Token (EAT) profile
-    and a new EAT claim that cryptographically bind a private key used to sign a certificate
-    signing request (CSR), or the private key corresponding to an end-entity certificate
-    used for TLS authentication, to an attested execution environment. The subject
-    public key is conveyed using the EAT cnf claim defined in [RFC8747], and freshness
-    uses the EAT nonce claim defined in [RFC9711]. The proof of possession of the
-    subject key is obtained from the surrounding protocol, such as TLS certificate-based
+- content: "<p>This document defines an Entity Attestation Token (EAT) profile and
+    a new EAT claim that convey the subject public key and its protection properties
+    within attestation evidence. Combined with protocol-level proof of possession
+    from the surrounding protocol, this establishes a cryptographic binding between
+    a private key and an attested execution environment. The subject public key is
+    conveyed using the EAT cnf claim defined in [RFC8747] and [RFC7800], and freshness
+    uses the EAT eat_nonce claim defined in [RFC9711]. The proof of possession of
+    the subject key is obtained from the surrounding protocol, such as TLS certificate-based
     authentication or CSR signature verification. Because the EAT is signed by a hardware-backed
     Attestation Key (AK), successful verification of the EAT signature together with
     protocol-level proof of possession establishes a cryptographic binding between
@@ -41,6 +42,16 @@ relation:
       primary: true
     formattedref:
       content: draft-reddy-rats-key-binding-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-reddy-rats-key-binding-01
+    docid:
+    - id: draft-reddy-rats-key-binding-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-reddy-rats-key-binding-01
       format: text/plain
 ext:
   schema-version: v1.0.1
