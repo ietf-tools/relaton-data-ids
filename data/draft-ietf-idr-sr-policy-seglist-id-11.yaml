@@ -1,89 +1,148 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-regext-epp-quic-08
+id: draft-ietf-idr-sr-policy-seglist-id-11
 title:
-- content: Extensible Provisioning Protocol (EPP) Transport over QUIC
+- content: BGP SR Policy Extensions for Segment List Identifier
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-regext-epp-quic-08
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-sr-policy-seglist-id-11
   type: src
 type: standard
 docid:
-- id: draft-ietf-regext-epp-quic-08
+- id: draft-ietf-idr-sr-policy-seglist-id-11
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-regext-epp-quic
+- id: I-D.ietf-idr-sr-policy-seglist-id
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-regext-epp-quic
+docnumber: I-D.ietf-idr-sr-policy-seglist-id
 date:
 - type: published
-  value: '2026-06-06'
+  value: '2026-06-08'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Jiankang
+        - content: Changwang
           language:
           - en
         - language:
           - en
-          initial: J
+          initial: C
         formatted_initials:
-          content: J.
+          content: C.
           language:
           - en
       surname:
-        content: Yao
+        content: Lin
         language:
         - en
       completename:
-        content: Jiankang Yao
+        content: Changwang Lin
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: CNNIC
+        - content: New H3C Technologies
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Hongtao
+        - content: Weiqiang
           language:
           - en
         - language:
           - en
-          initial: H
+          initial: W
         formatted_initials:
-          content: H.
+          content: W.
           language:
           - en
       surname:
-        content: Li
+        content: Cheng
         language:
         - en
       completename:
-        content: Hongtao Li
+        content: Weiqiang Cheng
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: CNNIC
+        - content: China Mobile
   role:
   - type: author
 - person:
     name:
       given:
         forename:
+        - content: Yao
+          language:
+          - en
+        - language:
+          - en
+          initial: "Y"
+        formatted_initials:
+          content: Y.
+          language:
+          - en
+      surname:
+        content: Liu
+        language:
+        - en
+      completename:
+        content: Yao Liu
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: ZTE
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Ketan
+          language:
+          - en
+        - language:
+          - en
+          initial: K
+        formatted_initials:
+          content: K.
+          language:
+          - en
+      surname:
+        content: Talaulikar
+        language:
+        - en
+      completename:
+        content: Ketan Talaulikar
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Cisco Systems
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Mengxiao
+          language:
+          - en
         - language:
           - en
           initial: M
@@ -92,86 +151,31 @@ contributor:
           language:
           - en
       surname:
-        content: Zhang
+        content: Chen
         language:
         - en
       completename:
-        content: M. Zhang
+        content: Mengxiao Chen
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: CNNIC
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Dan
-          language:
-          - en
-        - language:
-          - en
-          initial: D
-        formatted_initials:
-          content: D.
-          language:
-          - en
-      surname:
-        content: Keathley
-        language:
-        - en
-      completename:
-        content: Dan Keathley
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: VeriSign, Inc.
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: James
-          language:
-          - en
-        - language:
-          - en
-          initial: J
-        formatted_initials:
-          content: J.
-          language:
-          - en
-      surname:
-        content: Gould
-        language:
-        - en
-      completename:
-        content: James Gould
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: VeriSign, Inc.
+        - content: New H3C Technologies
   role:
   - type: author
 version:
-- draft: '08'
-revdate: '2026-06-06'
+- draft: '11'
+revdate: '2026-06-08'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document specifies how an Extensible Provisioning Protocol (EPP)
-    session is mapped onto a QUIC connection. EPP over QUIC (EoQ) leverages features
-    of the QUIC protocol.</p>"
+- content: "<p>Segment Routing (SR) is a source routing paradigm that explicitly indicates
+    the forwarding path for packets at the ingress node. An SR Policy is a set of
+    candidate paths, each consisting of one or more segment lists. This document defines
+    extensions to BGP SR Policy to specify the identifier of a segment list.</p>"
   language:
   - en
   script:
@@ -180,23 +184,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-regext-epp-quic-05
+    id: draft-ietf-idr-sr-policy-seglist-id-01
     docid:
-    - id: draft-ietf-regext-epp-quic-05
+    - id: draft-ietf-idr-sr-policy-seglist-id-01
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-regext-epp-quic-05
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-regext-epp-quic-09
-    docid:
-    - id: draft-ietf-regext-epp-quic-09
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-regext-epp-quic-09
+      content: draft-ietf-idr-sr-policy-seglist-id-01
       format: text/plain
 series:
 - type: main
@@ -207,7 +201,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-regext-epp-quic-08
+  number: draft-ietf-idr-sr-policy-seglist-id-11
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
