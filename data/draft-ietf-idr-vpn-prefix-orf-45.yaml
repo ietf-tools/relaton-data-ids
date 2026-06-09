@@ -1,62 +1,62 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-tvr-schedule-yang-08
+id: draft-ietf-idr-vpn-prefix-orf-45
 title:
-- content: YANG Data Model for Scheduled Attributes
+- content: VPN Prefix Outbound Route Filter (VPN Prefix ORF) for BGP-4
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-tvr-schedule-yang-08
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-vpn-prefix-orf-45
   type: src
 type: standard
 docid:
-- id: draft-ietf-tvr-schedule-yang-08
+- id: draft-ietf-idr-vpn-prefix-orf-45
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-tvr-schedule-yang
+- id: I-D.ietf-idr-vpn-prefix-orf
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-tvr-schedule-yang
+docnumber: I-D.ietf-idr-vpn-prefix-orf
 date:
 - type: published
-  value: '2026-02-09'
+  value: '2026-06-09'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Yingzhen
+        - content: Wei
           language:
           - en
         - language:
           - en
-          initial: "Y"
+          initial: W
         formatted_initials:
-          content: Y.
+          content: W.
           language:
           - en
       surname:
-        content: Qu
+        content: Wang
         language:
         - en
       completename:
-        content: Yingzhen Qu
+        content: Wei Wang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Futurewei Technologies
+        - content: China Telecom
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Acee
+        - content: Aijun
           language:
           - en
         - language:
@@ -67,115 +67,122 @@ contributor:
           language:
           - en
       surname:
-        content: Lindem
+        content: Wang
         language:
         - en
       completename:
-        content: Acee Lindem
+        content: Aijun Wang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Arrcus, Inc.
+        - content: China Telecom
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Eric
+        - content: Haibo
           language:
           - en
         - language:
           - en
-          initial: E
+          initial: H
         formatted_initials:
-          content: E.
+          content: H.
           language:
           - en
       surname:
-        content: Kinzie
+        content: Wang
         language:
         - en
       completename:
-        content: Eric Kinzie
+        content: Haibo Wang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: LabN Consulting, L.L.C.
+        - content: Huawei Technologies
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Don
+        - content: Gyan
           language:
           - en
         - language:
           - en
-          initial: D
+          initial: G
+        - language:
+          - en
+          initial: S
         formatted_initials:
-          content: D.
+          content: G. S.
           language:
           - en
       surname:
-        content: Fedyk
+        content: Mishra
         language:
         - en
       completename:
-        content: Don Fedyk
+        content: Gyan Mishra
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: LabN Consulting, L.L.C.
+        - content: Verizon Inc.
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Marc
+        - content: Jie
           language:
           - en
         - language:
           - en
-          initial: M
+          initial: J
         formatted_initials:
-          content: M.
+          content: J.
           language:
           - en
       surname:
-        content: Blanchet
+        content: Dong
         language:
         - en
       completename:
-        content: Marc Blanchet
+        content: Jie Dong
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Viagenie
+        - content: Huawei Technologies
   role:
   - type: author
 version:
-- draft: '08'
-revdate: '2026-02-09'
+- draft: '45'
+revdate: '2026-06-09'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>The YANG model in this document includes three modules, and can be
-    used to manage network resources and topologies with scheduled attributes, such
-    as predictable link loss and link connectivity as a function of time. The intent
-    is to have this information be utilized by Time-Variant Routing systems.</p>"
+- content: "<p>This document defines an experimental specification for a new type
+    of Outbound Route Filter (ORF), known as the Virtual Private Network (VPN) Prefix
+    ORF. The VPN Prefix ORF mechanism is applicable when VPN routes from different
+    Virtual Routing and Forwarding (VRF) instances are exchanged through a single
+    shared Border Gateway Protocol (BGP) session. The purpose of the VPN Prefix ORF
+    mechanism is to control the overload of VPN routes based on Route Distinguisher
+    (RD), Route Target (RT) and other necessary routing information. This mechanism
+    is applicable to intra-domain scenarios.</p>"
   language:
   - en
   script:
@@ -184,23 +191,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-tvr-schedule-yang-05
+    id: draft-ietf-idr-vpn-prefix-orf-40
     docid:
-    - id: draft-ietf-tvr-schedule-yang-05
+    - id: draft-ietf-idr-vpn-prefix-orf-40
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-tvr-schedule-yang-05
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-tvr-schedule-yang-09
-    docid:
-    - id: draft-ietf-tvr-schedule-yang-09
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-tvr-schedule-yang-09
+      content: draft-ietf-idr-vpn-prefix-orf-40
       format: text/plain
 series:
 - type: main
@@ -211,7 +208,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-tvr-schedule-yang-08
+  number: draft-ietf-idr-vpn-prefix-orf-45
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

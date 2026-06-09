@@ -17,17 +17,14 @@ abstract:
     many TLS servers will continue supporting traditional certificates to maintain
     compatibility with legacy clients. However, this coexistence introduces a significant
     vulnerability: an undetected rollback attack, where a malicious actor strips the
-    PQC or Composite certificate and forces the use of a traditional certificate once
+    PQC or composite certificate and forces the use of a classical certificate once
     quantum-capable adversaries exist. To defend against this, this document defines
-    a TLS extension that allows a TLS peer (typically a client) to cache another peer's
-    (typically a server's) declared commitment to present PQC or composite certificates
-    for a specified duration. On subsequent connections, the caching peer enforces
-    that cached commitment and rejects traditional-only certificates that conflict
-    with it. This mechanism, inspired by HTTP Strict Transport Security (HSTS) but
-    operating at the TLS layer, provides PQC downgrade protection without requiring
-    changes to certificate authority (CA) infrastructure. Although we expect the more
-    common use case to be clients caching server commitments, the mechanism applies
-    symmetrically to server caching of client certificate commitments as well.</p>"
+    a TLS extension that allows a TLS client to cache a server's declared commitment
+    to present PQC or composite certificates for a specified duration. On subsequent
+    connections, the client enforces that cached commitment and rejects traditional-only
+    certificates that conflict with it. This mechanism, inspired by HTTP Strict Transport
+    Security (HSTS) but operating at the TLS layer, provides PQC downgrade protection
+    without requiring changes to certificate authority (CA) infrastructure.</p>"
   language:
   - en
   script:
@@ -53,6 +50,16 @@ relation:
       primary: true
     formattedref:
       content: draft-sheffer-tls-pqc-continuity-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-sheffer-tls-pqc-continuity-02
+    docid:
+    - id: draft-sheffer-tls-pqc-continuity-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-sheffer-tls-pqc-continuity-02
       format: text/plain
 ext:
   schema-version: v1.0.1

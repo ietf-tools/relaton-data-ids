@@ -1,118 +1,34 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-tvr-schedule-yang-08
+id: draft-ietf-dnsop-structured-dns-error-21
 title:
-- content: YANG Data Model for Scheduled Attributes
+- content: Structured Error Data for Filtered DNS
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-tvr-schedule-yang-08
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-dnsop-structured-dns-error-21
   type: src
 type: standard
 docid:
-- id: draft-ietf-tvr-schedule-yang-08
+- id: draft-ietf-dnsop-structured-dns-error-21
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-tvr-schedule-yang
+- id: I-D.ietf-dnsop-structured-dns-error
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-tvr-schedule-yang
+docnumber: I-D.ietf-dnsop-structured-dns-error
 date:
 - type: published
-  value: '2026-02-09'
+  value: '2026-06-08'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Yingzhen
-          language:
-          - en
-        - language:
-          - en
-          initial: "Y"
-        formatted_initials:
-          content: Y.
-          language:
-          - en
-      surname:
-        content: Qu
-        language:
-        - en
-      completename:
-        content: Yingzhen Qu
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Futurewei Technologies
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Acee
-          language:
-          - en
-        - language:
-          - en
-          initial: A
-        formatted_initials:
-          content: A.
-          language:
-          - en
-      surname:
-        content: Lindem
-        language:
-        - en
-      completename:
-        content: Acee Lindem
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Arrcus, Inc.
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Eric
-          language:
-          - en
-        - language:
-          - en
-          initial: E
-        formatted_initials:
-          content: E.
-          language:
-          - en
-      surname:
-        content: Kinzie
-        language:
-        - en
-      completename:
-        content: Eric Kinzie
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: LabN Consulting, L.L.C.
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Don
+        - content: Dan
           language:
           - en
         - language:
@@ -123,24 +39,80 @@ contributor:
           language:
           - en
       surname:
-        content: Fedyk
+        content: Wing
         language:
         - en
       completename:
-        content: Don Fedyk
+        content: Dan Wing
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: LabN Consulting, L.L.C.
+        - content: Citrix Systems, Inc.
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Marc
+        - content: Tirumaleswar
+          language:
+          - en
+        - language:
+          - en
+          initial: T
+        formatted_initials:
+          content: T.
+          language:
+          - en
+      surname:
+        content: Reddy.K
+        language:
+        - en
+      completename:
+        content: Tirumaleswar Reddy.K
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Nokia
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Neil
+          language:
+          - en
+        - language:
+          - en
+          initial: "N"
+        formatted_initials:
+          content: N.
+          language:
+          - en
+      surname:
+        content: Cook
+        language:
+        - en
+      completename:
+        content: Neil Cook
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Open-Xchange
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Mohamed
           language:
           - en
         - language:
@@ -151,31 +123,35 @@ contributor:
           language:
           - en
       surname:
-        content: Blanchet
+        content: Boucadair
         language:
         - en
       completename:
-        content: Marc Blanchet
+        content: Mohamed Boucadair
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Viagenie
+        - content: Orange
   role:
   - type: author
 version:
-- draft: '08'
-revdate: '2026-02-09'
+- draft: '21'
+revdate: '2026-06-08'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>The YANG model in this document includes three modules, and can be
-    used to manage network resources and topologies with scheduled attributes, such
-    as predictable link loss and link connectivity as a function of time. The intent
-    is to have this information be utilized by Time-Variant Routing systems.</p>"
+- content: "<p>DNS filtering is widely deployed for various reasons, including network
+    security and policy enforcement. However, filtered DNS responses lack structured
+    information for end users to understand the reason for the filtering. Existing
+    mechanisms to provide explanatory details to end users cause harm especially if
+    the blocked DNS response is for HTTPS resources. This document updates RFC 8914
+    by signaling client support for structuring the EXTRA-TEXT field of the Extended
+    DNS Error to provide details on the DNS filtering. Such details can be parsed
+    by the client and displayed, logged, or used for other purposes.</p>"
   language:
   - en
   script:
@@ -184,23 +160,23 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-tvr-schedule-yang-05
+    id: draft-ietf-dnsop-structured-dns-error-07
     docid:
-    - id: draft-ietf-tvr-schedule-yang-05
+    - id: draft-ietf-dnsop-structured-dns-error-07
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-tvr-schedule-yang-05
+      content: draft-ietf-dnsop-structured-dns-error-07
       format: text/plain
 - type: updatedBy
   bibitem:
-    id: draft-ietf-tvr-schedule-yang-09
+    id: draft-ietf-dnsop-structured-dns-error-22
     docid:
-    - id: draft-ietf-tvr-schedule-yang-09
+    - id: draft-ietf-dnsop-structured-dns-error-22
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-tvr-schedule-yang-09
+      content: draft-ietf-dnsop-structured-dns-error-22
       format: text/plain
 series:
 - type: main
@@ -211,7 +187,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-tvr-schedule-yang-08
+  number: draft-ietf-dnsop-structured-dns-error-21
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
