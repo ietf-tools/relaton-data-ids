@@ -13,22 +13,17 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>AI agents operating in automated workflows require a structured authorization
-    credential that binds agent authority not merely to an action type, but to a specific
-    governed resource instance, a specific human principal, a specific Cedar action
-    scope, and a specific mission context. Existing workload credentials provide identity
-    but not governance binding. Existing OAuth tokens provide scope but not resource-instance
-    specificity, human principal linkage, or mandate issuance chain traceability.
-    This document defines the Mandate JWT (MJWT): a WIMSE workload credential profile
-    that grants an AI agent authority to perform a specified set of Cedar actions
-    on a specific Sovereign Object instance under the oversight of a named human principal.
-    The MJWT carries governance claims not present in general-purpose workload credentials:
-    a Cedar action scope, a Sovereign Object instance binding, a human principal identifier,
-    a mission reference, and a mandate ceiling. The Narrowing Property -- by which
-    a child mandate is always a strict subset of its parent in all authorization dimensions
-    -- is normatively defined. The MJWT is the authorization primitive referenced
-    by [I-D.sato-soos-idp], [I-D.sato-soos-hem], [I-D.sato-soos-gar], [I-D.sato-soos-cap],
-    and [I-D.sato-soos-sov].</p>"
+- content: "<p>An AI agent that can act without a verifiable, human-traceable authorization
+    record is an agent without an owner. Existing authorization credentials tell you
+    what an agent is permitted to do; none of them tell you who authorized it, on
+    which specific object, under which mission, or how far that authority can be delegated
+    before it reaches this agent. This document defines the Mandate JWT (MJWT): a
+    WIMSE workload credential profile that binds an AI agent's authority to a specific
+    Sovereign Object instance under a named human principal, with a cryptographically
+    enforced delegation ceiling and a six-dimensional Narrowing Property that prevents
+    any sub-agent from exceeding the authority of the human principal at the root
+    of the chain. The MJWT is the authorization primitive referenced by [I-D.sato-soos-idp],
+    [I-D.sato-soos-hem], [I-D.sato-soos-gar], [I-D.sato-soos-cap], and [I-D.sato-soos-sov].</p>"
   language:
   - en
   script:
@@ -44,6 +39,16 @@ relation:
       primary: true
     formattedref:
       content: draft-sato-soos-mjwt-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-sato-soos-mjwt-01
+    docid:
+    - id: draft-sato-soos-mjwt-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-sato-soos-mjwt-01
       format: text/plain
 ext:
   schema-version: v1.0.1

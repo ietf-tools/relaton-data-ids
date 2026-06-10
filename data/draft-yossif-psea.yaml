@@ -2,8 +2,8 @@
 schema-version: v1.2.3
 id: draft-yossif-psea
 title:
-- content: 'Post-Session Execution Assurance (PSEA): A Security Model for Verifying
-    Authority at the Moment of Action'
+- content: 'PSEA Token Profile: An EAT Profile for Action-Bound, User-Verification-Gated
+    Transaction-Confirmation Evidence'
   language:
   - en
   script:
@@ -14,15 +14,23 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>Modern security architectures assume that trust established at login
-    can safely extend to all subsequent actions within a session. This assumption
-    is fundamentally flawed. Sessions preserve the memory of authentication but not
-    the certainty of authority. Post-Session Execution Assurance (PSEA) is an architectural
-    security model that addresses this gap by requiring cryptographic proof of real
-    human presence, device trust, and execution authority at the exact moment a sensitive
-    action is approved -- independent of prior authentication or session state. This
-    paper defines the PSEA model, its core principles, its distinction from existing
-    security paradigms, and its implications for regulated and mission-critical systems.</p>"
+- content: "<p>This document defines the PSEA Token Profile, an Entity Attestation
+    Token (EAT) profile for action-bound, user-verification-gated transaction-confirmation
+    Evidence. The profile specifies the canonical encoding, the signed proof-token
+    claim set, the action- payload and cross-replay bindings, an optional hash-chain
+    integrity layer, and the security properties that together constitute a What-
+    You-Sign-Is-What-You-Execute proof that a human, present and verified at an authenticator,
+    approved a specific named action at the moment of execution. The profile binds
+    what is signed to what the Verifier executes; it does not, by itself, bind what
+    a human saw on a potentially compromised display to what was signed (the What-You-See-
+    Is-What-You-Sign problem), which remains out of scope. The strength of the human-presence
+    assurance depends on the authenticator's user- verification enforcement: where
+    the platform attestation conveys that enforcement it is hardware-attested, and
+    otherwise it rests on the authenticator's signed assertion that user verification
+    occurred. The profile does not, by itself, prove a specific human identity. It
+    fills the transaction-confirmation gap left unaddressed by deployed authentication
+    standards and complements OAuth 2.0 Step-Up Authentication by supplying the per-action,
+    cryptographically action- bound Evidence that step-up flows can require.</p>"
   language:
   - en
   script:
@@ -48,6 +56,16 @@ relation:
       primary: true
     formattedref:
       content: draft-yossif-psea-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-yossif-psea-02
+    docid:
+    - id: draft-yossif-psea-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-yossif-psea-02
       format: text/plain
 ext:
   schema-version: v1.0.1

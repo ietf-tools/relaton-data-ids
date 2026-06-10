@@ -1,0 +1,110 @@
+---
+schema-version: v1.2.3
+id: draft-mcgraw-httpapi-agent-budget-01
+title:
+- content: The Budget HTTP Authentication Scheme and 427 Budget Required Status Code
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-mcgraw-httpapi-agent-budget-01
+  type: src
+type: standard
+docid:
+- id: draft-mcgraw-httpapi-agent-budget-01
+  type: Internet-Draft
+  primary: true
+- id: I-D.mcgraw-httpapi-agent-budget
+  type: IETF
+  scope: anchor
+docnumber: I-D.mcgraw-httpapi-agent-budget
+date:
+- type: published
+  value: '2026-06-10'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: John
+          language:
+          - en
+        - language:
+          - en
+          initial: J
+        - language:
+          - en
+          initial: P
+        formatted_initials:
+          content: J. P.
+          language:
+          - en
+      surname:
+        content: McGraw,
+        language:
+        - en
+      completename:
+        content: John Paul McGraw, Jr.
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: TaskHawk Systems LLC
+  role:
+  - type: author
+version:
+- draft: '01'
+revdate: '2026-06-10'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: <p>Delegated software requesters are increasingly authorized to consume
+    paid or metered services, allocate account credits, or commit bounded resources
+    on behalf of human or organizational principals. Existing HTTP authentication
+    mechanisms indicate whether a requester holds a credential, while RateLimit fields
+    communicate server-advertised quota and current service-limit information. Neither
+    mechanism directly conveys that the requester has been authorized by its principal
+    to consume or commit resources within a bounded limit before a request is processed.
+    This document defines the 427 (Budget Required) HTTP status code, the "Budget"
+    HTTP authentication scheme, the Budget-Attestation HTTP field, and a CBOR/COSE
+    Budget-Attestation envelope. The mechanism is algorithm-agile; the initial cose-ml-dsa
+    profile uses existing JOSE and COSE serializations for ML-DSA, with ML-DSA-65
+    as the baseline algorithm and ML-DSA-87 available as a high-assurance deployment
+    policy option. An optional rail-keyed SLH-DSA signature can be used by deployments
+    that bind a budget attestation to a settlement rail. This document does not define
+    payment semantics and does not depend on the HTTP 402 (Payment Required) status
+    code.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-mcgraw-httpapi-agent-budget-00
+    docid:
+    - id: draft-mcgraw-httpapi-agent-budget-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-mcgraw-httpapi-agent-budget-00
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-mcgraw-httpapi-agent-budget-01
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

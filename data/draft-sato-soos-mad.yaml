@@ -37,7 +37,12 @@ abstract:
     from the GEC- signed audit record alone. Cascade revocation means one decision
     stops the entire tree. For AI agents, MAD provides machine-speed delegation authority
     and the parallel execution efficiency that sequential single-agent approaches
-    cannot achieve.</p>"
+    cannot achieve. MAD-02 adds a fourth guarantee: when revocation fires during active
+    execution, the completion state of every in-flight operation is classified and
+    recorded, and partial-completion cases are routed to human oversight through the
+    HEM escalation chain. This closes the revocation gap across offline-attenuated
+    delegation chains that the OpenID Foundation identifies as unsolved in current
+    agentic AI authorization infrastructure.</p>"
   language:
   - en
   script:
@@ -63,6 +68,16 @@ relation:
       primary: true
     formattedref:
       content: draft-sato-soos-mad-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-sato-soos-mad-02
+    docid:
+    - id: draft-sato-soos-mad-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-sato-soos-mad-02
       format: text/plain
 ext:
   schema-version: v1.0.1

@@ -2,8 +2,7 @@
 schema-version: v1.2.3
 id: draft-mcgraw-httpapi-agent-budget
 title:
-- content: 'Protocol 427: An HTTP Budget-Required Status Code with Post-Quantum-Signed
-    Budget Attestations'
+- content: The Budget HTTP Authentication Scheme and 427 Budget Required Status Code
   language:
   - en
   script:
@@ -14,19 +13,22 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: '<p>Internet-deployed software agents are increasingly authorized to spend
-    money, consume metered services, or commit other resources on behalf of human
-    or organizational principals. Existing HTTP authentication and payment patterns
-    conflate two orthogonal concerns: whether the requester holds a credential at
-    all (the "401" axis), and whether the requester has been authorized to spend a
-    specific amount through a specific settlement rail (the "budget" axis). This document
-    defines the 427 (Budget Required) HTTP status code, the "Budget" HTTP authentication
-    scheme, a CBOR-encoded Budget- Attestation envelope signed with a post-quantum
-    digital signature algorithm, and a version-negotiation mechanism using the existing
-    426 (Upgrade Required) status code. The mandatory primary signature uses ML-DSA-87
-    (FIPS 204). An optional "rail-keyed" signature, computed with a hash-based stateless
-    signature algorithm, provides cryptographic diversification for settlement-rail
-    submissions.</p>'
+- content: <p>Delegated software requesters are increasingly authorized to consume
+    paid or metered services, allocate account credits, or commit bounded resources
+    on behalf of human or organizational principals. Existing HTTP authentication
+    mechanisms indicate whether a requester holds a credential, while RateLimit fields
+    communicate server-advertised quota and current service-limit information. Neither
+    mechanism directly conveys that the requester has been authorized by its principal
+    to consume or commit resources within a bounded limit before a request is processed.
+    This document defines the 427 (Budget Required) HTTP status code, the "Budget"
+    HTTP authentication scheme, the Budget-Attestation HTTP field, and a CBOR/COSE
+    Budget-Attestation envelope. The mechanism is algorithm-agile; the initial cose-ml-dsa
+    profile uses existing JOSE and COSE serializations for ML-DSA, with ML-DSA-65
+    as the baseline algorithm and ML-DSA-87 available as a high-assurance deployment
+    policy option. An optional rail-keyed SLH-DSA signature can be used by deployments
+    that bind a budget attestation to a settlement rail. This document does not define
+    payment semantics and does not depend on the HTTP 402 (Payment Required) status
+    code.</p>
   language:
   - en
   script:
@@ -42,6 +44,16 @@ relation:
       primary: true
     formattedref:
       content: draft-mcgraw-httpapi-agent-budget-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-mcgraw-httpapi-agent-budget-01
+    docid:
+    - id: draft-mcgraw-httpapi-agent-budget-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-mcgraw-httpapi-agent-budget-01
       format: text/plain
 ext:
   schema-version: v1.0.1

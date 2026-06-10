@@ -13,16 +13,21 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document specifies trust computation, delegation, and key succession
-    mechanisms for the TrustChain bilateral ledger protocol (draft-pouwelse-trustchain-01).
+- content: "<p>This document specifies trust computation, audit recording, delegation,
+    and key succession mechanisms for the TrustChain bilateral ledger protocol (draft-pouwelse-trustchain-01).
     The base protocol specifies a bilateral block structure for recording pairwise
     interactions but explicitly leaves trust computation out of scope. This document
     fills that gap by defining: (1) a canonical hash computation for cross-implementation
     compatibility, (2) an interaction graph constructed from half-block pairs, (3)
-    a maximum network flow algorithm (Edmonds-Karp) over the interaction graph for
-    Sybil- resistant trust scoring, (4) a composite trust score combining chain integrity
-    with network flow, (5) a delegation protocol for transitive authority with budget
-    splitting and revocation, and (6) a bilateral succession protocol for key rotation.</p>"
+    pluggable Sybil-resistant path-diversity algorithms over the interaction graph
+    -- maximum network flow (Edmonds-Karp) and personalized random walks (MeritRank),
+    (4) a multiplicative trust score combining connectivity, chain integrity, and
+    interaction diversity, (5) an audit block type for single-player recording of
+    agent actions as a signed, hash- chained log when no counterparty is available,
+    (6) a delegation protocol for transitive authority with budget splitting and revocation,
+    (7) a bilateral succession protocol for key rotation, and (8) a chain anchoring
+    mechanism that binds chain heads to external time-stamping authorities for evidence-grade
+    deployments.</p>"
   language:
   - en
   script:
@@ -38,6 +43,16 @@ relation:
       primary: true
     formattedref:
       content: draft-viftode-trustchain-trust-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-viftode-trustchain-trust-01
+    docid:
+    - id: draft-viftode-trustchain-trust-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-viftode-trustchain-trust-01
       format: text/plain
 ext:
   schema-version: v1.0.1

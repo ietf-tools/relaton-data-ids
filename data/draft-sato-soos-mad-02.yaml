@@ -1,0 +1,117 @@
+---
+schema-version: v1.2.3
+id: draft-sato-soos-mad-02
+title:
+- content: Multi-Agent Delegation in Sovereign Object Systems
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-sato-soos-mad-02
+  type: src
+type: standard
+docid:
+- id: draft-sato-soos-mad-02
+  type: Internet-Draft
+  primary: true
+- id: I-D.sato-soos-mad
+  type: IETF
+  scope: anchor
+docnumber: I-D.sato-soos-mad
+date:
+- type: published
+  value: '2026-06-10'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Tom
+          language:
+          - en
+        formatted_initials:
+          language:
+          - en
+      surname:
+        content: Sato
+        language:
+        - en
+      completename:
+        content: Tom Sato
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: MyAuberge K.K.
+  role:
+  - type: author
+version:
+- draft: '02'
+revdate: '2026-06-10'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>When a consequential task requires multiple AI agents -- one to coordinate,
+    others to execute, each operating on different objects in a shared workflow --
+    who is responsible for the outcome? Which agent caused which state change? Under
+    whose authority? If the coordinating agent's authorization is revoked, does the
+    authority of every sub-agent it delegated to immediately expire? If one agent
+    in a parallel workflow exceeds its scope, can that excess propagate to others?
+    Today, no protocol ensures the answers to these questions are knowable. Multi-agent
+    AI systems can produce accountability black holes: chains of delegation where
+    the authority at each hop is unclear, where revocation does not cascade reliably,
+    and where the audit record cannot reconstruct which agent caused which outcome
+    under which authorization. This document defines the Multi-Agent Delegation (MAD)
+    protocol: a normative specification ensuring that authority in multi-agent AI
+    workflows is structured, verifiable, and reconstructable. MAD specifies three
+    mechanisms. The Narrowing Property (INV-4) ensures that authority can only attenuate
+    across a delegation hop -- a sub-agent can never acquire capabilities its orchestrator
+    does not itself hold. SO Instance Topology Types provide five formally defined
+    patterns for how governed objects relate at runtime. SO Cluster Coordination Primitives
+    (L1-16) enable parallel fan-out topologies in which multiple specialist agents
+    execute simultaneously, with aggregation rules that let the orchestrator proceed
+    as soon as a quorum of specialists complete. For human principals, MAD provides
+    a single recoverable property: the accountability chain is always reconstructable
+    from the GEC- signed audit record alone. Cascade revocation means one decision
+    stops the entire tree. For AI agents, MAD provides machine-speed delegation authority
+    and the parallel execution efficiency that sequential single-agent approaches
+    cannot achieve. MAD-02 adds a fourth guarantee: when revocation fires during active
+    execution, the completion state of every in-flight operation is classified and
+    recorded, and partial-completion cases are routed to human oversight through the
+    HEM escalation chain. This closes the revocation gap across offline-attenuated
+    delegation chains that the OpenID Foundation identifies as unsolved in current
+    agentic AI authorization infrastructure.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-sato-soos-mad-01
+    docid:
+    - id: draft-sato-soos-mad-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-sato-soos-mad-01
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-sato-soos-mad-02
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
