@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-martin-retry-over-ipv6-00
+id: draft-martin-retry-over-ipv6-01
 title:
 - content: HTTP Signaling of Planned IPv4 Unavailability
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-martin-retry-over-ipv6-00
+- content: https://datatracker.ietf.org/doc/html/draft-martin-retry-over-ipv6-01
   type: src
 type: standard
 docid:
-- id: draft-martin-retry-over-ipv6-00
+- id: draft-martin-retry-over-ipv6-01
   type: Internet-Draft
   primary: true
 - id: I-D.martin-retry-over-ipv6
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.martin-retry-over-ipv6
 date:
 - type: published
-  value: '2026-06-03'
+  value: '2026-06-11'
 contributor:
 - person:
     name:
@@ -53,8 +53,8 @@ contributor:
   role:
   - type: author
 version:
-- draft: '00'
-revdate: '2026-06-03'
+- draft: '01'
+revdate: '2026-06-11'
 language:
 - en
 script:
@@ -68,25 +68,27 @@ abstract:
     clients to retry over IPv6 after closing the IPv4 connection, and allow clients
     to confirm successful IPv6 recovery via an optional correlation token so operators
     can distinguish soft failures from hard failures in centralized logs. The mechanism
-    supports coordinated events (for example, 6/6 IPv6 Day drills), staged enterprise
-    rollouts, and permanent IPv6-only migration. Legacy clients that do not implement
-    this specification treat an unrecognized 566 status code as an internal server
-    error and MAY use the response body for human-readable guidance.</p>"
+    supports staged enterprise rollouts, internal HTTP services, and permanent IPv6-only
+    migration; coordinated public events (for example, 6/6 drills) remain possible
+    with advance notice. The primary intended deployment is operator-controlled environments
+    where provider and users share operational responsibility. Legacy clients that
+    do not implement this specification treat an unrecognized 566 status code as an
+    internal server error and MAY use the response body for human- readable guidance.</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-martin-retry-over-ipv6-01
+    id: draft-martin-retry-over-ipv6-00
     docid:
-    - id: draft-martin-retry-over-ipv6-01
+    - id: draft-martin-retry-over-ipv6-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-martin-retry-over-ipv6-01
+      content: draft-martin-retry-over-ipv6-00
       format: text/plain
 series:
 - type: main
@@ -97,7 +99,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-martin-retry-over-ipv6-00
+  number: draft-martin-retry-over-ipv6-01
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

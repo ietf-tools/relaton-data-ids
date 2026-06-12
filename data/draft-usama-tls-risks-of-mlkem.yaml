@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-usama-tls-risks-of-mlkem
 title:
-- content: Potential Risks of Standalone ML-KEM in TLS 1.3
+- content: Analysis of Hybrid Key Exchange and Standalone ML-KEM in TLS 1.3
   language:
   - en
   script:
@@ -13,29 +13,13 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>We attest that standalone ML-KEM in TLS 1.3 breaks the existing formal
-    proofs of TLS in state-of-the-art symbolic security analysis tool, ProVerif. We
-    believe this requires a new symbolic proof in ProVerif. To help inform the analysis,
-    we share our understanding of *exactly* where the ProVerif proofs break, namely
-    transition from symmetric DHKE to asymmetric KEM. More specifically, our understanding
-    is that the existing proofs of TLS in ProVerif are based on commutativity property,
-    whereas commutativity does not apply to standalone ML-KEM in TLS. In general,
-    we see no reason to believe that hybrid key exchanges are not _at least_ as strong
-    as the stronger of the two components. We invite collaborations or independent
-    analysis to extend the ProVerif models to perform such analysis and offer a statement
-    for security considerations of [I-D.ietf-tls-mlkem]. In our understanding, a couple
-    of WG participants have already started formal analysis in ProVerif. We also attest
-    that from a formal analysis perspective, this is a much bigger change than RFC8773bis,
-    which indeed went for FATT review (cf. [TLS-FATT]). We, therefore, formally request
-    the chairs to initiate the FATT review of standalone ML-KEM in TLS. This draft
-    also offers some preliminary discussion to help the developers and policy makers
-    make informed choices. Finally, the draft also aims to reduce the endless repitition
-    of arguments from both sides presented on several lists by documenting these arguments
-    so they can simply be referred to. We sincerely believe this will help to focus
-    the discussion on technical matters, such as system model, threat model, security
-    properties, and deployments. We acknowledge several IETF participants who have
-    contributed to this draft with their insights. This draft captures what _we_ understand
-    them to be saying.</p>"
+- content: "<p>The draft presents _symbolic_ and _computational_ analysis of hybrid
+    key exchange and standalone ML-KEM. In our observation, we believe that hybrid
+    key exchange is preferable over standalone ML-KEM until a powerful CRQC exists
+    which breaks *all* the bits of pre-quantum. This draft also offers opinions of
+    the IETF participants and some preliminary discussion to help the developers and
+    policymakers make informed choices. Finally, it offers minimal implementation
+    guidance for hybrids.</p>"
   language:
   - en
   script:
@@ -71,6 +55,16 @@ relation:
       primary: true
     formattedref:
       content: draft-usama-tls-risks-of-mlkem-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-usama-tls-risks-of-mlkem-03
+    docid:
+    - id: draft-usama-tls-risks-of-mlkem-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-usama-tls-risks-of-mlkem-03
       format: text/plain
 ext:
   schema-version: v1.0.1

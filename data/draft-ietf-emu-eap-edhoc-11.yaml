@@ -1,186 +1,185 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-jose-hpke-encrypt-16
+id: draft-ietf-emu-eap-edhoc-11
 title:
-- content: Use of Hybrid Public Key Encryption (HPKE) with JSON Web Encryption (JWE)
+- content: Using the Extensible Authentication Protocol (EAP) with Ephemeral Diffie-Hellman
+    over COSE (EDHOC)
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-jose-hpke-encrypt-16
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-emu-eap-edhoc-11
   type: src
 type: standard
 docid:
-- id: draft-ietf-jose-hpke-encrypt-16
+- id: draft-ietf-emu-eap-edhoc-11
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-jose-hpke-encrypt
+- id: I-D.ietf-emu-eap-edhoc
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-jose-hpke-encrypt
+docnumber: I-D.ietf-emu-eap-edhoc
 date:
 - type: published
-  value: '2026-02-16'
+  value: '2026-06-11'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Tirumaleswar
+        - content: Dan
           language:
           - en
         - language:
           - en
-          initial: T
+          initial: D
         formatted_initials:
-          content: T.
+          content: D.
           language:
           - en
       surname:
-        content: Reddy.K
+        content: Garcia-Carrillo
         language:
         - en
       completename:
-        content: Tirumaleswar Reddy.K
+        content: Dan Garcia-Carrillo
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Nokia
+        - content: University of Oviedo
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Hannes
+        - content: Rafael
           language:
           - en
         - language:
           - en
-          initial: H
+          initial: R
         formatted_initials:
-          content: H.
+          content: R.
           language:
           - en
       surname:
-        content: Tschofenig
+        content: Marin-Lopez
         language:
         - en
       completename:
-        content: Hannes Tschofenig
+        content: Rafael Marin-Lopez
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: University of Applied Sciences Bonn-Rhein-Sieg
+        - content: University of Murcia
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Aritra
-          language:
-          - en
         - language:
           - en
-          initial: A
+          initial: G
         formatted_initials:
-          content: A.
+          content: G.
           language:
           - en
       surname:
-        content: Banerjee
+        content: Selander
         language:
         - en
       completename:
-        content: Aritra Banerjee
+        content: Göran Selander
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Nokia
+        - content: Ericsson
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Orie
+        - content: John
           language:
           - en
         - language:
           - en
-          initial: O
+          initial: J
+        - language:
+          - en
+          initial: P
         formatted_initials:
-          content: O.
+          content: J. P.
           language:
           - en
       surname:
-        content: Steele
+        content: Mattsson
         language:
         - en
       completename:
-        content: Orie Steele
+        content: John Preuß Mattsson
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Tradeverifyd
+        - content: Ericsson
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Michael
+        - content: Francisco
           language:
           - en
         - language:
           - en
-          initial: M
-        - language:
-          - en
-          initial: B
+          initial: F
         formatted_initials:
-          content: M. B.
+          content: F.
           language:
           - en
       surname:
-        content: Jones
+        content: Lopez-Gomez
         language:
         - en
       completename:
-        content: Michael B. Jones
+        content: Francisco Lopez-Gomez
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Self-Issued Consulting
+        - content: University of Murcia
   role:
   - type: author
 version:
-- draft: '16'
-revdate: '2026-02-16'
+- draft: '11'
+revdate: '2026-06-11'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This specification defines how to use Hybrid Public Key Encryption
-    (HPKE) with JSON Web Encryption (JWE). HPKE enables public key encryption of arbitrary-sized
-    plaintexts to a recipient's public key, and provides security against adaptive
-    chosen ciphertext attacks. This specification chooses a specific subset of the
-    HPKE features to use with JWE. This specification updates RFC 7516 (JWE) to enable
-    use of Integrated Encryption as a Key Management Mode.</p>"
+- content: "<p>The Extensible Authentication Protocol (EAP), defined in RFC 3748,
+    provides a standard mechanism for support of multiple authentication methods.
+    This document specifies the EAP authentication method EAP- EDHOC, based on Ephemeral
+    Diffie-Hellman Over COSE (EDHOC). EDHOC is a lightweight security handshake protocol,
+    enabling authentication and establishment of shared secret keys suitable in constrained
+    settings. This document also provides guidance on authentication and authorization
+    for EAP-EDHOC.</p>"
   language:
   - en
   script:
@@ -189,23 +188,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-jose-hpke-encrypt-05
+    id: draft-ietf-emu-eap-edhoc-03
     docid:
-    - id: draft-ietf-jose-hpke-encrypt-05
+    - id: draft-ietf-emu-eap-edhoc-03
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-jose-hpke-encrypt-05
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-jose-hpke-encrypt-19
-    docid:
-    - id: draft-ietf-jose-hpke-encrypt-19
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-jose-hpke-encrypt-19
+      content: draft-ietf-emu-eap-edhoc-03
       format: text/plain
 series:
 - type: main
@@ -216,7 +205,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-jose-hpke-encrypt-16
+  number: draft-ietf-emu-eap-edhoc-11
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

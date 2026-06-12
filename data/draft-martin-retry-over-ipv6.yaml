@@ -21,10 +21,12 @@ abstract:
     clients to retry over IPv6 after closing the IPv4 connection, and allow clients
     to confirm successful IPv6 recovery via an optional correlation token so operators
     can distinguish soft failures from hard failures in centralized logs. The mechanism
-    supports coordinated events (for example, 6/6 IPv6 Day drills), staged enterprise
-    rollouts, and permanent IPv6-only migration. Legacy clients that do not implement
-    this specification treat an unrecognized 566 status code as an internal server
-    error and MAY use the response body for human-readable guidance.</p>"
+    supports staged enterprise rollouts, internal HTTP services, and permanent IPv6-only
+    migration; coordinated public events (for example, 6/6 drills) remain possible
+    with advance notice. The primary intended deployment is operator-controlled environments
+    where provider and users share operational responsibility. Legacy clients that
+    do not implement this specification treat an unrecognized 566 status code as an
+    internal server error and MAY use the response body for human- readable guidance.</p>"
   language:
   - en
   script:
@@ -40,6 +42,16 @@ relation:
       primary: true
     formattedref:
       content: draft-martin-retry-over-ipv6-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-martin-retry-over-ipv6-01
+    docid:
+    - id: draft-martin-retry-over-ipv6-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-martin-retry-over-ipv6-01
       format: text/plain
 ext:
   schema-version: v1.0.1

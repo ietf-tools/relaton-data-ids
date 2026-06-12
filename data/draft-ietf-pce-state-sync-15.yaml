@@ -1,109 +1,139 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-teas-actn-poi-applicability-18
+id: draft-ietf-pce-state-sync-15
 title:
-- content: Applicability of Abstraction and Control of Traffic Engineered Networks
-    (ACTN) to Packet Optical Integration (POI)
+- content: Procedures for Communication between Stateful Path Computation Elements
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-teas-actn-poi-applicability-18
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-pce-state-sync-15
   type: src
 type: standard
 docid:
-- id: draft-ietf-teas-actn-poi-applicability-18
+- id: draft-ietf-pce-state-sync-15
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-teas-actn-poi-applicability
+- id: I-D.ietf-pce-state-sync
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-teas-actn-poi-applicability
+docnumber: I-D.ietf-pce-state-sync
 date:
 - type: published
-  value: '2026-03-14'
+  value: '2026-06-11'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Fabio
+        - content: Haomian
           language:
           - en
         - language:
           - en
-          initial: F
+          initial: H
         formatted_initials:
-          content: F.
+          content: H.
           language:
           - en
       surname:
-        content: Peruzzini
+        content: Zheng
         language:
         - en
       completename:
-        content: Fabio Peruzzini
+        content: Haomian Zheng
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: FiberCop
+        - content: Huawei Technologies
   role:
   - type: author
 - person:
     name:
       given:
         forename:
+        - content: Stephane
+          language:
+          - en
         - language:
           - en
-          initial: J
+          initial: S
         formatted_initials:
-          content: J.
+          content: S.
           language:
           - en
       surname:
-        content: Bouquier
+        content: Litkowski
         language:
         - en
       completename:
-        content: Jean-Francois Bouquier
+        content: Stephane Litkowski
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Vodafone
+        - content: Cisco
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Italo
+        - content: Siva
           language:
           - en
         - language:
           - en
-          initial: I
+          initial: S
         formatted_initials:
-          content: I.
+          content: S.
           language:
           - en
       surname:
-        content: Busi
+        content: Sivabalan
         language:
         - en
       completename:
-        content: Italo Busi
+        content: Siva Sivabalan
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei
+        - content: Ciena Corporation
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Cheng
+          language:
+          - en
+        - language:
+          - en
+          initial: C
+        formatted_initials:
+          content: C.
+          language:
+          - en
+      surname:
+        content: Li
+        language:
+        - en
+      completename:
+        content: Cheng Li
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei Technologies
   role:
   - type: author
 - person:
@@ -134,50 +164,25 @@ contributor:
         - content: Old Dog Consulting
   role:
   - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Daniele
-          language:
-          - en
-        - language:
-          - en
-          initial: D
-        formatted_initials:
-          content: D.
-          language:
-          - en
-      surname:
-        content: Ceccarelli
-        language:
-        - en
-      completename:
-        content: Daniele Ceccarelli
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Cisco
-  role:
-  - type: author
 version:
-- draft: '18'
-revdate: '2026-03-14'
+- draft: '15'
+revdate: '2026-06-11'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document explores the applicability of the Abstraction and Control
-    of TE Networks (ACTN) architecture to Packet Optical Integration (POI) within
-    the context of IP/MPLS and optical internetworking. It examines the YANG data
-    models defined by the IETF that enable an ACTN-based deployment architecture and
-    highlights specific scenarios pertinent to Service Providers. Existing IETF protocols
-    and data models are identified for each multi-technology scenario (packet over
-    optical), particularly emphasising the Multi-Domain Service Coordinator to Provisioning
-    Network Controller Interface (MPI) within the ACTN architecture</p>"
+- content: "<p>The Path Computation Element (PCE) Communication Protocol (PCEP) provides
+    mechanisms for PCEs to perform path computation in response to a Path Computation
+    Client (PCC) request. The Stateful PCE extensions allow stateful control of Multi-Protocol
+    Label Switching (MPLS) Traffic Engineering (TE) and Generalized Multi-Protocol
+    Label Switching (GMPLS) Label Switched Paths (LSPs) using PCEP. A Path Computation
+    Client (PCC) can synchronize LSP state information to a Stateful Path Computation
+    Element (PCE). A PCC can have multiple PCEP sessions toward multiple PCEs. In
+    some use cases, inter-PCE stateful communication can bring additional resiliency
+    in the design, for instance, when some PCC-PCE session fails. This document describes
+    the procedures to allow stateful communication between PCEs for various use cases,
+    and also the procedures to prevent computational loops.</p>"
   language:
   - en
   script:
@@ -186,23 +191,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-teas-actn-poi-applicability-09
+    id: draft-ietf-pce-state-sync-06
     docid:
-    - id: draft-ietf-teas-actn-poi-applicability-09
+    - id: draft-ietf-pce-state-sync-06
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-teas-actn-poi-applicability-09
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-teas-actn-poi-applicability-19
-    docid:
-    - id: draft-ietf-teas-actn-poi-applicability-19
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-teas-actn-poi-applicability-19
+      content: draft-ietf-pce-state-sync-06
       format: text/plain
 series:
 - type: main
@@ -213,7 +208,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-teas-actn-poi-applicability-18
+  number: draft-ietf-pce-state-sync-15
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
