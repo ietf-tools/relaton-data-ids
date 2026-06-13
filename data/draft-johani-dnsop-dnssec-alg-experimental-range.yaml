@@ -1,0 +1,46 @@
+---
+schema-version: v1.2.3
+id: draft-johani-dnsop-dnssec-alg-experimental-range
+title:
+- content: Experimental and Private-Use Ranges in the DNSSEC Algorithm Numbers Registry
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-johani-dnsop-dnssec-alg-experimental-range
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: '<p>The DNSSEC Algorithm Numbers registry contains two code points, 253
+    (PRIVATEDNS) and 254 (PRIVATEOID), intended for private and experimental algorithms.
+    These code points identify the algorithm by prepending a domain name or an object
+    identifier to the "Public Key" field of the DNSKEY RDATA, overloading the semantics
+    of that field and forcing every implementation to special-case algorithm dispatch.
+    Because all such algorithms share a single code point, they cannot be distinguished
+    on the wire by the algorithm number alone. This document reserves two small ranges
+    of DNSSEC algorithm numbers: one for Private Use, requiring no IANA registration,
+    and one for experimental algorithms, registered on a First Come First Served basis.
+    Code points drawn from these ranges behave identically to ordinary algorithm numbers
+    and require no overloading of the DNSKEY RDATA. This enables clean experimentation
+    with the growing set of post-quantum and other candidate signature algorithms.
+    This document updates RFC 6014 and RFC 9157.</p>'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-johani-dnsop-dnssec-alg-experimental-range-00
+    docid:
+    - id: draft-johani-dnsop-dnssec-alg-experimental-range-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-johani-dnsop-dnssec-alg-experimental-range-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

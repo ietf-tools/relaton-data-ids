@@ -1,0 +1,196 @@
+---
+schema-version: v1.2.3
+id: draft-leon-dnsop-signaling-zone-owner-intent-01
+title:
+- content: Signaling Zone Owner Intent
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-leon-dnsop-signaling-zone-owner-intent-01
+  type: src
+type: standard
+docid:
+- id: draft-leon-dnsop-signaling-zone-owner-intent-01
+  type: Internet-Draft
+  primary: true
+- id: I-D.leon-dnsop-signaling-zone-owner-intent
+  type: IETF
+  scope: anchor
+docnumber: I-D.leon-dnsop-signaling-zone-owner-intent
+date:
+- type: published
+  value: '2026-06-12'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Leon
+          language:
+          - en
+        - language:
+          - en
+          initial: L
+        formatted_initials:
+          content: L.
+          language:
+          - en
+      surname:
+        content: Fernandez
+        language:
+        - en
+      completename:
+        content: Leon Fernandez
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: The Swedish Internet Foundation
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Erik
+          language:
+          - en
+        - language:
+          - en
+          initial: E
+        formatted_initials:
+          content: E.
+          language:
+          - en
+      surname:
+        content: Bergström
+        language:
+        - en
+      completename:
+        content: Erik Bergström
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: The Swedish Internet Foundation
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Johan
+          language:
+          - en
+        - language:
+          - en
+          initial: J
+        formatted_initials:
+          content: J.
+          language:
+          - en
+      surname:
+        content: Stenstam
+        language:
+        - en
+      completename:
+        content: Johan Stenstam
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: The Swedish Internet Foundation
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Steve
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Crocker
+        language:
+        - en
+      completename:
+        content: Steve Crocker
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Edgemoor Research Institute
+  role:
+  - type: author
+version:
+- draft: '01'
+revdate: '2026-06-12'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: '<p>This document introduces a standardized mechanism for zone owners to
+    signal their intent regarding DNS provider responsibilities through DNS itself.
+    It defines two new DNS RRtypes -- HSYNC (Horizontal Synchronization, per-provider
+    enrollment) and HSYNCPARAM (zone-wide multi-provider policy) -- that together
+    enable zone owners to designate which Providers are authorized to serve and/or
+    sign their zones, control whether Providers or the zone owner manages the NS RRset,
+    and specify zone transfer chain configurations. The HSYNC and HSYNCPARAM records
+    allow DNS Providers to discover each other and establish secure communication,
+    either using the JOSE framework over DNS or via a RESTful API secured by TLS.
+    This provider-to-provider communication enables automated coordination for tasks
+    such as NS RRset management and DNSSEC-related operations. The document describes
+    how the Providers discover one another, establish secure communication, and maintain
+    it with periodic keep-alives; this specification covers those discovery and communication-establishment
+    aspects, while the on-the-wire framing of the messages the Providers exchange
+    is defined in a companion document. While a distributed DNSSEC multi-signer architecture
+    (similar to "model 2" in [RFC8901]) is an important application of this framework,
+    the HSYNC-based signaling supports broader provider synchronization needs. TO
+    BE REMOVED: This document is being collaborated on in Github at: https://github.com/johanix/draft-leon-dnsop-signaling-zone-owner-
+    intent (https://github.com/johanix/draft-leon-dnsop-signaling-zone- owner-intent).
+    The most recent working version of the document, open issues, etc, should all
+    be available there. The authors (gratefully) accept pull requests.</p>'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-leon-dnsop-signaling-zone-owner-intent-00
+    docid:
+    - id: draft-leon-dnsop-signaling-zone-owner-intent-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-leon-dnsop-signaling-zone-owner-intent-00
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-leon-dnsop-signaling-zone-owner-intent-01
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

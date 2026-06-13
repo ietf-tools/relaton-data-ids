@@ -16,15 +16,15 @@ abstract:
 - content: "<p>This document provides guidance to avoid carrying Resource Public Key
     Infrastructure (RPKI) derived validation states in Border Gateway Protocol (BGP)
     Path Attributes whose change triggers a BGP UPDATE being sent across external
-    BGP sessions. Annotating routes with BGP Path Attributes carried across external
-    BGP sessions signaling validation states may cause needless flooding of BGP UPDATE
+    BGP (EBGP) sessions. Annotating routes with BGP Path Attributes carried across
+    EBGP sessions signaling validation states may cause needless flooding of BGP UPDATE
     messages through the global Internet routing system, for example when Route Origin
     Authorizations (ROAs) are issued, or are revoked, or when RPKI-To-Router sessions
     are terminated. Operators should ensure RPKI-derived validation states are not
     signaled in BGP Path Attributes whose change triggers a BGP UPDATE being sent
-    across external BGP sessions. Specifically, operators should not associate Prefix
-    Origin Validation state with BGP routes using any form of BGP Communities carried
-    across EBGP session. This document updates RFC 8097.</p>"
+    across EBGP sessions. Specifically, operators should not associate Prefix Origin
+    Validation state with BGP routes using any form of BGP Communities carried across
+    EBGP session.</p>"
   language:
   - en
   script:
@@ -140,6 +140,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-sidrops-avoid-rpki-state-in-bgp-10
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-sidrops-avoid-rpki-state-in-bgp-11
+    docid:
+    - id: draft-ietf-sidrops-avoid-rpki-state-in-bgp-11
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-sidrops-avoid-rpki-state-in-bgp-11
       format: text/plain
 ext:
   schema-version: v1.0.1
