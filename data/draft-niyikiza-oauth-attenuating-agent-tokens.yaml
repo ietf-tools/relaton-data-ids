@@ -13,17 +13,18 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document defines Attenuating Authorization Tokens (AATs), a JWT-
-    based credential format for secure delegation in AI agent systems. An AAT encodes
-    which tools an agent may invoke and with what argument constraints. Any holder
-    can derive a more restrictive token offline that narrows or maintains scope but
-    cannot expand it. This invariant is cryptographically enforced and verifiable
-    offline by any party holding the root token's trust anchor key. This specification
-    extends the Rich Authorization Requests format (RFC 9396) with delegation-chain
-    semantics and defines a typed constraint vocabulary for tool-level argument restrictions.
-    The accompanying chain verification algorithm enforces the monotonic attenuation
-    invariant at each delegation step and requires no network contact with the root
-    issuer.</p>"
+- content: "<p>This document defines Attenuating Authorization Tokens (AATs), a signed
+    credential format for task-scoped delegation in AI agent systems. An AAT encodes
+    the tools an agent may invoke and the argument constraints that apply to those
+    invocations. A token holder authorized to delegate can derive a token offline
+    with equal or narrower authority, subject to the parent token's depth and lifetime
+    limits. The resulting delegation chain is verifiable offline by any enforcement
+    point that has the root issuer's trust anchor key. This specification profiles
+    the OAuth Rich Authorization Requests format (RFC 9396) for tool-level capability
+    claims, adds delegation- chain claims, and defines a core constraint vocabulary
+    for argument restrictions. The chain verification algorithm authenticates each
+    delegation step and enforces monotonic attenuation without network contact with
+    the root issuer.</p>"
   language:
   - en
   script:
@@ -39,6 +40,16 @@ relation:
       primary: true
     formattedref:
       content: draft-niyikiza-oauth-attenuating-agent-tokens-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-niyikiza-oauth-attenuating-agent-tokens-01
+    docid:
+    - id: draft-niyikiza-oauth-attenuating-agent-tokens-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-niyikiza-oauth-attenuating-agent-tokens-01
       format: text/plain
 ext:
   schema-version: v1.0.1

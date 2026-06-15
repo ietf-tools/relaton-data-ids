@@ -1,0 +1,162 @@
+---
+schema-version: v1.2.3
+id: draft-nordin-ocm-integration-protocol-00
+title:
+- content: Open Cloud Mesh Integration Protocol
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-nordin-ocm-integration-protocol-00
+  type: src
+type: standard
+docid:
+- id: draft-nordin-ocm-integration-protocol-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.nordin-ocm-integration-protocol
+  type: IETF
+  scope: anchor
+docnumber: I-D.nordin-ocm-integration-protocol
+date:
+- type: published
+  value: '2026-06-15'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Micke
+          language:
+          - en
+        - language:
+          - en
+          initial: M
+        formatted_initials:
+          content: M.
+          language:
+          - en
+      surname:
+        content: Nordin
+        language:
+        - en
+      completename:
+        content: Micke Nordin
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: SUNET
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Giuseppe
+          language:
+          - en
+        - language:
+          - en
+          initial: G
+        - language:
+          - en
+          initial: L
+        formatted_initials:
+          content: G. L.
+          language:
+          - en
+      surname:
+        content: Presti
+        language:
+        - en
+      completename:
+        content: Giuseppe Lo Presti
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: CERN
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Mahdi
+          language:
+          - en
+        - language:
+          - en
+          initial: M
+        formatted_initials:
+          content: M.
+          language:
+          - en
+      surname:
+        content: Baghbani
+        language:
+        - en
+      completename:
+        content: Mahdi Baghbani
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Ponder Source
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-06-15'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>The Open Cloud Mesh Integration Protocol (OCM-IP) defines how an Open
+    Cloud Mesh (OCM) Server can integrate supporting servers, such as SSH/SFTP servers,
+    web application platforms, or stand-alone WebDAV servers, to perform protocol-specific
+    work on its behalf. OCM-IP makes it possible for existing OCM Servers to offload
+    protocol specific interactions to stand-alone servers, or even implement OCM as
+    a lightweight server that handles only the OCM parts of a deployment: discovery,
+    share creation, token issuance and signing. Anything protocol-specific, such as
+    serving files over WebDAV, providing SSH access, or running an interactive web
+    application, can be handed off to one or more Protocol Servers running elsewhere,
+    possibly operated with different software and on different infrastructure. OCM-IP
+    defines three integration modes: a provisioned mode, in which the OCM Server pushes
+    Share information to the Protocol Server over a signed back channel; a self-contained
+    mode, in which the Share information is embedded in the signed access token itself,
+    so that the Protocol Server needs no per-share state and no inbound API at all;
+    and an introspected mode, in which the Protocol Server validates presented credentials
+    through a token introspection endpoint, restoring compatibility with Receiving
+    Servers that do not support token exchange. OCM-IP is a protocol between the Sending
+    OCM Server and its Protocol Servers only. The Receiving Server is not involved
+    in, and does not need to be aware of, this protocol: everything it observes is
+    indistinguishable from the Sending Server serving the access protocols itself.
+    For this reason, an OCM Sending Server MAY adopt a different strategy to interoperate
+    with Protocol Servers, including e.g. establishing trust via shared keys, without
+    compromising compliance with the OCM protocol.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-nordin-ocm-integration-protocol-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
