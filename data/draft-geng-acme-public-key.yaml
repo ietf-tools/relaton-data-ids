@@ -14,20 +14,16 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: '<p>The current ACME protocol [RFC8555] requires applicants to submit a
-    PKCS#10 Certificate Signing Request (CSR) during the finalization phase. The construction,
-    ASN.1 encoding, and transmission of the CSR impose additional implementation burdens
-    on both the client (especially resource-constrained devices) and the server. Moreover,
-    the CSR cannot prevent a public key from being replaced by an intermediary at
-    the protocol level. This document introduces the "pk-01" challenge extension based
-    on the ACME protocol. Its core mechanism is as follows: the applicant declares
-    the public key to be authenticated during the "newOrder" phase and completes the
-    Proof of Possession (PoP) by signing with the private key during the challenge
-    phase. Since the public key is declared when the order is created and verified
-    during the challenge phase, there is no need to submit a CSR during the finalization
-    phase; the ACME server can issue the certificate directly based on the verified
-    public key, thereby eliminating the CSR at the protocol level. The "pk-01" challenge
-    supports two verification modes via the pop_mode field:</p>'
+- content: <p>The Automatic Certificate Management Environment (ACME) [RFC8555] requires
+    a PKCS#10 Certificate Signing Request (CSR) at the finalization stage. This document
+    defines a new ACME challenge type, "pk-01", that allows a client to prove possession
+    of a private key directly, without constructing a CSR. The primary motivation
+    is to support key types that cannot generate CSR self-signatures, notably post-quantum
+    Key Encapsulation Mechanism (KEM) keys. The client declares the public key via
+    a popKey field in the "newOrder" request; the server attaches the "pk-01" challenge
+    to existing identifier authorizations. When all required authorizations are satisfied,
+    the ACME server issues a certificate using the validated public key and the authorized
+    identifiers, eliminating the need for a CSR in the finalization stage.</p>
   language:
   - en
   script:
@@ -103,6 +99,16 @@ relation:
       primary: true
     formattedref:
       content: draft-geng-acme-public-key-06
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-geng-acme-public-key-07
+    docid:
+    - id: draft-geng-acme-public-key-07
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-geng-acme-public-key-07
       format: text/plain
 ext:
   schema-version: v1.0.1

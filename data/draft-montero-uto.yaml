@@ -2,8 +2,8 @@
 schema-version: v1.2.3
 id: draft-montero-uto
 title:
-- content: 'Unified Transition Overlay (UTO): A Gateway-Based IPv4/IPv6 Translation
-    Proxy'
+- content: 'Unified Transition Overlay (UTO): A Stateless Cross-Version Transition
+    Mechanism for IPv4/IPv6'
   language:
   - en
   script:
@@ -14,15 +14,17 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>Unified Transition Overlay (UTO) is a gateway-based IPv4/IPv6 translation
-    proxy that enables cross-version connectivity without requiring encapsulation,
-    new protocol headers, or modifications to end-host stacks. UTO operates exclusively
-    at transition gateways, which translate packet headers between IPv4 and IPv6 and
-    update transport-layer checksums to preserve end-to-end correctness. By confining
-    translation logic to gateways, UTO allows the underlying network to remain purely
-    IPv4 or purely IPv6, facilitating incremental deployment within existing routing
-    and forwarding infrastructures. UTO also supports incremental checksum update
-    to reduce processing overhead for TCP and UDP traffic.</p>"
+- content: "<p>This document specifies Unified Transition Overlay (UTO), a stateless
+    encapsulation-plus-translation mechanism that enables bidirectional communication
+    between IPv4-only and IPv6-only hosts across a transit network whose forwarding
+    plane uses the opposite IP version. UTO carries the native source and destination
+    addresses of the communicating hosts in a compact, variable-length overlay header.
+    The original packet is tunneled between UTO-Gateways (UGWs) across the transit
+    network and is converted to the destination's address family by a single stateless
+    header translation performed only at the egress UGW. UTO requires no DNS64, no
+    stateful per-flow translation in the common IPv4-to-IPv6 direction, and no changes
+    to backbone routers or end-host stacks. The transit network forwards only pure
+    IPv4 or pure IPv6 packets.</p>"
   language:
   - en
   script:
@@ -58,6 +60,16 @@ relation:
       primary: true
     formattedref:
       content: draft-montero-uto-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-montero-uto-03
+    docid:
+    - id: draft-montero-uto-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-montero-uto-03
       format: text/plain
 ext:
   schema-version: v1.0.1
