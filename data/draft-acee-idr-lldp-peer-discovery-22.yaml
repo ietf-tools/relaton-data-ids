@@ -1,136 +1,157 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-mboned-non-source-routed-sr-mcast-00
+id: draft-acee-idr-lldp-peer-discovery-22
 title:
-- content: Non-source-routed Multicast in SR Networks
+- content: BGP Logical Link Discovery Protocol (LLDP) Peer Discovery
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-mboned-non-source-routed-sr-mcast-00
+- content: https://datatracker.ietf.org/doc/html/draft-acee-idr-lldp-peer-discovery-22
   type: src
 type: standard
 docid:
-- id: draft-ietf-mboned-non-source-routed-sr-mcast-00
+- id: draft-acee-idr-lldp-peer-discovery-22
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-mboned-non-source-routed-sr-mcast
+- id: I-D.acee-idr-lldp-peer-discovery
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-mboned-non-source-routed-sr-mcast
+docnumber: I-D.acee-idr-lldp-peer-discovery
 date:
 - type: published
-  value: '2025-04-03'
+  value: '2026-06-15'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Zhaohui
+        - content: Acee
           language:
           - en
         - language:
           - en
-          initial: Z
+          initial: A
+        formatted_initials:
+          content: A.
+          language:
+          - en
+      surname:
+        content: Lindem
+        language:
+        - en
+      completename:
+        content: Acee Lindem
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Arrcus, Inc
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Keyur
+          language:
+          - en
+        - language:
+          - en
+          initial: K
+        formatted_initials:
+          content: K.
+          language:
+          - en
+      surname:
+        content: Patel
+        language:
+        - en
+      completename:
+        content: Keyur Patel
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Arrcus, Inc
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Shawn
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Zandi
+        language:
+        - en
+      completename:
+        content: Shawn Zandi
+        language:
+        - en
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Jeff
+          language:
+          - en
         - language:
           - en
           initial: J
         formatted_initials:
-          content: Z. J.
+          content: J.
           language:
           - en
       surname:
-        content: Zhang
+        content: Haas
         language:
         - en
       completename:
-        content: Zhaohui (Jeffrey) Zhang
+        content: Jeff Haas
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Juniper Networks
+        - content: HPE
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: IJsbrand
+        - content: Xiaohu
           language:
           - en
         - language:
           - en
-          initial: I
+          initial: X
         formatted_initials:
-          content: I.
+          content: X.
           language:
           - en
       surname:
-        content: Wijnands
+        content: Xu
         language:
         - en
       completename:
-        content: IJsbrand Wijnands
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Arrcus
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Hooman
-          language:
-          - en
-        - language:
-          - en
-          initial: H
-        formatted_initials:
-          content: H.
-          language:
-          - en
-      surname:
-        content: Bidgoli
-        language:
-        - en
-      completename:
-        content: Hooman Bidgoli
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Nokia
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Yisong
-          language:
-          - en
-        - language:
-          - en
-          initial: "Y"
-        formatted_initials:
-          content: Y.
-          language:
-          - en
-      surname:
-        content: Liu
-        language:
-        - en
-      completename:
-        content: Yisong Liu
+        content: Xiaohu Xu
         language:
         - en
     affiliation:
@@ -140,35 +161,33 @@ contributor:
   role:
   - type: author
 version:
-- draft: '00'
-revdate: '2025-04-03'
+- draft: '22'
+revdate: '2026-06-15'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>With Segment Routing (SR) architecture, a unicast flow can be source-
-    routed through an SR network following an explicit path specified in the packet,
-    w/o the need for per-flow state in the network. As a result, the otherwise needed
-    protocols to signal the per-flow unicast state can also be removed from the network.
-    In the case of multicast, traffic can be either source-routed or non-source-routed,
-    and this document discusses non-sourced-routed options for multicast in an SR
-    network with either MPLS or IPv6/SRv6 data plane.</p>"
+- content: "<p>Link Layer Discovery Protocol (LLDP) or IEEE Std 802.1AB is implemented
+    in networking equipment from many vendors. It is natural for IETF protocols to
+    avail this protocol for simple discovery tasks. This document describes how BGP
+    would use LLDP to discover directly connected and 2-hop peers when peering is
+    based on loopback addresses.</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-ietf-mboned-non-source-routed-sr-mcast-05
+    id: draft-acee-idr-lldp-peer-discovery-15
     docid:
-    - id: draft-ietf-mboned-non-source-routed-sr-mcast-05
+    - id: draft-acee-idr-lldp-peer-discovery-15
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-mboned-non-source-routed-sr-mcast-05
+      content: draft-acee-idr-lldp-peer-discovery-15
       format: text/plain
 series:
 - type: main
@@ -179,7 +198,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-mboned-non-source-routed-sr-mcast-00
+  number: draft-acee-idr-lldp-peer-discovery-22
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

@@ -1,34 +1,90 @@
 ---
 schema-version: v1.2.3
-id: draft-acee-idr-lldp-peer-discovery-19
+id: draft-ietf-jose-hpke-encrypt-20
 title:
-- content: BGP Logical Link Discovery Protocol (LLDP) Peer Discovery
+- content: Use of Hybrid Public Key Encryption (HPKE) with JSON Web Encryption (JWE)
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-acee-idr-lldp-peer-discovery-19
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-jose-hpke-encrypt-20
   type: src
 type: standard
 docid:
-- id: draft-acee-idr-lldp-peer-discovery-19
+- id: draft-ietf-jose-hpke-encrypt-20
   type: Internet-Draft
   primary: true
-- id: I-D.acee-idr-lldp-peer-discovery
+- id: I-D.ietf-jose-hpke-encrypt
   type: IETF
   scope: anchor
-docnumber: I-D.acee-idr-lldp-peer-discovery
+docnumber: I-D.ietf-jose-hpke-encrypt
 date:
 - type: published
-  value: '2025-01-05'
+  value: '2026-06-15'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Acee
+        - content: Tirumaleswar
+          language:
+          - en
+        - language:
+          - en
+          initial: T
+        formatted_initials:
+          content: T.
+          language:
+          - en
+      surname:
+        content: Reddy.K
+        language:
+        - en
+      completename:
+        content: Tirumaleswar Reddy.K
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Nokia
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Hannes
+          language:
+          - en
+        - language:
+          - en
+          initial: H
+        formatted_initials:
+          content: H.
+          language:
+          - en
+      surname:
+        content: Tschofenig
+        language:
+        - en
+      completename:
+        content: Hannes Tschofenig
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: University of the Bundeswehr Munich
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Aritra
           language:
           - en
         - language:
@@ -39,144 +95,92 @@ contributor:
           language:
           - en
       surname:
-        content: Lindem
+        content: Banerjee
         language:
         - en
       completename:
-        content: Acee Lindem
+        content: Aritra Banerjee
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: LabN Consulting, L.L.C.
+        - content: Nokia
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Keyur
+        - content: Orie
           language:
           - en
         - language:
           - en
-          initial: K
+          initial: O
         formatted_initials:
-          content: K.
+          content: O.
           language:
           - en
       surname:
-        content: Patel
+        content: Steele
         language:
         - en
       completename:
-        content: Keyur Patel
+        content: Orie Steele
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Arrcus, Inc
+        - content: Tradeverifyd
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Shawn
+        - content: Michael
           language:
           - en
         - language:
           - en
-          initial: S
+          initial: M
+        - language:
+          - en
+          initial: B
         formatted_initials:
-          content: S.
+          content: M. B.
           language:
           - en
       surname:
-        content: Zandi
+        content: Jones
         language:
         - en
       completename:
-        content: Shawn Zandi
+        content: Michael B. Jones
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: LinkedIn
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Jeffrey
-          language:
-          - en
-        - language:
-          - en
-          initial: J
-        formatted_initials:
-          content: J.
-          language:
-          - en
-      surname:
-        content: Haas
-        language:
-        - en
-      completename:
-        content: Jeffrey Haas
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Juniper Networks, Inc
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Xiaohu
-          language:
-          - en
-        - language:
-          - en
-          initial: X
-        formatted_initials:
-          content: X.
-          language:
-          - en
-      surname:
-        content: Xu
-        language:
-        - en
-      completename:
-        content: Xiaohu Xu
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: China Mobile
+        - content: Self-Issued Consulting
   role:
   - type: author
 version:
-- draft: '19'
-revdate: '2025-01-05'
+- draft: '20'
+revdate: '2026-06-15'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>Link Layer Discovery Protocol (LLDP) or IEEE Std 802.1AB is implemented
-    in networking equipment from many vendors. It is natural for IETF protocols to
-    avail this protocol for simple discovery tasks. This document describes how BGP
-    would use LLDP to discover directly connected and 2-hop peers when peering is
-    based on loopback addresses.</p>"
+- content: "<p>This specification defines how to use Hybrid Public Key Encryption
+    (HPKE) with JSON Web Encryption (JWE). HPKE enables public key encryption of arbitrary-sized
+    plaintexts to a recipient's public key, and provides security against adaptive
+    chosen ciphertext attacks. This specification chooses a specific subset of the
+    HPKE features to use with JWE. This specification updates RFC 7516 (JWE) to enable
+    use of Integrated Encryption as a Key Management Mode.</p>"
   language:
   - en
   script:
@@ -185,23 +189,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-acee-idr-lldp-peer-discovery-15
+    id: draft-ietf-jose-hpke-encrypt-05
     docid:
-    - id: draft-acee-idr-lldp-peer-discovery-15
+    - id: draft-ietf-jose-hpke-encrypt-05
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-acee-idr-lldp-peer-discovery-15
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-acee-idr-lldp-peer-discovery-22
-    docid:
-    - id: draft-acee-idr-lldp-peer-discovery-22
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-acee-idr-lldp-peer-discovery-22
+      content: draft-ietf-jose-hpke-encrypt-05
       format: text/plain
 series:
 - type: main
@@ -212,7 +206,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-acee-idr-lldp-peer-discovery-19
+  number: draft-ietf-jose-hpke-encrypt-20
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

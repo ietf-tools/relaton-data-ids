@@ -1,0 +1,47 @@
+---
+schema-version: v1.2.3
+id: draft-sunnetci-ntcf-format
+title:
+- content: The NTCF Network and Telemetry Compression Format
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-sunnetci-ntcf-format
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This document specifies NTCF (Network and Telemetry Compression Format),
+    a self-describing, columnar, append-friendly binary container for cybersecurity
+    and network telemetry such as flow records, honeypot events, and web access logs.
+    Unlike general- purpose byte compressors, NTCF models the semantics of telemetry
+    -- IP addresses, autonomous system numbers, ports, country codes, event types,
+    and timestamps -- as typed columns and applies semantic encodings (dictionary,
+    delta, delta-of-delta, run-length, frame-of- reference bit packing, and variable-length
+    integers) before a conventional entropy compression stage. NTCF embeds per-column
+    zone-map statistics and Bloom filters so that point lookups and analytical predicates
+    can be evaluated by reading only the columns and segments that can possibly match,
+    without decompressing the entire file. This document defines the on-disk octet
+    layout (format version 1), the encoding catalogue, the reading and crash-recovery
+    algorithms, a resource-limit model, security considerations, and an IANA media-type
+    registration.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-sunnetci-ntcf-format-00
+    docid:
+    - id: draft-sunnetci-ntcf-format-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-sunnetci-ntcf-format-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
