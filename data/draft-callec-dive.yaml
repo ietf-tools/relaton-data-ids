@@ -16,14 +16,19 @@ abstract:
 - content: "<p>Domain-based Integrity Verification Enforcement (DIVE) is an application-layer
     protocol that provides cryptographic integrity and authenticity verification of
     HTTP response bodies by leveraging the Domain Name System Security Extensions
-    (DNSSEC) as an out-of-band distribution channel for public keys. DIVE has two
-    independent components: (1) an object-security layer, which uses HTTP Message
-    Signatures (RFC 9421) to carry per-resource signatures in HTTP response headers,
-    and (2) a DNS key-distribution layer, which publishes public keys and policy in
-    DNSSEC-protected TXT records. A client implementing DIVE verifies each covered
-    resource against the corresponding DNS-published public key before accepting it.
-    An attacker must therefore compromise both the DNS infrastructure and the origin
-    server simultaneously to deliver a tampered resource to a DIVE-compliant client.</p>"
+    (DNSSEC) as an out-of-band distribution channel for public keys. DIVE is designed
+    for non-browser automated clients operating in controlled infrastructure: software
+    update agents, package managers, and IoT device fleets. It is specifically suited
+    to the distribution of static, pre-signable content (firmware images, packages,
+    and versioned binary artifacts), where signatures can be computed offline and
+    injected at deployment time. DIVE has two independent components: (1) an object-security
+    layer, which uses HTTP Message Signatures (RFC 9421) to carry per-resource signatures
+    in HTTP response headers, and (2) a DNS key-distribution layer, which publishes
+    public keys and policy in DNSSEC-protected TXT records. A client implementing
+    DIVE verifies each covered resource against the corresponding DNS-published public
+    key before accepting it. An attacker must therefore compromise both the DNS infrastructure
+    and the origin server simultaneously to deliver a tampered resource to a DIVE-compliant
+    client.</p>"
   language:
   - en
   script:
@@ -49,6 +54,16 @@ relation:
       primary: true
     formattedref:
       content: draft-callec-dive-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-callec-dive-02
+    docid:
+    - id: draft-callec-dive-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-callec-dive-02
       format: text/plain
 ext:
   schema-version: v1.0.1
