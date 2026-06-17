@@ -1,0 +1,122 @@
+---
+schema-version: v1.2.3
+id: draft-vandemeent-mux-status-frame-00
+title:
+- content: 'MUX Status Frame: Two-Way Reachability Signalling without an Enumeration
+    Oracle'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-vandemeent-mux-status-frame-00
+  type: src
+type: standard
+docid:
+- id: draft-vandemeent-mux-status-frame-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.vandemeent-mux-status-frame
+  type: IETF
+  scope: anchor
+docnumber: I-D.vandemeent-mux-status-frame
+date:
+- type: published
+  value: '2026-06-17'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Jasper
+          language:
+          - en
+        - language:
+          - en
+          initial: J
+        formatted_initials:
+          content: J.
+          language:
+          - en
+      surname:
+        content: van de Meent
+        language:
+        - en
+      completename:
+        content: Jasper van de Meent
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Humotica
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Root
+          language:
+          - en
+        - language:
+          - en
+          initial: R
+        formatted_initials:
+          content: R.
+          language:
+          - en
+      surname:
+        content: AI
+        language:
+        - en
+      completename:
+        content: Root AI
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Humotica
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-06-17'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>This document defines the MUX Status Frame, a two-octet, relationship-scoped
+    signal that lets a multiplexing routing layer tell a proven, related peer that
+    a destination is unavailable - offline, not in session, superseded, or permanently
+    revoked (tombstoned) - while disclosing nothing to the open network. It resolves
+    the tension between two failure modes of a null-routing mux: silently dropping
+    traffic to a dead peer (a false positive - the sender believes it landed) and
+    answering honestly to everyone (an enumeration oracle mapping who is alive, dead,
+    or revoked). Honest status travels only on a relationship-scoped trusted path;
+    to the world, and to any merely authenticated but unrelated peer, the entire frame
+    is zero. Status is derived from the canonical naming record and session liveness,
+    not from a separate blocklist. The encoding is deterministic so independent implementations
+    agree byte-for-byte. This protocol is transport-agnostic and complements JIS [JIS],
+    AINS [AINS], TIBET [TIBET], and RVP [RVP].</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-vandemeent-mux-status-frame-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

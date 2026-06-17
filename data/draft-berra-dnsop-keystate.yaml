@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-berra-dnsop-keystate
 title:
-- content: Signalling Key State Via DNS EDNS(0) OPT
+- content: Signaling Key State Via a DNS EDNS(0) Option
   language:
   - en
   script:
@@ -13,18 +13,18 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document introduces the KeyState EDNS(0) option code, to enable
-    the exchange of SIG(0) key state information between DNS entities via the DNS
-    protocol. The KeyState option allows DNS clients and servers to include key state
-    data in both queries and responses, facilitating mutual awareness of SIG(0) key
-    status between child and parent zones. This mechanism addresses the challenges
-    of maintaining synchronization of SIG(0) keys used for securing DNS UPDATE messages,
-    thereby enhancing the efficiency and reliability of DNS operations that require
-    coordinated key management. This document proposes such a mechanism. TO BE REMOVED:
-    This document is being collaborated on in Github at: https://github.com/johanix/draft-berra-dnsop-opt-transaction-state
-    (https://github.com/johanix/draft-berra-dnsop-transaction-state-00). The most
-    recent working version of the document, open issues, etc, should all be available
-    there. The authors (gratefully) accept pull requests.</p>"
+- content: "<p>This document introduces the KeyState EDNS(0) option, to enable a child
+    operator to query a parent UPDATE Receiver about the state of a SIG(0) key used
+    to secure cross-zone-cut DNS UPDATE messages. The KeyState option allows the child
+    to include a key state inquiry in its DNS query, and the parent to include the
+    corresponding key state in its response. This addresses the challenge of maintaining
+    synchronization of SIG(0) keys between the child and the parent UPDATE Receiver:
+    the child can become aware of any issue with its SIG(0) key in advance, before
+    attempting the next operational DNS UPDATE. TO BE REMOVED: This document is being
+    collaborated on in Github at: https://github.com/johanix/draft-berra-dnsop-keystate
+    (https://github.com/johanix/draft-berra-dnsop-keystate). The most recent working
+    version of the document, open issues, etc, should all be available there. The
+    authors (gratefully) accept pull requests.</p>"
   language:
   - en
   script:
@@ -60,6 +60,16 @@ relation:
       primary: true
     formattedref:
       content: draft-berra-dnsop-keystate-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-berra-dnsop-keystate-03
+    docid:
+    - id: draft-berra-dnsop-keystate-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-berra-dnsop-keystate-03
       format: text/plain
 ext:
   schema-version: v1.0.1

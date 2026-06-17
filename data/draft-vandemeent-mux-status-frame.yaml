@@ -1,0 +1,47 @@
+---
+schema-version: v1.2.3
+id: draft-vandemeent-mux-status-frame
+title:
+- content: 'MUX Status Frame: Two-Way Reachability Signalling without an Enumeration
+    Oracle'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-vandemeent-mux-status-frame
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This document defines the MUX Status Frame, a two-octet, relationship-scoped
+    signal that lets a multiplexing routing layer tell a proven, related peer that
+    a destination is unavailable - offline, not in session, superseded, or permanently
+    revoked (tombstoned) - while disclosing nothing to the open network. It resolves
+    the tension between two failure modes of a null-routing mux: silently dropping
+    traffic to a dead peer (a false positive - the sender believes it landed) and
+    answering honestly to everyone (an enumeration oracle mapping who is alive, dead,
+    or revoked). Honest status travels only on a relationship-scoped trusted path;
+    to the world, and to any merely authenticated but unrelated peer, the entire frame
+    is zero. Status is derived from the canonical naming record and session liveness,
+    not from a separate blocklist. The encoding is deterministic so independent implementations
+    agree byte-for-byte. This protocol is transport-agnostic and complements JIS [JIS],
+    AINS [AINS], TIBET [TIBET], and RVP [RVP].</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-vandemeent-mux-status-frame-00
+    docid:
+    - id: draft-vandemeent-mux-status-frame-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-vandemeent-mux-status-frame-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
