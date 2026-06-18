@@ -1,0 +1,119 @@
+---
+schema-version: v1.2.3
+id: draft-mackay-aacp-03
+title:
+- content: Agent Action Compression Protocol (AACP) Version 1.4
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-mackay-aacp-03
+  type: src
+type: standard
+docid:
+- id: draft-mackay-aacp-03
+  type: Internet-Draft
+  primary: true
+- id: I-D.mackay-aacp
+  type: IETF
+  scope: anchor
+docnumber: I-D.mackay-aacp
+date:
+- type: published
+  value: '2026-06-17'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Andrew
+          language:
+          - en
+        - language:
+          - en
+          initial: A
+        formatted_initials:
+          content: A.
+          language:
+          - en
+      surname:
+        content: Mackay
+        language:
+        - en
+      completename:
+        content: Andrew Mackay
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Independent
+  role:
+  - type: author
+version:
+- draft: '03'
+revdate: '2026-06-17'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>This document defines the Agent Action Compression Protocol (AACP),
+    a typed coordination format for agent-to-agent communication in multi- agent large
+    language model (LLM) systems. AACP transforms natural language coordination instructions
+    into deterministic, machine- parseable packets that can be validated before transmission,
+    logged as structured audit records, and replayed consistently across workflow
+    runs. AACP addresses a coordination content layer that existing agent protocols
+    do not cover. The Model Context Protocol (MCP) and Agent- to-Agent Protocol (A2A)
+    operate at the tool access and routing layers respectively. Neither specifies
+    what agents say to each other inside coordination messages. AACP fills this gap
+    with a shared, typed vocabulary for agent coordination intent. For known workflow
+    types, a rule-based encoder produces AACP packets deterministically at zero LLM
+    cost. A four-tier fallback extends this to novel instructions: community registry
+    lookup at zero cost; local cache lookup at zero cost; pattern matching at zero
+    cost; LLM encoding for genuinely novel instructions, logged to registry for permanent
+    reuse. An amortisation benchmark across 240 encoding operations demonstrated 91.6
+    percent cost saving versus per-call LLM encoding, with 6 LLM calls required across
+    the full run. As a secondary benefit, AACP reduces coordination token usage by
+    approximately 23 percent versus equivalent natural language instructions. Framework
+    integration benchmarks demonstrate 18 percent total workflow cost reduction in
+    LangChain (59 coordination hops) and 30 percent in CrewAI (59 coordination hops),
+    with all coordination LLM calls eliminated in both cases. This document updates
+    draft-mackay-aacp-02 with: framework integration results for AutoGen (55 percent
+    total cost reduction, 59 coordination hops) and Pydantic AI (85 percent total
+    cost reduction, 59 coordination hops); a four-framework comparison demonstrating
+    that AACP saving scales with framework coordination verbosity; a new framing for
+    typed-result frameworks showing that AACP completes the determinism picture by
+    adding typed instructions to complement existing typed results; and publication
+    of five packages on PyPI and npm covering all four frameworks.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-mackay-aacp-00
+    docid:
+    - id: draft-mackay-aacp-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-mackay-aacp-00
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-mackay-aacp-03
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
