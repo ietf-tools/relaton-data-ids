@@ -18,11 +18,17 @@ abstract:
     the minimum facts needed to make a trust decision about a future call: who acted,
     who delegated, what tool was used, whether the call succeeded, how long it took,
     and how the call's inputs and outputs are identified (without disclosing their
-    contents). The format is intentionally tool-system-agnostic. The same receipt
-    structure can be emitted by MCP (Model Context Protocol) servers, LangChain.js
-    callback handlers, OpenAI tool-calling loops, HTTP clients, or proprietary agent
-    runtimes. Receipts use Ed25519 signatures over a JSON-canonicalized payload, and
-    identities are W3C Decentralized Identifiers (DIDs). Scoring policy, aggregation
+    contents). A distinguishing property of the format is optional caller co- signature
+    over the same canonical per-call record. When both signatures validate, the receipt
+    cryptographically binds the identified Caller and Agent to the same canonical
+    payload. This does not establish that either party independently observed every
+    field, that the recorded execution was correct, or that the parties did not collude.
+    A receipt may carry the Agent signature alone, and consumers may distinguish the
+    two cases according to deployment policy. The format is intentionally tool-system-agnostic.
+    The same receipt structure can be emitted by MCP (Model Context Protocol) servers,
+    LangChain.js callback handlers, OpenAI tool-calling loops, HTTP clients, or proprietary
+    agent runtimes. Receipts use Ed25519 signatures over a JSON-canonicalized payload,
+    and identities are W3C Decentralized Identifiers (DIDs). Scoring policy, aggregation
     architecture, and reactive behavior in response to receipts are explicitly out
     of scope and left to deployments.</p>"
   language:
@@ -40,6 +46,26 @@ relation:
       primary: true
     formattedref:
       content: draft-xkumakichi-xaip-receipts-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-xkumakichi-xaip-receipts-01
+    docid:
+    - id: draft-xkumakichi-xaip-receipts-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-xkumakichi-xaip-receipts-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-xkumakichi-xaip-receipts-02
+    docid:
+    - id: draft-xkumakichi-xaip-receipts-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-xkumakichi-xaip-receipts-02
       format: text/plain
 ext:
   schema-version: v1.0.1
