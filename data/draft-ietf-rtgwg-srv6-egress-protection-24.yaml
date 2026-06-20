@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-rtgwg-srv6-egress-protection-23
+id: draft-ietf-rtgwg-srv6-egress-protection-24
 title:
 - content: SRv6 Path Egress Protection
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-rtgwg-srv6-egress-protection-23
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-rtgwg-srv6-egress-protection-24
   type: src
 type: standard
 docid:
-- id: draft-ietf-rtgwg-srv6-egress-protection-23
+- id: draft-ietf-rtgwg-srv6-egress-protection-24
   type: Internet-Draft
   primary: true
 - id: I-D.ietf-rtgwg-srv6-egress-protection
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.ietf-rtgwg-srv6-egress-protection
 date:
 - type: published
-  value: '2026-04-09'
+  value: '2026-06-19'
 contributor:
 - person:
     name:
@@ -165,26 +165,20 @@ contributor:
   role:
   - type: author
 version:
-- draft: '23'
-revdate: '2026-04-09'
+- draft: '24'
+revdate: '2026-06-19'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>TI-LFA specifies fast protections for transit nodes and links of an
-    SR path. However, it does not present any fast protections for the egress node
-    of the SR path. This document describes protocol extensions for fast protecting
-    the egress node and link of a Segment Routing for IPv6 (SRv6) path. The solution
-    uses IGP extensions and a Mirror SID (End.M) behavior to steer traffic to a protector
-    egress upon failure of the primary egress. This document operates within a single
-    link-state IGP area/level and uses IS-IS/OSPFv3 to advertise a Mirror SID and
-    the protected locators for egress node/link protection. While the mechanism can
-    protect traffic whose active segment at the egress is a Service SID (e.g., VPN
-    SID), it is not suitable for large-scale deployments with a high cardinality of
-    VPN/service instances or random multi-homing patterns, because the amount of egress-protection
-    information to be flooded in the IGP increases and may impact convergence and
-    control- plane load.</p>"
+- content: "<p>This document describes the mechanism and operational guidelines for
+    fast protecting the egress node and link of a Segment Routing for IPv6 (SRv6)
+    path. TI-LFA specifies fast protections for transit nodes and links of an SR path,
+    but does not present protections for the egress node. The solution uses a Mirror
+    SID (End.M) behavior to steer traffic to a protector egress upon failure of the
+    primary egress. The IGP extensions (IS-IS/OSPFv3) can be used to advertise Mirror
+    SID and protected locators.</p>"
   language:
   - en
   script:
@@ -201,16 +195,6 @@ relation:
     formattedref:
       content: draft-ietf-rtgwg-srv6-egress-protection-00
       format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-rtgwg-srv6-egress-protection-24
-    docid:
-    - id: draft-ietf-rtgwg-srv6-egress-protection-24
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-rtgwg-srv6-egress-protection-24
-      format: text/plain
 series:
 - type: main
   title:
@@ -220,7 +204,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-rtgwg-srv6-egress-protection-23
+  number: draft-ietf-rtgwg-srv6-egress-protection-24
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
