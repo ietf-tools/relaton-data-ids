@@ -1,0 +1,58 @@
+---
+schema-version: v1.2.3
+id: draft-vandemeent-bearer-handover
+title:
+- content: Identity-Anchored Bearer Handover for Real-Time Media Sessions
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-vandemeent-bearer-handover
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This document describes identity-anchored bearer handover: a method
+    for keeping a live, authenticated real-time media session (such as a voice call)
+    running uninterrupted while the underlying network bearer changes - for example
+    a device moving from Wi-Fi to cellular. The session is bound to a cryptographic
+    identity and a media-encryption key, never to an IP address. When the bearer changes,
+    the endpoint detects the new local address and emits an authenticated re-anchor
+    over a stable control channel; the media path is re-established to the same cryptographic
+    context, so the far end can relearn the new transport source without exposing
+    the session to source-substitution (latching) attacks. No central media relay
+    is required: a default- routed media anchor plus an authenticated re-anchor is
+    sufficient. Each handover MAY emit a signed transport-rebind event for an auditable
+    trail. Human-facing names, dial strings, or aliases may select a policy surface,
+    but they are not the cryptographic anchor and not the transport binding. This
+    protocol is transport-agnostic and complements JIS [JIS], the MUX Status Frame
+    [MUX], the Semantic Surface Manifest [SSM], and TIBET provenance [TIBET].</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-vandemeent-bearer-handover-00
+    docid:
+    - id: draft-vandemeent-bearer-handover-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-vandemeent-bearer-handover-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-vandemeent-bearer-handover-01
+    docid:
+    - id: draft-vandemeent-bearer-handover-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-vandemeent-bearer-handover-01
+      format: text/plain
+ext:
+  schema-version: v1.0.1

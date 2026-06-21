@@ -15,7 +15,7 @@ docid:
 abstract:
 - content: "<p>This document defines a mechanism for binding OAuth 2.0 access tokens
     to a specific mutual TLS (mTLS) connection. The binding is achieved through a
-    proof token that incorporates the TLS Exporter value [RFC5705] derived from the
+    proof token that incorporates the TLS Exporter value (RFC 5705) derived from the
     current connection and an access token hash, signed by the client's private key
     corresponding to its mTLS certificate. This mechanism prevents stolen bearer tokens
     from being replayed on a different TLS connection. The proof is constructed once
@@ -23,8 +23,8 @@ abstract:
     delivering session binding with no per-request signing overhead and no additional
     key management beyond what mTLS already provides. The mechanism is applicable
     to TLS 1.2, TLS 1.3, and QUIC transports. While applicable to any OAuth 2.0 access
-    token presented over mTLS, this specification is primarily motivated by the Token
-    Exchange protocol [RFC8693], where multi-hop delegation chains in autonomous,
+    token presented over mTLS, this specification is primarily motivated by the OAuth
+    2.0 Token Exchange protocol (RFC 8693), where multi-hop delegation chains in autonomous,
     agent-driven architectures create elevated replay risk.</p>"
   language:
   - en
@@ -101,6 +101,16 @@ relation:
       primary: true
     formattedref:
       content: draft-mw-oauth-tls-session-bound-tokens-06
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-mw-oauth-tls-session-bound-tokens-07
+    docid:
+    - id: draft-mw-oauth-tls-session-bound-tokens-07
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-mw-oauth-tls-session-bound-tokens-07
       format: text/plain
 ext:
   schema-version: v1.0.1
