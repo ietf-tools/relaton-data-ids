@@ -13,14 +13,18 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>RPKI ROAs and other digitally signed objects provide a practical solution
-    to validate BGP routes for preventing route hijacks and leaks. During ROV operations,
-    validation data may be sourced not only from issued ROAs but also from other local
-    sources. As these data sources vary in credibility, ROV operations may therefore
-    require different response actions for invalid or unknown routes. This document
-    takes ROV as an example to describe a flexible RPKI- based route validation mechanism
-    with multi-priority data, and outlines relevant use cases, framework, and requirements
-    for ROV operations that involve multi-priority data.</p>"
+- content: "<p>The Resource Public Key Infrastructure (RPKI) provides globally verifiable
+    signed routing security data, such as Route Origin Authorizations (ROAs). Operators
+    also commonly use local or supplemental data sources, including SLURM files, operator-maintained
+    exceptions, IRR-derived inputs, and other operator-selected supplemental data,
+    to improve local routing decisions. These sources may not have the same authority
+    as signed RPKI objects and therefore may require operator-configured priority-safe
+    handling. This document describes a framework for RPKI-based validation with prioritized
+    resource data. It defines priority-safe handling semantics that allow operators
+    to use data sources with different levels of authority or assurance for local
+    routing policy, while preserving the global authorization semantics of signed
+    RPKI data. The document also discusses deployment models with different implementation
+    costs and operational trade-offs.</p>"
   language:
   - en
   script:
@@ -46,6 +50,16 @@ relation:
       primary: true
     formattedref:
       content: draft-zhang-sidrops-prioritized-route-validation-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-zhang-sidrops-prioritized-route-validation-02
+    docid:
+    - id: draft-zhang-sidrops-prioritized-route-validation-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-zhang-sidrops-prioritized-route-validation-02
       format: text/plain
 ext:
   schema-version: v1.0.1

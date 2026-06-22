@@ -1,0 +1,108 @@
+---
+schema-version: v1.2.3
+id: draft-schrock-ep-quorum-01
+title:
+- content: Multi-Party Quorum Authorization for High-Risk Agent Actions (EP-QUORUM)
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-schrock-ep-quorum-01
+  type: src
+type: standard
+docid:
+- id: draft-schrock-ep-quorum-01
+  type: Internet-Draft
+  primary: true
+- id: I-D.schrock-ep-quorum
+  type: IETF
+  scope: anchor
+docnumber: I-D.schrock-ep-quorum
+date:
+- type: published
+  value: '2026-06-21'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Iman
+          language:
+          - en
+        - language:
+          - en
+          initial: I
+        formatted_initials:
+          content: I.
+          language:
+          - en
+      surname:
+        content: Schrock
+        language:
+        - en
+      completename:
+        content: Iman Schrock
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: EMILIA Protocol, Inc.
+  role:
+  - type: author
+version:
+- draft: '01'
+revdate: '2026-06-21'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: '<p>This document defines EP-QUORUM, a multi-party authorization profile
+    for the EMILIA Protocol (EP) authorization receipt (draft-schrock-ep- authorization-receipts).
+    Where the base receipt binds a single accountable human to one exact high-risk
+    action, EP-QUORUM binds a set of distinct accountable humans -- the "two-person
+    rule," generalized to M-of-N and to ordered approval trails -- to one exact action,
+    such that no action is authorized until the full quorum holds. The profile is
+    purely additive: each quorum member is an unmodified EP signoff over the same
+    action hash, and a single- approver policy is the degenerate one-member case.
+    EP-QUORUM specifies a fail-closed quorum predicate (all member signatures valid,
+    every member bound to the exact action, approvers pairwise distinct, every approver
+    admitted by role, the threshold met, the declared order respected, and all signatures
+    within a bounded time window), an incremental server-side admission rule that
+    rejects a non-conforming signer before it enters the trail, and a set of adversarial
+    conformance vectors. The predicate is offline-verifiable under the base draft''s
+    verification model and is maintained as cross- language conformance vectors that
+    three independent implementations (JavaScript, Python, Go) are required to agree
+    on.</p>'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-schrock-ep-quorum-00
+    docid:
+    - id: draft-schrock-ep-quorum-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-schrock-ep-quorum-00
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-schrock-ep-quorum-01
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

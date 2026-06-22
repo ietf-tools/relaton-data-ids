@@ -1,0 +1,59 @@
+---
+schema-version: v1.2.3
+id: draft-cheng-sidrops-rpki-rov-gap-analysis
+title:
+- content: Information Asymmetry and Deployment Gaps in RPKI-based Route Origin Validation
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-cheng-sidrops-rpki-rov-gap-analysis
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>The Resource Public Key Infrastructure (RPKI) and Route Origin Validation
+    (ROV) have made significant progress. Over 60% of IPv4 routes now have ROAs, and
+    more than 70% of Internet traffic flows to ROA-covered prefixes. A growing number
+    of large transit providers actively reject RPKI-invalid routes. Despite these
+    achievements, however, thousands of RPKI-invalid routes persistently appear in
+    the global routing table, and their count has not shown a sustained downward trend
+    over the years. More importantly, the deployment of strict ROV drop policies is
+    highly uneven. While large transit providers have largely embraced dropping invalids,
+    the long tail - tens of thousands of stub ASes and small regional ISPs - remains
+    on the sidelines, often keeping ROV in monitor-only mode or not deploying it at
+    all. This document analyzes the root causes behind these persistent gaps: (1)
+    inherent *synchronization asymmetry* between the RPKI management plane and router
+    control planes, and (2) the inevitable possibility of *errors on both planes*
+    (ROA configuration and router origin configuration). These causes lead to a fundamental
+    *information asymmetry*: downstream routers cannot distinguish self-inflicted
+    invalids (due to sync delays or misconfigurations) from true prefix hijacks. We
+    examine the operational harms of this asymmetry - unnecessary blackholes, path
+    shifts, global route churn, and long-lived connectivity loss - and explain why
+    the long tail remains reluctant to deploy ROV. We then identify the informational
+    requirements that any enhanced system would need to meet: source-side cross-validation
+    to prevent self-inflicted invalids, and downstream consistency information to
+    reconcile local ROV outcomes with the origin's intent. The goal is to enable more
+    confident and widespread deployment of strict ROV policies while preserving the
+    existing RPKI-ROV architecture. This document does not propose a specific protocol
+    solution. It defines the problem space and information needs, providing a foundation
+    for future work.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-cheng-sidrops-rpki-rov-gap-analysis-00
+    docid:
+    - id: draft-cheng-sidrops-rpki-rov-gap-analysis-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-cheng-sidrops-rpki-rov-gap-analysis-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
