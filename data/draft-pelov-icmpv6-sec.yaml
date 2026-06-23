@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-pelov-icmpv6-sec
 title:
-- content: Secure ICMPv6 Messages for Network Segment Characterization
+- content: ICMPv6 Secure Segment Treatment Notifications
   language:
   - en
   script:
@@ -13,15 +13,15 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document proposes a new ICMPv6 message type, ICMPv6-SEC, designed
-    to convey cryptographically verifiable information using COSE objects and CBOR-encoded
-    certificates. The purpose is to signal segment-specific network characteristics,
-    including high RTT, congestion, policy constraints, and traffic treatment expectations.
-    These messages can describe either the segment beyond the current hop (forward
-    segment) or the local segment on which the source resides. Certificates may be
-    embedded or referenced via DNS using cryptographic hashes. The mechanism is optimized
-    for high-speed environments by allowing the use of static, signed descriptors
-    for destination prefixes.</p>"
+- content: "<p>A packet can cross an IPv6 segment whose properties - long delay, scheduled
+    contacts, a strict size budget - defeat the feedback an endpoint normally relies
+    on. This document defines ICMPv6-SEC (SECure Segment Treatment), an ICMPv6 message
+    that a segment boundary sends to a packet's source when the packet is not prepared
+    for such a segment. The message carries a COSE-signed Segment Descriptor: a compact
+    CBOR object stating which segment is meant, how long the statement is valid, and
+    what treatment future packets require. A receiver applies a descriptor only after
+    verifying the signature, the validity window, and that the signer is authorized
+    for the segment.</p>"
   language:
   - en
   script:
@@ -37,6 +37,16 @@ relation:
       primary: true
     formattedref:
       content: draft-pelov-icmpv6-sec-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-pelov-icmpv6-sec-01
+    docid:
+    - id: draft-pelov-icmpv6-sec-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-pelov-icmpv6-sec-01
       format: text/plain
 ext:
   schema-version: v1.0.1

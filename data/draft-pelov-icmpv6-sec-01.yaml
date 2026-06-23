@@ -1,0 +1,100 @@
+---
+schema-version: v1.2.3
+id: draft-pelov-icmpv6-sec-01
+title:
+- content: ICMPv6 Secure Segment Treatment Notifications
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-pelov-icmpv6-sec-01
+  type: src
+type: standard
+docid:
+- id: draft-pelov-icmpv6-sec-01
+  type: Internet-Draft
+  primary: true
+- id: I-D.pelov-icmpv6-sec
+  type: IETF
+  scope: anchor
+docnumber: I-D.pelov-icmpv6-sec
+date:
+- type: published
+  value: '2026-06-23'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Alexander
+          language:
+          - en
+        - language:
+          - en
+          initial: A
+        formatted_initials:
+          content: A.
+          language:
+          - en
+      surname:
+        content: Pelov
+        language:
+        - en
+      completename:
+        content: Alexander Pelov
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: IMT Atlantique
+  role:
+  - type: author
+version:
+- draft: '01'
+revdate: '2026-06-23'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>A packet can cross an IPv6 segment whose properties - long delay, scheduled
+    contacts, a strict size budget - defeat the feedback an endpoint normally relies
+    on. This document defines ICMPv6-SEC (SECure Segment Treatment), an ICMPv6 message
+    that a segment boundary sends to a packet's source when the packet is not prepared
+    for such a segment. The message carries a COSE-signed Segment Descriptor: a compact
+    CBOR object stating which segment is meant, how long the statement is valid, and
+    what treatment future packets require. A receiver applies a descriptor only after
+    verifying the signature, the validity window, and that the signer is authorized
+    for the segment.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-pelov-icmpv6-sec-00
+    docid:
+    - id: draft-pelov-icmpv6-sec-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-pelov-icmpv6-sec-00
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-pelov-icmpv6-sec-01
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

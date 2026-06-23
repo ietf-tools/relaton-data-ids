@@ -1,0 +1,50 @@
+---
+schema-version: v1.2.3
+id: draft-huang-sidrops-source-pre-validation
+title:
+- content: Source Pre-validation in RPKI-based Route Origin Validation
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-huang-sidrops-source-pre-validation
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>The Resource Public Key Infrastructure (RPKI) and Route Origin Validation
+    (ROV) have significantly improved inter-domain routing security. However, thousands
+    of RPKI-invalid routes - the vast majority caused by misconfiguration or synchronization
+    delays - persistently appear in the global routing table. Many of these self-
+    inflicted invalid routes originate from autonomous systems (ASes) that could have
+    easily blocked them before advertisement. This document defines a *Best Current
+    Practice (BCP)* for *source pre-validation*: the practice by which an originating
+    AS checks its intended BGP announcement against its local RPKI cache *before*
+    sending it to eBGP neighbors. Routes that would be evaluated as Invalid (or NotFound
+    for strict mode) are blocked, logged, and *MUST be cached* for later re-evaluation,
+    enabling automatic recovery when RPKI data changes. Routes evaluated as Valid
+    or NotFound(for default mode) may be advertised normally. This BCP complements
+    existing standards RFC8893 &amp; RFC9324 by focusing on *mandatory deployment
+    at the origin* and on *outbound caching* of suppressed routes. It provides operational
+    guidance for deployment, cache management, and handling of RPKI data updates.
+    Implementation of this BCP reduces self-inflicted invalid routes, improves global
+    routing stability, and encourages wider ROV adoption.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-huang-sidrops-source-pre-validation-00
+    docid:
+    - id: draft-huang-sidrops-source-pre-validation-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-huang-sidrops-source-pre-validation-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

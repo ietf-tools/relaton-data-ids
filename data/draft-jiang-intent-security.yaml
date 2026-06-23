@@ -2,7 +2,8 @@
 schema-version: v1.2.3
 id: draft-jiang-intent-security
 title:
-- content: Security Considerations for Intent-Based Requests in Agentic Systems
+- content: Security Considerations and Requirements for Intent-Based Requests in Agentic
+    Systems
   language:
   - en
   script:
@@ -22,11 +23,13 @@ abstract:
     at the point where an intent enters the system, a forged or unauthorized origin
     may cause actions to be taken without valid consent. This document provides a
     solution-agnostic security analysis for intent-based requests across agentic systems.
-    It introduces a reference model and scenarios to guide protocol and system design,
-    and also presents threats and requirements. The document emphasizes origin authentication
-    and admission control, constraint validation, invocation validation, multi-hop
-    chain-of-custody, and policy-driven responses to drift, while remaining independent
-    of any specific deployment domain.</p>"
+    It presents attack scenarios, a threat model, security requirements, and per-scenario
+    mitigation considerations, supported by a reference model. The document is Informational:
+    it does not define a protocol, message format, or registry, and concrete mechanisms
+    are left to companion specifications. It emphasizes origin authentication and
+    admission control, constraint validation, invocation validation, multi-hop chain-of-custody,
+    enforcement placement across hops, and policy- driven responses to drift, while
+    remaining independent of any specific deployment domain.</p>"
   language:
   - en
   script:
@@ -62,6 +65,16 @@ relation:
       primary: true
     formattedref:
       content: draft-jiang-intent-security-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-jiang-intent-security-03
+    docid:
+    - id: draft-jiang-intent-security-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-jiang-intent-security-03
       format: text/plain
 ext:
   schema-version: v1.0.1

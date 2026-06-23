@@ -13,20 +13,17 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>The evolution of 6G networks and the expansion of Internet of Things
-    (IoT) environments introduce new challenges in managing diverse networked resources.
-    Intent-based management frameworks enable operators to express desired network
-    outcomes using high-level intents, often articulated in natural language. However,
-    converting these expressions into machine-executable policy configurations remains
-    an open challenge. This document defines an intent translation framework designed
-    to bridge the gap between user-issued intents and structured policy representations
-    for 6G enabled IoT systems. The framework accepts natural language intent as input
-    and produces a policy document in a structured format, such as YAML, that aligns
-    with the intent model defined in 3GPP in [TS-28.312]. The framework consists of
-    modular components responsible for processing input, aligning user intent with
-    domain knowledge, evaluating semantic confidence, and generating standardized
-    output. This modularity supports transparency, interoperability, and automated
-    policy enforcement in next-generation network infrastructures.</p>"
+- content: "<p>This document describes an intent translation framework for Internet
+    of Things (IoT) and next-generation network management environments. The framework
+    converts user-issued natural language intents into structured policy representations
+    that can be consumed by management and orchestration systems. The framework decomposes
+    intent interpretation into parallel role- and-scenario classification and entity-and-slot
+    extraction, merges the results into an intermediate representation, and generates
+    a candidate policy document under schema-as-grammar constraints derived from the
+    target schema. A policy validator then checks the candidate output for schema
+    conformance, cross-slot consistency, and faithfulness to the original intent.
+    When validation fails, a trace driven recovery agent dispatches targeted regeneration
+    or re- extraction rather than relying on generic retry.</p>"
   language:
   - en
   script:
@@ -62,6 +59,16 @@ relation:
       primary: true
     formattedref:
       content: draft-gu-nmrg-intent-translator-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-gu-nmrg-intent-translator-03
+    docid:
+    - id: draft-gu-nmrg-intent-translator-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-gu-nmrg-intent-translator-03
       format: text/plain
 ext:
   schema-version: v1.0.1
