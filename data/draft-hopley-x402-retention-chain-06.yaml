@@ -1,0 +1,119 @@
+---
+schema-version: v1.2.3
+id: draft-hopley-x402-retention-chain-06
+title:
+- content: Self-Verifiable Retention Chain for Payment Receipts
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-hopley-x402-retention-chain-06
+  type: src
+type: standard
+docid:
+- id: draft-hopley-x402-retention-chain-06
+  type: Internet-Draft
+  primary: true
+- id: I-D.hopley-x402-retention-chain
+  type: IETF
+  scope: anchor
+docnumber: I-D.hopley-x402-retention-chain
+date:
+- type: published
+  value: '2026-06-24'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - language:
+          - en
+          initial: H
+        - language:
+          - en
+          initial: C
+        formatted_initials:
+          content: H. C.
+          language:
+          - en
+      surname:
+        content: Mr
+        language:
+        - en
+      completename:
+        content: MR CHRISTOPHER HOPLEY
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: AlgoVoi
+  role:
+  - type: author
+version:
+- draft: '06'
+revdate: '2026-06-24'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>This document specifies seven cryptographic constructions for self-verifiable
+    agentic payment records. The first, the Retention Chain Reference (retention_chain_ref),
+    enables tamper-evident audit chains linking payment receipts without requiring
+    external infrastructure. The second, the Payment Action Lifecycle, defines a content-addressed
+    model for the exactly-once execution of payment actions, including an action reference
+    primitive (action_ref) and a per-state transition hash (transition_hash) with
+    a provable SKIP-on- retry idempotency guarantee. The third, the Settlement-Action
+    Binding (binding_ref), binds a settled payment to the verified agent action it
+    paid for and to the retention chain entry recording it, so that a settlement attestation
+    proves not only that a payment occurred but which verified action it corresponds
+    to. The fourth, the Policy Binding (policy_bound_ref), binds a content-addressed
+    snapshot of the governing policy to an existing binding or chain reference, so
+    that a decision is verifiable against the exact policy version that admitted it
+    and a policy rotation is detectable by recomputation. The fifth, the Compliance
+    Gate Binding (gate_ref), binds a categorical ALLOW/REFER/DENY compliance verdict
+    and a no-PII payer reference to a policy or binding reference, so that a screening
+    decision is provably tied to the policy in force when it was made and carries
+    no personal data in the bound record. The sixth, the Pre-Payment Decision Chain
+    (guardrail_ref), composes an agent identity reference, a spend authority reference,
+    and the policy in force into one recomputable pre-payment ALLOW/DENY decision.
+    The seventh, Post-Decision Execution Evidence (execution_ref), binds an executed
+    action to the exact decision that authorized it, so the recorded execution is
+    provably consistent with the decision and not merely correlated with an agent
+    identity. All constructions use only SHA-256 and the JSON Canonicalization Scheme
+    (JCS, RFC 8785), and are verifiable by any party holding the relevant receipts
+    without contacting the issuer. The constructions satisfy the transaction recording
+    and audit trail obligations of MiCA Article 80, DORA Article 14, and AMLR Article
+    56.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-hopley-x402-retention-chain-01
+    docid:
+    - id: draft-hopley-x402-retention-chain-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-hopley-x402-retention-chain-01
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-hopley-x402-retention-chain-06
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

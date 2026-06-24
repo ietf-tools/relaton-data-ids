@@ -1,0 +1,98 @@
+---
+schema-version: v1.2.3
+id: draft-bezerra-relay-auth-transparency-00
+title:
+- content: Authentication-Transparent Protocol Extensions in Middleware-Relayed Systems
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-bezerra-relay-auth-transparency-00
+  type: src
+type: standard
+docid:
+- id: draft-bezerra-relay-auth-transparency-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.bezerra-relay-auth-transparency
+  type: IETF
+  scope: anchor
+docnumber: I-D.bezerra-relay-auth-transparency
+date:
+- type: published
+  value: '2026-06-24'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Cleiton
+          language:
+          - en
+        - language:
+          - en
+          initial: C
+        - language:
+          - en
+          initial: A
+        - language:
+          - en
+          initial: C
+        formatted_initials:
+          content: C. A. C.
+          language:
+          - en
+      surname:
+        content: Bezerra
+        language:
+        - en
+      completename:
+        content: Cleiton Augusto Correa Bezerra
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Independent Researcher
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-06-24'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: <p>Protocol-aware middleware (relays, bridges, gateways) re-serializes
+    messages at their protocol frame boundary, silently discarding any bytes appended
+    outside that boundary. Authentication material placed after the frame boundary
+    by a sender is therefore stripped at every relay hop before reaching the receiver,
+    with no error indication. This document identifies this behavior as a protocol
+    design vulnerability class -- "relay-transparent authentication stripping" --
+    demonstrates it in three independent protocol stacks (MAVLink v2, ROS2/DDS CDR,
+    and CAN/AUTOSAR SecOC), and specifies the architectural principle that authentication
+    material must be carried as a first- class, independently addressable protocol
+    unit to survive relay transit. Post-quantum cryptographic schemes (ML-DSA-87,
+    ML-KEM-1024) are particularly susceptible due to their large signature and ciphertext
+    sizes.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-bezerra-relay-auth-transparency-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

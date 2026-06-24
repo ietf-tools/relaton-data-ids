@@ -14,11 +14,12 @@ docid:
   primary: true
 abstract:
 - content: "<p>This specification defines a method for OAuth 2.0 clients to discover
-    the set of available target services (audiences, resources, and scopes) for a
-    given subject token when performing OAuth 2.0 Token Exchange. The discovery endpoint
-    accepts any subject token type registered in the OAuth Token Type Registry and
-    returns values that are valid inputs to subsequent Token Exchange requests, supporting
-    advanced use cases such as identity chaining and cross-domain delegation.</p>"
+    the set of available Token Exchange Targets (such as audiences, resources, scopes,
+    and token types) for a given subject token when performing OAuth 2.0 Token Exchange.
+    The discovery endpoint accepts a subject token of any type the authorization server
+    supports, identified by a token type URI, and returns values that are valid inputs
+    to subsequent Token Exchange requests, supporting advanced use cases such as identity
+    chaining and cross-domain delegation.</p>"
   language:
   - en
   script:
@@ -44,6 +45,16 @@ relation:
       primary: true
     formattedref:
       content: draft-mcguinness-token-xchg-target-svc-disco-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-mcguinness-token-xchg-target-svc-disco-02
+    docid:
+    - id: draft-mcguinness-token-xchg-target-svc-disco-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-mcguinness-token-xchg-target-svc-disco-02
       format: text/plain
 ext:
   schema-version: v1.0.1

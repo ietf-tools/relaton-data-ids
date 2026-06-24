@@ -13,11 +13,11 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document defines a standard means to signal that a zone cut exists
-    in the DNS without specifying a set of nameservers to which a child zone is delegated.
-    This is useful in situations where it is important to make it clear to clients
-    that a zone cut exists, but when the child zone is only provisioned in a private
-    namespace.</p>"
+- content: <p>This document defines a standard mechanism to signal the existence of
+    a DNS zone cut without specifying authoritative nameservers for the delegated
+    child zone. This "zone cut to nowhere" is particularly useful in split-horizon
+    environments, allowing parent zones to explicitly signal that a child zone exists
+    but is only resolvable within a private namespace.</p>
   language:
   - en
   script:
@@ -33,6 +33,16 @@ relation:
       primary: true
     formattedref:
       content: draft-jabley-dnsop-zone-cut-to-nowhere-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-jabley-dnsop-zone-cut-to-nowhere-01
+    docid:
+    - id: draft-jabley-dnsop-zone-cut-to-nowhere-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-jabley-dnsop-zone-cut-to-nowhere-01
       format: text/plain
 ext:
   schema-version: v1.0.1

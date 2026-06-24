@@ -13,28 +13,19 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>Bootstrapping Remote Secure Key Infrastructure (BRSKI) is a protocol
-    to enroll pledge devices automatically and secure with a registrar of an owner,
-    relying also on proxies to facilitate the communication and Manufacturer Authorized
-    Signing Authorities (MASA) and Certificate Authorities (CA) to enable the enrollment.
-    This document specifies how to make BRSKI communications autoconfiguring, extensible
-    and resilient in the face of simultaneous use of different variations of the BRSKI
-    protocol (BRSKI, BRSKI-AE, BRSKI-PRM, constrained BRSKI, stateless constrained
-    BRSKI proxies). This document specifies a data model, IANA registry and BRSKI
-    component procedures to achieve this. This document does not define any new discovery
-    methods. Instead, its data model allows signaling of all current (and future)
-    variations of the BRSKI family of protocols consistently via different existing
-    network discovery mechanisms: DNS-SD, CoAP discovery (CORE-LF) and GRASP. Additional/future
-    discovery mechanisms can also be supported through the IANA registry. Automatic
-    resiliency and load-sharing are enabled through the use of discovery mechanisms
-    and the provisioning of multiple instances of BRSKI components such as registrars
-    and Join Proxies. This document specifies the procedures to support load-sharing
-    and (fast) failover under failure and recovery of redundant components. Future-proof
-    deployments of BRSKI require Join Proxies that automatically support any current
-    and future BRSKI variation. This document specifies the procedures by which Join
-    Proxies can support this through specific Join Proxy protocol behavior and the
-    use of discovery mechanisms. The specification of discovery of pledges by their
-    IDevID as introduced by BRSKI-PRM is refined in this document.</p>"
+- content: <p>This document specifies procedures for variations of the "Bootstrapping
+    Remote Secure Key Infrastructure" (BRSKI) series of protocols to automatically
+    announce, discover and select responders using different discovery mechanisms
+    such as DNS-SD, GRASP or CORE- LF. Different variations are not interoperable
+    so initiators need to be able to find responders supporting the variation(s) they
+    support. Procedures for BRSKI proxies are defined that allow proxying of traffic
+    for any current and future variation. Procedures to discover BRSKI Pledges by
+    their identifier are defined. All procedures are defined such that they rely on
+    IANA defined tables through which not only well specified but also possible but
+    not yet validated variations of BRSKI or additional discovery mechanisms can be
+    supported simply by adding entries to the IANA tables. Many of the procedures
+    and mechanisms covered by this document may equally be applied to discovery of
+    other protocols, especially when they have non-interoperable variations.</p>
   language:
   - en
   script:
@@ -160,6 +151,26 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-anima-brski-discovery-11
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-anima-brski-discovery-12
+    docid:
+    - id: draft-ietf-anima-brski-discovery-12
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-anima-brski-discovery-12
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-anima-brski-discovery-13
+    docid:
+    - id: draft-ietf-anima-brski-discovery-13
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-anima-brski-discovery-13
       format: text/plain
 ext:
   schema-version: v1.0.1
