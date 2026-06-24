@@ -1,0 +1,58 @@
+---
+schema-version: v1.2.3
+id: draft-vicente-acme-pqc-agility-profile
+title:
+- content: Post-Quantum Cryptographic Agility Profile for ACME
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-vicente-acme-pqc-agility-profile
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This document defines an Automated Certificate Management Environment
+    (ACME) [RFC8555] profile extension that enables ACME servers and clients to express
+    per-account and per-order post-quantum cryptographic (PQC) posture. The extension
+    introduces a pqcAgility metadata object in the ACME directory, an optional pqcAgility
+    member in order objects, and a server-side adequacy scoring mechanism that determines
+    whether a given order satisfies an account's declared PQC readiness threshold.
+    The profile is designed for both public and private ACME deployments and does
+    not modify the core ACME state machine: it adds discoverable capability metadata
+    and per-order policy directives that servers MAY enforce. Multi-tenant ACME servers
+    MUST implement tenant-isolation controls that prevent cross-account PQC posture
+    leakage. This document is distinguished from draft-giron-acme-pqcnegotiation [I-D.giron-acme-pqcnegotiation],
+    which defines algorithm negotiation at the ACME protocol level. This profile operates
+    above the negotiation layer: it defines per-account posture scoring, adequacy
+    thresholds, hybrid policy bits, rotation epoch anchoring, and tenant- isolation
+    requirements that apply regardless of which negotiation mechanism is used.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-vicente-acme-pqc-agility-profile-00
+    docid:
+    - id: draft-vicente-acme-pqc-agility-profile-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-vicente-acme-pqc-agility-profile-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-vicente-acme-pqc-agility-profile-01
+    docid:
+    - id: draft-vicente-acme-pqc-agility-profile-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-vicente-acme-pqc-agility-profile-01
+      format: text/plain
+ext:
+  schema-version: v1.0.1

@@ -1,0 +1,106 @@
+---
+schema-version: v1.2.3
+id: draft-vicente-acme-pqc-agility-profile-00
+title:
+- content: Post-Quantum Cryptographic Agility Profile for ACME
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-vicente-acme-pqc-agility-profile-00
+  type: src
+type: standard
+docid:
+- id: draft-vicente-acme-pqc-agility-profile-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.vicente-acme-pqc-agility-profile
+  type: IETF
+  scope: anchor
+docnumber: I-D.vicente-acme-pqc-agility-profile
+date:
+- type: published
+  value: '2026-06-23'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Brian
+          language:
+          - en
+        - language:
+          - en
+          initial: B
+        formatted_initials:
+          content: B.
+          language:
+          - en
+      surname:
+        content: Vicente
+        language:
+        - en
+      completename:
+        content: Brian Vicente
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Sanctum SecOps LLC
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-06-23'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>This document defines an Automated Certificate Management Environment
+    (ACME) [RFC8555] profile extension that enables ACME servers and clients to express
+    per-account and per-order post-quantum cryptographic (PQC) posture. The extension
+    introduces a pqcAgility metadata object in the ACME directory, an optional pqcAgility
+    member in order objects, and a server-side adequacy scoring mechanism that determines
+    whether a given order satisfies an account's declared PQC readiness threshold.
+    The profile is designed for both public and private ACME deployments and does
+    not modify the core ACME state machine: it adds discoverable capability metadata
+    and per-order policy directives that servers MAY enforce. Multi-tenant ACME servers
+    MUST implement tenant-isolation controls that prevent cross-account PQC posture
+    leakage. This document is distinguished from draft-giron-acme-pqcnegotiation [I-D.giron-acme-pqcnegotiation],
+    which defines algorithm negotiation at the ACME protocol level. This profile operates
+    above the negotiation layer: it defines per-account posture scoring, adequacy
+    thresholds, hybrid policy bits, rotation epoch anchoring, and tenant- isolation
+    requirements that apply regardless of which negotiation mechanism is used.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updatedBy
+  bibitem:
+    id: draft-vicente-acme-pqc-agility-profile-01
+    docid:
+    - id: draft-vicente-acme-pqc-agility-profile-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-vicente-acme-pqc-agility-profile-01
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-vicente-acme-pqc-agility-profile-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

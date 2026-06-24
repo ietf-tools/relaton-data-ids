@@ -1,0 +1,47 @@
+---
+schema-version: v1.2.3
+id: draft-noa-scitt-ai-agent-receipt
+title:
+- content: A SCITT Profile for AI-Agent Action Receipts
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-noa-scitt-ai-agent-receipt
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: '<p>This document profiles the IETF SCITT (Supply Chain Integrity, Transparency,
+    and Trust) architecture for *AI-agent action receipts*: tamper-evident, signed,
+    offline-verifiable records of what an autonomous agent did, for which principal,
+    under which policy, with what verdict. Each receipt is a COSE_Sign1 Signed Statement
+    (RFC 9052) over a canonical (RFC 8785 / JCS) payload, hash-chained for ordering,
+    and registrable in any SCITT Transparency Service to obtain non-equivocation and
+    tail-truncation properties a self-signed chain cannot provide alone. The profile
+    makes a deliberately NARROW, checkable claim — "this is a tamper-evident, signature-verifiable
+    record of the action, principal, policy identity, and recorded verdict" — and
+    explicitly does NOT claim that the agent was correct, safe, or wise, that the
+    recorded inputs were true or complete, or that any real-world outcome followed.
+    A deterministic offline policy-REPLAY capability (re-deriving the verdict from
+    the recorded inputs) is named here as a non-goal of this revision and is left
+    to a separate companion profile.</p>'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-noa-scitt-ai-agent-receipt-00
+    docid:
+    - id: draft-noa-scitt-ai-agent-receipt-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-noa-scitt-ai-agent-receipt-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

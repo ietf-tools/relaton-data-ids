@@ -13,7 +13,7 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document specifies the TLS TimeToken Secure Protocol (tttps://),
+- content: '<p>This document specifies the TLS TimeToken Secure Protocol (tttps://),
     a protocol extension that augments TLS 1.3 [RFC8446] with cryptographically verifiable
     temporal ordering. Internet infrastructure assumes that channels are passive:
     noise is random and channel operators have no ordering preferences. This assumption
@@ -37,7 +37,28 @@ abstract:
     by autonomous AI agents -- an unanticipated finding that confirms the structural
     severity of the ordering problem in agent economies. This document has Experimental
     status. The GRG pipeline specification will be published upon conclusion of pending
-    patent proceedings (Section 12).</p>"
+    patent proceedings (Section 12). Discussion Note This note is to be removed before
+    publishing as an RFC. This document is being discussed on the dispatch@ietf.org
+    mailing list. The authors have submitted a BoF request for IETF 126 (Vienna, July
+    2026) targeting the DISPATCH working group. Comments and participation are welcome.
+    Changes from -03: * Header: revision -03 -&gt; -04; dates updated (23 June 2026
+    / Expires 25 December 2026). * New Section 15.3: Formal Verification Artifacts
+    -- records the publicly available kenoslean PyPI package (version 0.1.0) and the
+    Lean 4 / Mathlib formalisation of the G-Score / InsufficientKnowledge confidence
+    primitive (sorry-free). (Existing 15.3 Interested Parties renumbered to 15.4.)
+    * New Appendix E: Motivating Use Case -- a regulated therapeutic- design data-integrity
+    scenario distinguishing record integrity (TTTPS) from computation integrity (formal
+    verification), aligned with FDA 21 CFR Part 11. * References: [I-D.ietf-ntp-roughtime]
+    (Roughtime, the protocol the D_chain mechanism depends on) and [I-D.ietf-rats-msg-wrap]
+    (CMW) added as informative references; both are in the RFC Editor Queue as of
+    June 2026 (status verified on the IETF Datatracker). [KENOSLEAN] and [21CFR11]
+    added. Changes from -02: * New Section 1.1: "Why This Protocol, Why Now" * New
+    Section 2: Use Cases (satellite, 5G, financial, AI agents) * New Section 4.2:
+    SS7/SCCP Legacy Infrastructure as SCCP Instance * New Section 10.8: Path Manipulation
+    Attack Scenarios (3 scenarios) * New Section 10.9: Trust Model and Key Compromise
+    Resilience * New Section 15: Implementation Status (RFC 7942) * Section 5.5 Verification:
+    future-timestamp check, TLS binding step * References: SS7-VULN, GSMA-SS7, GPS-SPOOF,
+    RFC6962, RFC9557</p>'
   language:
   - en
   script:
@@ -83,6 +104,16 @@ relation:
       primary: true
     formattedref:
       content: draft-helmprotocol-tttps-03
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-helmprotocol-tttps-04
+    docid:
+    - id: draft-helmprotocol-tttps-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-helmprotocol-tttps-04
       format: text/plain
 ext:
   schema-version: v1.0.1

@@ -15,14 +15,21 @@ docid:
 abstract:
 - content: "<p>Given that an AS collaboration scheme for inter-domain source address
     validation requires an information-sharing platform, this document proposes a
-    new approach by leveraging Resource Public Key Infrastructure (RPKI) architecture
-    to validate the authenticity of source address of packets. Source Origin Authorization
-    (SOA) is a newly defined cryptographically signed object; it provides a means
-    of recording information about the last Autonomous System (AS) traversed by packets
-    before reaching a specific AS. When validated, the eContent of an SOA object confirms
-    that the holder of the listed AS Number (ASN) has authorized the specified pre-ASes.
-    This enables other ASes to collaboratively filter spoofed traffic, enhancing global
-    Internet security by mitigating source address spoofing and DDoS attacks.</p>"
+    two-tier approach. In the first tier, Resource Public Key Infrastructure (RPKI)
+    is used for service discovery, identity authentication, and transmission of the
+    minimum bootstrap information needed to establish a private channel. Source Origin
+    Authorization (SOA) is a newly defined cryptographically signed AS-level service-
+    profile object for that purpose. Subscribers and providers each publish their
+    own SOA profiles; a concrete service relation exists only after discovery, bilateral
+    request validation, and provider acceptance. In the second tier, the legitimate
+    predecessor AS information and its subsequent updates are exchanged over the authenticated
+    private channel, by default using TLS[RFC8446] carrying CBOR[RFC8949]-encoded
+    logical messages, enabling other ASes to collaboratively filter spoofed traffic
+    while avoiding frequent routing-driven updates to RPKI and reducing exposure of
+    subscriber- specific routing data. This revision also describes a logical synchronization
+    state model, evidence-tagged authorization state, and fail-open handling for unavailable
+    synchronized state, while leaving private-channel wire encoding to future specifications
+    or bilateral deployment profiles.</p>"
   language:
   - en
   script:
@@ -58,6 +65,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ren-sidrops-soa-usage-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ren-sidrops-soa-usage-03
+    docid:
+    - id: draft-ren-sidrops-soa-usage-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ren-sidrops-soa-usage-03
       format: text/plain
 ext:
   schema-version: v1.0.1

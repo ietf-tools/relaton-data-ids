@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-ren-sidrops-soa-profile
 title:
-- content: A Profile for Source Origin Authorizations(SOAs)
+- content: A Profile for Source Origin Authorization (SOA) Service Profiles
   language:
   - en
   script:
@@ -14,13 +14,17 @@ docid:
   primary: true
 abstract:
 - content: "<p>This document defines Source Origin Authorization (SOA), a new object
-    in the Resource Public Key Infrastructure (RPKI), designed to extend RPKI's capabilities
-    to securing the data plane. An SOA object is a digitally signed artifact that
-    records information about the possible last-hop ASes traversed by packets before
-    reaching a specific AS. By providing this information, the SOA enables other ASes
-    to collaboratively filter traffic with spoofed source addresses claiming to originate
-    from the IP space of the target AS, thereby enhancing global Internet security
-    through mitigation of source address spoofing and DDoS attacks.</p>"
+    in the Resource Public Key Infrastructure (RPKI), for publishing an AS-level service
+    profile used by inter-AS source address protection services. An SOA object is
+    a digitally signed artifact that carries the publisher AS, its service role, a
+    service descriptor, and the bootstrap information needed to authenticate a private
+    synchronization channel, such as an endpoint address, an optional port, an optional
+    protocol identifier, and a public key. An SOA does not itself create a subscriber-provider
+    service relation, authorize arbitrary protected prefixes, or carry legitimate
+    predecessor AS sets. A concrete service relation is established only after discovery,
+    bilateral request validation, and provider acceptance. Routing-dependent data
+    and subsequent updates are exchanged over the authenticated private channel rather
+    than being stored in the RPKI repository.</p>"
   language:
   - en
   script:
@@ -46,6 +50,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ren-sidrops-soa-profile-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ren-sidrops-soa-profile-02
+    docid:
+    - id: draft-ren-sidrops-soa-profile-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ren-sidrops-soa-profile-02
       format: text/plain
 ext:
   schema-version: v1.0.1
