@@ -13,16 +13,13 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document describes a profile for binding agent identity and authorization
-    material to an accepted TLS session and to verifier- accepted attestation or channel-binding
-    facts. The profile separates authority statements, holder-of-key session binding,
-    and verifier- local policy so that a relying party accepts an agent only when
-    the grant, session binding, freshness state, and local policy describe the same
-    intended interaction. The profile does not define a new TLS extension, attestation
-    evidence format, identity provider, wallet format, or application protocol. It
-    profiles the use of existing mechanisms, including TLS exporters, exported authenticators,
-    JWT/CWT-style signed claims, proof-of- possession keys, and remote attestation
-    results.</p>"
+- content: "<p>This document defines a verifier-side profile for accepting agent identity.
+    A verifier accepts an Agent only when an authority statement, holder-of-key proof,
+    accepted TLS session, freshness state, any required attestation result, and verifier-local
+    policy all describe the same intended interaction. The profile does not define
+    a TLS extension, attestation evidence format, identity provider, wallet format,
+    registry, control plane, gateway, or application protocol. It composes existing
+    mechanisms and defines the fail-closed acceptance rule between them.</p>"
   language:
   - en
   script:
@@ -38,6 +35,16 @@ relation:
       primary: true
     formattedref:
       content: draft-okutomi-session-bound-agent-identity-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-okutomi-session-bound-agent-identity-01
+    docid:
+    - id: draft-okutomi-session-bound-agent-identity-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-okutomi-session-bound-agent-identity-01
       format: text/plain
 ext:
   schema-version: v1.0.1

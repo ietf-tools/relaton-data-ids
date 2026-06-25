@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-mcguinness-oauth-client-instance-assertion
 title:
-- content: OAuth 2.0 Client Instance Assertions using Actor Tokens
+- content: OAuth 2.0 Client Instance Assertion
   language:
   - en
   script:
@@ -13,23 +13,23 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This specification defines a profile for representing OAuth 2.0 client
-    instance identity to an authorization server. It registers a new actor_token_type,
-    urn:ietf:params:oauth:token-type:client- instance-jwt, that carries the instance
-    identity as a signed JWT presented via the actor_token parameter defined by OAuth
-    2.0 Token Exchange (RFC 8693). To support presentation outside token exchange,
-    this specification also permits actor_token and actor_token_type on selected additional
-    grant types. The profile does not introduce a new client_instance identifier in
-    protocol messages. Instead, it defines client metadata parameters (applicable
-    to clients identified by a Client ID Metadata Document (CIMD) or registered via
-    OAuth Dynamic Client Registration (RFC 7591)) that let a client_id identify a
-    logical client whose concrete runtime instances are authenticated by one or more
-    trusted instance issuers (for example, workload identity systems). The Authorization
-    Server validates the instance assertion and represents the instance either as
-    an act claim, when another principal is present (e.g., a user delegating to the
-    instance), or as the access token's sub, when the instance itself is the principal
-    (e.g., a client credentials grant). The issued access token is sender-constrained
-    to a key the instance possesses.</p>"
+- content: "<p>This specification defines the Client Instance Assertion: a signed
+    JWT identifying a concrete runtime instance of an OAuth 2.0 client. It registers
+    the client_instance_assertion request parameter for carrying the assertion at
+    the OAuth 2.0 token endpoint on the authorization_code, client_credentials, refresh_token,
+    and JWT bearer (RFC 7523) grants; on the token-exchange grant (RFC 8693), the
+    same assertion is presented as actor_token with actor_token_type set to urn:ietf:params:oauth:token-type:client-instance-jwt,
+    also registered by this specification. This specification does not introduce a
+    new client_instance identifier in protocol messages. Instead, it defines client
+    metadata parameters (applicable to clients identified by a Client ID Metadata
+    Document (CIMD) or registered via OAuth Dynamic Client Registration (RFC 7591))
+    that let a client_id identify a logical client whose concrete runtime instances
+    are authenticated by one or more trusted instance issuers (for example, workload
+    identity systems). The Authorization Server validates the instance assertion and
+    represents the instance either as an act claim, when another principal is present
+    (e.g., a user delegating to the instance), or as the access token's sub, when
+    the instance itself is the principal (e.g., a client credentials grant). The issued
+    access token is sender-constrained to a key the instance possesses.</p>"
   language:
   - en
   script:
@@ -45,6 +45,16 @@ relation:
       primary: true
     formattedref:
       content: draft-mcguinness-oauth-client-instance-assertion-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-mcguinness-oauth-client-instance-assertion-01
+    docid:
+    - id: draft-mcguinness-oauth-client-instance-assertion-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-mcguinness-oauth-client-instance-assertion-01
       format: text/plain
 ext:
   schema-version: v1.0.1

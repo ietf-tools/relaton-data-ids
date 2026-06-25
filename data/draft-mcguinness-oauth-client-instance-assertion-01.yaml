@@ -1,0 +1,108 @@
+---
+schema-version: v1.2.3
+id: draft-mcguinness-oauth-client-instance-assertion-01
+title:
+- content: OAuth 2.0 Client Instance Assertion
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-mcguinness-oauth-client-instance-assertion-01
+  type: src
+type: standard
+docid:
+- id: draft-mcguinness-oauth-client-instance-assertion-01
+  type: Internet-Draft
+  primary: true
+- id: I-D.mcguinness-oauth-client-instance-assertion
+  type: IETF
+  scope: anchor
+docnumber: I-D.mcguinness-oauth-client-instance-assertion
+date:
+- type: published
+  value: '2026-06-24'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Karl
+          language:
+          - en
+        - language:
+          - en
+          initial: K
+        formatted_initials:
+          content: K.
+          language:
+          - en
+      surname:
+        content: McGuinness
+        language:
+        - en
+      completename:
+        content: Karl McGuinness
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Independent
+  role:
+  - type: author
+version:
+- draft: '01'
+revdate: '2026-06-24'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>This specification defines the Client Instance Assertion: a signed
+    JWT identifying a concrete runtime instance of an OAuth 2.0 client. It registers
+    the client_instance_assertion request parameter for carrying the assertion at
+    the OAuth 2.0 token endpoint on the authorization_code, client_credentials, refresh_token,
+    and JWT bearer (RFC 7523) grants; on the token-exchange grant (RFC 8693), the
+    same assertion is presented as actor_token with actor_token_type set to urn:ietf:params:oauth:token-type:client-instance-jwt,
+    also registered by this specification. This specification does not introduce a
+    new client_instance identifier in protocol messages. Instead, it defines client
+    metadata parameters (applicable to clients identified by a Client ID Metadata
+    Document (CIMD) or registered via OAuth Dynamic Client Registration (RFC 7591))
+    that let a client_id identify a logical client whose concrete runtime instances
+    are authenticated by one or more trusted instance issuers (for example, workload
+    identity systems). The Authorization Server validates the instance assertion and
+    represents the instance either as an act claim, when another principal is present
+    (e.g., a user delegating to the instance), or as the access token's sub, when
+    the instance itself is the principal (e.g., a client credentials grant). The issued
+    access token is sender-constrained to a key the instance possesses.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-mcguinness-oauth-client-instance-assertion-00
+    docid:
+    - id: draft-mcguinness-oauth-client-instance-assertion-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-mcguinness-oauth-client-instance-assertion-00
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-mcguinness-oauth-client-instance-assertion-01
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
