@@ -2,9 +2,8 @@
 schema-version: v1.2.3
 id: draft-ietf-lamps-attestation-freshness
 title:
-- content: Nonce-based Freshness for Remote Attestation in Certificate Signing Requests
-    (CSRs) for the Certification Management Protocol (CMP), for Enrollment over Secure
-    Transport (EST), and for Certificate Management over CMS (CMC)
+- content: Requesting a Freshness Nonce for Attestation Evidence in Certificate Signing
+    Requests
   language:
   - en
   script:
@@ -16,12 +15,15 @@ docid:
   primary: true
 abstract:
 - content: "<p>When an end entity includes attestation statements in a Certificate
-    Signing Request (CSR), this document is specifically concerned with establishing
-    the freshness of Evidence statements among that attestation data. Current attestation
-    technology commonly achieves this using nonces. This document outlines the process
-    through which nonces are supplied to the end entity by an RA/CA for inclusion
-    in Evidence, leveraging the Certificate Management Protocol (CMP), Enrollment
-    over Secure Transport (EST), and Certificate Management over CMS (CMC).</p>"
+    Signing Request (CSR), the freshness of the conveyed Evidence often needs to be
+    established. A common mechanism is a nonce that is obtained from a Relying Party
+    or Verifier and included by the Attester in the Evidence. This document specifies
+    how an end entity requests such an attestation freshness nonce from an RA/CA when
+    using certificate lifecycle management protocols. It defines message formats and
+    protocol bindings for the conveyance of nonce request and response messages in
+    the Certificate Management Protocol (CMP), Enrollment over Secure Transport (EST),
+    and Certificate Management over CMS (CMC), including optional type-specific information
+    needed to produce fresh Evidence for inclusion in a CSR.</p>"
   language:
   - en
   script:
@@ -97,6 +99,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-lamps-attestation-freshness-06
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-lamps-attestation-freshness-07
+    docid:
+    - id: draft-ietf-lamps-attestation-freshness-07
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-lamps-attestation-freshness-07
       format: text/plain
 ext:
   schema-version: v1.0.1

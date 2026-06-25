@@ -16,11 +16,12 @@ abstract:
 - content: "<p>Existing approaches bind a Segment Routing (SR) Policy to a Network
     Resource Partition (NRP) on a one-to-one basis, which lacks flexibility and introduces
     significant operational overhead as the number of NRPs scales, especially when
-    the NRPs share the same SR Policy path. This document defines BGP extensions to
-    advertise NRP identifier (NRP ID) information between network nodes, which decouples
-    SR Policy from NRP, allowing multiple NRPs to share a common SR Policy path and
-    thus avoiding linear growth of SR Policies. This design reduces operational complexity
-    and is also applicable to SR Best Effort (SR BE) scenario.</p>"
+    multiple NRPs share the same SR Policy path. This document defines BGP extensions
+    to advertise NRP Identifier (NRP ID) information within BGP Update messages between
+    headend and endpoint nodes. It decouples SR Policies from NRPs, allowing multiple
+    NRPs to share a common SR Policy path and avoiding linear growth of SR Policies.
+    The proposed design reduces operational complexity and also applies to SR Best
+    Effort (SR BE) scenarios.</p>"
   language:
   - en
   script:
@@ -36,6 +37,16 @@ relation:
       primary: true
     formattedref:
       content: draft-li-idr-bgp-nrp-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-li-idr-bgp-nrp-01
+    docid:
+    - id: draft-li-idr-bgp-nrp-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-li-idr-bgp-nrp-01
       format: text/plain
 ext:
   schema-version: v1.0.1

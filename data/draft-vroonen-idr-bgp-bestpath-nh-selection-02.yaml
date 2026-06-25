@@ -1,0 +1,225 @@
+---
+schema-version: v1.2.3
+id: draft-vroonen-idr-bgp-bestpath-nh-selection-02
+title:
+- content: BGP best path next-hop selection enhancements
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-vroonen-idr-bgp-bestpath-nh-selection-02
+  type: src
+type: standard
+docid:
+- id: draft-vroonen-idr-bgp-bestpath-nh-selection-02
+  type: Internet-Draft
+  primary: true
+- id: I-D.vroonen-idr-bgp-bestpath-nh-selection
+  type: IETF
+  scope: anchor
+docnumber: I-D.vroonen-idr-bgp-bestpath-nh-selection
+date:
+- type: published
+  value: '2026-06-25'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Olivier
+          language:
+          - en
+        - language:
+          - en
+          initial: O
+        formatted_initials:
+          content: O.
+          language:
+          - en
+      surname:
+        content: Vroonen
+        language:
+        - en
+      completename:
+        content: Olivier Vroonen
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Cisco
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Stephane
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Litkowski
+        language:
+        - en
+      completename:
+        content: Stephane Litkowski
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Cisco
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: kandhla
+          language:
+          - en
+        - language:
+          - en
+          initial: '7'
+        - language:
+          - en
+          initial: '9'
+        - language:
+          - en
+          initial: '1'
+        - language:
+          - en
+          initial: '1'
+        - language:
+          - en
+          initial: '1'
+        - language:
+          - en
+          initial: '1'
+        - language:
+          - en
+          initial: '9'
+        - language:
+          - en
+          initial: '3'
+        - language:
+          - en
+          initial: '6'
+        - language:
+          - en
+          initial: '1'
+        - language:
+          - en
+          initial: '9'
+        - language:
+          - en
+          initial: '1'
+        - language:
+          - en
+          initial: '1'
+        formatted_initials:
+          content: 7. 9. 1. 1. 1. 1. 9. 3. 6. 1. 9. 1. 1.
+          language:
+          - en
+      surname:
+        content: Chandi
+        language:
+        - en
+      completename:
+        content: kandhla Chandi
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Bell Canada
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Jie
+          language:
+          - en
+        - language:
+          - en
+          initial: J
+        formatted_initials:
+          content: J.
+          language:
+          - en
+      surname:
+        content: Dong
+        language:
+        - en
+      completename:
+        content: Jie Dong
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei
+  role:
+  - type: author
+version:
+- draft: '02'
+revdate: '2026-06-25'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: '<p>BGP [RFC4271] has originally been designed to carry IPv4 routing information
+    over the Internet. IP routing being "hop-by-hop" in nature, NEXT_HOP which purpose
+    is to carry the address of the next router to send the IP packet to. In BGP, the
+    next-hop may not be a directly connected router, hence, when evaluating paths,
+    a BGP speaker must determine if the next-hop is resolvable and, if so, determine
+    the internal cost to reach it. The incremental use of tunneling technologies to
+    carry traffic between routers (e.g.: GRE, MPLS, SR-MPLS, SRv6...) may violate
+    the assumption that the address carried in the NEXT_HOP is representative of the
+    actual forwarding next-hop. These technologies decouple the BGP control-plane''s
+    view of the next-hop from the data-plane''s actual forwarding endpoint. This document
+    describes the problems that arise from this decoupling. These problems include
+    sub-optimal path selection, incorrect resolvability tracking of the forwarding
+    path leading to traffic drop or misrouting, and others. This document proposes
+    some modification of BGP path selection procedures to accommodate these use cases.</p>'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-vroonen-idr-bgp-bestpath-nh-selection-00
+    docid:
+    - id: draft-vroonen-idr-bgp-bestpath-nh-selection-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-vroonen-idr-bgp-bestpath-nh-selection-00
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-vroonen-idr-bgp-bestpath-nh-selection-02
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
