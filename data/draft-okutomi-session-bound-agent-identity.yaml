@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-okutomi-session-bound-agent-identity
 title:
-- content: A Profile for Session-Bound Agent Identity
+- content: A Core Acceptance Profile for Session-Bound Agent Identity
   language:
   - en
   script:
@@ -13,13 +13,15 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document defines a verifier-side profile for accepting agent identity.
-    A verifier accepts an Agent only when an authority statement, holder-of-key proof,
-    accepted TLS session, freshness state, any required attestation result, and verifier-local
-    policy all describe the same intended interaction. The profile does not define
-    a TLS extension, attestation evidence format, identity provider, wallet format,
-    registry, control plane, gateway, or application protocol. It composes existing
-    mechanisms and defines the fail-closed acceptance rule between them.</p>"
+- content: "<p>This document defines a core verifier-side acceptance profile for session-bound
+    Agent identity. A verifier accepts an Agent only when a verified authority grant,
+    holder-of-key proof, accepted TLS or exported-authenticator session, freshness
+    and replay state, any required attestation result, and verifier-local policy all
+    describe the same intended interaction. This document does not define a TLS extension,
+    attestation evidence format, identity provider, holder-side presentation format,
+    registry, control plane, gateway, or application protocol. Instead, it defines
+    the fail-closed acceptance rule for composing existing Internet mechanisms at
+    the verifier boundary.</p>"
   language:
   - en
   script:
@@ -45,6 +47,16 @@ relation:
       primary: true
     formattedref:
       content: draft-okutomi-session-bound-agent-identity-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-okutomi-session-bound-agent-identity-02
+    docid:
+    - id: draft-okutomi-session-bound-agent-identity-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-okutomi-session-bound-agent-identity-02
       format: text/plain
 ext:
   schema-version: v1.0.1

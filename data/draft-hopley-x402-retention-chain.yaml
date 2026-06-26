@@ -13,7 +13,7 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document specifies seven cryptographic constructions for self-verifiable
+- content: "<p>This document specifies eight cryptographic constructions for self-verifiable
     agentic payment records. The first, the Retention Chain Reference (retention_chain_ref),
     enables tamper-evident audit chains linking payment receipts without requiring
     external infrastructure. The second, the Payment Action Lifecycle, defines a content-addressed
@@ -36,10 +36,13 @@ abstract:
     The seventh, Post-Decision Execution Evidence (execution_ref), binds an executed
     action to the exact decision that authorized it, so the recorded execution is
     provably consistent with the decision and not merely correlated with an agent
-    identity. All constructions use only SHA-256 and the JSON Canonicalization Scheme
-    (JCS, RFC 8785), and are verifiable by any party holding the relevant receipts
-    without contacting the issuer. The constructions satisfy the transaction recording
-    and audit trail obligations of MiCA Article 80, DORA Article 14, and AMLR Article
+    identity. The eighth, Cross-Party Authority Delegation (delegation_ref), binds
+    a delegation of authority from one party to another and chains hand-offs, so a
+    verifier can confirm that authority did not widen across an organizational boundary.
+    All constructions use only SHA-256 and the JSON Canonicalization Scheme (JCS,
+    RFC 8785), and are verifiable by any party holding the relevant receipts without
+    contacting the issuer. The constructions satisfy the transaction recording and
+    audit trail obligations of MiCA Article 80, DORA Article 14, and AMLR Article
     56.</p>"
   language:
   - en
@@ -116,6 +119,16 @@ relation:
       primary: true
     formattedref:
       content: draft-hopley-x402-retention-chain-06
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-hopley-x402-retention-chain-07
+    docid:
+    - id: draft-hopley-x402-retention-chain-07
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-hopley-x402-retention-chain-07
       format: text/plain
 ext:
   schema-version: v1.0.1

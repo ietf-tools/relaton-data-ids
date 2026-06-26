@@ -1,0 +1,48 @@
+---
+schema-version: v1.2.3
+id: draft-claise-opsawg-ipfix-ordered-ie
+title:
+- content: Ordered Information Element Export in IP Flow Information Export (IPFIX)
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-claise-opsawg-ipfix-ordered-ie
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>The IP Flow Information Export (IPFIX) protocol allows the same Information
+    Element to appear multiple times in a Template Record. RFC 7011 states that multiple
+    occurrences of the same Information Element SHOULD follow the logical order of
+    their treatments by the Metering Process; however, no protocol mechanism exists
+    for the Exporting Process to explicitly signal to the Collecting Process that
+    this ordering is guaranteed. Without such a guarantee, the Collecting Process
+    cannot safely interpret repeated Information Elements as ordered observations.
+    This document describes the problem, presents use cases, analyzes candidate solutions,
+    and specifies a mechanism -- a new Ordered Set type -- that establishes an end-to-end
+    ordering guarantee: the Metering Process records repeated Information Element
+    values in the order the corresponding observations are made, the Exporting Process
+    preserves and signals this guarantee, and the Collecting Process interprets the
+    n-th occurrence of an Information Element as corresponding to the n-th observation
+    by the Metering Process at the Observation Point. This document updates RFC 7011,
+    RFC 5476, and RFC 6183.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-claise-opsawg-ipfix-ordered-ie-00
+    docid:
+    - id: draft-claise-opsawg-ipfix-ordered-ie-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-claise-opsawg-ipfix-ordered-ie-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
