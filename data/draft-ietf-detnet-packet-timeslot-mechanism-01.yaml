@@ -1,28 +1,28 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-detnet-deadline-based-forwarding-00
+id: draft-ietf-detnet-packet-timeslot-mechanism-01
 title:
-- content: Deadline Based Deterministic Forwarding
+- content: Timeslot Queueing and Forwarding Mechanism
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-detnet-deadline-based-forwarding-00
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-detnet-packet-timeslot-mechanism-01
   type: src
 type: standard
 docid:
-- id: draft-ietf-detnet-deadline-based-forwarding-00
+- id: draft-ietf-detnet-packet-timeslot-mechanism-01
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-detnet-deadline-based-forwarding
+- id: I-D.ietf-detnet-packet-timeslot-mechanism
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-detnet-deadline-based-forwarding
+docnumber: I-D.ietf-detnet-packet-timeslot-mechanism
 date:
 - type: published
-  value: '2026-01-16'
+  value: '2026-06-27'
 contributor:
 - person:
     name:
@@ -49,29 +49,29 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: ZTE Corporation
+        - content: ZTE
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Zongpeng
+        - content: Peng
           language:
           - en
         - language:
           - en
-          initial: Z
+          initial: P
         formatted_initials:
-          content: Z.
+          content: P.
           language:
           - en
       surname:
-        content: Du
+        content: Liu
         language:
         - en
       completename:
-        content: Zongpeng Du
+        content: Peng Liu
         language:
         - en
     affiliation:
@@ -112,28 +112,28 @@ contributor:
     name:
       given:
         forename:
-        - content: chris
+        - content: Aihua
           language:
           - en
         - language:
           - en
-          initial: C
+          initial: A
         formatted_initials:
-          content: C.
+          content: A.
           language:
           - en
       surname:
-        content: cheng
+        content: Liu
         language:
         - en
       completename:
-        content: chris cheng
+        content: Aihua Liu
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Zhejiang P&T College
+        - content: ZTE
   role:
   - type: author
 - person:
@@ -168,58 +168,92 @@ contributor:
     name:
       given:
         forename:
-        - content: Chang
+        - content: Guoyu
           language:
           - en
         - language:
           - en
-          initial: C
+          initial: G
         formatted_initials:
-          content: C.
+          content: G.
           language:
           - en
       surname:
-        content: Liu
+        content: Peng
         language:
         - en
       completename:
-        content: Chang Liu
+        content: Guoyu Peng
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: China Unicom
+        - content: Beijing University of Posts and Telecommunications
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Junfeng
+          language:
+          - en
+        - language:
+          - en
+          initial: J
+        formatted_initials:
+          content: J.
+          language:
+          - en
+      surname:
+        content: Zhao
+        language:
+        - en
+      completename:
+        content: Junfeng Zhao
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: CAICT
   role:
   - type: author
 version:
-- draft: '00'
-revdate: '2026-01-16'
+- draft: '01'
+revdate: '2026-06-27'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document describes a deadline based deterministic forwarding mechanism
-    for IP/MPLS network with the corresponding resource reservation, admission control,
-    scheduling and policing processes to provide guaranteed latency bound. It employs
-    a latency compensation technique with a stateless core, to replace reshaping,
-    making it suitable for the Differentiated Services (Diffserv) architecture [RFC2475].</p>"
+- content: "<p>IP/MPLS networks use packet switching (with the feature store-and-
+    forward) and are based on statistical multiplexing. Statistical multiplexing is
+    essentially a variant of time division multiplexing, which refers to the asynchronous
+    and dynamic allocation of link timeslot resources. Statistical multiplexing has
+    certain challenges and complexity in meeting deterministic QoS. This document
+    describes a generic time division multiplexing scheme for layer-3 in an IP/MPLS
+    networks, called timeslot queueing and forwarding (TQF) mechanism. TQF is an enhancement
+    based on TSN TAS and allows the data plane to create a flexible timeslot mapping
+    based on available timeslot resources. It defines a cyclic period consisting of
+    multiple timeslots where a flow is assigned to be transmitted within one or more
+    dedicated timeslots. The objective of TQF is to better handle large scaling requirements.</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-ietf-detnet-deadline-based-forwarding-01
+    id: draft-ietf-detnet-packet-timeslot-mechanism-00
     docid:
-    - id: draft-ietf-detnet-deadline-based-forwarding-01
+    - id: draft-ietf-detnet-packet-timeslot-mechanism-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-detnet-deadline-based-forwarding-01
+      content: draft-ietf-detnet-packet-timeslot-mechanism-00
       format: text/plain
 series:
 - type: main
@@ -230,7 +264,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-detnet-deadline-based-forwarding-00
+  number: draft-ietf-detnet-packet-timeslot-mechanism-01
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
