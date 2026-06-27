@@ -1,0 +1,108 @@
+---
+schema-version: v1.2.3
+id: draft-johani-dnsop-dnssec-alg-split-01
+title:
+- content: 'Algorithm-Split DNSSEC: KSK/ZSK Algorithm Separation'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-johani-dnsop-dnssec-alg-split-01
+  type: src
+type: standard
+docid:
+- id: draft-johani-dnsop-dnssec-alg-split-01
+  type: Internet-Draft
+  primary: true
+- id: I-D.johani-dnsop-dnssec-alg-split
+  type: IETF
+  scope: anchor
+docnumber: I-D.johani-dnsop-dnssec-alg-split
+date:
+- type: published
+  value: '2026-06-26'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Johan
+          language:
+          - en
+        - language:
+          - en
+          initial: J
+        formatted_initials:
+          content: J.
+          language:
+          - en
+      surname:
+        content: Stenstam
+        language:
+        - en
+      completename:
+        content: Johan Stenstam
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: The Swedish Internet Foundation
+  role:
+  - type: author
+version:
+- draft: '01'
+revdate: '2026-06-26'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>Post-quantum DNSSEC signature algorithms have much larger keys and/or
+    signatures than the elliptic-curve algorithms in common use today. For any such
+    algorithm the apex DNSKEY RRset grows, since it carries the key material; the
+    open question is whether the rest of the zone has to grow with it. A key-signing
+    key (KSK) signs only the apex DNSKEY RRset, so its signature size is nearly irrelevant;
+    a zone- signing key (ZSK) signs every other RRset, so keeping its signatures small
+    is what keeps ordinary responses small. Confining a large algorithm to the KSK,
+    and using a small-signature algorithm for the ZSK, keeps the cost of the large
+    algorithm contained in the DNSKEY RRset. This document specifies the changes that
+    make this pattern safe and practical: (1) it relaxes the DNSSEC signing rule that
+    requires a zone to be signed with every algorithm present in the apex DNSKEY RRset,
+    so that an algorithm used only by a key-signing key need not be applied to the
+    rest of the zone; (2) it relies on ordinary ZSK rotation to bound the residual
+    exposure of the ZSK algorithm; and (3) it specifies how a resolver can use the
+    algorithm number in the parent's DS RRset to recognize a likely-oversized DNSKEY
+    RRset and select a transport suitable for large responses, avoiding the truncate-then-retry
+    round trip. This document updates RFC 4035 and RFC 6840.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-johani-dnsop-dnssec-alg-split-00
+    docid:
+    - id: draft-johani-dnsop-dnssec-alg-split-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-johani-dnsop-dnssec-alg-split-00
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-johani-dnsop-dnssec-alg-split-01
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
