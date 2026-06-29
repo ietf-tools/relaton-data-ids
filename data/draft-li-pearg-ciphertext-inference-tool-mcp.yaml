@@ -1,0 +1,49 @@
+---
+schema-version: v1.2.3
+id: draft-li-pearg-ciphertext-inference-tool-mcp
+title:
+- content: Ciphertext-Based AI Inference Tool Design for the Model Context Protocol
+    (MCP)
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-li-pearg-ciphertext-inference-tool-mcp
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>The Model Context Protocol (MCP) enables AI-powered tools to interact
+    with autonomous agents and Large Language Models (LLMs), but currently processes
+    user inputs and inference results in plaintext. This could introduce some privacy
+    risks and violates the principle of least privilege when processing user data.
+    This contribution specifies a ciphertext-based AI inference extension for MCP.
+    The design leverages Homomorphic Encryption (HE) to allow an MCP server or remote
+    tool to perform inference directly on encrypted data without accessing the plaintext.
+    The server receives encrypted payloads, computes over ciphertexts using an evaluation
+    key, and returns an encrypted result that only the MCP client can decrypt. To
+    ensure interoperability across various network environments, this document defines
+    a JSON-RPC message format independent of the underlying transport layer (supporting
+    both local stdio and remote Server-Sent Events). The format extends the existing
+    MCP 'tools/ call' method with fields for encrypted payloads, algorithm identifiers,
+    and key references. Additionally, this document discusses security considerations,
+    key management, and implementation trade-offs.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-li-pearg-ciphertext-inference-tool-mcp-00
+    docid:
+    - id: draft-li-pearg-ciphertext-inference-tool-mcp-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-li-pearg-ciphertext-inference-tool-mcp-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
