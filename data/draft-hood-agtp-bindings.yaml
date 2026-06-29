@@ -1,0 +1,48 @@
+---
+schema-version: v1.2.3
+id: draft-hood-agtp-bindings
+title:
+- content: 'AGTP Transport Bindings: TCP/TLS and QUIC'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-hood-agtp-bindings
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>The Agent Transfer Protocol (AGTP) base specification defines AGTP
+    semantics independently of any specific transport. This document specifies the
+    AGTP transport bindings for TCP with TLS 1.3 and for QUIC, defining how AGTP requests
+    and responses are carried over each transport, how TLS mutual authentication composes
+    with AGTP identity, and how connection lifecycle events map to AGTP session semantics.
+    A central concern for the QUIC binding is replay safety. QUIC supports 0-RTT early
+    data, which is replayable by design. AGTP requests carry authority-scoped actions;
+    a replayed action method could re-trigger authorized work without the requesting
+    agent's intent. This document defines an AGTP-specific replay-safety profile:
+    early data is permitted only for safe idempotent methods (QUERY, DISCOVER) and
+    *MUST NOT* be used for action methods (EXECUTE, DELEGATE, PURCHASE, TRANSACT,
+    and the lifecycle methods). This document follows the pattern established by HTTP:
+    protocol semantics defined independently of transport ([RFC9110] for HTTP), with
+    transport-specific bindings in separate documents. AGTP semantics are defined
+    in [AGTP]; this document defines the transport mechanics.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-hood-agtp-bindings-00
+    docid:
+    - id: draft-hood-agtp-bindings-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-hood-agtp-bindings-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

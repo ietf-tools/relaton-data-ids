@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-ietf-roll-enrollment-priority
 title:
-- content: Controlling Secure Network Enrollment in RPL networks
+- content: Controlling Network Enrollment in RPL networks
   language:
   - en
   script:
@@ -13,12 +13,14 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>[RFC9032] defines a method by which a potential [RFC9031] enrollment
-    proxy can announce itself as available for new RPL nodes to enroll on a network.
-    The announcement includes a priority for enrollment. This document provides a
-    mechanism by which a Routing Protocol for Low-Power and Lossy Networks (RPL) Root
-    can globally disable enrollment announcements or adjust the base priority for
-    enrollment operations.</p>"
+- content: "<p>The Routing Protocol for Low-Power and Lossy Networks (RPL) manages
+    the routing topology but lacks a mechanism to globally regulate how many new nodes,
+    known as Pledges, can join a node in a 6TiSCH network at any given time. Currently,
+    Join Proxies (6LowPAN Routers) make local decisions about whether to facilitate
+    a Pledge's enrollment based only on their immediate resources. This document introduces
+    RPL extensions to ensure that enrollment remains orderly, prevents localized congestion
+    at specific Join Proxies, and allows the network to stay within its operational
+    capacity limits.</p>"
   language:
   - en
   script:
@@ -184,6 +186,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-roll-enrollment-priority-15
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-roll-enrollment-priority-16
+    docid:
+    - id: draft-ietf-roll-enrollment-priority-16
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-roll-enrollment-priority-16
       format: text/plain
 ext:
   schema-version: v1.0.1

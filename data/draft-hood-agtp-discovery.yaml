@@ -14,15 +14,20 @@ docid:
   primary: true
 abstract:
 - content: "<p>The Agent Transfer Protocol (AGTP) enables agents to communicate once
-    they know each other's canonical identifiers. It does not define how agents find
-    each other. This document specifies the AGTP Agent Discovery and Name Service
-    (ANS): a protocol for dynamic agent discovery using the AGTP DISCOVER method and
-    a governed Agent Name Service that returns ranked sets of Agent Manifest Documents
-    matching a discovery query. ANS servers act as Scope-Enforcement Points for discovery
-    queries and enforce behavioral trust score thresholds, trust tier requirements,
-    and governance zone constraints. This document also defines the DISCOVER method,
-    the Discovery Query language, and the Agent Name Service registration and lookup
-    protocol.</p>"
+    they know each other's canonical identifiers. This document specifies two layered
+    mechanisms by which agents find each other and by which human-readable names resolve
+    to Canonical Agent-IDs: the DISCOVER method, which queries for agents matching
+    a capability description, and the Agent Name Service (ANS), which provides governed
+    name-to-Agent-ID resolution. The architectural relationship is layered. AGTP-Presence
+    [AGTP-PRESENCE] provides ambient awareness of agents within visibility scopes
+    as a substrate property. DISCOVER operates over the Presence substrate to query
+    the live population. ANS provides human-readable name resolution, analogous to
+    DNS for the web, with name authorities federating across organizational boundaries.
+    This document also introduces Anticipatory Discovery Services (ADS) as a forward-looking
+    composition pattern where application-layer services preload agent awareness based
+    on observed operational signals. DISCOVER and ANS together provide the application-layer
+    interfaces for discovery and naming that compose with the substrate-level ambient
+    discovery defined in [AGTP-PRESENCE].</p>"
   language:
   - en
   script:
@@ -38,6 +43,16 @@ relation:
       primary: true
     formattedref:
       content: draft-hood-agtp-discovery-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-hood-agtp-discovery-01
+    docid:
+    - id: draft-hood-agtp-discovery-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-hood-agtp-discovery-01
       format: text/plain
 ext:
   schema-version: v1.0.1
