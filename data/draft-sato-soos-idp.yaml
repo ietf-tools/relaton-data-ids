@@ -25,22 +25,17 @@ abstract:
     enabling post-hoc review of agent reasoning, richer authorization policy evaluation,
     and enriched denial responses that guide agent behaviour. The IDP also provides
     the technical basis for compliance with EU AI Act Article 12 logging requirements
-    for high-risk AI systems. This document adds the IDP Commitment Verification mechanism,
-    by which the GEC verifies at each state transition that the agent's actual action
-    matches its declared intent. This document also adds the RETRY_CONTINUATION reasoning
-    basis type and the prior_denial_count Cedar context attribute, which together
-    address computational inefficiency arising from uninformed agent retry loops.
-    This document further defines, in Section 5.6, the schemas of the outcome Event
-    Log entries (STATE_TRANSITIONED, CEDAR_DENY_RECORDED, and ACTION_RESULT_RECORDED)
-    that record the result of each governed transition, completing the pre-action/post-
-    action audit pair that gives the IDP its full auditability property. This document
-    renames the Governing Kernel role to Governing Enforcement Component (GEC) to
-    accommodate application-layer, isolated-process, and kernel-level implementations
-    under a common conformance model. A Conformance Levels section (Section 9) defines
-    three implementation profiles (Application, Isolated, and Kernel) with graduated
-    non-suppressibility guarantees. A data_residency field is added to the IDP structure
-    (Section 4.1) governing analytics tier eligibility. Section 3.5 states the Event
-    Log as Operational Intelligence design intent.</p>"
+    for high-risk AI systems. Version -05 adds: the intake_endorsement operation (Section
+    4.6) through which the GEC endorses a submitted EOD before the first SENSE delivery,
+    making the EOD a GEC-signed artifact and preventing unendorsed IDPs from proceeding;
+    the PD-EOD (Prompt-Derived EOD) branch (Section 4.7) for IDPs derived from natural-language
+    prompts rather than structured input, with scope-bounding rules and HEM notification
+    requirements; the mandate_reference field (Section 4.1) linking each IDP to an
+    SPO URI for structural validation; confidence_ level calibration guidance (Section
+    7) including the CONFIDENCE_ MISCALIBRATION_WARNING trigger; RETRY_CONTINUATION
+    normative strengthening with backward reference to AEP-02's what_changed requirement;
+    and four new Security Considerations addressing prompt injection at intake, EOD
+    scope manipulation, confidence_level inflation attacks, and COMMITMENT_GAP exploitation.</p>"
   language:
   - en
   script:
@@ -96,6 +91,16 @@ relation:
       primary: true
     formattedref:
       content: draft-sato-soos-idp-04
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-sato-soos-idp-05
+    docid:
+    - id: draft-sato-soos-idp-05
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-sato-soos-idp-05
       format: text/plain
 ext:
   schema-version: v1.0.1

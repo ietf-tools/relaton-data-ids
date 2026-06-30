@@ -20,10 +20,14 @@ abstract:
     before it reaches this agent. This document defines the Mandate JWT (MJWT): a
     WIMSE workload credential profile that binds an AI agent's authority to a specific
     Sovereign Object instance under a named human principal, with a cryptographically
-    enforced delegation ceiling and a six-dimensional Narrowing Property that prevents
+    enforced delegation ceiling and a seven-dimensional Narrowing Property that prevents
     any sub-agent from exceeding the authority of the human principal at the root
-    of the chain. The MJWT is the authorization primitive referenced by [I-D.sato-soos-idp],
-    [I-D.sato-soos-hem], [I-D.sato-soos-gar], [I-D.sato-soos-cap], and [I-D.sato-soos-sov].</p>"
+    of the chain. Version -02 adds a seventh narrowing dimension (consent scope),
+    the consent_scope claim carrying data subject consent state for APPI/GDPR compliance,
+    the sub_agent_scope claim for consent attenuation across delegation hops, a Purpose
+    Code Registry, and HEM_CONSENT_REQUIRED integration for fail-closed consent enforcement.
+    The MJWT is the authorization primitive referenced by [I-D.sato-soos-idp], [I-D.sato-soos-hem],
+    [I-D.sato-soos-gar], [I-D.sato-soos-cap], and [I-D.sato-soos-sov].</p>"
   language:
   - en
   script:
@@ -49,6 +53,16 @@ relation:
       primary: true
     formattedref:
       content: draft-sato-soos-mjwt-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-sato-soos-mjwt-02
+    docid:
+    - id: draft-sato-soos-mjwt-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-sato-soos-mjwt-02
       format: text/plain
 ext:
   schema-version: v1.0.1

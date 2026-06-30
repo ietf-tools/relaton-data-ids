@@ -21,7 +21,15 @@ abstract:
     requirements. KIA is the Layer 0 signing and attestation component on which the
     audit trail guarantees of draft-sato-soos-gar, the mandate enforcement guarantees
     of draft-sato-soos-mjwt, and the multi-agent delegation chain of draft-sato-soos-mad
-    all depend.</p>"
+    all depend. Version -03 adds FROST threshold signing for high-availability GEC
+    keypair deployments, the Cross-Principal Identifier (XPID) for cross-instance
+    federation audit correlation, the XPID cross- instance trust model, and four new
+    Security Considerations (Sections 14.8 through 14.11) addressing FROST nonce reuse,
+    XPID revocation gap, identity takeover via claimed identifier (CVE-2025- 13609
+    class), and attestation channel binding (CVE-2026-33697 class). This document
+    is the reference specification for the KIA RATS WG presentation at IETF 126 Vienna.
+    The XPID primitive and the CVE-2026-33697 attestation channel binding defense
+    are the primary novel contributions presented to the RATS WG.</p>"
   language:
   - en
   script:
@@ -57,6 +65,16 @@ relation:
       primary: true
     formattedref:
       content: draft-sato-soos-kia-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-sato-soos-kia-03
+    docid:
+    - id: draft-sato-soos-kia-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-sato-soos-kia-03
       format: text/plain
 ext:
   schema-version: v1.0.1
