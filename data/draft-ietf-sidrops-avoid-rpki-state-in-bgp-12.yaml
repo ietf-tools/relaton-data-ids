@@ -1,0 +1,159 @@
+---
+schema-version: v1.2.3
+id: draft-ietf-sidrops-avoid-rpki-state-in-bgp-12
+title:
+- content: Guidance to Avoid Carrying RPKI Validation States in BGP Path Attributes
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-sidrops-avoid-rpki-state-in-bgp-12
+  type: src
+type: standard
+docid:
+- id: draft-ietf-sidrops-avoid-rpki-state-in-bgp-12
+  type: Internet-Draft
+  primary: true
+- id: I-D.ietf-sidrops-avoid-rpki-state-in-bgp
+  type: IETF
+  scope: anchor
+docnumber: I-D.ietf-sidrops-avoid-rpki-state-in-bgp
+date:
+- type: published
+  value: '2026-06-29'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Job
+          language:
+          - en
+        - language:
+          - en
+          initial: J
+        formatted_initials:
+          content: J.
+          language:
+          - en
+      surname:
+        content: Snijders
+        language:
+        - en
+      completename:
+        content: Job Snijders
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: BSD Software Development
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Tobias
+          language:
+          - en
+        - language:
+          - en
+          initial: T
+        formatted_initials:
+          content: T.
+          language:
+          - en
+      surname:
+        content: Fiebig
+        language:
+        - en
+      completename:
+        content: Tobias Fiebig
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Technische Universität Wien
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Massimiliano
+          language:
+          - en
+        - language:
+          - en
+          initial: M
+        formatted_initials:
+          content: M.
+          language:
+          - en
+      surname:
+        content: Stucchi
+        language:
+        - en
+      completename:
+        content: Massimiliano Stucchi
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Glevia GmbH
+  role:
+  - type: author
+version:
+- draft: '12'
+revdate: '2026-06-29'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>This document provides guidance to avoid carrying Resource Public Key
+    Infrastructure (RPKI) derived validation states in Border Gateway Protocol (BGP)
+    Path Attributes whose change triggers a BGP UPDATE being sent across external
+    BGP (EBGP) sessions. Annotating routes with BGP Path Attributes carried across
+    EBGP sessions signaling validation states may cause needless flooding of BGP UPDATE
+    messages through the global Internet routing system, for example when Route Origin
+    Authorizations (ROAs) are issued, or are revoked, or when RPKI-To-Router sessions
+    are terminated. Operators should ensure RPKI-derived validation states are not
+    signaled in BGP Path Attributes whose change triggers a BGP UPDATE being sent
+    across EBGP sessions. Specifically, operators should not associate Prefix Origin
+    Validation state with BGP routes using any form of BGP Communities carried across
+    EBGP session.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-ietf-sidrops-avoid-rpki-state-in-bgp-04
+    docid:
+    - id: draft-ietf-sidrops-avoid-rpki-state-in-bgp-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-sidrops-avoid-rpki-state-in-bgp-04
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-ietf-sidrops-avoid-rpki-state-in-bgp-12
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

@@ -13,11 +13,12 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document defines a profile for certificates that are issued for
-    validation of the digital signature produced by a single signing operation. Each
-    certificate is created at the time of signing and bound to the signed content.
-    The associated signing key is generated, used to produce a single digital signature,
-    and then immediately destroyed. The certificate never expires and is never revoked,
+- content: "<p>This document defines the signedDocumentBinding certificate extension,
+    which binds a certificate to the signed content of a digital signature produced
+    by a single signing operation. Each certificate is created at the time of signing
+    and the associated signing key is generated, used to produce a single digital
+    signature, and then immediately destroyed. Certificates carrying this extension
+    are intended to be issued without a revocation mechanism and with no expiration,
     which simplifies long-term validation.</p>"
   language:
   - en
@@ -34,6 +35,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-lamps-one-signature-certs-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-lamps-one-signature-certs-01
+    docid:
+    - id: draft-ietf-lamps-one-signature-certs-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-lamps-one-signature-certs-01
       format: text/plain
 ext:
   schema-version: v1.0.1
