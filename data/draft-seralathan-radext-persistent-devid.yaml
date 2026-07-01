@@ -2,7 +2,8 @@
 schema-version: v1.2.3
 id: draft-seralathan-radext-persistent-devid
 title:
-- content: RADIUS Attribute for Persistent Device Identity in MAC-Randomized Environments
+- content: RADIUS Chargeable-Device-Identity and Persistent Device Identification
+    in MAC-Randomized Environments
   language:
   - en
   script:
@@ -13,16 +14,22 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document defines a new RADIUS attribute, Persistent-Device-Id,
-    that enables Network Access Control (NAC) systems to maintain a stable device
-    identity across Media Access Control (MAC) address changes. Modern operating systems
-    randomize MAC addresses by default, disrupting RADIUS-based authentication, authorization,
-    and accounting workflows that rely on the Calling-Station-Id attribute as a persistent
-    device identifier. The Persistent-Device-Id attribute carries a Globally Unique
-    Identifier (GUID) in RADIUS Access-Accept and Accounting-Request messages, providing
-    a stable correlation key for device profiling, policy enforcement, and regulatory
-    compliance. This document specifies the attribute format, assignment procedures,
-    and usage guidelines for RADIUS clients and servers..</p>"
+- content: "<p>This document defines a Chargeable-Device-Identity (CDI) -- a privacy-
+    preserving, rotating device correlator carried in existing RADIUS Class attributes
+    -- that enables Network Access Control (NAC) systems to maintain device session
+    correlation across Media Access Control (MAC) address changes. Modern operating
+    systems randomize MAC addresses by default, disrupting RADIUS-based authentication,
+    authorization, and accounting workflows that rely on the Calling- Station-Id attribute
+    as a persistent device identifier. CDI is modeled after the Chargeable-User-Identity
+    (CUI) defined in RFC 4372, providing an analogous device-level correlator with
+    explicit privacy controls: epoch-based rotation limits long-term tracking, HMAC
+    construction prevents identifier reversal by intermediate systems, and transport
+    within the Class attribute ensures immediate deployability on existing infrastructure.
+    This document additionally defines a new RADIUS attribute, Persistent-Device-Id,
+    for deployments that require explicit device identity semantics beyond what the
+    opaque Class attribute can provide. The Class-based CDI mechanism is the RECOMMENDED
+    approach for immediate deployment; the dedicated attribute provides a migration
+    path for future interoperability.</p>"
   language:
   - en
   script:
@@ -38,6 +45,16 @@ relation:
       primary: true
     formattedref:
       content: draft-seralathan-radext-persistent-devid-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-seralathan-radext-persistent-devid-01
+    docid:
+    - id: draft-seralathan-radext-persistent-devid-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-seralathan-radext-persistent-devid-01
       format: text/plain
 ext:
   schema-version: v1.0.1

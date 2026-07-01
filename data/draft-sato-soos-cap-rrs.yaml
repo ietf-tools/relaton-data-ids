@@ -17,8 +17,8 @@ abstract:
     authoring problem. The Constitutional AI Protocol (CAP) [I-D.sato-soos-cap] defines
     the enforcement architecture for governed AI agent systems: a three-tier Cedar
     policy evaluation model that distinguishes absolute prohibitions, jurisdictional
-    legal constraints, operator policies, and resource limits. CAP-01 specifies what
-    the Governing Enforcement Component (GEC) does when a Cedar policy fires. It does
+    legal constraints, operator policies, and resource limits. CAP specifies what
+    the Governance Execution Controller (GEC) does when a Cedar policy fires. It does
     not specify how Cedar policies are authored, certified, distributed, or maintained
     as law changes. This document defines the Regulation Record: the structured representation
     of a compliance obligation at any CAP tier. A Regulation Record is the human-readable,
@@ -28,11 +28,17 @@ abstract:
     (Section 5), the conflict declaration model (Section 6), the certification model
     governing which publishers may certify records at each tier (Section 7), and the
     versioning and update protocol for the Constitutional Mandate Registry (Section
-    8). The core developer experience this document enables: a developer imports certified
-    Regulation Record packages from the Constitutional Mandate Registry, declares
-    their own Tier 2 operator policies and Tier 3 resource policies, calls compile(),
-    and receives a Cedar policy set ready for GEC loading. No Cedar is authored by
-    hand for compliance purposes. Compliance is a package management operation.</p>"
+    8). Version -02 adds the Law Reference Interface (LRI) generic model (Section
+    9), the Statute-Primacy Rule (Section 10), and the Operational Requirements for
+    catalog amendment and interpretation detection (Section 11). These three additions
+    complete the regulation lifecycle: from law encoding (Sections 4-8) through law
+    reference and provenance (Section 9), through the consequences of law amendment
+    (Section 10), through the operational cadence governing detection and response
+    (Section 11). The core developer experience this document enables: a developer
+    imports certified Regulation Record packages from the Constitutional Mandate Registry,
+    declares their own Tier 2 operator policies and Tier 3 resource policies, calls
+    compile(), and receives a Cedar policy set ready for GEC loading. No Cedar is
+    authored by hand for compliance purposes. Compliance is a package management operation.</p>"
   language:
   - en
   script:
@@ -58,6 +64,16 @@ relation:
       primary: true
     formattedref:
       content: draft-sato-soos-cap-rrs-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-sato-soos-cap-rrs-02
+    docid:
+    - id: draft-sato-soos-cap-rrs-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-sato-soos-cap-rrs-02
       format: text/plain
 ext:
   schema-version: v1.0.1

@@ -29,22 +29,18 @@ abstract:
     places the session into a formally defined HEM_PENDING state, routes a structured
     escalation request to one or more designated human principals along an ordered
     designation chain, enforces a prohibition on all state transitions until a human
-    decision is received, and processes five defined human decision types. HEM also
+    decision is received, and processes six defined human decision types. HEM also
     defines the Policy Rationale Declaration (PRD), which links Cedar policies that
     route to HEM with machine-readable rationale, and the Decision Rationale Record
     (DRR), which captures the human principal's reasoning for audit and learning purposes.
-    For human principals, HEM provides more than oversight: it provides better project
-    outcomes, a learning record of both human and agent decisions, and a normative
-    channel for injecting real- world context into agent execution at the moment it
-    is most relevant. For AI agents, HEM provides a governed recovery path that enables
-    higher confidence operation near decision boundaries and a shorter, more efficient
-    route to correct outcomes. HEM is the entry point to a four-draft governance stack.
-    The Intent Declaration Primitive [I-D.sato-soos-idp] makes HEM escalation requests
-    legible to human principals. The Governance Audit Record [I-D.sato-soos-gar] provides
-    the permanent, non- suppressible record that oversight occurred and what was decided.
-    The Constitutional AI Protocol [I-D.sato-soos-cap] defines the prohibition floor
-    below which no HEM decision may operate. HEM is enforced by the GEC, not by the
-    agent and not by the application layer. An agent cannot opt out; an application
+    Version -05 adds ten new HEM interaction classes (HEM-PRE-1, HEM-PRE-2, HEM-DS-1,
+    HEM-DS-2, HEM-LIM-1, HEM-DIV-1, HEM-HIGH-1, HEM-FAT-1, HEM-EMO-1, and HEM-CONSENT)
+    with full normative specifications, trigger conditions, GAR ALE registrations
+    (ALE-030 through ALE-041), and five new Security Considerations addressing the
+    HEM channel attack surface. INV-HEM-01 (The Surfacing Obligation) is added as
+    a KernelSpec invariant. Section 7 (Human Readiness Score) and Section 8 (Tier
+    0-A Integration) are new normative sections. HEM is enforced by the GEC, not by
+    the agent and not by the application layer. An agent cannot opt out; an application
     cannot suppress it. This non-bypassability is the source of HEM's regulatory utility
     and provides the technical specification for human oversight required by EU AI
     Act Article 14.</p>"
@@ -103,6 +99,16 @@ relation:
       primary: true
     formattedref:
       content: draft-sato-soos-hem-04
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-sato-soos-hem-05
+    docid:
+    - id: draft-sato-soos-hem-05
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-sato-soos-hem-05
       format: text/plain
 ext:
   schema-version: v1.0.1

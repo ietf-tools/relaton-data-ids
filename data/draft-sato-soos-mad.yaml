@@ -19,30 +19,15 @@ abstract:
     whose authority? If the coordinating agent's authorization is revoked, does the
     authority of every sub-agent it delegated to immediately expire? If one agent
     in a parallel workflow exceeds its scope, can that excess propagate to others?
-    Today, no protocol ensures the answers to these questions are knowable. Multi-agent
-    AI systems can produce accountability black holes: chains of delegation where
-    the authority at each hop is unclear, where revocation does not cascade reliably,
-    and where the audit record cannot reconstruct which agent caused which outcome
-    under which authorization. This document defines the Multi-Agent Delegation (MAD)
-    protocol: a normative specification ensuring that authority in multi-agent AI
-    workflows is structured, verifiable, and reconstructable. MAD specifies three
-    mechanisms. The Narrowing Property (INV-4) ensures that authority can only attenuate
-    across a delegation hop -- a sub-agent can never acquire capabilities its orchestrator
-    does not itself hold. SO Instance Topology Types provide five formally defined
-    patterns for how governed objects relate at runtime. SO Cluster Coordination Primitives
-    (L1-16) enable parallel fan-out topologies in which multiple specialist agents
-    execute simultaneously, with aggregation rules that let the orchestrator proceed
-    as soon as a quorum of specialists complete. For human principals, MAD provides
-    a single recoverable property: the accountability chain is always reconstructable
-    from the GEC- signed audit record alone. Cascade revocation means one decision
-    stops the entire tree. For AI agents, MAD provides machine-speed delegation authority
-    and the parallel execution efficiency that sequential single-agent approaches
-    cannot achieve. MAD-02 adds a fourth guarantee: when revocation fires during active
-    execution, the completion state of every in-flight operation is classified and
-    recorded, and partial-completion cases are routed to human oversight through the
-    HEM escalation chain. This closes the revocation gap across offline-attenuated
-    delegation chains that the OpenID Foundation identifies as unsolved in current
-    agentic AI authorization infrastructure.</p>"
+    This document defines the Multi-Agent Delegation (MAD) protocol, extended in version
+    -03 with four new normative mechanisms: the Sub-Agent Composition Record (SACR)
+    for kernel-governed sub-agent spawning; the hub-only constraint for sub-agent
+    communication topology; XPID cross-cluster integration derived from KIA-03; and
+    full normative specifications for the R-1 through R-7 revocation trigger classes
+    with completion states and cascade behavior. MAD provides a single recoverable
+    property: the accountability chain is always reconstructable from the GEC-signed
+    audit record alone. Cascade revocation means one decision stops the entire tree.
+    SACR means the spawning of that tree is itself governed.</p>"
   language:
   - en
   script:
@@ -78,6 +63,16 @@ relation:
       primary: true
     formattedref:
       content: draft-sato-soos-mad-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-sato-soos-mad-03
+    docid:
+    - id: draft-sato-soos-mad-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-sato-soos-mad-03
       format: text/plain
 ext:
   schema-version: v1.0.1
