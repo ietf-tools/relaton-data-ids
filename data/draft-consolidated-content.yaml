@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-consolidated-content
 title:
-- content: HTTP Content Negotiation for Consolidated Machine-Readable Representations
+- content: Content Negotiation for Consolidated Machine-Readable Representations
   language:
   - en
   script:
@@ -13,15 +13,17 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document specifies the use of HTTP content negotiation with the
-    Prefer header to request consolidated, machine-optimised representations of web
-    resources. Clients use the Accept header for format negotiation and the Prefer
-    header with return=consolidated to request content optimised for automated consumption.
-    Publishers benefit from dramatically reduced request volume and the ability to
-    present contextually complete information, improving both operational efficiency
-    and content effectiveness. Consolidated resources enable practical caching, further
-    reducing load. This document introduces a single new preference value for the
-    existing Prefer header and otherwise relies solely on established HTTP mechanisms.</p>"
+- content: "<p>This document specifies the use of HTTP content negotiation and the
+    Prefer header to request consolidated, machine-readable representations of web
+    resources. A client uses the Accept header to negotiate an appropriate media type
+    and Prefer: return=consolidated to request a representation intended for automated
+    consumption. A server that honours the preference identifies the selected representation
+    with Preference-Applied: return=consolidated and varies cached responses on Accept
+    and Prefer. The mechanism uses existing HTTP semantics and introduces a single
+    new preference value for the existing Prefer header. It provides a protocol-level
+    alternative to ad-hoc client detection or path conventions when serving machine-readable
+    representations, while also enabling publishers to reduce repeated fetching, bandwidth
+    use, and server processing.</p>"
   language:
   - en
   script:
@@ -37,6 +39,16 @@ relation:
       primary: true
     formattedref:
       content: draft-consolidated-content-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-consolidated-content-01
+    docid:
+    - id: draft-consolidated-content-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-consolidated-content-01
       format: text/plain
 ext:
   schema-version: v1.0.1

@@ -45,16 +45,35 @@ abstract:
     Discussion Note This note is to be removed before publishing as an RFC. This document
     is being discussed on the dispatch@ietf.org mailing list. The authors have submitted
     a BoF request for IETF 126 (Vienna, July 2026) targeting the DISPATCH working
-    group. Comments and participation are welcome. Changes from -04: * Header: revision
-    -04 -&gt; -05; dates updated (24 June 2026 / Expires 26 December 2026). * IANA
-    Considerations: added a new subsection "URI Scheme Registration" recording that
-    IANA has provisionally registered the "tttps" URI scheme [RFC7595] in the provisional
-    URI Schemes registry, and added [RFC7595] to the normative references. * Section
-    cross-reference consistency: corrected prose references that named the Implementation
-    Status section and its subsections by their -03 numbers. In the rendered document
-    the Implementation Status section is Section 14 (subsections 14.1-14.4) and References
-    is Section 15; running text now matches these rendered numbers (formerly "Section
-    15.2", "Section 15.3", "Section 15.4", and "New Section 15: Implementation Status").
+    group. Comments and participation are welcome. Changes from -05: * Header: revision
+    -05 -&gt; -06; dates updated (30 June 2026). * AdaptiveSwitch (Section 7): added
+    a new subsection "Oracle Confidence Gating (G-Score)" specifying that oracle agreement
+    is gated by a normalised-entropy confidence metric (the G-Score, G(p) = H(p) /
+    log n), and describing the optional von Neumann (density- matrix) extension S(rho)
+    = -Tr(rho log rho) that captures inter- source correlation (collusion) which marginal
+    Shannon entropy cannot see. The von Neumann form is specified as tier-adaptive:
+    applied in the deep-space / low-source-count regime where collusion is acute and
+    the source count is small enough to bound the eigendecomposition cost, while terrestrial
+    tiers use the linear-cost Shannon form. This is an abstract mechanism specification;
+    weighting formulae and pipeline internals are out of scope. * Implementation Status
+    (Section 14): updated the Formal Verification Artifacts subsection to record that
+    the Shannon G-Score and its von Neumann extension are implemented and unit- tested
+    with corresponding sorry-free Lean 4 formalisations, and noted honestly that live
+    AdaptiveSwitch integration of the oracle- confidence gate is pending source time-value
+    distribution instrumentation (the metrics are specified and tested but not yet
+    wired into the live switch). * Intellectual Property (Section 13): removed the
+    licensing-terms sentence; per ISE guidance, IPR licensing commitments are handled
+    by the separate IPR disclosure process and not stated in the draft body. The section
+    now records only the technical IPR facts (pending patent; independent implementation
+    paths via the abstract interface and published primitives). * IANA Considerations:
+    added a new subsection "URI Scheme Registration" recording that IANA has provisionally
+    registered the "tttps" URI scheme [RFC7595] in the provisional URI Schemes registry,
+    and added [RFC7595] to the normative references. * Section cross-reference consistency:
+    corrected prose references that named the Implementation Status section and its
+    subsections by their -03 numbers. In the rendered document the Implementation
+    Status section is Section 14 (subsections 14.1-14.4) and References is Section
+    15; running text now matches these rendered numbers (formerly "Section 15.2",
+    "Section 15.3", "Section 15.4", and "New Section 15: Implementation Status").
     * Changelog wording: the Implementation Status section was first added in -03,
     not -04; the "New Section" wording in earlier changelog entries has been retained
     only where historically accurate and the stale section numbers corrected. * Interested
@@ -147,6 +166,16 @@ relation:
       primary: true
     formattedref:
       content: draft-helmprotocol-tttps-05
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-helmprotocol-tttps-06
+    docid:
+    - id: draft-helmprotocol-tttps-06
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-helmprotocol-tttps-06
       format: text/plain
 ext:
   schema-version: v1.0.1

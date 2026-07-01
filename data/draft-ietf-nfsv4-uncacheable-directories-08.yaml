@@ -1,0 +1,101 @@
+---
+schema-version: v1.2.3
+id: draft-ietf-nfsv4-uncacheable-directories-08
+title:
+- content: Adding an Uncacheable Directory-Entry Metadata Attribute to NFSv4.2
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-nfsv4-uncacheable-directories-08
+  type: src
+type: standard
+docid:
+- id: draft-ietf-nfsv4-uncacheable-directories-08
+  type: Internet-Draft
+  primary: true
+- id: I-D.ietf-nfsv4-uncacheable-directories
+  type: IETF
+  scope: anchor
+docnumber: I-D.ietf-nfsv4-uncacheable-directories
+date:
+- type: published
+  value: '2026-06-30'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Thomas
+          language:
+          - en
+        - language:
+          - en
+          initial: T
+        formatted_initials:
+          content: T.
+          language:
+          - en
+      surname:
+        content: Haynes
+        language:
+        - en
+      completename:
+        content: Thomas Haynes
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Hammerspace
+  role:
+  - type: author
+version:
+- draft: '08'
+revdate: '2026-06-30'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>Network File System version 4.2 (NFSv4.2) clients may cache the file
+    attributes returned by READDIR alongside each directory entry. This caching is
+    inherently best-effort: those attributes belong to the underlying files and change
+    when the files are written, which the directory's change attribute does not track.
+    In some deployments the rate of file writes by other clients makes such caching
+    produce incorrect size and timestamp values often enough to be a deployment problem.
+    This document introduces an uncacheable dirent metadata attribute for NFSv4.2
+    that allows a server to identify a directory for which an honoring client is required
+    to retrieve directory-entry metadata from the server on each READDIR rather than
+    serving the response from a local cache.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-ietf-nfsv4-uncacheable-directories-02
+    docid:
+    - id: draft-ietf-nfsv4-uncacheable-directories-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-nfsv4-uncacheable-directories-02
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-ietf-nfsv4-uncacheable-directories-08
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
