@@ -1,0 +1,44 @@
+---
+schema-version: v1.2.3
+id: draft-toutain-core-sid-encoding
+title:
+- content: YANG SID Discovery Using the Domain Name System
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-toutain-core-sid-encoding
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: '<p>CORECONF is an interface for managing YANG-modeled data using CBOR.
+    It replaces verbose YANG schema item identifiers with compact 64-bit integers
+    called Schema Item iDentifiers (SIDs). Interpreting a SID requires two resources:
+    the YANG module definition and the SID dictionary (the.sid file) that maps each
+    integer to the corresponding YANG schema item. Pre-loading every possible YANG
+    module and its SID dictionary is not practical as the set of deployed modules
+    grows; a dynamic discovery mechanism is therefore needed. This document specifies
+    a DNS reverse-lookup mechanism analogous to ip6.arpa that maps a SID to a DNS
+    name under the sid.yt. tree (where "yt" stands for YANG Tracker). Resolving that
+    name returns TXT records pointing to the authoritative repository for the corresponding
+    YANG module.</p>'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-toutain-core-sid-encoding-00
+    docid:
+    - id: draft-toutain-core-sid-encoding-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-toutain-core-sid-encoding-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
