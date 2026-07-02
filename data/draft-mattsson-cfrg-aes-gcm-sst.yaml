@@ -13,17 +13,20 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document defines the Galois Counter Mode with Strong Secure Tags
-    (GCM-SST) Authenticated Encryption with Associated Data (AEAD) algorithm. GCM-SST
-    can be used with any keystream generator, not just 128-bit block ciphers. The
-    main differences from GCM are the use of an additional subkey H_2, the derivation
-    of fresh subkeys H and H_2 for each nonce, and the replacement of the GHASH function
-    with the POLYVAL function from AES-GCM-SIV. This enables truncated tags with near-ideal
-    forgery probabilities, even against multiple forgery attacks, which are significant
-    security improvements over GCM. GCM-SST is designed for security protocols with
-    replay protection and addresses the strong industry demand for fast encryption
-    with minimal overhead and high security. This document registers several instances
-    of GCM-SST using Advanced Encryption Standard (AES) and Rijndael-256.</p>"
+- content: "<p>This document defines Galois Counter Mode with Strong Secure Tags (GCM-SST),
+    an Authenticated Encryption with Associated Data (AEAD) algorithm that addresses
+    several weaknesses of GCM. GCM-SST can be used with any keystream generator, not
+    only 128-bit block ciphers. Main differences from GCM are the introduction of
+    a second authentication subkey H_2, per-nonce derivation of both H and H_2, and
+    stricter usage limits. Together, these changes yield authentication tags with
+    near-ideal forgery probabilities, including reforgeability resistance. All registered
+    instances have an expected number of forgeries E(F) ≈ v / 2^t, a property that
+    GCM is far from providing. GCM-SST is designed for security protocols with replay
+    protection such as TLS, QUIC, SRTP, and PDCP, and provides hardware and software
+    performance comparable to GCM. This document registers nine AEAD algorithm instances
+    using AES and Rijndael-256 in counter mode, with tag lengths of 48, 96, and 112
+    bits. GCM-SST has been standardized by 3GPP for use with SNOW 5G, AES-256, and
+    ZUC-256.</p>"
   language:
   - en
   script:
@@ -219,6 +222,16 @@ relation:
       primary: true
     formattedref:
       content: draft-mattsson-cfrg-aes-gcm-sst-18
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-mattsson-cfrg-aes-gcm-sst-19
+    docid:
+    - id: draft-mattsson-cfrg-aes-gcm-sst-19
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-mattsson-cfrg-aes-gcm-sst-19
       format: text/plain
 ext:
   schema-version: v1.0.1
