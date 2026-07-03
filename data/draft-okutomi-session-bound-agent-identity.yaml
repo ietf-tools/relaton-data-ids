@@ -13,18 +13,14 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document defines a core verifier-side acceptance profile for session-bound
-    Agent identity. Its primary failure class is context diversion: accepting cryptographically
-    valid material for a different service, tenant, Agent, task, delegation, or authority
-    boundary than the verifier intended. A verifier accepts an Agent only when a verified
-    authority grant, holder-of-key proof, accepted TLS or exported-authenticator session,
-    freshness and replay state, any required attestation result, and verifier-local
-    policy all describe the same intended interaction. This document does not define
-    a universal Agent namespace, identity provider, attestation evidence format, holder-side
-    presentation mechanism, control plane, gateway, or complete application protocol.
-    Instead, it defines the fail-closed acceptance rule for composing existing Internet
-    mechanisms at the verifier boundary, and states the requirements that a concrete
-    binding profile has to fix for interoperability.</p>"
+- content: "<p>This document defines a verifier-side acceptance profile for session-
+    bound Agent identity. It addresses context diversion, where cryptographically
+    valid material is accepted for a different service, tenant, Agent, task, delegation,
+    or authority boundary than the verifier intended. A verifier accepts an Agent
+    only when a verified authority grant, holder-of-key proof, accepted TLS or exported-authenticator
+    session, freshness and replay state, any required attestation result, and verifier-local
+    policy all describe the same intended interaction. Protocol-specific wire formats
+    and deployment choices are left to binding profiles.</p>"
   language:
   - en
   script:
@@ -80,6 +76,16 @@ relation:
       primary: true
     formattedref:
       content: draft-okutomi-session-bound-agent-identity-04
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-okutomi-session-bound-agent-identity-05
+    docid:
+    - id: draft-okutomi-session-bound-agent-identity-05
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-okutomi-session-bound-agent-identity-05
       format: text/plain
 ext:
   schema-version: v1.0.1

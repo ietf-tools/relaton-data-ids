@@ -27,10 +27,12 @@ abstract:
     two cases according to deployment policy. The format is intentionally tool-system-agnostic.
     The same receipt structure can be emitted by MCP (Model Context Protocol) servers,
     LangChain.js callback handlers, OpenAI tool-calling loops, HTTP clients, or proprietary
-    agent runtimes. Receipts use Ed25519 signatures over a JSON-canonicalized payload,
-    and identities are W3C Decentralized Identifiers (DIDs). Scoring policy, aggregation
-    architecture, and reactive behavior in response to receipts are explicitly out
-    of scope and left to deployments.</p>"
+    agent runtimes. Receipts use Ed25519 signatures over a JCS-canonicalized payload,
+    and identities are W3C Decentralized Identifiers (DIDs). This revision introduces
+    an explicit wire-format version (formatVersion), pins the hash preimage profile,
+    and ships executable conformance test vectors. Scoring policy, aggregation architecture,
+    and reactive behavior in response to receipts are explicitly out of scope and
+    left to deployments.</p>"
   language:
   - en
   script:
@@ -66,6 +68,16 @@ relation:
       primary: true
     formattedref:
       content: draft-xkumakichi-xaip-receipts-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-xkumakichi-xaip-receipts-03
+    docid:
+    - id: draft-xkumakichi-xaip-receipts-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-xkumakichi-xaip-receipts-03
       format: text/plain
 ext:
   schema-version: v1.0.1

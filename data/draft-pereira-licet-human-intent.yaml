@@ -2,8 +2,8 @@
 schema-version: v1.2.3
 id: draft-pereira-licet-human-intent
 title:
-- content: 'LICET: A Cryptographic Protocol for Physiological Human-Intent Verification
-    in Autonomous AI Agent Authorization'
+- content: 'LICET: Multi-Modal Physiological Human-Intent Verification for Autonomous
+    AI Agent Authorization'
   language:
   - en
   script:
@@ -14,22 +14,24 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: '<p>Autonomous AI agents executing consequential actions in high-stakes
-    domains — medical prescribing, financial transactions, critical infrastructure
-    control — require authorization mechanisms that go beyond classical identity verification.
-    Existing mechanisms (passwords, static biometrics, digital signatures) verify
-    who authorized an action but cannot verify whether the authorizing human was genuinely
-    conscious, uncoerced, and cognitively capable at the moment of authorization.
-    This document specifies LICET (Latin: "it is permitted"), a cryptographic middleware
-    protocol that binds AI agent authorization events to the real-time physiological
-    state of the authorizing human. LICET defines: (1) a biometric capture and coercion-detection
-    procedure using wearable sensor data; (2) per-event session-key derivation using
-    HKDF (RFC 5869); (3) a biometric temporal signature using HMAC (RFC 2104); (4)
-    a Schnorr zero-knowledge proof over the BN128 elliptic curve enabling third-party
-    audit without biometric data exposure; and (5) a SHA-256 hash-chained ledger for
-    tamper- evident authorization records. A reference implementation is publicly
-    deployed at https://licet.dev/ v1/ and available as open source at https://github.com/christianrp45/
-    licet-protocol.</p>'
+- content: "<p>Autonomous AI agents executing consequential actions require authorization
+    mechanisms that verify not only identity but voluntary intent. Existing mechanisms
+    verify _who_ authorized an action; they cannot verify _whether the authorizing
+    human was uncoerced and cognitively capable_ at the moment of authorization. This
+    document specifies LICET (Latin: _it is permitted_), a cryptographic middleware
+    protocol binding AI agent authorization to real-time multi-modal physiological
+    state via a three-layer architecture: (1) ECG waveform morphology matching as
+    a medication- resistant identity and liveness anchor; (2) electrodermal activity
+    (EDA) as a sympathetic cholinergic liveness signal immune to beta- adrenergic
+    blockade; and (3) personalized Mahalanobis distance fusion over five physiological
+    signals to elevate the cost of pharmacological coercion attacks rather than claim
+    binary detection. LICET defines a Biometric Trust Level hierarchy (L0-L3) aligned
+    with the IETF RATS architecture (RFC 9334), a baseline calibration protocol establishing
+    individual physiological profiles, per-event HKDF session-key derivation, HMAC
+    biometric temporal signatures, Schnorr zero-knowledge proofs over BN128 enabling
+    third-party audit without biometric exposure, and a SHA-256 hash-chained tamper-evident
+    ledger. A reference implementation is publicly deployed at https://licet.dev/
+    v1/ and available as open source at https://github.com/christianrp45/ licet-protocol.</p>"
   language:
   - en
   script:
@@ -45,6 +47,16 @@ relation:
       primary: true
     formattedref:
       content: draft-pereira-licet-human-intent-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-pereira-licet-human-intent-01
+    docid:
+    - id: draft-pereira-licet-human-intent-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-pereira-licet-human-intent-01
       format: text/plain
 ext:
   schema-version: v1.0.1
