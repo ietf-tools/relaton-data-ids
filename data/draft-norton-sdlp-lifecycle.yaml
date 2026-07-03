@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-norton-sdlp-lifecycle
 title:
-- content: 'SDLP RFC 2: Lifecycle State Machine'
+- content: 'SDLP RFC 2: Lifecycle Specification'
   language:
   - en
   script:
@@ -13,13 +13,14 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document defines the lifecycle state machine for the Secured Digital
-    Lifecycle Protocol (SDLP). The SDLP lifecycle governs the existence, transitions,
-    and permitted operations of all SDLP objects. Each object MUST exist in exactly
-    one lifecycle state at any given time, and all transitions MUST follow the deterministic
-    rules defined in this document. The lifecycle state machine ensures predictable
-    behavior, prevents invalid transitions, and provides a universal framework for
-    object governance across SDLP implementations.</p>"
+- content: "<p>This document defines the lifecycle model for the Secured Digital Lifecycle
+    Protocol (SDLP). The lifecycle model specifies the canonical state machine used
+    by all SDLP-governed objects, including the rules for state transitions, transformation
+    events, duplication events, and materialization events. The lifecycle model provides
+    a stable and predictable framework for describing how SDLP objects evolve over
+    time while preserving identity, lineage, and security guarantees defined in companion
+    SDLP specifications. This document updates and formalizes the lifecycle semantics
+    originally introduced in draft-norton-sdlp-lifecycle-00.</p>"
   language:
   - en
   script:
@@ -35,6 +36,16 @@ relation:
       primary: true
     formattedref:
       content: draft-norton-sdlp-lifecycle-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-norton-sdlp-lifecycle-01
+    docid:
+    - id: draft-norton-sdlp-lifecycle-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-norton-sdlp-lifecycle-01
       format: text/plain
 ext:
   schema-version: v1.0.1

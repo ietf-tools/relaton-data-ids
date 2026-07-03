@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-corneo-schc-compress-payload
 title:
-- content: SCHC Payload compression
+- content: SCHC Payload Compression for Structured Formats
   language:
   - en
   script:
@@ -13,14 +13,14 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document describes several techniques to enable utilization of
-    the same engine to compress and decompress headers from the existing SCHC framework
-    [RFC8724], but used to compress payload of specific protocols. The first approach
-    is to introduce new type of static rules that enable encoding application data.
-    This extensions provides compact and generic variation on how data is organized.
-    The second approach provides dynamic compression and decompression. Here, the
-    system identifies parts of the payload that can be compressed, and enables a SCHC
-    decompressor to restore the original packet.</p>"
+- content: "<p>This document describes techniques to adapt the SCHC framework (RFC8724),
+    used for header compression, to also compress and decompress payload of specific
+    protocols. To this end, this document defines a new matching operator, equal-template,
+    to check equality of field values with respect to a user-defined template, and
+    a payload keyword to be used as Field IDentifier (FID) to signal the presence
+    of payload to be compressed or decompressed. Additionally, this document defines
+    a set of template functions and variables to optimize user-defined templates,
+    which can be extended through the IANA registry defined herein.</p>"
   language:
   - en
   script:
@@ -46,6 +46,16 @@ relation:
       primary: true
     formattedref:
       content: draft-corneo-schc-compress-payload-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-corneo-schc-compress-payload-02
+    docid:
+    - id: draft-corneo-schc-compress-payload-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-corneo-schc-compress-payload-02
       format: text/plain
 ext:
   schema-version: v1.0.1
