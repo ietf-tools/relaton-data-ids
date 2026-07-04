@@ -1,0 +1,49 @@
+---
+schema-version: v1.2.3
+id: draft-schrock-authorization-evidence-challenge
+title:
+- content: An Authorization Evidence Challenge for High-Risk Agent Actions
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-schrock-authorization-evidence-challenge
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>The agent-action evidence stack has declaration (a resource declares
+    what evidence its actions require), presentation (an evidence graph of signed
+    artifacts), and decision (deterministic policy replay yielding a closed verdict).
+    Nothing closes the loop: when the verdict is that evidence is missing or stale,
+    no machine-readable message tells the agent what to obtain, how to re-present,
+    or what the retry semantics are — every deployment hand-rolls the dance. This
+    document defines the Authorization Evidence Challenge: the message a relying party
+    returns before a high-risk action executes, naming the exact evidence still required
+    (type, assurance constraints, freshness bound, revocation-check requirement),
+    how to present it, where it might be obtained, and the challenge's own expiry
+    and single-use nonce. The action digest in a challenge is computed by the RELYING
+    PARTY over its own canonical action, so evidence is obtained against the action
+    that will actually execute. The exchange generalizes OAuth step-up authentication
+    (RFC 9470) from authentication to evidence, and completes the circuit: declare,
+    attempt, challenge, obtain, present, replay, consume. A satisfied challenge yields
+    a verdict under the relying party's policy, never a promise to execute.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-schrock-authorization-evidence-challenge-00
+    docid:
+    - id: draft-schrock-authorization-evidence-challenge-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-schrock-authorization-evidence-challenge-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

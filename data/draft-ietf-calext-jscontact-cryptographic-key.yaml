@@ -14,10 +14,15 @@ docid:
   primary: true
 abstract:
 - content: "<p>Extensions to the JSContact data model for contact card data are defined
-    to provide improved support for describing cryptographic credentials to be used
-    with applications and services and to provide support for authenticated updates
-    to a contact card. These features in combination provide a basis for establishing
-    and maintaining peer- to-peer trust.</p>"
+    to improve support for describing cryptographic credentials to be used with applications
+    and services by specifying which credential is used for which online service.
+    This allows a contact application to identify the specific credential to be used
+    with an application without the need for the contact application to understand
+    the syntax or semantics of the credential used. An additional extension allows
+    a contact to specify one of more mechanisms for obtaining updates to itself with
+    optional verification under specified signature keys. The mechanisms used are
+    outside the scope of this document. These features in combination provide a basis
+    for establishing and maintaining peer-to-peer trust.</p>"
   language:
   - en
   script:
@@ -33,6 +38,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-calext-jscontact-cryptographic-key-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-calext-jscontact-cryptographic-key-01
+    docid:
+    - id: draft-ietf-calext-jscontact-cryptographic-key-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-calext-jscontact-cryptographic-key-01
       format: text/plain
 ext:
   schema-version: v1.0.1

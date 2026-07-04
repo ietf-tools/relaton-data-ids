@@ -1,0 +1,50 @@
+---
+schema-version: v1.2.3
+id: draft-schrock-ep-presentation-binding
+title:
+- content: 'Presentation Binding for Human-Authorization Receipts: Proving the Human
+    Approved What They Saw'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-schrock-ep-presentation-binding
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: '<p>A human-authorization receipt proves a named person produced a user-
+    verified signature over a digest that commits to an exact action. It does not
+    prove the surface that person signed on DISPLAYED that action honestly. If a signing
+    interface shows a benign summary while committing a different action, the resulting
+    receipt is laundered authority: cryptographically valid and semantically false,
+    which is worse than no receipt at all. This is the presentation attack, and it
+    is the deepest unsolved problem in authorization evidence, because a signature
+    cannot attest to pixels. This document narrows the gap with two additive, offline-checkable
+    pieces that touch no existing receipt format: a DETERMINISTIC RENDERER, a pure
+    function from the canonical action to a byte-identical human-readable rendering,
+    so a verifier RE-DERIVES the rendering from the signed bytes and rejects any surface
+    that showed something else; and a DISPLAY ATTESTATION, a signed claim by the signing
+    client binding the rendering it showed to the action it committed. Neither eliminates
+    the presentation attack (nothing purely digital can), but together they convert
+    "trust the vendor''s UI" into "verify the rendering was the honest function of
+    the signed action," and they make the residual risk explicit rather than hidden.</p>'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-schrock-ep-presentation-binding-00
+    docid:
+    - id: draft-schrock-ep-presentation-binding-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-schrock-ep-presentation-binding-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

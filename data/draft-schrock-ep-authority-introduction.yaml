@@ -1,0 +1,52 @@
+---
+schema-version: v1.2.3
+id: draft-schrock-ep-authority-introduction
+title:
+- content: 'Authority Documents and Graded Introduction: Trust Establishment for Agent-Action
+    Evidence Without Prior Federation'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-schrock-ep-authority-introduction
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: '<p>Every signed-evidence format in the agent-action space specifies verification
+    and defers acceptance to "a pinned issuer key, distributed out of band." The result
+    is that two organizations with no prior relationship cannot begin relying on each
+    other''s evidence without a human key ceremony. This document fills the acceptance
+    half. It defines the Authority Document: a signed, hash-chained, sequence-numbered
+    declaration of an organization''s evidence-issuing keys, with per-key validity
+    windows, custody classes, and revocation; rotations carry a continuity signature
+    by a key from the previous document, so first contact is the only leap of faith
+    and everything after is mechanical. Verification of an artifact resolves the key
+    that was valid AT ISSUANCE, so rotation never breaks old evidence and compromise
+    never retroactively voids honest history. Acceptance itself becomes a graded,
+    replayable verdict: introduction evidence (chain consistency, domain binding,
+    transparency-log inclusion and age, endorsements by the relying party''s pinned
+    anchors) is evaluated under a relying-party policy per action class, so a young,
+    unendorsed issuer can be acceptable for low-value actions while insufficient for
+    money movement, and its acceptance widens mechanically as its verifiable history
+    accrues. Nothing in this document creates trust from nothing; it makes the bootstrap
+    checkable and the residual risk priced by the relying party''s own policy.</p>'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-schrock-ep-authority-introduction-00
+    docid:
+    - id: draft-schrock-ep-authority-introduction-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-schrock-ep-authority-introduction-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
