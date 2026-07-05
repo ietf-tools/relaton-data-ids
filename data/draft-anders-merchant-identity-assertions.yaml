@@ -14,15 +14,19 @@ docid:
   primary: true
 abstract:
 - content: "<p>Existing work helps a relying party determine whether an automated
-    client is authorized to initiate a transaction. This document addresses how that
-    client can obtain verifiable merchant identity information about the payee before
-    completing the transaction. Specifically, this document defines a Merchant Identity
-    Assertion (MIA): a JSON document that attests to the verifiable identity of a
-    merchant entity and carries an embedded cryptographic proof. It defines the assertion
-    object structure, required and optional fields, the proof object, key discovery
-    via well-known URIs, validity semantics, and an optional signed Evaluation Result
-    Token for pre- transaction verification. This document is intended to complement,
-    not replace, existing agent identity and payment authorization protocols.</p>"
+    client is authorized to initiate a transaction. This document addresses the complementary
+    problem: how that client can obtain a verifiable identity statement about the
+    merchant that will receive the resulting payment, before the transaction is completed.
+    This document defines a Merchant Identity Assertion (MIA): a signed JSON document
+    binding a legal entity claim to a domain name. It specifies the claims schema,
+    the proof envelope, key discovery via a JSON Web Key Set at a well-known URI,
+    third-party issuance with explicit authorization, signing and verification procedures,
+    validity and revocation semantics, and an optional signed Evaluation Result Token
+    that records the outcome of a verification check as a portable audit artifact.
+    This document is informational. It defines a discovery and verification mechanism
+    only. It does not define trust scoring, merchant ranking, payment authorization,
+    or agent identity. It complements existing agent identity and payment authorization
+    protocols without modifying them.</p>"
   language:
   - en
   script:
@@ -38,6 +42,16 @@ relation:
       primary: true
     formattedref:
       content: draft-anders-merchant-identity-assertions-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-anders-merchant-identity-assertions-01
+    docid:
+    - id: draft-anders-merchant-identity-assertions-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-anders-merchant-identity-assertions-01
       format: text/plain
 ext:
   schema-version: v1.0.1

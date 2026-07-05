@@ -22,11 +22,12 @@ abstract:
     security. This limitation can pose a security risk in long-lived sessions, such
     as those found in industrial IoT or telecommunications environments. To address
     this, this specification defines an extended key update mechanism that performs
-    a fresh Diffie-Hellman exchange within an active session, thereby ensuring post-compromise
-    security. By forcing attackers to exfiltrate new key material repeatedly, this
-    approach mitigates the risks associated with static key compromise. Regular renewal
-    of session keys helps contain the impact of such compromises. The extension is
-    applicable to both TLS 1.3 and DTLS 1.3.</p>"
+    a fresh execution of the key exchange negotiated during the initial handshake
+    within an active session, thereby ensuring post-compromise security. By forcing
+    attackers to exfiltrate new key material repeatedly, this approach mitigates the
+    risks associated with static key compromise. Regular renewal of session keys helps
+    contain the impact of such compromises. The extension is applicable to both TLS
+    1.3 and DTLS 1.3.</p>"
   language:
   - en
   script:
@@ -162,6 +163,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-tls-extended-key-update-12
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-tls-extended-key-update-13
+    docid:
+    - id: draft-ietf-tls-extended-key-update-13
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-tls-extended-key-update-13
       format: text/plain
 ext:
   schema-version: v1.0.1

@@ -1,0 +1,218 @@
+---
+schema-version: v1.2.3
+id: draft-ietf-tls-extended-key-update-13
+title:
+- content: Extended Key Update for Transport Layer Security (TLS) 1.3
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-tls-extended-key-update-13
+  type: src
+type: standard
+docid:
+- id: draft-ietf-tls-extended-key-update-13
+  type: Internet-Draft
+  primary: true
+- id: I-D.ietf-tls-extended-key-update
+  type: IETF
+  scope: anchor
+docnumber: I-D.ietf-tls-extended-key-update
+date:
+- type: published
+  value: '2026-07-04'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Hannes
+          language:
+          - en
+        - language:
+          - en
+          initial: H
+        formatted_initials:
+          content: H.
+          language:
+          - en
+      surname:
+        content: Tschofenig
+        language:
+        - en
+      completename:
+        content: Hannes Tschofenig
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Siemens
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Michael
+          language:
+          - en
+        - language:
+          - en
+          initial: M
+        formatted_initials:
+          content: M.
+          language:
+          - en
+      surname:
+        content: Tüxen
+        language:
+        - en
+      completename:
+        content: Michael Tüxen
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Münster Univ. of Applied Sciences
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Tirumaleswar
+          language:
+          - en
+        - language:
+          - en
+          initial: T
+        formatted_initials:
+          content: T.
+          language:
+          - en
+      surname:
+        content: Reddy.K
+        language:
+        - en
+      completename:
+        content: Tirumaleswar Reddy.K
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Nokia
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Steffen
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Fries
+        language:
+        - en
+      completename:
+        content: Steffen Fries
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Siemens
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Yaroslav
+          language:
+          - en
+        - language:
+          - en
+          initial: "Y"
+        formatted_initials:
+          content: Y.
+          language:
+          - en
+      surname:
+        content: Rosomakho
+        language:
+        - en
+      completename:
+        content: Yaroslav Rosomakho
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Zscaler
+  role:
+  - type: author
+version:
+- draft: '13'
+revdate: '2026-07-04'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>TLS 1.3 ensures forward secrecy by performing an ephemeral Diffie-
+    Hellman key exchange during the initial handshake, protecting past communications
+    even if a party's long-term keys (typically a private key with a corresponding
+    certificate) are later compromised. While the built-in KeyUpdate mechanism allows
+    application traffic keys to be refreshed during a session, it does not incorporate
+    fresh entropy from a new key exchange and therefore does not provide post- compromise
+    security. This limitation can pose a security risk in long-lived sessions, such
+    as those found in industrial IoT or telecommunications environments. To address
+    this, this specification defines an extended key update mechanism that performs
+    a fresh execution of the key exchange negotiated during the initial handshake
+    within an active session, thereby ensuring post-compromise security. By forcing
+    attackers to exfiltrate new key material repeatedly, this approach mitigates the
+    risks associated with static key compromise. Regular renewal of session keys helps
+    contain the impact of such compromises. The extension is applicable to both TLS
+    1.3 and DTLS 1.3.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-ietf-tls-extended-key-update-06
+    docid:
+    - id: draft-ietf-tls-extended-key-update-06
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-tls-extended-key-update-06
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-ietf-tls-extended-key-update-13
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

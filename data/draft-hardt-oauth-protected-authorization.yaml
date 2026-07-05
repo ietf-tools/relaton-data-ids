@@ -1,0 +1,50 @@
+---
+schema-version: v1.2.3
+id: draft-hardt-oauth-protected-authorization
+title:
+- content: OAuth Protected Authorization
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-hardt-oauth-protected-authorization
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This document defines browser support for protecting OAuth 2.0 authorization
+    requests and authorization responses during redirect- based authorization flows.
+    A single Structured Field header field, OAuth-Authorization, is set by the OAuth
+    client in the redirect response that sends the browser to the authorization server,
+    and by the authorization server in the redirect response that returns the browser
+    to the OAuth client. In both cases the browser augments the header with the attested
+    origin of the redirecting party and delivers it to the redirect destination. The
+    mechanism provides security for the authorization request: the authorization server
+    receives a browser-attested, tamper-evident statement of which origin initiated
+    the request. The mechanism provides security and privacy for the authorization
+    response: the authorization code is delivered in the browser-protected header
+    instead of the redirect URI, and never appears in a URL, eliminating its exposure
+    through browser history, server logs, Referer headers, analytics systems, and
+    URL sharing. The header is generated, validated, and delivered by the browser,
+    and is inaccessible to scripts, service workers, and browser extensions. Existing
+    OAuth deployments continue to function unchanged; the protections activate only
+    when the OAuth client, browser, and authorization server all support them.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-hardt-oauth-protected-authorization-00
+    docid:
+    - id: draft-hardt-oauth-protected-authorization-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-hardt-oauth-protected-authorization-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

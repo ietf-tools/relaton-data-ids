@@ -14,18 +14,14 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document specifies an initial post-quantum signature algorithm
-    profile and migration considerations for the Resource Public Key Infrastructure
-    (RPKI). It profiles ML-DSA-65 as the primary candidate for an RPKI next signature
-    algorithm suite by reusing the ML-DSA algorithm identifiers and CMS conventions
-    defined by LAMPS. It also describes how Certification Authorities, repository
-    operators, and Relying Parties can evaluate and deploy a post-quantum suite while
-    preserving the existing RPKI architecture and router- facing VRP/RTR model. This
-    document profiles candidate post-quantum signature algorithms for RPKI certificates,
-    CRLs, certification requests, and CMS signed objects. It is written as input to
-    SIDROPS discussion and does not update RFC 7935 in this revision. It does not
-    define a new RPKI object format, a new cryptographic primitive, a new repository
-    synchronization protocol, or a new router protocol.</p>"
+- content: "<p>This document defines an initial experimental post-quantum signature
+    profile and migration design for the Resource Public Key Infrastructure (RPKI).
+    The profile uses Composite ML-DSA-65 with ECDSA P-256 for RPKI certificates, CRLs,
+    certification requests, and CMS signed objects. The migration design introduces
+    the composite suite at CA boundaries through Mixed Certification Chains. It preserves
+    the existing RPKI object formats, repository system, validation procedure, and
+    router-facing VRP/RTR model. This revision is intended for SIDROPS evaluation
+    and does not update RFC 7935.</p>"
   language:
   - en
   script:
@@ -41,6 +37,16 @@ relation:
       primary: true
     formattedref:
       content: draft-yoshikawa-sidrops-pqc-rpki-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-yoshikawa-sidrops-pqc-rpki-01
+    docid:
+    - id: draft-yoshikawa-sidrops-pqc-rpki-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-yoshikawa-sidrops-pqc-rpki-01
       format: text/plain
 ext:
   schema-version: v1.0.1

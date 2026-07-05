@@ -16,13 +16,16 @@ abstract:
 - content: <p>This specification describes an optional Topology Control (TC) message
     that can be sent by an OLSRv2 router. This is permitted, but not suggested, by
     the existing protocol, but is here recommended for use in some networks. The original
-    motivation for this message came from the circumstances of a mostly stable network,
-    in the most extreme case updated only by messages responding to the arrival and
-    departure of routers, in which case the additional TC message is not just recommended
-    but required. However, the additional message could be useful in reducing the
-    routing convergence time in any network in which messages are sent at lengthy
-    intervals. This specification updates RFC 7181 "The Optimized Link State Routing
-    Protocol version 2 (OLSRv2)".</p>
+    motivation for this message came from considering the circumstances of a mostly
+    stable network, in the most extreme case updated only by messages responding to
+    the arrival and departure of routers, in which case the additional TC message
+    would be not just recommended but required. While this extreme case is highly
+    unlikely to be ever used, consideration of this additional message indicates that
+    it could be useful in reducing the routing convergence time in any network in
+    which messages are sent at lengthy intervals. Sending such a message is, although
+    not previously suggested, permitted by OLSRv2 and thus implementations of OLSRv2
+    that do and do not send such messages are fully compatible. This specification
+    updates RFC 7181 "The Optimized Link State Routing Protocol version 2 (OLSRv2)".</p>
   language:
   - en
   script:
@@ -38,6 +41,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-manet-olsrv2-responsive-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-manet-olsrv2-responsive-01
+    docid:
+    - id: draft-ietf-manet-olsrv2-responsive-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-manet-olsrv2-responsive-01
       format: text/plain
 ext:
   schema-version: v1.0.1

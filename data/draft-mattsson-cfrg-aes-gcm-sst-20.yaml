@@ -1,0 +1,164 @@
+---
+schema-version: v1.2.3
+id: draft-mattsson-cfrg-aes-gcm-sst-20
+title:
+- content: Galois Counter Mode with Strong Secure Tags (GCM-SST)
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-mattsson-cfrg-aes-gcm-sst-20
+  type: src
+type: standard
+docid:
+- id: draft-mattsson-cfrg-aes-gcm-sst-20
+  type: Internet-Draft
+  primary: true
+- id: I-D.mattsson-cfrg-aes-gcm-sst
+  type: IETF
+  scope: anchor
+docnumber: I-D.mattsson-cfrg-aes-gcm-sst
+date:
+- type: published
+  value: '2026-07-04'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Matt
+          language:
+          - en
+        - language:
+          - en
+          initial: M
+        formatted_initials:
+          content: M.
+          language:
+          - en
+      surname:
+        content: Campagna
+        language:
+        - en
+      completename:
+        content: Matt Campagna
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Amazon Web Services
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Alexander
+          language:
+          - en
+        - language:
+          - en
+          initial: A
+        formatted_initials:
+          content: A.
+          language:
+          - en
+      surname:
+        content: Maximov
+        language:
+        - en
+      completename:
+        content: Alexander Maximov
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Ericsson
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: John
+          language:
+          - en
+        - language:
+          - en
+          initial: J
+        - language:
+          - en
+          initial: P
+        formatted_initials:
+          content: J. P.
+          language:
+          - en
+      surname:
+        content: Mattsson
+        language:
+        - en
+      completename:
+        content: John Preuß Mattsson
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Ericsson
+  role:
+  - type: author
+version:
+- draft: '20'
+revdate: '2026-07-04'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>This document defines Galois Counter Mode with Strong Secure Tags (GCM-SST),
+    an Authenticated Encryption with Associated Data (AEAD) algorithm that addresses
+    several weaknesses of GCM. GCM-SST can be used with any keystream generator, not
+    only 128-bit block ciphers. Main differences from GCM are the introduction of
+    a second authentication subkey H_2, per-nonce derivation of both H and H_2, and
+    stricter usage limits. Together, these changes yield authentication tags with
+    near-ideal forgery probabilities, including reforgeability resistance. All registered
+    instances have an expected number of forgeries E(F) ≈ v / 2^t, a property that
+    GCM is far from providing. GCM-SST is designed for security protocols with replay
+    protection such as TLS, QUIC, SRTP, and PDCP, and provides hardware and software
+    performance comparable to GCM. This document registers nine AEAD algorithm instances
+    using AES and Rijndael-256 in counter mode, with tag lengths of 48, 96, and 112
+    bits. GCM-SST has been standardized by 3GPP for use with SNOW 5G, AES-256, and
+    ZUC-256.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-mattsson-cfrg-aes-gcm-sst-12
+    docid:
+    - id: draft-mattsson-cfrg-aes-gcm-sst-12
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-mattsson-cfrg-aes-gcm-sst-12
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-mattsson-cfrg-aes-gcm-sst-20
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
