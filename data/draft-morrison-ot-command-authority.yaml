@@ -1,0 +1,50 @@
+---
+schema-version: v1.2.3
+id: draft-morrison-ot-command-authority
+title:
+- content: Consented and Attributable Agent Authority for Operational-Technology Control
+    Actions
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-morrison-ot-command-authority
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This memo specifies a binding profile by which a control action issued
+    to an operational-technology (OT) or industrial control system on the authority
+    of a software agent is refused unless it carries a verifiable statement of who
+    the agent is, which human principal it acts for, whether that principal consented
+    to this specific action on this specific asset, whether a human authorised the
+    action where the action's risk class requires it, and an append-only record sufficient
+    to attribute the action afterward. The profile does not invent new cryptography
+    or a new identity mechanism. It composes primitives defined elsewhere, DNSSEC-rooted
+    agent discovery, scoped and revocable consent, a human-in-the-loop binding moment,
+    and a provenance-labelled audit record, into a single structure, the Command Authority
+    Envelope, that an OT conduit evaluates and, on any missing or invalid binding,
+    refuses. The profile is availability- first and fails closed on authority, never
+    on safety: it MUST NOT be placed in the trip path of a safety function. The memo
+    maps the profile onto the identification, use-control, and audit requirements
+    that [IEC62443] and [NERCCIP] state but do not give a wire mechanism for. The
+    methods by which a principal's identity is inferred are out of scope by construction.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-morrison-ot-command-authority-00
+    docid:
+    - id: draft-morrison-ot-command-authority-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-morrison-ot-command-authority-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

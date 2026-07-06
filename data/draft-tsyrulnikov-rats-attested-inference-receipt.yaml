@@ -18,14 +18,18 @@ abstract:
     COSE_Sign1 envelope carrying CWT claims profiled per the Entity Attestation Token
     (EAT) framework. An AIR receipt binds model identity, input/output hashes, attestation-linked
     metadata, and operational telemetry into a single signed artifact suitable for
-    independent third-party verification of a confidential AI inference event. AIR
-    v1 targets single-inference receipts emitted by workloads running inside hardware-isolated
+    independent third-party verification of a confidential AI inference. An AIR receipt
+    is Attester-signed Evidence, not an appraisal verdict: a RATS Verifier must appraise
+    the referenced platform attestation before the receipt establishes TEE provenance.
+    AIR v1 targets single-inference receipts emitted by workloads running inside hardware-isolated
     Trusted Execution Environments (TEEs). AIR is attestation-linked: it carries measurements
     and a hash reference to the platform attestation evidence associated with the
     inference, but it does not replace platform-specific attestation verification.
-    This version defines AWS Nitro Enclaves and Intel TDX measurement profiles only.
-    Pipeline chaining, multi-inference receipts, and extensibility mechanisms for
-    additional claim or platform profiles are out of scope.</p>"
+    This version defines AWS Nitro Enclaves and Intel TDX measurement profiles only,
+    and assumes a single platform attestation document per receipt. Pipeline chaining,
+    multi-inference receipts, composite attesters, multi-verifier orchestration, accelerator
+    / GPU confidential-compute attestation integration, and extensibility mechanisms
+    for additional claim or platform profiles are out of scope.</p>"
   language:
   - en
   script:
@@ -51,6 +55,16 @@ relation:
       primary: true
     formattedref:
       content: draft-tsyrulnikov-rats-attested-inference-receipt-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-tsyrulnikov-rats-attested-inference-receipt-02
+    docid:
+    - id: draft-tsyrulnikov-rats-attested-inference-receipt-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-tsyrulnikov-rats-attested-inference-receipt-02
       format: text/plain
 ext:
   schema-version: v1.0.1

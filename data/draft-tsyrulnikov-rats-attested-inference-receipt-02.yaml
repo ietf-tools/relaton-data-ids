@@ -1,0 +1,108 @@
+---
+schema-version: v1.2.3
+id: draft-tsyrulnikov-rats-attested-inference-receipt-02
+title:
+- content: 'Attested Inference Receipt (AIR): A COSE/CWT Profile for Confidential
+    AI Inference'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-tsyrulnikov-rats-attested-inference-receipt-02
+  type: src
+type: standard
+docid:
+- id: draft-tsyrulnikov-rats-attested-inference-receipt-02
+  type: Internet-Draft
+  primary: true
+- id: I-D.tsyrulnikov-rats-attested-inference-receipt
+  type: IETF
+  scope: anchor
+docnumber: I-D.tsyrulnikov-rats-attested-inference-receipt
+date:
+- type: published
+  value: '2026-07-05'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Borys
+          language:
+          - en
+        - language:
+          - en
+          initial: B
+        formatted_initials:
+          content: B.
+          language:
+          - en
+      surname:
+        content: Tsyrulnikov
+        language:
+        - en
+      completename:
+        content: Borys Tsyrulnikov
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Cyntrisec
+  role:
+  - type: author
+version:
+- draft: '02'
+revdate: '2026-07-05'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>This document defines the Attested Inference Receipt (AIR), an application-layer
+    COSE_Sign1 envelope carrying CWT claims profiled per the Entity Attestation Token
+    (EAT) framework. An AIR receipt binds model identity, input/output hashes, attestation-linked
+    metadata, and operational telemetry into a single signed artifact suitable for
+    independent third-party verification of a confidential AI inference. An AIR receipt
+    is Attester-signed Evidence, not an appraisal verdict: a RATS Verifier must appraise
+    the referenced platform attestation before the receipt establishes TEE provenance.
+    AIR v1 targets single-inference receipts emitted by workloads running inside hardware-isolated
+    Trusted Execution Environments (TEEs). AIR is attestation-linked: it carries measurements
+    and a hash reference to the platform attestation evidence associated with the
+    inference, but it does not replace platform-specific attestation verification.
+    This version defines AWS Nitro Enclaves and Intel TDX measurement profiles only,
+    and assumes a single platform attestation document per receipt. Pipeline chaining,
+    multi-inference receipts, composite attesters, multi-verifier orchestration, accelerator
+    / GPU confidential-compute attestation integration, and extensibility mechanisms
+    for additional claim or platform profiles are out of scope.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-tsyrulnikov-rats-attested-inference-receipt-01
+    docid:
+    - id: draft-tsyrulnikov-rats-attested-inference-receipt-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-tsyrulnikov-rats-attested-inference-receipt-01
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-tsyrulnikov-rats-attested-inference-receipt-02
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
