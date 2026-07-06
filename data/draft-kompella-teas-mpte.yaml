@@ -13,7 +13,7 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>Shortest path routing offers an easy-to-understand, easy-to-implement
+- content: '<p>Shortest path routing offers an easy-to-understand, easy-to-implement
     method of establishing loop-free connectivity in a network, but offers few other
     features. Equal-cost multipath (ECMP), a simple extension, uses multiple equal-cost
     paths between any two points in a network: at any node in a path (really, Directed
@@ -25,13 +25,14 @@ abstract:
     attributes such as bandwidth, colors, risk groups and alternate metrics. A TE
     path can use these attributes to include or avoid certain links, increase path
     diversity, manage bandwidth reservations, improve service experience, and offer
-    protection paths. However, TE typically doesn't offer multipathing as the tunnels
+    protection paths. However, TE typically doesn''t offer multipathing as the tunnels
     used to implement TE usually take a single path. This memo proposes multipath
     traffic-engineering (MPTE), combining the best of ECMP and TE. The multipathing
-    proposed here need not be strictly equal-cost, nor the load balancing equally
-    weighted to each next hop. Moreover, the desired destination may be reachable
-    via multiple egresses. The proposal includes a protocol for signaling MPTE paths
-    using various types of tunnels, some of which are better suited to multipathing.</p>"
+    proposed here need not be strictly equal-cost, allowing for some "slack" to admit
+    more paths. The load balancing at each hop is optimally weighted to each next
+    hop rather than always being equally weighted. Moreover, traffic can enter and
+    leave an MPTE construct via multiple ingresses and egresses. The proposal includes
+    several choices of control and data planes.</p>'
   language:
   - en
   script:
@@ -67,6 +68,16 @@ relation:
       primary: true
     formattedref:
       content: draft-kompella-teas-mpte-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-kompella-teas-mpte-03
+    docid:
+    - id: draft-kompella-teas-mpte-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-kompella-teas-mpte-03
       format: text/plain
 ext:
   schema-version: v1.0.1

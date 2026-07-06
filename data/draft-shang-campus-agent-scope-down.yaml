@@ -14,15 +14,20 @@ docid:
   primary: true
 abstract:
 - content: <p>AI agents operating in enterprise campus networks execute user- delegated
-    tasks by invoking multiple tools and services, often without continuous user supervision.
+    Tasks by invoking multiple tools and services, often without continuous user supervision.
     Traditional authorization models assume stable applications and human-driven interactions,
     creating a mismatch when applied to autonomous agents that can chain actions across
     heterogeneous systems. Campus environments also contain heterogeneous and legacy
     services across diverse protocols, making per-service agent-aware authorization
-    difficult to deploy consistently. This document describes the problem space for
-    campus agent access control and argues that agents require task-bound privilege
-    reduction ("scope- down") and that enforcement can be provided by in-path network
-    devices in order to preserve compatibility with existing systems.</p>
+    difficult to deploy consistently. Similar problems can also appear in residential
+    access networks where home AI agents, smart-home hubs, and personal devices share
+    a subscriber line and are connected through a broadband network gateway (BNG).
+    This document describes the problem space for campus agent access control and
+    argues that agents require task-bound privilege reduction ("scope-down") and that
+    enforcement can be provided by in-path network devices in order to preserve compatibility
+    with existing systems. It also describes a home network and BNG use case where
+    the access provider or home gateway can provide a coarse but useful network-level
+    boundary for agent traffic.</p>
   language:
   - en
   script:
@@ -38,6 +43,16 @@ relation:
       primary: true
     formattedref:
       content: draft-shang-campus-agent-scope-down-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-shang-campus-agent-scope-down-01
+    docid:
+    - id: draft-shang-campus-agent-scope-down-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-shang-campus-agent-scope-down-01
       format: text/plain
 ext:
   schema-version: v1.0.1

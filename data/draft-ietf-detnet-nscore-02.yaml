@@ -1,0 +1,163 @@
+---
+schema-version: v1.2.3
+id: draft-ietf-detnet-nscore-02
+title:
+- content: On-time Forwarding with Non-Work Conserving Stateless Core Fair Queuing
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-detnet-nscore-02
+  type: src
+type: standard
+docid:
+- id: draft-ietf-detnet-nscore-02
+  type: Internet-Draft
+  primary: true
+- id: I-D.ietf-detnet-nscore
+  type: IETF
+  scope: anchor
+docnumber: I-D.ietf-detnet-nscore
+date:
+- type: published
+  value: '2026-07-06'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Yeoncheol
+          language:
+          - en
+        - language:
+          - en
+          initial: "Y"
+        formatted_initials:
+          content: Y.
+          language:
+          - en
+      surname:
+        content: Ryoo
+        language:
+        - en
+      completename:
+        content: Yeoncheol Ryoo
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: ETRI
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Jinoo
+          language:
+          - en
+        - language:
+          - en
+          initial: J
+        formatted_initials:
+          content: J.
+          language:
+          - en
+      surname:
+        content: Joung
+        language:
+        - en
+      completename:
+        content: Jinoo Joung
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Sangmyung University
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - language:
+          - en
+          initial: C
+        formatted_initials:
+          content: C.
+          language:
+          - en
+      surname:
+        content: CHOI
+        language:
+        - en
+      completename:
+        content: Chang-ho CHOI
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: ETRI
+  role:
+  - type: author
+version:
+- draft: '02'
+revdate: '2026-07-06'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>This document specifies the framework and operational procedure for
+    deterministic networking that guarantees maximum and minimum end-to- end latency
+    bounds to flows. The solution has non-periodic, asynchronous, flow-level, non-work
+    conserving, on-time, and rate- based functional characteristics, according to
+    the taxonomy suggested by [I-D.ietf-detnet-dataplane-taxonomy]. The packets are
+    stored in the queue in ascending order of the ideal service start time, called
+    Eligible Time (ET), and the ideal service completion time, called Finish Time
+    (FT). The queued packets were forwarded after ET, in ascending ordering of FT,
+    in a non-work conserving manner. The ET and FT are calculated at the entrance
+    node according to the packet size and rate of the flow. All subsequent core nodes
+    are stateless and asynchronously update ET and FT based on metadata received via
+    packet headers. This mechanism is called non- work conserving stateless fair queuing
+    (N-SCORE), which guarantees both E2E latency upper and lower bounds, thus E2E
+    jitter bound. N-SCORE supports two alternative methods for determining ET and
+    FT at stateless core nodes. The Direct ET/FT Method propagates ET and FT generated
+    by the previous node using the delay factor function. The Arrival-based ET/FT
+    Method reconstructs ET and FT from the locally observed packet arrival time together
+    with metadata carried in the packet header. Both methods provide identical scheduling
+    semantics while allowing different implementation choices.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-ietf-detnet-nscore-01
+    docid:
+    - id: draft-ietf-detnet-nscore-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-detnet-nscore-01
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-ietf-detnet-nscore-02
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

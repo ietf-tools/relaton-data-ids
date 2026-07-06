@@ -13,13 +13,19 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: <p>"Secure hybrid network monitoring - Problem statement" identifies challenges
-    in securing and monitoring networks deployed across hybrid and mixed cloud environments.
-    This document introduces the Path Characteristics Service (PCS), a framework that
-    enables applications and operators to obtain and evaluate verifiable information
-    about the characteristics of the network paths they use. It outlines a non- normative
-    architecture and interfaces for PCS and explains how PCS can help address the
-    identified challenges; it does not define protocol requirements.</p>
+- content: <p>"Secure hybrid network monitoring – Problem statement" [I-D.oiwa-secure-hybrid-network]
+    identifies challenges in securing and monitoring networks deployed across hybrid
+    and mixed cloud environments. This document introduces the Path Characteristics
+    Service (PCS), a service that enables applications and operators to verify whether
+    a given network path conforms to their declared requirements ("intent") regarding
+    security, compliance, and operational properties. Unlike traditional network monitoring,
+    PCS does not expose raw network state; instead, it evaluates the user's intent
+    against the actual path characteristics and returns a conformance result (match
+    or no-match). This intent matching approach allows multi-stakeholder environments
+    to verify path properties without disclosing sensitive internal infrastructure
+    details. This document describes an architecture and interfaces for PCS; it expresses
+    recommended behaviors and constraints using the normative keywords of BCP 14,
+    but does not specify a wire protocol or its encoding.</p>
   language:
   - en
   script:
@@ -35,6 +41,16 @@ relation:
       primary: true
     formattedref:
       content: draft-oiwa-path-characteristics-service-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-oiwa-path-characteristics-service-01
+    docid:
+    - id: draft-oiwa-path-characteristics-service-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-oiwa-path-characteristics-service-01
       format: text/plain
 ext:
   schema-version: v1.0.1

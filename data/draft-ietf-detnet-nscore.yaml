@@ -26,7 +26,12 @@ abstract:
     are stateless and asynchronously update ET and FT based on metadata received via
     packet headers. This mechanism is called non- work conserving stateless fair queuing
     (N-SCORE), which guarantees both E2E latency upper and lower bounds, thus E2E
-    jitter bound.</p>"
+    jitter bound. N-SCORE supports two alternative methods for determining ET and
+    FT at stateless core nodes. The Direct ET/FT Method propagates ET and FT generated
+    by the previous node using the delay factor function. The Arrival-based ET/FT
+    Method reconstructs ET and FT from the locally observed packet arrival time together
+    with metadata carried in the packet header. Both methods provide identical scheduling
+    semantics while allowing different implementation choices.</p>"
   language:
   - en
   script:
@@ -52,6 +57,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-detnet-nscore-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-detnet-nscore-02
+    docid:
+    - id: draft-ietf-detnet-nscore-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-detnet-nscore-02
       format: text/plain
 ext:
   schema-version: v1.0.1

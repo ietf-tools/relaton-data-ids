@@ -16,9 +16,16 @@ abstract:
 - content: "<p>This document specifies an evaluation framework and related definitions
     for intent-driven network configuration using Large Language Model(LLM)-based
     agents. The framework combines an emulator-based interactive environment, a suite
-    of representative tasks, and multi-dimensional metrics to assess reasoning quality,
-    command accuracy, and functional correctness. The framework aims to enable reproducible,
-    comprehensive, and fair comparisons among LLM- driven network configuration approaches.</p>"
+    of representative tasks, and multi-dimensional metrics organized in two layers:
+    outcome metrics that verify functional correctness in a method-agnostic way, and
+    agentic process metrics that assess reasoning quality and interactive command
+    generation. Functional testcase results serve as the primary metric; command and
+    reasoning scores act as diagnostic estimates against the task's ground truth configurations
+    (which may include more than one validated solution), and optional efficiency
+    metrics capture time and token cost. The framework aims to enable reproducible,
+    comprehensive, and fair comparisons among network configuration approaches, covering
+    both agentic and non-agentic solutions while highlighting capabilities specific
+    to autonomous agents.</p>"
   language:
   - en
   script:
@@ -44,6 +51,16 @@ relation:
       primary: true
     formattedref:
       content: draft-cui-nmrg-llm-benchmark-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-cui-nmrg-llm-benchmark-02
+    docid:
+    - id: draft-cui-nmrg-llm-benchmark-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-cui-nmrg-llm-benchmark-02
       format: text/plain
 ext:
   schema-version: v1.0.1

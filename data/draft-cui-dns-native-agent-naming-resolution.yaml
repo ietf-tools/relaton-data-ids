@@ -14,13 +14,19 @@ docid:
   primary: true
 abstract:
 - content: "<p>This document specifies DNS-Native Agent Naming and Resolution (DN-
-    ANR) for AI agents. DN-ANR has three goals: (1) use domain names (FQDNs) as stable
-    Agent Identifiers, (2) resolve Agent Identifiers to verifiable endpoints and supported
-    protocol/version information with a cryptographic integrity chain (DNSSEC preferred),
-    and (3) provide only minimal and stable pointer/index capabilities that can be
-    referenced by upper-layer discovery systems. DN-ANR intentionally does not carry
-    heavy semantic metadata in DNS, and does not define semantic discovery, ranking,
-    or routing decisions.</p>"
+    ANR) for AI agents. DN-ANR uses domain names (FQDNs) as stable Agent Identifiers
+    and resolves a selected Agent Identifier to verifiable endpoints and supported
+    protocol/version information with a cryptographic integrity chain, with DNSSEC
+    preferred. DN-ANR is a post-selection resolution profile. It does not define agent
+    discovery, capability search, semantic matching, ranking, or routing decisions.
+    Agent discovery, publication, or registry, including DNS-based mechanisms such
+    as DNS-AID, may produce candidate Agent Identifiers; DN-ANR resolves and verifies
+    the identifier selected by such mechanisms or by local policy. Within that scope,
+    DN-ANR additionally defines DNS-based version distribution and deterministic version
+    selection, canonicalized SVCB integrity cross- checking, and a signed HTTPS mirror
+    for clients that cannot perform SVCB queries. While AI agents are the primary
+    use case, the resolution and verification behavior defined here applies to any
+    entity identified by an FQDN, such as services and workloads.</p>"
   language:
   - en
   script:
@@ -46,6 +52,16 @@ relation:
       primary: true
     formattedref:
       content: draft-cui-dns-native-agent-naming-resolution-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-cui-dns-native-agent-naming-resolution-02
+    docid:
+    - id: draft-cui-dns-native-agent-naming-resolution-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-cui-dns-native-agent-naming-resolution-02
       format: text/plain
 ext:
   schema-version: v1.0.1

@@ -22,11 +22,15 @@ abstract:
     receiver can actually verify. This document defines a verifier-facing model for
     separating those claims. It provides a reusable matrix format that protocol authors
     can use to state, for each security-relevant claim, which field carries it, which
-    party verifies it, what binding or freshness rule applies, and what failure behavior
-    is required when the claim is absent, stale, inconsistent, or not verifiable.
-    The document is protocol-neutral. It is intended to help compare candidate agent
-    communication drafts and to provide security-considerations and requirements text
-    for agent session and delegation binding.</p>"
+    party verifies it, what binding or freshness rule applies, what failure behavior
+    is required when the claim is absent, stale, inconsistent, or not verifiable,
+    and what constrained result an application may consume after successful verification.
+    It also separates specification status, implementation status, and evidence type
+    so that reviewers can distinguish current protocol text, implementation evidence,
+    inherited mechanisms, and architectural assumptions. The document is protocol-neutral.
+    It is intended to help compare candidate agent communication drafts and to provide
+    security-considerations and requirements text for agent session and delegation
+    binding.</p>"
   language:
   - en
   script:
@@ -52,6 +56,16 @@ relation:
       primary: true
     formattedref:
       content: draft-bu-agentproto-security-principal-binding-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-bu-agentproto-security-principal-binding-02
+    docid:
+    - id: draft-bu-agentproto-security-principal-binding-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-bu-agentproto-security-principal-binding-02
       format: text/plain
 ext:
   schema-version: v1.0.1

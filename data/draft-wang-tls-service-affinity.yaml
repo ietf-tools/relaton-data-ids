@@ -14,15 +14,19 @@ docid:
   primary: true
 abstract:
 - content: "<p>This draft proposes a service affinity solution between client and
-    server based on Transport Layer Security (TLS). An extension to Transport Layer
-    Security (TLS) 1.3 to enable session migration. This mechanism is designed for
-    network architectures, particularly for multi-homed servers that possess multiple
-    network interfaces and IP addresses. This document also introduces a Reliable
-    Framing Layer that operates above the TLS record layer to provide message framing,
-    sequence numbering, acknowledgment tracking, and automatic retransmission. The
-    Framing Layer ensures zero application data loss during TLS session migration
-    by buffering unacknowledged data frames and retransmitting them to the new server
-    endpoint after migration completes.</p>"
+    server based on Transport Layer Security (TLS). It defines a minimal extension
+    to TLS 1.3 by which a server instance can authorize a client to resume an established
+    session on a different instance of the same service (for example, another node
+    of a load-balanced cluster) and request, in band, that the client do so. The relocation
+    authorization is carried inside the server's own session ticket, so it inherits
+    the security properties of TLS 1.3 ticket-based resumption; the relocation target
+    is an opaque identifier resolved by the application or control plane rather than
+    an address carried in TLS. This document also introduces a Reliable Framing Layer
+    that operates above the TLS record layer to provide message framing, sequence
+    numbering, acknowledgment tracking, and automatic retransmission. The Framing
+    Layer ensures zero application data loss during TLS session migration by buffering
+    unacknowledged data frames and retransmitting them to the new server endpoint
+    after migration completes.</p>"
   language:
   - en
   script:
@@ -68,6 +72,16 @@ relation:
       primary: true
     formattedref:
       content: draft-wang-tls-service-affinity-03
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-wang-tls-service-affinity-04
+    docid:
+    - id: draft-wang-tls-service-affinity-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-wang-tls-service-affinity-04
       format: text/plain
 ext:
   schema-version: v1.0.1

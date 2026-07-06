@@ -17,14 +17,18 @@ abstract:
     of AI agents. It defines a common metadata format for describing AI agents (including
     capabilities, I/O specifications, supported languages, tags, authentication methods,
     etc.), a capability-based discovery mechanism, and a unified RESTful invocation
-    interface. This revision additionally specifies an optional extension that enables
-    intent-based agent selection prior to discovery and invocation, without changing
-    existing discovery or invocation semantics. The goal is to enable cross-platform
-    interoperability among AI agents by providing a discover-and-match mechanism and
-    a unified invocation entry point. Security considerations, including authentication
-    and trust measures, are also discussed. This specification aims to facilitate
-    the formation of multi-agent systems by making it easy to find the right agent
-    for a task and invoke it in a consistent manner across different vendors and platforms.</p>"
+    interface. This revision refines the discovery mechanism by defining fields for
+    intent-based agent selection. This capability enables a client, host agent, or
+    orchestration system to describe a task intent and receive a ranked set of candidate
+    agents before invocation, without changing existing discovery or invocation semantics.
+    The goal is to enable cross-platform interoperability among AI agents by providing
+    a discover-and-match mechanism and a unified invocation entry point. Security
+    considerations, including authentication and trust measures, are also discussed.
+    This specification aims to facilitate the formation of multi-agent systems by
+    making it easy to find the right agent for a task and invoke it in a consistent
+    manner across different vendors and platforms. Intent-based selection is an application-layer
+    capability and does not define network routing, packet forwarding, path computation,
+    reachability advertisement, or address resolution.</p>"
   language:
   - en
   script:
@@ -50,6 +54,16 @@ relation:
       primary: true
     formattedref:
       content: draft-cui-ai-agent-discovery-invocation-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-cui-ai-agent-discovery-invocation-02
+    docid:
+    - id: draft-cui-ai-agent-discovery-invocation-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-cui-ai-agent-discovery-invocation-02
       format: text/plain
 ext:
   schema-version: v1.0.1

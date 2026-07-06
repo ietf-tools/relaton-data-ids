@@ -14,11 +14,11 @@ docid:
   primary: true
 abstract:
 - content: "<p>This document defines a small, backwards-compatible change to composite
-    ML-DSA that *cryptographically binds the signature to the specific composite public
-    key*. It does so by defining a *Public-Key Context* value (pkc) equal to a hash
-    of the *serialized composite public key*, and by setting the composite context
-    field to that value. This prevents *key reuse* and *cross-key forgeries* across
-    different composite keys, while preserving the API of Composite ML-DSA. The construction
+    ML-DSA that cryptographically binds the signature to the specific composite public
+    key. It does so by defining a Public-Key Context value (pkc) equal to a hash of
+    the serialized composite public key, and by setting the composite context field
+    to that value. This prevents key reuse and cross-key forgeries across different
+    composite keys, while preserving the API of Composite ML-DSA. The construction
     introduces two helper procedures to compute pkc from either the composite private
     key or the composite public key.</p>"
   language:
@@ -36,6 +36,16 @@ relation:
       primary: true
     formattedref:
       content: draft-gray-lamps-compositepkc-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-gray-lamps-compositepkc-01
+    docid:
+    - id: draft-gray-lamps-compositepkc-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-gray-lamps-compositepkc-01
       format: text/plain
 ext:
   schema-version: v1.0.1

@@ -1,0 +1,45 @@
+---
+schema-version: v1.2.3
+id: draft-chen-rdma-windowless-ack
+title:
+- content: Windowless Cumulative ACK Extension for RDMA Retransmission
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-chen-rdma-windowless-ack
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>Traditional RDMA Reliable Connection (RC) uses selective retransmission,
+    while TCP SACK depends on sliding window and RTO timer tuning. Both mechanisms
+    waste network bandwidth when window or RTO parameters mismatch real network conditions.
+    This document defines a windowless cumulative selective acknowledgement extension
+    (T/C AETH) embedded within the RDMA ETH header, paired with dual- trigger ACK
+    reporting logic driven by cumulative receive time threshold and cumulative received
+    packet count threshold. The receiver generates extended SACK reports without sliding
+    window constraints. The sender accurately identifies lost PSN segments through
+    multi-segment confirmation fields carried in T/C AETH, then only retransmits missing
+    packets. This design removes window dependency, eliminates redundant retransmissions,
+    and improves bandwidth utilization and end-to-end throughput for high-speed RDMA
+    workloads in data centers and wide-area networks.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-chen-rdma-windowless-ack-00
+    docid:
+    - id: draft-chen-rdma-windowless-ack-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-chen-rdma-windowless-ack-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
