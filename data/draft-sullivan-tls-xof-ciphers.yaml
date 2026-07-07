@@ -1,0 +1,44 @@
+---
+schema-version: v1.2.3
+id: draft-sullivan-tls-xof-ciphers
+title:
+- content: TLS 1.3 Cipher Suites with Alternative Key-Schedule Profiles
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-sullivan-tls-xof-ciphers
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>TLS 1.3 builds its key schedule on HKDF over the cipher suite's hash.
+    This document defines TLS 1.3 cipher suites that build it on a deck function over
+    a single permutation instead, the one a deployment already carries when it uses
+    SHA-3, ML-KEM, or ML-DSA. One permutation then runs the whole schedule, and a
+    full handshake takes about a third of the permutation calls an HKDF schedule over
+    that permutation would. Such a cipher suite names an AEAD algorithm together with
+    a schedule profile that defines every key-schedule function the connection uses.
+    The profile follows from the negotiated cipher suite alone, so no new extension
+    is defined and the TLS 1.3 state machine and wire format are unchanged. Two profiles
+    are defined, one on the standard SHA-3 function and one on a faster reduced-round
+    variant of it.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-sullivan-tls-xof-ciphers-00
+    docid:
+    - id: draft-sullivan-tls-xof-ciphers-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-sullivan-tls-xof-ciphers-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

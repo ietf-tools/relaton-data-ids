@@ -13,14 +13,12 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>The Path Computation Element (PCE) is able of determining paths according
-    to constraints expressed in the form of metrics. The value of the metric can be
-    signaled as a bound or maximum, meaning that path metric must be less than or
-    equal such value. While this can be sufficient for certain services, some others
-    can require the utilization of Precision Availability Metrics (PAM). This document
-    defines a new object, namely the PRECISION METRIC object, to be used for path
-    calculation or selection for networking services with performance requirements
-    expressed as Service Level Objectives (SLO) using PAM.</p>"
+- content: "<p>This document extends PCEP to support Precision Availability Metrics
+    (PAM) [RFC9544] for path computation. The optimization objectives for PAM computations
+    are encoded using the Objective Function (OF) object defined in [RFC5541], allowing
+    PCCs to specify precise optimization criteria for services with SLO requirements.
+    And a PCE can report the statistical characterization associated with a computed
+    path.</p>"
   language:
   - en
   script:
@@ -96,6 +94,16 @@ relation:
       primary: true
     formattedref:
       content: draft-contreras-pce-pam-06
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-contreras-pce-pam-07
+    docid:
+    - id: draft-contreras-pce-pam-07
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-contreras-pce-pam-07
       format: text/plain
 ext:
   schema-version: v1.0.1

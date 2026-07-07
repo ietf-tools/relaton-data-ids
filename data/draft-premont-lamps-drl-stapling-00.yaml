@@ -1,0 +1,127 @@
+---
+schema-version: v1.2.3
+id: draft-premont-lamps-drl-stapling-00
+title:
+- content: TLS Extension for Distributed Revocation Ledger (DRL) Stapling using a
+    Sparse Merkle Tree
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-premont-lamps-drl-stapling-00
+  type: src
+type: standard
+docid:
+- id: draft-premont-lamps-drl-stapling-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.premont-lamps-drl-stapling
+  type: IETF
+  scope: anchor
+docnumber: I-D.premont-lamps-drl-stapling
+date:
+- type: published
+  value: '2026-07-06'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Arthur
+          language:
+          - en
+        - language:
+          - en
+          initial: A
+        formatted_initials:
+          content: A.
+          language:
+          - en
+      surname:
+        content: PREMONT
+        language:
+        - en
+      completename:
+        content: Arthur PREMONT
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: IP Paris
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Hossam
+          language:
+          - en
+        - language:
+          - en
+          initial: H
+        formatted_initials:
+          content: H.
+          language:
+          - en
+      surname:
+        content: Afifi
+        language:
+        - en
+      completename:
+        content: Hossam Afifi
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Telecom SudParis
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-07-06'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: <p>Managing certificate revocation remains a recurring challenge in the
+    Web Public Key Infrastructure (WebPKI). Existing solutions such as Certificate
+    Revocation Lists (CRLs) and the Online Certificate Status Protocol (OCSP) involve
+    compromises in terms of propagation latency, availability, and user privacy. With
+    the planned deprecation of OCSP by some major Certificate Authorities (CAs), there
+    is renewed interest in alternatives. This document specifies a decentralized certificate
+    revocation architecture based on a Distributed Revocation Ledger (DRL) managed
+    collectively by CAs. The ledger state is maintained as a Sparse Merkle Tree (SMT)
+    in which only revoked certificates occupy non- default leaves, so that a valid
+    certificate is attested by a compact non-membership proof and no prior registration
+    of valid certificates is required. This document further defines a new Transport
+    Layer Security (TLS) extension enabling "DRL Stapling", which allows a server
+    to provide a client with a cryptographic proof of a certificate's status, consisting
+    of a Sparse Merkle audit path and an M-of-N threshold signature from the CA consortium.
+    The approach builds on the Revocation Transparency proposal of Laurie and Kasper
+    and on subsequent formalizations of Sparse Merkle Trees; its novel contributions
+    are the decentralized threshold-signature trust model with deterministic finality
+    and the concrete TLS wire format.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-premont-lamps-drl-stapling-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

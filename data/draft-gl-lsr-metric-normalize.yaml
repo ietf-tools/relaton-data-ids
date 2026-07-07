@@ -17,10 +17,12 @@ abstract:
     as ECMP equivalent links for load balancing during forwarding. However, slight
     fluctuations in metric values can prevent the formation of ECMP equivalent links,
     leading to the idle state of suboptimal links and thus wasting bandwidth resources.
-    This document proposes a method for normalizing metrics, allowing the slight fluctuations
-    across multiple links to be adjusted so that the resulting calculated metrics
-    become identical. This enables the formation of ECMP equivalent links, facilitating
-    load distribution during forwarding.</p>"
+    This document proposes a metric normalization method by advertising metric normalization
+    parameters corresponding to a specific Metric- Type for Flexible Algorithm. During
+    route calculation, slight fluctuations across multiple links are adjusted according
+    to these normalization parameters, making the computed metric values more consistent.
+    This approach enables the formation of ECMP equivalent links and promotes load
+    sharing in the forwarding process.</p>"
   language:
   - en
   script:
@@ -36,6 +38,16 @@ relation:
       primary: true
     formattedref:
       content: draft-gl-lsr-metric-normalize-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-gl-lsr-metric-normalize-01
+    docid:
+    - id: draft-gl-lsr-metric-normalize-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-gl-lsr-metric-normalize-01
       format: text/plain
 ext:
   schema-version: v1.0.1

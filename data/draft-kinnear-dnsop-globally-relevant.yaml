@@ -1,0 +1,42 @@
+---
+schema-version: v1.2.3
+id: draft-kinnear-dnsop-globally-relevant
+title:
+- content: Globally Relevant HTTPS RRs
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-kinnear-dnsop-globally-relevant
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: <p>DNS answers for SVCB and HTTPS resource records are typically treated
+    as scoped to the network on which they were obtained. This requires clients to
+    re-resolve DNS when changing network attachments, adding latency to connection
+    establishment. This document defines a new SvcParamKey, "globally-relevant", for
+    use in SVCB and HTTPS DNS resource records as defined in [RFC9460]. When present,
+    this boolean flag indicates that the service binding parameters in the record
+    are valid regardless of the client's network attachment point. Clients that observe
+    this flag can reuse cached SVCB and HTTPS records across network changes, subject
+    to normal TTL expiry.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-kinnear-dnsop-globally-relevant-00
+    docid:
+    - id: draft-kinnear-dnsop-globally-relevant-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-kinnear-dnsop-globally-relevant-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

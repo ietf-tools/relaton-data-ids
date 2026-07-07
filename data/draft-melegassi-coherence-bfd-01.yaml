@@ -1,0 +1,117 @@
+---
+schema-version: v1.2.3
+id: draft-melegassi-coherence-bfd-01
+title:
+- content: 'Coherence-BFD: Sub-Second Coherence Detection Using Bidirectional Forwarding
+    Detection Patterns'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-melegassi-coherence-bfd-01
+  type: src
+type: standard
+docid:
+- id: draft-melegassi-coherence-bfd-01
+  type: Internet-Draft
+  primary: true
+- id: I-D.melegassi-coherence-bfd
+  type: IETF
+  scope: anchor
+docnumber: I-D.melegassi-coherence-bfd
+date:
+- type: published
+  value: '2026-07-06'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Leonardo
+          language:
+          - en
+        - language:
+          - en
+          initial: L
+        - language:
+          - en
+          initial: M
+        formatted_initials:
+          content: L. M.
+          language:
+          - en
+      surname:
+        content: Costa
+        language:
+        - en
+      completename:
+        content: Leonardo Melegassi Costa
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Catellix
+  role:
+  - type: author
+version:
+- draft: '01'
+revdate: '2026-07-06'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>This document specifies Coherence-BFD, a protocol that combines the
+    asynchronous heartbeat, demand-mode, echo function, and detection-multiplier mechanisms
+    of Bidirectional Forwarding Detection (BFD, [RFC5880]) with the multi-vantage
+    path coherence detection of [I-D.melegassi-mvps-incremental-be]. The result is
+    a sub-second coherence failure detector with theoretical and empirical detection
+    latency of 55 ms (1091x faster than the 60-second tick baseline of the underlying
+    BE-MVPS framework). Five execution variants are specified: V0 (baseline), V1 (heartbeat-fast),
+    V2 (demand), V3 (echo), and V4 (hybrid). Wall- clock benchmarks confirm V3 (Echo)
+    as the latency-optimal variant at 55 ms median tau_detect with 39 680 B/s bandwidth.
+    This revision (-01) adds three layers of proof: (a) Canonical: formal proofs of
+    the detection lower-bound (Theorem T-BFD-1), false-positive-rate decay (Theorem
+    T-BFD-2), and connection to the GDDP geometric- precision framework (Corollary
+    C-BFD-3). (b) Empirical: SHA-256-anchored benchmark receipts reproducible from
+    the public reference scripts. (c) Real data: validation against 92 067 RIPE Atlas
+    RTT measurements from 450+ globally-distributed anchors spanning 2+ months of
+    continuous collection. NOTE ON DATA PROVENANCE. Wall-clock detection-latency and
+    bandwidth numbers in Section 10 are obtained from controlled benchmarks (scripts/benchmark_coherence_bfd.py).
+    Real-data validation in Section 18 uses live Internet RTT measurements from RIPE
+    Atlas to confirm that the theoretical bounds hold on operational paths. HARDWARE
+    CAVEAT. The 55 ms median tau_detect is a SOFTWARE- HARNESS measurement, not a
+    router-class measurement. Validation against real BFD hardware is identified as
+    required future work before progression past Experimental status.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-melegassi-coherence-bfd-00
+    docid:
+    - id: draft-melegassi-coherence-bfd-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-melegassi-coherence-bfd-00
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-melegassi-coherence-bfd-01
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

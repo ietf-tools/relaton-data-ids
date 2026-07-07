@@ -23,30 +23,19 @@ abstract:
     BE-MVPS framework). Five execution variants are specified: V0 (baseline), V1 (heartbeat-fast),
     V2 (demand), V3 (echo), and V4 (hybrid). Wall- clock benchmarks confirm V3 (Echo)
     as the latency-optimal variant at 55 ms median tau_detect with 39 680 B/s bandwidth.
-    A new lower bound theorem (Theorem 9 of [I-D.melegassi-mvps-incremental-be]) shows
-    that tau_detect &gt;= M * T_tick + tau_RTT is tight; V3 achieves this bound exactly
-    for M=1. The protocol is designed for deployment alongside conventional BFD sessions:
-    a Coherence-BFD session monitors not the binary up/down state of a forwarding
-    path but the coherence state across N vantage observers. NOTE ON DATA PROVENANCE.
-    All wall-clock detection-latency and bandwidth numbers reported in this document
-    are obtained from synthetic simulations (scripts/benchmark_coherence_bfd.py) under
-    controlled conditions, not from operational deployment data. HARDWARE CAVEAT (v5.0
-    unified proof, 2026-05-22). The 55 ms median tau_detect figure of Section 5 is
-    a SOFTWARE-HARNESS measurement on a single host, not a router-class measurement.
-    In particular, it does NOT account for the data-plane forwarding asymmetries,
-    micro-bursts, or ASIC/NPU scheduling delays that real BFD hardware exhibits on
-    production forwarders. Operators MUST treat the 55 ms figure as a theoretical-bound
-    demonstration on a coherence-grade observation pipeline (vantages -&gt; broker),
-    not as a guaranteed service level over arbitrary BFD-capable hardware. Validation
-    against real BFD hardware (commercial routers, merchant-silicon ASICs, software
-    forwarders such as VPP or DPDK) is identified as required future work before progression
-    past Experimental status. This caveat is the principal reason the document is
-    targeted at Experimental. A REFERENCE IMPLEMENTATION of the wire format defined
-    in Section 4 (mandatory section + Experimental-range TLVs + HMAC-SHA256 authentication)
-    is provided in pure Python at &lt;https://catellix.com/static/download/reference-impl/&gt;.
-    It demonstrates end-to-end interop of 1 broker and 4 vantages with 480 packets
-    in 8 seconds, zero HMAC failures, and correct triggering of ALARM and Byzantine-event
-    detection. See reference-impl/README.md for usage.</p>"
+    This revision (-01) adds three layers of proof: (a) Canonical: formal proofs of
+    the detection lower-bound (Theorem T-BFD-1), false-positive-rate decay (Theorem
+    T-BFD-2), and connection to the GDDP geometric- precision framework (Corollary
+    C-BFD-3). (b) Empirical: SHA-256-anchored benchmark receipts reproducible from
+    the public reference scripts. (c) Real data: validation against 92 067 RIPE Atlas
+    RTT measurements from 450+ globally-distributed anchors spanning 2+ months of
+    continuous collection. NOTE ON DATA PROVENANCE. Wall-clock detection-latency and
+    bandwidth numbers in Section 10 are obtained from controlled benchmarks (scripts/benchmark_coherence_bfd.py).
+    Real-data validation in Section 18 uses live Internet RTT measurements from RIPE
+    Atlas to confirm that the theoretical bounds hold on operational paths. HARDWARE
+    CAVEAT. The 55 ms median tau_detect is a SOFTWARE- HARNESS measurement, not a
+    router-class measurement. Validation against real BFD hardware is identified as
+    required future work before progression past Experimental status.</p>"
   language:
   - en
   script:
@@ -62,6 +51,16 @@ relation:
       primary: true
     formattedref:
       content: draft-melegassi-coherence-bfd-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-melegassi-coherence-bfd-01
+    docid:
+    - id: draft-melegassi-coherence-bfd-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-melegassi-coherence-bfd-01
       format: text/plain
 ext:
   schema-version: v1.0.1

@@ -14,22 +14,21 @@ docid:
   primary: true
 abstract:
 - content: "<p>This document describes a mechanism for delivering authenticated telephone
-    call identity information using the VESPER framework in environments where SIP
-    signaling is unavailable or unsuitable. By supporting an out-of-band (OOB) transport
-    model, this approach enables entities to publish and retrieve signed PASSporT
-    assertions independent of end-to-end delivery within SIP-based VoIP networks.
-    These PASSporTs are signed with delegate certificates that were authorized for
-    issuance by corresponding authority tokens, which represent the trust and validation
-    of telephone number control and related claim information. Transparency features
-    ensure that these authorizations are publicly auditable and cryptographically
-    provable, supporting a higher standard of trust. This document also introduces
-    support for Connected Identity to the STIR OOB model, enabling the called party
-    to respond with a signed PASSporT asserting its identity, thereby binding the
-    identities of both parties to the transaction and enhancing end-to-end accountability.
-    The OOB mechanism serves as an alternative delivery path for PASSporTs in cases
-    where end-to-end in-band SIP delivery is not possible, enabling verifiers to confirm
-    the association between the originating telephone number and the identity asserting
-    authority as part of the broader VESPER trust framework.</p>"
+    call identity information using the VESPER framework for use where in-band signaling
+    does not carry the identity end to end, or where there is no in-band path between
+    the parties at all. By supporting an out-of-band (OOB) transport model, this approach
+    enables entities to publish and retrieve signed PASSporT assertions independent
+    of end-to-end delivery within an in-band signaling path such as a SIP-based VoIP
+    network. These PASSporTs are signed with VESPER delegate certificates, which identify
+    the entity holding the right-to-use for a telephone number and bind it to that
+    entity's domain identity. This document also introduces support for Connected
+    Identity to the STIR OOB model, enabling the called party to respond with a signed
+    PASSporT asserting its identity, thereby binding the identities of both parties
+    to the transaction and enhancing end-to- end accountability. The OOB mechanism
+    provides a delivery path for PASSporTs where in-band delivery within a signaling
+    path such as SIP is unavailable or is not the path used, enabling verifiers to
+    confirm the association between the originating telephone number and the identity
+    asserting authority as part of the broader VESPER trust framework.</p>"
   language:
   - en
   script:
@@ -65,6 +64,16 @@ relation:
       primary: true
     formattedref:
       content: draft-wendt-stir-vesper-oob-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-wendt-stir-vesper-oob-03
+    docid:
+    - id: draft-wendt-stir-vesper-oob-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-wendt-stir-vesper-oob-03
       format: text/plain
 ext:
   schema-version: v1.0.1

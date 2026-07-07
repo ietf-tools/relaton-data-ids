@@ -13,22 +13,18 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document defines an operator-facing management and policy control
-    model for operator-managed Agent Gateways. The model controls and observes interactions
-    mediated by an Agent Gateway; it does not manage, govern, or modify the internal
-    behavior or lifecycle of an agent. Agent-related identifiers, agent groups, tenants,
-    task classes, and service levels are used only as gateway-recognized policy matching
-    attributes. Policies are enforced at the Agent Gateway and, when validated gateway
-    attachment bindings provide suitable selectors, at associated network enforcement
-    points. The model is organized around four core policy classes: Interaction Access
-    Control, QoS and Flow Control, Invocation and Token Control, and Path Selection.
-    The model also defines three supporting management models: Subject and Attachment
-    Binding, Applied Policy State and Telemetry, and Policy Lifecycle and Failure
-    Handling. This document defines a YANG module for configuring and observing Agent
-    Gateway policy control state. It does not define agent-runtime governance, agent
-    reasoning or planning, prompt or model-output governance, global agent identity
-    registration, DNS, service discovery, or the semantics of existing ACL, QoS, routing,
-    VPN, traffic-engineering, or network-slice mechanisms.</p>"
+- content: "<p>This document defines an operational policy control model for operator-managed
+    Agent Gateways. The model describes how an operator can control and observe interactions
+    that are admitted, mediated, routed, proxied, or otherwise handled by an Agent
+    Gateway. The model does not govern an agent's internal behavior, reasoning, planning,
+    prompts, memory, tools, runtime, or lifecycle. Instead, it uses agent-related
+    identifiers, groups, tenants, task classes, and service levels as gateway-recognized
+    policy matching attributes. Those attributes allow an operator-managed Agent Gateway
+    to identify the interactions to which a policy applies. The model defines four
+    core policy classes: Interaction Access Control, QoS and Flow Control, Invocation
+    and Token Control, and Path Selection. It further defines three supporting management
+    capabilities: Subject and Attachment Binding, Applied Policy State and Telemetry,
+    and Policy Lifecycle and Failure Handling.</p>"
   language:
   - en
   script:
@@ -44,6 +40,16 @@ relation:
       primary: true
     formattedref:
       content: draft-zhao-opsawg-agent-gateway-policy-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-zhao-opsawg-agent-gateway-policy-01
+    docid:
+    - id: draft-zhao-opsawg-agent-gateway-policy-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-zhao-opsawg-agent-gateway-policy-01
       format: text/plain
 ext:
   schema-version: v1.0.1

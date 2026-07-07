@@ -14,10 +14,11 @@ docid:
   primary: true
 abstract:
 - content: "<p>HTTP/1.1 Message Binding adds new hop-by-hop header fields that are
-    cryptographically bound to requests and responses. The keys used are negotiated
-    out-of-band from the HTTP datastream (such as via TLS Exporters). These header
-    fields allow endpoints to detect and mitigate desynchronization attacks, such
-    as HTTP Request Smuggling, that exist due to datastream handling differences.</p>"
+    cryptographically bound to requests and responses. The use of this protocol is
+    negotiated out-of-band from the HTTP datastream, and keys can be communicated
+    either in-band in the first request or out-of- band (such as via TLS Exporters).
+    These header fields allow endpoints to detect and mitigate desynchronization attacks,
+    such as HTTP Request Smuggling, that exist due to datastream handling differences.</p>"
   language:
   - en
   script:
@@ -33,6 +34,16 @@ relation:
       primary: true
     formattedref:
       content: draft-nygren-httpbis-http11-request-binding-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-nygren-httpbis-http11-request-binding-01
+    docid:
+    - id: draft-nygren-httpbis-http11-request-binding-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-nygren-httpbis-http11-request-binding-01
       format: text/plain
 ext:
   schema-version: v1.0.1

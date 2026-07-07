@@ -19,14 +19,14 @@ abstract:
     session on a different instance of the same service (for example, another node
     of a load-balanced cluster) and request, in band, that the client do so. The relocation
     authorization is carried inside the server's own session ticket, so it inherits
-    the security properties of TLS 1.3 ticket-based resumption; the relocation target
-    is an opaque identifier resolved by the application or control plane rather than
-    an address carried in TLS. This document also introduces a Reliable Framing Layer
-    that operates above the TLS record layer to provide message framing, sequence
-    numbering, acknowledgment tracking, and automatic retransmission. The Framing
-    Layer ensures zero application data loss during TLS session migration by buffering
-    unacknowledged data frames and retransmitting them to the new server endpoint
-    after migration completes.</p>"
+    the security properties of TLS 1.3 ticket-based resumption. The relocation target
+    is an opaque value that either directly carries the switchover address (for example,
+    an IP address and port) or is an identifier resolved by the application or control
+    plane. This document also introduces a Reliable Framing Layer that operates above
+    the TLS record layer to provide message framing, sequence numbering, acknowledgment
+    tracking, and automatic retransmission. The Framing Layer ensures zero application
+    data loss during TLS session migration by buffering unacknowledged data frames
+    and retransmitting them to the new server endpoint after migration completes.</p>"
   language:
   - en
   script:
@@ -82,6 +82,16 @@ relation:
       primary: true
     formattedref:
       content: draft-wang-tls-service-affinity-04
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-wang-tls-service-affinity-05
+    docid:
+    - id: draft-wang-tls-service-affinity-05
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-wang-tls-service-affinity-05
       format: text/plain
 ext:
   schema-version: v1.0.1

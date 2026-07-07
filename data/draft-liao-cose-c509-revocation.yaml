@@ -1,0 +1,47 @@
+---
+schema-version: v1.2.3
+id: draft-liao-cose-c509-revocation
+title:
+- content: CBOR Encoded Certificate Revocation Management
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-liao-cose-c509-revocation
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This document specifies CBOR-encoded PKI structures for use with C509
+    certificates (draft-ietf-cose-cbor-encoded-cert), X.509 certificates (RFC 5280),
+    and future certificate types. It defines C509 CRL and C509 OCSP, compact CBOR
+    encodings of X.509 Certificate Revocation Lists (RFC 5280) and OCSP messages (RFC
+    6960), respectively. The structures defined in this document are certificate-type
+    agnostic and can be used with C509 certificates, X.509 certificates, or future
+    certificate types without modification. C509 OCSP improves on RFC 6960 by signing
+    a wider set of fields to prevent algorithm- substitution and certificate-chain
+    substitution attacks, replacing plaintext serial numbers with hashes to preserve
+    requestor privacy, replacing the two-hash issuer identity with a single certificate
+    hash, and identifying all participants (requestor, responder, issuer) by a uniform
+    certificate hash rather than type-specific fields. C509 CRL and C509 OCSP are
+    not wire-format-compatible with their DER- encoded X.509 counterparts and cannot
+    be converted to or from them without semantic interpretation.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-liao-cose-c509-revocation-00
+    docid:
+    - id: draft-liao-cose-c509-revocation-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-liao-cose-c509-revocation-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

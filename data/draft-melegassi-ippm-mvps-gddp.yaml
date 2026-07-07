@@ -1,0 +1,60 @@
+---
+schema-version: v1.2.3
+id: draft-melegassi-ippm-mvps-gddp
+title:
+- content: Geometric Dilution of Detection Precision for Multi-Vantage Path Snapshots
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-melegassi-ippm-mvps-gddp
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: '<p>GPS positioning accuracy degrades with anchor geometry; the effect
+    is quantified by the well-known Geometric Dilution of Precision (GDOP). Multi-vantage
+    anomaly detection systems face the DUAL problem: how does anchor geometry affect
+    DETECTION SENSITIVITY rather than localisation accuracy? This document formalises
+    Geometric Dilution of Detection Precision (GDDP) for the Multi-Vantage Path Snapshot
+    (MVPS) framework [I-D.melegassi-ippm-mvps-bundle]. The minimum displacement that
+    a multi-vantage detector can reliably distinguish from measurement noise is NOT
+    a single number: it is an anisotropic scalar field d*(v, theta) over the Earth''s
+    surface, governed by the geometry of the anchor set relative to each vantage.
+    Three main results are proved: (1) GDDP Theorem (T-GDDP-1): d*(v, theta) admits
+    a closed-form expression in terms of the Fisher Information of the anchor- to-vantage
+    RTT-ratio vector. The directional detection threshold is d*(theta) = sqrt(chi2_crit
+    / I(theta)), where I(theta) is the Fisher Information in direction theta. This
+    is the Cramer-Rao bound applied to detection. (2) Anisotropy Lemma (L-GDDP-2):
+    every vantage has a "blind cone" -- a set of directions in which displacement
+    barely changes the RTT-ratio vector and detection sensitivity degrades. The blind
+    cone is quantifiable and, for isolated vantages, can span over 70% of the compass.
+    (3) Monotonicity Theorem (T-GDDP-3): adding an anchor NEVER reduces the Fisher
+    Information of the system (Shannon chain rule applied to detection channels).
+    There exists a principled anchor- placement optimisation: minimise max_theta d*(v,
+    theta) over candidate sites. All three are validated to three layers of proof:
+    canonical (math), empirical (deterministic scripts, seed=1337), and real data
+    (RIPE Atlas measured RTTs, 92,067 D-squared values from 40 probes, 11/11 checks
+    PASS). No simulation-only claim is made. The GDDP/GDOP duality has not, to the
+    author''s knowledge, been previously formalised. VerLoc (Kohls and Diaz, USENIX
+    Security 2022) observes the directional effect empirically but does not derive
+    d*(v, theta) or propose a geometric defence.</p>'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-melegassi-ippm-mvps-gddp-00
+    docid:
+    - id: draft-melegassi-ippm-mvps-gddp-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-melegassi-ippm-mvps-gddp-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

@@ -28,8 +28,13 @@ abstract:
     rejects a non-conforming signer before it enters the trail, and a set of adversarial
     conformance vectors. The predicate is offline-verifiable under the base draft''s
     verification model and is maintained as cross- language conformance vectors that
-    three independent implementations (JavaScript, Python, Go) are required to agree
-    on.</p>'
+    three reference verifiers (JavaScript, Python, Go) are required to agree on. Those
+    verifiers live in one repository -- a cross-language consistency check, not clean-room
+    independent implementations; independent implementations remain future interoperability
+    evidence. The document also describes, informatively, the multi-handshake composition
+    process: how individual signing ceremonies -- fresh one-time challenge, exact-
+    action binding, user-verified device signature -- compose into one ordered, offline-verifiable,
+    once-consumable multi-party decision.</p>'
   language:
   - en
   script:
@@ -55,6 +60,16 @@ relation:
       primary: true
     formattedref:
       content: draft-schrock-ep-quorum-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-schrock-ep-quorum-02
+    docid:
+    - id: draft-schrock-ep-quorum-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-schrock-ep-quorum-02
       format: text/plain
 ext:
   schema-version: v1.0.1

@@ -25,8 +25,10 @@ abstract:
     view of the next-hop from the data-plane''s actual forwarding endpoint. This document
     describes the problems that arise from this decoupling. These problems include
     sub-optimal path selection, incorrect resolvability tracking of the forwarding
-    path leading to traffic drop or misrouting, and others. This document proposes
-    some modification of BGP path selection procedures to accommodate these use cases.</p>'
+    path leading to traffic drop or misrouting, and others. This document specifies
+    how BGP obtains resolvability, preference, metric, and tracking information from
+    resolution of the forwarding path and uses those values as inputs to BGP path
+    selection.</p>'
   language:
   - en
   script:
@@ -62,6 +64,16 @@ relation:
       primary: true
     formattedref:
       content: draft-vroonen-idr-bgp-bestpath-nh-selection-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-vroonen-idr-bgp-bestpath-nh-selection-03
+    docid:
+    - id: draft-vroonen-idr-bgp-bestpath-nh-selection-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-vroonen-idr-bgp-bestpath-nh-selection-03
       format: text/plain
 ext:
   schema-version: v1.0.1

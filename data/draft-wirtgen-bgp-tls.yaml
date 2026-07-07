@@ -13,7 +13,14 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document specifies the use of TLS over TCP to support BGP.</p>"
+- content: <p>This document specifies the use of TLS over TCP to support BGP. The
+    Border Gateway Protocol (BGP) relies on TCP to establish sessions between routers.
+    While the TCP Authentication Option (TCP-AO) provides transport-layer integrity
+    protection against spoofing and reset attacks, it does not provide confidentiality,
+    cryptographic peer identity, or scalable key management. This document specifies
+    a method for establishing a secure BGP session by running BGP over a TLS 1.3 session.
+    The underlying TCP transport MUST be protected using TCP-AO. An "Implicit TLS"
+    model on TCP port 179 is specified as the preferred mechanism.</p>
   language:
   - en
   script:
@@ -69,6 +76,16 @@ relation:
       primary: true
     formattedref:
       content: draft-wirtgen-bgp-tls-04
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-wirtgen-bgp-tls-05
+    docid:
+    - id: draft-wirtgen-bgp-tls-05
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-wirtgen-bgp-tls-05
       format: text/plain
 ext:
   schema-version: v1.0.1

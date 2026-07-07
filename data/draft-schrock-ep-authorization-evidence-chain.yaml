@@ -30,7 +30,12 @@ abstract:
     one canonical action digest, dispatches each component to a verifier for its type,
     and evaluates a fail-closed requirement expression. EP-AEC introduces no new receipt
     type and replaces none; it is the verifier-side glue that lets independently specified
-    receipts compose into one accountability decision.</p>'
+    receipts compose into one accountability decision. This revision additionally
+    profiles two optional component record types for that composition: the effect
+    attestation, a post- execution record in which the executor signs the receipt
+    identifier together with a digest of the observed effect, and ceremony evidence,
+    a signed record of signing-ceremony telemetry (the challenge issued, viewed, and
+    approved instants and the approver identity) that enables review-latency policies.</p>'
   language:
   - en
   script:
@@ -56,6 +61,16 @@ relation:
       primary: true
     formattedref:
       content: draft-schrock-ep-authorization-evidence-chain-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-schrock-ep-authorization-evidence-chain-02
+    docid:
+    - id: draft-schrock-ep-authorization-evidence-chain-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-schrock-ep-authorization-evidence-chain-02
       format: text/plain
 ext:
   schema-version: v1.0.1

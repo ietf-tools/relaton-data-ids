@@ -14,21 +14,16 @@ docid:
   primary: true
 abstract:
 - content: "<p>This document defines VESPER (Verifiable STI Presentation and Evidence
-    for RTU), a framework that extends the STIR architecture to cryptographically
-    bind telephone number authority, domain identity, and originating provider authorization
-    in a single delegate certificate. The delegate certificate is issued under the
-    certificate policy defined under a STIR compliant eco-system and carries the assigned
-    telephone numbers and authorized originating providers in a TNAuthList extension,
-    the responsible entity's domain in a SubjectAltName, and an embedded Signed Certificate
-    Timestamp (SCT) proving the certificate was recorded in a public transparency
-    log prior to use. VESPER enables relying parties to verify that a telephone number
-    was assigned to the entity whose domain is presented, and that calls from those
-    numbers are originated by an authorized originating provider. The framework defines
-    a certificate profile and issuance process grounded in existing STIR and ACME
-    authority token mechanisms, a domain-hosted certificate repository with domain-controlled
-    certificate discovery enabling cross-channel trust signals, a PASSporT usage profile
-    for SIP signaling, and certificate transparency to support ecosystem auditability
-    and detection of mis- issuance.</p>"
+    for RTU), a framework that composes existing STIR mechanisms into a system in
+    which a relying party can verify that a telephone number was assigned to a specific
+    entity and that the same entity controls a specific domain. VESPER builds on the
+    telephone-number- to-domain binding defined in [I-D.wendt-stir-tn-domain-binding],
+    the STIR certificate and PASSporT specifications, ACME-based authority token issuance,
+    and certificate transparency. This document describes the roles, the certificate
+    usage, a domain-hosted certificate repository and discovery model, a PASSporT
+    usage profile for SIP signaling, and a portable Right-to-Use Token for use outside
+    of SIP. It defines the framework and its composition; the new normative binding
+    it relies on is specified in [I-D.wendt-stir-tn-domain-binding].</p>"
   language:
   - en
   script:
@@ -114,6 +109,16 @@ relation:
       primary: true
     formattedref:
       content: draft-wendt-stir-vesper-07
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-wendt-stir-vesper-08
+    docid:
+    - id: draft-wendt-stir-vesper-08
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-wendt-stir-vesper-08
       format: text/plain
 ext:
   schema-version: v1.0.1
