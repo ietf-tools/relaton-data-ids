@@ -1,0 +1,55 @@
+---
+schema-version: v1.2.3
+id: draft-spk-agentproto-llm-stream
+title:
+- content: A Standard Wire Format for Large Language Model Inference Streaming
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-spk-agentproto-llm-stream
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>Large Language Model (LLM) inference endpoints stream response tokens
+    to clients using a fragmented set of vendor-specific application- layer protocols
+    layered on top of standardized transports (HTTP/2, HTTP/1.1, WebSocket, Server-Sent
+    Events). While these transports carry IETF or W3C standardization, the JSON payload
+    schemas, event taxonomies, and framing conventions used within them are entirely
+    vendor-defined, with no RFCs or common specifications governing them. This fragmentation
+    imposes costs across the AI ecosystem. Middleware frameworks and orchestration
+    platforms (LangChain, LiteLLM, Vercel AI SDK, Portkey, Cloudflare AI Gateway)
+    must maintain vendor-specific streaming parsers for every supported provider.
+    Cloud hosting platforms (AWS Bedrock, Azure AI Studio, Google Vertex AI) have
+    each introduced additional proprietary streaming formats. Compliance and observability
+    tooling must be rebuilt per provider. And new inference providers cannot reach
+    framework-dependent developers without custom integration work. This document
+    defines a standard wire format for LLM inference streaming over Server-Sent Events
+    (SSE) on HTTP. It specifies a request envelope media type (application/llm-request+json),
+    a response event taxonomy, and a JSON event envelope schema that enable middleware,
+    orchestration platforms, compliance tooling, and HTTP intermediaries to handle
+    AI inference traffic from any conforming provider using a single protocol contract.
+    SSE transport remains unchanged; only the JSON payload inside it is standardized.
+    The scope of this document is strictly Client/Application to LLM inference endpoint
+    streaming. Agent-to-tool interaction (e.g., MCP) and agent-to-agent communication
+    are out of scope.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-spk-agentproto-llm-stream-00
+    docid:
+    - id: draft-spk-agentproto-llm-stream-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-spk-agentproto-llm-stream-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

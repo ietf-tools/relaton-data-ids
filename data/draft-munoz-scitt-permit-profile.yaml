@@ -19,11 +19,18 @@ abstract:
     Record" (also called a Permit), that records a policy-evaluated decision to allow,
     deny, or challenge an AI agent action before that action is dispatched to a model
     provider, tool, or service. The profile cryptographically binds the authorization
-    decision to the canonical bytes of the request that is subsequently dispatched,
-    enabling independently verifiable "authorized request equals dispatched request"
-    assertions. The profile composes with adjacent profiles for human-authority binding,
-    post-execution material-action evidence, and content-refusal events, referenced
-    rather than replicated.</p>
+    decision to the canonical bytes of the request that is authorized. When the paired
+    Closure Record carries a dispatch digest, a Verifier can compare the authorized-request
+    digest against the recorded dispatched-request digest; on the managed dispatch
+    path the reference implementation additionally enforces this equality before the
+    request is sent. This revision also introduces authorization-lineage vocabulary.
+    It defines how a Verifier can determine whether the authority conveyed by a child
+    Permit is equal to or narrower than the authority conveyed by its parent (attenuation),
+    given a signed or chain-committed Authority Representation and a declared Comparator
+    Profile. The Permit remains an evidence artifact; this profile specifies the evidence
+    a Verifier needs to make that determination, not a delegation or policy protocol.
+    The profile composes with adjacent profiles for human-authority binding, post-execution
+    material-action evidence, and content-refusal events, referenced rather than replicated.</p>
   language:
   - en
   script:
@@ -39,6 +46,16 @@ relation:
       primary: true
     formattedref:
       content: draft-munoz-scitt-permit-profile-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-munoz-scitt-permit-profile-01
+    docid:
+    - id: draft-munoz-scitt-permit-profile-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-munoz-scitt-permit-profile-01
       format: text/plain
 ext:
   schema-version: v1.0.1

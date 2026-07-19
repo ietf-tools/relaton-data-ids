@@ -1,0 +1,48 @@
+---
+schema-version: v1.2.3
+id: draft-mcbride-mcast4ai-p2mp-mechanism-evaluation
+title:
+- content: AI P2MP Mechanism Evaluation
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-mcbride-mcast4ai-p2mp-mechanism-evaluation
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>AI workloads in data centers exhibit inherently point-to-multipoint
+    (P2MP) communication patterns. During distributed training, collective operations
+    such as AllReduce, AllGather and Broadcast require identical data delivery to
+    many receivers. During inference serving, P2MP patterns also arise from mechanisms
+    such as KV-cache distribution in disaggregated serving architectures and speculative-
+    decoding verifier fan-out. Unicast replication of these flows does not scale to
+    large GPU clusters. This document evaluates two architectural mechanisms for addressing
+    this problem: extending BIER (Bit Index Explicit Replication) to support AI P2MP
+    requirements, or defining a new purpose-built protocol. The evaluation is grounded
+    in the transport-layer requirements this P2MP communication pattern places on
+    a multicast solution, i.e., the requirements imposed by RDMA and RoCEv2 semantics
+    rather than by the choice of network-layer replication mechanism, including considerations
+    around ACK aggregation, congestion control, RoCE/RDMA compatibility and operational
+    complexity. This document does not define a protocol but is intended instead to
+    help the mcast4ai community evaluate this problem space.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-mcbride-mcast4ai-p2mp-mechanism-evaluation-00
+    docid:
+    - id: draft-mcbride-mcast4ai-p2mp-mechanism-evaluation-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-mcbride-mcast4ai-p2mp-mechanism-evaluation-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

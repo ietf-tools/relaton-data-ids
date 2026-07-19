@@ -2,8 +2,8 @@
 schema-version: v1.2.3
 id: draft-pidlisnyi-aps
 title:
-- content: 'Agent Passport System (APS): Cryptographic Identity, Faceted Authority
-    Attenuation, and Governance for AI Agent Systems'
+- content: 'Agent Passport System (APS): Verifiable Agent Identity, Faceted Authority,
+    and Signed Action Receipts'
   language:
   - en
   script:
@@ -15,32 +15,16 @@ docid:
   primary: true
 abstract:
 - content: "<p>This document specifies the Agent Passport System (APS), a protocol
-    for cryptographic identity, faceted authority attenuation, and governance for
-    AI agent systems. APS introduces Ed25519-based agent passports, scoped delegation
-    chains with monotonic narrowing across seven constraint dimensions (scope, spend,
-    depth, time, reputation, values floor, reversibility), cascade revocation, a three-signature
-    policy chain (intent, evaluation, receipt), and signed receipts that record what
-    an agent declared, what a policy engine decided, and what an enforcement boundary
-    observed. Authority is modeled as an element of a product lattice, and delegation
-    is a monotone function on that lattice, ensuring that delegated capabilities can
-    only be attenuated, never amplified. APS also defines key rotation with identity
-    continuity, and recognizes institutional governance primitives (charters, offices,
-    approval policies, federation) that compose with the delegation lattice; their
-    normative specification is companion work. The protocol is intended to complement
-    current AI agent infrastructure, including MCP and A2A, with cryptographic identity,
-    delegated authority, and verifiable enforcement evidence. A protocol binding is
-    specified for MCP. Reference implementations are available in TypeScript and Python
-    under Apache-2.0; see the Implementation Status section. Beyond the authority
-    core, this document also specifies: an external correlation form for cross-ecosystem
-    record matching; key resolution for external and evidence signers; attestation
-    provenance tiers; signed revocation evidence with cascade-completion records;
-    a two- phase execution gate model; supporting signed record classes for boundary
-    decisions, composition checks, and sampled readback; a receipt-profile mechanism
-    illustrated by a trust-domain-gated regulated-action profile; a word-handle digest
-    presentation; and a binding for OAuth identity-assertion authorization grants.
-    The temporal dimension is specified as an absolute expiry bound, spend as denominated,
-    and verification claims are expressed at named levels stating what each proves
-    and what it does not.</p>"
+    for identifying AI agents, attenuating delegated authority, and producing signed
+    evidence at policy-enforcement boundaries. APS defines Ed25519 agent passports;
+    separately signed principal bindings; delegation chains that cannot widen across
+    scope, spend, depth, time, reputation, values, or reversibility; deterministic
+    action and decision references; and a common envelope for signed action receipts.
+    It also defines bindings for Model Context Protocol tool calls and imported OAuth
+    identity-assertion authorization grants. Verification results keep cryptographic
+    integrity, signer authority, referenced-artifact resolution, policy semantics,
+    and external truth separate. An Implementation Status section identifies the exact
+    coverage and maturity of the available open-source implementations.</p>"
   language:
   - en
   script:
@@ -76,6 +60,16 @@ relation:
       primary: true
     formattedref:
       content: draft-pidlisnyi-aps-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-pidlisnyi-aps-03
+    docid:
+    - id: draft-pidlisnyi-aps-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-pidlisnyi-aps-03
       format: text/plain
 ext:
   schema-version: v1.0.1

@@ -14,15 +14,22 @@ docid:
   primary: true
 abstract:
 - content: "<p>This document profiles a verifiable-telemetry ledger for resource-
-    constrained deployments. After a gateway has admitted telemetry under its transport
-    and anti-replay rules, the profile fixes a reference framed transport, deterministic
-    projection to a canonical record, a daily Concise Binary Object Representation
-    (CBOR) day artifact and its Merkle construction, a verification manifest, three
-    disclosure classes, and binding of the day-artifact digest to external timestamp
-    channels. OpenTimestamps (OTS) is the default anchoring channel; RFC 3161 timestamp
-    responses and peer signatures are optional parallel channels. The profile enables
-    independent recomputation and audit of disclosed evidence. It does not cover device
-    onboarding, end-to-end security of sensor values, or safety decisions.</p>"
+    constrained deployments. Its interoperability boundary begins with exact canonical-record
+    byte strings that an upstream system has already produced. The profile fixes admission
+    and assignment of those byte strings to serial-numbered segments, deterministic
+    commitment-tree calculation, a Concise Binary Object Representation (CBOR) segment
+    artifact, a verification manifest, three disclosure classes, and binding of the
+    segment-artifact digest to external timestamp channels. Transport framing, decryption,
+    anti-replay processing, payload interpretation, and source-telemetry-to-record
+    mapping are outside this profile. Segment closure uses a deployment- configured
+    elapsed-time interval and does not depend on source or gateway calendar dates.
+    RFC 3161 timestamp responses are the mandatory-to-implement interoperable timestamp
+    channel. OpenTimestamps (OTS) and peer signatures are optional parallel channels.
+    The profile enables independent recomputation and audit of disclosed evidence
+    from the admitted canonical-record bytes onward. It does not verify how source
+    telemetry was authenticated, interpreted, or mapped to those bytes, and it does
+    not cover device onboarding, end- to-end security of sensor values, or safety
+    decisions.</p>"
   language:
   - en
   script:
@@ -108,6 +115,16 @@ relation:
       primary: true
     formattedref:
       content: draft-elkhatabi-verifiable-telemetry-ledgers-07
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-elkhatabi-verifiable-telemetry-ledgers-08
+    docid:
+    - id: draft-elkhatabi-verifiable-telemetry-ledgers-08
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-elkhatabi-verifiable-telemetry-ledgers-08
       format: text/plain
 ext:
   schema-version: v1.0.1
