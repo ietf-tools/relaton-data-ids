@@ -1,0 +1,97 @@
+---
+schema-version: v1.2.3
+id: draft-dellaert-oauth-approval-based-dcr-00
+title:
+- content: OAuth 2.0 Approval-Based Dynamic Client Registration
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-dellaert-oauth-approval-based-dcr-00
+  type: src
+type: standard
+docid:
+- id: draft-dellaert-oauth-approval-based-dcr-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.dellaert-oauth-approval-based-dcr
+  type: IETF
+  scope: anchor
+docnumber: I-D.dellaert-oauth-approval-based-dcr
+date:
+- type: published
+  value: '2026-07-19'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Philippe
+          language:
+          - en
+        - language:
+          - en
+          initial: P
+        formatted_initials:
+          content: P.
+          language:
+          - en
+      surname:
+        content: Dellaert
+        language:
+        - en
+      completename:
+        content: Philippe Dellaert
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Amazon
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-07-19'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>This document specifies an extension to the OAuth 2.0 Dynamic Client
+    Registration Protocol ([RFC7591]) that enables registration of a client with an
+    authorization server through an explicit approval step performed by an approving
+    party, typically the user running the client, without requiring the client to
+    possess an Initial Access Token (IAT) beforehand. The client submits its desired
+    metadata to the existing client registration endpoint and signals that it can
+    accept a deferred, approval-based registration. When the authorization server
+    requires approval, it defers completion of the registration and returns a 202
+    (Accepted) response carrying a registration code and a verification challenge.
+    The client polls the same registration endpoint, presenting the registration code.
+    The approving party, authenticated to the authorization server through a mechanism
+    of the authorization server's choosing, responds to the verification challenge
+    and approves or denies the registration. On approval, a subsequent poll returns
+    a registered client identifier and, where applicable, a client secret. This extension
+    preserves the authorization server operator's ability to require an authenticated,
+    policy-controlled approval for every new client record, while removing the operational
+    burden of issuing an Initial Access Token out of band.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-dellaert-oauth-approval-based-dcr-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

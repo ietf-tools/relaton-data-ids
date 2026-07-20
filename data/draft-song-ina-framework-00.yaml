@@ -1,0 +1,136 @@
+---
+schema-version: v1.2.3
+id: draft-song-ina-framework-00
+title:
+- content: A Unified Bitmap Framework for In-Network Aggregation and Multicast
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-song-ina-framework-00
+  type: src
+type: standard
+docid:
+- id: draft-song-ina-framework-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.song-ina-framework
+  type: IETF
+  scope: anchor
+docnumber: I-D.song-ina-framework
+date:
+- type: published
+  value: '2026-07-20'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Haoyu
+          language:
+          - en
+        - language:
+          - en
+          initial: H
+        formatted_initials:
+          content: H.
+          language:
+          - en
+      surname:
+        content: Song
+        language:
+        - en
+      completename:
+        content: Haoyu Song
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Futurewei Technologies
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Tianran
+          language:
+          - en
+        - language:
+          - en
+          initial: T
+        formatted_initials:
+          content: T.
+          language:
+          - en
+      surname:
+        content: Zhou
+        language:
+        - en
+      completename:
+        content: Tianran Zhou
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-07-20'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>Collective communication is a critical performance bottleneck for distributed
+    deep learning and large model training and inference in data centers for AI computing.
+    In-Network Aggregation (INA) has been identified as an effective accelerating
+    technique to improve its performance. This draft describes a flexible and efficient
+    INA framework for packet routing and forwarding in which a tree is encoded by
+    a bitmap and the same bitmap is reused for data movement in both directions, with
+    the multicast direction realized by a stateless bitmap-driven forwarding mechanism
+    that adopts an encoding and replication behavior similar to BIER. The bitmap encoding
+    is compact, hardware friendly, exact and self-describing, and, being carried per
+    packet, supports highly dynamic endpoint sets without any signaling to the network.
+    The framework is applied to three use cases. The first is AllReduce, used in model
+    training, which performs an in-network aggregation toward the root followed by
+    a multicast of the result back to the workers. The second is the dispatch and
+    combine operations of Mixture-of-Experts (MoE) expert parallelism, which performs
+    a dynamic multicast of tokens to the selected experts followed by an in-network
+    aggregation of the expert outputs. In both use cases a single bitmap-encoded tree
+    drives both directions. The third use case is for reliable multicast, which aggregates
+    the acknowledgments of all multicast receivers in the network to avoid ACK implosion;
+    its ACK- aggregation tree can be either pre-configured, as in the AllReduce use
+    case, or self-installed by the data multicast itself, as in the MoE use case.
+    The draft further analyzes why the base BIER architecture alone cannot realize
+    the framework and identifies the per-packet information an INA encapsulation must
+    carry beyond the endpoint-set encoding: a direction indicator, a job identifier,
+    a sequence number, and an encoding-type indicator. It also examines the efficiency
+    of the endpoint-set encoding at scale, covering hierarchical bitmaps and multiple
+    parallel trees for large dense endpoint sets, node-list encoding for very large
+    domains with few active endpoints, and the trade-offs between header overhead
+    and network processing complexity among these encodings.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-song-ina-framework-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

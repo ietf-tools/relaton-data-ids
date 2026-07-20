@@ -1,0 +1,61 @@
+---
+schema-version: v1.2.3
+id: draft-song-ina-framework
+title:
+- content: A Unified Bitmap Framework for In-Network Aggregation and Multicast
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-song-ina-framework
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>Collective communication is a critical performance bottleneck for distributed
+    deep learning and large model training and inference in data centers for AI computing.
+    In-Network Aggregation (INA) has been identified as an effective accelerating
+    technique to improve its performance. This draft describes a flexible and efficient
+    INA framework for packet routing and forwarding in which a tree is encoded by
+    a bitmap and the same bitmap is reused for data movement in both directions, with
+    the multicast direction realized by a stateless bitmap-driven forwarding mechanism
+    that adopts an encoding and replication behavior similar to BIER. The bitmap encoding
+    is compact, hardware friendly, exact and self-describing, and, being carried per
+    packet, supports highly dynamic endpoint sets without any signaling to the network.
+    The framework is applied to three use cases. The first is AllReduce, used in model
+    training, which performs an in-network aggregation toward the root followed by
+    a multicast of the result back to the workers. The second is the dispatch and
+    combine operations of Mixture-of-Experts (MoE) expert parallelism, which performs
+    a dynamic multicast of tokens to the selected experts followed by an in-network
+    aggregation of the expert outputs. In both use cases a single bitmap-encoded tree
+    drives both directions. The third use case is for reliable multicast, which aggregates
+    the acknowledgments of all multicast receivers in the network to avoid ACK implosion;
+    its ACK- aggregation tree can be either pre-configured, as in the AllReduce use
+    case, or self-installed by the data multicast itself, as in the MoE use case.
+    The draft further analyzes why the base BIER architecture alone cannot realize
+    the framework and identifies the per-packet information an INA encapsulation must
+    carry beyond the endpoint-set encoding: a direction indicator, a job identifier,
+    a sequence number, and an encoding-type indicator. It also examines the efficiency
+    of the endpoint-set encoding at scale, covering hierarchical bitmaps and multiple
+    parallel trees for large dense endpoint sets, node-list encoding for very large
+    domains with few active endpoints, and the trade-offs between header overhead
+    and network processing complexity among these encodings.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-song-ina-framework-00
+    docid:
+    - id: draft-song-ina-framework-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-song-ina-framework-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

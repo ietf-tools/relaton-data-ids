@@ -1,0 +1,57 @@
+---
+schema-version: v1.2.3
+id: draft-capobianco-ncfed
+title:
+- content: The NetClaw-to-NetClaw Federation Protocol (NCFED)
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-capobianco-ncfed
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: <p>This document specifies the NetClaw-to-NetClaw Federation Protocol (NCFED),
+    an implementation-agnostic application-layer protocol that lets independently
+    operated, heterogeneous AI network-engineering agents ("NCFED peers", or "claws")
+    discover one another's capabilities, invoke remote tools, and delegate tasks over
+    long-lived TCP sessions. Although named for its reference instantiation, NCFED
+    is a wire specification, not an SDK, and federates arbitrary autonomous agent
+    architectures across distinct administrative boundaries; a peer needs no knowledge
+    of its counterparty's internal reasoning framework, prompt structure, or execution
+    runtime. NCFED multiplexes its federation channel with BGP-4 and an associated
+    tunneling data plane on a single listening port, using first-octet protocol discrimination.
+    Its payload is JSON-RPC 2.0, onto which Model Context Protocol (MCP) tool-invocation
+    semantics and Agent2Agent (A2A) task-delegation semantics are mapped. Federation
+    between different trust domains (eN2N) requires mutual operator consent; within
+    a single operator's trust domain (iN2N) it is hub- and-spoke, bootstrapped by
+    an enrollment token. For eN2N, the channel is encrypted with TLS 1.3 and each
+    peer is cryptographically authenticated by proof of possession of the credential
+    bound to its identity, under either a domain-verified (publicly certified) or
+    a pinned (trust-on-first-use) model. For iN2N, members and the Border mutually
+    authenticate at the application layer with pinned credentials and a hub attestation,
+    and TLS may additionally protect the transport. NCFED does not replace MCP or
+    A2A; it is a cross- operator federation, identity, and transport layer beneath
+    them. This document describes the protocol as implemented in the open- source
+    NetClaw project and is published as Experimental to enable interoperability and
+    public review.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-capobianco-ncfed-00
+    docid:
+    - id: draft-capobianco-ncfed-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-capobianco-ncfed-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
