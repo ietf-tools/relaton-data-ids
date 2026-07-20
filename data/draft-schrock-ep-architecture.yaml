@@ -2,8 +2,8 @@
 schema-version: v1.2.3
 id: draft-schrock-ep-architecture
 title:
-- content: 'The EMILIA Protocol Architecture: A Human-Authorization and Oversight
-    Evidence Layer for Agentic and Autonomous Systems'
+- content: 'The EMILIA Protocol: An Evidence Architecture for Consequential Agent
+    Actions'
   language:
   - en
   script:
@@ -14,26 +14,17 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>Autonomous and agentic systems now take consequential, often irreversible
-    actions -- moving money, changing records, routing benefits, releasing effects
-    -- at machine speed, while the evidence systems that establish accountability
-    were built for the speed of humans taking those actions. Across regulation, audit,
-    and insurance the same requirement recurs and the same artifact is missing: portable,
-    offline-verifiable proof that a named, accountable human authorized a specific
-    action before it executed, checkable by a third party without trusting the operator
-    that produced it. This document is the architectural overview of the EMILIA Protocol
-    (EP): a human-authorization and oversight evidence layer for agentic and autonomous
-    systems. It defines the layer's position relative to agent identity, delegation,
-    policy, and transparency work; states the design invariants; and ties together
-    the component specifications -- the authorization receipt, multi-party quorum,
-    the enforcement point, the authorization evidence chain, long-term evidence-record
-    renewal, authorization-posture advisories, and the human-oversight profile. EP
-    composes with the other layers rather than replacing them; its contribution is
-    the human- accountability apex and the composition seam that binds the layers'
-    artifacts into one verifiable record. EP proves authorization -- that a named
-    human (or quorum) approved the exact action. It does not prove the action was
-    understood, lawful, wise, or proportional. It is a necessary, not sufficient,
-    condition for accountable autonomy, and this document is explicit about that boundary.</p>"
+- content: "<p>Consequential agent actions can cross operator and administrative boundaries.
+    The party that later decides whether to rely on an action record may not have
+    participated in the interaction and may not trust either operator. This document
+    describes an evidence architecture for that case. It separates transport identity,
+    delegation and policy, material action matching, authorization evidence, evidence
+    satisfaction, enforcement, outcome evidence, and long-term preservation. The architecture
+    does not define a universal authorization policy and does not claim that a valid
+    signature establishes authority. It defines where independently verified artifacts
+    join, which decisions remain local to the relying party, and the terms VERIFIED,
+    MATCH, SATISFIED, AUTHORIZED, and EXECUTED so that an implementation cannot silently
+    collapse one into another.</p>"
   language:
   - en
   script:
@@ -49,6 +40,16 @@ relation:
       primary: true
     formattedref:
       content: draft-schrock-ep-architecture-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-schrock-ep-architecture-01
+    docid:
+    - id: draft-schrock-ep-architecture-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-schrock-ep-architecture-01
       format: text/plain
 ext:
   schema-version: v1.0.1

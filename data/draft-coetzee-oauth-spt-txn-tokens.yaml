@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-coetzee-oauth-spt-txn-tokens
 title:
-- content: Sovereign Policy Token Transactions (SPT-Txn)
+- content: Transaction-Bound Authorization Tokens for Software and AI Agents (SPT-Txn)
   language:
   - en
   script:
@@ -13,20 +13,25 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document specifies the Sovereign Policy Token Transaction (SPT-Txn)
-    Framework, a token-based architecture for policy-bound, tamper-evident authorization
-    across trust boundaries in agentic and multi-organizational systems. The framework
-    extends IETF Transaction Tokens (RFC 9700) with Capability Acquisition Tokens
-    (CATs), cryptographically scoped authorization tokens that bind capability grants
-    to specific transaction contexts, propagate human-origin identity commitments
-    across delegation chains, and support offline verification without issuer interaction.
-    SPT-Txn addresses the gap between coarse-grained bearer token authorization and
-    the fine-grained, auditable, scope-limited authorization required in regulated
-    financial infrastructure, AI agent systems, and cross-organizational transaction
-    chains. The framework provides cryptographic guarantees that every hop in a transaction
-    chain was authorized by a verified human principal, operated within a declared
-    capability scope, and can be audited without exposing personally identifiable
-    information.</p>"
+- content: "<p>Current authorization is role-scoped: an actor is granted a role whose
+    authority persists across every action it takes. This fails exactly when actors
+    fail -- under compromise, prompt injection, or goal hijacking -- because a compromised
+    actor retains full role authority. This document specifies SPT-Txn, a family of
+    transaction- bound authorization tokens in which authority exists only inside
+    a short-lived token bound to one declared action, on one resource, under one jurisdictional
+    policy, verified against how the requesting workload was attested. Delegation
+    across agents and tools is expressed as a cryptographically sealed chain that
+    can only narrow authority and is verifiable offline. Each authorization decision
+    emits a signed, tamper-evident receipt as a byproduct of enforcement. This document
+    specifies normative intent binding, transaction receipts and their transparency
+    log, attested issuance via OAuth 2.0 Token Exchange, per-token status-list revocation,
+    and cryptographic algorithm agility including hybrid post-quantum signing. It
+    also hardens attested issuance in response to an adversarial security review of
+    the reference implementation: it makes an audience and a verifiable expiry mandatory
+    on the presented attestation, requires the issuer to bound the delegated depth
+    it grants, and clamps a token's lifetime to the attestation it was minted on.
+    The issuer- side requested-versus-permitted scope intersection is retained; the
+    enforcement point re-checks the chain independently.</p>"
   language:
   - en
   script:
@@ -62,6 +67,16 @@ relation:
       primary: true
     formattedref:
       content: draft-coetzee-oauth-spt-txn-tokens-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-coetzee-oauth-spt-txn-tokens-03
+    docid:
+    - id: draft-coetzee-oauth-spt-txn-tokens-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-coetzee-oauth-spt-txn-tokens-03
       format: text/plain
 ext:
   schema-version: v1.0.1

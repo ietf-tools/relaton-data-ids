@@ -2,8 +2,8 @@
 schema-version: v1.2.3
 id: draft-schrock-ep-authorization-evidence-chain
 title:
-- content: 'Authorization Evidence Chains: Composing Heterogeneous Agent-Authorization
-    Receipts (EP-AEC)'
+- content: 'Authorization Evidence Chains: Composing Heterogeneous Agent-Action Evidence
+    (EP-AEC)'
   language:
   - en
   script:
@@ -14,28 +14,19 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: '<p>A growing family of Internet-Drafts defines signed "receipts" about
-    an AI agent''s action: delegation receipts that attest an agent was authorized
-    to act for a principal, policy or permit receipts that attest a policy allowed
-    an external effect, decision and compliance receipts, route authorizations, and
-    human-authorization receipts that attest a named, accountable human approved a
-    specific action. The mature efforts independently converged on a common substrate:
-    bind the action with a canonical digest (JSON Canonicalization Scheme, RFC 8785)
-    and sign it. No specification, however, defines how a relying party verifies that,
-    for one action, the several heterogeneous receipts it has been handed all bind
-    the same canonical action and each verify under their own rules, yielding a single,
-    offline, fail- closed ALLOW or DENY. This document defines the Authorization Evidence
-    Chain (EP-AEC): a transport-agnostic composition object and an offline verification
-    algorithm that references existing receipts, checks that every component binds
-    one canonical action digest, dispatches each component to a verifier for its type,
-    and evaluates a fail-closed requirement expression. EP-AEC introduces no new receipt
-    type and replaces none; it is the verifier-side glue that lets independently specified
-    receipts compose into one accountability decision. This revision additionally
-    profiles two optional component record types for that composition: the effect
-    attestation, a post- execution record in which the executor signs the receipt
-    identifier together with a digest of the observed effect, and ceremony evidence,
-    a signed record of signing-ceremony telemetry (the challenge issued, viewed, and
-    approved instants and the approver identity) that enables review-latency policies.</p>'
+- content: "<p>Consequential agent actions can produce heterogeneous identity, delegation,
+    policy, permit, approval, transparency, and execution artifacts. Each artifact
+    can verify under its own specification while still referring to a different action
+    or filling a different evidentiary role. This document defines the Authorization
+    Evidence Chain (EP-AEC): a transport-agnostic composition object and an offline
+    verification algorithm that verifies each component under relying-party-selected
+    trust inputs, checks material-action binding, and evaluates a relying-party-pinned
+    requirement. The result is SATISFIED or UNSATISFIED. It states whether the presented
+    evidence filled the relying party's named evidence slots; it is not a universal
+    authorization decision. An executor makes the separate local AUTHORIZED decision.
+    AEC introduces no new component receipt type and does not replace any native verifier.
+    Presenter labels, keys, requirements, and action identifiers cannot establish
+    their own authority.</p>"
   language:
   - en
   script:
@@ -71,6 +62,16 @@ relation:
       primary: true
     formattedref:
       content: draft-schrock-ep-authorization-evidence-chain-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-schrock-ep-authorization-evidence-chain-03
+    docid:
+    - id: draft-schrock-ep-authorization-evidence-chain-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-schrock-ep-authorization-evidence-chain-03
       format: text/plain
 ext:
   schema-version: v1.0.1
