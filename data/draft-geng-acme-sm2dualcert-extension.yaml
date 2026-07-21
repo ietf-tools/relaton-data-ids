@@ -1,0 +1,52 @@
+---
+schema-version: v1.2.3
+id: draft-geng-acme-sm2dualcert-extension
+title:
+- content: ACME Extension for SM2 Dual-Certificate System
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-geng-acme-sm2dualcert-extension
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This document describes the extension of the ACME protocol [RFC8555]
+    to support automated issuance of SM2 dual certificates (signature certificates
+    and encryption certificates) in the Chinese National Cryptography certificate
+    system. This document does not represent IETF consensus; the technical solution
+    is applicable only to PKI environments based on an SM2 dual-certificate system.
+    Under the framework of the ACME protocol [RFC8555], this document proposes using
+    two separate Orders to request the two certificates. For the signature certificate,
+    the existing ACME workflow is reused, optionally using the standard CSR approach
+    or the pk-01 challenge [I-D.geng-acme-public-key]. For the encryption certificate,
+    this document defines a new challenge type, auth-01, specifically for *identity
+    authorization* scenarios: the client proves possession of the *signature private
+    key* to authorize the Key Management Center (KMC) to generate an encryption key
+    pair and issue the encryption certificate on behalf of the entity. This challenge
+    type intrinsically binds the issuance of the encryption certificate to the signature
+    key, requiring no additional binding identifiers. All extensions are compatible
+    with the existing ACME resource model. No new Order types are introduced. This
+    document only adds optional fields in the client's newOrder request (authKey,
+    includeEnvelope) and an additional field in the server's response (envelope),
+    without changing the core semantics or state machine of Order.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-geng-acme-sm2dualcert-extension-00
+    docid:
+    - id: draft-geng-acme-sm2dualcert-extension-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-geng-acme-sm2dualcert-extension-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

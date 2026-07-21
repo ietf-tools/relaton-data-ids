@@ -2,7 +2,8 @@
 schema-version: v1.2.3
 id: draft-raskar-agentic-web-federated-resolution
 title:
-- content: Federated Resolution for AI Agent Discovery Using AI Catalog and NandaIndex
+- content: Registry-Assisted Discovery for AI Agents and Workloads Without DNS Discovery
+    Anchors
   language:
   - en
   script:
@@ -13,25 +14,26 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>Autonomous and semi-autonomous AI agents are published through multiple
-    discovery mechanisms, including AI Catalog, DNS-based discovery, enterprise gateways,
-    Agentic Resource Discovery (ARD) services, platform registries, A2A Agent Cards,
-    MCP server descriptors, telecom directories, sovereign registries, and vertical-specific
-    systems. This diversity is useful, but it creates discovery islands when a requester
-    knows an identity but does not know which discovery mechanism is authoritative
-    for that identity. This document defines a Federated Resolution Architecture that
-    separates identity resolution from capability discovery. Resolution maps a stable
-    subject identity to one or more discovery entry points. Discovery then retrieves
-    resources through the selected mechanism. The architecture uses a conforming AI
-    Catalog document as the response envelope and defines an agent-resolution-target
-    JSON object for typed pointers to catalogs, DNS-AID organization indexes, ARD
-    services, gateways, registries, hosted descriptors, and other resolution services.
-    NandaIndex is described as a federated implementation of this architecture: a
-    global switchboard of lightweight, authority-bound pointers. Direct enterprise
-    discovery remains direct when an authoritative endpoint is already known. NandaIndex
-    is used when the discovery mechanism is unknown, when multiple mechanisms coexist,
-    or when small businesses, individuals, and emerging directories require a stable
-    identity-to-discovery mapping without operating a unified enterprise stack.</p>"
+- content: "<p>Many agent-discovery mechanisms assume that an organization controls
+    a DNS domain and can publish a DNS record, a well-known catalog, or an organization
+    gateway. That model works well for enterprises with operational DNS infrastructure,
+    but it does not cover every agent or workload. Small businesses may own a domain
+    yet lack the expertise or infrastructure to publish agent-specific DNS records.
+    Individuals may have a globally scoped account identifier, such as an email address,
+    while not controlling the provider domain. Personal agents and other workloads
+    may run on a cloud service or local device while their public descriptor is hosted
+    elsewhere. This document describes registry-assisted discovery for these cases.
+    A NandaIndex registry binds a stable Subject Identity to a subject-authorized
+    terminal object, such as an A2A Agent Card, an MCP server descriptor, a workload
+    descriptor, a subject-owned AI Catalog, or a subject-authorized gateway. The binding
+    includes authority, freshness, and revocation information. The identity owner,
+    descriptor host, and runtime operator may be different parties. This document
+    does not define a directory of discovery servers, directory federation, or a global
+    switchboard. A NandaIndex response does not direct a client to another generic
+    resolution or discovery service. DNS-anchored systems remain direct: when an authoritative
+    AI Catalog, DNS-AID record, or organization gateway is already known, NandaIndex
+    is not in the critical path. The focus is permissionless publication and discovery
+    for agents and workloads that do not have a usable DNS Discovery Anchor.</p>"
   language:
   - en
   script:
@@ -47,6 +49,16 @@ relation:
       primary: true
     formattedref:
       content: draft-raskar-agentic-web-federated-resolution-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-raskar-agentic-web-federated-resolution-01
+    docid:
+    - id: draft-raskar-agentic-web-federated-resolution-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-raskar-agentic-web-federated-resolution-01
       format: text/plain
 ext:
   schema-version: v1.0.1

@@ -1,0 +1,126 @@
+---
+schema-version: v1.2.3
+id: draft-li-sidrops-pqrpki-00
+title:
+- content: Post-Quantum Authentication for the Resource Public Key Infrastructure
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-li-sidrops-pqrpki-00
+  type: src
+type: standard
+docid:
+- id: draft-li-sidrops-pqrpki-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.li-sidrops-pqrpki
+  type: IETF
+  scope: anchor
+docnumber: I-D.li-sidrops-pqrpki
+date:
+- type: published
+  value: '2026-07-20'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Weitong
+          language:
+          - en
+        - language:
+          - en
+          initial: W
+        formatted_initials:
+          content: W.
+          language:
+          - en
+      surname:
+        content: Li
+        language:
+        - en
+      completename:
+        content: Weitong Li
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Virginia Tech
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Tijay
+          language:
+          - en
+        - language:
+          - en
+          initial: T
+        formatted_initials:
+          content: T.
+          language:
+          - en
+      surname:
+        content: Chung
+        language:
+        - en
+      completename:
+        content: Tijay Chung
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Virginia Tech
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-07-20'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>The Resource Public Key Infrastructure (RPKI) authenticates Internet
+    number resource holdings and routing authorizations with classical (RSA) signatures.
+    Because every relying party repeatedly fetches and validates the complete global
+    repository, replacing each per-object signature with a larger post-quantum signature
+    would multiply repository size and validation cost. This document specifies pqRPKI,
+    an additive post-quantum authentication layer for the RPKI. Instead of re-signing
+    every object, each Certification Authority (CA) authenticates its complete published
+    state with a single post-quantum signature over a Merkle Tree Ladder whose leaf
+    order and leaf commitments are taken directly from the CA's existing Manifest.
+    A new signed object, the pqRPKI Ladder Object (PQLO), carries the ladder root,
+    the Manifest binding, an optional aggregate binding the CA's children, and --
+    for a Trust Anchor or a CA holding its own post-quantum key -- the post-quantum
+    signature; a CA operated by its parent is authenticated through the parent's aggregate
+    instead. Existing RPKI objects are unchanged and legacy relying parties are unaffected
+    by the PQLO, which no Manifest lists, while upgraded relying parties validate
+    the same repository contents with post-quantum authentication. This document updates
+    RFC 9286 to permit index-preserving placeholder Manifest entries and the pqRPKI
+    file-name extension.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-li-sidrops-pqrpki-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

@@ -1,0 +1,180 @@
+---
+schema-version: v1.2.3
+id: draft-geng-acme-sm2dualcert-extension-00
+title:
+- content: ACME Extension for SM2 Dual-Certificate System
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-geng-acme-sm2dualcert-extension-00
+  type: src
+type: standard
+docid:
+- id: draft-geng-acme-sm2dualcert-extension-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.geng-acme-sm2dualcert-extension
+  type: IETF
+  scope: anchor
+docnumber: I-D.geng-acme-sm2dualcert-extension
+date:
+- type: published
+  value: '2026-07-20'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Feng
+          language:
+          - en
+        - language:
+          - en
+          initial: F
+        formatted_initials:
+          content: F.
+          language:
+          - en
+      surname:
+        content: Geng
+        language:
+        - en
+      completename:
+        content: Feng Geng
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei Technologies
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Panyu
+          language:
+          - en
+        - language:
+          - en
+          initial: P
+        formatted_initials:
+          content: P.
+          language:
+          - en
+      surname:
+        content: Wu
+        language:
+        - en
+      completename:
+        content: Panyu Wu
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei Technologies
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Guilin
+          language:
+          - en
+        - language:
+          - en
+          initial: G
+        formatted_initials:
+          content: G.
+          language:
+          - en
+      surname:
+        content: WANG
+        language:
+        - en
+      completename:
+        content: Guilin WANG
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei Technologies
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - language:
+          - en
+          initial: C
+        formatted_initials:
+          content: C.
+          language:
+          - en
+      surname:
+        content: 陈鑫
+        language:
+        - en
+      completename:
+        content: 陈鑫
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: TrustAsia
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-07-20'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>This document describes the extension of the ACME protocol [RFC8555]
+    to support automated issuance of SM2 dual certificates (signature certificates
+    and encryption certificates) in the Chinese National Cryptography certificate
+    system. This document does not represent IETF consensus; the technical solution
+    is applicable only to PKI environments based on an SM2 dual-certificate system.
+    Under the framework of the ACME protocol [RFC8555], this document proposes using
+    two separate Orders to request the two certificates. For the signature certificate,
+    the existing ACME workflow is reused, optionally using the standard CSR approach
+    or the pk-01 challenge [I-D.geng-acme-public-key]. For the encryption certificate,
+    this document defines a new challenge type, auth-01, specifically for *identity
+    authorization* scenarios: the client proves possession of the *signature private
+    key* to authorize the Key Management Center (KMC) to generate an encryption key
+    pair and issue the encryption certificate on behalf of the entity. This challenge
+    type intrinsically binds the issuance of the encryption certificate to the signature
+    key, requiring no additional binding identifiers. All extensions are compatible
+    with the existing ACME resource model. No new Order types are introduced. This
+    document only adds optional fields in the client's newOrder request (authKey,
+    includeEnvelope) and an additional field in the server's response (envelope),
+    without changing the core semantics or state machine of Order.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-geng-acme-sm2dualcert-extension-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
