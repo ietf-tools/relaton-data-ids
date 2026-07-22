@@ -1,0 +1,98 @@
+---
+schema-version: v1.2.3
+id: draft-schrock-ep-revocation-statement-00
+title:
+- content: Portable Revocation Statements for Action-Bound Authorization Artifacts
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-schrock-ep-revocation-statement-00
+  type: src
+type: standard
+docid:
+- id: draft-schrock-ep-revocation-statement-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.schrock-ep-revocation-statement
+  type: IETF
+  scope: anchor
+docnumber: I-D.schrock-ep-revocation-statement
+date:
+- type: published
+  value: '2026-07-21'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Iman
+          language:
+          - en
+        - language:
+          - en
+          initial: I
+        formatted_initials:
+          content: I.
+          language:
+          - en
+      surname:
+        content: Schrock
+        language:
+        - en
+      completename:
+        content: Iman Schrock
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: EMILIA Protocol, Inc.
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-07-21'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>Signed authorization artifacts for agent actions (receipts, commits,
+    delegations) are being defined faster than the means to retract them. Many deployed
+    systems use live status services, revocation lists, or issuer datastores. This
+    document defines a complementary portable form for action-bound authorization
+    artifacts: a signed, offline- verifiable claim that a named logical target, addressed
+    by identifier and action commitment, is revoked. Verification is fail-closed and
+    evaluates a fixed set of checks: version, closed object structure, target binding,
+    a revoker key pinned by the verifier and, for newly emitted artifacts, bound to
+    a full digest-derived key identifier (a self-asserted key confers nothing), the
+    presence of a strict revocation instant that has taken effect by the verifier's
+    decision time, and an independently recomputed signature. The statement proves
+    that a named, pinned revoker revoked this specific target. It does not prove that
+    every relying party saw it, and offline verification cannot prove the absence
+    of a revocation that was not presented. A terminal revocation never ages out;
+    current non- revocation requires separate authenticated, policy-fresh status evidence.
+    A Trust Program profile binds revocation to the complete execution claim, and
+    requires revocation-versus-claim to be resolved atomically; a revocation learned
+    after a claim never rewrites an effect that may already have occurred.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-schrock-ep-revocation-statement-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

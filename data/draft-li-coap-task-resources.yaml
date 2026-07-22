@@ -13,19 +13,15 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>Many CoAP deployments need to start operations that cannot be completed
-    within one request/response exchange. Existing deployments commonly model these
-    operations with application-specific resources, payload formats, and polling or
-    notification conventions. This makes clients, gateways, and proxies unable to
-    interoperate across implementations that expose otherwise similar long-running
-    operations. This document defines a CoAP task-resource pattern for asynchronous
-    operations. It specifies a small set of CoAP Options and a CBOR status representation
-    that allow a server to create a temporary task resource, allow a client to monitor,
-    update, or cancel that task using existing CoAP methods, and allow task-state
-    and task-progress observations to reuse the Conditional Query Parameters defined
-    for CoAP Observe [I-D.ietf-core-conditional-attributes]. The mechanisms are intended
-    to be generally usable for constrained applications that need interoperable task
-    orchestration.</p>"
+- content: "<p>Many operations on constrained devices cannot complete within a single
+    CoAP request and response exchange. Examples include firmware installation, diagnostic
+    procedures, commissioning, calibration, and physical actuation. This document
+    defines a common lifecycle model for representing such operations as addressable
+    CoAP Task Resources. It specifies task creation, state monitoring, discovery,
+    cancellation, terminal-state retention, and eventual removal. It also defines
+    a four-part request payload model, identified by the existing CoAP Content-Format
+    Option, for carrying resource operations together with task execution controls.
+    No new CoAP Option is defined.</p>"
   language:
   - en
   script:
@@ -41,6 +37,16 @@ relation:
       primary: true
     formattedref:
       content: draft-li-coap-task-resources-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-li-coap-task-resources-01
+    docid:
+    - id: draft-li-coap-task-resources-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-li-coap-task-resources-01
       format: text/plain
 ext:
   schema-version: v1.0.1
