@@ -1,0 +1,133 @@
+---
+schema-version: v1.2.3
+id: draft-zhu-oauth-async-delegation-01
+title:
+- content: Delegation Handle for Asynchronous OAuth 2.0 Token Exchange
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-zhu-oauth-async-delegation-01
+  type: src
+type: standard
+docid:
+- id: draft-zhu-oauth-async-delegation-01
+  type: Internet-Draft
+  primary: true
+- id: I-D.zhu-oauth-async-delegation
+  type: IETF
+  scope: anchor
+docnumber: I-D.zhu-oauth-async-delegation
+date:
+- type: published
+  value: '2026-07-21'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Larry
+          language:
+          - en
+        - language:
+          - en
+          initial: L
+        formatted_initials:
+          content: L.
+          language:
+          - en
+      surname:
+        content: Zhu
+        language:
+        - en
+      completename:
+        content: Larry Zhu
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Atlassian
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Zate
+          language:
+          - en
+        - language:
+          - en
+          initial: Z
+        formatted_initials:
+          content: Z.
+          language:
+          - en
+      surname:
+        content: Berg
+        language:
+        - en
+      completename:
+        content: Zate Berg
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Atlassian
+  role:
+  - type: author
+version:
+- draft: '01'
+revdate: '2026-07-21'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: <p>This document defines a standardized continuation mechanism for delegated
+    OAuth 2.0 Token Exchange. RFC 8693 permits an authorization server to include
+    an optional "refresh_token" in a successful Token Exchange response, but does
+    not specify issuance policy, delegated authorization semantics, lifecycle, or
+    security properties for continuation credentials. This specification fills that
+    gap for asynchronous and long-running delegated service workflows by defining
+    the Delegation Handle. The Delegation Handle is a delegation-bound continuation
+    credential with a new token type identifier usable as the RFC 8693 "subject_token_type".
+    An acting service presents the handle as the "subject_token" in a subsequent RFC
+    8693 Token Exchange request after the original subject token is no longer available.
+    This specification standardizes delegated continuation semantics, preservation
+    of subject and actor relationships, audience confinement, scope monotonicity,
+    actor binding, authorization re- evaluation during continuation, token rotation,
+    revocation, bounded delegation lifetime, and interoperability between implementations.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-zhu-oauth-async-delegation-00
+    docid:
+    - id: draft-zhu-oauth-async-delegation-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-zhu-oauth-async-delegation-00
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-zhu-oauth-async-delegation-01
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

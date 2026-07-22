@@ -13,34 +13,14 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document specifies the Network Hiding Protocol (NHP) Extensions
-    for 5G/6G Service-Based Architectures (NHP-SBA), a normative protocol for zero-trust
-    control-plane communication in autonomous 5G/6G network infrastructures. NHP-SBA
-    defines a cryptographically authenticated control-plane signaling framework that
-    enforces an Authenticated-before-Connect principle: no network endpoint shall
-    be reachable, discoverable, or accessible until the requesting entity has been
-    cryptographically authenticated and its operational intent has been explicitly
-    authorized. The protocol integrates the Network infrastructure Hiding Protocol
-    (NHP) as its primary knock-and-tunnel mechanism, leveraging the Noise Protocol
-    Framework with Curve25519 Diffie-Hellman key exchange, ChaCha20-Poly1305 AEAD
-    encryption, and HKDF-SHA-256 key derivation to establish ephemeral, intent-scoped
-    micro-tunnels between authenticated agents and authorized network services. NHP-SBA
-    introduces NHP-NRS as an intent-driven naming resolution service that replaces
-    conventional DNS lookups with FlatBuffers- serialized query tuples, binding resolution
-    responses to authenticated intent declarations rather than returning raw IP addresses.
-    NHP-NRS queries carry explicit intent classification, impact scope declarations,
-    and operational context, enabling the resolution infrastructure to enforce policy-driven
-    access control at the naming layer itself. Interoperability with 3GPP Service-Based
-    Architecture (SBA) is achieved through HTTP/2 Custom Frame Extensions, where NHP-SBA
-    Policy Enforcement Points transfer binary FlatBuffers tokens to mediate Network
-    Function invocations. This revised specification includes a comprehensive scientific
-    review identifying architectural weaknesses, protocol gaps, and missing validation
-    methodology. It adds mandatory sections on threat modeling, security analysis,
-    formal verification considerations, performance evaluation methodology, and an
-    experimental validation framework for FR3 (7-24 GHz) phase-coherent SDR platforms
-    using USRP X440 and TMYTEK UD Box 0630 hardware. The document also introduces
-    deployment models and a future standardization roadmap, addressing interoperability
-    readiness and providing implementation guidance for 5G/6G vendors and operators.</p>"
+- content: "<p>This document specifies a candidate implementation profile and extension
+    to the evolving Network Hiding Protocol (NHP) standards, designed specifically
+    for autonomous 5G/6G Service-Based Architectures (NHP-SBA). It defines the payload
+    schemas, cryptographic bindings, and state machine workflows necessary to address
+    Policy Enforcement Point (PEP) interoperability surfaces in heterogeneous telecom
+    environments. By leveraging zero-copy FlatBuffers serialization and HTTP/2 Custom
+    Frame Extensions, NHP-SBA enables deterministic, ultra-low-latency safety enforcement
+    for agent-driven RF control loops.</p>"
   language:
   - en
   script:
@@ -56,6 +36,16 @@ relation:
       primary: true
     formattedref:
       content: draft-alsahati-nhp-sba-nhp-protocol-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-alsahati-nhp-sba-nhp-protocol-01
+    docid:
+    - id: draft-alsahati-nhp-sba-nhp-protocol-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-alsahati-nhp-sba-nhp-protocol-01
       format: text/plain
 ext:
   schema-version: v1.0.1

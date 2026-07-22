@@ -2,8 +2,7 @@
 schema-version: v1.2.3
 id: draft-zhu-oauth-async-delegation
 title:
-- content: Sender-Constrained Delegation Handle for Asynchronous OAuth 2.0 Identity
-    Chaining
+- content: Delegation Handle for Asynchronous OAuth 2.0 Token Exchange
   language:
   - en
   script:
@@ -14,19 +13,20 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: '<p>This document defines an extension to OAuth 2.0 Token Exchange [RFC8693]
-    and the OAuth Identity Chaining draft [I-D.ietf-oauth-identity-chaining] for delegated
-    workflows that must continue after the end user has gone offline. When a chained
-    access token expires while the end user is unavailable to re-authenticate (for
-    example, to satisfy a multi-factor authentication or a touch-to-engage gesture),
-    the acting client today has no standards- defined way to obtain a refreshed chained
-    token without either widening privileges, breaking the identity chain, or impersonating
-    the user as a service. This specification introduces the "Delegation Handle":
-    a sender-constrained, audience-locked, scope- frozen JSON Web Token issued by
-    the authorization server alongside a chained access token, that the original acting
-    client MAY present back to the authorization server to refresh the chained access
-    token within strict, server-side policy bounds and without re-prompting the end
-    user.</p>'
+- content: <p>This document defines a standardized continuation mechanism for delegated
+    OAuth 2.0 Token Exchange. RFC 8693 permits an authorization server to include
+    an optional "refresh_token" in a successful Token Exchange response, but does
+    not specify issuance policy, delegated authorization semantics, lifecycle, or
+    security properties for continuation credentials. This specification fills that
+    gap for asynchronous and long-running delegated service workflows by defining
+    the Delegation Handle. The Delegation Handle is a delegation-bound continuation
+    credential with a new token type identifier usable as the RFC 8693 "subject_token_type".
+    An acting service presents the handle as the "subject_token" in a subsequent RFC
+    8693 Token Exchange request after the original subject token is no longer available.
+    This specification standardizes delegated continuation semantics, preservation
+    of subject and actor relationships, audience confinement, scope monotonicity,
+    actor binding, authorization re- evaluation during continuation, token rotation,
+    revocation, bounded delegation lifetime, and interoperability between implementations.</p>
   language:
   - en
   script:
@@ -42,6 +42,16 @@ relation:
       primary: true
     formattedref:
       content: draft-zhu-oauth-async-delegation-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-zhu-oauth-async-delegation-01
+    docid:
+    - id: draft-zhu-oauth-async-delegation-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-zhu-oauth-async-delegation-01
       format: text/plain
 ext:
   schema-version: v1.0.1

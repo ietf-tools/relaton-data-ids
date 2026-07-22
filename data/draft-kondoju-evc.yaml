@@ -1,0 +1,48 @@
+---
+schema-version: v1.2.3
+id: draft-kondoju-evc
+title:
+- content: An External Verifier Contract for Agent Authorization Decisions
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-kondoju-evc
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This document specifies the External Verifier Contract (EVC): a small,
+    testable, proof-system-agnostic boundary between a host (the program about to
+    take a privileged action on an agent's behalf) and an external verifier (a subprocess
+    that renders an allow/deny verdict on an opaque proof bundle). The contract governs
+    only the transport and verdict envelope: how the host hands a single JSON request
+    to a verifier subprocess over stdin, how the verifier answers with exactly one
+    JSON verdict on stdout, and how the host interprets exit codes, timeouts, and
+    malformed output under a fail-closed rule. Three properties make the boundary
+    standardizable: (1) a single-shot subprocess transport with a closed JSON verdict
+    schema; (2) fail- closed host semantics that are independently testable by a host-
+    conformance suite; and (3) proof-system agnosticism, so the same envelope carries
+    classical-signature, zero-knowledge, and third-party verdicts, distinguished only
+    by an OPTIONAL self-description field. EVC is deliberately not a governance framework,
+    not a delegation model, and not a policy language. It is the narrow decision boundary
+    those larger systems all require at the point of enforcement.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-kondoju-evc-00
+    docid:
+    - id: draft-kondoju-evc-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-kondoju-evc-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

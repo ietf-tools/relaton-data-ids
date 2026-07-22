@@ -21,7 +21,18 @@ abstract:
     markets, including high-precision timestamps, regulatory compliance considerations
     (EU AI Act, MiFID II), and privacy-preserving mechanisms (crypto-shredding) compatible
     with GDPR. This profile specifies how VCP events are encoded as SCITT Signed Statements,
-    registered with Transparency Services, and verified using COSE Receipts.</p>"
+    registered with Transparency Services, and verified using COSE Receipts. It further
+    defines SCITT conformance profiles for interoperability and an ERASURE event type
+    that records crypto- shredding operations as immutable audit events. About This
+    Document This note is to be removed before publishing as an RFC. The latest version
+    of this document, along with implementation resources and test vectors, can be
+    found at https://github.com/veritaschain/vcp-spec. Discussion of this document
+    takes place on the SCITT Working Group mailing list (scitt@ietf.org). Changes
+    from -02: * Updated to align with VCP Specification v1.2 * Added SCITT Alignment
+    Object and conformance profiles (Section 4.4) * Added ERASURE event type recording
+    crypto-shredding operations (Section 6.3) * Corrected the post-quantum SignAlgo
+    registry value from DILITHIUM3 to DILITHIUM2 (ML-DSA, FIPS 204) * PolicyID examples
+    migrated to the Issuer Domain + Local ID naming convention defined in VCP v1.2</p>"
   language:
   - en
   script:
@@ -57,6 +68,16 @@ relation:
       primary: true
     formattedref:
       content: draft-kamimura-scitt-vcp-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-kamimura-scitt-vcp-03
+    docid:
+    - id: draft-kamimura-scitt-vcp-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-kamimura-scitt-vcp-03
       format: text/plain
 ext:
   schema-version: v1.0.1

@@ -13,16 +13,20 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>Registration Data Access Protocol (RDAP) queries can be resolved from
+- content: <p>Registration Data Access Protocol (RDAP) queries can be resolved from
     the IANA bootstrap registries down to the most specific object held by a registry
     operator's RDAP service. Where the holder of a registered resource maintains registration
     data for resources subordinate to it, such as DNS names below a registered domain
     or more-specific networks below an address allocation, and operates a conformant
     RDAP service for that data, there is currently no discoverable referral from the
     registry's response to the holder's service. This document describes an optional,
-    holder-designated referral for subordinate resources, building on the explicit
-    redirect mechanism defined for RDAP. It is written as input to draft-ietf- regext-rdap-referrals
-    and its content may be merged into that document.</p>"
+    holder-designated referral for subordinate resources, carried by a pair of directional
+    RDAP link relations, "rdap-base-down" and "rdap-base-up", whose targets are the
+    base URL of a downstream RDAP service and the base URL of the covering registry
+    service, respectively. The holder- designated subordinate referral is the primary
+    application, but the same relations serve related base-URL discovery needs, including
+    delegated and hybrid RPKI referrals. It is written as input to draft-ietf-regext-rdap-referrals
+    and its content may be merged into that document.</p>
   language:
   - en
   script:
@@ -38,6 +42,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ranjbar-regext-rdap-subordinate-referrals-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ranjbar-regext-rdap-subordinate-referrals-01
+    docid:
+    - id: draft-ranjbar-regext-rdap-subordinate-referrals-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ranjbar-regext-rdap-subordinate-referrals-01
       format: text/plain
 ext:
   schema-version: v1.0.1
