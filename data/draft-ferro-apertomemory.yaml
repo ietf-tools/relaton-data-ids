@@ -22,7 +22,11 @@ abstract:
     in deterministic CBOR, signed with COSE_Sign1, and encrypted with COSE_Encrypt0
     under keys derived from and controlled by the user. A storage or synchronisation
     server handling ApertoMemory objects has zero access to their content, authorship,
-    or semantic timestamps.</p>"
+    or semantic timestamps. This revision specifies format_version 2, which cryptographically
+    binds every signature to the author it claims and to the cleartext envelope around
+    it, and derives trust from which key verified an object rather than from a declared
+    field. format_version 1, described by earlier revisions of this document, carries
+    a known forgeable- provenance defect and MUST NOT be implemented for new deployments.</p>"
   language:
   - en
   script:
@@ -48,6 +52,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ferro-apertomemory-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ferro-apertomemory-02
+    docid:
+    - id: draft-ferro-apertomemory-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ferro-apertomemory-02
       format: text/plain
 ext:
   schema-version: v1.0.1

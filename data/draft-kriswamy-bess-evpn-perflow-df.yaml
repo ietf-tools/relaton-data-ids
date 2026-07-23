@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-kriswamy-bess-evpn-perflow-df
 title:
-- content: Per-flow based EVPN DF Election
+- content: Per-Flow EVPN Designated Forwarder Election
   language:
   - en
   script:
@@ -18,10 +18,11 @@ abstract:
     this context, the Provider Edge (PE) router is responsible for sending Broadcast,
     Unknown Unicast, and Multicast (BUM) traffic to a multihomed device or network.
     This applies in cases of an all-active multihomed Ethernet Segment (ES) as well
-    as for BUM and unicast traffic in the case of single-active multi- homing. While
-    the Default Algorithm provides an efficient and automated way of selecting the
-    DF across different Ethernet Tags in the Ethernet Segment, but lacks in providing
-    per flow based DF within the given EVPN Instances (EVIs).</p>"
+    as for BUM and unicast traffic in the case of single-active multihoming. While
+    the Default Algorithm provides an efficient and automated mechanism for selecting
+    the DF across Ethernet Tags within an Ethernet Segment, it does not provide Per-flow
+    DF selection within an EVPN Instance (EVI). This document defines a new DF Election
+    Algorithm that performs Per-flow DF selection by defining a new DF Algorithm value.</p>"
   language:
   - en
   script:
@@ -37,6 +38,16 @@ relation:
       primary: true
     formattedref:
       content: draft-kriswamy-bess-evpn-perflow-df-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-kriswamy-bess-evpn-perflow-df-01
+    docid:
+    - id: draft-kriswamy-bess-evpn-perflow-df-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-kriswamy-bess-evpn-perflow-df-01
       format: text/plain
 ext:
   schema-version: v1.0.1
