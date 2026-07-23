@@ -31,7 +31,17 @@ abstract:
     as the baseline algorithm and ML-DSA-87 available as a high-assurance deployment
     policy option. A dedicated 4NN Delegated Authority Required status code remains
     an open design question for HTTP Working Group review; this revision does not
-    depend on that status code and does not define payment semantics.</p>
+    depend on that status code and does not define payment semantics. This revision
+    also defines a mandatory-to-implement preflight flow for large proof profiles
+    so that GET and HEAD requests do not depend on request content, and so that requests
+    with application representations do not need to multiplex the application body
+    and the proof body in a single content stream. For implementation experience,
+    this individual draft also includes the initial Budget authority profile. The
+    HTTP authentication scheme, status-code semantics, Problem Details members, and
+    field- carriage rules are intentionally separable from the COSE/CBOR Budget profile.
+    If a Working Group chooses to progress the HTTP mechanism independently, the Budget
+    authority profile can be moved to a companion profile document without changing
+    the Delegation challenge semantics defined here.</p>
   language:
   - en
   script:
@@ -67,6 +77,16 @@ relation:
       primary: true
     formattedref:
       content: draft-mcgraw-httpapi-agent-budget-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-mcgraw-httpapi-agent-budget-03
+    docid:
+    - id: draft-mcgraw-httpapi-agent-budget-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-mcgraw-httpapi-agent-budget-03
       format: text/plain
 ext:
   schema-version: v1.0.1

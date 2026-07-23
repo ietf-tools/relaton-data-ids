@@ -13,30 +13,28 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document defines a DNS-based mechanism for the discovery of Model
-    Context Protocol (MCP) servers, the identity properties of the organisations that
-    operate them, and (new in this revision) the cryptographic identity envelope bound
-    to an individual Sovereign- tier ~handle published under the same zone. Three
-    TXT resource records are defined. The _mcp.&lt;domain&gt; record (defined in v01)
-    advertises the presence, endpoint URL, transport protocol, cryptographic identity,
-    and capability profile of an MCP server associated with a domain name. The _org-alter.&lt;domain&gt;
-    record (introduced in v02) advertises the canonical organisational identity of
-    the domain operator: legal entity name, registry identifier, founding date, primary
-    regions of operation, and any regulatory frameworks under which the operator is
-    bound to refuse external automated access. The _alter.&lt;domain&gt; record (introduced
-    in this revision) publishes an Ed25519-signed identity envelope binding a ~handle
-    to a public key, an IdentityLog Signed Tree Head root, and a revocation commitment.
-    Taken together, the three records provide service discovery, organisational identity
-    bootstrap, and individual identity recognition from a single canonical source:
-    the domain's own DNS zone. This revision additionally requires DNSSEC [RFC4033]
-    validation of envelope responses and a DANE TLSA [RFC6698] pin binding the MCP
-    endpoint's leaf certificate to the published zone. A companion URI scheme (alter:)
-    is registered provisionally with IANA per [RFC7595] for handle dispatch. The mechanism
-    complements HTTPS- based discovery (.well-known/mcp/server-card.json and.well-known/
-    alter-envelope.json) by providing a lightweight, resolver-cached bootstrap that
-    requires no HTTPS round-trip. The design follows the precedent established by
-    DKIM [RFC6376], SPF [RFC7208], DMARC [RFC7489], MTA-STS [RFC8461], and the existing
-    _mcp. / _org-alter. labels of v01-v02.</p>"
+- content: "<p>This document defines a DNS-based mechanism for discovering Model Context
+    Protocol (MCP) servers, the identity of the organisations that operate them, and
+    a cryptographic identity envelope bound to an individual Sovereign-tier ~handle
+    published under the same zone. Three TXT records are defined. _mcp.&lt;domain&gt;
+    advertises an MCP server's endpoint URL, agent protocol family, transport binding,
+    cryptographic identity, and capability profile. _org-alter.&lt;domain&gt; advertises
+    the operator's canonical organisational identity, including its legal entity,
+    registry identifier, regions of operation, and any regulatory framework under
+    which it must refuse external automated access. _alter.&lt;domain&gt; publishes
+    an Ed25519-signed envelope binding a ~handle to a public key, an IdentityLog root
+    reference, and a revocation commitment. DNSSEC validation is REQUIRED for the
+    envelope record, and a DANE TLSA pin on the MCP endpoint is REQUIRED where resolving
+    an envelope and opening an MCP session are one recognition transaction. This revision
+    (v05) corrects earlier ones and introduces no new mechanism. It withdraws several
+    claims that v04 could not support, marks publication of a per-individual envelope
+    in DNS as NOT RECOMMENDED on enumeration, size, and erasure grounds, and separates
+    the agent protocol family from the transport binding in the _mcp record, aligning
+    that vocabulary with neighbouring DNS agent- discovery drafts. All three record
+    formats and all three procedures are given here in full, so no earlier revision
+    need be fetched. The mechanism complements HTTPS-based discovery, and follows
+    the precedent set by DKIM, SPF, DMARC, and MTA-STS. Provisional registration of
+    a companion alter: URI scheme is requested of IANA, and is not yet granted.</p>"
   language:
   - en
   script:
@@ -92,6 +90,16 @@ relation:
       primary: true
     formattedref:
       content: draft-morrison-mcp-dns-discovery-04
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-morrison-mcp-dns-discovery-05
+    docid:
+    - id: draft-morrison-mcp-dns-discovery-05
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-morrison-mcp-dns-discovery-05
       format: text/plain
 ext:
   schema-version: v1.0.1

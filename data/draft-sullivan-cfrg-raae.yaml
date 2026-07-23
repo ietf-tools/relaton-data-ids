@@ -19,13 +19,14 @@ abstract:
     SEAL (Segmented Encryption and Authentication Layer), a parameterized construction
     that defines a family of concrete raAE instantiations, one for each valid choice
     of an Authenticated Encryption with Associated Data (AEAD) algorithm, a key derivation
-    function (KDF), and associated parameters. SEAL provides two profiles, immutable
-    (write-once) and mutable (in- place ciphertext rewrite), each with per-segment
-    authentication. A separately configured snapshot authenticator can additionally
-    authenticate the complete, indexed segment set. The document also defines the
-    security notions of raAE, specifies the requirements for conforming constructions,
-    analyzes SEAL against those requirements, and provides example cipher suites and
-    test vectors.</p>"
+    function (KDF), and associated parameters. SEAL supports immutable (write-once),
+    append-only, and mutable (in- place ciphertext rewrite) operations, each with
+    per-segment authentication. A separately configured snapshot authenticator can
+    additionally authenticate the complete, indexed segment set. The document also
+    defines the security notions of raAE, specifies the requirements for conforming
+    constructions, and analyzes SEAL against those requirements. Concrete cipher suites,
+    serialization layouts, and test vectors for SEAL are specified in a companion
+    document.</p>"
   language:
   - en
   script:
@@ -61,6 +62,16 @@ relation:
       primary: true
     formattedref:
       content: draft-sullivan-cfrg-raae-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-sullivan-cfrg-raae-03
+    docid:
+    - id: draft-sullivan-cfrg-raae-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-sullivan-cfrg-raae-03
       format: text/plain
 ext:
   schema-version: v1.0.1

@@ -24,12 +24,14 @@ abstract:
     field of a Model Context Protocol [MCP] tool result. The contribution is the delivery
     contract itself: a single renderer-agnostic envelope so that the briefing an agent
     delivers and the binding a principal commits back have one machine-checkable shape
-    across every consuming surface. The load-bearing element is the dual-veto handshake:
+    across every consuming surface. The central element is the dual-veto handshake:
     one escape hatch lets the principal revise the answer space while accepting the
     question; the other lets the principal reject the question itself and reopen deliberation.
-    Either party may veto. The memo is Informational. No new transport is introduced;
-    the envelope composes with the handle namespace of [IDPRONOUNS] and the MCP tool
-    surface of [POLICYPROV].</p>"
+    Either party may veto. The memo defines a content digest over the envelope, canonicalized
+    under JCS and hashed with SHA-256, so that a resolution names the exact envelope
+    it resolves and an external receipt can reference that envelope by digest. The
+    memo is Informational. No new transport is introduced; the envelope composes with
+    the handle namespace of [IDPRONOUNS] and the MCP tool surface of [POLICYPROV].</p>"
   language:
   - en
   script:
@@ -45,6 +47,16 @@ relation:
       primary: true
     formattedref:
       content: draft-morrison-binding-moment-envelope-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-morrison-binding-moment-envelope-01
+    docid:
+    - id: draft-morrison-binding-moment-envelope-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-morrison-binding-moment-envelope-01
       format: text/plain
 ext:
   schema-version: v1.0.1

@@ -20,17 +20,17 @@ abstract:
     an agent pays to read an identity attribute about a person, the extension requires
     that the read carry a reference to a scoped, revocable consent grant issued by
     the subject, and it requires that the payment's settlement instruction name the
-    subject as a beneficiary of a defined share of the read's price. The extension
-    composes above an identity- attestation envelope (which asserts who a credential
-    is about) and above an HTTP-native payment flow (which moves value for the read);
-    it adds the two functions neither layer provides: consent capture at disclosure
-    time and settlement to the data subject. The wire additions are an advertisement
-    in the server's payment-required response, a consent-grant reference echoed in
-    the client's payment payload, and a settlement instruction enumerating subject
-    beneficiary roles. The extension is settlement-network-agnostic and attestation-
-    format-agnostic. The memo is Informational; the underlying COSE and CBOR formats
-    are normative per [RFC9052] and [RFC8949], and the HTTP semantics are normative
-    per [RFC9110].</p>"
+    subject as a beneficiary of a share of the read's price greater than the shares
+    of all other parties combined. The extension composes above an identity- attestation
+    envelope (which asserts who a credential is about) and above an HTTP-native payment
+    flow (which moves value for the read); it adds the two functions neither layer
+    provides: consent capture at disclosure time and settlement to the data subject.
+    The wire additions are an advertisement in the server's payment-required response,
+    a consent- grant reference echoed in the client's payment payload, and a settlement
+    instruction enumerating subject beneficiary roles. The extension is settlement-network-agnostic
+    and attestation-format- agnostic. The memo is Informational; the underlying COSE
+    and CBOR formats are normative per [RFC9052] and [RFC8949], and the HTTP semantics
+    are normative per [RFC9110].</p>"
   language:
   - en
   script:
@@ -56,6 +56,16 @@ relation:
       primary: true
     formattedref:
       content: draft-morrison-consent-settlement-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-morrison-consent-settlement-02
+    docid:
+    - id: draft-morrison-consent-settlement-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-morrison-consent-settlement-02
       format: text/plain
 ext:
   schema-version: v1.0.1

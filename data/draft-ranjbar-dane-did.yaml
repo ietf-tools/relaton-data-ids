@@ -1,0 +1,48 @@
+---
+schema-version: v1.2.3
+id: draft-ranjbar-dane-did
+title:
+- content: 'Rooting Decentralized Identifiers in DNSSEC: A DANE-EE Key-Binding Profile'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-ranjbar-dane-did
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>Several Decentralized Identifier (DID) methods root trust in a DNS
+    name: did:web binds an identifier to a domain and today verifies its keys over
+    the Web PKI, did:dns serves DID data from DNS resource records, and did:webvh
+    retrieves its history from an HTTPS location derived from a name. Each either
+    depends on the Web PKI, treats DNSSEC as an optional recommendation, or does not
+    bind the verification-method key to the name at all. This document defines a single,
+    normative DANE-EE key-binding profile that any DNS-anchored DID method can point
+    at rather than reinventing: a verification method's public key is published as
+    a TLSA record with certificate usage DANE-EE(3), selector SubjectPublicKeyInfo(1),
+    and matching type SHA-256(1) under a DNSSEC-signed name, so that a relying party
+    can confirm the key from the DNS root of trust with no certificate authority and
+    no fetch from the subject. The profile binds a name to a key and the key to the
+    specific DID document it signs, and no further; it states precisely what it does
+    not cover, including continuity of holding, and points to where those answers
+    live.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-ranjbar-dane-did-00
+    docid:
+    - id: draft-ranjbar-dane-did-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ranjbar-dane-did-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
