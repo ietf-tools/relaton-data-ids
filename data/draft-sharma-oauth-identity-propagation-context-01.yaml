@@ -1,0 +1,111 @@
+---
+schema-version: v1.2.3
+id: draft-sharma-oauth-identity-propagation-context-01
+title:
+- content: Identity Propagation Context for Multi-Hop Delegation in OAuth 2.0 Environments
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-sharma-oauth-identity-propagation-context-01
+  type: src
+type: standard
+docid:
+- id: draft-sharma-oauth-identity-propagation-context-01
+  type: Internet-Draft
+  primary: true
+- id: I-D.sharma-oauth-identity-propagation-context
+  type: IETF
+  scope: anchor
+docnumber: I-D.sharma-oauth-identity-propagation-context
+date:
+- type: published
+  value: '2026-07-23'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Ravi
+          language:
+          - en
+        - language:
+          - en
+          initial: R
+        - language:
+          - en
+          initial: K
+        formatted_initials:
+          content: R. K.
+          language:
+          - en
+      surname:
+        content: Sharma
+        language:
+        - en
+      completename:
+        content: Ravi Kant Sharma
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Ericsson
+  role:
+  - type: author
+version:
+- draft: '01'
+revdate: '2026-07-23'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: <p>This specification defines the Identity Propagation Context (IPC), a
+    signed, short-lived context artifact that carries identity and delegation chain
+    information across multi-hop service chains with per-hop cryptographic re-signing.
+    IPC complements the delegation semantics of OAuth 2.0 Token Exchange (RFC 8693)
+    by enabling each trust boundary to independently verify the upstream signature
+    and re- sign the identity context it forwards, supporting cascade revocation,
+    delegation depth limits, and cross-protocol propagation (HTTP, gRPC, and event-streaming
+    systems). Unlike the act claim in RFC 8693, which is explicitly designated as
+    "informational only and not to be considered in access control decisions," IPC
+    is designed for identity propagation that can be used in access control decisions,
+    with per-hop cryptographic re-signing within a single trust domain. In autonomous
+    agent architectures and multi-service platforms, Each trust boundary verifies
+    the upstream signature and re-signs with its own key before forwarding; the delegation
+    chain content is asserted by the IPC Creator and trusted transitively through
+    the chain of re-signing intermediaries. This provides single-hop-verifiable integrity
+    (each service can verify its immediate upstream) rather than end-to-end cryptographic
+    proof of the full chain.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-sharma-oauth-identity-propagation-context-00
+    docid:
+    - id: draft-sharma-oauth-identity-propagation-context-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-sharma-oauth-identity-propagation-context-00
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-sharma-oauth-identity-propagation-context-01
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

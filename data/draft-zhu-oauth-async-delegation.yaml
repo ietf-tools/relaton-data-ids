@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-zhu-oauth-async-delegation
 title:
-- content: Delegation Handle for Asynchronous OAuth 2.0 Token Exchange
+- content: Delegated Refresh Tokens for OAuth 2.0 Token Exchange
   language:
   - en
   script:
@@ -13,20 +13,25 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: <p>This document defines a standardized continuation mechanism for delegated
-    OAuth 2.0 Token Exchange. RFC 8693 permits an authorization server to include
-    an optional "refresh_token" in a successful Token Exchange response, but does
-    not specify issuance policy, delegated authorization semantics, lifecycle, or
-    security properties for continuation credentials. This specification fills that
-    gap for asynchronous and long-running delegated service workflows by defining
-    the Delegation Handle. The Delegation Handle is a delegation-bound continuation
-    credential with a new token type identifier usable as the RFC 8693 "subject_token_type".
-    An acting service presents the handle as the "subject_token" in a subsequent RFC
-    8693 Token Exchange request after the original subject token is no longer available.
-    This specification standardizes delegated continuation semantics, preservation
-    of subject and actor relationships, audience confinement, scope monotonicity,
-    actor binding, authorization re- evaluation during continuation, token rotation,
-    revocation, bounded delegation lifetime, and interoperability between implementations.</p>
+- content: "<p>OAuth 2.0 Token Exchange permits an authorization server to issue a
+    refresh token when a client needs continued access after the original credential
+    is no longer valid. However, RFC 8693 does not define how a refresh token issued
+    by a delegated Token Exchange preserves the subject, actor chain, resource restrictions,
+    or other delegated authorization state. This specification profiles refresh tokens
+    issued by delegated OAuth 2.0 Token Exchange for asynchronous and long-running
+    workflows. It defines a Token Exchange request signal by which a client requests
+    delegated continuation, together with preservation of subject and actor relationships,
+    client and actor binding, resource confinement, scope monotonicity, authorization
+    re-evaluation, rotation, task- scoped revocation, and a bounded delegation lifetime.
+    The common signal and semantics enable autonomous agents and other product components
+    to interoperate with independently implemented authorization servers across trust
+    domains. Because a client generally cannot determine the effective lifetime of
+    an opaque refresh token, this profile requires the client to request continuation
+    only for an identified asynchronous task and to promptly revoke the refresh-token
+    family when that task reaches a terminal state. These requirements reduce unnecessary
+    issuance and limit the period in which residual delegated authority can be abused.
+    The profile uses the existing OAuth refresh token response and grant and introduces
+    no new token type or grant type.</p>"
   language:
   - en
   script:
@@ -62,6 +67,16 @@ relation:
       primary: true
     formattedref:
       content: draft-zhu-oauth-async-delegation-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-zhu-oauth-async-delegation-03
+    docid:
+    - id: draft-zhu-oauth-async-delegation-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-zhu-oauth-async-delegation-03
       format: text/plain
 ext:
   schema-version: v1.0.1

@@ -17,9 +17,11 @@ abstract:
     of authority for a domain in the Domain Name System (DNS) using DELEG and DELEGPARAM
     records. A delegation in the DNS enables efficient and distributed management
     of the DNS namespace. The traditional DNS delegation is based on NS records which
-    contain only hostnames of servers and no other parameters. The new delegation
-    records are extensible, can be secured with DNSSEC, and eliminate the problem
-    of having two sources of truth for delegation information.</p>"
+    contain only hostnames of servers and no other parameters. In classic DNS, both
+    parent and child zones contain copies of NS delegation records, which can potentially
+    be out of sync and confusing. The new delegation records are extensible, can be
+    secured with DNSSEC, and eliminate the problem of having two sources of truth
+    for delegation information.</p>"
   language:
   - en
   script:
@@ -135,6 +137,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-deleg-10
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-deleg-11
+    docid:
+    - id: draft-ietf-deleg-11
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-deleg-11
       format: text/plain
 ext:
   schema-version: v1.0.1
