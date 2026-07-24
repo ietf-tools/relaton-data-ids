@@ -19,19 +19,20 @@ abstract:
     by a delegated Token Exchange preserves the subject, actor chain, resource restrictions,
     or other delegated authorization state. This specification profiles refresh tokens
     issued by delegated OAuth 2.0 Token Exchange for asynchronous and long-running
-    workflows. It defines a Token Exchange request signal by which a client requests
-    delegated continuation, together with preservation of subject and actor relationships,
-    client and actor binding, resource confinement, scope monotonicity, authorization
-    re-evaluation, rotation, task- scoped revocation, and a bounded delegation lifetime.
-    The common signal and semantics enable autonomous agents and other product components
-    to interoperate with independently implemented authorization servers across trust
-    domains. Because a client generally cannot determine the effective lifetime of
-    an opaque refresh token, this profile requires the client to request continuation
-    only for an identified asynchronous task and to promptly revoke the refresh-token
-    family when that task reaches a terminal state. These requirements reduce unnecessary
-    issuance and limit the period in which residual delegated authority can be abused.
-    The profile uses the existing OAuth refresh token response and grant and introduces
-    no new token type or grant type.</p>"
+    workflows. It defines authorization-server metadata advertising profile support
+    and a Token Exchange request signal by which a client requests delegated continuation,
+    together with preservation of subject and actor relationships, client and actor
+    binding, resource confinement, scope monotonicity, authorization re-evaluation,
+    rotation, task-scoped revocation, and a bounded delegation lifetime. The common
+    discovery signal, request signal, and semantics enable autonomous agents and other
+    product components to interoperate with independently implemented authorization
+    servers across trust domains. Because a client generally cannot determine the
+    effective lifetime of an opaque refresh token, this profile requires the client
+    to request continuation only for an identified asynchronous task and to promptly
+    revoke the refresh-token family when that task reaches a terminal state. These
+    requirements reduce unnecessary issuance and limit the period in which residual
+    delegated authority can be abused. The profile uses the existing OAuth refresh
+    token response and grant and introduces no new token type or grant type.</p>"
   language:
   - en
   script:
@@ -77,6 +78,16 @@ relation:
       primary: true
     formattedref:
       content: draft-zhu-oauth-async-delegation-03
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-zhu-oauth-async-delegation-04
+    docid:
+    - id: draft-zhu-oauth-async-delegation-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-zhu-oauth-async-delegation-04
       format: text/plain
 ext:
   schema-version: v1.0.1

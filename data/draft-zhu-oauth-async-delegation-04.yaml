@@ -1,0 +1,139 @@
+---
+schema-version: v1.2.3
+id: draft-zhu-oauth-async-delegation-04
+title:
+- content: Delegated Refresh Tokens for OAuth 2.0 Token Exchange
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-zhu-oauth-async-delegation-04
+  type: src
+type: standard
+docid:
+- id: draft-zhu-oauth-async-delegation-04
+  type: Internet-Draft
+  primary: true
+- id: I-D.zhu-oauth-async-delegation
+  type: IETF
+  scope: anchor
+docnumber: I-D.zhu-oauth-async-delegation
+date:
+- type: published
+  value: '2026-07-23'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Larry
+          language:
+          - en
+        - language:
+          - en
+          initial: L
+        formatted_initials:
+          content: L.
+          language:
+          - en
+      surname:
+        content: Zhu
+        language:
+        - en
+      completename:
+        content: Larry Zhu
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Atlassian
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Zate
+          language:
+          - en
+        - language:
+          - en
+          initial: Z
+        formatted_initials:
+          content: Z.
+          language:
+          - en
+      surname:
+        content: Berg
+        language:
+        - en
+      completename:
+        content: Zate Berg
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Atlassian
+  role:
+  - type: author
+version:
+- draft: '04'
+revdate: '2026-07-23'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>OAuth 2.0 Token Exchange permits an authorization server to issue a
+    refresh token when a client needs continued access after the original credential
+    is no longer valid. However, RFC 8693 does not define how a refresh token issued
+    by a delegated Token Exchange preserves the subject, actor chain, resource restrictions,
+    or other delegated authorization state. This specification profiles refresh tokens
+    issued by delegated OAuth 2.0 Token Exchange for asynchronous and long-running
+    workflows. It defines authorization-server metadata advertising profile support
+    and a Token Exchange request signal by which a client requests delegated continuation,
+    together with preservation of subject and actor relationships, client and actor
+    binding, resource confinement, scope monotonicity, authorization re-evaluation,
+    rotation, task-scoped revocation, and a bounded delegation lifetime. The common
+    discovery signal, request signal, and semantics enable autonomous agents and other
+    product components to interoperate with independently implemented authorization
+    servers across trust domains. Because a client generally cannot determine the
+    effective lifetime of an opaque refresh token, this profile requires the client
+    to request continuation only for an identified asynchronous task and to promptly
+    revoke the refresh-token family when that task reaches a terminal state. These
+    requirements reduce unnecessary issuance and limit the period in which residual
+    delegated authority can be abused. The profile uses the existing OAuth refresh
+    token response and grant and introduces no new token type or grant type.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-zhu-oauth-async-delegation-02
+    docid:
+    - id: draft-zhu-oauth-async-delegation-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-zhu-oauth-async-delegation-02
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-zhu-oauth-async-delegation-04
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

@@ -13,10 +13,14 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>Delegated authorization enables a client to delegate a subset of its
-    granted privileges to a subordinate access token (also known as a delegated access
-    token). This mechanism allows the client to securely delegate authorization to
-    another application while maintaining fine-grained control over delegated permissions.</p>"
+- content: "<p>This specification defines Delegated Authorization Tokens, key-bound
+    tokens that enable an OAuth client to delegate a constrained subset of its authorization
+    to another client without contacting the authorization server for each delegation.
+    An authorization server issues the root token and binds it to a client key. That
+    client can use the bound key either to prove possession when accessing a protected
+    resource or to sign a further token bound to a delegate client's key. Resource
+    servers validate the ordered token chain, the restrictions imposed at every delegation
+    step, and a DPoP proof signed by the key bound to the leaf token.</p>"
   language:
   - en
   script:
@@ -52,6 +56,16 @@ relation:
       primary: true
     formattedref:
       content: draft-li-oauth-delegated-authorization-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-li-oauth-delegated-authorization-03
+    docid:
+    - id: draft-li-oauth-delegated-authorization-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-li-oauth-delegated-authorization-03
       format: text/plain
 ext:
   schema-version: v1.0.1

@@ -18,17 +18,23 @@ abstract:
     claims against a plurality of sovereign authoritative registers without raw register
     records leaving their data-residency jurisdiction. ARP extends the SCITT (Supply
     Chain Integrity, Transparency, and Trust) architecture to cross-sovereign claim
-    reconciliation. A reconciliation server canonicalises a structured claim, projects
-    it through register-specific controlled projection functions producing the greatest-lower-bound
-    predicate supported by each addressed register, transmits register-specific ciphertexts,
-    receives partial attestations whose payload discloses only a verdict and an optional
-    divergence axis, aggregates the partial attestations through either homomorphic
-    or hash-linkage aggregation, and seals the resulting reconciliation output against
-    a policy-version hash. An append-only cross-jurisdictional settlement- layer ledger
-    records only hashes, with no content. The protocol supports retroactive re-evaluation
-    of historical reconciliations under updated pattern libraries or policy versions
-    without bilateral renegotiation, and a cryptographic-primitive-upgrade path including
-    post-quantum primitives.</p>"
+    reconciliation. A reconciliation server canonicalises a structured claim, binds
+    the identity of the requesting principal -- including, where the requester is
+    an autonomous agent, a friend-or- foe determination of that agent's verifiable
+    principal binding -- projects the claim through register-specific controlled projection
+    functions producing the greatest-lower-bound predicate supported by each addressed
+    register, transmits register-specific ciphertexts, receives partial attestations
+    whose payload discloses only a verdict and an optional divergence axis, aggregates
+    the partial attestations through either homomorphic or hash-linkage aggregation,
+    and seals the resulting reconciliation output against a policy-version hash. An
+    append-only cross-jurisdictional settlement-layer ledger records only hashes,
+    with no content. The protocol supports retroactive re- evaluation of historical
+    reconciliations under updated pattern libraries or policy versions without bilateral
+    renegotiation, and a cryptographic-primitive-upgrade path including post-quantum
+    primitives. This revision adds agentic-principal reconciliation, requester identity
+    binding, alignment with HTTP Message Signatures and COSE Receipts, and composition
+    of heterogeneous agent-action accountability attestations into a single producer-agnostic
+    reconciled verdict evaluated at decision time.</p>"
   language:
   - en
   script:
@@ -44,6 +50,16 @@ relation:
       primary: true
     formattedref:
       content: draft-hillier-scitt-arp-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-hillier-scitt-arp-01
+    docid:
+    - id: draft-hillier-scitt-arp-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-hillier-scitt-arp-01
       format: text/plain
 ext:
   schema-version: v1.0.1
