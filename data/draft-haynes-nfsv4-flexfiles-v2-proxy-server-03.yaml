@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-haynes-nfsv4-flexfiles-v2-proxy-server-01
+id: draft-haynes-nfsv4-flexfiles-v2-proxy-server-03
 title:
 - content: Proxy-Driven Server for Flexible Files Version 2
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-haynes-nfsv4-flexfiles-v2-proxy-server-01
+- content: https://datatracker.ietf.org/doc/html/draft-haynes-nfsv4-flexfiles-v2-proxy-server-03
   type: src
 type: standard
 docid:
-- id: draft-haynes-nfsv4-flexfiles-v2-proxy-server-01
+- id: draft-haynes-nfsv4-flexfiles-v2-proxy-server-03
   type: Internet-Draft
   primary: true
 - id: I-D.haynes-nfsv4-flexfiles-v2-proxy-server
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.haynes-nfsv4-flexfiles-v2-proxy-server
 date:
 - type: published
-  value: '2026-05-22'
+  value: '2026-07-24'
 contributor:
 - person:
     name:
@@ -53,8 +53,8 @@ contributor:
   role:
   - type: author
 version:
-- draft: '01'
-revdate: '2026-05-22'
+- draft: '03'
+revdate: '2026-07-24'
 language:
 - en
 script:
@@ -62,15 +62,15 @@ script:
 abstract:
 - content: "<p>Parallel NFS (pNFS) with the Flexible Files Version 2 layout type supports
     client-side erasure coding and per-chunk repair between clients and data servers.
-    This document extends that architecture with a proxy server (PS) role: a registered
+    This document extends that architecture with a proxy server role: a registered
     peer of the metadata server that polls the metadata server for work assignments
     and carries them out -- moving a file from one layout to another, reconstructing
-    a whole file from surviving shards, or translating between codecs for clients
+    a whole file from surviving shards, or translating between encodings for clients
     that cannot participate in the file's native encoding (including NFSv3 clients).
-    All PS-MDS coordination is fore-channel: the metadata server returns work assignments
-    inline in the response to a PS-initiated PROXY_PROGRESS poll, and the PS reports
-    completion via a fore-channel PROXY_DONE. No callback operations are required
-    for the PS protocol.</p>"
+    All proxy-server-to-metadata-server coordination is fore-channel: the metadata
+    server returns work assignments inline in the response to a proxy-server-initiated
+    PROXY_PROGRESS poll, and the proxy server reports completion via a fore-channel
+    PROXY_DONE. No callback operations are required for the proxy server protocol.</p>"
   language:
   - en
   script:
@@ -87,16 +87,6 @@ relation:
     formattedref:
       content: draft-haynes-nfsv4-flexfiles-v2-proxy-server-00
       format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-haynes-nfsv4-flexfiles-v2-proxy-server-03
-    docid:
-    - id: draft-haynes-nfsv4-flexfiles-v2-proxy-server-03
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-haynes-nfsv4-flexfiles-v2-proxy-server-03
-      format: text/plain
 series:
 - type: main
   title:
@@ -106,7 +96,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-haynes-nfsv4-flexfiles-v2-proxy-server-01
+  number: draft-haynes-nfsv4-flexfiles-v2-proxy-server-03
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

@@ -15,14 +15,14 @@ docid:
 abstract:
 - content: "<p>Parallel NFS (pNFS) with the Flexible Files Version 2 layout type supports
     client-side erasure coding and per-chunk repair between clients and data servers.
-    This document extends that architecture with a proxy server (proxy server) role:
-    a registered peer of the metadata server that polls the metadata server for work
-    assignments and carries them out -- moving a file from one layout to another,
-    reconstructing a whole file from surviving shards, or translating between codecs
-    for clients that cannot participate in the file's native encoding (including NFSv3
-    clients). All proxy-server-to- metadata-server coordination is fore-channel: the
-    metadata server returns work assignments inline in the response to a proxy-server-
-    initiated PROXY_PROGRESS poll, and the proxy server reports completion via a fore-channel
+    This document extends that architecture with a proxy server role: a registered
+    peer of the metadata server that polls the metadata server for work assignments
+    and carries them out -- moving a file from one layout to another, reconstructing
+    a whole file from surviving shards, or translating between encodings for clients
+    that cannot participate in the file's native encoding (including NFSv3 clients).
+    All proxy-server-to-metadata-server coordination is fore-channel: the metadata
+    server returns work assignments inline in the response to a proxy-server-initiated
+    PROXY_PROGRESS poll, and the proxy server reports completion via a fore-channel
     PROXY_DONE. No callback operations are required for the proxy server protocol.</p>"
   language:
   - en
@@ -59,6 +59,16 @@ relation:
       primary: true
     formattedref:
       content: draft-haynes-nfsv4-flexfiles-v2-proxy-server-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-haynes-nfsv4-flexfiles-v2-proxy-server-03
+    docid:
+    - id: draft-haynes-nfsv4-flexfiles-v2-proxy-server-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-haynes-nfsv4-flexfiles-v2-proxy-server-03
       format: text/plain
 ext:
   schema-version: v1.0.1

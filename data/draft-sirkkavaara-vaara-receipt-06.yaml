@@ -1,8 +1,8 @@
 ---
 schema-version: v1.2.3
-id: draft-sirkkavaara-vaara-receipt-04
+id: draft-sirkkavaara-vaara-receipt-06
 title:
-- content: 'The Vaara Receipt: A Recomputable Receipt Format for Decisions About Agent
+- content: 'The Vaara Receipt: A Recomputable Receipt Format for Decisions About Autonomous
     Actions'
   language:
   - en
@@ -10,11 +10,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-sirkkavaara-vaara-receipt-04
+- content: https://datatracker.ietf.org/doc/html/draft-sirkkavaara-vaara-receipt-06
   type: src
 type: standard
 docid:
-- id: draft-sirkkavaara-vaara-receipt-04
+- id: draft-sirkkavaara-vaara-receipt-06
   type: Internet-Draft
   primary: true
 - id: I-D.sirkkavaara-vaara-receipt
@@ -23,7 +23,7 @@ docid:
 docnumber: I-D.sirkkavaara-vaara-receipt
 date:
 - type: published
-  value: '2026-06-27'
+  value: '2026-07-24'
 contributor:
 - person:
     name:
@@ -54,30 +54,31 @@ contributor:
   role:
   - type: author
 version:
-- draft: '04'
-revdate: '2026-06-27'
+- draft: '06'
+revdate: '2026-07-24'
 language:
 - en
 script:
 - Latn
 abstract:
 - content: "<p>This document specifies vaara.receipt/v1, a signed and independently
-    recomputable record that binds a decision about an agent action to the evidence
+    recomputable record that binds a decision about an autonomous action to the evidence
     the decision was made on, and optionally to one or more external timestamp anchors.
     The format is canonicalized with the JSON Canonicalization Scheme (JCS) so that
     any third party can recompute its digests and verify its signature without access
-    to the issuer. The receipt's trust is root-agnostic: the same record is verifiable
-    with or without a hardware trusted execution environment and is re- expressible
-    as an IETF RATS Entity Attestation Result. Downstream specifications (a payment
-    rail, a compliance regime, a framework integration) define profiles that pin to
-    a version of this document and add only their own evidence schema; they do not
-    redefine the envelope. The format described here is deployed, and its receipts
-    are independently recomputable from public conformance vectors that ship with
-    standalone checkers importing no issuer code. The minimal profile is a governance
-    decision over a single agent action, bound to the action's own intent with no
-    external rail; it is the floor of the format, and a reference library offers a
-    matching adoption floor at the API layer as a one-line decorator over the governed
-    function.</p>"
+    to the issuer. A decision and the execution receipt that answers it form one recomputable
+    pair through the envelope's back link. The receipt's trust is root-agnostic: the
+    same record is verifiable with or without a hardware trusted execution environment
+    and is re- expressible as an IETF RATS Entity Attestation Result. Downstream specifications
+    (a payment rail, a compliance regime, a framework integration) define profiles
+    that pin to a version of this document and add only their own evidence schema;
+    they do not redefine the envelope. The format described here is deployed, and
+    its receipts are independently recomputable from public conformance vectors that
+    ship with standalone checkers importing no issuer code. The minimal profile is
+    a governance decision over a single autonomous action, bound to the action's own
+    intent with no external rail; it is the floor of the format, and a reference library
+    offers a matching adoption floor at the API layer as a one-line decorator over
+    the governed function.</p>"
   language:
   - en
   script:
@@ -94,16 +95,6 @@ relation:
     formattedref:
       content: draft-sirkkavaara-vaara-receipt-00
       format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-sirkkavaara-vaara-receipt-06
-    docid:
-    - id: draft-sirkkavaara-vaara-receipt-06
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-sirkkavaara-vaara-receipt-06
-      format: text/plain
 series:
 - type: main
   title:
@@ -113,7 +104,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-sirkkavaara-vaara-receipt-04
+  number: draft-sirkkavaara-vaara-receipt-06
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
