@@ -1,28 +1,28 @@
 ---
 schema-version: v1.2.3
-id: draft-smc-grow-bmp-route-change-stats-01
+id: draft-dikshit-grow-bmp-rd-scoped-rib-stats-00
 title:
-- content: BMP Route Change Statistics Based on Routing Policy
+- content: Route-Distinguisher-Scoped BMP RIB Statistics
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-smc-grow-bmp-route-change-stats-01
+- content: https://datatracker.ietf.org/doc/html/draft-dikshit-grow-bmp-rd-scoped-rib-stats-00
   type: src
 type: standard
 docid:
-- id: draft-smc-grow-bmp-route-change-stats-01
+- id: draft-dikshit-grow-bmp-rd-scoped-rib-stats-00
   type: Internet-Draft
   primary: true
-- id: I-D.smc-grow-bmp-route-change-stats
+- id: I-D.dikshit-grow-bmp-rd-scoped-rib-stats
   type: IETF
   scope: anchor
-docnumber: I-D.smc-grow-bmp-route-change-stats
+docnumber: I-D.dikshit-grow-bmp-rd-scoped-rib-stats
 date:
 - type: published
-  value: '2026-07-19'
+  value: '2026-07-25'
 contributor:
 - person:
     name:
@@ -49,7 +49,7 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Aruba Networks, HPE
+        - content: Aruba Networks
   role:
   - type: author
 - person:
@@ -112,42 +112,32 @@ contributor:
   role:
   - type: author
 version:
-- draft: '01'
-revdate: '2026-07-19'
+- draft: '00'
+revdate: '2026-07-25'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document defines few generic BGP Monitoring Protocol (BMP) statistics
-    for monitoring route modifications or changes due to applying Routing Policy.
-    These statistics are reported per BGP peer using the BMP Statistics Report message.</p>"
+- content: <p>[RFC7854] defines the BGP Monitoring Protocol (BMP) and its Statistics
+    Report message. [I-D.ietf-grow-bmp-bgp-rib-stats] (published as [RFC9972]) extended
+    that message with a set of advanced, per-AFI/SAFI BGP RIB statistics types. Several
+    ongoing individual contributions independently define additional per- address-family,
+    per-instance, or per-Route-Distinguisher (RD) statistics on top of that base (for
+    example, EVPN-specific RIB statistics and VRF Loc-RIB monitoring enhancements),
+    each proposing its own ad hoc Stat Data encoding. This document defines a single,
+    address-family-agnostic Stat Data container -- the "RD-Scoped Statistics" format
+    -- for BMP statistics that are naturally scoped below the per-AFI/SAFI level,
+    to a specific Route Distinguisher (VRF instance, EVPN Instance, MVPN instance,
+    or equivalent). Address-family-specific documents, such as EVPN-specific BMP RIB
+    statistics, are expected to become thin "profiles" of this container rather than
+    defining their own wire format, reducing duplication and Stat Type registry fragmentation
+    across the GROW working group's BMP statistics work.</p>
   language:
   - en
   script:
   - Latn
   format: text/html
-relation:
-- type: updates
-  bibitem:
-    id: draft-smc-grow-bmp-route-change-stats-00
-    docid:
-    - id: draft-smc-grow-bmp-route-change-stats-00
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-smc-grow-bmp-route-change-stats-00
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-smc-grow-bmp-route-change-stats-02
-    docid:
-    - id: draft-smc-grow-bmp-route-change-stats-02
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-smc-grow-bmp-route-change-stats-02
-      format: text/plain
 series:
 - type: main
   title:
@@ -157,7 +147,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-smc-grow-bmp-route-change-stats-01
+  number: draft-dikshit-grow-bmp-rd-scoped-rib-stats-00
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

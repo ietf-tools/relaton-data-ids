@@ -1,28 +1,28 @@
 ---
 schema-version: v1.2.3
-id: draft-smc-grow-bmp-route-change-stats-01
+id: draft-saum-grow-bmp-afi-safi-evpn-06
 title:
-- content: BMP Route Change Statistics Based on Routing Policy
+- content: EVPN-Specific BMP RIB Statistics Extensions
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-smc-grow-bmp-route-change-stats-01
+- content: https://datatracker.ietf.org/doc/html/draft-saum-grow-bmp-afi-safi-evpn-06
   type: src
 type: standard
 docid:
-- id: draft-smc-grow-bmp-route-change-stats-01
+- id: draft-saum-grow-bmp-afi-safi-evpn-06
   type: Internet-Draft
   primary: true
-- id: I-D.smc-grow-bmp-route-change-stats
+- id: I-D.saum-grow-bmp-afi-safi-evpn
   type: IETF
   scope: anchor
-docnumber: I-D.smc-grow-bmp-route-change-stats
+docnumber: I-D.saum-grow-bmp-afi-safi-evpn
 date:
 - type: published
-  value: '2026-07-19'
+  value: '2026-07-24'
 contributor:
 - person:
     name:
@@ -49,7 +49,7 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Aruba Networks, HPE
+        - content: Aruba Networks
   role:
   - type: author
 - person:
@@ -112,16 +112,25 @@ contributor:
   role:
   - type: author
 version:
-- draft: '01'
-revdate: '2026-07-19'
+- draft: '06'
+revdate: '2026-07-24'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document defines few generic BGP Monitoring Protocol (BMP) statistics
-    for monitoring route modifications or changes due to applying Routing Policy.
-    These statistics are reported per BGP peer using the BMP Statistics Report message.</p>"
+- content: "<p>This document defines new EVPN-specific BGP Monitoring Protocol (BMP)
+    statistics types. These extensions include scalar counters for EVPN route types
+    specifically, while also keeping scope for defining counters which are EVPN route-type
+    agnostic but related to BGP-EVPN RIB like, number of multihoming Ethernet Segments,
+    number of multihomed EVIs, number of aliased paths, number of dynamic inter-VRF
+    route leaking (IVRL). This revision (-06) firms up the specification for working
+    group consideration: it adds a Relationship to Other Work section that explicitly
+    maps this document to concurrently circulating GROW contributions on BMP statistics
+    and TLV extensions and invites coordination with their authors, corrects the YANG
+    alignment reference, strengthens Security Considerations, and adds a worked example.
+    No statistics semantics, Stat Type/Subtype allocations, or wire formats defined
+    in -05 are changed.</p>"
   language:
   - en
   script:
@@ -130,23 +139,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-smc-grow-bmp-route-change-stats-00
+    id: draft-saum-grow-bmp-afi-safi-evpn-03
     docid:
-    - id: draft-smc-grow-bmp-route-change-stats-00
+    - id: draft-saum-grow-bmp-afi-safi-evpn-03
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-smc-grow-bmp-route-change-stats-00
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-smc-grow-bmp-route-change-stats-02
-    docid:
-    - id: draft-smc-grow-bmp-route-change-stats-02
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-smc-grow-bmp-route-change-stats-02
+      content: draft-saum-grow-bmp-afi-safi-evpn-03
       format: text/plain
 series:
 - type: main
@@ -157,7 +156,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-smc-grow-bmp-route-change-stats-01
+  number: draft-saum-grow-bmp-afi-safi-evpn-06
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
