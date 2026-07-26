@@ -13,14 +13,13 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document specifies the on-the-wire format of an attestation receipt
-    produced by an AI enforcement gateway at the moment it decides whether a large-language-model
-    (LLM) call is permitted. A receipt binds that decision to a specific request under
-    a published Ed25519 public key, so that a party who does not trust the gateway
-    can still verify offline what was decided. The format is deliberately minimal,
-    a fixed set of fields and a version-selected signature suite, chosen for the smallest
-    possible independent verifier. It is intended for settings in which an operator-
-    controlled log is not, on its own, sufficient evidence of the enforcement decision.</p>"
+- content: "<p>This document specifies a compact JSON attestation receipt for an AI
+    inference decision. A receipt binds an outcome to a request hash under a published
+    Ed25519 public key, so a party that does not trust the issuer's infrastructure
+    can still verify offline what was decided. The format is intentionally small and
+    version-selected, so independent verifiers stay easy to implement and audit. It
+    is intended for settings where an operator-controlled log is not, on its own,
+    sufficient evidence of the decision.</p>"
   language:
   - en
   script:
@@ -36,6 +35,16 @@ relation:
       primary: true
     formattedref:
       content: draft-chueayen-attestation-receipts-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-chueayen-attestation-receipts-01
+    docid:
+    - id: draft-chueayen-attestation-receipts-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-chueayen-attestation-receipts-01
       format: text/plain
 ext:
   schema-version: v1.0.1

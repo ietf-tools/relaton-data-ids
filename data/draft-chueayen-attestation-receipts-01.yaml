@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-chueayen-attestation-receipts-00
+id: draft-chueayen-attestation-receipts-01
 title:
 - content: Enforcement Attestation Receipts for AI Inference Decisions
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-chueayen-attestation-receipts-00
+- content: https://datatracker.ietf.org/doc/html/draft-chueayen-attestation-receipts-01
   type: src
 type: standard
 docid:
-- id: draft-chueayen-attestation-receipts-00
+- id: draft-chueayen-attestation-receipts-01
   type: Internet-Draft
   primary: true
 - id: I-D.chueayen-attestation-receipts
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.chueayen-attestation-receipts
 date:
 - type: published
-  value: '2026-07-22'
+  value: '2026-07-25'
 contributor:
 - person:
     name:
@@ -53,36 +53,35 @@ contributor:
   role:
   - type: author
 version:
-- draft: '00'
-revdate: '2026-07-22'
+- draft: '01'
+revdate: '2026-07-25'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document specifies the on-the-wire format of an attestation receipt
-    produced by an AI enforcement gateway at the moment it decides whether a large-language-model
-    (LLM) call is permitted. A receipt binds that decision to a specific request under
-    a published Ed25519 public key, so that a party who does not trust the gateway
-    can still verify offline what was decided. The format is deliberately minimal,
-    a fixed set of fields and a version-selected signature suite, chosen for the smallest
-    possible independent verifier. It is intended for settings in which an operator-
-    controlled log is not, on its own, sufficient evidence of the enforcement decision.</p>"
+- content: "<p>This document specifies a compact JSON attestation receipt for an AI
+    inference decision. A receipt binds an outcome to a request hash under a published
+    Ed25519 public key, so a party that does not trust the issuer's infrastructure
+    can still verify offline what was decided. The format is intentionally small and
+    version-selected, so independent verifiers stay easy to implement and audit. It
+    is intended for settings where an operator-controlled log is not, on its own,
+    sufficient evidence of the decision.</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-chueayen-attestation-receipts-01
+    id: draft-chueayen-attestation-receipts-00
     docid:
-    - id: draft-chueayen-attestation-receipts-01
+    - id: draft-chueayen-attestation-receipts-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-chueayen-attestation-receipts-01
+      content: draft-chueayen-attestation-receipts-00
       format: text/plain
 series:
 - type: main
@@ -93,7 +92,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-chueayen-attestation-receipts-00
+  number: draft-chueayen-attestation-receipts-01
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
