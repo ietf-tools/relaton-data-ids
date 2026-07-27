@@ -14,12 +14,16 @@ docid:
   primary: true
 abstract:
 - content: "<p>This document specifies the Collaboration Content Transfer (TCT) Protocol,
-    an HTTP-based method for efficient, verifiable delivery of web content to automated
-    agents. TCT defines a JSON envelope that encapsulates resource content in negotiated
-    text-based formats (such as Markdown or plain text) together with canonical metadata.
-    It uses bidirectional URL discovery between human-facing and machine-facing URLs,
-    JSON sitemaps, strong ETag validators, and conditional requests to reduce bandwidth
-    while preserving semantic structure and canonical identity.</p>"
+    an experimental HTTP profile for efficient delivery of publisher-selected web
+    content to automated clients. TCT defines a deterministic JSON representation
+    at a machine-facing URL, bidirectional discovery between human-facing and machine-facing
+    resources, JSON sitemaps containing representation-validator hints, and conditional
+    request behavior using ordinary strong ETags. TCT preserves standard HTTP validator
+    scope: an M-URL ETag identifies the exact selected M-URL representation. Optional
+    Semantic Validators can correlate the logical state of human-facing and machine-facing
+    representations, but are not required by TCT and do not replace ordinary cache
+    validators. TCT does not define authorization, licensing, content-use policy,
+    or mutation semantics.</p>"
   language:
   - en
   script:
@@ -55,6 +59,16 @@ relation:
       primary: true
     formattedref:
       content: draft-jurkovikj-collab-tunnel-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-jurkovikj-collab-tunnel-03
+    docid:
+    - id: draft-jurkovikj-collab-tunnel-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-jurkovikj-collab-tunnel-03
       format: text/plain
 ext:
   schema-version: v1.0.1

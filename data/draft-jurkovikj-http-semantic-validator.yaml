@@ -13,14 +13,14 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document defines the Semantic-ETag HTTP response header field
-    and two associated conditional request header fields. Unlike the standard ETag
-    field, which identifies a selected representation, Semantic-ETag identifies a
-    server-defined semantic equivalence class for the underlying resource state. This
-    enables origin servers to support representation-independent validation and optimistic
-    concurrency control across different representations, such as HTML, JSON, and
-    Markdown views of the same logical resource. This document does not update or
-    replace the semantics of the ETag header field defined in RFC 9110.</p>"
+- content: "<p>This document defines the Semantic-ETag HTTP response field and the
+    If-Semantic-Match HTTP request field. Unlike the standard ETag field, which identifies
+    a selected representation, Semantic-ETag identifies a server-defined semantic
+    state within an explicitly scoped semantic equivalence domain. If-Semantic-Match
+    enables origin servers to perform representation-independent optimistic concurrency
+    control when different HTTP resources or representations expose the same logical
+    state. This document does not update or replace the semantics of ETag, If- Match,
+    or HTTP cache validation defined by RFC 9110.</p>"
   language:
   - en
   script:
@@ -36,6 +36,16 @@ relation:
       primary: true
     formattedref:
       content: draft-jurkovikj-http-semantic-validator-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-jurkovikj-http-semantic-validator-01
+    docid:
+    - id: draft-jurkovikj-http-semantic-validator-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-jurkovikj-http-semantic-validator-01
       format: text/plain
 ext:
   schema-version: v1.0.1

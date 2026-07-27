@@ -1,0 +1,131 @@
+---
+schema-version: v1.2.3
+id: draft-cassen-vrrp-auth-hmac-01
+title:
+- content: An HMAC Authentication Extension for the Virtual Router Redundancy Protocol
+    (VRRP)
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-cassen-vrrp-auth-hmac-01
+  type: src
+type: standard
+docid:
+- id: draft-cassen-vrrp-auth-hmac-01
+  type: Internet-Draft
+  primary: true
+- id: I-D.cassen-vrrp-auth-hmac
+  type: IETF
+  scope: anchor
+docnumber: I-D.cassen-vrrp-auth-hmac
+date:
+- type: published
+  value: '2026-07-27'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Alexandre
+          language:
+          - en
+        - language:
+          - en
+          initial: A
+        formatted_initials:
+          content: A.
+          language:
+          - en
+      surname:
+        content: Cassen
+        language:
+        - en
+      completename:
+        content: Alexandre Cassen
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Free / keepalived.org
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Quentin
+          language:
+          - en
+        - language:
+          - en
+          initial: Q
+        formatted_initials:
+          content: Q.
+          language:
+          - en
+      surname:
+        content: Armitage
+        language:
+        - en
+      completename:
+        content: Quentin Armitage
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: keepalived.org
+  role:
+  - type: author
+version:
+- draft: '01'
+revdate: '2026-07-27'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>VRRP relies on a hop limit of 255 to prove that an advertisement came
+    from the local link. That guard cannot apply when advertisements travel as multi-hop
+    unicast across a routed or overlay network, as is common in cloud deployments,
+    leaving the protocol open to off-segment injection and replay. The legacy VRRPv2
+    authentication types do not close this gap and were removed from later VRRP specifications.
+    This document defines an authentication extension that appends an HMAC- SHA256
+    trailer and a time-based sequence number to VRRPv3 advertisements, authenticating
+    the sender as a holder of the group key, protecting message integrity and bounding
+    replay, for both IP address families. The extension is the primary defense where
+    the hop-limit check cannot apply, and defense in depth for multicast and single-hop
+    unicast, where that check remains in force.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-cassen-vrrp-auth-hmac-00
+    docid:
+    - id: draft-cassen-vrrp-auth-hmac-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-cassen-vrrp-auth-hmac-00
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-cassen-vrrp-auth-hmac-01
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
