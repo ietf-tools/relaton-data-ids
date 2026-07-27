@@ -1,0 +1,47 @@
+---
+schema-version: v1.2.3
+id: draft-dikshit-bess-evpn-fhs-scoped-sync
+title:
+- content: Scoped Sync for EVPN First-Hop-Security DHCP Snoop Routes
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-dikshit-bess-evpn-fhs-scoped-sync
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: <p>[I-D.ietf-bess-evpn-first-hop-security] defines a new EVPN Route Type,
+    the DHCP Snoop Route (DSR), to synchronize DHCP snoop MAC/IP bindings across EVPN
+    Provider Edge (PE) devices so that First Hop Security (FHS) functions such as
+    Dynamic ARP Inspection, Neighbor Discovery Inspection, and IPv4/IPv6 Source Guard
+    continue to operate correctly across EVPN multihoming and host mobility events.
+    As specified, a DSR is distributed to every PE participating in the EVPN Broadcast
+    Domain (BD) in which it was learned. In deployments where a single EVPN BD spans
+    many geographically or administratively distinct fabrics interconnected over a
+    WAN, this "flood to the whole BD" behavior distributes client IP/MAC binding information
+    -- and therefore knowledge of which hosts exist behind which access switches --
+    well beyond the set of fabrics that actually need it for FHS purposes. This document
+    defines a Sync-Scope Extended Community that an originating PE MAY attach to a
+    DSR to restrict its distribution to an explicitly identified subset of participating
+    fabrics, and specifies the associated PE processing rules.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-dikshit-bess-evpn-fhs-scoped-sync-00
+    docid:
+    - id: draft-dikshit-bess-evpn-fhs-scoped-sync-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-dikshit-bess-evpn-fhs-scoped-sync-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
