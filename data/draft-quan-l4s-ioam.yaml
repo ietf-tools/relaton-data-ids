@@ -14,15 +14,15 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This specification defines a framework how to update L4S Dual-Queue
-    Coupled AQM with In Situ Operations, Administration, and Maintenance (IOAM). These
-    are designed for consistently very low queuing latency, very low congestion loss,
-    and scaling of perflow throughput by using Explicit Congestion Notification (ECN)
-    using the operational and telemetry information collected by IOAM. Since L4S lacks
-    information about the use of network status and network nodes, which also affect
-    network performance in practice, it is considered to use direct export mode for
-    information collection of L4S-IOAM to strengthen the AQM regulation of L4S. It
-    then gives the normative requirements that are necessary.</p>"
+- content: "<p>This document specifies a framework that uses operational and telemetry
+    information collected by In Situ Operations, Administration, and Maintenance (IOAM)
+    to support the monitoring and parameter adjustment of an L4S Dual-Queue Coupled
+    AQM within a single limited domain. IOAM Direct Export reports path and node information,
+    such as hop-by-hop delay and queue depth, to an IOAM Control Center (IOAM-C).
+    The IOAM-C correlates this information and may adjust operator-configurable AQM
+    target or threshold parameters within configured bounds. This document does not
+    modify the L4S ECN protocol, the IOAM data formats, or the packet forwarding behavior
+    defined by the referenced specifications.</p>"
   language:
   - en
   script:
@@ -48,6 +48,16 @@ relation:
       primary: true
     formattedref:
       content: draft-quan-l4s-ioam-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-quan-l4s-ioam-02
+    docid:
+    - id: draft-quan-l4s-ioam-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-quan-l4s-ioam-02
       format: text/plain
 ext:
   schema-version: v1.0.1
