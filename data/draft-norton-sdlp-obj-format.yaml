@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-norton-sdlp-obj-format
 title:
-- content: 'SDLP RFC 3: Transformation and Lineage Rules'
+- content: 'SDLP RFC 3: Object Format Specification'
   language:
   - en
   script:
@@ -13,14 +13,13 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document defines the transformation rules and lineage guarantees
-    for the Secured Digital Lifecycle Protocol (SDLP). Transformations represent any
-    modification, duplication, conversion, or derivative operation performed on an
-    SDLP object. All transformations MUST produce descendant identities, extend lineage,
-    preserve ancestry, and maintain tamper-evident integrity. This document defines
-    the transformation model, lineage structure, invariants, and security requirements
-    that govern all SDLP transformations, including updated lifecycle semantics introduced
-    in this revision.</p>"
+- content: "<p>This document defines the canonical object format for the Secured Digital
+    Lifecycle Protocol (SDLP). The object format specifies the normative byte-level
+    representation used for hashing, signing, validation, and interoperability across
+    SDLP implementations. All SDLP-governed objects MUST follow the canonical encoding,
+    field ordering, and serialization grammar defined in this specification. This
+    document updates and replaces draft-norton-sdlp-obj-format-00 and resolves inconsistencies
+    identified during interoperability analysis with Identity-02 and Lifecycle-02.</p>"
   language:
   - en
   script:
@@ -36,6 +35,16 @@ relation:
       primary: true
     formattedref:
       content: draft-norton-sdlp-obj-format-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-norton-sdlp-obj-format-01
+    docid:
+    - id: draft-norton-sdlp-obj-format-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-norton-sdlp-obj-format-01
       format: text/plain
 ext:
   schema-version: v1.0.1

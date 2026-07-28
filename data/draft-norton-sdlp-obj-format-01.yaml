@@ -1,19 +1,19 @@
 ---
 schema-version: v1.2.3
-id: draft-norton-sdlp-obj-format-00
+id: draft-norton-sdlp-obj-format-01
 title:
-- content: 'SDLP RFC 3: Transformation and Lineage Rules'
+- content: 'SDLP RFC 3: Object Format Specification'
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-norton-sdlp-obj-format-00
+- content: https://datatracker.ietf.org/doc/html/draft-norton-sdlp-obj-format-01
   type: src
 type: standard
 docid:
-- id: draft-norton-sdlp-obj-format-00
+- id: draft-norton-sdlp-obj-format-01
   type: Internet-Draft
   primary: true
 - id: I-D.norton-sdlp-obj-format
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.norton-sdlp-obj-format
 date:
 - type: published
-  value: '2026-07-01'
+  value: '2026-07-27'
 contributor:
 - person:
     name:
@@ -53,36 +53,35 @@ contributor:
   role:
   - type: author
 version:
-- draft: '00'
-revdate: '2026-07-01'
+- draft: '01'
+revdate: '2026-07-27'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document defines the transformation rules and lineage guarantees
-    for the Secured Digital Lifecycle Protocol (SDLP). Transformations represent any
-    modification, duplication, conversion, or derivative operation performed on an
-    SDLP object. All transformations MUST produce descendant identities, extend lineage,
-    preserve ancestry, and maintain tamper-evident integrity. This document defines
-    the transformation model, lineage structure, invariants, and security requirements
-    that govern all SDLP transformations, including updated lifecycle semantics introduced
-    in this revision.</p>"
+- content: "<p>This document defines the canonical object format for the Secured Digital
+    Lifecycle Protocol (SDLP). The object format specifies the normative byte-level
+    representation used for hashing, signing, validation, and interoperability across
+    SDLP implementations. All SDLP-governed objects MUST follow the canonical encoding,
+    field ordering, and serialization grammar defined in this specification. This
+    document updates and replaces draft-norton-sdlp-obj-format-00 and resolves inconsistencies
+    identified during interoperability analysis with Identity-02 and Lifecycle-02.</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-norton-sdlp-obj-format-01
+    id: draft-norton-sdlp-obj-format-00
     docid:
-    - id: draft-norton-sdlp-obj-format-01
+    - id: draft-norton-sdlp-obj-format-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-norton-sdlp-obj-format-01
+      content: draft-norton-sdlp-obj-format-00
       format: text/plain
 series:
 - type: main
@@ -93,7 +92,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-norton-sdlp-obj-format-00
+  number: draft-norton-sdlp-obj-format-01
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

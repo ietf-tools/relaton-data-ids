@@ -2,8 +2,8 @@
 schema-version: v1.2.3
 id: draft-zhu-sketch-int-codesign
 title:
-- content: A Framework for Co-Designing Sketch and In-Band Network Telemetry for Accurate
-    Network Measurement
+- content: 'Sketch-INT Co-Design for Accurate Network Measurement: Applicability to
+    Time-Variant Non-Terrestrial Networks'
   language:
   - en
   script:
@@ -14,16 +14,22 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>Network measurement is a fundamental building block for network management
-    applications. Existing measurement techniques face a trade-off between accuracy
-    and resource efficiency: sketch-based techniques achieve high accuracy for large
-    flows but degrade for small flows, while In-band Network Telemetry (INT) measures
-    every flow accurately but at the cost of significant bandwidth and control plane
-    resources. This document describes a framework for co-designing sketches and INT
-    to measure large and small flows respectively, achieving both high accuracy and
-    resource efficiency. It addresses two key challenges: (1) where to deploy measurement
-    functions when routing information is incomplete, and (2) how to collect measurement
-    data without causing network congestion.</p>"
+- content: "<p>Network measurement supports management applications that need statistics
+    about both large and small flows. Sketch-based techniques use compact data structures
+    and are effective for large flows, but hash collisions can produce substantial
+    relative errors for small flows. In-band Network Telemetry (INT) can provide detailed
+    observations for individual packets, but applying it to every packet can consume
+    significant packet, bandwidth, and collector resources. This document describes
+    a framework that uses sketches for large flows and INT for small flows. It also
+    describes measurement-point selection when exact routing information is unavailable
+    and congestion-aware collection of sketch and INT reports. The document identifies
+    the information needed to describe and compare implementations. It does not define
+    a new packet format, INT instruction, sketch algorithm, or routing protocol. As
+    a concrete applicability direction, the document considers time- variant non-terrestrial
+    networks (NTNs), in which paths and available forwarding resources can change
+    over time. It maps the existing Sketch-INT framework to this scenario and identifies
+    the assumptions that require validation. It does not claim that the existing terrestrial
+    implementation has been deployed or evaluated on satellite hardware.</p>"
   language:
   - en
   script:
@@ -39,6 +45,16 @@ relation:
       primary: true
     formattedref:
       content: draft-zhu-sketch-int-codesign-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-zhu-sketch-int-codesign-01
+    docid:
+    - id: draft-zhu-sketch-int-codesign-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-zhu-sketch-int-codesign-01
       format: text/plain
 ext:
   schema-version: v1.0.1
