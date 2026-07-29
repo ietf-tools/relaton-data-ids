@@ -16,14 +16,14 @@ abstract:
 - content: "<p>This document specifies the Radio Image Framing Protocol (RIFP), a
     compact, unidirectional object-transfer protocol intended for transmitting images
     over low-rate radio links. RIFP defines independently synchronized frames, a versioned
-    and extensible binary header, fragmentation and reassembly rules, a JSON manifest,
-    per- frame CRC-32 protection, whole-object SHA-256 verification, and registries
-    for future frame types, flags, header extensions, media encodings, and radio profiles.
-    RIFP is independent of a particular frequency allocation or modulation. This document
-    also defines an initial continuous-phase binary frequency-shift keying profile
-    named rifp-cpfsk-4800. The profile can be used on frequencies where local regulation
-    permits such operation; 433.92 MHz is a common deployment example but is not mandated
-    by this specification.</p>"
+    and extensible binary header, fragmentation and reassembly rules, a fixed binary
+    object descriptor, optional JSON metadata, per-frame CRC-32 protection, whole-object
+    SHA-256 verification, and registries for future frame types, flags, header extensions,
+    media encodings, and radio profiles. RIFP is independent of a particular frequency
+    allocation or modulation. This document also defines an initial continuous-phase
+    binary frequency-shift keying profile named rifp-cpfsk-4800. The profile can be
+    used on frequencies where local regulation permits such operation; 433.92 MHz
+    is a common deployment example but is not mandated by this specification.</p>"
   language:
   - en
   script:
@@ -39,6 +39,16 @@ relation:
       primary: true
     formattedref:
       content: draft-dulaunoy-rifp-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-dulaunoy-rifp-01
+    docid:
+    - id: draft-dulaunoy-rifp-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-dulaunoy-rifp-01
       format: text/plain
 ext:
   schema-version: v1.0.1
