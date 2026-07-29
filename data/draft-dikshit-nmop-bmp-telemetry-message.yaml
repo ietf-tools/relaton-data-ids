@@ -1,0 +1,53 @@
+---
+schema-version: v1.2.3
+id: draft-dikshit-nmop-bmp-telemetry-message
+title:
+- content: A YANG Augmentation for Carrying BMP Telemetry in the Network Telemetry
+    Message Envelope
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-dikshit-nmop-bmp-telemetry-message
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: '<p>[I-D.ietf-nmop-message-broker-telemetry-message] defines an extensible
+    YANG envelope, "ietf-telemetry-message", for publishing collected Network Telemetry
+    data to a Message Broker as part of a Data Mesh, together with a companion augmentation
+    module, "ietf-yang-push-telemetry-message", that adds YANG-Push-specific subscription
+    metadata to that envelope. The base document''s prose explicitly anticipates the
+    BGP Monitoring Protocol (BMP) [RFC7854] as a source of collected data flowing
+    through this envelope (see the description of the "node-export-timestamp" leaf),
+    but defines no "session-protocol" identity, and no companion augmentation module,
+    for BMP. This document closes that gap. It defines a new YANG module, "ietf-bmp-telemetry-message",
+    that (a) adds an "identity bmp" under the base module''s "session-protocol" identity,
+    and (b) augments "telemetry-message-metadata" with BMP-specific provenance: the
+    monitoring station identifier, BMP per-peer header fields, BMP message type, and
+    route-monitoring scope (network instance, RIB type, address family, and Route
+    Distinguisher). It also documents how this module interoperates with the BMP YANG
+    configuration and monitoring model [I-D.ietf-grow-bmp-yang] and with several BMP
+    Statistics Report extensions ([RFC9972], [I-D.ietf-grow-bmp-stats-informational-tlv],
+    [I-D.saum-grow-bmp-afi-safi-evpn], [I-D.smc-grow-bmp-route-change-stats], and
+    [I-D.dikshit-grow-bmp-rd-scoped-rib-stats]) when their messages are republished
+    to a Message Broker.</p>'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-dikshit-nmop-bmp-telemetry-message-00
+    docid:
+    - id: draft-dikshit-nmop-bmp-telemetry-message-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-dikshit-nmop-bmp-telemetry-message-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

@@ -16,17 +16,19 @@ abstract:
 - content: "<p>As operators transition services to IPv6-only, planned IPv4 outages
     help identify remaining dependencies before permanent decommission. Such outages
     must be measurable, reversible, and understandable to end users. This document
-    defines the 5NN (IPv4 Unavailable) HTTP response status code and associated header
-    fields that signal an intentional, often time-bounded IPv4 outage, instruct aware
-    clients to retry over IPv6 after closing the IPv4 connection, and allow clients
-    to confirm successful IPv6 recovery via an optional correlation token so operators
-    can distinguish soft failures from hard failures in centralized logs. The mechanism
-    supports staged enterprise rollouts, internal HTTP services, and permanent IPv6-only
-    migration; coordinated public events (for example, 6/6 drills) remain possible
-    with advance notice. The primary intended deployment is operator-controlled environments
-    where provider and users share operational responsibility. Legacy clients that
-    do not implement this specification treat an unrecognized 5NN status code as an
-    internal server error and MAY use the response body for human- readable guidance.</p>"
+    defines HTTP signaling for an intentional, often time-bounded IPv4 outage: the
+    existing 503 Service Unavailable status code together with the mandatory Retry-Over-IPv6
+    response header field (and optional related fields) that instruct aware clients
+    to retry over IPv6 after closing the IPv4 connection, and allow clients to confirm
+    successful IPv6 recovery via an optional correlation token so operators can distinguish
+    soft failures from hard failures in centralized logs. Machine-readable response
+    bodies MAY use Problem Details (RFC 9457) with a registered problem type URI.
+    The mechanism supports staged enterprise rollouts, internal HTTP services, and
+    permanent IPv6-only migration; coordinated public events (for example, 6/6 drills)
+    remain possible with advance notice. The primary intended deployment is operator-controlled
+    environments where provider and users share operational responsibility. Legacy
+    clients that do not implement this specification treat the response as ordinary
+    service unavailability and MAY use the response body for human-readable guidance.</p>"
   language:
   - en
   script:
@@ -72,6 +74,16 @@ relation:
       primary: true
     formattedref:
       content: draft-martin-retry-over-ipv6-03
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-martin-retry-over-ipv6-04
+    docid:
+    - id: draft-martin-retry-over-ipv6-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-martin-retry-over-ipv6-04
       format: text/plain
 ext:
   schema-version: v1.0.1

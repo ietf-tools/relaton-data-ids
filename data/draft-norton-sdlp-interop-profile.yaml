@@ -2,7 +2,8 @@
 schema-version: v1.2.3
 id: draft-norton-sdlp-interop-profile
 title:
-- content: SDLP Interoperability Profile for Ownership and Provenance
+- content: SDLP Interoperability Profile for Ownership, Verification, and Provenance
+    Evidence
   language:
   - en
   script:
@@ -15,11 +16,17 @@ docid:
 abstract:
 - content: "<p>This document defines an interoperability profile for the Secured Digital
     Lifecycle Protocol (SDLP). The profile specifies how SDLP canonical objects, identity,
-    lineage, lifecycle state, and digests are composed with ownership binding, trust-root
-    pinning, and relying-party admission semantics. It defines a transition vector
-    model, a binding result vocabulary, and composition rules for integrating SDLP
-    with provenance and transparency systems such as CAID, AEC, AEB, SCITT, and EMILIA,
-    without changing the core SDLP semantics.</p>"
+    lineage, lifecycle state, and digests are composed with external verification,
+    typed authority evaluation, and provenance evidence semantics. It introduces a
+    transition vector model that carries canonical SDLP envelopes together with CAID
+    projections, AEC evidence results, local authorization decisions, and AEB execution
+    outcomes, without altering SDLP’s core object semantics. The profile defines how
+    SDLP objects participate in multi-stage verification pipelines and how mutated
+    candidate inputs, negative cases, and authority constraints are represented. It
+    also specifies composition rules for integrating SDLP with provenance and transparency
+    systems such as CAID, AEC, AEB, SCITT, and EMILIA, while preserving the separation
+    of concerns between SDLP canonical semantics and ecosystem-specific admission
+    and trust policies.</p>"
   language:
   - en
   script:
@@ -35,6 +42,26 @@ relation:
       primary: true
     formattedref:
       content: draft-norton-sdlp-interop-profile-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-norton-sdlp-interop-profile-01
+    docid:
+    - id: draft-norton-sdlp-interop-profile-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-norton-sdlp-interop-profile-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-norton-sdlp-interop-profile-02
+    docid:
+    - id: draft-norton-sdlp-interop-profile-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-norton-sdlp-interop-profile-02
       format: text/plain
 ext:
   schema-version: v1.0.1
