@@ -1,62 +1,146 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-nmop-network-incident-yang-10
+id: draft-ietf-scone-protocol-06
 title:
-- content: A YANG Data Model for Network Incident Management
+- content: Standard Communication with Network Elements (SCONE) Protocol
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-nmop-network-incident-yang-10
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-scone-protocol-06
   type: src
 type: standard
 docid:
-- id: draft-ietf-nmop-network-incident-yang-10
+- id: draft-ietf-scone-protocol-06
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-nmop-network-incident-yang
+- id: I-D.ietf-scone-protocol
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-nmop-network-incident-yang
+docnumber: I-D.ietf-scone-protocol
 date:
 - type: published
-  value: '2026-07-05'
+  value: '2026-07-29'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Tong
+        - content: Martin
           language:
           - en
         - language:
           - en
-          initial: T
+          initial: M
         formatted_initials:
-          content: T.
+          content: M.
           language:
           - en
       surname:
-        content: Hu
+        content: Thomson
         language:
         - en
       completename:
-        content: Tong Hu
+        content: Martin Thomson
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: CMCC
+        - content: Mozilla
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Luis
+        - content: Christian
+          language:
+          - en
+        - language:
+          - en
+          initial: C
+        formatted_initials:
+          content: C.
+          language:
+          - en
+      surname:
+        content: Huitema
+        language:
+        - en
+      completename:
+        content: Christian Huitema
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Private Octopus Inc.
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Kazuho
+          language:
+          - en
+        - language:
+          - en
+          initial: K
+        formatted_initials:
+          content: K.
+          language:
+          - en
+      surname:
+        content: Oku
+        language:
+        - en
+      completename:
+        content: Kazuho Oku
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Fastly
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Matt
+          language:
+          - en
+        - language:
+          - en
+          initial: M
+        formatted_initials:
+          content: M.
+          language:
+          - en
+      surname:
+        content: Joras
+        language:
+        - en
+      completename:
+        content: Matt Joras
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Meta
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Marcus
           language:
           - en
         - language:
@@ -70,111 +154,31 @@ contributor:
           language:
           - en
       surname:
-        content: Contreras
+        content: Ihlar
         language:
         - en
       completename:
-        content: Luis M. Contreras
+        content: Marcus Ihlar
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Telefonica
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Qin
-          language:
-          - en
-        - language:
-          - en
-          initial: Q
-        formatted_initials:
-          content: Q.
-          language:
-          - en
-      surname:
-        content: Wu
-        language:
-        - en
-      completename:
-        content: Qin Wu
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Huawei
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Nigel
-          language:
-          - en
-        - language:
-          - en
-          initial: "N"
-        formatted_initials:
-          content: N.
-          language:
-          - en
-      surname:
-        content: Davis
-        language:
-        - en
-      completename:
-        content: Nigel Davis
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Ciena
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Chong
-          language:
-          - en
-        - language:
-          - en
-          initial: C
-        formatted_initials:
-          content: C.
-          language:
-          - en
-      surname:
-        content: Feng
-        language:
-        - en
-      completename:
-        content: Chong Feng
-        language:
-        - en
+        - content: Ericsson
   role:
   - type: author
 version:
-- draft: '10'
-revdate: '2026-07-05'
+- draft: '06'
+revdate: '2026-07-29'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document defines a YANG Module for the network incident lifecycle
-    management. This YANG module is meant to provide a standard way to report, diagnose,
-    and help reduce troubleshooting tickets and resolve network incidents for the
-    sake of network service health and probable cause analysis.</p>"
+- content: "<p>This document describes a protocol where on-path network elements can
+    communicate their perspective on the maximum sustainable throughput for QUIC flows
+    to endpoints. This throughput advice suggests an upper bound on long-term average
+    throughput, independent of and complementary to real-time congestion control signals.</p>"
   language:
   - en
   script:
@@ -183,23 +187,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-nmop-network-incident-yang-00
+    id: draft-ietf-scone-protocol-03
     docid:
-    - id: draft-ietf-nmop-network-incident-yang-00
+    - id: draft-ietf-scone-protocol-03
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-nmop-network-incident-yang-00
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-nmop-network-incident-yang-13
-    docid:
-    - id: draft-ietf-nmop-network-incident-yang-13
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-nmop-network-incident-yang-13
+      content: draft-ietf-scone-protocol-03
       format: text/plain
 series:
 - type: main
@@ -210,7 +204,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-nmop-network-incident-yang-10
+  number: draft-ietf-scone-protocol-06
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

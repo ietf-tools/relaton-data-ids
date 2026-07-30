@@ -17,13 +17,17 @@ abstract:
 - content: "<p>This document extends the analysis of the applicability of Abstraction
     and Control of TE Networks (ACTN) architecture to Packet Optical Integration (POI)
     to cover multi-layer service assurance scenarios. Specifically, the ACTN architecture
-    enables the detection and handling of different failures that may happen either
-    at the optical or the packet layer. It is assumed that the underlying transport
-    optical network carries end-to-end IP services such as L2VPN or L3VPN connectivity
-    services, with specific Service Level Agreement (SLA) requirements. Existing IETF
-    protocols and data models are identified for each multi-layer (packet over optical)
-    service assurance scenario with a specific focus on the MPI (Multi-Domain Service
-    Coordinator to Provisioning Network Controllers Interface) in the ACTN architecture.</p>"
+    supports service assurance through the detection and correlation of failures across
+    the optical and packet layers, with failure handling performed through the relevant
+    PNC. The MDSC can also request health checks for IP services across multi-domain
+    paths for SLA conformance assessment. The PNCs may also be configured with thresholds
+    so that alerts are reported when relevant service or network conditions exceed
+    defined limits. It is assumed that the underlying transport optical network carries
+    end-to-end IP services such as L2VPN or L3VPN connectivity services, with specific
+    Service Level Agreement (SLA) requirements. Existing IETF protocols and data models
+    are identified for each multi-layer (packet over optical) service assurance scenario
+    with a specific focus on the MPI (Multi-Domain Service Coordinator to Provisioning
+    Network Controllers Interface) in the ACTN architecture.</p>"
   language:
   - en
   script:
@@ -79,6 +83,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-teas-actn-poi-assurance-04
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-teas-actn-poi-assurance-05
+    docid:
+    - id: draft-ietf-teas-actn-poi-assurance-05
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-teas-actn-poi-assurance-05
       format: text/plain
 ext:
   schema-version: v1.0.1

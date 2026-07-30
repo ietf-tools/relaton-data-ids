@@ -1,180 +1,212 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-nmop-network-incident-yang-10
+id: draft-ietf-sidrops-aspa-profile-29
 title:
-- content: A YANG Data Model for Network Incident Management
+- content: A Profile for Autonomous System Provider Authorization
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-nmop-network-incident-yang-10
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-sidrops-aspa-profile-29
   type: src
 type: standard
 docid:
-- id: draft-ietf-nmop-network-incident-yang-10
+- id: draft-ietf-sidrops-aspa-profile-29
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-nmop-network-incident-yang
+- id: I-D.ietf-sidrops-aspa-profile
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-nmop-network-incident-yang
+docnumber: I-D.ietf-sidrops-aspa-profile
 date:
 - type: published
-  value: '2026-07-05'
+  value: '2026-07-29'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Tong
+        - content: Job
           language:
           - en
         - language:
           - en
-          initial: T
+          initial: J
         formatted_initials:
-          content: T.
+          content: J.
           language:
           - en
       surname:
-        content: Hu
+        content: Snijders
         language:
         - en
       completename:
-        content: Tong Hu
+        content: Job Snijders
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: CMCC
+        - content: BSD Software Development
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Luis
+        - content: Alexander
           language:
           - en
         - language:
           - en
-          initial: L
-        - language:
-          - en
-          initial: M
+          initial: A
         formatted_initials:
-          content: L. M.
+          content: A.
           language:
           - en
       surname:
-        content: Contreras
+        content: Azimov
         language:
         - en
       completename:
-        content: Luis M. Contreras
+        content: Alexander Azimov
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Telefonica
+        - content: Yandex
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Qin
+        - content: Eugene
           language:
           - en
         - language:
           - en
-          initial: Q
+          initial: E
         formatted_initials:
-          content: Q.
+          content: E.
           language:
           - en
       surname:
-        content: Wu
+        content: Uskov
         language:
         - en
       completename:
-        content: Qin Wu
+        content: Eugene Uskov
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei
+        - content: JetLend
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Nigel
+        - content: Randy
           language:
           - en
         - language:
           - en
-          initial: "N"
+          initial: R
         formatted_initials:
-          content: N.
+          content: R.
           language:
           - en
       surname:
-        content: Davis
+        content: Bush
         language:
         - en
       completename:
-        content: Nigel Davis
+        content: Randy Bush
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Ciena
+        - content: Internet Initiative Japan
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Chong
+        - content: Russ
           language:
           - en
         - language:
           - en
-          initial: C
+          initial: R
         formatted_initials:
-          content: C.
+          content: R.
           language:
           - en
       surname:
-        content: Feng
+        content: Housley
         language:
         - en
       completename:
-        content: Chong Feng
+        content: Russ Housley
         language:
         - en
+    affiliation:
+    - organization:
+        name:
+        - content: Vigil Security, LLC
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Ben
+          language:
+          - en
+        - language:
+          - en
+          initial: B
+        formatted_initials:
+          content: B.
+          language:
+          - en
+      surname:
+        content: Maddison
+        language:
+        - en
+      completename:
+        content: Ben Maddison
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Workonline
   role:
   - type: author
 version:
-- draft: '10'
-revdate: '2026-07-05'
+- draft: '29'
+revdate: '2026-07-29'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document defines a YANG Module for the network incident lifecycle
-    management. This YANG module is meant to provide a standard way to report, diagnose,
-    and help reduce troubleshooting tickets and resolve network incidents for the
-    sake of network service health and probable cause analysis.</p>"
+- content: "<p>This document defines a Cryptographic Message Syntax (CMS) protected
+    content type for Autonomous System Provider Authorization (ASPA) objects for use
+    with the Resource Public Key Infrastructure (RPKI). An ASPA is a digitally signed
+    object through which the issuer (the holder of an Autonomous System identifier),
+    can authorize one or more other Autonomous Systems (ASes) as its transit providers.
+    When validated, an ASPA's eContent can be used for detection and mitigation of
+    route leaks.</p>"
   language:
   - en
   script:
@@ -183,23 +215,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-nmop-network-incident-yang-00
+    id: draft-ietf-sidrops-aspa-profile-13
     docid:
-    - id: draft-ietf-nmop-network-incident-yang-00
+    - id: draft-ietf-sidrops-aspa-profile-13
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-nmop-network-incident-yang-00
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-nmop-network-incident-yang-13
-    docid:
-    - id: draft-ietf-nmop-network-incident-yang-13
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-nmop-network-incident-yang-13
+      content: draft-ietf-sidrops-aspa-profile-13
       format: text/plain
 series:
 - type: main
@@ -210,7 +232,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-nmop-network-incident-yang-10
+  number: draft-ietf-sidrops-aspa-profile-29
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
