@@ -16,21 +16,21 @@ abstract:
 - content: '<p>The IANA "Message Headers" registries record, for each registered header
     field, the protocol it belongs to, its status, whether it is a trace field, and
     the document(s) that specify it. These registries were populated incrementally
-    by many documents over more than two decades, and the instructions those documents
-    gave to IANA were not consistent with one another. As a result the registries
-    no longer present a reliable picture of the relative status or usage of the fields
-    they contain: fields of equal standing carry different status values, foundational
-    fields appear less classified than minor ones, the "trace" property is recorded
-    for only a fraction of the fields whose defining documents describe them as trace
-    fields, and the reference column frequently points at a later registration document
-    rather than at the document that actually defines or updates the field. This reduces
-    the value of the metadata to the point where a reader cannot use it to reason
-    about a field with confidence. This document reviews the initial definition of,
+    by many documents over more than two decades, and the metadata that reached the
+    registries is in several respects less complete than the metadata the registering
+    documents supplied. Most notably, the document that performed the single largest
+    bulk registration, RFC 4021, gave IANA an explicit status and an explicit specification
+    document for every one of the roughly ninety fields it registered, and neither
+    was recorded: those entries carry a blank status and cite RFC 4021 itself rather
+    than the specification. Separately, the "Trace" column added to both registries
+    by the ongoing revision of RFC 5322 was deliberately left empty for pre-existing
+    entries, to be filled in later. This document reviews the initial definition of,
     and every subsequent update to, each registered header field, and gives IANA a
-    single, coherent set of instructions for correcting each registry entry. Every
-    recommended change, and every deliberate decision to leave a non-obvious entry
-    unchanged, is justified by reference to the clear intent of the authors of the
-    source documents in which the field was defined or modified.</p>'
+    single, coherent set of instructions for completing and correcting each registry
+    entry. Every recommended change, and every deliberate decision to leave a non-obvious
+    entry unchanged, is justified by reference to the instructions already given by,
+    or the clear intent of the authors of, the source documents in which the field
+    was defined or modified.</p>'
   language:
   - en
   script:
@@ -56,6 +56,16 @@ relation:
       primary: true
     formattedref:
       content: draft-gondwana-email-header-maintenance-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-gondwana-email-header-maintenance-02
+    docid:
+    - id: draft-gondwana-email-header-maintenance-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-gondwana-email-header-maintenance-02
       format: text/plain
 ext:
   schema-version: v1.0.1
