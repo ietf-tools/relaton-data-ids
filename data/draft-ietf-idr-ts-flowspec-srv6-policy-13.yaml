@@ -1,49 +1,49 @@
 ---
 schema-version: v1.2.3
-id: draft-yl-bmwg-cats-04
+id: draft-ietf-idr-ts-flowspec-srv6-policy-13
 title:
-- content: Benchmarking Methodology for Computing-aware Traffic Steering
+- content: Traffic Steering using BGP FlowSpec with SR Policy
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-yl-bmwg-cats-04
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-ts-flowspec-srv6-policy-13
   type: src
 type: standard
 docid:
-- id: draft-yl-bmwg-cats-04
+- id: draft-ietf-idr-ts-flowspec-srv6-policy-13
   type: Internet-Draft
   primary: true
-- id: I-D.yl-bmwg-cats
+- id: I-D.ietf-idr-ts-flowspec-srv6-policy
   type: IETF
   scope: anchor
-docnumber: I-D.yl-bmwg-cats
+docnumber: I-D.ietf-idr-ts-flowspec-srv6-policy
 date:
 - type: published
-  value: '2026-05-25'
+  value: '2026-07-30'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Kehan
+        - content: Jiang
           language:
           - en
         - language:
           - en
-          initial: K
+          initial: J
         formatted_initials:
-          content: K.
+          content: J.
           language:
           - en
       surname:
-        content: Yao
+        content: Wenying
         language:
         - en
       completename:
-        content: Kehan Yao
+        content: Jiang Wenying
         language:
         - en
     affiliation:
@@ -56,14 +56,14 @@ contributor:
     name:
       given:
         forename:
-        - content: Peng
+        - content: Yisong
           language:
           - en
         - language:
           - en
-          initial: P
+          initial: "Y"
         formatted_initials:
-          content: P.
+          content: Y.
           language:
           - en
       surname:
@@ -71,7 +71,7 @@ contributor:
         language:
         - en
       completename:
-        content: Peng Liu
+        content: Yisong Liu
         language:
         - en
     affiliation:
@@ -84,126 +84,104 @@ contributor:
     name:
       given:
         forename:
-        - content: Guanming
+        - content: Shunwan
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Zhuang
+        language:
+        - en
+      completename:
+        content: Shunwan Zhuang
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei Technologies
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Gyan
           language:
           - en
         - language:
           - en
           initial: G
+        - language:
+          - en
+          initial: S
         formatted_initials:
-          content: G.
+          content: G. S.
           language:
           - en
       surname:
-        content: Zeng
+        content: Mishra
         language:
         - en
       completename:
-        content: Guanming Zeng
+        content: Gyan Mishra
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei
+        - content: Verizon Communications Inc.
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Xinxin
+        - content: Shuanglong
           language:
           - en
         - language:
           - en
-          initial: X
+          initial: S
         formatted_initials:
-          content: X.
+          content: S.
           language:
           - en
       surname:
-        content: Yi
+        content: Chen
         language:
         - en
       completename:
-        content: Xinxin Yi
+        content: Shuanglong Chen
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: China Unicom
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Quan
-          language:
-          - en
-        - language:
-          - en
-          initial: Q
-        formatted_initials:
-          content: Q.
-          language:
-          - en
-      surname:
-        content: Xiong
-        language:
-        - en
-      completename:
-        content: Quan Xiong
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: ZTE
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - language:
-          - en
-          initial: T
-        - language:
-          - en
-          initial: M
-        formatted_initials:
-          content: T. M.
-          language:
-          - en
-      surname:
-        content: Ngọc
-        language:
-        - en
-      completename:
-        content: Trần Minh Ngọc
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: ETRI
+        - content: Huawei Technologies
   role:
   - type: author
 version:
-- draft: '04'
-revdate: '2026-05-25'
+- draft: '13'
+revdate: '2026-07-30'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>Computing-aware traffic steering (CATS) is a traffic engineering approach
-    for steering service requests towards appropriate service instances based on the
-    awareness of both computing and network information. This document proposes benchmarking
-    methodologies for CATS.</p>"
+- content: "<p>BGP Flow Specification (FlowSpec) (as defined in RFC 8955, RFC 8956
+    and RFC 9117) has been proposed to distribute BGP (RFC 4271) FlowSpec NLRI to
+    FlowSpec clients to mitigate (distributed) denial-of-service attacks, and to provide
+    traffic filtering in the context of a BGP/ MPLS VPN service. Recently, traffic
+    steering applications in the context of SR-MPLS and SRv6 using FlowSpec are being
+    used in networks. This document introduces the usage of BGP Flow Specification
+    to steer packets into an SR Policy.</p>"
   language:
   - en
   script:
@@ -212,23 +190,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-yl-bmwg-cats-03
+    id: draft-ietf-idr-ts-flowspec-srv6-policy-00
     docid:
-    - id: draft-yl-bmwg-cats-03
+    - id: draft-ietf-idr-ts-flowspec-srv6-policy-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-yl-bmwg-cats-03
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-yl-bmwg-cats-05
-    docid:
-    - id: draft-yl-bmwg-cats-05
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-yl-bmwg-cats-05
+      content: draft-ietf-idr-ts-flowspec-srv6-policy-00
       format: text/plain
 series:
 - type: main
@@ -239,7 +207,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-yl-bmwg-cats-04
+  number: draft-ietf-idr-ts-flowspec-srv6-policy-13
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
