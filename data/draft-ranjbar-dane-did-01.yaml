@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-ranjbar-dane-did-00
+id: draft-ranjbar-dane-did-01
 title:
 - content: 'Rooting Decentralized Identifiers in DNSSEC: A DANE-EE Key-Binding Profile'
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ranjbar-dane-did-00
+- content: https://datatracker.ietf.org/doc/html/draft-ranjbar-dane-did-01
   type: src
 type: standard
 docid:
-- id: draft-ranjbar-dane-did-00
+- id: draft-ranjbar-dane-did-01
   type: Internet-Draft
   primary: true
 - id: I-D.ranjbar-dane-did
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.ranjbar-dane-did
 date:
 - type: published
-  value: '2026-07-22'
+  value: '2026-08-01'
 contributor:
 - person:
     name:
@@ -52,9 +52,40 @@ contributor:
         - content: Whisper Security (viaGraph B.V.)
   role:
   - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Anivar
+          language:
+          - en
+        - language:
+          - en
+          initial: A
+        - language:
+          - en
+          initial: A
+        formatted_initials:
+          content: A. A.
+          language:
+          - en
+      surname:
+        content: Aravind
+        language:
+        - en
+      completename:
+        content: Anivar A Aravind
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Independent Researcher
+  role:
+  - type: author
 version:
-- draft: '00'
-revdate: '2026-07-22'
+- draft: '01'
+revdate: '2026-08-01'
 language:
 - en
 script:
@@ -69,7 +100,7 @@ abstract:
     normative DANE-EE key-binding profile that any DNS-anchored DID method can point
     at rather than reinventing: a verification method's public key is published as
     a TLSA record with certificate usage DANE-EE(3), selector SubjectPublicKeyInfo(1),
-    and matching type SHA-256(1) under a DNSSEC-signed name, so that a relying party
+    and matching type SHA2-256(1) under a DNSSEC-signed name, so that a relying party
     can confirm the key from the DNS root of trust with no certificate authority and
     no fetch from the subject. The profile binds a name to a key and the key to the
     specific DID document it signs, and no further; it states precisely what it does
@@ -81,15 +112,15 @@ abstract:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-ranjbar-dane-did-01
+    id: draft-ranjbar-dane-did-00
     docid:
-    - id: draft-ranjbar-dane-did-01
+    - id: draft-ranjbar-dane-did-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ranjbar-dane-did-01
+      content: draft-ranjbar-dane-did-00
       format: text/plain
 series:
 - type: main
@@ -100,7 +131,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ranjbar-dane-did-00
+  number: draft-ranjbar-dane-did-01
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

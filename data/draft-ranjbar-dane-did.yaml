@@ -22,7 +22,7 @@ abstract:
     normative DANE-EE key-binding profile that any DNS-anchored DID method can point
     at rather than reinventing: a verification method's public key is published as
     a TLSA record with certificate usage DANE-EE(3), selector SubjectPublicKeyInfo(1),
-    and matching type SHA-256(1) under a DNSSEC-signed name, so that a relying party
+    and matching type SHA2-256(1) under a DNSSEC-signed name, so that a relying party
     can confirm the key from the DNS root of trust with no certificate authority and
     no fetch from the subject. The profile binds a name to a key and the key to the
     specific DID document it signs, and no further; it states precisely what it does
@@ -43,6 +43,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ranjbar-dane-did-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ranjbar-dane-did-01
+    docid:
+    - id: draft-ranjbar-dane-did-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ranjbar-dane-did-01
       format: text/plain
 ext:
   schema-version: v1.0.1
