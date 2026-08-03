@@ -1,0 +1,55 @@
+---
+schema-version: v1.2.3
+id: draft-wang-ring-load-aware
+title:
+- content: Load-Adaptive Priority Migration Mechanism for Deterministic Switched Ethernet
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-wang-ring-load-aware
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This document proposes a Load-Adaptive Priority Migration (LAPM) mechanism
+    for deterministic switched Ethernet. The mechanism classifies traffic into three
+    criticality levels (TC0/TC1/TC2), which are logically equivalent to the foundational
+    classification of network slicing. An inverse M/D/1 queuing model is introduced
+    to derive per-hop network utilization from measured forwarding delay, requiring
+    no additional probe traffic. A four-level load classification scheme with hysteresis
+    logic drives dynamic remapping of the IEEE 802.1Q Priority Code Point (PCP), enabling
+    traffic priority to adapt as network load changes. LAPM serves as a runtime complement
+    to the scheduling framework defined by RFC 9320. Existing DetNet queuing mechanisms
+    (TAS, CBS, CQF, Guaranteed Service) rely on statically pre-configured offline
+    parameters, whereas LAPM monitors utilization in real time and adaptively adjusts
+    PCP when load levels cross pre-defined thresholds. This capability is particularly
+    critical for deployment scenarios with time-varying traffic patterns, including
+    automotive backbone networks, industrial automation, and professional audio/video
+    systems. Experimental validation on a 5-node ring topology (1000BASE-T) across
+    three traffic classes reveals the existence of three operationally distinct regions
+    — normal, transitional, and saturated — where load bursts in the transitional
+    region cannot be captured by the EWMA- smoothed utilization metric alone. A cross-domain
+    maximum aggregation mechanism coordinates load-level decisions across multiple
+    VLANs via a shared global variable, ensuring consistent priority migration policy
+    enforcement. In summary, the LAPM mechanism provides a means to guarantee low-
+    latency transmission for critical flows through dynamic load-based priority control.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-wang-ring-load-aware-00
+    docid:
+    - id: draft-wang-ring-load-aware-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-wang-ring-load-aware-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
