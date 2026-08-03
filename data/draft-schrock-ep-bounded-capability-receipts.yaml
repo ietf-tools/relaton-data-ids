@@ -22,10 +22,13 @@ abstract:
     a closed action scope, a budget with explicit units, a holder proof, an expiry,
     and any parent capability. The state protocol atomically refuses overspend and
     replay, fences concurrent owners, and charges an indeterminate operation when
-    an external effect may have occurred. It also defines narrowing-only delegation
+    an external effect may have occurred. Delegation transfers rather than copies
+    authority: all direct child allocations are funded by committed parent operations
+    before child registration, and their aggregate cannot exceed the parent balance
+    within one authoritative atomic state domain. It also defines narrowing-only delegation
     and evidence interfaces. It does not make a bearer token into human approval,
-    does not provide offline global double-spend prevention, and does not claim that
-    an authorized action was safe, lawful, or successfully executed.</p>"
+    does not provide cross-domain or offline global double-spend prevention, and does
+    not claim that an authorized action was safe, lawful, or successfully executed.</p>"
   language:
   - en
   script:
@@ -41,6 +44,16 @@ relation:
       primary: true
     formattedref:
       content: draft-schrock-ep-bounded-capability-receipts-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-schrock-ep-bounded-capability-receipts-01
+    docid:
+    - id: draft-schrock-ep-bounded-capability-receipts-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-schrock-ep-bounded-capability-receipts-01
       format: text/plain
 ext:
   schema-version: v1.0.1
