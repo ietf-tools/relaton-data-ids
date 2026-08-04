@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-schrock-ep-authorization-receipts-08
+id: draft-schrock-ep-authorization-receipts-09
 title:
 - content: Authorization Receipts for High-Risk Agent Actions
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-schrock-ep-authorization-receipts-08
+- content: https://datatracker.ietf.org/doc/html/draft-schrock-ep-authorization-receipts-09
   type: src
 type: standard
 docid:
-- id: draft-schrock-ep-authorization-receipts-08
+- id: draft-schrock-ep-authorization-receipts-09
   type: Internet-Draft
   primary: true
 - id: I-D.schrock-ep-authorization-receipts
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.schrock-ep-authorization-receipts
 date:
 - type: published
-  value: '2026-07-21'
+  value: '2026-08-03'
 contributor:
 - person:
     name:
@@ -53,8 +53,8 @@ contributor:
   role:
   - type: author
 version:
-- draft: '08'
-revdate: '2026-07-21'
+- draft: '09'
+revdate: '2026-08-03'
 language:
 - en
 script:
@@ -72,7 +72,18 @@ abstract:
     authority. Offline verification does not establish current revocation status,
     global non-replay, comprehension, legality, safety, or execution. Replay prevention
     requires an online atomic consumption store at the executor. The state-machine
-    invariants are machine-checked under the assumptions stated in this document.</p>"
+    invariants are machine-checked under the assumptions stated in this document.
+    A receipt is evidence, not authorization. This document does not treat a local
+    user interaction as an authorization decision. Section 10.7 of [I-D.klrc-aiagent-auth]
+    states that an agent MUST NOT treat local UI confirmation alone as sufficient
+    authorization, and notes that additional specification or design work may be needed
+    for user confirmation occurring mid-execution, since CIBA accounts only for client
+    initiation. This document defines one evidence artifact that an authorization
+    architecture can use in such a flow: the signed Authorization Context is action-bound
+    confirmation evidence an authorization server MAY validate and bind to the grant
+    it issues. The resulting Trust Receipt records terminal consumption and remains
+    evidence; neither object makes the authorization decision. That decision remains
+    with the authorization server.</p>"
   language:
   - en
   script:
@@ -89,16 +100,6 @@ relation:
     formattedref:
       content: draft-schrock-ep-authorization-receipts-01
       format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-schrock-ep-authorization-receipts-09
-    docid:
-    - id: draft-schrock-ep-authorization-receipts-09
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-schrock-ep-authorization-receipts-09
-      format: text/plain
 series:
 - type: main
   title:
@@ -108,7 +109,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-schrock-ep-authorization-receipts-08
+  number: draft-schrock-ep-authorization-receipts-09
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
