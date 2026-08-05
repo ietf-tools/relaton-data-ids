@@ -1,156 +1,157 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-ccwg-ratelimited-increase-05
+id: draft-cz-bier-bgp-ls-bier-te-ext-07
 title:
-- content: Increase of the Congestion Window when the Sender Is Rate-Limited
+- content: BGP-LS extensions for BIER-TE
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-ccwg-ratelimited-increase-05
+- content: https://datatracker.ietf.org/doc/html/draft-cz-bier-bgp-ls-bier-te-ext-07
   type: src
 type: standard
 docid:
-- id: draft-ietf-ccwg-ratelimited-increase-05
+- id: draft-cz-bier-bgp-ls-bier-te-ext-07
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-ccwg-ratelimited-increase
+- id: I-D.cz-bier-bgp-ls-bier-te-ext
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-ccwg-ratelimited-increase
+docnumber: I-D.cz-bier-bgp-ls-bier-te-ext
 date:
 - type: published
-  value: '2026-07-21'
+  value: '2026-08-04'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Michael
+        - content: Ran
           language:
           - en
         - language:
           - en
-          initial: M
+          initial: R
         formatted_initials:
-          content: M.
+          content: R.
           language:
           - en
       surname:
-        content: Welzl
+        content: Chen
         language:
         - en
       completename:
-        content: Michael Welzl
+        content: Ran Chen
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: University of Oslo
+        - content: ZTE Corporation
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Tom
+        - content: Zheng
           language:
           - en
         - language:
           - en
-          initial: T
+          initial: Z
         formatted_initials:
-          content: T.
+          content: Z.
           language:
           - en
       surname:
-        content: Henderson
+        content: Zhang
         language:
         - en
       completename:
-        content: Tom Henderson
+        content: Zheng Zhang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: University of Washington
+        - content: ZTE Corporation
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Gorry
+        - content: Yisong
           language:
           - en
         - language:
           - en
-          initial: G
+          initial: "Y"
         formatted_initials:
-          content: G.
+          content: Y.
           language:
           - en
       surname:
-        content: Fairhurst
+        content: Liu
         language:
         - en
       completename:
-        content: Gorry Fairhurst
+        content: Yisong Liu
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: University of Aberdeen
+        - content: China Mobile
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Mohit
+        - content: Changwang
           language:
           - en
         - language:
           - en
-          initial: M
-        - language:
-          - en
-          initial: P
+          initial: C
         formatted_initials:
-          content: M. P.
+          content: C.
           language:
           - en
       surname:
-        content: Tahiliani
+        content: Lin
         language:
         - en
       completename:
-        content: Mohit P. Tahiliani
+        content: Changwang Lin
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: National Institute of Technology Karnataka
+        - content: New H3C Technologies
   role:
   - type: author
 version:
-- draft: '05'
-revdate: '2026-07-21'
+- draft: '07'
+revdate: '2026-08-04'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document specifies how transport protocols increase their congestion
-    window when the sender is rate-limited, and updates RFC 5681, RFC 9002, RFC 9260,
-    and RFC 9438. Such a limitation can be caused by the sending application not supplying
-    data or by receiver flow control.</p>"
+- content: "<p>BIER-TE forwards and replicates packets based on a BitString in the
+    packet header, but every BitPosition of the BitString of a BIER-TE packet indicates
+    one or more adjacencies. BGP Link-State (BGP-LS) enables the collection of various
+    topology informations from the network, and the topology informations are used
+    by the PCE to calculate the path and then propagate them onto the BFRs(instead
+    of having each node to calculate on its own) and that can be for both inter-as
+    and intra-as situations. This document specifies extensions to the BGP Link-state
+    address- family in order to advertise BIER-TE informations.</p>"
   language:
   - en
   script:
@@ -159,23 +160,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-ccwg-ratelimited-increase-02
+    id: draft-cz-bier-bgp-ls-bier-te-ext-03
     docid:
-    - id: draft-ietf-ccwg-ratelimited-increase-02
+    - id: draft-cz-bier-bgp-ls-bier-te-ext-03
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-ccwg-ratelimited-increase-02
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-ccwg-ratelimited-increase-07
-    docid:
-    - id: draft-ietf-ccwg-ratelimited-increase-07
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-ccwg-ratelimited-increase-07
+      content: draft-cz-bier-bgp-ls-bier-te-ext-03
       format: text/plain
 series:
 - type: main
@@ -186,7 +177,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-ccwg-ratelimited-increase-05
+  number: draft-cz-bier-bgp-ls-bier-te-ext-07
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
