@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-norton-sdlp-lifecycle
 title:
-- content: 'SDLP RFC 2: Lifecycle Specification'
+- content: SDLP Lifecycle Specification
   language:
   - en
   script:
@@ -13,14 +13,17 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document defines the lifecycle model for the Secured Digital Lifecycle
-    Protocol (SDLP). The lifecycle model specifies the canonical state machine used
-    by all SDLP-governed objects, including the rules for state transitions, transformation
-    events, duplication events, and materialization events. The lifecycle model provides
-    a stable and predictable framework for describing how SDLP objects evolve over
-    time while preserving identity, lineage, and security guarantees defined in companion
-    SDLP specifications. This document updates and formalizes the lifecycle semantics
-    originally introduced in draft-norton-sdlp-lifecycle-00.</p>"
+- content: "<p>This document defines the SDLP Lifecycle Specification, the canonical
+    state machine and transition semantics governing how SDLP objects evolve over
+    time. The lifecycle model establishes deterministic rules for object creation,
+    activation, transformation, and termination, ensuring that identity, lineage,
+    and lifecycle metadata remain tamper-evident and verifiable across all implementations.
+    Lifecycle-03 updates and aligns the transition grammar with Identity-02, Lineage-03,
+    and Object-Format-08, providing a unified framework in which DigitalID is immutable,
+    InstanceID grows deterministically, Lineage reflects complete ancestry, and Timestamp
+    records the precise moment of each transition. The lifecycle rules defined in
+    this document are normative and required for interoperable SDLP processing, validation,
+    and provenance assurance.</p>"
   language:
   - en
   script:
@@ -56,6 +59,16 @@ relation:
       primary: true
     formattedref:
       content: draft-norton-sdlp-lifecycle-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-norton-sdlp-lifecycle-03
+    docid:
+    - id: draft-norton-sdlp-lifecycle-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-norton-sdlp-lifecycle-03
       format: text/plain
 ext:
   schema-version: v1.0.1

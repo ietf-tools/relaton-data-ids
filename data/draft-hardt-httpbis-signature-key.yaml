@@ -13,18 +13,21 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document defines two HTTP header fields and one Accept-Signature
-    parameter for use with HTTP Message Signatures as defined in RFC 9421. The Signature-Key
-    request header distributes public keys used to verify signatures, with six initial
-    key distribution schemes: pseudonymous inline keys (hwk), self-issued key delegation
-    via JWK Thumbprint JWTs (jkt-jwt), identified signers with JWKS URI discovery
-    (jwks_uri), JWT-based delegation (jwt), self-issued JWTs (self-jwt), and X.509
-    certificate chains (x509). The sigkey parameter extends Accept-Signature (RFC
-    9421 Section 5) to indicate the type of Signature-Key the server requires. The
-    Signature-Error response header provides structured error information when signature
-    verification fails. Together, these mechanisms enable flexible trust models ranging
-    from privacy-preserving pseudonymous verification to horizontally-scalable delegated
-    authentication and PKI-based identity chains.</p>"
+- content: "<p>This document defines five HTTP header fields for use with HTTP Message
+    Signatures as defined in RFC 9421. The Signature-Key request header distributes
+    public keys used to verify signatures, with eight initial key distribution schemes:
+    pseudonymous inline keys (hwk), self-issued key delegation via JWK Thumbprint
+    JWTs (jkt-jwt), identified signers with JWKS URI discovery (jwks_uri), direct
+    JWKS fetch (jwks), JWT-based delegation (jwt), self-issued JWTs (self- jwt), X.509
+    certificate chains (x509), and references to previously cached assertions (cached).
+    The Accept-Signature-Scheme and Accept- Signature-Alg response headers state the
+    schemes and algorithms a server accepts, so a client can select both before it
+    signs. The Signature-Error response header provides structured error information
+    when signature verification fails, and the Signature-Key-Cache response header
+    issues a cache identifier by which a caller can reference a previously presented
+    assertion instead of resending it. Together, these mechanisms enable flexible
+    trust models ranging from privacy-preserving pseudonymous verification to horizontally-scalable
+    delegated authentication and PKI-based identity chains.</p>"
   language:
   - en
   script:
@@ -110,6 +113,16 @@ relation:
       primary: true
     formattedref:
       content: draft-hardt-httpbis-signature-key-07
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-hardt-httpbis-signature-key-08
+    docid:
+    - id: draft-hardt-httpbis-signature-key-08
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-hardt-httpbis-signature-key-08
       format: text/plain
 ext:
   schema-version: v1.0.1

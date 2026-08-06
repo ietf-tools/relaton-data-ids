@@ -1,0 +1,134 @@
+---
+schema-version: v1.2.3
+id: draft-hardt-httpbis-signature-key-08
+title:
+- content: HTTP Signature Keys
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-hardt-httpbis-signature-key-08
+  type: src
+type: standard
+docid:
+- id: draft-hardt-httpbis-signature-key-08
+  type: Internet-Draft
+  primary: true
+- id: I-D.hardt-httpbis-signature-key
+  type: IETF
+  scope: anchor
+docnumber: I-D.hardt-httpbis-signature-key
+date:
+- type: published
+  value: '2026-08-05'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Dick
+          language:
+          - en
+        - language:
+          - en
+          initial: D
+        formatted_initials:
+          content: D.
+          language:
+          - en
+      surname:
+        content: Hardt
+        language:
+        - en
+      completename:
+        content: Dick Hardt
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Hellō
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Thibault
+          language:
+          - en
+        - language:
+          - en
+          initial: T
+        formatted_initials:
+          content: T.
+          language:
+          - en
+      surname:
+        content: Meunier
+        language:
+        - en
+      completename:
+        content: Thibault Meunier
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Cloudflare
+  role:
+  - type: author
+version:
+- draft: '08'
+revdate: '2026-08-05'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>This document defines five HTTP header fields for use with HTTP Message
+    Signatures as defined in RFC 9421. The Signature-Key request header distributes
+    public keys used to verify signatures, with eight initial key distribution schemes:
+    pseudonymous inline keys (hwk), self-issued key delegation via JWK Thumbprint
+    JWTs (jkt-jwt), identified signers with JWKS URI discovery (jwks_uri), direct
+    JWKS fetch (jwks), JWT-based delegation (jwt), self-issued JWTs (self- jwt), X.509
+    certificate chains (x509), and references to previously cached assertions (cached).
+    The Accept-Signature-Scheme and Accept- Signature-Alg response headers state the
+    schemes and algorithms a server accepts, so a client can select both before it
+    signs. The Signature-Error response header provides structured error information
+    when signature verification fails, and the Signature-Key-Cache response header
+    issues a cache identifier by which a caller can reference a previously presented
+    assertion instead of resending it. Together, these mechanisms enable flexible
+    trust models ranging from privacy-preserving pseudonymous verification to horizontally-scalable
+    delegated authentication and PKI-based identity chains.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-hardt-httpbis-signature-key-06
+    docid:
+    - id: draft-hardt-httpbis-signature-key-06
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-hardt-httpbis-signature-key-06
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-hardt-httpbis-signature-key-08
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

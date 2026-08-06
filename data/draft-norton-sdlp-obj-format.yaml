@@ -14,17 +14,17 @@ docid:
   primary: true
 abstract:
 - content: "<p>This document defines the canonical object format for the Secured Digital
-    Lifecycle Protocol (SDLP). The object format specifies the normative byte-level
-    representation used for hashing, signing, validation, and interoperability across
-    SDLP implementations. All SDLP-governed objects MUST follow the canonical encoding,
-    field ordering, and serialization grammar defined in this specification. Object-Format-07
-    freezes the canonical envelope grammar and provides a concrete example of a fully
-    serialized SDLP object to illustrate how DigitalID, InstanceID, Lineage, Timestamp,
-    and Body are encoded in practice. This revision also introduces brief application
-    context describing how SDLP objects are used in provenance, auditability, and
-    regulated-content workflows. This document updates and replaces draft-norton-sdlp-obj-format-06
-    and provides the authoritative definition of the SDLP object format required for
-    interoperable identity, lineage, and lifecycle processing.</p>"
+    Lifecycle Protocol (SDLP). The SDLP object format specifies the structure, encoding,
+    and canonicalization rules for DigitalID, lineage fields, lifecycle timestamps,
+    Body content, and signature envelopes. These rules establish the immutable semantics
+    required for SDLP verification, provenance tracking, lifecycle transitions, and
+    interoperability with external systems such as CAID, AEC, AEB, SCITT, and EMILIA.
+    Version -08 updates the canonical timestamp grammar, clarifies DigitalID and lineage
+    field semantics, refines Body canonicalization rules, and incorporates corrections
+    identified through SDLP Fixture Bundle v4 testing. This revision aligns the object
+    format with the current SDLP Identity (-02), Lineage (-03), Lifecycle (-03), Security
+    Architecture (-04), Architecture (-03), Overview (-01), and Physics Model (-00)
+    drafts.</p>"
   language:
   - en
   script:
@@ -110,6 +110,16 @@ relation:
       primary: true
     formattedref:
       content: draft-norton-sdlp-obj-format-07
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-norton-sdlp-obj-format-08
+    docid:
+    - id: draft-norton-sdlp-obj-format-08
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-norton-sdlp-obj-format-08
       format: text/plain
 ext:
   schema-version: v1.0.1
