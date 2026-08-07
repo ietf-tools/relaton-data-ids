@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-bezerra-relay-auth-transparency-00
+id: draft-bezerra-relay-auth-transparency-01
 title:
 - content: Authentication-Transparent Protocol Extensions in Middleware-Relayed Systems
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-bezerra-relay-auth-transparency-00
+- content: https://datatracker.ietf.org/doc/html/draft-bezerra-relay-auth-transparency-01
   type: src
 type: standard
 docid:
-- id: draft-bezerra-relay-auth-transparency-00
+- id: draft-bezerra-relay-auth-transparency-01
   type: Internet-Draft
   primary: true
 - id: I-D.bezerra-relay-auth-transparency
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.bezerra-relay-auth-transparency
 date:
 - type: published
-  value: '2026-06-24'
+  value: '2026-08-06'
 contributor:
 - person:
     name:
@@ -59,8 +59,8 @@ contributor:
   role:
   - type: author
 version:
-- draft: '00'
-revdate: '2026-06-24'
+- draft: '01'
+revdate: '2026-08-06'
 language:
 - en
 script:
@@ -72,27 +72,29 @@ abstract:
     by a sender is therefore stripped at every relay hop before reaching the receiver,
     with no error indication. This document identifies this behavior as a protocol
     design vulnerability class -- "relay-transparent authentication stripping" --
-    demonstrates it in three independent protocol stacks (MAVLink v2, ROS2/DDS CDR,
-    and CAN/AUTOSAR SecOC), and specifies the architectural principle that authentication
-    material must be carried as a first- class, independently addressable protocol
-    unit to survive relay transit. Post-quantum cryptographic schemes (ML-DSA-87,
-    ML-KEM-1024) are particularly susceptible due to their large signature and ciphertext
-    sizes.</p>
+    demonstrates it with running code in three independent protocol stacks (MAVLink
+    v2, ROS2/DDS CDR, and CAN/ISO-TP with a SecOC-unaware gateway), and specifies
+    the architectural principle that authentication material must be carried as a
+    first-class, independently addressable protocol unit to survive relay transit.
+    Post-quantum signature sizes push authentication out of fixed fields and so create
+    the precondition systematically; this revision reports three measured cases where
+    they do not, because a transport that refuses to carry the oversized unit produces
+    a loss of availability instead of a silent authentication bypass.</p>
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-bezerra-relay-auth-transparency-01
+    id: draft-bezerra-relay-auth-transparency-00
     docid:
-    - id: draft-bezerra-relay-auth-transparency-01
+    - id: draft-bezerra-relay-auth-transparency-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-bezerra-relay-auth-transparency-01
+      content: draft-bezerra-relay-auth-transparency-00
       format: text/plain
 series:
 - type: main
@@ -103,7 +105,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-bezerra-relay-auth-transparency-00
+  number: draft-bezerra-relay-auth-transparency-01
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

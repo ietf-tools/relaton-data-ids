@@ -1,0 +1,49 @@
+---
+schema-version: v1.2.3
+id: draft-flores-airp-provenance
+title:
+- content: The AIRP Provenance Seal and Serving Register
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-flores-airp-provenance
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>A response served by an inference provider carries no verifiable statement
+    of what produced it. A recipient cannot determine which model generated a given
+    output, nor whether the endpoint that served it was authorized by the party whose
+    name is on it. Attribution today rests on the serving party's own account of events,
+    offered after the fact and at its own discretion. This document specifies two
+    mechanisms that together make that determination decidable by a recipient. The
+    Provenance Seal is a detached signature by which a provider binds a model identifier,
+    its own identity, and a timestamp to the exact bytes of a served response. The
+    Serving Register is a signed document listing, for each provider, the endpoints
+    authorized to serve its models, the public keys that validate its seals, and whether
+    the provider declares that it seals every response. A DNS record under the provider's
+    own domain binds that domain to its register entry and to its declared sealing
+    policy, so that a suppressed seal is detectable rather than merely absent. The
+    design follows electronic mail authentication: the seal is patterned on DKIM,
+    the register on SPF, and the declared sealing policy on the published policy record
+    of DMARC.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-flores-airp-provenance-00
+    docid:
+    - id: draft-flores-airp-provenance-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-flores-airp-provenance-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

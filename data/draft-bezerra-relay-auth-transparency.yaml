@@ -19,12 +19,14 @@ abstract:
     by a sender is therefore stripped at every relay hop before reaching the receiver,
     with no error indication. This document identifies this behavior as a protocol
     design vulnerability class -- "relay-transparent authentication stripping" --
-    demonstrates it in three independent protocol stacks (MAVLink v2, ROS2/DDS CDR,
-    and CAN/AUTOSAR SecOC), and specifies the architectural principle that authentication
-    material must be carried as a first- class, independently addressable protocol
-    unit to survive relay transit. Post-quantum cryptographic schemes (ML-DSA-87,
-    ML-KEM-1024) are particularly susceptible due to their large signature and ciphertext
-    sizes.</p>
+    demonstrates it with running code in three independent protocol stacks (MAVLink
+    v2, ROS2/DDS CDR, and CAN/ISO-TP with a SecOC-unaware gateway), and specifies
+    the architectural principle that authentication material must be carried as a
+    first-class, independently addressable protocol unit to survive relay transit.
+    Post-quantum signature sizes push authentication out of fixed fields and so create
+    the precondition systematically; this revision reports three measured cases where
+    they do not, because a transport that refuses to carry the oversized unit produces
+    a loss of availability instead of a silent authentication bypass.</p>
   language:
   - en
   script:
@@ -40,6 +42,16 @@ relation:
       primary: true
     formattedref:
       content: draft-bezerra-relay-auth-transparency-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-bezerra-relay-auth-transparency-01
+    docid:
+    - id: draft-bezerra-relay-auth-transparency-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-bezerra-relay-auth-transparency-01
       format: text/plain
 ext:
   schema-version: v1.0.1

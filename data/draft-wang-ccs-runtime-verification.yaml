@@ -1,0 +1,58 @@
+---
+schema-version: v1.2.3
+id: draft-wang-ccs-runtime-verification
+title:
+- content: A Runtime Verification Receipt Format for Agent Auditing
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-wang-ccs-runtime-verification
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>The Correctover Conformance Shape (CCS) defines a tamper-evident, cryptographically
+    bound receipt format that provides runtime verification for agent tool invocations.
+    Each CCS receipt captures a seven-dimensional verification outcome -- Structure,
+    Schema, Latency, Cost, Identity, Integrity, and Security -- as a single artifact
+    suitable for consumption by audit, compliance, and observability systems. CCS
+    is designed as a pluggable runtime verification infrastructure layer that complements
+    -- but does not replace -- existing and emerging agent protocol work at the IETF.
+    Specifically: (1) the AUDIT effort (draft-kuehlewind-audit-architecture) defines
+    an auditing architecture with Action Record and Authorization Transition Record
+    types; a CCS receipt provides the verifiable, tamper-evident evidence payload
+    that can populate these record types with cryptographically bound proof of runtime
+    governance decisions. (2) The agentproto WG-forming effort (IETF 126 BoF) addresses
+    agent-to- agent and agent-to-tool communication protocols; CCS provides per- invocation,
+    sub-millisecond runtime verification that operates beneath the session/transport
+    layer, complementing protocol-level context exchange with evidence-level integrity
+    guarantees. Version 1.1 of the CCS receipt comprises 29 fields with full Ed25519
+    signature coverage, including three causal chain fields (rule_version, tool_call_id,
+    args_digest) that elevate the Integrity dimension from behavioral traceability
+    to verifiable decision causality. The reference implementation (ccs-verifier v1.1.0,
+    PyPI) passes 154 conformance tests across all verification dimensions. This document
+    specifies the CCS Receipt Schema, the Canonical Configuration model, the nine
+    binding mechanisms, key management, transport requirements, verifier source classification,
+    conformance levels, and negative test cases. CCS is protocol-agnostic: it is not
+    bound to Model Context Protocol (MCP), Agent2Agent (A2A), or any other specific
+    agent protocol, and can be integrated into any runtime that governs tool invocations.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-wang-ccs-runtime-verification-00
+    docid:
+    - id: draft-wang-ccs-runtime-verification-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-wang-ccs-runtime-verification-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
