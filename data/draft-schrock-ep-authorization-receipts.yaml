@@ -26,17 +26,19 @@ abstract:
     global non-replay, comprehension, legality, safety, or execution. Replay prevention
     requires an online atomic consumption store at the executor. The state-machine
     invariants are machine-checked under the assumptions stated in this document.
-    A receipt is evidence, not authorization. This document does not treat a local
-    user interaction as an authorization decision. Section 10.7 of [I-D.klrc-aiagent-auth]
-    states that an agent MUST NOT treat local UI confirmation alone as sufficient
-    authorization, and notes that additional specification or design work may be needed
-    for user confirmation occurring mid-execution, since CIBA accounts only for client
-    initiation. This document defines one evidence artifact that an authorization
-    architecture can use in such a flow: the signed Authorization Context is action-bound
-    confirmation evidence an authorization server MAY validate and bind to the grant
-    it issues. The resulting Trust Receipt records terminal consumption and remains
-    evidence; neither object makes the authorization decision. That decision remains
-    with the authorization server.</p>"
+    This revision names the detailed receipt profile EP-AUTHORIZATION- RECEIPT-v1,
+    requires a pinned CAID mapping profile whenever a relying party compares the action
+    across artifact formats, and defines an optional presentation-binding profile
+    with fail-closed display- unbound, display-mismatch, and display-untrusted results.
+    Presentation evidence binds profile-defined disclosure bytes; it does not establish
+    comprehension or an uncompromised physical display path. A receipt is evidence,
+    not authorization. This document does not treat a local user interaction as an
+    authorization decision. It defines one evidence artifact that an authorization
+    architecture can use in a human-confirmation flow: the signed Authorization Context
+    is action-bound confirmation evidence an authorization server MAY validate and
+    bind to the grant it issues. The resulting Trust Receipt records terminal consumption
+    and remains evidence; neither object makes the authorization decision. That decision
+    remains with the authorization server.</p>"
   language:
   - en
   script:
@@ -142,6 +144,16 @@ relation:
       primary: true
     formattedref:
       content: draft-schrock-ep-authorization-receipts-09
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-schrock-ep-authorization-receipts-10
+    docid:
+    - id: draft-schrock-ep-authorization-receipts-10
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-schrock-ep-authorization-receipts-10
       format: text/plain
 ext:
   schema-version: v1.0.1

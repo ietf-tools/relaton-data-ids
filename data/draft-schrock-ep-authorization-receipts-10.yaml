@@ -1,0 +1,117 @@
+---
+schema-version: v1.2.3
+id: draft-schrock-ep-authorization-receipts-10
+title:
+- content: Authorization Receipts for High-Risk Agent Actions
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-schrock-ep-authorization-receipts-10
+  type: src
+type: standard
+docid:
+- id: draft-schrock-ep-authorization-receipts-10
+  type: Internet-Draft
+  primary: true
+- id: I-D.schrock-ep-authorization-receipts
+  type: IETF
+  scope: anchor
+docnumber: I-D.schrock-ep-authorization-receipts
+date:
+- type: published
+  value: '2026-08-06'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Iman
+          language:
+          - en
+        - language:
+          - en
+          initial: I
+        formatted_initials:
+          content: I.
+          language:
+          - en
+      surname:
+        content: Schrock
+        language:
+        - en
+      completename:
+        content: Iman Schrock
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: EMILIA Protocol, Inc.
+  role:
+  - type: author
+version:
+- draft: '10'
+revdate: '2026-08-06'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>This document defines the EMILIA Protocol (EP) authorization receipt,
+    an evidence artifact binding an enrolled approver key to one canonical action
+    before execution. An approver-held key signs an Authorization Context containing
+    the action hash, policy reference, nonce, audience, and validity window. A Trust
+    Receipt carries the signed contexts, terminal consumption record, and Merkle inclusion
+    material so a relying party can verify the recorded event offline under independently
+    selected log, directory, policy, and approver trust inputs. The receipt establishes
+    only the guarantees of the selected verification profile. The mapping from an
+    enrolled approver identifier to a natural person is asserted by the directory
+    authority. Offline verification does not establish current revocation status,
+    global non-replay, comprehension, legality, safety, or execution. Replay prevention
+    requires an online atomic consumption store at the executor. The state-machine
+    invariants are machine-checked under the assumptions stated in this document.
+    This revision names the detailed receipt profile EP-AUTHORIZATION- RECEIPT-v1,
+    requires a pinned CAID mapping profile whenever a relying party compares the action
+    across artifact formats, and defines an optional presentation-binding profile
+    with fail-closed display- unbound, display-mismatch, and display-untrusted results.
+    Presentation evidence binds profile-defined disclosure bytes; it does not establish
+    comprehension or an uncompromised physical display path. A receipt is evidence,
+    not authorization. This document does not treat a local user interaction as an
+    authorization decision. It defines one evidence artifact that an authorization
+    architecture can use in a human-confirmation flow: the signed Authorization Context
+    is action-bound confirmation evidence an authorization server MAY validate and
+    bind to the grant it issues. The resulting Trust Receipt records terminal consumption
+    and remains evidence; neither object makes the authorization decision. That decision
+    remains with the authorization server.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-schrock-ep-authorization-receipts-01
+    docid:
+    - id: draft-schrock-ep-authorization-receipts-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-schrock-ep-authorization-receipts-01
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-schrock-ep-authorization-receipts-10
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
