@@ -1,0 +1,43 @@
+---
+schema-version: v1.2.3
+id: draft-haynes-nfsv4-flexfiles-v2-delta-writes
+title:
+- content: Delta-Write Extension for the Flexible File Version 2 Layout Type
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-haynes-nfsv4-flexfiles-v2-delta-writes
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>The Flexible File Version 2 pNFS layout type defines a chunk-oriented
+    data-server protocol in which every write is a full-chunk payload. For workloads
+    that make small edits to files protected by an XOR- based erasure encoding, this
+    forces client-side stripe fetch, re- encode, and transmit on every edit, with
+    wire amplification of three to four orders of magnitude per byte edited. This
+    document defines an optional extension, CHUNK_XOR_DELTA, that lets a client transmit
+    a per-projection XOR delta directly to each data server holding a projection of
+    the affected stripe; the data server applies the delta locally. The extension
+    is restricted to XOR-linear systematic encodings and XOR-affine checksums, using
+    the existing chunk state machine with no new commit protocol.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-haynes-nfsv4-flexfiles-v2-delta-writes-00
+    docid:
+    - id: draft-haynes-nfsv4-flexfiles-v2-delta-writes-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-haynes-nfsv4-flexfiles-v2-delta-writes-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
