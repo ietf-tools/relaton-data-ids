@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-bu-agentproto-security-principal-binding-02
+id: draft-bu-agentproto-security-principal-binding-05
 title:
 - content: Security Principal and Verifier Binding for Agent Communication Protocols
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-bu-agentproto-security-principal-binding-02
+- content: https://datatracker.ietf.org/doc/html/draft-bu-agentproto-security-principal-binding-05
   type: src
 type: standard
 docid:
-- id: draft-bu-agentproto-security-principal-binding-02
+- id: draft-bu-agentproto-security-principal-binding-05
   type: Internet-Draft
   primary: true
 - id: I-D.bu-agentproto-security-principal-binding
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.bu-agentproto-security-principal-binding
 date:
 - type: published
-  value: '2026-07-05'
+  value: '2026-08-09'
 contributor:
 - person:
     name:
@@ -49,8 +49,8 @@ contributor:
   role:
   - type: author
 version:
-- draft: '02'
-revdate: '2026-07-05'
+- draft: '05'
+revdate: '2026-08-09'
 language:
 - en
 script:
@@ -73,7 +73,12 @@ abstract:
     inherited mechanisms, and architectural assumptions. The document is protocol-neutral.
     It is intended to help compare candidate agent communication drafts and to provide
     security-considerations and requirements text for agent session and delegation
-    binding.</p>"
+    binding. The document also defines row-outcome semantics and dependency- closure
+    rules for composed mappings. These rules prevent a composite result from becoming
+    stronger than its verified inputs, distinguish failed checks, unsupported verifier
+    capabilities, checks skipped after a failed prerequisite, and unavailable or ambiguous
+    inputs, propagate transitive dependency failures, and make cyclic, stale, downgraded,
+    or revision-incoherent dependencies visible to reviewers.</p>"
   language:
   - en
   script:
@@ -90,16 +95,6 @@ relation:
     formattedref:
       content: draft-bu-agentproto-security-principal-binding-00
       format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-bu-agentproto-security-principal-binding-05
-    docid:
-    - id: draft-bu-agentproto-security-principal-binding-05
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-bu-agentproto-security-principal-binding-05
-      format: text/plain
 series:
 - type: main
   title:
@@ -109,7 +104,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-bu-agentproto-security-principal-binding-02
+  number: draft-bu-agentproto-security-principal-binding-05
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

@@ -30,7 +30,12 @@ abstract:
     inherited mechanisms, and architectural assumptions. The document is protocol-neutral.
     It is intended to help compare candidate agent communication drafts and to provide
     security-considerations and requirements text for agent session and delegation
-    binding.</p>"
+    binding. The document also defines row-outcome semantics and dependency- closure
+    rules for composed mappings. These rules prevent a composite result from becoming
+    stronger than its verified inputs, distinguish failed checks, unsupported verifier
+    capabilities, checks skipped after a failed prerequisite, and unavailable or ambiguous
+    inputs, propagate transitive dependency failures, and make cyclic, stale, downgraded,
+    or revision-incoherent dependencies visible to reviewers.</p>"
   language:
   - en
   script:
@@ -86,6 +91,16 @@ relation:
       primary: true
     formattedref:
       content: draft-bu-agentproto-security-principal-binding-04
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-bu-agentproto-security-principal-binding-05
+    docid:
+    - id: draft-bu-agentproto-security-principal-binding-05
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-bu-agentproto-security-principal-binding-05
       format: text/plain
 ext:
   schema-version: v1.0.1

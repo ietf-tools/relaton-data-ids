@@ -1,34 +1,34 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-anima-masa-considerations-00
+id: draft-ietf-quic-reliable-stream-reset-10
 title:
-- content: Operational Considerations for Voucher infrastructure for BRSKI MASA
+- content: QUIC Stream Resets with Partial Delivery
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-anima-masa-considerations-00
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-quic-reliable-stream-reset-10
   type: src
 type: standard
 docid:
-- id: draft-ietf-anima-masa-considerations-00
+- id: draft-ietf-quic-reliable-stream-reset-10
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-anima-masa-considerations
+- id: I-D.ietf-quic-reliable-stream-reset
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-anima-masa-considerations
+docnumber: I-D.ietf-quic-reliable-stream-reset
 date:
 - type: published
-  value: '2025-06-25'
+  value: '2026-08-09'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Michael
+        - content: Marten
           language:
           - en
         - language:
@@ -39,75 +39,72 @@ contributor:
           language:
           - en
       surname:
-        content: Richardson
+        content: Seemann
         language:
         - en
       completename:
-        content: Michael Richardson
+        content: Marten Seemann
         language:
         - en
-    affiliation:
-    - organization:
-        name:
-        - content: Sandelman Software Works
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Wei
+        - content: Kazuho
           language:
           - en
         - language:
           - en
-          initial: W
+          initial: K
         formatted_initials:
-          content: W.
+          content: K.
           language:
           - en
       surname:
-        content: Pan
+        content: Oku
         language:
         - en
       completename:
-        content: Wei Pan
+        content: Kazuho Oku
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei Technologies
+        - content: Fastly
   role:
   - type: author
 version:
-- draft: '00'
-revdate: '2025-06-25'
+- draft: '10'
+revdate: '2026-08-09'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document describes a number of operational modes that a BRSKI
-    Manufacturer Authorized Signing Authority (MASA) may take on. Each mode is defined,
-    and then each mode is given a relevance within an over applicability of what kind
-    of organization the MASA is deployed into. This document does not change any protocol
-    mechanisms.</p>"
+- content: "<p>QUIC defines a RESET_STREAM frame to abort sending on a stream. When
+    a sender resets a stream, it also stops retransmitting STREAM frames for this
+    stream in the event of packet loss. On the receiving side, there is no guarantee
+    that any data sent on that stream is delivered. This document defines a new QUIC
+    frame, the RESET_STREAM_AT frame, that allows resetting a stream, while guaranteeing
+    delivery of stream data up to a certain byte offset.</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-ietf-anima-masa-considerations-03
+    id: draft-ietf-quic-reliable-stream-reset-08
     docid:
-    - id: draft-ietf-anima-masa-considerations-03
+    - id: draft-ietf-quic-reliable-stream-reset-08
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-anima-masa-considerations-03
+      content: draft-ietf-quic-reliable-stream-reset-08
       format: text/plain
 series:
 - type: main
@@ -118,7 +115,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-anima-masa-considerations-00
+  number: draft-ietf-quic-reliable-stream-reset-10
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
