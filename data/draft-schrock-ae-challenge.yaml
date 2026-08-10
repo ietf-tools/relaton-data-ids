@@ -28,7 +28,10 @@ abstract:
     The core therefore defines optional retry timing with per-challenge jitter, and
     the HTTP binding maps its lower bound to Retry-After. Retry timing controls presentation
     attempts only; it does not authorize the action or make an uncertain action safe
-    to repeat.</p>"
+    to repeat. Single-use processing also places state on the refusal path. The core
+    therefore requires bounded outstanding and replay state, fail- closed behavior
+    when state cannot be claimed, and retention of live replay records until they
+    are no longer security-relevant.</p>"
   language:
   - en
   script:
@@ -84,6 +87,16 @@ relation:
       primary: true
     formattedref:
       content: draft-schrock-ae-challenge-04
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-schrock-ae-challenge-05
+    docid:
+    - id: draft-schrock-ae-challenge-05
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-schrock-ae-challenge-05
       format: text/plain
 ext:
   schema-version: v1.0.1

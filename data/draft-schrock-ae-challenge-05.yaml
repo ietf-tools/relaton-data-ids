@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-schrock-ae-challenge-04
+id: draft-schrock-ae-challenge-05
 title:
 - content: An Authorization Evidence Challenge for High-Risk Agent Actions
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-schrock-ae-challenge-04
+- content: https://datatracker.ietf.org/doc/html/draft-schrock-ae-challenge-05
   type: src
 type: standard
 docid:
-- id: draft-schrock-ae-challenge-04
+- id: draft-schrock-ae-challenge-05
   type: Internet-Draft
   primary: true
 - id: I-D.schrock-ae-challenge
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.schrock-ae-challenge
 date:
 - type: published
-  value: '2026-08-09'
+  value: '2026-08-10'
 contributor:
 - person:
     name:
@@ -53,8 +53,8 @@ contributor:
   role:
   - type: author
 version:
-- draft: '04'
-revdate: '2026-08-09'
+- draft: '05'
+revdate: '2026-08-10'
 language:
 - en
 script:
@@ -75,7 +75,10 @@ abstract:
     The core therefore defines optional retry timing with per-challenge jitter, and
     the HTTP binding maps its lower bound to Retry-After. Retry timing controls presentation
     attempts only; it does not authorize the action or make an uncertain action safe
-    to repeat.</p>"
+    to repeat. Single-use processing also places state on the refusal path. The core
+    therefore requires bounded outstanding and replay state, fail- closed behavior
+    when state cannot be claimed, and retention of live replay records until they
+    are no longer security-relevant.</p>"
   language:
   - en
   script:
@@ -92,16 +95,6 @@ relation:
     formattedref:
       content: draft-schrock-ae-challenge-03
       format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-schrock-ae-challenge-05
-    docid:
-    - id: draft-schrock-ae-challenge-05
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-schrock-ae-challenge-05
-      format: text/plain
 series:
 - type: main
   title:
@@ -111,7 +104,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-schrock-ae-challenge-04
+  number: draft-schrock-ae-challenge-05
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

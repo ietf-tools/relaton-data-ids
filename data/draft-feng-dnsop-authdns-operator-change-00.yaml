@@ -1,0 +1,204 @@
+---
+schema-version: v1.2.3
+id: draft-feng-dnsop-authdns-operator-change-00
+title:
+- content: Operational Guidance for Authoritative DNS Operator Changes with Service
+    Endpoint Migration for Registered Domain Names
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-feng-dnsop-authdns-operator-change-00
+  type: src
+type: standard
+docid:
+- id: draft-feng-dnsop-authdns-operator-change-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.feng-dnsop-authdns-operator-change
+  type: IETF
+  scope: anchor
+docnumber: I-D.feng-dnsop-authdns-operator-change
+date:
+- type: published
+  value: '2026-08-10'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Yuming
+          language:
+          - en
+        - language:
+          - en
+          initial: "Y"
+        formatted_initials:
+          content: Y.
+          language:
+          - en
+      surname:
+        content: Feng
+        language:
+        - en
+      completename:
+        content: Yuming Feng
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Pengcheng Laboratory
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - language:
+          - en
+          initial: "Y"
+        formatted_initials:
+          content: Y.
+          language:
+          - en
+      surname:
+        content: Zhang
+        language:
+        - en
+      completename:
+        content: Yu Zhang
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Harbin Institute of Technology
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - language:
+          - en
+          initial: D
+        formatted_initials:
+          content: D.
+          language:
+          - en
+      surname:
+        content: Ma
+        language:
+        - en
+      completename:
+        content: Di Ma
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: ZDNS
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Weizhe
+          language:
+          - en
+        - language:
+          - en
+          initial: W
+        formatted_initials:
+          content: W.
+          language:
+          - en
+      surname:
+        content: Zhang
+        language:
+        - en
+      completename:
+        content: Weizhe Zhang
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Harbin Institute of Technology
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Rongwei
+          language:
+          - en
+        - language:
+          - en
+          initial: R
+        formatted_initials:
+          content: R.
+          language:
+          - en
+      surname:
+        content: Yang
+        language:
+        - en
+      completename:
+        content: Rongwei Yang
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Pengcheng Laboratory
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-08-10'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>A registered domain name can change its authoritative DNS operator
+    while the registrant also migrates service endpoints, such as web, API, CDN, mail,
+    or cloud-hosted services. In this situation, service RRsets such as A, AAAA, CNAME,
+    MX, SRV, SVCB, and HTTPS RRsets can change at the same time as the parent-side
+    delegation changes. The parent-side delegation change is not observed by all recursive
+    resolvers at the same instant. During the transition, some resolvers can continue
+    to query the losing DNS operator while others query the gaining DNS operator.
+    If the losing operator continues to serve stale service RRsets, or if it stops
+    serving the zone too early, users can receive different answers depending on resolver
+    cache state and can experience intermittent service failure. This document provides
+    operational guidance for authoritative DNS operator changes with service endpoint
+    migration for registered domain names. It recommends a registrant-authorized change
+    plan, a consistency profile for in-scope service RRsets, synchronized provisioning
+    or a common source of truth, a hold period during which the losing DNS operator
+    continues to serve target or otherwise equivalent data, and verification points
+    that directly compare the losing and gaining authoritative servers and classify
+    observed states as planned, service-risk, or unexpected-delegation conditions.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-feng-dnsop-authdns-operator-change-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
