@@ -1,0 +1,115 @@
+---
+schema-version: v1.2.3
+id: draft-schrock-ae-challenge-07
+title:
+- content: An Authorization Evidence Challenge for High-Risk Agent Actions
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-schrock-ae-challenge-07
+  type: src
+type: standard
+docid:
+- id: draft-schrock-ae-challenge-07
+  type: Internet-Draft
+  primary: true
+- id: I-D.schrock-ae-challenge
+  type: IETF
+  scope: anchor
+docnumber: I-D.schrock-ae-challenge
+date:
+- type: published
+  value: '2026-08-10'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Iman
+          language:
+          - en
+        - language:
+          - en
+          initial: I
+        formatted_initials:
+          content: I.
+          language:
+          - en
+      surname:
+        content: Schrock
+        language:
+        - en
+      completename:
+        content: Iman Schrock
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: EMILIA Protocol, Inc.
+  role:
+  - type: author
+version:
+- draft: '07'
+revdate: '2026-08-10'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>When a relying party refuses a consequential agent action because authorization
+    evidence is missing, stale, or unverifiable, the agent needs a machine-readable
+    description of what remains necessary. This document defines a transport-neutral
+    Authorization Evidence Challenge data model bound to the relying party's exact
+    action. The challenge identifies outstanding evidence requirements, freshness
+    and status constraints, acceptable presentation profiles, and retry state. It
+    authorizes nothing, transfers no admission ownership, and provides no promise
+    that a later request will execute. The document also defines an HTTP challenge-response
+    carrier using 403 Forbidden and RFC 9457 Problem Details, and describes an informative
+    gateway-handoff illustration for DMSC-style federation. The gateway illustration
+    communicates evidence requirements; it does not solve conserved admission or double-admission
+    across independently operated gateways. A challenge can synchronize corrected
+    retries and amplify load. The core therefore defines optional retry timing with
+    per-challenge jitter, and the HTTP carrier maps its lower bound to Retry-After.
+    Retry timing controls presentation attempts only; it does not authorize the action
+    or make an uncertain action safe to repeat. Single-use processing also places
+    state on the refusal path. The core therefore requires bounded outstanding and
+    replay state, fail- closed behavior when state cannot be claimed, and retention
+    of live replay records until they are no longer security-relevant. Nonce claim
+    and refusal-path capacity reservation are one atomic owner-side transition before
+    native evidence verification, and a binding capacity refusal reveals no remaining
+    evidence requirements. In a sharded replay domain, only the authoritative owner
+    can classify a nonce as already claimed; inability to reach that owner is unavailability,
+    not replay.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-schrock-ae-challenge-03
+    docid:
+    - id: draft-schrock-ae-challenge-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-schrock-ae-challenge-03
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-schrock-ae-challenge-07
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

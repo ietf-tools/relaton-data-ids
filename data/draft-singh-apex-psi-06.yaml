@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-singh-apex-psi-06
 title:
-- content: 'PSI-06: Supply Chain Provenance'
+- content: 'PSI-06: Inception-Lock Protocol for Human-Originated Data Signals'
   language:
   - en
   script:
@@ -14,9 +14,15 @@ docid:
   primary: true
 abstract:
 - content: "<p>PSI-06 specifies an inception-lock protocol that cryptographically
-    anchors a raw human-originated data signal (keystroke, biometric, survey response)
-    to an Ed25519 signing key within 10 ms of generation. The protocol prevents tampering
-    with source data between capture and submission.</p>"
+    anchors a raw human-originated data signal (keystroke, biometric, survey response,
+    application screen capture, trip acceptance timestamp) to a signing key at the
+    point of capture. The protocol prevents tampering with source data between capture
+    and submission, enabling verifiable proof of what a user was shown and when they
+    saw it. Receipts are protected by a hybrid dual-signature scheme combining Ed25519
+    (classical) and ML-DSA-65 (post-quantum), making the evidence chain resistant
+    to both classical and quantum adversaries. This is critical for accountability
+    proceedings involving algorithmic platforms, where the information displayed to
+    the user may differ from the information recorded by the platform.</p>"
   language:
   - en
   script:
@@ -32,6 +38,16 @@ relation:
       primary: true
     formattedref:
       content: draft-singh-apex-psi-06-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-singh-apex-psi-06-01
+    docid:
+    - id: draft-singh-apex-psi-06-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-singh-apex-psi-06-01
       format: text/plain
 ext:
   schema-version: v1.0.1
