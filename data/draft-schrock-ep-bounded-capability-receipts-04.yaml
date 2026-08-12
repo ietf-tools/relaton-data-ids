@@ -1,0 +1,108 @@
+---
+schema-version: v1.2.3
+id: draft-schrock-ep-bounded-capability-receipts-04
+title:
+- content: Bounded Capability Receipts and Durable Spend Control for Agent Actions
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-schrock-ep-bounded-capability-receipts-04
+  type: src
+type: standard
+docid:
+- id: draft-schrock-ep-bounded-capability-receipts-04
+  type: Internet-Draft
+  primary: true
+- id: I-D.schrock-ep-bounded-capability-receipts
+  type: IETF
+  scope: anchor
+docnumber: I-D.schrock-ep-bounded-capability-receipts
+date:
+- type: published
+  value: '2026-08-11'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Iman
+          language:
+          - en
+        - language:
+          - en
+          initial: I
+        formatted_initials:
+          content: I.
+          language:
+          - en
+      surname:
+        content: Schrock
+        language:
+        - en
+      completename:
+        content: Iman Schrock
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: EMILIA Protocol, Inc.
+  role:
+  - type: author
+version:
+- draft: '04'
+revdate: '2026-08-11'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>Agents sometimes need bounded authority to perform more than one consequential
+    action without obtaining a new human approval for every operation. A signed token
+    alone cannot enforce a shared budget across replicas, survive retries safely,
+    or distinguish an operation that never crossed an effect boundary from one whose
+    outcome is unknown. This document defines a bounded capability receipt and a durable
+    reserve-execute-commit protocol. The receipt binds an issuance authorization,
+    a closed action scope, a budget with explicit units, a holder proof, an expiry,
+    and any parent capability. The state protocol atomically refuses overspend and
+    operation-key replay, fences concurrent owners, and charges an indeterminate operation
+    when an external effect may have occurred. Delegation transfers rather than copies
+    authority: all direct child allocations are funded by committed parent operations
+    before child registration, and their aggregate cannot exceed the parent balance
+    within one authoritative atomic state domain. It also defines narrowing-only delegation,
+    explicit revocation inheritance for delegated authority, and evidence interfaces.
+    It does not make a bearer token into human approval, does not provide cross-domain
+    or offline global double-spend prevention, and does not claim that an authorized
+    action was safe, lawful, or successfully executed.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-schrock-ep-bounded-capability-receipts-03
+    docid:
+    - id: draft-schrock-ep-bounded-capability-receipts-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-schrock-ep-bounded-capability-receipts-03
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-schrock-ep-bounded-capability-receipts-04
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

@@ -21,8 +21,8 @@ abstract:
     reserve-execute-commit protocol. The receipt binds an issuance authorization,
     a closed action scope, a budget with explicit units, a holder proof, an expiry,
     and any parent capability. The state protocol atomically refuses overspend and
-    replay, fences concurrent owners, and charges an indeterminate operation when
-    an external effect may have occurred. Delegation transfers rather than copies
+    operation-key replay, fences concurrent owners, and charges an indeterminate operation
+    when an external effect may have occurred. Delegation transfers rather than copies
     authority: all direct child allocations are funded by committed parent operations
     before child registration, and their aggregate cannot exceed the parent balance
     within one authoritative atomic state domain. It also defines narrowing-only delegation,
@@ -75,6 +75,16 @@ relation:
       primary: true
     formattedref:
       content: draft-schrock-ep-bounded-capability-receipts-03
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-schrock-ep-bounded-capability-receipts-04
+    docid:
+    - id: draft-schrock-ep-bounded-capability-receipts-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-schrock-ep-bounded-capability-receipts-04
       format: text/plain
 ext:
   schema-version: v1.0.1
