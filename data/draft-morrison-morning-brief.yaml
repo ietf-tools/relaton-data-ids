@@ -23,7 +23,7 @@ abstract:
     individual observation; the last of these is forbidden on the wire and rejected
     at the grammar level. Readers present a capability token scoped by (category,
     provenance_class) that gates release BEFORE payload emission, not after. The payload
-    is envelope-signed with COSE_Sign1 [RFC8152] over a JCS-canonicalised [RFC8785]
+    is envelope-signed with COSE_Sign1 [RFC9052] over a JCS-canonicalised [RFC8785]
     representation, bound to the issuer's Sovereign-tier handle per [IDCOMMITS]. Briefs
     carry a mandatory not_after (default 24h) and reference a revocation endpoint
     discovered via DNS TXT per [MCPDNS]. The document defines the wire format only;
@@ -43,6 +43,16 @@ relation:
       primary: true
     formattedref:
       content: draft-morrison-morning-brief-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-morrison-morning-brief-01
+    docid:
+    - id: draft-morrison-morning-brief-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-morrison-morning-brief-01
       format: text/plain
 ext:
   schema-version: v1.0.1
