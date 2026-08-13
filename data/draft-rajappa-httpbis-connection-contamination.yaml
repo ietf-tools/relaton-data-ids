@@ -1,0 +1,67 @@
+---
+schema-version: v1.2.3
+id: draft-rajappa-httpbis-connection-contamination
+title:
+- content: Mitigating HTTP/3 Connection Contamination in Multi-Tenant and CDN-Fronted
+    Deployments
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-rajappa-httpbis-connection-contamination
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: <p>HTTP/3 [RFC9114] clients commonly reuse ("coalesce") an existing QUIC
+    [RFC9000] connection for requests to a second origin when the TLS certificate
+    presented on that connection is also valid for the second origin, even though
+    the two origins may route to entirely different backends. This document describes
+    "connection contamination," a class of security exposure that arises when a routing
+    layer -- reverse proxy, load balancer, or CDN edge -- determines backend routing
+    using a signal established at connection setup rather than re-validated per request.
+    Under that condition, a coalesced connection can be used to reach an unintended
+    backend origin, potentially enabling cross-tenant data leakage, authentication
+    bypass, and response-queue interference analogous to HTTP request smuggling. This
+    document defines the underlying mechanism, characterizes the attacker model, distinguishes
+    connection contamination from related QUIC exposures, and provides normative operational
+    guidance for implementers and operators of HTTP/3-terminating infrastructure.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-rajappa-httpbis-connection-contamination-00
+    docid:
+    - id: draft-rajappa-httpbis-connection-contamination-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-rajappa-httpbis-connection-contamination-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-rajappa-httpbis-connection-contamination-01
+    docid:
+    - id: draft-rajappa-httpbis-connection-contamination-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-rajappa-httpbis-connection-contamination-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-rajappa-httpbis-connection-contamination-02
+    docid:
+    - id: draft-rajappa-httpbis-connection-contamination-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-rajappa-httpbis-connection-contamination-02
+      format: text/plain
+ext:
+  schema-version: v1.0.1
