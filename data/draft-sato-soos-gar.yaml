@@ -32,7 +32,18 @@ abstract:
     specification for OTel-to-SAR pipeline construction with Session Block Merkle
     integrity (Section 14), four new Authority Lifecycle Events (ALE-NEW-01 through
     ALE-NEW-04), three mandatory provenance fields on Cedar evaluation records, and
-    the XPID mirror field on ACD session ALEs.</p>"
+    the XPID mirror field on ACD session ALEs. Version -04 makes the Session Block
+    construction rules of Section 14.3 fully explicit and implementation-independent,
+    closing three ambiguities found during independent interop verification at the
+    IETF 126 Hackathon: the exact soos.gar.prev_span_hash formula (Section 2), the
+    requirement that Merkle leaf computation occur over the canonical (RFC 8785 JCS)
+    serialization of the event delta record with block_id already attached, and that
+    Merkle parent nodes combine raw digest bytes rather than hex-encoded text. Version
+    -04 also resolves OQ-OTEL-03 (Section 14.6) and adds Security Considerations entry
+    S.15.d documenting the Layer 1 / Layer 2 tamper-detection coverage asymmetry as
+    an intentional, named property of the design rather than a silent gap. No new
+    fields, attributes, or ALE types are introduced in -04; all changes make existing
+    -03 normative language explicit.</p>"
   language:
   - en
   script:
@@ -78,6 +89,16 @@ relation:
       primary: true
     formattedref:
       content: draft-sato-soos-gar-03
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-sato-soos-gar-04
+    docid:
+    - id: draft-sato-soos-gar-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-sato-soos-gar-04
       format: text/plain
 ext:
   schema-version: v1.0.1

@@ -29,7 +29,20 @@ abstract:
     class), and attestation channel binding (CVE-2026-33697 class). This document
     is the reference specification for the KIA RATS WG presentation at IETF 126 Vienna.
     The XPID primitive and the CVE-2026-33697 attestation channel binding defense
-    are the primary novel contributions presented to the RATS WG.</p>"
+    are the primary novel contributions presented to the RATS WG. Version -04 corrects
+    a registry-format mismatch identified by IANA early review (#1456067): the Section
+    16 request to register XPID_DERIVED and XPID_VERIFICATION_FAILED into the GAR
+    Authority Lifecycle Event Types Registry [I-D.sato-soos-gar] now uses that registry's
+    actual column set (Event Type, Class, Reference) and assigns both entries the
+    newly-defined Class ID (Identity/ Federation event). No new event types, fields,
+    or normative behavior are introduced in -04; this is a registration-format correction
+    only. Version -05 discloses a known open issue found by a WIMSE security review
+    checklist dry-run against -03 (DR-MJWT-KIA-CHECKLIST-01, Finding 4): Section 6.3's
+    Cross-Instance Trust Model verifies an XPID but does not restrict which federation
+    participants can see the underlying Evidence in the first place. This is named
+    as OQ-KIA-EVIDENCE-VIS (Sections 6.6, 14.4, 15.12), following the same acknowledge-rather-than-silently-omit
+    pattern this document already uses for OQ-S-XPID-REV. No mechanism is specified
+    in -05; resolution is deferred, consistent with how OQ-S-XPID-REV is treated.</p>"
   language:
   - en
   script:
@@ -75,6 +88,26 @@ relation:
       primary: true
     formattedref:
       content: draft-sato-soos-kia-03
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-sato-soos-kia-04
+    docid:
+    - id: draft-sato-soos-kia-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-sato-soos-kia-04
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-sato-soos-kia-05
+    docid:
+    - id: draft-sato-soos-kia-05
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-sato-soos-kia-05
       format: text/plain
 ext:
   schema-version: v1.0.1

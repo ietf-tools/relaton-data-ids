@@ -1,0 +1,117 @@
+---
+schema-version: v1.2.3
+id: draft-sato-soos-kia-05
+title:
+- content: Kernel Identity and Attestation for Governing Enforcement Components
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-sato-soos-kia-05
+  type: src
+type: standard
+docid:
+- id: draft-sato-soos-kia-05
+  type: Internet-Draft
+  primary: true
+- id: I-D.sato-soos-kia
+  type: IETF
+  scope: anchor
+docnumber: I-D.sato-soos-kia
+date:
+- type: published
+  value: '2026-08-13'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Tom
+          language:
+          - en
+        formatted_initials:
+          language:
+          - en
+      surname:
+        content: Sato
+        language:
+        - en
+      completename:
+        content: Tom Sato
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: MyAuberge K.K.
+  role:
+  - type: author
+version:
+- draft: '05'
+revdate: '2026-08-13'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>This document specifies the Kernel Identity and Attestation (KIA) protocol
+    for the Sovereign Object OS (SOOS) governance architecture. KIA defines the cryptographic
+    identity of the GEC, the trust chain anchoring kernel authority from hardware
+    root through operator root keypair to every signed Event Log entry, the GEC Manifest
+    schema for runtime state attestation, and the Revocation Registry maintenance
+    requirements. KIA is the Layer 0 signing and attestation component on which the
+    audit trail guarantees of draft-sato-soos-gar, the mandate enforcement guarantees
+    of draft-sato-soos-mjwt, and the multi-agent delegation chain of draft-sato-soos-mad
+    all depend. Version -03 adds FROST threshold signing for high-availability GEC
+    keypair deployments, the Cross-Principal Identifier (XPID) for cross-instance
+    federation audit correlation, the XPID cross- instance trust model, and four new
+    Security Considerations (Sections 14.8 through 14.11) addressing FROST nonce reuse,
+    XPID revocation gap, identity takeover via claimed identifier (CVE-2025- 13609
+    class), and attestation channel binding (CVE-2026-33697 class). This document
+    is the reference specification for the KIA RATS WG presentation at IETF 126 Vienna.
+    The XPID primitive and the CVE-2026-33697 attestation channel binding defense
+    are the primary novel contributions presented to the RATS WG. Version -04 corrects
+    a registry-format mismatch identified by IANA early review (#1456067): the Section
+    16 request to register XPID_DERIVED and XPID_VERIFICATION_FAILED into the GAR
+    Authority Lifecycle Event Types Registry [I-D.sato-soos-gar] now uses that registry's
+    actual column set (Event Type, Class, Reference) and assigns both entries the
+    newly-defined Class ID (Identity/ Federation event). No new event types, fields,
+    or normative behavior are introduced in -04; this is a registration-format correction
+    only. Version -05 discloses a known open issue found by a WIMSE security review
+    checklist dry-run against -03 (DR-MJWT-KIA-CHECKLIST-01, Finding 4): Section 6.3's
+    Cross-Instance Trust Model verifies an XPID but does not restrict which federation
+    participants can see the underlying Evidence in the first place. This is named
+    as OQ-KIA-EVIDENCE-VIS (Sections 6.6, 14.4, 15.12), following the same acknowledge-rather-than-silently-omit
+    pattern this document already uses for OQ-S-XPID-REV. No mechanism is specified
+    in -05; resolution is deferred, consistent with how OQ-S-XPID-REV is treated.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-sato-soos-kia-01
+    docid:
+    - id: draft-sato-soos-kia-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-sato-soos-kia-01
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-sato-soos-kia-05
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
