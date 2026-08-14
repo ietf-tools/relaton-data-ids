@@ -1,0 +1,90 @@
+---
+schema-version: v1.2.3
+id: draft-srivastava-websocket-pmce-state-reset-00
+title:
+- content: Compression Context State After Refused Messages in WebSocket Per-Message
+    Compression
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-srivastava-websocket-pmce-state-reset-00
+  type: src
+type: standard
+docid:
+- id: draft-srivastava-websocket-pmce-state-reset-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.srivastava-websocket-pmce-state-reset
+  type: IETF
+  scope: anchor
+docnumber: I-D.srivastava-websocket-pmce-state-reset
+date:
+- type: published
+  value: '2026-08-13'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Aviral
+          language:
+          - en
+        - language:
+          - en
+          initial: A
+        formatted_initials:
+          content: A.
+          language:
+          - en
+      surname:
+        content: Srivastava
+        language:
+        - en
+      completename:
+        content: Aviral Srivastava
+        language:
+        - en
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-08-13'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: <p>RFC 7692 defines Per-Message Compression Extensions for the WebSocket
+    Protocol, including the "permessage-deflate" extension. When context takeover
+    is in effect, the LZ77 sliding window is retained across messages, so the decompression
+    of one message can depend on the plaintext of earlier messages. RFC 7692 does
+    not state what the sliding window contains after a message has been successfully
+    decompressed but subsequently refused by a check applied to the decompressed plaintext,
+    such as UTF-8 validation, a payload size limit, or an application-level policy.
+    An implementation that retains the refused plaintext in the window violates no
+    stated requirement, yet the content of a refused message can then influence the
+    decompression of a later message that is accepted. This document describes the
+    gap, contrasts it with the corresponding situation in QPACK where RFC 9204 specifies
+    the required behavior, and recommends behavior for implementations. It defines
+    no new protocol element and updates no existing specification.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-srivastava-websocket-pmce-state-reset-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

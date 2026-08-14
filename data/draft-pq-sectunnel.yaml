@@ -1,0 +1,44 @@
+---
+schema-version: v1.2.3
+id: draft-pq-sectunnel
+title:
+- content: PQ-SecTunnel Protocol Specification
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-pq-sectunnel
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This document specifies the PQ-SecTunnel protocol, a UDP-based quantum-resistant
+    IP tunnel derived from the WireGuard architecture. Session keys are established
+    by a three-message Noise_IKpsk1kem handshake that replaces Diffie-Hellman with
+    dual Key Encapsulation Mechanism (KEM) operations (static and ephemeral). Authentication
+    is implicit: peers prove possession of long-term KEM private keys through interlocking
+    encapsulations rather than signing the transcript. The protocol is organized as
+    a multi-suite framework. Implementations MAY select ML-KEM-512 or ML-KEM-768 independently
+    for the static and ephemeral KEM roles. This document RECOMMENDS the profile static=ML-KEM-512,
+    ephemeral=ML-KEM-768, AEAD=SM4-GCM, Hash=SM3 (denoted mlkem512-mlkem768-sm4gcm-sm3).
+    Other ML-KEM combinations with the same AEAD/Hash, and additional KEM families
+    such as Aigis-enc (integration ongoing), are optional profiles.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-pq-sectunnel-00
+    docid:
+    - id: draft-pq-sectunnel-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-pq-sectunnel-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

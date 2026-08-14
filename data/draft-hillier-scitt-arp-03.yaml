@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-hillier-scitt-arp-02
+id: draft-hillier-scitt-arp-03
 title:
 - content: Attestation Reconciliation Protocol
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-hillier-scitt-arp-02
+- content: https://datatracker.ietf.org/doc/html/draft-hillier-scitt-arp-03
   type: src
 type: standard
 docid:
-- id: draft-hillier-scitt-arp-02
+- id: draft-hillier-scitt-arp-03
   type: Internet-Draft
   primary: true
 - id: I-D.hillier-scitt-arp
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.hillier-scitt-arp
 date:
 - type: published
-  value: '2026-08-08'
+  value: '2026-08-13'
 contributor:
 - person:
     name:
@@ -53,8 +53,8 @@ contributor:
   role:
   - type: author
 version:
-- draft: '02'
-revdate: '2026-08-08'
+- draft: '03'
+revdate: '2026-08-13'
 language:
 - en
 script:
@@ -71,17 +71,20 @@ abstract:
     principal binding -- projects the claim through register-specific controlled projection
     functions producing the nearest permitted ancestor predicate supported by each
     addressed register, transmits register-specific ciphertexts, receives partial
-    attestations whose payload discloses only a verdict and an optional divergence
-    axis, aggregates the partial attestations through either homomorphic or hash-linkage
-    aggregation, and seals the resulting reconciliation output against a policy-version
-    hash. An append-only cross-jurisdictional settlement- layer ledger records only
-    hashes, with no content. The protocol supports retroactive re-evaluation of historical
-    reconciliations under updated pattern libraries or policy versions without bilateral
-    renegotiation, and a cryptographic-primitive-upgrade path including post-quantum
-    primitives. This revision adds agentic-principal reconciliation, requester identity
-    binding, alignment with HTTP Message Signatures and COSE Receipts, and composition
-    of heterogeneous agent-action accountability attestations into a single producer-agnostic
-    reconciled verdict evaluated at decision time.</p>"
+    attestations whose payload discloses, of the subject, only a verdict, an optional
+    divergence axis, the applied profile parameters and a query binding digest, aggregates
+    those attestations under a verdict arithmetic the deployment's policy resolves,
+    committing each register's contribution to a Merkle tree, and seals the resulting
+    reconciliation output against a policy- version hash. An append-only cross-jurisdictional
+    settlement-layer ledger records digests and structural metadata, with no claim,
+    register-record or principal content. The protocol supports retroactive re-evaluation
+    of historical reconciliations under updated pattern libraries or policy versions
+    without bilateral renegotiation, and a cryptographic-primitive-upgrade path including
+    post-quantum primitives. This revision adds a normative binding to the SCITT Reference
+    APIs, register data-format profiles for beneficial- ownership, corporate-registry,
+    customs and consolidated-sanctions formats, and a source-data version binding
+    that makes a change in a historical verdict attributable to a change in policy
+    or to a change in the underlying published corpus.</p>"
   language:
   - en
   script:
@@ -98,16 +101,6 @@ relation:
     formattedref:
       content: draft-hillier-scitt-arp-01
       format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-hillier-scitt-arp-03
-    docid:
-    - id: draft-hillier-scitt-arp-03
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-hillier-scitt-arp-03
-      format: text/plain
 series:
 - type: main
   title:
@@ -117,7 +110,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-hillier-scitt-arp-02
+  number: draft-hillier-scitt-arp-03
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
