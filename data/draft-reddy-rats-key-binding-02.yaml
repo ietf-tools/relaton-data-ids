@@ -1,84 +1,83 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-bfd-rfc5884-bis-00
+id: draft-reddy-rats-key-binding-02
 title:
-- content: Bidirectional Forwarding Detection (BFD) for MPLS Label Switched Paths
-    (LSPs)
+- content: Key Attestation for Entity Attestation Tokens (EAT)
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-bfd-rfc5884-bis-00
+- content: https://datatracker.ietf.org/doc/html/draft-reddy-rats-key-binding-02
   type: src
 type: standard
 docid:
-- id: draft-ietf-bfd-rfc5884-bis-00
+- id: draft-reddy-rats-key-binding-02
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-bfd-rfc5884-bis
+- id: I-D.reddy-rats-key-binding
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-bfd-rfc5884-bis
+docnumber: I-D.reddy-rats-key-binding
 date:
 - type: published
-  value: '2026-06-18'
+  value: '2026-08-15'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Rahul
+        - content: Tirumaleswar
           language:
           - en
         - language:
           - en
-          initial: R
+          initial: T
         formatted_initials:
-          content: R.
+          content: T.
           language:
           - en
       surname:
-        content: Aggarwal
+        content: Reddy.K
         language:
         - en
       completename:
-        content: Rahul Aggarwal
+        content: Tirumaleswar Reddy.K
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Juniper Networks
+        - content: Nokia
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Kireeti
+        - content: Hannes
           language:
           - en
         - language:
           - en
-          initial: K
+          initial: H
         formatted_initials:
-          content: K.
+          content: H.
           language:
           - en
       surname:
-        content: Kompella
+        content: Tschofenig
         language:
         - en
       completename:
-        content: Kireeti Kompella
+        content: Hannes Tschofenig
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Juniper Networks
+        - content: University of the Bundeswehr Munich
   role:
   - type: author
 - person:
@@ -96,112 +95,109 @@ contributor:
           language:
           - en
       surname:
-        content: Nadeau
+        content: Fossati
         language:
         - en
       completename:
-        content: Thomas Nadeau
+        content: Thomas Fossati
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: BT
+        - content: Linaro
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: George
-          language:
-          - en
         - language:
           - en
-          initial: G
+          initial: I
         formatted_initials:
-          content: G.
+          content: I.
           language:
           - en
       surname:
-        content: Swallow
+        content: Mihalcea
         language:
         - en
       completename:
-        content: George Swallow
+        content: Ionuț Mihalcea
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Retired
+        - content: Arm Limited
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Vengada
+        - content: Henk
           language:
           - en
         - language:
           - en
-          initial: V
-        - language:
-          - en
-          initial: P
+          initial: H
         formatted_initials:
-          content: V. P.
+          content: H.
           language:
           - en
       surname:
-        content: Govindan
+        content: Birkholz
         language:
         - en
       completename:
-        content: Vengada Prasad Govindan
+        content: Henk Birkholz
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems, Inc.
+        - content: Fraunhofer SIT
   role:
   - type: author
 version:
-- draft: '00'
-revdate: '2026-06-18'
+- draft: '02'
+revdate: '2026-08-15'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>One desirable application of Bidirectional Forwarding Detection (BFD)
-    is to detect a Multiprotocol Label Switching (MPLS) Label Switched Path (LSP)
-    data plane failure. LSP Ping is an existing mechanism for detecting MPLS data
-    plane failures and for verifying the MPLS LSP data plane against the control plane.
-    BFD can be used for the former, but not for the latter. However, the control plane
-    processing required for BFD Control packets is relatively smaller than the processing
-    required for LSP Ping messages. A combination of LSP Ping and BFD can be used
-    to provide faster data plane failure detection and/or make it possible to provide
-    such detection on a greater number of LSPs. This document describes the applicability
-    of BFD in relation to LSP Ping for this application. It also describes procedures
-    for using BFD in this environment. This document obsoletes RFC5884 and RFC7726.</p>"
+- content: "<p>This document defines an Entity Attestation Token (EAT) profile and
+    a new EAT claim that convey the subject public key and its protection properties
+    within attestation evidence. Combined with protocol-level proof of possession
+    from the surrounding protocol, this establishes a cryptographic binding between
+    a private key and an attested execution environment. The subject public key is
+    conveyed using the EAT cnf claim defined in [RFC8747] and [RFC7800], and freshness
+    uses the EAT eat_nonce claim defined in [RFC9711]. The proof of possession of
+    the subject key is obtained from the surrounding protocol, such as TLS certificate-based
+    authentication or CSR signature verification. Because the EAT is signed by a hardware-backed
+    Attestation Key (AK), successful verification of the EAT signature together with
+    protocol-level proof of possession establishes a cryptographic binding between
+    the private key and the attested platform state. This mechanism addresses key
+    substitution attacks that arise when attestation evidence and the certificate
+    private keys are validated independently.</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-ietf-bfd-rfc5884-bis-01
+    id: draft-reddy-rats-key-binding-01
     docid:
-    - id: draft-ietf-bfd-rfc5884-bis-01
+    - id: draft-reddy-rats-key-binding-01
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-bfd-rfc5884-bis-01
+      content: draft-reddy-rats-key-binding-01
       format: text/plain
 series:
 - type: main
@@ -212,7 +208,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-bfd-rfc5884-bis-00
+  number: draft-reddy-rats-key-binding-02
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
