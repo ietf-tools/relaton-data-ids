@@ -1,0 +1,89 @@
+---
+schema-version: v1.2.3
+id: draft-gaikwad-ba64-00
+title:
+- content: 'ba64: A Binary-to-Text Encoding That Is Never Larger Than Base64'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-gaikwad-ba64-00
+  type: src
+type: standard
+docid:
+- id: draft-gaikwad-ba64-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.gaikwad-ba64
+  type: IETF
+  scope: anchor
+docnumber: I-D.gaikwad-ba64
+date:
+- type: published
+  value: '2026-08-16'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Madhava
+          language:
+          - en
+        - language:
+          - en
+          initial: M
+        formatted_initials:
+          content: M.
+          language:
+          - en
+      surname:
+        content: Gaikwad
+        language:
+        - en
+      completename:
+        content: Madhava Gaikwad
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Independent
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-08-16'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: <p>ba64 is a text encoding for binary data that is never larger than standard
+    base64. An encoder races DEFLATE compression against plain base64 and emits whichever
+    final text is shorter. Compressed output is marked by a leading "=" character,
+    which is inside the base64 alphabet, so it survives every base64-safe channel,
+    yet can never begin a valid base64 string, so the two forms are unambiguous. A
+    CRC-32 over the decoded bytes guarantees that a ba64 decoder never silently returns
+    wrong data. The plain form is byte-identical to base64, so ba64 decoders are a
+    drop-in replacement wherever base64 is read today. An optional padding method
+    decouples the emitted length from the compressibility of the input.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-gaikwad-ba64-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

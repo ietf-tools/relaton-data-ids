@@ -1,0 +1,42 @@
+---
+schema-version: v1.2.3
+id: draft-gaikwad-ba64
+title:
+- content: 'ba64: A Binary-to-Text Encoding That Is Never Larger Than Base64'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-gaikwad-ba64
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: <p>ba64 is a text encoding for binary data that is never larger than standard
+    base64. An encoder races DEFLATE compression against plain base64 and emits whichever
+    final text is shorter. Compressed output is marked by a leading "=" character,
+    which is inside the base64 alphabet, so it survives every base64-safe channel,
+    yet can never begin a valid base64 string, so the two forms are unambiguous. A
+    CRC-32 over the decoded bytes guarantees that a ba64 decoder never silently returns
+    wrong data. The plain form is byte-identical to base64, so ba64 decoders are a
+    drop-in replacement wherever base64 is read today. An optional padding method
+    decouples the emitted length from the compressibility of the input.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-gaikwad-ba64-00
+    docid:
+    - id: draft-gaikwad-ba64-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-gaikwad-ba64-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
