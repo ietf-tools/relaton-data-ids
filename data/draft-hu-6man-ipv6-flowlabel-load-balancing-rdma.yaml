@@ -18,11 +18,12 @@ abstract:
     load balancing based on the 5-tuple cannot distinguish between different RDMA
     sessions that share the same 5-tuple. This causes "elephant flows" to be hashed
     to the same path, leading to network congestion. This method resolves this issue
-    by parsing the QP (Queue Pair) information from the IB BTH (Base Transport Header)
-    and IB DETH (Datagram Extended Transport Header) headers of the RoCEv2 packet.
-    By combining this with portions of the IPv6 source and destination addresses as
-    an entropy source, a CRC32 hash algorithm generates a 20-bit value, which is then
-    written into the Flow Label field of the IPv6 header. Network devices can subsequently
+    by having the ingress network device (e.g., a top-of-rack switch or router) parse
+    the QP (Queue Pair) information from the IB BTH (Base Transport Header) and IB
+    DETH (Datagram Extended Transport Header) headers of the RoCEv2 packet. By combining
+    this with portions of the IPv6 source and destination addresses as an entropy
+    source, a CRC32 hash algorithm generates a 20-bit value, which is then written
+    into the Flow Label field of the IPv6 header. Network devices can subsequently
     use the updated "5-tuple + Flow Label" for more granular flow-level load balancing,
     thereby effectively improving transmission efficiency in high-performance networks
     such as AI computing.</p>
@@ -51,6 +52,16 @@ relation:
       primary: true
     formattedref:
       content: draft-hu-6man-ipv6-flowlabel-load-balancing-rdma-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-hu-6man-ipv6-flowlabel-load-balancing-rdma-02
+    docid:
+    - id: draft-hu-6man-ipv6-flowlabel-load-balancing-rdma-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-hu-6man-ipv6-flowlabel-load-balancing-rdma-02
       format: text/plain
 ext:
   schema-version: v1.0.1

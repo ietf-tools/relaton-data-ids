@@ -13,17 +13,12 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document describes how to construct a non-interactive proof via
-    the Fiat–Shamir transformation, using a generic procedure that compiles an interactive
-    proof into a non-interactive one by relying on a stateful duplex sponge object.
-    The duplex sponge interface requires two methods: absorb and squeeze, which respectively
-    read and write elements of a specified base type. The absorb operation incrementally
-    updates the duplex sponge's internal state, while the squeeze operation produces
-    variable-length, unpredictable outputs. This interface can be instantiated with
-    different constructions based on permutation or compression functions. This specification
-    also defines codecs to securely map prover messages into the duplex sponge domain,
-    from the duplex sponge domain into verifier messages. It also establishes how
-    the non-interactive argument string should be serialized.</p>"
+- content: "<p>This document describes the Fiat-Shamir transformation, which allows
+    making a public-coin protocol non-interactive by means of a cryptographic hash
+    function. It specifies how the hash function is employed, how prover messages
+    are encoded as hash-function input, and how verifier messages are decoded from
+    the hash function's output, as well as the serialization and deserialization of
+    the non-interactive argument string.</p>"
   language:
   - en
   script:
@@ -59,6 +54,16 @@ relation:
       primary: true
     formattedref:
       content: draft-irtf-cfrg-fiat-shamir-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-irtf-cfrg-fiat-shamir-03
+    docid:
+    - id: draft-irtf-cfrg-fiat-shamir-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-irtf-cfrg-fiat-shamir-03
       format: text/plain
 ext:
   schema-version: v1.0.1

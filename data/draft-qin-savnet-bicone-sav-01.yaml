@@ -1,0 +1,186 @@
+---
+schema-version: v1.2.3
+id: draft-qin-savnet-bicone-sav-01
+title:
+- content: Bicone Source Address Validation
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-qin-savnet-bicone-sav-01
+  type: src
+type: standard
+docid:
+- id: draft-qin-savnet-bicone-sav-01
+  type: Internet-Draft
+  primary: true
+- id: I-D.qin-savnet-bicone-sav
+  type: IETF
+  scope: anchor
+docnumber: I-D.qin-savnet-bicone-sav
+date:
+- type: published
+  value: '2026-08-17'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Lancheng
+          language:
+          - en
+        - language:
+          - en
+          initial: L
+        formatted_initials:
+          content: L.
+          language:
+          - en
+      surname:
+        content: Qin
+        language:
+        - en
+      completename:
+        content: Lancheng Qin
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Zhongguancun Laboratory
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Dan
+          language:
+          - en
+        - language:
+          - en
+          initial: D
+        formatted_initials:
+          content: D.
+          language:
+          - en
+      surname:
+        content: Li
+        language:
+        - en
+      completename:
+        content: Dan Li
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Tsinghua University
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - language:
+          - en
+          initial: L
+        formatted_initials:
+          content: L.
+          language:
+          - en
+      surname:
+        content: Chen
+        language:
+        - en
+      completename:
+        content: Li Chen
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Zhongguancun Laboratory
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Libin
+          language:
+          - en
+        - language:
+          - en
+          initial: L
+        formatted_initials:
+          content: L.
+          language:
+          - en
+      surname:
+        content: Liu
+        language:
+        - en
+      completename:
+        content: Libin Liu
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Zhongguancun Laboratory
+  role:
+  - type: author
+version:
+- draft: '01'
+revdate: '2026-08-17'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>Source address validation (SAV) aims to detect source-spoofed traffic
+    while avoiding improper blocking of legitimate traffic. Existing SAV mechanisms
+    commonly rely on ingress allowlist filters on interfaces facing customer or lateral
+    peer Autonomous Systems (ASes). When such an allowlist is incomplete, a source
+    address not covered by the allowlist cannot be conclusively identified as spoofed,
+    because legitimate source prefixes may be missing from the allowlist. This document
+    describes Bicone SAV, which jointly uses an allowlist derived from customer-cone
+    information and a blocklist containing prefixes that can be positively identified
+    as inappropriate on the corresponding ingress interface. When the allowlist is
+    incomplete, packets matching the allowlist are permitted, packets matching the
+    blocklist are discarded, and packets matching neither list are permitted with
+    logging or other monitoring for subsequent analysis. The blocklist can be constructed
+    from provider-cone information and augmented with denylist information derived
+    from customer cones.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-qin-savnet-bicone-sav-00
+    docid:
+    - id: draft-qin-savnet-bicone-sav-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-qin-savnet-bicone-sav-00
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-qin-savnet-bicone-sav-01
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

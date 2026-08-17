@@ -13,16 +13,15 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>The Witnessed Execution Protocol (WEXP) defines a record format and
-    a verification procedure for classifying the strength of execution- related evidence
-    about actions performed by software and AI systems. A WEXP record asserts, for
-    a single action, a Witnessability Level (WL) bounded by the execution-relevant
-    boundary that the witness controls. WEXP grades only the evidentiary strength
-    of an execution claim; it does not certify the action's correctness, safety, or
-    alignment. This document specifies WEXP Core: the record model, required fields,
-    the two classification axes (Witnessability Level and Conformance Class), the
-    honesty invariants that bound claims, the verifier procedure, and failure semantics.
-    WEXP Core is profile- independent and validates standalone.</p>"
+- content: "<p>The Witnessed Execution Protocol (WEXP) Core defines carrier-neutral
+    appraisal semantics for execution-related evidence. It defines four distinct content
+    bases, two independent evidence qualifiers, the Boundary Ceiling, exact-claim
+    support, deterministic accept, downgrade, and reject verdicts, composition without
+    inflation, and a normalized interface between evidence-carrying profiles and appraisers.
+    WEXP Core does not define a record serialization, signature envelope, action identifier,
+    authorization model, or evidence-artifact schema. A companion Native Record profile
+    can encode the normalized inputs defined here, and other carriers can do so without
+    adopting that record format.</p>"
   language:
   - en
   script:
@@ -38,6 +37,16 @@ relation:
       primary: true
     formattedref:
       content: draft-sergeev-wexp-core-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-sergeev-wexp-core-01
+    docid:
+    - id: draft-sergeev-wexp-core-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-sergeev-wexp-core-01
       format: text/plain
 ext:
   schema-version: v1.0.1
