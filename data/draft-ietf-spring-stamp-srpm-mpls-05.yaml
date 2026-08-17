@@ -1,62 +1,119 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-ippm-encrypted-pdmv2-08
+id: draft-ietf-spring-stamp-srpm-mpls-05
 title:
-- content: IPv6 Performance and Diagnostic Metrics Version 2 (PDMv2) Destination Option
+- content: Performance Measurement Using Simple Two-Way Active Measurement Protocol
+    (STAMP) for Segment Routing over the MPLS Data Plane
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-ippm-encrypted-pdmv2-08
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-spring-stamp-srpm-mpls-05
   type: src
 type: standard
 docid:
-- id: draft-ietf-ippm-encrypted-pdmv2-08
+- id: draft-ietf-spring-stamp-srpm-mpls-05
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-ippm-encrypted-pdmv2
+- id: I-D.ietf-spring-stamp-srpm-mpls
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-ippm-encrypted-pdmv2
+docnumber: I-D.ietf-spring-stamp-srpm-mpls
 date:
 - type: published
-  value: '2024-09-13'
+  value: '2026-08-16'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Nalini
+        - content: Rakesh
           language:
           - en
         - language:
           - en
-          initial: "N"
+          initial: R
         formatted_initials:
-          content: N.
+          content: R.
           language:
           - en
       surname:
-        content: Elkins
+        content: Gandhi
         language:
         - en
       completename:
-        content: Nalini Elkins
+        content: Rakesh Gandhi
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Inside Products
+        - content: Cisco Systems, Inc.
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: michael
+        - content: Clarence
+          language:
+          - en
+        - language:
+          - en
+          initial: C
+        formatted_initials:
+          content: C.
+          language:
+          - en
+      surname:
+        content: Filsfils
+        language:
+        - en
+      completename:
+        content: Clarence Filsfils
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Cisco Systems, Inc.
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Bart
+          language:
+          - en
+        - language:
+          - en
+          initial: B
+        formatted_initials:
+          content: B.
+          language:
+          - en
+      surname:
+        content: Janssens
+        language:
+        - en
+      completename:
+        content: Bart Janssens
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Colt
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Mach
           language:
           - en
         - language:
@@ -67,118 +124,67 @@ contributor:
           language:
           - en
       surname:
-        content: ackermann
+        content: Chen
         language:
         - en
       completename:
-        content: michael ackermann
+        content: Mach Chen
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: BCBS Michigan
+        - content: Individual
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Ameya
+        - content: Richard
           language:
           - en
         - language:
           - en
-          initial: A
+          initial: R
+        - language:
+          - en
+          initial: F
         formatted_initials:
-          content: A.
+          content: R. F.
           language:
           - en
       surname:
-        content: Deshpande
+        content: Foote
         language:
         - en
       completename:
-        content: Ameya Deshpande
+        content: Richard "Footer" Foote
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: NITK Surathkal/Google
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Tommaso
-          language:
-          - en
-        - language:
-          - en
-          initial: T
-        formatted_initials:
-          content: T.
-          language:
-          - en
-      surname:
-        content: Pecorella
-        language:
-        - en
-      completename:
-        content: Tommaso Pecorella
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: University of Florence
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Adnan
-          language:
-          - en
-        - language:
-          - en
-          initial: A
-        formatted_initials:
-          content: A.
-          language:
-          - en
-      surname:
-        content: Rashid
-        language:
-        - en
-      completename:
-        content: Adnan Rashid
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Politecnico di Bari
+        - content: Nokia
   role:
   - type: author
 version:
-- draft: '08'
-revdate: '2024-09-13'
+- draft: '05'
+revdate: '2026-08-16'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>RFC8250 describes an optional Destination Option (DO) header embedded
-    in each packet to provide sequence numbers and timing information as a basis for
-    measurements. As this data is sent in clear-text, this may create an opportunity
-    for malicious actors to get information for subsequent attacks. This document
-    defines PDMv2 which has a lightweight handshake (registration procedure) and encryption
-    to secure this data. Additional performance metrics which may be of use are also
-    defined.</p>"
+- content: "<p>Segment Routing (SR) can be used to steer packets through a network
+    employing source routing. SR can be applied to both MPLS (SR-MPLS) and IPv6 (SRv6)
+    data planes. This document describes the procedures for Performance Measurement
+    in SR-MPLS networks using the Simple Two- Way Active Measurement Protocol (STAMP),
+    as defined in RFC 8762, along with its optional extensions defined in RFC 8972
+    and further augmented in RFC 9503. The described procedures are used for SR-MPLS
+    paths (including Segment Lists of SR-MPLS Policies, SR-MPLS IGP best paths, and
+    SR-MPLS IGP Flexible Algorithm paths), as well as Layer-3 and Layer-2 services
+    over the SR-MPLS paths.</p>"
   language:
   - en
   script:
@@ -187,23 +193,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-ippm-encrypted-pdmv2-07
+    id: draft-ietf-spring-stamp-srpm-mpls-01
     docid:
-    - id: draft-ietf-ippm-encrypted-pdmv2-07
+    - id: draft-ietf-spring-stamp-srpm-mpls-01
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-ippm-encrypted-pdmv2-07
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-ippm-encrypted-pdmv2-16
-    docid:
-    - id: draft-ietf-ippm-encrypted-pdmv2-16
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-ippm-encrypted-pdmv2-16
+      content: draft-ietf-spring-stamp-srpm-mpls-01
       format: text/plain
 series:
 - type: main
@@ -214,7 +210,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-ippm-encrypted-pdmv2-08
+  number: draft-ietf-spring-stamp-srpm-mpls-05
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

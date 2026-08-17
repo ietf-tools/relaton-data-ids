@@ -1,0 +1,44 @@
+---
+schema-version: v1.2.3
+id: draft-sahu-agent-action-receipts
+title:
+- content: Signed, Hash-Chained Action Receipts for AI Agents
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-sahu-agent-action-receipts
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This document specifies a format for action receipts: compact, individually
+    signed JSON records that state that a specific AI agent attempted a specific action
+    at a specific time, under a specific policy decision, and what the outcome was.
+    Receipts are linked into an append-only hash chain so that deletion, insertion,
+    reordering, or modification of any previously recorded receipt is detectable by
+    a verifier that holds only the records and the signer's public key. The format
+    is deliberately small and self-contained. Verification requires no network access,
+    no service operated by the producer of the receipts, and no state beyond the records
+    themselves and a trust anchor obtained out of band. This document specifies the
+    record fields, the canonical byte sequence that is signed, the chain linkage rule,
+    the verification procedure, and test vectors.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-sahu-agent-action-receipts-00
+    docid:
+    - id: draft-sahu-agent-action-receipts-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-sahu-agent-action-receipts-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

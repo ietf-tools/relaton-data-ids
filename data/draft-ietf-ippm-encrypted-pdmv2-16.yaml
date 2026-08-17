@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-ippm-encrypted-pdmv2-08
+id: draft-ietf-ippm-encrypted-pdmv2-16
 title:
 - content: IPv6 Performance and Diagnostic Metrics Version 2 (PDMv2) Destination Option
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-ippm-encrypted-pdmv2-08
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-ippm-encrypted-pdmv2-16
   type: src
 type: standard
 docid:
-- id: draft-ietf-ippm-encrypted-pdmv2-08
+- id: draft-ietf-ippm-encrypted-pdmv2-16
   type: Internet-Draft
   primary: true
 - id: I-D.ietf-ippm-encrypted-pdmv2
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.ietf-ippm-encrypted-pdmv2
 date:
 - type: published
-  value: '2024-09-13'
+  value: '2026-08-16'
 contributor:
 - person:
     name:
@@ -164,21 +164,55 @@ contributor:
         - content: Politecnico di Bari
   role:
   - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Lorenzo
+          language:
+          - en
+        - language:
+          - en
+          initial: L
+        formatted_initials:
+          content: L.
+          language:
+          - en
+      surname:
+        content: Fedi
+        language:
+        - en
+      completename:
+        content: Lorenzo Fedi
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: University of Florence
+  role:
+  - type: author
 version:
-- draft: '08'
-revdate: '2024-09-13'
+- draft: '16'
+revdate: '2026-08-16'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>RFC8250 describes an optional Destination Option (DO) header embedded
-    in each packet to provide sequence numbers and timing information as a basis for
-    measurements. As this data is sent in clear-text, this may create an opportunity
-    for malicious actors to get information for subsequent attacks. This document
-    defines PDMv2 which has a lightweight handshake (registration procedure) and encryption
-    to secure this data. Additional performance metrics which may be of use are also
-    defined.</p>"
+- content: "<p>RFC 8250 defines an IPv6 Destination Option that carries Performance
+    and Diagnostic Metrics (PDM) such as sequence numbers and timing information.
+    While useful for measurement and troubleshooting, clear-text PDM data may expose
+    operational characteristics of endpoints and networks. This document defines PDMv2,
+    a revised version of PDM that introduces a registration-based security model.
+    Instead of specifying cryptographic algorithms or inline key negotiation, PDMv2
+    relies on a prior registration process to authenticate entities, authorize participation,
+    and establish shared secrets. These secrets are then used by endpoints and authorized
+    analyzers to protect and interpret PDMv2 data according to local policy. This
+    document specifies the PDMv2 semantics, header structure, and operational model.
+    The selection of specific cryptographic algorithms and key derivation functions,
+    and the definition of any cipher-negotiation mechanism, are outside the scope
+    of this document.</p>"
   language:
   - en
   script:
@@ -187,23 +221,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-ippm-encrypted-pdmv2-07
+    id: draft-ietf-ippm-encrypted-pdmv2-10
     docid:
-    - id: draft-ietf-ippm-encrypted-pdmv2-07
+    - id: draft-ietf-ippm-encrypted-pdmv2-10
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-ippm-encrypted-pdmv2-07
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-ippm-encrypted-pdmv2-16
-    docid:
-    - id: draft-ietf-ippm-encrypted-pdmv2-16
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-ippm-encrypted-pdmv2-16
+      content: draft-ietf-ippm-encrypted-pdmv2-10
       format: text/plain
 series:
 - type: main
@@ -214,7 +238,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-ippm-encrypted-pdmv2-08
+  number: draft-ietf-ippm-encrypted-pdmv2-16
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

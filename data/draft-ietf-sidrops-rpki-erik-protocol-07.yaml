@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-sidrops-rpki-erik-protocol-05
+id: draft-ietf-sidrops-rpki-erik-protocol-07
 title:
 - content: The Erik Synchronization Protocol for use with the Resource Public Key
     Infrastructure (RPKI)
@@ -10,11 +10,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-sidrops-rpki-erik-protocol-05
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-sidrops-rpki-erik-protocol-07
   type: src
 type: standard
 docid:
-- id: draft-ietf-sidrops-rpki-erik-protocol-05
+- id: draft-ietf-sidrops-rpki-erik-protocol-07
   type: Internet-Draft
   primary: true
 - id: I-D.ietf-sidrops-rpki-erik-protocol
@@ -23,7 +23,7 @@ docid:
 docnumber: I-D.ietf-sidrops-rpki-erik-protocol
 date:
 - type: published
-  value: '2026-07-06'
+  value: '2026-08-16'
 contributor:
 - person:
     name:
@@ -138,8 +138,8 @@ contributor:
   role:
   - type: author
 version:
-- draft: '05'
-revdate: '2026-07-06'
+- draft: '07'
+revdate: '2026-08-16'
 language:
 - en
 script:
@@ -149,10 +149,12 @@ abstract:
     the Resource Public Key Infrastructure (RPKI). Erik Synchronization can be characterized
     as a data replication system using Merkle trees, a content-addressable naming
     scheme, concurrency control using monotonically increasing sequence numbers, and
-    HTTP transport. Relying Parties can combine information retrieved via Erik Synchronization
-    with other RPKI transport protocols. The protocol's design is intended to be efficient,
-    fast, easy to implement, and robust in the face of partitions or faults in the
-    network.</p>"
+    HTTP transport. The protocol is used to interact with Erik Relays, a new intermediary
+    layer in the RPKI supply chain that exists between the Repository Publication
+    Point and Relying Parties, enabling better scalability. Relying Parties can combine
+    information retrieved via Erik Synchronization with other RPKI transport protocols.
+    The protocol's design is intended to be efficient, fast, easy to implement, and
+    robust in the face of partitions or faults in the network.</p>"
   language:
   - en
   script:
@@ -161,23 +163,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-sidrops-rpki-erik-protocol-02
+    id: draft-ietf-sidrops-rpki-erik-protocol-05
     docid:
-    - id: draft-ietf-sidrops-rpki-erik-protocol-02
+    - id: draft-ietf-sidrops-rpki-erik-protocol-05
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-sidrops-rpki-erik-protocol-02
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-sidrops-rpki-erik-protocol-07
-    docid:
-    - id: draft-ietf-sidrops-rpki-erik-protocol-07
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-sidrops-rpki-erik-protocol-07
+      content: draft-ietf-sidrops-rpki-erik-protocol-05
       format: text/plain
 series:
 - type: main
@@ -188,7 +180,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-sidrops-rpki-erik-protocol-05
+  number: draft-ietf-sidrops-rpki-erik-protocol-07
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
