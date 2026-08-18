@@ -1,0 +1,42 @@
+---
+schema-version: v1.2.3
+id: draft-antony-ipsecme-muse
+title:
+- content: Multiple Ephemeral UDP Source Ports for ESP in UDP Encapsulation (MUSE)
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-antony-ipsecme-muse
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This document specifies a mechanism to improve network path distribution
+    and host receive-queue load distribution for IPsec traffic using ESP in UDP encapsulation
+    [RFC3948]. Using the per- resource Child SA mechanism of [RFC9611], peers negotiate
+    multiple Child SAs each bound to a distinct UDP source port. The resulting entropy
+    in the UDP source port enables network devices to distribute per-resource traffic
+    across distinct paths (equal-cost multi-path, ECMP) and lets the host NIC steer
+    each per-resource flow to a distinct receive queue via receive-side scaling (RSS),
+    supporting efficient per-CPU IPsec processing. This document specifies the IKEv2
+    negotiation, NAT traversal behavior, and operational requirements for this mechanism.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-antony-ipsecme-muse-00
+    docid:
+    - id: draft-antony-ipsecme-muse-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-antony-ipsecme-muse-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

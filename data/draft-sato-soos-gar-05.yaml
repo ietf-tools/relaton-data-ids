@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-sato-soos-gar-04
+id: draft-sato-soos-gar-05
 title:
 - content: The Governance Audit Record (GAR) for Agentic AI Systems
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-sato-soos-gar-04
+- content: https://datatracker.ietf.org/doc/html/draft-sato-soos-gar-05
   type: src
 type: standard
 docid:
-- id: draft-sato-soos-gar-04
+- id: draft-sato-soos-gar-05
   type: Internet-Draft
   primary: true
 - id: I-D.sato-soos-gar
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.sato-soos-gar
 date:
 - type: published
-  value: '2026-08-13'
+  value: '2026-08-17'
 contributor:
 - person:
     name:
@@ -49,8 +49,8 @@ contributor:
   role:
   - type: author
 version:
-- draft: '04'
-revdate: '2026-08-13'
+- draft: '05'
+revdate: '2026-08-17'
 language:
 - en
 script:
@@ -73,20 +73,25 @@ abstract:
     Governance Semantic Convention: the normative soos.governance.* OpenTelemetry
     attribute namespace for governance observability (Section 13), the SOOS GAR Processor
     specification for OTel-to-SAR pipeline construction with Session Block Merkle
-    integrity (Section 14), four new Authority Lifecycle Events (ALE-NEW-01 through
-    ALE-NEW-04), three mandatory provenance fields on Cedar evaluation records, and
-    the XPID mirror field on ACD session ALEs. Version -04 makes the Session Block
-    construction rules of Section 14.3 fully explicit and implementation-independent,
+    integrity (Section 14), four new Authority Lifecycle Events, three mandatory provenance
+    fields on Cedar evaluation records, and the XPID mirror field on ACD session ALEs.
+    Version -04 made the Session Block construction rules of Section 14.3 more explicit,
     closing three ambiguities found during independent interop verification at the
-    IETF 126 Hackathon: the exact soos.gar.prev_span_hash formula (Section 2), the
-    requirement that Merkle leaf computation occur over the canonical (RFC 8785 JCS)
-    serialization of the event delta record with block_id already attached, and that
-    Merkle parent nodes combine raw digest bytes rather than hex-encoded text. Version
-    -04 also resolves OQ-OTEL-03 (Section 14.6) and adds Security Considerations entry
-    S.15.d documenting the Layer 1 / Layer 2 tamper-detection coverage asymmetry as
-    an intentional, named property of the design rather than a silent gap. No new
-    fields, attributes, or ALE types are introduced in -04; all changes make existing
-    -03 normative language explicit.</p>"
+    IETF 126 Hackathon. Version -05 supersedes -04's Section 14.3 text with a corrected
+    construction: the Merkle leaf and internal-node hashes are now domain-separated
+    (RFC 6962 S2.1's MTH, with 0x00/0x01 prefix octets) and odd-length levels use
+    RFC 6962's k-split recursive tree shape rather than duplicate-node padding, closing
+    a malleability class structurally equivalent to CVE-2012-2459 that was present
+    in -04's construction (Section 15 S.15.e). This revision is fully self-contained:
+    unlike -03 and -04, it does not carry forward unreproduced text from an earlier
+    version. Version -05 also adds a subject_digest field to Cedar-evaluation GAR
+    records (Section 8.6), the same construction used by the Agent Accountability
+    Composition [I-D.mih-sato-agent-accountability- composition] as its cross-slot
+    join key, positioning GAR as a conforming AEP instance under the RATS-bound composition
+    of [I-D.sokolov-rats-aep-composition]; the field is normatively scoped to prohibit
+    independent re-serialization where an upstream party has already established the
+    action's canonical serialization, per the failure mode documented in [I-D.hillier-scitt-arp]
+    Appendix D.</p>"
   language:
   - en
   script:
@@ -103,16 +108,6 @@ relation:
     formattedref:
       content: draft-sato-soos-gar-03
       format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-sato-soos-gar-05
-    docid:
-    - id: draft-sato-soos-gar-05
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-sato-soos-gar-05
-      format: text/plain
 series:
 - type: main
   title:
@@ -122,7 +117,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-sato-soos-gar-04
+  number: draft-sato-soos-gar-05
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
