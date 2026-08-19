@@ -1,0 +1,115 @@
+---
+schema-version: v1.2.3
+id: draft-rajappa-httpbis-connection-contamination-03
+title:
+- content: Mitigating HTTP/3 Connection Contamination in Multi-Tenant and CDN-Fronted
+    Deployments
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-rajappa-httpbis-connection-contamination-03
+  type: src
+type: standard
+docid:
+- id: draft-rajappa-httpbis-connection-contamination-03
+  type: Internet-Draft
+  primary: true
+- id: I-D.rajappa-httpbis-connection-contamination
+  type: IETF
+  scope: anchor
+docnumber: I-D.rajappa-httpbis-connection-contamination
+date:
+- type: published
+  value: '2026-08-18'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Madhusudhan
+          language:
+          - en
+        - language:
+          - en
+          initial: M
+        formatted_initials:
+          content: M.
+          language:
+          - en
+      surname:
+        content: Rajappa
+        language:
+        - en
+      completename:
+        content: Madhusudhan Rajappa
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: IBM
+  role:
+  - type: author
+version:
+- draft: '03'
+revdate: '2026-08-18'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: <p>HTTP/3 [RFC9114] clients commonly reuse ("coalesce") an existing QUIC
+    [RFC9000] connection for requests to a second origin when the TLS certificate
+    presented on that connection is also valid for the second origin, even though
+    the two origins may route to entirely different backends. This document describes
+    "connection contamination," a class of security exposure that arises when a routing
+    layer -- reverse proxy, load balancer, or CDN edge -- determines backend routing
+    using a signal established at connection setup rather than re-validated per request.
+    Under that condition, a coalesced connection can be used to reach an unintended
+    backend origin, potentially enabling cross-tenant data leakage, authentication
+    bypass, and response-queue interference analogous to HTTP request smuggling. This
+    document defines the underlying mechanism, characterizes the attacker model, distinguishes
+    connection contamination from related QUIC exposures, and provides normative operational
+    guidance for implementers and operators of HTTP/3-terminating infrastructure.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-rajappa-httpbis-connection-contamination-01
+    docid:
+    - id: draft-rajappa-httpbis-connection-contamination-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-rajappa-httpbis-connection-contamination-01
+      format: text/plain
+- type: updatedBy
+  bibitem:
+    id: draft-rajappa-httpbis-connection-contamination-05
+    docid:
+    - id: draft-rajappa-httpbis-connection-contamination-05
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-rajappa-httpbis-connection-contamination-05
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-rajappa-httpbis-connection-contamination-03
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

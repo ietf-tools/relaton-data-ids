@@ -20,11 +20,14 @@ abstract:
     using SHA-256 per RFC 8785, with optional ECDSA signatures for non-repudiation.
     The format addresses requirements from the EU AI Act (Regulation 2024/1689), which
     mandates automatic recording of events for high-risk AI systems effective August
-    2026. It also maps to SOC 2 Trust Services Criteria, ISO/IEC 42001, and PCI DSS
-    v4.0.1 logging requirements. The design is transport-agnostic and supports export
-    to JSONL, Syslog (RFC 5424), and CSV while preserving chain integrity. Privacy
-    is addressed through input/output hashing and tombstone- based deletion compatible
-    with GDPR Article 17.</p>"
+    2026. It also maps to SOC 2 Trust Services Criteria, ISO/IEC 42001, ISO/IEC 24970,
+    prEN 18229-1, and PCI DSS v4.0.1 logging requirements. The design is transport-agnostic
+    and supports export to JSONL, Syslog (RFC 5424), and CSV while preserving chain
+    integrity. Privacy is addressed through input/output hashing, content fingerprinting,
+    and tombstone-based deletion compatible with GDPR Article 17. This revision (-01)
+    adds pre-execution recording requirements, recording independence, deny reason
+    codes, replay protection, external timestamp anchoring, and content fingerprinting
+    based on feedback from independent implementers.</p>"
   language:
   - en
   script:
@@ -40,6 +43,16 @@ relation:
       primary: true
     formattedref:
       content: draft-sharif-agent-audit-trail-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-sharif-agent-audit-trail-01
+    docid:
+    - id: draft-sharif-agent-audit-trail-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-sharif-agent-audit-trail-01
       format: text/plain
 ext:
   schema-version: v1.0.1
