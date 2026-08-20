@@ -2,8 +2,8 @@
 schema-version: v1.2.3
 id: draft-yoshikawa-sidrops-pqc-rpki
 title:
-- content: Post-Quantum Signature Algorithm Profile and Migration Considerations for
-    the Resource Public Key Infrastructure (RPKI)
+- content: Post-Quantum Signature Experiments and Migration Considerations for the
+    Resource Public Key Infrastructure (RPKI)
   language:
   - en
   script:
@@ -14,14 +14,18 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document defines an initial experimental post-quantum signature
-    profile and migration design for the Resource Public Key Infrastructure (RPKI).
-    The profile uses Composite ML-DSA-65 with ECDSA P-256 for RPKI certificates, CRLs,
-    certification requests, and CMS signed objects. The migration design introduces
-    the composite suite at CA boundaries through Mixed Certification Chains. It preserves
-    the existing RPKI object formats, repository system, validation procedure, and
-    router-facing VRP/RTR model. This revision is intended for SIDROPS evaluation
-    and does not update RFC 7935.</p>"
+- content: "<p>This document reports experiments with post-quantum signature algorithms
+    and analyzes migration approaches for the Resource Public Key Infrastructure (RPKI).
+    The experiments compare classical, post- quantum, and composite signature candidates;
+    generate and validate RPKI-profiled certificate, CRL, manifest, and ROA test objects;
+    evaluate Parallel Publication and Mixed Tree migration as distinct migration structures;
+    and evaluate the effect of larger objects on rsync, RRDP, and Erik Synchronization.
+    The results identify implementation, interoperability, repository-distribution,
+    and operational questions that need to be resolved before a production algorithm
+    profile or transition procedure can be specified. This document is informational.
+    It does not update RFC 7935 or RFC 6916, define a new RPKI algorithm profile,
+    or authorize the use of the evaluated algorithms or Mixed Tree migration in the
+    production RPKI.</p>"
   language:
   - en
   script:
@@ -47,6 +51,16 @@ relation:
       primary: true
     formattedref:
       content: draft-yoshikawa-sidrops-pqc-rpki-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-yoshikawa-sidrops-pqc-rpki-02
+    docid:
+    - id: draft-yoshikawa-sidrops-pqc-rpki-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-yoshikawa-sidrops-pqc-rpki-02
       format: text/plain
 ext:
   schema-version: v1.0.1
