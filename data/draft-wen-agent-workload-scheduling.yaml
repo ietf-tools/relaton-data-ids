@@ -1,0 +1,51 @@
+---
+schema-version: v1.2.3
+id: draft-wen-agent-workload-scheduling
+title:
+- content: Dynamic Scheduling of Update and Query Workloads in Agent Service Discovery
+    Nodes
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-wen-agent-workload-scheduling
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>Agent service discovery nodes may need to process two classes of workloads
+    concurrently: Agent registration and dynamic state updates, and discovery queries
+    issued by other Agents. These workloads compete for shared processing resources
+    but have different performance objectives. Delayed state updates can cause a service
+    discovery node to rely on stale workload, availability, or QoS information, while
+    delayed queries can increase Agent-selection latency and the completion time of
+    multi-Agent tasks. This document describes a scheduling framework for coordinating
+    update and query processing in a multi-Worker Agent service discovery node. To
+    estimate the demand of each workload, the framework considers total queued work,
+    waiting time, deadline pressure, recent load, state freshness, and, for updates,
+    the expected freshness gain from processing a pending update. These estimates
+    determine how Worker capacity is divided between the two queues, which remain
+    active in parallel. The framework also incorporates update merging and deduplication,
+    freshness-aware dependencies between state updates and discovery queries, hysteresis-based
+    resource reallocation, minimum resource holding time, and intra-queue task prioritization.
+    Different deployment conditions can be accommodated by adjusting the corresponding
+    weights and thresholds without changing the scheduling structure itself.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-wen-agent-workload-scheduling-00
+    docid:
+    - id: draft-wen-agent-workload-scheduling-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-wen-agent-workload-scheduling-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

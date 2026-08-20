@@ -1,0 +1,95 @@
+---
+schema-version: v1.2.3
+id: draft-wen-agent-workload-scheduling-00
+title:
+- content: Dynamic Scheduling of Update and Query Workloads in Agent Service Discovery
+    Nodes
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-wen-agent-workload-scheduling-00
+  type: src
+type: standard
+docid:
+- id: draft-wen-agent-workload-scheduling-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.wen-agent-workload-scheduling
+  type: IETF
+  scope: anchor
+docnumber: I-D.wen-agent-workload-scheduling
+date:
+- type: published
+  value: '2026-08-19'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - language:
+          - en
+          initial: "Y"
+        formatted_initials:
+          content: Y.
+          language:
+          - en
+      surname:
+        content: 文远峤
+        language:
+        - en
+      completename:
+        content: 文远峤
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: China Mobile
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-08-19'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>Agent service discovery nodes may need to process two classes of workloads
+    concurrently: Agent registration and dynamic state updates, and discovery queries
+    issued by other Agents. These workloads compete for shared processing resources
+    but have different performance objectives. Delayed state updates can cause a service
+    discovery node to rely on stale workload, availability, or QoS information, while
+    delayed queries can increase Agent-selection latency and the completion time of
+    multi-Agent tasks. This document describes a scheduling framework for coordinating
+    update and query processing in a multi-Worker Agent service discovery node. To
+    estimate the demand of each workload, the framework considers total queued work,
+    waiting time, deadline pressure, recent load, state freshness, and, for updates,
+    the expected freshness gain from processing a pending update. These estimates
+    determine how Worker capacity is divided between the two queues, which remain
+    active in parallel. The framework also incorporates update merging and deduplication,
+    freshness-aware dependencies between state updates and discovery queries, hysteresis-based
+    resource reallocation, minimum resource holding time, and intra-queue task prioritization.
+    Different deployment conditions can be accommodated by adjusting the corresponding
+    weights and thresholds without changing the scheduling structure itself.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-wen-agent-workload-scheduling-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
