@@ -1,62 +1,34 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-scone-protocol-06
+id: draft-ietf-idr-sr-policy-seglist-id-13
 title:
-- content: Standard Communication with Network Elements (SCONE) Protocol
+- content: BGP SR Policy Extensions for Segment List Identifier
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-scone-protocol-06
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-sr-policy-seglist-id-13
   type: src
 type: standard
 docid:
-- id: draft-ietf-scone-protocol-06
+- id: draft-ietf-idr-sr-policy-seglist-id-13
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-scone-protocol
+- id: I-D.ietf-idr-sr-policy-seglist-id
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-scone-protocol
+docnumber: I-D.ietf-idr-sr-policy-seglist-id
 date:
 - type: published
-  value: '2026-07-29'
+  value: '2026-08-20'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Martin
-          language:
-          - en
-        - language:
-          - en
-          initial: M
-        formatted_initials:
-          content: M.
-          language:
-          - en
-      surname:
-        content: Thomson
-        language:
-        - en
-      completename:
-        content: Martin Thomson
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Mozilla
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Christian
+        - content: Changwang
           language:
           - en
         - language:
@@ -67,24 +39,80 @@ contributor:
           language:
           - en
       surname:
-        content: Huitema
+        content: Lin
         language:
         - en
       completename:
-        content: Christian Huitema
+        content: Changwang Lin
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Private Octopus Inc.
+        - content: New H3C Technologies
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Kazuho
+        - content: Weiqiang
+          language:
+          - en
+        - language:
+          - en
+          initial: W
+        formatted_initials:
+          content: W.
+          language:
+          - en
+      surname:
+        content: Cheng
+        language:
+        - en
+      completename:
+        content: Weiqiang Cheng
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: China Mobile
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Yao
+          language:
+          - en
+        - language:
+          - en
+          initial: "Y"
+        formatted_initials:
+          content: Y.
+          language:
+          - en
+      surname:
+        content: Liu
+        language:
+        - en
+      completename:
+        content: Yao Liu
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: ZTE
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Ketan
           language:
           - en
         - language:
@@ -95,24 +123,24 @@ contributor:
           language:
           - en
       surname:
-        content: Oku
+        content: Talaulikar
         language:
         - en
       completename:
-        content: Kazuho Oku
+        content: Ketan Talaulikar
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Fastly
+        - content: Cisco Systems
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Matt
+        - content: Mengxiao
           language:
           - en
         - language:
@@ -123,62 +151,31 @@ contributor:
           language:
           - en
       surname:
-        content: Joras
+        content: Chen
         language:
         - en
       completename:
-        content: Matt Joras
+        content: Mengxiao Chen
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Meta
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Marcus
-          language:
-          - en
-        - language:
-          - en
-          initial: L
-        - language:
-          - en
-          initial: M
-        formatted_initials:
-          content: L. M.
-          language:
-          - en
-      surname:
-        content: Ihlar
-        language:
-        - en
-      completename:
-        content: Marcus Ihlar
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Ericsson
+        - content: New H3C Technologies
   role:
   - type: author
 version:
-- draft: '06'
-revdate: '2026-07-29'
+- draft: '13'
+revdate: '2026-08-20'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document describes a protocol where on-path network elements can
-    communicate their perspective on the maximum sustainable throughput for QUIC flows
-    to endpoints. This throughput advice suggests an upper bound on long-term average
-    throughput, independent of and complementary to real-time congestion control signals.</p>"
+- content: "<p>Segment Routing (SR) is a source routing paradigm that explicitly indicates
+    the forwarding path for packets at the ingress node. An SR Policy is a set of
+    candidate paths, each consisting of one or more segment lists. This document defines
+    extensions to BGP SR Policy to specify the identifier of a segment list.</p>"
   language:
   - en
   script:
@@ -187,23 +184,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-scone-protocol-01
+    id: draft-ietf-idr-sr-policy-seglist-id-01
     docid:
-    - id: draft-ietf-scone-protocol-01
+    - id: draft-ietf-idr-sr-policy-seglist-id-01
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-scone-protocol-01
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-scone-protocol-07
-    docid:
-    - id: draft-ietf-scone-protocol-07
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-scone-protocol-07
+      content: draft-ietf-idr-sr-policy-seglist-id-01
       format: text/plain
 series:
 - type: main
@@ -214,7 +201,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-scone-protocol-06
+  number: draft-ietf-idr-sr-policy-seglist-id-13
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
