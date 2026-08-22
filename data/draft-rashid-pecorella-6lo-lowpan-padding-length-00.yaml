@@ -1,0 +1,116 @@
+---
+schema-version: v1.2.3
+id: draft-rashid-pecorella-6lo-lowpan-padding-length-00
+title:
+- content: 6LoWPAN Payload Length Handling with L2 Padding
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-rashid-pecorella-6lo-lowpan-padding-length-00
+  type: src
+type: standard
+docid:
+- id: draft-rashid-pecorella-6lo-lowpan-padding-length-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.rashid-pecorella-6lo-lowpan-padding-length
+  type: IETF
+  scope: anchor
+docnumber: I-D.rashid-pecorella-6lo-lowpan-padding-length
+date:
+- type: published
+  value: '2026-08-21'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Adnan
+          language:
+          - en
+        - language:
+          - en
+          initial: A
+        formatted_initials:
+          content: A.
+          language:
+          - en
+      surname:
+        content: Rashid
+        language:
+        - en
+      completename:
+        content: Adnan Rashid
+        language:
+        - en
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Tommaso
+          language:
+          - en
+        - language:
+          - en
+          initial: T
+        formatted_initials:
+          content: T.
+          language:
+          - en
+      surname:
+        content: Pecorella
+        language:
+        - en
+      completename:
+        content: Tommaso Pecorella
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: University of Florence
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-08-21'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>6LoWPAN compression schemes, including HC1 [RFC4944], IPHC [RFC6282],
+    and GHC [RFC7400], elide the IPv6 Payload Length (PL) field from compressed packets,
+    relying on the Layer 2 (L2) PL to reconstruct it at the receiver. This assumption
+    holds for IEEE 802.15.4 [IEEE Std 802.15.4], which delivers exactly the bytes
+    transmitted. However, L2 technologies that enforce a minimum frame size — most
+    notably Ethernet IEEE 802.3 [IEEE Std 802.3], which has a minimum payload of 46
+    bytes — silently pad short frames with zero bytes. In such cases, the receiver
+    incorrectly reconstructs the IPv6 PL field, leading to packet corruption and protocol
+    failure. This document describes the problem, analyzes existing workarounds, and
+    defines a solution based on an Escape dispatch byte (ESC) or ESC Extension Type
+    (EET) extended dispatch mechanism that explicitly encodes the IPv6 PL when L2
+    padding may be present.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-rashid-pecorella-6lo-lowpan-padding-length-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
