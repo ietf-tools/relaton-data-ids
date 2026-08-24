@@ -13,12 +13,14 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document specifies Route86, a compact textual timestamp representation
-    intended for constrained message transports. A Route86 timestamp combines a Base36-encoded
-    calendar-day component with a three-digit decimal Internet Time component. The
-    representation occupies six ASCII characters in its canonical form. Interpretation
-    of the calendar component requires knowledge of a shared reference date, which
-    may be application-specific or salted.</p>"
+- content: "<p>This document specifies Route86, a compact textual timestamp format
+    for constrained message transports. A Route86 value consists of a three-character
+    Base36 calendar-day component and a three-digit decimal time-of-day component.
+    The canonical representation occupies exactly six ASCII characters. The calendar
+    component is interpreted relative to an external reference date. The reference
+    date itself encodes as AAA. The time- of-day component divides a fixed BMT day,
+    defined here as UTC+01:00 without daylight-saving adjustment, into 1000 intervals
+    of 86.4 seconds.</p>"
   language:
   - en
   script:
@@ -34,6 +36,16 @@ relation:
       primary: true
     formattedref:
       content: draft-luechow-route86-timestamp-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-luechow-route86-timestamp-01
+    docid:
+    - id: draft-luechow-route86-timestamp-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-luechow-route86-timestamp-01
       format: text/plain
 ext:
   schema-version: v1.0.1

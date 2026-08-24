@@ -23,9 +23,14 @@ abstract:
     an assurance requirement from a risk signal and expresses that requirement in
     a domain-appropriate form, recording the decision in an audit record and optionally
     binding it to a verified human root. It defines the interface and the audit-record
-    fields, not any particular risk-scoring method or control law. This document is
-    offered as input to the proposed AUDIT working group''s work on authorization
-    state over time and action provenance.</p>'
+    fields, not any particular risk-scoring method or control law. This document also
+    describes the autonomy-asymmetry control law: a feedback loop coupling assurance
+    requirements to VERIFY-phase pass rates, with fast-down (immediate elevation on
+    failure) and slow-up (hysteresis- governed relaxation on sustained success) asymmetry.
+    The iteration governor is described as the per-packet instance of this control
+    law, and the phase-seal chain as its sensor. This document is offered as input
+    to the proposed AUDIT working group''s work on authorization state over time and
+    action provenance.</p>'
   language:
   - en
   script:
@@ -41,6 +46,16 @@ relation:
       primary: true
     formattedref:
       content: draft-zagarella-autonomy-governor-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-zagarella-autonomy-governor-01
+    docid:
+    - id: draft-zagarella-autonomy-governor-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-zagarella-autonomy-governor-01
       format: text/plain
 ext:
   schema-version: v1.0.1
