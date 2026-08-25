@@ -18,21 +18,27 @@ abstract:
     method for establishing integrity, provenance, and auditability across the artificial
     intelligence (AI) lifecycle. RSP defines a Sentinel Evidence Package (SEP) that
     binds payload digests, provenance metadata, signatures, blockchain timestamp proofs,
-    and resolvable identifiers (DOIs). This enables tamper-evident, independently
-    verifiable receipts for datasets, data transformations, training jobs, checkpoints,
-    fine-tuning runs, evaluations, inference outputs, and agentic AI action logs.
-    This revision (-01) expands the protocol with a quantum-resistant triple-hash
-    cross-chain architecture (SHA-256, SHA3-512, BLAKE3), formal cross-chain binding
-    proofs, agentic AI provenance extensions, streaming inference provenance, federated
-    learning provenance, expanded threat model covering post-quantum adversaries,
-    integration with the Reilly EternaMark (REM) Protocol triple-layer permanence
-    system, implementation status updates, and a conformance framework. RSP is transport-agnostic
-    and serializable in JSON and CBOR. It leverages existing IETF and industry building
-    blocks, including COSE/CMS signatures, CBOR (RFC 8949), CDDL (RFC 8610), JSON
-    (RFC 8259), and NTS-secured time (RFC 8915). Anchoring is done via append-only
-    blockchain receipts and identity/lineage is stabilized with a DOI registry. The
-    result is an evidence-grade, quantum-resilient audit trail for regulated and safety-critical
-    AI deployments worldwide.</p>"
+    and resolvable identifiers. This enables tamper-evident, independently verifiable
+    receipts for datasets, data transformations, training jobs, checkpoints, fine-tuning
+    runs, evaluations, inference outputs, and agentic AI action logs. This revision
+    (-02) supersedes draft-reilly-sentinel-protocol-01 and corrects defects in it.
+    The cross-chain binding hash of -01 was computed under SHA3-512 alone over an
+    unframed concatenation of hex strings, which made a single algorithm the point
+    of failure for a construction whose stated purpose was to survive the failure
+    of any single algorithm, and which admitted field-boundary ambiguity. It is replaced
+    by an entangled link construction over a fixed-length framed input, with a concatenated
+    braid that privileges no algorithm. The post-quantum analysis of -01 applied Grover's
+    algorithm to collision resistance, a property Grover does not meaningfully reduce,
+    and stated SHA-256's collision resistance as 256 bits when it is 128 bits classically.
+    The claim that combining three hash functions requires an adversary to break all
+    three is replaced, following [JOUX], by a hedging claim. Merkle tree construction,
+    left unspecified in -01 while relied upon by three separate extensions, is now
+    normatively specified per [RFC6962]. Digest-only selective disclosure is replaced
+    by salted commitments. Automated repair of chain integrity violations is prohibited.
+    RSP is transport-agnostic and serializable in JSON and CBOR. It leverages existing
+    IETF building blocks including COSE signatures, CBOR, CDDL, JSON, and NTS-secured
+    time. Anchoring is done via append-only blockchain receipts and identity is stabilized
+    with persistent identifiers.</p>"
   language:
   - en
   script:
@@ -58,6 +64,16 @@ relation:
       primary: true
     formattedref:
       content: draft-reilly-sentinel-protocol-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-reilly-sentinel-protocol-02
+    docid:
+    - id: draft-reilly-sentinel-protocol-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-reilly-sentinel-protocol-02
       format: text/plain
 ext:
   schema-version: v1.0.1

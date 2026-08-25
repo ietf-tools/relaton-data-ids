@@ -17,15 +17,22 @@ abstract:
     to prove that IT systems, cloud infrastructures, and AI pipelines are continuously
     exercised and resilient. RRP transforms resilience claims into cryptographically
     signed, tamper-evident evidence persisted in immutable storage and batched into
-    a daily Merkle root that is publicly time-anchored on public blockchains. The
-    protocol outputs an executive Resilience Scorecard backed by independently verifiable
-    cryptographic receipts. RRP composes with the Reilly EternaMark (REM) protocol
-    to ensure dual-layer digital permanence using both DOI archival and blockchain
-    timestamping. This document supersedes draft-reilly-resilience-protocol-00 and
-    extends the protocol with a formal evidence schema, compliance mapping, a scoring
-    algorithm specification, expanded threat model, implementation guidance, and key
-    management requirements. The foundational whitepaper underpinning this work (Reilly
-    Resilience Protocol Whitepaper v2) is permanently archived at:</p>"
+    a daily Merkle root that is publicly time-anchored. The protocol outputs an executive
+    Resilience Scorecard backed by independently verifiable cryptographic receipts.
+    RRP composes with the Reilly EternaMark (REM) protocol to ensure dual-layer digital
+    permanence using both DOI archival and blockchain timestamping. This document
+    supersedes draft-reilly-resilience-protocol-01. It corrects the Merkle tree construction
+    of -01, which duplicated the final leaf of an odd-cardinality set and incorrectly
+    attributed that construction to RFC 9162. It further addresses the principal structural
+    gap of -01, namely that the protocol proved the integrity of the evidence that
+    was produced but could not prove that any particular evidence was ever required
+    to exist. This revision adds the Evidence Continuity Chain, the Control Coverage
+    Attestation, field-level commitments with selective disclosure, governed autonomous
+    remediation with blast-radius classes, hash and signature migration for long retention
+    horizons, a coverage factor and weight renormalization rule in the scoring algorithm,
+    and an implementation status section describing running code. The foundational
+    whitepaper underpinning this work (Reilly Resilience Protocol Whitepaper v2) is
+    permanently archived at:</p>"
   language:
   - en
   script:
@@ -51,6 +58,16 @@ relation:
       primary: true
     formattedref:
       content: draft-reilly-resilience-protocol-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-reilly-resilience-protocol-02
+    docid:
+    - id: draft-reilly-resilience-protocol-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-reilly-resilience-protocol-02
       format: text/plain
 ext:
   schema-version: v1.0.1
