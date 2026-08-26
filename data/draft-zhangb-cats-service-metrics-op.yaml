@@ -14,20 +14,23 @@ docid:
   primary: true
 abstract:
 - content: "<p>Computing-Aware Traffic Steering (CATS) optimizes traffic forwarding
-    by considering both computing and networking metrics. While the existing framework
-    and metric drafts provide theoretical models (e.g., L1/L2 normalized metrics),
-    they face significant challenges to achieve direct operational execution in real-world
-    deployments. Normalization methods vary across providers, and aggregated unitless
-    scores often lose critical operational information, making it difficult for routers
-    to make precise decisions. This document is proposed to fill this gap by providing
-    an executable approach. It defines a set of Computing Service Metrics and their
-    operations under the CATS framework. Instead of transmitting low- level raw hardware
-    metrics, service sites dynamically evaluate and report service-oriented metrics
-    (e.g., Global Available Slots) to the control plane. The document also clarifies
-    how such service-oriented metrics can be derived from basic resource information,
-    service reference information, and local policy, and how updates can be controlled
-    in large-scale deployments. This enables efficient and precise traffic-steering
-    policies without negating the value of existing normalized metrics.</p>"
+    by considering both computing and networking metrics. While existing framework
+    and metric definition drafts provide theoretical models (e.g., L1/L2 normalized
+    metrics), they face significant challenges in achieving direct operational execution
+    in real-world deployments. Normalization methods vary across providers, and aggregated
+    unitless scores often lose critical operational information, making it difficult
+    for routers to make precise traffic-steering decisions. This document fills this
+    gap by providing an executable operational approach. It defines a set of Computing
+    Service Metrics and their operations under the CATS framework. Instead of transmitting
+    low- level raw hardware metrics, service sites dynamically evaluate and report
+    service-oriented metrics (e.g., Global Available Slots) to the control plane.
+    The document clarifies how such service-oriented metrics can be derived from basic
+    resource information, service reference information, and local policy. It also
+    specifies how the CATS Path Selector (C-PS) combines the Computing Service Table
+    (derived from C-SMA reports) with the Network Service Table to make joint traffic-steering
+    decisions. Finally, the document defines update control mechanisms for large-scale
+    deployments. This enables efficient and precise traffic-steering policies without
+    negating the value of existing normalized metrics.</p>"
   language:
   - en
   script:
@@ -73,6 +76,16 @@ relation:
       primary: true
     formattedref:
       content: draft-zhangb-cats-service-metrics-op-03
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-zhangb-cats-service-metrics-op-04
+    docid:
+    - id: draft-zhangb-cats-service-metrics-op-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-zhangb-cats-service-metrics-op-04
       format: text/plain
 ext:
   schema-version: v1.0.1

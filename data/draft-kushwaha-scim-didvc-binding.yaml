@@ -23,7 +23,12 @@ abstract:
     advertises server capabilities for DID and VC binding. This specification intentionally
     does not define DID resolution, credential issuance, credential transport, or
     authentication flows. Instead, it defines how a SCIM service provider represents,
-    discovers, queries, and manages binding state derived from those systems.</p>"
+    discovers, queries, and manages binding state derived from those systems. This
+    specification defines binding lifecycle semantics including classification of
+    SCIM attribute changes as material to credential claims, partial revocation when
+    only a subset of credential claims is affected by a SCIM change, three supported
+    lifecycle interleavings between SCIM resources and externally issued credentials,
+    and propagation of binding state changes via SCIM Events [RFC9967].</p>"
   language:
   - en
   script:
@@ -39,6 +44,16 @@ relation:
       primary: true
     formattedref:
       content: draft-kushwaha-scim-didvc-binding-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-kushwaha-scim-didvc-binding-01
+    docid:
+    - id: draft-kushwaha-scim-didvc-binding-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-kushwaha-scim-didvc-binding-01
       format: text/plain
 ext:
   schema-version: v1.0.1

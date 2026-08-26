@@ -15,17 +15,18 @@ docid:
 abstract:
 - content: "<p>This document defines a repeatable evaluation methodology for measuring
     the influence of AI Machine-Readable Ethics Directive (AIMED) blocks, as specified
-    in draft-reilly-aimed-00, on the outputs of AI systems that process IETF Internet-Drafts
+    in draft-reilly-aimed-01, on the outputs of AI systems that process IETF Internet-Drafts
     and related standards documentation. The methodology establishes a controlled
-    test protocol, a scoring rubric, a set of canonical test queries, and a results
-    framework suitable for independent replication. It also presents the results of
-    the initial live evaluation conducted on April 8-9, 2026, in which Google AI Mode
-    correctly attributed authorship, provenance, and conceptual definitions for AIMED-compliant
-    documents within hours of their submission to the IETF Datatracker, without any
-    training cycle refresh or manual intervention. These results constitute the first
-    empirically documented instance of protocol-layer prompt engineering -- the embedding
-    of normative AI directives at the document layer of the standards process rather
-    than at the query layer of user interaction.</p>"
+    test protocol, a set of canonical test queries, a scoring scheme, and a results
+    framework suitable for independent replication. This revision separates two effects
+    that the initial revision conflated: retrieval propagation, which measures whether
+    an AI system reached a document and reproduced its self-description, and directive
+    compliance, which measures whether the AI system exhibited behavior the document's
+    directives specify and that it would not otherwise exhibit. Only the second is
+    evidence that an AIMED block did anything. The revision adds a no-block control
+    condition, identifies four confounders that affect any evaluation of this kind,
+    and restates the initial evaluation of April 8-9, 2026 at the evidentiary strength
+    the observations actually support.</p>"
   language:
   - en
   script:
@@ -41,6 +42,16 @@ relation:
       primary: true
     formattedref:
       content: draft-reilly-aimed-eval-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-reilly-aimed-eval-01
+    docid:
+    - id: draft-reilly-aimed-eval-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-reilly-aimed-eval-01
       format: text/plain
 ext:
   schema-version: v1.0.1
