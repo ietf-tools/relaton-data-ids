@@ -19,8 +19,11 @@ abstract:
     check and a signed spend receipt that a verifier can reconcile against a rail
     extract. Cedulon specifies a Trade Manifest (signed offer before payment), a Policy
     Decision Point with default deny, a Spend Receipt (COSE/CWT claim set after a
-    gated payment), epoch checkpoints, and rail-extract reconciliation that proves
-    completeness against an authenticated rail extract. It also defines a Dispute
+    gated payment), epoch checkpoints, and rail-extract reconciliation. The reconciliation
+    shows that no settlement on the extract lacks a receipt and no settled receipt
+    is absent from the extract. That result is unconditional only when the verifier
+    pins the rail key out of band and states the period under audit; otherwise the
+    document requires it to be reported as conditional. It also defines a Dispute
     Evidence Bundle (evidence, not an award) and optional SCITT anchoring. Cedulon
     is not a competitor to x402 or AP2; it sits above them.</p>"
   language:
@@ -38,6 +41,16 @@ relation:
       primary: true
     formattedref:
       content: draft-dogru-cedulon-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-dogru-cedulon-01
+    docid:
+    - id: draft-dogru-cedulon-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-dogru-cedulon-01
       format: text/plain
 ext:
   schema-version: v1.0.1

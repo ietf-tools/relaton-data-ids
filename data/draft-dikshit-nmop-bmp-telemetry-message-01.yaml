@@ -1,0 +1,170 @@
+---
+schema-version: v1.2.3
+id: draft-dikshit-nmop-bmp-telemetry-message-01
+title:
+- content: A YANG Augmentation for Carrying BMP Telemetry in the Network Telemetry
+    Message Envelope
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-dikshit-nmop-bmp-telemetry-message-01
+  type: src
+type: standard
+docid:
+- id: draft-dikshit-nmop-bmp-telemetry-message-01
+  type: Internet-Draft
+  primary: true
+- id: I-D.dikshit-nmop-bmp-telemetry-message
+  type: IETF
+  scope: anchor
+docnumber: I-D.dikshit-nmop-bmp-telemetry-message
+date:
+- type: published
+  value: '2026-08-26'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Saumya
+          language:
+          - en
+        - language:
+          - en
+          initial: D
+        formatted_initials:
+          content: D.
+          language:
+          - en
+      surname:
+        content: Dikshit
+        language:
+        - en
+      completename:
+        content: Saumya Dikshit
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Aruba Networks
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Mukul
+          language:
+          - en
+        - language:
+          - en
+          initial: M
+        - language:
+          - en
+          initial: K
+        formatted_initials:
+          content: M. K.
+          language:
+          - en
+      surname:
+        content: Srivastava
+        language:
+        - en
+      completename:
+        content: Mukul Kumar Srivastava
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Hewlett Packard Enterprise
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Changwang
+          language:
+          - en
+        - language:
+          - en
+          initial: C
+        formatted_initials:
+          content: C.
+          language:
+          - en
+      surname:
+        content: Lin
+        language:
+        - en
+      completename:
+        content: Changwang Lin
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: New H3C Technologies
+  role:
+  - type: author
+version:
+- draft: '01'
+revdate: '2026-08-26'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: '<p>[I-D.ietf-nmop-message-broker-telemetry-message] defines an extensible
+    YANG envelope, "ietf-telemetry-message", for publishing collected Network Telemetry
+    data to a Message Broker as part of a Data Mesh, together with a companion augmentation
+    module, "ietf-yang-push-telemetry-message", that adds YANG-Push-specific subscription
+    metadata to that envelope. The base document''s prose explicitly anticipates the
+    BGP Monitoring Protocol (BMP) [RFC7854] as a source of collected data flowing
+    through this envelope (see the description of the "node-export-timestamp" leaf),
+    but defines no "session-protocol" identity, and no companion augmentation module,
+    for BMP. This document closes that gap. It defines a new YANG module, "ietf-bmp-telemetry-message",
+    that (a) adds an "identity bmp" under the base module''s "session-protocol" identity,
+    and (b) augments "telemetry-message-metadata" with BMP-specific provenance: the
+    monitoring station identifier, BMP per-peer header fields, BMP message type, and
+    route-monitoring scope (network instance, RIB type, address family, and Route
+    Distinguisher). It also documents how this module interoperates with the BMP YANG
+    configuration and monitoring model [I-D.ietf-grow-bmp-yang] and with several BMP
+    Statistics Report extensions ([RFC9972], [I-D.ietf-grow-bmp-stats-informational-tlv],
+    [I-D.saum-grow-bmp-afi-safi-evpn], [I-D.smc-grow-bmp-route-change-stats], and
+    [I-D.dikshit-grow-bmp-rd-scoped-rib-stats]) when their messages are republished
+    to a Message Broker.</p>'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-dikshit-nmop-bmp-telemetry-message-00
+    docid:
+    - id: draft-dikshit-nmop-bmp-telemetry-message-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-dikshit-nmop-bmp-telemetry-message-00
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-dikshit-nmop-bmp-telemetry-message-01
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

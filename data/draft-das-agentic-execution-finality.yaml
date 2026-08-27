@@ -1,0 +1,59 @@
+---
+schema-version: v1.2.3
+id: draft-das-agentic-execution-finality
+title:
+- content: 'Tool Selection Is Not Execution: Finality for Agentic Tool Dispatch'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-das-agentic-execution-finality
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>An agentic model can emit a tool call that today's runtimes treat as
+    something to execute. Allowlists, OAuth tokens, MCP server auth, sandboxes, output
+    filters, and human approval decide whether an agent may reach a tool. They do
+    not decide whether this generated call, with this argument digest, from this instruction
+    chain, at this delegation depth, may take effect now. That gap is the incident
+    surface. Prompt-injected content, poisoned retrieval, a malicious tool response,
+    or a delegated sub-agent can produce a call that looks like ordinary tool use.
+    If the dispatcher executes whatever the model selected, policy that lived upstream
+    becomes advisory. This document specifies a dispatch-time gate. The model may
+    compute a call. The call remains a Candidate Act. A Protected Enforcement Domain
+    binds agent, tool, arguments, purpose, destination, provenance, and policy epochs,
+    then issues scoped non-bearer authority. A Tool-Dispatch Finality Sink verifies
+    that authority against the actual invocation immediately before the tool runs,
+    then consumes it. The same gate applies to support, coding, payments, clinical,
+    SOC, browser-use, and multi-agent MCP deployments. Tool selection is not execution
+    authority.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-das-agentic-execution-finality-00
+    docid:
+    - id: draft-das-agentic-execution-finality-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-das-agentic-execution-finality-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-das-agentic-execution-finality-01
+    docid:
+    - id: draft-das-agentic-execution-finality-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-das-agentic-execution-finality-01
+      format: text/plain
+ext:
+  schema-version: v1.0.1

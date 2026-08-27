@@ -1,0 +1,78 @@
+---
+schema-version: v1.2.3
+id: draft-das-child-safe-rendering-finality
+title:
+- content: Preventing Unauthorized Adult and Age-Restricted Content Rendering to Children
+    Through Hardware-Rooted Execution Finality
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-das-child-safe-rendering-finality
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>Online child-safety controls commonly operate before the final rendering
+    boundary. Platforms may use account-age flags, parental settings, content labels,
+    recommender controls, server-side classification, age-assurance systems, access
+    policies, or application filters to decide whether adult or age-restricted content
+    should be available to a user. Those controls are important, but an upstream decision
+    does not by itself guarantee that the content cannot later be decrypted, decoded,
+    composited, rendered, forwarded, mirrored, or otherwise materialized through another
+    software or device path. This problem is becoming more important as content delivery
+    becomes more distributed, encrypted, AI-mediated, personalized, and dynamically
+    generated. A modern device may receive content through applications, browsers,
+    content-delivery networks, embedded web views, messaging clients, recommendation
+    systems, generative-AI services, caches, cloud gaming or streaming pipelines,
+    local AI models, or third-party SDKs. The security question is therefore no longer
+    only whether content was classified or whether an age check occurred upstream.
+    A later question must also be answered: is this specific protected content authorized
+    to become perceptible to this recipient, on this device, under the current eligibility,
+    policy, and revocation state, at this moment? This document defines a protected
+    rendering execution-finality architecture for adult, pornographic, sexually explicit,
+    violent, gambling-related, or otherwise age-restricted content. A proposed rendering
+    is represented as a Restricted Content Candidate Act and remains in a Non-Renderable
+    State until a Protected Enforcement Domain validates the applicable recipient,
+    content, device, policy, age-or-eligibility, freshness, revocation, and sink predicates.
+    Protected validation evidence is committed before, or atomically with, release
+    of scoped non-bearer Rendering Finality Authority. A Protected Rendering Finality
+    Sink independently verifies that authority immediately before the content becomes
+    perceptible. Depending on the implementation, the sink may control content-key
+    release, decryption, media-decoder enablement, GPU or compositor access, protected-surface
+    creation, audio output, casting, screen mirroring, display enablement, or an equivalent
+    materialization boundary. Content bytes may therefore be delivered to a device
+    while remaining technically non-renderable. The architecture deliberately does
+    not define a universal age- estimation algorithm, identity system, or content-classification
+    scheme. Those mechanisms may supply inputs to the Protected Enforcement Domain.
+    This document defines the consequence-control step that prevents an upstream policy
+    result from becoming merely advisory at the point of rendering. UNICEF has warned
+    that pornographic content can harm children and that digital restrictions have
+    not kept pace with technological shifts. The ITU Child Online Protection programme
+    provides global guidance for safer digital environments, and the United Nations
+    Committee on the Rights of the Child has called for protection of children from
+    harmful content and online risks in the digital environment. The European Commission
+    has likewise adopted protection-of-minors guidance and a privacy-preserving age-
+    verification approach for adult-restricted content. These materials motivate the
+    problem addressed here; they do not endorse this particular technical architecture.
+    The central protocol principle is: permission to deliver content is not permission
+    to render it.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-das-child-safe-rendering-finality-00
+    docid:
+    - id: draft-das-child-safe-rendering-finality-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-das-child-safe-rendering-finality-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

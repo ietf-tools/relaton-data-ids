@@ -19,18 +19,18 @@ abstract:
     strings to serial- numbered segments, deterministic commitment-tree calculation,
     an authoritative segment artifact encoded in Concise Binary Object Representation
     (CBOR), a producer manifest, three disclosure classes, and binding of the authoritative
-    segment artifact digest to external timestamp channels. Transport framing, decryption,
-    anti-replay processing, payload interpretation, and source-telemetry-to-record
-    mapping are outside this profile. Segment closure uses a deployment- configured
+    segment artifact digest to timestamp artifacts under the RFC 3161 profile. Transport
+    framing, decryption, anti-replay processing, payload interpretation, and source-telemetry-
+    to-record mapping are outside this profile. Segment closure uses a deployment-configured
     elapsed-time interval and does not depend on calendar dates from either the source
-    or the ledger producer. Every baseline producer selects the RFC 3161 timestamp
-    channel, as updated by RFC 5816 and profiled by this document, for every emitted
-    segment. OpenTimestamps (OTS) can be selected only as an additive, deployment-
-    specific timestamp profile; peer signatures are optional attestations. The profile
-    enables independent recomputation and audit of disclosed evidence from the admitted
-    canonical-record bytes onward. It does not verify how source telemetry was authenticated,
-    interpreted, or mapped to those bytes, and it does not cover device onboarding,
-    end- to-end security of sensor values, or safety decisions.</p>"
+    or the ledger producer. Every baseline producer uses RFC 3161 timestamping, as
+    updated by RFC 5816 and profiled by this document, for every emitted segment.
+    Alternative timestamping and attestation mechanisms are outside this profile and
+    require a separate specification. The profile enables independent recomputation
+    and audit of disclosed evidence from the admitted canonical-record bytes onward.
+    It does not verify how source telemetry was authenticated, interpreted, or mapped
+    to those bytes, and it does not cover device onboarding, end- to-end security
+    of sensor values, or safety decisions.</p>"
   language:
   - en
   script:
@@ -136,6 +136,16 @@ relation:
       primary: true
     formattedref:
       content: draft-elkhatabi-verifiable-telemetry-ledgers-09
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-elkhatabi-verifiable-telemetry-ledgers-10
+    docid:
+    - id: draft-elkhatabi-verifiable-telemetry-ledgers-10
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-elkhatabi-verifiable-telemetry-ledgers-10
       format: text/plain
 ext:
   schema-version: v1.0.1

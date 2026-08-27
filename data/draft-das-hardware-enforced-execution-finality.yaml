@@ -1,0 +1,149 @@
+---
+schema-version: v1.2.3
+id: draft-das-hardware-enforced-execution-finality
+title:
+- content: Hardware-Rooted National Control to Prevent Covert Intelligence Data Export
+    and Unauthorized Frontier and Neural AI/Autonomous Acts in Critical Infrastructure
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-das-hardware-enforced-execution-finality
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: '<p>Modern security architecture has traditionally focused on who or what
+    may access a system, data object, network, device, application, or service. Authentication,
+    authorization, sandboxing, access control, encryption, application permissions,
+    network policy, identity management, and audit logging were generally sufficient
+    when most consequential operations were initiated, reviewed, or completed through
+    relatively predictable human-directed software flows. That assumption is changing.
+    Ten years ago, there was substantially less need for a distinct execution-finality
+    security layer because most artificial- intelligence systems were primarily analytical,
+    classificatory, predictive, or advisory. A model could classify an image, rank
+    search results, recommend content, detect patterns, translate text, or generate
+    a prediction, but it generally could not autonomously discover external tools,
+    recruit other agents, operate browsers, invoke APIs, modify persistent memory,
+    initiate payments, reconfigure networks, control accelerators, export sensitive
+    information, communicate directly with machines, or cause physical and communications
+    effects at machine speed. The human operator, application workflow, operating
+    system, or another conventional software boundary often remained the practical
+    final boundary between computation and consequence. In contemporary agentic and
+    autonomous systems, that boundary is increasingly disappearing. A model output
+    may become a tool call; a tool call may become an API transaction; an autonomous
+    agent may delegate to another agent; an application with location access may automatically
+    transmit precise coordinates; an AI-controlled network function may modify routing
+    or resource allocation; and an AI- generated instruction may become a payment,
+    RF emission, satellite command, memory write, database commit, network transmission,
+    or actuator signal without a separate technical decision immediately before the
+    consequence occurs. This creates a different class of security problem: successful
+    computation, authentication, data access, application permission, model approval,
+    or upstream authorization does not necessarily establish authority for the resulting
+    consequence. Precise geolocation provides a particularly important example. Traditional
+    mobile-security models frequently treat location permission as an application-level
+    access question: whether an application may obtain location information. In the
+    AI era, however, precise latitude and longitude should increasingly be treated
+    as high-value inference material rather than as ordinary application metadata.
+    A single GPS coordinate may reveal little. Thousands or millions of coordinates,
+    timestamps, movement traces, device observations, proximity records, public-map
+    information, telemetry signals, communications metadata, and other apparently
+    low-sensitivity fragments can be correlated by modern AI systems to infer information
+    that was never explicitly contained in any individual record. Such inference may
+    reveal movement patterns, home and workplace relationships, protected-person movements,
+    operational routines, sensitive infrastructure, military activity, research facilities,
+    industrial sites, or other strategically significant information. The important
+    security problem is therefore no longer limited to: "Was the secret database breached?"
+    A future attacker or intelligence system may instead ask: "Can the secret be reconstructed
+    from ordinary data that many applications were permitted to collect?" This distinction
+    becomes increasingly important because contemporary machine-learning systems can
+    perform correlation, clustering, anomaly detection, temporal analysis, multimodal
+    fusion, relationship inference, and large-scale pattern recognition far more rapidly
+    and economically than was practical for routine use a decade ago. The inference
+    itself was not impossible ten years ago. What has changed is its scale, automation,
+    cost, speed, and accessibility. Accordingly, not every application, SDK, analytics
+    component, advertising library, AI agent, browser process, cloud service, or external
+    endpoint should automatically receive precise GPS coordinates merely because some
+    component of the application stack possesses location permission. A weather application
+    may need only a city. A local-search application may need only an approximate
+    area. A recommendation service may require a regional location. An emergency,
+    navigation, rescue, or safety-critical application may legitimately require exact
+    coordinates. An unrelated analytics or advertising component may require no location
+    at all. Precise location should therefore be treated not merely as readable data,
+    but as a consequence-bearing disclosure whose permitted precision can be independently
+    verified before release. This document describes a hardware-rooted execution-finality
+    architecture in which a proposed consequence-bearing operation is represented
+    as a Candidate Act and maintained in a Non-Effective State until protected validation
+    and independent Finality Sink verification succeed. A Protected Enforcement Domain
+    evaluates act-specific conditions that may include authority, purpose, instruction
+    provenance, requesting application or agent identity, permitted scope, recipient,
+    destination, jurisdiction, data class, data precision, policy epoch, revocation
+    state, protected state, runtime behavior, permitted consequence class, and Finality
+    Sink identity. Protected validation evidence is committed before, or atomically
+    with, release of scoped non-bearer finality authority. The applicable Finality
+    Sink independently verifies that authority immediately before the operation becomes
+    externally or operationally effective. For a location-data Candidate Act, the
+    result may therefore be: exact location permitted; coarse location permitted;
+    city-level or regional location permitted; delayed, randomized, grid-based, or
+    otherwise reduced location permitted; or location disclosure denied. If exact
+    coordinates are not authorized, possession of exact coordinates inside the application
+    or protected environment does not itself authorize those coordinates to cross
+    the relevant data-egress boundary. The architecture is jurisdiction-neutral. It
+    does not prescribe whether the governing rule originates in the United States,
+    the European Union, China, India, another sovereign jurisdiction, an enterprise
+    policy, a telecommunications operator, or a user- controlled privacy policy. Instead,
+    it provides a technical mechanism by which the applicable regulatory, sovereign,
+    organizational, contractual, or user- authorized policy can be evaluated before
+    a protected consequence becomes effective. Thus, a system may determine: "This
+    application is allowed to use exact GPS locally, but this destination is authorized
+    to receive only city-level location." or: "This recipient is authorized to receive
+    exact coordinates for emergency response." or: "This foreign destination is not
+    authorized to receive this location information." The same architectural principle
+    applies beyond location information to agentic AI, sovereign data export, AI-native
+    5G and 6G, O-RAN, GPU and accelerator egress, confidential computing, satellite
+    and non- terrestrial networks, financial settlement, and cyber-physical infrastructure.
+    This requirement becomes still more important as 6G develops. The International
+    Telecommunication Union''s IMT-2030 framework for 6G includes Artificial Intelligence
+    and Communication and Integrated Sensing and Communication as distinct usage scenarios.
+    Current IMT-2030 work also anticipates substantially enhanced positioning and
+    sensing capabilities, including object detection, localization, mapping, AI-enabled
+    processing, ubiquitous intelligence, and very high precision positioning. This
+    means that the future security problem will not simply involve more applications
+    connected to a faster network. The network environment itself is expected to become
+    more intelligent, more sensing-aware, more densely connected, more autonomous,
+    and more capable of combining communications, computation, positioning, and environmental
+    information. Without a corresponding consequence-control boundary, the combination
+    of AI, precise location, integrated sensing, ubiquitous connectivity, autonomous
+    agents, cloud and edge computation, and machine-speed communication risks undermining
+    traditional assumptions on which both cybersecurity and privacy have relied. The
+    result could be a collapse of the conventional distinction between harmless metadata
+    and sensitive intelligence: data that is individually ordinary may become strategically
+    sensitive after AI inference. It could also collapse the traditional distinction
+    between software permission and real-world authority: an application may be authorized
+    to read information while being unauthorized to disclose it; an AI may be authorized
+    to compute while being unauthorized to act; a network function may be authenticated
+    while being unauthorized to cause a particular network consequence. The security
+    boundary must therefore move closer to the consequence itself. If required finality
+    authority is absent, stale, replayed, revoked, consumed, act-mismatched, scope-mismatched,
+    precision-mismatched, jurisdiction-mismatched, policy-mismatched, or sink-mismatched,
+    the Candidate Act remains non-effective and the protected consequence fails closed.
+    The central security principle is: COMPUTATION IS NOT AUTHORITY.</p>'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-das-hardware-enforced-execution-finality-00
+    docid:
+    - id: draft-das-hardware-enforced-execution-finality-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-das-hardware-enforced-execution-finality-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
