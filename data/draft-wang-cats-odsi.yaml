@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-wang-cats-odsi
 title:
-- content: An Open, Decentralized, and Scalable Framework for Large Language Model
+- content: An Architecture for Open, Decentralized, and Scalable Large Language Model
     Inference
   language:
   - en
@@ -14,26 +14,25 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>Large Language Model (LLM) inference is increasingly deployed as a
-    networked service, yet existing deployments rely primarily on centralized infrastructure
-    and trusted operators. Such designs limit openness, concentrate resource ownership,
-    and constrain scalability to the capacity of individual providers. At the same
-    time, LLM inference introduces execution characteristics (e.g., strict sequential
-    dependencies, large intermediate activations, and tight latency requirements)
-    that are not well supported by existing network, transport, or coordination mechanisms
-    in open environments. This document specifies an open, decentralized, and scalable
-    framework for executing LLM inference across independently operated and mutually
-    untrusted participants. The framework treats inference as a distributed, layer-wise
-    execution process subject to explicit deadlines, rather than as a monolithic computation
-    or best-effort service. It combines layer-aware activation transport and routing,
-    decentralized coordination among heterogeneous compute resources, and security
-    mechanisms that provide accountability and correctness without assuming trusted
-    execution. This document focuses on the architectural framework, design rationale,
-    problem definition, challenges, and solution space of the Open, Decentralized,
-    and Scalable Inference framework (ODSI). It does not specify concrete wire protocols,
-    message formats, or protocol state machines. Such protocol-level specifications
-    are to be defined in separate documents that build upon the framework described
-    herein.</p>"
+- content: "<p>Large Language Model (LLM) inference is normally operated by one provider,
+    even when the provider distributes execution across many sites. This document
+    describes a different system model in which independently operated and mutually
+    untrusted participants contribute compute, memory, model storage, and network
+    capacity to one inference service. No single administrative entity is required
+    to admit participants, select every execution path, hold the complete model, verify
+    all results, or settle all resource contributions. This document defines the Open,
+    Decentralized, and Scalable Inference (ODSI) architecture. It specifies the architectural
+    roles, trust boundaries, named objects, protocol-independent interfaces, execution
+    workflow, verification choices, timing model, and security and privacy requirements
+    needed to construct a multi-operator inference overlay. It also identifies the
+    protocol and operational choices that each ODSI deployment must specify so that
+    independently developed participants can interoperate. ODSI is related to Computing-Aware
+    Traffic Steering (CATS), but it does not extend the CATS single-provider model
+    across trust domains. CATS mechanisms can be used within a participating domain
+    or as an input to local path selection. Cross-domain membership, model governance,
+    execution verification, and settlement are separate ODSI functions. This document
+    is Informational and does not define a wire format, consensus algorithm, payment
+    system, or new CATS metric.</p>"
   language:
   - en
   script:
@@ -49,6 +48,16 @@ relation:
       primary: true
     formattedref:
       content: draft-wang-cats-odsi-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-wang-cats-odsi-01
+    docid:
+    - id: draft-wang-cats-odsi-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-wang-cats-odsi-01
       format: text/plain
 ext:
   schema-version: v1.0.1
