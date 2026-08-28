@@ -22,8 +22,15 @@ abstract:
     — so that each payload class declares its canonicalization algorithm and exclusion
     set once, obtains an interoperable derived identifier, and inherits statement-to-receipt
     binding and typed digest reference semantics without restating the mechanics in
-    every profile. IANA registries govern both the canonicalization algorithms and
-    the artifact types that may appear in typed references; entries are immutable.</p>"
+    every profile. It complements the COSE Hash Envelope mechanism defined in RFC
+    9995: where that mechanism signals that a Signed Statement's payload is a digest
+    standing in for content held elsewhere, this document defines how that digest
+    is computed from structured content so that independently written implementations
+    converge on the same bytes. An IANA registry governs the canonicalization algorithms;
+    entries are immutable. This document defines no payload content formats and registers
+    no artifact types; the artifact types that a typed reference may cite, and their
+    meaning, are registered in a single shared Artifact Type Registry, governed separately
+    from this document, that payload profiles register into.</p>"
   language:
   - en
   script:
@@ -49,6 +56,16 @@ relation:
       primary: true
     formattedref:
       content: draft-mih-sokolov-scitt-payload-binding-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-mih-sokolov-scitt-payload-binding-02
+    docid:
+    - id: draft-mih-sokolov-scitt-payload-binding-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-mih-sokolov-scitt-payload-binding-02
       format: text/plain
 ext:
   schema-version: v1.0.1

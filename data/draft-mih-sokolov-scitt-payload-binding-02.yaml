@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-mih-sokolov-scitt-payload-binding-01
+id: draft-mih-sokolov-scitt-payload-binding-02
 title:
 - content: 'Canonical Payload Binding: A Signed Statement Construction Profile'
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-mih-sokolov-scitt-payload-binding-01
+- content: https://datatracker.ietf.org/doc/html/draft-mih-sokolov-scitt-payload-binding-02
   type: src
 type: standard
 docid:
-- id: draft-mih-sokolov-scitt-payload-binding-01
+- id: draft-mih-sokolov-scitt-payload-binding-02
   type: Internet-Draft
   primary: true
 - id: I-D.mih-sokolov-scitt-payload-binding
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.mih-sokolov-scitt-payload-binding
 date:
 - type: published
-  value: '2026-07-27'
+  value: '2026-08-27'
 contributor:
 - person:
     name:
@@ -49,7 +49,7 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Action State Group
+        - content: Action State Group, Inc.
   role:
   - type: author
 - person:
@@ -81,8 +81,8 @@ contributor:
   role:
   - type: author
 version:
-- draft: '01'
-revdate: '2026-07-27'
+- draft: '02'
+revdate: '2026-08-27'
 language:
 - en
 script:
@@ -97,8 +97,15 @@ abstract:
     — so that each payload class declares its canonicalization algorithm and exclusion
     set once, obtains an interoperable derived identifier, and inherits statement-to-receipt
     binding and typed digest reference semantics without restating the mechanics in
-    every profile. IANA registries govern both the canonicalization algorithms and
-    the artifact types that may appear in typed references; entries are immutable.</p>"
+    every profile. It complements the COSE Hash Envelope mechanism defined in RFC
+    9995: where that mechanism signals that a Signed Statement's payload is a digest
+    standing in for content held elsewhere, this document defines how that digest
+    is computed from structured content so that independently written implementations
+    converge on the same bytes. An IANA registry governs the canonicalization algorithms;
+    entries are immutable. This document defines no payload content formats and registers
+    no artifact types; the artifact types that a typed reference may cite, and their
+    meaning, are registered in a single shared Artifact Type Registry, governed separately
+    from this document, that payload profiles register into.</p>"
   language:
   - en
   script:
@@ -115,16 +122,6 @@ relation:
     formattedref:
       content: draft-mih-sokolov-scitt-payload-binding-00
       format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-mih-sokolov-scitt-payload-binding-02
-    docid:
-    - id: draft-mih-sokolov-scitt-payload-binding-02
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-mih-sokolov-scitt-payload-binding-02
-      format: text/plain
 series:
 - type: main
   title:
@@ -134,7 +131,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-mih-sokolov-scitt-payload-binding-01
+  number: draft-mih-sokolov-scitt-payload-binding-02
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

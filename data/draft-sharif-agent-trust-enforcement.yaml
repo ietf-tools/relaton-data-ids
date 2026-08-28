@@ -1,0 +1,48 @@
+---
+schema-version: v1.2.3
+id: draft-sharif-agent-trust-enforcement
+title:
+- content: Agent Trust Enforcement for Autonomous AI Systems
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-sharif-agent-trust-enforcement
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This document specifies a trust enforcement architecture for autonomous
+    AI agents operating within container orchestration environments such as Kubernetes.
+    It defines a sidecar injection pattern using mutating admission webhooks, graduated
+    trust enforcement (L0-L4) on every outbound call from an agent workload, credential
+    isolation via secret management systems, bilateral revocation propagation across
+    clusters, and tamper- evident evidence generation. The architecture operates alongside
+    existing workload identity frameworks including SPIFFE/SPIRE without replacement,
+    extends X.509v3 certificates with agent-specific extensions under a registered
+    IANA Private Enterprise Number (PEN 66339), and provides compliance evidence for
+    EU AI Act Article 12, FDA 21 CFR Part 11, IEC 62443, and NERC CIP. Three enforcement
+    gates -- LLM gate, Database gate, and API gate -- intercept every outbound call
+    from an agent container. Each gate classifies the call against the agent's trust
+    level, records the decision in a hash-chained evidence ledger with ECDSA P-256
+    signatures, and either permits or refuses the call. The architecture defaults
+    to deny: if no policy matches, the call is refused.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-sharif-agent-trust-enforcement-00
+    docid:
+    - id: draft-sharif-agent-trust-enforcement-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-sharif-agent-trust-enforcement-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
