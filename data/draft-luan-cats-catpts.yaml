@@ -2,8 +2,8 @@
 schema-version: v1.2.3
 id: draft-luan-cats-catpts
 title:
-- content: A Framework for Compute-Aware Task Placement and Traffic Steering in Heterogeneous
-    Computing Networks
+- content: A Timescale-Aware Framework for Compute-Aware Task Placement and Traffic
+    Steering in Heterogeneous Geo-Distributed Computing Networks
   language:
   - en
   script:
@@ -14,20 +14,20 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>The increasing deployment of geographically distributed computing infrastructures
-    equipped with heterogeneous compute resources (e.g., CPU, GPU, memory) has motivated
-    new architectural approaches for jointly optimizing task placement and traffic
-    steering. In heterogeneous computing networks, tasks must be assigned to compute-
-    capable nodes while respecting multi-dimensional resource constraints and network
-    bandwidth limitations. This document presents a conceptual framework for Compute-Aware
-    Task Placement and Traffic Steering (CATPTS). The framework models a computing
-    network as a directed graph containing compute-capable nodes and forwarding-only
-    nodes. Task execution location selection and two-stage traffic steering are jointly
-    optimized under link bandwidth and multi-dimensional compute capacity constraints.
-    The objective is to achieve global load balancing across compute and network resources.
-    This document defines the architectural principles, conceptual model, terminology,
-    and optimization formulation underlying such systems. It does not specify protocol
-    mechanisms.</p>"
+- content: "<p>Geographically distributed compute-intensive services require coordinated
+    selection of execution sites and wide-area traffic paths. Placement changes slowly
+    because service relocation may involve model loading, state migration, or execution-environment
+    reconfiguration, while traffic splitting can be changed more frequently. This
+    document evolves the CATPTS framework by defining a timescale- aware control architecture
+    for source-compute-destination services. A slow-timescale placement function uses
+    abstracted multipath and failure information to select a compute site. A fast-timescale
+    traffic function then refines the input and output traffic allocations across
+    candidate paths while holding placement fixed. The framework also introduces scenario-based
+    service-loss estimation and an optional Conditional Value at Risk (CVaR) policy
+    for limiting tail loss caused by compute-site or network-link failures. This document
+    specifies architectural principles, information requirements, workflows, and operational
+    considerations; it does not specify protocol extensions or a mandatory optimization
+    algorithm.</p>"
   language:
   - en
   script:
@@ -43,6 +43,16 @@ relation:
       primary: true
     formattedref:
       content: draft-luan-cats-catpts-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-luan-cats-catpts-01
+    docid:
+    - id: draft-luan-cats-catpts-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-luan-cats-catpts-01
       format: text/plain
 ext:
   schema-version: v1.0.1

@@ -1,28 +1,28 @@
 ---
 schema-version: v1.2.3
-id: draft-geng-sidrops-aspa-analysis-04
+id: draft-geng-sidrops-rtr-selective-sync-07
 title:
-- content: An Analysis of ASPA-based AS_PATH Verification
+- content: Selective Synchronization Extension for RPKI-to-Router Protocol
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-geng-sidrops-aspa-analysis-04
+- content: https://datatracker.ietf.org/doc/html/draft-geng-sidrops-rtr-selective-sync-07
   type: src
 type: standard
 docid:
-- id: draft-geng-sidrops-aspa-analysis-04
+- id: draft-geng-sidrops-rtr-selective-sync-07
   type: Internet-Draft
   primary: true
-- id: I-D.geng-sidrops-aspa-analysis
+- id: I-D.geng-sidrops-rtr-selective-sync
   type: IETF
   scope: anchor
-docnumber: I-D.geng-sidrops-aspa-analysis
+docnumber: I-D.geng-sidrops-rtr-selective-sync
 date:
 - type: published
-  value: '2026-02-25'
+  value: '2026-08-27'
 contributor:
 - person:
     name:
@@ -56,6 +56,59 @@ contributor:
     name:
       given:
         forename:
+        - content: Shunwan
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Zhuang
+        language:
+        - en
+      completename:
+        content: Shunwan Zhuang
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - language:
+          - en
+          initial: "Y"
+        formatted_initials:
+          content: Y.
+          language:
+          - en
+      surname:
+        content: Fu
+        language:
+        - en
+      completename:
+        content: Yu Fu
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: China Telecom
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
         - language:
           - en
           initial: M
@@ -74,50 +127,21 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Zhongguancun Lab
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Yangyang
-          language:
-          - en
-        - language:
-          - en
-          initial: "Y"
-        formatted_initials:
-          content: Y.
-          language:
-          - en
-      surname:
-        content: Wang
-        language:
-        - en
-      completename:
-        content: Yangyang Wang
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Tsinghua University
+        - content: Zhongguancun Laboratory
   role:
   - type: author
 version:
-- draft: '04'
-revdate: '2026-02-25'
+- draft: '07'
+revdate: '2026-08-27'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>Autonomous System Provider Authorization (ASPA) is very helpful in
-    detecting and mitigating route leaks (valley-free violations) and a majority of
-    forged-origin hijacks. This document does an analysis on ASPA-based AS_PATH verification
-    to help people understand its strengths and deficiencies, and some potential directions
-    of enhancing ASPA are provided.</p>"
+- content: "<p>The RPKI-to-Router (RTR) protocol synchronizes all the verified RPKI
+    data to routers. This document proposes to extend the existing RTR protocol to
+    support selective data synchronization. Selective synchronization can avoid unnecessary
+    transmissions. The router can receive only the data that it really needs.</p>"
   language:
   - en
   script:
@@ -126,23 +150,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-geng-sidrops-aspa-analysis-01
+    id: draft-geng-sidrops-rtr-selective-sync-00
     docid:
-    - id: draft-geng-sidrops-aspa-analysis-01
+    - id: draft-geng-sidrops-rtr-selective-sync-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-geng-sidrops-aspa-analysis-01
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-geng-sidrops-aspa-analysis-05
-    docid:
-    - id: draft-geng-sidrops-aspa-analysis-05
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-geng-sidrops-aspa-analysis-05
+      content: draft-geng-sidrops-rtr-selective-sync-00
       format: text/plain
 series:
 - type: main
@@ -153,7 +167,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-geng-sidrops-aspa-analysis-04
+  number: draft-geng-sidrops-rtr-selective-sync-07
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

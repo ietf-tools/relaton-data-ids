@@ -1,0 +1,58 @@
+---
+schema-version: v1.2.3
+id: draft-agentic-ai-tool-execution-finality
+title:
+- content: 'Execution Finality for Agentic AI: Stopping Unauthorized Tool Calls, Memory
+    Writes, and Real-World Consequences Before They Happen (DAS -- Decoupled Authorisation
+    System)'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-agentic-ai-tool-execution-finality
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>Agentic AI systems now call tools, write memory, move money, change
+    infrastructure, and trigger physical actions. Most safety layers still decide
+    permission upstream and then trust the downstream path. Once that path is compromised,
+    or once the approved request is widened, replayed, or substituted, the act becomes
+    real before any audit can stop it. This document specifies a protected execution-finality
+    architecture of the Decoupled Authorisation System (DAS). It is built on four
+    mechanisms: (1) two-instance binding that separates collection-time evidence from
+    execution-time validation, (2) mutually load-bearing, cross-committed protected
+    evidence so that no single artifact authorizes effectuation, (3) scoped non-bearer
+    finality authority whose possession alone is never enough, and (4) independent
+    Finality Sink reconstruction that re-derives the actual pending operation at the
+    effectuation boundary and permits the act only when every required condition still
+    matches. A Candidate Act remains in a Non-Effective State until the Finality Sink
+    has reconstructed the operation, verified the protected evidence against sink-local
+    monotonic state, and advanced that state. Failure at any step produces fail-closed
+    denial before effectuation rather than post-event remediation. The architecture
+    is applicable to agentic tool use, MCP and connector frameworks, RAG and vector-memory
+    systems, cloud control planes, financial settlement, telecom routing, and cyber-physical
+    control. The document elaborates the problem space, compares the approach with
+    representative existing techniques, presents the detailed solution and its advantages,
+    supplies JSON Schema definitions for core protected objects, and includes an industry-relevance
+    section. Related Indian provisional applications and PCT filings appear in the
+    final appendix.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-agentic-ai-tool-execution-finality-00
+    docid:
+    - id: draft-agentic-ai-tool-execution-finality-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-agentic-ai-tool-execution-finality-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
