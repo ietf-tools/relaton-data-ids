@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-das-6g-query-scoped-communication-handles
 title:
-- content: 6G-Era Privacy-Preserving, Anti-Harassment and Spam-Free Communication
+- content: 6G-Era Privacy-Preserving, Anti-Harassment and Spam-Resistant Communication
     for Map-Based Business Discovery and AI-Native Telecommunication Using Query-Scoped
     Communication Handles
   language:
@@ -15,55 +15,46 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: '<p>A basic architectural weakness remains embedded in modern telecommunications:
-    knowing how to reach someone is often practically equivalent to having permission
-    to attempt contact. A phone number, email address, SIP URI, messaging handle,
-    marketplace contact reference, or similar identifier commonly acts simultaneously
-    as an identity reference, a routing locator, and a reusable path to the recipient.
-    Once that identifier is exposed, copied, leaked, scraped, sold, forwarded, or
-    retained after a legitimate interaction, the recipient may remain reachable long
-    after the original purpose has ended. Existing protections, including caller authentication,
-    spam scoring, AI-based filtering, blacklists, temporary aliases, number masking,
-    and application-level policies, generally operate on top of this persistently
-    reachable architecture rather than changing it. This problem becomes more significant
-    as communications become increasingly automated. AI agents, autonomous workflows,
-    programmable network APIs, AI-RAN systems, digital twins, machine-to-machine services,
-    and future 5G/6G infrastructures can generate communication actions at machine
-    speed and scale. A communication attempt may therefore originate not only from
-    a human caller, but from an AI model, software agent, automated business process,
-    network controller, or chained multi-agent workflow. This patent-pending work
-    introduces the concept of a Capability-Validated Inbound Descriptor (CVID): a
-    communication architecture in which possession of an exposed identifier does not
-    itself constitute authority to reach the recipient. The central principle is:
-    Possession of an identifier is not permission to reach. Under the proposed model,
-    an inbound communication request is treated first as a proposed or Candidate Act
-    rather than as an automatically executable communication event. The act may remain
-    non-effective until a protected authority mechanism determines that the communication
-    is within an authorized scope. Only after successful validation is the limited
-    capability necessary for the particular communication effect released. The authorization
-    may conceptually be limited by factors such as purpose, sender or business identity,
-    permitted channel, time, usage quantity, freshness, revocation state, recipient
-    scope, and jurisdiction. The objective is to transform communication authority
-    from persistent reachability into bounded and consumable authority associated
-    with a particular permitted interaction. This changes the underlying communication
-    model from: persistent identifier + downstream filtering to: bounded authority
-    + protected validation + controlled effectuation The distinction is important.
-    Conventional spam filtering asks: "Is this communication probably unwanted?" The
-    proposed architecture asks an earlier and structurally different question: "Does
-    this requester presently possess valid authority to cause this communication to
-    become effective at all?" The approach is intended to complement, not replace,
-    existing telecommunications, identity, anti-fraud, AI-safety, and network- security
-    mechanisms. Potential applications include voice and messaging systems, business
-    callbacks, marketplaces, customer-support interactions, email, AI-agent communications,
-    programmable telecom networks, 5G/6G, AI-RAN, satellite and non-terrestrial networks,
-    machine-to-machine communications, and other environments in which persistent
-    identifiers create unwanted or excessive reachability. The broader technical objective
-    is to separate: identity from reachability; knowledge of an endpoint from authority
-    to use it; and communication preparation from permission for communication effect.
-    This public record describes the problem space and patent-pending architectural
-    concept only. Detailed cryptographic constructions, protected-state mechanisms,
-    enforcement sequences, implementation variants, and claim-specific technical limitations
-    remain subject to pending patent rights.</p>'
+- content: "<p>Modern telecommunications usually couple knowledge of a routable identifier
+    with the practical ability to attempt contact. A telephone number, SIP URI, messaging
+    handle, relay address, marketplace contact reference, or similar identifier can
+    therefore remain a reusable reachability path after the original purpose for disclosure
+    has ended. Existing controls solve important but different problems. Virtual or
+    masked numbers hide an underlying endpoint but commonly leave a substitute route
+    active while the alias is valid. STIR and SHAKEN authenticate or attest information
+    associated with the calling identity, but do not by themselves establish that
+    the authenticated caller is presently authorized by the recipient to create this
+    particular communication effect. Combining number masking with STIR/ SHAKEN improves
+    privacy and origin authenticity, yet still does not inherently convert reachability
+    into purpose-scoped, revocable, consumable communication authority. OAuth can
+    express delegated and even fine-grained API authorization, including sender-constrained
+    tokens, but it does not define telecommunications-specific semantics in which
+    a visible contact handle alone creates no effective path until recipient-side
+    or policy-bound communication authority is established. This document describes
+    a Capability-Validated Inbound Descriptor (CVID) and related query-scoped communication
+    model. A communication request is represented as a Candidate Act and remains non-effective
+    until current authorization is established for the requested communication effect.
+    Authorization may be bound to sender or business identity, recipient scope, purpose,
+    channel, time, quota, freshness, revocation and policy epochs, jurisdiction, device
+    or agent identity, and other deployment-specific constraints. Two deployment profiles
+    are distinguished. In a blocked-path profile, ordinary routing may proceed to
+    an enforcement point that rejects a request lacking valid communication authority.
+    In a stronger absent-path profile, possession of the visible handle alone does
+    not resolve to or activate the effective communication path; protected authority
+    must be established before routing, gateway resolution, media allocation, notification,
+    or another consequence- bearing resource is released. The model is relevant to
+    IMT-2030/6G because increasingly programmable, AI-assisted, machine-to-machine,
+    and autonomous communications can generate requests at machine speed and scale.
+    Early rejection or non-creation of unauthorized communication paths may reduce
+    unnecessary signaling, gateway processing, fraud-analysis load, notification work,
+    media/resource allocation, and associated energy consumption. These are potential
+    efficiency benefits, not universal guarantees: authorization itself consumes resources,
+    and net bandwidth or energy savings require measurement in the target deployment.
+    The document focuses on the remaining problem space, comparison with existing
+    mechanisms, 6G and sustainability relevance, blocked-path and absent-path operation,
+    deployment feasibility, legacy interworking, latency considerations, security
+    and privacy, and frequently asked questions likely to arise in telecom engineering
+    review.</p>"
   language:
   - en
   script:
@@ -89,6 +80,16 @@ relation:
       primary: true
     formattedref:
       content: draft-das-6g-query-scoped-communication-handles-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-das-6g-query-scoped-communication-handles-02
+    docid:
+    - id: draft-das-6g-query-scoped-communication-handles-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-das-6g-query-scoped-communication-handles-02
       format: text/plain
 ext:
   schema-version: v1.0.1
