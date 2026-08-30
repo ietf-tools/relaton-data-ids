@@ -1,0 +1,52 @@
+---
+schema-version: v1.2.3
+id: draft-dikshit-bess-evpn-mobility-crdt
+title:
+- content: Modeling EVPN MAC-Mobility Sequence State as a Conflict-Free Replicated
+    Data Type
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-dikshit-bess-evpn-mobility-crdt
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>EVPN MAC Mobility, as carried in the MAC Mobility Extended Community
+    defined by [RFC7432], uses a per-MAC sequence number to let PEs agree on the most
+    recent location of a moving host. [I-D.ietf-bess-evpn-umr-mobility] extends this
+    to cross-data-center moves via gateways, and already specifies, in some detail,
+    how ordinary intra-DC and inter-DC moves are kept consistent: each gateway maintains
+    two independent MAC Mobility sequence counters per host (one intra-DC, one inter-DC)
+    specifically so that a purely local move does not have to be reconciled against
+    the interconnect network's state. What that document does not specify is what
+    a gateway does if it fails after locally resetting its intra-DC counter to zero
+    (Section 5.2, the step taken when a host is confirmed to have left every local
+    PE) but before propagating that fact onward; no failure-handling or crash-recovery
+    text exists anywhere in the document. This document shows that this narrower,
+    but concretely unaddressed, gap is a special case of a data type with known, formally
+    proven convergence properties, the Last-Writer-Wins Register, one member of the
+    Conflict-Free Replicated Data Type (CRDT) family, and proposes modeling the per-gateway
+    mobility sequence state that way so that a mid-reset gateway crash is recovered
+    from as a consequence of the data type's algebra rather than requiring a new,
+    separately specified recovery procedure.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-dikshit-bess-evpn-mobility-crdt-00
+    docid:
+    - id: draft-dikshit-bess-evpn-mobility-crdt-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-dikshit-bess-evpn-mobility-crdt-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

@@ -1,0 +1,46 @@
+---
+schema-version: v1.2.3
+id: draft-dikshit-netconf-yang-push-causal-ordering
+title:
+- content: Comparable Sequence Numbers Across Publishers in YANG Datastore Telemetry
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-dikshit-netconf-yang-push-causal-ordering
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>YANG Datastore Telemetry, YANG-Push version 2 [I-D.ietf-netconf-yang-push-2],
+    assigns each publisher a monotonically increasing sequence number so a receiver
+    can detect loss and reordering. The current design leaves two questions unanswered:
+    what happens when the counter wraps, and how a receiver aggregating records from
+    more than one publisher is to compare sequence numbers that were never defined
+    to be comparable across publishers in the first place. Both questions have already
+    been studied, and largely settled, in the distributed systems literature under
+    the heading of logical and hybrid logical clocks, and in deployed streaming systems
+    under the heading of offset and epoch numbering. This document evaluates three
+    existing causal- ordering primitives against YANG-Push's specific constraints
+    and proposes adopting a Hybrid Logical Clock so that the wraparound and cross-publisher
+    comparison problems are removed by construction rather than patched with a wider
+    counter.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-dikshit-netconf-yang-push-causal-ordering-00
+    docid:
+    - id: draft-dikshit-netconf-yang-push-causal-ordering-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-dikshit-netconf-yang-push-causal-ordering-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
