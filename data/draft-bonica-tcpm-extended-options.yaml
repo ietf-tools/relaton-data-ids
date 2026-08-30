@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-bonica-tcpm-extended-options
 title:
-- content: TCP Extended Options
+- content: An Upgraded TCP Session Type
   language:
   - en
   script:
@@ -13,12 +13,14 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>A TCP header accommodates only 40 octets of TCP options. In the future,
-    applications may require more than 40 octets of TCP options. For example, an application
-    may require a TCP Authentication Option (TCP-AO) with a 384-bit MAC. This option
-    requires 52 octets of option space. This document defines a TCP extension that
-    accommodates up to 1,016 octets of TCP options while maintaining backward compatibility
-    with legacy implementations.</p>"
+- content: "<p>Currently, TCP maintains ordinary sessions (SES-O) in which ordinary
+    segments (SEG-O) are exchanged. Each SEG-O can accommodate up to 40 octets of
+    options. In the future, applications may require more than 40 octets of options.
+    For example, an application may use a 36-byte TCP Authentication Option (TCP-AO),
+    leaving insufficient space for other required options. Therefore, this document
+    describes an experiment in which upgraded sessions (SES-U) and upgraded segments
+    (SEG-U) are introduced. Each SEG-U can accommodate up to 1,016 octets of Individual
+    Options.</p>"
   language:
   - en
   script:
@@ -74,6 +76,16 @@ relation:
       primary: true
     formattedref:
       content: draft-bonica-tcpm-extended-options-04
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-bonica-tcpm-extended-options-05
+    docid:
+    - id: draft-bonica-tcpm-extended-options-05
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-bonica-tcpm-extended-options-05
       format: text/plain
 ext:
   schema-version: v1.0.1
