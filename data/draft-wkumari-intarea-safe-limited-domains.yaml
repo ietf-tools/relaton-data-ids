@@ -13,17 +13,18 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: <p>Documents describing protocols that are only intended to be used within
-    "limited domains" often do not clearly define how the boundary of the limited
-    domain is implemented and enforced, or require that operators of these limited
-    domains perfectly filter at all of the boundary nodes of the domain to protect
-    the rest of the global Internet from these protocols and vice-versa. This document
-    discusses some design principles and offers mechanisms to allow protocols that
-    are designed to operate in a limited domain "fail-closed" rather than "fail-open",
-    thereby making these protocols safer to deploy on the Internet. These mechanism
-    are not applicable to all protocols intended for use in a limited domain, but
-    if implemented on certain classes of protocols, they can significantly reduce
-    the risks.</p>
+- content: <p>Documents describing protocols intended solely for use within "limited
+    domains" often rely on edge filtering at every boundary node to prevent domain-internal
+    traffic from leaking to the global Internet (and vice versa). Relying purely on
+    administrative filtering creates "fail-open" designs that are susceptible to configuration
+    errors, ACL bypass, and hardware table exhaustion. This document describes design
+    principles and concrete mechanisms that allow limited-domain protocols to "fail-closed"
+    by default. By leveraging Layer-2 encapsulation identifiers (such as dedicated
+    or extended EtherTypes), link-local address scoping, and / or Hop-Limit boundaries,
+    protocol designers can significantly reduce the operational and security risks
+    associated with limited domain protocols. These mechanisms are not applicable
+    to all protocols intended for use in a limited domain, but if implemented on certain
+    classes of protocols, can significantly reduce the risks.</p>
   language:
   - en
   script:
@@ -99,6 +100,16 @@ relation:
       primary: true
     formattedref:
       content: draft-wkumari-intarea-safe-limited-domains-06
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-wkumari-intarea-safe-limited-domains-07
+    docid:
+    - id: draft-wkumari-intarea-safe-limited-domains-07
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-wkumari-intarea-safe-limited-domains-07
       format: text/plain
 ext:
   schema-version: v1.0.1

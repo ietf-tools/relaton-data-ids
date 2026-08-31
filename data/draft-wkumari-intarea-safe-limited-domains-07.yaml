@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-wkumari-intarea-safe-limited-domains-06
+id: draft-wkumari-intarea-safe-limited-domains-07
 title:
 - content: Safe(r) Limited Domains
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-wkumari-intarea-safe-limited-domains-06
+- content: https://datatracker.ietf.org/doc/html/draft-wkumari-intarea-safe-limited-domains-07
   type: src
 type: standard
 docid:
-- id: draft-wkumari-intarea-safe-limited-domains-06
+- id: draft-wkumari-intarea-safe-limited-domains-07
   type: Internet-Draft
   primary: true
 - id: I-D.wkumari-intarea-safe-limited-domains
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.wkumari-intarea-safe-limited-domains
 date:
 - type: published
-  value: '2026-03-01'
+  value: '2026-08-30'
 contributor:
 - person:
     name:
@@ -165,24 +165,25 @@ contributor:
   role:
   - type: author
 version:
-- draft: '06'
-revdate: '2026-03-01'
+- draft: '07'
+revdate: '2026-08-30'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: <p>Documents describing protocols that are only intended to be used within
-    "limited domains" often do not clearly define how the boundary of the limited
-    domain is implemented and enforced, or require that operators of these limited
-    domains perfectly filter at all of the boundary nodes of the domain to protect
-    the rest of the global Internet from these protocols and vice-versa. This document
-    discusses some design principles and offers mechanisms to allow protocols that
-    are designed to operate in a limited domain "fail-closed" rather than "fail-open",
-    thereby making these protocols safer to deploy on the Internet. These mechanism
-    are not applicable to all protocols intended for use in a limited domain, but
-    if implemented on certain classes of protocols, they can significantly reduce
-    the risks.</p>
+- content: <p>Documents describing protocols intended solely for use within "limited
+    domains" often rely on edge filtering at every boundary node to prevent domain-internal
+    traffic from leaking to the global Internet (and vice versa). Relying purely on
+    administrative filtering creates "fail-open" designs that are susceptible to configuration
+    errors, ACL bypass, and hardware table exhaustion. This document describes design
+    principles and concrete mechanisms that allow limited-domain protocols to "fail-closed"
+    by default. By leveraging Layer-2 encapsulation identifiers (such as dedicated
+    or extended EtherTypes), link-local address scoping, and / or Hop-Limit boundaries,
+    protocol designers can significantly reduce the operational and security risks
+    associated with limited domain protocols. These mechanisms are not applicable
+    to all protocols intended for use in a limited domain, but if implemented on certain
+    classes of protocols, can significantly reduce the risks.</p>
   language:
   - en
   script:
@@ -191,23 +192,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-wkumari-intarea-safe-limited-domains-02
+    id: draft-wkumari-intarea-safe-limited-domains-06
     docid:
-    - id: draft-wkumari-intarea-safe-limited-domains-02
+    - id: draft-wkumari-intarea-safe-limited-domains-06
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-wkumari-intarea-safe-limited-domains-02
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-wkumari-intarea-safe-limited-domains-07
-    docid:
-    - id: draft-wkumari-intarea-safe-limited-domains-07
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-wkumari-intarea-safe-limited-domains-07
+      content: draft-wkumari-intarea-safe-limited-domains-06
       format: text/plain
 series:
 - type: main
@@ -218,7 +209,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-wkumari-intarea-safe-limited-domains-06
+  number: draft-wkumari-intarea-safe-limited-domains-07
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
