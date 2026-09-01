@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-mcphillips-agentenvelope-derived-authority
 title:
-- content: 'AgentEnvelope: Deterministic Derived Authority for Autonomous Systems'
+- content: 'AgentEnvelope: Derived Authority and Legitimacy for Autonomous Systems'
   language:
   - en
   script:
@@ -14,13 +14,20 @@ docid:
   primary: true
 abstract:
 - content: "<p>AgentEnvelope defines a deterministic derived-authority model for autonomous
-    and action-performing systems. Instead of issuing bearer credentials or authorization
-    envelopes from a central authority, AgentEnvelope derives scoped action capabilities
-    from customer-held custody material and canonical action envelopes. A verifier
-    can check an action signature against a public action record without receiving
-    roots, seeds, private keys, or hosted service access. This document specifies
-    the v1 derivation model, signing domains, public record structure, mint delegation
-    flow, verification rules, and security considerations.</p>"
+    and action-performing systems. Instead of issuing bearer credentials from a central
+    authority, AgentEnvelope derives scoped action capabilities from customer-held
+    custody material and canonical action envelopes. A verifier can check an action
+    signature against a public action record without receiving roots, seeds, private
+    keys, mint material, or hosted service access. This revision extends the model
+    with legitimacy: a governance state that records whether a cryptographically valid
+    authority remains admissible under current policy, evidence, time, and operating
+    context. Legitimacy separates provenance from present-tense authorization. A command
+    can remain signed and verifiable while becoming illegitimate because operating
+    facts, policy, or evidence changed. For autonomous-system deployments, derived
+    authority and legitimacy support an IAM model concerned with authority, admissibility,
+    accountability, and audit for actors that perform actions, including AI agents,
+    workflows, bots, microservices, devices, robots, serverless workers, and multi-agent
+    systems.</p>"
   language:
   - en
   script:
@@ -36,6 +43,16 @@ relation:
       primary: true
     formattedref:
       content: draft-mcphillips-agentenvelope-derived-authority-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-mcphillips-agentenvelope-derived-authority-01
+    docid:
+    - id: draft-mcphillips-agentenvelope-derived-authority-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-mcphillips-agentenvelope-derived-authority-01
       format: text/plain
 ext:
   schema-version: v1.0.1

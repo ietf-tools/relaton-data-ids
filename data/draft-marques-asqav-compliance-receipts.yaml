@@ -27,12 +27,22 @@ abstract:
     of the OPTIONAL fields to REQUIRED, imposes a retention floor, and requires at
     least one timestamping anchor (RFC 3161 or OpenTimestamps). It registers OPTIONAL
     extension fields for risk and incident classification, cross-agent envelope binding,
-    per-action freshness and integrity, build provenance, threat-framework taxonomy,
-    server-built enforcement attestation, producer-asserted risk acceptance, and producer-asserted
-    code authorship, each subject to false-attestation guards where applicable, and
-    registers receipt type namespaces for passive- telemetry, result-bound observation,
-    risk-acceptance, and code- authorship receipts. The full field set and its normative
-    requirements are defined in the body of this document.</p>"
+    per-action validity-window and integrity, build provenance, threat-framework taxonomy,
+    server-built enforcement-control records, producer-asserted risk acceptance, and
+    producer-asserted code authorship, each subject to false-attestation guards where
+    applicable, and registers receipt type namespaces for passive-telemetry, result-bound
+    observation, risk-acceptance, and code-authorship receipts. Revision -08 additionally
+    defines an attestation statement envelope (a Dead Simple Signing Envelope (DSSE)
+    Pre-Authentication Encoding wrapping an in-toto Statement v1 under an asqav predicate
+    namespace) with two tiers: a voluntary observation attestation that signs a caller-supplied
+    digest and is explicitly not a capture, and an authoritative attestation whose
+    subject digest the issuing platform re-derives from independent evidence (for
+    code, the SHA-256 of the raw unified diff re-fetched from the source host); revision
+    -08 further defines the capture-layer integrity, independent verification protocol,
+    honest-tiering, and service-identity and revocation rules that govern those attestation
+    statements, and documents the shipped keyed-digest wire tokens and the verifier
+    verdict vocabulary (verified, verified_keyed, unverified). The full field set
+    and its normative requirements are defined in the body of this document.</p>"
   language:
   - en
   script:
@@ -118,6 +128,16 @@ relation:
       primary: true
     formattedref:
       content: draft-marques-asqav-compliance-receipts-07
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-marques-asqav-compliance-receipts-08
+    docid:
+    - id: draft-marques-asqav-compliance-receipts-08
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-marques-asqav-compliance-receipts-08
       format: text/plain
 ext:
   schema-version: v1.0.1

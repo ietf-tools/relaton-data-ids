@@ -13,15 +13,13 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>Misconfiguration and malicious manipulation of BGP AS_Path may lead
-    to route hijack. This document proposes to enhance the BGP [RFC4271] Inbound/
-    Outbound route processing in the case of detecting an AS loop. It is an enhancement
-    to the current BGP's Inbound/Outbound processing and can be implemented directly
-    on the device, and this document also proposes a centralized usecase. This could
-    empower networks to quickly and accurately figure out they're being victimized.
-    Two options are proposed for the enhancement, a) a local check at the device;
-    b) data collection/analysis at the remote network controller/ server. Both approaches
-    are beneficial for route hijack detection.</p>"
+- content: "<p>Misconfiguration and malicious manipulation of the BGP `AS_PATH` attribute
+    can lead to route hijacking. This document proposes enhancements to BGP [RFC4271]
+    inbound and outbound route processing when an AS loop is detected. This mechanism
+    can be implemented directly on devices or deployed in a centralized architecture
+    using the BGP Monitoring Protocol (BMP) [RFC7854]. These enhancements empower
+    networks to quickly and accurately detect route hijacking and malicious path poisoning.
+    Two implementation options are proposed:</p>"
   language:
   - en
   script:
@@ -117,6 +115,16 @@ relation:
       primary: true
     formattedref:
       content: draft-chen-grow-enhanced-as-loop-detection-08
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-chen-grow-enhanced-as-loop-detection-09
+    docid:
+    - id: draft-chen-grow-enhanced-as-loop-detection-09
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-chen-grow-enhanced-as-loop-detection-09
       format: text/plain
 ext:
   schema-version: v1.0.1

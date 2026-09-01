@@ -1,0 +1,124 @@
+---
+schema-version: v1.2.3
+id: draft-dogru-cedulon-06
+title:
+- content: 'Cedulon: An Audit Layer for Agent-to-Agent Commerce'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-dogru-cedulon-06
+  type: src
+type: standard
+docid:
+- id: draft-dogru-cedulon-06
+  type: Internet-Draft
+  primary: true
+- id: I-D.dogru-cedulon
+  type: IETF
+  scope: anchor
+docnumber: I-D.dogru-cedulon
+date:
+- type: published
+  value: '2026-08-31'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Emek
+          language:
+          - en
+        - language:
+          - en
+          initial: E
+        - language:
+          - en
+          initial: C
+        formatted_initials:
+          content: E. C.
+          language:
+          - en
+      surname:
+        content: Doğru
+        language:
+        - en
+      completename:
+        content: Emek Can Doğru
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: VERAX TEKNOLOJI LIMITED SIRKETI
+  role:
+  - type: author
+version:
+- draft: '06'
+revdate: '2026-08-31'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>This document defines the Cedulon Protocol, an audit layer for agent-
+    to-agent commerce. Payment rails such as HTTP 402 flows (x402) and mandate protocols
+    (AP2) already move value, and a mandate protocol can already refuse a spend before
+    it happens and return signed receipts. What they do not, by themselves, give a
+    party that is neither payer nor rail operator is a retrievable record of that
+    decision and a signed spend receipt that reconciles against an authenticated extract
+    of the rail. Cedulon specifies a Trade Manifest (signed offer before payment),
+    a Policy Decision Point with default deny, a Spend Receipt (COSE/CWT claim set
+    after a gated payment), epoch checkpoints, and rail-extract reconciliation. The
+    reconciliation shows that no settlement on the extract lacks a receipt and no
+    settled receipt is absent from the extract. That result is unconditional only
+    when the verifier pins the rail key out of band and states the period under audit;
+    otherwise the document requires it to be reported as conditional. Checkpoints
+    carry the suppression guarantee, so the document profiles the checkpoint as a
+    Signed Statement, gives the verification algorithm a step that consumes the witness
+    receipts returned for checkpoints, names what a witness holding a checkpoint the
+    presented chain omits reports, brings equivocation within reach by comparing recorded
+    copies against the presented chain, and states how checkpoint totals may be withheld
+    without withholding the fact that they were. No signed object may be verified
+    against a key it carries itself, and a presented Trade Manifest must be bound
+    both to the receipts that name it and to the terms those receipts claim. The document
+    also names a threat no adversary causes, a settlement recorded on a rail with
+    no receipt behind it, and defines a Dispute Evidence Bundle (evidence, not an
+    award) and optional SCITT anchoring. The encodings earlier revisions called canonical
+    are defined, and the exact input to every hash- valued field is stated, so that
+    an independent verifier can be written from the text alone. This revision adds
+    the JSON counterpart of the CBOR duplicate-key rule, names the refusal of a non-empty
+    unprotected header, and requests registration of the five media types the profile
+    carries in its protected headers. Cedulon is not a competitor to x402 or AP2;
+    it sits above them.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-dogru-cedulon-04
+    docid:
+    - id: draft-dogru-cedulon-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-dogru-cedulon-04
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-dogru-cedulon-06
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

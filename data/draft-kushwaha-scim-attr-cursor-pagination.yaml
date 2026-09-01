@@ -2,7 +2,8 @@
 schema-version: v1.2.3
 id: draft-kushwaha-scim-attr-cursor-pagination
 title:
-- content: Cursor-Based Pagination for Multi-Valued Attributes in SCIM 2.0
+- content: Cursor-Based Pagination and Deferred Retrieval for Multi-Valued Attributes
+    in SCIM 2.0
   language:
   - en
   script:
@@ -13,15 +14,38 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>The System for Cross-domain Identity Management (SCIM) 2.0 specification
-    (RFC 7644) defines pagination mechanisms at the resource level. However, it does
-    not provide a standardized method for paginating large multi-valued attributes
-    within a resource. This limitation creates scalability and performance challenges
-    in modern identity systems, particularly for attributes such as group memberships,
-    roles, and entitlements. This document proposes a cursor-based pagination mechanism
-    for multi-valued attributes in SCIM resources. The proposal introduces attribute-level
-    pagination parameters and response metadata, including total count, to improve
-    performance, consistency, and usability in large-scale deployments.</p>"
+- content: "<p>[RFC7643] defines Group.members with the returned: default characteristic,
+    so a conformant service provider is required to return the attribute in response
+    to GET /Groups/{id}. [RFC7644] defines no bound on the number of values that attribute
+    may contain. A service provider holding a group with millions of members therefore
+    has no conformant and interoperable way to answer a request that a client is entitled
+    to make. In practice providers diverge: they truncate silently, reject the request,
+    omit the attribute, or fail. A client cannot discover in advance which behavior
+    it will encounter. This document defines that missing behavior. It specifies discovery
+    so a client can learn how a service provider treats a high- cardinality attribute,
+    a bounded response with a defined continuation contract, and rules preventing
+    a partial representation from being mistaken for complete resource state. The
+    mechanism has two forms. A request for one resource returns a bounded page of
+    one protected multi-valued attribute with an opaque cursor when more values exist.
+    A collection search returns parent resources without loading protected attributes,
+    each carrying an authoritative link for retrieving that attribute. The attribute
+    remains part of its parent resource; this document does not create a top-level
+    resource for each attribute value, and it is not a substitute for doing so where
+    independent relationship lifecycle or cross-collection query is required (Section
+    16.4). Although the mechanism is defined generally and applies to any complex
+    multi-valued attribute a service provider designates as protected, the attributes
+    that reach problematic sizes in deployed SCIM services are predominantly Group.members
+    and User.groups among those defined in [RFC7643], together with implementation-specific
+    assignment attributes (Section 3). This document updates [RFC7643] and [RFC7644].
+    It adds attributes to existing structures defined by those documents and defines
+    attribute- return behavior that replaces the requirements of Section 3.9 of [RFC7644]
+    within a negotiated scope. It does not change the behavior of deployments that
+    do not implement it: the modified attribute- selection behavior described in Section
+    4 applies only between a service provider that has advertised this capability
+    and a client for which deferred retrieval has been established through the negotiation
+    mechanisms defined in this document. It defines discovery metadata, the attributeCount
+    and attributeCursor query parameters, response metadata, processing and compatibility
+    rules, mutation safety, error handling, cursor security, and operational limits.</p>"
   language:
   - en
   script:
@@ -37,6 +61,16 @@ relation:
       primary: true
     formattedref:
       content: draft-kushwaha-scim-attr-cursor-pagination-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-kushwaha-scim-attr-cursor-pagination-01
+    docid:
+    - id: draft-kushwaha-scim-attr-cursor-pagination-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-kushwaha-scim-attr-cursor-pagination-01
       format: text/plain
 ext:
   schema-version: v1.0.1

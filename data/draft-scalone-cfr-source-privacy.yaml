@@ -14,15 +14,24 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>Encrypted Client Hello (ECH) improves destination privacy by encrypting
-    the Server Name Indication in TLS, but the customer source identity-- typically
-    the IP address and network metadata--remains observable to intermediaries such
-    as CDNs, hosting providers, and recursive resolvers. This document introduces
-    the _Customer-Facing Relay (CFR)_, a lightweight, transport-agnostic relay operated
-    by access providers to decouple customer identity from encrypted destinations.
-    By forwarding opaque encrypted payloads (TCP or UDP) without terminating TLS or
-    QUIC, a CFR complements ECH encryption to strengthen source privacy and reduce
-    metadata correlation.</p>"
+- content: "<p>Encrypted ClientHello (ECH) protects sensitive TLS ClientHello fields,
+    including the Server Name Indication (SNI), from on-path observers. ECH does not,
+    however, attempt to hide the client's network-layer source identity from the ECH
+    client-facing server (CFS). In split-mode deployments, the CFS decrypts the ClientHelloInner
+    in order to route the connection to the appropriate backend while also receiving
+    the connection from the client's visible source address. This creates a distinct
+    source-privacy problem. Where ECH service and content front-door infrastructure
+    are concentrated, a relatively small number of providers can obtain a privileged
+    vantage point from which a stable source address can be correlated with many encrypted
+    destinations and with other service telemetry. Measurements over a corpus of approximately
+    one million domains, together with an active- ECH validation subset, show substantial
+    front-door concentration and motivate treating source privacy as a complement
+    to destination privacy. This document describes the Customer-Facing Relay (CFR),
+    a network- layer, access-side source-aliasing function. A CFR forwards encrypted
+    TCP or UDP traffic without terminating TLS or QUIC and replaces the subscriber-visible
+    source address with a shared or short-lived source alias. The document also examines
+    the different privacy properties of IPv4 NAT/CGN and IPv6 source addressing and
+    identifies requirements for privacy-preserving source mapping.</p>"
   language:
   - en
   script:
@@ -48,6 +57,16 @@ relation:
       primary: true
     formattedref:
       content: draft-scalone-cfr-source-privacy-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-scalone-cfr-source-privacy-02
+    docid:
+    - id: draft-scalone-cfr-source-privacy-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-scalone-cfr-source-privacy-02
       format: text/plain
 ext:
   schema-version: v1.0.1

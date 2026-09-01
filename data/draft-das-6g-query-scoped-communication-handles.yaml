@@ -2,9 +2,8 @@
 schema-version: v1.2.3
 id: draft-das-6g-query-scoped-communication-handles
 title:
-- content: 6G-Era Privacy-Preserving, Anti-Harassment and Spam-Resistant Communication
-    for Map-Based Business Discovery and AI-Native Telecommunication Using Query-Scoped
-    Communication Handles
+- content: 'Authorization-to-Reach for Communication Handles: Separating Identifier
+    Possession from Permission to Contact'
   language:
   - en
   script:
@@ -15,46 +14,25 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>Modern telecommunications usually couple knowledge of a routable identifier
-    with the practical ability to attempt contact. A telephone number, SIP URI, messaging
-    handle, relay address, marketplace contact reference, or similar identifier can
-    therefore remain a reusable reachability path after the original purpose for disclosure
-    has ended. Existing controls solve important but different problems. Virtual or
-    masked numbers hide an underlying endpoint but commonly leave a substitute route
-    active while the alias is valid. STIR and SHAKEN authenticate or attest information
-    associated with the calling identity, but do not by themselves establish that
-    the authenticated caller is presently authorized by the recipient to create this
-    particular communication effect. Combining number masking with STIR/ SHAKEN improves
-    privacy and origin authenticity, yet still does not inherently convert reachability
-    into purpose-scoped, revocable, consumable communication authority. OAuth can
-    express delegated and even fine-grained API authorization, including sender-constrained
-    tokens, but it does not define telecommunications-specific semantics in which
-    a visible contact handle alone creates no effective path until recipient-side
-    or policy-bound communication authority is established. This document describes
-    a Capability-Validated Inbound Descriptor (CVID) and related query-scoped communication
-    model. A communication request is represented as a Candidate Act and remains non-effective
-    until current authorization is established for the requested communication effect.
-    Authorization may be bound to sender or business identity, recipient scope, purpose,
-    channel, time, quota, freshness, revocation and policy epochs, jurisdiction, device
-    or agent identity, and other deployment-specific constraints. Two deployment profiles
-    are distinguished. In a blocked-path profile, ordinary routing may proceed to
-    an enforcement point that rejects a request lacking valid communication authority.
-    In a stronger absent-path profile, possession of the visible handle alone does
-    not resolve to or activate the effective communication path; protected authority
-    must be established before routing, gateway resolution, media allocation, notification,
-    or another consequence- bearing resource is released. The model is relevant to
-    IMT-2030/6G because increasingly programmable, AI-assisted, machine-to-machine,
-    and autonomous communications can generate requests at machine speed and scale.
-    Early rejection or non-creation of unauthorized communication paths may reduce
-    unnecessary signaling, gateway processing, fraud-analysis load, notification work,
-    media/resource allocation, and associated energy consumption. These are potential
-    efficiency benefits, not universal guarantees: authorization itself consumes resources,
-    and net bandwidth or energy savings require measurement in the target deployment.
-    The document focuses on the remaining problem space, comparison with existing
-    mechanisms, 6G and sustainability relevance, blocked-path and absent-path operation,
-    deployment feasibility, legacy interworking, latency considerations, security
-    and privacy, and frequently asked questions likely to arise in telecom engineering
-    review.</p>"
+- content: "<p>Many Internet and telephone communication systems treat possession
+    of a routable identifier as sufficient to attempt contact. A telephone number,
+    SIP URI, messaging handle, relay address, or marketplace contact reference can
+    therefore remain a reusable reachability path after the purpose of disclosure
+    has ended. Existing IETF and industry mechanisms solve related but different problems.
+    STIR and SHAKEN authenticate or attest originating identity. Virtual or masked
+    numbers hide a persistent endpoint but commonly leave a substitute route active
+    while the alias is valid. OAuth can express delegated API authorization. Spam
+    scoring and call screening classify or reject an attempt after some path already
+    exists. This document describes an authorization-to-reach model. A visible communication
+    handle is not, by itself, permission to create a communication effect. A request
+    is held as a candidate until current, purpose-scoped, revocable, and optionally
+    consumable authority is validated. The document is informational. It asks whether
+    the IETF Applications and Real-Time area should define interoperable semantics
+    or an encoding for that authority (for example a PASSporT claim, a SIP header
+    or pre-INVITE check, or a reusable authorization object). This work is not a 3GPP
+    radio, core-network, or IMT-2030 architecture proposal. References to machine-scale
+    or future-network traffic are motivational only. The intended protocol home, if
+    any, is IETF work on SIP, STIR, messaging, and Internet communication identifiers.</p>"
   language:
   - en
   script:
@@ -100,6 +78,16 @@ relation:
       primary: true
     formattedref:
       content: draft-das-6g-query-scoped-communication-handles-03
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-das-6g-query-scoped-communication-handles-04
+    docid:
+    - id: draft-das-6g-query-scoped-communication-handles-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-das-6g-query-scoped-communication-handles-04
       format: text/plain
 ext:
   schema-version: v1.0.1

@@ -15,12 +15,14 @@ docid:
 abstract:
 - content: <p>This document describes a design for a lightweight decentralized multicast
     group address allocation protocol (named GAAP and pronounced "gap" as in "mind
-    the gap"). The base allocation protocol requires no centralized service and minimal
-    configuration, although deployments using encryption or administrative scoping
-    may require configuration. The protocol runs among group participants which need
-    a unique group address to send and receive multicast packets. Tailored for IPv4
-    and IPv6 networks, this design offers a simple, lightweight option rather than
-    extending an existing protocol.</p>
+    the gap"). GAAP requires no centralized service or coordination for the address-allocation
+    protocol itself, though it depends on ASM-capable multicast routing already being
+    provisioned in the deployment domain, and deployments using encryption or administrative
+    scoping may require additional configuration. The protocol runs among group participants
+    which need a unique group address to send and receive multicast packets. Tailored
+    for IPv4 and IPv6 networks, this design offers a simple, lightweight option rather
+    than extending an existing protocol. This document is Experimental, see Section
+    8 for the rationale and the criteria for concluding the experiment.</p>
   language:
   - en
   script:
@@ -236,6 +238,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-pim-gaap-20
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-pim-gaap-21
+    docid:
+    - id: draft-ietf-pim-gaap-21
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-pim-gaap-21
       format: text/plain
 ext:
   schema-version: v1.0.1

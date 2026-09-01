@@ -1,0 +1,66 @@
+---
+schema-version: v1.2.3
+id: draft-das-rats-openai-anthropic-extraction
+title:
+- content: 'Beyond Attestation: An Execution-Finality Architecture for Controlling
+    Release and Limiting Unauthorized Extraction and Distillation of Sensitive OpenAI
+    and Anthropic Claude Model Information'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-das-rats-openai-anthropic-extraction
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: '<p>Anthropic and OpenAI already ship inference interfaces richer than
+    raw completions -- log-probabilities, embeddings, hidden states, intermediate
+    activations, KV-cache material, and diagnostic output are all in production today.
+    Each is a channel an adversary, a compromised partner integration, or a stolen
+    enterprise seat can use to reconstruct, steal, or distill a model far faster than
+    by scraping ordinary text output. In this document, a "release" is any point at
+    which such information leaves the protected execution environment and becomes
+    usable outside it: returned to a caller, cached, forwarded, or otherwise materialized.
+    The operational question this document answers is narrow: given that the caller
+    is authenticated and the workload is attested, is this specific release still
+    authorized to happen right now? Authentication establishes who is asking. Confidential
+    computing and remote attestation establish whether the execution environment is
+    trustworthy. Neither establishes whether this particular release, of this particular
+    artifact, at this particular moment, should be allowed to cross the protected
+    boundary. A valid API key, a genuine TEE, and a passing Attestation Result are
+    all fully compatible with an unauthorized bulk-extraction run already in progress.
+    Rate limits, output filtering, and anomaly detection operate after the release
+    has already happened; they make extraction easier to notice, not harder to complete.
+    This document specifies an execution-finality architecture that makes release
+    control a technical precondition rather than a monitoring layer: computation is
+    separated from authority to release, every sensitive result is held as a non-effective
+    Candidate Release, and release becomes possible only after release-specific validation,
+    rollback-resistant extraction-state evaluation, bounded authorization, and verification
+    at a controlled Finality Sink. Because release authority is bound to rollback-resistant,
+    atomically consumed extraction state rather than to a bearer credential, the volume
+    of privileged teacher signal an adversary can accumulate through the governed
+    path is capped by authorized state transitions, not by request volume or attacker
+    persistence alone. The mechanism is not claimed to prevent all forms of model
+    distillation; its objective is to make unauthorized or excessive extraction of
+    privileged model information structurally harder to complete, not merely easier
+    to detect afterward.</p>'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-das-rats-openai-anthropic-extraction-00
+    docid:
+    - id: draft-das-rats-openai-anthropic-extraction-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-das-rats-openai-anthropic-extraction-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
