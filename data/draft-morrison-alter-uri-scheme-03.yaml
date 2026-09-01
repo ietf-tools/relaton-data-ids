@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-morrison-alter-uri-scheme-01
+id: draft-morrison-alter-uri-scheme-03
 title:
 - content: The 'alter' URI Scheme for Dispatchable ~handle References
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-morrison-alter-uri-scheme-01
+- content: https://datatracker.ietf.org/doc/html/draft-morrison-alter-uri-scheme-03
   type: src
 type: standard
 docid:
-- id: draft-morrison-alter-uri-scheme-01
+- id: draft-morrison-alter-uri-scheme-03
   type: Internet-Draft
   primary: true
 - id: I-D.morrison-alter-uri-scheme
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.morrison-alter-uri-scheme
 date:
 - type: published
-  value: '2026-05-17'
+  value: '2026-08-31'
 contributor:
 - person:
     name:
@@ -53,8 +53,8 @@ contributor:
   role:
   - type: author
 version:
-- draft: '01'
-revdate: '2026-05-17'
+- draft: '03'
+revdate: '2026-08-31'
 language:
 - en
 script:
@@ -62,17 +62,20 @@ script:
 abstract:
 - content: "<p>This document defines the alter URI scheme as a dispatchable reference
     syntax for ~handle identity references published under the DNS substrate defined
-    in [MCPDNS]. An alter: URI binds a textual ~handle reference, with an optional
-    surface path, to a resolution and verification procedure that retrieves the handle's
-    envelope from the publishing zone, validates the envelope's signature chain, and
-    dispatches the result to an operating-system URI handler. The scheme is provisionally
-    registered under [MCPDNS] Section 11; this document is the full registration request
-    per [RFC7595] Section 3. The scheme is provider-neutral, introduces no new cryptographic
-    primitive, and reuses the resolution and verification procedures of [MCPDNS] without
-    modification. The principal contribution is to give operating systems, browsers,
-    chat clients, and command-line tools a single dispatch surface for handle-typed
-    references so that clicking, typing, or scanning an alter: URI yields a verified
-    handle resolution rather than a free-text string.</p>"
+    in [MCPDNS]. An alter: URI binds a textual ~handle reference to a resolution and
+    verification procedure that retrieves the handle's envelope from the publishing
+    zone, validates the envelope's signature chain, and dispatches the result to an
+    operating-system URI handler. The reference may be scoped to an organisation,
+    narrowed to a named facet of the identity, and addressed to a typed action surface.
+    The scheme is the addressing form of the ~handle@org:facet/action reference; its
+    resolution semantics are those of [MCPDNS], reused without modification. The scheme
+    is provider-neutral, introduces no new cryptographic primitive, and reuses the
+    resolution and verification procedures of [MCPDNS] without modification. The principal
+    contribution is a single, self-verifying dispatch surface for handle-typed references:
+    clicking, typing, or scanning an alter: URI yields a verified handle resolution
+    rather than a free-text string or an unauthenticated fetch, and where an action
+    is addressed it yields a verify-before- side-effect dispatch. This document requests
+    provisional registration of the alter scheme with IANA per [RFC7595] Section 3.</p>"
   language:
   - en
   script:
@@ -89,16 +92,6 @@ relation:
     formattedref:
       content: draft-morrison-alter-uri-scheme-00
       format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-morrison-alter-uri-scheme-03
-    docid:
-    - id: draft-morrison-alter-uri-scheme-03
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-morrison-alter-uri-scheme-03
-      format: text/plain
 series:
 - type: main
   title:
@@ -108,7 +101,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-morrison-alter-uri-scheme-01
+  number: draft-morrison-alter-uri-scheme-03
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
