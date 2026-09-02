@@ -1,0 +1,52 @@
+---
+schema-version: v1.2.3
+id: draft-ietf-acme-pop
+title:
+- content: Automated Certificate Management Environment (ACME) Extension for Proof-of-Possession
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-ietf-acme-pop
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: '<p>The Automated Certificate Management Environment (ACME) protocol [RFC8555]
+    requires a PKCS#10 Certificate Signing Request (CSR) at the finalization stage.
+    This document defines an optional extension that allows a client to prove possession
+    of a private key directly, without constructing a CSR. The extension is motivated
+    by use cases where the CSR-based flow is problematic: KEM-only keys that cannot
+    generate self-signatures, resource-constrained devices that benefit from reduced
+    encoding overhead, and issuance models where the certificate is constructed from
+    order and profile data (e.g., via the ACME Profiles extension [I-D.ietf-acme-profiles])
+    rather than a client-generated CSR. This is particularly relevant when combined
+    with compact encodings such as C509 certificates [I-D.ietf-cose-cbor-encoded-cert].
+    In the "newOrder" request, the client declares the public key via a popKey field
+    and includes a pop-type identifier whose value is the empty string. The server
+    creates a dedicated pop authorization containing a single pop-01 challenge, processed
+    using the same state machine as any other ACME authorization. When all authorizations
+    (including the pop authorization) are valid, the ACME server issues a certificate
+    using the validated public key and the authorized identifiers, eliminating the
+    need for a CSR at finalization. The extension is additive and strictly optional:
+    clients that do not use it, and servers that do not support it, continue to use
+    the standard CSR-based flow defined in [RFC8555] without any changes.</p>'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-ietf-acme-pop-00
+    docid:
+    - id: draft-ietf-acme-pop-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-acme-pop-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
