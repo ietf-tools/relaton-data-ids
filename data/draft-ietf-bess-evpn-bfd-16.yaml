@@ -1,188 +1,188 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-idr-ts-flowspec-srv6-policy-17
+id: draft-ietf-bess-evpn-bfd-16
 title:
-- content: Traffic Steering using BGP FlowSpec with SR Policy
+- content: EVPN Network Layer Fault Management
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-ts-flowspec-srv6-policy-17
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-bess-evpn-bfd-16
   type: src
 type: standard
 docid:
-- id: draft-ietf-idr-ts-flowspec-srv6-policy-17
+- id: draft-ietf-bess-evpn-bfd-16
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-idr-ts-flowspec-srv6-policy
+- id: I-D.ietf-bess-evpn-bfd
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-idr-ts-flowspec-srv6-policy
+docnumber: I-D.ietf-bess-evpn-bfd
 date:
 - type: published
-  value: '2026-08-25'
+  value: '2026-09-05'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Jiang
+        - content: Vengada
           language:
           - en
         - language:
           - en
-          initial: J
+          initial: V
+        - language:
+          - en
+          initial: P
         formatted_initials:
-          content: J.
+          content: V. P.
           language:
           - en
       surname:
-        content: Wenying
+        content: Govindan
         language:
         - en
       completename:
-        content: Jiang Wenying
+        content: Vengada Prasad Govindan
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: China Mobile
+        - content: Cisco Systems
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Yisong
+        - content: Ali
           language:
           - en
         - language:
           - en
-          initial: "Y"
+          initial: A
         formatted_initials:
-          content: Y.
+          content: A.
           language:
           - en
       surname:
-        content: Liu
+        content: Sajassi
         language:
         - en
       completename:
-        content: Yisong Liu
+        content: Ali Sajassi
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: China Mobile
+        - content: Cisco Systems
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Shunwan
+        - content: Mudigonda
           language:
           - en
         - language:
           - en
-          initial: S
+          initial: M
         formatted_initials:
-          content: S.
+          content: M.
           language:
           - en
       surname:
-        content: Zhuang
+        content: Mallik
         language:
         - en
       completename:
-        content: Shunwan Zhuang
+        content: Mudigonda Mallik
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei Technologies
+        - content: Celestica Inc.
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Gyan
+        - content: Greg
           language:
           - en
         - language:
           - en
           initial: G
-        - language:
-          - en
-          initial: S
         formatted_initials:
-          content: G. S.
+          content: G.
           language:
           - en
       surname:
-        content: Mishra
+        content: Mirsky
         language:
         - en
       completename:
-        content: Gyan Mishra
+        content: Greg Mirsky
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Verizon Communications Inc.
+        - content: Independent
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Shuanglong
+        - content: Donald
           language:
           - en
         - language:
           - en
-          initial: S
+          initial: D
+        - language:
+          - en
+          initial: E
         formatted_initials:
-          content: S.
+          content: D. E.
           language:
           - en
       surname:
-        content: Chen
+        content: Eastlake
         language:
         - en
       completename:
-        content: Shuanglong Chen
+        content: Donald E. Eastlake 3rd
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei Technologies
+        - content: Independent
   role:
   - type: author
 version:
-- draft: '17'
-revdate: '2026-08-25'
+- draft: '16'
+revdate: '2026-09-05'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>BGP Flow Specification (FlowSpec) provides mechanisms to distribute
-    traffic filtering and steering rules across BGP networks. This document specifies
-    BGP FlowSpec procedures to steer matching traffic flows into Segment Routing (SR)
-    Policies. Specifically, it defines normative protocol mechanisms for combining
-    FlowSpec NLRIs with specific BGP Extended Communities for transport policy steering
-    in SR-MPLS and SRv6 networks (Mode 1), and optionally with the BGP Prefix-SID
-    Attribute when egress service action execution is required in SRv6 networks (Mode
-    2).</p>"
+- content: "<p>This document specifies proactive, in-band Network Layer OAM (RFC 9062)
+    mechanisms to detect loss of continuity faults that affect unicast and multi-destination
+    paths (used by Broadcast, Unknown Unicast, and Multicast traffic) in an Ethernet
+    VPN (EVPN, RFC 7432bis) network. The mechanisms specified in this document use
+    the widely adopted Bidirectional Forwarding Detection (RFC 5880) protocol.</p>"
   language:
   - en
   script:
@@ -191,23 +191,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-idr-ts-flowspec-srv6-policy-10
+    id: draft-ietf-bess-evpn-bfd-06
     docid:
-    - id: draft-ietf-idr-ts-flowspec-srv6-policy-10
+    - id: draft-ietf-bess-evpn-bfd-06
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-idr-ts-flowspec-srv6-policy-10
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-idr-ts-flowspec-srv6-policy-18
-    docid:
-    - id: draft-ietf-idr-ts-flowspec-srv6-policy-18
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-idr-ts-flowspec-srv6-policy-18
+      content: draft-ietf-bess-evpn-bfd-06
       format: text/plain
 series:
 - type: main
@@ -218,7 +208,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-idr-ts-flowspec-srv6-policy-17
+  number: draft-ietf-bess-evpn-bfd-16
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

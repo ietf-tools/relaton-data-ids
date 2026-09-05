@@ -1,0 +1,142 @@
+---
+schema-version: v1.2.3
+id: draft-das-global-privacy-execution-enforcement-00
+title:
+- content: Technical Enforcement of the European GDPR and Global Data-Protection Constraints
+    Without Paper Policy
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-das-global-privacy-execution-enforcement-00
+  type: src
+type: standard
+docid:
+- id: draft-das-global-privacy-execution-enforcement-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.das-global-privacy-execution-enforcement
+  type: IETF
+  scope: anchor
+docnumber: I-D.das-global-privacy-execution-enforcement
+date:
+- type: published
+  value: '2026-09-05'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Sangam
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Das
+        language:
+        - en
+      completename:
+        content: Sangam Das
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Independent Inventor
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-09-05'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>The European Union's General Data Protection Regulation (GDPR), China's
+    Personal Information Protection Law (PIPL), and India's Digital Personal Data
+    Protection Act (DPDP Act) each require, in their own terms, that personal data
+    be used only for a specified purpose, be limited to what is necessary, be kept
+    secure, and remain subject to the data subject's or regulator's ability to hold
+    a controller accountable. Every one of these regimes is currently enforced primarily
+    through paper: privacy notices, consent records, data-processing agreements, internal
+    policies, access-control configurations, and audits performed after data has already
+    moved. Paper policy fails in the age of artificial intelligence because it assumes
+    a human-speed decision that no longer exists. An agentic AI system can authenticate,
+    read from several lawfully accessible data sources, combine those sources into
+    a new relationship that was never separately assessed, choose a purpose, select
+    a recipient or an international destination, and transmit the result -- all within
+    a single inference pass, before any privacy officer, consent record, contract
+    clause, or after-the-fact audit log can intervene. A GDPR purpose-limitation clause,
+    a PIPL processing-purpose restriction, or a DPDP consent-manager rule can be entirely
+    correct on paper and still fail in practice, because none of them is a property
+    of the computation itself; each is a property of a document that the computation
+    is merely expected to obey. By the time an audit trail shows that Article 5(1)(b)
+    of the GDPR, the purpose-limitation principle of the PIPL, or the purpose-limitation
+    requirement of the DPDP Act was violated, the disclosure, the cross-border transfer,
+    or the unauthorized combination of data has already occurred and cannot be undone.
+    This document introduces an execution-finality architecture that converts an already-determined
+    privacy rule from a document into a mandatory, machine-verifiable precondition
+    of the computer operation itself. A proposed privacy-sensitive operation is represented
+    as a Candidate Act and is held in a Non-Effective State -- technically incapable
+    of disclosing, transmitting, or combining protected data -- until a Protected
+    Enforcement Domain conjunctively validates the requesting Virtual Identity (VI),
+    the applicable purpose and jurisdictional constraints represented as a Compliance
+    Jurisdiction Token or Structure (CJT/CJS), the minimum required data attributes,
+    the recipient, and the destination, and a Finality Sink positioned at the boundary
+    of first usable external effect independently reverifies that state immediately
+    before release. Non-Joinable Vaults further ensure that holding a valid credential
+    or an authenticated AI session does not, by itself, grant authority to recombine
+    separated categories of personal data. A worked example applies the architecture
+    to a small-or-medium enterprise (SME) AI customer-service deployment, including
+    a prompt- injection scenario in which a manipulated AI agent is technically prevented
+    from exfiltrating payment and identity data regardless of what the model was tricked
+    into generating. A feasibility and latency analysis shows the mechanism can be
+    deployed as ordinary gateway middleware without replacing existing identity or
+    SaaS infrastructure. The document then provides a deliberately bounded mapping
+    onto specific GDPR provisions (Articles 5(1)(b), 5(1)(c), 5(1)(f), 6, 25, 32,
+    and Chapter V), stating plainly which provisions this architecture can make technically
+    load-bearing and which -- such as the legal validity of a basis for processing,
+    or the lawfulness of an international transfer mechanism -- must remain a legal
+    and regulatory determination that no software can make on its own. This document
+    does not advocate discarding paper-based privacy policy, consent management, contractual
+    controls, or audit for general-purpose applications, where the cost, rigidity,
+    and operational overhead of execution-level enforcement would be disproportionate
+    to the risk being managed. The architecture is instead proposed for high-criticality
+    systems: national-security- relevant infrastructure, critical infrastructure,
+    systems processing special-category or otherwise highly sensitive personal data,
+    and other environments in which unauthorized disclosure, cross-border transfer,
+    or unauthorized data combination would be catastrophic, irreversible, or strategically
+    damaging rather than merely a regulatory infraction. For ordinary commercial applications,
+    existing paper-policy, consent, and audit mechanisms, combined with conventional
+    access control, may remain proportionate and sufficient on their own. The central
+    proposition offered to regulators, standards bodies, and implementers is this:
+    a privacy rule that exists only on paper is a rule the machine can violate before
+    anyone notices; a privacy rule bound to the execution boundary is a rule the machine
+    cannot complete without satisfying.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-das-global-privacy-execution-enforcement-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

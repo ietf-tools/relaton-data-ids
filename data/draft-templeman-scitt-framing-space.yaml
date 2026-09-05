@@ -1,0 +1,46 @@
+---
+schema-version: v1.2.3
+id: draft-templeman-scitt-framing-space
+title:
+- content: Measuring the CBOR Framing Space of COSE_Sign1 Data-Hash Pre-images
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-templeman-scitt-framing-space
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>A signed statement conveyed as a COSE_Sign1 object may be serialized
+    into many distinct byte sequences that all decode to the same data item. Where
+    a protocol identifies such a statement by a digest computed over its wire octets
+    (referred to here as a data-hash), the identifier is sensitive to that framing
+    while the signature over the statement is not. This document reports a measurement
+    of the size of that class. Taking one 165-octet COSE_Sign1 object and re-emitting
+    it under every combination of six CBOR encoding freedoms yields 64 distinct octet
+    sequences. All 64 carry an identical Sig_structure and therefore an identical,
+    valid signature. All 64 produce distinct data-hash values, with no collisions.
+    A stock CBOR decoder rejected none of them, and 31 were silently repaired into
+    the canonical form by the act of being read. This document specifies nothing and
+    proposes no wording. It reports a measurement, publishes the reproduction recipe,
+    and identifies the prior work that already addresses the problem it measures.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-templeman-scitt-framing-space-00
+    docid:
+    - id: draft-templeman-scitt-framing-space-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-templeman-scitt-framing-space-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
