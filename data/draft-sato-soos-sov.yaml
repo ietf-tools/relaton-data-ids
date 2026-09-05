@@ -34,16 +34,23 @@ abstract:
     subtype model for structured SO Type composition; (b) the Standing Plan Object
     (SPO) as a normative SOV-02 subtype, specifying declarative scope constraints,
     Cedar bundle reference, CAP-RRS catalog reference, and IDP structural validation
-    integration; (c) the Mission Plan SO and Mission Status SO as normative SOV-02
-    subtypes for multi-agent orchestration over directed-acyclic-graph task structures;
-    (d) event stream integrity normative requirements including GEC-signed append-only
-    guarantees, kernel_id binding, and OpenTelemetry integration for observability
-    bridging; (e) expanded Security Considerations addressing SO state manipulation,
+    integration; (c) event stream integrity normative requirements including GEC-signed
+    append-only guarantees, kernel_id binding, and OpenTelemetry integration for observability
+    bridging; (d) expanded Security Considerations addressing SO state manipulation,
     event stream tampering, SO Type spoofing, and stale state_constraint exploitation;
-    and (f) IANA registrations for the SO Type code namespace and SPO media type.
-    The Sovereign Object is the architectural foundation referenced normatively by
-    [I-D.sato-soos-idp], [I-D.sato-soos-hem], [I-D.sato-soos-gar], [I-D.sato-soos-cap],
-    and [I-D.sato-soos-mjwt].</p>"
+    and (e) IANA registrations for the SO Type code namespace and SPO media type.
+    Version -03 removes the Mission Plan SO and Mission Status SO subtypes, which
+    -02 defined normatively alongside a SOV-01 SO Type Registry Governance and SOV-02
+    Subtype Model that already generalizes to them. These subtypes are now owned exclusively
+    by the Agentic Orchestration Protocol (AOP), which defines a materially more complete
+    Sub-Goal DAG model (typed dependency edges, deadline tracking, critical-path annotation)
+    than -02's; duplicating them here created a cross-draft inconsistency this revision
+    resolves by deferring entirely to AOP. Version -03 also reorders the Cedar policy
+    evaluation sequence to place Mandate JWT verification before SO Type Cedar policy
+    evaluation, matching the Mandate JWT draft's own explicit verification-sequencing
+    requirement, and updates cross-draft version references throughout to the current
+    suite versions. The Sovereign Object is the architectural foundation referenced
+    normatively by the other SOOS governance drafts.</p>"
   language:
   - en
   script:
@@ -79,6 +86,16 @@ relation:
       primary: true
     formattedref:
       content: draft-sato-soos-sov-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-sato-soos-sov-03
+    docid:
+    - id: draft-sato-soos-sov-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-sato-soos-sov-03
       format: text/plain
 ext:
   schema-version: v1.0.1

@@ -1,0 +1,139 @@
+---
+schema-version: v1.2.3
+id: draft-stone-adrp-01
+title:
+- content: 'ADRP: Agent Dispute Resolution Protocol'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-stone-adrp-01
+  type: src
+type: standard
+docid:
+- id: draft-stone-adrp-01
+  type: Internet-Draft
+  primary: true
+- id: I-D.stone-adrp
+  type: IETF
+  scope: anchor
+docnumber: I-D.stone-adrp
+date:
+- type: published
+  value: '2026-09-04'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Ben
+          language:
+          - en
+        - language:
+          - en
+          initial: B
+        - language:
+          - en
+          initial: E
+        - language:
+          - en
+          initial: "N"
+        - language:
+          - en
+          initial: S
+        - language:
+          - en
+          initial: S
+        - language:
+          - en
+          initial: T
+        - language:
+          - en
+          initial: O
+        - language:
+          - en
+          initial: "N"
+        formatted_initials:
+          content: B. E. N. S. S. T. O. N.
+          language:
+          - en
+      surname:
+        content: Stone
+        language:
+        - en
+      completename:
+        content: Ben Stone
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: SwarmSync.AI
+  role:
+  - type: author
+version:
+- draft: '01'
+revdate: '2026-09-04'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: '<p>This document defines the Agent Dispute Resolution Protocol (ADRP),
+    a wire protocol and state machine for resolving disputes that arise from cryptographically-attested
+    agent-to-agent (A2A) transactions. ADRP is the companion specification to ATXN
+    (draft-stone-atxn-01), which defines what an A2A transaction is. ADRP defines
+    what happens when a party contests one. ADRP severs an equivalence that every
+    prior agentic commerce design has implicitly assumed: that a valid cryptographic
+    proof bundle equals contractual satisfaction. It does not. Conduit-style cryptographic
+    verifiers prove that an agent took specified actions; they do not prove that those
+    actions satisfied the principal''s Intent Mandate. ADRP bifurcates disputes into
+    a *cryptographic class* (resolvable by code from the proof bundle and mandate
+    chain) and a *semantic class* (resolvable only against pre-committed machine-
+    readable acceptance criteria, with arbitration escalation when those criteria
+    are absent or under-specified). ADRP introduces the *Arbitration Mandate* as an
+    ADRP extension that can be cryptographically linked to AP2 Intent/Cart/Payment
+    Mandates or to an ATXN Standing Token. It is not an AP2 core mandate. The Arbitration
+    Mandate records the principal''s pre-committed dispute policy and is designed
+    to support a written arbitration agreement where applicable; enforceability remains
+    jurisdiction- and fact- specific. ADRP defines a *counter-attestation override
+    pattern* in which a signed RulingBundle supersedes a Conduit ProofBundle by a
+    signing- time precedence rule rather than by mutation. Both the original attestation
+    and the override are preserved forever in the hash chain; "override" is a verification-time
+    computation, not a write. Companion specifications: * *ATXN* (draft-stone-atxn-01):
+    defines the A2A transaction primitive that ADRP resolves disputes over * *AIVS*
+    (draft-stone-aivs-01): cryptographic audit-trail substrate for proof bundles *
+    *VCAP* (draft-stone-vcap-01): verified-commerce escrow rails consumed by ADRP
+    EscrowDirectives * *ATEP* (draft-stone-atep-01): trust passports referenced by
+    Standing Tokens in ADRP</p>'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-stone-adrp-00
+    docid:
+    - id: draft-stone-adrp-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-stone-adrp-00
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-stone-adrp-01
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

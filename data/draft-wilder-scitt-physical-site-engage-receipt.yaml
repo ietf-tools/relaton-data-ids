@@ -34,15 +34,15 @@ abstract:
     verdicts derived from the receipt (SLA credit, insurance underwriting, regulatory
     audit) are the responsibility of the relying party and its policies, not of this
     profile. The profile is designed around a three-party trust model in which no
-    single party can unilaterally forge or repudiate a receipt: the _site owner_ physically
-    hosts and controls the TEE hardware (they own the box); the _TEE silicon vendor_
-    attests the key material inside the TEE through its hardware root of trust (silicon
-    vouches for the key); and the _Issuer_ writes the vocabulary, registers Signed
-    Statements with a Transparency Service, and posts the resulting receipt into the
-    site''s operations layer via a WRITE_ONLY adapter. This separation is normative
-    in this profile: implementations MUST NOT collapse these three roles into a single
-    custodian, and relying parties MUST NOT trust a receipt that lacks any one of
-    them.</p>'
+    single party can unilaterally forge or repudiate a receipt: the _Site Owner_ controls
+    physical access to the TEE hardware and keeps it running (they can unplug the
+    box, and cannot forge what it signs); the _TEE silicon vendor_ attests the key
+    material inside the TEE through its hardware root of trust (silicon vouches for
+    the key); and the _Issuer_ writes the vocabulary, registers Signed Statements
+    with a Transparency Service, and posts the resulting receipt into the site''s
+    operations layer via a WRITE_ONLY adapter. This separation is normative in this
+    profile: implementations MUST NOT collapse these three roles into a single custodian,
+    and relying parties MUST NOT trust a receipt that lacks any one of them.</p>'
   language:
   - en
   script:
@@ -68,6 +68,16 @@ relation:
       primary: true
     formattedref:
       content: draft-wilder-scitt-physical-site-engage-receipt-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-wilder-scitt-physical-site-engage-receipt-02
+    docid:
+    - id: draft-wilder-scitt-physical-site-engage-receipt-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-wilder-scitt-physical-site-engage-receipt-02
       format: text/plain
 ext:
   schema-version: v1.0.1

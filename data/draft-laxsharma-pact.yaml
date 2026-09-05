@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-laxsharma-pact
 title:
-- content: 'PACT: A Contract Layer for Autonomous Agent Commerce'
+- content: 'PACT: Liability and Settlement for Autonomous Agent Contracts'
   language:
   - en
   script:
@@ -13,18 +13,21 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>Existing agent interoperability protocols move tasks (A2A) and money
-    (x402, AP2) but provide no mechanism that binds work to payment to proof of completion.
-    This document specifies PACT (Propose, Agree, Complete, Trust), an application-layer
-    contract protocol for commerce between autonomous agents. PACT defines (1) a sealed-bid
-    second- price task-award procedure; (2) the Verifiable Task Contract (VTC), a
-    signed JSON object binding parties, scope, price, verification method, and liability;
-    (3) escrowed, optimistically released settlement with a fraud-proof challenge
-    window; (4) graded verification methods ranging from deterministic re-execution
-    to zero- knowledge proofs of inference and staked arbitration; and (5) co- signed
-    Work Attestations from which agent reputation is derived as a byproduct of settlement.
-    PACT composes existing primitives: Decentralized Identifiers, JSON Web Signatures,
-    OAuth token-exchange delegation chains, the x402 payment protocol, and AP2 mandates.</p>"
+- content: "<p>A growing family of specifications lets autonomous agents establish
+    identity, delegate authority, record what they did, and move money. None of them
+    makes one party financially answerable to another for a result that was not delivered.
+    This document specifies PACT, which adds liability as a required, co-signed member
+    of an agent contract and propagates it through a subcontract tree. PACT defines
+    the Verifiable Task Contract, a signed JSON object binding parties, scope, price,
+    verification profile, and an explicit allocation of liability; the Delivery object
+    that a contract is judged against; an escrowed settlement procedure whose release
+    is conditioned on a stated assurance level rather than on elapsed time; and a
+    subcontract tree in which a parent's Work Attestation commits to its children
+    by Merkle root and liability cascades upward. PACT does not define an identity
+    format, an authorization model, an audit architecture, a transparency service,
+    a payment rail, or a reputation system. It composes existing work for all of these.
+    Its settlement loop is an instance of optimistic fair exchange, and its bond-sizing
+    rule is the classical deterrence bound; both are cited rather than reintroduced.</p>"
   language:
   - en
   script:
@@ -40,6 +43,16 @@ relation:
       primary: true
     formattedref:
       content: draft-laxsharma-pact-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-laxsharma-pact-01
+    docid:
+    - id: draft-laxsharma-pact-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-laxsharma-pact-01
       format: text/plain
 ext:
   schema-version: v1.0.1

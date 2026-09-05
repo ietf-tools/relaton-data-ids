@@ -38,9 +38,12 @@ abstract:
     with full normative specifications, trigger conditions, GAR ALE registrations
     (ALE-030 through ALE-041), and five new Security Considerations addressing the
     HEM channel attack surface. INV-HEM-01 (The Surfacing Obligation) is added as
-    a KernelSpec invariant. Section 7 (Human Readiness Score) and Section 8 (Tier
-    0-A Integration) are new normative sections. HEM is enforced by the GEC, not by
-    the agent and not by the application layer. An agent cannot opt out; an application
+    a KernelSpec invariant, along with normative Human Readiness Score (HRS) and Tier
+    0-A Integration sections. Version -06 corrects an internal contradiction over
+    whether HRS data persists across sessions, reconstructs several sections whose
+    base content had gone missing from the -05 text, and extends DoS rate-limiting
+    guidance to the -05 interaction-class triggers. HEM is enforced by the GEC, not
+    by the agent and not by the application layer. An agent cannot opt out; an application
     cannot suppress it. This non-bypassability is the source of HEM's regulatory utility
     and provides the technical specification for human oversight required by EU AI
     Act Article 14.</p>"
@@ -109,6 +112,16 @@ relation:
       primary: true
     formattedref:
       content: draft-sato-soos-hem-05
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-sato-soos-hem-06
+    docid:
+    - id: draft-sato-soos-hem-06
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-sato-soos-hem-06
       format: text/plain
 ext:
   schema-version: v1.0.1

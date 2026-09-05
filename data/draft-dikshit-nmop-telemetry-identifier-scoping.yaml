@@ -13,18 +13,24 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>Several documents currently in progress across multiple IETF working
-    groups define identifiers that are exported from a network element and consumed
-    by a remote collector, controller, or receiver: a flow identifier, a path segment
-    identifier, a per-peer or per-Route-Distinguisher counter, and a period or sequence
-    number are examples already found in active work. In each case examined in this
-    document, the identifier is defined without a stated scope of uniqueness, so the
-    receiver cannot determine, from the exported value alone, whether two records
-    observed at different times or from different sources describe the same object.
-    This document catalogs six such instances found independently across five working
-    groups, defines a short vocabulary for stating an identifier's scope of uniqueness,
-    and sets out requirements for documents that define exported telemetry identifiers
-    going forward.</p>"
+- content: "<p>This document describes a recurring interoperability problem in exported
+    network telemetry: many values are encoded without an explicit definition of the
+    scope in which they are unique, meaningful, and comparable. In practice, the wire
+    representation of a value may be standardized while the semantic context of that
+    value remains implicit. As a result, a receiver may infer that two numerically
+    identical values are equivalent when they were produced in different semantic
+    domains and therefore refer to different objects, states, or observations. This
+    ambiguity is operationally significant. It can lead to incorrect aggregation,
+    incorrect cross-instance comparison, and erroneous conclusions about routing state,
+    forwarding behavior, or network health. The risk is particularly visible in telemetry
+    protocols that export statistics or identifiers in contexts such as VRFs, topology
+    instances, address families, route distinguishers, policy domains, or other instance-specific
+    scopes. This document argues that exported telemetry identifiers and statistics
+    MUST explicitly define both the scope in which a value is unique and meaningful,
+    and the conditions under which it may be compared with values from other contexts.
+    This requirement is not limited to BMP; it applies to any telemetry mechanism
+    in which a value can be generated in multiple semantic domains and therefore cannot
+    be treated as self-describing solely by its encoded form.</p>"
   language:
   - en
   script:
@@ -40,6 +46,16 @@ relation:
       primary: true
     formattedref:
       content: draft-dikshit-nmop-telemetry-identifier-scoping-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-dikshit-nmop-telemetry-identifier-scoping-01
+    docid:
+    - id: draft-dikshit-nmop-telemetry-identifier-scoping-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-dikshit-nmop-telemetry-identifier-scoping-01
       format: text/plain
 ext:
   schema-version: v1.0.1

@@ -14,14 +14,22 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document defines two formally provable consequences of retiring
-    the IPv4 protocol stack in a dual-stack (IPv4 and IPv6) network environment: (1)
-    complete elimination of attacks attributable to the IPv4 protocol, and (2) a minimum
-    50% reduction in the count of concurrently exposed network-layer attack surfaces.
-    Both results are established as definitional and structural derivations, independent
-    of empirical attack-volume measurement. This document proposes standard terminology
-    for discussing these effects and states explicitly the boundary between what is
-    proven here and what remains an open empirical question.</p>"
+- content: "<p>The Single-Stack 100/50 Principle defines two independent, formally
+    derivable consequences of retiring the IPv4 protocol stack in a dual- stack (IPv4
+    + IPv6) network environment: (1) 100% elimination of executable attacks attributable
+    to IPv4 under the document's definition, and (2) an exact 50% reduction in the
+    count of concurrently exposed network-layer protocol-stack surfaces when IPv4
+    is retired, stated by the Principle as a minimum structural floor. The analysis
+    is bounded to the functional Layer 3 scope and parameter universe U_3 defined
+    in this document. Within that premise, Axiom 0 and Axioms 1-15 stipulate protocol
+    independence, operational state transitions, traffic termination, addressing/routing
+    domains, protocol-associated control and resolution functions, header- processing
+    paths, and protocol-specific vulnerability execution. Theorem I follows by removal
+    of the necessary IPv4 Layer 3 execution precondition for every IPv4-attributable
+    attack. Theorem II follows by direct enumeration of two concurrently exposed protocol-stack
+    surfaces before retirement and one after retirement. Neither theorem depends on
+    empirical attack volume, incident frequency, or statistical inference, and neither
+    theorem claims that IPv6 is inherently more secure than IPv4.</p>"
   language:
   - en
   script:
@@ -37,6 +45,16 @@ relation:
       primary: true
     formattedref:
       content: draft-sun-single-stack-100-50-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-sun-single-stack-100-50-01
+    docid:
+    - id: draft-sun-single-stack-100-50-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-sun-single-stack-100-50-01
       format: text/plain
 ext:
   schema-version: v1.0.1

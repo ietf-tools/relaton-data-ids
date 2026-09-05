@@ -1,0 +1,115 @@
+---
+schema-version: v1.2.3
+id: draft-reilly-government-integrity-02
+title:
+- content: 'Reilly Government Integrity Protocol (RGIP): Multi-Layer, Quantum-Resilient
+    Framework for Permanent and Tamper-Evident Public Records'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-reilly-government-integrity-02
+  type: src
+type: standard
+docid:
+- id: draft-reilly-government-integrity-02
+  type: Internet-Draft
+  primary: true
+- id: I-D.reilly-government-integrity
+  type: IETF
+  scope: anchor
+docnumber: I-D.reilly-government-integrity
+date:
+- type: published
+  value: '2026-09-04'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Lawrence
+          language:
+          - en
+        - language:
+          - en
+          initial: L
+        - language:
+          - en
+          initial: J
+        formatted_initials:
+          content: L. J.
+          language:
+          - en
+      surname:
+        content: Reilly
+        language:
+        - en
+      completename:
+        content: Lawrence John Reilly Jr.
+        language:
+        - en
+  role:
+  - type: author
+version:
+- draft: '02'
+revdate: '2026-09-04'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>The Reilly Government Integrity Protocol (RGIP) defines a standards-aligned
+    method for producing permanent, independently verifiable public records by combining
+    multi-algorithm content hashing, public timestamp anchoring, archival deposit
+    under a persistent identifier, decentralized storage, and web archiving into a
+    single pipeline. This revision corrects defects in draft-reilly-government-integrity-01
+    that would have prevented independent verification or overstated the guarantees
+    the protocol provides. It replaces the -01 SHA3-512-only Cross-Chain Hash, which
+    made a single algorithm the sole binding of three otherwise independent chains,
+    with an entangled link-and-braid construction in which each chain consumes the
+    prior state of all three. It defines a canonical, domain-separated, length-delimited
+    encoding for every hashed input, removing the concatenation ambiguity present
+    in -01. It separates the signed Evidence Receipt Core from the mutable anchor
+    envelope, resolving the -01 condition in which confirming an anchor invalidated
+    the signature over the record it described. It adds Chain Checkpoint anchoring,
+    without which the -01 claim that record sequence is provable did not hold, since
+    -01 anchored only artifact digests and never the chain itself. It replaces raw
+    digests of low-entropy government records with salted field commitments, adds
+    explicit pending and attested anchor states, adds a Revocation Registry and Hash
+    Migration Bridging Records, replaces the quantum_resilient boolean with a declared
+    algorithm suite, prohibits automated repair of chain integrity violations, and
+    narrows the -01 post-quantum claims to what the constructions support. It also
+    documents the function of RGIP records and of this specification as prior art
+    records under 35 U.S.C. 102(a)(1), consistent with the treatment in version -02
+    of the REM Protocol specification.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-reilly-government-integrity-00
+    docid:
+    - id: draft-reilly-government-integrity-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-reilly-government-integrity-00
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-reilly-government-integrity-02
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

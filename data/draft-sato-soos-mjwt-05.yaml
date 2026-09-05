@@ -1,0 +1,124 @@
+---
+schema-version: v1.2.3
+id: draft-sato-soos-mjwt-05
+title:
+- content: The Mandate JWT (MJWT) for Agentic AI Systems
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-sato-soos-mjwt-05
+  type: src
+type: standard
+docid:
+- id: draft-sato-soos-mjwt-05
+  type: Internet-Draft
+  primary: true
+- id: I-D.sato-soos-mjwt
+  type: IETF
+  scope: anchor
+docnumber: I-D.sato-soos-mjwt
+date:
+- type: published
+  value: '2026-09-04'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Tom
+          language:
+          - en
+        formatted_initials:
+          language:
+          - en
+      surname:
+        content: Sato
+        language:
+        - en
+      completename:
+        content: Tom Sato
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: MyAuberge K.K.
+  role:
+  - type: author
+version:
+- draft: '05'
+revdate: '2026-09-04'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: '<p>An AI agent that can act without a verifiable, human-traceable authorization
+    record is an agent without an owner. Existing authorization credentials tell you
+    what an agent is permitted to do; none of them tell you who authorized it, on
+    which specific object, under which mission, or how far that authority can be delegated
+    before it reaches this agent. This document defines the Mandate JWT (MJWT): a
+    WIMSE workload credential profile that binds an AI agent''s authority to a specific
+    Sovereign Object instance under a named human principal, with a cryptographically
+    enforced delegation ceiling and an eight-dimensional Narrowing Property that prevents
+    any sub-agent from exceeding the authority of the human principal at the root
+    of the chain. Version -02 adds a seventh narrowing dimension (consent scope),
+    the consent_scope claim carrying data subject consent state for APPI/GDPR compliance,
+    the sub_agent_scope claim for consent attenuation across delegation hops, a Purpose
+    Code Registry, and HEM_CONSENT_REQUIRED integration for fail-closed consent enforcement.
+    The MJWT is the authorization primitive referenced by the other SOOS governance
+    drafts. Version -03 corrects an IANA registration issue: the two registries requested
+    there are renamed to drop the redundant word "Registry" from the registry name
+    itself, and each now includes the Designated Expert Guidance that a Specification
+    Required registration policy requires. No new claims, codes, or normative behavior
+    are introduced in -03; this is a registration-format correction only. Version
+    -04 addresses four findings from a WIMSE security review checklist dry-run against
+    -02/-03 (DR-MJWT-KIA-CHECKLIST-01): the parent-mandate check at Cedar-action verification
+    time is tightened from a disjunctive "retrieve or verify" to a mandatory live
+    re-verification of the parent''s current signature and revocation status, closing
+    a parent-swap-class window; the Revocation Registry is now stated explicitly to
+    be the same Revocation Registry the KIA draft defines, and the residual cross-instance
+    propagation-lag risk this implies is now named explicitly, mirroring how that
+    draft discloses its own XPID revocation gap; and a new Security Considerations
+    entry states plainly that MJWT does not itself establish or verify a human_principal_id''s
+    root authority. Version -05 closes gaps surfaced by a WIMSE-style security review
+    pass against -04''s own text: an eighth Narrowing Property dimension, max_delegation_depth,
+    closes an unbounded-delegation- depth Denial of Service vector that -04''s own
+    text named but did not bound; the consent_reference staleness defense is upgraded
+    from a SHOULD-level recommendation to a MUST, extending the same live-re-verification
+    discipline already applied to parent mandates; and the Introduction''s description
+    of RFC 8693 inheritance is corrected to no longer claim use of the optional may_act
+    claim, which this document does not in fact use. This revision also carries minor
+    idnits and citation-hygiene fixes.</p>'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-sato-soos-mjwt-04
+    docid:
+    - id: draft-sato-soos-mjwt-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-sato-soos-mjwt-04
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-sato-soos-mjwt-05
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

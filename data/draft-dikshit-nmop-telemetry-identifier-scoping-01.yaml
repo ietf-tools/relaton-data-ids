@@ -1,0 +1,109 @@
+---
+schema-version: v1.2.3
+id: draft-dikshit-nmop-telemetry-identifier-scoping-01
+title:
+- content: Scoping and Comparability Requirements for Exported Network Telemetry Identifiers
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-dikshit-nmop-telemetry-identifier-scoping-01
+  type: src
+type: standard
+docid:
+- id: draft-dikshit-nmop-telemetry-identifier-scoping-01
+  type: Internet-Draft
+  primary: true
+- id: I-D.dikshit-nmop-telemetry-identifier-scoping
+  type: IETF
+  scope: anchor
+docnumber: I-D.dikshit-nmop-telemetry-identifier-scoping
+date:
+- type: published
+  value: '2026-09-04'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Saumya
+          language:
+          - en
+        - language:
+          - en
+          initial: D
+        formatted_initials:
+          content: D.
+          language:
+          - en
+      surname:
+        content: Dikshit
+        language:
+        - en
+      completename:
+        content: Saumya Dikshit
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: HPE
+  role:
+  - type: author
+version:
+- draft: '01'
+revdate: '2026-09-04'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>This document describes a recurring interoperability problem in exported
+    network telemetry: many values are encoded without an explicit definition of the
+    scope in which they are unique, meaningful, and comparable. In practice, the wire
+    representation of a value may be standardized while the semantic context of that
+    value remains implicit. As a result, a receiver may infer that two numerically
+    identical values are equivalent when they were produced in different semantic
+    domains and therefore refer to different objects, states, or observations. This
+    ambiguity is operationally significant. It can lead to incorrect aggregation,
+    incorrect cross-instance comparison, and erroneous conclusions about routing state,
+    forwarding behavior, or network health. The risk is particularly visible in telemetry
+    protocols that export statistics or identifiers in contexts such as VRFs, topology
+    instances, address families, route distinguishers, policy domains, or other instance-specific
+    scopes. This document argues that exported telemetry identifiers and statistics
+    MUST explicitly define both the scope in which a value is unique and meaningful,
+    and the conditions under which it may be compared with values from other contexts.
+    This requirement is not limited to BMP; it applies to any telemetry mechanism
+    in which a value can be generated in multiple semantic domains and therefore cannot
+    be treated as self-describing solely by its encoded form.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-dikshit-nmop-telemetry-identifier-scoping-00
+    docid:
+    - id: draft-dikshit-nmop-telemetry-identifier-scoping-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-dikshit-nmop-telemetry-identifier-scoping-00
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-dikshit-nmop-telemetry-identifier-scoping-01
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

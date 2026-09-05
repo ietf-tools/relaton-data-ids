@@ -15,14 +15,17 @@ docid:
 abstract:
 - content: "<p>Agent systems can issue stop, suspend, revoke, constrain, cancel, or
     override instructions across system and administrative boundaries. A record that
-    such a control was decided or dispatched does not establish that the intended
+    such a control was decided or dispatched does not establish that every intended
     enforcement point received or applied it. Conversely, the absence of an acknowledgement
     does not, by itself, establish non-delivery. This document defines format-independent
-    evidence requirements for preserving that distinction. It separates issuer-side
-    emission, receiver-side observation, enforcement outcome, and observation of the
-    resulting control effect. It also defines negative-observation rules, per-instruction
-    reconciliation states, and bounded-population accounting so that missing, malformed,
-    conflicting, and unmatched records remain visible. This document does not define
+    evidence requirements for preserving those distinctions. It separates issuer-side
+    emission, required-target resolution, receiver-side observation, enforcement outcome,
+    and observation of the resulting control effect. For a control that must reach
+    more than one enforcement target, the unit of delivery reconciliation is an instruction-target
+    obligation rather than the parent instruction alone. The document also defines
+    bounded negative observations, total reconciliation, population conservation,
+    semantic-preservation requirements for intermediary paths, and a separate qualification
+    for the evidentiary strength of aggregate claims. This document does not define
     a receipt format, wire protocol, authorization system, policy language, transparency
     service, or audit regime.</p>"
   language:
@@ -40,6 +43,16 @@ relation:
       primary: true
     formattedref:
       content: draft-abak-agent-control-delivery-evidence-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-abak-agent-control-delivery-evidence-01
+    docid:
+    - id: draft-abak-agent-control-delivery-evidence-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-abak-agent-control-delivery-evidence-01
       format: text/plain
 ext:
   schema-version: v1.0.1

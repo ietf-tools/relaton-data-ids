@@ -30,22 +30,28 @@ abstract:
     defines the Context Package delivered at SENSE, the GEC Query Interface exercised
     at PLAN, the Transition Request submitted at ACT, and the atomic GEC response
     received at OBSERVE. The AEP specifies two conformance modes -- Standard and Goal
-    Execution Engine (GEE) -- and normatively integrates the Intent Declaration Primitive
-    [I-D.sato-soos-idp], the Mandate JWT [I-D.sato-soos-mjwt], the Human Escalation
-    Mechanism [I-D.sato-soos-hem], the Governance Audit Record [I-D.sato-soos-gar],
-    the Constitutional AI Protocol [I-D.sato-soos-cap], and the Sovereign Object [I-D.sato-soos-sov]
-    as components of a single governed execution architecture. The REASON step is
-    intentionally GEC-unspecified: the LLM reasoning engine is opaque to the protocol.
-    The AEP is the transmission between the LLM engine and the GEC enforcement substrate.
-    Version -02 adds: XPID binding at session open (GEC MUST bind XPID from KIA-verified
-    Party Registry; MUST NOT accept client-supplied XPID); STALLED and PLAN_B_ACTIVE
-    session states with full normative definitions, trigger conditions, and resume
-    conditions; Expected Outcome Declaration (EOD) as a pre-session commitment structure
-    with primary outcome, acceptance envelope, and pre-declared Plan B; RETRY_CONTINUATION
-    normative strengthening with what-changed-since- last-attempt requirement and
-    prior_denial_count Cedar attribute; AEP-to-OTel mapping section (Section 8) with
-    mandatory span attributes at each AEP phase; four new Security Considerations;
-    and updated IANA registrations for new state codes and EOD media type.</p>"
+    Execution Engine (GEE) -- and normatively integrates the Intent Declaration Primitive,
+    the Mandate JWT, the Human Escalation Mechanism, the Governance Audit Record,
+    the Constitutional AI Protocol, and the Sovereign Object as components of a single
+    governed execution architecture. The REASON step is intentionally GEC-unspecified:
+    the LLM reasoning engine is opaque to the protocol. The AEP is the transmission
+    between the LLM engine and the GEC enforcement substrate. Version -02 adds: XPID
+    binding at session open (GEC MUST bind XPID from KIA-verified Party Registry;
+    MUST NOT accept client-supplied XPID); STALLED and PLAN_B_ACTIVE session states
+    with full normative definitions, trigger conditions, and resume conditions; Expected
+    Outcome Declaration (EOD) as a pre-session commitment structure with primary outcome,
+    acceptance envelope, and pre-declared Plan B; RETRY_CONTINUATION normative strengthening
+    with what-changed-since- last-attempt requirement and prior_denial_count Cedar
+    attribute; an AEP-to-OTel mapping with mandatory span attributes at each AEP phase;
+    four new Security Considerations; and updated IANA registrations for new state
+    codes and EOD media type. Version -03 adds Step 4a of the GEC execution sequence:
+    DAM lineage and residency validation. When a Transition Request's optional da_production
+    field is present, the GEC resolves every referenced input artifact, confirms each
+    is in a VALID lifecycle state, and computes the resulting artifact's data_residency
+    under the applicable narrowing rule -- before the transition's Event Stream write
+    occurs, and under the same signature as that write. This is the enforcement point
+    for a rule the data governance companion specification had defined but this document,
+    until now, gave no mechanism to actually apply.</p>"
   language:
   - en
   script:
@@ -81,6 +87,16 @@ relation:
       primary: true
     formattedref:
       content: draft-sato-soos-aep-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-sato-soos-aep-03
+    docid:
+    - id: draft-sato-soos-aep-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-sato-soos-aep-03
       format: text/plain
 ext:
   schema-version: v1.0.1

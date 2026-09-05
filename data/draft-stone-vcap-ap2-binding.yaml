@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-stone-vcap-ap2-binding
 title:
-- content: 'VCAP-AP2 Binding: Verified Commerce Settlement for the Agent Payments
+- content: 'VCAP-AP2 Binding: Verified Delivery Settlement for the Agent Payments
     Protocol'
   language:
   - en
@@ -14,16 +14,16 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: '<p>This document specifies how the Verified Commerce for Agent Protocols
-    (VCAP) settlement layer binds to the Agent Payments Protocol (AP2) developed by
-    Google and its coalition partners. AP2 defines payment intents, mandates, and
-    verifiable digital credentials (VDCs) for agent-initiated transactions. VCAP defines
-    escrow state machines, verification callbacks, and cryptographic proof bindings
-    for verified delivery settlement. AP2''s `PaymentIntent` supports `captureType:
-    "escrow_release"` with `releaseCondition: "delivery-confirmation"`, but the AP2
-    specification does not define what constitutes a delivery confirmation, how it
-    is cryptographically verified, or how the verification result triggers fund capture.
-    This binding document fills that gap.</p>'
+- content: "<p>This document defines a binding between Verified Commerce for Agent
+    Protocols (VCAP) and the Agent Payments Protocol (AP2). AP2 supplies agent-commerce
+    authorization evidence through IntentMandate, CartMandate, and PaymentMandate
+    artifacts. VCAP supplies delivery verification, settlement evidence, escrow directives,
+    timeout handling, and dispute handoff. This revision deliberately does not model
+    AP2 as an escrow or settlement state machine. Current AP2 positions itself as
+    an authorization and security layer used within a surrounding commerce protocol,
+    including Universal Commerce Protocol (UCP). Accordingly, this binding references
+    AP2 mandates by cryptographic digest or opaque identifier and leaves payment capture,
+    refund, and settlement transitions to the commerce protocol and payment rail.</p>"
   language:
   - en
   script:
@@ -39,6 +39,16 @@ relation:
       primary: true
     formattedref:
       content: draft-stone-vcap-ap2-binding-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-stone-vcap-ap2-binding-01
+    docid:
+    - id: draft-stone-vcap-ap2-binding-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-stone-vcap-ap2-binding-01
       format: text/plain
 ext:
   schema-version: v1.0.1
