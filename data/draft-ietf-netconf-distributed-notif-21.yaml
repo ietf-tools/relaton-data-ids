@@ -1,121 +1,62 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-bess-evpn-bfd-14
+id: draft-ietf-netconf-distributed-notif-21
 title:
-- content: EVPN Network Layer Fault Management
+- content: Subscription to Notifications in a Distributed Architecture
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-bess-evpn-bfd-14
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-netconf-distributed-notif-21
   type: src
 type: standard
 docid:
-- id: draft-ietf-bess-evpn-bfd-14
+- id: draft-ietf-netconf-distributed-notif-21
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-bess-evpn-bfd
+- id: I-D.ietf-netconf-distributed-notif
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-bess-evpn-bfd
+docnumber: I-D.ietf-netconf-distributed-notif
 date:
 - type: published
-  value: '2026-07-28'
+  value: '2026-09-06'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Vengada
+        - content: Tianran
           language:
           - en
         - language:
           - en
-          initial: V
-        - language:
-          - en
-          initial: P
+          initial: T
         formatted_initials:
-          content: V. P.
+          content: T.
           language:
           - en
       surname:
-        content: Govindan
+        content: Zhou
         language:
         - en
       completename:
-        content: Vengada Prasad Govindan
+        content: Tianran Zhou
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems
+        - content: Huawei
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Ali
-          language:
-          - en
-        - language:
-          - en
-          initial: A
-        formatted_initials:
-          content: A.
-          language:
-          - en
-      surname:
-        content: Sajassi
-        language:
-        - en
-      completename:
-        content: Ali Sajassi
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Cisco Systems
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Mudigonda
-          language:
-          - en
-        - language:
-          - en
-          initial: M
-        formatted_initials:
-          content: M.
-          language:
-          - en
-      surname:
-        content: Mallik
-        language:
-        - en
-      completename:
-        content: Mudigonda Mallik
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Celestica Inc.
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Greg
+        - content: Guangying
           language:
           - en
         - language:
@@ -126,63 +67,115 @@ contributor:
           language:
           - en
       surname:
-        content: Mirsky
+        content: Zheng
         language:
         - en
       completename:
-        content: Greg Mirsky
+        content: Guangying Zheng
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Independent
+        - content: Huawei
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Donald
+        - content: Eric
           language:
           - en
-        - language:
-          - en
-          initial: D
         - language:
           - en
           initial: E
         formatted_initials:
-          content: D. E.
+          content: E.
           language:
           - en
       surname:
-        content: Eastlake
+        content: Voit
         language:
         - en
       completename:
-        content: Donald E. Eastlake 3rd
+        content: Eric Voit
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Independent
+        - content: Cisco Systems
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Thomas
+          language:
+          - en
+        - language:
+          - en
+          initial: T
+        formatted_initials:
+          content: T.
+          language:
+          - en
+      surname:
+        content: Graf
+        language:
+        - en
+      completename:
+        content: Thomas Graf
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Swisscom
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Pierre
+          language:
+          - en
+        - language:
+          - en
+          initial: P
+        formatted_initials:
+          content: P.
+          language:
+          - en
+      surname:
+        content: Francois
+        language:
+        - en
+      completename:
+        content: Pierre Francois
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: INSA-Lyon
   role:
   - type: author
 version:
-- draft: '14'
-revdate: '2026-07-28'
+- draft: '21'
+revdate: '2026-09-06'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document specifies proactive, in-band Network Layer OAM (RFC 9062)
-    mechanisms to detect loss of continuity faults that affect unicast and multi-destination
-    paths (used by Broadcast, Unknown Unicast, and Multicast traffic) in an Ethernet
-    VPN (EVPN, RFC 7432bis) network. The mechanisms specified in this document use
-    the widely adopted Bidirectional Forwarding Detection (RFC 5880) protocol.</p>"
+- content: "<p>This document describes extensions to the YANG notifications subscription
+    to allow metrics being published directly from processors on line cards to target
+    receivers, while subscription is still maintained at the route processor in a
+    distributed forwarding system of a network node.</p>"
   language:
   - en
   script:
@@ -191,23 +184,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-bess-evpn-bfd-06
+    id: draft-ietf-netconf-distributed-notif-06
     docid:
-    - id: draft-ietf-bess-evpn-bfd-06
+    - id: draft-ietf-netconf-distributed-notif-06
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-bess-evpn-bfd-06
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-bess-evpn-bfd-17
-    docid:
-    - id: draft-ietf-bess-evpn-bfd-17
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-bess-evpn-bfd-17
+      content: draft-ietf-netconf-distributed-notif-06
       format: text/plain
 series:
 - type: main
@@ -218,7 +201,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-bess-evpn-bfd-14
+  number: draft-ietf-netconf-distributed-notif-21
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

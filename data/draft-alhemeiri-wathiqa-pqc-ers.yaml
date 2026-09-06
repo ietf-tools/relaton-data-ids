@@ -23,8 +23,10 @@ abstract:
     record reproducibly verifiable across independent implementations, the authenticated
     temporal binding that places each link in time (an append-only transparency log
     à la RFC 6962, whose signed inclusion receipt is _not-after_ evidence), and the
-    verification procedure. A per-link beacon anchor records _not-before_ metadata
-    but is, in this profile, carried unauthenticated — see Section 8.</p>"
+    verification procedure. A per-link beacon anchor records _not-before_ evidence:
+    from wire version 3 it is authenticated against the beacon's hash chain, with
+    the beacon's classical pulse signature as defence in depth; the Security Considerations
+    say which assumption each check rests on.</p>"
   language:
   - en
   script:
@@ -40,6 +42,16 @@ relation:
       primary: true
     formattedref:
       content: draft-alhemeiri-wathiqa-pqc-ers-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-alhemeiri-wathiqa-pqc-ers-01
+    docid:
+    - id: draft-alhemeiri-wathiqa-pqc-ers-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-alhemeiri-wathiqa-pqc-ers-01
       format: text/plain
 ext:
   schema-version: v1.0.1

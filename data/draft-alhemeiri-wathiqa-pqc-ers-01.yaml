@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-alhemeiri-wathiqa-pqc-ers-00
+id: draft-alhemeiri-wathiqa-pqc-ers-01
 title:
 - content: Post-Quantum Evidence Records with Algorithm Agility (Wathiqa Profile)
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-alhemeiri-wathiqa-pqc-ers-00
+- content: https://datatracker.ietf.org/doc/html/draft-alhemeiri-wathiqa-pqc-ers-01
   type: src
 type: standard
 docid:
-- id: draft-alhemeiri-wathiqa-pqc-ers-00
+- id: draft-alhemeiri-wathiqa-pqc-ers-01
   type: Internet-Draft
   primary: true
 - id: I-D.alhemeiri-wathiqa-pqc-ers
@@ -53,7 +53,7 @@ contributor:
   role:
   - type: author
 version:
-- draft: '00'
+- draft: '01'
 revdate: '2026-09-05'
 language:
 - en
@@ -70,23 +70,25 @@ abstract:
     record reproducibly verifiable across independent implementations, the authenticated
     temporal binding that places each link in time (an append-only transparency log
     à la RFC 6962, whose signed inclusion receipt is _not-after_ evidence), and the
-    verification procedure. A per-link beacon anchor records _not-before_ metadata
-    but is, in this profile, carried unauthenticated — see Section 8.</p>"
+    verification procedure. A per-link beacon anchor records _not-before_ evidence:
+    from wire version 3 it is authenticated against the beacon's hash chain, with
+    the beacon's classical pulse signature as defence in depth; the Security Considerations
+    say which assumption each check rests on.</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-alhemeiri-wathiqa-pqc-ers-01
+    id: draft-alhemeiri-wathiqa-pqc-ers-00
     docid:
-    - id: draft-alhemeiri-wathiqa-pqc-ers-01
+    - id: draft-alhemeiri-wathiqa-pqc-ers-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-alhemeiri-wathiqa-pqc-ers-01
+      content: draft-alhemeiri-wathiqa-pqc-ers-00
       format: text/plain
 series:
 - type: main
@@ -97,7 +99,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-alhemeiri-wathiqa-pqc-ers-00
+  number: draft-alhemeiri-wathiqa-pqc-ers-01
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
