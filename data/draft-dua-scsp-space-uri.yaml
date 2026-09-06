@@ -1,0 +1,60 @@
+---
+schema-version: v1.2.3
+id: draft-dua-scsp-space-uri
+title:
+- content: The 'scsp' Uniform Resource Identifier (URI) Scheme and Space Command &
+    Telemetry Security Protocol (SCSP)
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-dua-scsp-space-uri
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: <p>This document specifies the 'scsp' Uniform Resource Identifier (URI)
+    scheme and its associated Space Command &amp; Telemetry Security Protocol (SCSP).
+    The scheme defines a zero-trust, transport-agnostic space cybersecurity protocol
+    standardizing telecommand authentication, telemetry integrity, inter-satellite
+    laser mesh encryption, and optional profile-driven space-grade hardware attestation
+    (TPM 2.0 / TEE) across Low-Earth Orbit (LEO) constellations, Geostationary (GEO)
+    satellites, and Deep-Space missions. It defines exact binary field- width tables
+    in Network Byte Order (Big-Endian) with O(1) KeyID indexing, reserved KeyID 0x0000
+    Master Emergency slots, 11-bit CCSDS APID zero-padding constraints, normative
+    DMA buffer sizing (B_min &gt;= 26 + N_max + SigLen_max), AEAD cipher agility,
+    deterministic 96-bit IV construction (Sequence_Epoch || KeyID || 0x0000), continuous
+    International Atomic Time (TAI) microsecond epoch baselines, zero- payload (N=0)
+    boundary rules, ISL TTL hop limiting, a mission- provisioned Endpoint Resolution
+    Table mapping URIs to CCSDS Spacecraft ID (SCID), Virtual Channel ID (VCID), and
+    Application Process ID (APID) parameters, ground-side URI:port stripping rules,
+    mandatory signature byte-scoping over header and payload, normative X25519 HKDF
+    info strings for AEAD key derivation ("SCSP-Payload-AEAD- v1") and non-interactive
+    TC segment HMAC trailers ("SCSP-Segment- HMAC-v1") with 32-zero-byte RFC 5869
+    salts, 3,378-byte hybrid PQC signature sub-framing (Ed25519 + ML-DSA-65 per FIPS
+    204), KeyID- isolated configurable-width (64/256/1024-bit) NVRAM sliding-window
+    anti-replay protection, monotonic NVRAM counter-protected Emergency Time-Resynchronization,
+    monotonic counter-protected in-pass Key Revocation Lists (KRL), dual-mode SDLS
+    SPI/ESH Extended Security Headers (SA Table Index vs. Direct Bitfield), I-JSON
+    compliant payload documents (RFC 7493), onboard Command Authorization Policy Matrices,
+    mandatory signed Telemetry Response schemas for SUCCESS and ERROR states (0x01..0x0C),
+    SCSP URI canonicalization, and provisional IANA registration under RFC 7595.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-dua-scsp-space-uri-00
+    docid:
+    - id: draft-dua-scsp-space-uri-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-dua-scsp-space-uri-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
