@@ -18,7 +18,7 @@ abstract:
     alone cannot enforce a shared budget across replicas, survive retries safely,
     or distinguish an operation that never crossed an effect boundary from one whose
     outcome is unknown. This document defines a bounded capability receipt and a durable
-    reserve-execute-commit protocol. The receipt binds an issuance authorization,
+    reserve-admit-reconcile protocol. The receipt binds an issuance authorization,
     a closed action scope, a budget with explicit units, a holder proof, an expiry,
     and any parent capability. The state protocol atomically refuses overspend and
     operation-key replay, fences concurrent owners, and charges an indeterminate operation
@@ -26,9 +26,10 @@ abstract:
     authority: all direct child allocations are funded by committed parent operations
     before child registration, and their aggregate cannot exceed the parent balance
     within one authoritative atomic state domain. It also defines narrowing-only delegation,
-    explicit revocation inheritance for delegated authority, and evidence interfaces.
-    It does not make a bearer token into human approval, does not provide cross-domain
-    or offline global double-spend prevention, and does not claim that an authorized
+    explicit revocation inheritance for delegated authority, an optional admission-control
+    epoch that can freeze new consequence admission, and evidence interfaces. It does
+    not make a bearer token into human approval, does not provide cross-domain or
+    offline global double- spend prevention, and does not claim that an authorized
     action was safe, lawful, or successfully executed.</p>"
   language:
   - en
@@ -85,6 +86,16 @@ relation:
       primary: true
     formattedref:
       content: draft-schrock-ep-bounded-capability-receipts-04
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-schrock-ep-bounded-capability-receipts-05
+    docid:
+    - id: draft-schrock-ep-bounded-capability-receipts-05
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-schrock-ep-bounded-capability-receipts-05
       format: text/plain
 ext:
   schema-version: v1.0.1

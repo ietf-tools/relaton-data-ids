@@ -13,29 +13,19 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: '<p>This document defines EP-QUORUM, a multi-party authorization profile
-    for the EMILIA Protocol (EP) authorization receipt (draft-schrock-ep- authorization-receipts).
-    Where the base receipt binds a single accountable human to one exact high-risk
-    action, EP-QUORUM binds a set of distinct accountable humans -- the "two-person
-    rule," generalized to M-of-N and to ordered approval trails -- to one exact action,
-    such that the quorum predicate is not satisfied until the full quorum holds. The
-    profile is purely additive: each quorum member is an unmodified EP signoff over
-    the same action hash, and a single-approver policy is the degenerate one-member
-    case. EP-QUORUM specifies a fail-closed quorum predicate (all member signatures
-    valid, every member bound to the exact action, approvers pairwise distinct, every
-    approver admitted by role, the threshold met, the declared order respected, and
-    all signatures within a bounded time window), an incremental server-side admission
-    rule that rejects a non-conforming signer before it enters the trail, and a set
-    of adversarial conformance vectors. The predicate is offline-verifiable under
-    the base draft''s verification model and is maintained as cross- language conformance
-    vectors that three reference verifiers (JavaScript, Python, Go) are required to
-    agree on. Those verifiers live in one repository -- a cross-language consistency
-    check, not clean-room independent implementations; independent implementations
-    remain future interoperability evidence. The document also describes, informatively,
-    the multi-handshake composition process: how individual signing ceremonies --
-    fresh one-time challenge, exact- action binding, user-verified device signature
-    -- compose into one ordered, offline-verifiable, at-most-once-consumable multi-party
-    decision.</p>'
+- content: "<p>This document defines a multi-party approval predicate over action-
+    bound human signoffs: valid signatures, admitted roles, distinct approvers and
+    keys, threshold, and an optional ordered trail. The relying party pins the governing
+    policy and approver directory independently. Passing the predicate is approval
+    evidence, not a complete authorization decision, proof of execution, or proof
+    of unused authority. This revision repairs the strong ordered profile. A successor
+    signs a digest of the completed predecessor signoff, including its signature,
+    rather than a precomputable context. The versioned profile establishes causal
+    dependence on a completed prior proof under the cryptographic assumptions; it
+    does not establish trusted wall-clock time or human comprehension. Legacy context-only
+    chains cannot satisfy it. JavaScript, Python, and Go reference verifiers share
+    a corpus in one repository. Agreement is a same-team consistency check, not independent
+    interoperability evidence or a formal proof of the new construction.</p>"
   language:
   - en
   script:
@@ -81,6 +71,16 @@ relation:
       primary: true
     formattedref:
       content: draft-schrock-ep-quorum-03
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-schrock-ep-quorum-04
+    docid:
+    - id: draft-schrock-ep-quorum-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-schrock-ep-quorum-04
       format: text/plain
 ext:
   schema-version: v1.0.1

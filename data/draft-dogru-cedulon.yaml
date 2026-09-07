@@ -16,38 +16,21 @@ abstract:
 - content: "<p>This document defines the Cedulon Protocol, an audit layer for agent-
     to-agent commerce. Payment rails such as HTTP 402 flows (x402) and mandate protocols
     (AP2) already move value, and a mandate protocol can already refuse a spend before
-    it happens and return signed receipts. What they do not, by themselves, give a
-    party that is neither payer nor rail operator is a retrievable record of that
-    decision and a signed spend receipt that reconciles against an authenticated extract
-    of the rail. Cedulon specifies a Trade Manifest (signed offer before payment),
-    a Policy Decision Point with default deny, a Spend Receipt (COSE/CWT claim set
-    after a gated payment), epoch checkpoints, and rail-extract reconciliation. The
-    reconciliation shows that no settlement on the extract lacks a receipt and no
-    settled receipt is absent from the extract. That result is unconditional only
-    when the verifier pins the rail key out of band and states the period under audit;
-    otherwise the document requires it to be reported as conditional. Checkpoints
-    carry the suppression guarantee, so the document profiles the checkpoint as a
-    Signed Statement, gives the verification algorithm a step that consumes the witness
-    receipts returned for checkpoints, names what a witness holding a checkpoint the
-    presented chain omits reports, brings equivocation within reach by comparing recorded
-    copies against the presented chain, and states how checkpoint totals may be withheld
-    without withholding the fact that they were. No signed object is attested by a
-    key it carries itself, a signature checked against such a key where no key is
-    held establishes internal consistency and attests nothing, and a presented Trade
-    Manifest must be bound both to the receipts that name it and to the terms those
-    receipts claim. The document also names a threat no adversary causes, a settlement
-    recorded on a rail with no receipt behind it, and defines a Dispute Evidence Bundle
-    (evidence, not an award) and optional SCITT anchoring. The encodings earlier revisions
-    called canonical are defined, and the exact input to every hash-valued field is
-    stated, so that an independent verifier can be written from the text alone. The
-    account and the rail under audit are part of the declared scope on the terms the
-    period already had, no settlement finding is read out of an extract the pinned
-    rail key refused, and the witness receipt has a stated wire form and a registered
-    media type. This revision widens one requirement: a report names the account,
-    rail and window it was computed over in every structure an implementation returns
-    for that audit, not only in the printed report and the finding object, so that
-    no returned result can be read as a statement about settlement paths it never
-    looked at. Cedulon is not a competitor to x402 or AP2; it sits above them.</p>"
+    it happens. What they do not, by themselves, give a party that is neither payer
+    nor rail operator is a retrievable record of that decision and a signed spend
+    receipt that reconciles against an authenticated extract of the rail. Cedulon
+    specifies a Trade Manifest (a signed offer before payment), a Policy Decision
+    Point with default deny, a Spend Receipt (a COSE/CWT claim set issued after a
+    gated payment), epoch checkpoints, and rail- extract reconciliation. The reconciliation
+    shows that no settlement on the extract lacks a receipt and no settled receipt
+    is absent from the extract. That result is unconditional only when the verifier
+    pins the rail key out of band and names the account, rail and window under audit;
+    otherwise it is reported as conditional. Checkpoints are profiled as SCITT Signed
+    Statements, and a checkpoint the presented chain omits is reported by a witness
+    that holds it. No signed object is attested by a key it carries itself, and the
+    exact input to every hash-valued field is stated, so that an independent verifier
+    can be written from the text alone. Cedulon is not a competitor to x402 or AP2;
+    it sits above them.</p>"
   language:
   - en
   script:
@@ -143,6 +126,16 @@ relation:
       primary: true
     formattedref:
       content: draft-dogru-cedulon-08
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-dogru-cedulon-09
+    docid:
+    - id: draft-dogru-cedulon-09
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-dogru-cedulon-09
       format: text/plain
 ext:
   schema-version: v1.0.1

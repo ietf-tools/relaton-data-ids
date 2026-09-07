@@ -15,35 +15,34 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: <p>As frontier AI providers expose increasingly rich inference interfaces
-    to partners, evaluators, and enterprise tenants, richer- than-normal outputs --
-    for example logits, log-probability distributions, embeddings, hidden states,
-    intermediate activations, KV-cache material, and diagnostic state -- become practical
-    extraction vectors rather than theoretical concerns. In this document, a "release"
-    is any point at which such information leaves a provider's protected execution
-    environment and becomes usable outside it, whether returned directly to a caller,
-    cached, forwarded, or otherwise materialized. Existing authentication, confidential-
-    computing, and remote-attestation mechanisms can establish important properties
-    of the requester and execution environment, but they do not by themselves establish
-    that each specific release of sensitive model information is currently authorized
-    to cross that protected-to- unprotected boundary. This document describes that
-    gap as a pre-effectuation release- control problem and proposes controls intended
-    to limit unauthorized extraction and reduce the risk that released model information
-    can be used for downstream distillation. It presents an execution-finality architecture
-    in which computation is separated from authority to release. A sensitive result
-    is treated as a Candidate Release, remains non-effective outside the protected
-    domain, and becomes externally available only after release-specific validation,
-    rollback-resistant extraction-state evaluation, bounded authorization, and verification
-    at a controlled Finality Sink. The document discusses anti-bypass requirements,
-    remote-attestation composition, latency, legacy deployment, industrial relevance,
-    and a concrete model-extraction scenario. The mechanism is not claimed to prevent
-    all forms of model distillation. Its narrower objective is to reduce unauthorized
-    or excessive extraction of privileged model information that can materially improve
-    model stealing, reconstruction, imitation, or distillation. Because release authority
-    is bound to rollback- resistant, atomically consumed extraction state rather than
-    to a bearer credential, the volume of privileged teacher signal an adversary can
-    accumulate through the governed path is capped by authorized state transitions,
-    not by request volume or attacker persistence alone.</p>
+- content: "<p>Frontier and proprietary AI deployments may contain or expose model-
+    related information substantially richer than ordinary final-answer text. Depending
+    on the deployment and interface, such Sensitive Model Information (SMI) can include
+    detailed probability information, embeddings, cached intermediate state, hidden
+    representations, intermediate activations, diagnostic information, model-related
+    metadata, or other high-information artifacts. Repeated unauthorized or excessive
+    release of such information can increase the efficiency of model reconstruction,
+    imitation, extraction, or distillation. Authentication establishes who is requesting
+    an operation. Confidential computing and remote attestation can establish properties
+    of the environment in which computation occurs. Neither property alone determines
+    whether a particular pending release of particular model information, to a particular
+    destination, under the current extraction state and security epoch, remains authorized
+    to become externally usable. This document describes an execution-finality architecture
+    for that remaining problem. Sensitive information may be computed while remaining
+    a non-effective Candidate Release. External release occurs only after release-specific
+    protected validation, evaluation of rollback-resistant extraction state where
+    required, atomic reservation or consumption of bounded authority, and verification
+    at a controlled Finality Sink. Release authority is bound to the applicable Candidate
+    Release or bounded release class rather than operating as a generic transferable
+    bearer credential. The architecture does not claim universal prevention of model
+    extraction or distillation and does not restrict legitimately exposed ordinary
+    model output. Its narrower objective is to make unauthorized, excessive, replayed,
+    rolled-back, or bypassed release of protected model information technically harder
+    to complete through governed release paths. RATS can complement this mechanism
+    by allowing a Verifier or Relying Party to obtain machine-verifiable information
+    about whether the expected release-control mechanism, protected state, security
+    epoch, and Finality Sink are present and operating with the required assurance
+    properties.</p>"
   language:
   - en
   script:
@@ -79,6 +78,16 @@ relation:
       primary: true
     formattedref:
       content: draft-das-rats-frontier-model-extraction-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-das-rats-frontier-model-extraction-03
+    docid:
+    - id: draft-das-rats-frontier-model-extraction-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-das-rats-frontier-model-extraction-03
       format: text/plain
 ext:
   schema-version: v1.0.1

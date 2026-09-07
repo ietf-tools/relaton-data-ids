@@ -39,7 +39,28 @@ abstract:
     Authentication does not certify that a response reflects the managed device's
     true state, only that the boundary obtained and authenticated those bytes for
     that recorded request. Asymmetric proof of origin and external anchoring of the
-    chain are distinct, independent items of future work (Section 17).</p>"
+    chain are distinct, independent items of future work (Section 18). This revision
+    adds External Authorization Binding (Section 11): a deployment profile in which
+    the gate holds only a read-only device identity, the write credential is never
+    at rest on the gate, and per- command authorization is performed by an authorization
+    service that the gate does not control, using the device's own authorization mechanism
+    (for example TACACS+ command authorization [RFC8907] on IOS and IOS-XE). The gate's
+    own record of an action is then reconciled against the device's independent accounting
+    under the same public verification tooling. The individual mechanisms are long-standing;
+    the contribution is their composition, with an autonomous or automated requester
+    as the constrained principal, together with an evidence layer that enables the
+    gate's account of an action to be reconciled against the device's independently
+    sourced account of the same action so a third party can compare them. Static per-command
+    authorization and reconciliation are implemented and exercised on production Cisco
+    hardware; approval-scoped dynamic grants and the chaining of authorization decisions
+    are specified and marked as not yet implemented (Section 19). Since draft-howard-virp-06
+    the reference chain implementation has gained an OPTIONAL per-entry and per-head
+    Ed25519 signature, computed by the daemon at append time over the same canonical
+    bytes as the mandatory HMAC and verifiable from a public key alone. It is enabled
+    per node and is off by default, so a conforming deployment may still be HMAC-only.
+    The base chain-integrity guarantee remains the symmetric one described here; the
+    signature is an additional authenticator, described in Section 6.5 and Section
+    6.5.2, not a replacement for it.</p>"
   language:
   - en
   script:
@@ -115,6 +136,16 @@ relation:
       primary: true
     formattedref:
       content: draft-howard-virp-06
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-howard-virp-07
+    docid:
+    - id: draft-howard-virp-07
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-howard-virp-07
       format: text/plain
 ext:
   schema-version: v1.0.1
