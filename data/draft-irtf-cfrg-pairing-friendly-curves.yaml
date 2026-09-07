@@ -15,20 +15,23 @@ docid:
 abstract:
 - content: <p>Pairing-based cryptography, a subfield of elliptic curve cryptography,
     has received attention due to its flexible and practical functionality. Pairings
-    are special maps defined using elliptic curves and it can be applied to construct
+    are special maps defined using elliptic curves and they can be applied to construct
     several cryptographic protocols such as identity-based encryption, attribute-
     based encryption, and so on. At CRYPTO 2016, Kim and Barbulescu proposed an efficient
     number field sieve algorithm named exTNFS for the discrete logarithm problem in
     a finite field. Several types of pairing-friendly curves such as Barreto-Naehrig
     curves are affected by the attack. In particular, a Barreto-Naehrig curve with
     a 254-bit characteristic was adopted by a lot of cryptographic libraries as a
-    parameter of 128-bit security, however, it ensures no more than the 100-bit security
+    parameter of 128-bit security; however, it ensures no more than the 100-bit security
     level due to the effect of the attack. In this memo, we list the security levels
     of certain pairing-friendly curves, and motivate our choices of curves. First,
     we summarize the adoption status of pairing-friendly curves in standards, libraries
-    and applications, and classify them in the 128-bit, 192-bit, and 256-bit security
+    and applications, and consider them at the 128-bit, 192-bit, and 256-bit security
     levels. Then, from the viewpoints of "security" and "widely used", we select the
-    recommended pairing-friendly curves considering exTNFS.</p>
+    recommended pairing-friendly curves considering exTNFS. This memo also specifies
+    the serialization and deserialization of the points and scalars that protocols
+    exchange, restating a format that is already in widespread use, and states which
+    of the remaining decisions belong to the calling protocol.</p>
   language:
   - en
   script:
@@ -174,6 +177,16 @@ relation:
       primary: true
     formattedref:
       content: draft-irtf-cfrg-pairing-friendly-curves-13
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-irtf-cfrg-pairing-friendly-curves-14
+    docid:
+    - id: draft-irtf-cfrg-pairing-friendly-curves-14
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-irtf-cfrg-pairing-friendly-curves-14
       format: text/plain
 ext:
   schema-version: v1.0.1

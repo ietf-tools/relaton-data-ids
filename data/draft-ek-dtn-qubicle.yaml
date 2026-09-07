@@ -15,9 +15,11 @@ docid:
 abstract:
 - content: "<p>This document specifies a minimal convergence layer protocol for transferring
     Bundle Protocol version 7 (BPv7) bundles over QUIC. The protocol leverages QUIC's
-    native capabilities for reliable streaming, connection management, and security,
-    requiring no application-layer framing for reliable transfers. Unreliable transfers
-    use the Bundle Transfer Protocol - Unidirectional (BTP-U) over QUIC datagrams.</p>"
+    native capabilities for reliable streaming, connection management, and security.
+    Reliable transfers carry each bundle on its own QUIC stream, either directly or
+    wrapped in a single CBOR byte string, with no further application-layer framing.
+    Unreliable transfers use the Bundle Transfer Protocol - Unidirectional (BTP-U)
+    over QUIC datagrams.</p>"
   language:
   - en
   script:
@@ -43,6 +45,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ek-dtn-qubicle-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ek-dtn-qubicle-02
+    docid:
+    - id: draft-ek-dtn-qubicle-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ek-dtn-qubicle-02
       format: text/plain
 ext:
   schema-version: v1.0.1
