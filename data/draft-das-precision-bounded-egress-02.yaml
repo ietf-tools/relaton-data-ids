@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-das-precision-bounded-egress-01
+id: draft-das-precision-bounded-egress-02
 title:
 - content: 'Access Is Not Egress: Precision-Bounded Location Release'
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-das-precision-bounded-egress-01
+- content: https://datatracker.ietf.org/doc/html/draft-das-precision-bounded-egress-02
   type: src
 type: standard
 docid:
-- id: draft-das-precision-bounded-egress-01
+- id: draft-das-precision-bounded-egress-02
   type: Internet-Draft
   primary: true
 - id: I-D.das-precision-bounded-egress
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.das-precision-bounded-egress
 date:
 - type: published
-  value: '2026-08-26'
+  value: '2026-09-08'
 contributor:
 - person:
     name:
@@ -53,8 +53,8 @@ contributor:
   role:
   - type: author
 version:
-- draft: '01'
-revdate: '2026-08-26'
+- draft: '02'
+revdate: '2026-09-08'
 language:
 - en
 script:
@@ -65,14 +65,18 @@ abstract:
     representation, a delayed or randomized representation, or no location at all.
     Operating system permission to read a fix does not answer whether that fix may
     leave the device at the requested precision. This document defines a precision-bounded
-    egress profile on top of execution finality. A proposed release is a Location-Release
-    Candidate Act and remains non-effective while a Protected Enforcement Domain evaluates
-    purpose, requester, component, recipient, destination, jurisdiction, required
-    precision, policy and revocation state, cumulative disclosure state, and intended
-    egress sink. The sink independently verifies scoped non-bearer authority against
-    the actual outbound payload immediately before release. The permitted result may
-    be exact data, a reduced representation, or denial. Data access is not data-export
-    authority. Precise GPS access is not precise GPS-release authority.</p>"
+    egress profile on top of execution finality. The gap this closes is concrete:
+    an application that legitimately reads exact GPS for one on-device purpose commonly
+    shares its process with an embedded SDK, agent tool, or cloud sync path that can
+    forward the same exact coordinate to a destination that never needed it, without
+    the user seeing that forwarding as a separate disclosure. A proposed release is
+    a Location-Release Candidate Act and remains non-effective while a Protected Enforcement
+    Domain evaluates purpose, requester, component, recipient, destination, jurisdiction,
+    required precision, policy and revocation state, cumulative disclosure state,
+    and intended egress sink. The sink independently verifies scoped non-bearer authority
+    against the actual outbound payload immediately before release. The permitted
+    result may be exact data, a reduced representation, or denial. Data access is
+    not data-export authority. Precise GPS access is not precise GPS-release authority.</p>"
   language:
   - en
   script:
@@ -91,13 +95,13 @@ relation:
       format: text/plain
 - type: updatedBy
   bibitem:
-    id: draft-das-precision-bounded-egress-02
+    id: draft-das-precision-bounded-egress-03
     docid:
-    - id: draft-das-precision-bounded-egress-02
+    - id: draft-das-precision-bounded-egress-03
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-das-precision-bounded-egress-02
+      content: draft-das-precision-bounded-egress-03
       format: text/plain
 series:
 - type: main
@@ -108,7 +112,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-das-precision-bounded-egress-01
+  number: draft-das-precision-bounded-egress-02
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

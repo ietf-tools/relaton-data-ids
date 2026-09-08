@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-sato-soos-acd-01
+id: draft-sato-soos-acd-03
 title:
 - content: The Agent Compliance Disclosure (ACD) Protocol for Agentic AI Systems
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-sato-soos-acd-01
+- content: https://datatracker.ietf.org/doc/html/draft-sato-soos-acd-03
   type: src
 type: standard
 docid:
-- id: draft-sato-soos-acd-01
+- id: draft-sato-soos-acd-03
   type: Internet-Draft
   primary: true
 - id: I-D.sato-soos-acd
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.sato-soos-acd
 date:
 - type: published
-  value: '2026-07-01'
+  value: '2026-09-07'
 contributor:
 - person:
     name:
@@ -49,8 +49,8 @@ contributor:
   role:
   - type: author
 version:
-- draft: '01'
-revdate: '2026-07-01'
+- draft: '03'
+revdate: '2026-09-07'
 language:
 - en
 script:
@@ -77,7 +77,23 @@ abstract:
     and MUST NOT be used as an ACD disclosure surface. ACD is the inbound complement
     to the Resource Governance Protocol (RGP): where RGP governs outbound capability
     discovery, ACD governs inbound compliance verification. Together they define the
-    complete resource access governance flow for SOOS-governed agents.</p>"
+    complete resource access governance flow for SOOS-governed agents. Version -02
+    added the aep_session_id Layer 3 field, distinct from acd_session_id, to bind
+    a cached ACD Record to the specific AEP session it was produced within (Section
+    6.3); strengthened the ACD Record Replay defense that checks this binding from
+    a SHOULD to a MUST (Section 12.4); added the confirmation_basis field (NOTIFIED
+    | INFERRED) to ALE-058 so an auditor can distinguish a confirmed validation pass
+    from one merely inferred from the absence of a failure record (Section 10.1);
+    added Compliance Handshake Volumetric Abuse as a new security consideration (Section
+    12.5); and migrated the KEE-1 citation from the versioned [I-D.sato-soos-kee]
+    form to the non-versioned [SOOS-KEE] form, since KEE-1 is a permanent local-only
+    specification that will never be submitted to the IETF Datatracker. Version -03
+    is an editorial revision with no normative content changes: six sibling-draft
+    citations in Section 15.1 had gone stale against those drafts' current live versions
+    and are updated to draft-sato-soos-aep-04, draft-sato-soos-gar-08, draft-sato-soos-kia-07,
+    draft-sato-soos-mjwt-06, draft-sato-soos-rgp-02, and draft-sato-soos-sov-04 respectively;
+    and the Table of Contents, which omitted Section 12.5 from -02's submission, now
+    lists it correctly.</p>"
   language:
   - en
   script:
@@ -94,16 +110,6 @@ relation:
     formattedref:
       content: draft-sato-soos-acd-00
       format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-sato-soos-acd-03
-    docid:
-    - id: draft-sato-soos-acd-03
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-sato-soos-acd-03
-      format: text/plain
 series:
 - type: main
   title:
@@ -113,7 +119,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-sato-soos-acd-01
+  number: draft-sato-soos-acd-03
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
