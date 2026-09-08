@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-le-comparing-derived-identifiers
 title:
-- content: Principles for Comparing Independently Derived Identifiers
+- content: A Framework for Comparing Independently Derived Identifiers
   language:
   - en
   script:
@@ -13,21 +13,18 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>When separate implementations independently derive identifiers and
-    later compare them for equality, interoperability depends on more than the final
-    identifier syntax or digest algorithm. The implementations need common semantics
-    for which values are in scope, which distinctions matter to the comparison, and
-    how identifiers are derived. Otherwise values intended to compare as equivalent
-    can produce different identifiers, or processing can erase a relevant distinction
-    before a later lossy or cryptographic operation is reached. This document gives
-    principles for specifications that define such identifiers. It covers the comparison
-    domain and equivalence relation, complete derivation semantics, the semantics
-    under which output equality is interpreted, and processing that can create false
-    matches before properties of a later operation are relied upon. It complements
-    identifier comparison and hash-based naming specifications by focusing on the
-    specification boundary from source values to independently reproducible identifiers.
-    The document does not define a new identifier syntax, canonicalization format,
-    resolver, registry, trust framework, or hash procedure.</p>"
+- content: "<p>Specifications use equality of independently derived identifiers to
+    compare underlying values. Those comparisons require shared rules for admission,
+    equivalence, derivation, and output interpretation. Inconsistent rules can give
+    different identifiers to equivalent values or equal identifiers to values that
+    the comparison distinguishes. This document presents a framework for specifying
+    and reviewing these rules as a comparison contract. It connects source mappings
+    to derivation-domain equivalence and the conclusions supported by equal and unequal
+    outputs. It distinguishes information loss before a downstream operation from
+    that operation's own false match properties. A review traces the relevant specification
+    clauses, records supporting evidence, and identifies failed or unestablished obligations.
+    The framework provides guidance for concrete identifier specifications; it defines
+    no identifier format or derivation algorithm.</p>"
   language:
   - en
   script:
@@ -43,6 +40,16 @@ relation:
       primary: true
     formattedref:
       content: draft-le-comparing-derived-identifiers-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-le-comparing-derived-identifiers-01
+    docid:
+    - id: draft-le-comparing-derived-identifiers-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-le-comparing-derived-identifiers-01
       format: text/plain
 ext:
   schema-version: v1.0.1

@@ -1,0 +1,153 @@
+---
+schema-version: v1.2.3
+id: draft-das-child-safe-rendering-finality-04
+title:
+- content: Preventing Unauthorized Adult and Age-Restricted Content Rendering to Children
+    Through Hardware-Rooted Execution Finality
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-das-child-safe-rendering-finality-04
+  type: src
+type: standard
+docid:
+- id: draft-das-child-safe-rendering-finality-04
+  type: Internet-Draft
+  primary: true
+- id: I-D.das-child-safe-rendering-finality
+  type: IETF
+  scope: anchor
+docnumber: I-D.das-child-safe-rendering-finality
+date:
+- type: published
+  value: '2026-09-07'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Sangam
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Das
+        language:
+        - en
+      completename:
+        content: Sangam Das
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Independent Inventor
+  role:
+  - type: author
+version:
+- draft: '04'
+revdate: '2026-09-07'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>Online child-safety controls commonly operate before the final rendering
+    boundary. Platforms may use account-age flags, parental settings, content labels,
+    recommender controls, server-side classification, age-assurance systems, access
+    policies, or application filters to decide whether adult or age-restricted content
+    should be available to a user. Those controls are important, but an upstream decision
+    does not by itself guarantee that the content cannot later be decrypted, decoded,
+    composited, rendered, forwarded, mirrored, or otherwise materialized through another
+    software or device path. The practical motivation is also personal. As a father
+    of three, I have encountered this same problem in my own family: a parent may
+    understand that an unrestricted adult-configured phone should not be handed to
+    a minor, yet a son or daughter may repeatedly ask to use the parent's phone and,
+    in ordinary family life, the parent may eventually hand it over. Human affection,
+    trust, convenience, and everyday family circumstances cannot simply be designed
+    away. Existing age checks, parental controls, child profiles, and application
+    restrictions are useful, but they do not necessarily provide a simple device-wide
+    protection for this moment of handover. Requiring the adult to provide a fingerprint,
+    facial verification, or other authentication for every individual video would
+    also create an impractical user experience. This document therefore considers
+    a Temporary Under-18 Handover Mode: before giving an adult-configured device to
+    a child, the adult can place the device into a temporary minor-protection state,
+    after which Execution-Finality makes that state technically consequential at the
+    protected rendering boundary. This is therefore not only an abstract design problem
+    for me; it is a solution developed to address a problem I encounter myself as
+    a parent, with the broader aim of turning that everyday family difficulty into
+    a practical protection that may also help other families. This problem is becoming
+    more important as content delivery becomes more distributed, encrypted, AI-mediated,
+    personalized, and dynamically generated. A modern device may receive content through
+    applications, browsers, content-delivery networks, embedded web views, messaging
+    clients, recommendation systems, generative-AI services, caches, cloud gaming
+    or streaming pipelines, local AI models, or third-party SDKs. The security question
+    is therefore no longer only whether content was classified or whether an age check
+    occurred upstream. A later question must also be answered: is this specific protected
+    content authorized to become perceptible to this recipient, on this device, under
+    the current eligibility, policy, and revocation state, at this moment? This document
+    defines a protected rendering execution-finality architecture for adult, pornographic,
+    sexually explicit, violent, gambling-related, or otherwise age-restricted content.
+    A proposed rendering is represented as a Restricted Content Candidate Act and
+    remains in a Non-Renderable State until a Protected Enforcement Domain validates
+    the applicable recipient, content, device, policy, age-or-eligibility, freshness,
+    revocation, and sink predicates. Protected validation evidence is committed before,
+    or atomically with, release of scoped non-bearer Rendering Finality Authority.
+    A Protected Rendering Finality Sink independently verifies that authority immediately
+    before the content becomes perceptible. Depending on the implementation, the sink
+    may control content-key release, decryption, media-decoder enablement, GPU or
+    compositor access, protected-surface creation, audio output, casting, screen mirroring,
+    display enablement, or an equivalent materialization boundary. Content bytes may
+    therefore be delivered to a device while remaining technically non-renderable.
+    The architecture deliberately does not define a universal age- estimation algorithm,
+    identity system, or content-classification scheme. Those mechanisms may supply
+    inputs to the Protected Enforcement Domain. This document defines the consequence-control
+    step that prevents an upstream policy result from becoming merely advisory at
+    the point of rendering. UNICEF has warned that pornographic content can harm children
+    and that digital restrictions have not kept pace with technological shifts. The
+    ITU Child Online Protection programme provides global guidance for safer digital
+    environments, and the United Nations Committee on the Rights of the Child has
+    called for protection of children from harmful content and online risks in the
+    digital environment. The European Commission has likewise adopted protection-of-minors
+    guidance and a privacy-preserving age- verification approach for adult-restricted
+    content. These materials motivate the problem addressed here; they do not endorse
+    this particular technical architecture. The central protocol principle is: permission
+    to deliver content is not permission to render it.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-das-child-safe-rendering-finality-03
+    docid:
+    - id: draft-das-child-safe-rendering-finality-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-das-child-safe-rendering-finality-03
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-das-child-safe-rendering-finality-04
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

@@ -13,7 +13,7 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document specifies the Governed Remediation Protocol (GRP) for
+- content: '<p>This document specifies the Governed Remediation Protocol (GRP) for
     agentic AI systems operating under the Sovereign Object OS (SOOS) framework. GRP
     defines the normative remediation action set available to a SOOS governance kernel
     when agent execution encounters a governed failure condition: FALLBACK (autonomous
@@ -25,7 +25,27 @@ abstract:
     and the Human Escalation Mechanism (HEM), and normatively references the Governance
     Audit Record (GAR) for logging all remediation events. GRP adopts DEC-RGP-08 (the
     three-condition autonomous fallback test) verbatim from the Resource Governance
-    Protocol as the normative FALLBACK action class boundary rule.</p>"
+    Protocol as the normative FALLBACK action class boundary rule. Version -02 restores
+    Section 9.4 (Artifact-Level Impact Refinement), the CONTENT_CORRECTION change_class
+    value, and the affected_da_id field, which were inadvertently dropped from -01''s
+    Datatracker submission during an unrelated editorial pass; a WIMSE-style review
+    of the restored text found and closes a genuine gap in its original form -- Section
+    9.4(1)''s impact query walked only one hop of the derived_from derivation graph,
+    missing artifacts transitively downstream of a correction, and now walks the graph
+    transitively with a bounded traversal depth. This revision also mirrors RGP-02''s
+    ALE-026/ALE-064/ALE-066 double-recording reconciliation into this document''s
+    own Section 11.6 (previously stated only on RGP''s side), and renames ALE-066
+    from GRP_FALLBACK_ACTIVATED to GRP_MEDIATED_FALLBACK_ACTIVATED to remove its near-duplicate
+    naming collision with RGP''s own ALE-026 (RGP_FALLBACK_ACTIVATED). This revision
+    adds Remediation Outcome Verification (Section 11.7): FALLBACK and RETRY could
+    previously complete with a clean mechanical success record while the outcome the
+    session actually needed still went undelivered, with no check against the session''s
+    own EOD until AEP''s own session-close evaluation, if any GRP action had even
+    run by then. A new ALE-070 (GRP_REMEDIATION_VERIFIED) closes that gap, reusing
+    AEP''s own MATCHED/PARTIAL/PLAN_B_MATCHED/ UNMATCHED vocabulary so a mid-session
+    verification result is directly comparable to the session''s eventual outcome.
+    Three prior references to the EOD as the "IDP Expected Outcome Declaration" are
+    also corrected to AEP, its actual source.</p>'
   language:
   - en
   script:
@@ -51,6 +71,16 @@ relation:
       primary: true
     formattedref:
       content: draft-sato-soos-grp-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-sato-soos-grp-02
+    docid:
+    - id: draft-sato-soos-grp-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-sato-soos-grp-02
       format: text/plain
 ext:
   schema-version: v1.0.1
