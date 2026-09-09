@@ -14,13 +14,16 @@ docid:
   primary: true
 abstract:
 - content: "<p>This document defines the Identity Continuation Assertion, a short-
-    lived, sender-constrained JWT used as an OAuth 2.0 Token Exchange subject token.
-    It lets an IdP Authorization Server (IdP) issue an onward Identity Assertion JWT
-    Authorization Grant (ID-JAG) when a user's request crosses service boundaries
-    after the user is no longer present. The profile targets deployments in which
-    several Resource Authorization Servers trust one IdP and use audience-local subject
-    identifiers that only the IdP can resolve. It complements offline attenuation
-    for intra-domain fan-out that does not change the subject.</p>"
+    lived, sender-constrained JSON Web Token (JWT) used as an OAuth 2.0 Token Exchange
+    subject token. It enables a workload acting on a user's behalf to obtain an Identity
+    Assertion JWT Authorization Grant (ID-JAG) for another service when it lacks a
+    suitable credential, including when the user is no longer present. A trusted issuer
+    attests that a resource authorization server accepted an earlier ID-JAG and that
+    the resulting authorization remains active and eligible for continuation. The
+    workload exchanges this assertion at the identity provider, which evaluates the
+    requested access under the chain authorization and current policy before issuing
+    an onward ID-JAG. The profile supports multi-hop access across resource authorization
+    servers that trust a common identity provider.</p>"
   language:
   - en
   script:
@@ -46,6 +49,16 @@ relation:
       primary: true
     formattedref:
       content: draft-mcguinness-oauth-id-continuation-assertion-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-mcguinness-oauth-id-continuation-assertion-02
+    docid:
+    - id: draft-mcguinness-oauth-id-continuation-assertion-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-mcguinness-oauth-id-continuation-assertion-02
       format: text/plain
 ext:
   schema-version: v1.0.1

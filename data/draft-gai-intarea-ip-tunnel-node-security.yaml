@@ -13,16 +13,19 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>IP tunnel nodes are widely deployed for IPv4/IPv6 transition, overlay
-    connectivity, traffic engineering, and inter-domain services. A tunnel node that
-    accepts tunneled packets from unauthorized sources or forwards decapsulated packets
-    without validating the inner packet can become an open relay, a source-address-spoofing
-    enabler, or a path around filtering policy. This document specifies security requirements
-    for IP tunnel nodes. It defines requirements for tunnel enablement, peer authorization,
-    source address validation, forwarding-scope validation, recursive encapsulation
-    limits, IPv6 extension header handling, ICMP behavior, logging, and operational
-    management. The requirements apply to IP- in-IP, GRE, IPv6 tunnel mechanisms,
-    and IPv4/IPv6 transition tunnels.</p>"
+- content: "<p>IP tunnels conceal passenger-packet fields from devices on the delivery
+    path and create a new forwarding and policy boundary at decapsulation. If a tunnel
+    node accepts delivery packets from an unauthorized source, or if it forwards a
+    decapsulated passenger packet without applying the policy for the exposed packet
+    and forwarding domain, the node can enable source-address spoofing, unauthorized
+    transit, policy bypass, or resource-exhaustion attacks. This document specifies
+    generic security requirements for IP tunnel ingress, egress, and relay nodes.
+    The requirements cover explicit enablement, peer and passenger-packet authorization,
+    source and forwarding-scope validation, nested tunneling, IPv6 extension headers,
+    ICMP and Path MTU Discovery, resource controls, and telemetry. They apply to configured
+    IP-in-IP, IPv6 tunneling, GRE, and enabled IPv4/IPv6 transition mechanisms. This
+    document does not define a new encapsulation or replace protocol-specific processing
+    rules.</p>"
   language:
   - en
   script:
@@ -38,6 +41,16 @@ relation:
       primary: true
     formattedref:
       content: draft-gai-intarea-ip-tunnel-node-security-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-gai-intarea-ip-tunnel-node-security-01
+    docid:
+    - id: draft-gai-intarea-ip-tunnel-node-security-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-gai-intarea-ip-tunnel-node-security-01
       format: text/plain
 ext:
   schema-version: v1.0.1

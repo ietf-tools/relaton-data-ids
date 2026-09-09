@@ -1,0 +1,108 @@
+---
+schema-version: v1.2.3
+id: draft-das-payment-execution-finality-01
+title:
+- content: 'A Signed Instruction Is Not Settlement: Finality for Agentic and API Payments'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-das-payment-execution-finality-01
+  type: src
+type: standard
+docid:
+- id: draft-das-payment-execution-finality-01
+  type: Internet-Draft
+  primary: true
+- id: I-D.das-payment-execution-finality
+  type: IETF
+  scope: anchor
+docnumber: I-D.das-payment-execution-finality
+date:
+- type: published
+  value: '2026-09-08'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Sangam
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Das
+        language:
+        - en
+      completename:
+        content: Sangam Das
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Independent Inventor
+  role:
+  - type: author
+version:
+- draft: '01'
+revdate: '2026-09-08'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>Payment rails already know how to move money. They do not know whether
+    this generated instruction — this amount, this beneficiary, this rail, this purpose,
+    from this agent or API worker — is the instruction that was authorized to move.
+    A signed ISO 20022 message, an OAuth token on a PSP, a stored mandate, or a pass
+    through 3-D Secure can all be valid while the act is wrong. The signature authenticates
+    a channel. It does not bind a Candidate Act at the settlement sink. That gap is
+    now an agent gap. A model that can call payout.create, a RPA job that submits
+    ACH, or a checkout agent that captures a card will treat tool selection as settlement
+    authority. Fraud used to steal credentials and replay files. It now steals a seat
+    or injects a document and asks the authorized worker to pay a new beneficiary
+    at the old amount, or the old beneficiary at a new amount. This document specifies
+    a payment-side execution-finality profile. An instruction remains a Payment Candidate
+    Act. A Protected Enforcement Domain binds principal, wallet or account, amount,
+    currency, beneficiary, rail, purpose, policy epoch, and intended settlement sink,
+    then commits evidence before scoped non-bearer authority is issued. The sink that
+    would actually post, capture, or release funds verifies that authority against
+    the live instruction and consumes it. A signed instruction is not settlement.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-das-payment-execution-finality-00
+    docid:
+    - id: draft-das-payment-execution-finality-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-das-payment-execution-finality-00
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-das-payment-execution-finality-01
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
