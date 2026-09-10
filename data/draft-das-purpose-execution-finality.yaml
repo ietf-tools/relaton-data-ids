@@ -39,19 +39,33 @@ abstract:
     combination of data technically verifiable at the moment it happens, rather than
     leaving that boundary to rest on a data-sharing agreement nobody downstream actually
     checks -- making lawful cross-referencing demonstrable, not making cross-referencing
-    itself the target. A further motivation is stated directly here because it shapes
-    several design choices in this document: the same technical capacity that lets
-    an advertising system profitably combine location and behavioral signals across
-    sources is, absent a verifiable purpose boundary, also capable of exposing patterns
-    -- such as the movement of military personnel or the operating rhythm of critical
-    infrastructure -- to a party in a jurisdiction other than the one the data was
-    collected in. Aggregated commercial location and behavioral data has, in publicly
-    reported incidents, already been shown capable of revealing exactly this kind
-    of sensitive pattern. This document does not ask commercial systems to stop combining
-    data for legitimate purposes; it asks that a combination authorized for commercial
-    targeting be technically distinguishable, at the moment of use, from a combination
-    that has crossed into cross-jurisdictional intelligence-gathering territory the
-    data was never authorized for.</p>'
+    itself the target. The same gap appears when four applications sit on a shared
+    raw-data path. Applications A, B, and C may be known operators: they host to published
+    standards, maintain written ethics and paper policies, and implement the technical
+    controls those policies require. This document does not argue that such operators
+    should be denied raw data they are authorized to receive. Application D may request
+    that same raw object. Paper policy and a self-asserted purpose string give no
+    technical reason to believe that D will confine the object to the purpose and
+    jurisdiction under which it was collected, rather than reuse it for an unauthorized
+    purpose -- including surveillance or intelligence activity directed against the
+    jurisdiction that originally authorized collection. This architecture does not
+    ask A, B, or C to stop receiving authorized raw data; it asks that D''s Candidate
+    Act be refused at the Protected Enforcement Domain unless binding records, not
+    D''s own label, establish that D, the requested operation, and the destination
+    are actually authorized -- so that faith in D is replaced by a check D cannot
+    write. A further motivation is stated directly here because it shapes several
+    design choices in this document: the same technical capacity that lets an advertising
+    system profitably combine location and behavioral signals across sources is, absent
+    a verifiable purpose boundary, also capable of exposing patterns -- such as the
+    movement of military personnel or the operating rhythm of critical infrastructure
+    -- to a party in a jurisdiction other than the one the data was collected in.
+    Aggregated commercial location and behavioral data has, in publicly reported incidents,
+    already been shown capable of revealing exactly this kind of sensitive pattern.
+    This document does not ask commercial systems to stop combining data for legitimate
+    purposes; it asks that a combination authorized for commercial targeting be technically
+    distinguishable, at the moment of use, from a combination that has crossed into
+    cross-jurisdictional intelligence-gathering territory the data was never authorized
+    for.</p>'
   language:
   - en
   script:
@@ -67,6 +81,16 @@ relation:
       primary: true
     formattedref:
       content: draft-das-purpose-execution-finality-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-das-purpose-execution-finality-01
+    docid:
+    - id: draft-das-purpose-execution-finality-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-das-purpose-execution-finality-01
       format: text/plain
 ext:
   schema-version: v1.0.1
