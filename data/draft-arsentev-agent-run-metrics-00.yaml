@@ -1,0 +1,96 @@
+---
+schema-version: v1.2.3
+id: draft-arsentev-agent-run-metrics-00
+title:
+- content: 'Agent Run Metrics: A JSON Interchange Format for Resource Accounting of
+    Language-Model Agent Runs'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-arsentev-agent-run-metrics-00
+  type: src
+type: standard
+docid:
+- id: draft-arsentev-agent-run-metrics-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.arsentev-agent-run-metrics
+  type: IETF
+  scope: anchor
+docnumber: I-D.arsentev-agent-run-metrics
+date:
+- type: published
+  value: '2026-09-10'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Evgenii
+          language:
+          - en
+        - language:
+          - en
+          initial: E
+        formatted_initials:
+          content: E.
+          language:
+          - en
+      surname:
+        content: Arsentev
+        language:
+        - en
+      completename:
+        content: Evgenii Arsentev
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Independent
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-09-10'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>Autonomous software agents driven by large language models execute
+    multi-step runs in which the same conversational context is retransmitted to a
+    model on every step. The resulting resource consumption is dominated by repeated
+    input rather than by generated output, and it is reported today in mutually incompatible,
+    vendor- specific shapes. This document defines Agent Run Metrics, a JSON interchange
+    format that describes the resource consumption of a single agent run and of its
+    constituent steps, together with a small set of derived quantities whose computation
+    is specified exactly. It states normatively that one reported step corresponds
+    to one completed model invocation, so that the several records a runtime may write
+    while a single response is produced are not mistaken for several invocations,
+    and it defines how the consumption of delegated sub-runs is attributed without
+    being counted twice. The format carries counters, timing and cost attribution
+    only; it deliberately excludes prompt and completion content. This document also
+    registers the associated media type and creates IANA registries for extensible
+    enumerations.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-arsentev-agent-run-metrics-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

@@ -14,58 +14,36 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: '<p>Systems that collect data for one stated purpose routinely permit that
-    data, or values derived from it, to be consumed by a second system for a different
-    purpose -- not because the second use was authorized, but because nothing in the
-    protocol path was capable of refusing it. The most common technical control in
-    deployment today is a self-asserted purpose string: a "purpose" claim in a token,
-    a field in an API request, a comment in a data-sharing agreement. A self-asserted
-    string is evidence of intent, not proof of authority, and it fails precisely when
-    it matters most -- when the requester lies. This document specifies an execution-finality
-    architecture in which a Candidate Act to read, transmit, or derive from a protected
-    data object does not become effective merely because a caller labels its request
-    with an allowed purpose. Effect is withheld until a Protected Enforcement Domain
-    verifies caller identity, requested operation, and destination against binding
-    records -- not against caller-supplied metadata -- and issues a scoped, non-bearer
-    Execution Handle before any release occurs. The document works through a single
-    running example (a delivery address later targeted by an unrelated advertising
-    system) to make the failure mode and the enforcement boundary concrete, and states
-    plainly which part of the problem this architecture does not solve. It is offered
-    as an architectural pattern for discussion, not as a proposal for a new wire protocol.
-    Cross-referencing data across systems, including in advertising, is a legitimate
-    and economically necessary function, and this document does not argue for eliminating
-    it; doing so would stall innovation and materially harm the businesses that depend
-    on it. What this architecture offers such systems is a way to make an authorized
-    combination of data technically verifiable at the moment it happens, rather than
-    leaving that boundary to rest on a data-sharing agreement nobody downstream actually
-    checks -- making lawful cross-referencing demonstrable, not making cross-referencing
-    itself the target. The same gap appears when four applications sit on a shared
-    raw-data path. Applications A, B, and C may be known operators: they host to published
-    standards, maintain written ethics and paper policies, and implement the technical
-    controls those policies require. This document does not argue that such operators
-    should be denied raw data they are authorized to receive. Application D may request
-    that same raw object. Paper policy and a self-asserted purpose string give no
-    technical reason to believe that D will confine the object to the purpose and
-    jurisdiction under which it was collected, rather than reuse it for an unauthorized
-    purpose -- including surveillance or intelligence activity directed against the
-    jurisdiction that originally authorized collection. This architecture does not
-    ask A, B, or C to stop receiving authorized raw data; it asks that D''s Candidate
-    Act be refused at the Protected Enforcement Domain unless binding records, not
-    D''s own label, establish that D, the requested operation, and the destination
-    are actually authorized -- so that faith in D is replaced by a check D cannot
-    write. A further motivation is stated directly here because it shapes several
-    design choices in this document: the same technical capacity that lets an advertising
-    system profitably combine location and behavioral signals across sources is, absent
-    a verifiable purpose boundary, also capable of exposing patterns -- such as the
-    movement of military personnel or the operating rhythm of critical infrastructure
-    -- to a party in a jurisdiction other than the one the data was collected in.
-    Aggregated commercial location and behavioral data has, in publicly reported incidents,
-    already been shown capable of revealing exactly this kind of sensitive pattern.
-    This document does not ask commercial systems to stop combining data for legitimate
-    purposes; it asks that a combination authorized for commercial targeting be technically
-    distinguishable, at the moment of use, from a combination that has crossed into
-    cross-jurisdictional intelligence-gathering territory the data was never authorized
-    for.</p>'
+- content: '<p>Consider a concrete case: a user invokes a highly capable AI model
+    under a declared purpose of education, but the resulting capability is in fact
+    used for a military or terrorist end -- an illustrative example, not a claim about
+    any real deployment. When such misuse surfaces, an unresolved question follows:
+    is the model provider liable, is the user liable, or is the jurisdiction that
+    permitted the deployment liable? This document does not answer that question --
+    liability determination remains an external legal question for the responsible
+    court, regulator, or contracting parties -- but it addresses the technical gap
+    that makes the question unanswerable today. Systems that collect data, or grant
+    capability, for one stated purpose routinely permit that data or capability to
+    be consumed for a different purpose, not because the second use was authorized,
+    but because nothing in the protocol path was capable of refusing it or of recording
+    what was actually authorized. The most common technical control in deployment
+    today is a self-asserted purpose string: a "purpose" claim in a token, a field
+    in an API request, a comment in a data-sharing agreement. A self-asserted string
+    is evidence of intent, not proof of authority, and it fails precisely when it
+    matters most -- when the requester lies. This architecture addresses that loophole
+    deterministically: it makes an undeclared or purpose-switched use technically
+    detectable and refusable at the point of use, and it produces verifiable evidence
+    of what was actually authorized, so that any subsequent liability determination
+    can be argued from that evidence rather than from an unverifiable self-assertion.
+    Achieving that determinism introduces a bounded, measurable amount of evaluation
+    latency at the point of use; this document treats that latency as an acceptable,
+    secured trade-off for closing an otherwise unverifiable gap, not as a cost to
+    be minimized at the expense of the guarantee. The premise is not that AI innovation
+    should slow down, any more than cars should be built slower; it is that innovation
+    moving this fast needs the technical equivalent of a seat belt. A runnable reference
+    implementation accompanies this document at Purpose Execution Finality Validator
+    -- Runnable Reference Implementation (https://github.com/sangmdas/Purpose-Execution-
+    Finality-Validator-to-Prevent-Data-Purpose-Laundering-in-AI-Systems).</p>'
   language:
   - en
   script:
@@ -91,6 +69,16 @@ relation:
       primary: true
     formattedref:
       content: draft-das-purpose-execution-finality-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-das-purpose-execution-finality-02
+    docid:
+    - id: draft-das-purpose-execution-finality-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-das-purpose-execution-finality-02
       format: text/plain
 ext:
   schema-version: v1.0.1

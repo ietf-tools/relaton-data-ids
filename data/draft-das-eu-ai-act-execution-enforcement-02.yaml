@@ -1,0 +1,193 @@
+---
+schema-version: v1.2.3
+id: draft-das-eu-ai-act-execution-enforcement-02
+title:
+- content: Technical Enforcement of the EU AI Act and Global AI Laws for High-Risk
+    AI Systems Without Relying on Paper Policies
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-das-eu-ai-act-execution-enforcement-02
+  type: src
+type: standard
+docid:
+- id: draft-das-eu-ai-act-execution-enforcement-02
+  type: Internet-Draft
+  primary: true
+- id: I-D.das-eu-ai-act-execution-enforcement
+  type: IETF
+  scope: anchor
+docnumber: I-D.das-eu-ai-act-execution-enforcement
+date:
+- type: published
+  value: '2026-09-10'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Sangam
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Das
+        language:
+        - en
+      completename:
+        content: Sangam Das
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Independent Inventor
+  role:
+  - type: author
+version:
+- draft: '02'
+revdate: '2026-09-10'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: '<p>This architecture is specifically designed for high-risk AI systems,
+    where standard engineering priorities shift from speed and latency toward absolute
+    determinism and safety. The European Union Artificial Intelligence Act establishes
+    an extensive paper-based governance regime for artificial intelligence: risk-management
+    documentation, data-governance records, conformity assessments, human-oversight
+    instructions, transparency notices, logging obligations, and post-market monitoring
+    plans. These instruments are necessary, and this document does not propose to
+    discard them. They are not, however, sufficient by themselves once an AI system
+    can autonomously or semi-autonomously act at machine speed, because a document
+    can only describe what an operation should do; it cannot, by itself, make an operation
+    technically incapable of doing otherwise. This is not a problem unique to the
+    European Union. South Korea''s AI Basic Act regulates "high-impact AI" through
+    comparable risk- management, human-oversight, and documentation duties. Japan''s
+    AI Act, in force since September 2025, takes a lighter, more promotion- oriented
+    approach but still assumes that written governance is the primary control. China
+    enforces a binding but differently structured set of algorithm-recommendation,
+    deep-synthesis, generative-AI, and AI-content-labelling rules. Texas and Colorado
+    have each enacted state-level AI statutes in the United States with disclosure
+    and consequential-decision obligations, and Brazil''s PL 2338/2023 and Canada''s
+    lapsed AIDA proposal show the same EU-style risk-based model spreading, whether
+    or not yet enacted. Every one of these regimes, whatever their legal differences,
+    shares the identical underlying engineering gap this document addresses: a written
+    rule, however well drafted, does not by itself make a machine unable to break
+    it before anyone can react. The gap is most consequential precisely where the
+    stakes are highest. In defence-relevant AI, critical-infrastructure control systems,
+    and satellite or space-system automation, an autonomous agent can select a target,
+    reroute power or water, transfer control of a physical asset, or transmit a command
+    to an orbital platform within a single inference cycle -- before any operator,
+    reviewer, regulator, or after-the-fact investigation can intervene. If that act
+    causes harm, two questions follow immediately: who is liable, and at what cost.
+    A risk-management file, a conformity-assessment certificate, or an audit log written
+    after the fact can show that a rule existed; none of them can show that the machine
+    was technically incapable of breaking it, and none of them limits the cost already
+    incurred by the time the record is examined. For these classes of system, the
+    appropriate default when an authorization cannot be verified is not "log it and
+    investigate later"; it is fail-closed: the act simply does not occur. This document
+    describes an execution-finality architecture that converts a selected, already-determined
+    AI-governance requirement from a document into a mandatory, machine-verifiable
+    precondition of the AI-generated operation itself. A consequential AI-generated
+    operation is first represented as a Candidate Act and is held in a Non-Effective
+    State -- technically incapable of invoking a tool, actuating a device, transmitting
+    a command, or otherwise causing an external consequence -- until a Protected Enforcement
+    Domain validates the machine-readable constraints applicable to that exact act,
+    including the AI system identity, permitted operation, target, recipient, destination,
+    required human-oversight state, transparency marker, risk-control status, policy
+    epoch, and revocation state. Successful validation produces narrowly scoped, act-bound
+    effectuation authority; a Finality Sink positioned at the point of first usable
+    external effect independently re-verifies that exact authority, and the current
+    required state, immediately before the consequence is permitted to occur. Absent,
+    stale, revoked, or unverifiable authority results by default in no effect, not
+    in a warning. The same architecture accepts a jurisdiction-specific governance
+    profile as an input, so that an EU AI Act profile, a Korean AI Basic Act profile,
+    or another national profile can each supply the machine-readable constraints for
+    the identical enforcement mechanism without this document taking a position on
+    how those laws relate to one another. This document does not determine whether
+    an AI system is legally high-risk under Annex III, whether a practice is prohibited
+    under Article 5, whether a conformity assessment is valid, whether human oversight
+    under Article 14 is legally sufficient, or whether an organisation complies with
+    the Regulation as a whole, nor does it make any equivalent determination under
+    another jurisdiction''s law. Those determinations remain outside the protocol
+    and must be made by the responsible legal, regulatory, or organisational authority.
+    This document addresses the narrower engineering problem that arises only after
+    such a determination has already been made: once an applicable governance requirement
+    has been translated into a machine-readable constraint, how can satisfaction of
+    that constraint be made technically necessary before the corresponding AI-generated
+    consequence becomes effective? This document does not advocate replacing paper-based
+    AI governance for general-purpose or low-consequence AI applications, where the
+    cost and rigidity of execution-level enforcement would be disproportionate to
+    the risk. The architecture is proposed specifically for high-criticality AI deployments
+    -- defence and dual- use systems, critical infrastructure, satellite and space
+    systems, and comparably consequential autonomous or agentic systems -- in which
+    an unauthorised act is not merely a compliance finding but a matter of physical
+    safety, national security, or irreversible loss, and in which liability and cost
+    must be bounded by making the unauthorised act technically non-completable rather
+    than merely detectable afterward. Cross-regime use is treated as a profile-input
+    problem rather than as legal harmonisation. An EU AI Act profile, a South Korean
+    AI Basic Act profile, a Japanese AI Act profile, or another national, sectoral,
+    or contractual profile can each supply machine-readable constraints to the same
+    Candidate Act / Protected Enforcement Domain / Finality Sink mechanism. Where
+    profiles are compatible, the effective authority is their intersection; where
+    they conflict, the act remains unauthorised by default pending an external legal
+    or organisational determination. That is the maximum interoperability claim this
+    document makes: a shared enforcement substrate, not equivalence of laws, not a
+    conflict-of-law solver, and not a finding that any listed regime is legally sufficient
+    or interchangeable. A primary public reference implementation accompanies this
+    document at https://github.com/sangmdas/Execution-Finality-Technical- Enforcement-for-EU-AI-Act-and-AI-Governance-Constraints
+    (https://github.com/sangmdas/Execution-Finality-Technical- Enforcement-for-EU-AI-Act-and-AI-Governance-Constraints).
+    It is a runnable engineering reference for the substrate and selected AI- governance
+    predicates (human-approval binding, runtime evidence, delegation bounds, bounded
+    offline mode, policy-epoch revocation, and profile intersection). It is not a
+    legal-compliance product, not a certification, and not evidence that any deployment
+    using it complies with the EU AI Act or another law. Reviewer questions that recur
+    in this series -- cross-regime generalisation, deterministic runtime bounds for
+    dynamic agentic plans, interaction with Article 14 human oversight, and audit
+    responsibility -- are collected as frequently asked questions in Section 43. Trust-boundary,
+    insider-approval, sink-failure, delegation, liability, and residual-limitation
+    questions are treated as a threat model and operational caveat set in Section
+    44 and Section 38. Those sections state what the architecture can and cannot claim.
+    Independent technical and legal criticism is invited; the author would rather
+    have the limits of execution-finality found in review than have them discovered
+    after a protected effect has already occurred.</p>'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-das-eu-ai-act-execution-enforcement-00
+    docid:
+    - id: draft-das-eu-ai-act-execution-enforcement-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-das-eu-ai-act-execution-enforcement-00
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-das-eu-ai-act-execution-enforcement-02
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

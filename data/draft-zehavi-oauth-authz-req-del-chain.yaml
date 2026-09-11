@@ -18,14 +18,12 @@ abstract:
     server that obtains user consent and issues tokens. Such deployments have security
     risks because the upstream authorization server sees only the immediate OAuth
     client and is unaware of the downstream client or intermediary brokers obtaining
-    its response. This document defines an informative OAuth 2.0 profile for carrying
-    a verifiable, signed authorization request delegation chain as a RAR authorization_details
-    object [RFC9396]. Each node in the chain is a JSON object signed by the attesting
-    authorization server or broker using detached JWS [RFC7515], attesting its validated
-    client, hash- linked to the previous node, allowing the upstream authorization
-    server to validate the exact delegation path before issuing tokens. This document
-    does not define new OAuth endpoints, grant types, error codes, token formats,
-    token response parameters, or token request parameters.</p>"
+    its response. This document defines an OAuth 2.0 profile for carrying a verifiable,
+    signed authorization request delegation chain as a RAR authorization_details object
+    [RFC9396]. Each node in the chain is a JSON object signed by an attesting authorization
+    server using detached JWS [RFC7515], attesting its validated client, hash-linked
+    to the previous node, allowing the upstream authorization server to validate the
+    integrity of the visible delegation path and apply policy before issuing tokens.</p>"
   language:
   - en
   script:
@@ -41,6 +39,16 @@ relation:
       primary: true
     formattedref:
       content: draft-zehavi-oauth-authz-req-del-chain-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-zehavi-oauth-authz-req-del-chain-01
+    docid:
+    - id: draft-zehavi-oauth-authz-req-del-chain-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-zehavi-oauth-authz-req-del-chain-01
       format: text/plain
 ext:
   schema-version: v1.0.1

@@ -1,0 +1,102 @@
+---
+schema-version: v1.2.3
+id: draft-zehavi-oauth-authz-req-del-chain-01
+title:
+- content: OAuth Authorization Request Delegation Chain
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-zehavi-oauth-authz-req-del-chain-01
+  type: src
+type: standard
+docid:
+- id: draft-zehavi-oauth-authz-req-del-chain-01
+  type: Internet-Draft
+  primary: true
+- id: I-D.zehavi-oauth-authz-req-del-chain
+  type: IETF
+  scope: anchor
+docnumber: I-D.zehavi-oauth-authz-req-del-chain
+date:
+- type: published
+  value: '2026-09-10'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Yaron
+          language:
+          - en
+        - language:
+          - en
+          initial: "Y"
+        formatted_initials:
+          content: Y.
+          language:
+          - en
+      surname:
+        content: Zehavi
+        language:
+        - en
+      completename:
+        content: Yaron Zehavi
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Raiffeisen Bank International
+  role:
+  - type: author
+version:
+- draft: '01'
+revdate: '2026-09-10'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>Brokered OAuth redirect authorization requests involve intermediary
+    authorization servers between a downstream client and the upstream authorization
+    server that obtains user consent and issues tokens. Such deployments have security
+    risks because the upstream authorization server sees only the immediate OAuth
+    client and is unaware of the downstream client or intermediary brokers obtaining
+    its response. This document defines an OAuth 2.0 profile for carrying a verifiable,
+    signed authorization request delegation chain as a RAR authorization_details object
+    [RFC9396]. Each node in the chain is a JSON object signed by an attesting authorization
+    server using detached JWS [RFC7515], attesting its validated client, hash-linked
+    to the previous node, allowing the upstream authorization server to validate the
+    integrity of the visible delegation path and apply policy before issuing tokens.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-zehavi-oauth-authz-req-del-chain-00
+    docid:
+    - id: draft-zehavi-oauth-authz-req-del-chain-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-zehavi-oauth-authz-req-del-chain-00
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-zehavi-oauth-authz-req-del-chain-01
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

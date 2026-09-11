@@ -1,0 +1,49 @@
+---
+schema-version: v1.2.3
+id: draft-arsentev-agent-run-metrics
+title:
+- content: 'Agent Run Metrics: A JSON Interchange Format for Resource Accounting of
+    Language-Model Agent Runs'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-arsentev-agent-run-metrics
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>Autonomous software agents driven by large language models execute
+    multi-step runs in which the same conversational context is retransmitted to a
+    model on every step. The resulting resource consumption is dominated by repeated
+    input rather than by generated output, and it is reported today in mutually incompatible,
+    vendor- specific shapes. This document defines Agent Run Metrics, a JSON interchange
+    format that describes the resource consumption of a single agent run and of its
+    constituent steps, together with a small set of derived quantities whose computation
+    is specified exactly. It states normatively that one reported step corresponds
+    to one completed model invocation, so that the several records a runtime may write
+    while a single response is produced are not mistaken for several invocations,
+    and it defines how the consumption of delegated sub-runs is attributed without
+    being counted twice. The format carries counters, timing and cost attribution
+    only; it deliberately excludes prompt and completion content. This document also
+    registers the associated media type and creates IANA registries for extensible
+    enumerations.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-arsentev-agent-run-metrics-00
+    docid:
+    - id: draft-arsentev-agent-run-metrics-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-arsentev-agent-run-metrics-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

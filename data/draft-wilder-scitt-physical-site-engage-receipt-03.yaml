@@ -1,0 +1,121 @@
+---
+schema-version: v1.2.3
+id: draft-wilder-scitt-physical-site-engage-receipt-03
+title:
+- content: A SCITT Profile for Physical-Site Engagement Receipts
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-wilder-scitt-physical-site-engage-receipt-03
+  type: src
+type: standard
+docid:
+- id: draft-wilder-scitt-physical-site-engage-receipt-03
+  type: Internet-Draft
+  primary: true
+- id: I-D.wilder-scitt-physical-site-engage-receipt
+  type: IETF
+  scope: anchor
+docnumber: I-D.wilder-scitt-physical-site-engage-receipt
+date:
+- type: published
+  value: '2026-09-09'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Rob
+          language:
+          - en
+        - language:
+          - en
+          initial: R
+        formatted_initials:
+          content: R.
+          language:
+          - en
+      surname:
+        content: Wilder
+        language:
+        - en
+      completename:
+        content: Rob Wilder
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Wilder Robotics
+  role:
+  - type: author
+version:
+- draft: '03'
+revdate: '2026-09-09'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: '<p>This document defines a SCITT profile for _Physical-Site Engagement
+    Receipts_ (PSER): tamper-evident, signed, offline-verifiable records that describe
+    an autonomous or human-directed physical engagement at a specific real-world site
+    governed by a defined operating envelope. Each receipt is a SCITT Signed Statement
+    as defined by the SCITT architecture, encoded as a COSE Single Signer message,
+    carrying a JCS-canonicalized JSON payload with a five-artifact vocabulary describing
+    (1) the _Site_, (2) the _Operator_ and _Actor_, (3) the _Engagement Window_ and
+    _Envelope_, (4) the _Attestation Evidence_ from a Trusted Execution Environment
+    (TEE), and (5) the _Adapter Write-In_ recording that the receipt was posted into
+    an out-of-band operations layer. A Physical-Site Engagement Receipt is registerable
+    in any conforming SCITT Transparency Service, obtaining a Receipt that proves
+    the Statement''s inclusion in that Service''s verifiable data structure. Registration
+    does not establish that the Issuer registered every receipt it issued. This profile
+    deliberately makes a NARROW, checkable claim -- "this is a tamper-evident, signature-verifiable
+    record that a specific engagement occurred at a specific site under a specific
+    envelope, and its evidence was sealed by a specific TEE" -- and explicitly does
+    NOT claim that the engagement was safe, correct, or wise, that the site conditions
+    were as described, or that any downstream operational outcome followed. Compliance
+    verdicts derived from the receipt (SLA credit, insurance underwriting, regulatory
+    audit) are the responsibility of the relying party and its policies, not of this
+    profile. The profile is designed around a three-party trust model in which no
+    single party can unilaterally forge or repudiate a receipt: the _Site Owner_ controls
+    physical access to the TEE hardware and keeps it running (they can unplug the
+    box, and cannot forge what it signs); the _TEE silicon vendor_ attests the key
+    material inside the TEE through its hardware root of trust (silicon vouches for
+    the key); and the _Issuer_ writes the vocabulary, registers Signed Statements
+    with a Transparency Service, and posts the resulting receipt into the site''s
+    operations layer via a WRITE_ONLY adapter. This separation is normative in this
+    profile: implementations MUST NOT collapse these three roles into a single custodian,
+    and relying parties MUST NOT trust a receipt that lacks any one of them.</p>'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-wilder-scitt-physical-site-engage-receipt-01
+    docid:
+    - id: draft-wilder-scitt-physical-site-engage-receipt-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-wilder-scitt-physical-site-engage-receipt-01
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-wilder-scitt-physical-site-engage-receipt-03
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

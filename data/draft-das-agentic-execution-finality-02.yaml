@@ -1,0 +1,113 @@
+---
+schema-version: v1.2.3
+id: draft-das-agentic-execution-finality-02
+title:
+- content: 'Tool Selection Is Not Execution: Finality for Agentic Tool Dispatch in
+    High-Risk AI Systems'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-das-agentic-execution-finality-02
+  type: src
+type: standard
+docid:
+- id: draft-das-agentic-execution-finality-02
+  type: Internet-Draft
+  primary: true
+- id: I-D.das-agentic-execution-finality
+  type: IETF
+  scope: anchor
+docnumber: I-D.das-agentic-execution-finality
+date:
+- type: published
+  value: '2026-09-10'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Sangam
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Das
+        language:
+        - en
+      completename:
+        content: Sangam Das
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Independent Inventor
+  role:
+  - type: author
+version:
+- draft: '02'
+revdate: '2026-09-10'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>This architecture is specifically designed for high-risk AI systems,
+    where standard engineering priorities shift from speed and latency toward absolute
+    determinism and safety. An agentic model can emit a tool call that today's runtimes
+    treat as something to execute. Allowlists, OAuth tokens, MCP server auth, sandboxes,
+    output filters, and human approval decide whether an agent may reach a tool. They
+    do not decide whether this generated call, with this argument digest, from this
+    instruction chain, at this delegation depth, may take effect now. That gap is
+    the incident surface. Prompt-injected content, poisoned retrieval, a malicious
+    tool response, or a delegated sub-agent can produce a call that looks like ordinary
+    tool use. If the dispatcher executes whatever the model selected, policy that
+    lived upstream becomes advisory. This document specifies a dispatch-time gate.
+    The model may compute a call. The call remains a Candidate Act. A Protected Enforcement
+    Domain binds agent, tool, arguments, purpose, destination, provenance, and policy
+    epochs, then issues scoped non-bearer authority. A Tool-Dispatch Finality Sink
+    verifies that authority against the actual invocation immediately before the tool
+    runs, then consumes it. The same gate applies to support, coding, payments, clinical,
+    SOC, browser-use, and multi-agent MCP deployments. Tool selection is not execution
+    authority. A runnable reference implementation for this dispatch-time gate is
+    provided at tool_use Is Not invoke(): Binding Execution-Finality to Agentic Tool-Call
+    Interfaces and MCP (https://github.com/sangmdas/ tool_use-Is-Not-invoke-Binding-Execution-Finality-to-Agentic-Tool-
+    Call-Interfaces-and-MCP).</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-das-agentic-execution-finality-01
+    docid:
+    - id: draft-das-agentic-execution-finality-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-das-agentic-execution-finality-01
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-das-agentic-execution-finality-02
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
