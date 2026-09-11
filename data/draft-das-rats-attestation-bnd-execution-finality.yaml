@@ -14,51 +14,48 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: <p>Remote attestation can establish evidence about the hardware, firmware,
-    software, configuration, and execution environment associated with a workload.
-    In heterogeneous confidential-computing environments, this trust assessment can
-    extend across CPUs, confidential virtual machines, GPUs, AI accelerators, DPUs,
-    SmartNICs, and other trusted execution components. As AI training and inference
-    workloads scale onto large fleets of GPUs and other accelerators, and as confidential-computing
-    modes for those accelerators reach production deployment, the boundary between
-    "the environment is trustworthy" and "this specific operation may proceed" becomes
-    an increasingly consequential, and increasingly load-bearing, engineering question.
-    An increasingly important class of workloads, however, does not merely compute
-    data. AI agents and autonomous workloads can generate consequential operations
-    such as API invocations, storage mutations, network configuration changes, infrastructure-control
-    commands, financial instructions, device operations, and cross-workload requests.
-    These operations are typically issued from, or on behalf of, GPU- and accelerator-hosted
-    workloads, so the architecture is directly relevant to any infrastructure operator
-    or hardware, DPU, SmartNIC, or confidential-computing vendor whose platform participates
-    in generating, attesting, or effectuating such operations. This document is intended
-    to be of particular interest to organizations building or operating large-scale
-    confidential AI accelerator infrastructure, including GPU vendors, cloud and hyperscale
-    operators, DPU and SmartNIC vendors, and confidential- computing platform providers,
-    since the accompanying reference implementation and FAQ discussion (Section 34.8,
-    Appendix C) illustrate the architecture using publicly documented attestation
-    stacks such as NVIDIA's Confidential Computing and Attestation Suite (NRAS, RIM
-    Service, and OCSP Service) alongside Intel Trust Domain Extensions (TDX) plus
-    confidential-GPU composite attestation. These vendors and products are cited only
-    as concrete, checkable, publicly documented examples of the class of infrastructure
-    the architecture addresses; this document is vendor-neutral, does not depend on
-    any specific vendor's hardware or software, and neither claims nor implies review,
-    adoption, endorsement, or affiliation by NVIDIA, Intel, or any other named vendor.
-    An acceptable Attestation Result supplies trust information to a Relying Party;
-    it is not, without an application-defined authorization step, a decision on the
-    admissibility of each operation later emitted by the attested workload. This document
-    describes an attestation-bound execution-finality architecture in which a consequential
-    operation first exists as a Candidate Act in a non-effective state. Before that
-    act can acquire external effect, its relevant parameters are cryptographically
-    bound to validation context that can include Attestation Results, workload identity,
-    execution context, policy, authorization scope, freshness information, and other
-    application-specific evidence. A designated Finality Sink verifies the required
-    binding at or before the boundary at which the Candidate Act would first acquire
-    external effect. The resulting separation is between appraisal of the execution
-    environment and authorization of a concrete operation at its effectuation boundary.
-    The architecture is intended to complement, rather than replace, Remote ATtestation
-    procedureS (RATS), Entity Attestation Token (EAT) [RFC9711], workload-identity
-    systems, confidential computing, Trusted Execution Environments (TEEs), accelerator
-    attestation, and existing authorization mechanisms.</p>
+- content: "<p>Remote attestation can establish that a CPU, confidential virtual machine,
+    GPU, AI accelerator, DPU, or SmartNIC is running expected firmware and software
+    in an expected configuration. However, an acceptable Attestation Result describes
+    the execution environment, not the operations it later emits; it remains the same
+    whether subsequent workload outputs arise from expected logic, prompt injection,
+    or model error. As AI workloads become agentic and move onto confidential accelerator
+    infrastructure, they emit high- consequence operations, such as financial transfers,
+    cloud-control mutations, database deletions, and external API invocations, where
+    platform trustworthiness alone cannot determine whether a concrete operation is
+    authorized to take effect. OAuth access tokens, transaction tokens, and workload
+    credentials do not close this gap on their own: they typically authorize by scope
+    and by possession of a credential rather than by the exact content of one operation,
+    and they do not require that the protected effect be unreachable except through
+    a verifying boundary. This document describes an attestation-bound execution-finality
+    architecture that bridges platform appraisal and consequence-bearing authorization.
+    A consequential operation originates in a non- effective state as a Candidate
+    Act. An Execution-Finality Validator evaluates the act's security-relevant arguments
+    together with the platform's Attestation Result, workload identity, and policy,
+    and issues an act-bound, single-use, non-bearer Execution Handle. A Finality Sink
+    verifies that handle at the non-bypassable boundary where the operation would
+    first acquire external effect, so that an authorized act cannot be swapped, mutated,
+    or replayed. The architecture requires no changes to silicon, microcode, firmware,
+    drivers, or accelerator programming models, and it separates concerns: platforms
+    such as NVIDIA confidential-computing GPUs and BlueField DPUs, Arm Confidential
+    Compute Architecture (CCA), AMD SEV- SNP, and Intel TDX supply environment appraisal
+    on the cold path, while enforcement is placed at the gateway, service-mesh, DPU
+    or SmartNIC, network, or storage boundary. On the hot path, verification uses
+    local cryptographic bindings and single-use checks rather than repeated attestation
+    round trips. The document discusses its relationship to RATS, WIMSE, OAuth, and
+    related IETF work, and its engineering FAQ addresses platform layering, DPU visibility
+    under end-to-end encryption, tail latency, and other anticipated critical questions.
+    It is intentionally long because it is explanatory rather than a protocol specification.
+    The architecture is implemented, not only described. An executable reference implementation
+    (GitHub: reference implementation, tests, benchmarks, and deployment materials,
+    https://github.com/sangmdas/ Execution-Finality-for-GPU-AI-Accelerators-and-Confidential-
+    Workloads) demonstrates act binding, single-use enforcement, and replay rejection
+    in running code. It uses a software-only attester; it has not been run on any
+    vendor's confidential-computing hardware and does not consume any vendor-issued
+    attestation token, and vendor platforms are discussed on the basis of public documentation
+    only. This document is vendor-neutral, neither claims nor implies review, adoption,
+    endorsement, or affiliation by any named vendor, and complements rather than replaces
+    existing attestation, workload- identity, and authorization mechanisms.</p>"
   language:
   - en
   script:
@@ -94,6 +91,26 @@ relation:
       primary: true
     formattedref:
       content: draft-das-rats-attestation-bnd-execution-finality-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-das-rats-attestation-bnd-execution-finality-03
+    docid:
+    - id: draft-das-rats-attestation-bnd-execution-finality-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-das-rats-attestation-bnd-execution-finality-03
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-das-rats-attestation-bnd-execution-finality-04
+    docid:
+    - id: draft-das-rats-attestation-bnd-execution-finality-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-das-rats-attestation-bnd-execution-finality-04
       format: text/plain
 ext:
   schema-version: v1.0.1

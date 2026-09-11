@@ -1,0 +1,145 @@
+---
+schema-version: v1.2.3
+id: draft-das-rats-attestation-bnd-execution-finality-03
+title:
+- content: Attestation-Bound Execution Finality for GPU, AI Accelerator, DPU, SmartNIC,
+    and Confidential-Computing Infrastructure
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-das-rats-attestation-bnd-execution-finality-03
+  type: src
+type: standard
+docid:
+- id: draft-das-rats-attestation-bnd-execution-finality-03
+  type: Internet-Draft
+  primary: true
+- id: I-D.das-rats-attestation-bnd-execution-finality
+  type: IETF
+  scope: anchor
+docnumber: I-D.das-rats-attestation-bnd-execution-finality
+date:
+- type: published
+  value: '2026-09-10'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Sangam
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Das
+        language:
+        - en
+      completename:
+        content: Sangam Das
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Independent Inventor and Researcher
+  role:
+  - type: author
+version:
+- draft: '03'
+revdate: '2026-09-10'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>Remote attestation can establish that a CPU, confidential virtual machine,
+    GPU, AI accelerator, DPU, or SmartNIC is running expected firmware and software
+    in an expected configuration. As AI workloads move onto confidential accelerator
+    infrastructure and become agentic, they increasingly emit consequential operations:
+    API invocations, storage mutations, network and infrastructure-control commands,
+    financial instructions, and cross-workload requests. An acceptable Attestation
+    Result establishes that the environment is trustworthy; it does not, by itself,
+    decide whether a specific operation emitted by that environment may take effect.
+    This document describes an attestation-bound execution-finality architecture.
+    A consequential operation first exists as a Candidate Act in a non-effective state.
+    An Execution-Finality Validator binds the act's security-relevant parameters to
+    validation context, including Attestation Results, workload identity, policy,
+    authorization scope, and freshness, and issues an act-bound, single- use Execution
+    Handle. A Finality Sink verifies that binding at the boundary where the act would
+    first acquire external effect. The result separates appraisal of the execution
+    environment from authorization of a concrete operation. Existing mechanisms each
+    answer part of this question. TEE and accelerator attestation establish what is
+    running, but an acceptable Attestation Result describes the environment and remains
+    the same for every later operation the attested workload emits, including operations
+    produced through prompt injection or model error. OAuth access tokens, transaction
+    tokens, and workload credentials establish which caller may access which resources,
+    but they typically authorize by scope and by possession of a credential rather
+    than by the exact content of one operation, and they do not require that the protected
+    effect be unreachable except through a verifying boundary. This document addresses
+    the gap between them: binding one specific act to its authorization and enforcing
+    that binding where the act takes effect. The document is intentionally long. It
+    is explanatory rather than a protocol specification, and its technical FAQ (Appendix
+    C) addresses anticipated critical questions from RATS, WIMSE, OAuth, confidential-computing,
+    accelerator, and DPU perspectives. The document is addressed in particular to
+    GPU, CPU, DPU, and SmartNIC vendors and to operators of confidential AI infrastructure,
+    including platforms such as NVIDIA confidential-computing GPUs and BlueField DPUs,
+    Arm Confidential Compute Architecture (CCA), AMD SEV- SNP, and Intel TDX. It requires
+    no changes to silicon, firmware, drivers, or accelerator programming models. It
+    consumes the Attestation Results these platforms already produce, identifies DPUs
+    and SmartNICs as candidate enforcement points, and states the limits of that placement,
+    including where end-to-end encryption prevents a DPU from observing the act. Vendor
+    platforms are discussed on the basis of public documentation only. The accompanying
+    reference implementation uses a software-only attester; it has not been run on
+    any vendor's confidential-computing hardware and does not consume any vendor-issued
+    attestation token. This document is vendor-neutral and neither claims nor implies
+    review, adoption, endorsement, or affiliation by any named vendor. It complements,
+    rather than replaces, RATS, the Entity Attestation Token (EAT), workload-identity
+    systems, and existing authorization mechanisms.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-das-rats-attestation-bnd-execution-finality-02
+    docid:
+    - id: draft-das-rats-attestation-bnd-execution-finality-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-das-rats-attestation-bnd-execution-finality-02
+      format: text/plain
+- type: updatedBy
+  bibitem:
+    id: draft-das-rats-attestation-bnd-execution-finality-04
+    docid:
+    - id: draft-das-rats-attestation-bnd-execution-finality-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-das-rats-attestation-bnd-execution-finality-04
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-das-rats-attestation-bnd-execution-finality-03
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

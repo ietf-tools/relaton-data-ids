@@ -17,11 +17,10 @@ abstract:
 - content: <p>This document defines a "Signed SAVNET-Peering Information" (SiSPI)
     object, a Cryptographic Message Syntax (CMS) protected content type included in
     the Resource Public Key Infrastructure (RPKI). A SiSPI object is a digitally signed
-    object which carries the list of Autonomous Systems (ASes) deploying inter-domain
-    SAVNET. When validated, the eContent of a SiSPI object confirms that the holder
-    of the listed ASN produces the object and the AS has deployed inter- domain SAV
-    and is ready to establish neighbor relationship for preventing source address
-    spoofing.</p>
+    object that carries an attestation for a single Autonomous System (AS) participating
+    in inter-domain SAVNET. A valid SiSPI object confirms that the holder of the listed
+    AS number has published the attestation indicating its participation in inter-
+    domain SAVNET and its willingness to establish SAVNET peering relationships.</p>
   language:
   - en
   script:
@@ -87,6 +86,16 @@ relation:
       primary: true
     formattedref:
       content: draft-chen-sidrops-sispi-05
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-chen-sidrops-sispi-06
+    docid:
+    - id: draft-chen-sidrops-sispi-06
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-chen-sidrops-sispi-06
       format: text/plain
 ext:
   schema-version: v1.0.1

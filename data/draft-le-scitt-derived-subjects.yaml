@@ -14,17 +14,16 @@ docid:
   primary: true
 abstract:
 - content: "<p>The Supply Chain Integrity, Transparency, and Trust (SCITT) architecture
-    permits distinct Issuers to agree on the same CBOR Web Token (CWT) Subject Claim
-    (sub) value for a common Subject. This document specifies one profile by which
-    those Issuers can independently compute that common value from the same application-
-    defined Subject semantics without relying on a shared assigning authority. A surrounding
-    application maps its Subject description to an admitted structured Value. This
-    profile defines an exact deterministic binding encoding, SHA-256 derivation, a
-    text representation, and verification requirements for deriving sub from that
-    Value. Optional JSON and Concise Binary Object Representation (CBOR) forms are
-    provided for exchanging an admitted Value; they are not SCITT Statement payload
-    formats. The SCITT Statement payload, signature, Registration, Receipt, Transparency
-    Service state, and Issuer identity are not implicit inputs to Subject derivation.</p>"
+    permits distinct Issuers to agree on a common CBOR Web Token (CWT) Subject Claim
+    (sub). This document specifies a profile for independently deriving that claim
+    from shared application-defined Subject semantics without a shared assigning authority.
+    An application maps its Subject description to a structured Value. This profile
+    defines the derivation domain, deterministic binding encoding, SHA-256 construction,
+    text syntax, and candidate-to-claim comparison requirements. Optional JSON and
+    Concise Binary Object Representation (CBOR) codecs exchange admitted Values. Subject
+    descriptions and Statement payloads have separate roles; the construction derives
+    sub from the complete mapped Value, while SCITT provides the signed binding and
+    transparency evidence.</p>"
   language:
   - en
   script:
@@ -40,6 +39,16 @@ relation:
       primary: true
     formattedref:
       content: draft-le-scitt-derived-subjects-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-le-scitt-derived-subjects-01
+    docid:
+    - id: draft-le-scitt-derived-subjects-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-le-scitt-derived-subjects-01
       format: text/plain
 ext:
   schema-version: v1.0.1
