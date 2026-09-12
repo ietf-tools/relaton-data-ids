@@ -13,13 +13,16 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document defines an IS-IS capability sub-TLV for advertising measurement
+- content: "<p>This document defines IGP capability advertisements for measurement
     group membership for Active Measurement Protocols (AMPs) such as TWAMP and STAMP.
-    The mechanism allows IGP routers to discover other routers participating in different
-    measurement groups, enabling automatic discovery of measurement endpoints throughout
-    an IS-IS routing domain. The solution uses a Group ID to identify measurement
-    group membership, where the same interface address (IPv4 or IPv6) may be used
-    for multiple measurement groups.</p>"
+    An IS-IS capability sub-TLV is defined for IS-IS and an OSPF Router Information
+    (RI) LSA TLV is defined for OSPFv2 and OSPFv3. The mechanism allows IGP routers
+    to discover other routers participating in different measurement groups, enabling
+    automatic discovery of measurement endpoints throughout an IS-IS or OSPF routing
+    domain. The solution uses a Group ID to identify measurement group membership,
+    where the same interface address (IPv4 or IPv6) may be used for multiple measurement
+    groups. A corresponding BGP - Link State (BGP-LS) node-level attribute is defined
+    to distribute measurement group membership beyond a single IGP domain.</p>"
   language:
   - en
   script:
@@ -65,6 +68,16 @@ relation:
       primary: true
     formattedref:
       content: draft-admnr-lsr-igp-measurement-group-03
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-admnr-lsr-igp-measurement-group-04
+    docid:
+    - id: draft-admnr-lsr-igp-measurement-group-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-admnr-lsr-igp-measurement-group-04
       format: text/plain
 ext:
   schema-version: v1.0.1

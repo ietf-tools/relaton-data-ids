@@ -13,16 +13,17 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>The Mercurius Window System (MWS) is a zero-trust network-native, server-side
-    rendering system that enables graphical sessions to be accessed remotely with
-    explicit semantics for Session, Window, and rendering state. MWS allows a user
-    to interact with a workstation from untrusted or resource-constrained portal devices
-    (thin clients or laptops acting as Mercurius terminals) while keeping authoritative
-    application, GPU, and compositor state on the workstation. The protocol defines
-    a zero-trust portal model, a structured Session and Window architecture, and a
-    multi-stream SCTP transport profile. It defines distinct protocol planes for control,
-    rendering, input, video, and audio. Some payload encodings remain subject to refinement
-    in later revisions of this Internet-Draft.</p>"
+- content: "<p>The Mercurius Window System (MWS) is a zero-trust, network-native window
+    system for contemporary desktops. It combines persistent, detachable graphical
+    Sessions with network transparency. MWS works on a workstation without requiring
+    network connectivity. The same Session model allows users to start a new Session
+    or resume a detached Session, either at the workstation itself or from another
+    device across the network. MWS complements local display systems such as Wayland.
+    Applications and their state remain on the workstation, while a Portal provides
+    the user's display and input facilities. Modern graphics APIs and authenticated
+    transport support this separation between where applications execute and where
+    a user interacts with them. This document specifies the Session, Window, and communication
+    behaviour needed for independent implementations to interoperate.</p>"
   language:
   - en
   script:
@@ -88,6 +89,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ross-mercurius-05
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ross-mercurius-06
+    docid:
+    - id: draft-ross-mercurius-06
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ross-mercurius-06
       format: text/plain
 ext:
   schema-version: v1.0.1
