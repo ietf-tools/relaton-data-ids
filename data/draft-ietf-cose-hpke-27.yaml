@@ -1,204 +1,201 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-spring-stamp-srpm-srv6-00
+id: draft-ietf-cose-hpke-27
 title:
-- content: Performance Measurement Using Simple Two-Way Active Measurement Protocol
-    (STAMP) for Segment Routing over the IPv6 (SRv6) Data Plane
+- content: Use of Hybrid Public-Key Encryption (HPKE) with CBOR Object Signing and
+    Encryption (COSE)
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-spring-stamp-srpm-srv6-00
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-cose-hpke-27
   type: src
 type: standard
 docid:
-- id: draft-ietf-spring-stamp-srpm-srv6-00
+- id: draft-ietf-cose-hpke-27
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-spring-stamp-srpm-srv6
+- id: I-D.ietf-cose-hpke
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-spring-stamp-srpm-srv6
+docnumber: I-D.ietf-cose-hpke
 date:
 - type: published
-  value: '2025-10-02'
+  value: '2026-09-12'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Rakesh
+        - content: Hannes
           language:
           - en
         - language:
           - en
-          initial: R
+          initial: H
         formatted_initials:
-          content: R.
+          content: H.
           language:
           - en
       surname:
-        content: Gandhi
+        content: Tschofenig
         language:
         - en
       completename:
-        content: Rakesh Gandhi
+        content: Hannes Tschofenig
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems, Inc.
+        - content: University of the Bundeswehr Munich
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Clarence
-          language:
-          - en
-        - language:
-          - en
-          initial: C
-        formatted_initials:
-          content: C.
-          language:
-          - en
-      surname:
-        content: Filsfils
-        language:
-        - en
-      completename:
-        content: Clarence Filsfils
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Cisco Systems, Inc.
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Bart
-          language:
-          - en
-        - language:
-          - en
-          initial: B
-        formatted_initials:
-          content: B.
-          language:
-          - en
-      surname:
-        content: Janssens
-        language:
-        - en
-      completename:
-        content: Bart Janssens
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Colt
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Mach
+        - content: Michael
           language:
           - en
         - language:
           - en
           initial: M
+        - language:
+          - en
+          initial: B
         formatted_initials:
-          content: M.
+          content: M. B.
           language:
           - en
       surname:
-        content: Chen
+        content: Jones
         language:
         - en
       completename:
-        content: Mach Chen
+        content: Michael B. Jones
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei
+        - content: Self-Issued Consulting
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Richard
+        - content: Orie
           language:
           - en
         - language:
           - en
-          initial: R
-        - language:
-          - en
-          initial: F
+          initial: O
         formatted_initials:
-          content: R. F.
+          content: O.
           language:
           - en
       surname:
-        content: Foote
+        content: Steele
         language:
         - en
       completename:
-        content: Richard "Footer" Foote
+        content: Orie Steele
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Nokia
+        - content: Tradeverifyd
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - language:
+          - en
+          initial: A
+        formatted_initials:
+          content: A.
+          language:
+          - en
+      surname:
+        content: Daisuke
+        language:
+        - en
+      completename:
+        content: Ajitomi, Daisuke
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: bibital LLC
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Laurence
+          language:
+          - en
+        - language:
+          - en
+          initial: L
+        formatted_initials:
+          content: L.
+          language:
+          - en
+      surname:
+        content: Lundblade
+        language:
+        - en
+      completename:
+        content: Laurence Lundblade
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Security Theory LLC
   role:
   - type: author
 version:
-- draft: '00'
-revdate: '2025-10-02'
+- draft: '27'
+revdate: '2026-09-12'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>Segment Routing (SR) leverages the source routing paradigm. SR is applicable
-    to both Multiprotocol Label Switching (SR-MPLS) and IPv6 (SRv6) data planes. This
-    document describes the procedures for Performance Measurement for SRv6 using the
-    Simple Two-Way Active Measurement Protocol (STAMP), as defined in RFC 8762, along
-    with its optional extensions defined in RFC 8972 and further augmented in RFC
-    9503. The described procedure is used for links and SRv6 paths (including SRv6
-    Policies, SRv6 IGP best paths, and SRv6 IGP Flexible Algorithm paths), as well
-    as Layer-3 and Layer-2 services over the SRv6 paths.</p>"
+- content: "<p>This specification defines hybrid public-key encryption (HPKE) for
+    use with CBOR Object Signing and Encryption (COSE). HPKE offers a variant of public-key
+    encryption of arbitrary-sized plaintexts for a recipient public key. HPKE is a
+    general encryption framework utilizing an asymmetric key encapsulation mechanism
+    (KEM), a key derivation function (KDF), and an Authenticated Encryption with Associated
+    Data (AEAD) algorithm. This document defines the use of HPKE with COSE. Authentication
+    for HPKE in COSE is provided by COSE-native security mechanisms or by the pre-shared
+    key authenticated variant of HPKE.</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-ietf-spring-stamp-srpm-srv6-04
+    id: draft-ietf-cose-hpke-20
     docid:
-    - id: draft-ietf-spring-stamp-srpm-srv6-04
+    - id: draft-ietf-cose-hpke-20
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-spring-stamp-srpm-srv6-04
+      content: draft-ietf-cose-hpke-20
       format: text/plain
 series:
 - type: main
@@ -209,7 +206,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-spring-stamp-srpm-srv6-00
+  number: draft-ietf-cose-hpke-27
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
