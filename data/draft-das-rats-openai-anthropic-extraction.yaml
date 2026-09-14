@@ -2,9 +2,8 @@
 schema-version: v1.2.3
 id: draft-das-rats-openai-anthropic-extraction
 title:
-- content: 'Beyond Attestation: An Execution-Finality Architecture for Controlling
-    Release and Limiting Unauthorized Extraction and Distillation of Sensitive OpenAI
-    and Anthropic Claude Model Information'
+- content: An Execution-Finality Architecture Against Automated Extraction and Distillation
+    of OpenAI and Anthropic Claude Model Information
   language:
   - en
   script:
@@ -15,34 +14,54 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>Frontier and proprietary AI deployments may contain or expose model-
-    related information substantially richer than ordinary final-answer text. Depending
-    on the deployment and interface, such Sensitive Model Information (SMI) can include
-    detailed probability information, embeddings, cached intermediate state, hidden
-    representations, intermediate activations, diagnostic information, model-related
-    metadata, or other high-information artifacts. Repeated unauthorized or excessive
-    release of such information can increase the efficiency of model reconstruction,
-    imitation, extraction, or distillation. Authentication establishes who is requesting
-    an operation. Confidential computing and remote attestation can establish properties
-    of the environment in which computation occurs. Neither property alone determines
-    whether a particular pending release of particular model information, to a particular
-    destination, under the current extraction state and security epoch, remains authorized
-    to become externally usable. This document describes an execution-finality architecture
-    for that remaining problem. Sensitive information may be computed while remaining
-    a non-effective Candidate Release. External release occurs only after release-specific
-    protected validation, evaluation of rollback-resistant extraction state where
-    required, atomic reservation or consumption of bounded authority, and verification
-    at a controlled Finality Sink. Release authority is bound to the applicable Candidate
-    Release or bounded release class rather than operating as a generic transferable
-    bearer credential. The architecture does not claim universal prevention of model
-    extraction or distillation and does not restrict legitimately exposed ordinary
-    model output. Its narrower objective is to make unauthorized, excessive, replayed,
-    rolled-back, or bypassed release of protected model information technically harder
-    to complete through governed release paths. RATS can complement this mechanism
-    by allowing a Verifier or Relying Party to obtain machine-verifiable information
-    about whether the expected release-control mechanism, protected state, security
-    epoch, and Finality Sink are present and operating with the required assurance
-    properties.</p>"
+- content: "<p>High-capability AI models can expose commercially, strategically, or
+    technically valuable model information through governed inference interfaces,
+    including logits, log-probabilities, embeddings, intermediate representations,
+    structured responses, and other protected outputs. Repeated or automated access
+    to such information can contribute to industrial-scale model extraction, unauthorized
+    capability replication, or distillation, creating significant intellectual-property,
+    commercial, security, or strategic risk for operators of high-value models. The
+    problem addressed by this document is not whether a model is technically capable
+    of computing such information, but whether computation itself should constitute
+    authority to release it. This document therefore separates model computation from
+    external disclosure: successful inference does not, by itself, constitute release
+    authority. An output may be fully computed while remaining a non-effective Candidate
+    Release that cannot yet cross the governed release boundary. A Candidate Release
+    remains non-effective until the applicable release conditions have been independently
+    satisfied. The architecture can include release-specific protected validation,
+    evaluation of rollback-resistant extraction state where required, and atomic reservation
+    or consumption of bounded release authority. A controlled Finality Sink verifies
+    the required state at the boundary where the protected information would first
+    become externally available. Release authority is bound to the applicable Candidate
+    Release or bounded release class rather than functioning as a generic transferable
+    bearer credential. The intended result is a technical separation between information
+    that a model can compute and information that the governed system permits to become
+    externally effective. This architecture is intended primarily for high-value or
+    high- capability models and protected output classes where industrial-scale extraction
+    or unauthorized capability replication creates sufficient risk to justify stronger
+    release controls. It is not intended to impose the same enforcement mechanism
+    on every model, user request, or inference path. Operators can apply execution-finality
+    controls selectively according to model value, protected-output class, extraction
+    risk, interface characteristics, or required assurance level. Such enforcement
+    can introduce additional protected-state management, validation, synchronization,
+    attestation, or Finality Sink verification overhead. Latency is therefore an explicit
+    deployment tradeoff rather than an assumption that every inference request should
+    incur the same assurance cost. For sufficiently valuable models or sensitive capabilities,
+    an operator may determine that stronger protection against industrial-scale extraction
+    justifies additional release-path processing, while ordinary or lower-risk output
+    paths may use lighter controls. The architecture does not claim universal prevention
+    of model extraction or distillation. In particular, it does not claim to prevent
+    all learning from ordinary outputs that have been legitimately released, nor does
+    it claim control over information after valid disclosure beyond the governed boundary.
+    Its narrower objective is to constrain industrial-scale extraction conducted through
+    governed release paths and to make unauthorized, excessive, replayed, rolled-back,
+    or bypassed release of protected model information technically harder to complete.
+    Remote Attestation Procedures (RATS) can complement this architecture by providing
+    machine-verifiable evidence that the expected release- control mechanism, protected
+    extraction state, security epoch, and Finality Sink are present and operating
+    with the required assurance properties. Attestation establishes evidence concerning
+    the enforcement environment; it does not itself constitute authority to release
+    a protected Candidate Release.</p>"
   language:
   - en
   script:
@@ -78,6 +97,16 @@ relation:
       primary: true
     formattedref:
       content: draft-das-rats-openai-anthropic-extraction-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-das-rats-openai-anthropic-extraction-03
+    docid:
+    - id: draft-das-rats-openai-anthropic-extraction-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-das-rats-openai-anthropic-extraction-03
       format: text/plain
 ext:
   schema-version: v1.0.1

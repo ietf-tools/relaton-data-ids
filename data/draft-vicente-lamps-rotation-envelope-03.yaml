@@ -1,0 +1,116 @@
+---
+schema-version: v1.2.3
+id: draft-vicente-lamps-rotation-envelope-03
+title:
+- content: CA-Side Post-Quantum Rotation Envelope for X.509 Issuance Continuity
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-vicente-lamps-rotation-envelope-03
+  type: src
+type: standard
+docid:
+- id: draft-vicente-lamps-rotation-envelope-03
+  type: Internet-Draft
+  primary: true
+- id: I-D.vicente-lamps-rotation-envelope
+  type: IETF
+  scope: anchor
+docnumber: I-D.vicente-lamps-rotation-envelope
+date:
+- type: published
+  value: '2026-09-12'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Brian
+          language:
+          - en
+        - language:
+          - en
+          initial: B
+        formatted_initials:
+          content: B.
+          language:
+          - en
+      surname:
+        content: Vicente
+        language:
+        - en
+      completename:
+        content: Brian Vicente
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Sanctum SecOps LLC
+  role:
+  - type: author
+version:
+- draft: '03'
+revdate: '2026-09-12'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>This document defines the X.509 Post-Quantum Rotation Envelope extension,
+    a Certification Authority (CA) side commitment mechanism that allows an issuing
+    CA to publish, sign, and bind to its issued certificates a machine-verifiable
+    guarantee of post-quantum (PQ) or PQ/T hybrid issuance continuity across the CA's
+    own key-rotation boundaries. The mechanism is complementary to, and does not overlap
+    with, subject-side commitments such as the continuityPeriod field defined in [I-D.reddy-lamps-x509-pq-commit]:
+    where that draft captures the CA's continuity obligation to continue presenting
+    PQ or composite certificates after the current certificate's notAfter, this document
+    captures the issuing CA's parallel obligation to remain capable of issuing such
+    certificates across its own root and intermediate key rotations during the same
+    migration window. The Rotation Envelope extension carries a SHA-384 hash of a
+    CA- published, signed JSON manifest hosted at a stable /.well-known/pki- rotation-envelope
+    URI under the issuer's authorityInfoAccess host. The manifest enumerates: (a)
+    the algorithm identifiers the CA commits to continue supporting for issuance through
+    a stated envelopeNotAfter date, (b) the successor-CA SubjectPublicKey hashes already
+    provisioned for the next CA key generation, and (c) the OCSP and CRL distribution
+    endpoints that will remain authoritative through the envelope window. Relying
+    parties that understand the extension can verify, at any time during the current
+    certificate's lifetime, that the CA's published continuity posture matches what
+    was bound at issuance, detecting silent CA-side degradation, unannounced CA replacement,
+    or rollback of PQ-capable issuance commitments. This document is filed independently
+    and is intended to be considered alongside, not in place of, [I-D.reddy-lamps-x509-pq-commit].
+    The two mechanisms address orthogonal sides of the same PQ migration window: subject-side
+    declaration of intent (Reddy et al.) and CA-side guarantee of issuance capability
+    (this document).</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-vicente-lamps-rotation-envelope-00
+    docid:
+    - id: draft-vicente-lamps-rotation-envelope-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-vicente-lamps-rotation-envelope-00
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-vicente-lamps-rotation-envelope-03
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

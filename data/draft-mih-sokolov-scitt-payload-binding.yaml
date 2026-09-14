@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-mih-sokolov-scitt-payload-binding
 title:
-- content: 'Canonical Payload Binding: A Signed Statement Construction Profile'
+- content: Canonicalization Declaration for SCITT Signed Statements
   language:
   - en
   script:
@@ -17,16 +17,17 @@ abstract:
     Service repeatedly need the same construction: a canonical form of structured
     content, a content-addressed identifier derived from that form, binding to a SCITT
     Signed Statement and Receipt, and references that cite external artifacts by digest.
-    This document defines that construction as the Canonical Payload Binding (CPB).
-    A payload profile declares its canonicalization algorithm and exclusion set and
-    thereby obtains a reproducible derived identifier. A CPB Signed Statement carries
-    either the complete statement content as specified by RFC 9943 or a digest of
-    content held elsewhere using the COSE Hash Envelope of RFC 9995. CPB also defines
-    an abstract typed digest reference information model and one optional protected-
-    header encoding, cpb-refs; a payload profile may instead define its own reference
-    serialization. An IANA registry governs CPB canonicalization algorithms. CPB does
-    not define payload content formats, establish or require a universal artifact-type
-    registry, or require either typed-reference carrier.</p>"
+    This document, referred to as CPB, specifies that construction as declarations
+    rather than as a payload format. A payload profile declares its canonicalization
+    algorithm and exclusion set and thereby obtains a reproducible derived identifier.
+    A CPB Signed Statement carries either the complete statement content as specified
+    by RFC 9943 or a digest of content held elsewhere using the COSE Hash Envelope
+    of RFC 9995. CPB also defines an abstract typed digest reference information model
+    and one optional protected-header encoding, cpb-refs; a payload profile may instead
+    define its own reference serialization. An IANA registry assigns the canonicalization
+    algorithm identifiers that these declarations name. CPB does not define payload
+    content formats, establish or require a universal artifact-type registry, or require
+    either typed-reference carrier.</p>"
   language:
   - en
   script:
@@ -72,6 +73,26 @@ relation:
       primary: true
     formattedref:
       content: draft-mih-sokolov-scitt-payload-binding-03
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-mih-sokolov-scitt-payload-binding-04
+    docid:
+    - id: draft-mih-sokolov-scitt-payload-binding-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-mih-sokolov-scitt-payload-binding-04
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-mih-sokolov-scitt-payload-binding-05
+    docid:
+    - id: draft-mih-sokolov-scitt-payload-binding-05
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-mih-sokolov-scitt-payload-binding-05
       format: text/plain
 ext:
   schema-version: v1.0.1
