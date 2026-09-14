@@ -1,0 +1,180 @@
+---
+schema-version: v1.2.3
+id: draft-das-execution-finality-enforcement-profiles-00
+title:
+- content: 'Execution Finality at External-Effect Boundaries: Enforcement Profiles
+    for 6G, AI-Native RAN, RF, ISAC, Accelerated Compute, Devices, and Autonomous
+    Systems'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-das-execution-finality-enforcement-profiles-00
+  type: src
+type: standard
+docid:
+- id: draft-das-execution-finality-enforcement-profiles-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.das-execution-finality-enforcement-profiles
+  type: IETF
+  scope: anchor
+docnumber: I-D.das-execution-finality-enforcement-profiles
+date:
+- type: published
+  value: '2026-09-14'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Sangam
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Das
+        language:
+        - en
+      completename:
+        content: Sangam Das
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Independent
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-09-14'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>AI-native and autonomous infrastructure is increasingly able to generate,
+    optimize, schedule, route, transmit, disclose, render, allocate, encrypt, modify
+    network state, control radio resources, and initiate physical or machine actions
+    without a human decision at every step. An agentic AI system may generate a tool
+    call or machine instruction; an AI-native RAN may compute a beam, handover, power,
+    spectrum, routing, slicing, or topology change; an integrated sensing and communication
+    (ISAC) system may generate sensing information for release or fusion; an O-RAN
+    xApp or rApp may generate a network- control instruction; an accelerator may produce
+    a routing, scheduling, inference, or resource-allocation result; or an autonomous
+    controller may prepare a cyber-physical actuation. Successful computation, authentication,
+    attestation, access authorization, credential possession, or execution inside
+    a trusted environment does not, by itself, establish authority for the resulting
+    operation to become externally effective. This document describes a protected
+    execution-finality architecture in which that distinction is machine-enforced.
+    A proposed consequential operation is represented as a Candidate Act and remains
+    in a Non-Effective State while a Protected Enforcement Domain establishes a machine-verifiable
+    act descriptor, validates applicable machine-verifiable authority predicates,
+    and performs, consumes, advances, or references applicable protected state. The
+    resulting state is represented by an applicable protected-state representation,
+    and Protected Validation Evidence is committed before, or atomically with, authorization
+    of availability of a scoped non-bearer capability. The capability is machine-verifiably
+    or cryptographically bound to the specific Candidate Act, the act descriptor or
+    its digest, the committed validation evidence, applicable protected state, freshness
+    constraints, permitted effectuation scope, the relevant execution-finality boundary,
+    and the applicable Finality Sink. The Finality Sink is positioned at or before
+    the point at which the Candidate Act would first acquire an externally meaningful
+    consequence. Before effectuation, the Finality Sink performs a machine-enforced
+    capability-validity check and permits the Candidate Act to cross the execution-finality
+    boundary only when the required bindings, protected state, validation evidence,
+    freshness conditions, and effectuation scope remain valid. Absence, expiry, revocation,
+    exhaustion, replay, staleness, mismatch, timeout, unverifiability, indeterminacy,
+    scope failure, binding failure, or failure of a required preceding protected operation
+    causes the architecture to fail closed, leaving the Candidate Act non-effective.
+    The document provides 132 detailed Enforcement Profiles that instantiate this
+    common architecture at materially different consequence boundaries. The profiles
+    cover agentic AI tool calls and machine instructions; AI-native RAN and RF control;
+    integrated sensing and communication (ISAC); sensing-result, location, telemetry,
+    and metadata release; restricted-content delivery, decryption, decoding, recommendation,
+    and rendering; derivative, transformed, synthetic, and AI-modified content; VPN,
+    proxy, encrypted-DNS, encrypted-session, and tunnel establishment; cyber- physical,
+    robotic, vehicle, industrial, and actuator control; network exposure, CAPIF, northbound
+    APIs, and operator-controlled capabilities; distributed, edge, joint communication-compute,
+    and in- network compute; shared AI-RAN accelerators and deterministic resource
+    isolation; O-RAN xApp, rApp, A1, E2, and O1 control paths; cloud-native and virtualized
+    RAN; network slicing, routing, topology, service-function-chain, and autonomous-network
+    operations; ambient, passive, batteryless, backscatter, and zero-energy IoT; device
+    wake and RF-energy admission; dynamic spectrum occupancy and spectrum authorization;
+    RF, millimetre-wave, sub-THz, and future-band emission; reconfigurable intelligent
+    surfaces; cooperative and distributed radio; post-quantum and hybrid cryptographic
+    activation; RAN AI-model mutation; hardware-controlled location release; speculative
+    decoding and target-model reconciliation; persistent and vector memory; deferred,
+    scheduled, recurring, and trigger- conditioned acts; tool, plug-in, MCP-server,
+    and external-agent supply-chain re-attestation; neural-state descriptors and privacy-
+    preserving neural proofs; neural Candidate Act fragments; neural trust segmentation
+    and influence-threshold enforcement; hardware- isolated neural-influence shadow
+    auditing; multimodal sensory provenance; distributed multi-GPU neural execution
+    and secure interconnect binding; unknown-agent marketplace recruitment and trust
+    establishment; two-instance collection-time and execution-time cross- committed
+    validation with independent protected enforcement domains; boundary-local reconstruction
+    of the actual pending operation; attested measurement paths; atomic verify-and-effectuate
+    and compare- and-commit enforcement; distributed partial-share finality without
+    centralized authority reconstruction; sink-rooted finality evidence for dependent
+    operations; readable-data operational inertness; cross- committed multi-agent
+    delegation chains; autonomous cloud-control- plane and telco-cloud commit control;
+    AI-mediated voice, video, recording, call-transfer, and communication-response
+    control; separate computation authority and produced-output finality authority;
+    produced-output canonicalization and output-derived digest binding; effectuation-enabling-resource
+    withholding and execution- substrate technical non-completability; first-usable,
+    location- neutral effectuation-boundary control; output grounding-to- effectuation
+    correspondence; and accelerator, DMA, RDMA, memory, interconnect, SmartNIC, DPU,
+    and other hardware-egress boundaries. Each profile identifies the relevant Candidate
+    Act, authority predicates, protected state, capability scope, Finality Sink, execution-finality
+    boundary, and externally effective consequence while inheriting the common execution-finality
+    model. The architectural question addressed here is complementary to, rather than
+    a replacement for, current industry work on AI-native and future communications.
+    Publicly described work from Qualcomm, Nokia, NVIDIA, Samsung, Ericsson, and Huawei
+    is relevant to areas covered by these profiles, including AI-native 6G, AI-RAN,
+    accelerated and shared compute, programmable and autonomous RAN control, RF and
+    spectrum operation, ISAC, cloud-native networking, energy optimization, and increasingly
+    autonomous network-management loops. The present document addresses a narrower
+    enforcement question that arises at or immediately before consequence: after an
+    AI model, network function, accelerator, application, controller, or autonomous
+    agent has successfully computed or prepared an operation, what machine-verifiable
+    authority must exist at the exact external-effect boundary before that specific
+    operation is allowed to take effect? The named organizations are referenced solely
+    to identify publicly relevant technical directions; no affiliation, review, adoption,
+    approval, endorsement, or participation by any named organization is implied.
+    The common invariant across all profiles is therefore: computation may produce
+    a Candidate Act, but computation is not authority for consequence. The silicon-layer
+    extension profiles additionally cover CXL-class coherent memory pooling and ownership
+    transitions; UCIe-class chiplet attach and die-to-die manageability; accelerator
+    scale-up-fabric remote load, store, atomic, and route operations; confidential
+    accelerator contexts and secret provisioning; IOMMU/SMMU, PASID, ATS, DMA-aperture,
+    and peer-to-peer translation state; HBM4-class memory- region reassignment and
+    residual-state control; DPU/SuperNIC host- independent network and storage data
+    paths; co-packaged optics and silicon-photonics optical egress; silicon-root-of-trust
+    firmware, microcode, and bitstream activation; and on-die memory-system, NoC,
+    cache, and bandwidth partition state.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-das-execution-finality-enforcement-profiles-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

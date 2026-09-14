@@ -1,62 +1,118 @@
 ---
 schema-version: v1.2.3
-id: draft-liu-add-dnssd-edns-00
+id: draft-yuyou-moq-conditional-filtering-01
 title:
-- content: Multicast DNS-Based Service Discovery for Encrypted DNS Services
+- content: Conditional Range Filters for Media over QUIC Transport
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-liu-add-dnssd-edns-00
+- content: https://datatracker.ietf.org/doc/html/draft-yuyou-moq-conditional-filtering-01
   type: src
 type: standard
 docid:
-- id: draft-liu-add-dnssd-edns-00
+- id: draft-yuyou-moq-conditional-filtering-01
   type: Internet-Draft
   primary: true
-- id: I-D.liu-add-dnssd-edns
+- id: I-D.yuyou-moq-conditional-filtering
   type: IETF
   scope: anchor
-docnumber: I-D.liu-add-dnssd-edns
+docnumber: I-D.yuyou-moq-conditional-filtering
 date:
 - type: published
-  value: '2025-07-22'
+  value: '2026-09-13'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Dongjie
-          language:
-          - en
         - language:
           - en
-          initial: D
+          initial: "Y"
         formatted_initials:
-          content: D.
+          content: Y.
           language:
           - en
       surname:
-        content: Liu
+        content: You
         language:
         - en
       completename:
-        content: Dongjie Liu
+        content: Yu You
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Jinan University
+        - content: Nokia
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Zhiwei
+        - content: Serhan
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Gül
+        language:
+        - en
+      completename:
+        content: Serhan Gül
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Nokia
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Ali
+          language:
+          - en
+        - language:
+          - en
+          initial: A
+        - language:
+          - en
+          initial: C
+        formatted_initials:
+          content: A. C.
+          language:
+          - en
+      surname:
+        content: Begen
+        language:
+        - en
+      completename:
+        content: Ali C. Begen
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Networked Media
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Zaheduzzaman
           language:
           - en
         - language:
@@ -67,104 +123,51 @@ contributor:
           language:
           - en
       surname:
-        content: Yan
+        content: Sarker
         language:
         - en
       completename:
-        content: Zhiwei Yan
+        content: Zaheduzzaman Sarker
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: CNNIC
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Guanggang
-          language:
-          - en
-        - language:
-          - en
-          initial: G
-        formatted_initials:
-          content: G.
-          language:
-          - en
-      surname:
-        content: Geng
-        language:
-        - en
-      completename:
-        content: Guanggang Geng
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Jinan University
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Guoqiang
-          language:
-          - en
-        - language:
-          - en
-          initial: G
-        formatted_initials:
-          content: G.
-          language:
-          - en
-      surname:
-        content: Zeng
-        language:
-        - en
-      completename:
-        content: Guoqiang Zeng
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Jinan University
+        - content: Nokia
   role:
   - type: author
 version:
-- draft: '00'
-revdate: '2025-07-22'
+- draft: '01'
+revdate: '2026-09-13'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document defines a multicast DNS (mDNS) and DNS-Based Service
-    Discovery (DNS-SD) mechanism for discovering encrypted DNS services in local networks.
-    It specifies new service types (_dot, _doh, _doq) and associated TXT record parameters
-    to enable zero-configuration discovery of DNS over TLS (DoT), DNS over HTTPS (DoH),
-    and DNS over QUIC (DoQ) resolvers. This extension addresses critical privacy gaps
-    in local networks while maintaining backward compatibility with RFC 6763.</p>"
+- content: "<p>In Media over QUIC Transport (MOQT), subscribers can use Range Filters
+    to select specific subgroups, objects, or priorities within a subscribed track.
+    However, these subscription filters are static once established and can only be
+    modified through explicit subscriber control signaling. This document proposes
+    an extension to the Range Filter design that binds conditional evaluation logic
+    directly to specific Range Filter sets. By introducing dynamic conditions to Range
+    Filter configurations, a relay can autonomously adapt the intra-track forwarding
+    behavior based on real-time network conditions, avoiding the round-trip delay
+    of explicit subscriber update signaling.</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-liu-add-dnssd-edns-03
+    id: draft-yuyou-moq-conditional-filtering-00
     docid:
-    - id: draft-liu-add-dnssd-edns-03
+    - id: draft-yuyou-moq-conditional-filtering-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-liu-add-dnssd-edns-03
+      content: draft-yuyou-moq-conditional-filtering-00
       format: text/plain
 series:
 - type: main
@@ -175,7 +178,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-liu-add-dnssd-edns-00
+  number: draft-yuyou-moq-conditional-filtering-01
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

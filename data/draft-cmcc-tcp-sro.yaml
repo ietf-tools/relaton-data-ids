@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-cmcc-tcp-sro
 title:
-- content: The Session Recovery Option (SRO) for TCP
+- content: The Session Recovery (SR) Option for TCP
   language:
   - en
   script:
@@ -13,14 +13,18 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document defines the Session Recovery Option (SRO) for TCP. SRO
-    improves the reliability of Source Network Address Translation (SNAT) and load
-    balancing (LB) services and simplifies the implementation of elastically scaling
-    SNAT/LB clusters. SRO enables a client and a server to exchange their identifiers
-    during connection establishment. When a session needs to be recovered, an endpoint
-    conveys the identifier of the peer to the network node, which uses it to locate
-    the endpoint holding the session backup and recover the session. SRO is optional:
-    endpoints that do not support it behave as if the option did not exist.</p>"
+- content: "<p>This document defines the Session Recovery (SR) option for TCP. The
+    option lets the endpoints of a connection exchange identifiers: during the handshake
+    each endpoint carries its own identifier, and designated segments afterwards carry
+    the identifier of the peer. This places the knowledge of which endpoint a connection
+    belongs to inside the TCP header, where network functions on the path - load balancers,
+    NAT gateways, firewalls - can read it without per-flow state and without payload
+    inspection. The primary use is session recovery in SNAT and load-balancing clusters;
+    further uses include reduced-state forwarding, connection-tracking recovery, and
+    per- backend telemetry. The option is carried in the SYN, the SYN-ACK, and retransmitted
+    segments, or in every segment when so configured; the default adds no overhead
+    to normal data segments. Endpoints that do not support it behave as if the option
+    did not exist.</p>"
   language:
   - en
   script:
@@ -46,6 +50,16 @@ relation:
       primary: true
     formattedref:
       content: draft-cmcc-tcp-sro-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-cmcc-tcp-sro-02
+    docid:
+    - id: draft-cmcc-tcp-sro-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-cmcc-tcp-sro-02
       format: text/plain
 ext:
   schema-version: v1.0.1

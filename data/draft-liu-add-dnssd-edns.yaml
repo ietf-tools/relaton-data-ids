@@ -15,12 +15,12 @@ docid:
 abstract:
 - content: "<p>This document defines a DNS-Based Service Discovery (DNS-SD) mechanism
     for discovering encrypted DNS services in local networks. It specifies new service
-    types (_dot, _doh, _doq) and associated service parameters to enable zero-configuration
-    discovery of DNS over TLS (DoT), DNS over HTTPS (DoH), and DNS over QUIC (DoQ)
-    resolvers. The mechanism works over both multicast DNS (mDNS) and unicast DNS-
-    SD, addressing critical privacy gaps in local networks while maintaining backward
-    compatibility with RFC 6763. This document leverages SVCB and HTTPS resource records
-    (RFC 9460) for parameter negotiation, with TXT records provided for compatibility
+    types (_dot._tcp, _doh._tcp, _doq._udp) and associated service parameters to enable
+    zero-configuration discovery of DNS over TLS (DoT), DNS over HTTPS (DoH), and
+    DNS over QUIC (DoQ) resolvers. This mechanism is defined for use with multicast
+    DNS (mDNS), addressing critical privacy gaps in local networks while maintaining
+    backward compatibility with RFC 6763. This document leverages SVCB and HTTPS resource
+    records (RFC 9460) for parameter negotiation, with TXT records provided for compatibility
     with legacy implementations.</p>"
   language:
   - en
@@ -57,6 +57,16 @@ relation:
       primary: true
     formattedref:
       content: draft-liu-add-dnssd-edns-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-liu-add-dnssd-edns-03
+    docid:
+    - id: draft-liu-add-dnssd-edns-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-liu-add-dnssd-edns-03
       format: text/plain
 ext:
   schema-version: v1.0.1

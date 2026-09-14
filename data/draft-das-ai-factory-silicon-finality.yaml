@@ -1,0 +1,109 @@
+---
+schema-version: v1.2.3
+id: draft-das-ai-factory-silicon-finality
+title:
+- content: 'Execution Finality for AI-Factory Silicon and Accelerated Infrastructure:
+    Enforcement Profiles for GPUs, Chiplets, Memory Fabrics, DPUs, RDMA, CXL, and
+    Photonic Boundaries'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-das-ai-factory-silicon-finality
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>AI factories and AI-native network infrastructure are becoming heterogeneous
+    hardware systems rather than isolated model-serving applications. A single consequential
+    operation may traverse CPU control planes, GPUs or NPUs, high-bandwidth memory,
+    chiplets, coherent memory fabrics, CXL or PCIe paths, IOMMUs, DMA and RDMA engines,
+    SmartNICs or DPUs, accelerator fabrics, model-serving runtimes, optical interconnects,
+    storage systems, and physical power or cooling controllers. At these layers, a
+    computation can be valid and a component can be authenticated while the resulting
+    tensor transfer, memory exposure, queue activation, model load, routing change,
+    optical emission, partition transition, firmware update, or physical actuation
+    is still not authorized to become effective. This document describes a silicon-oriented
+    execution-finality architecture for preserving that distinction. A consequential
+    hardware or infrastructure operation is represented as a Candidate Act and remains
+    in a Non-Effective State until a Protected Enforcement Domain establishes a machine-verifiable
+    act descriptor, validates applicable authority predicates, updates or consumes
+    protected state, and commits Protected Validation Evidence. A scoped non-bearer
+    capability is then bound to the exact Candidate Act, relevant descriptor or digest,
+    protected evidence, protected state, freshness and policy conditions, permitted
+    scope, execution-finality boundary, and applicable Finality Sink. Possession of
+    the capability alone is insufficient. The Finality Sink is the hardware, firmware,
+    protected-runtime, fabric, controller, or adjacent enforcement role that has mandatory
+    control over the consequence. Depending on the profile, it may be a memory controller,
+    HBM gate, GPU scheduler, accelerator partition controller, IOMMU or SMMU, DMA
+    or RDMA engine, DPU or SmartNIC, fabric switch, chiplet link controller, CXL component,
+    cache- coherence controller, model loader, token-emission gate, optical modulator
+    or wavelength controller, eFPGA configuration gate, rack power controller, or
+    another protected effectuation point. The Candidate Act becomes effective only
+    after sink-local verification confirms that the actual pending operation still
+    corresponds to the validated act and current protected state. The document provides
+    83 detailed Enforcement Profiles. Sixty-three translate the supplied GPU, silicon,
+    chiplet, memory-fabric, and AI- factory source set; twelve supplementary profiles
+    map the same execution-finality model onto current hyperscale and Arm-based infrastructure
+    directions; and eight additional profiles selectively adapt non-duplicative mechanisms
+    from the companion DAS Protocols V, VI, and VIII disclosures for silicon and AI-factory
+    use. The catalogue covers GPU and accelerator egress, rack-scale AI fabrics, sparse
+    expert routing, coherent and disaggregated memory, collective communication, DPUs
+    and SmartNICs, RDMA and GPU-direct access, model and KV-cache lifecycle state,
+    accelerator partitioning, arithmetic- mode control, AI-factory scheduling, storage,
+    telemetry, firmware, power and cooling, digital-twin actuation, in-network compute,
+    federated-learning egress, neural-waveform release, silicon photonics, optical
+    lanes and wavelengths, chiplet admission and UCIe control, CXL memory pools, RAS
+    and memory quarantine, eFPGA configuration, reconfigurable optical accelerator
+    topologies, accelerator-pod membership, compiler-to-silicon executable activation,
+    confidential-realm memory ownership, secure device attachment, coherent-mesh admission,
+    confidential offload-device attachment, network and storage offload queues, isolated
+    management- controller actions, host-independent cloud-offload actions, UltraServer-scale
+    accelerator-fabric membership, distributed EFA/RDMA endpoint admission, protected
+    neural-state proofs, hardware-isolated shadow auditing, cross-committed collection-time
+    and execution-time validation, attested measurement paths, distributed partial-share
+    finality, separate compute-enable and produced-output authority, output-derived
+    digest binding, and effectuation-enabling-resource withholding. Profile identifiers
+    retain the source numbering for traceability; gaps are intentional. The architecture
+    is intended to complement, not replace, existing work in accelerated computing,
+    AI networking, confidential computing, chiplet and coherent-memory systems, accelerator
+    fabrics, optical I/ O, attestation, authorization, and hardware isolation. In
+    particular, the profiles are directly relevant to public technology directions
+    associated with NVIDIA, AMD, Intel, Google, Amazon Web Services (AWS), Microsoft,
+    Broadcom, Marvell, and Arm, whose current infrastructure spans GPUs and AI accelerators,
+    custom AI silicon, high-bandwidth memory, CPU-to-accelerator coherence, chiplets,
+    CXL and PCIe-class fabrics, DPUs and infrastructure offload, RDMA and high-speed
+    AI networking, rack-scale accelerator systems, optical and silicon-photonic interconnects,
+    hardware roots of trust, and large- scale AI-factory orchestration. Additional
+    industry relationships with Qualcomm, Meta, Cisco, HPE, Nokia, Ericsson, Samsung,
+    Huawei, AT&amp;T, Verizon, Orange, and Deutsche Telekom are discussed in the body
+    of the document where AI-native networking, RAN, 6G, edge compute, and operator-controlled
+    infrastructure create related effectuation boundaries. These references identify
+    technical complementarity and possible enforcement locations; they do not imply
+    that any named organization has reviewed, endorsed, adopted, or lacks equivalent
+    mechanisms. The IETF relevance is principally the cross-layer security relationship
+    among identity, attestation, evidence, cryptographic binding, workload authorization,
+    protected state, replay resistance, delegation, and the final effectuation boundary.
+    The hardware protocols themselves remain within the remit of the appropriate hardware,
+    semiconductor, telecommunications, optical, and system standards bodies. The common
+    invariant is: computation may produce a Candidate Act, but computation is not
+    authority for consequence.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-das-ai-factory-silicon-finality-00
+    docid:
+    - id: draft-das-ai-factory-silicon-finality-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-das-ai-factory-silicon-finality-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
