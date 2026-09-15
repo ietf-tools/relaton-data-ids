@@ -1,0 +1,125 @@
+---
+schema-version: v1.2.3
+id: draft-huang-idr-color-time-schedule-00
+title:
+- content: BGP Extension for Time-Scheduled Color based SR Policy Selection
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-huang-idr-color-time-schedule-00
+  type: src
+type: standard
+docid:
+- id: draft-huang-idr-color-time-schedule-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.huang-idr-color-time-schedule
+  type: IETF
+  scope: anchor
+docnumber: I-D.huang-idr-color-time-schedule
+date:
+- type: published
+  value: '2026-09-15'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Cancan
+          language:
+          - en
+        - language:
+          - en
+          initial: C
+        formatted_initials:
+          content: C.
+          language:
+          - en
+      surname:
+        content: Huang
+        language:
+        - en
+      completename:
+        content: Cancan Huang
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: China Telecom
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Zhuojun
+          language:
+          - en
+        - language:
+          - en
+          initial: Z
+        formatted_initials:
+          content: Z.
+          language:
+          - en
+      surname:
+        content: Huang
+        language:
+        - en
+      completename:
+        content: Zhuojun Huang
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: China Telecom
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-09-15'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>Segment Routing (SR) Policy is identified by a tuple of Color and Endpoint.
+    In BGP/MPLS IP VPN and EVPN services, the egress PE attaches a Color Extended
+    Community to the advertised VPN route so that the ingress PE can steer the traffic
+    into a corresponding SR Policy. In many deployment scenarios, the same customer
+    may require different Service Level Agreements (SLAs) during different time periods
+    of a day. For example, a customer may require a high- bandwidth SLA during the
+    off-peak hours (e.g., 02:00-06:00) and a low-cost SLA during the daytime. Such
+    time-variant SLA requirements imply that the ingress PE should select different
+    SR Policies (i.e., different Colors) for the same VPN route at different times.
+    This document defines a new BGP Extended Community, called the Schedule Extended
+    Community, to be used together with the Color Extended Community. Two sub-types
+    of the Schedule Extended Community are defined: a Daily Schedule sub-type for
+    recurring time-of-day periods, and a Day Schedule sub-type for specific dates.
+    The Schedule Extended Community carries the time period during which the associated
+    Color is valid. Based on the current time and the received Schedule Extended Communities,
+    the ingress PE can dynamically select the appropriate SR Policy for a VPN route,
+    thereby realizing time-scheduled SLA switching.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-huang-idr-color-time-schedule-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
