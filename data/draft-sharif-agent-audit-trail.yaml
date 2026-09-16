@@ -19,25 +19,36 @@ abstract:
     and trust level reporting. Records are linked via tamper-evident hash chaining
     using SHA-256 per RFC 8785, with optional ECDSA signatures for non-repudiation.
     The format addresses requirements from the EU AI Act (Regulation 2024/1689), which
-    mandates automatic recording of events for high-risk AI systems effective August
-    2026. It also maps to SOC 2 Trust Services Criteria, ISO/IEC 42001, ISO/IEC 24970,
-    prEN 18229-1, and PCI DSS v4.0.1 logging requirements. The design is transport-agnostic
-    and supports export to JSONL, Syslog (RFC 5424), and CSV while preserving chain
-    integrity. Privacy is addressed through input/output hashing, content fingerprinting,
-    and tombstone-based deletion compatible with GDPR Article 17. This revision (-01)
-    adds pre-execution recording requirements, recording independence, deny reason
-    codes, replay protection, external timestamp anchoring, and content fingerprinting
-    based on feedback from independent implementers. This revision (-02) adds a Decision
-    Reproducibility section (Section 13) that distinguishes record reproducibility,
-    available for any model, from decision reproducibility, available only for open-weight
-    models executed at temperature zero in an attested environment, and defines the
-    associated record fields. This revision (-03) adds the Attestation Closure requirement
-    (Section 13.6): the digests recorded for decision reproducibility MUST cover the
-    complete computational closure of the inference function -- model weights, tokenizer,
-    chat template, inference engine build, decoding configuration, and numeric environment
-    -- together with new record fields (tokenizer_digest, chat_template_digest, engine_build_digest)
-    and a minimal-change threat analysis (Section 13.7) showing that any component
-    left outside the attested set is a forgery channel.</p>"
+    mandates automatic recording of events for high-risk AI systems, whose application
+    dates were staged into 2027-2028 by Regulation (EU) 2026/1744. It also maps informatively
+    to SOC 2 Trust Services Criteria, ISO/IEC 42001, the draft ISO/IEC 24970 and prEN
+    18229-1 logging standards, and PCI DSS v4.0.1 logging requirements. The design
+    is transport-agnostic and supports export to JSONL, Syslog (RFC 5424), and CSV
+    while preserving chain integrity. Privacy is addressed through input/output hashing,
+    content fingerprinting, and tombstone-based deletion compatible with GDPR Article
+    17. The -01 revision added pre-execution recording requirements, recording independence,
+    deny reason codes, replay protection, external timestamp anchoring, and content
+    fingerprinting based on feedback from independent implementers. The -02 revision
+    added a Decision Reproducibility section (Section 13) that distinguishes record
+    reproducibility, available for any model, from decision reproducibility, available
+    only for open-weight models executed at temperature zero in an attested environment,
+    and defines the associated record fields. The -03 revision added the Attestation
+    Closure requirement (Section 13.6): the digests recorded for decision reproducibility
+    MUST cover the complete computational closure of the inference function -- model
+    weights, tokenizer, chat template, inference engine build, decoding configuration,
+    and numeric environment -- together with new record fields (tokenizer_digest,
+    chat_template_digest, engine_build_digest) and a minimal-change threat analysis
+    (Section 13.7) showing that any component left outside the attested set is a forgery
+    channel. This revision (-04) adds algorithm agility for post-quantum signatures
+    (ML-DSA-65, FIPS 204) alongside ECDSA P-256; a key identifier (signer_kid, RFC
+    7638) that resolves which principal signed an independently recorded record; a
+    trust-level assignment integrity requirement (Section 5.3) so that downgrading
+    a consequential action is an attributable event rather than silent suppression;
+    and OPTIONAL Merkle batch anchoring (Section 6.4) using the RFC 6962 construction
+    for compact inclusion proofs at high throughput. All -04 additions are OPTIONAL
+    to produce, and -04 verifiers stay backward compatible with -03: a -04 verifier
+    accepts -03 records, and the new signing metadata is required only in records
+    that carry a signature.</p>"
   language:
   - en
   script:
@@ -83,6 +94,16 @@ relation:
       primary: true
     formattedref:
       content: draft-sharif-agent-audit-trail-03
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-sharif-agent-audit-trail-04
+    docid:
+    - id: draft-sharif-agent-audit-trail-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-sharif-agent-audit-trail-04
       format: text/plain
 ext:
   schema-version: v1.0.1

@@ -1,0 +1,108 @@
+---
+schema-version: v1.2.3
+id: draft-das-attestation-interconnect-finality-00
+title:
+- content: 'When Attestation Is Not Enough: Execution Finality for High-Assurance
+    Resource Transitions'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-das-attestation-interconnect-finality-00
+  type: src
+type: standard
+docid:
+- id: draft-das-attestation-interconnect-finality-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.das-attestation-interconnect-finality
+  type: IETF
+  scope: anchor
+docnumber: I-D.das-attestation-interconnect-finality
+date:
+- type: published
+  value: '2026-09-15'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Sangam
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Das
+        language:
+        - en
+      completename:
+        content: Sangam Das
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Independent
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-09-15'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>Modern infrastructure increasingly allows memory, accelerators, device
+    interfaces, storage regions, and other resources to move dynamically between hosts,
+    tenants, virtual machines, and security domains. Existing mechanisms can authenticate
+    devices, attest software and firmware state, protect communication, and authorize
+    resource operations. However, these properties do not necessarily establish that
+    the exact resource transition that becomes effective is still the transition that
+    was evaluated and authorized. This distinction becomes security-critical when
+    a change in addressability, ownership, routing, or device assignment itself exposes
+    protected state. For example, a dynamically reassigned memory extent may become
+    accessible to a new tenant even though the device is authentic and the transport
+    is protected, if sanitization, ownership state, allocation generation, destination
+    binding, or other required conditions are no longer valid at the moment of reassignment.
+    This document describes an execution-finality model in which a proposed transition
+    remains non-effective until a protected enforcement boundary verifies the concrete
+    operation immediately before effectuation. Authorization is bound to the exact
+    resource, source, destination, generation, security state, freshness conditions,
+    and required preconditions, with replay and alternate- path protections. The problem
+    is particularly relevant to high-assurance AI and composable-compute environments,
+    including NVIDIA NVLink-based confidential multi-GPU systems, Arm Confidential
+    Compute Architecture (CCA) and Realm Management Extension (RME) systems, UALink
+    accelerator fabrics, CXL pooled-memory systems, and confidential- computing deployments
+    operated by cloud providers. These names identify published industry directions
+    and alignment points; they are not assertions that any named implementation is
+    vulnerable or non- conformant. The model complements attestation, confidential
+    computing, secure transport, and device-assignment mechanisms rather than replacing
+    them. Its central security invariant is that a trusted component does not, by
+    itself, imply a trusted transition.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-das-attestation-interconnect-finality-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

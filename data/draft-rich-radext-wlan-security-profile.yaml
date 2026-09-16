@@ -13,16 +13,14 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>RADIUS has attributes that let an IEEE 802.11 authenticator report
-    the AKM suite and pairwise cipher selected for an association. That is useful,
-    but it is not enough anymore. IEEE 802.11, as amended, also defines security profiles.
-    A security profile is the complete set of AKM, pairwise cipher, and related security
-    capabilities accepted for an association. The problem is that the AKM and the
-    pairwise cipher no longer maps to a single security profile. Using these two values,
-    the RADIUS server cannot tell which of the security profiles was accepted. This
-    document defines the WLAN-Security-Profile RADIUS attribute. The attribute reports
-    the IEEE 802.11 security profile accepted by the responder for the association.
-    It complements the existing IEEE 802 network attributes.</p>"
+- content: "<p>IEEE 802.11, as amended, defines security profiles, and several of
+    those profiles can share the same AKM suite and pairwise cipher, so WLAN-AKM-Suite
+    and WLAN-Pairwise-Cipher no longer tell a RADIUS server which profile is in effect.
+    This document defines the WLAN-Security-Profile RADIUS attribute, which reports
+    the security profile the responder accepted. A Network Access Server includes
+    it in the Access-Requests it generates for an IEEE 802.1X authentication so the
+    server can make policy decisions based on the value. The attribute complements
+    the IEEE 802 attributes defined in RFC 7268.</p>"
   language:
   - en
   script:
@@ -38,6 +36,16 @@ relation:
       primary: true
     formattedref:
       content: draft-rich-radext-wlan-security-profile-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-rich-radext-wlan-security-profile-01
+    docid:
+    - id: draft-rich-radext-wlan-security-profile-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-rich-radext-wlan-security-profile-01
       format: text/plain
 ext:
   schema-version: v1.0.1
