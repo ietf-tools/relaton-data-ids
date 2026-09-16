@@ -1,0 +1,64 @@
+---
+schema-version: v1.2.3
+id: draft-das-state-policy-continuity-finality
+title:
+- content: 'When Valid Authorization Becomes Stale: State and Policy Continuity at
+    the Execution-Finality Boundary'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-das-state-policy-continuity-finality
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>Security decisions are frequently made against mutable state. An authorization
+    decision may depend on a policy bundle, mapping table, reference-value set, ownership
+    record, revocation state, risk classification, purpose grant, account state, or
+    other data that can change between evaluation and effectuation. A cryptographically
+    authentic permit can therefore remain valid as an object while becoming stale
+    as authority. Existing freshness, replay-protection, sender-constraining, attestation,
+    and anti-rollback mechanisms solve important parts of this problem. They do not
+    by themselves establish that the exact policy and state basis used to approve
+    an act is still the applicable basis when that act becomes externally effective.
+    This document describes a state- and policy-continuity model for execution finality.
+    A Candidate Act remains non-effective until a protected Finality Sink verifies
+    the concrete act, the identity of the evaluated policy or mapping content, protected
+    generations or epochs, relevant mutable state, freshness, and authorized-use constraints
+    immediately before effectuation. The model treats revision identity as content-bound
+    rather than merely name- or location-bound. A change from one mapping or policy
+    revision to another is a state transition that requires re-evaluation unless an
+    authoritative mechanism explicitly establishes applicability across revisions.
+    The Finality Sink is not expected to infer semantic equivalence dynamically. The
+    model complements, rather than replaces, mechanisms such as RATS, Entity Attestation
+    Tokens, SUIT anti-rollback controls, OAuth fine- grained authorization, sender-constrained
+    tokens, and application policy engines. Its central invariant is that authorization
+    valid at evaluation time is not automatically authority at effectuation time.
+    The problem is industrially relevant to systems that already combine continuously
+    evaluated access, fine-grained policy decisions, attestation, and confidential
+    computing. Examples of complementary industry directions include Microsoft Entra
+    Continuous Access Evaluation, Amazon Verified Permissions and Cedar, Google Cloud
+    IAM policy enforcement, NVIDIA GPU and switch attestation, and Arm Confidential
+    Compute Architecture. These names identify useful integration and comparison points;
+    they are not assertions of vulnerability, deficiency, non-conformance, or endorsement
+    by any named organization.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-das-state-policy-continuity-finality-00
+    docid:
+    - id: draft-das-state-policy-continuity-finality-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-das-state-policy-continuity-finality-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

@@ -1,0 +1,132 @@
+---
+schema-version: v1.2.3
+id: draft-das-jurisdiction-bound-execution-finality-00
+title:
+- content: 'Authorized Here, Not Authorized There: Jurisdiction-Bound Execution Finality
+    for Cross-Border and Sovereign Systems'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-das-jurisdiction-bound-execution-finality-00
+  type: src
+type: standard
+docid:
+- id: draft-das-jurisdiction-bound-execution-finality-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.das-jurisdiction-bound-execution-finality
+  type: IETF
+  scope: anchor
+docnumber: I-D.das-jurisdiction-bound-execution-finality
+date:
+- type: published
+  value: '2026-09-15'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Sangam
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Das
+        language:
+        - en
+      completename:
+        content: Sangam Das
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Independent
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-09-15'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>Modern cloud, AI, financial, telecom, and critical-infrastructure systems
+    increasingly operate across regions, sovereign clouds, multi- cloud environments,
+    and distributed workload chains. A high- consequence authorization failure can
+    occur even when identity, cryptography, policy evaluation, and platform attestation
+    all succeed: the same Candidate Act can become effective under a jurisdictional
+    or governance context different from the one under which it was authorized. Workload
+    migration, disaster-recovery failover, cross-region queues, service rerouting,
+    remote administration, control-plane changes, destination substitution, key- control
+    changes, or downstream processing can convert an authorization that was valid
+    under context J1 into an effect occurring under context J2. No token forgery or
+    cryptographic break is required. Existing mechanisms already address important
+    parts of this problem. OAuth Rich Authorization Requests [RFC9396] can carry fine-grained
+    authorization details; OAuth Resource Indicators [RFC8707] bind authorization
+    requests to protected resources; JWT [RFC7519] can carry signed application claims;
+    WIMSE [WIMSE-ARCH] provides workload-identity and security-context architecture
+    for multi-system environments; RATS [RFC9334] provides Evidence, Verifiers, and
+    Attestation Results; and SCITT [RFC9943] provides signed statements, transparency,
+    and receipts. Industry systems also provide concrete sovereignty and data-boundary
+    controls: Microsoft documents its EU Data Boundary [MS-EUDB], AWS operates the
+    European Sovereign Cloud [AWS-ESC], and Google Cloud provides Sovereign Controls
+    by Partners [GOOGLE-SOV]. The residual gap exists only where jurisdiction is treated
+    as descriptive metadata, inferred from weak location signals, enforced only at
+    deployment time, or checked at an upstream boundary while the actual consequence
+    can later move through another region, operator, administrative path, processing
+    service, destination, failover route, or control domain. A workload can be correctly
+    authenticated and a platform correctly attested while the current effectuation
+    context no longer satisfies the deployment's sovereignty rule. Likewise, storing
+    data in one region does not by itself prove where it is processed, remotely administered,
+    decrypted, transmitted, or finally disclosed. This document proposes a jurisdiction-bound
+    execution-finality invariant. A Candidate Act remains in a Non-Effective State
+    until the Finality Sink establishes a current, authoritative Jurisdiction Execution
+    Context (JEC) for the exact act and verifies that the present effectuation environment
+    satisfies the deployment-defined Jurisdiction Policy. The JEC can combine workload
+    identity, compute and processing domain, storage location, destination, operator/
+    control domain, key-control domain, remote-access state, attested trust state,
+    and policy generation. JEC is an architectural role, not a mandated token format.
+    Prevention is claimed only when the jurisdiction policy, evidence sources, current
+    effectuation context, exact-act binding, state continuity, and consequence path
+    are load-bearing and non-bypassable. If the deployment relies only on GeoIP, region
+    labels, advisory metadata, best-effort routing, post-hoc audit, or incomplete
+    path coverage, the result is mitigation or evidence rather than the same prevention
+    guarantee. The architecture enforces machine-readable jurisdiction or compliance
+    policy supplied by an authoritative deployment source; it does not determine what
+    law applies or provide a legal conclusion. Microsoft, AWS, Google Cloud, NVIDIA,
+    and Arm are discussed only as complementary industrial examples or potential integration
+    points. The document does not assert vulnerability, deficiency, non- conformance,
+    affiliation, or endorsement by any named organization. A deployment that already
+    makes its required jurisdictional constraints current, non-bypassable, and mandatory
+    at the actual consequence boundary already satisfies the core property. Criticism,
+    corrections, counterexamples, prior-art pointers, implementation experience, and
+    evidence of equivalent existing mechanisms are explicitly invited.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-das-jurisdiction-bound-execution-finality-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

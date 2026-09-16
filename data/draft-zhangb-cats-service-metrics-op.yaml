@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-zhangb-cats-service-metrics-op
 title:
-- content: Computing Service Metric Definitions and Operation under CATS
+- content: Computing Service Metrics Operation and Joint Service Selection under CATS
   language:
   - en
   script:
@@ -14,23 +14,27 @@ docid:
   primary: true
 abstract:
 - content: "<p>Computing-Aware Traffic Steering (CATS) optimizes traffic forwarding
-    by considering both computing and networking metrics. While existing framework
-    and metric definition drafts provide theoretical models (e.g., L1/L2 normalized
-    metrics), they face significant challenges in achieving direct operational execution
-    in real-world deployments. Normalization methods vary across providers, and aggregated
-    unitless scores often lose critical operational information, making it difficult
-    for routers to make precise traffic-steering decisions. This document fills this
-    gap by providing an executable operational approach. It defines a set of Computing
-    Service Metrics and their operations under the CATS framework. Instead of transmitting
-    low- level raw hardware metrics, service sites dynamically evaluate and report
-    service-oriented metrics (e.g., Global Available Slots) to the control plane.
-    The document clarifies how such service-oriented metrics can be derived from basic
-    resource information, service reference information, and local policy. It also
-    specifies how the CATS Path Selector (C-PS) combines the Computing Service Table
-    (derived from C-SMA reports) with the Network Service Table to make joint traffic-steering
-    decisions. Finally, the document defines update control mechanisms for large-scale
-    deployments. This enables efficient and precise traffic-steering policies without
-    negating the value of existing normalized metrics.</p>"
+    by considering both computing and networking metrics. The CATS framework and metric-definition
+    documents provide valuable theoretical models, yet they face challenges in achieving
+    direct operational execution in real-world deployments: normalization methods
+    vary across providers, and aggregated unitless scores often lose the operational
+    information that routers need for precise steering decisions. This document provides
+    a self-contained, executable operational model for a core class of CATS deployment
+    scenarios: latency-sensitive, compute-intensive services whose steering decisions
+    are made in real time at the forwarding node. Instead of disseminating low-level
+    raw hardware metrics, service sites dynamically evaluate and report service-oriented
+    metrics (e.g., Global Available Slots and Computing Time) to the control plane.
+    The document clarifies how these metrics are derived from basic resource information,
+    service reference information, and local policy. It also specifies how the CATS
+    Path Selector (C-PS) combines the Computing Service Table (populated from C-SMA
+    reports) with the Network Service Table to make joint traffic- steering decisions,
+    and defines update-control and fallback mechanisms suitable for large-scale deployments.
+    Within the unified CATS architecture, the service-oriented operational model defined
+    in this document coexists with the general- purpose L1/L2 normalized metric framework:
+    a deployment MAY use either model, or run both pipelines in parallel for different
+    service classes, without embedding metric fields across frameworks. This document
+    does not negate the value of normalized metrics; it focuses on the service-level
+    abstractions and runtime operations required for direct traffic steering.</p>"
   language:
   - en
   script:
@@ -86,6 +90,16 @@ relation:
       primary: true
     formattedref:
       content: draft-zhangb-cats-service-metrics-op-04
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-zhangb-cats-service-metrics-op-05
+    docid:
+    - id: draft-zhangb-cats-service-metrics-op-05
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-zhangb-cats-service-metrics-op-05
       format: text/plain
 ext:
   schema-version: v1.0.1

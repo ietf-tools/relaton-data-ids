@@ -1,0 +1,77 @@
+---
+schema-version: v1.2.3
+id: draft-das-finality-bound-revocation
+title:
+- content: 'Revoked but Still Executable: Closing the Authorization-to-Effect Gap
+    with Finality-Bound Revocation'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-das-finality-bound-revocation
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>Revocation is often treated as a property of a credential, token, session,
+    grant, policy, or identity record. In consequence-bearing systems, however, an
+    authorization can be completely legitimate when issued and still become unsafe
+    before the authorized operation becomes externally effective. The security question
+    is therefore not only whether revocation exists, but whether a revocation that
+    becomes authoritative before a protected commit is guaranteed to control that
+    commit. The severity is deployment- dependent, but can be high in financial, administrative,
+    AI-agent, cloud-control, confidential- compute, device, industrial, or other environments
+    where a stale-but- valid authorization can produce an irreversible or externally
+    consequential effect. This document describes a finality-bound revocation model.
+    A Candidate Act remains in a Non-Effective State after upstream authorization.
+    The authorization is bound to an act-specific revocation basis, such as a protected
+    revocation generation, epoch, status root, or equivalent authority state. Immediately
+    before the protected consequence is committed, a Finality Sink verifies that no
+    applicable revocation, suspension, narrowing, or superseding authorization state
+    has become load-bearing. Where the revocation state changed, the act is rejected,
+    re-authorized, or explicitly shown to survive the change under an authoritative
+    rule. With authoritative current state, atomic check-and-commit semantics, and
+    complete mediation of all effectuation paths, this is intended as a prevention
+    property for the protected stale act; deployments that permit bounded staleness
+    or incomplete path coverage obtain mitigation rather than the same prevention
+    guarantee. The model complements existing mechanisms rather than replacing them.
+    OAuth Token Revocation [RFC7009] and Token Introspection [RFC7662] provide standardized
+    token-state mechanisms; Microsoft Entra Continuous Access Evaluation [MS-CAE]
+    demonstrates event-driven rejection of otherwise unexpired tokens; Amazon Verified
+    Permissions and Cedar [AWS-VERIFIED-PERMISSIONS] provide fine-grained policy-
+    evaluation mechanisms; Google Cloud IAM [GOOGLE-IAM-DENY] provides centrally managed
+    deny-policy controls; and confidential-computing and attestation platforms such
+    as NVIDIA attestation [NVIDIA-ATTEST] and Arm CCA [ARM-CCA] can provide protected
+    execution and trust inputs. These technologies are cited as industrial alignment
+    and integration points, not as assertions of vulnerability, deficiency, non-conformance,
+    affiliation, or endorsement. The proposed delta is an effectuation-bound invariant:
+    if revocation becomes authoritative before an act crosses the protected effectuation
+    boundary, a previously valid permit must not remain sufficient merely because
+    its signature, expiry, sender constraint, earlier authorization decision, or cached
+    status result is still valid. The document therefore focuses on the ordering and
+    binding between revocation state and the exact protected commit, including queued
+    work, multi-hop delegation, alternate effectuation paths, rollback, crash recovery,
+    and TOCTOU races. The document asks the IETF community whether existing standards
+    or deployed mechanisms already provide this invariant in full, where the correct
+    effectuation boundary lies, and what interoperability work, if any, is justified.
+    Criticism, corrections, counterexamples, implementation experience, and pointers
+    to existing equivalent mechanisms are explicitly invited.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-das-finality-bound-revocation-00
+    docid:
+    - id: draft-das-finality-bound-revocation-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-das-finality-bound-revocation-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

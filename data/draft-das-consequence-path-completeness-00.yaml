@@ -1,0 +1,126 @@
+---
+schema-version: v1.2.3
+id: draft-das-consequence-path-completeness-00
+title:
+- content: 'When the Gate Can Be Bypassed: Consequence-Path Completeness for Execution
+    Finality'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-das-consequence-path-completeness-00
+  type: src
+type: standard
+docid:
+- id: draft-das-consequence-path-completeness-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.das-consequence-path-completeness
+  type: IETF
+  scope: anchor
+docnumber: I-D.das-consequence-path-completeness
+date:
+- type: published
+  value: '2026-09-15'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Sangam
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Das
+        language:
+        - en
+      completename:
+        content: Sangam Das
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Independent
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-09-15'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>A perfectly correct authorization or security gate does not prevent
+    a protected consequence if the same effect remains technically reachable through
+    another path. High-consequence systems commonly place authentication, authorization,
+    policy, attestation, or execution-finality checks at identified API, gateway,
+    Resource Server, operating-system, service-perimeter, or hardware boundaries.
+    The vulnerability examined here is therefore a coverage failure: the protected
+    gate can be sound while the effect can go around it. This deserves high attention
+    where the bypass can produce irreversible, financial, safety-relevant, privacy-sensitive,
+    sovereign, or mission- critical consequences. Existing security architecture already
+    addresses important parts of this problem. The reference-monitor concept requires
+    complete mediation, tamper resistance, and verifiability; OAuth Resource Servers
+    validate authorization for requests they receive; gateways, service meshes, cloud
+    policy systems, and service perimeters mediate configured flows; RATS provides
+    trust evidence for components; and confidential-computing or hardware isolation
+    can provide protected enforcement locations. If any existing mechanism actually
+    mediates every route capable of producing the defined consequence under the stated
+    threat model, that deployment already satisfies the core property described here
+    and no additional component is required merely for duplication. The residual problem
+    arises when enforcement coverage is narrower than the consequence: for example,
+    when an approved API hands work to a queue or database with other ingress paths,
+    a service perimeter covers selected services while another interface remains effect-
+    capable, or a software gate coexists with administrative, recovery, device, DMA,
+    storage, or management-plane routes. This document introduces a consequence-oriented
+    execution-finality formulation: a Protected Consequence K, an Effectuation Domain
+    D, a generation- indexed directed Effectuation Graph G_g, an Effectuation Path
+    Set P_g(K,D), a Finality Cut Set F, and a protected Path-Set Generation g. Prevention
+    is claimed only when removal of the valid enforcement set F disconnects every
+    admissible source from the consequence node, every member of F enforces an equivalent
+    load-bearing finality predicate, and topology changes cannot silently inherit
+    an older completeness claim. Where path discovery is incomplete, enforcement is
+    bypassable, topology state is stale, or only selected interfaces are covered,
+    the mechanism is mitigation or detection rather than the same prevention guarantee.
+    The model is relevant to AI-agent tool execution, cloud authorization, service
+    meshes, financial and database commits, operating-system and device actions, confidential
+    computing, accelerator/DPU/SmartNIC infrastructure, and industrial control. Microsoft
+    Azure Policy, Amazon Verified Permissions/Cedar, Google Cloud VPC Service Controls,
+    NVIDIA attestation, and Arm CCA are cited only as complementary industrial comparison
+    or integration points, not as assertions of vulnerability, deficiency, non-conformance,
+    affiliation, or endorsement. The proposed delta is not invention of complete mediation.
+    It is an explicit, testable mapping of complete-mediation reasoning to a protected
+    consequence across heterogeneous distributed software and hardware paths, with
+    coverage bound to a topology generation and to effectuation-time finality. Criticism,
+    corrections, counterexamples, prior-art pointers, evidence of equivalent existing
+    mechanisms, and cases where path completeness cannot be established at acceptable
+    cost are explicitly invited.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-das-consequence-path-completeness-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

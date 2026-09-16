@@ -1,0 +1,131 @@
+---
+schema-version: v1.2.3
+id: draft-das-third-party-decision-binding-00
+title:
+- content: 'Trust Me, I Checked: Verifiable Third-Party Decision Binding at the Execution-Finality
+    Boundary'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-das-third-party-decision-binding-00
+  type: src
+type: standard
+docid:
+- id: draft-das-third-party-decision-binding-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.das-third-party-decision-binding
+  type: IETF
+  scope: anchor
+docnumber: I-D.das-third-party-decision-binding
+date:
+- type: published
+  value: '2026-09-15'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Sangam
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Das
+        language:
+        - en
+      completename:
+        content: Sangam Das
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Independent
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-09-15'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: '<p>High-consequence distributed systems frequently allow one component
+    to act based on a decision produced by another component, such as an authorization
+    server, policy engine, risk service, attestation Verifier, compliance service,
+    workload-identity authority, or safety controller. The vulnerability is not limited
+    to forged credentials: a compromised or incorrectly designed intermediary can
+    claim that a required third-party check succeeded, replay an earlier decision,
+    substitute evidence from a different act or context, suppress a required DENY,
+    or retain evidence only for audit while the protected effect remains technically
+    independent of that evidence. The issue deserves high attention where the downstream
+    consequence is financial, administrative, privacy-sensitive, safety-relevant,
+    infrastructure-changing, or otherwise difficult to reverse. Existing mechanisms
+    solve important parts of this problem. OAuth Token Introspection [RFC7662] lets
+    a protected resource query token state; HTTP Message Signatures [RFC9421] provide
+    integrity and authenticity for selected HTTP message components; RATS [RFC9334]
+    provides Evidence, Verifiers, and Attestation Results; Transaction Tokens [TXN-TOKENS]
+    propagate identity and authorization context through trusted call chains; SCITT
+    [RFC9943] provides signed statements, transparency, and verifiable receipts; and
+    current authorization- evidence work [MUNOZ-EVIDENCE] [MUNOZ-SCITT] defines signed
+    pre-execution Permits bound to canonical request material. Where one of these
+    mechanisms is verified by the actual non- bypassable effectuation boundary and
+    already proves the required decision for the exact act, current context, and authorized
+    use, that deployment can already satisfy the property described here. The residual
+    gap arises only where the consequential component receives an upstream claim such
+    as "the external check passed", where authentic evidence is bound to the wrong
+    act, authority, tenant, purpose, generation, or sink, where valid evidence has
+    become stale or replayable, where only a subset of required authorities is represented,
+    or where evidence exists but is not a load-bearing prerequisite of effectuation.
+    This document introduces an architectural role called External Decision Evidence
+    (EDE). EDE is not a new wire format: an existing Permit, SCITT statement or receipt,
+    Attestation Result, live authenticated decision response, or other protected result
+    can instantiate EDE when its semantics satisfy the deployment profile. The proposed
+    invariant is that a Candidate Act remains non-effective until the Finality Sink
+    independently establishes that every required external decision authority issued
+    an applicable decision for the concrete act, under the required decision basis
+    and current state, with freshness, audience or sink binding, and authorized-use
+    semantics appropriate to the deployment. Prevention is claimed only when the protected
+    consequence cannot occur without successful verification of the required evidence
+    and alternate effectuation paths cannot bypass that verification. Otherwise the
+    mechanism provides auditability, accountability, detection, or mitigation rather
+    than the same prevention guarantee. The model is intended to complement, not criticize
+    or replace, OAuth, WIMSE, SCITT, RATS, externalized policy systems such as Amazon
+    Verified Permissions/Cedar, continuous-access systems such as Microsoft Entra
+    Continuous Access Evaluation, Google Cloud IAM controls, and protected-compute
+    technologies such as NVIDIA attestation and Arm CCA. The proposed delta is not
+    the invention of signatures, authorization evidence, receipts, or attestation
+    results; it is the effectuation-time requirement that independently verifiable
+    required decisions become load-bearing for the exact protected act. Criticism,
+    corrections, counterexamples, implementation experience, prior-art pointers, and
+    evidence that existing mechanisms already provide the full invariant are explicitly
+    invited.</p>'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-das-third-party-decision-binding-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
