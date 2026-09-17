@@ -1,0 +1,128 @@
+---
+schema-version: v1.2.3
+id: draft-das-composite-execution-finality-01
+title:
+- content: 'Partial Commit Is Not Finality: Composite Candidate Acts Across Multiple
+    Finality Sinks'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-das-composite-execution-finality-01
+  type: src
+type: standard
+docid:
+- id: draft-das-composite-execution-finality-01
+  type: Internet-Draft
+  primary: true
+- id: I-D.das-composite-execution-finality
+  type: IETF
+  scope: anchor
+docnumber: I-D.das-composite-execution-finality
+date:
+- type: published
+  value: '2026-09-16'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Sangam
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Das
+        language:
+        - en
+      completename:
+        content: Sangam Das
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Independent
+  role:
+  - type: author
+version:
+- draft: '01'
+revdate: '2026-09-16'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: '<p>An agent, a payment orchestrator, or a control-plane applicator often
+    intends one Candidate Act that would become real only as several consequences:
+    a settlement post, a ledger write, a tool invoke, a notification, a radio enable.
+    [DAS-HANDLE] specifies verify, consume, and receipt at one Finality Sink. It does
+    not say what "the act was permitted" means when sink S1 has consumed and posted
+    and sink S2 has rejected, timed out, or committed a different digest. Existing
+    distributed-transaction tools already address adjacent problems. Two-phase commit,
+    XA, sagas, TCC, transactional outbox, and workflow engines coordinate steps. OAuth,
+    WIMSE, RATS, and SCITT still name identity, environment, and signed statements.
+    None of them, by themselves, bind N sink-local Execution Handles to one composite
+    Act Digest and require that no child consequence become externally effective unless
+    every required child reaches a defined terminal state. This document specifies
+    Composite Candidate Acts, child handles, a coordinator that may only prepare,
+    a two-phase consume rule, and the distinction between prevention (no child commits
+    unless the composite closes) and mitigation (compensate after a partial post).
+    Compensation is itself a Candidate Act. It is not a silent undo and not a license
+    to skip verify on the original child. The join is closed by a durable, linearizable
+    Composite Decision Log holding one value per composite: empty, COMMIT, or ABORT,
+    written only by compare-and-swap so that the first writer wins. The coordinator
+    MUST win the log before sending a decision to any child. A prepared child whose
+    reservation timer expires MUST consult the log: it commits if COMMIT is recorded,
+    releases if ABORT is recorded, attempts its own compare-and-swap of ABORT if the
+    log is empty, and holds its reservation (HOLD) only if the log is unreachable.
+    No child acts on silence alone. This is not a new consensus protocol and not a
+    claim that XA is obsolete. Profiles that cannot obtain prepare-from-every-sink,
+    or cannot reach a durable linearizable decision log, MUST NOT claim all- or-none
+    prevention. Three rejections are expected and are treated as design constraints.
+    "Saga plus handle is enough" is accepted when each saga step already reconstructs
+    the live child, consumes a child handle, and cannot log SUCCESS after a required
+    child rejects; this draft then shrinks to join fields. Prepare across N sinks
+    is a latency tax only if consume-state is global; it is per child handle, and
+    a no_prepare mail or MCP child must use the mitigation profile rather than pretend
+    2PC. Child sinks reconstruct only their own pending effect, not a mesh-wide CAD.
+    Reviewers who would reject on saga, performance, or reconstruction grounds are
+    asked to read those sections before discarding the document. Criticism, including
+    "this should stay a note in the handle draft," remains invited.</p>'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-das-composite-execution-finality-00
+    docid:
+    - id: draft-das-composite-execution-finality-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-das-composite-execution-finality-00
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-das-composite-execution-finality-01
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
