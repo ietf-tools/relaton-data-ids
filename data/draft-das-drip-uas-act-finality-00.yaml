@@ -1,0 +1,153 @@
+---
+schema-version: v1.2.3
+id: draft-das-drip-uas-act-finality-00
+title:
+- content: 'Cleared to Fly or Drive Is Not Cleared to Act: Actuator-Level Execution
+    Finality and Compact Act Evidence for UAS and Autonomous Vehicles'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-das-drip-uas-act-finality-00
+  type: src
+type: standard
+docid:
+- id: draft-das-drip-uas-act-finality-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.das-drip-uas-act-finality
+  type: IETF
+  scope: anchor
+docnumber: I-D.das-drip-uas-act-finality
+date:
+- type: published
+  value: '2026-09-18'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Sangam
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Das
+        language:
+        - en
+      completename:
+        content: Sangam Das
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Independent Inventor
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-09-18'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: '<p>Problem: Unmanned Aircraft System (UAS) trust infrastructure answers
+    two questions well. Remote Identification (RID), strengthened by the Drone Remote
+    ID Protocol (DRIP), answers "who is this aircraft?", and UAS Traffic Management
+    (UTM), U-space, and geo-awareness answer "may this flight take place here and
+    now?". Neither answers the question that decides physical consequence: may this
+    specific act -- arming motors, crossing into a newly restricted volume, releasing
+    a delivery payload, activating a camera over a protected area, emitting on a radio
+    band, or joining a coordinated multi-aircraft manoeuvre -- become effective at
+    this actuator, at this instant, under the airspace and revocation state that is
+    current now? Authorizations are granted before or at take-off, while acts are
+    executed continuously by mission computers and autonomy stacks that can be compromised,
+    misled, coerced with validly signed commands, or cut off from their authorities.
+    Observers on the ground, in turn, can verify an aircraft''s identity but not whether
+    what it is doing was authorized before it happened. Solution: The IETF-facing
+    contribution of this document is Compact Broadcast Act Evidence: 16-octet per-act
+    decision records authenticated with a TESLA-style one-way key chain sealed inside
+    a Protected Enforcement Domain and anchored to the aircraft''s DRIP identity.
+    This lets an Observer verify, after a short disclosure delay and within the 25-octet
+    Broadcast RID message budget, that the protected enforcement domain made an allow,
+    deny, or safe-state decision before the corresponding evidence key was disclosed,
+    without requiring a public-key signature on every act. The evidence mechanism
+    is coupled to an execution-finality profile in which each safety-significant or
+    externally consequential act remains non- effective as a Candidate Act until the
+    Protected Enforcement Domain verifies an act-bound, sink-bound Execution Handle
+    against live trusted context, consumes current authority state atomically, commits
+    a Finality Receipt, and only then releases the physical enablement condition at
+    the Finality Sink. The profile also specifies act classes and sinks, self-contained
+    object fields, sink processing pseudocode, envelope handles for high-rate control,
+    a boundary- proximity revalidation policy, bounded offline operation, and composite
+    multi-aircraft semantics. For constrained onboard, air-to- air, telemetry, or
+    other small-frame links, the profile also defines an optional Beacon Proof Capsule
+    (BPC): a compact act-bound and sink- bound execution-proof representation using
+    an Authority Reference, freshness and generation state, a context commitment,
+    a keyed binding commitment, explicit truncation-risk sizing, authenticated multi-
+    frame reconstruction when necessary, and fail-closed resolver semantics. A BPC
+    is an input to execution verification; the AER/KDR/ Anchor mechanism is output
+    evidence of the PED decision, and the two roles are intentionally non-interchangeable.
+    Additional profiles: This document also describes three narrowly scoped execution-finality
+    embodiments: conflict-set-bound Detect-and- Avoid (DAA) resolution finality for
+    UAS, emergency-scene temporary authority finality for autonomous road vehicles
+    as an informative cross-domain application, and atomic control-authority handover
+    with monotonic authority epochs for autonomous motion platforms. These profiles
+    preserve the same rule: an authenticated or correctly computed instruction remains
+    a Candidate Act until the current effectuation boundary independently verifies
+    the state on which that instruction depends. In an autonomous road vehicle, that
+    boundary may be a protected motion-admission gate rather than a motor or ESC gate,
+    so the architecture can coexist with the vehicle''s existing perception, planning,
+    braking, steering, and minimal-risk-control functions. Industrial context and
+    complementarity: The mechanism complements, and does not replace, Broadcast and
+    Network RID, DRIP Entity Tags and authentication, DET resolution through DNS,
+    UTM and U-space services, geo-awareness, Detect-and-Avoid, flight-control safety
+    logic, automotive ADAS/autonomy stacks, remote-assistance systems, and authenticated
+    command channels. Publicly described examples of the kinds of software-defined
+    or autonomy-enabled platforms to which this boundary can be complementary include
+    Tesla driver-assistance systems, BYD DiPilot and related intelligent-driving platforms,
+    DJI enterprise drone automation, Boeing autonomous and uncrewed aircraft systems,
+    and Lockheed Martin/Sikorsky autonomous aircraft systems. These names are illustrative
+    only: this document does not state or imply that any named organization uses,
+    endorses, requires, or has evaluated this profile. Their existing perception,
+    planning, stabilization, DAA, ADAS, command-and-control, and safety mechanisms
+    remain in place; the proposed finality layer operates later, at a protected motion-admission
+    or actuator boundary, to verify the concrete pending act against current protected
+    authority and state before effectuation. The scope of this document remains strictly
+    civil and excludes weapon release, targeting, and counter-UAS engagement. This
+    is an individual Informational Internet-Draft, not a DRIP WG work item. In short,
+    its IETF/IRTF relevance is to DRIP (DET-anchored compact act evidence for Observers),
+    RATS (attestation of the protected enforcement domain), COSE/CBOR (deterministic
+    compact objects), ACE (constrained scoped authorization as input rather than effectuation),
+    SCITT (later audit of receipts), and T2TRG (constrained Things with multiple authorities).
+    No WG adoption or code-point allocation is requested in this version; the draft
+    is offered for technical discussion in those communities and in UAS, Remote ID,
+    constrained-security, autonomous-vehicle, and aviation standards forums.</p>'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-das-drip-uas-act-finality-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
