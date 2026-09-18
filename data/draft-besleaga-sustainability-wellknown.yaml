@@ -13,15 +13,15 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: <p>This document defines the "sustainability-data" well-known URI. This
-    URI provides a uniform, out-of-band convention for web servers and digital services
-    to publish aggregated environmental impact, energy consumption, and carbon footprint
-    metrics for a declared reporting subject -- typically the publishing origin itself.
-    The convention publishes a single, cacheable JSON document per origin, described
-    by formal schemas and discoverable at a fixed location without prior arrangement,
-    so that environmental disclosures can be located, validated, and ingested automatically.
-    Publication is voluntary, and the metrics are self-asserted claims of the publisher,
-    linked to the publisher's methodology and supporting evidence.</p>
+- content: <p>This document defines the "sustainability-data" well-known URI, at which
+    a web origin publishes a single JSON document declaring the energy consumption,
+    carbon footprint, and related environmental metrics of a reporting subject, typically
+    the origin itself. The declaration is described by formal schemas and located
+    at a fixed path, so that it can be retrieved, validated, and ingested automatically.
+    It carries an optional embedded signature, may reference the declarations of upstream
+    providers from which its figures derive, links to a methodology, and may link
+    to third-party attestations. The metrics are self-asserted claims of the publisher.
+    This document registers the well-known URI and the media type application/sustainability-data+json.</p>
   language:
   - en
   script:
@@ -97,6 +97,16 @@ relation:
       primary: true
     formattedref:
       content: draft-besleaga-sustainability-wellknown-06
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-besleaga-sustainability-wellknown-07
+    docid:
+    - id: draft-besleaga-sustainability-wellknown-07
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-besleaga-sustainability-wellknown-07
       format: text/plain
 ext:
   schema-version: v1.0.1

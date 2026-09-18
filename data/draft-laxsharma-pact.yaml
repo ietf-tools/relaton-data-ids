@@ -2,7 +2,8 @@
 schema-version: v1.2.3
 id: draft-laxsharma-pact
 title:
-- content: 'PACT: Liability and Settlement for Autonomous Agent Contracts'
+- content: 'PACT: Co-Signed Task Contracts, Delivery and Verdict Records, and Outcome
+    Records for Autonomous Agents'
   language:
   - en
   script:
@@ -13,21 +14,20 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>A growing family of specifications lets autonomous agents establish
-    identity, delegate authority, record what they did, and move money. None of them
-    makes one party financially answerable to another for a result that was not delivered.
-    This document specifies PACT, which adds liability as a required, co-signed member
-    of an agent contract and propagates it through a subcontract tree. PACT defines
-    the Verifiable Task Contract, a signed JSON object binding parties, scope, price,
-    verification profile, and an explicit allocation of liability; the Delivery object
-    that a contract is judged against; an escrowed settlement procedure whose release
-    is conditioned on a stated assurance level rather than on elapsed time; and a
-    subcontract tree in which a parent's Work Attestation commits to its children
-    by Merkle root and liability cascades upward. PACT does not define an identity
-    format, an authorization model, an audit architecture, a transparency service,
-    a payment rail, or a reputation system. It composes existing work for all of these.
-    Its settlement loop is an instance of optimistic fair exchange, and its bond-sizing
-    rule is the classical deterrence bound; both are cited rather than reintroduced.</p>"
+- content: "<p>Autonomous agents can already prove who they are, show whose authority
+    they act under, find and call one another, and pay. What no existing specification
+    lets them do is agree on a task in a form a third party can check, deliver against
+    it, have the delivery judged by someone other than the performer, and carry away
+    a record of the outcome that a stranger can verify. This document specifies PACT,
+    a set of signed JSON records that closes that gap. PACT defines four things: a
+    co-signed task contract whose digest covers its signature set; a Verdict record
+    bound by digest to the Delivery it judges; a Facilitator-signed event trace and
+    Outcome Record for every contract, recorded once, in one order, by a party other
+    than the performer; and a Merkle commitment from a parent's Outcome Record to
+    its subcontracts' Outcome Records. Settlement terms are carried by reference to
+    a profile defined outside this document. This document specifies no escrow, custody
+    or release of value, and takes no position on the legal effect of any record it
+    defines.</p>"
   language:
   - en
   script:
@@ -53,6 +53,16 @@ relation:
       primary: true
     formattedref:
       content: draft-laxsharma-pact-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-laxsharma-pact-02
+    docid:
+    - id: draft-laxsharma-pact-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-laxsharma-pact-02
       format: text/plain
 ext:
   schema-version: v1.0.1
