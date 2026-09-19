@@ -1,29 +1,29 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-spring-stamp-srpm-srv6-04
+id: draft-gandhi-ippm-stamp-mpls-hdr-09
 title:
-- content: Performance Measurement Using Simple Two-Way Active Measurement Protocol
-    (STAMP) for Segment Routing over IPv6 (SRv6) Data Plane
+- content: Simple Two-Way Active Measurement Protocol (STAMP) Extensions for Reflecting
+    STAMP Packet MPLS Network Action Headers
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-spring-stamp-srpm-srv6-04
+- content: https://datatracker.ietf.org/doc/html/draft-gandhi-ippm-stamp-mpls-hdr-09
   type: src
 type: standard
 docid:
-- id: draft-ietf-spring-stamp-srpm-srv6-04
+- id: draft-gandhi-ippm-stamp-mpls-hdr-09
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-spring-stamp-srpm-srv6
+- id: I-D.gandhi-ippm-stamp-mpls-hdr
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-spring-stamp-srpm-srv6
+docnumber: I-D.gandhi-ippm-stamp-mpls-hdr
 date:
 - type: published
-  value: '2026-09-12'
+  value: '2026-09-18'
 contributor:
 - person:
     name:
@@ -57,35 +57,91 @@ contributor:
     name:
       given:
         forename:
-        - content: Clarence
+        - content: Tianran
           language:
           - en
         - language:
           - en
-          initial: C
+          initial: T
         formatted_initials:
-          content: C.
+          content: T.
           language:
           - en
       surname:
-        content: Filsfils
+        content: Zhou
         language:
         - en
       completename:
-        content: Clarence Filsfils
+        content: Tianran Zhou
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems, Inc.
+        - content: Huawei
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Bart
+        - content: Zhenqiang
+          language:
+          - en
+        - language:
+          - en
+          initial: Z
+        formatted_initials:
+          content: Z.
+          language:
+          - en
+      surname:
+        content: Li
+        language:
+        - en
+      completename:
+        content: Zhenqiang Li
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: China Mobile
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Fabian
+          language:
+          - en
+        - language:
+          - en
+          initial: F
+        formatted_initials:
+          content: F.
+          language:
+          - en
+      surname:
+        content: Ihle
+        language:
+        - en
+      completename:
+        content: Fabian Ihle
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: University of Tuebingen
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Bin
           language:
           - en
         - language:
@@ -96,95 +152,34 @@ contributor:
           language:
           - en
       surname:
-        content: Janssens
+        content: Wen
         language:
         - en
       completename:
-        content: Bart Janssens
+        content: Bin Wen
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Colt
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Mach
-          language:
-          - en
-        - language:
-          - en
-          initial: M
-        formatted_initials:
-          content: M.
-          language:
-          - en
-      surname:
-        content: Chen
-        language:
-        - en
-      completename:
-        content: Mach Chen
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Individual
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Richard
-          language:
-          - en
-        - language:
-          - en
-          initial: R
-        - language:
-          - en
-          initial: F
-        formatted_initials:
-          content: R. F.
-          language:
-          - en
-      surname:
-        content: Foote
-        language:
-        - en
-      completename:
-        content: Richard "Footer" Foote
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Nokia
+        - content: Comcast
   role:
   - type: author
 version:
-- draft: '04'
-revdate: '2026-09-12'
+- draft: '09'
+revdate: '2026-09-18'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>Segment Routing (SR) can be used to steer packets through a network
-    employing source routing. SR can be applied to both MPLS (SR-MPLS) and IPv6 (SRv6)
-    data planes. This document describes the procedures for performance measurement
-    in SRv6 networks using the Simple Two-Way Active Measurement Protocol (STAMP),
-    as specified in RFC 8762, along with its optional extensions specified in RFC
-    8972 and further augmented in RFC 9503. The procedures described in this document
-    are used for links and SRv6 paths (including Segment Lists of SRv6 Policies, SRv6
-    IGP best paths, and SRv6 IGP Flexible Algorithm (Flex- Algo) paths), as well as
-    Layer-3 and Layer-2 services carried over the SRv6 paths.</p>"
+- content: "<p>The Simple Two-Way Active Measurement Protocol (STAMP) and its optional
+    extensions can be used for Edge-to-Edge (E2E) active measurements. In Situ Operations,
+    Administration, and Maintenance (IOAM) data fields can be used for recording and
+    collecting Hop-by- Hop (HBH) and E2E operational and telemetry information. This
+    document extends STAMP to reflect MPLS Network Action Sub-Stacks and Post-Stack
+    MPLS Headers, for HBH and E2E active measurements, for example, by using the IOAM
+    data fields.</p>"
   language:
   - en
   script:
@@ -193,23 +188,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-spring-stamp-srpm-srv6-01
+    id: draft-gandhi-ippm-stamp-mpls-hdr-05
     docid:
-    - id: draft-ietf-spring-stamp-srpm-srv6-01
+    - id: draft-gandhi-ippm-stamp-mpls-hdr-05
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-spring-stamp-srpm-srv6-01
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-spring-stamp-srpm-srv6-05
-    docid:
-    - id: draft-ietf-spring-stamp-srpm-srv6-05
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-spring-stamp-srpm-srv6-05
+      content: draft-gandhi-ippm-stamp-mpls-hdr-05
       format: text/plain
 series:
 - type: main
@@ -220,7 +205,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-spring-stamp-srpm-srv6-04
+  number: draft-gandhi-ippm-stamp-mpls-hdr-09
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
