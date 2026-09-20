@@ -15,10 +15,12 @@ docid:
 abstract:
 - content: "<p>This document defines extensions to the Point-to-Point Protocol (PPP)
     Internet Protocol Control Protocol (IPCP) for negotiating encrypted DNS resolver
-    configurations. These extensions allow PPP peers to exchange information about
-    encrypted DNS servers supporting protocols such as DNS over TLS (DoT), DNS over
-    HTTPS (DoH), and DNS over QUIC (DoQ). The design maintains backward compatibility
-    with RFC 1877 while addressing modern security requirements.</p>"
+    configurations. Two IPCP Configuration Options are defined for primary and secondary
+    encrypted DNS resolvers. Each option carries an Authentication Domain Name (ADN),
+    an explicit list of resolver IP addresses, and Service Parameters (SvcParams)
+    using the wire format defined by RFC 9460. The design supports DNS over TLS (DoT),
+    DNS over HTTPS (DoH), and DNS over QUIC (DoQ), while maintaining coexistence with
+    the plaintext DNS configuration mechanism defined by RFC 1877.</p>"
   language:
   - en
   script:
@@ -54,6 +56,16 @@ relation:
       primary: true
     formattedref:
       content: draft-liu-add-ppp-edns-negotiation-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-liu-add-ppp-edns-negotiation-03
+    docid:
+    - id: draft-liu-add-ppp-edns-negotiation-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-liu-add-ppp-edns-negotiation-03
       format: text/plain
 ext:
   schema-version: v1.0.1

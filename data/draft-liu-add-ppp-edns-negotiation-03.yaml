@@ -1,6 +1,6 @@
 ---
 schema-version: v1.2.3
-id: draft-liu-add-ppp-edns-negotiation-02
+id: draft-liu-add-ppp-edns-negotiation-03
 title:
 - content: PPP IPCP Extensions for Encrypted DNS Server Negotiation
   language:
@@ -9,11 +9,11 @@ title:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-liu-add-ppp-edns-negotiation-02
+- content: https://datatracker.ietf.org/doc/html/draft-liu-add-ppp-edns-negotiation-03
   type: src
 type: standard
 docid:
-- id: draft-liu-add-ppp-edns-negotiation-02
+- id: draft-liu-add-ppp-edns-negotiation-03
   type: Internet-Draft
   primary: true
 - id: I-D.liu-add-ppp-edns-negotiation
@@ -22,7 +22,7 @@ docid:
 docnumber: I-D.liu-add-ppp-edns-negotiation
 date:
 - type: published
-  value: '2026-03-23'
+  value: '2026-09-19'
 contributor:
 - person:
     name:
@@ -84,34 +84,6 @@ contributor:
     name:
       given:
         forename:
-        - content: Jian
-          language:
-          - en
-        - language:
-          - en
-          initial: J
-        formatted_initials:
-          content: J.
-          language:
-          - en
-      surname:
-        content: Weng
-        language:
-        - en
-      completename:
-        content: Jian Weng
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Guangzhou University
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
         - content: Guanggang
           language:
           - en
@@ -136,37 +108,9 @@ contributor:
         - content: Jinan University
   role:
   - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Yinyan
-          language:
-          - en
-        - language:
-          - en
-          initial: "Y"
-        formatted_initials:
-          content: Y.
-          language:
-          - en
-      surname:
-        content: Zhang
-        language:
-        - en
-      completename:
-        content: Yinyan Zhang
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Jinan University
-  role:
-  - type: author
 version:
-- draft: '02'
-revdate: '2026-03-23'
+- draft: '03'
+revdate: '2026-09-19'
 language:
 - en
 script:
@@ -174,10 +118,12 @@ script:
 abstract:
 - content: "<p>This document defines extensions to the Point-to-Point Protocol (PPP)
     Internet Protocol Control Protocol (IPCP) for negotiating encrypted DNS resolver
-    configurations. These extensions allow PPP peers to exchange information about
-    encrypted DNS servers supporting protocols such as DNS over TLS (DoT), DNS over
-    HTTPS (DoH), and DNS over QUIC (DoQ). The design maintains backward compatibility
-    with RFC 1877 while addressing modern security requirements.</p>"
+    configurations. Two IPCP Configuration Options are defined for primary and secondary
+    encrypted DNS resolvers. Each option carries an Authentication Domain Name (ADN),
+    an explicit list of resolver IP addresses, and Service Parameters (SvcParams)
+    using the wire format defined by RFC 9460. The design supports DNS over TLS (DoT),
+    DNS over HTTPS (DoH), and DNS over QUIC (DoQ), while maintaining coexistence with
+    the plaintext DNS configuration mechanism defined by RFC 1877.</p>"
   language:
   - en
   script:
@@ -194,16 +140,6 @@ relation:
     formattedref:
       content: draft-liu-add-ppp-edns-negotiation-00
       format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-liu-add-ppp-edns-negotiation-03
-    docid:
-    - id: draft-liu-add-ppp-edns-negotiation-03
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-liu-add-ppp-edns-negotiation-03
-      format: text/plain
 series:
 - type: main
   title:
@@ -213,7 +149,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-liu-add-ppp-edns-negotiation-02
+  number: draft-liu-add-ppp-edns-negotiation-03
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
