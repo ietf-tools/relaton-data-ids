@@ -1,93 +1,34 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-bier-ping-27
+id: draft-ietf-opsawg-pcapng-06
 title:
-- content: Bit Index Explicit Replication (BIER) Ping and Trace
+- content: PCAP Now Generic (pcapng) Capture File Format
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-bier-ping-27
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-pcapng-06
   type: src
 type: standard
 docid:
-- id: draft-ietf-bier-ping-27
+- id: draft-ietf-opsawg-pcapng-06
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-bier-ping
+- id: I-D.ietf-opsawg-pcapng
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-bier-ping
+docnumber: I-D.ietf-opsawg-pcapng
 date:
 - type: published
-  value: '2026-05-30'
+  value: '2026-09-19'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Nagendra
-          language:
-          - en
-        - language:
-          - en
-          initial: "N"
-        - language:
-          - en
-          initial: K
-        formatted_initials:
-          content: N. K.
-          language:
-          - en
-      surname:
-        content: Nainar
-        language:
-        - en
-      completename:
-        content: Nagendra Kumar Nainar
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: NVIDIA
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Carlos
-          language:
-          - en
-        - language:
-          - en
-          initial: C
-        formatted_initials:
-          content: C.
-          language:
-          - en
-      surname:
-        content: Pignataro
-        language:
-        - en
-      completename:
-        content: Carlos Pignataro
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: North Carolina State University
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Mach
+        - content: Michael
           language:
           - en
         - language:
@@ -98,24 +39,52 @@ contributor:
           language:
           - en
       surname:
-        content: Chen
+        content: Tüxen
         language:
         - en
       completename:
-        content: Mach Chen
+        content: Michael Tüxen
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei Technologies
+        - content: Muenster University of Applied Sciences
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Greg
+        - content: Fulvio
+          language:
+          - en
+        - language:
+          - en
+          initial: F
+        formatted_initials:
+          content: F.
+          language:
+          - en
+      surname:
+        content: Risso
+        language:
+        - en
+      completename:
+        content: Fulvio Risso
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Politecnico di Torino
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Guy
           language:
           - en
         - language:
@@ -126,32 +95,54 @@ contributor:
           language:
           - en
       surname:
-        content: Mirsky
+        content: Harris
         language:
         - en
       completename:
-        content: Greg Mirsky
+        content: Guy Harris
+        language:
+        - en
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Michael
+          language:
+          - en
+        - language:
+          - en
+          initial: M
+        formatted_initials:
+          content: M.
+          language:
+          - en
+      surname:
+        content: Richardson
+        language:
+        - en
+      completename:
+        content: Michael Richardson
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Independent
+        - content: Sandelman Software Works
   role:
   - type: author
 version:
-- draft: '27'
-revdate: '2026-05-30'
+- draft: '06'
+revdate: '2026-09-19'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>Bit Index Explicit Replication (BIER) is a multicast forwarding architecture
-    designed to simplify and optimize multicast delivery. This document specifies
-    the mechanism and basic BIER OAM packet format that can be used to perform failure
-    detection and isolation on the BIER data plane without any dependency on other
-    layers, like the IP layer.</p>"
+- content: "<p>This document describes a format to record captured packets to a file.
+    This format is extensible; Wireshark can currently read and write it, and libpcap
+    can currently read some pcapng files.</p>"
   language:
   - en
   script:
@@ -160,23 +151,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-bier-ping-21
+    id: draft-ietf-opsawg-pcapng-02
     docid:
-    - id: draft-ietf-bier-ping-21
+    - id: draft-ietf-opsawg-pcapng-02
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-bier-ping-21
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-bier-ping-28
-    docid:
-    - id: draft-ietf-bier-ping-28
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-bier-ping-28
+      content: draft-ietf-opsawg-pcapng-02
       format: text/plain
 series:
 - type: main
@@ -187,7 +168,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-bier-ping-27
+  number: draft-ietf-opsawg-pcapng-06
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

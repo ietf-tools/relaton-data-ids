@@ -13,12 +13,16 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>The Lightweight Authenticated Key Exchange (LAKE) protocol, also known
-    as Ephemeral Diffie-Hellman over COSE (EDHOC), achieves post- quantum security
-    by adding new cipher suites with quantum-resistant algorithms, such as ML-DSA
-    for digital signatures and ML-KEM for key exchange. This document specifies how
-    the LAKE protocol operates in a post-quantum setting using both signature-based
-    and PSK-based authentication methods, and defines corresponding cipher suites.</p>"
+- content: "<p>The Lightweight Authenticated Key Exchange (LAKE) protocol, formerly
+    known as Ephemeral Diffie-Hellman over COSE (EDHOC), as originally specified in
+    RFC 9528, relies on Elliptic Curve Cryptography (ECC) for key exchange and authentication.
+    This document specifies how the LAKE protocol operates in a post-quantum setting
+    by defining new cipher suites using quantum-resistant algorithms, such as ML-DSA
+    for digital signatures and ML-KEM for key exchange. This document also updates
+    RFC 9528 by changing the name of the protocol from EDHOC to LAKE and updating
+    the EDHOC Method Types and Cipher Suites registries to add columns indicating,
+    respectively, whether a method requires and whether a cipher suite supports Diffie-Hellman
+    or Non-Interactive Key Exchange (NIKE) primitives.</p>"
   language:
   - en
   script:
@@ -34,6 +38,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-lake-pqsuites-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-lake-pqsuites-01
+    docid:
+    - id: draft-ietf-lake-pqsuites-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-lake-pqsuites-01
       format: text/plain
 ext:
   schema-version: v1.0.1

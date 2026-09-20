@@ -1,232 +1,213 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-opsawg-pcapng-04
+id: draft-fossati-seat-expat-04
 title:
-- content: PCAP Now Generic (pcapng) Capture File Format
+- content: Remote Attestation with Exported Authenticators
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-pcapng-04
+- content: https://datatracker.ietf.org/doc/html/draft-fossati-seat-expat-04
   type: src
 type: standard
 docid:
-- id: draft-ietf-opsawg-pcapng-04
+- id: draft-fossati-seat-expat-04
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-opsawg-pcapng
+- id: I-D.fossati-seat-expat
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-opsawg-pcapng
+docnumber: I-D.fossati-seat-expat
 date:
 - type: published
-  value: '2025-08-30'
+  value: '2026-09-19'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Michael
+        - content: Muhammad
           language:
           - en
         - language:
           - en
           initial: M
+        - language:
+          - en
+          initial: U
         formatted_initials:
-          content: M.
+          content: M. U.
           language:
           - en
       surname:
-        content: Tüxen
+        content: Sardar
         language:
         - en
       completename:
-        content: Michael Tüxen
+        content: Muhammad Usama Sardar
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Muenster University of Applied Sciences
+        - content: TU Dresden
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Fulvio
+        - content: Thomas
           language:
           - en
         - language:
           - en
-          initial: F
+          initial: T
         formatted_initials:
-          content: F.
+          content: T.
           language:
           - en
       surname:
-        content: Risso
+        content: Fossati
         language:
         - en
       completename:
-        content: Fulvio Risso
+        content: Thomas Fossati
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Politecnico di Torino
+        - content: Linaro
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Jasper
+        - content: Tirumaleswar
           language:
           - en
         - language:
           - en
-          initial: J
+          initial: T
         formatted_initials:
-          content: J.
+          content: T.
           language:
           - en
       surname:
-        content: Bongertz
+        content: Reddy.K
         language:
         - en
       completename:
-        content: Jasper Bongertz
+        content: Tirumaleswar Reddy.K
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Airbus Defence and Space CyberSecurity
+        - content: Nokia
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Gerald
+        - content: Yaron
           language:
           - en
         - language:
           - en
-          initial: G
+          initial: "Y"
         formatted_initials:
-          content: G.
+          content: Y.
           language:
           - en
       surname:
-        content: Combs
+        content: Sheffer
         language:
         - en
       completename:
-        content: Gerald Combs
+        content: Yaron Sheffer
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Wireshark Foundation
+        - content: Intuit
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Guy
+        - content: Hannes
           language:
           - en
         - language:
           - en
-          initial: G
+          initial: H
         formatted_initials:
-          content: G.
+          content: H.
           language:
           - en
       surname:
-        content: Harris
+        content: Tschofenig
         language:
         - en
       completename:
-        content: Guy Harris
+        content: Hannes Tschofenig
         language:
         - en
+    affiliation:
+    - organization:
+        name:
+        - content: University of the Bundeswehr Munich
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Eelco
-          language:
-          - en
         - language:
           - en
-          initial: E
+          initial: I
         formatted_initials:
-          content: E.
+          content: I.
           language:
           - en
       surname:
-        content: Chaudron
+        content: Mihalcea
         language:
         - en
       completename:
-        content: Eelco Chaudron
+        content: Ionuț Mihalcea
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Red Hat
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Michael
-          language:
-          - en
-        - language:
-          - en
-          initial: M
-        formatted_initials:
-          content: M.
-          language:
-          - en
-      surname:
-        content: Richardson
-        language:
-        - en
-      completename:
-        content: Michael Richardson
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Sandelman Software Works
+        - content: Arm Limited
   role:
   - type: author
 version:
 - draft: '04'
-revdate: '2025-08-30'
+revdate: '2026-09-19'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document describes a format to record captured packets to a file.
-    This format is extensible; Wireshark can currently read and write it, and libpcap
-    can currently read some pcapng files.</p>"
+- content: "<p>This specification defines a method for two parties in a communication
+    interaction to exchange Evidence and Attestation Results using exported authenticators,
+    as defined in [RFC9261]. Additionally, it introduces the cmw_attestation extension,
+    which allows attestation credentials to be included directly in the Certificate
+    message sent during the Exported Authenticator-based post-handshake authentication.
+    The approach supports both the passport and background check models from the RATS
+    architecture while ensuring that attestation remains bound to the underlying communication
+    channel.</p>"
   language:
   - en
   script:
@@ -235,23 +216,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-opsawg-pcapng-02
+    id: draft-fossati-seat-expat-03
     docid:
-    - id: draft-ietf-opsawg-pcapng-02
+    - id: draft-fossati-seat-expat-03
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-opsawg-pcapng-02
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-opsawg-pcapng-06
-    docid:
-    - id: draft-ietf-opsawg-pcapng-06
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-opsawg-pcapng-06
+      content: draft-fossati-seat-expat-03
       format: text/plain
 series:
 - type: main
@@ -262,7 +233,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-opsawg-pcapng-04
+  number: draft-fossati-seat-expat-04
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
