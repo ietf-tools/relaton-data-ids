@@ -1,146 +1,118 @@
 ---
 schema-version: v1.2.3
-id: draft-camarillo-rtgwg-lsn-00
+id: draft-wang-idr-flowspec-dip-origin-as-filter-14
 title:
-- content: Lightspeed Notification Protocol
+- content: Destination-IP-Origin-AS Filter for BGP Flow Specification
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-camarillo-rtgwg-lsn-00
+- content: https://datatracker.ietf.org/doc/html/draft-wang-idr-flowspec-dip-origin-as-filter-14
   type: src
 type: standard
 docid:
-- id: draft-camarillo-rtgwg-lsn-00
+- id: draft-wang-idr-flowspec-dip-origin-as-filter-14
   type: Internet-Draft
   primary: true
-- id: I-D.camarillo-rtgwg-lsn
+- id: I-D.wang-idr-flowspec-dip-origin-as-filter
   type: IETF
   scope: anchor
-docnumber: I-D.camarillo-rtgwg-lsn
+docnumber: I-D.wang-idr-flowspec-dip-origin-as-filter
 date:
 - type: published
-  value: '2026-03-02'
+  value: '2026-09-20'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Pablo
+        - content: Haibo
           language:
           - en
         - language:
           - en
-          initial: P
+          initial: H
         formatted_initials:
-          content: P.
+          content: H.
           language:
           - en
       surname:
-        content: Camarillo
+        content: Wang
         language:
         - en
       completename:
-        content: Pablo Camarillo
+        content: Haibo Wang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cisco
+        - content: Huawei
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Clarence
+        - content: Aijun
           language:
           - en
         - language:
           - en
-          initial: C
+          initial: A
         formatted_initials:
-          content: C.
+          content: A.
           language:
           - en
       surname:
-        content: Filsfils
+        content: Wang
         language:
         - en
       completename:
-        content: Clarence Filsfils
+        content: Aijun Wang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cisco
+        - content: China Telecom
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Nadav
+        - content: Shunwan
           language:
           - en
         - language:
           - en
-          initial: "N"
+          initial: S
         formatted_initials:
-          content: N.
+          content: S.
           language:
           - en
       surname:
-        content: Chachmon
+        content: Zhuang
         language:
         - en
       completename:
-        content: Nadav Chachmon
+        content: Shunwan Zhuang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Cisco
+        - content: Huawei
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Ofer
-          language:
-          - en
-        - language:
-          - en
-          initial: O
-        formatted_initials:
-          content: O.
-          language:
-          - en
-      surname:
-        content: Iny
-        language:
-        - en
-      completename:
-        content: Ofer Iny
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Cisco
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Yuanchao
+        - content: Yang
           language:
           - en
         - language:
@@ -151,77 +123,76 @@ contributor:
           language:
           - en
       surname:
-        content: Su
+        content: Huang
         language:
         - en
       completename:
-        content: Yuanchao Su
+        content: Yang Huang
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Alibaba
+        - content: Huawei
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Roy
+        - content: Tao
           language:
           - en
         - language:
           - en
-          initial: R
+          initial: T
         formatted_initials:
-          content: R.
+          content: T.
           language:
           - en
       surname:
-        content: Jiang
+        content: Qin
         language:
         - en
       completename:
-        content: Roy Jiang
+        content: Tao Qin
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Alibaba
+        - content: Huawei
   role:
   - type: author
 version:
-- draft: '00'
-revdate: '2026-03-02'
+- draft: '14'
+revdate: '2026-09-20'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: <p>This document defines the Lightspeed Notification Protocol (LSN), a
-    hardware-accelerated signaling mechanism designed for sub-100 microsecond network
-    convergence in AI/ML data center fabrics. By operating entirely within the forwarding
-    plane, LSN bypasses traditional CPU-based latencies to propagate link failures
-    and congestion via a hardware-efficient encoding. It serves as a high- speed complement
-    to routing protocols like BGP, providing an immediate hardware "veto" to prune
-    congested/failed paths while maintaining control-plane stability for path recovery.</p>
+- content: "<p>This document defines an extension to the Border Gateway Protocol (BGP)
+    Flow Specification (FlowSpec) to enable filtering based on the Origin Autonomous
+    System (AS) of the destination IP address. This extension is particularly useful
+    in mitigating Distributed Denial of Service (DDoS) attacks or optimizing traffic
+    redirection where the target IP addresses are numerous or rapidly changing, but
+    belong to a specific destination Origin AS.</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-camarillo-rtgwg-lsn-01
+    id: draft-wang-idr-flowspec-dip-origin-as-filter-08
     docid:
-    - id: draft-camarillo-rtgwg-lsn-01
+    - id: draft-wang-idr-flowspec-dip-origin-as-filter-08
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-camarillo-rtgwg-lsn-01
+      content: draft-wang-idr-flowspec-dip-origin-as-filter-08
       format: text/plain
 series:
 - type: main
@@ -232,7 +203,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-camarillo-rtgwg-lsn-00
+  number: draft-wang-idr-flowspec-dip-origin-as-filter-14
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
