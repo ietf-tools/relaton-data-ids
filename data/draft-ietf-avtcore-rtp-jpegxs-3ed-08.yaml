@@ -1,178 +1,163 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-bmwg-sr-bench-meth-08
+id: draft-ietf-avtcore-rtp-jpegxs-3ed-08
 title:
-- content: Benchmarking Methodology for Segment Routing (SR)
+- content: RTP Payload Format for ISO/IEC 21122 (JPEG XS)
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-bmwg-sr-bench-meth-08
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-avtcore-rtp-jpegxs-3ed-08
   type: src
 type: standard
 docid:
-- id: draft-ietf-bmwg-sr-bench-meth-08
+- id: draft-ietf-avtcore-rtp-jpegxs-3ed-08
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-bmwg-sr-bench-meth
+- id: I-D.ietf-avtcore-rtp-jpegxs-3ed
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-bmwg-sr-bench-meth
+docnumber: I-D.ietf-avtcore-rtp-jpegxs-3ed
 date:
 - type: published
-  value: '2026-08-27'
+  value: '2026-09-22'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Giuseppe
+        - content: Tim
           language:
           - en
         - language:
           - en
-          initial: G
+          initial: T
         formatted_initials:
-          content: G.
+          content: T.
           language:
           - en
       surname:
-        content: Fioccola
+        content: Bruylants
         language:
         - en
       completename:
-        content: Giuseppe Fioccola
+        content: Tim Bruylants
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei Technologies
+        - content: intoPIX S.A.
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Eduard
+        - content: Thomas
           language:
           - en
+        - language:
+          - en
+          initial: T
         formatted_initials:
+          content: T.
           language:
           - en
       surname:
-        content: V
+        content: Richter
         language:
         - en
       completename:
-        content: Eduard V
+        content: Thomas Richter
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei Technologies
+        - content: Fraunhofer IIS
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Paolo
+        - content: Corentin
           language:
           - en
         - language:
           - en
-          initial: P
+          initial: C
+        - language:
+          - en
+          initial: D
         formatted_initials:
-          content: P.
+          content: C. D.
           language:
           - en
       surname:
-        content: Volpato
+        content: Geeroms
         language:
         - en
       completename:
-        content: Paolo Volpato
+        content: Corentin Damman Geeroms
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei Technologies
+        - content: intoPIX S.A.
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Luis
+        - content: Antonin
           language:
           - en
         - language:
           - en
-          initial: L
-        - language:
-          - en
-          initial: M
+          initial: A
         formatted_initials:
-          content: L. M.
+          content: A.
           language:
           - en
       surname:
-        content: Contreras
+        content: Descampe
         language:
         - en
       completename:
-        content: Luis M. Contreras
+        content: Antonin Descampe
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Telefonica
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Bruno
-          language:
-          - en
-        - language:
-          - en
-          initial: B
-        formatted_initials:
-          content: B.
-          language:
-          - en
-      surname:
-        content: Decraene
-        language:
-        - en
-      completename:
-        content: Bruno Decraene
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Orange
+        - content: Université Catholique de Louvain
   role:
   - type: author
 version:
 - draft: '08'
-revdate: '2026-08-27'
+revdate: '2026-09-22'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document defines a methodology for benchmarking Segment Routing
-    (SR) performance for Segment Routing over IPv6 (SRv6) and MPLS (SR- MPLS).</p>"
+- content: "<p>This document specifies a Real-Time Transport Protocol (RTP) payload
+    format for transport of a video signal encoded with JPEG XS (ISO/IEC 21122). JPEG
+    XS is a low-latency and low-complexity video coding system. Employing this format
+    allows achieving encoding-decoding latencies confined to a fraction of a video
+    frame. This document revises RFC 9134 to incorporate support for new features
+    introduced in the third edition of JPEG XS. Most notably, it contains the necessary
+    provisions to support the TDC coding mode. This document obsoletes RFC 9134; however,
+    the revised payload format is designed to ensure that existing conforming implementations
+    of RFC 9134 remain valid under the updated specification. Additionally, this document
+    consolidates the errata of RFC 9134 and includes improvements and clarifications
+    for implementers and users.</p>"
   language:
   - en
   script:
@@ -181,23 +166,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-bmwg-sr-bench-meth-06
+    id: draft-ietf-avtcore-rtp-jpegxs-3ed-07
     docid:
-    - id: draft-ietf-bmwg-sr-bench-meth-06
+    - id: draft-ietf-avtcore-rtp-jpegxs-3ed-07
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-bmwg-sr-bench-meth-06
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-bmwg-sr-bench-meth-09
-    docid:
-    - id: draft-ietf-bmwg-sr-bench-meth-09
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-bmwg-sr-bench-meth-09
+      content: draft-ietf-avtcore-rtp-jpegxs-3ed-07
       format: text/plain
 series:
 - type: main
@@ -208,7 +183,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-bmwg-sr-bench-meth-08
+  number: draft-ietf-avtcore-rtp-jpegxs-3ed-08
 doctype: internet-draft
 ext:
   schema-version: v1.0.1

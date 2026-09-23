@@ -1,86 +1,34 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-bmwg-sr-bench-meth-04
+id: draft-carleton-workload-authz-grant-01
 title:
-- content: Benchmarking Methodology for Segment Routing
+- content: Workload Authorization Grant
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-bmwg-sr-bench-meth-04
+- content: https://datatracker.ietf.org/doc/html/draft-carleton-workload-authz-grant-01
   type: src
 type: standard
 docid:
-- id: draft-ietf-bmwg-sr-bench-meth-04
+- id: draft-carleton-workload-authz-grant-01
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-bmwg-sr-bench-meth
+- id: I-D.carleton-workload-authz-grant
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-bmwg-sr-bench-meth
+docnumber: I-D.carleton-workload-authz-grant
 date:
 - type: published
-  value: '2025-07-04'
+  value: '2026-09-22'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Giuseppe
-          language:
-          - en
-        - language:
-          - en
-          initial: G
-        formatted_initials:
-          content: G.
-          language:
-          - en
-      surname:
-        content: Fioccola
-        language:
-        - en
-      completename:
-        content: Giuseppe Fioccola
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Huawei Technologies
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Eduard
-          language:
-          - en
-        formatted_initials:
-          language:
-          - en
-      surname:
-        content: V
-        language:
-        - en
-      completename:
-        content: Eduard V
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Huawei Technologies
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Paolo
+        - content: Paul
           language:
           - en
         - language:
@@ -91,55 +39,108 @@ contributor:
           language:
           - en
       surname:
-        content: Volpato
+        content: Carleton
         language:
         - en
       completename:
-        content: Paolo Volpato
+        content: Paul Carleton
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei Technologies
+        - content: Anthropic
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Luis
+        - content: Nick
           language:
           - en
         - language:
           - en
-          initial: L
-        - language:
-          - en
-          initial: M
+          initial: "N"
         formatted_initials:
-          content: L. M.
+          content: N.
           language:
           - en
       surname:
-        content: Contreras
+        content: Steele
         language:
         - en
       completename:
-        content: Luis M. Contreras
+        content: Nick Steele
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Telefonica
+        - content: OpenAI
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Bruno
+        - content: Aaron
+          language:
+          - en
+        - language:
+          - en
+          initial: A
+        formatted_initials:
+          content: A.
+          language:
+          - en
+      surname:
+        content: Parecki
+        language:
+        - en
+      completename:
+        content: Aaron Parecki
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Okta
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Arndt
+          language:
+          - en
+        - language:
+          - en
+          initial: A
+        formatted_initials:
+          content: A.
+          language:
+          - en
+      surname:
+        content: Schwenkschuster
+        language:
+        - en
+      completename:
+        content: Arndt Schwenkschuster
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Defakto Security
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Brian
           language:
           - en
         - language:
@@ -150,30 +151,41 @@ contributor:
           language:
           - en
       surname:
-        content: Decraene
+        content: Campbell
         language:
         - en
       completename:
-        content: Bruno Decraene
+        content: Brian Campbell
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Orange
+        - content: Ping Identity
   role:
   - type: author
 version:
-- draft: '04'
-revdate: '2025-07-04'
+- draft: '01'
+revdate: '2026-09-22'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document defines a methodology for benchmarking Segment Routing
-    (SR) performance for Segment Routing over IPv6 (SRv6) and MPLS (SR- MPLS). It
-    builds upon RFC 2544, RFC 5180, RFC 5695 and RFC 8402.</p>"
+- content: "<p>This document defines the Workload Authorization Grant (WAG), by which
+    a workload hosted on a platform -- an AI agent is the motivating case -- obtains
+    access tokens from a third party's OAuth authorization server without requiring
+    an administrator to perform a per-workload provisioning step. Each workload is
+    identified by an opaque identifier that is never reassigned. The platform signs
+    a JWT authorization grant ([RFC7523]) that names one workload, and the workload
+    presents it at the token endpoint of an authorization server that has been configured,
+    once, to trust that platform. The authorization server does not reject a workload
+    because it has not seen it before. The workload's access is determined by the
+    authorization server's own policy, which may consult claims the platform asserts
+    about the workload. This document covers workloads acting on their own behalf.
+    Access on behalf of a user or other principal is out of scope, though the grant
+    is intended to compose with delegation mechanisms in which the workload is the
+    actor.</p>"
   language:
   - en
   script:
@@ -182,23 +194,13 @@ abstract:
 relation:
 - type: updates
   bibitem:
-    id: draft-ietf-bmwg-sr-bench-meth-01
+    id: draft-carleton-workload-authz-grant-00
     docid:
-    - id: draft-ietf-bmwg-sr-bench-meth-01
+    - id: draft-carleton-workload-authz-grant-00
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-bmwg-sr-bench-meth-01
-      format: text/plain
-- type: updatedBy
-  bibitem:
-    id: draft-ietf-bmwg-sr-bench-meth-09
-    docid:
-    - id: draft-ietf-bmwg-sr-bench-meth-09
-      type: Internet-Draft
-      primary: true
-    formattedref:
-      content: draft-ietf-bmwg-sr-bench-meth-09
+      content: draft-carleton-workload-authz-grant-00
       format: text/plain
 series:
 - type: main
@@ -209,7 +211,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-bmwg-sr-bench-meth-04
+  number: draft-carleton-workload-authz-grant-01
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
