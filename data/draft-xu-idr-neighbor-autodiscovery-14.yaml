@@ -1,49 +1,49 @@
 ---
 schema-version: v1.2.3
-id: draft-ietf-ccamp-flexe-yang-cm-00
+id: draft-xu-idr-neighbor-autodiscovery-14
 title:
-- content: YANG Data Model for FlexE Management
+- content: BGP Neighbor Discovery
   language:
   - en
   script:
   - Latn
   format: text/plain
 link:
-- content: https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-flexe-yang-cm-00
+- content: https://datatracker.ietf.org/doc/html/draft-xu-idr-neighbor-autodiscovery-14
   type: src
 type: standard
 docid:
-- id: draft-ietf-ccamp-flexe-yang-cm-00
+- id: draft-xu-idr-neighbor-autodiscovery-14
   type: Internet-Draft
   primary: true
-- id: I-D.ietf-ccamp-flexe-yang-cm
+- id: I-D.xu-idr-neighbor-autodiscovery
   type: IETF
   scope: anchor
-docnumber: I-D.ietf-ccamp-flexe-yang-cm
+docnumber: I-D.xu-idr-neighbor-autodiscovery
 date:
 - type: published
-  value: '2022-06-28'
+  value: '2026-09-22'
 contributor:
 - person:
     name:
       given:
         forename:
-        - content: Minxue
+        - content: Xiaohu
           language:
           - en
         - language:
           - en
-          initial: M
+          initial: X
         formatted_initials:
-          content: M.
+          content: X.
           language:
           - en
       surname:
-        content: Wang
+        content: Xu
         language:
         - en
       completename:
-        content: Minxue Wang
+        content: Xiaohu Xu
         language:
         - en
     affiliation:
@@ -56,62 +56,121 @@ contributor:
     name:
       given:
         forename:
-        - content: Liuyan
+        - content: Ketan
           language:
           - en
         - language:
           - en
-          initial: L
+          initial: K
         formatted_initials:
-          content: L.
+          content: K.
           language:
           - en
       surname:
-        content: Han
+        content: Talaulikar
         language:
         - en
       completename:
-        content: Liuyan Han
+        content: Ketan Talaulikar
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: China Mobile
+        - content: Individual
   role:
   - type: author
 - person:
     name:
       given:
         forename:
-        - content: Fan
+        - content: Kunyang
           language:
           - en
         - language:
           - en
-          initial: F
+          initial: K
         formatted_initials:
-          content: F.
+          content: K.
           language:
           - en
       surname:
-        content: Yang
+        content: Bi
         language:
         - en
       completename:
-        content: Fan Yang
+        content: Kunyang Bi
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: Huawei Technologies
+        - content: Huawei
   role:
   - type: author
 - person:
     name:
       given:
         forename:
+        - content: Jeff
+          language:
+          - en
+        - language:
+          - en
+          initial: J
+        formatted_initials:
+          content: J.
+          language:
+          - en
+      surname:
+        content: Tantsura
+        language:
+        - en
+      completename:
+        content: Jeff Tantsura
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Apstra
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Nikos
+          language:
+          - en
+        - language:
+          - en
+          initial: "N"
+        formatted_initials:
+          content: N.
+          language:
+          - en
+      surname:
+        content: Triantafillis
+        language:
+        - en
+      completename:
+        content: Nikos Triantafillis
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Amazon Web Services
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Xiang
+          language:
+          - en
         - language:
           - en
           initial: X
@@ -120,105 +179,49 @@ contributor:
           language:
           - en
       surname:
-        content: xiaobingNIU
+        content: Chen
         language:
         - en
       completename:
-        content: xiaobingNIU
+        content: Xiang Chen
         language:
         - en
     affiliation:
     - organization:
         name:
-        - content: ZTE
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Luis
-          language:
-          - en
-        - language:
-          - en
-          initial: L
-        - language:
-          - en
-          initial: M
-        formatted_initials:
-          content: L. M.
-          language:
-          - en
-      surname:
-        content: Contreras
-        language:
-        - en
-      completename:
-        content: Luis M. Contreras
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: Telefonica
-  role:
-  - type: author
-- person:
-    name:
-      given:
-        forename:
-        - content: Xufeng
-          language:
-          - en
-        - language:
-          - en
-          initial: X
-        formatted_initials:
-          content: X.
-          language:
-          - en
-      surname:
-        content: Liu
-        language:
-        - en
-      completename:
-        content: Xufeng Liu
-        language:
-        - en
-    affiliation:
-    - organization:
-        name:
-        - content: IBM Corporation
+        - content: IEIT System
   role:
   - type: author
 version:
-- draft: '00'
-revdate: '2022-06-28'
+- draft: '14'
+revdate: '2026-09-22'
 language:
 - en
 script:
 - Latn
 abstract:
-- content: "<p>This document defines a service provider targeted YANG data model for
-    the configuration and management of a Flex Ethernet (FlexE) network, including
-    FlexE group and FlexE client. The YANG module in this document conforms to the
-    Network Management Datastore Architecture (NMDA).</p>"
+- content: "<p>BGP is being used as the underlay routing protocol in some large- scaled
+    data centers (DCs). Most popular design followed is to do hop-by-hop external
+    BGP (EBGP) session configurations between neighboring routers on a per link basis.
+    The provisioning of BGP neighbors in routers across such a DC brings its own operational
+    complexity. This document introduces a BGP neighbor discovery mechanism that greatly
+    simplifies BGP operations in such DC and other networks by automatic setup of
+    BGP sessions between neighbor routers using this mechanism.</p>"
   language:
   - en
   script:
   - Latn
   format: text/html
 relation:
-- type: updatedBy
+- type: updates
   bibitem:
-    id: draft-ietf-ccamp-flexe-yang-cm-11
+    id: draft-xu-idr-neighbor-autodiscovery-04
     docid:
-    - id: draft-ietf-ccamp-flexe-yang-cm-11
+    - id: draft-xu-idr-neighbor-autodiscovery-04
       type: Internet-Draft
       primary: true
     formattedref:
-      content: draft-ietf-ccamp-flexe-yang-cm-11
+      content: draft-xu-idr-neighbor-autodiscovery-04
       format: text/plain
 series:
 - type: main
@@ -229,7 +232,7 @@ series:
     script:
     - Latn
     format: text/plain
-  number: draft-ietf-ccamp-flexe-yang-cm-00
+  number: draft-xu-idr-neighbor-autodiscovery-14
 doctype: internet-draft
 ext:
   schema-version: v1.0.1
