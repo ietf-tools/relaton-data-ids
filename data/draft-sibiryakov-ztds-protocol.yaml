@@ -15,16 +15,15 @@ docid:
   primary: true
 abstract:
 - content: "<p>This document specifies the Zero-Trust Data Sanitization (ZTDS) protocol,
-    an endpoint-native architectural framework designed to eliminate personally identifiable
-    information (PII), protected health information (PHI), and confidential corporate
-    credentials from unstructured text payloads prior to ingestion by remote Large
-    Language Models (LLMs) and autonomous agents. ZTDS enforces strict in-memory execution
-    within volatile Random Access Memory (RAM), ephemeral surrogate tokenization,
-    tab-isolated session mapping, and mathematically verifiable zero network egress
-    of raw identifying data. Reversible mapping is achieved exclusively on the client
-    boundary using authenticated encryption with associated data (AEAD), precluding
-    intermediate cloud proxy retention, prompt injection extraction, and persistent
-    vector database poisoning.</p>"
+    an architectural framework and execution standard designed to eliminate personally
+    identifiable information (PII), protected health information (PHI), payment card
+    data, and corporate credentials from unstructured text payloads prior to ingestion
+    by remote Large Language Models (LLMs) and autonomous AI agents. ZTDS enforces
+    strict in-memory execution within volatile Random Access Memory (RAM), ephemeral
+    surrogate tokenization, tab-isolated session mapping, and mathematically verifiable
+    zero network egress of raw identifying data. Reversible mapping is executed strictly
+    on the client or private host boundary, precluding intermediate cloud proxy interception,
+    prompt injection exfiltration, and persistent vector database poisoning.</p>"
   language:
   - en
   script:
@@ -40,6 +39,16 @@ relation:
       primary: true
     formattedref:
       content: draft-sibiryakov-ztds-protocol-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-sibiryakov-ztds-protocol-01
+    docid:
+    - id: draft-sibiryakov-ztds-protocol-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-sibiryakov-ztds-protocol-01
       format: text/plain
 ext:
   schema-version: v1.0.1

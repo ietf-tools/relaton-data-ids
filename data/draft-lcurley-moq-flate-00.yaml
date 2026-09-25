@@ -1,0 +1,83 @@
+---
+schema-version: v1.2.3
+id: draft-lcurley-moq-flate-00
+title:
+- content: DEFLATE Compressed Tracks for MoQ
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-lcurley-moq-flate-00
+  type: src
+type: standard
+docid:
+- id: draft-lcurley-moq-flate-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.lcurley-moq-flate
+  type: IETF
+  scope: anchor
+docnumber: I-D.lcurley-moq-flate
+date:
+- type: published
+  value: '2026-09-24'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Luke
+          language:
+          - en
+        - language:
+          - en
+          initial: L
+        formatted_initials:
+          content: L.
+          language:
+          - en
+      surname:
+        content: Curley
+        language:
+        - en
+      completename:
+        content: Luke Curley
+        language:
+        - en
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-09-24'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>This document specifies how a MoQ Transport [moqt] track carries DEFLATE-compressed
+    payloads. Each subgroup is one raw DEFLATE stream, sync flushed at each object
+    boundary, so every object stays self-delimited while later objects compress against
+    the earlier ones in the subgroup. Small repetitive payloads compress several times
+    better than they do alone, and a dropped group costs nothing beyond itself because
+    the window never spans one. Nothing is added to the wire: the application declares
+    the track compressed, and a relay forwards it unchanged.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-lcurley-moq-flate-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

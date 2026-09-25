@@ -1,0 +1,84 @@
+---
+schema-version: v1.2.3
+id: draft-lcurley-moq-e2ee-00
+title:
+- content: MoQ End-to-End Encryption Profile
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-lcurley-moq-e2ee-00
+  type: src
+type: standard
+docid:
+- id: draft-lcurley-moq-e2ee-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.lcurley-moq-e2ee
+  type: IETF
+  scope: anchor
+docnumber: I-D.lcurley-moq-e2ee
+date:
+- type: published
+  value: '2026-09-24'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Luke
+          language:
+          - en
+        - language:
+          - en
+          initial: L
+        formatted_initials:
+          content: L.
+          language:
+          - en
+      surname:
+        content: Curley
+        language:
+        - en
+      completename:
+        content: Luke Curley
+        language:
+        - en
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-09-24'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>This document specifies moq-e2ee-00, a versioned profile for end-to-
+    end encryption of MoQ application payloads. Authorized publishers and subscribers
+    share a 32-byte broadcast secret out of band. Each publisher instance mints an
+    epoch and publishes under an opaque broadcast path ending in it. HKDF-SHA-256
+    derives opaque physical track names and per-track AES-128-GCM keys from the secret
+    and the epoch; grouped frames and datagrams use separate key domains. Media frames
+    and datagrams carry only ciphertext plus a 16-byte tag. The profile binds object
+    identity through derivation and the nonce, not an on-wire header.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-lcurley-moq-e2ee-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

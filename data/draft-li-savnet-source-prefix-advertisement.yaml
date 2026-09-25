@@ -13,14 +13,12 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document describes a mechanism for intra-domain source address
-    validation (SAV), called Source Prefix Advertisement (SPA) for Intra- domain SAVNET
-    (Intra-domain SPA). The mechanism enables intra-domain routers to generate accurate
-    SAV rules by leveraging routing information together with SAV-specific information,
-    including Source Entity Identifiers (SEIs) and Hidden Prefix (HP). Intra-domain
-    SPA improves the precision and reliability of source address validation, addressing
-    challenges such as asymmetric routing and the use of hidden prefixes by legitimate
-    source entities.</p>"
+- content: "<p>This document describes a mechanism for generating interface-based
+    prefix allowlists for intra-domain source address validation (SAV) on external
+    interfaces facing directly connected hosts or non-BGP customer networks. The mechanism
+    derives source prefixes from routing information and combines them with source
+    prefixes provisioned by the AS operator. Routers use the combined source prefixes
+    to generate SAV allowlists.</p>"
   language:
   - en
   script:
@@ -96,6 +94,16 @@ relation:
       primary: true
     formattedref:
       content: draft-li-savnet-source-prefix-advertisement-06
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-li-savnet-source-prefix-advertisement-07
+    docid:
+    - id: draft-li-savnet-source-prefix-advertisement-07
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-li-savnet-source-prefix-advertisement-07
       format: text/plain
 ext:
   schema-version: v1.0.1

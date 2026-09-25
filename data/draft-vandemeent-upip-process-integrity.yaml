@@ -2,8 +2,8 @@
 schema-version: v1.2.3
 id: draft-vandemeent-upip-process-integrity
 title:
-- content: 'UPIP: Universal Process Integrity Protocol with Fork Tokens for Multi-Actor
-    Continuation'
+- content: 'UPIP: Universal Process Integrity Protocol with Task Capsules, Work Corridors,
+    and Fork Tokens'
   language:
   - en
   script:
@@ -20,12 +20,15 @@ abstract:
     hash chain over five layers: STATE (input), DEPS (dependencies), PROCESS (execution),
     RESULT (output), and VERIFY (cross- machine proof). The stack hash chains these
     layers, ensuring that modification of any component is detectable. This document
-    also defines Fork Tokens, a continuation mechanism for multi-actor process handoff.
-    Fork tokens freeze the UPIP stack at a specific point and transfer it to another
-    actor with cryptographic chain of custody. The receiving actor can verify what
-    was handed off, validate capabilities, and continue the process with full provenance.
-    UPIP integrates with TIBET [TIBET] for provenance tokens, JIS [JIS] for actor
-    identity, and is transport-agnostic with JSON as the baseline serialization.</p>"
+    also defines continuation artifacts: Task Capsules, Work Corridors, and Fork Tokens.
+    A task capsule carries a bounded process blueprint and evidence context. A work
+    corridor names a bounded continuation window. A fork token freezes the UPIP stack
+    at a specific point and transfers it to another actor with cryptographic chain
+    of custody. The receiving actor can verify what was handed off, validate capabilities,
+    and continue the process with full provenance. UPIP integrates with TIBET [TIBET]
+    for provenance tokens, JIS [JIS] for actor identity, AINS [AINS] for discovery,
+    and RVP [RVP] for presence evidence. UPIP is transport-agnostic with JSON as the
+    baseline serialization.</p>"
   language:
   - en
   script:
@@ -51,6 +54,16 @@ relation:
       primary: true
     formattedref:
       content: draft-vandemeent-upip-process-integrity-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-vandemeent-upip-process-integrity-02
+    docid:
+    - id: draft-vandemeent-upip-process-integrity-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-vandemeent-upip-process-integrity-02
       format: text/plain
 ext:
   schema-version: v1.0.1

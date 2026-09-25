@@ -1,0 +1,41 @@
+---
+schema-version: v1.2.3
+id: draft-lcurley-moq-e2ee
+title:
+- content: MoQ End-to-End Encryption Profile
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-lcurley-moq-e2ee
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This document specifies moq-e2ee-00, a versioned profile for end-to-
+    end encryption of MoQ application payloads. Authorized publishers and subscribers
+    share a 32-byte broadcast secret out of band. Each publisher instance mints an
+    epoch and publishes under an opaque broadcast path ending in it. HKDF-SHA-256
+    derives opaque physical track names and per-track AES-128-GCM keys from the secret
+    and the epoch; grouped frames and datagrams use separate key domains. Media frames
+    and datagrams carry only ciphertext plus a 16-byte tag. The profile binds object
+    identity through derivation and the nonce, not an on-wire header.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-lcurley-moq-e2ee-00
+    docid:
+    - id: draft-lcurley-moq-e2ee-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-lcurley-moq-e2ee-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
