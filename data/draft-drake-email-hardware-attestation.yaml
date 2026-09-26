@@ -13,33 +13,19 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: '<p>This document defines a mechanism for automated email senders (AI agents,
-    bots, and autonomous systems) to include hardware attestation evidence in message
-    headers, enabling receiving mail servers to cryptographically verify that the
-    sending system has access to a genuine hardware security component -- such as
-    a Trusted Platform Module (TPM), a PIV smart card (e.g., YubiKey), a virtual TPM,
-    or a software-managed key -- from a known manufacturer or issuer. The attestation
-    proves hardware presence, not message composition locale. The verification chain
-    runs from the email header to a manufacturer''s root Certificate Authority (for
-    hardware-backed attestation) or to an issuer''s verification key (for issuer-certified
-    attestation). Each automated sender is assigned a persistent agent identity, expressed
-    as a URN in the "aid" (Agent Identity) namespace ([RFC8141]), enabling federated
-    issuance by multiple independent identity providers and persistent reputation
-    tracking across protocols and platforms. As a companion mechanism, this document
-    defines a privacy-preserving alternative using SD-JWT (Selective Disclosure JWT,
-    [RFC9901]) where the sender can prove specific claims about their hardware trust
-    level without revealing their hardware identity. Together, these mechanisms provide
-    both Sybil-resistant authentication and a foundation for reputation building:
-    each identity requires a unique hardware security component, making large- scale
-    automated abuse economically infeasible regardless of advances in artificial intelligence,
-    while the persistent hardware-anchored identity enables receiving systems to accumulate
-    trust signals over time. Software-only agents MAY participate at a lower trust
-    tier, building reputation from an initial baseline rather than from a hardware-anchored
-    starting point. While this document specifies these mechanisms for email message
-    headers, the attestation formats defined herein -- both the CMS attestation bundle
-    and the SD-JWT trust proof -- are self-contained, transport-independent data structures
-    applicable to HTTP headers, agent-to-agent messaging, payment authorisation, and
-    other Internet protocols.</p>'
+- content: "<p>This document defines two email bindings for proving properties of
+    an automated sender using the durable identity and anchor architecture of the
+    Agent Identity Registry System (AIRS). Mode 1 carries a detached CMS signature
+    made by a message-signing proof key. It can provide manufacturer-rooted hardware
+    provenance, Registrar-backed AIRS identity binding, or both. Mode 2 carries a
+    per-message SD-JWT that allows a Registrar to assert selected properties without
+    requiring disclosure of the sender's canonical AIRS identifier. The AIRS identity0
+    model, canonical aid identifier, trust tiers, anchor semantics, enrollment rules,
+    and Registrar trust boundary are defined by [I-D.drake-agent-identity-problem-statement]
+    and [I-D.drake-agent-identity-registry]. Authoritative resolution of the current
+    Registrar/OAuth issuer is defined by [I-D.drake-agent-identity-resolution]. This
+    document does not redefine those concepts; it defines how email messages bind
+    to and verify them.</p>"
   language:
   - en
   script:
@@ -65,6 +51,16 @@ relation:
       primary: true
     formattedref:
       content: draft-drake-email-hardware-attestation-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-drake-email-hardware-attestation-02
+    docid:
+    - id: draft-drake-email-hardware-attestation-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-drake-email-hardware-attestation-02
       format: text/plain
 ext:
   schema-version: v1.0.1

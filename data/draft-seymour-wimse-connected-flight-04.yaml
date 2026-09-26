@@ -1,0 +1,113 @@
+---
+schema-version: v1.2.3
+id: draft-seymour-wimse-connected-flight-04
+title:
+- content: Zero Trust Fabric Layer Agent-to-Agent Chained Trust on a Connected Flight
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-seymour-wimse-connected-flight-04
+  type: src
+type: standard
+docid:
+- id: draft-seymour-wimse-connected-flight-04
+  type: Internet-Draft
+  primary: true
+- id: I-D.seymour-wimse-connected-flight
+  type: IETF
+  scope: anchor
+docnumber: I-D.seymour-wimse-connected-flight
+date:
+- type: published
+  value: '2026-09-25'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Errol
+          language:
+          - en
+        - language:
+          - en
+          initial: E
+        formatted_initials:
+          content: E.
+          language:
+          - en
+      surname:
+        content: Seymour,
+        language:
+        - en
+      completename:
+        content: Errol Seymour, Ph.D.
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Capitol Technology University
+  role:
+  - type: author
+version:
+- draft: '04'
+revdate: '2026-09-25'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>The Zero Trust Fabric Layer (ZTFL) verified a single autonomous agent
+    issuing a single request. It did not address what happens when that agent delegates
+    its authority to a second agent, or a third, a pattern already standard in multi-agent
+    orchestration. Existing delegation mechanisms do not close this gap. OAuth 2.0
+    Token Exchange represents prior actors as claims that are informational only for
+    access control decisions. Classical logic-based and relationship-based authorization
+    models were built for stable, long- lived principals and do not enforce a tenant
+    boundary at the specific hop where it is crossed, nor do they bind every hop in
+    a chain to a single expiring credential established at the chain's origin. This
+    document extends ZTFL with a chained authorization model, structured on the mechanics
+    of international travel. An immutable Passport establishes identity for the full
+    journey. A Ticket, issued once at task initiation as a conditional ephemeral credential,
+    binds every subsequent hop to the same authorized chain; a locally valid-looking
+    Boarding Pass that cannot trace back to it is rejected regardless of appearance.
+    A per-hop Boarding Pass, a child ephemeral token derived from and traceable to
+    the Ticket, authorizes each leg. A Visa, an explicit and narrowly scoped grant,
+    is required only at the moment a hop crosses a tenant boundary the Passport alone
+    cannot cross. The model is formalized as a boundary-conditional evaluation function,
+    implemented and validated against the Cedar policy language, and compared directly
+    against OAuth Token Exchange, delegation logic, and relationship-based authorization
+    on two properties none of them enforce structurally: chain-wide traceability to
+    a single origin, and containment at the boundary itself.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-seymour-wimse-connected-flight-01
+    docid:
+    - id: draft-seymour-wimse-connected-flight-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-seymour-wimse-connected-flight-01
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-seymour-wimse-connected-flight-04
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

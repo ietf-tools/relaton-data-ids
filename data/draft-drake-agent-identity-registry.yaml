@@ -2,8 +2,8 @@
 schema-version: v1.2.3
 id: draft-drake-agent-identity-registry
 title:
-- content: 'Agent Identity Registry System: A Federated Architecture for Hardware-Anchored
-    Identity of Autonomous Entities'
+- content: 'Agent Identity Registry System: A Federated Architecture for Durable Identity
+    of Autonomous Entities'
   language:
   - en
   script:
@@ -14,38 +14,22 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: '<p>The Internet''s identity infrastructure assumes human principals. As
-    autonomous entities -- AI agents, robotic systems, and other non- human actors
-    -- increasingly participate in both Internet protocols and physical society, no
-    existing standard provides them with persistent, verifiable, hardware-anchored
-    identity. The absence of such identity enables Sybil attacks at scale, undermines
-    trust between autonomous entities and the services they interact with, and leaves
-    human bystanders unable to distinguish one machine from another. This document
-    defines a federated registry architecture for issuing, managing, and verifying
-    persistent identities for autonomous entities. Each identity is expressed as a
-    URN in the "aid" (Agent Identity) namespace ([RFC8141]) and is anchored, where
-    hardware is available, to a physical security component (TPM, PIV smart card,
-    secure enclave, or virtual TPM) whose manufacturer-certified key cannot be extracted,
-    cloned, or transferred. This hardware anchoring provides Sybil resistance: creating
-    N identities requires N distinct physical devices, making large-scale identity
-    fraud economically infeasible. Software-only entities may participate at a lower
-    trust tier, building reputation from a baseline rather than from a hardware-anchored
-    starting point. The architecture separates concerns into three tiers, modeled
-    on the proven Internet domain name system: a Governance Authority that sets policy
-    and manages the global trust framework, Registry Operators that maintain authoritative
-    identity databases and enforce cross- provider uniqueness, and Registrars that
-    perform hardware attestation verification, issue standard OpenID Connect ([OIDC-Core])
-    tokens, and serve as the primary interface for autonomous entities. The system
-    issues standard OIDC/OAuth2 tokens, enabling any Relying Party -- email services,
-    API gateways, agent-to-agent platforms, reputation services, certification bodies,
-    or any service that needs to verify agent identity -- to verify token signatures
-    using existing OIDC libraries. A companion specification ([I-D.drake-email-hardware-attestation])
-    defines transport-level attestation headers for email and other protocols; this
-    document defines the identity infrastructure that underpins those attestations.
-    The architecture anticipates a future in which reliable, indelible identity for
-    autonomous entities -- from cloud software agents through embodied robots that
-    interact physically with humans -- is as fundamental to infrastructure as the
-    domain name system is today.</p>'
+- content: '<p>This document defines the Agent Identity Registry System (AIRS): a
+    federated architecture that gives the durable identity0 of an autonomous entity
+    a permanent canonical identifier, maintains an authoritative record about that
+    identity, binds proof of control to enrolled anchors, and issues credentials that
+    relying parties can verify. Identity0 and the distinction between an identity,
+    its identifiers, its credentials, and its anchors are defined in [I-D.drake-agent-identity-problem-statement].
+    The canonical identifier is a URN in the "aid" namespace ([RFC8141]). At the sovereign
+    and portable assurance tiers, each independently accepted identity requires its
+    own manufacturer-attested physical anchor, and each accepted anchor backs at most
+    one identity. A device normally carries one accepted anchor, so identities at
+    these tiers cost scarce physical units rather than software operations. Enclave
+    and virtual tiers can provide useful hardware-backed key protection without making
+    that physical-scarcity claim; a declared tier permits software-only participation.
+    The architecture separates governance, authoritative registry operation, and competing
+    Registrars, and uses standard OAuth 2.0 JWT access tokens conforming to [RFC9068]
+    for authenticated use.</p>'
   language:
   - en
   script:
@@ -91,6 +75,16 @@ relation:
       primary: true
     formattedref:
       content: draft-drake-agent-identity-registry-03
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-drake-agent-identity-registry-04
+    docid:
+    - id: draft-drake-agent-identity-registry-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-drake-agent-identity-registry-04
       format: text/plain
 ext:
   schema-version: v1.0.1
