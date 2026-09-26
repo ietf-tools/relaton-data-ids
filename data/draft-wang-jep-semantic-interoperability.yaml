@@ -14,25 +14,15 @@ docid:
   primary: true
 abstract:
 - content: "<p>This document defines semantic interoperability requirements for the
-    Judgment Event Protocol (JEP). JEP-Core defines the event syntax, event classes,
-    signatures, hashes, references, extension processing, and validation levels for
-    signed judgment-related events. This document does not modify those mechanisms.
-    Where this document restates JEP-Core semantics, JEP-Core remains authoritative.
-    Instead, this document defines the minimum shared semantic invariants required
-    for independent systems to interpret JEP events consistently across implementations,
-    profiles, organizations, and jurisdictions. The document specifies core semantic
-    roles, core semantic relations, event- class interpretation rules for Judgment,
-    Delegation, Termination, and Verification events, verification-scope semantics,
-    semantic identifiers, profile-extension constraints, semantic validation results,
-    non-inference rules, semantic conformance requirements, initial semantic registry
-    requirements, and cross-jurisdictional boundaries. It defines semantic registry
-    contents and constraints, but does not define operational registry governance
-    beyond the requirements stated here. This document does not define legal effect,
-    moral responsibility, regulatory compliance, runtime enforcement, access-control
-    decisions, domain-specific workflows, or external truth. A JEP event is a protocol-
-    semantic record. Whether that record is sufficient to support an external target
-    claim is outside the scope of this document and must be determined by an applicable
-    profile, evidence policy, domain rule, or target-support analysis.</p>"
+    Judgment Event Protocol (JEP) [JEP]. JEP-Core defines signed J/D/T/V event semantics,
+    Event Identity, Event Hash, references, validation checks, validation modes, extension
+    processing, and idempotent acceptance. This document does not redefine those mechanisms.
+    Instead, it defines the minimum shared interpretation rules required for independent
+    systems to map, display, translate, and consume JEP events without silently changing
+    their meaning. The core rule is that a JEP event records a signed protocol statement
+    with defined verb semantics. It does not by itself establish external truth, authority,
+    legality, causality, completeness, policy consequence, or external effect. Stronger
+    conclusions require an explicitly selected profile or external evidence rule.</p>"
   language:
   - en
   script:
@@ -48,6 +38,16 @@ relation:
       primary: true
     formattedref:
       content: draft-wang-jep-semantic-interoperability-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-wang-jep-semantic-interoperability-01
+    docid:
+    - id: draft-wang-jep-semantic-interoperability-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-wang-jep-semantic-interoperability-01
       format: text/plain
 ext:
   schema-version: v1.0.1

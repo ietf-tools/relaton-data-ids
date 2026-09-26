@@ -13,19 +13,22 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document defines the Judgment Event Protocol (JEP), a neutral
-    verifiable event format for decision-related operations in human, organizational,
-    software, and autonomous agent systems. JEP specifies four immutable event verbs:
-    Judgment (J), Delegation (D), Termination (T), and Verification (V). It defines
-    a signed JSON event structure, anti-replay fields, detached JSON Web Signature
-    (JWS) verification over JSON Canonicalization Scheme (JCS) canonicalized payloads,
-    event hash and reference semantics, validation levels, structured validation results,
-    failure codes, extension handling, trust-profile interfaces, and determinability
-    boundaries. JEP is intended to provide a global protocol-level interoperability
-    layer for verifiable decision event records. JEP-Core does not define legal liability,
-    authorization validity, regulatory compliance, organizational trust decisions,
-    global identity, global truth, or mandatory support for any specific credential,
-    identity, AI platform, agent framework, or blockchain system. ---</p>"
+- content: "<p>This document defines the Judgment Event Protocol (JEP), a verifiable
+    event format for judgment-related statements in human, organizational, software,
+    and autonomous agent systems. JEP specifies four Core event verbs: Judgment (J),
+    Delegation (D), Termination (T), and Verification (V). It defines a signed JSON
+    event structure, stable event identity, signature verification over JSON Canonicalization
+    Scheme (JCS) canonicalized payloads, a detached JSON Web Signature (JWS) baseline
+    profile, signed-artifact hash and reference semantics, independent validation
+    checks, idempotent acceptance semantics, structured validation results, extension
+    handling, trust-profile interfaces, and determinability boundaries. JEP-Core does
+    not mandate a replay-protection mechanism. An acceptance processor MUST apply
+    the acceptance effect of a given Event Identity at most once within an acceptance
+    domain. Profiles MAY impose additional freshness or replay requirements. JEP-Core
+    does not determine the substantive truth, authority, legality, policy consequence,
+    causality, or external effect of the statements it carries. It also does not require
+    any specific credential, identity, AI platform, agent framework, transport, or
+    blockchain system.</p>"
   language:
   - en
   script:
@@ -101,6 +104,16 @@ relation:
       primary: true
     formattedref:
       content: draft-wang-jep-judgment-event-protocol-06
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-wang-jep-judgment-event-protocol-07
+    docid:
+    - id: draft-wang-jep-judgment-event-protocol-07
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-wang-jep-judgment-event-protocol-07
       format: text/plain
 ext:
   schema-version: v1.0.1

@@ -13,16 +13,15 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document defines optional trust profiles and interoperability
-    bindings for the Judgment Event Protocol (JEP). JEP-Core defines the neutral event
-    protocol. This document defines how actor identifiers, keys, credentials, authorization
-    context, attestations, archival systems, and chain systems can be bound to JEP
-    events without changing JEP-Core semantics. The profiles in this document are
-    optional. A JEP-Core implementation MUST NOT require support for DID, VC, X.509,
-    OAuth, RATS, blockchain anchoring, HJS, JAC, or any specific AI platform or agent
-    framework. --- Companion Drafts This draft depends on draft-wang-jep-judgment-event-protocol-06.
-    Conformance classes, schemas, test vectors, and reference-validator behavior are
-    defined in draft-wang-jep-conformance-00.</p>"
+- content: "<p>This document defines a profile model and optional interoperability
+    bindings for the Judgment Event Protocol (JEP) [JEP]. JEP-Core defines a narrow
+    signed event protocol. Profiles define deployment- specific rules for actor identifiers,
+    key resolution, actor binding, credentials, authorization context, attestation,
+    freshness, audience, replay-related mechanisms, archival evidence, chain interpretation,
+    and policy integration without changing JEP-Core semantics. Profiles are optional.
+    A JEP-Core implementation MUST NOT require DID, Verifiable Credentials, X.509,
+    OAuth, OpenID Connect, RATS, blockchain anchoring, HJS, JAC, a particular AI platform,
+    or any other optional profile for Core conformance.</p>"
   language:
   - en
   script:
@@ -38,6 +37,16 @@ relation:
       primary: true
     formattedref:
       content: draft-wang-jep-profiles-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-wang-jep-profiles-01
+    docid:
+    - id: draft-wang-jep-profiles-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-wang-jep-profiles-01
       format: text/plain
 ext:
   schema-version: v1.0.1
