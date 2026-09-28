@@ -16,14 +16,18 @@ abstract:
 - content: "<p>Authorization, delegation, execution, and audit artifacts often identify
     an action using format-local content and digests. Those digests are not directly
     comparable when the formats select or encode material action fields differently.
-    This document defines the Canonical Action IDentifier (CAID): a typed action object,
-    a canonicalization and digest suite, a compact identifier string, and immutable
-    action-type definitions with required material fields. External enum definitions
-    are bound to immutable, integrity-checked value-set snapshots. It also defines
-    an Action-Mapping Profile for projecting independently verified native artifacts
-    into a common action type, with the closed results EQUIVALENT_UNDER_PROFILE, NOT_EQUIVALENT,
-    and INDETERMINATE. CAID carries no trust semantics. It does not establish identity,
-    authority, authorization, execution, safety, or legal reliance.</p>"
+    This document defines the Canonical Action Identifier (CAID): a typed action object,
+    a canonicalization and digest suite, a compact identifier string, and versioned
+    action-type definitions with required material fields. External value sets are
+    bound to integrity-checked snapshots. The document specifies a strict JSON input
+    profile, a fixed and ordered set of refusal reasons, and a digest that identifies
+    the validation semantics of a type definition. It requests seven registries: suites,
+    action types, field types, code formats, reason codes, mapping transforms, and
+    mapping loss policies. It also defines an Action-Mapping Profile for projecting
+    natively verified artifacts into a common action type, with the closed results
+    EQUIVALENT_UNDER_PROFILE, NOT_EQUIVALENT, and INDETERMINATE. CAID carries no trust
+    semantics. It does not establish identity, authority, authorization, execution,
+    safety, or legal reliance.</p>"
   language:
   - en
   script:
@@ -69,6 +73,16 @@ relation:
       primary: true
     formattedref:
       content: draft-schrock-canonical-action-identifier-03
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-schrock-canonical-action-identifier-04
+    docid:
+    - id: draft-schrock-canonical-action-identifier-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-schrock-canonical-action-identifier-04
       format: text/plain
 ext:
   schema-version: v1.0.1

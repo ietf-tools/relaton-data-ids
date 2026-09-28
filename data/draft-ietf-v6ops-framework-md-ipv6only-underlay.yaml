@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-ietf-v6ops-framework-md-ipv6only-underlay
 title:
-- content: Framework for Multi-domain IPv6-only Underlay Network and IPv4-as-a-Service
+- content: Framework for Multi-domain IPv6-only Network and IPv4-as-a-Service
   language:
   - en
   script:
@@ -13,17 +13,17 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>For the IPv6 transition, IPv6-only is considered the final stage where
-    only IPv6 protocol is used for transport while maintaining global reachability
-    for both IPv6 and IPv4 services. This document introduces a framework for a multi-domain
-    IPv6-only underlay network from the perspective of network providers. In particular,
-    it proposes stateless address mapping as the basis for enabling IPv4 service data
-    transmission in a multi-domain IPv6-only environment (i.e., IPv4-as-a-Service).
-    It describes the methodology of stateless IPv4/IPv6 mapping, illustrates the behaviors
-    of network devices, analyzes the options of IPv6 mapping prefix allocation, and
-    discusses the security considerations. This framework is not intended to replace
-    existing IPv6-only technologies, but rather to leverage or remain compatible with
-    them.</p>"
+- content: "<p>This document presents a framework, from the network operators' perspective,
+    for building and operating IPv6-only underlay networks that span multiple domains
+    (i.e., multiple interconnected Autonomous Systems). To carry residual IPv4 traffic
+    in such an environment, the framework proposes stateless IPv4/IPv6 address mapping
+    as the basis for IPv4-as-a-Service (IPv4aaS), so that IPv4 packets are translated
+    at the network edge and forwarded across the IPv6-only underlay without per-flow
+    state or IPv4/IPv6 conversion gateways on the data path. The document is intended
+    as a network operator problem statement, guidance, and requirements rather than
+    a protocol specification. It covers the scope of applicability and trust boundaries,
+    options for IPv6 mapping prefix allocation, and operational, manageability, and
+    security considerations.</p>"
   language:
   - en
   script:
@@ -309,6 +309,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-v6ops-framework-md-ipv6only-underlay-27
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-v6ops-framework-md-ipv6only-underlay-28
+    docid:
+    - id: draft-ietf-v6ops-framework-md-ipv6only-underlay-28
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-v6ops-framework-md-ipv6only-underlay-28
       format: text/plain
 ext:
   schema-version: v1.0.1

@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-reddy-wimse-aggregate-signatures
 title:
-- content: Aggregate Signatures for WIMSE Delegation-Chain Integrity
+- content: Authenticated Provenance for WIMSE Delegation Chains
   language:
   - en
   script:
@@ -13,15 +13,16 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document profiles the WIMSE HTTP Message Signatures mechanism
-    ([I-D.ietf-wimse-http-signature]) to protect a request that passes through a chain
-    of workloads. In the base mechanism each workload signs independently: an intermediary
-    can remove a signature undetected, and the signatures accumulate on every hop.
-    This document combines the workloads' signatures into one aggregate signature.
-    Removal of a signature becomes detectable, and the signature material no longer
-    grows with the length of the chain, a significant saving for post-quantum signature
-    algorithms, whose signatures are large. The mechanism works with any aggregate
-    signature scheme.</p>"
+- content: "<p>A request and its response, passing through a chain of workloads, may
+    need authenticated provenance: proof of which workloads participated and whether
+    each changed the message. The base WIMSE HTTP Message Signatures mechanism ([I-D.ietf-wimse-http-signature])
+    authenticates one workload's message to its immediate recipient and does not provide
+    this across a chain. This document establishes authenticated provenance using
+    per-hop digests of what each hop received and forwarded; this alone detects an
+    omitted hop that changed the message. An aggregate signature closes the remaining
+    gap, a hop that forwards the message unchanged, and keeps the signature close
+    to the size of one signature regardless of chain length. The mechanism works with
+    any aggregate signature scheme.</p>"
   language:
   - en
   script:
@@ -37,6 +38,16 @@ relation:
       primary: true
     formattedref:
       content: draft-reddy-wimse-aggregate-signatures-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-reddy-wimse-aggregate-signatures-01
+    docid:
+    - id: draft-reddy-wimse-aggregate-signatures-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-reddy-wimse-aggregate-signatures-01
       format: text/plain
 ext:
   schema-version: v1.0.1
