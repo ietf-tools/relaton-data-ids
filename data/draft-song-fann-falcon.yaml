@@ -1,0 +1,51 @@
+---
+schema-version: v1.2.3
+id: draft-song-fann-falcon
+title:
+- content: 'FALCON: Fast Latency and Congestion Notification Using Reverse-Path In-Network
+    Telemetry'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-song-fann-falcon
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This document describes FALCON (FAst Latency and COngestion Notification),
+    a method that allows a traffic source to learn the queuing delay and congestion
+    status of a path with a notification lag no greater than the one-way propagation
+    delay from the congested node back to the source, which is at most about half
+    of the baseline Round-Trip Time (RTT). FALCON combines in-network telemetry and
+    source routing: a forward packet records the path it traverses, and the receiver
+    returns a high-priority packet that is source-routed along the exact reverse of
+    that path, collecting the state of the forward-direction queues as it passes.
+    Where a hop-by-hop flow control mechanism is used, such as Priority-based Flow
+    Control (PFC) or a backpressure mechanism for lossless WAN transport, the returned
+    packet can also collect the buffer state that determines when each node throttles
+    its upstream neighbor, allowing the source to act before throttling occurs and
+    to distinguish the root of congestion from nodes that are only throttled by it.
+    The fresher telemetry enables more effective traffic steering and congestion control.
+    FALCON is applicable to data center and wide area networks within a single administrative
+    domain and is designed to be realized with IETF In situ OAM (IOAM) and SRv6, with
+    the extensions identified in this document.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-song-fann-falcon-00
+    docid:
+    - id: draft-song-fann-falcon-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-song-fann-falcon-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

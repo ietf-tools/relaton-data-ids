@@ -1,0 +1,154 @@
+---
+schema-version: v1.2.3
+id: draft-song-fann-falcon-00
+title:
+- content: 'FALCON: Fast Latency and Congestion Notification Using Reverse-Path In-Network
+    Telemetry'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-song-fann-falcon-00
+  type: src
+type: standard
+docid:
+- id: draft-song-fann-falcon-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.song-fann-falcon
+  type: IETF
+  scope: anchor
+docnumber: I-D.song-fann-falcon
+date:
+- type: published
+  value: '2026-09-28'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Haoyu
+          language:
+          - en
+        - language:
+          - en
+          initial: H
+        formatted_initials:
+          content: H.
+          language:
+          - en
+      surname:
+        content: Song
+        language:
+        - en
+      completename:
+        content: Haoyu Song
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Futurewei Technologies
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Ying
+          language:
+          - en
+        - language:
+          - en
+          initial: "Y"
+        formatted_initials:
+          content: Y.
+          language:
+          - en
+      surname:
+        content: Wan
+        language:
+        - en
+      completename:
+        content: Ying Wan
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Southeast University
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Keyi
+          language:
+          - en
+        - language:
+          - en
+          initial: K
+        formatted_initials:
+          content: K.
+          language:
+          - en
+      surname:
+        content: Zhu
+        language:
+        - en
+      completename:
+        content: Keyi Zhu
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei Technologies
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-09-28'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>This document describes FALCON (FAst Latency and COngestion Notification),
+    a method that allows a traffic source to learn the queuing delay and congestion
+    status of a path with a notification lag no greater than the one-way propagation
+    delay from the congested node back to the source, which is at most about half
+    of the baseline Round-Trip Time (RTT). FALCON combines in-network telemetry and
+    source routing: a forward packet records the path it traverses, and the receiver
+    returns a high-priority packet that is source-routed along the exact reverse of
+    that path, collecting the state of the forward-direction queues as it passes.
+    Where a hop-by-hop flow control mechanism is used, such as Priority-based Flow
+    Control (PFC) or a backpressure mechanism for lossless WAN transport, the returned
+    packet can also collect the buffer state that determines when each node throttles
+    its upstream neighbor, allowing the source to act before throttling occurs and
+    to distinguish the root of congestion from nodes that are only throttled by it.
+    The fresher telemetry enables more effective traffic steering and congestion control.
+    FALCON is applicable to data center and wide area networks within a single administrative
+    domain and is designed to be realized with IETF In situ OAM (IOAM) and SRv6, with
+    the extensions identified in this document.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-song-fann-falcon-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
