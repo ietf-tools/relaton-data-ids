@@ -25,19 +25,10 @@ abstract:
     an Ed25519-signed envelope binding a ~handle to a public key, an IdentityLog root
     reference, and a revocation commitment. DNSSEC validation is REQUIRED for the
     envelope record, and a DANE TLSA pin on the MCP endpoint is REQUIRED where resolving
-    an envelope and opening an MCP session are one recognition transaction. This revision
-    (v06) adds a key continuity rule for the _mcp record. It says what a client does
-    when the key it pinned differs from the key DNS now serves, and when the published
-    epoch goes down, neither of which any earlier revision covered. It also corrects
-    two statements in the Implementation Status section. Revision 05 withdrew several
-    claims that v04 could not support, marked publication of a per-individual envelope
-    in DNS as NOT RECOMMENDED on enumeration, size, and erasure grounds, and separated
-    the agent protocol family from the transport binding in the _mcp record, aligning
-    that vocabulary with neighbouring DNS agent-discovery drafts. All three record
-    formats and all three procedures are given here in full, so no earlier revision
-    need be fetched. The mechanism complements HTTPS-based discovery, and follows
-    the precedent set by DKIM, SPF, DMARC, and MTA-STS. Provisional registration of
-    a companion alter: URI scheme is requested of IANA, and is not yet granted.</p>"
+    an envelope and opening an MCP session are one recognition transaction. The mechanism
+    complements HTTPS-based discovery, and follows the precedent set by DKIM, SPF,
+    DMARC, and MTA-STS. Provisional registration of a companion alter: URI scheme
+    is requested of IANA, and is not yet granted.</p>"
   language:
   - en
   script:
@@ -113,6 +104,16 @@ relation:
       primary: true
     formattedref:
       content: draft-morrison-mcp-dns-discovery-06
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-morrison-mcp-dns-discovery-07
+    docid:
+    - id: draft-morrison-mcp-dns-discovery-07
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-morrison-mcp-dns-discovery-07
       format: text/plain
 ext:
   schema-version: v1.0.1
