@@ -14,17 +14,17 @@ docid:
   primary: true
 abstract:
 - content: "<p>This document describes the Prove-Transform-Verify (PTV) protocol for
-    hardware-anchored attestation of AI agent identity. PTV is designed to enable
-    an agent to prove that it is running an authorized model and policy without exposing
-    sensitive data. The protocol is intended to compose with existing RATS attestation
-    mechanisms and to support exercise-time re-attestation requirements. The protocol
-    defines a common envelope format (CBOR/CDDL), message types for attestation request/response,
-    and a threat model that separates identity binding integrity from behavioral continuity.
-    Behavioral continuity is treated as a separate requirement class addressed via
-    exercise-time checks and execution receipts (e.g., SCITT composition), not by
-    PTV alone. Example use cases include healthcare clinical decision support systems
-    (CDSS), critical infrastructure industrial control systems (ICS/OT), and cross-border
-    regulatory compliance scenarios.</p>"
+    hardware-anchored attestation of AI agent identity. PTV enables an agent to prove,
+    at exercise time, that it is bound to an enrolled attestation key and an authorized
+    configuration, without exposing model weights or inference inputs. PTV is a thin
+    request/response profile over the RATS architecture (RFC 9334) and the Entity
+    Attestation Token (RFC 9711). It does not replace workload identifiers such as
+    SPIFFE or WIMSE. It does not attest behavioral continuity; behavioral continuity
+    is a separate requirement class that relying parties need to treat as such. This
+    revision is intended as Experimental. It defines a common CBOR/ CDDL message set,
+    four message types, a COSE-based message protection rule, an informative EAT claim
+    mapping, and a threat model that separates identity binding integrity from behavioral
+    continuity.</p>"
   language:
   - en
   script:
@@ -40,6 +40,16 @@ relation:
       primary: true
     formattedref:
       content: draft-anandakrishnan-rats-ptv-agent-identity-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-anandakrishnan-rats-ptv-agent-identity-01
+    docid:
+    - id: draft-anandakrishnan-rats-ptv-agent-identity-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-anandakrishnan-rats-ptv-agent-identity-01
       format: text/plain
 ext:
   schema-version: v1.0.1
