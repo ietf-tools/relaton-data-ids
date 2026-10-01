@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-birkholz-did-x509
 title:
-- content: x509 Decentralized Identifier
+- content: The did:x509 Decentralized Identifier (DID) Method
   language:
   - en
   script:
@@ -13,17 +13,24 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document defines the did:x509 decentralized identifier method,
-    which enables a direct, resolvable binding between X.509 certificate chains and
-    compact issuer identifiers (DID string). In particular, the did:x509 identifier
-    format in this documents comes with a CWT Claims definition. In general, this
-    identifier is a compact and interoperable mechanism for certificate-based identification
-    by combining a certificate fingerprint with optional policies for subject names,
-    subject alternative names, extended key usage, and issuer information. It is especially
-    useful for policy evaluation and reference in transparency services and similar
-    systems requiring cryptographic binding to certificate material. This Informational
-    document is published as an Independent Submission to improve interoperability
-    with Microsoft's architecture. It is not a standard nor a product of the IETF.</p>"
+- content: <p>This document defines the did:x509 decentralized identifier (DID) method,
+    a flexible issuer identifier format for messages that transport or refer to X.509
+    certificates, including CBOR Object Signing and Encryption (COSE) messages using
+    RFC 9360. The did:x509 identifier format implements a direct, resolvable binding
+    between a certificate chain and a compact issuer string (DID string). It combines
+    the fingerprint of a certification authority (CA) certificate in the chain with
+    one or more predicates on the leaf certificate's subject name, subject alternative
+    names, extended key usage, or Fulcio issuer. The identifier can be conveyed as
+    an issuer value in a COSE Header CBOR Web Token (CWT) Claims map as defined in
+    RFC 9597, in JSON Object Signing and Encryption (JOSE) and JSON Web Token (JWT)
+    messages, such as in the "iss" claim defined in RFC 7519, or through other protocol-specific
+    mechanisms that associate the identifier with the certificate chain. The did:x509
+    method lets existing X.509 solutions and DID-based systems interoperate where
+    a full transition to DIDs is not achievable or desired. This issuer identifier
+    is convenient for references and policy evaluation, for example in the context
+    of transparency ledgers. This Informational document is published as an Independent
+    Submission to describe the method as implemented by Microsoft. It is neither a
+    standard nor a product of the IETF.</p>
   language:
   - en
   script:
@@ -59,6 +66,16 @@ relation:
       primary: true
     formattedref:
       content: draft-birkholz-did-x509-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-birkholz-did-x509-03
+    docid:
+    - id: draft-birkholz-did-x509-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-birkholz-did-x509-03
       format: text/plain
 ext:
   schema-version: v1.0.1
