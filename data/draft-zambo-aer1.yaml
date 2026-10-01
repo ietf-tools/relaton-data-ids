@@ -24,7 +24,13 @@ abstract:
     account or token. This revision adds workflow receipts: a verifiable record that
     binds an ordered sequence of step receipts to a single goal, with a Merkle root
     over the step sequence for tamper evidence. The worked workflow example's Merkle
-    root is computed with the Section 8.1 leaf construction.</p>"
+    root is computed with the Section 8.1 leaf construction. This revision hardens
+    the Section 7 hash-chain entry digest: the digest now binds the entry's sequence
+    number, job identifier, closing flag, receipt identifier, tool name, and provenance
+    class alongside the output commitment, so relabeling or splicing attacks against
+    chain metadata are detectable by recomputation. The revision also states the honest
+    limit of chain mechanics: truncation with re-linking is not detectable by the
+    chain alone and needs an anchored endpoint commitment.</p>"
   language:
   - en
   script:
@@ -100,6 +106,16 @@ relation:
       primary: true
     formattedref:
       content: draft-zambo-aer1-06
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-zambo-aer1-07
+    docid:
+    - id: draft-zambo-aer1-07
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-zambo-aer1-07
       format: text/plain
 ext:
   schema-version: v1.0.1
