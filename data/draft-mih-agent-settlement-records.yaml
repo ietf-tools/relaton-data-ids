@@ -1,0 +1,47 @@
+---
+schema-version: v1.2.3
+id: draft-mih-agent-settlement-records
+title:
+- content: Two-Party Settlement Records for Agent Payments
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-mih-agent-settlement-records
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>A payment between two agents is observed by two systems: the payer's
+    wallet or bank and the payee's. Existing payment protocols record one of those
+    observations, signed by one party, and most record nothing about what was delivered
+    in exchange. This document defines two-party settlement records, carried as Agent
+    Action Capsules, in which payer and payee each seal, under their own key, only
+    what their own system observed. A settlement is a set of up to four leg records
+    (terms, payer-observed, payee-observed, and delivered) that cite each other by
+    digest and join on a typed payment reference. The state of a settlement (one-sided,
+    agreed, or mismatched) is derived by the verifier from which legs are present
+    and whether they agree; no record asserts it. Signed objects from existing payment
+    protocols are carried by digest and never re-signed. Amounts are exact integers
+    with a decimal scale. The document defines a registry of payment reference types
+    covering x402, Lightning, AP2, ACP, UCP, the Payment HTTP authentication scheme,
+    ISO 20022, and Open Payments, and maps its states to ISO 20022 status codes.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-mih-agent-settlement-records-00
+    docid:
+    - id: draft-mih-agent-settlement-records-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-mih-agent-settlement-records-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
