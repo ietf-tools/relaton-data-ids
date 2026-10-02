@@ -34,7 +34,11 @@ abstract:
     implemented and validated against the Cedar policy language, and compared directly
     against OAuth Token Exchange, delegation logic, and relationship-based authorization
     on two properties none of them enforce structurally: chain-wide traceability to
-    a single origin, and containment at the boundary itself.</p>"
+    a single origin, and containment at the boundary itself. This revision further
+    shows that the model's per-hop Boarding Pass structurally resists mid-chain redirection,
+    including redirection caused by prompt injection reaching an intermediate agent,
+    because issuing a Boarding Pass requires standing the redirected agent never holds
+    and cannot acquire by altering its own behavior.</p>"
   language:
   - en
   script:
@@ -100,6 +104,16 @@ relation:
       primary: true
     formattedref:
       content: draft-seymour-wimse-connected-flight-05
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-seymour-wimse-connected-flight-06
+    docid:
+    - id: draft-seymour-wimse-connected-flight-06
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-seymour-wimse-connected-flight-06
       format: text/plain
 ext:
   schema-version: v1.0.1

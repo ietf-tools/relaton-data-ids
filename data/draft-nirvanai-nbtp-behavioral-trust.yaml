@@ -18,16 +18,17 @@ abstract:
     networks. NBTP treats trust as a volatile, time- decaying state variable measured
     by an oracle-federated layer of independent scanner nodes. Unlike static credential
     systems that answer "Is this agent authorized?", NBTP answers "Is this agent currently
-    acting like itself?" Trust computation is performed locally by each verifying
-    party using signed attestations from independent oracle scanners; no centralized
-    policy engine or authorization server is required at verification time. NBTP introduces
-    a temporal decay model with context-dependent decay rates, a four-state trust
-    machine (PROBATIONARY, TRUSTED, SUSPECT, QUARANTINED), cross-context co-silence
-    detection, and a genesis bootstrapping mechanism (Creole gate) using formal CHALLENGE/RESPONSE
-    packet types. Absence of attestation data is treated as a security- relevant signal.
-    This document specifies the protocol wire format, state machine, decay model,
-    security properties, and IANA considerations. Implementation-specific measurement
-    heuristics are out of scope.</p>
+    acting like itself?" Identity systems confirm who sent a message. NBTP confirms
+    whether the sender is still the entity that earned that identity. Trust computation
+    is performed locally by each verifying party using signed attestations from independent
+    oracle scanners; no centralized policy engine or authorization server is required
+    at verification time. NBTP introduces a temporal decay model with context-dependent
+    decay rates, a four-state trust machine (PROBATIONARY, TRUSTED, SUSPECT, QUARANTINED),
+    cross-context co-silence detection, and a genesis bootstrapping mechanism (Creole
+    gate) using formal CHALLENGE/RESPONSE packet types. Absence of attestation data
+    is treated as a security- relevant signal. This document specifies the protocol
+    wire format, state machine, decay model, security properties, and IANA considerations.
+    Implementation-specific measurement heuristics are out of scope.</p>
   language:
   - en
   script:
@@ -43,6 +44,16 @@ relation:
       primary: true
     formattedref:
       content: draft-nirvanai-nbtp-behavioral-trust-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-nirvanai-nbtp-behavioral-trust-01
+    docid:
+    - id: draft-nirvanai-nbtp-behavioral-trust-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-nirvanai-nbtp-behavioral-trust-01
       format: text/plain
 ext:
   schema-version: v1.0.1

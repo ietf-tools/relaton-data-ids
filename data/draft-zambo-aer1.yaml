@@ -24,13 +24,18 @@ abstract:
     account or token. This revision adds workflow receipts: a verifiable record that
     binds an ordered sequence of step receipts to a single goal, with a Merkle root
     over the step sequence for tamper evidence. The worked workflow example's Merkle
-    root is computed with the Section 8.1 leaf construction. This revision hardens
-    the Section 7 hash-chain entry digest: the digest now binds the entry's sequence
+    root is computed with the leaf construction specified for that example. This revision
+    hardens the hash-chain entry digest: the digest now binds the entry's sequence
     number, job identifier, closing flag, receipt identifier, tool name, and provenance
     class alongside the output commitment, so relabeling or splicing attacks against
     chain metadata are detectable by recomputation. The revision also states the honest
     limit of chain mechanics: truncation with re-linking is not detectable by the
-    chain alone and needs an anchored endpoint commitment.</p>"
+    chain alone and needs an anchored endpoint commitment. This revision adds guidance
+    that the external commitment SHOULD bind the final chain entry digest, closing
+    the last-entry gap where a rewritten final entry would otherwise still verify.
+    This revision names the two id conformance tiers, defines an optional external
+    chain commitment artifact that the conformance kit checks, and corrects the description
+    of member ordering to match the code-point serialization order the kit implements.</p>"
   language:
   - en
   script:
@@ -116,6 +121,26 @@ relation:
       primary: true
     formattedref:
       content: draft-zambo-aer1-07
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-zambo-aer1-08
+    docid:
+    - id: draft-zambo-aer1-08
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-zambo-aer1-08
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-zambo-aer1-09
+    docid:
+    - id: draft-zambo-aer1-09
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-zambo-aer1-09
       format: text/plain
 ext:
   schema-version: v1.0.1
