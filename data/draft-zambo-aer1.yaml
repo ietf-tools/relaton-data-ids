@@ -34,8 +34,13 @@ abstract:
     that the external commitment SHOULD bind the final chain entry digest, closing
     the last-entry gap where a rewritten final entry would otherwise still verify.
     This revision names the two id conformance tiers, defines an optional external
-    chain commitment artifact that the conformance kit checks, and corrects the description
-    of member ordering to match the code-point serialization order the kit implements.</p>"
+    chain commitment artifact that the conformance kit checks, code-point serialization
+    order the kit implements. This revision precisely specifies the Section 7.1 string
+    escaping for the entry digest (Section 7.1): the exact escape table, including
+    U+007F, lowercase hexadecimal, and short escapes, matching the reference implementation's
+    behavior. This revision also makes the RFC 3339 timestamp check independent of
+    the Python version, and adds conformance vectors isolating nine previously untested
+    rules.</p>"
   language:
   - en
   script:
@@ -141,6 +146,16 @@ relation:
       primary: true
     formattedref:
       content: draft-zambo-aer1-09
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-zambo-aer1-10
+    docid:
+    - id: draft-zambo-aer1-10
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-zambo-aer1-10
       format: text/plain
 ext:
   schema-version: v1.0.1
