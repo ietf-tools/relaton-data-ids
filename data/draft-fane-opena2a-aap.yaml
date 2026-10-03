@@ -13,7 +13,7 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document defines the OpenA2A Agent Authorization Protocol (AAP),
+- content: '<p>This document defines the OpenA2A Agent Authorization Protocol (AAP),
     a protocol for authorization in AI agent systems. AAP provides mechanisms for
     agent identity assertion, scoped capability grants, cross-agent delegation, behavioral
     attestation, cross-organizational federation, and revocation propagation. AAP
@@ -23,9 +23,13 @@ abstract:
     specifies the AAP credentials and assertions: what they contain, how they are
     signed, and how they are verified. A companion broker and resolution layer specifies
     how an agent obtains and exercises a grant without the credential value ever entering
-    the agent's reasoning context. This confinement property, that no secret, temporary
+    the agent''s reasoning context. This confinement property, that no secret, temporary
     credential, or backend identifier reaches the agent or the model behind it, is
-    the primary design goal of the protocol.</p>"
+    the primary design goal of the protocol. This revision adds a structured, mandatory-to-understand
+    "authorization_details" claim with a typed entry registry and a per- type attenuation
+    relation for delegation, an "aap_crit" claim naming the claims a verifier must
+    understand, a "cnf" claim binding a token to the presenter''s key, a session label
+    in the behavioral attestation claim, and a local grant revocation list.</p>'
   language:
   - en
   script:
@@ -51,6 +55,16 @@ relation:
       primary: true
     formattedref:
       content: draft-fane-opena2a-aap-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-fane-opena2a-aap-02
+    docid:
+    - id: draft-fane-opena2a-aap-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-fane-opena2a-aap-02
       format: text/plain
 ext:
   schema-version: v1.0.1
