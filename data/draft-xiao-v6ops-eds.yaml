@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-xiao-v6ops-eds
 title:
-- content: 'Enhanced Dual Stack: Automatic IPv6/IPv4 Selection Based on Performance'
+- content: 'Enhanced Dual Stack: Connectivity-Informed IPv6/IPv4 Selection'
   language:
   - en
   script:
@@ -13,17 +13,19 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document describes Enhanced Dual Stack (EDS), a host-side framework
-    intended to reduce the operational risk and workload of IPv6 deployment. Today,
-    many applications select IPv6 or IPv4 using static address- selection rules. These
-    rules provide a useful baseline, but they are not live measurements of current
-    reachability or performance. If IPv6 is selected when it is broken or degraded,
-    users may experience failures or delays. This creates a need for extensive upfront
-    IPv6 validation before deployment. Happy Eyeballs (HE) reduces this risk for applications
-    that implement it, but it does not automatically help existing applications that
-    continue to use traditional APIs such as getaddrinfo(), socket(), and connect().
-    EDS aims to make IPv6/IPv4 selection performance-informed for both new and existing
-    applications. It does this through three enhancements:</p>"
+- content: <p>This document describes Enhanced Dual Stack (EDS), a framework intended
+    to reduce the operational risk and upfront workload of introducing IPv6 into an
+    existing IPv4 network. EDS consists of two complementary mechanisms. First, connectivity-informed
+    destination selection updates Rule 6 of RFC 6724 Section 6 from "Prefer higher
+    precedence" to "Prefer higher precedence unless recently failed", so that recently
+    failed IPv6 connectivity is not repeatedly preferred over IPv4. Second, operational
+    diagnostics provide information that helps network administrators understand why
+    IPv6 was not used and identify problems that can be corrected over time. With
+    these mechanisms, IPv6 deployment can move from extensive upfront validation toward
+    practical upfront validation followed by gradual operational improvement. This
+    simpler IPv6 introduction approach can enable enterprises that do not have much
+    IPv6 expertise and do not need a large number of IP addresses provided by IPv6
+    to try IPv6.</p>
   language:
   - en
   script:
@@ -49,6 +51,16 @@ relation:
       primary: true
     formattedref:
       content: draft-xiao-v6ops-eds-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-xiao-v6ops-eds-02
+    docid:
+    - id: draft-xiao-v6ops-eds-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-xiao-v6ops-eds-02
       format: text/plain
 ext:
   schema-version: v1.0.1
