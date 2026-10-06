@@ -21,26 +21,13 @@ abstract:
     what the system observed from claims about the outside world, and it separates
     provenance (who ran or reported the action) from the record itself. A reference
     implementation is deployed, and its receipts are publicly verifiable without an
-    account or token. This revision adds workflow receipts: a verifiable record that
-    binds an ordered sequence of step receipts to a single goal, with a Merkle root
-    over the step sequence for tamper evidence. The worked workflow example's Merkle
-    root is computed with the leaf construction specified for that example. This revision
-    hardens the hash-chain entry digest: the digest now binds the entry's sequence
-    number, job identifier, closing flag, receipt identifier, tool name, and provenance
-    class alongside the output commitment, so relabeling or splicing attacks against
-    chain metadata are detectable by recomputation. The revision also states the honest
-    limit of chain mechanics: truncation with re-linking is not detectable by the
-    chain alone and needs an anchored endpoint commitment. This revision adds guidance
-    that the external commitment SHOULD bind the final chain entry digest, closing
-    the last-entry gap where a rewritten final entry would otherwise still verify.
-    This revision names the two id conformance tiers, defines an optional external
-    chain commitment artifact that the conformance kit checks, code-point serialization
-    order the kit implements. This revision precisely specifies the Section 7.1 string
-    escaping for the entry digest (Section 7.1): the exact escape table, including
-    U+007F, lowercase hexadecimal, and short escapes, matching the reference implementation's
-    behavior. This revision also makes the RFC 3339 timestamp check independent of
-    the Python version, and adds conformance vectors isolating nine previously untested
-    rules.</p>"
+    account or token. The specification also defines workflow receipts, which bind
+    an ordered sequence of step receipts to a single goal with a Merkle root over
+    the step sequence, and hash-chained job timelines for tamper-evident sequencing
+    of executions. This revision is editorial only: it adds the missing Table of Contents
+    entry for the Acknowledgments section, rewraps example lines that exceeded the
+    72-character limit, and shortens this abstract. It changes no receipt field, procedure,
+    verification rule, or conformance vector.</p>"
   language:
   - en
   script:
@@ -156,6 +143,16 @@ relation:
       primary: true
     formattedref:
       content: draft-zambo-aer1-10
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-zambo-aer1-11
+    docid:
+    - id: draft-zambo-aer1-11
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-zambo-aer1-11
       format: text/plain
 ext:
   schema-version: v1.0.1

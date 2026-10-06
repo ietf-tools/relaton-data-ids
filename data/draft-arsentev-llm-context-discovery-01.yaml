@@ -1,0 +1,117 @@
+---
+schema-version: v1.2.3
+id: draft-arsentev-llm-context-discovery-01
+title:
+- content: Discovery and Retrieval of Publisher-Curated Context Files for Large Language
+    Model Consumers
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-arsentev-llm-context-discovery-01
+  type: src
+type: standard
+docid:
+- id: draft-arsentev-llm-context-discovery-01
+  type: Internet-Draft
+  primary: true
+- id: I-D.arsentev-llm-context-discovery
+  type: IETF
+  scope: anchor
+docnumber: I-D.arsentev-llm-context-discovery
+date:
+- type: published
+  value: '2026-10-05'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Evgenii
+          language:
+          - en
+        - language:
+          - en
+          initial: E
+        formatted_initials:
+          content: E.
+          language:
+          - en
+      surname:
+        content: Arsentev
+        language:
+        - en
+      completename:
+        content: Evgenii Arsentev
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Independent
+  role:
+  - type: author
+version:
+- draft: '01'
+revdate: '2026-10-05'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: <p>Publishers have begun to serve a curated, plain-text summary of a web
+    origin intended for consumption by large language models and by the crawlers that
+    feed them, most visibly under the de facto file name "llms.txt". The practice
+    is described by an informal proposal which, in its current version, recommends
+    existing link relations from individual pages to the file. It has no media type,
+    no rules that bound the cost of retrieval, and no way for a consumer that starts
+    from an origin's robots.txt or from a fixed well-known location to learn that
+    such a file exists. This document specifies discovery and retrieval for publisher-curated
+    context files. It defines the well-known URI "llm-context", the link relation
+    type "llm-context", and an extension record for the robots exclusion protocol,
+    so that a publisher may advertise a context file by three independent paths and
+    a consumer may find it without guessing. It specifies a two-tier arrangement of
+    an index resource and optional detail resources, states conditional-request and
+    size requirements that keep retrieval affordable for both parties, and describes
+    the relationship of this mechanism to the robots exclusion protocol, to sitemaps,
+    to the llms.txt proposal itself, and to work in the IETF on AI usage preferences,
+    agent communication and the discovery of AI agents. This document also reports
+    measurements from an operational deployment in which requests presenting twenty
+    crawler tokens of search and language-model providers numbered 46,155 over fifteen
+    days at one origin server, without once retrieving the context file the origin
+    was serving, while the same crawler tokens retrieved robots.txt 698 times in the
+    three days after the context file was deployed. The measurement figures in revision
+    -00 were computed on an incomplete log and are corrected here. The absence of
+    a discovery mechanism, rather than the absence of interest, is the hypothesis
+    this document acts upon.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-arsentev-llm-context-discovery-00
+    docid:
+    - id: draft-arsentev-llm-context-discovery-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-arsentev-llm-context-discovery-00
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-arsentev-llm-context-discovery-01
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
