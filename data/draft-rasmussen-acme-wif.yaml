@@ -1,0 +1,52 @@
+---
+schema-version: v1.2.3
+id: draft-rasmussen-acme-wif
+title:
+- content: A Federated Workload Identity Challenge for the Automated Certificate Management
+    Environment (ACME)
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-rasmussen-acme-wif
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: '<p>The Automated Certificate Management Environment (ACME, RFC 8555) establishes
+    that a requester has authority over an identifier by means of a challenge that
+    demonstrates control of that identifier, such as publishing a DNS record or serving
+    an HTTP resource. It authenticates the requester by means of an account key whose
+    provenance is outside the protocol''s scope. Neither mechanism is a good fit for
+    automated workloads running in continuous-integration systems, container orchestrators,
+    and cloud compute platforms. Such workloads typically possess no long-lived secret
+    and no ability to publish DNS records, but they do possess a short-lived, cryptographically
+    verifiable identity assertion issued by their execution platform. This document
+    defines a new ACME challenge type, "wif-01", by which an ACME server authorizes
+    issuance for an identifier on the basis of a platform-issued identity token. The
+    token is bound to the ACME account key, and to the specific authorization it satisfies,
+    using the token''s audience claim. The mechanism therefore requires no new claims,
+    no new endpoints, and no changes of any kind to existing identity providers. Because
+    the workload''s identity is established for each authorization, the mechanism
+    also removes any need for External Account Binding: an ordinary ACME account,
+    created by the workload with no pre-shared secret, suffices. The mechanism uses
+    only extension points that ACME already defines.</p>'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-rasmussen-acme-wif-00
+    docid:
+    - id: draft-rasmussen-acme-wif-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-rasmussen-acme-wif-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

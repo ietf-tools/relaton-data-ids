@@ -23,18 +23,19 @@ abstract:
     captures, structures, cryptographically signs, and verifies human delegation context
     in agentic AI systems. An HDP token binds a human authorization event to a session,
     records each agent's delegation action as a signed hop in an append-only chain,
-    and enables any participant to verify the full provenance record using only the
-    issuer's Ed25519 public key and the current session identifier. Verification is
-    fully offline. No registry lookup, no network call, and no third-party trust anchor
-    is required. HDP's distinguishing contribution is a signed, tamper-evident record
-    of each agent's declared action at each hop, an execution audit trail that complements,
-    rather than replaces, capability-based delegation formats such as UCAN and ZCAP-LD.
-    The underlying append-only, offline-verifiable chain-of-custody mechanism is payload-agnostic;
+    and lets an auditor verify the integrity of the full record using only the issuer's
+    Ed25519 public key. Verification is fully offline. No registry lookup, no network
+    call, and no third-party trust anchor is required. HDP's distinguishing contribution
+    is a signed, tamper-evident record of what the human asked for and of how each
+    agent read and acted on that request. On deployments that use capability-based
+    delegation formats such as UCAN and ZCAP-LD, the same content can travel in the
+    capability certificates' own metadata instead of a separate token. The underlying
+    append-only, offline-verifiable chain-of-custody mechanism is payload-agnostic;
     human-authorized agentic delegation is the reference profile specified in this
     document. HDP is not an authorization protocol. An HDP token confers no authority
-    and its presentation entitles the presenter to nothing. It is a record of who
-    authorized a task and of what each agent declared it did with that authorization,
-    carried with the task and read at audit.</p>"
+    and is not an input to any access decision. It is a record of who authorized a
+    task and of what each agent declared it did with that authorization, carried with
+    the task and read at audit.</p>"
   language:
   - en
   script:
@@ -70,6 +71,16 @@ relation:
       primary: true
     formattedref:
       content: draft-helixar-hdp-agentic-delegation-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-helixar-hdp-agentic-delegation-03
+    docid:
+    - id: draft-helixar-hdp-agentic-delegation-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-helixar-hdp-agentic-delegation-03
       format: text/plain
 ext:
   schema-version: v1.0.1
