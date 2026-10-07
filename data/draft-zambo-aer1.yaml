@@ -21,13 +21,15 @@ abstract:
     what the system observed from claims about the outside world, and it separates
     provenance (who ran or reported the action) from the record itself. A reference
     implementation is deployed, and its receipts are publicly verifiable without an
-    account or token. The specification also defines workflow receipts, which bind
-    an ordered sequence of step receipts to a single goal with a Merkle root over
-    the step sequence, and hash-chained job timelines for tamper-evident sequencing
-    of executions. This revision is editorial only: it adds the missing Table of Contents
-    entry for the Acknowledgments section, rewraps example lines that exceeded the
-    72-character limit, and shortens this abstract. It changes no receipt field, procedure,
-    verification rule, or conformance vector.</p>"
+    account or token. The specification workflow receipts, which bind an ordered sequence
+    of step receipts to a single goal with a Merkle root over the step sequence, and
+    hash-chained job timelines for tamper-evident sequencing of executions. This revision
+    closes honesty and precision gaps: it adds the workflow-receipt truncation limit
+    (new Section 8.4), normatively specifies the external anchor format and its verification
+    procedure (rewritten Section 10, new Section 10.1), fixes a RECOMMENDED/MUST contradiction
+    in Section 8.1, makes the Section 6 verification step testable, and documents
+    replay, low-entropy, empty-record, and size-limit considerations. It changes no
+    receipt field, digest construction, or existing verification rule.</p>"
   language:
   - en
   script:
@@ -153,6 +155,16 @@ relation:
       primary: true
     formattedref:
       content: draft-zambo-aer1-11
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-zambo-aer1-12
+    docid:
+    - id: draft-zambo-aer1-12
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-zambo-aer1-12
       format: text/plain
 ext:
   schema-version: v1.0.1

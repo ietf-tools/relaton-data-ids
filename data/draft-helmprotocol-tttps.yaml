@@ -13,17 +13,20 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document specifies TTTPS, an application-layer protocol for evaluating
-    temporal evidence before an application accepts an event or performs a related
-    state transition. The protocol defines a fixed 180-byte Proof-of-Time Record v2
-    containing context, freshness, integrity, issuer-authentication, and holder-authentication
-    fields. When TLS 1.3 transport binding is selected, a separate holder binding
-    proof is derived from TLS exporter output and holder key material. The proof is
-    sent with, but is not part of, the 180-byte record. The fixed-record GRG admission
-    path is bounded with respect to peer count under declared frame and correction
-    limits. TTTPS returns an explicit admission result before application state mutation.
-    Confidence and propagation-aware profiles are optional. This document does not
-    define agent intent, audit record schemas, or transparency-log operation.</p>"
+- content: "<p>This document specifies a temporal-evidence admission protocol with
+    a fixed 180-octet Proof-of-Time Record v2. It defines issuer authentication, holder
+    presentation, context binding, asymmetric freshness checks, and replay-safe application
+    commitment. Implementations can place verification at a declared application boundary
+    and can accelerate suitable operations in a kernel, NIC, or FPGA without changing
+    those requirements. An authenticated context identifies the event, policy, source
+    evidence, and selected binding revision. A Roughtime adapter combines response-chain
+    validation with authority-backed provenance and effective-source aggregation.
+    Other clock adapters retain their own evidence contracts. Confidence and propagation-aware
+    profiles are optional and cannot repair a failed core check. The core mandatory
+    integrity algorithm is SHA-256. Optional recovery algorithms require separate
+    complete specifications. The protocol does not establish physical truth, agent
+    intent, legal admissibility, or regulatory compliance, and does not replace clock
+    synchronization, authorization, auditing, or transparency services.</p>"
   language:
   - en
   script:
@@ -159,6 +162,16 @@ relation:
       primary: true
     formattedref:
       content: draft-helmprotocol-tttps-12
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-helmprotocol-tttps-13
+    docid:
+    - id: draft-helmprotocol-tttps-13
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-helmprotocol-tttps-13
       format: text/plain
 ext:
   schema-version: v1.0.1
