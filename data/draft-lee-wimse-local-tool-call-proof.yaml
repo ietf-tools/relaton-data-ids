@@ -1,0 +1,45 @@
+---
+schema-version: v1.2.3
+id: draft-lee-wimse-local-tool-call-proof
+title:
+- content: Per-Call Proof for Local Tool Invocation by AI Agents
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-lee-wimse-local-tool-call-proof
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>AI agents increasingly act through local tool servers that run on the
+    same host and are reached over inter-process channels such as the stdio transport
+    of the Model Context Protocol (MCP). These channels are outside the scope of HTTP-based
+    authorization: the tool server cannot tell whether a given invocation passed any
+    policy decision, and reusable credentials typically sit in the agent's process
+    memory. This document defines a per-call proof for local tool invocation. A Call
+    Authority that runs outside the agent process evaluates policy, issues a short-lived,
+    single-use proof bound to the exact tool name and arguments through a canonical
+    action digest, and verifies that proof on behalf of the tool server. The tool
+    server rejects invocations whose proof is missing or does not verify. The proof
+    format is opaque to the agent and the tool server; concrete formats are defined
+    as evidence type profiles. An MCP stdio binding is provided.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-lee-wimse-local-tool-call-proof-00
+    docid:
+    - id: draft-lee-wimse-local-tool-call-proof-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-lee-wimse-local-tool-call-proof-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

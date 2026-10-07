@@ -29,7 +29,13 @@ abstract:
     developed third-party interoperability profile), clarifies the relationship to
     SCITT-based agent evidence work, and updates the author contact address. The detached
     Ed25519 signature construction over RFC 8785 canonical JSON and the receipt lifecycle
-    and signing- algorithm conformance are unchanged from draft-08.</p>"
+    and signing- algorithm conformance are unchanged from draft-08. This revision
+    restructures key management around two orthogonal trust levels: VERIFIED, the
+    self-contained integrity and key/signature consistency verifiable fully offline
+    from the receipt alone, and ACCEPTED, which adds out-of-band issuer pinning and
+    is the only level that authenticates the signer. The embedded public_key, public_key_fingerprint,
+    and signing_algorithm fields are now required to be covered by the signature to
+    prevent key substitution and algorithm downgrade.</p>"
   language:
   - en
   script:
@@ -135,6 +141,16 @@ relation:
       primary: true
     formattedref:
       content: draft-correctover-ccs-09
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-correctover-ccs-10
+    docid:
+    - id: draft-correctover-ccs-10
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-correctover-ccs-10
       format: text/plain
 ext:
   schema-version: v1.0.1

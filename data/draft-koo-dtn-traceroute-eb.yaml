@@ -15,13 +15,14 @@ docid:
 abstract:
 - content: "<p>This document defines a Traceroute Extension Block (TREB) for Bundle
     Protocol Version 7 (BPv7). Each participating node along a bundle's path appends
-    a hop-record containing its Node ID, the next hop it selected, the time of the
-    recorded event, and link characteristics. The same block, copied into bundle status
-    reports, returns traceroute data to the source. The mechanism is opt-in and intended
-    for designated diagnostic bundles on scheduled, bandwidth-constrained paths. In
-    delivery-report-only operation a single status report returns the full recorded
-    path and also records its own return path, giving a round-trip trace. Status report
-    generation remains governed by RFC 9171.</p>"
+    a hop-record containing its Node ID, the node it received the bundle from, the
+    next hop it selected, the time of the recorded event, and link characteristics.
+    The same block, copied into bundle status reports, returns traceroute data to
+    the source. The mechanism is opt-in and intended for designated diagnostic bundles
+    on scheduled, bandwidth-constrained paths. Each forwarding report returns one
+    hop-record, and the delivery report returns the full recorded path and also records
+    its own return path, giving a round-trip trace. Status report generation remains
+    governed by RFC 9171.</p>"
   language:
   - en
   script:
@@ -47,6 +48,16 @@ relation:
       primary: true
     formattedref:
       content: draft-koo-dtn-traceroute-eb-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-koo-dtn-traceroute-eb-02
+    docid:
+    - id: draft-koo-dtn-traceroute-eb-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-koo-dtn-traceroute-eb-02
       format: text/plain
 ext:
   schema-version: v1.0.1
