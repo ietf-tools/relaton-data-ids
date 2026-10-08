@@ -13,13 +13,12 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>QUIC is well-suited to various NAT traversal techniques. As it operates
-    over UDP, and because the QUIC header was designed to be demultipexed from other
-    protocols, STUN can be used on the same UDP socket, enabling ICE to be used with
-    QUIC. Furthermore, QUIC’s path validation mechanism can be used to test the viability
-    of an address candidate pair while at the same time creating the NAT bindings
-    required for a direction connection, after which QUIC connection migration can
-    be used to migrate the connection to a direct path.</p>"
+- content: "<p>This document specifies a QUIC extension for traversing Network Address
+    Translators (NATs). Endpoints use an existing proxied QUIC connection to coordinate
+    path validation attempts that create the NAT bindings needed for a direct path
+    and test its connectivity. Application data can be exchanged over the proxied
+    path while NAT traversal is in progress. Once a suitable direct path has been
+    validated, the connection can migrate to it.</p>"
   language:
   - en
   script:
@@ -55,6 +54,16 @@ relation:
       primary: true
     formattedref:
       content: draft-seemann-quic-nat-traversal-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-seemann-quic-nat-traversal-03
+    docid:
+    - id: draft-seemann-quic-nat-traversal-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-seemann-quic-nat-traversal-03
       format: text/plain
 ext:
   schema-version: v1.0.1

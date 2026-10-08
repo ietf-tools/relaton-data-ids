@@ -14,21 +14,14 @@ docid:
   primary: true
 abstract:
 - content: "<p>This document specifies the Sovereign Validation Protocol (SOVP), a
-    protocol for cryptographic verification of publisher-provided identity metadata
-    bound to DNS-anchored Ed25519 public keys. SOVP enables consuming agents, gateways,
-    and federated infrastructure components to verify the origin and integrity of
-    machine-readable declarations published by a domain prior to ingestion, allowing
-    deployments to reject unauthenticated data before application-level processing
-    occurs. SOVP is designed to operate as a verification layer beneath existing trust
-    frameworks, federation architectures, and governance systems. It does not replace
-    these systems. It provides the cryptographic infrastructure evidence upon which
-    higher-layer trust decisions may be grounded. SOVP defines a deterministic verification
-    procedure based on RFC 8785 JSON Canonicalization Scheme (JCS), Ed25519 signatures,
-    DNS-based key publication, and optional HTTP transport mechanisms. The protocol
-    defines data structures, cryptographic procedures, operational modes, and associated
-    DNS and HTTP mechanisms. The reference implementation provides signing and verification
-    primitives, DNS TXT resolution, and HTTP retrieval of identity documents. Full
-    gateway enforcement behavior is implementation- defined.</p>"
+    protocol for checking, before ingestion, that a signed identity document was produced
+    by the party that controls the Ed25519 key published in DNS for a host. A consumer
+    retrieves a JSON document from a well-known location on the host, canonicalizes
+    it, and verifies its signature against the key published in a DNS TXT record.
+    The protocol defines the signed scope, the retrieval and key resolution rules,
+    freshness checks, resource limits for unverified input, and an optional extension
+    that binds a document to a deployment instance. It does not establish legal identity,
+    the accuracy of content, or the configuration of the system that serves the document.</p>"
   language:
   - en
   script:
@@ -74,6 +67,16 @@ relation:
       primary: true
     formattedref:
       content: draft-litzki-sovp-03
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-litzki-sovp-04
+    docid:
+    - id: draft-litzki-sovp-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-litzki-sovp-04
       format: text/plain
 ext:
   schema-version: v1.0.1

@@ -13,19 +13,25 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>The Computing-Aware Traffic Steering (CATS) framework introduces the
-    CATS Service Metric Agent (C-SMA) as the functional entity responsible for collecting
+- content: "<p>The Computing-Aware Traffic Steering (CATS) framework defines the CATS
+    Service Metric Agent (C-SMA) as the functional entity responsible for collecting
     service capabilities and status, and reporting them to CATS Path Selectors (C-PSes).
-    While existing drafts define the metrics and high-level framework, the concrete
-    functional behavior, internal architecture, and operational procedures of the
-    C-SMA remain underspecified. This document fills that gap by defining the functional
-    implementation of the C-SMA. Specifically, it specifies how the C-SMA collects
-    metrics from multiple Service Contact Instances (SCIs) within a service site;
-    how it validates, and caches these metrics; how it adapts to various control-plane
-    protocols for metric distribution; how it enforces local policies and security
-    policies; and how it maintains synchronization with the C-PS under dynamic conditions.
-    This document complements [I-D.ietf-cats-framework] and [I-D.zhangb-cats-service-metrics-op]
-    by providing the operational execution layer for the C-SMA.</p>"
+    While the framework and the CATS metric documents define the components and the
+    metrics, the concrete observable behavior of the C-SMA - in particular, how it
+    validates and sanitizes the metrics it collects, how it manages soft- state for
+    stale or failing Service Contact Instances (SCIs), and how it synchronizes with
+    the C-PS - remains underspecified. This document fills that gap. It specifies
+    the functional behavior of the C-SMA in terms of observable behavior and reporting
+    semantics: how the C-SMA collects metric reports from SCIs (as specified in [I-D.zhangb-cats-sci-implementation]);
+    how it validates and sanitizes these reports to prevent erroneous or malicious
+    data from influencing traffic steering; how it manages a local metric cache with
+    soft-state aging; how it enforces local policies and update control policies;
+    and how it synchronizes with the C-PS, including recovery and reconciliation.
+    A decomposition of the C-SMA into internal functional components is provided as
+    illustrative implementation guidance, not as a mandated software architecture.
+    This document complements [RFC10053], [I-D.ietf-cats-metric-definition-13], [I-D.zhangb-cats-service-metrics-op],
+    and [I-D.zhangb-cats-sci-implementation] by providing the operational execution
+    layer for the C-SMA within the unified CATS architecture.</p>"
   language:
   - en
   script:
@@ -41,6 +47,16 @@ relation:
       primary: true
     formattedref:
       content: draft-zhangb-cats-csma-implementation-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-zhangb-cats-csma-implementation-01
+    docid:
+    - id: draft-zhangb-cats-csma-implementation-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-zhangb-cats-csma-implementation-01
       format: text/plain
 ext:
   schema-version: v1.0.1
