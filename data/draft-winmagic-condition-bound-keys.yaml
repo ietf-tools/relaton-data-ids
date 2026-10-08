@@ -1,0 +1,53 @@
+---
+schema-version: v1.2.3
+id: draft-winmagic-condition-bound-keys
+title:
+- content: User Authentication in the TLS Handshake with Condition-Bound Keys
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-winmagic-condition-bound-keys
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>A user's access to an online service is secured today in two parts.
+    A login establishes who is there and ends in a verdict, which a cookie or token
+    carries to later requests. The session is then protected by other means, such
+    as binding that token to a key. The login does not establish the key that protects
+    the session, and that leaves a gap between the two. This document describes authenticating
+    the user the way workloads are commonly authenticated: in the TLS handshake. The
+    user signs in to their own device. The device holds a condition-bound key that
+    can sign only while that user is using the device, the device is the enrolled
+    one, and its state meets local policy. Used as the TLS client key, it makes the
+    handshake the login and the TLS session the session. The key represents the identity
+    (the user, the device and its state) at the moment of use, so identity assurance
+    is carried in each transaction and nothing else has to stand for it: no separate
+    login to the service and no session credential. When a condition fails, the key
+    can no longer sign, and access ends at the next full handshake without a revocation
+    message being sent. This is not an extension of OAuth. OAuth starts after the
+    login; this removes the login to the service and the token that carries its result.
+    Authorization is unchanged and can still come from OAuth. The document describes
+    the properties of such a key, its use in mutual TLS, what a relying party can
+    conclude from it, what parties would need to agree on for it to interoperate,
+    and how it relates to existing mechanisms.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-winmagic-condition-bound-keys-00
+    docid:
+    - id: draft-winmagic-condition-bound-keys-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-winmagic-condition-bound-keys-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
