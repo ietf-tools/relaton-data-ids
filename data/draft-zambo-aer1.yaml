@@ -21,15 +21,28 @@ abstract:
     what the system observed from claims about the outside world, and it separates
     provenance (who ran or reported the action) from the record itself. A reference
     implementation is deployed, and its receipts are publicly verifiable without an
-    account or token. The specification workflow receipts, which bind an ordered sequence
-    of step receipts to a single goal with a Merkle root over the step sequence, and
-    hash-chained job timelines for tamper-evident sequencing of executions. This revision
-    closes honesty and precision gaps: it adds the workflow-receipt truncation limit
-    (new Section 8.4), normatively specifies the external anchor format and its verification
-    procedure (rewritten Section 10, new Section 10.1), fixes a RECOMMENDED/MUST contradiction
-    in Section 8.1, makes the Section 6 verification step testable, and documents
-    replay, low-entropy, empty-record, and size-limit considerations. It changes no
-    receipt field, digest construction, or existing verification rule.</p>"
+    account or token. The specification covers workflow receipts, which bind an ordered
+    sequence of step receipts to a single goal with a Merkle root over the step sequence,
+    and hash-chained job timelines for tamper-evident sequencing of executions. This
+    revision closes honesty and precision gaps: it adds the workflow-receipt truncation
+    limit (new Section 8.4), normatively specifies the external anchor format and
+    its verification procedure (rewritten Section 10, new Section 10.1), fixes a RECOMMENDED/MUST
+    contradiction in Section 8.1, makes the Section 6 verification step testable,
+    and documents replay, low-entropy, empty-record, and size-limit considerations.
+    It changes no receipt field, digest construction, or existing verification rule.
+    The -13 revision fixes a malformed sentence in the Abstract, three incorrect section
+    cross-references, stale Table of Contents page numbers, a skipped footer page
+    number, misaligned table rows, and chain version-string updates, and records two
+    live independent interop validations in Implementation Status; it changes no receipt
+    field, digest construction, or verification rule. The -14 revision adds tamper-evident
+    metadata binding (new Section 3.1; conditional metadata_hash for schema 0.4 and
+    later), disambiguates the anchor receipt_id (Table 4), corrects the self-anchoring
+    witnessing claim (Section 10), makes the Section 8.3 display rule a SHOULD with
+    a byte-testable MUST, narrows the provenance attestation wording (Section 5),
+    states the binding non-transfer rule normatively (new Section 10.2), pins anchored_digest
+    to bare hex (Table 4), corrects the vector corpus counts, and adds normative disclosure
+    of missing issuer authentication. It changes no existing receipt field, digest
+    construction, or verification rule for schema 0.3 and earlier.</p>"
   language:
   - en
   script:
@@ -165,6 +178,26 @@ relation:
       primary: true
     formattedref:
       content: draft-zambo-aer1-12
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-zambo-aer1-13
+    docid:
+    - id: draft-zambo-aer1-13
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-zambo-aer1-13
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-zambo-aer1-14
+    docid:
+    - id: draft-zambo-aer1-14
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-zambo-aer1-14
       format: text/plain
 ext:
   schema-version: v1.0.1
