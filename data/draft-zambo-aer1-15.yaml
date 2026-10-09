@@ -1,0 +1,124 @@
+---
+schema-version: v1.2.3
+id: draft-zambo-aer1-15
+title:
+- content: 'AER-1: A Portable Execution Receipt for AI Agent Tool Calls'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-zambo-aer1-15
+  type: src
+type: standard
+docid:
+- id: draft-zambo-aer1-15
+  type: Internet-Draft
+  primary: true
+- id: I-D.zambo-aer1
+  type: IETF
+  scope: anchor
+docnumber: I-D.zambo-aer1
+date:
+- type: published
+  value: '2026-10-08'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Brennan
+          language:
+          - en
+        - language:
+          - en
+          initial: B
+        formatted_initials:
+          content: B.
+          language:
+          - en
+      surname:
+        content: Zambo
+        language:
+        - en
+      completename:
+        content: Brennan Zambo
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Zambo
+  role:
+  - type: author
+version:
+- draft: '15'
+revdate: '2026-10-08'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>This document specifies AER-1, a small vocabulary for recording one
+    AI agent tool call as a portable, independently checkable execution receipt. A
+    receipt identifies the execution, records when it happened, preserves the canonical
+    bytes used for the output commitment, names the tool and caller scope, carries
+    a provenance class, and resolves at a stable public URL. The format separates
+    what the system observed from claims about the outside world, and it separates
+    provenance (who ran or reported the action) from the record itself. A reference
+    implementation is deployed, and its receipts are publicly verifiable without an
+    account or token. The specification covers workflow receipts, which bind an ordered
+    sequence of step receipts to a single goal with a Merkle root over the step sequence,
+    and hash-chained job timelines for tamper-evident sequencing of executions. This
+    revision closes honesty and precision gaps: it adds the workflow-receipt truncation
+    limit (new Section 8.4), normatively specifies the external anchor format and
+    its verification procedure (rewritten Section 10, new Section 10.1), fixes a RECOMMENDED/MUST
+    contradiction in Section 8.1, makes the Section 6 verification step testable,
+    and documents replay, low-entropy, empty-record, and size-limit considerations.
+    It changes no receipt field, digest construction, or existing verification rule.
+    The -13 revision fixes a malformed sentence in the Abstract, three incorrect section
+    cross-references, stale Table of Contents page numbers, a skipped footer page
+    number, misaligned table rows, and chain version-string updates, and records two
+    reported interoperability examples in Implementation Status; it changes no receipt
+    field, digest construction, or verification rule. The -14 revision adds tamper-evident
+    metadata binding (new Section 3.1; conditional metadata_hash for schema 0.4 and
+    later), disambiguates the anchor receipt_id (Table 4), corrects the self-anchoring
+    witnessing claim (Section 10), makes the Section 8.3 display rule a SHOULD with
+    a byte-testable MUST, narrows the provenance attestation wording (Section 5),
+    states the binding non-transfer rule normatively (new Section 10.2), pins anchored_digest
+    to bare hex (Table 4), corrects the vector corpus counts, and adds normative disclosure
+    of missing issuer authentication. It changes no existing receipt field, digest
+    construction, or verification rule for schema 0.3 and earlier. The -15 revision
+    narrows the Implementation Status wording for the reported interoperability examples
+    at the implementer's request; it changes no receipt field, digest construction,
+    or verification rule.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-zambo-aer1-12
+    docid:
+    - id: draft-zambo-aer1-12
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-zambo-aer1-12
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-zambo-aer1-15
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

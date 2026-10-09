@@ -14,17 +14,21 @@ docid:
   primary: true
 abstract:
 - content: "<p>This document defines a git commit trailer grammar for identity- attributed
-    contributions using the ~handle identity primitive defined in [MCPDNS]. The grammar
-    binds sovereign actors, automated bots, and AI instruments to specific commits
-    via three tier-structured trailers (Acted-By, Executed-By, Drafted-With) and three
-    optional cryptographic trailers (Identity-Signature, Identity-Key-Id, Identity-Anchor).
-    The signature is computed with Ed25519 over the commit's tree hash rather than
-    its commit hash, preserving attribution across rebase, cherry-pick, and squash
-    merge operations. Conformant parsers reject cross-tier category errors (e.g.,
-    an Instrument-tier handle in an Acted-By slot) as malformed. The mechanism is
-    provider-neutral, depends only on DNS [RFC1035] and the ~handle resolution algorithm
-    of [MCPDNS], and requires no central authority or platform-specific verification
-    service.</p>"
+    contributions using the ~handle identity primitive defined in the MCP DNS discovery
+    draft. The grammar binds sovereign actors, automated bots, and AI instruments
+    to specific commits via three tier-structured trailers (Acted-By, Executed-By,
+    Drafted-With) and three optional cryptographic trailers (Identity-Signature, Identity-
+    Key-Id, Identity-Anchor). The signature is computed with Ed25519 over the commit's
+    patch identifier, the value git patch-id derives from the change the commit makes,
+    under a fixed domain-separation prefix. It therefore attests the change and not
+    the resulting tree or the commit hash. A commit that carries the same change keeps
+    a verifying signature across rebase onto an unrelated base, cherry- pick, and
+    message amendment. A merge commit carries no signature, and a squash is a new
+    change signed by whoever squashed it. Conformant parsers reject cross-tier category
+    errors (e.g., an Instrument-tier handle in an Acted-By slot) as malformed. The
+    mechanism is provider-neutral, depends only on DNS and the ~handle resolution
+    algorithm of that draft, and requires no central authority or platform-specific
+    verification service.</p>"
   language:
   - en
   script:
@@ -60,6 +64,16 @@ relation:
       primary: true
     formattedref:
       content: draft-morrison-identity-attributed-commits-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-morrison-identity-attributed-commits-03
+    docid:
+    - id: draft-morrison-identity-attributed-commits-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-morrison-identity-attributed-commits-03
       format: text/plain
 ext:
   schema-version: v1.0.1

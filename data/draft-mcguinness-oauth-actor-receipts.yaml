@@ -13,15 +13,13 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document defines OAuth Actor Receipts, an optional companion provenance
-    profile for delegated OAuth tokens that conform to the OAuth Actor Profile for
-    Delegation. It introduces the actor_receipts claim, a signed per-hop receipt chain
-    that records which issuer added each visible actor hop, optionally preserves the
-    historical top-level cnf value associated with that hop subject to deployment
-    disclosure policy, and links receipts together so recipients can validate prior-
-    hop provenance without relying solely on the current outer token issuer. This
-    document also defines metadata and introspection parameters for advertising and
-    consuming actor-receipt support.</p>"
+- content: "<p>This document defines OAuth Actor Receipts, an optional companion to
+    the OAuth Actor Profile for Delegation. Each receipt is a signed JSON Web Token
+    (JWT) attesting which issuer added an actor hop and, optionally, the hop's historical
+    presenter binding. The actor_receipts claim carries a hash-linked chain of receipts
+    that recipients verify against each hop's issuer. This document specifies receipt
+    processing rules and the associated metadata parameters and introspection response
+    members.</p>"
   language:
   - en
   script:
@@ -37,6 +35,16 @@ relation:
       primary: true
     formattedref:
       content: draft-mcguinness-oauth-actor-receipts-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-mcguinness-oauth-actor-receipts-01
+    docid:
+    - id: draft-mcguinness-oauth-actor-receipts-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-mcguinness-oauth-actor-receipts-01
       format: text/plain
 ext:
   schema-version: v1.0.1
