@@ -2,8 +2,8 @@
 schema-version: v1.2.3
 id: draft-ietf-pce-stateful-pce-autobw-update
 title:
-- content: Update to Automatic Bandwidth Adjustment Procedure of Stateful PCE for
-    MPLS-TE and SR-TE LSPs
+- content: Update to the Automatic Bandwidth Adjustment Procedure for MPLS-TE and
+    SR-TE LSPs with a Stateful PCE
   language:
   - en
   script:
@@ -14,18 +14,19 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>The Stateful PCE extensions allow Stateful control of Traffic Engineering
-    (TE) LSPs using PCEP for RSVP-TE and Segment Routing (SR) (for both MPLS and IPv6
-    Data planes) for both PCE-Initiated and PCC- Initiated LSPs. Extensions to the
-    Path Computation Element Communication Protocol (PCEP) for MPLS-TE Label Switched
-    Path (LSP) Automatic Bandwidth Adjustments with Stateful PCE are defined in RFC
-    8733. It defines the AUTO-BANDWIDTH-ATTRIBUTES TLV and a set of sub-TLVs for each
-    of the attributes. The sub-TLVs are included if there is a change since the last
-    information sent in the PCEP message. However, it lacks a mechanism to remove
-    an attribute identified by the sub-TLV explicitly. This document updates RFC 8733
-    by defining the behaviour to remove an attribute explicitly. In addition, this
-    updates allow applying this PCEP extensions to SR-TE LSPs (for both MPLS and IPv6
-    Data planes), in addition to MPLS-TE LSPs.</p>"
+- content: "<p>Extensions for the stateful PCE model enable control of Traffic Engineering
+    (TE) LSPs using the Path Computation Element Communication Protocol (PCEP) for
+    RSVP-TE and Segment Routing (SR), for both PCE-initiated and PCC-initiated LSPs.
+    RFC 8733 defines PCEP extensions for automatically adjusting bandwidth on MPLS-TE
+    Label Switched Paths (LSPs) using a stateful PCE. It also defines the AUTO-BANDWIDTH-ATTRIBUTES
+    TLV and a set of sub-TLVs for the attributes. A sub-TLV is included when its value
+    differs from the value last sent in a PCEP message. However, RFC 8733 lacks a
+    mechanism to explicitly remove an attribute identified by a sub-TLV. This document
+    updates RFC 8733 by defining such a mechanism. In addition, this document applies
+    the PCEP extensions for automatic bandwidth adjustment to SR-TE LSPs in both the
+    MPLS (SR-MPLS) and IPv6 (SRv6) data planes. It also extends automatic bandwidth
+    adjustment to multiple Segment Lists in an SR LSP using the extensions defined
+    in draft-ietf-pce-multipath.</p>"
   language:
   - en
   script:
@@ -81,6 +82,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-pce-stateful-pce-autobw-update-04
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-pce-stateful-pce-autobw-update-05
+    docid:
+    - id: draft-ietf-pce-stateful-pce-autobw-update-05
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-pce-stateful-pce-autobw-update-05
       format: text/plain
 ext:
   schema-version: v1.0.1

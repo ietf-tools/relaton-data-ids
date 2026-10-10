@@ -17,13 +17,16 @@ abstract:
     groups define counters, gauges, and other measured values that are exported from
     a network element and compared, summed, or averaged by a remote collector, either
     against the same node's history or against values from a different node. YANG
-    (RFC 7950) has no first-class, machine-checkable way to state the domain within
-    which two occurrences of such a value are comparable, so this determination is
-    currently made, inconsistently or not at all, in prose. This document defines
-    a YANG extension statement, "csc:comparability-scope", a four-value scope lattice,
-    and a compatibility rule that lets a schema-aware tool statically detect an illegal
-    aggregation across incomparable scopes, without waiting for it to happen at a
-    collector.</p>
+    (RFC 7950) has no first-class, machine-checkable way to state the administrative
+    or topological domain within which two occurrences of such a value are comparable,
+    so this determination is currently made, inconsistently or not at all, in prose.
+    This document defines a YANG extension statement, "csc:comparability-scope", a
+    four-value scope lattice, and a compatibility rule that lets a schema-aware tool
+    statically detect an illegal aggregation across incomparable scopes, without waiting
+    for it to happen at a collector. A related but distinct axis, the measurement
+    window or method over which a rate or average value was computed, is identified
+    as a further gap this document's mechanism does not itself close, and is reported
+    separately as a candidate for future work.</p>
   language:
   - en
   script:
@@ -39,6 +42,26 @@ relation:
       primary: true
     formattedref:
       content: draft-dikshit-netmod-comparability-scope-extension-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-dikshit-netmod-comparability-scope-extension-01
+    docid:
+    - id: draft-dikshit-netmod-comparability-scope-extension-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-dikshit-netmod-comparability-scope-extension-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-dikshit-netmod-comparability-scope-extension-02
+    docid:
+    - id: draft-dikshit-netmod-comparability-scope-extension-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-dikshit-netmod-comparability-scope-extension-02
       format: text/plain
 ext:
   schema-version: v1.0.1
