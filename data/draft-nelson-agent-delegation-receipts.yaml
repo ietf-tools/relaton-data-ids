@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-nelson-agent-delegation-receipts
 title:
-- content: Delegation Receipt Protocol for AI Agent Authorization
+- content: Agent Delegation Receipts
   language:
   - en
   script:
@@ -13,13 +13,16 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document defines the Delegation Receipt Protocol (DRP), a cryptographic
-    authorization primitive for AI agent deployments. Before any agent action executes,
-    the authorizing user signs an Authorization Object containing scope boundaries,
-    time window, operator instruction hash, and model state commitment. This signed
-    receipt is published to an append-only log before the agent runtime receives control.
-    The protocol reduces reliance on the operator as a trusted intermediary by making
-    the user's private key the sole signing authority over the delegation record.</p>"
+- content: "<p>This document defines the Agent Delegation Receipt: a signed record
+    of what a human principal authorized an AI agent to do, for how long, and under
+    what instructions. The receipt carries a scope, hard boundaries, a validity window,
+    and a hash of the operator's stated instructions, all signed by the authorizing
+    key. Version -11 replaces the draft's earlier custom signature format with two
+    standard profiles: a JWS profile (RFC 7515) over JCS-canonicalized JSON (RFC 8785)
+    as the primary wire format, and a COSE_Sign1 profile (RFC 9052) for constrained
+    environments. It also specifies scope attenuation rules for multi-agent delegation
+    chains, a revocation registry model with cascade semantics, and the limitations
+    of what receipts can and cannot prove.</p>"
   language:
   - en
   script:
@@ -135,6 +138,16 @@ relation:
       primary: true
     formattedref:
       content: draft-nelson-agent-delegation-receipts-10
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-nelson-agent-delegation-receipts-11
+    docid:
+    - id: draft-nelson-agent-delegation-receipts-11
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-nelson-agent-delegation-receipts-11
       format: text/plain
 ext:
   schema-version: v1.0.1

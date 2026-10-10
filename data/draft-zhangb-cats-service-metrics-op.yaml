@@ -14,27 +14,23 @@ docid:
   primary: true
 abstract:
 - content: "<p>Computing-Aware Traffic Steering (CATS) optimizes traffic forwarding
-    by considering both computing and networking metrics. The CATS framework and metric-definition
-    documents provide valuable theoretical models, yet they face challenges in achieving
-    direct operational execution in real-world deployments: normalization methods
-    vary across providers, and aggregated unitless scores often lose the operational
-    information that routers need for precise steering decisions. This document provides
-    a self-contained, executable operational model for a core class of CATS deployment
-    scenarios: latency-sensitive, compute-intensive services whose steering decisions
-    are made in real time at the forwarding node. Instead of disseminating low-level
-    raw hardware metrics, service sites dynamically evaluate and report service-oriented
-    metrics (e.g., Global Available Slots and Computing Time) to the control plane.
+    by considering both computing and networking metrics. The CATS Metrics framework
+    provides a general metric hierarchy and operational guidance for aggregation and
+    normalization. Some deployment scenarios additionally require service-oriented
+    metrics with explicit semantics and units to be consumed directly for joint service-
+    instance and path selection. This document defines an operational approach that
+    does not rely on the Level 1 or Level 2 normalized scores of the CATS Metrics
+    framework. Instead, service sites report service-oriented metrics with explicit
+    semantics and units, such as Global Available Slots and Computing Time, which
+    are directly consumed by the C-PS for joint service-instance and path selection.
     The document clarifies how these metrics are derived from basic resource information,
-    service reference information, and local policy. It also specifies how the CATS
-    Path Selector (C-PS) combines the Computing Service Table (populated from C-SMA
-    reports) with the Network Service Table to make joint traffic- steering decisions,
-    and defines update-control and fallback mechanisms suitable for large-scale deployments.
-    Within the unified CATS architecture, the service-oriented operational model defined
-    in this document coexists with the general- purpose L1/L2 normalized metric framework:
-    a deployment MAY use either model, or run both pipelines in parallel for different
-    service classes, without embedding metric fields across frameworks. This document
-    does not negate the value of normalized metrics; it focuses on the service-level
-    abstractions and runtime operations required for direct traffic steering.</p>"
+    service reference information, and local policy. It also specifies how the C-PS
+    combines the Computing Service Table with the Network Service Table, and defines
+    update-control and fallback mechanisms suitable for large-scale deployments. Within
+    the unified CATS architecture, this service-oriented operational approach complements
+    the normalized-score approach. The two targeted scenarios are rapid deployment
+    without offline metric- function negotiation and fine-grained, requirement-aware
+    joint selection.</p>"
   language:
   - en
   script:
@@ -100,6 +96,16 @@ relation:
       primary: true
     formattedref:
       content: draft-zhangb-cats-service-metrics-op-05
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-zhangb-cats-service-metrics-op-06
+    docid:
+    - id: draft-zhangb-cats-service-metrics-op-06
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-zhangb-cats-service-metrics-op-06
       format: text/plain
 ext:
   schema-version: v1.0.1
