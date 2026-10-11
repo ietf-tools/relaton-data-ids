@@ -13,20 +13,18 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document specifies the Agent Identity Protocol (AIP), a protocol
-    for verifiable, delegable identity for AI agent systems. AIP introduces Invocation-Bound
-    Capability Tokens (IBCTs) that bind identity, authorization, scope constraints,
-    and provenance into a single cryptographic artifact. Two token modes are defined:
-    a compact mode using JSON Web Tokens (JWT) with Ed25519 signatures for single-hop
-    interactions, and a chained mode using Biscuit tokens with append-only blocks
-    and Datalog policy evaluation for multi-hop delegation chains. Protocol bindings
-    are specified for the Model Context Protocol (MCP), Agent-to-Agent Protocol (A2A),
-    and generic HTTP APIs. The protocol addresses authentication gaps in current AI
-    agent infrastructure where a survey of approximately 2,000 MCP servers found all
-    lacked authentication. This revision specifies a normative verification algorithm,
-    defines the canonical policy encoding for chained mode, describes how AIP composes
-    with workload identity systems such as SPIFFE, and maps AIP against the cross-
-    organization delegation requirements enumerated in [I-D.reece-wimse-cross-org-delegation].</p>"
+- content: "<p>This document specifies the Agent Identity Protocol (AIP), which conveys
+    delegated authority along a chain of AI agents so that a relying party can verify,
+    from the token and the issuer's public key, who granted the authority, through
+    which agents it passed, and that no hop widened what it received. AIP addresses
+    hops where no authorization server is on the path, such as one agent subdelegating
+    to another. It is intended to compose with the AI Identity Management System (AIMS)
+    framework, which covers hops where an authorization server is present. The document
+    defines an encoding- neutral delegation chain model with a single attenuation
+    invariant, a normative verification algorithm, and two encodings of the model:
+    a chain of JSON Web Tokens, in which each link names the key of the next holder,
+    and a Biscuit token with Datalog policy. Bindings are given for the Model Context
+    Protocol (MCP), the Agent2Agent protocol (A2A), and generic HTTP.</p>"
   language:
   - en
   script:
@@ -52,6 +50,16 @@ relation:
       primary: true
     formattedref:
       content: draft-prakash-aip-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-prakash-aip-02
+    docid:
+    - id: draft-prakash-aip-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-prakash-aip-02
       format: text/plain
 ext:
   schema-version: v1.0.1
