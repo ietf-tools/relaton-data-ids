@@ -14,13 +14,17 @@ docid:
   primary: true
 abstract:
 - content: "<p>This document defines the Sovereign AI Horizontal Memory (SAIHM) protocol,
-    a memory layer for AI agents that supports post-quantum identity binding, public-chain
-    audit anchoring, per-cell encryption with wallet-derived keys, revocable sharing
-    contracts, and cryptographic right-to-erasure aligned with Article 17 of EU Regulation
-    2016/679 (GDPR). SAIHM is the memory-layer protocol companion to the Model Context
-    Protocol (MCP). MCP standardizes how AI agents reach tools and contextual data
-    sources; SAIHM standardizes how AI agents persist, share, and erase memory across
-    sessions, models, and vendors.</p>"
+    a memory layer for AI agents. A SAIHM client seals every memory cell before it
+    leaves the holder's machine, under a random data-encryption key that is wrapped
+    under a key-encryption key only the client holds; the operator stores signed envelopes
+    of ciphertext and wrapped keys and never holds a key able to decrypt them. The
+    protocol specifies post-quantum identity binding (ML-DSA-65), authenticated sharing
+    (ML-KEM-768), and cryptographic erasure by destruction of every operator-held
+    copy of a cell's wrapped key, distinguished normatively from access-control erasure.
+    SAIHM lets agents that use the Model Context Protocol (MCP) persist, share, and
+    erase memory across sessions, models, and vendors. It is intended to complement
+    IETF work on agent dialog management and conversation data containers without
+    overlapping it.</p>"
   language:
   - en
   script:
@@ -46,6 +50,16 @@ relation:
       primary: true
     formattedref:
       content: draft-saihm-memory-protocol-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-saihm-memory-protocol-02
+    docid:
+    - id: draft-saihm-memory-protocol-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-saihm-memory-protocol-02
       format: text/plain
 ext:
   schema-version: v1.0.1

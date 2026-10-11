@@ -13,16 +13,20 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document defines the Agent Delegation Receipt: a signed record
+- content: '<p>This document defines the Agent Delegation Receipt: a signed record
     of what a human principal authorized an AI agent to do, for how long, and under
     what instructions. The receipt carries a scope, hard boundaries, a validity window,
-    and a hash of the operator's stated instructions, all signed by the authorizing
-    key. Version -11 replaces the draft's earlier custom signature format with two
+    and a hash of the operator''s stated instructions, all signed by the authorizing
+    key. Version -11 replaces the draft''s earlier custom signature format with two
     standard profiles: a JWS profile (RFC 7515) over JCS-canonicalized JSON (RFC 8785)
     as the primary wire format, and a COSE_Sign1 profile (RFC 9052) for constrained
     environments. It also specifies scope attenuation rules for multi-agent delegation
     chains, a revocation registry model with cascade semantics, and the limitations
-    of what receipts can and cannot prove.</p>"
+    of what receipts can and cannot prove. Version -12 resolves the unknown- fields
+    question raised on the IETF oauth mailing list: authorization fields are closed
+    (verifiers reject unknown top-level body fields rather than silently ignoring
+    them), the "metadata" object is the defined extension point, and one-time-use
+    receipts fail closed without a durable consumption store.</p>'
   language:
   - en
   script:
@@ -148,6 +152,16 @@ relation:
       primary: true
     formattedref:
       content: draft-nelson-agent-delegation-receipts-11
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-nelson-agent-delegation-receipts-12
+    docid:
+    - id: draft-nelson-agent-delegation-receipts-12
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-nelson-agent-delegation-receipts-12
       format: text/plain
 ext:
   schema-version: v1.0.1
