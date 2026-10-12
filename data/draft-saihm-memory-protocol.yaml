@@ -14,17 +14,17 @@ docid:
   primary: true
 abstract:
 - content: "<p>This document defines the Sovereign AI Horizontal Memory (SAIHM) protocol,
-    a memory layer for AI agents. A SAIHM client seals every memory cell before it
-    leaves the holder's machine, under a random data-encryption key that is wrapped
-    under a key-encryption key only the client holds; the operator stores signed envelopes
-    of ciphertext and wrapped keys and never holds a key able to decrypt them. The
-    protocol specifies post-quantum identity binding (ML-DSA-65), authenticated sharing
-    (ML-KEM-768), and cryptographic erasure by destruction of every operator-held
-    copy of a cell's wrapped key, distinguished normatively from access-control erasure.
-    SAIHM lets agents that use the Model Context Protocol (MCP) persist, share, and
-    erase memory across sessions, models, and vendors. It is intended to complement
-    IETF work on agent dialog management and conversation data containers without
-    overlapping it.</p>"
+    a memory layer for AI agents. A SAIHM operator stores an agent's memory as encrypted
+    cells bound to a post-quantum holder identity, records each state change in a
+    public audit log, and supports revocable sharing contracts. The protocol defines
+    an erasure operation with two stated erasure classes, intended to help an operator
+    meet its obligations under Article 17 of EU Regulation 2016/679 (GDPR). This revision
+    specifies the custodial profile. The operator holds the holder's keys and performs
+    all cryptography. The agent-side client holds no keys, runs no cryptography beyond
+    TLS and keeps no store; it reaches the operator over HTTPS and exposes the protocol
+    to the agent as eight Model Context Protocol (MCP) tools. The document defines
+    the operator obligations, the HTTPS binding, the eight tools, and the checks a
+    conformant client applies to what the operator returns.</p>"
   language:
   - en
   script:
@@ -60,6 +60,16 @@ relation:
       primary: true
     formattedref:
       content: draft-saihm-memory-protocol-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-saihm-memory-protocol-03
+    docid:
+    - id: draft-saihm-memory-protocol-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-saihm-memory-protocol-03
       format: text/plain
 ext:
   schema-version: v1.0.1
