@@ -1,0 +1,184 @@
+---
+schema-version: v1.2.3
+id: draft-lee-wimse-local-tool-call-proof-01
+title:
+- content: Per-Call Proof for Local Tool Invocation by AI Agents
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-lee-wimse-local-tool-call-proof-01
+  type: src
+type: standard
+docid:
+- id: draft-lee-wimse-local-tool-call-proof-01
+  type: Internet-Draft
+  primary: true
+- id: I-D.lee-wimse-local-tool-call-proof
+  type: IETF
+  scope: anchor
+docnumber: I-D.lee-wimse-local-tool-call-proof
+date:
+- type: published
+  value: '2026-10-11'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Jaebin
+          language:
+          - en
+        - language:
+          - en
+          initial: J
+        formatted_initials:
+          content: J.
+          language:
+          - en
+      surname:
+        content: Lee
+        language:
+        - en
+      completename:
+        content: Jaebin Lee
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: SSenStone Inc.
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - language:
+          - en
+          initial: C
+        formatted_initials:
+          content: C.
+          language:
+          - en
+      surname:
+        content: Yoo
+        language:
+        - en
+      completename:
+        content: Chang-Hun Yoo
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: SSenStone Inc.
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: MinGyu
+          language:
+          - en
+        - language:
+          - en
+          initial: M
+        formatted_initials:
+          content: M.
+          language:
+          - en
+      surname:
+        content: Kim
+        language:
+        - en
+      completename:
+        content: MinGyu Kim
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: SSenStone Inc.
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: WooYong
+          language:
+          - en
+        - language:
+          - en
+          initial: W
+        formatted_initials:
+          content: W.
+          language:
+          - en
+      surname:
+        content: Seo
+        language:
+        - en
+      completename:
+        content: WooYong Seo
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: SSenStone Inc.
+  role:
+  - type: author
+version:
+- draft: '01'
+revdate: '2026-10-11'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>AI agents increasingly act through local tool servers that run on the
+    same host and are reached over inter-process channels such as the stdio transport
+    of the Model Context Protocol (MCP). These channels are outside the scope of HTTP-based
+    authorization: the tool server cannot tell whether a given invocation passed any
+    policy decision, and reusable credentials typically sit in the agent's process
+    memory. This document defines a per-call proof for local tool invocation. A Call
+    Authority that runs outside the agent process evaluates policy, issues a short-lived,
+    single-use proof bound to the exact tool name and arguments through a canonical
+    action digest, and verifies that proof on behalf of the tool server. The tool
+    server rejects invocations whose proof is missing or does not verify. The proof
+    format is opaque to the agent and the tool server; concrete formats are defined
+    as evidence type profiles. An MCP stdio binding is provided.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-lee-wimse-local-tool-call-proof-00
+    docid:
+    - id: draft-lee-wimse-local-tool-call-proof-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-lee-wimse-local-tool-call-proof-00
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-lee-wimse-local-tool-call-proof-01
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

@@ -13,17 +13,18 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document introduces an inter-domain SAVNET architecture for performing
-    AS-level SAV and provides a comprehensive framework for guiding the design of
-    inter-domain SAV mechanisms. The proposed architecture empowers ASes to generate
-    SAV rules by sharing SAV- specific information between themselves, which can be
-    used to generate more accurate and trustworthy SAV rules in a timely manner compared
-    to the general information. During the incremental or partial deployment of SAV-specific
-    information, it can utilize general information to generate SAV rules, if an AS's
-    SAV-specific information is unavailable. Rather than delving into protocol extensions
-    or implementations, this document primarily concentrates on proposing SAV-specific
-    and general information and guiding how to utilize them to generate SAV rules.
-    To this end, it also defines some architectural components and their relations.</p>"
+- content: "<p>This document specifies an architecture for inter-domain source address
+    validation (SAV). The architecture provides a common framework for collecting
+    SAV-specific and SAV-related information from multiple sources, determining the
+    legitimate incoming directions of source prefixes, and using this information
+    to generate SAV table for inter-domain SAV. A SAV agent maintains the collected
+    information in a SAV Information Base (SIB), and the SAV Information Base Manager
+    (SIM) uses the available information to determine the corresponding prefix and
+    legitimate incoming-direction mappings and generate or update the SAV table. This
+    document also defines the architectural components and communication framework
+    of inter-domain SAV, and discusses deployment, operation, convergence, manageability,
+    security, and privacy considerations. It does not define a specific SAV protocol,
+    protocol extension, or SAV table generation algorithm.</p>"
   language:
   - en
   script:
@@ -69,6 +70,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-savnet-inter-domain-architecture-03
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-savnet-inter-domain-architecture-04
+    docid:
+    - id: draft-ietf-savnet-inter-domain-architecture-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-savnet-inter-domain-architecture-04
       format: text/plain
 ext:
   schema-version: v1.0.1
