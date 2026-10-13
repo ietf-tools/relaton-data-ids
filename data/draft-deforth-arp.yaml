@@ -2,8 +2,7 @@
 schema-version: v1.2.3
 id: draft-deforth-arp
 title:
-- content: 'Agentic Reasoning Protocol (ARP): DNS-Bound Cryptographic Verification
-    for Machine-Readable Entity Claims'
+- content: 'Agentic Reasoning Protocol (ARP): DNS-Bound Signatures for Entity Self-Descriptions'
   language:
   - en
   script:
@@ -14,15 +13,18 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document specifies the Agentic Reasoning Protocol (ARP), a lightweight
-    mechanism for cryptographically binding machine-readable entity claims to domain
-    ownership via DNS TXT records. ARP enables AI agents and Retrieval-Augmented Generation
-    (RAG) pipelines to verify that structured data published on a domain was authorized
-    by the domain owner, preventing narrative injection and entity spoofing in generative
-    search systems. ARP uses Ed25519 digital signatures [RFC8032], JSON Canonicalization
-    Scheme (JCS) [RFC8785], and DNS TXT records to establish a chain of trust analogous
-    to DomainKeys Identified Mail (DKIM) [RFC6376] but designed specifically for the
-    verification of semantic entity data consumed by autonomous AI agents.</p>"
+- content: <p>This document specifies version 1.3 ("Reader Profile") of the Agentic
+    Reasoning Protocol (ARP). ARP defines a JSON manifest, served at a well-known
+    location, in which the operator of a domain publishes a self-description of an
+    entity, and an optional Ed25519 signature that binds the manifest to the domain
+    through a public key in a DNS TXT record. A valid signature shows that the domain
+    operator published exactly this file and that it has not been altered since; it
+    does not show that the statements in the file are true. Version 1.3 adds a wording
+    profile that limits manifest text to third-person statements about the entity,
+    a required provenance statement, a readable description of the signature with
+    pointers for checking it, a Markdown representation bound to the manifest by a
+    SHA-256 digest, a discovery profile, and key revocation through an empty key value
+    in the DNS record.</p>
   language:
   - en
   script:
@@ -38,6 +40,16 @@ relation:
       primary: true
     formattedref:
       content: draft-deforth-arp-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-deforth-arp-01
+    docid:
+    - id: draft-deforth-arp-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-deforth-arp-01
       format: text/plain
 ext:
   schema-version: v1.0.1

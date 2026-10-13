@@ -15,13 +15,16 @@ docid:
 abstract:
 - content: "<p>This document defines learnlog, a log format for learning software.
     A record holds typed events that describe what a learner did and what other parties,
-    human or software, did in response. Entries are chained by hash, and a producer
+    human or software, did in response. As AI participates in learning and assessment,
+    these records can preserve the assistance and producing instruments needed to
+    interpret a performance. The format does not establish independent learning or
+    the effectiveness of an intervention. Entries are chained by hash, and a producer
     can sign the chain. A reader who trusts the signing key can then detect changes
     to the entries under a signed head that were made without that key. Some changes
     remain undetectable, and the security considerations list them. An event can be
     redacted, and the rest of the record still verifies. The format defines files,
-    records, entries, events, and registries for event schemas. Event schemas for
-    specific subject areas are out of scope.</p>"
+    records, entries, events, and registries for event schemas. Subject- area event
+    schemas and judgments about the applicability of research are out of scope.</p>"
   language:
   - en
   script:
@@ -37,6 +40,16 @@ relation:
       primary: true
     formattedref:
       content: draft-srivastava-learnlog-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-srivastava-learnlog-01
+    docid:
+    - id: draft-srivastava-learnlog-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-srivastava-learnlog-01
       format: text/plain
 ext:
   schema-version: v1.0.1

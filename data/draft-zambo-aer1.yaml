@@ -52,7 +52,24 @@ abstract:
     member (new Section 3.2): an optional, non-core structure for recording source
     and version context such as the model name and version behind a tool call and
     the identity of the source system acted upon. It changes no existing receipt field,
-    digest construction, or verification rule.</p>"
+    digest construction, or verification rule. The -18 revision repairs the reference
+    apparatus (normative references to RFC 3339, RFC 8259, RFC 4122, and RFC 4648,
+    and the previously missing RFC 7942 entry), pins two parser edge cases (duplicate
+    JSON member names and leap-second timestamps are rejected), names the Unicode
+    normalization behavior in Section 4 with a computed vector pair, adopts the unknown-
+    versus-not-applicable convention for optional members, adds optional members for
+    readback outcomes, per-field provenance, negative records, reversal state, method
+    descriptors, and payment references, completes the execution_context member set
+    (model and environment digests), adds the optional input_hash commitment (Section
+    3.3), permits SCITT and RFC 3161 anchors under Section 10, states the clock-trust
+    and equivocation limits in Section 13, and rewrites Section 15 to position the
+    specification against adjacent work. It changes no receipt field, digest construction,
+    or verification outcome for any receipt well-formed under the -17 rules. The -19
+    revision aligns the workflow tool and workflow view descriptions in Sections 8.5
+    and 8.7 with the normative Merkle construction in Section 8.1: both descriptions
+    named step output hashes as the root's leaf input where Section 8.1 specifies
+    step receipt identifiers. An implementer report identified the divergence. It
+    changes no construction, receipt field, digest, or verification outcome.</p>"
   language:
   - en
   script:
@@ -238,6 +255,26 @@ relation:
       primary: true
     formattedref:
       content: draft-zambo-aer1-17
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-zambo-aer1-18
+    docid:
+    - id: draft-zambo-aer1-18
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-zambo-aer1-18
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-zambo-aer1-19
+    docid:
+    - id: draft-zambo-aer1-19
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-zambo-aer1-19
       format: text/plain
 ext:
   schema-version: v1.0.1

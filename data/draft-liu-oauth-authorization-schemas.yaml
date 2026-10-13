@@ -1,0 +1,46 @@
+---
+schema-version: v1.2.3
+id: draft-liu-oauth-authorization-schemas
+title:
+- content: Domain-Specific Authorization Schemas for OAuth 2.0
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-liu-oauth-authorization-schemas
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This specification defines a framework for constructing fine-grained
+    authorization requests in OAuth 2.0 using domain-specific authorization schemas:
+    structured definitions of behavioral boundaries for a particular application domain.
+    Schema instances are carried in authorization requests via authorization_details;
+    upon approval, the instance governs the authorization associated with the issued
+    access token. Approved instances have a lifecycle: they become active upon approval
+    and end, with defined protocol consequences for token issuance, refresh, and resource
+    access. Resource servers verify client behaviors against the approved schema instance
+    at runtime through deterministic constraint evaluation. Authorization servers
+    review requested schema instances against server-side authorization policies.
+    This specification also defines a negotiation pattern, reverse-guided authorization,
+    allowing resource servers to reference a schema profile in error responses, guiding
+    clients toward the authorization required for their next action.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-liu-oauth-authorization-schemas-00
+    docid:
+    - id: draft-liu-oauth-authorization-schemas-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-liu-oauth-authorization-schemas-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
