@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-singh-apex-psi-09
 title:
-- content: 'PSI-09: Age Assurance Attestation'
+- content: 'PSI-09: Receipts for Age Assurance Decisions'
   language:
   - en
   script:
@@ -13,10 +13,15 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>PSI-09 defines a signed verdict format for distributed tribunal proceedings
-    conducted under the Apex Protocol. A verdict carries the case identifier, the
-    predicate chain that produced it, the ruling, the evidence anchors, and the dissenting
-    opinion if any.</p>"
+- content: "<p>This document defines PSI-09, a domain profile of Proof of Stateful
+    Integrity (PSI) for decisions made by an age assurance provider, recording that
+    a check was performed, by which method, and with what outcome. Each record is
+    sealed as a PSI receipt so that later alteration, reordering, or removal is detectable.
+    Only digests are sealed. PSI-09 shows integrity and ordering only; it does not
+    show the age of any person, the accuracy of the method, or compliance with any
+    age assurance law. Revision 00 carried this title over an abstract describing
+    tribunal verdicts. That material is withdrawn and this revision makes the body
+    match the title.</p>"
   language:
   - en
   script:
@@ -32,6 +37,16 @@ relation:
       primary: true
     formattedref:
       content: draft-singh-apex-psi-09-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-singh-apex-psi-09-01
+    docid:
+    - id: draft-singh-apex-psi-09-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-singh-apex-psi-09-01
       format: text/plain
 ext:
   schema-version: v1.0.1

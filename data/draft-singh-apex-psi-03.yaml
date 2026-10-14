@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-singh-apex-psi-03
 title:
-- content: 'PSI-03: VPP Dispatch Conformance Attestation'
+- content: 'PSI-03: Receipts for Virtual Power Plant Dispatch Records'
   language:
   - en
   script:
@@ -13,10 +13,15 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>PSI-03 specifies a portable, Ed25519-signed bond that anchors a registered
-    NDIS practitioner's professional identity to a DID- compatible decentralised identifier
-    without requiring a central registry. The bond enables cross-provider, cross-border
-    practice verification while preserving privacy and issuer sovereignty.</p>"
+- content: "<p>This document defines PSI-03, a domain profile of Proof of Stateful
+    Integrity (PSI) for dispatch instructions and metered responses exchanged between
+    a virtual power plant operator and its distributed energy resources. Each record
+    is sealed as a PSI receipt so that later alteration, reordering, or removal is
+    detectable. Only digests are sealed. PSI-03 shows integrity and ordering only;
+    it does not show that a resource performed as instructed, that metering is accurate,
+    or that any market rule was met. Earlier revisions carried this title over an
+    abstract describing practitioner identity bonds. This revision makes the body
+    match the title.</p>"
   language:
   - en
   script:
@@ -42,6 +47,16 @@ relation:
       primary: true
     formattedref:
       content: draft-singh-apex-psi-03-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-singh-apex-psi-03-02
+    docid:
+    - id: draft-singh-apex-psi-03-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-singh-apex-psi-03-02
       format: text/plain
 ext:
   schema-version: v1.0.1

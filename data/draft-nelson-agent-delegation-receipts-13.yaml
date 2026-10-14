@@ -1,0 +1,108 @@
+---
+schema-version: v1.2.3
+id: draft-nelson-agent-delegation-receipts-13
+title:
+- content: Agent Delegation Receipts
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-nelson-agent-delegation-receipts-13
+  type: src
+type: standard
+docid:
+- id: draft-nelson-agent-delegation-receipts-13
+  type: Internet-Draft
+  primary: true
+- id: I-D.nelson-agent-delegation-receipts
+  type: IETF
+  scope: anchor
+docnumber: I-D.nelson-agent-delegation-receipts
+date:
+- type: published
+  value: '2026-10-13'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Ryan
+          language:
+          - en
+        - language:
+          - en
+          initial: R
+        formatted_initials:
+          content: R.
+          language:
+          - en
+      surname:
+        content: Nelson
+        language:
+        - en
+      completename:
+        content: Ryan Nelson
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Authproof
+  role:
+  - type: author
+version:
+- draft: '13'
+revdate: '2026-10-13'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: '<p>This document defines the Agent Delegation Receipt: a signed record
+    of what a human principal authorized an AI agent to do, for how long, and under
+    what instructions. The receipt carries a scope, hard boundaries, a validity window,
+    and a hash of the operator''s stated instructions, all signed by the authorizing
+    key. Version -11 replaces the draft''s earlier custom signature format with two
+    standard profiles: a JWS profile (RFC 7515) over JCS-canonicalized JSON (RFC 8785)
+    as the primary wire format, and a COSE_Sign1 profile (RFC 9052) for constrained
+    environments. It also specifies scope attenuation rules for multi-agent delegation
+    chains, a revocation registry model with cascade semantics, and the limitations
+    of what receipts can and cannot prove. Version -12 resolves the unknown- fields
+    question raised on the IETF oauth mailing list: authorization fields are closed
+    (verifiers reject unknown top-level body fields rather than silently ignoring
+    them), the "metadata" object is the defined extension point, and one-time-use
+    receipts fail closed without a durable consumption store. Version -13 incorporates
+    independent-implementation feedback: it pins the orchestratorSignature verification
+    key to the sub-receipt signer''s key, states the receipt-issuance computation
+    order explicitly, and guides issuers on default boundaries versus explicit allowances.</p>'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-nelson-agent-delegation-receipts-09
+    docid:
+    - id: draft-nelson-agent-delegation-receipts-09
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-nelson-agent-delegation-receipts-09
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-nelson-agent-delegation-receipts-13
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

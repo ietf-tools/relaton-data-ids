@@ -2,7 +2,8 @@
 schema-version: v1.2.3
 id: draft-singh-psi
 title:
-- content: 'Proof of Sovereign Integrity (PSI): Protocol Specification v1'
+- content: 'Proof of Stateful Integrity (PSI): Signed, Merkle-Committed Receipts for
+    Digital Records'
   language:
   - en
   script:
@@ -13,9 +14,17 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document specifies the Proof of Sovereign Integrity (PSI) Protocol
-    for verifiable AI regulatory compliance. Revision 01 updates the March 2026 specification
-    with EU AI Act Article 50 alignment and post-quantum cryptographic requirements.</p>"
+- content: "<p>This document specifies Proof of Stateful Integrity (PSI), a format
+    and procedure for issuing signed receipts over digital records. A PSI receipt
+    binds the SHA-256 digest of a canonical JSON record to an issuer signature, a
+    monotonic sequence number, and a Merkle tree root computed with the RFC 6962 hashing
+    profile, and may reference an external timestamp anchor. Any party holding the
+    record, the receipt, and the issuer public key can verify the receipt offline.
+    PSI provides evidence of integrity, origin, and ordering only. It does not establish
+    that a record is true, lawful, safe, or compliant with any regulation. This revision
+    replaces revision 01. It withdraws all claims of zero- knowledge proofs, multi-party
+    computation, and inclusion proofs, which the reference implementation does not
+    provide.</p>"
   language:
   - en
   script:
@@ -61,6 +70,16 @@ relation:
       primary: true
     formattedref:
       content: draft-singh-psi-01-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-singh-psi-02
+    docid:
+    - id: draft-singh-psi-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-singh-psi-02
       format: text/plain
 ext:
   schema-version: v1.0.1

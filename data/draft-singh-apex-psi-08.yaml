@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-singh-apex-psi-08
 title:
-- content: 'PSI-08: Health Records Access Attestation'
+- content: 'PSI-08: Receipts for Health Record Access Events'
   language:
   - en
   script:
@@ -13,10 +13,14 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>PSI-08 specifies a format for composing multiple Digital Gallows predicates
-    into a verifiable chain. Each link in the chain is a signed predicate output that
-    serves as input to the next, enabling verifiable multi-step inference without
-    a trusted intermediary.</p>"
+- content: "<p>This document defines PSI-08, a domain profile of Proof of Stateful
+    Integrity (PSI) for access events on health records, recording that an access
+    occurred, by which role, and for what stated purpose. Each record is sealed as
+    a PSI receipt so that later alteration, reordering, or removal is detectable.
+    Only digests are sealed. PSI-08 shows integrity and ordering only; it does not
+    show that an access was authorised, appropriate, or lawful. Revision 00 carried
+    this title over an abstract describing predicate chains. This revision makes the
+    body match the title.</p>"
   language:
   - en
   script:
@@ -32,6 +36,16 @@ relation:
       primary: true
     formattedref:
       content: draft-singh-apex-psi-08-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-singh-apex-psi-08-01
+    docid:
+    - id: draft-singh-apex-psi-08-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-singh-apex-psi-08-01
       format: text/plain
 ext:
   schema-version: v1.0.1

@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-singh-apex-psi-04
 title:
-- content: Proof of Stateful Integrity (PSI) for Vulnerable Populations
+- content: 'PSI-04: State-Chain Receipts for Records Concerning Vulnerable Persons'
   language:
   - en
   script:
@@ -13,13 +13,15 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: <p>This document specifies the PSI-04 Protocol, a cryptographic framework
-    for establishing the Proof of Stateful Integrity (PSI) for data involving vulnerable
-    subjects (e.g., Clinical Trial participants, NDIS recipients, and Aged Care residents).
-    The protocol mandates a verifiable "Chain of State" that prevents post-hoc data
-    manipulation by ensuring the final submission is mathematically anchored to the
-    point of inception. PSI-04 utilizes Ed25519 signatures canonicalized via RFC 8785
-    and verified through a 3-node Multi-Party Computation (MPC) consensus mechanism.</p>
+- content: "<p>This document defines PSI-04, a domain profile of Proof of Stateful
+    Integrity (PSI) for records about vulnerable persons, such as clinical-trial participants
+    and recipients of disability or aged care services. PSI-04 seals each state transition
+    of a record as a PSI receipt chained to the previous one, so that later alteration
+    or omission of a transition is detectable. Only digests are sealed; no personal
+    data leaves the record holder. PSI-04 shows integrity and ordering only and does
+    not show that care was adequate or that any regulation was met. This revision
+    withdraws the multi-party computation and zero- knowledge claims of revision 00
+    and the request for a URI scheme.</p>"
   language:
   - en
   script:
@@ -35,6 +37,16 @@ relation:
       primary: true
     formattedref:
       content: draft-singh-apex-psi-04-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-singh-apex-psi-04-01
+    docid:
+    - id: draft-singh-apex-psi-04-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-singh-apex-psi-04-01
       format: text/plain
 ext:
   schema-version: v1.0.1

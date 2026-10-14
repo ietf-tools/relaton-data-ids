@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-singh-psi-merkle
 title:
-- content: PSI Merkle Tree Anchoring for Cryptographic Seals
+- content: PSI Merkle Commitment Profile (RFC6962-SHA256)
   language:
   - en
   script:
@@ -13,13 +13,14 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document specifies the Merkle tree construction and anchoring
-    protocol used by the Proof of Sovereign Integrity (PSI) system for tamper-evident
-    content verification. It defines tree parameters, leaf construction, inclusion
-    proof generation, and root anchoring to public ledgers including the Bitcoin blockchain.
-    The protocol uses SHA-256 as the hash function, binary Merkle trees with height=5
-    (32 leaves per epoch), and deterministic leaf ordering to enable third- party
-    v</p>"
+- content: "<p>This document specifies the Merkle commitment profile used by Proof
+    of Stateful Integrity (PSI) receipts. It adopts the Merkle Tree Hash and inclusion
+    proof of RFC 9162 without modification, fixes leaf order, and defines how a receipt
+    declares the profile and how a verifier obtains and checks an inclusion proof.
+    A valid proof shows only that a leaf was committed under a root; it says nothing
+    about the truth or lawfulness of the sealed content. This revision replaces the
+    lexicographic ordering and odd-leaf duplication of revision 00, which were incompatible
+    with RFC 9162, and withdraws all anchoring claims other than OpenTimestamps.</p>"
   language:
   - en
   script:
@@ -35,6 +36,16 @@ relation:
       primary: true
     formattedref:
       content: draft-singh-psi-merkle-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-singh-psi-merkle-01
+    docid:
+    - id: draft-singh-psi-merkle-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-singh-psi-merkle-01
       format: text/plain
 ext:
   schema-version: v1.0.1

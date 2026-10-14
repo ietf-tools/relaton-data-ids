@@ -26,7 +26,10 @@ abstract:
     question raised on the IETF oauth mailing list: authorization fields are closed
     (verifiers reject unknown top-level body fields rather than silently ignoring
     them), the "metadata" object is the defined extension point, and one-time-use
-    receipts fail closed without a durable consumption store.</p>'
+    receipts fail closed without a durable consumption store. Version -13 incorporates
+    independent-implementation feedback: it pins the orchestratorSignature verification
+    key to the sub-receipt signer''s key, states the receipt-issuance computation
+    order explicitly, and guides issuers on default boundaries versus explicit allowances.</p>'
   language:
   - en
   script:
@@ -162,6 +165,16 @@ relation:
       primary: true
     formattedref:
       content: draft-nelson-agent-delegation-receipts-12
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-nelson-agent-delegation-receipts-13
+    docid:
+    - id: draft-nelson-agent-delegation-receipts-13
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-nelson-agent-delegation-receipts-13
       format: text/plain
 ext:
   schema-version: v1.0.1

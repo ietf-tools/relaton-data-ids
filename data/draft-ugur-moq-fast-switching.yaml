@@ -1,0 +1,44 @@
+---
+schema-version: v1.2.3
+id: draft-ugur-moq-fast-switching
+title:
+- content: Subscriber-Side Multi-Variant Fast Track Switching for MOQT
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-ugur-moq-fast-switching
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This document describes subscriber-side multi-variant fast track switching
+    (MVFTS), a technique that allows a MOQ Transport (MOQT) subscriber to switch between
+    tracks that are encoded at the same bitrate but use different group of pictures
+    (GoP) lengths, combining the compression efficiency of a long GoP with the low
+    switching delay of a short GoP. A publisher using this technique packages each
+    encoded bitrate as a ladder of tracks distinguished only by their keyframe interval,
+    numbers those tracks' Group IDs so that they share a common alignment, and advertises
+    the keyframe interval of each track in a MOQT Streaming Format (MSF) catalog.
+    A subscriber uses this information to compute the nearest valid switch point on
+    any track in scope and to perform the switch using the SWITCH_FROM request parameter
+    in soft mode.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-ugur-moq-fast-switching-00
+    docid:
+    - id: draft-ugur-moq-fast-switching-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ugur-moq-fast-switching-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

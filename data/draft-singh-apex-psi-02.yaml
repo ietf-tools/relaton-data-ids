@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-singh-apex-psi-02
 title:
-- content: 'PSI-02: ACCU Carbon Sequestration Attestation'
+- content: 'PSI-02: Receipts for Carbon Sequestration Measurement Records'
   language:
   - en
   script:
@@ -13,10 +13,15 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>PSI-02 specifies a privacy-preserving cryptographic attestation that
-    a registered NDIS service provider's operational evidence satisfies the NDIS Practice
-    Standards. The attestation binds a canonicalised evidence digest to an Ed25519
-    signature without disclosing participant data or commercially sensitive material.</p>"
+- content: "<p>This document defines PSI-02, a domain profile of Proof of Stateful
+    Integrity (PSI) for measurement records supporting carbon sequestration claims,
+    such as field sampling results, remote-sensing extracts, and calculation inputs.
+    Each record is sealed as a PSI receipt so that later alteration, reordering, or
+    removal is detectable. Only digests are sealed. PSI-02 shows integrity and ordering
+    only; it does not show that the sequestration occurred, that a methodology was
+    followed, or that any credit is valid. Revision 00 carried this title over an
+    abstract describing disability-services evidence. This revision makes the body
+    match the title.</p>"
   language:
   - en
   script:
@@ -32,6 +37,16 @@ relation:
       primary: true
     formattedref:
       content: draft-singh-apex-psi-02-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-singh-apex-psi-02-01
+    docid:
+    - id: draft-singh-apex-psi-02-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-singh-apex-psi-02-01
       format: text/plain
 ext:
   schema-version: v1.0.1
