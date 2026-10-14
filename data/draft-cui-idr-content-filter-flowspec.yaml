@@ -13,14 +13,15 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>The BGP Flow Specification enables the distribution of traffic filter
+- content: "<p>The BGP FlowSpec mechanism enables the distribution of traffic filter
     policies (traffic filters and actions) via BGP, facilitating DDoS traffic filtering.
-    However, the traffic filter in FSv1 and FSv2 predominantly focuses on IP header
-    fields, which may not adequately address volumetric DDoS attack traffic characterized
-    by fixed patterns within the packet content. This document introduces a new flow
-    specification filter type designed for packet content filtering. The match field
-    includes ptype, otype, offset, content-length, content, and mask encoded in the
-    Flowspec NLRI. This new filter aims to leverage network devices such as routers
+    The IP filter components defined for FSv1 and the FSv2 IP Basic Filter Families
+    primarily match fields in the IP and transport-layer headers, which may not adequately
+    address volumetric DDoS attack traffic characterized by fixed patterns within
+    the packet content. This document defines a Packet Content Filter Component for
+    FSv1 and FSv2. The match is encoded using OType, Offset, Content Length, Content,
+    and Mask fields in the FlowSpec NLRI. The FSv1 encoding additionally carries a
+    PType field. This new component aims to leverage network devices such as routers
     and switches to support controlled traffic handling, traffic optimization, and
     mitigation of simple volumetric DDoS attacks, reducing the overall processing
     cost of carrier networks.</p>"
@@ -79,6 +80,16 @@ relation:
       primary: true
     formattedref:
       content: draft-cui-idr-content-filter-flowspec-04
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-cui-idr-content-filter-flowspec-05
+    docid:
+    - id: draft-cui-idr-content-filter-flowspec-05
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-cui-idr-content-filter-flowspec-05
       format: text/plain
 ext:
   schema-version: v1.0.1

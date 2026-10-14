@@ -13,15 +13,15 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document describes the CPaceOQUAKE+ protocol, a hybrid asymmetric
-    password-authenticated key exchange (aPAKE) that supports mutual authentication
-    in a client-server setting secure against quantum-capable attackers. CPaceOQUAKE+
-    is composed of two stages — CPace and OQUAKE+ — that run sequentially, with the
-    output of CPace feeding as the secret_context into OQUAKE+. OQUAKE+ is an augmented
-    variant of OQUAKE that adds password confirmation. This document also describes
-    standalone OQUAKE+, a post-quantum aPAKE, and CPaceOQUAKE, the hybrid symmetric
-    PAKE composed of the CPace and OQUAKE stages. This document recommends configurations
-    for CPaceOQUAKE+.</p>"
+- content: "<p>This document describes four post-quantum password authenticated key
+    exchange (PAKE) protocols: OQUAKE, OQUAKE+, CPaceOQUAKE, and CPaceOQUAKE+. OQUAKE
+    and OQUAKE+ are standalone PAKEs that both offer security against a quantum-capable
+    attacker. OQUAKE is a symmetric PAKE, suitable for use cases where both parties
+    share a view of the password. OQUAKE+ is an augmented version of OQUAKE suitable
+    for client-server settings where only one party (the client) knows the password.
+    CPaceOQUAKE is a hybrid PAKE that runs a classical PAKE (CPace) and OQUAKE sequentially,
+    and CPaceOQUAKE+ is its augmented version. This document also provides recommended
+    configurations for each protocol.</p>"
   language:
   - en
   script:
@@ -57,6 +57,16 @@ relation:
       primary: true
     formattedref:
       content: draft-vos-cfrg-pqpake-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-vos-cfrg-pqpake-03
+    docid:
+    - id: draft-vos-cfrg-pqpake-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-vos-cfrg-pqpake-03
       format: text/plain
 ext:
   schema-version: v1.0.1
