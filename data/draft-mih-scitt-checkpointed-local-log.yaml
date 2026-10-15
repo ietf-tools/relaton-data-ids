@@ -17,16 +17,16 @@ abstract:
     statements — and store them locally. Each record verifies on its own, but the
     collection proves nothing: records can be deleted, reordered, or created after
     the fact without detection. This document specifies the Checkpointed Local Log
-    (CLL): a producer- operated append-only log, built on the Merkle Mountain Range
-    structure whose COSE proof formats are specified in [I-D.bryce-cose-receipts-mmr-profile],
-    together with a small signed checkpoint that commits to the log's entire history.
-    Records of any format are appended as they are produced; checkpoints are emitted
-    on a declared cadence and may be registered with one or more independent Transparency
-    Services or witnesses using existing SCITT registration. A CLL upgrades a set
-    of point receipts into a stream with provable order, contemporaneity, and completeness
-    — while defining precisely, and narrowly, what such a log does and does not establish.
-    This document defines the log discipline and the checkpoint structure; it defines
-    no new proof formats, no transparency service behavior, and no payload semantics.</p>"
+    (CLL): a producer- operated append-only log that is a Merkle Mountain Range as
+    defined by the COSE Receipts profile for Merkle Mountain Ranges, together with
+    a small signed checkpoint that commits to the log's entire history. A checkpoint
+    carries the content of that profile's Receipt of consistency — the accumulator
+    and the consistency proof — inside a SCITT Signed Statement, so it can be registered
+    with one or more independent Transparency Services without any change to them.
+    A CLL upgrades a set of point receipts into a stream with provable order, contemporaneity,
+    and completeness, and states precisely what it does not establish. It defines
+    no new proof format, no change to SCITT Registration or Receipts, and no payload
+    semantics.</p>"
   language:
   - en
   script:
@@ -52,6 +52,16 @@ relation:
       primary: true
     formattedref:
       content: draft-mih-scitt-checkpointed-local-log-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-mih-scitt-checkpointed-local-log-02
+    docid:
+    - id: draft-mih-scitt-checkpointed-local-log-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-mih-scitt-checkpointed-local-log-02
       format: text/plain
 ext:
   schema-version: v1.0.1
