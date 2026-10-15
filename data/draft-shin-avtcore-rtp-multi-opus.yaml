@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-shin-avtcore-rtp-multi-opus
 title:
-- content: RTP/SDP for Opus Multistream
+- content: RTP/SDP Signaling for Opus Multistream Operation
   language:
   - en
   script:
@@ -13,13 +13,16 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document specifies RTP/SDP signaling for Opus multistream (multi-channel)
+- content: <p>This document specifies RTP/SDP signaling for Opus multistream (multichannel)
     operation, enabling negotiation of layouts such as 5.1 and 7.1 in real-time communications.
-    It defines an SDP encoding name and format parameters to describe multistream
-    configurations, and specifies Offer/Answer procedures for interoperable negotiation.
-    This document does not define new Opus codec behavior. It extends the the SDP
-    signaling defined in [RFC7587] and reuses the channel-mapping semantics defined
-    in [RFC7845].</p>"
+    It defines SDP format parameters for describing multistream configurations and
+    specifies Offer/Answer procedures for interoperable negotiation of multichannel
+    Opus sessions. This document does not define new Opus codec behavior. Rather,
+    it standardizes SDP signaling for Opus multistream operation while continuing
+    to use the Opus RTP payload format defined in [RFC7587] and the channel mapping
+    semantics defined in [RFC7845]. The signaling procedures specified in this document
+    are intended to provide a standardized alternative to deployment-specific approaches
+    that have historically been referred to as "multiopus".</p>
   language:
   - en
   script:
@@ -65,6 +68,16 @@ relation:
       primary: true
     formattedref:
       content: draft-shin-avtcore-rtp-multi-opus-03
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-shin-avtcore-rtp-multi-opus-04
+    docid:
+    - id: draft-shin-avtcore-rtp-multi-opus-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-shin-avtcore-rtp-multi-opus-04
       format: text/plain
 ext:
   schema-version: v1.0.1
