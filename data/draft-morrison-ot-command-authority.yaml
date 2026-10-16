@@ -2,8 +2,8 @@
 schema-version: v1.2.3
 id: draft-morrison-ot-command-authority
 title:
-- content: Consented and Attributable Agent Authority for Operational-Technology Control
-    Actions
+- content: Authorised and Attributable Agent Authority for Operational-Technology
+    Control Actions
   language:
   - en
   script:
@@ -22,17 +22,16 @@ abstract:
     on the action where its risk class requires it, and an append-only record sufficient
     to attribute the action afterward. The profile does not invent new cryptography
     or a new identity mechanism. It composes primitives specified elsewhere, DNSSEC-rooted
-    agent discovery, a scoped and revocable authorisation grant, a named-human authorization
-    receipt bound into the record as human-authorization evidence, and an append-only
-    transparency record, into a single structure, the Command Authority Envelope,
-    that an enforcement point evaluates and, on any missing or invalid binding, refuses.
-    The profile is availability- first and fails closed on authority, never on safety:
-    it MUST NOT be placed in the trip path of a safety function. The memo maps the
-    profile onto the identification, use-control, and audit requirements that the
-    IEC 62443 and NERC CIP frameworks state but do not give a wire mechanism for.
-    A neighbouring proposal gates safety-critical commands on an agent's trust level;
-    this profile takes the opposite position, and states why. The methods by which
-    a principal's identity is inferred are out of scope by construction.</p>"
+    agent discovery, a scoped and revocable authorisation grant, and a named-human
+    authorization receipt bound into the record as human-authorization evidence, together
+    with an append-only audit record, into a single structure, the Command Authority
+    Envelope, that an enforcement point evaluates and, on any missing or invalid binding,
+    refuses. The profile is availability-first and fails closed on authority, never
+    on safety: it MUST NOT be placed in the trip path of a safety function. The memo
+    relates the profile to the identification, use-control, and audit requirements
+    that the IEC 62443 and NERC CIP frameworks state but do not give a wire mechanism
+    for. A neighbouring proposal gates safety-critical commands on an agent's trust
+    level; this profile takes the opposite position, and states why.</p>"
   language:
   - en
   script:
@@ -78,6 +77,16 @@ relation:
       primary: true
     formattedref:
       content: draft-morrison-ot-command-authority-03
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-morrison-ot-command-authority-04
+    docid:
+    - id: draft-morrison-ot-command-authority-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-morrison-ot-command-authority-04
       format: text/plain
 ext:
   schema-version: v1.0.1
