@@ -1,0 +1,43 @@
+---
+schema-version: v1.2.3
+id: draft-rosomakho-tls-secondary-client-auth
+title:
+- content: Secondary Client Authentication in TLS 1.3
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-rosomakho-tls-secondary-client-auth
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>Some deployments authenticate a client using two certificates, such
+    as one identifying a device and another identifying its user. This document defines
+    the secondary_client_certificate TLS flag to negotiate one additional client authentication
+    exchange as part of connection establishment. The server sends an additional CertificateRequest
+    immediately after its Finished, and the client responds after its own handshake
+    Finished and before sending application data. Either certificate response can
+    be empty, and the server determines whether the resulting authentication state
+    satisfies its policy. This document updates RFC 9846 to permit the additional
+    request before the server receives the client's Finished. It also updates RFCs
+    9001 and 9113 to permit this negotiated exchange with QUIC and HTTP/2.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-rosomakho-tls-secondary-client-auth-00
+    docid:
+    - id: draft-rosomakho-tls-secondary-client-auth-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-rosomakho-tls-secondary-client-auth-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

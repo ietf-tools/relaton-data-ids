@@ -14,9 +14,23 @@ docid:
   primary: true
 abstract:
 - content: "<p>This document defines the Verified Email Identity Framework (VEIF),
-    a mechanism for associating a cryptographically verifiable real- world identity
-    with an email message. VEIF complements existing email authentication technologies
-    such as SPF, DKIM, and DMARC by providing a higher-level identity assurance layer.</p>"
+    an experimental framework for adding accountable, verified sender identity to
+    Internet email. VEIF complements existing email authentication mechanisms such
+    as SPF, DKIM, and DMARC. Those mechanisms establish authorization, message integrity,
+    and domain alignment, but do not by themselves establish that a sender identity
+    is associated with a verified real-world entity. VEIF uses an SD-JWT-based Verifiable
+    Digital Credential (SD-JWT VC) to bind a pseudonymous sender identity and a sender-controlled
+    cryptographic key to an identity verified by an Identity Provider (IdP). A separate
+    VEIF message signature binds that credential to the email message. The recipient
+    does not normally receive the sender's real-world identity. Instead, VEIF provides
+    technical accountability: where an appropriate legal or otherwise authorized process
+    exists, the Identity Provider can establish the real-world entity to which the
+    sender credential was issued. This document intentionally does not define a global
+    identity authority, a legal identification procedure, or a mandatory trust hierarchy.
+    Trust and identity disclosure policies remain matters for receiving organizations,
+    Identity Providers, jurisdictions, and deployment environments. This version is
+    experimental and is intended to enable discussion, implementation experimentation,
+    and interoperability testing.</p>"
   language:
   - en
   script:
@@ -42,6 +56,16 @@ relation:
       primary: true
     formattedref:
       content: draft-uimonen-veif-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-uimonen-veif-02
+    docid:
+    - id: draft-uimonen-veif-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-uimonen-veif-02
       format: text/plain
 ext:
   schema-version: v1.0.1

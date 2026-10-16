@@ -69,7 +69,16 @@ abstract:
     and 8.7 with the normative Merkle construction in Section 8.1: both descriptions
     named step output hashes as the root's leaf input where Section 8.1 specifies
     step receipt identifiers. An implementer report identified the divergence. It
-    changes no construction, receipt field, digest, or verification outcome.</p>"
+    changes no construction, receipt field, digest, or verification outcome. The -20
+    revision adopts three findings reported by an independent implementer who built
+    a conformance verifier from the -19 text alone. It requires the published byte
+    layout of a recorded input to state the member ordering rule it applies when the
+    input is a JSON object (Section 3.3), and it bars control characters from provenance
+    class labels, with rejection required (Section 5). The conformance kit's quickstart
+    core tier also gains the provenance-label and schema-version metadata checks as
+    a stated rule. It changes no receipt field or digest construction; a receipt well-formed
+    under the -19 rules verifies identically, except that an input commitment whose
+    published layout states no ordering rule is no longer reported as confirmed.</p>"
   language:
   - en
   script:
@@ -275,6 +284,16 @@ relation:
       primary: true
     formattedref:
       content: draft-zambo-aer1-19
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-zambo-aer1-20
+    docid:
+    - id: draft-zambo-aer1-20
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-zambo-aer1-20
       format: text/plain
 ext:
   schema-version: v1.0.1
