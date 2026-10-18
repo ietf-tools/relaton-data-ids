@@ -1,0 +1,42 @@
+---
+schema-version: v1.2.3
+id: draft-anarayanan-bess-evpn-extended-ip-mobility
+title:
+- content: Extended IP mobility procedures for EVPN-IRB
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-anarayanan-bess-evpn-extended-ip-mobility
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>[RFC9721] introduces IP mobility procedures for EVPN-IRB that couple
+    IP and MAC mobility sequence numbers. This coupling results in excessive control
+    plane churn when a single IP migrates among multiple IP addresses associated with
+    a single MAC address. This document proposes separating sequence number spaces
+    for IP mobility (MAC-IP routes) and MAC mobility (MAC-only routes), reducing BGP
+    updates from O(N) to O(1) when one IP moves among N IPs on a MAC, while maintaining
+    full compatibility with an implementation conforming to the recommendations of
+    [RFC9721]. Further, this document proposes an upgrade path for deployments transitioning
+    to IP mobility as defined in [RFC9721] or this draft.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-anarayanan-bess-evpn-extended-ip-mobility-00
+    docid:
+    - id: draft-anarayanan-bess-evpn-extended-ip-mobility-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-anarayanan-bess-evpn-extended-ip-mobility-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

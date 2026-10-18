@@ -14,18 +14,22 @@ docid:
   primary: true
 abstract:
 - content: "<p>This document specifies the HTTP Mail Transfer Protocol (HMTP), a protocol
-    for the submission and transfer of Internet mail over HTTPS. HMTP covers both
-    the submission of messages by clients to their mail service and the transfer of
-    messages between mail servers. Each message is carried unmodified in the existing
-    Internet Message Format inside a JSON envelope that holds the information needed
-    for delivery. Large messages and attachments can be transferred by reference,
-    with their integrity protected by cryptographic hashes. Requests are authenticated
-    by signatures bound to the sending domain, using keys published with the DomainKeys
-    Identified Mail (DKIM) key publication mechanism, which allows receivers to identify
-    senders independently of their IP addresses. Servers discover HMTP endpoints through
-    DNS. To allow incremental deployment alongside existing mail infrastructure, a
-    server can optionally fall back to the Simple Mail Transfer Protocol (SMTP) when
-    a peer does not support HMTP.</p>"
+    for the submission and transfer of Internet mail over HTTPS. HMTP retains what
+    SMTP and the mail system built around it have proven, namely the Internet Message
+    Format, the separation of envelope and message, and the semantics of delivery
+    and delivery status notifications, and adds what SMTP provides only through optional
+    extensions or not at all. Security is built in: transport encryption is mandatory,
+    and every transfer request is signed on behalf of the sending domain, using keys
+    published with the DomainKeys Identified Mail (DKIM) key publication mechanism.
+    Requests carry identifiers that make retries safe, failures are reported per recipient
+    as structured problem details with a mapping to SMTP status codes, and extensions
+    are declared explicitly as capabilities. Messages are carried unmodified inside
+    a JSON envelope, and large messages and attachments can be transferred by reference,
+    with their integrity protected by cryptographic hashes. Servers discover HMTP
+    endpoints through DNS and a well-known URI, and a domain can publish a policy
+    that prevents downgrade to SMTP. HMTP does not depend on SMTP, but an implementation
+    can optionally fall back to SMTP when a peer does not support HMTP, so that it
+    can be deployed incrementally alongside existing systems.</p>"
   language:
   - en
   script:
@@ -41,6 +45,16 @@ relation:
       primary: true
     formattedref:
       content: draft-tishkin-hmtp-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-tishkin-hmtp-01
+    docid:
+    - id: draft-tishkin-hmtp-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-tishkin-hmtp-01
       format: text/plain
 ext:
   schema-version: v1.0.1

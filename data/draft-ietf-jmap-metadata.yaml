@@ -14,14 +14,14 @@ docid:
   primary: true
 abstract:
 - content: "<p>This document defines an extension to the JSON Meta Application Protocol
-    (JMAP) that lets clients and servers attach metadata to existing JMAP data types.
-    Each opted-in data type gains two new properties, metadata and privateMetadata,
-    whose values are objects keyed by _namespace identifier_. A namespace identifier
-    is either a name registered with IANA or a domain name controlled by the vendor
-    providing the namespace; the latter allows vendors and applications to extend
-    the metadata schema without prior coordination. Because metadata is carried as
-    a property on the related object, clients use the existing /get, /set, /changes,
-    and /query methods to read, modify, and synchronize it.</p>"
+    (JMAP) that lets clients and servers attach metadata to objects of existing JMAP
+    data types. Each data type the server lists gains two new properties, metadata
+    and privateMetadata, whose values are objects keyed by _namespace identifier_.
+    A namespace identifier is either a name registered with IANA or a domain name
+    controlled by the vendor providing the namespace; the latter allows vendors and
+    applications to extend the metadata schema without prior coordination. Because
+    metadata is carried as a property on the related object, clients use the existing
+    /get, /set, /changes, and /query methods to read, modify, and synchronize it.</p>"
   language:
   - en
   script:
@@ -57,6 +57,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-jmap-metadata-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-jmap-metadata-03
+    docid:
+    - id: draft-ietf-jmap-metadata-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-jmap-metadata-03
       format: text/plain
 ext:
   schema-version: v1.0.1
