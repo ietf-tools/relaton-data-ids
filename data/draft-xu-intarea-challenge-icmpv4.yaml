@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-xu-intarea-challenge-icmpv4
 title:
-- content: Enhancing ICMP Error Message Authentication Using Challenge-Confirm Mechanism
+- content: Enhancing ICMP Error Message Validation Using a Challenge-Confirm Mechanism
   language:
   - en
   script:
@@ -13,19 +13,23 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>The Internet Control Message Protocol (ICMP) is essential for network
-    diagnostics but is vulnerable to off-path spoofing attacks, especially when error
-    messages relate to stateless transport protocols like UDP. An attacker can forge
-    these messages to degrade performance or enable Man-in-the-Middle attacks. This
-    document proposes a robust, stateless challenge-response mechanism to authenticate
-    ICMP error messages. Traditional stateful challenge mechanisms are vulnerable
-    to state-exhaustion Denial-of- Service (DoS) attacks. To avoid this, the proposed
-    solution is inspired by TCP SYN-Cookies, eliminating the need to store per- challenge
-    state by using cryptographic computation. It limits state management to minimal
-    flags on existing sockets or a bounded probabilistic data structure. This approach
-    effectively authenticates ICMP error messages while inherently resisting both
-    off-path spoofing and state-exhaustion DoS attacks, thus improving the robustness
-    of ICMP.</p>"
+- content: "<p>ICMP error messages provide feedback used by hosts to manage network
+    communication. Existing validation of the quoted invoking packet is essential,
+    but its resistance to blind off-path forgery depends on the information quoted
+    and the communication state available to the receiver. This document describes
+    a Challenge-Confirm mechanism that supplements existing ICMP validation. After
+    an eligible initial error passes existing checks, the host can mark the associated
+    flow and include an unpredictable token in an IPv4 option of a subsequent packet
+    that would otherwise be transmitted. Receipt of the initial error does not immediately
+    generate a probe or a separate ICMP Echo Request. A later ICMP error can return
+    the token by quoting the invoking packet. The token is computed using a secret
+    local to the validating host. No key is shared with routers or peer hosts, and
+    no per-challenge nonce cache is required. Successful token validation provides
+    evidence of access to a valid token; it does not authenticate a router's identity
+    or the semantics of the reported error. This document specifies bounded triggering,
+    replay limitations, and deployment considerations, including the need to evaluate
+    IPv4 option traversal and quotation. It does not report Internet-wide deployment
+    measurements.</p>"
   language:
   - en
   script:
@@ -71,6 +75,16 @@ relation:
       primary: true
     formattedref:
       content: draft-xu-intarea-challenge-icmpv4-03
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-xu-intarea-challenge-icmpv4-04
+    docid:
+    - id: draft-xu-intarea-challenge-icmpv4-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-xu-intarea-challenge-icmpv4-04
       format: text/plain
 ext:
   schema-version: v1.0.1

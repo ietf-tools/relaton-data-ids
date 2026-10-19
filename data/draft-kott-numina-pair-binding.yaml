@@ -2,8 +2,7 @@
 schema-version: v1.2.3
 id: draft-kott-numina-pair-binding
 title:
-- content: 'An Evidence Preserving Companion Record for the fixed string numina.pair-binding.v1
-    / Ed25519: A design study of Ed25519; the universal pair binding model.'
+- content: 'Singularity: Skott34-Ed25519, Universal Companion Model'
   language:
   - en
   script:
@@ -14,23 +13,18 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>Software attribution may need to be clarified after release artifacts
-    and their cryptographic commitments have been fixed. Editing those artifacts would
-    disturb the evidence that an attribution statement is intended to describe. This
-    paper proposes a separately versioned companion record that associates two unchanged
-    source commitments with explicit named attribution and an opaque reference to
-    a private genesis record. The construction uses JSON Canonicalization Scheme (JCS)
-    bytes, an application-specific message prefix, and pure Ed25519 signatures. Its
-    verification model separates payload integrity, signing authority, source equality,
-    revision freshness, and private reference resolution. A Numina example preserves
-    two existing SHA-256 commitments and records an owner-defined person-to-alias
-    map without treating labels as proof of authorship or mathematical derivation.
-    Historical records report reproduction of both commitments. A later byte comparison
-    establishes equality of the selected v155 inputs and hash profile, without establishing
-    whole- source equality or a deployed signed binding. The contribution is a proposed
-    evidence-preservation and reporting discipline, rather than a new cryptographic
-    primitive. A public-safe record would require its own approved payload and signature.
-    Trust provisioning, implementation tests, and public reproducibility remain open.</p>"
+- content: "<p>This document describes a proposed companion format for associating
+    two frozen software-artifact commitments with attribution and revisioned claims.
+    It specifies canonical signing bytes, separate trust and freshness checks, claim-making
+    and verification procedures, and operational state boundaries. The intended implementing
+    community is software-provenance maintainers, release operators and independent
+    security reviewers. Existing IETF canonicalization and signature specifications
+    are used without defining a new cryptographic primitive. Retained source comparisons,
+    document- signature checks and synthetic tests are indexed with their limits.
+    Application control-plane evidence is distinguished from deployment of the companion
+    itself. A complete operational profile, independently authenticated trust and
+    current-state evidence, and a verified field deployment remain prerequisites to
+    an implementation- readiness claim.</p>"
   language:
   - en
   script:
@@ -56,6 +50,16 @@ relation:
       primary: true
     formattedref:
       content: draft-kott-numina-pair-binding-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-kott-numina-pair-binding-02
+    docid:
+    - id: draft-kott-numina-pair-binding-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-kott-numina-pair-binding-02
       format: text/plain
 ext:
   schema-version: v1.0.1
