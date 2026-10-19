@@ -2,8 +2,8 @@
 schema-version: v1.2.3
 id: draft-burls-mtac
 title:
-- content: 'Merkle Tree Agent Certificates (MTAC): Batch-Issued Post-Quantum Identity
-    Credentials for AI Agents'
+- content: 'Merkle Tree Agent Certificates (MTAC): A Merkle Tree Certificates Profile
+    for AI Agent Identity'
   language:
   - en
   script:
@@ -14,20 +14,20 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document specifies Merkle Tree Agent Certificates (MTAC), a credential
-    format and issuance profile in which a certificate authority commits a batch of
-    AI agent identity credentials to a Merkle tree, signs only the tree head with
-    the post-quantum signature algorithm ML-DSA-65, and distributes a per-credential
-    inclusion proof. A relying party verifies a credential offline against the signed
-    tree head without contacting the issuer. Each batch root is additionally co-signed
-    by an independently keyed witness, providing per-batch integrity and continuity
-    attestation, and its root can be corroborated against an independent public record.
-    MTAC defines the leaf structure, its deterministic encoding, the leaf hash preimage,
-    the signed tree head wire format, the witness co- signature, and an optional challenge-response
-    proof of possession that binds a credential to a holder key. Test vectors are
-    provided. This document specifies a credential issuance and verification mechanism.
-    Declared scopes carried in a credential are self-reported parameters recorded
-    at issuance; this document does not specify a runtime authorization mechanism.</p>"
+- content: "<p>This document profiles Merkle Tree Certificates (MTC) for the identity
+    of AI agents. An MTAC certificate is an MTC whose subject is one AI agent instance,
+    named by a workload identifier in a URI subject alternative name, so that it is
+    also a Workload Identity Certificate. It carries a mandatory non-critical extension
+    naming the sponsor the CA recorded as accountable for the agent, and two optional
+    ones: scopes declared for the agent at issuance, and the model and configuration
+    components the agent is issued for, each graded by how the CA came to record it.
+    The document also defines an audit cosigner role and a procedure by which an auditor,
+    possibly without network access and possibly long after issuance, can establish
+    that a certificate was issued and logged and what it declared. An MTAC certificate
+    identifies an agent. It does not authorize the agent to do anything, and it does
+    not record what the agent did. Records of agent actions can be expressed as signed
+    statements in a transparency service that refer to an MTAC certificate as the
+    acting party.</p>"
   language:
   - en
   script:
@@ -43,6 +43,16 @@ relation:
       primary: true
     formattedref:
       content: draft-burls-mtac-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-burls-mtac-01
+    docid:
+    - id: draft-burls-mtac-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-burls-mtac-01
       format: text/plain
 ext:
   schema-version: v1.0.1
