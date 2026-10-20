@@ -94,84 +94,91 @@ abstract:
     for every check that does not pass (Section 6), and records an independent production
     validator in the Implementation Status. It changes no receipt field or digest
     construction; one verification outcome changes, for a receipt whose canonical_bytes
-    spelling is not canonical, which earlier revisions did not address. Implementation
-    Status This section records the implementation status of the AER-1 vocabulary
-    at the time of this revision, following [RFC7942]. It will be removed before publication
-    as an RFC. Reference implementation. Zambo (https://zambo.dev), operated by the
-    document author, is a deployed implementation of Sections 3 through 10. Tool calls
-    made over HTTPS as JSON-RPC to https://zambo.dev/api/ mcp receive a public receipt
-    page at https://zambo.dev/run/&lt;id&gt;, retrievable without an account, wallet,
-    or token. A machine-readable verifier is exposed as described in Section 6. Receipts
-    are anchored to public Nostr relays with an envelope binding the receipt identifier,
-    the output hash, and the evidence hash (envelope "zambo- receipt-anchor/1"). Workflow
-    receipts (Section 8) are deployed in the reference implementation. Multi-step
-    sessions receive a workflow receipt at https://zambo.dev/workflow/&lt;workflow_id&gt;
+    spelling is not canonical, which earlier revisions did not address. The -23 revision
+    states the per-anchor outcome report normatively (Section 6): a verifier''s report
+    carries each anchor''s outcome in machine-visible form, and an anchor the verifier
+    did not evaluate is reported as "not checked", never as an evaluated outcome,
+    so that state cannot be conflated with an anchor that was evaluated and could
+    not be resolved. It changes no receipt field, digest construction, or existing
+    verification rule. Implementation Status This section records the implementation
+    status of the AER-1 vocabulary at the time of this revision, following [RFC7942].
+    It will be removed before publication as an RFC. Reference implementation. Zambo
+    (https://zambo.dev), operated by the document author, is a deployed implementation
+    of Sections 3 through 10. Tool calls made over HTTPS as JSON-RPC to https://zambo.dev/api/
+    mcp receive a public receipt page at https://zambo.dev/run/&lt;id&gt;, retrievable
+    without an account, wallet, or token. A machine-readable verifier is exposed as
+    described in Section 6. Receipts are anchored to public Nostr relays with an envelope
+    binding the receipt identifier, the output hash, and the evidence hash (envelope
+    "zambo- receipt-anchor/1"). Workflow receipts (Section 8) are deployed in the
+    reference implementation. Multi-step sessions receive a workflow receipt at https://zambo.dev/workflow/&lt;workflow_id&gt;
     binding the ordered step receipts with a Merkle root, and step receipt pages link
     to the parent workflow ("Part of workflow") while workflow pages link to each
     step receipt. Conformance kit. An open conformance suite for this vocabulary is
     maintained at https://gitlab.com/rambozambodotdev/zambo. It ships seven bundled
     kit runners (Rust, Go, TypeScript, Python, Java, C#, and Swift), each verified
-    against the full vector corpus, which at this revision stands at 113 vectors (116
+    against the full vector corpus, which at this revision stands at 119 vectors (122
     checks per runner) across the receipt-level, Merkle (Section 8.1), timeline (Section
-    7), hardened chain (Section 7.1), chain commitment (Section 7.3), Unicode, and
-    id-binding suites. The -22 revision adds vectors pinning the canonical base64
-    spelling (Section 4), the nil-UUID rejection as a standalone case, the legacy
-    schema 0.3 production shape (Section 6), the bare presentation form (Section 3),
-    a current- schema (0.4) real receipt beside the two bundled 0.3 fixtures, and
-    one vector per id_verdict state (Section 6). Each runner is zero- dependency within
-    its language toolchain. Running the Python suite takes two steps and no dependencies
-    beyond git and a Python 3 interpreter: git clone https://gitlab.com/rambozambodotdev/zambo.git
-    python3 aer1- implementations/python/conformance.py An implementation is conformant
-    when it produces byte-identical verdicts to the reference runners across the full
-    vector corpus. The corpus includes attack vectors for tampered provenance labels,
-    schema version downgrades, and legacy (pre-0.4) receipts; conformance requires
-    the Section 6 metadata checks to fail the first two and to report the third with
-    a legacy notice rather than a failure. The kit is versioned; the v1.5.5 release
-    is the frozen reference for the corpus described above. Independent verification.
-    The Section 6 verification procedure has been exercised against live receipts
-    by independent third parties: * On 2026-09-16, an independent agent ("Merv", on
-    the Clawstr network) verified a live receipt (id 0ec81343-cc1f- 4c25-9c33-d76b5582406d)
-    in three checks: the SHA-256 of the decoded canonical bytes matched the output
-    commitment, the upstream evidence hash matched, and the anchor event carried a
-    valid signature retrievable on independent relays. The same party reported that
-    the anchor envelope did not then bind the evidence hash; the reference implementation
-    has since shipped the binding envelope described above. * On 2026-09-16, an independent
-    agent ("nilo_agent", on Nostr) ran adversarial verification challenges against
-    live receipts, including a witness round and a strong-form Bitcoin-anchored challenge
-    (anchor block 967351, receipt 88094e26), each answered with bytes the challenger
-    could check independently. * On 2026-09-25 and 2026-09-26, an independent agent
-    ("Devan", on Nostr) published timestamped probe receipts (v1 and v2) exercising
-    independent verification of agent work in the same receipt model. Independent
-    validators. An independent implementation exposes the Section 6 procedure as a
-    public service: * WhiteMagic Labs (Lucas Bailey) operates a production validator
-    for this specification at https://api.whitemagic.dev/aer1/verify, publicly accessible
-    without a key, with the same procedure also exposed as an MCP tool (verify_aer1_receipt).
-    On 2026-10-17 the operator exercised the validator against the reference implementation
-    and the conformance corpus. The two implementations initially disagreed on cases
-    in both directions (a decoding boundary in the validator; an id-binding reading
-    and a nil-UUID acceptance in the reference tooling), each disagreement was resolved
-    against the draft text the same day, and the implementations now agree across
-    the exercised case matrix. The validator reports comparison outcomes in the shared
-    states of Section 6 and attaches its provenance caution as advisory metadata beside
-    the verdict, the arrangement the provenance note in Section 6 describes. Seven
-    bundled kit runners for Sections 3 through 6 are maintained in the conformance
-    kit repository (Rust, Go, TypeScript, Python, Java, C#, and Swift), each verified
-    against the full vector corpus described above (113 vectors, 116 checks per runner).
-    These runners are the kit''s own test runners, not independent implementations.
-    Independent third-party implementations, built from the draft text alone without
-    access to kit internals, include ARION''s Node.js and Java verifiers and ColonistOne''s
-    Perl verifier, each conformant against the same corpus. Since revision 12, contributors
-    have reported two scoped interoperability exercises. On 2026-10-08, Tanilo and
-    the AER-1 author published a cross-repository worked example linking an AER-1
-    receipt to a live Tanilo receipt by canonical hash, with the AER-1 commitment
-    check and the Tanilo signature check run separately, each under its own rules.
-    Also on 2026-10-08, the independent builder FlyThink published a four-case fixture
-    binding AER-1 execution receipts to physical completion claims; all four cases
-    replay cleanly, including the case where a valid AER-1 receipt coexists with invalid
-    physical-evidence binding (see Section 10.2). Reports of additional implementations
-    or independent verification results are solicited; implementers are encouraged
-    to validate against the open conformance kit described above and to report their
-    results.</p>'
+    7), hardened chain (Section 7.1), chain commitment (Section 7.3), Unicode, id-binding,
+    and anchor-report suites. The -22 revision adds vectors pinning the canonical
+    base64 spelling (Section 4), the nil- UUID rejection as a standalone case, the
+    legacy schema 0.3 production shape (Section 6), the bare presentation form (Section
+    3), a current- schema (0.4) real receipt beside the two bundled 0.3 fixtures,
+    and one vector per id_verdict state (Section 6). The -23 revision adds the anchor-report
+    vectors pinning the per-anchor outcome report of Section 6, implemented in the
+    kit runners (kit v1.5.6) and in the reference verifier (aer1-verify 0.2.13) ahead
+    of this text. Each runner is zero-dependency within its language toolchain. Running
+    the Python suite takes two steps and no dependencies beyond git and a Python 3
+    interpreter: git clone https://gitlab.com/rambozambodotdev/zambo.git python3 aer1-
+    implementations/python/conformance.py An implementation is conformant when it
+    produces byte-identical verdicts to the reference runners across the full vector
+    corpus. The corpus includes attack vectors for tampered provenance labels, schema
+    version downgrades, and legacy (pre-0.4) receipts; conformance requires the Section
+    6 metadata checks to fail the first two and to report the third with a legacy
+    notice rather than a failure. The kit is versioned; the v1.5.5 release is the
+    frozen reference for the corpus described above. Independent verification. The
+    Section 6 verification procedure has been exercised against live receipts by independent
+    third parties: * On 2026-09-16, an independent agent ("Merv", on the Clawstr network)
+    verified a live receipt (id 0ec81343-cc1f- 4c25-9c33-d76b5582406d) in three checks:
+    the SHA-256 of the decoded canonical bytes matched the output commitment, the
+    upstream evidence hash matched, and the anchor event carried a valid signature
+    retrievable on independent relays. The same party reported that the anchor envelope
+    did not then bind the evidence hash; the reference implementation has since shipped
+    the binding envelope described above. * On 2026-09-16, an independent agent ("nilo_agent",
+    on Nostr) ran adversarial verification challenges against live receipts, including
+    a witness round and a strong-form Bitcoin-anchored challenge (anchor block 967351,
+    receipt 88094e26), each answered with bytes the challenger could check independently.
+    * On 2026-09-25 and 2026-09-26, an independent agent ("Devan", on Nostr) published
+    timestamped probe receipts (v1 and v2) exercising independent verification of
+    agent work in the same receipt model. Independent validators. An independent implementation
+    exposes the Section 6 procedure as a public service: * WhiteMagic Labs (Lucas
+    Bailey) operates a production validator for this specification at https://api.whitemagic.dev/aer1/verify,
+    publicly accessible without a key, with the same procedure also exposed as an
+    MCP tool (verify_aer1_receipt). On 2026-10-17 the operator exercised the validator
+    against the reference implementation and the conformance corpus. The two implementations
+    initially disagreed on cases in both directions (a decoding boundary in the validator;
+    an id-binding reading and a nil-UUID acceptance in the reference tooling), each
+    disagreement was resolved against the draft text the same day, and the implementations
+    now agree across the exercised case matrix. The validator reports comparison outcomes
+    in the shared states of Section 6 and attaches its provenance caution as advisory
+    metadata beside the verdict, the arrangement the provenance note in Section 6
+    describes. Seven bundled kit runners for Sections 3 through 6 are maintained in
+    the conformance kit repository (Rust, Go, TypeScript, Python, Java, C#, and Swift),
+    each verified against the full vector corpus described above (113 vectors, 116
+    checks per runner). These runners are the kit''s own test runners, not independent
+    implementations. Independent third-party implementations, built from the draft
+    text alone without access to kit internals, include ARION''s Node.js and Java
+    verifiers and ColonistOne''s Perl verifier, each conformant against the same corpus.
+    Since revision 12, contributors have reported two scoped interoperability exercises.
+    On 2026-10-08, Tanilo and the AER-1 author published a cross-repository worked
+    example linking an AER-1 receipt to a live Tanilo receipt by canonical hash, with
+    the AER-1 commitment check and the Tanilo signature check run separately, each
+    under its own rules. Also on 2026-10-08, the independent builder FlyThink published
+    a four-case fixture binding AER-1 execution receipts to physical completion claims;
+    all four cases replay cleanly, including the case where a valid AER-1 receipt
+    coexists with invalid physical-evidence binding (see Section 10.2). Reports of
+    additional implementations or independent verification results are solicited;
+    implementers are encouraged to validate against the open conformance kit described
+    above and to report their results.</p>'
   language:
   - en
   script:
@@ -407,6 +414,16 @@ relation:
       primary: true
     formattedref:
       content: draft-zambo-aer1-22
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-zambo-aer1-23
+    docid:
+    - id: draft-zambo-aer1-23
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-zambo-aer1-23
       format: text/plain
 ext:
   schema-version: v1.0.1
