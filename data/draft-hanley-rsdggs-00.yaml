@@ -1,0 +1,102 @@
+---
+schema-version: v1.2.3
+id: draft-hanley-rsdggs-00
+title:
+- content: Regulatory Spectrum Discrete Global Grid System (RSDGGS)
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-hanley-rsdggs-00
+  type: src
+type: standard
+docid:
+- id: draft-hanley-rsdggs-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.hanley-rsdggs
+  type: IETF
+  scope: anchor
+docnumber: I-D.hanley-rsdggs
+date:
+- type: published
+  value: '2026-10-20'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: James
+          language:
+          - en
+        - language:
+          - en
+          initial: J
+        - language:
+          - en
+          initial: P
+        formatted_initials:
+          content: J. P.
+          language:
+          - en
+      surname:
+        content: Hanley
+        language:
+        - en
+      completename:
+        content: James Patrick Hanley
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Myelin Networks LLC
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-10-20'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>This document defines the Regulatory Spectrum Discrete Global Grid
+    System (RSDGGS), a hierarchical geographic indexing scheme designed to encode
+    the regulatory jurisdiction applicable to Industrial, Scientific, and Medical
+    (ISM) radio band usage at any location on Earth. RSDGGS represents geographic
+    location as a variable-length byte array of 1 to 8 octets. The length of the array
+    implicitly encodes the spatial resolution of the index, eliminating the need for
+    an explicit resolution field. Truncation of the array yields a coarser representation,
+    enabling privacy-preserving location compaction without loss of structural integrity.
+    The grid is rooted in a spherical dodecahedron whose twelve pentagonal faces are
+    aligned to approximate the three ITU Radio Regions, with face indices 1, 2, and
+    3 corresponding directly to ITU Regions 1, 2, and 3 respectively. Each face is
+    recursively subdivided using a hierarchy of isosceles golden gnomon triangles,
+    with 2-bit child indices packed into successive octets. The system supports both
+    fixed IoT deployments for automated regulatory provisioning during manufacturing
+    and mobile IoT devices that acquire regulatory context through GPS, tethered devices,
+    or peer-assisted discovery. A beacon mechanism is defined whereby location-aware
+    devices broadcast their RSDGGS index within ISM band transmissions, enabling location-unaware
+    peers to derive applicable regulatory parameters including frequency allocation,
+    power limits, duty cycle, dwell interval, channelization, and permitted modulation.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-hanley-rsdggs-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
