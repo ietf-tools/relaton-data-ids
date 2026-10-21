@@ -16,15 +16,18 @@ abstract:
 - content: "<p>This document proposes Learnlog as an assistance capture profile for
     measuring AI scaffolding, with xAPI and Caliper bindings. Its motivation is Quantum
     Learning Machines' work on QLM Measure. The profile defines what assistance was
-    requested, generated, transmitted, displayed, or accepted; what an instrument
-    captured; and which facts remain unknown. Existing logging ecosystems can carry
-    these definitions. Their reviewed base specifications do not, by themselves, require
-    this particular combined agreement on assistance, achieved capture, unavailable
-    information, and mapping provenance. Existing AI and tutoring profiles already
-    cover important parts of the domain. The document retains the existing Learnlog
-    event file representation, hash chains, optional signed heads, and verifiable
-    redaction as an optional carrier. An implementation can use the assistance profile
-    without producing that file representation. Experimental companion software constructs
+    requested, offered, generated, transmitted, displayed, or accepted; what an instrument
+    captured; which facts remain unknown; and which assertions were observed, self-
+    reported, or inferred. Existing logging ecosystems can carry these definitions.
+    Their reviewed base specifications do not, by themselves, require this particular
+    combined agreement on assistance, achieved capture, unavailable information, and
+    mapping provenance. Existing AI and tutoring profiles already cover important
+    parts of the domain. For discussion, the document also proposes event families
+    beyond assistance, among them prediction, revision, recall after a delay, stated
+    confidence, and agency. The document retains the existing Learnlog event file
+    representation, hash chains, optional signed heads, and verifiable redaction as
+    an optional carrier. An implementation can use the assistance profile without
+    producing that file representation. Experimental companion software constructs
     importer-observation records in xAPI and Caliper while preserving source assistance
     assertions separately. The implementation does not establish independent interoperability,
     truthful or complete capture, independent learning, or scientific equivalence
@@ -64,6 +67,16 @@ relation:
       primary: true
     formattedref:
       content: draft-srivastava-learnlog-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-srivastava-learnlog-03
+    docid:
+    - id: draft-srivastava-learnlog-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-srivastava-learnlog-03
       format: text/plain
 ext:
   schema-version: v1.0.1

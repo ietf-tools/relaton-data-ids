@@ -16,12 +16,15 @@ abstract:
 - content: "<p>This document describes a two-layer reference architecture for discovering
     the minimum public information needed to reach AI agents. The Local Discovery
     Plane obtains discovery information within an administrative domain through mDNS/DNS-SD
-    or infrastructure-assisted discovery. The Federation Plane uses DNS as its baseline
-    for cross- domain discovery: Federation Gateways apply export policy, publish
-    permitted information in independently administered DNS zones, and retrieve, validate,
-    and cache remote information on demand. The framework also provides non-DNS mechanisms
-    and mixed-mode deployments on the Federation Plane which can complement the baseline
-    with proactive distribution, recipient-specific sharing, and directory lookup.</p>"
+    or infrastructure-assisted discovery. For cross-domain discovery, the Federation
+    Plane uses publication of policy-approved information in authoritative DNS zones
+    and on-demand resolution as its baseline; Federation Gateways apply export policy
+    and validate and cache accepted results. The document also identifies optional
+    functions that may complement this baseline where DNS publication and request-driven
+    resolution do not meet deployment needs: recipient-specific sharing, proactive
+    or multi-hop dissemination, and trusted aggregated directory queries. In mixed-
+    mode deployments, DNS may bootstrap an endpoint that provides one of these additional
+    functions.</p>"
   language:
   - en
   script:
@@ -117,6 +120,16 @@ relation:
       primary: true
     formattedref:
       content: draft-zhang-dawn-agent-discovery-framework-08
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-zhang-dawn-agent-discovery-framework-09
+    docid:
+    - id: draft-zhang-dawn-agent-discovery-framework-09
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-zhang-dawn-agent-discovery-framework-09
       format: text/plain
 ext:
   schema-version: v1.0.1

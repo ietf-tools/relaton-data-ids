@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-cmcc-tcp-sro
 title:
-- content: The Session Recovery (SR) Option for TCP
+- content: The Session Identifier Option (SIO)
   language:
   - en
   script:
@@ -13,18 +13,16 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document defines the Session Recovery (SR) option for TCP. The
-    option lets the endpoints of a connection exchange identifiers: during the handshake
-    each endpoint carries its own identifier, and designated segments afterwards carry
-    the identifier of the peer. This places the knowledge of which endpoint a connection
-    belongs to inside the TCP header, where network functions on the path - load balancers,
-    NAT gateways, firewalls - can read it without per-flow state and without payload
-    inspection. The primary use is session recovery in SNAT and load-balancing clusters;
-    further uses include reduced-state forwarding, connection-tracking recovery, and
-    per- backend telemetry. The option is carried in the SYN, the SYN-ACK, and retransmitted
-    segments, or in every segment when so configured; the default adds no overhead
-    to normal data segments. Endpoints that do not support it behave as if the option
-    did not exist.</p>"
+- content: "<p>This document defines the Session Identifier Option (SIO), carried
+    as a TCP option for TCP connections and as a UDP option for UDP datagrams. The
+    option lets the endpoints of a connection or flow publish identifiers at the transport
+    layer, where network functions on the path - load balancers, NAT gateways, firewalls
+    - can read them without per-flow state and without payload inspection. Network
+    functions of all kinds can benefit from it: session recovery in load- balancing
+    and NAT clusters, stateless forwarding, connection-tracking recovery, and telemetry.
+    The option adds only a few octets, and only to the packets that carry it; which
+    packets carry it is a deployment choice. Endpoints that do not support it behave
+    as if the option did not exist.</p>"
   language:
   - en
   script:
@@ -60,6 +58,16 @@ relation:
       primary: true
     formattedref:
       content: draft-cmcc-tcp-sro-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-cmcc-tcp-sro-03
+    docid:
+    - id: draft-cmcc-tcp-sro-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-cmcc-tcp-sro-03
       format: text/plain
 ext:
   schema-version: v1.0.1
