@@ -1,0 +1,107 @@
+---
+schema-version: v1.2.3
+id: draft-mcguinness-oauth-mission-01
+title:
+- content: Mission-Bound Authorization for OAuth 2.0
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-mcguinness-oauth-mission-01
+  type: src
+type: standard
+docid:
+- id: draft-mcguinness-oauth-mission-01
+  type: Internet-Draft
+  primary: true
+- id: I-D.mcguinness-oauth-mission
+  type: IETF
+  scope: anchor
+docnumber: I-D.mcguinness-oauth-mission
+date:
+- type: published
+  value: '2026-10-21'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Karl
+          language:
+          - en
+        - language:
+          - en
+          initial: K
+        formatted_initials:
+          content: K.
+          language:
+          - en
+      surname:
+        content: McGuinness
+        language:
+        - en
+      completename:
+        content: Karl McGuinness
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Independent
+  role:
+  - type: author
+version:
+- draft: '01'
+revdate: '2026-10-21'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: '<p>OAuth 2.0 has authorization grants and access tokens but no standard
+    object that binds an approved task, such as one an AI agent performs on a user''s
+    behalf, to the authority approved for it and governs the tokens later issued under
+    that authority. This document defines that object for OAuth 2.0: a Mission. A
+    client submits, through Pushed Authorization Requests, a Mission Intent describing
+    the task it will perform. The authorization server derives Rich Authorization
+    Requests authorization details from it, binds the approved task and that authority
+    to the Approver''s consent through integrity anchors, and records a durable Mission.
+    Every access token issued under the Mission carries a subset of the approved authority
+    and a "mission" claim, and every issuance is gated on the Mission''s lifecycle
+    state. Revoking a Mission stops further issuance; it does not recall tokens already
+    issued, which a resource server that enforces from the token alone can continue
+    to honor until they expire. Optional capabilities represent delegation among agents
+    with the OAuth Actor Profile and, as specified by a companion, let a single Mission
+    be honored across trust domains. Runtime enforcement of each action is a separate,
+    optional layer.</p>'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-mcguinness-oauth-mission-00
+    docid:
+    - id: draft-mcguinness-oauth-mission-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-mcguinness-oauth-mission-00
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-mcguinness-oauth-mission-01
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
