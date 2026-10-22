@@ -19,9 +19,9 @@ abstract:
     The grammar introduces one required trailer (Reviewed-By:) and three optional
     companion trailers (Review-Stance:, Review-Of:, Witnessed-By:) that bind a Sovereign-tier
     ~handle to a specific act of review over a specific content artefact, cryptographically
-    signed using the Ed25519 mechanism of that grammar. The signature covers the reviewer's
-    role, the stance, and the review target together, so that changing any of them
-    after signing fails verification. The mechanism applies to git commits, document
+    signed using the Ed25519 mechanism of that grammar. Because the signature covers
+    the reviewer's role, the stance and the review target together, changing any of
+    them after signing fails verification. The mechanism applies to git commits, document
     manifests, pre-prints, patent disclosures, and any other content-addressable artefact.
     A reviewer's signed reviews are bound to the reviewer's sovereign handle, not
     to a publisher's platform, and can be verified without the publisher. For anonymous
@@ -74,6 +74,16 @@ relation:
       primary: true
     formattedref:
       content: draft-morrison-reviewed-by-trailer-03
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-morrison-reviewed-by-trailer-04
+    docid:
+    - id: draft-morrison-reviewed-by-trailer-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-morrison-reviewed-by-trailer-04
       format: text/plain
 ext:
   schema-version: v1.0.1

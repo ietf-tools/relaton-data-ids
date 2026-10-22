@@ -13,11 +13,18 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>The idea of keeping option identifiers in SCHC Rules simplifies the
-    interoperability and the evolution of SCHC compression, when the protocol introduces
-    new options, that can be unknown from the current SCHC implementation. This document
-    discuss the augmentation of the current YANG Data Model, in order to add in the
-    Rule options identifiers used by the protocol.</p>"
+- content: "<p>Keeping option identifiers in SCHC Rules simplifies interoperability
+    and the evolution of SCHC compression when a protocol introduces options that
+    the current SCHC implementation does not know. This document explains why the
+    Field Identifiers (FIDs) defined for CoAP options in RFC 9363 do not scale: a
+    FID must be allocated, standardized and implemented for each option a protocol
+    defines, before any Rule can describe that option. It presents an evolution of
+    the compression Rule defined in RFC 9363, in which an entry refers to an option
+    by the pair (option space, option number), called a Universal Option, and in which
+    entries are indexed, ordered and can reference one another. It also presents a
+    data model dedicated to CoAP, which processes options directly from the option
+    number carried in the message, instead of mapping each option to a FID of its
+    own.</p>"
   language:
   - en
   script:
@@ -43,6 +50,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-schc-universal-option-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-schc-universal-option-02
+    docid:
+    - id: draft-ietf-schc-universal-option-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-schc-universal-option-02
       format: text/plain
 ext:
   schema-version: v1.0.1

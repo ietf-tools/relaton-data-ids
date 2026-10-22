@@ -31,7 +31,15 @@ abstract:
     key to the sub-receipt signer''s key, states the receipt-issuance computation
     order explicitly, and guides issuers on default boundaries versus explicit allowances.
     Version -14 adds a pointer to content profiles for verification of what the agent
-    produced, following implementer feedback; no wire- format changes.</p>'
+    produced, following implementer feedback. Version -15 adopts the grant/execution
+    vocabulary of [CHEN-AGENT-USE-CASES]: the receipt as Execution Layer Evidence
+    for a Grant Layer Authority. It adds delegatee holder binding for sub-receipts
+    -- a parent names the delegatee''s public key, closing a bearer-copy issuance
+    gap found in review -- deprecates orchestratorSignature as redundant, sketches
+    an OAuth authorization_details binding so a token can reference its receipt, and
+    states normative custody requirements for the authorizing key. The delegateeKey
+    field is a wire-format addition; -14-era verifiers will reject receipts carrying
+    it, which is the intended fail-closed version behavior.</p>'
   language:
   - en
   script:
@@ -187,6 +195,16 @@ relation:
       primary: true
     formattedref:
       content: draft-nelson-agent-delegation-receipts-14
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-nelson-agent-delegation-receipts-15
+    docid:
+    - id: draft-nelson-agent-delegation-receipts-15
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-nelson-agent-delegation-receipts-15
       format: text/plain
 ext:
   schema-version: v1.0.1
