@@ -1,0 +1,271 @@
+---
+schema-version: v1.2.3
+id: draft-zambo-aer1-25
+title:
+- content: 'AER-1: A Portable Execution Receipt for AI Agent Tool Calls'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-zambo-aer1-25
+  type: src
+type: standard
+docid:
+- id: draft-zambo-aer1-25
+  type: Internet-Draft
+  primary: true
+- id: I-D.zambo-aer1
+  type: IETF
+  scope: anchor
+docnumber: I-D.zambo-aer1
+date:
+- type: published
+  value: '2026-10-22'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Brennan
+          language:
+          - en
+        - language:
+          - en
+          initial: B
+        formatted_initials:
+          content: B.
+          language:
+          - en
+      surname:
+        content: Zambo
+        language:
+        - en
+      completename:
+        content: Brennan Zambo
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Zambo
+  role:
+  - type: author
+version:
+- draft: '25'
+revdate: '2026-10-22'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: '<p>This document specifies AER-1, a small vocabulary for recording one
+    AI agent tool call as a portable, independently checkable execution receipt. A
+    receipt identifies the execution, records when it happened, preserves the canonical
+    bytes used for the output commitment, names the tool and caller scope, carries
+    a provenance class, and resolves at a stable public URL. The format separates
+    what the system observed from claims about the outside world, and it separates
+    provenance (who ran or reported the action) from the record itself. A reference
+    implementation is deployed, and its receipts are publicly verifiable without an
+    account or token. The specification covers workflow receipts, which bind an ordered
+    sequence of step receipts to a single goal with a Merkle root over the step sequence,
+    and hash-chained job timelines for tamper-evident sequencing of executions. This
+    revision closes honesty and precision gaps: it adds the workflow-receipt truncation
+    limit (new Section 8.4), normatively specifies the external anchor format and
+    its verification procedure (rewritten Section 10, new Section 10.1), fixes a RECOMMENDED/MUST
+    contradiction in Section 8.1, makes the Section 6 verification step testable,
+    and documents replay, low-entropy, empty-record, and size- limit considerations.
+    It changes no receipt field, digest construction, or existing verification rule.
+    The -13 revision fixes a malformed sentence in the Abstract, three incorrect section
+    cross- references, stale Table of Contents page numbers, a skipped footer page
+    number, misaligned table rows, and chain version-string updates, and records two
+    reported interoperability examples in Implementation Status; it changes no receipt
+    field, digest construction, or verification rule. The -14 revision adds tamper-evident
+    metadata binding (new Section 3.1; conditional metadata_hash for schema 0.4 and
+    later), disambiguates the anchor receipt_id (Table 4), corrects the self-anchoring
+    witnessing claim (Section 10), makes the Section 8.3 display rule a SHOULD with
+    a byte-testable MUST, narrows the provenance attestation wording (Section 5),
+    states the binding non-transfer rule normatively (new Section 10.2), pins anchored_digest
+    to bare hex (Table 4), corrects the vector corpus counts, and adds normative disclosure
+    of missing issuer authentication. It changes no existing receipt field, digest
+    construction, or verification rule for schema 0.3 and earlier. The -15 revision
+    narrows the Implementation Status wording for the reported interoperability examples
+    at the implementer''s request; it changes no receipt field, digest construction,
+    or verification rule. The -16 revision documents the live workflow tools API (new
+    Sections 8.5, 8.6, 8.7): the workflow_close tool, workflow metadata in step receipts,
+    and the workflow view API. It changes no receipt field, digest construction, or
+    existing verification rule. The -17 revision documents the recommended execution_context
+    member (new Section 3.2): an optional, non-core structure for recording source
+    and version context such as the model name and version behind a tool call and
+    the identity of the source system acted upon. It changes no existing receipt field,
+    digest construction, or verification rule. The -18 revision repairs the reference
+    apparatus (normative references to RFC 3339, RFC 8259, RFC 4122, and RFC 4648,
+    and the previously missing RFC 7942 entry), pins two parser edge cases (duplicate
+    JSON member names and leap-second timestamps are rejected), names the Unicode
+    normalization behavior in Section 4 with a computed vector pair, adopts the unknown-versus-not-applicable
+    convention for optional members, adds optional members for readback outcomes,
+    per-field provenance, negative records, reversal state, method descriptors, and
+    payment references, completes the execution_context member set (model and environment
+    digests), adds the optional input_hash commitment (Section 3.3), permits SCITT
+    and RFC 3161 anchors under Section 10, states the clock-trust and equivocation
+    limits in Section 13, and rewrites Section 15 to position the specification against
+    adjacent work. It changes no receipt field, digest construction, or verification
+    outcome for any receipt well-formed under the -17 rules. The -19 revision aligns
+    the workflow tool and workflow view descriptions in Sections 8.5 and 8.7 with
+    the normative Merkle construction in Section 8.1: both descriptions named step
+    output hashes as the root''s leaf input where Section 8.1 specifies step receipt
+    identifiers. An implementer report identified the divergence. It changes no construction,
+    receipt field, digest, or verification outcome. The -20 revision adopts three
+    findings reported by an independent implementer who built a conformance verifier
+    from the -19 text alone. It requires the published byte layout of a recorded input
+    to state the member ordering rule it applies when the input is a JSON object (Section
+    3.3), and it bars control characters from provenance class labels, with rejection
+    required (Section 5). The conformance kit''s quickstart core tier also gains the
+    provenance-label and schema-version metadata checks as a stated rule. It changes
+    no receipt field or digest construction; a receipt well-formed under the -19 rules
+    verifies identically, except that an input commitment whose published layout states
+    no ordering rule is no longer reported as confirmed. The -21 revision states the
+    receipt-id binding rule normatively (Section 6), describes the id- substitution
+    case in Security Considerations (Section 13), and credits the independent control
+    test that produced the finding (Section 18). It changes no receipt field, digest
+    construction, or existing verification rule. The -22 revision pins the legacy
+    (schema 0.3) member forms that satisfy the core requirements and requires verifiers
+    to report a legacy acceptance explicitly rather than as a plain pass (Section
+    6), requires the canonical base64 spelling of canonical_bytes and the rejection
+    of non-canonical spellings (Sections 3 and 4), states that the receipt object
+    is the document and that no presentation envelope is part of the format (Section
+    3), enumerates the id verdict a verifier reports beside the structural verdict,
+    binds the states to verifier behavior, and states the resolution order between
+    the two layers (Section 6), requires the reason to be printed next to the rule
+    for every check that does not pass (Section 6), and records an independent production
+    validator in the Implementation Status. It changes no receipt field or digest
+    construction; one verification outcome changes, for a receipt whose canonical_bytes
+    spelling is not canonical, which earlier revisions did not address. The -23 revision
+    states the per-anchor outcome report normatively (Section 6): a verifier''s report
+    carries each anchor''s outcome in machine-visible form, and an anchor the verifier
+    did not evaluate is reported as "not checked", never as an evaluated outcome,
+    so that state cannot be conflated with an anchor that was evaluated and could
+    not be resolved. It changes no receipt field, digest construction, or existing
+    verification rule. Implementation Status This section records the implementation
+    status of the AER-1 vocabulary at the time of this revision, following [RFC7942].
+    It will be removed before publication as an RFC. Reference implementation. Zambo
+    (https://zambo.dev), operated by the document author, is a deployed implementation
+    of Sections 3 through 10. Tool calls made over HTTPS as JSON-RPC to https://zambo.dev/api/
+    mcp receive a public receipt page at https://zambo.dev/run/&lt;id&gt;, retrievable
+    without an account, wallet, or token. A machine-readable verifier is exposed as
+    described in Section 6. Receipts are anchored to public Nostr relays with an envelope
+    binding the receipt identifier, the output hash, and the evidence hash (envelope
+    "zambo- receipt-anchor/1"). Workflow receipts (Section 8) are deployed in the
+    reference implementation. Multi-step sessions receive a workflow receipt at https://zambo.dev/workflow/&lt;workflow_id&gt;
+    binding the ordered step receipts with a Merkle root, and step receipt pages link
+    to the parent workflow ("Part of workflow") while workflow pages link to each
+    step receipt. Since 2026-10-22, the reference implementation closes workflows
+    under the seq-output-v1 construction and declares merkle_version on every new
+    workflow receipt; workflow receipts issued before that date carry no merkle_version
+    member and remain verifiable under receipt-id-v0 exactly as issued. This revision
+    defines both constructions and the selector. The conformance corpus described
+    below does not yet carry seq-output-v1 vectors; its stated counts are unchanged.
+    Conformance kit. An open conformance suite for this vocabulary is maintained at
+    https://gitlab.com/rambozambodotdev/zambo. It ships seven bundled kit runners
+    (Rust, Go, TypeScript, Python, Java, C#, and Swift), each verified against the
+    full vector corpus, which at this revision stands at 119 vectors (122 checks per
+    runner) across the receipt-level, Merkle (Section 8.1), timeline (Section 7),
+    hardened chain (Section 7.1), chain commitment (Section 7.3), Unicode, id-binding,
+    and anchor-report suites. The -22 revision adds vectors pinning the canonical
+    base64 spelling (Section 4), the nil- UUID rejection as a standalone case, the
+    legacy schema 0.3 production shape (Section 6), the bare presentation form (Section
+    3), a current- schema (0.4) real receipt beside the two bundled 0.3 fixtures,
+    and one vector per id_verdict state (Section 6). The -23 revision adds the anchor-report
+    vectors pinning the per-anchor outcome report of Section 6, implemented in the
+    kit runners (kit v1.5.6) and in the reference verifier (aer1-verify 0.2.13) ahead
+    of this text. Each runner is zero-dependency within its language toolchain. Running
+    the Python suite takes two steps and no dependencies beyond git and a Python 3
+    interpreter: git clone https://gitlab.com/rambozambodotdev/zambo.git python3 aer1-
+    implementations/python/conformance.py Since the -23 revision, each conformance
+    run also emits the evaluated vector set: one line per vector carrying its id and
+    content digest, with a corpus digest over the set, so a claimed pass can be checked
+    as a set difference against the full corpus. The cross-runner parity gate mints
+    a receipt of each of its runs (schema 0.4; the committed payload carries the evaluated
+    vector ids, the corpus digest, and the verdict, pass or fail) and pins it in the
+    kit repository as parity- gate-receipt.json; the gate verifies that receipt with
+    the kit conformance check and with aer1-verify, id bound, before it reports success.
+    An implementation is conformant when it produces byte-identical verdicts to the
+    reference runners across the full vector corpus. The corpus includes attack vectors
+    for tampered provenance labels, schema version downgrades, and legacy (pre-0.4)
+    receipts; conformance requires the Section 6 metadata checks to fail the first
+    two and to report the third with a legacy notice rather than a failure. The kit
+    is versioned; the v1.5.6 release is the frozen reference for the corpus described
+    above. Independent verification. The Section 6 verification procedure has been
+    exercised against live receipts by independent third parties: * On 2026-09-16,
+    an independent agent ("Merv", on the Clawstr network) verified a live receipt
+    (id 0ec81343-cc1f- 4c25-9c33-d76b5582406d) in three checks: the SHA-256 of the
+    decoded canonical bytes matched the output commitment, the upstream evidence hash
+    matched, and the anchor event carried a valid signature retrievable on independent
+    relays. The same party reported that the anchor envelope did not then bind the
+    evidence hash; the reference implementation has since shipped the binding envelope
+    described above. * On 2026-09-16, an independent agent ("nilo_agent", on Nostr)
+    ran adversarial verification challenges against live receipts, including a witness
+    round and a strong-form Bitcoin-anchored challenge (anchor block 967351, receipt
+    88094e26), each answered with bytes the challenger could check independently.
+    * On 2026-09-25 and 2026-09-26, an independent agent ("Devan", on Nostr) published
+    timestamped probe receipts (v1 and v2) exercising independent verification of
+    agent work in the same receipt model. Independent validators. An independent implementation
+    exposes the Section 6 procedure as a public service: * WhiteMagic Labs (Lucas
+    Bailey) operates a production validator for this specification at https://api.whitemagic.dev/aer1/verify,
+    publicly accessible without a key, with the same procedure also exposed as an
+    MCP tool (verify_aer1_receipt). On 2026-10-17 the operator exercised the validator
+    against the reference implementation and the conformance corpus. The two implementations
+    initially disagreed on cases in both directions (a decoding boundary in the validator;
+    an id-binding reading and a nil-UUID acceptance in the reference tooling), each
+    disagreement was resolved against the draft text the same day, and the implementations
+    now agree across the exercised case matrix. The validator reports comparison outcomes
+    in the shared states of Section 6 and attaches its provenance caution as advisory
+    metadata beside the verdict, the arrangement the provenance note in Section 6
+    describes. Seven bundled kit runners for Sections 3 through 6 are maintained in
+    the conformance kit repository (Rust, Go, TypeScript, Python, Java, C#, and Swift),
+    each verified against the full vector corpus described above (119 vectors, 122
+    checks per runner). These runners are the kit''s own test runners, not independent
+    implementations. Independent third-party implementations, built from the draft
+    text alone without access to kit internals, include ARION''s Node.js and Java
+    verifiers and ColonistOne''s Perl verifier, each conformant against the same corpus.
+    Since revision 12, contributors have reported two scoped interoperability exercises.
+    On 2026-10-08, Tanilo and the AER-1 author published a cross-repository worked
+    example linking an AER-1 receipt to a live Tanilo receipt by canonical hash, with
+    the AER-1 commitment check and the Tanilo signature check run separately, each
+    under its own rules. Also on 2026-10-08, the independent builder FlyThink published
+    a four-case fixture binding AER-1 execution receipts to physical completion claims;
+    all four cases replay cleanly, including the case where a valid AER-1 receipt
+    coexists with invalid physical-evidence binding (see Section 10.2). Reports of
+    additional implementations or independent verification results are solicited;
+    implementers are encouraged to validate against the open conformance kit described
+    above and to report their results.</p>'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-zambo-aer1-12
+    docid:
+    - id: draft-zambo-aer1-12
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-zambo-aer1-12
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-zambo-aer1-25
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
