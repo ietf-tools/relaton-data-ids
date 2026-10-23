@@ -22,7 +22,7 @@ abstract:
     distinguishing active self-report, passive aggregate observation, and passive
     individual observation; the last of these is forbidden on the wire and rejected
     at the grammar level. Readers present a capability token scoped by (category,
-    provenance_class) that gates release BEFORE payload emission. The payload is envelope-
+    provenance_class) that gates release before payload emission. The payload is envelope-
     signed with COSE_Sign1 over a JCS-canonicalised representation, bound to the issuer's
     Sovereign-tier handle per the Identity-Attributed Git Commits draft. Briefs carry
     a mandatory not_after (default 24h) and reference a revocation endpoint discovered
@@ -65,6 +65,16 @@ relation:
       primary: true
     formattedref:
       content: draft-morrison-morning-brief-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-morrison-morning-brief-03
+    docid:
+    - id: draft-morrison-morning-brief-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-morrison-morning-brief-03
       format: text/plain
 ext:
   schema-version: v1.0.1

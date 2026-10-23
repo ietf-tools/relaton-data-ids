@@ -1,0 +1,134 @@
+---
+schema-version: v1.2.3
+id: draft-zhangb-cats-centralized-control-plane-01
+title:
+- content: A Centralized Control Plane for Computing-Aware Traffic Steering
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-zhangb-cats-centralized-control-plane-01
+  type: src
+type: standard
+docid:
+- id: draft-zhangb-cats-centralized-control-plane-01
+  type: Internet-Draft
+  primary: true
+- id: I-D.zhangb-cats-centralized-control-plane
+  type: IETF
+  scope: anchor
+docnumber: I-D.zhangb-cats-centralized-control-plane
+date:
+- type: published
+  value: '2026-10-22'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Bin
+          language:
+          - en
+        - language:
+          - en
+          initial: B
+        formatted_initials:
+          content: B.
+          language:
+          - en
+      surname:
+        content: Zhang
+        language:
+        - en
+      completename:
+        content: Bin Zhang
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Pengcheng Laboratory
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Bowen
+          language:
+          - en
+        - language:
+          - en
+          initial: B
+        formatted_initials:
+          content: B.
+          language:
+          - en
+      surname:
+        content: Shen
+        language:
+        - en
+      completename:
+        content: Bowen Shen
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Harbin Institute of Technology
+  role:
+  - type: author
+version:
+- draft: '01'
+revdate: '2026-10-22'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>This document specifies a centralized control-plane realization of
+    Computing-Aware Traffic Steering (CATS). The realization uses a logically centralized
+    CATS Path Selector (C-PS) together with ingress and egress CATS-Forwarders. The
+    C-PS receives a service request from an ingress CATS-Forwarder, resolves the requested
+    service to an eligible service contact instance using computing service and network
+    information, and then invokes a path-computation function for the selected destination.
+    The path-computation request contains a resolved headend, endpoint, and network
+    constraints; it does not ask the PCE to discover service instances. After path
+    computation, the C-PS returns a steering binding to the ingress CATS-Forwarder.
+    The binding identifies the selected destination address, the egress CATS-Forwarder,
+    and a realizable path or policy. The ingress forwarder applies the destination
+    replacement and path encapsulation to the first packet and forwards it. The egress
+    forwarder removes the path encapsulation and delivers the packet to the selected
+    service contact instance. Subsequent packets use the installed flow binding, and
+    reverse traffic uses the corresponding return binding.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-zhangb-cats-centralized-control-plane-00
+    docid:
+    - id: draft-zhangb-cats-centralized-control-plane-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-zhangb-cats-centralized-control-plane-00
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-zhangb-cats-centralized-control-plane-01
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

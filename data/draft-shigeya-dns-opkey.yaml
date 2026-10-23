@@ -1,0 +1,54 @@
+---
+schema-version: v1.2.3
+id: draft-shigeya-dns-opkey
+title:
+- content: Using Secure DNS for Originator Profile
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-shigeya-dns-opkey
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>The Originator Profile Framework (OPF) provides information about the
+    origin of content, together with a verifiable binding of the content to that origin,
+    in digital media, advertising, and email ecosystems. In the framework, an originator
+    holds an Originator Profile (OP): a Core Profile (CP) issued by a CP issuer, and
+    Profile Annotations (PA) issued by PA issuers. The CP carries the public keys
+    with which the originator signs the data it originates; a PA annotates the CP
+    with validated attributes about the originator. Verifiers need an authenticated
+    way to confirm that the public keys used by an originator and by the issuers of
+    these documents are currently valid, that the originator's CP has not been revoked
+    by its CP issuer, and that a PA has not been revoked by its PA issuer. This document
+    defines the OPKEY DNS resource record, which associates a public key with a DNS
+    name under the _op label. Its wire and presentation formats are those of the TLSA
+    record. The DNS does not carry the CP or the PAs themselves; it carries records
+    that identify their keys by digest, and it signals, through the presence or absence
+    of OPKEY records, whether a CP has been revoked. The document specifies where
+    OPKEY records are located, how a verifier uses them, and how DNSSEC is used to
+    authenticate them. It also specifies two further records under _op, of existing
+    types: an SVCB record by which an originator names the CP issuers it accepts,
+    and a TXT record whose presence signals that a PA issuer has revoked a PA. Operational
+    aspects of the framework, such as registration, key rollover procedures, and revocation
+    timing, are outside the scope of this document.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-shigeya-dns-opkey-00
+    docid:
+    - id: draft-shigeya-dns-opkey-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-shigeya-dns-opkey-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

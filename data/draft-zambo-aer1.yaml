@@ -118,49 +118,54 @@ abstract:
     workflow receipt; workflow receipts issued before that date carry no merkle_version
     member and remain verifiable under receipt-id-v0 exactly as issued. This revision
     defines both constructions and the selector. The conformance corpus described
-    below does not yet carry seq-output-v1 vectors; its stated counts are unchanged.
-    Conformance kit. An open conformance suite for this vocabulary is maintained at
-    https://gitlab.com/rambozambodotdev/zambo. It ships seven bundled kit runners
-    (Rust, Go, TypeScript, Python, Java, C#, and Swift), each verified against the
-    full vector corpus, which at this revision stands at 119 vectors (122 checks per
-    runner) across the receipt-level, Merkle (Section 8.1), timeline (Section 7),
-    hardened chain (Section 7.1), chain commitment (Section 7.3), Unicode, id-binding,
-    and anchor-report suites. The -22 revision adds vectors pinning the canonical
-    base64 spelling (Section 4), the nil- UUID rejection as a standalone case, the
-    legacy schema 0.3 production shape (Section 6), the bare presentation form (Section
-    3), a current- schema (0.4) real receipt beside the two bundled 0.3 fixtures,
-    and one vector per id_verdict state (Section 6). The -23 revision adds the anchor-report
-    vectors pinning the per-anchor outcome report of Section 6, implemented in the
-    kit runners (kit v1.5.6) and in the reference verifier (aer1-verify 0.2.13) ahead
-    of this text. Each runner is zero-dependency within its language toolchain. Running
-    the Python suite takes two steps and no dependencies beyond git and a Python 3
-    interpreter: git clone https://gitlab.com/rambozambodotdev/zambo.git python3 aer1-
-    implementations/python/conformance.py Since the -23 revision, each conformance
-    run also emits the evaluated vector set: one line per vector carrying its id and
-    content digest, with a corpus digest over the set, so a claimed pass can be checked
-    as a set difference against the full corpus. The cross-runner parity gate mints
-    a receipt of each of its runs (schema 0.4; the committed payload carries the evaluated
-    vector ids, the corpus digest, and the verdict, pass or fail) and pins it in the
-    kit repository as parity- gate-receipt.json; the gate verifies that receipt with
-    the kit conformance check and with aer1-verify, id bound, before it reports success.
-    An implementation is conformant when it produces byte-identical verdicts to the
-    reference runners across the full vector corpus. The corpus includes attack vectors
-    for tampered provenance labels, schema version downgrades, and legacy (pre-0.4)
-    receipts; conformance requires the Section 6 metadata checks to fail the first
-    two and to report the third with a legacy notice rather than a failure. The kit
-    is versioned; the v1.5.6 release is the frozen reference for the corpus described
-    above. Independent verification. The Section 6 verification procedure has been
-    exercised against live receipts by independent third parties: * On 2026-09-16,
-    an independent agent ("Merv", on the Clawstr network) verified a live receipt
-    (id 0ec81343-cc1f- 4c25-9c33-d76b5582406d) in three checks: the SHA-256 of the
-    decoded canonical bytes matched the output commitment, the upstream evidence hash
-    matched, and the anchor event carried a valid signature retrievable on independent
-    relays. The same party reported that the anchor envelope did not then bind the
-    evidence hash; the reference implementation has since shipped the binding envelope
-    described above. * On 2026-09-16, an independent agent ("nilo_agent", on Nostr)
-    ran adversarial verification challenges against live receipts, including a witness
-    round and a strong-form Bitcoin-anchored challenge (anchor block 967351, receipt
-    88094e26), each answered with bytes the challenger could check independently.
+    below now carries seq- output-v1 vectors as well, including multi-step closes,
+    the odd-level duplication case, a single-step close, and mixed-version cases in
+    which a single verifier checks closes under both constructions, each keyed on
+    the close''s declared merkle_version. Conformance kit. An open conformance suite
+    for this vocabulary is maintained at https://gitlab.com/rambozambodotdev/zambo.
+    It ships seven bundled kit runners (Rust, Go, TypeScript, Python, Java, C#, and
+    Swift), each verified against the full vector corpus, which at this revision stands
+    at 124 vectors (127 checks per runner) across the receipt-level, Merkle (Section
+    8.1), timeline (Section 7), hardened chain (Section 7.1), chain commitment (Section
+    7.3), Unicode, id-binding, and anchor-report suites. The kit repository publishes
+    the corpus''s current vector count, check count, and evaluated-set corpus digest
+    alongside the corpus itself; that published record states the corpus''s current
+    counts, and if the corpus grows beyond the counts stated here, the published record
+    governs. The -22 revision adds vectors pinning the canonical base64 spelling (Section
+    4), the nil-UUID rejection as a standalone case, the legacy schema 0.3 production
+    shape (Section 6), the bare presentation form (Section 3), a current-schema (0.4)
+    real receipt beside the two bundled 0.3 fixtures, and one vector per id_verdict
+    state (Section 6). The -23 revision adds the anchor-report vectors pinning the
+    per-anchor outcome report of Section 6, implemented in the kit runners (kit v1.5.6)
+    and in the reference verifier (aer1-verify 0.2.13) ahead of this text. Each runner
+    is zero- dependency within its language toolchain. Running the Python suite takes
+    two steps and no dependencies beyond git and a Python 3 interpreter: git clone
+    https://gitlab.com/rambozambodotdev/zambo.git python3 aer1- implementations/python/conformance.py
+    Since the -23 revision, each conformance run also emits the evaluated vector set:
+    one line per vector carrying its id and content digest, with a corpus digest over
+    the set, so a claimed pass can be checked as a set difference against the full
+    corpus. The cross-runner parity gate mints a receipt of each of its runs (schema
+    0.4; the committed payload carries the evaluated vector ids, the corpus digest,
+    and the verdict, pass or fail) and pins it in the kit repository as parity- gate-receipt.json;
+    the gate verifies that receipt with the kit conformance check and with aer1-verify,
+    id bound, before it reports success. An implementation is conformant when it produces
+    byte-identical verdicts to the reference runners across the full vector corpus.
+    The corpus includes attack vectors for tampered provenance labels, schema version
+    downgrades, and legacy (pre-0.4) receipts; conformance requires the Section 6
+    metadata checks to fail the first two and to report the third with a legacy notice
+    rather than a failure. The kit is versioned; the v1.5.7 release is the frozen
+    reference for the corpus described above. Independent verification. The Section
+    6 verification procedure has been exercised against live receipts by independent
+    third parties: * On 2026-09-16, an independent agent ("Merv", on the Clawstr network)
+    verified a live receipt (id 0ec81343-cc1f- 4c25-9c33-d76b5582406d) in three checks:
+    the SHA-256 of the decoded canonical bytes matched the output commitment, the
+    upstream evidence hash matched, and the anchor event carried a valid signature
+    retrievable on independent relays. The same party reported that the anchor envelope
+    did not then bind the evidence hash; the reference implementation has since shipped
+    the binding envelope described above. * On 2026-09-16, an independent agent ("nilo_agent",
+    on Nostr) ran adversarial verification challenges against live receipts, including
+    a witness round and a strong-form Bitcoin-anchored challenge (anchor block 967351,
+    receipt 88094e26), each answered with bytes the challenger could check independently.
     * On 2026-09-25 and 2026-09-26, an independent agent ("Devan", on Nostr) published
     timestamped probe receipts (v1 and v2) exercising independent verification of
     agent work in the same receipt model. Independent validators. An independent implementation
@@ -177,7 +182,7 @@ abstract:
     metadata beside the verdict, the arrangement the provenance note in Section 6
     describes. Seven bundled kit runners for Sections 3 through 6 are maintained in
     the conformance kit repository (Rust, Go, TypeScript, Python, Java, C#, and Swift),
-    each verified against the full vector corpus described above (119 vectors, 122
+    each verified against the full vector corpus described above (124 vectors, 127
     checks per runner). These runners are the kit''s own test runners, not independent
     implementations. Independent third-party implementations, built from the draft
     text alone without access to kit internals, include ARION''s Node.js and Java
@@ -458,6 +463,16 @@ relation:
       primary: true
     formattedref:
       content: draft-zambo-aer1-25
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-zambo-aer1-26
+    docid:
+    - id: draft-zambo-aer1-26
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-zambo-aer1-26
       format: text/plain
 ext:
   schema-version: v1.0.1

@@ -20,11 +20,11 @@ abstract:
     acts from. Each belief is held as a reference to a single named lowest authority
     and is resolved live at the point of use, with verification. When the authority
     is unobservable or the resolved value is stale, the belief takes an explicit uncertainty
-    state rather than a prior cached value; that state propagates to any belief derived
-    from it, and an uncertain belief feeding a costly or irreversible act blocks or
-    escalates rather than proceeding. Every resolution chain terminates in a single
-    self-authorising root. The document is Informational. It records a discipline
-    and a vocabulary; it does not define a wire protocol.</p>"
+    state and never falls back to a prior cached value. That state propagates to any
+    belief derived from it, and an uncertain belief feeding a costly or irreversible
+    act blocks or escalates rather than proceeding. Every resolution chain terminates
+    in a single self-authorising root. The document is Informational. It records a
+    discipline and a vocabulary; it does not define a wire protocol.</p>"
   language:
   - en
   script:
@@ -50,6 +50,16 @@ relation:
       primary: true
     formattedref:
       content: draft-morrison-live-reference-resolution-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-morrison-live-reference-resolution-02
+    docid:
+    - id: draft-morrison-live-reference-resolution-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-morrison-live-reference-resolution-02
       format: text/plain
 ext:
   schema-version: v1.0.1

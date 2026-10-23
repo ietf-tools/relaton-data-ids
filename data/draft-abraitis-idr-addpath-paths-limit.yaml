@@ -13,10 +13,13 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document specifies a BGP capability that complements the ADD-
-    PATH Capability by indicating the maximum number of paths a BGP speaker can receive
+- content: <p>This document specifies a BGP capability that complements the ADD- PATH
+    Capability by indicating the maximum number of paths a BGP speaker can receive
     from a peer, optimizing the transmission of BGP routes by selectively relaying
-    pertinent routes instead of the entire set.</p>"
+    pertinent routes instead of the entire set. This document also defines a new BGP
+    Cease NOTIFICATION message subcode, "Maximum Number of Paths Reached", used when
+    a BGP speaker terminates a peering because the number of paths received from a
+    neighbor for a prefix exceeds the Paths Limit advertised in the PATHS-LIMIT Capability.</p>
   language:
   - en
   script:
@@ -82,6 +85,16 @@ relation:
       primary: true
     formattedref:
       content: draft-abraitis-idr-addpath-paths-limit-05
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-abraitis-idr-addpath-paths-limit-06
+    docid:
+    - id: draft-abraitis-idr-addpath-paths-limit-06
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-abraitis-idr-addpath-paths-limit-06
       format: text/plain
 ext:
   schema-version: v1.0.1

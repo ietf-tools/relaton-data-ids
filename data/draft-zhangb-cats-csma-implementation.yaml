@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-zhangb-cats-csma-implementation
 title:
-- content: CATS Service Metric Agent (C-SMA) Functional Implementation
+- content: CATS C-SMA Nomination Snapshot and C-SMA-to-C-PS Transport Bindings
   language:
   - en
   script:
@@ -13,25 +13,16 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>The Computing-Aware Traffic Steering (CATS) framework defines the CATS
-    Service Metric Agent (C-SMA) as the functional entity responsible for collecting
-    service capabilities and status, and reporting them to CATS Path Selectors (C-PSes).
-    While the framework and the CATS metric documents define the components and the
-    metrics, the concrete observable behavior of the C-SMA - in particular, how it
-    validates and sanitizes the metrics it collects, how it manages soft- state for
-    stale or failing Service Contact Instances (SCIs), and how it synchronizes with
-    the C-PS - remains underspecified. This document fills that gap. It specifies
-    the functional behavior of the C-SMA in terms of observable behavior and reporting
-    semantics: how the C-SMA collects metric reports from SCIs (as specified in [I-D.zhangb-cats-sci-implementation]);
-    how it validates and sanitizes these reports to prevent erroneous or malicious
-    data from influencing traffic steering; how it manages a local metric cache with
-    soft-state aging; how it enforces local policies and update control policies;
-    and how it synchronizes with the C-PS, including recovery and reconciliation.
-    A decomposition of the C-SMA into internal functional components is provided as
-    illustrative implementation guidance, not as a mandated software architecture.
-    This document complements [RFC10053], [I-D.ietf-cats-metric-definition-13], [I-D.zhangb-cats-service-metrics-op],
-    and [I-D.zhangb-cats-sci-implementation] by providing the operational execution
-    layer for the C-SMA within the unified CATS architecture.</p>"
+- content: "<p>This document defines a nomination snapshot published by a CATS Service
+    Metric Agent (C-SMA) to a CATS Path Selector (C-PS). The snapshot carries aggregated
+    service metrics together with a nominated service candidate set. The document
+    defines the snapshot contract and two interoperable binding for the C-SMA-to-C-PS
+    interface: a YANG-modeled snapshot delivered over HTTPS using RESTCONF for centralized
+    C-PS deployments, and a BGP-LS service-metadata mapping for distributed deployments
+    in which a C-PS is located at an ingress CATS-Forwarder. The SCI-to-C-SMA interface,
+    individual metric definitions, management models, generic OAM, and the C-SMA's
+    internal aggregation, ranking, and caching methods are outside the scope of this
+    document.</p>"
   language:
   - en
   script:
@@ -57,6 +48,16 @@ relation:
       primary: true
     formattedref:
       content: draft-zhangb-cats-csma-implementation-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-zhangb-cats-csma-implementation-02
+    docid:
+    - id: draft-zhangb-cats-csma-implementation-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-zhangb-cats-csma-implementation-02
       format: text/plain
 ext:
   schema-version: v1.0.1
