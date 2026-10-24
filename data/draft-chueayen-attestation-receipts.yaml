@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-chueayen-attestation-receipts
 title:
-- content: Enforcement Attestation Receipts for AI Inference Decisions
+- content: Enforcement Attestation Receipts for AI Inference and Agent Action Decisions
   language:
   - en
   script:
@@ -13,13 +13,19 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document specifies a compact JSON attestation receipt for an AI
-    inference decision. A receipt binds an outcome to a request hash under a published
-    Ed25519 public key, so a party that does not trust the issuer's infrastructure
-    can still verify offline what the issuer's signing key attested was decided. The
-    format is intentionally small and version-selected, so independent verifiers stay
-    easy to implement and audit. It is intended for settings where an operator-controlled
-    log is not, on its own, sufficient evidence of the decision.</p>"
+- content: "<p>This document specifies two compact JSON records, signed with Ed25519
+    and verifiable offline under a pinned public key. The first is an attestation
+    receipt for an AI inference decision, binding an outcome to a request hash. The
+    second, added in this revision, is an action record: the decision an enforcement
+    point takes before an agent's proposed tool call or other state-changing action
+    runs, whether that decision is to allow or to refuse. An action record is signed
+    by the enforcement point, never by the agent, and binds the decision to a hash
+    of the exact canonical arguments proposed. The document also describes how a human
+    approval can be bound to exact action values with single use and expiry, how either
+    record could be carried as a COSE_Sign1 Signed Statement and registered with a
+    SCITT Transparency Service, and where the current format does not yet do so. Both
+    formats are intended for settings where an operator-controlled log is not, on
+    its own, sufficient evidence of the decision.</p>"
   language:
   - en
   script:
@@ -65,6 +71,16 @@ relation:
       primary: true
     formattedref:
       content: draft-chueayen-attestation-receipts-03
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-chueayen-attestation-receipts-04
+    docid:
+    - id: draft-chueayen-attestation-receipts-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-chueayen-attestation-receipts-04
       format: text/plain
 ext:
   schema-version: v1.0.1

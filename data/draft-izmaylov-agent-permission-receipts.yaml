@@ -13,14 +13,17 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>Automated agents, such as artificial intelligence (AI) agents, act
-    for people. This document specifies records that let anyone check, later and offline,
-    what an agent was allowed to do and what it recorded doing: a permission a person
-    signs with a passkey, with limits a machine can check; a receipt the agent signs
-    for each action, with Ed25519 and the post-quantum Module-Lattice-Based Digital
-    Signature Algorithm (ML-DSA-87); and a log whose tree head is signed and time-stamped.
-    A verifier says whether each action stayed within its permission, apart from whether
-    the records are sound.</p>"
+- content: "<p>This document specifies records with which a third party can establish,
+    later and without network access, what an automated agent, such as an artificial
+    intelligence (AI) agent, was permitted to do and what it recorded doing. The person
+    for whom the agent acts, the principal, signs a permission with a passkey; the
+    permission carries limits that a verifier can check mechanically. The agent signs
+    a receipt for each action with Ed25519 and the Module-Lattice-Based Digital Signature
+    Algorithm (ML-DSA-87). Receipts are chained and entered in a log whose signed
+    tree heads are time-stamped. A verifier reports, separately, whether the records
+    are sound and whether each recorded action stayed within its permission. The content
+    of each record is specified independently of its encoding; one encoding, JSON
+    Web Signature (JWS) over canonical JavaScript Object Notation (JSON), is defined.</p>"
   language:
   - en
   script:
@@ -36,6 +39,16 @@ relation:
       primary: true
     formattedref:
       content: draft-izmaylov-agent-permission-receipts-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-izmaylov-agent-permission-receipts-01
+    docid:
+    - id: draft-izmaylov-agent-permission-receipts-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-izmaylov-agent-permission-receipts-01
       format: text/plain
 ext:
   schema-version: v1.0.1
