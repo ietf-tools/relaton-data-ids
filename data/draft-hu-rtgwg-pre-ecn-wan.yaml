@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-hu-rtgwg-pre-ecn-wan
 title:
-- content: Precise ECN in WAN
+- content: Early-Warning ECN for WAN
   language:
   - en
   script:
@@ -13,7 +13,7 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This draft defines the precise ECN during used in WAN. With the growing
+- content: "<p>This document defines the precise use of ECN in WAN. With the growing
     demand for AI computing power, the computational capacity of a single Artificial
     Intelligence Data Center (AIDC) can no longer meet the requirements of large-scale
     model training. This has led to the emergence of cross-AIDC distributed model
@@ -22,12 +22,13 @@ abstract:
     loss can significantly degrade training efficiency. Additionally, elephant flows
     and extreme concurrent traffic impose higher demands on network performance. ECN
     achieves active feedback of network congestion by setting ECN flag bits in the
-    header of IP packets, which is an effective traffic control method. RFC6040 introduces
+    header of IP packets, which is an effective traffic control method. RFC 6040 introduces
     the application of ECN in WAN. However, due to the much higher end-to-end delay
     in WAN than in DC, and the frequent occurrence of instantaneous traffic bursts
-    in WAN, it is easy to trigger ECN at the wrong time. This draft focuses on the
-    precise use of ECN in WAN, by introducing different reactions of ECN in different
-    WAN transmission scenarios</p>"
+    in WAN, it is easy to trigger ECN at the wrong time. This document focuses on
+    the precise use of ECN in WAN, by introducing different reactions of ECN in different
+    WAN transmission scenarios. It updates RFC 6040 to specify a domain-local early-warning
+    semantics for the ECT(1) codepoint within managed WAN infrastructure.</p>"
   language:
   - en
   script:
@@ -53,6 +54,16 @@ relation:
       primary: true
     formattedref:
       content: draft-hu-rtgwg-pre-ecn-wan-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-hu-rtgwg-pre-ecn-wan-02
+    docid:
+    - id: draft-hu-rtgwg-pre-ecn-wan-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-hu-rtgwg-pre-ecn-wan-02
       format: text/plain
 ext:
   schema-version: v1.0.1

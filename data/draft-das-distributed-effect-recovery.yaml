@@ -1,0 +1,85 @@
+---
+schema-version: v1.2.3
+id: draft-das-distributed-effect-recovery
+title:
+- content: 'Secure AI Execution-Finality for iOS, Android, and Cross-Platform AI Agents,
+    Part 8: Distributed Effect Verification, Protected Recovery, and Multi-Resource
+    Finality'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-das-distributed-effect-recovery
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>When an AI agent's request times out, nobody knows whether the money
+    moved. Agents such as Apple Siri acting through App Intents, Google Gemini on
+    Android, enterprise copilots, and autonomous workflows on iOS, iPadOS, macOS,
+    Android, Windows, Linux, cloud APIs, banking and instant-payment systems, robotic
+    controllers, and telecommunications networks increasingly act across resources
+    that they do not control. An API acknowledgment, a queued request, an expired
+    timeout, an apparently failed payment, or a successful local transaction may not
+    prove whether the real external effect occurred. Agents that guess then retry
+    into duplicate transfers, compensate for effects that never happened, report rollbacks
+    that did not occur, leave multi- resource operations half committed, or repeat
+    irreversible actions. This document, Part 8 of a twelve-part series, specifies
+    how agents establish what actually happened and recover safely. It describes qualified
+    remote-effect evidence; independent witnesses with provenance and measurement-competence
+    checks; crash-consistent effect-intent journals; containment of indeterminate
+    outcomes so that neither successors nor retries run until reconciliation; recovery
+    and compensation as separately authorized Candidate Acts that cannot inherit or
+    exceed the original authority; resource-specific Finality Sinks; dependency-aware
+    multi-resource commit controls that report partial commits truthfully; and protected
+    irreversible-effect frontiers that require fresh hazard state before an action
+    that cannot be undone. Atomicity across unrelated providers is not presumed. Reference
+    algorithms, twelve threat models, and thirty reproducible tests, including an
+    Android and iOS cooperating-client case, are included. Part 1 of the series defines
+    the shared terminology and common workflows. The document relates these mechanisms
+    to HTTP semantics for idempotent methods, retries, and conditional updates; OAuth
+    2.0 authorization, Rich Authorization Requests, Resource Indicators, Token Exchange,
+    and Demonstrating Proof of Possession (DPoP); Workload Identity in Multi-System
+    Environments (WIMSE); Remote ATtestation procedureS (RATS) for observers and validators;
+    CBOR Object Signing and Encryption (COSE) for signed evidence; Supply Chain Integrity,
+    Transparency, and Trust (SCITT) receipts; and Authentication and Authorization
+    for Constrained Environments (ACE). Their assurances are kept distinct from proof
+    of a specific actual consequence, and no working-group adoption or IETF consensus
+    is claimed. Industry alignment covers Apple iOS, iPadOS, and macOS with Siri,
+    Shortcuts, and App Intents; Google Android with Gemini, intents, Binder, and Keystore;
+    Samsung Bixby, Microsoft Copilot, and Amazon Alexa; Google Cloud, Microsoft Azure,
+    and Kubernetes; agent platforms from OpenAI, Anthropic, and Meta; NVIDIA, Qualcomm,
+    Arm, and Huawei hardware; banks, card payments, and merchant APIs; instant payment
+    schemes such as UPI, Pix, FedNow, and SEPA Instant; agentic commerce; securities
+    trading and settlement; ERP and supply-chain systems; multi-leg travel bookings;
+    healthcare prescriptions and records; smart homes using Matter; automotive over-the-air
+    updates and remote commands; energy dispatch; telecom provisioning, including
+    eSIM profiles; government and tax filings; cloud data deletion and backups; email
+    and messaging; robotics; and satellites and intermittently connected edge systems.
+    For each, the document states the technical effect: an uncertain outcome blocks
+    duplicates and successors until a qualified receipt resolves it, and recovery
+    runs only under its own fresh authority. Product names are illustrative and imply
+    no endorsement or implementation by any vendor. For the EU Artificial Intelligence
+    Act (Regulation (EU) 2024/1689), truthful outcome records and controlled recovery
+    can help providers and deployers address robustness, record-keeping, human-oversight,
+    and risk-management requirements where those obligations apply; this is a technical
+    mapping, not a conformity claim or legal advice.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-das-distributed-effect-recovery-00
+    docid:
+    - id: draft-das-distributed-effect-recovery-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-das-distributed-effect-recovery-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

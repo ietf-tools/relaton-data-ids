@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-zhangb-cats-sci-implementation
 title:
-- content: CATS Service Contact Instance Functional Implementation
+- content: Metric Snapshot Exchange between SCI and C-SMA in CATS
   language:
   - en
   script:
@@ -13,25 +13,11 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>The Computing-Aware Traffic Steering (CATS) framework [I-D.ietf-cats-framework]
-    introduces the concept of a Service Contact Instance (SCI) as the client-facing
-    entity responsible for receiving and dispatching service requests. While the framework
-    and the CATS metric documents define the components and the metrics, the concrete
-    observable behavior of a Service Contact Instance - in particular, what it reports
-    to the CATS Service Metric Agent (C-SMA), when it reports, and how service-instance
-    health changes are reflected in the reported metrics - remains underspecified.
-    This document fills that gap. It specifies the functional behavior of a CATS Service
-    Contact Instance in terms of observable behavior and reporting semantics: how
-    an SCI aggregates instance-level information into service-oriented metrics (e.g.,
-    Global Available Slots and Computing Time) as defined in [I-D.zhangb-cats-service-metrics-op];
-    how it monitors the health and status of underlying service instances and adjusts
-    reported metrics accordingly; how it maintains affinity and handles failure scenarios;
-    and how it reports metrics and status updates to the C-SMA, including update policies
-    and threshold-based triggers. A decomposition of the SCI into internal functional
-    components is provided as illustrative implementation guidance, not as a mandated
-    software architecture. This document complements [I-D.ietf-cats-framework], [I-D.ietf-cats-metric-definition-11],
-    and [I-D.zhangb-cats-service-metrics-op] by providing the operational execution
-    layer for the SCI within the unified CATS architecture.</p>"
+- content: "<p>This document specifies metric snapshot exchange between a Service
+    Contact Instance (SCI) and a CATS Service Metric Agent (C-SMA). It defines atomic
+    replacement, ordering, and validity for periodic full snapshots and change-triggered
+    updates over HTTPS/JSON. An informative appendix explains how one shared snapshot
+    YANG model can support generation of the publication and response messages.</p>"
   language:
   - en
   script:
@@ -57,6 +43,16 @@ relation:
       primary: true
     formattedref:
       content: draft-zhangb-cats-sci-implementation-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-zhangb-cats-sci-implementation-02
+    docid:
+    - id: draft-zhangb-cats-sci-implementation-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-zhangb-cats-sci-implementation-02
       format: text/plain
 ext:
   schema-version: v1.0.1

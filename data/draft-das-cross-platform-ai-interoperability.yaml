@@ -1,0 +1,72 @@
+---
+schema-version: v1.2.3
+id: draft-das-cross-platform-ai-interoperability
+title:
+- content: 'Secure AI Execution-Finality for iOS, Android, and Cross-Platform AI Agents,
+    Part 2: Secure iOS and Android AI Tool Interoperability'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-das-cross-platform-ai-interoperability
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>AI assistants and third-party AI tools now act across the Apple and
+    Google ecosystems. Apple Siri invokes app actions through App Intents and Shortcuts,
+    Google Gemini acts through Android intents and app integrations, and agents from
+    many vendors reach the same accounts from iOS, iPadOS, macOS, Android, Windows,
+    Linux, cloud APIs, and connected devices. Each hop crosses a different permission,
+    sandbox, credential, identity, and hardware trust model. A prompt-injected, replayed,
+    or redirected tool call can then export a file, send a payment, change data, or
+    operate a device in a way that differs from what the user approved, and app permissions,
+    Keychain or Android Keystore credentials, and OAuth tokens do not by themselves
+    prove that the executed operation matches the approved one. This document, Part
+    2 of a twelve-part series, specifies how to carry authority across platforms without
+    letting a platform permission become final authority. Platform-specific adapters
+    for iOS and Android translate qualified app, user, device, and key evidence into
+    a protected canonical effect descriptor; the AI tool's proposed action remains
+    non-effective; operation-scoped, non-bearer authorization resists replay and redirection;
+    and the receiving Finality Sink independently reconstructs the actual pending
+    operation, checks resource identity, aliases, and redirects, fences stale devices
+    after cross-device handoff, and fails closed on any mismatch. Reference data models,
+    pseudocode, a state machine, six threat models, and twenty reproducible validation
+    tests are included. Part 1 of the series defines the shared terminology and common
+    workflows. The document relates these mechanisms to OAuth 2.0 Rich Authorization
+    Requests and Demonstrating Proof of Possession (DPoP); Workload Identity in Multi-System
+    Environments (WIMSE); Remote ATtestation procedureS (RATS); CBOR Object Signing
+    and Encryption (COSE); Authentication and Authorization for Constrained Environments
+    (ACE); Supply Chain Integrity, Transparency, and Trust (SCITT); and HTTP redirection
+    and conditional requests. It identifies discussion points for these groups and
+    for Security Area dispatch, without claiming working-group adoption or IETF consensus.
+    Industry alignment covers Apple iOS, iPadOS, and macOS with Siri, App Intents,
+    and Shortcuts; Google Android with Intents, Binder, and Android Keystore; Google
+    Gemini; Samsung Bixby; Microsoft Windows and Azure agent governance; agent platforms
+    from OpenAI, Anthropic, and Meta; NVIDIA, Qualcomm, Arm, and Huawei hardware;
+    and payments, telecommunications, and robotics. Product names are illustrative
+    and imply no endorsement or implementation by any vendor. For the EU Artificial
+    Intelligence Act (Regulation (EU) 2024/1689), operation- level evidence and fail-closed
+    cross-platform enforcement can help providers and deployers address risk-management,
+    record-keeping, human-oversight, and robustness and cybersecurity requirements
+    where those obligations apply; this is a technical mapping, not a conformity claim
+    or legal advice.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-das-cross-platform-ai-interoperability-00
+    docid:
+    - id: draft-das-cross-platform-ai-interoperability-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-das-cross-platform-ai-interoperability-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

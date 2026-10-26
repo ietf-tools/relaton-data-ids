@@ -1,0 +1,88 @@
+---
+schema-version: v1.2.3
+id: draft-das-agent-tool-integrity
+title:
+- content: 'Secure AI Execution-Finality for iOS, Android, and Cross-Platform AI Agents,
+    Part 7: AI Tool Integrity, Semantic Target Correspondence, and Execution-Time
+    Resource Identity'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-das-agent-tool-integrity
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: '<p>An AI agent can call the right tool with valid credentials and still
+    act on the wrong thing. When a user tells Apple Siri or Google Gemini to "send
+    this to her", asks a coding agent to deploy, or lets a browser agent complete
+    a form, the agent must resolve which file, contact, account, tenant, or device
+    is meant, and which tool, tool version, and model will act. On iOS, iPadOS, macOS,
+    Android, Windows, Linux, enterprise SaaS, cloud platforms, and connected hardware,
+    agents can select the wrong user-referenced object, follow instructions injected
+    into web pages, repositories, or tool outputs, call a tool whose description or
+    capabilities silently changed, run on a swapped model or configuration, or send
+    authorized-looking requests to redirected hosts, rebound aliases, and substituted
+    tenants. Identity authentication, sandboxing, and transport encryption can all
+    succeed while files, credentials, payments, developer infrastructure, and physical
+    devices are exposed. This document, Part 7 of a twelve-part series, specifies
+    execution- time integrity for AI tools. It describes protected correspondence
+    between what the user saw and referred to and the object actually acted on; canonical
+    tool-effect contracts with semantic-compatibility checks across tool versions;
+    algorithm, model, and configuration baseline continuity; instruction provenance
+    with evaluation of lower- trust influence on downstream actions; authenticated
+    resolution of resource aliases, hosts, and tenants, including redirects and DNS
+    rebinding; fencing of tool installation, activation, runtime upgrade, and rollback;
+    detection of dynamic service and capability substitution; and reconstruction of
+    the actual operation at an independent Finality Sink. Reference algorithms, twelve
+    threat models, and thirty reproducible tests, including iOS App Intents and Android
+    cooperating-app cases, are included. Part 1 of the series defines the shared terminology
+    and common workflows. The document relates these mechanisms to OAuth 2.0 authorization,
+    Rich Authorization Requests, Resource Indicators, Token Exchange, and Demonstrating
+    Proof of Possession (DPoP); Workload Identity in Multi- System Environments (WIMSE);
+    Remote ATtestation procedureS (RATS); CBOR Object Signing and Encryption (COSE);
+    Supply Chain Integrity, Transparency, and Trust (SCITT); Software Updates for
+    Internet of Things (SUIT) manifests; Trusted Execution Environment Provisioning
+    (TEEP); Authentication and Authorization for Constrained Environments (ACE); and
+    HTTP redirect and conditional-request semantics. None of these alone is treated
+    as conferring final authority for a consequential effect, and no working-group
+    adoption or IETF consensus is claimed. Industry alignment covers Apple iOS, iPadOS,
+    and macOS with Siri, Shortcuts, App Intents, and Keychain; Google Android with
+    Gemini, intents, Binder, and Keystore; Samsung Bixby, Microsoft Copilot, and Amazon
+    Alexa; Microsoft Windows and Azure; coding and computer-use agents from OpenAI,
+    Anthropic, Google, and Meta; Model Context Protocol servers, agent-to-agent protocols,
+    and tool and plugin registries; browser agents; NVIDIA, Qualcomm, Arm, and Huawei
+    hardware; banking, payments, and agentic commerce; email and messaging agents;
+    healthcare record agents; document signing; cloud infrastructure-as-code; model
+    hosting and model routing; smart homes using Matter; automotive assistants and
+    over-the-air updates; government digital identity, including the EU Digital Identity
+    Wallet; telecommunications; industrial IoT and robotics; and software supply chains
+    and CI/CD. For each, the document states the technical effect: the consequential
+    operation reaches the Finality Sink only if the actual target, tool contract,
+    model baseline, and instruction lineage match what was authorized. Product names
+    are illustrative and imply no endorsement or implementation by any vendor. For
+    the EU Artificial Intelligence Act (Regulation (EU) 2024/1689), execution- time
+    integrity of tools, models, and targets can help providers and deployers address
+    accuracy, robustness, and cybersecurity, record- keeping, and risk-management
+    requirements where those obligations apply; this is a technical mapping, not a
+    conformity claim or legal advice.</p>'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-das-agent-tool-integrity-00
+    docid:
+    - id: draft-das-agent-tool-integrity-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-das-agent-tool-integrity-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

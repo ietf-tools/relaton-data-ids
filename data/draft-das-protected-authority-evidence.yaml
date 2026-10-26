@@ -1,0 +1,74 @@
+---
+schema-version: v1.2.3
+id: draft-das-protected-authority-evidence
+title:
+- content: 'Secure AI Execution-Finality for iOS, Android, and Cross-Platform AI Agents,
+    Part 3: Protected Source Authority, Cross-Committed Evidence, and Scoped Non-Bearer
+    Finality'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-das-protected-authority-evidence
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>When Apple Siri runs an App Intent, Google Gemini triggers an Android
+    action, or a third-party AI agent calls a cloud API on a user's behalf, the request
+    usually carries valid credentials: an OAuth token, an iOS Keychain or Android
+    Keystore key, or a signed approval. Valid credentials are not the same as authority
+    for the exact operation. Prompt injection, stolen or reused tokens, forged or
+    substituted approvals, stale delegated authority, replayed authorizations, and
+    crashes between the authorization decision and the effect can each disconnect
+    an apparent permission from the file export, payment, secret use, cloud change,
+    or device command that is actually executed. This document, Part 3 of a twelve-part
+    series, specifies the authority and evidence layer of execution finality. It describes
+    how to capture protected source authority from the originating principal; collect
+    protected evidence when a request is formed; validate it again, independently,
+    at execution time; cross-commit the two so that neither can be substituted; issue
+    operation-scoped, non-bearer finality enablement that is useless if copied; and
+    consume it once, under protected state, at an independently verifying Finality
+    Sink. It also specifies crash-consistent journaling and reconciliation of indeterminate
+    remote outcomes, keeping local consumption of authority distinct from completion
+    of the external effect. Reference algorithms, six threat models, and twenty reproducible
+    positive and negative tests are included. Part 1 of the series defines the shared
+    terminology and common workflows. The document treats existing IETF mechanisms
+    as qualified inputs rather than final authority: OAuth 2.0 Rich Authorization
+    Requests and Demonstrating Proof of Possession (DPoP); Workload Identity in Multi-System
+    Environments (WIMSE); Remote ATtestation procedureS (RATS); CBOR Object Signing
+    and Encryption (COSE) for evidence encoding; Authentication and Authorization
+    for Constrained Environments (ACE); Supply Chain Integrity, Transparency, and
+    Trust (SCITT) signed statements; and HTTP conditional requests and redirects.
+    It identifies discussion points for these groups and for Security Area dispatch,
+    without claiming working-group adoption or IETF consensus. Industry alignment
+    covers Apple iOS, iPadOS, and macOS with Apple Intelligence, Siri, and App Intents;
+    Google Android with Gemini, Intents, Binder, and Android Keystore; Samsung Bixby
+    and Microsoft Copilot; Microsoft Windows and Azure; agent platforms from OpenAI,
+    Anthropic, Google Cloud, and Meta; NVIDIA, Qualcomm, Arm, and Huawei hardware;
+    API banking and digital signatures; Kubernetes and service meshes; telecommunications;
+    and robotics. Product names are illustrative and imply no endorsement or implementation
+    by any vendor. For the EU Artificial Intelligence Act (Regulation (EU) 2024/1689),
+    cross-committed, operation-level evidence and single-use consumption records can
+    help providers and deployers address record- keeping, traceability, human-oversight,
+    and robustness and cybersecurity requirements where those obligations apply; this
+    is a technical mapping, not a conformity claim or legal advice.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-das-protected-authority-evidence-00
+    docid:
+    - id: draft-das-protected-authority-evidence-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-das-protected-authority-evidence-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
