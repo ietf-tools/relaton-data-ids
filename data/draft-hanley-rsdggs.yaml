@@ -31,7 +31,14 @@ abstract:
     or peer-assisted discovery. A beacon mechanism is defined whereby location-aware
     devices broadcast their RSDGGS index within ISM band transmissions, enabling location-unaware
     peers to derive applicable regulatory parameters including frequency allocation,
-    power limits, duty cycle, dwell interval, channelization, and permitted modulation.</p>"
+    power limits, duty cycle, dwell interval, channelization, and permitted modulation.
+    For IETF protocols, this document defines a CBOR encoding of the index, requests
+    a CBOR tag for it, and describes how the index is carried in IEEE 802.15.4 frames,
+    the link layer for which 6LoWPAN was defined, so that a device can learn which
+    channels and power levels it may use before it joins such a network. It also outlines,
+    as future work, the use of the index as an IPv6 Interface Identifier for geographic
+    forwarding within 6LoWPAN and RPL meshes, and lists the privacy, address uniqueness,
+    and prefix allocation issues that such use would have to resolve.</p>"
   language:
   - en
   script:
@@ -47,6 +54,16 @@ relation:
       primary: true
     formattedref:
       content: draft-hanley-rsdggs-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-hanley-rsdggs-01
+    docid:
+    - id: draft-hanley-rsdggs-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-hanley-rsdggs-01
       format: text/plain
 ext:
   schema-version: v1.0.1
