@@ -13,21 +13,19 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document specifies the Verifiable AI Provenance (VAP) Framework,
-    a cross-domain upper framework for cryptographically verifiable decision audit
-    trails in high-risk AI systems, along with the Legal AI Profile (LAP), a domain-specific
-    instantiation for legal AI and LegalTech systems. VAP defines common infrastructure
-    including hash chain integrity, digital signatures, unified conformance levels
-    (Bronze/Silver/Gold), external anchoring via RFC 3161 Time-Stamp Protocol and
-    compatible transparency services (including IETF SCITT), a Completeness Invariant
-    pattern guaranteeing no selective logging, standardized Evidence Pack format for
-    regulatory submission, and privacy- preserving verification protocols. LAP extends
-    VAP for the judicial AI domain, addressing unique requirements including attorney
-    oversight verification (Human Override Coverage), three-pipeline completeness
-    invariants for legal consultation, document generation, and fact-checking, tiered
-    content retention with legal hold protocols for judicial discovery compliance,
-    graduated override enforcement mechanisms, and privacy- preserving fields designed
-    to maintain attorney-client privilege while enabling third-party auditability.</p>"
+- content: "<p>This document specifies an experimental Legal AI Profile (LAP) for
+    verifiable AI provenance, informed by the Verifiable AI Provenance (VAP) Framework.
+    It defines event signatures, hash chains, signed batch commitments, external anchoring,
+    and evidence packages for legal consultation, document generation, and fact checking.
+    This revision aligns the LAP design with a pinned VAP v1.2.0 Draft 3 baseline.
+    All LAP levels require Merkle trees and external anchoring. LAP Bronze, Silver,
+    and Gold remain profile-specific levels; they do not establish VAP Core, Standard,
+    or Full conformance. The document also defines bounded recovery, erasure records,
+    human review records, and legal hold controls. Verification concerns recorded
+    evidence within a declared scope. It does not prove that every real-world operation
+    was captured, that an AI output is correct, or that legal obligations have been
+    met. This is an individual Internet-Draft and a proposed profile, not an IETF
+    standard or a registered VAP profile.</p>"
   language:
   - en
   script:
@@ -83,6 +81,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ailex-vap-legal-ai-provenance-04
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ailex-vap-legal-ai-provenance-05
+    docid:
+    - id: draft-ailex-vap-legal-ai-provenance-05
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ailex-vap-legal-ai-provenance-05
       format: text/plain
 ext:
   schema-version: v1.0.1

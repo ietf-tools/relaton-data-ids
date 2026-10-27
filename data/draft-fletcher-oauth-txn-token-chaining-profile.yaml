@@ -2,8 +2,8 @@
 schema-version: v1.2.3
 id: draft-fletcher-oauth-txn-token-chaining-profile
 title:
-- content: Transaction Token Authorization Grant Profile for OAuth Identity and Authorization
-    Chaining
+- content: Transaction Token JWT Authorization Grant Profile for OAuth Identity and
+    Authorization Chaining
   language:
   - en
   script:
@@ -25,7 +25,14 @@ abstract:
     how a service operating within that trust domain can present its Txn-Token to
     obtain a JWT Authorization Grant that carries the necessary context across a trust
     boundary, enabling an access token to be issued for a partner service, without
-    exposing internal trust-domain credentials or token formats beyond the trust boundary.</p>"
+    exposing internal trust-domain credentials or token formats beyond the trust boundary.
+    Agentic systems are one class of deployment that depends on this capability. The
+    AI Identity Management System [I-D.ietf-wimse-aims] describes AI agents as workloads
+    that use Transaction Tokens to carry authorization context between the services
+    implementing a task, and that frequently need to reach resources protected by
+    an authorization server in another trust domain. Its treatment of cross-domain
+    access directs such an agent to use [I-D.ietf-oauth-identity-chaining] or a profile
+    of it as defined in this document.</p>"
   language:
   - en
   script:
@@ -41,6 +48,16 @@ relation:
       primary: true
     formattedref:
       content: draft-fletcher-oauth-txn-token-chaining-profile-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-fletcher-oauth-txn-token-chaining-profile-01
+    docid:
+    - id: draft-fletcher-oauth-txn-token-chaining-profile-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-fletcher-oauth-txn-token-chaining-profile-01
       format: text/plain
 ext:
   schema-version: v1.0.1

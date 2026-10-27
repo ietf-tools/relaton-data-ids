@@ -1,0 +1,152 @@
+---
+schema-version: v1.2.3
+id: draft-adyta-mls-pq-00
+title:
+- content: A Hybrid Post-Quantum KEM for the Messaging Layer Security (MLS) Protocol
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-adyta-mls-pq-00
+  type: src
+type: standard
+docid:
+- id: draft-adyta-mls-pq-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.adyta-mls-pq
+  type: IETF
+  scope: anchor
+docnumber: I-D.adyta-mls-pq
+date:
+- type: published
+  value: '2026-10-26'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Luis
+          language:
+          - en
+        - language:
+          - en
+          initial: L
+        formatted_initials:
+          content: L.
+          language:
+          - en
+      surname:
+        content: Maia
+        language:
+        - en
+      completename:
+        content: Luis Maia
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Adyta, LDA
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Marcelo
+          language:
+          - en
+        - language:
+          - en
+          initial: M
+        formatted_initials:
+          content: M.
+          language:
+          - en
+      surname:
+        content: Santos
+        language:
+        - en
+      completename:
+        content: Marcelo Santos
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Adyta, LDA
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Tadeu
+          language:
+          - en
+        - language:
+          - en
+          initial: T
+        formatted_initials:
+          content: T.
+          language:
+          - en
+      surname:
+        content: Freitas
+        language:
+        - en
+      completename:
+        content: Tadeu Freitas
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Adyta, LDA
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-10-26'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>This document specifies a hybrid classical/post-quantum Key Encapsulation
+    Mechanism (KEM) for use in the ratchet trees of the Messaging Layer Security (MLS)
+    protocol. Each parent node of the ratchet tree carries both a classical and a
+    post-quantum public key, and a direct path update encapsulates to both. The combiner
+    binds both ciphertexts and both public keys, so that the derived node secret is
+    pseudorandom if at least one of the two KEMs remains IND- CCA secure, including
+    against an adversary that controls the keys and ciphertexts of the broken KEM.
+    This document also specifies an optional asynchronous mode, in which fresh post-quantum
+    output is produced only on designated rotation commits rather than on every commit.
+    Asynchronous mode trades a bounded delay in post-quantum post-compromise recovery
+    for a reduction in post-quantum bandwidth proportional to the rotation interval.
+    Forward secrecy within the rotation window is retained by a one-way ratchet. This
+    document is independent of the MLS Combiner draft, which achieves hybrid security
+    by a different mechanism: running a pure post-quantum and a traditional MLS session
+    in parallel and injecting a secret exported from the former into the latter as
+    a pre-shared key.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-adyta-mls-pq-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

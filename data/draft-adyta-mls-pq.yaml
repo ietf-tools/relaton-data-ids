@@ -1,0 +1,49 @@
+---
+schema-version: v1.2.3
+id: draft-adyta-mls-pq
+title:
+- content: A Hybrid Post-Quantum KEM for the Messaging Layer Security (MLS) Protocol
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-adyta-mls-pq
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This document specifies a hybrid classical/post-quantum Key Encapsulation
+    Mechanism (KEM) for use in the ratchet trees of the Messaging Layer Security (MLS)
+    protocol. Each parent node of the ratchet tree carries both a classical and a
+    post-quantum public key, and a direct path update encapsulates to both. The combiner
+    binds both ciphertexts and both public keys, so that the derived node secret is
+    pseudorandom if at least one of the two KEMs remains IND- CCA secure, including
+    against an adversary that controls the keys and ciphertexts of the broken KEM.
+    This document also specifies an optional asynchronous mode, in which fresh post-quantum
+    output is produced only on designated rotation commits rather than on every commit.
+    Asynchronous mode trades a bounded delay in post-quantum post-compromise recovery
+    for a reduction in post-quantum bandwidth proportional to the rotation interval.
+    Forward secrecy within the rotation window is retained by a one-way ratchet. This
+    document is independent of the MLS Combiner draft, which achieves hybrid security
+    by a different mechanism: running a pure post-quantum and a traditional MLS session
+    in parallel and injecting a secret exported from the former into the latter as
+    a pre-shared key.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-adyta-mls-pq-00
+    docid:
+    - id: draft-adyta-mls-pq-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-adyta-mls-pq-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

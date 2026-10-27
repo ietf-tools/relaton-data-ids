@@ -1,0 +1,237 @@
+---
+schema-version: v1.2.3
+id: draft-narajala-courtney-ansv2-02
+title:
+- content: 'Agent Name Service v2 (ANS): A Domain-Anchored Identity Layer for Autonomous
+    AI Agents'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-narajala-courtney-ansv2-02
+  type: src
+type: standard
+docid:
+- id: draft-narajala-courtney-ansv2-02
+  type: Internet-Draft
+  primary: true
+- id: I-D.narajala-courtney-ansv2
+  type: IETF
+  scope: anchor
+docnumber: I-D.narajala-courtney-ansv2
+date:
+- type: published
+  value: '2026-10-26'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Scott
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Courtney
+        language:
+        - en
+      completename:
+        content: Scott Courtney
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: GoDaddy
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Vineeth
+          language:
+          - en
+        - language:
+          - en
+          initial: V
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: V. S.
+          language:
+          - en
+      surname:
+        content: Narajala
+        language:
+        - en
+      completename:
+        content: Vineeth Sai Narajala
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: OWASP
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Ken
+          language:
+          - en
+        - language:
+          - en
+          initial: K
+        formatted_initials:
+          content: K.
+          language:
+          - en
+      surname:
+        content: Huang
+        language:
+        - en
+      completename:
+        content: Ken Huang
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: DistributedApps.ai
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Idan
+          language:
+          - en
+        - language:
+          - en
+          initial: I
+        formatted_initials:
+          content: I.
+          language:
+          - en
+      surname:
+        content: Habler
+        language:
+        - en
+      completename:
+        content: Idan Habler
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: OWASP
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Akram
+          language:
+          - en
+        - language:
+          - en
+          initial: A
+        formatted_initials:
+          content: A.
+          language:
+          - en
+      surname:
+        content: Sheriff
+        language:
+        - en
+      completename:
+        content: Akram Sheriff
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Cisco Systems
+  role:
+  - type: author
+version:
+- draft: '02'
+revdate: '2026-10-26'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: <p>Autonomous AI agents now invoke one another across organizational boundaries
+    over protocols such as the Model Context Protocol (MCP) and Agent2Agent (A2A).
+    A relying party has no interoperable way to bind a discoverable agent endpoint
+    to the holder of its domain (optionally verified as a legal entity), a specific
+    software release, and an auditable issuance history. This document specifies the
+    architecture of Agent Name Service version 2 (ANS v2), an identity layer, anchored
+    in DNS domains, that binds an agent endpoint to its domain holder, its release,
+    and its history. ANS v2 composes systems the Internet already runs (the DNS with
+    DNSSEC; the Web PKI, with DANE where operators publish it; and an append-only
+    transparency log) and introduces no new root of trust. Every ANS v2 agent carries
+    a versioned name rooted in a DNS domain that the registrant controls. When a registrant
+    registers an agent, the Registration Authority (RA) checks the registrant's control
+    of that domain, can issue an Identity Certificate that binds the versioned name
+    to the agent's key, and submits a signed registration record to a Merkle-tree
+    transparency log. Under the current specifications, a new version is a new registration
+    and a new log entry, so a verifier can pin an agent to a specific release. Any
+    third party can detect a rewritten log by computing, from the log's public tiles,
+    a consistency proof between two of its signed checkpoints. For discovery, ANS
+    v2 adopts the SVCB records and SvcParams of DNS for AI Discovery (DNS-AID) as
+    its default format, and keeps an older TXT-based format only as an opt-in profile.
+    Beyond those discovery records, ANS v2 specifies one DNS record, an "_ans-badge"
+    TXT record that points to the agent's transparency-log entry; the log seals the
+    fingerprint of the agent server's certificate, and operators can add DANE records.
+    With these records, a verifier resolves an agent, authenticates its TLS endpoint,
+    and confirms that the presented name, version, and key match a logged registration.
+    This document also states a threat model covering agent impersonation, DNS spoofing,
+    CA and Registration Authority compromise, version rollback, agent card tampering,
+    and log rewriting, and names what each ANS check does and does not prevent. The
+    reference registry, transparency log, verifier, JSON Schemas, SDKs, and CLI are
+    open source.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-narajala-courtney-ansv2-01
+    docid:
+    - id: draft-narajala-courtney-ansv2-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-narajala-courtney-ansv2-01
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-narajala-courtney-ansv2-02
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

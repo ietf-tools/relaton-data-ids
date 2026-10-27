@@ -1,0 +1,85 @@
+---
+schema-version: v1.2.3
+id: draft-das-cross-device-authority-revocation
+title:
+- content: 'Secure AI Execution-Finality for iOS, Android, and Cross-Platform AI Agents,
+    Part 10: Cross-Device Authority Continuity, Revocation Fencing, and Offline Execution'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-das-cross-device-authority-revocation
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: '<p>Revoking an AI agent''s access does not stop the copy of it that is
+    still running somewhere else. Tasks now move between an iPhone, an iPad, a Mac,
+    an Android phone, a Windows or Linux workstation, a cloud agent, a car, and an
+    edge controller; Apple Siri and Google Gemini follow the user across phones, watches,
+    speakers, and vehicles. After a handoff, a synchronised login, a delegated session,
+    a cached OAuth token, or a cloned virtual machine, the old device or a disconnected
+    resource can still cause a duplicate or stale real-world effect. Revoked-but-cached
+    permissions, untrusted clock rollback, expired offline leases, delayed command
+    queues, races over who owns a task, lost or stolen devices, and uncertain outcomes
+    after a network partition all make "access revoked" different from "effects stopped".
+    This document, Part 10 of a twelve-part series, specifies how authority moves
+    between devices and stops when it should. It describes protected ownership generations
+    with source fencing, so that exactly one device or agent instance can act for
+    a task; authenticated delegation and revocation transitions with dependency graphs
+    and source-authority generations; protected time and lease expiry that resist
+    clock rollback; per-device, non-bearer finality; preallocated offline authority
+    with protected partition budgets that cannot be cloned or double-spent; partition-aware
+    reconciliation; transfer of administrative and resource ownership across domains;
+    and independent verification of the actual pending operation at the responsible
+    Finality Sink. Reference algorithms, fourteen threat models, and thirty-six reproducible
+    tests are included. Part 1 of the series defines the shared terminology and common
+    workflows. The document relates these mechanisms to OAuth 2.0 Token Revocation,
+    Token Introspection, Token Exchange, Rich Authorization Requests, and Demonstrating
+    Proof of Possession (DPoP); Workload Identity in Multi- System Environments (WIMSE);
+    Authentication and Authorization for Constrained Environments (ACE); Remote ATtestation
+    procedureS (RATS); CBOR Object Signing and Encryption (COSE); Supply Chain Integrity,
+    Transparency, and Trust (SCITT); HTTP conditional requests and caching; Software
+    Updates for Internet of Things (SUIT) and Trusted Execution Environment Provisioning
+    (TEEP); and the Network Configuration Protocol (NETCONF). It identifies discussion
+    points for these groups and for Security Area dispatch, without claiming working-group
+    adoption or IETF consensus. Industry alignment covers Apple iOS, iPadOS, and macOS
+    with Handoff, Siri, and App Intents; Google Android with Gemini and Android Keystore;
+    Samsung Bixby, Microsoft Copilot, and Amazon Alexa across phones, watches, speakers,
+    and cars; Microsoft Windows and Azure; agent platforms from OpenAI, Anthropic,
+    and Meta; NVIDIA, Qualcomm, Arm, and Huawei hardware; multi-cloud failover; lost
+    and stolen device protection and remote wipe; phone replacement and device transfer;
+    employee offboarding and bring-your-own-device programmes; offline and small-value
+    payments, including UPI Lite and proposed offline modes for central-bank digital
+    currencies; transit and access credentials in mobile wallets; vehicle digital
+    keys; smart locks and shared guest access; family accounts and parental controls;
+    telecommunications roaming and edge; IoT and intermittently connected sites, including
+    aviation, maritime, and satellite-connected devices; robotics and vehicles; and
+    industrial and energy systems. For each, the document states the technical effect:
+    after handoff or revocation, only the current owner can cause an effect, and offline
+    devices can act only within a protected, non-clonable budget that expires on trusted
+    time. Product names are illustrative and imply no endorsement or implementation
+    by any vendor. For the EU Artificial Intelligence Act (Regulation (EU) 2024/1689),
+    enforceable revocation and bounded offline authority can help providers and deployers
+    address human-oversight, robustness and cybersecurity, and record- keeping requirements
+    where those obligations apply; this is a technical mapping, not a conformity claim
+    or legal advice.</p>'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-das-cross-device-authority-revocation-00
+    docid:
+    - id: draft-das-cross-device-authority-revocation-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-das-cross-device-authority-revocation-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

@@ -1,0 +1,137 @@
+---
+schema-version: v1.2.3
+id: draft-das-hardware-execution-finality-00
+title:
+- content: 'Secure AI Execution-Finality for iOS, Android, and Cross-Platform AI Agents,
+    Part 11: Kernel, Sandbox, and Hardware-Enforced Execution Finality'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-das-hardware-execution-finality-00
+  type: src
+type: standard
+docid:
+- id: draft-das-hardware-execution-finality-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.das-hardware-execution-finality
+  type: IETF
+  scope: anchor
+docnumber: I-D.das-hardware-execution-finality
+date:
+- type: published
+  value: '2026-10-26'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Sangam
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Das
+        language:
+        - en
+      completename:
+        content: Sangam Das
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Independent Researcher
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-10-26'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>A sandboxed, attested AI agent can still change the real world through
+    a door the sandbox left open. Apple iOS and iPadOS app sandboxes, macOS, Google
+    Android, Windows and Linux kernels, AI-agent code-execution cells, on-device neural
+    processors running assistants such as Apple Siri, Google Gemini, Samsung Galaxy
+    AI, and Microsoft Copilot, NVIDIA accelerators and network controllers, Qualcomm
+    and Arm processors, confidential-computing virtual machines, and embedded, automotive,
+    and telecom controllers isolate workloads while still exposing consequential file,
+    credential, network, inter- process, deployment, firmware, and hardware-command
+    interfaces. Prompt-injected tool execution, privileged connector bypass, syscall
+    arguments changed after checking, policy hot swaps, stale attestation, GPU and
+    DMA egress, rollback of tools or policies, and monitors that only observe rather
+    than block can each let an apparently confined agent cause an unauthorized real
+    effect. This document, Part 11 of a twelve-part series, specifies execution finality
+    at kernel, sandbox, and hardware boundaries. It describes protected discovery
+    of every effect-capable path, with an explicit distinction between paths that
+    are blocked and paths that are merely observed; controls on transitions from sandbox
+    output to privileged real-world effect; non-bypassable credential custody; generation-safe
+    installation, upgrade, and rollback of tool runtimes; protected mutation of security
+    policy and configuration; hardware attribution of device and accelerator commands;
+    independent witness and attestation qualification; and Finality Sink reconstruction
+    of the actual pending operation with scoped non-bearer authority and fail- closed
+    consumption. Remote attestation is treated as evidence about an environment, not
+    authority for a particular effect. Reference algorithms, sixteen threat models,
+    and thirty-six reproducible tests, including Apple, Android Binder, and Windows
+    privileged-service cases, are included. Part 1 of the series defines the shared
+    terminology and common workflows. The document relates these mechanisms to Remote
+    ATtestation procedureS (RATS), Trusted Execution Environment Provisioning (TEEP),
+    Software Updates for Internet of Things (SUIT), Authentication and Authorization
+    for Constrained Environments (ACE), CBOR Object Signing and Encryption (COSE),
+    OAuth 2.0 Rich Authorization Requests, Demonstrating Proof of Possession (DPoP),
+    and Token Exchange, Workload Identity in Multi-System Environments (WIMSE), Supply
+    Chain Integrity, Transparency, and Trust (SCITT), HTTP semantics, the Network
+    Configuration Protocol (NETCONF), autonomic networking, and operational observability
+    work. The additional question addressed is whether a particular real-world effect
+    is authorised and is blocked or released at its actual enforcement boundary; no
+    working-group adoption or IETF consensus is claimed. Industry alignment covers
+    Apple iOS, iPadOS, and macOS sandboxes with Siri and App Intents; Google Android
+    with Gemini, Binder, and Keystore; Samsung Galaxy AI and Bixby; Microsoft Windows
+    with virtualization-based security, Copilot, and AI PCs with neural processing
+    units; Linux with seccomp, eBPF, security modules, and microVMs; code-execution
+    sandboxes for AI agents; browser sandboxes and web agents; agent platforms from
+    OpenAI, Anthropic, Google, and Meta; NVIDIA accelerators and data-processing units;
+    Qualcomm, Arm, and Huawei processors and trusted execution environments; confidential
+    computing and attested private AI clouds; cloud workload isolation on AWS, Azure,
+    and Google Cloud; server baseboard management controllers; banking, signing, and
+    payment hardware; telecommunications network functions and SmartNICs; software-defined
+    vehicles; medical devices; industrial control systems; drones and robotics; satellite
+    command; and CI/CD and policy automation. For each, the document states the technical
+    effect: a consequential effect leaves the sandbox or reaches the hardware only
+    through a gate that blocks, rather than merely logs, and that verifies the exact
+    operation against current authority. Product names are illustrative and imply
+    no endorsement or implementation by any vendor. For the EU Artificial Intelligence
+    Act (Regulation (EU) 2024/1689), mandatory blocking enforcement with honest coverage
+    records can help providers and deployers address robustness and cybersecurity,
+    risk-management, and record-keeping requirements where those obligations apply;
+    this is a technical mapping, not a conformity claim or legal advice.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-das-hardware-execution-finality-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
