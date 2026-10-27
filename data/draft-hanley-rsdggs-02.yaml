@@ -1,0 +1,131 @@
+---
+schema-version: v1.2.3
+id: draft-hanley-rsdggs-02
+title:
+- content: Regulatory Spectrum Discrete Global Grid System (RSDGGS)
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-hanley-rsdggs-02
+  type: src
+type: standard
+docid:
+- id: draft-hanley-rsdggs-02
+  type: Internet-Draft
+  primary: true
+- id: I-D.hanley-rsdggs
+  type: IETF
+  scope: anchor
+docnumber: I-D.hanley-rsdggs
+date:
+- type: published
+  value: '2026-10-27'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: James
+          language:
+          - en
+        - language:
+          - en
+          initial: J
+        - language:
+          - en
+          initial: P
+        formatted_initials:
+          content: J. P.
+          language:
+          - en
+      surname:
+        content: Hanley
+        language:
+        - en
+      completename:
+        content: James Patrick Hanley
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Myelin Networks LLC
+  role:
+  - type: author
+version:
+- draft: '02'
+revdate: '2026-10-27'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>This document defines the Regulatory Spectrum Discrete Global Grid
+    System (RSDGGS), a compact, variable-length hierarchical geographic indexing scheme
+    designed to encode geographic location and regulatory jurisdiction for Industrial,
+    Scientific, and Medical (ISM) radio band operations. RSDGGS encodes location into
+    a 1-to-8 octet compact byte array where length implicitly dictates spatial resolution,
+    allowing privacy-preserving location truncation without loss of spatial indexing
+    structure. For low-power constrained networks (6lo), RSDGGS provides a lightweight
+    binary representation and CBOR payload that can be embedded directly into IEEE
+    802.15.4 Information Elements (IEs) or lower-layer beacons, enabling constrained
+    IoT nodes to discover local spectrum regulations (permitted channels, power limits,
+    duty cycles) before or during network attachment. For core IPv6 architectural
+    contexts (6man), RSDGGS proposes a structured 64-bit spatial node identifier.
+    This document explores how this identifier can serve as a geographically anchored
+    Interface Identifier (IID) within IPv6 addresses to enable geographic greedy routing
+    in either an autonomous RF peer-aware network or low-power and lossy networks,
+    while outlining key architectural considerations regarding address uniqueness,
+    dynamic prefix updates, and location privacy. The grid is rooted in a spherical
+    dodecahedron whose twelve pentagonal faces are aligned to approximate the three
+    ITU Radio Regions, with face indices 1, 2, and 3 corresponding directly to ITU
+    Regions 1, 2, and 3 respectively, with each face covering the most radio dense
+    part of the ITU regions and spillover maping to bitmask appropriate representations
+    - ie 5 &amp; 9 for 1, 6 &amp; 10 for 2, and 7 &amp; 11 for 3. Each face is recursively
+    subdivided using a hierarchy of isosceles golden gnomon triangles, with 2-bit
+    child indices packed into successive octets. The system supports both fixed IoT
+    deployments for automated regulatory provisioning during manufacturing and mobile
+    IoT devices that acquire regulatory context through GPS, tethered devices, or
+    peer-assisted discovery. A beacon mechanism is defined whereby location-aware
+    devices broadcast their RSDGGS index within ISM band transmissions, enabling location-unaware
+    peers to derive applicable regulatory parameters including frequency allocation,
+    power limits, duty cycle, dwell interval, channelization, and permitted modulation.
+    For IETF protocols, this document defines a CBOR encoding of the index, requests
+    a CBOR tag for it, and describes how the index is carried in IEEE 802.15.4 frames,
+    the link layer for which 6LoWPAN was defined, so that a device can learn which
+    channels and power levels it may use before it joins such a network. It also outlines,
+    as future work, the use of the index as an IPv6 Interface Identifier for geographic
+    forwarding within 6LoWPAN and RPL meshes, and lists the privacy, address uniqueness,
+    and prefix allocation issues that such use would have to resolve.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-hanley-rsdggs-00
+    docid:
+    - id: draft-hanley-rsdggs-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-hanley-rsdggs-00
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-hanley-rsdggs-02
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

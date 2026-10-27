@@ -18,10 +18,11 @@ abstract:
     MPLS forwarding plane using preinstalled "TE link labels". Those labels are functionally
     equivalent to Segment Routing (SR) Adjacency Segment Identifiers (Adj-SIDs) but
     are allocated and distributed solely via RSVP-TE signaling. This document extends
-    RFC 8577 to use SR-MPLS Adjacency SIDs that are advertised by the IGP as the forwarding-plane
-    labels for RSVP-TE tunnels. It restricts scope to per-link Adj-SIDs and defines
-    the signaling procedures and protocol extensions required to couple the RSVP-TE
-    control plane with the native SR-MPLS forwarding plane.</p>
+    RFC 8577 so that RSVP-TE tunnels can use Segment Routing over MPLS (SR-MPLS) Adj-SIDs,
+    as specified in RFC 8402 and RFC 8660, in place of TE link labels. It restricts
+    scope to Adj-SIDs attached to a single unidirectional adjacency and defines the
+    signaling procedures and protocol extensions required to couple the RSVP-TE control
+    plane with the SR-MPLS data plane.</p>
   language:
   - en
   script:
@@ -37,6 +38,16 @@ relation:
       primary: true
     formattedref:
       content: draft-beeram-mpls-rsvp-sr-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-beeram-mpls-rsvp-sr-01
+    docid:
+    - id: draft-beeram-mpls-rsvp-sr-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-beeram-mpls-rsvp-sr-01
       format: text/plain
 ext:
   schema-version: v1.0.1

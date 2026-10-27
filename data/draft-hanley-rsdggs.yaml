@@ -14,21 +14,32 @@ docid:
   primary: true
 abstract:
 - content: "<p>This document defines the Regulatory Spectrum Discrete Global Grid
-    System (RSDGGS), a hierarchical geographic indexing scheme designed to encode
-    the regulatory jurisdiction applicable to Industrial, Scientific, and Medical
-    (ISM) radio band usage at any location on Earth. RSDGGS represents geographic
-    location as a variable-length byte array of 1 to 8 octets. The length of the array
-    implicitly encodes the spatial resolution of the index, eliminating the need for
-    an explicit resolution field. Truncation of the array yields a coarser representation,
-    enabling privacy-preserving location compaction without loss of structural integrity.
-    The grid is rooted in a spherical dodecahedron whose twelve pentagonal faces are
-    aligned to approximate the three ITU Radio Regions, with face indices 1, 2, and
-    3 corresponding directly to ITU Regions 1, 2, and 3 respectively. Each face is
-    recursively subdivided using a hierarchy of isosceles golden gnomon triangles,
-    with 2-bit child indices packed into successive octets. The system supports both
-    fixed IoT deployments for automated regulatory provisioning during manufacturing
-    and mobile IoT devices that acquire regulatory context through GPS, tethered devices,
-    or peer-assisted discovery. A beacon mechanism is defined whereby location-aware
+    System (RSDGGS), a compact, variable-length hierarchical geographic indexing scheme
+    designed to encode geographic location and regulatory jurisdiction for Industrial,
+    Scientific, and Medical (ISM) radio band operations. RSDGGS encodes location into
+    a 1-to-8 octet compact byte array where length implicitly dictates spatial resolution,
+    allowing privacy-preserving location truncation without loss of spatial indexing
+    structure. For low-power constrained networks (6lo), RSDGGS provides a lightweight
+    binary representation and CBOR payload that can be embedded directly into IEEE
+    802.15.4 Information Elements (IEs) or lower-layer beacons, enabling constrained
+    IoT nodes to discover local spectrum regulations (permitted channels, power limits,
+    duty cycles) before or during network attachment. For core IPv6 architectural
+    contexts (6man), RSDGGS proposes a structured 64-bit spatial node identifier.
+    This document explores how this identifier can serve as a geographically anchored
+    Interface Identifier (IID) within IPv6 addresses to enable geographic greedy routing
+    in either an autonomous RF peer-aware network or low-power and lossy networks,
+    while outlining key architectural considerations regarding address uniqueness,
+    dynamic prefix updates, and location privacy. The grid is rooted in a spherical
+    dodecahedron whose twelve pentagonal faces are aligned to approximate the three
+    ITU Radio Regions, with face indices 1, 2, and 3 corresponding directly to ITU
+    Regions 1, 2, and 3 respectively, with each face covering the most radio dense
+    part of the ITU regions and spillover maping to bitmask appropriate representations
+    - ie 5 &amp; 9 for 1, 6 &amp; 10 for 2, and 7 &amp; 11 for 3. Each face is recursively
+    subdivided using a hierarchy of isosceles golden gnomon triangles, with 2-bit
+    child indices packed into successive octets. The system supports both fixed IoT
+    deployments for automated regulatory provisioning during manufacturing and mobile
+    IoT devices that acquire regulatory context through GPS, tethered devices, or
+    peer-assisted discovery. A beacon mechanism is defined whereby location-aware
     devices broadcast their RSDGGS index within ISM band transmissions, enabling location-unaware
     peers to derive applicable regulatory parameters including frequency allocation,
     power limits, duty cycle, dwell interval, channelization, and permitted modulation.
@@ -64,6 +75,16 @@ relation:
       primary: true
     formattedref:
       content: draft-hanley-rsdggs-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-hanley-rsdggs-02
+    docid:
+    - id: draft-hanley-rsdggs-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-hanley-rsdggs-02
       format: text/plain
 ext:
   schema-version: v1.0.1
