@@ -25,9 +25,14 @@ abstract:
     when it handles such URIs, to avoid the failure modes that short, user-embeddable
     strings invite: using the authority as a navigation target (open redirect), using
     a registered handler as a general-purpose launcher, and, for "iqa", a parse that
-    looks like a certification. This document is not an Internet Standard. It is an
-    Informational specification of two experimental addressing schemes, published
-    for the public record.</p>'
+    looks like a certification. This revision adds three components that companion
+    implementations already run: a trust lease, which carries the freshness of every
+    attestation answer in-band and is checked against the verifier''s own clock, offline;
+    two fixed-length wire formats, the 128-octet pulse header of the "rttp" scheme
+    and the 128-octet attestation envelope of the "iqa" scheme; and a closed refusal
+    vocabulary with grant references for attestation responses. This document is not
+    an Internet Standard. It is an Informational specification of two experimental
+    addressing schemes, published for the public record.</p>'
   language:
   - en
   script:
@@ -43,6 +48,16 @@ relation:
       primary: true
     formattedref:
       content: draft-li-rttp-iqa-addressing-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-li-rttp-iqa-addressing-01
+    docid:
+    - id: draft-li-rttp-iqa-addressing-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-li-rttp-iqa-addressing-01
       format: text/plain
 ext:
   schema-version: v1.0.1
