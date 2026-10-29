@@ -22,9 +22,12 @@ abstract:
     Discovery (DNS-SD), can be used to advertise and discover agents on a local link,
     with no new protocol machinery. It presents a general, protocol-independent two-
     stage discovery model in which lightweight enumeration over DNS-SD is followed
-    by retrieval of full agent metadata over the agent's native transport. It gives
-    a worked instantiation of that model for the Agent2Agent (A2A) protocol, as an
-    example.</p>"
+    by obtaining full agent metadata over the agent's native transport, whether by
+    retrieving a description document or by connecting to the agent and performing
+    its native handshake. The DNS-SD records carry a small set of discovery parameters
+    that is shared with agent discovery in unicast DNS. The document gives worked
+    instantiations of that model for the Agent2Agent (A2A) protocol and the Model
+    Context Protocol (MCP).</p>"
   language:
   - en
   script:
@@ -40,6 +43,16 @@ relation:
       primary: true
     formattedref:
       content: draft-jakab-dawn-agent-discovery-mdns-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-jakab-dawn-agent-discovery-mdns-01
+    docid:
+    - id: draft-jakab-dawn-agent-discovery-mdns-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-jakab-dawn-agent-discovery-mdns-01
       format: text/plain
 ext:
   schema-version: v1.0.1

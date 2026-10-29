@@ -1,0 +1,121 @@
+---
+schema-version: v1.2.3
+id: draft-uppalapati-wimse-pq-agent-identity-01
+title:
+- content: Post-Quantum Requirements for Software and AI Agent Identity
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-uppalapati-wimse-pq-agent-identity-01
+  type: src
+type: standard
+docid:
+- id: draft-uppalapati-wimse-pq-agent-identity-01
+  type: Internet-Draft
+  primary: true
+- id: I-D.uppalapati-wimse-pq-agent-identity
+  type: IETF
+  scope: anchor
+docnumber: I-D.uppalapati-wimse-pq-agent-identity
+date:
+- type: published
+  value: '2026-10-27'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Venkata
+          language:
+          - en
+        - language:
+          - en
+          initial: V
+        - language:
+          - en
+          initial: K
+        formatted_initials:
+          content: V. K.
+          language:
+          - en
+      surname:
+        content: Uppalapati
+        language:
+        - en
+      completename:
+        content: Venkata Karunakar Uppalapati
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Independent Researcher
+  role:
+  - type: author
+version:
+- draft: '01'
+revdate: '2026-10-27'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>A delegation record retained as evidence must remain verifiable long
+    after the key that signed it is retired. A signature of any algorithm establishes
+    who signed, not when, so such a record needs anchoring in trusted time, renewed
+    before the algorithms protecting it weaken. That is long-settled practice for
+    archived signatures. It is rarely required for agent delegation, and where it
+    is, the anchor is not itself required to be post-quantum. An anchor is only as
+    good as the protection behind it, and an RFC 3161 timestamp is itself a signature:
+    an adversary holding a cryptanalytically relevant quantum computer can mint one
+    bearing any date it chooses. Because such a machine may be built without announcement,
+    anchoring must become post-quantum anchoring by a stated transition date, and
+    be applied early, so that the only assumption left about when such a machine appeared
+    is that none existed before a record was first anchored that way. The earlier
+    that date, the weaker the assumption, which makes choosing it a security decision
+    and not only a scheduling one. This document states requirements that software
+    and AI agent identity mechanisms should satisfy in order to remain sound across
+    the transition, and identifies four that no such mechanism yet imposes on delegation
+    credentials in general. The algorithms binding each hop of a delegation chain
+    to its trust anchor must be visible to a verifier and retained with any record
+    kept as evidence; where a signing key is fetched from a key set over TLS, as OAuth
+    deployments commonly do, that binding is rarely recorded and no mechanism for
+    agent delegation requires it to be, so in practice it is absent. Trust anchors
+    must migrate before the credentials issued under them. Every retained record must
+    be anchored, that anchoring must become post-quantum anchoring from a stated transition
+    date and be maintained by renewal, and credentials of any type kept as evidence
+    must be signed post-quantum from that same date. Delegation chains also propagate
+    the weakest algorithm in the chain, and routinely cross organizational boundaries
+    where no common trust anchor policy can be assumed.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-uppalapati-wimse-pq-agent-identity-00
+    docid:
+    - id: draft-uppalapati-wimse-pq-agent-identity-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-uppalapati-wimse-pq-agent-identity-00
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-uppalapati-wimse-pq-agent-identity-01
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

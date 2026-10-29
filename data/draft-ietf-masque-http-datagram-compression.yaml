@@ -19,9 +19,10 @@ abstract:
     datagrams that are static and can be removed, and other parts that can be derived
     (such as packet lengths and checksum values). Additionally, this document defines
     a checksum offload procedure enabling receivers to complete Internet checksums
-    using sender- provided partial values. These optimisations reduce per-packet overhead,
-    processing cost, and increase the effective maximum transmission unit (MTU) when
-    datagrams are encapsulated in QUIC DATAGRAM frames.</p>"
+    using sender- provided partial values. These optimisations reduce per-packet overhead
+    and processing cost. Compression can allow larger original packets to fit in QUIC
+    DATAGRAM frames, depending on the applicable processing context and path maximum
+    transmission unit (MTU).</p>"
   language:
   - en
   script:
@@ -47,6 +48,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-masque-http-datagram-compression-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-masque-http-datagram-compression-02
+    docid:
+    - id: draft-ietf-masque-http-datagram-compression-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-masque-http-datagram-compression-02
       format: text/plain
 ext:
   schema-version: v1.0.1

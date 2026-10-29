@@ -2,7 +2,8 @@
 schema-version: v1.2.3
 id: draft-degennaro-mta-hooks
 title:
-- content: 'MTA Hooks: An HTTP-Based Mail Processing Protocol'
+- content: 'Mail Transfer Agent (MTA) Hooks: An HTTP-Based Protocol for External Mail
+    Processing'
   language:
   - en
   script:
@@ -13,14 +14,15 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document specifies MTA Hooks, an HTTP-based protocol enabling
-    Mail Transfer Agents (MTAs) to delegate message processing decisions to external
-    services. MTA Hooks provides a modern alternative to legacy mail filtering protocols
-    by leveraging ubiquitous HTTP infrastructure, supporting both JSON and CBOR serialization,
-    and offering fine-grained capability negotiation. The protocol supports both inbound
-    message reception and outbound message delivery scenarios, allowing external scanners
-    to inspect messages, modify content, and influence routing decisions at various
-    stages of mail processing.</p>"
+- content: "<p>This document specifies MTA Hooks, an HTTP-based protocol that lets
+    Mail Transfer Agents (MTAs) delegate message processing decisions to external
+    services. The MTA sends a JSON or Concise Binary Object Representation (CBOR)
+    description of the SMTP session, envelope, and message to a registered service
+    at defined stages of reception and delivery. The service answers with a JSON Patch
+    that changes the description, and the MTA acts on the resulting state. The same
+    mechanism covers filtering at SMTP time, routing before delivery, and reacting
+    to delivery outcomes, and the MTA controls exactly which changes each service
+    may make.</p>"
   language:
   - en
   script:
@@ -46,6 +48,16 @@ relation:
       primary: true
     formattedref:
       content: draft-degennaro-mta-hooks-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-degennaro-mta-hooks-02
+    docid:
+    - id: draft-degennaro-mta-hooks-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-degennaro-mta-hooks-02
       format: text/plain
 ext:
   schema-version: v1.0.1
