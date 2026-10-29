@@ -20,7 +20,10 @@ abstract:
     sealed content. It is intended for use in systems where routing decisions may
     need to occur before deep inspection, while trust remains anchored in intrinsic
     bundle properties such as magic bytes, manifests, hashes, signatures, and causal
-    references. In short: address visible, content sealed.</p>"
+    references. This revision separates two decisions that earlier revisions left
+    implicit: a routing hint, which may be taken from the visible surface before any
+    inspection, and an admission verdict, which must never rest on the visible surface.
+    In short: address visible, content sealed.</p>"
   language:
   - en
   script:
@@ -56,6 +59,16 @@ relation:
       primary: true
     formattedref:
       content: draft-vandemeent-tibet-semantic-surface-manifest-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-vandemeent-tibet-semantic-surface-manifest-03
+    docid:
+    - id: draft-vandemeent-tibet-semantic-surface-manifest-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-vandemeent-tibet-semantic-surface-manifest-03
       format: text/plain
 ext:
   schema-version: v1.0.1

@@ -1,0 +1,43 @@
+---
+schema-version: v1.2.3
+id: draft-mih-sokolov-cose-deterministic-encodings
+title:
+- content: Deterministic Encodings for COSE
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-mih-sokolov-cose-deterministic-encodings
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>A COSE Hash Envelope signs the digest of a preimage, not the preimage
+    itself. When the preimage is the encoding of a structured value, such as a CBOR
+    data item, and a verifier holds that value but not the bytes that were hashed,
+    the verifier has to encode the value again, and the digest matches only if it
+    applies the same deterministic encoding as the producer. RFC 8949 describes more
+    than one such encoding for the same content type, and the preimage content type
+    does not identify which one was applied. This document defines a COSE Hash Envelope
+    protected-header parameter that identifies the encoding, and an IANA registry
+    of deterministic encodings whose initial entry is the Core Deterministic Encoding
+    Requirements of RFC 8949.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-mih-sokolov-cose-deterministic-encodings-00
+    docid:
+    - id: draft-mih-sokolov-cose-deterministic-encodings-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-mih-sokolov-cose-deterministic-encodings-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

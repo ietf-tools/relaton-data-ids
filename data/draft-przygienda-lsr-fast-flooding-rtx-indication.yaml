@@ -24,10 +24,10 @@ abstract:
     is mandatory. A credit-based window alone does not signal congestion. As long
     as acknowledgments keep freeing credit, a sender may keep refilling the window
     up to RWIN. It does so even while it is actively retransmitting LSPs on that adjacency.
-    Without an explicit, mandatory-to-implement reaction to observed retransmission,
+    Without an explicit, normatively specified reaction to observed retransmission,
     fast flooding at scale can degenerate into sustained retransmission storms that
     serve only to keep the window full. This document specifies a local backoff. A
-    node SHOULD reduce the effective outstanding-LSP ceiling it uses against a neighbor's
+    node reduces the effective outstanding-LSP ceiling it uses against a neighbor's
     advertised RWIN by a meaningful fraction. The trigger is a count of LSP retransmissions
     generated toward that neighbor within a trailing time window exceeding a threshold.
     This backoff applies unconditionally. It does not depend on whether the condition
@@ -58,6 +58,16 @@ relation:
       primary: true
     formattedref:
       content: draft-przygienda-lsr-fast-flooding-rtx-indication-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-przygienda-lsr-fast-flooding-rtx-indication-01
+    docid:
+    - id: draft-przygienda-lsr-fast-flooding-rtx-indication-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-przygienda-lsr-fast-flooding-rtx-indication-01
       format: text/plain
 ext:
   schema-version: v1.0.1

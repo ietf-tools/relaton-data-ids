@@ -15,13 +15,12 @@ docid:
 abstract:
 - content: "<p>Validators for the DNS Security Extensions (DNSSEC) reconstruct the
     original owner name of a signed resource record set (RRset) using the RRSIG Labels
-    field. If the reconstructed owner is outside the signing zone, a cryptographically
-    correct signature can be misinterpreted as authenticating wildcard data belonging
-    to another zone. Aggressive use of DNSSEC-validated caches can extend the effect
-    to other names. This document updates RFC 4035 to require signer-zone containment
-    of the reconstructed owner and updates RFC 8198 to preserve that authenticated
-    relationship when reusing wildcard data. These requirements constrain DNSSEC authentication
-    and cached reuse. They do not change DNS wildcard matching or synthesis rules,
+    field. This document updates RFC 4035 to make explicit how its existing signing-zone
+    authority requirement applies to that reconstructed owner, and updates RFC 8198
+    to preserve the authenticated association between wildcard data, its original
+    owner, and its signing zone during cache reuse. These clarifications prevent cryptographically
+    correct signatures from being treated as authenticating wildcard sources outside
+    the signing zone. They do not change DNS wildcard matching or synthesis rules,
     or DNS message formats.</p>"
   language:
   - en
@@ -48,6 +47,16 @@ relation:
       primary: true
     formattedref:
       content: draft-zhang-dnssec-wildcard-validation-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-zhang-dnssec-wildcard-validation-02
+    docid:
+    - id: draft-zhang-dnssec-wildcard-validation-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-zhang-dnssec-wildcard-validation-02
       format: text/plain
 ext:
   schema-version: v1.0.1

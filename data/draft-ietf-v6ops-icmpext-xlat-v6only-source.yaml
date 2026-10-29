@@ -15,12 +15,13 @@ docid:
   primary: true
 abstract:
 - content: "<p>This document suggests that when a source IPv6 address of an ICMPv6
-    message can not be translated to an IPv4 address, the protocol translators use
-    the dummy IPv4 address (192.0.0.8) to translate the IPv6 source address, and utilize
-    the ICMP extension for Node Identification (draft-ietf-intarea-extended-icmp-nodeid)
-    to carry the original IPv6 source address of ICMPv6 messages. This document obsoletes
-    RFC6791, Stateless Source Address Mapping for ICMPv6 Packets and updates IP/ICMP
-    Translation Algorithm (RFC7915).</p>"
+    message can not be translated to an IPv4 address, and the protocol translator
+    does not have any public IPv4 addresses available to source the translated packet
+    from, the translator uses the dummy IPv4 address (192.0.0.8) to translate the
+    IPv6 source address. This document updates RFC6791, Stateless Source Address Mapping
+    for ICMPv6 Packets, and RFC7915, IP/ICMP Translation Algorithm, by proposing to
+    utilize the ICMP extension for Node Identification (draft-ietf- intarea-extended-icmp-nodeid)
+    to carry the original IPv6 source address of ICMPv6 messages.</p>"
   language:
   - en
   script:
@@ -46,6 +47,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-v6ops-icmpext-xlat-v6only-source-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-v6ops-icmpext-xlat-v6only-source-02
+    docid:
+    - id: draft-ietf-v6ops-icmpext-xlat-v6only-source-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-v6ops-icmpext-xlat-v6only-source-02
       format: text/plain
 ext:
   schema-version: v1.0.1

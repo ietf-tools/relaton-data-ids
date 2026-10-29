@@ -1,0 +1,149 @@
+---
+schema-version: v1.2.3
+id: draft-przygienda-lsr-fast-flooding-rtx-indication-01
+title:
+- content: Retransmission Indication for IS-IS Fast Flooding
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-przygienda-lsr-fast-flooding-rtx-indication-01
+  type: src
+type: standard
+docid:
+- id: draft-przygienda-lsr-fast-flooding-rtx-indication-01
+  type: Internet-Draft
+  primary: true
+- id: I-D.przygienda-lsr-fast-flooding-rtx-indication
+  type: IETF
+  scope: anchor
+docnumber: I-D.przygienda-lsr-fast-flooding-rtx-indication
+date:
+- type: published
+  value: '2026-10-29'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Tony
+          language:
+          - en
+        - language:
+          - en
+          initial: T
+        formatted_initials:
+          content: T.
+          language:
+          - en
+      surname:
+        content: Przygienda
+        language:
+        - en
+      completename:
+        content: Tony Przygienda
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: HPE Juniper Networking
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Gunter
+          language:
+          - en
+        - language:
+          - en
+          initial: G
+        formatted_initials:
+          content: G.
+          language:
+          - en
+      surname:
+        content: Van de Velde
+        language:
+        - en
+      completename:
+        content: Gunter Van de Velde
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Nokia
+  role:
+  - type: author
+version:
+- draft: '01'
+revdate: '2026-10-29'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>[RFC9681] defines a Flooding Parameters TLV. Among other things, it
+    lets an IS-IS node advertise two values to a neighbor. The Receive Window (RWIN)
+    bounds the number of unacknowledged Link State PDUs (LSPs) the neighbor may have
+    outstanding. The LSPs-per-PSNP (LPP) threshold triggers immediate acknowledgment.
+    Together they form a credit-based flow-control window and an acknowledgment cadence.
+    These are the parts of [RFC9681] that are most important, most useful, and most
+    likely to be implemented at scale. The sender-side congestion-control algorithms
+    in that document are described only as optional, local choices. No single algorithm
+    is mandatory. A credit-based window alone does not signal congestion. As long
+    as acknowledgments keep freeing credit, a sender may keep refilling the window
+    up to RWIN. It does so even while it is actively retransmitting LSPs on that adjacency.
+    Without an explicit, normatively specified reaction to observed retransmission,
+    fast flooding at scale can degenerate into sustained retransmission storms that
+    serve only to keep the window full. This document specifies a local backoff. A
+    node reduces the effective outstanding-LSP ceiling it uses against a neighbor's
+    advertised RWIN by a meaningful fraction. The trigger is a count of LSP retransmissions
+    generated toward that neighbor within a trailing time window exceeding a threshold.
+    This backoff applies unconditionally. It does not depend on whether the condition
+    is signaled to the neighbor, or understood by it. This document also defines a
+    lightweight Retransmission (RTX) indication. It is a new flag in the existing
+    Flags sub-TLV of the Flooding Parameters TLV. A node advertises it to a neighbor
+    while it is retransmitting LSPs toward that neighbor. The flag reports only the
+    advertising node's own retransmissions, that is, its own congestion. A node never
+    sets it in reaction to a neighbor's flag. The flag lets the neighbor adjust its
+    own advertised RWIN in turn. The adjacency then converges toward a stable operating
+    point at the highest speed it can sustain. Neither side needs prior knowledge
+    of the other's characteristics or of the link. This document further clarifies
+    how concurrent versions of the same LSP fragment are counted against RWIN, LPP,
+    and the retransmission threshold. [RFC9681] leaves that case undefined, and it
+    arises routinely at fast flooding rates.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-przygienda-lsr-fast-flooding-rtx-indication-00
+    docid:
+    - id: draft-przygienda-lsr-fast-flooding-rtx-indication-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-przygienda-lsr-fast-flooding-rtx-indication-00
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-przygienda-lsr-fast-flooding-rtx-indication-01
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

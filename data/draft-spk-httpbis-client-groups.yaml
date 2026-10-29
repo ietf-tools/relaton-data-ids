@@ -1,0 +1,42 @@
+---
+schema-version: v1.2.3
+id: draft-spk-httpbis-client-groups
+title:
+- content: Client Groups for Shared HTTP Connections
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-spk-httpbis-client-groups
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>Intermediaries often carry requests from many unrelated clients over
+    one HTTP/2 or HTTP/3 connection to an origin server. The origin has no way to
+    know this, to say whether it accepts it, or to act on the traffic of one client
+    without disturbing every other client on the connection. This document defines
+    a pair of settings that let an intermediary and an origin agree on whether a connection
+    is shared, a request header field that marks which client a request belongs to,
+    and a frame that lets the origin drain, block, or limit one client on a shared
+    connection. It also states what an intermediary needs to do so that GOAWAY and
+    connection failures reach only the affected client streams.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-spk-httpbis-client-groups-00
+    docid:
+    - id: draft-spk-httpbis-client-groups-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-spk-httpbis-client-groups-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

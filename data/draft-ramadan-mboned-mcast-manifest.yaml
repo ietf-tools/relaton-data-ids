@@ -1,0 +1,43 @@
+---
+schema-version: v1.2.3
+id: draft-ramadan-mboned-mcast-manifest
+title:
+- content: Signed Digest Manifests for Multicast Datagram Authentication
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-ramadan-mboned-mcast-manifest
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This document defines a format for authenticating UDP datagrams delivered
+    over IP multicast without changing them. The sender computes a digest over every
+    datagram of a flow, places the digests of up to 37 datagrams in a fixed-layout
+    record, signs the record with Ed25519 under a prefix that names the flow, and
+    sends it on a second port of the same source and group immediately before the
+    datagrams it covers, followed by a byte-identical twin. A receiver verifies one
+    signature per record, hashes each datagram once, and delivers a datagram only
+    after its digest matches an entry of a verified record; it needs no return channel.
+    A well-known document supplies a flow's keys and parameters. A Media over QUIC
+    profile and a browser profile use the format.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-ramadan-mboned-mcast-manifest-00
+    docid:
+    - id: draft-ramadan-mboned-mcast-manifest-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ramadan-mboned-mcast-manifest-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

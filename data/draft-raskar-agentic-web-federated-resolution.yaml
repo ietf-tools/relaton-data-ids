@@ -2,8 +2,7 @@
 schema-version: v1.2.3
 id: draft-raskar-agentic-web-federated-resolution
 title:
-- content: Registry-Assisted Discovery for AI Agents and Workloads Without DNS Discovery
-    Anchors
+- content: Registry-Assisted Resolution for Known Subjects Without DNS Discovery Anchors
   language:
   - en
   script:
@@ -14,26 +13,26 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>Many agent-discovery mechanisms assume that an organization controls
-    a DNS domain and can publish a DNS record, a well-known catalog, or an organization
-    gateway. That model works well for enterprises with operational DNS infrastructure,
-    but it does not cover every agent or workload. Small businesses may own a domain
-    yet lack the expertise or infrastructure to publish agent-specific DNS records.
-    Individuals may have a globally scoped account identifier, such as an email address,
-    while not controlling the provider domain. Personal agents and other workloads
-    may run on a cloud service or local device while their public descriptor is hosted
-    elsewhere. This document describes registry-assisted discovery for these cases.
-    A NandaIndex registry binds a stable Subject Identity to a subject-authorized
-    terminal object, such as an A2A Agent Card, an MCP server descriptor, a workload
-    descriptor, a subject-owned AI Catalog, or a subject-authorized gateway. The binding
-    includes authority, freshness, and revocation information. The identity owner,
-    descriptor host, and runtime operator may be different parties. This document
-    does not define a directory of discovery servers, directory federation, or a global
-    switchboard. A NandaIndex response does not direct a client to another generic
-    resolution or discovery service. DNS-anchored systems remain direct: when an authoritative
-    AI Catalog, DNS-AID record, or organization gateway is already known, NandaIndex
-    is not in the critical path. The focus is permissionless publication and discovery
-    for agents and workloads that do not have a usable DNS Discovery Anchor.</p>"
+- content: "<p>Discovery mechanisms for AI resources increasingly use DNS and mDNS
+    as interoperable publication and lookup substrates. These mechanisms work well
+    when the publisher controls a usable DNS discovery anchor. They do not cover every
+    deployment. An individual may control an email or platform account without controlling
+    the provider's DNS namespace. A small organization may use managed infrastructure
+    without operating an agent-specific DNS publication point. A workload may have
+    a stable identity that is not itself DNS anchored. This document describes Registry-Assisted
+    Resolution for the narrower case in which a discovering entity already knows the
+    Subject Identity it wants to resolve, but no usable DNS Discovery Anchor is available
+    or selected by local policy. A configured registry returns the minimum information
+    needed to continue discovery, together with provenance, authority evidence, freshness,
+    and revocation information. This mechanism is complementary to DNS-based discovery.
+    A validated direct DNS-anchored discovery path remains direct and is normally
+    preferred for a domain-controlled subject. This document does not define open-ended
+    search, semantic matchmaking, ranking, capability search, a global registry, registry
+    discovery, directory-to-directory routing, identity management, or trust evaluation.
+    Multiple independently operated registries may implement the same resolution profile.
+    Registry selection is a client or deployment policy decision; no universal NandaIndex
+    or global root is assumed. NandaIndex is described as one reference implementation
+    of this model.</p>"
   language:
   - en
   script:
@@ -59,6 +58,16 @@ relation:
       primary: true
     formattedref:
       content: draft-raskar-agentic-web-federated-resolution-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-raskar-agentic-web-federated-resolution-02
+    docid:
+    - id: draft-raskar-agentic-web-federated-resolution-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-raskar-agentic-web-federated-resolution-02
       format: text/plain
 ext:
   schema-version: v1.0.1

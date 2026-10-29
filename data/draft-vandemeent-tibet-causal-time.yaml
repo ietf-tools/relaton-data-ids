@@ -20,7 +20,11 @@ abstract:
     monotonic generation counters, and signed causal references. External wall-clock
     sources, including NTP, RFC 3161 timestamping services, Roughtime, GNSS, or public
     ledger timestamps, are treated as auxiliary alignment anchors rather than as the
-    constitutive source of event order. The core claim is simple: TIBET is a forward-only
+    constitutive source of event order. This revision adds an optional vector-observation
+    layer for relating events across independent lanes, a classification of time-bounded
+    checks that separates physical-world windows from ledger-state windows, replay
+    protection that does not depend on clock agreement between parties, and a distinction
+    between forks, breaks, and reseeds. The core claim is simple: TIBET is a forward-only
     causal substrate that enables recovery and reversibility without rewriting history.</p>"
   language:
   - en
@@ -57,6 +61,16 @@ relation:
       primary: true
     formattedref:
       content: draft-vandemeent-tibet-causal-time-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-vandemeent-tibet-causal-time-03
+    docid:
+    - id: draft-vandemeent-tibet-causal-time-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-vandemeent-tibet-causal-time-03
       format: text/plain
 ext:
   schema-version: v1.0.1
