@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-yoon-ippm-collection-interval-capabilities
 title:
-- content: A YANG Data Model for Collection Interval Capabilities
+- content: A YANG Data Model for Performance Monitoring (PM) Interval Capabilities
   language:
   - en
   script:
@@ -14,17 +14,19 @@ docid:
   primary: true
 abstract:
 - content: <p>This document defines a YANG data model, "ietf-pm-interval- capabilities",
-    that enables a server to advertise which collection intervals it can support.
-    A client reads this capability information before configuring performance measurements,
-    so that it selects only sampling and collection intervals that the server can
-    honour. The capabilities are advertised by augmenting the "ietf-system- capabilities"
-    module defined in [RFC9196], so that a client discovers them at the same well-known
-    location used for subscription and notification capabilities. The model imports
-    the "profile-names" type from the companion collection measurement model defined
-    in [I-D.yoon-ippm-collection-measure] and mirrors its profile-and- parameter structure,
-    ensuring direct alignment between capability discovery and measurement configuration.
-    The model does not define measurement data structures or any delivery mechanism;
-    those are defined in the companion document.</p>
+    that enables a server to advertise which sampling and collection intervals, measurement
+    methods, and collection types it supports for each performance monitoring (PM)
+    parameter. A client reads this capability information before configuring PM collection,
+    so that it selects only values that the server can honour. The capabilities are
+    advertised by augmenting the "ietf-system- capabilities" module defined in [RFC9196],
+    so that a client discovers them at the same well-known location used for subscription
+    and notification capabilities. The model imports the "profile-names" and "collection-type"
+    types and the "performance-parameter" and "measurement-method" identities from
+    the companion PM collection model defined in [I-D.yoon-ippm-collection-measure]
+    and mirrors its profile-and-parameter structure, ensuring direct alignment between
+    capability discovery and collection configuration. The model does not define collection
+    data structures or any delivery mechanism; those are defined in the companion
+    document.</p>
   language:
   - en
   script:
@@ -40,6 +42,16 @@ relation:
       primary: true
     formattedref:
       content: draft-yoon-ippm-collection-interval-capabilities-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-yoon-ippm-collection-interval-capabilities-01
+    docid:
+    - id: draft-yoon-ippm-collection-interval-capabilities-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-yoon-ippm-collection-interval-capabilities-01
       format: text/plain
 ext:
   schema-version: v1.0.1
