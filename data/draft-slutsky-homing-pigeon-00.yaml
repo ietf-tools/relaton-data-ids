@@ -1,0 +1,96 @@
+---
+schema-version: v1.2.3
+id: draft-slutsky-homing-pigeon-00
+title:
+- content: Homing Pigeon Message Protocol, Version 1
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-slutsky-homing-pigeon-00
+  type: src
+type: standard
+docid:
+- id: draft-slutsky-homing-pigeon-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.slutsky-homing-pigeon
+  type: IETF
+  scope: anchor
+docnumber: I-D.slutsky-homing-pigeon
+date:
+- type: published
+  value: '2026-10-29'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Andrew
+          language:
+          - en
+        - language:
+          - en
+          initial: A
+        formatted_initials:
+          content: A.
+          language:
+          - en
+      surname:
+        content: Slutsky
+        language:
+        - en
+      completename:
+        content: Andrew Slutsky
+        language:
+        - en
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-10-29'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>This document specifies the Homing Pigeon message protocol, version
+    1: signed JSON job and result objects exchanged over a transport binding. On the
+    email binding, a submitter sends one HMAC-SHA-384 signed JSON object to a mailbox;
+    a runner polls that mailbox, verifies the signature, executes the job, and returns
+    a signed result; the other bindings carry the same objects unchanged. The signature
+    is the only authorization. The job object is protected end to end by per-job AEAD
+    encryption, a required part of the protocol: implementations MUST support it,
+    the reference software sends encrypted by default, and a receiver refuses a cleartext
+    job unless the operator has explicitly enabled cleartext acceptance — in the reference
+    software, only by a command-line parameter. The store-and- forward bindings open
+    no inbound listener on the host that runs the job. The DTLS binding changes the
+    binding and not the messages: the same signed objects travel inside a direct DTLS
+    1.3 session between the submitter and the runner. It is a binding of version 1,
+    not a new version of the protocol. The shared secret is the session's external
+    pre-shared key; key exchange is ephemeral-only, so sessions have perfect forward
+    secrecy; and once the handshake has authenticated the submitter, the runner opens
+    the session with a greeting that discloses a tiered, responder-chosen summary
+    of its platform. The binding opens an inbound listener on the runner's host and
+    is off unless the owner enables it. It is an addition, never a replacement: the
+    store-and-forward bindings remain the ones every submitter can reach.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-slutsky-homing-pigeon-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

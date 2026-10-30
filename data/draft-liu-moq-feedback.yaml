@@ -13,15 +13,12 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document defines an extension to Media over QUIC Transport (MOQT)
-    that enables MoQ receivers to report delivery quality information for media Objects
-    to senders. The MoQ layer synthesizes MMF feedback and local congestion control
-    (CC) output to compute control decisions such as bitrate, frame rate, and pacing,
-    and inform the CC algorithm module via a cross-layer control interface. This mechanism
-    reuses the MOQT Track/Object data model without introducing new control message
-    types. While QUIC ACK and reception timestamp extensions continue to provide per-packet
-    CC signals; this mechanism adds per-Object media semantic feedback when the MMF
-    extension is negotiated and enabled.</p>"
+- content: "<p>This document defines Media over QUIC Feedback (MQF), an extension
+    to Media over QUIC Transport (MOQT) that enables delivery quality information
+    about media Objects to be reported using Feedback Tracks. It defines how Feedback
+    Tracks are associated with media Tracks, established, forwarded through Relays,
+    and consumed, together with the MQF report format and capability negotiation.
+    MQF complements transport-layer signals with per-Object delivery information.</p>"
   language:
   - en
   script:
@@ -37,6 +34,16 @@ relation:
       primary: true
     formattedref:
       content: draft-liu-moq-feedback-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-liu-moq-feedback-01
+    docid:
+    - id: draft-liu-moq-feedback-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-liu-moq-feedback-01
       format: text/plain
 ext:
   schema-version: v1.0.1

@@ -13,18 +13,18 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>AI agents are discovered and identified through independent sources,
-    including registries, name services, DID methods, and catalogs. A single source
-    can misrepresent an agent by omission, withholding a record it holds, or by equivocation,
-    serving different answers to different observers. A signature on a served artifact
-    does not, by itself, defend against either behavior. This document specifies a
-    corroboration procedure that classifies one source's claim about one agent observed
-    from one network vantage; reduces claims to comparable views; diffs claims into
-    findings with deterministic attribution; distinguishes legitimate propagation
-    delay from persistent disagreement; and emits a signed Corroboration Record for
-    every sweep, including agreement, that other evidence formats can bind by digest.
-    The procedure is source-, format-, and layer-agnostic; requires neither cooperation
-    from nor modification of any source; and is verifiable from recorded bytes.</p>"
+- content: "<p>AI agent discovery depends on sources such as registries, name services,
+    DID methods, and catalogs. A valid signature on an artifact does not by itself
+    show that a source has not withheld a record, or served inconsistent records to
+    different observers. This document specifies a source- and format-agnostic procedure
+    for corroborating independent observations of an agent. It defines claim classification,
+    canonical views, deterministic disagreement findings, multi-vantage equivocation
+    detection, propagation-delay confirmation, and signed Corroboration Records. The
+    procedure produces verifiable evidence for every sweep, including agreement and
+    insufficient- observation results. It composes with registry-assisted resolution
+    of known subjects: a registry's renewable subject-to-target binding carries a
+    sequence, and the procedure attributes a source serving a superseded binding rather
+    than comparing it, so propagation lag is never reported as disagreement.</p>"
   language:
   - en
   script:
@@ -50,6 +50,16 @@ relation:
       primary: true
     formattedref:
       content: draft-chandra-agent-registry-corroboration-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-chandra-agent-registry-corroboration-02
+    docid:
+    - id: draft-chandra-agent-registry-corroboration-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-chandra-agent-registry-corroboration-02
       format: text/plain
 ext:
   schema-version: v1.0.1

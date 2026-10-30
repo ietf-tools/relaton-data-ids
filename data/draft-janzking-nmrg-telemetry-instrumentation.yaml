@@ -17,12 +17,16 @@ abstract:
     software-based analytics and decision-making. Network- based instrumentation provides
     crucial data for these components and processes. However, the proliferation of
     such instrumentation and the need to migrate the data it generates from the physical
-    network to "off-the-network" software, poses challenges. In particular, analog
-    measurement instrumentation, which generates time-continuous real number data,
-    may generate significant data volumes. Methodologies for handling analog measurement
-    instrumentation data will need to be identified and discussed, informed in part
-    by consideration of requirements for the operation of network digital twins, which
-    may be important software-realm consumers of such data.</p>
+    network to "off-the-network" software poses challenges. In particular, analog
+    measurement instrumentation, which generates time-continuous real-number data,
+    may generate significant data volumes. This document discusses methodologies for
+    handling analog measurement instrumentation data, informed by the requirements
+    of network digital twins and of automated fault diagnosis. It proposes that instrumentation
+    report, for each measured quantity and each interval, a summary that keeps the
+    level, the rate of change, the departure from a steady trend, the extremes over
+    a stated short window and the number of measurements taken. Such summaries can
+    be combined exactly over any longer span, and they allow trends, brief events
+    and stopped measurements to be detected and reported as they occur.</p>
   language:
   - en
   script:
@@ -48,6 +52,16 @@ relation:
       primary: true
     formattedref:
       content: draft-janzking-nmrg-telemetry-instrumentation-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-janzking-nmrg-telemetry-instrumentation-02
+    docid:
+    - id: draft-janzking-nmrg-telemetry-instrumentation-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-janzking-nmrg-telemetry-instrumentation-02
       format: text/plain
 ext:
   schema-version: v1.0.1

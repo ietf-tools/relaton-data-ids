@@ -1,0 +1,97 @@
+---
+schema-version: v1.2.3
+id: draft-slutsky-homing-pigeon-v2-00
+title:
+- content: 'Homing Pigeon Message Protocol, Version 2: Determinations, Questions,
+    and Shared Context'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-slutsky-homing-pigeon-v2-00
+  type: src
+type: standard
+docid:
+- id: draft-slutsky-homing-pigeon-v2-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.slutsky-homing-pigeon-v2
+  type: IETF
+  scope: anchor
+docnumber: I-D.slutsky-homing-pigeon-v2
+date:
+- type: published
+  value: '2026-10-29'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Andrew
+          language:
+          - en
+        - language:
+          - en
+          initial: A
+        formatted_initials:
+          content: A.
+          language:
+          - en
+      surname:
+        content: Slutsky
+        language:
+        - en
+      completename:
+        content: Andrew Slutsky
+        language:
+        - en
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-10-29'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>This document specifies version 2 of the Homing Pigeon message protocol.
+    Version 2 is an addition to version 1 (draft-slutsky- homing-pigeon-00), not a
+    replacement for it: every version 1 message keeps its meaning, and version 2 adds
+    three messages and one mechanism on top of the version 1 exchange. The additions
+    are a determination message, by which the runner tells the submitter what it expects
+    a job to do before the job runs; a question message, by which a runner whose local
+    decision machinery cannot answer a question itself asks that question instead;
+    an answer message, by which any enabled holder of the shared secret replies; and
+    context segments, signed fragments of local state that travel with these messages
+    and with the version 1 result, so each side plans with the other's actual state
+    in view. Version 2 is backwards compatible. A version 1 runner never sends a version
+    2 message and is unaffected by this document. A submitter that implements this
+    document adapts to the protocol version the runner supports: faced with a version
+    1 runner, it submits version 1 jobs and expects version 1 results, exactly as
+    before. There is no version negotiation and no handshake; the messages carry v,
+    as in version 1, and each side acts on what it receives. The deployment that motivates
+    version 2 is the constrained runner: a small host whose local decision machinery
+    is deliberately deterministic and carries no language model. Version 1 leaves
+    such a runner alone with every question its deterministic machinery cannot answer.
+    Version 2 lets it ask.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-slutsky-homing-pigeon-v2-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
