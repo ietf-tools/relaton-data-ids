@@ -14,12 +14,14 @@ docid:
   primary: true
 abstract:
 - content: "<p>The BGP Domain PATH (D-PATH) attribute is defined for Inter-Subnet
-    Forwarding (ISF) BGP Sub-Address Families that advertise IP prefixes. When used
-    along with EVPN IP Prefix routes or IP-VPN routes, it identifies the domain(s)
-    through which the routes have passed and that information can be used by the receiver
-    BGP speakers to detect routing loops or influence the BGP best path selection.
-    This document extends the use of D-PATH so that it can also be used along with
-    other EVPN route types.</p>"
+    Forwarding (ISF) BGP Sub-Address Families that advertise IP prefixes or MAC addresses.
+    D-PATH already applies to EVPN Route Type 2 when used for ISF, to EVPN Route Type
+    5 (IP Prefix routes), and to IP-VPN routes. When used along with those routes,
+    it identifies the domain(s) through which the routes have passed and that information
+    can be used by the receiver BGP speakers to detect routing loops or influence
+    the BGP best path selection. This document extends the use of D-PATH to EVPN Route
+    Type 2 when not used for ISF, to EVPN Route Type 1 (Ethernet Auto-Discovery per-EVI)
+    for EVPN VPWS, and to EVPN Route Type 3 (Inclusive Multicast Ethernet Tag routes).</p>"
   language:
   - en
   script:
@@ -75,6 +77,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-bess-evpn-dpath-04
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-bess-evpn-dpath-05
+    docid:
+    - id: draft-ietf-bess-evpn-dpath-05
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-bess-evpn-dpath-05
       format: text/plain
 ext:
   schema-version: v1.0.1

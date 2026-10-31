@@ -13,21 +13,22 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>The Agent Transfer Protocol (AGTP) base specification defines agent
-    identity headers (Agent-ID, Owner-ID, Authority-Scope) that are self- asserted:
-    present on every request and mandatory for logging, but not cryptographically
-    verified at the transport layer. This document specifies the AGTP Agent Certificate
-    Extension: an optional mechanism that binds Agent-ID, Owner-ID, and Authority-Scope
-    to an X.509 v3 certificate presented during TLS mutual authentication. The extension
-    enables infrastructure components including Scope- Enforcement Points (SEPs),
-    load balancers, and governance gateways to verify agent identity and enforce authority
-    scope without application-layer access, at O(1) cost per request header check.
-    The extension also defines session-level revocation propagation via AGTP NOTIFY
-    broadcast and a Certificate Transparency Log for tamper- evident governance metadata.
-    Note: Certain mechanisms described in this document may be subject to pending
-    patent applications by the author. The licensor is prepared to grant a royalty-free
-    license to implementers consistent with the IETF's IPR framework. See the IPR
-    Notice and Section 7.</p>"
+- content: "<p>The Agent Transfer Protocol (AGTP) base specification verifies agent
+    identity at the application layer: the Agent-ID header resolves to an issuer-signed
+    Agent Identity Document, and a per-request Request- Signature proves possession
+    of the key that document names. That verification runs per request and needs the
+    document. This document specifies the AGTP Agent Certificate Extension: an optional
+    mechanism that binds the Canonical Agent-ID, the recorded owner, and the Authority-Scope
+    commitment to an X.509 v3 certificate presented during TLS mutual authentication,
+    so that the same verification is made once at the handshake and infrastructure
+    components including Scope-Enforcement Points (SEPs), load balancers, and governance
+    gateways can enforce authority scope without application-layer access, at O(1)
+    cost per request. The extension also defines session-level revocation propagation
+    via AGTP NOTIFY broadcast and records certificate issuance and revocation in the
+    AGTP transparency log. Note: Certain mechanisms described in this document may
+    be subject to pending patent applications by the author. The licensor is prepared
+    to grant a royalty-free license to implementers consistent with the IETF's IPR
+    framework. See Section 9.4.</p>"
   language:
   - en
   script:
@@ -73,6 +74,16 @@ relation:
       primary: true
     formattedref:
       content: draft-hood-agtp-agent-cert-03
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-hood-agtp-agent-cert-04
+    docid:
+    - id: draft-hood-agtp-agent-cert-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-hood-agtp-agent-cert-04
       format: text/plain
 ext:
   schema-version: v1.0.1

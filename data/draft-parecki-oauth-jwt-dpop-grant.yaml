@@ -14,10 +14,11 @@ docid:
   primary: true
 abstract:
 - content: "<p>This specification defines a new OAuth 2.0 authorization grant type
-    that uses a JSON Web Token (JWT) assertion to request an access token that is
-    bound to a specific key using the Demonstration of Proof-of- Possession (DPoP)
-    mechanism. This provides a higher level of security than a simple bearer token,
-    as the client must prove possession of the key to use the access token.</p>"
+    for exchanging a JSON Web Token (JWT) assertion that is bound to a key for an
+    access token. To use the assertion, the client must prove possession of that key
+    using the Demonstrating Proof of Possession (DPoP) mechanism. Unlike the JWT bearer
+    grant, a stolen assertion cannot be used by a party that does not hold the private
+    key.</p>"
   language:
   - en
   script:
@@ -43,6 +44,16 @@ relation:
       primary: true
     formattedref:
       content: draft-parecki-oauth-jwt-dpop-grant-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-parecki-oauth-jwt-dpop-grant-02
+    docid:
+    - id: draft-parecki-oauth-jwt-dpop-grant-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-parecki-oauth-jwt-dpop-grant-02
       format: text/plain
 ext:
   schema-version: v1.0.1

@@ -2,8 +2,8 @@
 schema-version: v1.2.3
 id: draft-guorong-utxo-dns
 title:
-- content: 'UTXO Domain Name System (UTXO6-DNS): Data RR for Cryptographic Endpoint
-    Discovery'
+- content: 'UTXO6-DNS: Resolving Payment Endpoints via Private-use RRTYPE and Prefix
+    Isolation'
   language:
   - en
   script:
@@ -14,10 +14,14 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document specifies a new DNS Data Resource Record (RRTYPE 260)
-    for transporting opaque cryptographic pointers. The RDATA contains a CBOR-encoded
-    endpoint identifier and an optional Verifiable Random Function (VRF) proof. This
-    document prohibits apex usage and mandates the _utxo prefix.</p>"
+- content: "<p>This document specifies the _utxo application namespace for DNS. It
+    defines how wallet clients and TEE (Trusted Execution Environment) applications
+    resolve verifiable payment endpoints and blockchain UTXO (Unspent Transaction
+    Output) references using DNS. To avoid exacerbating public RRTYPE space congestion
+    and DNS-layer transparent parsing, this document utilizes the RFC 3597 Private-use
+    space (QTYPE 65400). The DNS protocol does not parse the payload. Application
+    semantics are isolated strictly via the _utxo underscore prefix in the owner name,
+    while the RDATA consists of a purely opaque CBOR-encoded byte stream.</p>"
   language:
   - en
   script:
@@ -53,6 +57,16 @@ relation:
       primary: true
     formattedref:
       content: draft-guorong-utxo-dns-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-guorong-utxo-dns-03
+    docid:
+    - id: draft-guorong-utxo-dns-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-guorong-utxo-dns-03
       format: text/plain
 ext:
   schema-version: v1.0.1

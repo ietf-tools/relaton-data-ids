@@ -1,0 +1,154 @@
+---
+schema-version: v1.2.3
+id: draft-wagope-dnsop-do-bit-00
+title:
+- content: Clearing the DO bit for DNSSEC
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-wagope-dnsop-do-bit-00
+  type: src
+type: standard
+docid:
+- id: draft-wagope-dnsop-do-bit-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.wagope-dnsop-do-bit
+  type: IETF
+  scope: anchor
+docnumber: I-D.wagope-dnsop-do-bit
+date:
+- type: published
+  value: '2026-10-30'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Warren
+          language:
+          - en
+        - language:
+          - en
+          initial: W
+        formatted_initials:
+          content: W.
+          language:
+          - en
+      surname:
+        content: Kumari
+        language:
+        - en
+      completename:
+        content: Warren Kumari
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Google, Inc.
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Geoff
+          language:
+          - en
+        - language:
+          - en
+          initial: G
+        formatted_initials:
+          content: G.
+          language:
+          - en
+      surname:
+        content: Huston
+        language:
+        - en
+      completename:
+        content: Geoff Huston
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: APNIC
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Peter
+          language:
+          - en
+        - language:
+          - en
+          initial: P
+        formatted_initials:
+          content: P.
+          language:
+          - en
+      surname:
+        content: Thomassen
+        language:
+        - en
+      completename:
+        content: Peter Thomassen
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: deSEC, SSE
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-10-30'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>{ Editor note: THIS IS A WORKING IDEA FOR DISCUSSION. It might be the
+    best idea ever... or the worst idea ever. The authors really cannot decide (or
+    even agree among themselves), but I have written this up as as an ID to share
+    it with the WG. Please understand that we are simply floating the idea; if it
+    turns out that it is the worse idea ever, we'll happily drop it and save ourselves
+    a bunch of work!:-) } The DNSSEC OK (DO) bit is an EDNS0 flag used in DNS queries
+    to signal that the requestor wishes to receive DNSSEC resource records (such as
+    RRSIG, DNSKEY, DS, and NSEC) in the response. This bit is named DNSEC OK (DO)
+    as an indication that the resolver implementation will not die if it receives
+    DNSSEC records, not that it is actually performing DNSSEC validation. It is important
+    to note that clearing the DO bit means that the authoritative server will not
+    include DNSSEC records in its response, even if they exist. One of the concerns
+    around Post Quantum Cryptography (PQC) is that the resulting DNSSEC signatures
+    may be significantly larger than current signatures. This could exacerbate issues
+    related to DNS message size and fragmentation, and cause many connections to fail
+    back to TCP.Clearing the DO bit can help mitigate these issues by preventing the
+    inclusion of potentially large DNSSEC records in responses, but it also means
+    that resolvers will not have access to the DNSSEC proofs necessary for validation.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-wagope-dnsop-do-bit-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

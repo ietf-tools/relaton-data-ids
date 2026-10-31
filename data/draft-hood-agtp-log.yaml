@@ -18,19 +18,22 @@ abstract:
     defined in [AGTP] and provides the post-hoc audit infrastructure for AGTP-based
     agent operations. AGTP-LOG aligns with [RFC9162] (Certificate Transparency 2.0)
     as the verifiable data structure and issues COSE_Sign1 receipts per [RFC9943]
-    (SCITT) for cross-ecosystem interoperability. This document also establishes the
-    AGTP Agent Identity Taxonomy (Agent Genesis, Canonical Agent-ID, Agent Certificate)
-    that [AGTP] v07 normatively adopts. The log protocol defined here covers entry
-    submission, receipt retrieval, inclusion-proof retrieval, consistency-proof retrieval,
-    and discovery via the log_uri field of the Agent Genesis. Per-platform logs are
-    the default; the federation model follows the SCITT cross-witnessing pattern.
-    Witness and monitor role definitions, full federation procedures, and the formal
-    entry-acceptance threat model are deferred to a future revision. The audit properties
-    AGTP-LOG provides are structural rather than retrofitted. Statements are signed
-    by the governance platform that operates the log, not by the agent the statements
-    concern; an agent cannot forge its own audit trail because it does not control
-    the log operator's signing key. This architectural separation distinguishes AGTP-LOG
-    audit infrastructure from approaches that layer audit data models onto general-purpose
+    (SCITT) for cross-ecosystem interoperability. This document restates the AGTP
+    Agent Identity Taxonomy (Agent Genesis, Canonical Agent-ID, Agent Certificate)
+    as [AGTP] adopts it. The log protocol defined here covers entry submission, receipt
+    retrieval, inclusion-proof retrieval, consistency-proof retrieval, and discovery
+    via the log_uri field of the Agent Genesis. This revision adds the statement types
+    by which Attribution-Record Audit-IDs and per-agent chain heads are committed
+    to the log, which is the mechanism [AGTP-IDENTIFIERS] names for making a self-held
+    attribution chain tamper-evident to a verifier that distrusts the holder. Per-platform
+    logs are the default; the federation model follows the SCITT cross- witnessing
+    pattern. Witness and monitor role definitions, full federation procedures, and
+    the formal entry-acceptance threat model are deferred to a future revision. The
+    audit properties AGTP-LOG provides are structural. Statements are signed by the
+    governance platform that operates the log, never by the agent the statements concern;
+    an agent cannot forge its own audit trail because the log operator's signing key
+    is outside its control. This architectural separation distinguishes AGTP-LOG audit
+    infrastructure from approaches that layer audit data models onto general-purpose
     substrates where the audited party participates in writing the audit trail.</p>"
   language:
   - en
@@ -67,6 +70,16 @@ relation:
       primary: true
     formattedref:
       content: draft-hood-agtp-log-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-hood-agtp-log-03
+    docid:
+    - id: draft-hood-agtp-log-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-hood-agtp-log-03
       format: text/plain
 ext:
   schema-version: v1.0.1

@@ -18,7 +18,11 @@ abstract:
     communication. AGTP-SESSION addresses two distinct session models: bounded sessions
     for time-limited transactional flows, and persistent sessions for long-lived agent
     contexts. Both inherit identity, authority, and attribution from base AGTP. This
-    is an early working draft; many design decisions are deliberately open.</p>"
+    revision specifies the session identifier format, the ESTABLISH, RESUME, and TERMINATE
+    methods and their wire format, and resumption after transport loss, in which a
+    session is bound to its participants by a signed session token and to the live
+    sender by the per-request signature of base AGTP; no transport connection is part
+    of the binding.</p>"
   language:
   - en
   script:
@@ -34,6 +38,16 @@ relation:
       primary: true
     formattedref:
       content: draft-hood-agtp-session-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-hood-agtp-session-01
+    docid:
+    - id: draft-hood-agtp-session-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-hood-agtp-session-01
       format: text/plain
 ext:
   schema-version: v1.0.1
