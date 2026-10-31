@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-watts-oauth-agent-revocation-closure
 title:
-- content: Revocation Closure for Agentic Authorization Systems
+- content: Revocation Closure and Authority Epochs for Agent Delegation
   language:
   - en
   script:
@@ -13,16 +13,17 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>Agentic systems can derive and distribute authority across delegated
-    agents, workloads, credentials, queues, and long-running operations. Existing
-    revocation mechanisms can invalidate a credential or authorization grant, but
-    credential invalidation alone does not establish that every path from revoked
-    authority to a consequential effect has been closed. This document defines a protocol-neutral
-    model for revocation closure. It introduces authority graphs, consequential sinks,
-    revocation cut sets, closure states, closure budgets, and closure receipts. The
-    model is intended to complement OAuth 2.0, workload identity, transaction-token,
-    and agent-authorization work. It does not define a new authorization protocol,
-    token format, or AI safety mechanism.</p>"
+- content: "<p>Automated agents can exercise OAuth-derived authority through delegated
+    credentials, child agents, asynchronous work, and operations spanning multiple
+    administrative domains. Invalidating an individual token does not necessarily
+    establish that the authority represented by that token can no longer cause a new
+    consequential operation. This document defines authority epochs, delegation-lineage
+    requirements, admission fencing, and revocation-closure states for OAuth-based
+    agent delegation. It distinguishes token invalidation from authority closure and
+    specifies that unresolved in-scope state produces UNKNOWN or PARTIAL rather than
+    CLOSED. The profile composes with OAuth Token Revocation, Token Exchange, Token
+    Introspection, proof-of-possession mechanisms, Transaction Tokens, and workload-
+    identity systems such as WIMSE.</p>"
   language:
   - en
   script:
@@ -48,6 +49,26 @@ relation:
       primary: true
     formattedref:
       content: draft-watts-oauth-agent-revocation-closure-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-watts-oauth-agent-revocation-closure-02
+    docid:
+    - id: draft-watts-oauth-agent-revocation-closure-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-watts-oauth-agent-revocation-closure-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-watts-oauth-agent-revocation-closure-03
+    docid:
+    - id: draft-watts-oauth-agent-revocation-closure-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-watts-oauth-agent-revocation-closure-03
       format: text/plain
 ext:
   schema-version: v1.0.1

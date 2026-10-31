@@ -1,0 +1,50 @@
+---
+schema-version: v1.2.3
+id: draft-williams-oauth-poi-chained-state
+title:
+- content: Proof-of-Intent (PoI) Chained State, Multi-Party Escalation, and Concurrency
+    Extension
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-williams-oauth-poi-chained-state
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>The Proof-of-Intent (PoI) Core Protocol (draft-williams-oauth-poi-
+    core-00) specifies a stateless, two-node ([R0, R1]) cryptographic framework for
+    verifying synchronous Human-in-the-Loop (HITL) approvals, rejections, and single-hop
+    parameter modifications. However, high-consequence enterprise workflows -- such
+    as multi-tier loan underwriting, dual-control clinical orders, and asynchronous
+    batch agent queues -- frequently require asynchronous review, hierarchical escalation
+    when a human modification exceeds the first operator's organizational authority,
+    and deterministic conflict resolution when multiple approvers act concurrently.
+    This document extends PoI Core to define: (1) an asynchronous operating mode separating
+    Intent Escrowing from Just-in-Time Challenge Minting to eliminate Time-of-Check
+    to Time-of-Use (TOCTOU) state drift; (2) multi-hop hash-linked assertion chains
+    (R0 -&gt; R1 -&gt;... -&gt; Rn) supporting hierarchical SUPERCEDE escalations
+    and multi- party co-signatures; (3) a Linear Chain Compare-and-Swap (CAS) concurrency
+    model on head_node_hash that resolves races between competing approvers without
+    ambiguous tree forks; and (4) extended verification rules (including bounded chain
+    length DoS protection) and concurrency error codes.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-williams-oauth-poi-chained-state-00
+    docid:
+    - id: draft-williams-oauth-poi-chained-state-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-williams-oauth-poi-chained-state-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
