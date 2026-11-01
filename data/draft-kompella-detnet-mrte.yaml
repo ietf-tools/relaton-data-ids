@@ -1,0 +1,58 @@
+---
+schema-version: v1.2.3
+id: draft-kompella-detnet-mrte
+title:
+- content: 'MRTE: Multipath Traffic Engineering for Reliable and Available Wireless
+    DetNet'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-kompella-detnet-mrte
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: '<p>Reliable and Available Wireless (RAW) extends Deterministic Networking
+    (DetNet) to networks in which some or all of the links are wireless. Wireless
+    links differ from wired links in that their quality varies over short time scales,
+    so a path that was good a moment ago may be unusable now. The RAW Architecture
+    addresses this with a "recovery graph", equivalent to a 6TiSCH "Track": not a
+    single path, but a Directed Acyclic Graph (DAG) of paths from an ingress to an
+    egress, over which packets are replicated, and duplicates eliminated where the
+    paths converge, so that a packet is delivered as long as at least one path through
+    the graph is working. Multipath Traffic Engineering (MPTE) introduces two notions
+    that are directly applicable to RAW: a traffic-engineered DAG (an MPTE DAG) from
+    one or more ingresses to one or more egresses, and a "junction", a node of the
+    DAG that is told, by direct signaling, its previous hops and next hops and what
+    to do with traffic between them. Multicast Traffic Engineering (MCTE) uses the
+    same notions to build multicast trees, in which a junction replicates traffic
+    to all of its next hops. This memo defines MRTE, which applies these notions to
+    RAW. MRTE introduces three new types of junction: a bounded replication junction
+    (henceforth called a replication junction), which replicates a packet to a subset
+    of its next hops; an elimination junction, which may receive copies of a packet
+    from several previous hops and forwards only the first; and an ordering junction,
+    which restores the sequence of packets in a flow. An MRTE DAG interleaves replication
+    and elimination junctions so that the number of copies in flight stays bounded
+    while the probability of delivery stays high. This memo describes MRTE DAGs and
+    junctions, the tunnel types suitable for them, and the information that must be
+    signaled to each junction.</p>'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-kompella-detnet-mrte-00
+    docid:
+    - id: draft-kompella-detnet-mrte-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-kompella-detnet-mrte-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

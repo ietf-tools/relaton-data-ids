@@ -1,0 +1,59 @@
+---
+schema-version: v1.2.3
+id: draft-das-digital-money-safety-module
+title:
+- content: 'Valid Credential Is Not Authorized Payment: A Digital Money Online Safety
+    Module Based on Execution Finality'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-das-digital-money-safety-module
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>Problem: digital money is now moved by software that holds valid credentials:
+    AI agents that buy services, card and wallet processors, exchange treasury systems,
+    stablecoin issuers, cross-chain bridges and offline digital-currency devices.
+    In these systems a valid signature, token, approval or initial card authorization
+    is commonly treated as permission for whatever financial effect is finally released.
+    Between approval and release the amount, beneficiary, asset, route, fee or message
+    format can change; operations can be replayed or run concurrently against one
+    budget; and a lost confirmation can lead to a second payment. Existing controls
+    authenticate the party, the key or the message, but do not verify that the effect
+    actually released is the effect that was authorized. Solution: this document describes
+    a digital money online safety module based on execution finality. Authority is
+    collected and bound in a protected record. Each candidate financial operation
+    is held in a non-effective state. At the last controllable boundary, a second
+    protected domain reconstructs the actual effect from the native bytes and compares
+    it with the bound authority and current policy, and a Finality Sink atomically
+    consumes a sink-bound, non-bearer Execution Handle while releasing only that exact
+    effect. Signing, clearing, settlement and delivery evidence are kept as distinct
+    states, and an uncertain outcome remains UNKNOWN instead of being retried. Scope:
+    the document gives a common workflow, safety invariants, 19 profiles (agent payments,
+    card capture, cross-rail FX, tokenized deposits, offline CBDC, payment-versus-payment,
+    delivery-versus- payment, stablecoins, bridges, exchange custody, QR and alias
+    resolution, metered payments, privacy-preserving compliance, financial-message
+    continuity, subscriptions, disputes, autonomous trading, delegated treasury and
+    accounts payable), 27 diagrams, 114 test vectors, 54 enforcement points and reference
+    code in Python, Go and JavaScript. It defines no wire format and is informational.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-das-digital-money-safety-module-00
+    docid:
+    - id: draft-das-digital-money-safety-module-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-das-digital-money-safety-module-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
