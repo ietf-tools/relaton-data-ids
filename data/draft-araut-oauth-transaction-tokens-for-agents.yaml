@@ -13,32 +13,29 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document specifies an extension to the to support agent context
-    propagation within Transaction Tokens for agent-based workloads. The extension
-    defines the use of the act field to identify the agent performing the action,
-    and leverages the existing sub field (as defined in the base Transaction Tokens
-    specification) to represent the principal. The sub field is populated according
-    to the rules specified in OAUTH-TXN-TOKENS (https://drafts.oauth.net/oauth- transaction-tokens/draft-ietf-oauth-transaction-tokens.html),
-    based on the 'subject_token' provided in the token request. For autonomous agents
-    operating independently, the sub field represents the agent itself. These mechanisms
-    enable services within the call graph to make more granular access control decisions,
-    thereby enhancing security. This document specifies an extension to OAuth Transaction
-    Tokens OAUTH-TXN-TOKENS (https://drafts.oauth.net/oauth-transaction- tokens/draft-ietf-oauth-transaction-tokens.html)
+- content: "<p>This document specifies an extension to OAuth Transaction Tokens OAUTH-TXN-TOKENS
+    (https://drafts.oauth.net/oauth-transaction-tokens/ draft-ietf-oauth-transaction-tokens.html)
     to support agent context propagation within Transaction Tokens for agent-based
     workloads. The extension defines the agentic_ctx claim, a structured JWT claim
-    that carries chain-level metadata required for multi-agent flow integrity and
-    MAY contain additional deployment-specific agent context. The extension addresses
-    two deployment patterns: single- agent flows where one agent acts on behalf of
-    a user within a transaction, and multi-agent flows where multiple agents collaborate
-    across a call chain. In multi-agent scenarios, the Transaction Token is replaced
-    at each agent transition by the Transaction Token Service, updating the agentic_ctx
-    claim while preserving the immutable identity context (sub and act claims) established
-    at transaction initiation. This specification leverages the existing act claim
-    as defined in RFC8693 (https://datatracker.ietf.org/doc/html/rfc8693) and the
-    sub claim as defined in OAUTH-TXN-TOKENS (https://drafts.oauth.net/oauth- transaction-tokens/draft-ietf-oauth-transaction-tokens.html).
-    It does not define new token types or grant types; it operates entirely within
-    the existing Transaction Token issuance and replacement mechanisms defined by
-    the base specification.</p>"
+    that carries chain-level metadata required for multi-agent flow integrity. The
+    extension addresses two deployment patterns: single-agent flows where one agent
+    acts on behalf of a user within a transaction, and multi-agent flows where multiple
+    agents collaborate across a call chain. In multi-agent scenarios, the Transaction
+    Token is replaced at each agent transition by the Transaction Token Service, updating
+    the agentic_ctx claim while preserving the immutable identity context (sub and
+    act claims) established at transaction initiation. By propagating agent chain
+    context to every service in the call path, this extension enables Resource Servers
+    to implement authorization policies that distinguish agentic execution paths from
+    direct human calls, and provides the transaction lineage required for fine-grained
+    audit trails at the point of data access. Security and compliance teams gain visibility
+    into the downstream operational footprint of an agentic workflow — the full set
+    of services and data stores reached under a single transaction — enabling post-incident
+    reconstruction and bounded assessment of agentic reach. This specification leverages
+    the existing act claim as defined in RFC8693 (https://datatracker.ietf.org/doc/html/rfc8693)
+    and the sub claim as defined in OAUTH-TXN-TOKENS (https://drafts.oauth.net/oauth-
+    transaction-tokens/draft-ietf-oauth-transaction-tokens.html). It does not define
+    new token types or grant types; it operates entirely within the existing Transaction
+    Token issuance and replacement mechanisms defined by the base specification.</p>"
   language:
   - en
   script:
@@ -74,6 +71,16 @@ relation:
       primary: true
     formattedref:
       content: draft-araut-oauth-transaction-tokens-for-agents-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-araut-oauth-transaction-tokens-for-agents-03
+    docid:
+    - id: draft-araut-oauth-transaction-tokens-for-agents-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-araut-oauth-transaction-tokens-for-agents-03
       format: text/plain
 ext:
   schema-version: v1.0.1

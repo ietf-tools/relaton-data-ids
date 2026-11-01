@@ -1,0 +1,256 @@
+---
+schema-version: v1.2.3
+id: draft-lkspa-rats-verifiable-geo-fence-04
+title:
+- content: Verifiable Proof of Environment Attestation Profile
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-lkspa-rats-verifiable-geo-fence-04
+  type: src
+type: standard
+docid:
+- id: draft-lkspa-rats-verifiable-geo-fence-04
+  type: Internet-Draft
+  primary: true
+- id: I-D.lkspa-rats-verifiable-geo-fence
+  type: IETF
+  scope: anchor
+docnumber: I-D.lkspa-rats-verifiable-geo-fence
+date:
+- type: published
+  value: '2026-10-31'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Ramki
+          language:
+          - en
+        - language:
+          - en
+          initial: R
+        formatted_initials:
+          content: R.
+          language:
+          - en
+      surname:
+        content: Krishnan
+        language:
+        - en
+      completename:
+        content: Ramki Krishnan
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: JPMorgan Chase & Co.
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Ned
+          language:
+          - en
+        - language:
+          - en
+          initial: "N"
+        formatted_initials:
+          content: N.
+          language:
+          - en
+      surname:
+        content: Smith
+        language:
+        - en
+      completename:
+        content: Ned Smith
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Independent
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Diego
+          language:
+          - en
+        - language:
+          - en
+          initial: D
+        formatted_initials:
+          content: D.
+          language:
+          - en
+      surname:
+        content: Lopez
+        language:
+        - en
+      completename:
+        content: Diego Lopez
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Telefonica
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - language:
+          - en
+          initial: A
+        formatted_initials:
+          content: A.
+          language:
+          - en
+      surname:
+        content: Prasad
+        language:
+        - en
+      completename:
+        content: A Prasad
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Oracle
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Srinivasa
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Addepalli
+        language:
+        - en
+      completename:
+        content: Srinivasa Addepalli
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Aryaka
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Henk
+          language:
+          - en
+        - language:
+          - en
+          initial: H
+        formatted_initials:
+          content: H.
+          language:
+          - en
+      surname:
+        content: Birkholz
+        language:
+        - en
+      completename:
+        content: Henk Birkholz
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Fraunhofer SIT
+  role:
+  - type: author
+version:
+- draft: '04'
+revdate: '2026-10-31'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>Operators of regulated, sovereign, and high-assurance deployments require
+    hardware-rooted, machine-verifiable proof that a workload executes in its approved
+    environment. Current remote attestation mechanisms address two relevant properties
+    in isolation: platform integrity — that the hardware and software stack are in
+    an approved, untampered state — and physical residency — that the hardware resides
+    within an approved geographic boundary. Neither property alone is sufficient:
+    integrity without residency permits a valid platform to operate outside approved
+    boundaries; residency without integrity permits a compromised platform to claim
+    valid placement. This document defines the *Verifiable Proof of Environment Attestation
+    Profile (V-PEA)*, a profile of the RATS Architecture (RFC 9334) in which a platform
+    binds location Claims to its own integrity Evidence in a single TPM-sealed Evidence
+    structure (lah-bundle). V-PEA does not generate location Claims: they are produced
+    by location sources, such as GNSS receivers, mobile network operators, or timing-based
+    anchors, and V-PEA binds them to the particular platform that will receive a credential
+    or key. V-PEA defines two Evidence dimensions: *WHAT* — hardware provenance (TPM
+    Attestation Key registered and manufacturer-endorsed), platform integrity (firmware
+    and OS state matching reference values), and workload agent software integrity
+    (binary digest matching an approved value); and *WHERE* — physical residency within
+    an approved geographic boundary, as reported by one or more location sources.
+    A TPM quote seal binds WHAT and WHERE into a single unforgeable statement: neither
+    dimension can be forged or transplanted without invalidating the other. For the
+    WHERE dimension, V-PEA supports Transparent Zero-Knowledge Proofs (ZKPs), enabling
+    an Attester to prove geographic compliance without disclosing precise coordinates.
+    A positive V-PEA Attestation Result enables a Relying Party to issue hardware-rooted
+    credentials or authorize operations — combining verified execution environment
+    (WHAT) with verified physical placement (WHERE) — before releasing sensitive assets
+    or granting access. Integration with workload identity systems is described in
+    the WIMSE Integration appendix.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-lkspa-rats-verifiable-geo-fence-03
+    docid:
+    - id: draft-lkspa-rats-verifiable-geo-fence-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-lkspa-rats-verifiable-geo-fence-03
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-lkspa-rats-verifiable-geo-fence-04
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

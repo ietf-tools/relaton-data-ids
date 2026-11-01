@@ -13,12 +13,12 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document updates [RFC2622] and [RFC4012] by defining the excl-
-    members attribute on as-set and route-set classes in the Routing Policy Specification
-    Language (RPSL). The existing RPSL syntax only supports the implicit inclusion
-    of everything contained within an as- set or route-set. The newly defined attribute
-    allows operators to overcome this limitation of the existing syntax by enabling
-    them to explicitly exclude specific members from that implicit inclusion.</p>"
+- content: "<p>This document updates RFC 2622 and RFC 4012 by defining the excl- members
+    attribute on the as-set and route-set classes in the Routing Policy Specification
+    Language (RPSL). A set that references another set includes everything the referenced
+    set contains, however deeply nested. RPSL currently has no way for the set owner
+    to make an exception. The excl-members attribute lets a set owner exclude specific
+    members, including ones brought in by a referenced set.</p>"
   language:
   - en
   script:
@@ -34,6 +34,16 @@ relation:
       primary: true
     formattedref:
       content: draft-bensley-rpsl-exclude-members-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-bensley-rpsl-exclude-members-01
+    docid:
+    - id: draft-bensley-rpsl-exclude-members-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-bensley-rpsl-exclude-members-01
       format: text/plain
 ext:
   schema-version: v1.0.1

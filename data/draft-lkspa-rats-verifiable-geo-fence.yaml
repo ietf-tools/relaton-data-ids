@@ -22,21 +22,25 @@ abstract:
     integrity without residency permits a valid platform to operate outside approved
     boundaries; residency without integrity permits a compromised platform to claim
     valid placement. This document defines the *Verifiable Proof of Environment Attestation
-    Profile (V-PEA)*, a profile of the RATS Architecture {{!RFC9334}} that fuses both
-    properties into a single TPM-sealed Evidence structure (lah-bundle). V-PEA defines
-    two Evidence dimensions: *WHAT* — hardware provenance (TPM Attestation Key registered
-    and manufacturer-endorsed), platform integrity (firmware and OS state matching
-    reference values), and workload agent software integrity (binary digest matching
-    an approved value); and *WHERE* — physical residency within an approved geographic
-    boundary. A TPM quote seal binds WHAT and WHERE into a single unforgeable statement:
-    neither dimension can be forged or transplanted without invalidating the other.
-    For the WHERE dimension, V-PEA supports Transparent Zero-Knowledge Proofs (ZKPs),
-    enabling an Attester to prove geographic compliance without disclosing precise
-    coordinates. A positive V-PEA Attestation Result enables a Relying Party to issue
-    hardware-rooted credentials or authorize operations — combining verified execution
-    environment (WHAT) with verified physical placement (WHERE) — before releasing
-    sensitive assets or granting access. Integration with workload identity systems
-    is described in the WIMSE Integration appendix.</p>"
+    Profile (V-PEA)*, a profile of the RATS Architecture (RFC 9334) in which a platform
+    binds location Claims to its own integrity Evidence in a single TPM-sealed Evidence
+    structure (lah-bundle). V-PEA does not generate location Claims: they are produced
+    by location sources, such as GNSS receivers, mobile network operators, or timing-based
+    anchors, and V-PEA binds them to the particular platform that will receive a credential
+    or key. V-PEA defines two Evidence dimensions: *WHAT* — hardware provenance (TPM
+    Attestation Key registered and manufacturer-endorsed), platform integrity (firmware
+    and OS state matching reference values), and workload agent software integrity
+    (binary digest matching an approved value); and *WHERE* — physical residency within
+    an approved geographic boundary, as reported by one or more location sources.
+    A TPM quote seal binds WHAT and WHERE into a single unforgeable statement: neither
+    dimension can be forged or transplanted without invalidating the other. For the
+    WHERE dimension, V-PEA supports Transparent Zero-Knowledge Proofs (ZKPs), enabling
+    an Attester to prove geographic compliance without disclosing precise coordinates.
+    A positive V-PEA Attestation Result enables a Relying Party to issue hardware-rooted
+    credentials or authorize operations — combining verified execution environment
+    (WHAT) with verified physical placement (WHERE) — before releasing sensitive assets
+    or granting access. Integration with workload identity systems is described in
+    the WIMSE Integration appendix.</p>"
   language:
   - en
   script:
@@ -82,6 +86,16 @@ relation:
       primary: true
     formattedref:
       content: draft-lkspa-rats-verifiable-geo-fence-03
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-lkspa-rats-verifiable-geo-fence-04
+    docid:
+    - id: draft-lkspa-rats-verifiable-geo-fence-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-lkspa-rats-verifiable-geo-fence-04
       format: text/plain
 ext:
   schema-version: v1.0.1
