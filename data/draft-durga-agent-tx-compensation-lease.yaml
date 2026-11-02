@@ -1,0 +1,43 @@
+---
+schema-version: v1.2.3
+id: draft-durga-agent-tx-compensation-lease
+title:
+- content: Pre-Release Transactional Compensation Leases and CAS Fencing Receipts
+    for Autonomous Agents Over Systems of Record
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-durga-agent-tx-compensation-lease
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>When autonomous AI agents execute write operations against enterprise
+    Systems of Record (ERP, MES, WMS, CRM, ITSM), traditional HTTP idempotency keys
+    (RFC 9110) and post-hoc Saga orchestrators cannot guarantee deterministic recovery
+    if a stochastic multi-step plan halts mid-flight or hallucinates downstream parameters.
+    This document specifies the Pre-Release Transactional Compensation Lease (PTCL)
+    protocol: a fail-closed wire contract requiring an agent runtime to acquire a
+    cryptographically signed recovery reservation lease, prove a bounded rollback
+    window (T_req &lt;= T_granted), and present a Compare-And-Swap (CAS) epoch fencing
+    token prior to committing any state mutation.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-durga-agent-tx-compensation-lease-00
+    docid:
+    - id: draft-durga-agent-tx-compensation-lease-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-durga-agent-tx-compensation-lease-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

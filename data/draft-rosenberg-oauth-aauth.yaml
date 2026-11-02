@@ -13,16 +13,15 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document defines the Agent Authorization Grant, an OAuth 2.1 extension
-    allowing a class of Internet applications - called AI Agents - to obtain access
-    tokens in order to invoke web-based APIs on behalf of their users. In the use
-    cases envisaged here, users interact with AI Agents through communication channels
-    - the Public Switched Telephone Network (PSTN) or texting - which do not permit
-    traditional OAuth grant flows. Instead, AI agents collect Personally Identifying
-    Information (PII) through natural language conversation, and then use that collected
-    information to obtain an access token with appropriately constrained scopes. A
-    primary considering is ensuring that the Large Language Model (LLM) powering the
-    AI Agent cannot, through hallucination, result in impersonation attacks.</p>"
+- content: "<p>AI Agents are increasingly accessing web resources on behalf of the
+    users they serve. Traditionally these agents are granted normal OAuth access tokens
+    through existing OAuth grant flows. However, these flows were designed in the
+    era of traditional software, and when applied to AI Agents, multiple problems
+    have arisen. This document outlines some of the problems, and then proposes a
+    simple OAuth2.1 extension that enables AI Agents to obtain access tokens at time
+    of resource access using Human-In-the-Loop or other approval flows. We call this
+    the Agent Authorization Grant (aauth) grant flow. This document also compares
+    the proposed solution with another, non-backwards compatible aauth solution.</p>"
   language:
   - en
   script:
@@ -48,6 +47,16 @@ relation:
       primary: true
     formattedref:
       content: draft-rosenberg-oauth-aauth-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-rosenberg-oauth-aauth-02
+    docid:
+    - id: draft-rosenberg-oauth-aauth-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-rosenberg-oauth-aauth-02
       format: text/plain
 ext:
   schema-version: v1.0.1

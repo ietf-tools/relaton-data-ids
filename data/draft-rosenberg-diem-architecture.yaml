@@ -13,12 +13,14 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document explores architectural considerations for digital emblems
-    as discussed in the DIEM working group. It is intended to complement the use cases
-    and requirements in [DIEM-REQS] by sketching one way to think about how the pieces
-    of a DIEM architecture might fit together. This document does not seek to propose
-    a specific architecture. It instead captures the author's current mental model
-    to help inform the requirements process and subsequent architectural work.</p>"
+- content: "<p>This document describes an architecture for digital emblems in which
+    emblems are authenticated, typed metadata about assets, published in the DNS and
+    protected by DNSSEC. A single architecture serves many use cases. Use cases differ
+    in the shape of their metadata, which is described by profiles, rather than in
+    their transport or trust machinery. The document illustrates the architecture
+    with a strawman encoding (an EMBLEM resource record carrying a deterministic CBOR
+    map with registered, typed keys) and with worked examples drawn from International
+    Humanitarian Law, logistics and customs, diplomatic pouches, and peacekeeping.</p>"
   language:
   - en
   script:
@@ -34,6 +36,16 @@ relation:
       primary: true
     formattedref:
       content: draft-rosenberg-diem-architecture-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-rosenberg-diem-architecture-01
+    docid:
+    - id: draft-rosenberg-diem-architecture-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-rosenberg-diem-architecture-01
       format: text/plain
 ext:
   schema-version: v1.0.1

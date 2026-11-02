@@ -1,0 +1,44 @@
+---
+schema-version: v1.2.3
+id: draft-pospichal-idr-yang-over-bgp
+title:
+- content: YANG over BGP
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-pospichal-idr-yang-over-bgp
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This document defines YANG over BGP (YoBGP), an extension of BGP for
+    distributing network configuration objects (for example routing policies, prefix
+    sets, community sets, and access control lists) modeled in YANG. Objects are carried
+    in a dedicated Address Family (AFI/SAFI) and spread between routers the way routes
+    do: they are advertised to peers, carry a version, are filtered on receipt, and
+    are optionally re-advertised. Received objects are subject to a per- peer inbound
+    filtering framework, persist in the receiving node's configuration independently
+    of the state of the BGP session, and are removed only by an explicit, versioned
+    tombstone. Its goal is effortless synchronization of selected configuration settings
+    across a large number of BGP speakers. The framework is schema-agnostic: any YANG
+    module, including vendor-specific ones, can be distributed.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-pospichal-idr-yang-over-bgp-00
+    docid:
+    - id: draft-pospichal-idr-yang-over-bgp-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-pospichal-idr-yang-over-bgp-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
