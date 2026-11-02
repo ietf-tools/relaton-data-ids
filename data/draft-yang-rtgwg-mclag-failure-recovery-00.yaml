@@ -1,0 +1,234 @@
+---
+schema-version: v1.2.3
+id: draft-yang-rtgwg-mclag-failure-recovery-00
+title:
+- content: Forwarding-Plane Failure Recovery Procedures for Multi-Chassis Link Aggregation
+    Groups
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-yang-rtgwg-mclag-failure-recovery-00
+  type: src
+type: standard
+docid:
+- id: draft-yang-rtgwg-mclag-failure-recovery-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.yang-rtgwg-mclag-failure-recovery
+  type: IETF
+  scope: anchor
+docnumber: I-D.yang-rtgwg-mclag-failure-recovery
+date:
+- type: published
+  value: '2026-11-01'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Jin
+          language:
+          - en
+        - language:
+          - en
+          initial: J
+        formatted_initials:
+          content: J.
+          language:
+          - en
+      surname:
+        content: Yang
+        language:
+        - en
+      completename:
+        content: Jin Yang
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: China Mobile
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Tingting
+          language:
+          - en
+        - language:
+          - en
+          initial: T
+        formatted_initials:
+          content: T.
+          language:
+          - en
+      surname:
+        content: Han
+        language:
+        - en
+      completename:
+        content: Tingting Han
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: China Mobile
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Weiqiang
+          language:
+          - en
+        - language:
+          - en
+          initial: W
+        formatted_initials:
+          content: W.
+          language:
+          - en
+      surname:
+        content: Cheng
+        language:
+        - en
+      completename:
+        content: Weiqiang Cheng
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: China Mobile
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Yuchi
+          language:
+          - en
+        - language:
+          - en
+          initial: "Y"
+        formatted_initials:
+          content: Y.
+          language:
+          - en
+      surname:
+        content: Tian
+        language:
+        - en
+      completename:
+        content: Yuchi Tian
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: China Mobile
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Junjie
+          language:
+          - en
+        - language:
+          - en
+          initial: J
+        formatted_initials:
+          content: J.
+          language:
+          - en
+      surname:
+        content: Wang
+        language:
+        - en
+      completename:
+        content: Junjie Wang
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Centec
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Guoying
+          language:
+          - en
+        - language:
+          - en
+          initial: G
+        formatted_initials:
+          content: G.
+          language:
+          - en
+      surname:
+        content: Zhang
+        language:
+        - en
+      completename:
+        content: Guoying Zhang
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Centec
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-11-01'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>When a downlink member of a Multi-Chassis Link Aggregation Group (MC-
+    LAG) fails, a common recovery method flushes the MAC forwarding table and relies
+    on flooding to re-establish the forwarding paths, which can cause a period of
+    congestion and disruption. This document specifies two complementary forwarding-plane
+    failure recovery procedures for MC-LAG. The first procedure preserves the forwarding
+    state by adjusting the LAG group's member set, adding an inter- chassis link (ICL)
+    port in place of the failed downlink, so that MAC table entries remain valid and
+    traffic is redistributed without a table flush and without flooding. The second
+    procedure extends recovery beyond a single Provider Edge (PE) pair: when the immediate
+    peer cannot satisfy a failover request, the request is relayed over a secondary
+    ICL to the next PE along a configured relay path, which allows recovery across
+    three or more PEs in the redundancy domain. The procedures operate primarily in
+    the forwarding plane and do not require Ethernet VPN (EVPN) infrastructure.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-yang-rtgwg-mclag-failure-recovery-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

@@ -2,8 +2,9 @@
 schema-version: v1.2.3
 id: draft-tiloca-ace-oscore-gm-kem
 title:
-- content: Quantum-Resistant Key Encapsulation Mechanisms (KEMs) via the OSCORE Group
-    Manager Using Authentication and Authorization for Constrained Environments (ACE)
+- content: Quantum-Resistant Key Encapsulation Mechanisms (KEMs) via the Object Security
+    for Constrained RESTful Environments (OSCORE) Group Manager Using Authentication
+    and Authorization for Constrained Environments (ACE)
   language:
   - en
   script:
@@ -23,9 +24,11 @@ abstract:
     pairwise mode of Group OSCORE post-quantum secure, it is possible to rely on a
     quantum-resistant Key Encapsulation Mechanism (KEM) as the Pairwise Key Agreement
     Algorithm used to derive pairwise keys. This document extends the interface of
-    the ACE-based Group Manager to enable the exchange of KEM public keys and KEM
-    ciphertexts among group members via the Group Manager, thus making the derivation
-    of pairwise keys in Group OSCORE post-quantum secure.</p>"
+    the ACE-based Group Manager to allow for the exchange of KEM public keys and encapsulated
+    KEM shared secrets among group members via the Group Manager, thus enabling the
+    post-quantum secure derivation of pairwise keys in Group OSCORE. Furthermore,
+    this document accordingly extends the set of parameters that can be used to specify
+    the configuration of an OSCORE group at the Group Manager.</p>"
   language:
   - en
   script:
@@ -41,6 +44,16 @@ relation:
       primary: true
     formattedref:
       content: draft-tiloca-ace-oscore-gm-kem-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-tiloca-ace-oscore-gm-kem-01
+    docid:
+    - id: draft-tiloca-ace-oscore-gm-kem-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-tiloca-ace-oscore-gm-kem-01
       format: text/plain
 ext:
   schema-version: v1.0.1

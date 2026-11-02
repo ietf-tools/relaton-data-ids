@@ -14,17 +14,18 @@ docid:
   primary: true
 abstract:
 - content: "<p>This document defines the Mobile User Plane (MUP) architecture for
-    Distributed Mobility Management. The requirements for Distributed Mobility Management
-    described in [RFC7333] can be satisfied by routing fashion. In MUP Architecture,
-    session information between the entities of the mobile user plane is turned to
-    routing information so that mobile user plane can be integrated into dataplane.
-    MUP architecture is designed to be pluggable user plane part of existing mobile
-    service architectures, enabled by auto-discovery for the use plane. Segment Routing
-    provides network programmability for a scalable option with it. While MUP architecture
-    itself is independent from a specific dataplane protocol, several dataplane options
-    are available for the architecture. This document describes IPv6 dataplane in
-    Segment Routing case (SRv6 MUP) due to the DMM requirement, and is suitable for
-    mobile services which require a large IP address space.</p>"
+    Distributed Mobility Management (DMM). MUP meets the DMM requirements in [RFC7333]
+    in a routing fashion. MUP provides a normative mechanism that makes it possible
+    to avoid traversing a single user plane anchor far from the optimal route, by
+    turning mobile user plane session information into routing information and integrating
+    the user plane into the dataplane. MUP is designed as a pluggable user plane part
+    of existing mobile service architectures, with auto-discovery. Although the architecture
+    is dataplane-independent, this document describes SRv6 over IPv6 (SRv6 MUP), whose
+    programmability and large address space suit scalable mobile services. This mechanism
+    is specified in terms of the semantics of MUP segments and of the routing information,
+    how that information is distributed among MUP PEs and the MUP Controller and resolved
+    by a MUP PE, and the behaviour required of them. It does not define the wire encoding
+    of any routing protocol; such an encoding may be defined in other documents.</p>"
   language:
   - en
   script:
@@ -60,6 +61,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-dmm-mup-architecture-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-dmm-mup-architecture-03
+    docid:
+    - id: draft-ietf-dmm-mup-architecture-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-dmm-mup-architecture-03
       format: text/plain
 ext:
   schema-version: v1.0.1

@@ -1,0 +1,53 @@
+---
+schema-version: v1.2.3
+id: draft-liu-agent-action-confirmation
+title:
+- content: Agent Action Confirmation Protocol (AACP)
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-liu-agent-action-confirmation
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>AI agents invoke operations with side effects: writes to resources,
+    creation of durable records, financial transactions, and delegated actions on
+    remote systems. Existing requirement documents in the agentproto working group
+    establish that such operations require confirmation by the human user, that this
+    confirmation must occur outside of LLM prompt inference, and that in multi-agent
+    delegation the receiving agent must be able to verify that a presented confirmation
+    actually originated from the user and is not fabricated by an intermediate agent.
+    No document in the current document set defines a protocol, message format, or
+    evidence format that satisfies these requirements. This document defines the Agent
+    Action Confirmation Protocol (AACP): an action descriptor format derived from
+    OAuth 2.0 Rich Authorization Requests (RFC 9396), a confirmation request format,
+    a signed confirmation evidence format, and verifier- side processing rules with
+    a distinct-outcome failure model. The design is transport-neutral and profiled
+    here for JSON over HTTP with JWS signatures; a CBOR/COSE mapping is defined. A
+    requirement traceability matrix maps each mechanism to its source requirement
+    in the agentproto document set. This document is informed by, and positions itself
+    relative to, two prior individual submissions that addressed user confirmation
+    of agent actions and have since expired: CHEQ [I-D.rosenberg-aiproto-cheq] and
+    the Agent Operation Authorization framework [I-D.liu-agent-operation-authorization].
+    The differences are summarized in Section 1.4.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-liu-agent-action-confirmation-00
+    docid:
+    - id: draft-liu-agent-action-confirmation-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-liu-agent-action-confirmation-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

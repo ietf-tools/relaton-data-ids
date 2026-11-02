@@ -1,0 +1,45 @@
+---
+schema-version: v1.2.3
+id: draft-yang-rtgwg-ecmp-adaptive-load-balance
+title:
+- content: Adaptive Load Balancing for Equal-Cost Multipath (ECMP)
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-yang-rtgwg-ecmp-adaptive-load-balance
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>Equal-Cost Multipath (ECMP) forwarding assigns a flow to a next-hop
+    by computing a hash over packet header fields when the flow is first seen. Because
+    the assignment does not change after that, the load across the paths of an ECMP
+    group can become uneven when the set of paths changes or when traffic shifts among
+    existing flows. This document defines procedures for adaptive ECMP load balancing
+    in which a forwarding node periodically measures per-path load, determines whether
+    the load is sufficiently uneven to act on, and makes a bounded number of incremental
+    flow placement changes toward less-used paths. The procedures preserve per-flow
+    packet ordering for all but the small number of flows that are moved in any interval,
+    and they converge toward a balanced distribution across the group. The procedures
+    operate within a single forwarding node and add no new packet formats or inter-node
+    signaling.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-yang-rtgwg-ecmp-adaptive-load-balance-00
+    docid:
+    - id: draft-yang-rtgwg-ecmp-adaptive-load-balance-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-yang-rtgwg-ecmp-adaptive-load-balance-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

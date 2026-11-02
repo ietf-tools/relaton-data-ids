@@ -1,0 +1,102 @@
+---
+schema-version: v1.2.3
+id: draft-kolomytsev-pshmp-core-overview-01
+title:
+- content: 'PSHMP Core: A Hybrid L4 Overlay for Proactive Self-Healing and Resilient
+    Multi-Hop Delivery'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-kolomytsev-pshmp-core-overview-01
+  type: src
+type: standard
+docid:
+- id: draft-kolomytsev-pshmp-core-overview-01
+  type: Internet-Draft
+  primary: true
+- id: I-D.kolomytsev-pshmp-core-overview
+  type: IETF
+  scope: anchor
+docnumber: I-D.kolomytsev-pshmp-core-overview
+date:
+- type: published
+  value: '2026-11-02'
+contributor:
+- person:
+    name:
+      given:
+        formatted_initials:
+          language:
+          - en
+      surname:
+        content: Kolomytsev
+        language:
+        - en
+      completename:
+        content: Kolomytsev
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Independent Researcher
+  role:
+  - type: author
+version:
+- draft: '01'
+revdate: '2026-11-02'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>PSHMP Core is a hybrid Layer-4-oriented overlay designed to keep multi-hop
+    data delivery working when individual nodes, links, or network segments become
+    unstable. It runs above ordinary IP infrastructure and does not require changes
+    to Layer-3 routing. Implementations may carry overlay traffic over multiple bidirectional
+    transports (for example UDP, DTLS, or TLS-protected TCP); the architecture is
+    intentionally transport-agnostic at the edges. Under stable conditions the system
+    builds ordered relay chains and forwards application fragments hop by hop while
+    preserving fragment identity. When several nodes on a path show degradation, it
+    can switch locally into a mesh-style recovery posture: collect alternative candidates,
+    apply progressive fallback and diversity rules, enforce a quality gate, and replace
+    the affected path. Continuous node assessment (K-Factor), a separate load signal,
+    diversity-aware selection, failure tracking, gossip and DHT-assisted discovery,
+    and batch acknowledgements with gap recovery form the supporting mechanisms. This
+    document revises [I-D.kolomytsev-pshmp-core-overview] (-00). It clarifies forwarding
+    invariants, separates path recovery from fragment recovery, documents load-aware
+    ranking, and strengthens security and limitation language. Scoring weights and
+    thresholds remain reference parameters of an experimental codebase; integrators
+    may refine them for their topologies.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-kolomytsev-pshmp-core-overview-00
+    docid:
+    - id: draft-kolomytsev-pshmp-core-overview-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-kolomytsev-pshmp-core-overview-00
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-kolomytsev-pshmp-core-overview-01
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

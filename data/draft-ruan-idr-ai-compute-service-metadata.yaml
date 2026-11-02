@@ -13,19 +13,13 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document defines a new optional transitive BGP Path Attribute
-    named AI Compute Service Metadata, which carries three categories of dedicated
-    Sub-TLVs for generative AI inference over inter-domain BGP routes. Existing CATS
-    framework and generic BGP compute metric drafts lack inference-specific metadata
-    covering inference SLA, token billing cost, and KV cache prefix index. Re-computing
-    context without matched cache prefixes raises GPU overhead and user billing expense.
-    This specification defines a new top-level optional transitive BGP Path Attribute
-    named AI Compute Service Metadata, which encapsulates three independent Sub-TLVs
-    to advertise inference SLA metrics, billing parameters, and cache prefix indexes.
-    All metadata carried within this Path Attribute is flooded across multi-domain
-    routing fabrics, supporting two core use cases: matching compute instances based
-    on latency and cost requirements, and dispatching tasks to nodes with matched
-    reusable KV cache to reduce resource consumption.</p>"
+- content: "<p>This document defines four AI inference-specific Sub-TLVs for the BGP
+    Edge Metadata Path Attribute specified in [I-D.ietf-idr-5g-edge-service-metadata].
+    They advertise model capabilities, aggregated inference latency, optional cost
+    preference, and selected long-lived KV cache prefix identifiers. Authorized CATS
+    Path Selectors (C-PSes) and other policy decision functions may use this information
+    to select suitable service contact instances and forwarding paths. This document
+    reuses the existing optional non- transitive attribute.</p>"
   language:
   - en
   script:
@@ -41,6 +35,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ruan-idr-ai-compute-service-metadata-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ruan-idr-ai-compute-service-metadata-01
+    docid:
+    - id: draft-ruan-idr-ai-compute-service-metadata-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ruan-idr-ai-compute-service-metadata-01
       format: text/plain
 ext:
   schema-version: v1.0.1

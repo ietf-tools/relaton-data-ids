@@ -1,0 +1,44 @@
+---
+schema-version: v1.2.3
+id: draft-zengin-moq-ssts-backpressure
+title:
+- content: A Backpressure Algorithm for Sender-Side Track Switching in MOQ Transport
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-zengin-moq-ssts-backpressure
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>Sender-Side Track Switching (SSTS) lets a publisher forward one track
+    at a time out of a switching set, and leaves the choice of which track to a pluggable
+    algorithm. The default algorithm divides a bandwidth estimate between switching
+    sets. This document defines an alternative algorithm that uses no bandwidth estimate
+    at all. It monitors the number of open forwarding streams carrying the currently
+    active tier, steps rapidly through the switching set's ladder during fast start,
+    regulates steady-state upshifts dynamically according to relative bitrate jumps
+    and the subscriber's probing risk tolerance, and reacts to mid-group congestion
+    using intra-group monitoring and retroactive stream supersede. The signal is directly
+    observable at the publisher, requires no cooperation from the congestion controller,
+    and degrades toward the lowest quality under load rather than toward none.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-zengin-moq-ssts-backpressure-00
+    docid:
+    - id: draft-zengin-moq-ssts-backpressure-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-zengin-moq-ssts-backpressure-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

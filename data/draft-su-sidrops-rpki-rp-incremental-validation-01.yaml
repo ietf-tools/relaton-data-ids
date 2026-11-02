@@ -1,0 +1,192 @@
+---
+schema-version: v1.2.3
+id: draft-su-sidrops-rpki-rp-incremental-validation-01
+title:
+- content: Considerations for Incremental Validation in RPKI Relying Parties
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-su-sidrops-rpki-rp-incremental-validation-01
+  type: src
+type: standard
+docid:
+- id: draft-su-sidrops-rpki-rp-incremental-validation-01
+  type: Internet-Draft
+  primary: true
+- id: I-D.su-sidrops-rpki-rp-incremental-validation
+  type: IETF
+  scope: anchor
+docnumber: I-D.su-sidrops-rpki-rp-incremental-validation
+date:
+- type: published
+  value: '2026-11-01'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Yingying
+          language:
+          - en
+        - language:
+          - en
+          initial: "Y"
+        formatted_initials:
+          content: Y.
+          language:
+          - en
+      surname:
+        content: Su
+        language:
+        - en
+      completename:
+        content: Yingying Su
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Zhongguancun Laboratory
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Lancheng
+          language:
+          - en
+        - language:
+          - en
+          initial: L
+        formatted_initials:
+          content: L.
+          language:
+          - en
+      surname:
+        content: Qin
+        language:
+        - en
+      completename:
+        content: Lancheng Qin
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Zhongguancun Laboratory
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Yirong
+          language:
+          - en
+        - language:
+          - en
+          initial: "Y"
+        formatted_initials:
+          content: Y.
+          language:
+          - en
+      surname:
+        content: Yu
+        language:
+        - en
+      completename:
+        content: Yirong Yu
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Zhongguancun Laboratory
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Dan
+          language:
+          - en
+        - language:
+          - en
+          initial: D
+        formatted_initials:
+          content: D.
+          language:
+          - en
+      surname:
+        content: Li
+        language:
+        - en
+      completename:
+        content: Dan Li
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Tsinghua University
+  role:
+  - type: author
+version:
+- draft: '01'
+revdate: '2026-11-01'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>RPKI Relying Parties (RPs) synchronize repository data and validate
+    RPKI objects to produce validated payloads. Incremental repository synchronization
+    can reduce data transfer, but it does not necessarily reduce validation work.
+    After a repository update, an RP may repeat parsing, cryptographic verification,
+    and other validation processing for objects whose relevant inputs have not changed.
+    This repeated work can increase validation latency and resource consumption, particularly
+    as the RPKI data set grows and as future cryptographic transitions, including
+    a possible transition to post-quantum cryptography (PQC), change processing costs.
+    This document describes the operational problem and design space for incremental
+    validation in RPs and discusses general correctness and security considerations
+    for reusing previously computed validation state. For the same repository snapshot,
+    trust anchor set, validation policy, validation time, and applicable RPKI validation
+    rules, incremental validation is expected to produce the same validated payload
+    output as full validation. This document does not specify a particular algorithm
+    or cache structure, modify RPKI object formats or repository synchronization protocols,
+    change existing validation semantics, or require RPs to implement incremental
+    validation.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-su-sidrops-rpki-rp-incremental-validation-00
+    docid:
+    - id: draft-su-sidrops-rpki-rp-incremental-validation-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-su-sidrops-rpki-rp-incremental-validation-00
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-su-sidrops-rpki-rp-incremental-validation-01
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

@@ -13,21 +13,20 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document specifies the implementation details for the framework
-    specified in ITU-T Y.3129 [Y.3129] and ITU-T Y.3148 [Y.3148]. The framework guarantees
-    end-to-end (E2E) latency bounds to flows. The schedulers in core nodes do not
-    need to maintain flow states. Instead, the entrance node of a flow marks an ideal
-    service completion time according to a fluid model, called Finish Time (FT), of
-    a packet in the packet header. The subsequent core nodes update the FT by adding
-    a delay factor, which is a function of the flow and the nodes. The packets in
-    the queue of the scheduler are served in the ascending order of FT. This mechanism
-    is called the stateless fair queuing. The result is that flows are isolated from
-    each other almost perfectly. The latency bound of a flow depends only on the flow's
-    intrinsic parameters such as the maximum burst size and the service rate, except
-    the link capacities and the maximum packet length among other flows sharing each
-    output link with the flow. This document specifies the metadata, formats of metadata,
-    the admission control procedure, and an approximation of stateless fair queuing
-    implemented via a strict priority (SP) scheduler.</p>"
+- content: "<p>This document specifies the implementation of the stateless fair queuing
+    framework defined in Recommendations ITU-T Y.3129 [Y.3129] and Y.3148 [Y.3148].
+    The framework provides end-to-end (E2E) latency bounds to flows without requiring
+    core nodes to maintain per-flow state. For each packet, the entrance node of a
+    flow computes the ideal service completion time under a fluid model, referred
+    to as the Finish Time (FT), and encodes it in the packet header. Each subsequent
+    core node updates the FT by adding a delay factor that is determined by the flow
+    and the nodes. Schedulers serve queued packets in ascending order of FT. This
+    mechanism provides strong isolation among flows. The E2E latency bound of a flow
+    depends on the flow's own parameters, such as its maximum burst size and service
+    rate, and on link parameters, such as the link capacity and the maximum packet
+    length among the flows sharing the link. This document specifies the required
+    metadata and its encoding formats, the admission control procedure, and an approximation
+    of stateless fair queuing using a strict priority (SP) scheduler.</p>"
   language:
   - en
   script:
@@ -53,6 +52,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-detnet-stateless-fair-queuing-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-detnet-stateless-fair-queuing-02
+    docid:
+    - id: draft-ietf-detnet-stateless-fair-queuing-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-detnet-stateless-fair-queuing-02
       format: text/plain
 ext:
   schema-version: v1.0.1

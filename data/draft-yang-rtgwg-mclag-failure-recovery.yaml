@@ -1,0 +1,47 @@
+---
+schema-version: v1.2.3
+id: draft-yang-rtgwg-mclag-failure-recovery
+title:
+- content: Forwarding-Plane Failure Recovery Procedures for Multi-Chassis Link Aggregation
+    Groups
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-yang-rtgwg-mclag-failure-recovery
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>When a downlink member of a Multi-Chassis Link Aggregation Group (MC-
+    LAG) fails, a common recovery method flushes the MAC forwarding table and relies
+    on flooding to re-establish the forwarding paths, which can cause a period of
+    congestion and disruption. This document specifies two complementary forwarding-plane
+    failure recovery procedures for MC-LAG. The first procedure preserves the forwarding
+    state by adjusting the LAG group's member set, adding an inter- chassis link (ICL)
+    port in place of the failed downlink, so that MAC table entries remain valid and
+    traffic is redistributed without a table flush and without flooding. The second
+    procedure extends recovery beyond a single Provider Edge (PE) pair: when the immediate
+    peer cannot satisfy a failover request, the request is relayed over a secondary
+    ICL to the next PE along a configured relay path, which allows recovery across
+    three or more PEs in the redundancy domain. The procedures operate primarily in
+    the forwarding plane and do not require Ethernet VPN (EVPN) infrastructure.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-yang-rtgwg-mclag-failure-recovery-00
+    docid:
+    - id: draft-yang-rtgwg-mclag-failure-recovery-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-yang-rtgwg-mclag-failure-recovery-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

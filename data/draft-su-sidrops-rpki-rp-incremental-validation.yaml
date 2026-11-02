@@ -2,8 +2,7 @@
 schema-version: v1.2.3
 id: draft-su-sidrops-rpki-rp-incremental-validation
 title:
-- content: A Publication-Point-Based Incremental Validation Procedure for RPKI Relying
-    Parties
+- content: Considerations for Incremental Validation in RPKI Relying Parties
   language:
   - en
   script:
@@ -14,21 +13,23 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>RPKI Relying Parties commonly perform top-down validation of the RPKI
-    certificate tree after repository synchronization. Existing repository synchronization
-    mechanisms can update the local repository incrementally, avoiding a complete
-    retrieval of all repository data. However, after such an incremental repository
-    update, an RP implementation may still repeat full top-down validation over the
-    local repository. It means that the RP starts from the trust anchors and performs
-    complete validation checks for all currently reachable RPKI objects encountered
-    during the traversal. Repeating such validation for objects whose validation inputs
-    have not changed can introduce unnecessary validation overhead. This document
-    specifies a publication-point-based incremental validation procedure for RPKI
-    RPs. The procedure is intended to reduce redundant validation work after incremental
-    repository synchronization, while preserving the same validation result as a full
-    top-down validation over the same repository snapshot, trust anchor set, validation
-    policy, and validation time. This document does not change the syntax or validation
-    semantics of any RPKI object.</p>"
+- content: "<p>RPKI Relying Parties (RPs) synchronize repository data and validate
+    RPKI objects to produce validated payloads. Incremental repository synchronization
+    can reduce data transfer, but it does not necessarily reduce validation work.
+    After a repository update, an RP may repeat parsing, cryptographic verification,
+    and other validation processing for objects whose relevant inputs have not changed.
+    This repeated work can increase validation latency and resource consumption, particularly
+    as the RPKI data set grows and as future cryptographic transitions, including
+    a possible transition to post-quantum cryptography (PQC), change processing costs.
+    This document describes the operational problem and design space for incremental
+    validation in RPs and discusses general correctness and security considerations
+    for reusing previously computed validation state. For the same repository snapshot,
+    trust anchor set, validation policy, validation time, and applicable RPKI validation
+    rules, incremental validation is expected to produce the same validated payload
+    output as full validation. This document does not specify a particular algorithm
+    or cache structure, modify RPKI object formats or repository synchronization protocols,
+    change existing validation semantics, or require RPs to implement incremental
+    validation.</p>"
   language:
   - en
   script:
@@ -44,6 +45,16 @@ relation:
       primary: true
     formattedref:
       content: draft-su-sidrops-rpki-rp-incremental-validation-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-su-sidrops-rpki-rp-incremental-validation-01
+    docid:
+    - id: draft-su-sidrops-rpki-rp-incremental-validation-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-su-sidrops-rpki-rp-incremental-validation-01
       format: text/plain
 ext:
   schema-version: v1.0.1
