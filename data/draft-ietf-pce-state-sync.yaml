@@ -2,7 +2,8 @@
 schema-version: v1.2.3
 id: draft-ietf-pce-state-sync
 title:
-- content: Procedures for Communication between Stateful Path Computation Elements
+- content: State Synchronization Procedures between Stateful Path Computation Elements
+    (PCEs)
   language:
   - en
   script:
@@ -15,15 +16,17 @@ docid:
 abstract:
 - content: "<p>The Path Computation Element (PCE) Communication Protocol (PCEP) provides
     mechanisms for PCEs to perform path computation in response to a Path Computation
-    Client (PCC) request. The Stateful PCE extensions allow stateful control of Multi-Protocol
-    Label Switching (MPLS) Traffic Engineering (TE) and Generalized Multi-Protocol
-    Label Switching (GMPLS) Label Switched Paths (LSPs) using PCEP. A Path Computation
-    Client (PCC) can synchronize LSP state information to a Stateful Path Computation
-    Element (PCE). A PCC can have multiple PCEP sessions toward multiple PCEs. In
-    some use cases, inter-PCE stateful communication can bring additional resiliency
-    in the design, for instance, when some PCC-PCE session fails. This document describes
-    the procedures to allow stateful communication between PCEs for various use cases,
-    and also the procedures to prevent computational loops.</p>"
+    Client (PCC) request. The stateful PCE extensions allow a PCE to maintain and
+    control the state of Label Switched Paths (LSPs) using PCEP, independent of the
+    path setup type used. A PCC can synchronize LSP state information to a stateful
+    PCE, and can have PCEP sessions toward multiple PCEs. In some deployments, synchronizing
+    LSP state directly between the stateful PCEs brings additional resiliency, for
+    instance when a PCC-PCE session fails, and allows a single PCE to compute paths
+    for a set of LSPs that are dependent on each other even when those LSPs are delegated
+    to different PCEs. This document describes procedures for synchronizing LSP state
+    between stateful PCEs across various deployment scenarios and for preventing computation
+    loops. It is published as Experimental to gather implementation and deployment
+    experience.</p>"
   language:
   - en
   script:
@@ -189,6 +192,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-pce-state-sync-15
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-pce-state-sync-16
+    docid:
+    - id: draft-ietf-pce-state-sync-16
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-pce-state-sync-16
       format: text/plain
 ext:
   schema-version: v1.0.1

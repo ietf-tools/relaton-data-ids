@@ -18,25 +18,25 @@ abstract:
 - content: <p>This memo proposes a mechanism called "guaranteed Latency Based Forwarding"
     (gLBF) as part of DetNet for hop-by-hop packet forwarding with per-hop deterministically
     bounded latency and minimal jitter. gLBF is intended to be useful across a wide
-    range of networks and applications with need for high-precision deterministic
-    networking services, including in-car networks or networks used for industrial
-    automation across on factory floors, all the way to ++100Gbps country-wide networks.
-    Contrary to other mechanisms, gLBF does not require network wide clock synchronization,
-    nor does it need to maintain per-flow state at network nodes, avoiding drawbacks
-    of other known methods while leveraging their advantages. Specifically, gLBF uses
+    range of networks and applications that need high-precision deterministic networking
+    services, from in-car networks and networks for industrial automation on factory
+    floors all the way to country-wide networks at 100 Gbps and beyond. Unlike other
+    mechanisms, gLBF does not require network-wide clock synchronization, nor does
+    it require per-flow state on network nodes. It thereby avoids the drawbacks of
+    other known methods while retaining their advantages. Specifically, gLBF uses
     the queuing model and calculus of Urgency Based Scheduling (UBS, [UBS]), which
-    is used by TSN Asynchronous Traffic Shaping [TSN-ATS]. gLBF is intended to be
-    a plug-in replacement for TSN-ATN or as a parallel mechanism beside TSN-ATS because
-    it allows to keeping the same controller-plane design which is selecting paths
-    for TSN-ATS, sizing TSN-ATS queues, calculating latencies and admitting flows
-    to calculated paths for calculated latencies. In addition to reducing the jitter
-    compared to TSN-ATS by additional buffering (dampening) in the network, gLBF also
-    eliminates the need for per-flow, per-hop state maintenance required by TSN-ATS.
-    This avoids the need to signal per-flow state to every hop from the controller-plane
-    and associated scaling problems. It also reduces implementation cost for high-speed
-    networking hardware due to the avoidance of additional high-speed speed read/write
-    memory access to retrieve, process and update per-flow state variables for a large
-    number of flows.</p>
+    is used by TSN Asynchronous Traffic Shaping [TSN-ATS]. gLBF is intended as a plug-in
+    replacement for, or a mechanism in parallel to, TSN-ATS, because it allows reuse
+    of the same controller-plane design that selects paths for TSN-ATS, sizes TSN-ATS
+    queues, calculates latencies and admits flows onto the calculated paths with the
+    calculated latencies. In addition to reducing jitter compared to TSN-ATS through
+    additional buffering (dampening) in the network, gLBF also eliminates the per-
+    flow, per-hop state maintenance required by TSN-ATS. This avoids having to signal
+    per-flow state from the controller-plane to every hop, and the associated scaling
+    problems. It also reduces the implementation cost of high-speed networking hardware,
+    because it avoids the additional high-speed read/write memory accesses needed
+    to retrieve, process and update per-flow state variables for a large number of
+    flows.</p>
   language:
   - en
   script:
@@ -62,6 +62,26 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-detnet-glbf-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-detnet-glbf-02
+    docid:
+    - id: draft-ietf-detnet-glbf-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-detnet-glbf-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-detnet-glbf-03
+    docid:
+    - id: draft-ietf-detnet-glbf-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-detnet-glbf-03
       format: text/plain
 ext:
   schema-version: v1.0.1

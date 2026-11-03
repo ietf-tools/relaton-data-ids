@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-toomim-httpbis-braid-http
 title:
-- content: 'Braid-HTTP: Synchronization for HTTP'
+- content: 'Braid-HTTP: State Synchronization for HTTP'
   language:
   - en
   script:
@@ -13,9 +13,13 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>Braid is a set of extensions that generalize HTTP from a state *transfer*
-    protocol into a full state *synchronization* protocol. Braid is composed of four
-    independent extensions to HTTP:</p>"
+- content: "<p>HTTP transfers the state of a resource once, and leaves programmers
+    to keep it up to date as it changes. Braid-HTTP extends HTTP from *transferring*
+    state to *synchronizing* it, with a set of independent extensions, each of which
+    addresses a limitation of HTTP on its own. When used together, a website can synchronize
+    with any other website's state by its URL, just as a page on today's web can link
+    to any other page. This document introduces the extensions, shows how they work
+    alone and together, and points to the documents that define them.</p>"
   language:
   - en
   script:
@@ -71,6 +75,16 @@ relation:
       primary: true
     formattedref:
       content: draft-toomim-httpbis-braid-http-04
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-toomim-httpbis-braid-http-05
+    docid:
+    - id: draft-toomim-httpbis-braid-http-05
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-toomim-httpbis-braid-http-05
       format: text/plain
 ext:
   schema-version: v1.0.1

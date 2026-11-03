@@ -1,0 +1,265 @@
+---
+schema-version: v1.2.3
+id: draft-li-rdma-kvcache-transfer-optimization-00
+title:
+- content: 'Key-Value (KV) Cache Block Transfer Protocol (KBTP) over RDMA: Block Load,
+    Mapped Store, and Unmapped Store'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-li-rdma-kvcache-transfer-optimization-00
+  type: src
+type: standard
+docid:
+- id: draft-li-rdma-kvcache-transfer-optimization-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.li-rdma-kvcache-transfer-optimization
+  type: IETF
+  scope: anchor
+docnumber: I-D.li-rdma-kvcache-transfer-optimization
+date:
+- type: published
+  value: '2026-11-02'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Zhiqiang
+          language:
+          - en
+        - language:
+          - en
+          initial: Z
+        formatted_initials:
+          content: Z.
+          language:
+          - en
+      surname:
+        content: Li
+        language:
+        - en
+      completename:
+        content: Zhiqiang Li
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: China Mobile
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Zongpeng
+          language:
+          - en
+        - language:
+          - en
+          initial: Z
+        formatted_initials:
+          content: Z.
+          language:
+          - en
+      surname:
+        content: Du
+        language:
+        - en
+      completename:
+        content: Zongpeng Du
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: China Mobile
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Junjie
+          language:
+          - en
+        - language:
+          - en
+          initial: J
+        formatted_initials:
+          content: J.
+          language:
+          - en
+      surname:
+        content: Wang
+        language:
+        - en
+      completename:
+        content: Junjie Wang
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Centec
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Wei
+          language:
+          - en
+        - language:
+          - en
+          initial: W
+        formatted_initials:
+          content: W.
+          language:
+          - en
+      surname:
+        content: Cheng
+        language:
+        - en
+      completename:
+        content: Wei Cheng
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Centec
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Ying
+          language:
+          - en
+        - language:
+          - en
+          initial: "Y"
+        formatted_initials:
+          content: Y.
+          language:
+          - en
+      surname:
+        content: Zhao
+        language:
+        - en
+      completename:
+        content: Ying Zhao
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Centec
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Chunhao
+          language:
+          - en
+        - language:
+          - en
+          initial: C
+        formatted_initials:
+          content: C.
+          language:
+          - en
+      surname:
+        content: Zhao
+        language:
+        - en
+      completename:
+        content: Chunhao Zhao
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: SAIA
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Xun
+          language:
+          - en
+        - language:
+          - en
+          initial: X
+        formatted_initials:
+          content: X.
+          language:
+          - en
+      surname:
+        content: Sun
+        language:
+        - en
+      completename:
+        content: Xun Sun
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Inesa
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-11-02'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>Inference systems move key-value (KV) cache blocks between instances
+    and cache tiers over RDMA. Existing practice forces a choice between statically
+    registered remote memory, which is fast but wastes memory, and per-transfer remote
+    procedure calls, which use memory well but involve the target's CPU in every transfer.
+    This document specifies the KV Cache Block Transfer Protocol (KBTP), an upper-layer
+    protocol over RDMA with three operations: Block Load, which places a stored block
+    into the initiator's memory; Block Mapped Store, which writes a block into an
+    already allocated block; and Block Unmapped Store, which allocates a free block
+    at the target and writes it in one operation. KBTP defines the request and completion
+    messages, a block table, and a free-block ring whose counters use masked atomic
+    fetch- and-add. These structures are designed so that a target can execute loads
+    and stores within its RDMA network interface, and allocations as well where the
+    interface supports conditional execution, without involving its CPU per operation,
+    while remaining interoperable with targets that process requests in software.
+    KBTP is bound to RDMAP with the RDMA protocol extensions, and can also be used
+    over InfiniBand and RoCEv2.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-li-rdma-kvcache-transfer-optimization-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

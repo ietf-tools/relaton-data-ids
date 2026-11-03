@@ -1,0 +1,50 @@
+---
+schema-version: v1.2.3
+id: draft-li-rdma-kvcache-transfer-optimization
+title:
+- content: 'Key-Value (KV) Cache Block Transfer Protocol (KBTP) over RDMA: Block Load,
+    Mapped Store, and Unmapped Store'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-li-rdma-kvcache-transfer-optimization
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>Inference systems move key-value (KV) cache blocks between instances
+    and cache tiers over RDMA. Existing practice forces a choice between statically
+    registered remote memory, which is fast but wastes memory, and per-transfer remote
+    procedure calls, which use memory well but involve the target's CPU in every transfer.
+    This document specifies the KV Cache Block Transfer Protocol (KBTP), an upper-layer
+    protocol over RDMA with three operations: Block Load, which places a stored block
+    into the initiator's memory; Block Mapped Store, which writes a block into an
+    already allocated block; and Block Unmapped Store, which allocates a free block
+    at the target and writes it in one operation. KBTP defines the request and completion
+    messages, a block table, and a free-block ring whose counters use masked atomic
+    fetch- and-add. These structures are designed so that a target can execute loads
+    and stores within its RDMA network interface, and allocations as well where the
+    interface supports conditional execution, without involving its CPU per operation,
+    while remaining interoperable with targets that process requests in software.
+    KBTP is bound to RDMAP with the RDMA protocol extensions, and can also be used
+    over InfiniBand and RoCEv2.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-li-rdma-kvcache-transfer-optimization-00
+    docid:
+    - id: draft-li-rdma-kvcache-transfer-optimization-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-li-rdma-kvcache-transfer-optimization-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

@@ -13,11 +13,14 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>The Software Update for the Internet of Things (SUIT) manifest provides
-    a way for many different update and boot workflows to be described by a common
-    format. This document specifies a lightweight feedback mechanism that allows a
-    developer in possession of a manifest to reconstruct the decisions made and actions
-    performed by a manifest processor.</p>"
+- content: "<p>This document defines a Concise Binary Object Representation (CBOR)
+    format for reporting the results of processing a Software Update for the Internet
+    of Things (SUIT) manifest. Reports can include diagnostic records, measured system
+    properties, and supported capabilities. Using a report and the corresponding manifest,
+    a developer can reconstruct the decisions made and actions performed by a manifest
+    processor during update or boot processing. The document also specifies protection
+    of reports using CBOR Object Signing and Encryption (COSE) and their use in remote
+    attestation.</p>"
   language:
   - en
   script:
@@ -253,6 +256,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-suit-report-22
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-suit-report-23
+    docid:
+    - id: draft-ietf-suit-report-23
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-suit-report-23
       format: text/plain
 ext:
   schema-version: v1.0.1

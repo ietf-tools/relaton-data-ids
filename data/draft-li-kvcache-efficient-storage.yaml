@@ -1,0 +1,46 @@
+---
+schema-version: v1.2.3
+id: draft-li-kvcache-efficient-storage
+title:
+- content: 'Key-Value (KV) Cache Storage Protocol (KVSP): Indexing, Placement, Prefetch,
+    and Migration for Distributed Inference'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-li-kvcache-efficient-storage
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>Large language model inference keeps the attention key-value (KV) cache
+    of processed tokens so that they are not recomputed. When inference instances,
+    cache tiers, and schedulers are separate components, possibly from different implementers,
+    they need a common way to name reusable KV cache blocks, find where copies reside,
+    protect copies from eviction while they are being loaded, steer work to the instance
+    where loading is cheapest, and move a session to another instance after a failure.
+    This document specifies the KV Cache Storage Protocol (KVSP), an HTTP-based protocol
+    that defines a compatibility descriptor, keyed block identifiers that bind a block
+    to its entire token prefix, a self-describing block container, a replica index
+    with layer-granular residency, instance status reporting, leased prefetch directives,
+    session checkpoints for migration, and a resharding procedure that retains sequence
+    shards in place when a parallel group is resized.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-li-kvcache-efficient-storage-00
+    docid:
+    - id: draft-li-kvcache-efficient-storage-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-li-kvcache-efficient-storage-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

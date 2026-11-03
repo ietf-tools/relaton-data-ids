@@ -15,14 +15,16 @@ docid:
 abstract:
 - content: "<p>This document defines a format for authenticating UDP datagrams delivered
     over IP multicast without changing them. The sender computes a digest over every
-    datagram of a flow, places the digests of up to 37 datagrams in a fixed-layout
+    data datagram of a flow, places the digests of up to 37 datagrams in a fixed-layout
     record, signs the record with Ed25519 under a prefix that names the flow, and
-    sends it on a second port of the same source and group immediately before the
-    datagrams it covers, followed by a byte-identical twin. A receiver verifies one
-    signature per record, hashes each datagram once, and delivers a datagram only
-    after its digest matches an entry of a verified record; it needs no return channel.
-    A well-known document supplies a flow's keys and parameters. A Media over QUIC
-    profile and a browser profile use the format.</p>"
+    sends it in band, on the flow's own source, group and port, immediately before
+    the datagrams it covers, followed by a byte-identical twin. Every record begins
+    with four fixed octets, and no data datagram does, so a receiver tells records
+    from data by those octets alone. A receiver verifies one signature per record,
+    hashes each datagram once, and delivers a datagram only after its digest matches
+    an entry of a verified record; it needs no return channel. A well-known document
+    supplies a flow's keys and parameters. A Media over QUIC profile and a browser
+    profile use the format.</p>"
   language:
   - en
   script:
@@ -38,6 +40,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ramadan-mboned-mcast-manifest-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ramadan-mboned-mcast-manifest-01
+    docid:
+    - id: draft-ramadan-mboned-mcast-manifest-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ramadan-mboned-mcast-manifest-01
       format: text/plain
 ext:
   schema-version: v1.0.1

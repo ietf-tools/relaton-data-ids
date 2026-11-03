@@ -1,0 +1,46 @@
+---
+schema-version: v1.2.3
+id: draft-li-fann-soft-state-refresh-yang
+title:
+- content: Per-Entry Soft-State Refresh Horizon and Paced Fragmentation Scheduling
+    for Fast Network Notification (FANN) Telemetry
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-li-fann-soft-state-refresh-yang
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This document specifies a Standards Track per-entry soft-state refresh
+    horizon profile, a bounded multi-packet fragmentation scheduling invariant, and
+    a YANG 1.1 data model (ietf-fann-soft- state-refresh) for Fast Network Notification
+    (FANN) link-quality telemetry. To prevent unrefreshed link entries from persisting
+    indefinitely when partial event-triggered updates share a transport channel with
+    periodic full sweeps, each receiver maintains an independent monotonic receipt
+    horizon per six-tuple link-record key. Furthermore, when a full periodic sweep
+    spans F fragmented datagrams paced at inter-packet interval T_spacing, the refresh
+    period T_refresh and expiration horizon T_expire satisfy T_refresh &lt;= T_expire
+    - M - (F - 1) * T_spacing.MUST NOT reset the full-sweep periodic timer for omitted
+    records. The refresh bound explicitly accounts for multi-packet fragmentation
+    emission duration (T_refresh &lt;= T_expire - M - (F - 1) * T_spacing).</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-li-fann-soft-state-refresh-yang-00
+    docid:
+    - id: draft-li-fann-soft-state-refresh-yang-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-li-fann-soft-state-refresh-yang-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

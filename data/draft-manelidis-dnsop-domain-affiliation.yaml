@@ -17,13 +17,15 @@ abstract:
     an established organization therefore starts with no reputation, and a legitimate
     domain that resembles another organization's name can be reported as an impersonation.
     This document defines Domain Affiliation Confirmation (DAC), by which the operator
-    of a parent domain confirms that a child domain is operated by it or under its
-    authority. The child publishes a DNS record naming the parent and a random token;
-    the parent confirms that token, in the DNS or over HTTPS, by naming the child.
-    Verification takes at most three DNS queries. The parent publishes no list of
-    its domains, and an affiliation is ended by deleting one record. The document
-    also states what a confirmation means to relying parties such as takedown services
-    and reputation systems.</p>"
+    of one domain, the confirming domain, confirms that another domain, the affiliated
+    domain, is operated by it or under its authority. The two domains need not be
+    related in the DNS hierarchy. The affiliated domain publishes a DNS record naming
+    the confirming domain and a random token; the confirming domain confirms that
+    token, in the DNS or over HTTPS, by naming the affiliated domain. Verification
+    takes at most three DNS queries and one HTTPS request. The confirming domain publishes
+    no list of its domains, and an affiliation is ended by deleting one record. The
+    document also states what a confirmation means to relying parties such as takedown
+    services and reputation systems.</p>"
   language:
   - en
   script:
@@ -39,6 +41,16 @@ relation:
       primary: true
     formattedref:
       content: draft-manelidis-dnsop-domain-affiliation-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-manelidis-dnsop-domain-affiliation-01
+    docid:
+    - id: draft-manelidis-dnsop-domain-affiliation-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-manelidis-dnsop-domain-affiliation-01
       format: text/plain
 ext:
   schema-version: v1.0.1

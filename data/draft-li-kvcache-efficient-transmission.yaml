@@ -1,0 +1,46 @@
+---
+schema-version: v1.2.3
+id: draft-li-kvcache-efficient-transmission
+title:
+- content: Layer-Aligned Key-Value (KV) Cache Streaming over Media over QUIC Transport
+    (MOQT)
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-li-kvcache-efficient-transmission
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>The key-value (KV) cache of a language model can be computed once and
+    reused by many inference instances, possibly at many sites. Media over QUIC Transport
+    (MOQT) provides publish/subscribe delivery through relays that cache objects without
+    understanding their content. This document specifies KV Cache Streaming (KVCS),
+    an application of MOQT for delivering KV caches. KVCS maps the identity of a token
+    prefix to a Track Namespace built from keyed identifiers that do not reveal the
+    prompt, carries the key and value tensors (or a jointly encoded form) in separate
+    Tracks, aligns each Group with one model layer and each Object with one block
+    of tokens, and defines a self-describing object payload and a manifest track.
+    These choices let consumers start using early layers while later layers are still
+    being produced, retrieve only the layers and token blocks they need, and verify
+    what they receive.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-li-kvcache-efficient-transmission-00
+    docid:
+    - id: draft-li-kvcache-efficient-transmission-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-li-kvcache-efficient-transmission-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

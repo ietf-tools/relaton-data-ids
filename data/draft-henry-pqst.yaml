@@ -1,0 +1,49 @@
+---
+schema-version: v1.2.3
+id: draft-henry-pqst
+title:
+- content: Post-Quantum Secure Transport (PQST)
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-henry-pqst
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>PQST (Post-Quantum Secure Transport) is a post-quantum native session-primary
+    datagram transport for secure tunnels without classical public key cryptography,
+    hybrid key exchange, or classical fallback. Its central rule is that the cryptographic
+    session is the persistent object and the network path is a replaceable carrier.
+    A PQST session can outlive the complete loss of every network path and be re-anchored
+    on a new path with fresh post-quantum key material, without the tunnel, its addressing,
+    its authorization, or the peers' authenticated identities changing. PQST runs
+    directly over UDP as one protocol with one state machine. Identities are ML-KEM-1024
+    keys and authentication is by decapsulation, so no signature is computed online.
+    The same exchange that establishes a session also recovers it, re-proves it, and
+    ratchets it. The per-packet overhead is 44 octets with the epoch and sequence
+    number hidden, identifiers are derived rather than signalled, and every input
+    that has not been authenticated costs a bounded amount and changes no authoritative
+    state. PQST is designed as the substrate for group continuity across intermittent
+    networks; its events are typed so that a layer above it can distinguish a transport
+    event from a security event.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-henry-pqst-00
+    docid:
+    - id: draft-henry-pqst-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-henry-pqst-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

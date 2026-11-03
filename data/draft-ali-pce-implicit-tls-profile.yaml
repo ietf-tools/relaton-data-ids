@@ -16,9 +16,10 @@ abstract:
 - content: "<p>RFC 8253 specifies the use of Transport Layer Security (TLS) for the
     Path Computation Element Communication Protocol (PCEP) by negotiating TLS using
     the PCEP StartTLS message exchange. This document specifies a deployment profile
-    for PCEP in which TLS is initiated immediately following TCP connection establishment
-    based on local policy. This document is intended to simplify deployments where
-    secure transport is mandatory.</p>"
+    in which TLS is initiated immediately after TCP connection establishment, on the
+    existing PCEP port, based on an out- of-band configured policy. This profile is
+    intended for managed deployments where TLS is mandatory and neither in-band security-mode
+    negotiation nor fallback to cleartext is permitted.</p>"
   language:
   - en
   script:
@@ -44,6 +45,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ali-pce-implicit-tls-profile-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ali-pce-implicit-tls-profile-02
+    docid:
+    - id: draft-ali-pce-implicit-tls-profile-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ali-pce-implicit-tls-profile-02
       format: text/plain
 ext:
   schema-version: v1.0.1

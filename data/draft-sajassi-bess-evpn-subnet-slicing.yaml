@@ -1,0 +1,55 @@
+---
+schema-version: v1.2.3
+id: draft-sajassi-bess-evpn-subnet-slicing
+title:
+- content: EVPN Subnet Slicing
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-sajassi-bess-evpn-subnet-slicing
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>Ethernet VPN (EVPN) Integrated Routing and Bridging (IRB) distributes
+    Layer 2 and Layer 3 reachability through BGP. In a large stretched broadcast domain,
+    traditional IRB can cause every Provider Edge (PE) to install MAC and IP addresses
+    for every endpoint in the subnet thus resulting in exhaustion of forwarding resources
+    (MAC-VRF and IP-VRF) on the PEs - i.e., route population is approximately proportional
+    to the number of endpoints in every stretched subnet imported by the PE [Optimized-IRB]
+    proposes a solution to alleviate the MAC-VRF resource consumption by terminating
+    ARP/ND messages on the PE and providing L3 forwarding (routing) for both intra
+    and inter subnets. Therefore, eliminating the need for MAC lookups and the maintenance
+    of MAC addresses in MAC-VRF for IP hosts. However, this solution does not solve
+    the IP-VRF resource consumption issue as IP host addresses still need to be maintained
+    in IP-VRF for both the locally connected hosts and the remote hosts. This problem
+    is particularly pronounced in campus networks where most subnets are stretched
+    across the entire campus (and thus all access switches) and the access switches
+    used as EVPN-IRB PE devices have significantly smaller forwarding tables and hence
+    limit the total endpoint scale that can be attached to stretched subnets across
+    the network. This document defines an EVPN Subnet Slicing solution to horizontally
+    scale stretched subnets across the network without being constrained by any PE's
+    forwarding table size. The solution enables access layer PE devices to maintain
+    only locally attached host routes and allows host routes to be distributed across
+    distribution or aggregation layer PE devices as opposed to each PE maintaining
+    all host IP routes.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-sajassi-bess-evpn-subnet-slicing-00
+    docid:
+    - id: draft-sajassi-bess-evpn-subnet-slicing-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-sajassi-bess-evpn-subnet-slicing-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

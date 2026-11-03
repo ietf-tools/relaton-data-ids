@@ -1,0 +1,99 @@
+---
+schema-version: v1.2.3
+id: draft-liu-agentproto-acp-00
+title:
+- content: The Agent Communication Protocol (ACP)
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-liu-agentproto-acp-00
+  type: src
+type: standard
+docid:
+- id: draft-liu-agentproto-acp-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.liu-agentproto-acp
+  type: IETF
+  scope: anchor
+docnumber: I-D.liu-agentproto-acp
+date:
+- type: published
+  value: '2026-11-02'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Dapeng
+          language:
+          - en
+        - language:
+          - en
+          initial: D
+        formatted_initials:
+          content: D.
+          language:
+          - en
+      surname:
+        content: Liu
+        language:
+        - en
+      completename:
+        content: Dapeng Liu
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Alibaba
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-11-02'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>An agentic dialog can run for hours or days, go quiet for long stretches,
+    move between hosts, and survive the loss of whatever connection was carrying it.
+    The Agent Communication Protocol (ACP) architecture names Agentic Dialog Management
+    as a building block and requires an identifier that correlates every message of
+    a dialog and outlives the transport, but leaves the wire format out of scope.
+    This document specifies one such wire format. ACP is an application-level session
+    protocol in the style of SIP: every message is a start line, a block of text header
+    fields, a blank line, and an optional body. A dialog is named by an Agentic Dialog
+    Identifier (ADID) and its durable state is an append-only log of entries, each
+    digesting the one before it into a hash chain. The chain lets two endpoints that
+    have been apart establish in one exchange which entries they still share, replay
+    only what is missing, and detect divergence. Periodic checkpoints bound the log,
+    so aligning a dialog does not cost more as it ages. ACP carries control and log
+    state only. Real-time media flows beside it on its own channels and enters the
+    log as a metadata entry or as a content-addressed reference, never as bytes the
+    chain must digest. The semantics are transport-independent; this version binds
+    them to Media over QUIC Transport (MoQ) and to WebTransport over HTTP/3, both
+    of which multiplex the channels ACP needs and migrate across network paths without
+    disturbing the dialog.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-liu-agentproto-acp-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

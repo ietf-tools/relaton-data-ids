@@ -1,0 +1,49 @@
+---
+schema-version: v1.2.3
+id: draft-liu-oauth-delegation-chaining
+title:
+- content: Delegation Chaining for the Identity Assertion JWT Authorization Grant
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-liu-oauth-delegation-chaining
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>The Identity Assertion JWT Authorization Grant (ID-JAG) defines how
+    a client obtains a delegated authorization grant from an identity assertion. It
+    leaves the validation of the actor_token, the related policy evaluation, and the
+    act claim of the issued ID-JAG open for future profiles. This document defines
+    those rules for delegation chains, in which a series of workloads, such as AI
+    agents, act on behalf of an initial end-user across multiple hops. Each delegating
+    workload authenticates to the Authorization Server and presents the ID-JAG it
+    holds as the subject_token of an OAuth 2.0 Token Exchange request, together with
+    the SPIFFE JWT-SVID of the workload it delegates to as the actor_token. The Authorization
+    Server validates both workload identities, checks that the delegating workload
+    matches the may_act claim of the subject_token, and enforces monotonic scope attenuation.
+    It then issues a new ID-JAG for the next hop, carrying the actor chain in the
+    act claim. The last workload of the chain delegates to no one and instead redeems
+    its ID- JAG for an Access Token with the JWT bearer grant of [RFC7523]. An optional
+    variant based on self-issued Delegation Assertions is defined for hops where the
+    Authorization Server is not reachable.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-liu-oauth-delegation-chaining-00
+    docid:
+    - id: draft-liu-oauth-delegation-chaining-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-liu-oauth-delegation-chaining-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

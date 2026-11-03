@@ -1,0 +1,179 @@
+---
+schema-version: v1.2.3
+id: draft-mayer-bpm-ioam-gob-00
+title:
+- content: Global Opaque Block for IOAM Pre-allocated Trace Option
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-mayer-bpm-ioam-gob-00
+  type: src
+type: standard
+docid:
+- id: draft-mayer-bpm-ioam-gob-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.mayer-bpm-ioam-gob
+  type: IETF
+  scope: anchor
+docnumber: I-D.mayer-bpm-ioam-gob
+date:
+- type: published
+  value: '2026-11-02'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Andrea
+          language:
+          - en
+        - language:
+          - en
+          initial: A
+        formatted_initials:
+          content: A.
+          language:
+          - en
+      surname:
+        content: Mayer
+        language:
+        - en
+      completename:
+        content: Andrea Mayer
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Univ. of Rome Tor Vergata / CNIT / Common Net
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Stefano
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Salsano
+        language:
+        - en
+      completename:
+        content: Stefano Salsano
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Univ. of Rome Tor Vergata / CNIT
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Justin
+          language:
+          - en
+        - language:
+          - en
+          initial: J
+        formatted_initials:
+          content: J.
+          language:
+          - en
+      surname:
+        content: Iurman
+        language:
+        - en
+      completename:
+        content: Justin Iurman
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: 6WIND
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Diego
+          language:
+          - en
+        - language:
+          - en
+          initial: D
+        formatted_initials:
+          content: D.
+          language:
+          - en
+      surname:
+        content: Lopez
+        language:
+        - en
+      completename:
+        content: Diego Lopez
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Telefonica
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-11-02'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>Extensible metadata carried within the IOAM Pre-allocated Trace Option
+    (PTO) can support packet-level, flow-level, or path-level processing beyond per-node
+    trace data. This document defines the Global Opaque Block (GOB), an extension
+    to the IOAM PTO that introduces a single pre-allocated global metadata region
+    placed at the tail of the option, after the pre-allocated node data space. Since
+    the PTO node data list is populated from the tail of the node data space toward
+    its head, under the control of the RemainingLen field, legacy IOAM transit nodes
+    can never reach the GOB region: the extension is transparent to such nodes by
+    construction, and only the decapsulating node or collector needs to be GOB-aware.
+    In the default mode of operation, the GOB carries an explicit length and schema
+    identifier in a trailer word; in an optimized namespace- implied mode, size and
+    schema are bound to the IOAM-Namespace and the block consists of payload only,
+    so that a 4-octet opaque value is carried in exactly 4 octets. The GOB preserves
+    the pre-allocated PTO processing model and can be used to transport Extensible
+    In-band Processing (EIP) Information Elements or other structured metadata formats.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-mayer-bpm-ioam-gob-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

@@ -1,0 +1,47 @@
+---
+schema-version: v1.2.3
+id: draft-li-mlc-inference-acceleration
+title:
+- content: Speculative Decoding Coordination Protocol (SDCP) for Distributed Inference
+    with Multi-Level Caches
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-li-mlc-inference-acceleration
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>Speculative decoding accelerates language model inference: a small
+    draft model proposes several tokens and the large target model verifies them in
+    one forward pass. In large deployments, draft models and the target model run
+    on separate, independently scaled instances that exchange state through a multi-level
+    cache. This document specifies the Speculative Decoding Coordination Protocol
+    (SDCP), with which a router assigns requests to draft instances by load, draft
+    instances submit proposals that reference draft state in the cache, and a verifier,
+    the only party that commits output, checks proposals under a registered acceptance
+    rule, returns the accepted tokens and the next-round speculation limit, and escalates
+    persistently rejected sessions to a reduced speculation length, another draft
+    model, or decoding by the target model itself depending on its load. SDCP defines
+    a session contract, a committed-prefix digest chain, CBOR messages carried over
+    HTTP, idempotent rounds, and epoch fencing for recovery.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-li-mlc-inference-acceleration-00
+    docid:
+    - id: draft-li-mlc-inference-acceleration-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-li-mlc-inference-acceleration-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

@@ -1,0 +1,45 @@
+---
+schema-version: v1.2.3
+id: draft-beeram-teas-rsvp-resource-notifications
+title:
+- content: RSVP-TE Resource Notifications
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-beeram-teas-rsvp-resource-notifications
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>In scaled Resource Reservation Protocol - Traffic Engineering (RSVP-
+    TE) networks, a single network resource event (such as a link failure or bandwidth
+    reduction) can trigger a storm of PathErr messages, one for each affected Label
+    Switched Path (LSP). This document introduces RSVP Resource Notifications, a mechanism
+    that reduces the number of per-LSP error messages by sending summarized per-source
+    resource-level notifications in a new RSVP message, ResourceNotify. This reduces
+    the control-plane message load from O(LSPs) to O(sources), significantly improving
+    convergence in networks with a large number of RSVP-TE LSPs. The mechanism applies
+    to LSPs whose source is reachable by the transit node within the same domain,
+    and uses a Resource Notification Request Object carried in PATH messages. Two
+    types of resource notifications are defined in this document: Resource Unavailable
+    (for link failures) and Resource Degraded (for bandwidth reduction events).</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-beeram-teas-rsvp-resource-notifications-00
+    docid:
+    - id: draft-beeram-teas-rsvp-resource-notifications-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-beeram-teas-rsvp-resource-notifications-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

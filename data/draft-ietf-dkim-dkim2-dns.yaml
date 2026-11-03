@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-ietf-dkim-dkim2-dns
 title:
-- content: Domain Name Specification for DKIM2
+- content: Domain Name Specification for DKIM1 and DKIM2
   language:
   - en
   script:
@@ -13,14 +13,17 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>The updated DomainKeys Identified Mail (DKIM2) permits an organization
-    that owns the signing domain to claim some responsibility for a message by associating
-    the domain with the message through a digital signature. This is done by publishing
-    to Domain Name Service (DNS) of the domain a public key that is then associated
-    to the domain and where messages can be signed by the corresponding private key.
-    Assertion of responsibility is validated through a cryptographic signature and
-    by querying the Signer's domain directly to retrieve the appropriate public key.
-    This document describes DKIM2 DNS record format and how to find the record.</p>"
+- content: "<p>DomainKeys Identified Mail (DKIM) permits the owner of a signing domain
+    to document that they have handled an email message by associating their domain
+    with the message. One part of this involves publishing a public key to a Domain
+    Name System (DNS) record associated with the domain. Signing with the associated
+    private key establishes their connection to the message. This document describes
+    how to find the relevant DNS record and how information is recorded within it.
+    This document updates RFC 6376, which describes DKIM, by clarifying the RSA public
+    key format and by deprecating key record features that have not turned out to
+    be useful. It also describes which parts of the key record are relevant to DomainKeys
+    Identified Mail v2 (DKIM2) and describes a new Domain Policy Record for DKIM2
+    that can hold domain-wide settings.</p>"
   language:
   - en
   script:
@@ -56,6 +59,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-dkim-dkim2-dns-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-dkim-dkim2-dns-03
+    docid:
+    - id: draft-ietf-dkim-dkim2-dns-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-dkim-dkim2-dns-03
       format: text/plain
 ext:
   schema-version: v1.0.1

@@ -1,0 +1,52 @@
+---
+schema-version: v1.2.3
+id: draft-mozleywilliams-dawn-dnsaid
+title:
+- content: DNS for AI Discovery
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-mozleywilliams-dawn-dnsaid
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This document specifies DNS for AI Discovery (DNS-AID), a method for
+    publishing AI agents in the Domain Name System (DNS) so that other agents can
+    discover them. It defines three discovery use cases, ordered by increasing latency
+    and computational cost. In the known- agent case, the requestor knows both the
+    agent and its domain, and a single DNS query returns connectivity information
+    and key metadata. In the known-organization case, the requestor knows the domain
+    but not which agent provides a required capability, and queries a well- known
+    organizational index to get connectivity information to enable a capability search
+    of a catalog, agent registry or database. In the known-capability case, the requestor
+    knows only the required capability and must rely on an external directory or search
+    service. This document addresses the known-agent and known-organization cases.
+    The known-capability case is out of scope, but search and cataloging services
+    can be built from the organizational index defined here. Once a client has learned
+    an organization’s agents, later interactions can use the known-agent case, relying
+    on a minimal, cacheable record set that each organization controls. DNS-AID uses
+    Service Binding (SVCB) records, optionally with DNS-Based Service Discovery (DNS-SD)
+    labels, DNSSEC, and DANE TLSA records. This gives agents direct connections that
+    no third party mediates and works the same way on public and private networks.
+    No new resource record types, opcodes, or response codes are introduced.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-mozleywilliams-dawn-dnsaid-00
+    docid:
+    - id: draft-mozleywilliams-dawn-dnsaid-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-mozleywilliams-dawn-dnsaid-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

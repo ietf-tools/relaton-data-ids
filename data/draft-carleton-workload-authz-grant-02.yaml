@@ -1,0 +1,218 @@
+---
+schema-version: v1.2.3
+id: draft-carleton-workload-authz-grant-02
+title:
+- content: Workload Authorization Grant
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-carleton-workload-authz-grant-02
+  type: src
+type: standard
+docid:
+- id: draft-carleton-workload-authz-grant-02
+  type: Internet-Draft
+  primary: true
+- id: I-D.carleton-workload-authz-grant
+  type: IETF
+  scope: anchor
+docnumber: I-D.carleton-workload-authz-grant
+date:
+- type: published
+  value: '2026-11-02'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Paul
+          language:
+          - en
+        - language:
+          - en
+          initial: P
+        formatted_initials:
+          content: P.
+          language:
+          - en
+      surname:
+        content: Carleton
+        language:
+        - en
+      completename:
+        content: Paul Carleton
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Anthropic
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Nick
+          language:
+          - en
+        - language:
+          - en
+          initial: "N"
+        formatted_initials:
+          content: N.
+          language:
+          - en
+      surname:
+        content: Steele
+        language:
+        - en
+      completename:
+        content: Nick Steele
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: OpenAI
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Aaron
+          language:
+          - en
+        - language:
+          - en
+          initial: A
+        formatted_initials:
+          content: A.
+          language:
+          - en
+      surname:
+        content: Parecki
+        language:
+        - en
+      completename:
+        content: Aaron Parecki
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Okta
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Arndt
+          language:
+          - en
+        - language:
+          - en
+          initial: A
+        formatted_initials:
+          content: A.
+          language:
+          - en
+      surname:
+        content: Schwenkschuster
+        language:
+        - en
+      completename:
+        content: Arndt Schwenkschuster
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Defakto Security
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Brian
+          language:
+          - en
+        - language:
+          - en
+          initial: B
+        formatted_initials:
+          content: B.
+          language:
+          - en
+      surname:
+        content: Campbell
+        language:
+        - en
+      completename:
+        content: Brian Campbell
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Ping Identity
+  role:
+  - type: author
+version:
+- draft: '02'
+revdate: '2026-11-02'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>This document defines the Workload Authorization Grant (WAG), by which
+    a workload hosted on a platform -- an AI agent is the motivating case -- obtains
+    access tokens from a third party's OAuth authorization server without requiring
+    an administrator to perform a per-workload provisioning step. Each workload is
+    identified by an opaque identifier that is never reassigned. A Workload Identity
+    Provider operated by the platform signs a JWT authorization grant ([RFC7523])
+    that names one workload, and the workload presents it at the token endpoint of
+    an authorization server that has been configured, once, to trust that Workload
+    Identity Provider. The authorization server does not reject a workload because
+    it has not seen it before. The workload's access is determined by the authorization
+    server's own policy, which may consult claims the Workload Identity Provider asserts
+    about the workload. This document covers workloads acting on their own behalf.
+    Access on behalf of a user or other principal is out of scope, though the grant
+    is intended to compose with delegation mechanisms in which the workload is the
+    actor.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-carleton-workload-authz-grant-01
+    docid:
+    - id: draft-carleton-workload-authz-grant-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-carleton-workload-authz-grant-01
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-carleton-workload-authz-grant-02
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

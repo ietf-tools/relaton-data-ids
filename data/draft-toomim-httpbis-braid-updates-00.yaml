@@ -1,0 +1,94 @@
+---
+schema-version: v1.2.3
+id: draft-toomim-httpbis-braid-updates-00
+title:
+- content: Replayable Updates for HTTP
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-toomim-httpbis-braid-updates-00
+  type: src
+type: standard
+docid:
+- id: draft-toomim-httpbis-braid-updates-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.toomim-httpbis-braid-updates
+  type: IETF
+  scope: anchor
+docnumber: I-D.toomim-httpbis-braid-updates
+date:
+- type: published
+  value: '2026-11-02'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Michael
+          language:
+          - en
+        - language:
+          - en
+          initial: M
+        formatted_initials:
+          content: M.
+          language:
+          - en
+      surname:
+        content: Toomim
+        language:
+        - en
+      completename:
+        content: Michael Toomim
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Invisible College
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-11-02'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>HTTP provides a suite of requests and responses for communicating changes
+    to resource state, but they are limited in symmetry and reproducibility. PATCH
+    is sent client-to-server, but a server cannot send a PATCH to a client. POST can
+    change server state flexibly, but its behavior is server-defined, and cannot be
+    reproduced by a naive server, client, or intermediary. This document extends ordinary
+    HTTP requests and responses into a suite of symmetric, reproducible *updates*.
+    A sequence of updates can be replayed on any client, server, or intermediary to
+    reproduce identical changes to state. There are three types of updates: snapshots,
+    patches, and deletions, and this document defines how they occur symmetrically
+    in both requests and responses. Arbitrary patch formats can be defined with a
+    new Patch-Type header, but most patches can be expressed as a replacement of a
+    range expressed via an extended syntax of Range Unit. This document is one of
+    the Braid-HTTP extensions, which work alone or together; together they make HTTP
+    a state synchronization protocol.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-toomim-httpbis-braid-updates-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

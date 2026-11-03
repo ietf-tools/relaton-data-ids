@@ -13,12 +13,10 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document specifies how a QUIC endpoint may delegate the emission
-    of Stateless Resets to a component that outlives the QUIC stack -- for example,
-    an operating system that resets the peers of an application that has exited. As
-    such delegation is most useful on the client side, where endpoints often use zero-length
-    Connection IDs, this document also defines a transport parameter and a frame that
-    allow those clients to advertise a Stateless Reset Token.</p>"
+- content: "<p>This document specifies how a QUIC endpoint can delegate sending Stateless
+    Resets to a component that outlives its connection state. It also defines a frame
+    for clients using zero-length Connection IDs to advertise a Stateless Reset Token
+    and a transport parameter for servers to indicate support for receiving the frame.</p>"
   language:
   - en
   script:
@@ -34,6 +32,16 @@ relation:
       primary: true
     formattedref:
       content: draft-kazuho-quic-delegated-stateless-reset-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-kazuho-quic-delegated-stateless-reset-01
+    docid:
+    - id: draft-kazuho-quic-delegated-stateless-reset-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-kazuho-quic-delegated-stateless-reset-01
       format: text/plain
 ext:
   schema-version: v1.0.1

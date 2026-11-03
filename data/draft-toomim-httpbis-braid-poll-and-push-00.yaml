@@ -1,0 +1,92 @@
+---
+schema-version: v1.2.3
+id: draft-toomim-httpbis-braid-poll-and-push-00
+title:
+- content: Poll and Push Modes for HTTP Subscriptions
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-toomim-httpbis-braid-poll-and-push-00
+  type: src
+type: standard
+docid:
+- id: draft-toomim-httpbis-braid-poll-and-push-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.toomim-httpbis-braid-poll-and-push
+  type: IETF
+  scope: anchor
+docnumber: I-D.toomim-httpbis-braid-poll-and-push
+date:
+- type: published
+  value: '2026-11-02'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Michael
+          language:
+          - en
+        - language:
+          - en
+          initial: M
+        formatted_initials:
+          content: M.
+          language:
+          - en
+      surname:
+        content: Toomim
+        language:
+        - en
+      completename:
+        content: Michael Toomim
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Invisible College
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-11-02'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>In the stream mode of Braid-HTTP subscriptions, the server holds one
+    response open, and sends each change in it. Some origin servers can't hold a response
+    open, such as those that run as serverless functions or on shared hosting. And
+    on some paths, a proxy buffers each response until it ends. This document defines
+    two subscription modes in which nothing stays open for long. In the long-poll
+    mode, the client sends a GET for each change, and the server responds to it when
+    the change happens. In the webhook mode, the origin server pushes each change
+    to a subscription gateway as a PUT or a DELETE, and the gateway serves the subscription
+    to its clients. In both, each message after the first says which version it builds
+    on, and the first can too, so no message depends on a connection, and each can
+    take its own path. This document is one of the Braid-HTTP extensions, which work
+    alone or together; together they make HTTP a state synchronization protocol.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-toomim-httpbis-braid-poll-and-push-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

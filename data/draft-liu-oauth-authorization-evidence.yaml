@@ -13,12 +13,17 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This specification defines an authorization details type for including
-    authorization evidence and audit trail information in OAuth 2.0 access tokens
-    using the Rich Authorization Requests (RAR) framework. When an Authorization Server
-    processes user consent, it enriches the authorization details with cryptographic
-    proof of user confirmation, supporting accountability, compliance, and dispute
-    resolution in scenarios where autonomous agents act on behalf of users.</p>"
+- content: "<p>This specification defines an authorization details type for carrying
+    authorization evidence in OAuth 2.0 access tokens, using the enriched response
+    mechanism of Rich Authorization Requests. When an Authorization Server records
+    an approval decision, it enriches the authorization details with cryptographic
+    proof of the decision and of the structured disclosure on which the decision was
+    based. Evidence is recorded for approved, narrowed, and declined decisions, supporting
+    accountability, compliance, and dispute resolution in scenarios where autonomous
+    agents act on behalf of users. An approval record that cannot be ended is not
+    an accountable record, so this specification defines the withdrawal mechanism
+    alongside the evidence itself. Withdrawal is one of the four ways a governing
+    authorization ends, alongside completion, termination, and expiry.</p>"
   language:
   - en
   script:
@@ -44,6 +49,16 @@ relation:
       primary: true
     formattedref:
       content: draft-liu-oauth-authorization-evidence-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-liu-oauth-authorization-evidence-02
+    docid:
+    - id: draft-liu-oauth-authorization-evidence-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-liu-oauth-authorization-evidence-02
       format: text/plain
 ext:
   schema-version: v1.0.1

@@ -17,12 +17,13 @@ abstract:
     a workload hosted on a platform -- an AI agent is the motivating case -- obtains
     access tokens from a third party's OAuth authorization server without requiring
     an administrator to perform a per-workload provisioning step. Each workload is
-    identified by an opaque identifier that is never reassigned. The platform signs
-    a JWT authorization grant ([RFC7523]) that names one workload, and the workload
-    presents it at the token endpoint of an authorization server that has been configured,
-    once, to trust that platform. The authorization server does not reject a workload
-    because it has not seen it before. The workload's access is determined by the
-    authorization server's own policy, which may consult claims the platform asserts
+    identified by an opaque identifier that is never reassigned. A Workload Identity
+    Provider operated by the platform signs a JWT authorization grant ([RFC7523])
+    that names one workload, and the workload presents it at the token endpoint of
+    an authorization server that has been configured, once, to trust that Workload
+    Identity Provider. The authorization server does not reject a workload because
+    it has not seen it before. The workload's access is determined by the authorization
+    server's own policy, which may consult claims the Workload Identity Provider asserts
     about the workload. This document covers workloads acting on their own behalf.
     Access on behalf of a user or other principal is out of scope, though the grant
     is intended to compose with delegation mechanisms in which the workload is the
@@ -52,6 +53,16 @@ relation:
       primary: true
     formattedref:
       content: draft-carleton-workload-authz-grant-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-carleton-workload-authz-grant-02
+    docid:
+    - id: draft-carleton-workload-authz-grant-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-carleton-workload-authz-grant-02
       format: text/plain
 ext:
   schema-version: v1.0.1

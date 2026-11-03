@@ -1,0 +1,48 @@
+---
+schema-version: v1.2.3
+id: draft-li-rdma-crem
+title:
+- content: Congestion-Aware Reliability Enhancement Mechanism (CREM) for RDMA over
+    IP Networks
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-li-rdma-crem
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>RDMA transports designed for lossless data center fabrics perform poorly
+    over long-distance, high bandwidth-delay product, or lossy IP paths: go-back-N
+    retransmission resends whole windows, selective repeat costs at least a round
+    trip per loss, and fixed forward erasure correction wastes capacity when the path
+    is clean. This document specifies the Congestion-Aware Reliability Enhancement
+    Mechanism (CREM), which protects datagram-based RDMA flows without modifying their
+    packets. CREM adds a UDP-encapsulated repair channel on which the sender transmits
+    erasure-coded repair symbols computed over blocks of RDMA packets, adapts the
+    redundancy to measured loss and to whether losses are caused by congestion, and
+    recovers losses that exceed the redundancy with a coded retransmission: a number
+    of repair symbols, computed only over the lost packets, that is smaller than the
+    number of lost packets. Per-packet retransmission remains as the final fallback.
+    Optional path reports from on-path nodes, derived from Alternate Marking measurements
+    or from the nodes' own drops, inform the adaptation.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-li-rdma-crem-00
+    docid:
+    - id: draft-li-rdma-crem-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-li-rdma-crem-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

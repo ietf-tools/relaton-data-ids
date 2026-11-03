@@ -14,19 +14,14 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document outlines desirable security goals and use cases for integrating
-    remote attestation (RA) capabilities with secure channel establishment protocols
-    (e.g., TLS and DTLS). Peer authentication in such protocols establishes trust
-    in a peer's network identifiers but provides no assurance regarding the integrity
-    of its underlying software and hardware stack. Remote attestation addresses this
-    gap by enabling a peer to provide verifiable evidence about the current state
-    of the Target Environment. This document specifies a set of essential security
-    goals the protocol solution must have, including cryptographic binding to the
-    secure connection, evidence freshness, and flexibility to support different attestation
-    models. It then explores relevant use cases, such as confidential data collaboration
-    and secure secrets provisioning, to motivate the need for this integration. This
-    document is intended to serve as an input to the design of protocol solutions
-    within the SEAT working group.</p>"
+- content: "<p>This document describes use cases for integrating remote attestation
+    (RA) with secure channel protocols, initially TLS and DTLS. Peer authentication
+    establishes a peer's identity; RA supplies Evidence for appraisal of its state.
+    The document identifies protected decisions and required assurance, describes
+    the attacks and failure modes that threaten them, and derives properties to guide
+    protocol designs in the SEAT working group. These properties address association
+    of attested state with a peer and connection, freshness, re-evaluation, negotiation,
+    and disclosure of attestation material.</p>"
   language:
   - en
   script:
@@ -52,6 +47,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-seat-use-cases-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-seat-use-cases-02
+    docid:
+    - id: draft-ietf-seat-use-cases-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-seat-use-cases-02
       format: text/plain
 ext:
   schema-version: v1.0.1

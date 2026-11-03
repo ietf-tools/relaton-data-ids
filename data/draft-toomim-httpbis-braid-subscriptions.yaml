@@ -1,0 +1,49 @@
+---
+schema-version: v1.2.3
+id: draft-toomim-httpbis-braid-subscriptions
+title:
+- content: Subscriptions for HTTP
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-toomim-httpbis-braid-subscriptions
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>Servers respond to an HTTP GET with a resource's current state. However,
+    if the resource changes afterward, HTTP has no way for the server to notify its
+    client of the new version. This document defines subscriptions. When a client
+    adds the Subscribe header to a GET, the server responds with the resource's current
+    state, and then continues to respond as subsequent changes occur. Each response
+    corresponds to a semantically-equivalent GET, so that content negotiation, authorization,
+    and caching work as they do for any GET request. When a server grants a subscription,
+    it promises to send each change as it happens. So once a client is caught up,
+    and while its connection is alive, it knows that nothing has changed until the
+    next response arrives. The server tells the client when the client has caught
+    up with the origin server's current version, and sends heartbeats to show that
+    the connection is alive. If a cache holds such a subscription, it knows at every
+    moment that its stored copy is current, and can respond to requests with the copy,
+    without asking the origin server. This document is one of the Braid-HTTP extensions,
+    which work alone or together; together they make HTTP a state synchronization
+    protocol.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-toomim-httpbis-braid-subscriptions-00
+    docid:
+    - id: draft-toomim-httpbis-braid-subscriptions-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-toomim-httpbis-braid-subscriptions-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

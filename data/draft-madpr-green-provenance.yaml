@@ -2,8 +2,7 @@
 schema-version: v1.2.3
 id: draft-madpr-green-provenance
 title:
-- content: Provenance Traceability Augmentation for the GREEN Power and Energy YANG
-    Module
+- content: Provenance Traceability for the GREEN Controller YANG Model
   language:
   - en
   script:
@@ -14,16 +13,18 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document defines a YANG module that augments the GREEN Power and
-    Energy YANG Module [PowerAndEnergy] to record the result of provenance verification
+- content: "<p>This document defines a YANG module that augments the GREEN network
+    controller YANG model [GreenController] to record the result of provenance verification
     for each Energy Object. The augmentation builds on the COSE-based signing mechanism
-    defined in [ProvenanceDraft]. For each Energy Object, it records whether the most
-    recent provenance signature was valid, which key was used to sign it, and who
-    is responsible for that key, whether the device itself, the network controller
-    acting on its behalf, or an external authority such as a grid energy provider.
-    This allows operators and auditors to verify not just that energy data is correct,
-    but that it came from where it claims to have come from, and to understand the
-    level of trust that applies to each source.</p>"
+    defined in [ProvenanceDraft]. The controller verifies each signature it receives
+    against a key it trusts. For each node or component, it records whether the most
+    recent signature was valid, which key was used to sign it, and who is responsible
+    for that key: the device itself, the network controller acting on its behalf,
+    or an external authority such as a grid energy provider. A signature that cannot
+    be verified, for example because the key is unknown or the signature is missing,
+    is recorded as a failure, with the reason. This allows operators and auditors
+    to check not just that energy data is correct, but where it came from, and how
+    much trust applies to each source.</p>"
   language:
   - en
   script:
@@ -39,6 +40,16 @@ relation:
       primary: true
     formattedref:
       content: draft-madpr-green-provenance-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-madpr-green-provenance-01
+    docid:
+    - id: draft-madpr-green-provenance-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-madpr-green-provenance-01
       format: text/plain
 ext:
   schema-version: v1.0.1

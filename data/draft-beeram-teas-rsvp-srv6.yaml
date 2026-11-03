@@ -19,11 +19,14 @@ abstract:
     equivalent to SR-MPLS adjacency segments. This document extends that work to the
     SRv6 data plane, defining the signaling extensions and procedures necessary to
     establish RSVP-TE tunnels that utilize SRv6 Segment Identifiers (SIDs) for forwarding.
-    This document specifies how SRv6 End.X SIDs serve as TE link SIDs, defines new
-    RSVP signaling extensions for carrying SRv6 SIDs, describes TE path segment-list
-    construction procedures at the ingress, and adapts the delegation mechanisms of
-    RFC 8577 to use SRv6 Binding SIDs. The result couples the traffic engineering
-    capabilities of the RSVP-TE control plane with the native IPv6 forwarding of SRv6.</p>"
+    This document specifies how SRv6 End.X SIDs that are advertised in the IGP serve
+    as TE link SIDs, defines new RSVP signaling extensions for carrying SRv6 SIDs
+    and for influencing the endpoint behavior flavors of the SIDs, describes TE path
+    segment-list construction procedures at the ingress (including NEXT-CSID compressed
+    segment lists), adapts the delegation mechanisms of RFC 8577 to use SRv6 Binding
+    SIDs, and describes the termination of the tunnel at the egress. The result couples
+    the traffic engineering capabilities of the RSVP-TE control plane with the native
+    IPv6 forwarding of SRv6.</p>"
   language:
   - en
   script:
@@ -39,6 +42,16 @@ relation:
       primary: true
     formattedref:
       content: draft-beeram-teas-rsvp-srv6-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-beeram-teas-rsvp-srv6-01
+    docid:
+    - id: draft-beeram-teas-rsvp-srv6-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-beeram-teas-rsvp-srv6-01
       format: text/plain
 ext:
   schema-version: v1.0.1
