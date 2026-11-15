@@ -1,0 +1,309 @@
+---
+schema-version: v1.2.3
+id: draft-ietf-detnet-tcqf-03
+title:
+- content: Deterministic Networking (DetNet) Data Plane - Tagged Cyclic Queuing and
+    Forwarding (TCQF) for bounded latency with low jitter in large scale DetNets
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-ietf-detnet-tcqf-03
+  type: src
+type: standard
+docid:
+- id: draft-ietf-detnet-tcqf-03
+  type: Internet-Draft
+  primary: true
+- id: I-D.ietf-detnet-tcqf
+  type: IETF
+  scope: anchor
+docnumber: I-D.ietf-detnet-tcqf
+date:
+- type: published
+  value: '2026-11-15'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Toerless
+          language:
+          - en
+        - language:
+          - en
+          initial: T
+        - language:
+          - en
+          initial: T
+        formatted_initials:
+          content: T. T.
+          language:
+          - en
+      surname:
+        content: Eckert
+        language:
+        - en
+      completename:
+        content: Toerless Eckert
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Futurewei Technologies USA
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Yizhou
+          language:
+          - en
+        - language:
+          - en
+          initial: "Y"
+        formatted_initials:
+          content: Y.
+          language:
+          - en
+      surname:
+        content: Li
+        language:
+        - en
+      completename:
+        content: Yizhou Li
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei Technologies
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Stewart
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Bryant
+        language:
+        - en
+      completename:
+        content: Stewart Bryant
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: University of Surrey ICS
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Andrew
+          language:
+          - en
+        - language:
+          - en
+          initial: A
+        - language:
+          - en
+          initial: G
+        formatted_initials:
+          content: A. G.
+          language:
+          - en
+      surname:
+        content: Malis
+        language:
+        - en
+      completename:
+        content: Andrew G. Malis
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Malis Consulting
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - language:
+          - en
+          initial: J
+        formatted_initials:
+          content: J.
+          language:
+          - en
+      surname:
+        content: Ryoo
+        language:
+        - en
+      completename:
+        content: Jeong-dong Ryoo
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: ETRI
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Peng
+          language:
+          - en
+        - language:
+          - en
+          initial: P
+        formatted_initials:
+          content: P.
+          language:
+          - en
+      surname:
+        content: Liu
+        language:
+        - en
+      completename:
+        content: Peng Liu
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: China Mobile
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Guangpeng
+          language:
+          - en
+        - language:
+          - en
+          initial: G
+        formatted_initials:
+          content: G.
+          language:
+          - en
+      surname:
+        content: Li
+        language:
+        - en
+      completename:
+        content: Guangpeng Li
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei Technologies
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Shoushou
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Ren
+        language:
+        - en
+      completename:
+        content: Shoushou Ren
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei Technologies
+  role:
+  - type: author
+version:
+- draft: '03'
+revdate: '2026-11-15'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>This memo specifies a forwarding method for bounded latency and bounded
+    jitter for Deterministic Networks. It is a variant of the IEEE TSN 802.1Q(ch)
+    Cyclic Queuing and Forwarding (CQF) method, called Tagged CQF (TCQF), in which
+    the cycle number is indicated in an existing or new packet header field, called
+    the cycle tag. This tag allows more than two cycles to be used and replaces the
+    cycle mapping of CQF, which is based purely on the synchronized reception clock.
+    Whereas CQF supports low end-to-end jitter across limited-scale networks with
+    link speeds mostly up to 10Gbps, TCQF supports the same low end-to-end jitter
+    across large-scale, wide-area networks with high per-hop latency and jitter (which
+    is not possible with CQF), and enables high-speed hardware implementations above
+    10Gbps without requiring more accurate clock synchronization. Like CQF, TCQF eliminates
+    the need for per-DetNet-flow state on midpoint routers, requiring only flow-agnostic
+    cycle state. Because it is specified as a DetNet scheduling method, TCQF can be
+    deployed not only as a sub- network method, but also as part of a DetNet forwarder.
+    This memo standardizes TCQF as a mechanism independent of the tagging method used.
+    It also specifies tagging via (1) the existing MPLS packet Traffic Class (TC)
+    field for MPLS packets, (2) the IP/IPv6 DSCP field for IP/IPv6 packets, and (3)
+    a new TCQF Option header for IPv6 packets.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-ietf-detnet-tcqf-02
+    docid:
+    - id: draft-ietf-detnet-tcqf-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-detnet-tcqf-02
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-ietf-detnet-tcqf-03
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

@@ -1,0 +1,42 @@
+---
+schema-version: v1.2.3
+id: draft-atwood-mimi-provider-auth
+title:
+- content: Provider Authentication for More Instant Messaging Interoperability (MIMI)
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-atwood-mimi-provider-auth
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>The MIMI protocol requires each provider to authenticate the provider
+    that sends it a request. It specifies mutually authenticated TLS for this, but
+    not where the client certificates come from or which trust anchors check them.
+    The public Web PKI has stopped issuing such certificates. This document defines
+    how MIMI providers authenticate each other without it. The mechanism every provider
+    implements is a key published in DNS under the provider's domain, used to sign
+    each request with HTTP Message Signatures. DANE client certificates, client certificates
+    from configured PKIX trust anchors, and locally configured trust lists are defined
+    as additional mechanisms that a provider can accept by local policy.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-atwood-mimi-provider-auth-00
+    docid:
+    - id: draft-atwood-mimi-provider-auth-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-atwood-mimi-provider-auth-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
