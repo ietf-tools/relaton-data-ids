@@ -14,22 +14,29 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document defines a framework for reproducible interoperability
-    and security evaluation of implementations that integrate remote attestation with
-    TLS 1.3 and DTLS 1.3. It complements protocol and architecture specifications
-    by defining test profiles, a common result model, cross-implementation procedures,
-    negative tests, and measurements at the boundary between transport authentication,
-    attestation appraisal, authorization, and application-data release. In addition
-    to per-connection attestation, the framework evaluates reusable Attestation Results
-    and cross-connection trust-continuity mechanisms, including deployments in which
-    an attestation endpoint and application-serving endpoint are distinct. It addresses
-    key custody and derivation, target and workload identity, state drift, credential
-    lifecycle, multi-relying-party isolation, proxy topology, session resumption,
-    early data, privacy, and failure containment. This document does not define a
-    new attestation architecture, Evidence format, TLS or DTLS extension, cryptographic
-    key schedule, or remote-attestation protocol. It specifies an evaluation framework
-    for comparing implementations and identifying interoperability and security gaps
-    in declared profiles.</p>"
+- content: "<p>This document defines a reproducible framework for interoperability
+    testing, security evaluation, negative testing, and performance measurement of
+    implementations that integrate remote attestation with TLS 1.3 and DTLS 1.3. The
+    framework complements existing Secure Evidence and Attestation Transport (SEAT)
+    and Remote ATtestation procedureS (RATS) specifications. It defines evaluation
+    profiles, test-vector requirements, deployment topology descriptions, decision-state
+    observations, common result classifications, cross-implementation procedures,
+    and security evaluation methods. The framework evaluates the boundaries between
+    transport authentication, attestation capability negotiation, Evidence conveyance,
+    appraisal, authorization, workload identity association, and protected application-data
+    release. It additionally addresses reusable Attestation Results, connection-bound
+    Evidence, cross-connection trust continuity, exporter-derived credentials, key
+    custody, credential lifecycle, multi-Relying-Party isolation, proxy deployments,
+    session resumption, early data, state drift, revocation, privacy, availability,
+    and cryptographic agility. This document introduces a machine-readable evaluation
+    model that connects individual protocol requirements to test vectors, implementation
+    versions, observed results, and reproducible evidence. It does not define a new
+    attestation protocol, Evidence format, TLS or DTLS extension, cryptographic key
+    schedule, universal appraisal policy, or credential format. Protocol-specific
+    behaviour remains governed by the exact specification revision under evaluation.
+    A successful test demonstrates observed behaviour under declared conditions. It
+    does not constitute a security certification or prove that a Target Environment
+    is free from compromise.</p>"
   language:
   - en
   script:
@@ -45,6 +52,16 @@ relation:
       primary: true
     formattedref:
       content: draft-elekula-seat-attested-tls-testing-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-elekula-seat-attested-tls-testing-01
+    docid:
+    - id: draft-elekula-seat-attested-tls-testing-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-elekula-seat-attested-tls-testing-01
       format: text/plain
 ext:
   schema-version: v1.0.1

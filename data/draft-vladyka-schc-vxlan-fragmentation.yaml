@@ -1,0 +1,43 @@
+---
+schema-version: v1.2.3
+id: draft-vladyka-schc-vxlan-fragmentation
+title:
+- content: SCHC No-ACK Fragmentation of VXLAN Payloads
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-vladyka-schc-vxlan-fragmentation
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This document proposes a SCHC No-ACK profile for carrying VXLAN payloads,
+    including those larger than the path MTU, over a managed UDP path. On a configured
+    peer association every frame is carried as a SCHC Packet made of a NoCompress
+    rule identifier, the uncompressed VXLAN header and the Ethernet frame. The packet
+    is sent unfragmented when it fits the path MTU and fragmented otherwise. A four-bit
+    fragment counter supports up to eight fragments. An optional receiver procedure
+    for reordering is described separately because it changes the RFC 8724 No-ACK
+    receiver behavior. The earlier indexed fragmentation proposal is retained in an
+    appendix for comparison. The mapping and operational parameters require working
+    group review.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-vladyka-schc-vxlan-fragmentation-00
+    docid:
+    - id: draft-vladyka-schc-vxlan-fragmentation-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-vladyka-schc-vxlan-fragmentation-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

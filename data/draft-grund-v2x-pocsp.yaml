@@ -1,0 +1,56 @@
+---
+schema-version: v1.2.3
+id: draft-grund-v2x-pocsp
+title:
+- content: Pseudonymous Stapled Certificate Status Evidence for V2X and TLS with ITS
+    Certificates (pOCSP)
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-grund-v2x-pocsp
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>Vehicle-to-Everything (V2X) systems authenticate broadcast and unicast
+    messages with short-lived pseudonymous certificates. Revocation status validation
+    is difficult in this environment: Certificate Revocation Lists (CRLs) can be costly
+    to distribute at pseudonym scale, while verifier-initiated OCSP requests introduce
+    online dependencies, latency, metadata leakage, and denial-of-service exposure.
+    This document specifies pOCSP, an OCSP-derived response type and a set of deployment
+    profiles for short-lived certificate-status evidence that is obtained by the certificate
+    holder and stapled to an authenticated message or TLS CertificateEntry. A verifier
+    validates pOCSP evidence locally, without contacting a responder at message- reception
+    time. pOCSP retains the OCSP status semantics good, revoked, and unknown; defines
+    an explicit signed usage context; defines a compact context-specific certificate
+    identifier; and specifies deterministic, bounded validation, caching, and failure
+    behavior. pOCSP does not claim that its identifier is unlinkable. The identifier
+    is deterministic and can be correlated whenever the underlying certificate is
+    observable or inferable. The V2X profiles therefore require single-certificate
+    evidence and prohibit transmitting pOCSP evidence more frequently than the corresponding
+    full certificate. The document prohibits future-active good evidence, bounds replay
+    by mandatory thisUpdate and nextUpdate values, and makes an authenticated revocation
+    terminal at the verifier: omitted, expired, unknown, or higher-versioned good
+    evidence cannot mask it. It defines profiles for ETSI CAM/DENM, SAE J2735 messages,
+    and TLS 1.3 with ITS certificates, requests an OCSP response-type object identifier,
+    and establishes a registry of pOCSP profile identifiers.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-grund-v2x-pocsp-00
+    docid:
+    - id: draft-grund-v2x-pocsp-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-grund-v2x-pocsp-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

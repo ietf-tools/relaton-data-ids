@@ -1,0 +1,183 @@
+---
+schema-version: v1.2.3
+id: draft-grund-khatoun-pujolle-serhrouchni-smrp-00
+title:
+- content: Stapled Merkle Revocation Proofs for Pseudonymous ITS Credentials (SMRP)
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-grund-khatoun-pujolle-serhrouchni-smrp-00
+  type: src
+type: standard
+docid:
+- id: draft-grund-khatoun-pujolle-serhrouchni-smrp-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.grund-khatoun-pujolle-serhrouchni-smrp
+  type: IETF
+  scope: anchor
+docnumber: I-D.grund-khatoun-pujolle-serhrouchni-smrp
+date:
+- type: published
+  value: '2026-11-15'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - language:
+          - en
+          initial: J
+        formatted_initials:
+          content: J.
+          language:
+          - en
+      surname:
+        content: Grund
+        language:
+        - en
+      completename:
+        content: Jean-Jacques Grund
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Telecom Paris, Institut Polytechnique de Paris
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Rida
+          language:
+          - en
+        - language:
+          - en
+          initial: R
+        formatted_initials:
+          content: R.
+          language:
+          - en
+      surname:
+        content: Khatoun
+        language:
+        - en
+      completename:
+        content: Rida Khatoun
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Telecom Paris, Institut Polytechnique de Paris
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Guy
+          language:
+          - en
+        - language:
+          - en
+          initial: G
+        formatted_initials:
+          content: G.
+          language:
+          - en
+      surname:
+        content: Pujolle
+        language:
+        - en
+      completename:
+        content: Guy Pujolle
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Sorbonne Universite, CNRS, LIP6
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Ahmed
+          language:
+          - en
+        - language:
+          - en
+          initial: A
+        formatted_initials:
+          content: A.
+          language:
+          - en
+      surname:
+        content: Serhrouchni
+        language:
+        - en
+      completename:
+        content: Ahmed Serhrouchni
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Telecom Paris, Institut Polytechnique de Paris, and Institut CyberIA
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-11-15'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>Pseudonymous Intelligent Transport Systems (ITS) credentials are short-lived
+    and numerous. Verifiers decide at message-reception time, often without connectivity,
+    which makes revocation status hard to deliver. This document specifies Stapled
+    Merkle Revocation Proofs (SMRP). For each partition of a revocation domain, an
+    authorized issuer signs a compact checkpoint that commits to the complete sorted
+    set of revoked credential tokens. A credential holder staples a logarithmic-size
+    proof that its token is absent from that set, and a verifier checks the proof
+    offline against the current checkpoint. Freshness is carried by the checkpoint,
+    which is public, shared by every credential of the partition, and deliverable
+    by any party. Within one stream, a proof remains usable across checkpoints for
+    as long as the set commitment is unchanged and the current checkpoint is admissible.
+    The same commitment supports proofs of revocation that anyone can relay, complete
+    authenticated lists for capable verifiers, and public audit. The document defines
+    a credential identity that does not depend on the certificate signature, a Merkle
+    tree over the intervals of the sorted revoked set with one authentication path
+    per proof, the checkpoint and staple encodings, conservative time validation with
+    a conditional bound on the last affirmative decision after revocation, verifier
+    state with terminal revocation, and carriage in V2X secured messages and in TLS
+    1.3. It positions SMRP against the companion pOCSP mechanism: pOCSP signs one
+    statement per certificate and validity window, whereas SMRP signs one statement
+    per partition and issuance period. This document is Experimental and allocates
+    no identifier in ETSI, IEEE, or SAE namespaces.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-grund-khatoun-pujolle-serhrouchni-smrp-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
