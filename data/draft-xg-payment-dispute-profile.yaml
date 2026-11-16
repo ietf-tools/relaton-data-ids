@@ -13,16 +13,14 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: '<p>This document profiles draft-farley-acta-signed-receipts, "Signed Decision
-    Receipts for Machine-to-Machine Access Control", for use as card-scheme dispute
-    evidence. It defines how a conforming decision receipt is populated for payment
-    disputes, and specifies four additional evidence layers bound to that receipt:
-    card-scheme dispute-evidence categories (Visa Compelling Evidence 3.0, Mastercard
-    First-Party Trust), agent-native anchors with no scheme-defined slot, a settlement
-    anchor recording what money actually moved, and an evidentiary-custody wrapper
-    aligned with U.S. Federal Rules of Evidence 901/902. This is a vendor profile
-    documenting one implementation (ActaSeal''s DisputeEvidencePacket); it does not
-    define a new protocol and makes no claim of IETF consensus or standardization.</p>'
+- content: "<p>In an agent-initiated payment dispute, the payer, the merchant, the
+    payment service provider and the agent operator each keep their own record of
+    the same decision, and none of those records can be verified by the other parties.
+    This document states that problem and defines a signed dispute receipt, registrable
+    as the payload of a SCITT Signed Statement, that binds the decision to card-scheme
+    dispute-evidence categories, to the agent's delegated scope, to the settlement
+    that actually occurred, and to an evidentiary-custody record, so that parties
+    with opposed interests can verify the same evidence offline.</p>"
   language:
   - en
   script:
@@ -48,6 +46,16 @@ relation:
       primary: true
     formattedref:
       content: draft-xg-payment-dispute-profile-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-xg-payment-dispute-profile-02
+    docid:
+    - id: draft-xg-payment-dispute-profile-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-xg-payment-dispute-profile-02
       format: text/plain
 ext:
   schema-version: v1.0.1

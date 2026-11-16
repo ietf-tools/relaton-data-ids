@@ -13,36 +13,25 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: '<p>This document specifies the AI Manifest, a JSON-based format with which
-    a website operator publishes an AI Friction-Recovery Manifest (AFRM): a declarative,
-    advisory description of the known user- interface (UI) traps on a site, the framework
-    hints that contextualize them, and the interaction shortcuts that bypass them.
-    An autonomous AI agent that uses browser-automation tools discovers the manifest
-    out-of-band and consults it as reference data when it encounters friction, instead
-    of re-inferring site-specific behavior from the full Document Object Model (DOM)
-    by trial and error. The manifest is advisory data published by the origin; it
-    is not part of, and does not modify, any browser-automation tool schema. The specification
-    defines five interoperable discovery methods, the AFRM three-part schema (frameworkHints,
-    knownTraps, and shortcuts), and an OPTIONAL SHA-256 canonical-hash verification
-    procedure via a trust registry, together with security mitigations against prompt-
-    injection attacks. Empirical evaluation with a contemporary LLM browser agent
-    on a proprietary-knowledge enterprise task -- an SAP S/4HANA-style table- maintenance
-    screen whose valid values depend on a company-code registration scope that is
-    not derivable from public or training knowledge -- shows that a site-published
-    manifest, consumed directly by the agent with no external runtime, reduces interaction
-    actions by approximately 54% and input tokens by approximately 45% relative to
-    the no-manifest baseline, with both conditions completing the task. The manifest''s
-    value concentrates where the agent cannot succeed from training knowledge alone:
-    site-specific dependencies, data, and hard mechanical blocks. This -02 revision
-    supersedes the deterministic-runtime framing of draft-han-ai-manifest-01. The
-    earlier revision reported a single- trial preliminary measurement and concluded
-    that an embedded manifest is of negative value unless paired with a deterministic
-    execution runtime (an "SDK"). Subsequent multi-condition measurement with a real
-    LLM agent shows that a manifest is consumed and is useful on its own; an out-of-band
-    discovery path (the Method A well-known URI, or the user-curated Method E) avoids
-    the prompt-injection-defense friction that the earlier embedded-only trial encountered.
-    A deterministic runtime remains OPTIONAL -- useful for latency- or service-level-sensitive
-    deployments -- but is no longer presented as REQUIRED.</p>'
+- content: "<p>This document specifies the AI Manifest, a JSON format with which a
+    website operator publishes an AI Friction-Recovery Manifest (AFRM): a description
+    of the user-interface (UI) patterns on its own origin that predictably stall autonomous
+    AI agents, together with constrained recovery steps and site-specific input hints.
+    An agent that drives a browser on behalf of a user retrieves the manifest from
+    a well-known URI and consults it when it encounters friction, instead of rediscovering
+    the same site-specific behavior by trial and error. The manifest is untrusted
+    input, interpreted by the agent's runtime and never shown to its language model.
+    Its operative content is drawn from a closed vocabulary that cannot enter text,
+    upload files, or reach another origin. Every action derived from a manifest passes
+    through a policy enforcement point that is not a language model, and steps conventionally
+    bound to a decision require the user's confirmation by default. Security controls
+    such as access denials, rate limits, CAPTCHAs, authentication challenges, and
+    confirmation dialogs are stop conditions, never traps to be recovered from. Optional
+    publisher signatures and agent-configured reputation services provide authenticity
+    but never imply safety and never relax these requirements. This -03 revision replaces
+    the trust model of draft-han-ai-manifest- 02, removes the inline and vendor-path
+    discovery methods from the protocol, and restructures the schema around a closed
+    action vocabulary. Preliminary measurements are reported in an appendix.</p>"
   language:
   - en
   script:
@@ -78,6 +67,16 @@ relation:
       primary: true
     formattedref:
       content: draft-han-ai-manifest-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-han-ai-manifest-03
+    docid:
+    - id: draft-han-ai-manifest-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-han-ai-manifest-03
       format: text/plain
 ext:
   schema-version: v1.0.1

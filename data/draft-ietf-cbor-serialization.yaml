@@ -13,19 +13,19 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: <p>RFC 8949 defines CBOR, a standard for serializing data types such as
+- content: "<p>RFC 8949 defines CBOR, a standard for serializing data types such as
     integers, strings, and arrays into encoded bytes. CBOR serialization is flexible,
     allowing data types to be encoded in multiple ways to accommodate deployment in
-    constrained environments. This document normatively defines one particular serialization,
-    called "preferred- plus serialization," that is suitable for the majority of CBOR-based
-    protocols. Protocol designers and implementers who choose it need not understand
-    or specify serialization details themselves. This document also normatively defines
-    a deterministic serialization. These serializations are largely compatible with
-    those widely implemented by the CBOR community. This document updates RFC 8949
-    with a new rule that limits how new tag definitions can affect the CBOR data model.
-    This document provides clarifications to RFC 8949 regarding bignums and floating-point
-    NaN handling, along with general background information on serialization, determinism,
-    and CBOR byte-string wrapping.</p>
+    constrained environments. This document introduces the term “general serialization”
+    for the full set of encodings permitted by RFC 8949, and formally defines two
+    specific serializations: preferred-plus serialization, which differs from preferred
+    serialization only in cases rarely encountered in practice and is recommended
+    for broad use; and deterministic serialization, which likewise differs only in
+    rarely encountered cases from core deterministic encoding defined in RFC 8949.
+    This document updates RFC 8949 with a new rule that limits how new tag definitions
+    can affect the CBOR data model. This document provides clarifications to RFC 8949
+    regarding bignums and floating-point NaN handling, along with general background
+    information on serialization, determinism, and CBOR byte-string wrapping.</p>"
   language:
   - en
   script:
@@ -161,6 +161,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-cbor-serialization-12
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-cbor-serialization-13
+    docid:
+    - id: draft-ietf-cbor-serialization-13
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-cbor-serialization-13
       format: text/plain
 ext:
   schema-version: v1.0.1
