@@ -17,10 +17,13 @@ abstract:
     scheme for identifying Bundle Protocol Version 7 (BPv7) endpoints that are not
     singleton endpoints, termed multicast endpoints. The structure of 'imc' URIs mirrors
     that of the 'ipn' URI scheme: each 'imc' URI comprises an Allocator Identifier,
-    a Group Number, and a Service Number. This document specifies the textual syntax
-    of 'imc' URIs, their interpretation when used as BPv7 Endpoint Identifiers, their
-    CBOR encoding, and the corresponding EID Pattern, and requests the associated
-    IANA registrations.</p>"
+    a Group Number, and a Service Number. In the same way that the Allocator Identifier
+    and Node Number of an 'ipn' URI identify the node at which a service exists, the
+    Allocator Identifier and Group Number of an 'imc' URI identify a group of nodes
+    at which a service exists, and the Service Number identifies that service. This
+    document specifies the textual syntax of 'imc' URIs, their interpretation when
+    used as BPv7 Endpoint Identifiers, their CBOR encoding, and the corresponding
+    EID Pattern, and requests the associated IANA registrations.</p>"
   language:
   - en
   script:
@@ -36,6 +39,16 @@ relation:
       primary: true
     formattedref:
       content: draft-taylor-dtn-imc-scheme-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-taylor-dtn-imc-scheme-01
+    docid:
+    - id: draft-taylor-dtn-imc-scheme-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-taylor-dtn-imc-scheme-01
       format: text/plain
 ext:
   schema-version: v1.0.1

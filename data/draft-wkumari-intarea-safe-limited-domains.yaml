@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-wkumari-intarea-safe-limited-domains
 title:
-- content: Safe(r) Limited Domains
+- content: Fail-closed Limited Domains
   language:
   - en
   script:
@@ -15,16 +15,17 @@ docid:
 abstract:
 - content: <p>Documents describing protocols intended solely for use within "limited
     domains" often rely on edge filtering at every boundary node to prevent domain-internal
-    traffic from leaking to the global Internet (and vice versa). Relying purely on
-    administrative filtering creates "fail-open" designs that are susceptible to configuration
-    errors, ACL bypass, and hardware table exhaustion. This document describes design
-    principles and concrete mechanisms that allow limited-domain protocols to "fail-closed"
-    by default. By leveraging Layer-2 encapsulation identifiers (such as dedicated
-    or extended EtherTypes), link-local address scoping, and / or Hop-Limit boundaries,
-    protocol designers can significantly reduce the operational and security risks
-    associated with limited domain protocols. These mechanisms are not applicable
-    to all protocols intended for use in a limited domain, but if implemented on certain
-    classes of protocols, can significantly reduce the risks.</p>
+    traffic from leaking to the global Internet (and vice versa). While edge filtering
+    is a critical and standard operational practice, relying solely on administrative
+    policies can create "fail-open" designs if configuration errors, ACL bypass, or
+    hardware table limitations occur. This document describes design principles and
+    concrete mechanisms that allow limited-domain protocols to "fail-closed" by default.
+    By leveraging Layer-2 encapsulation identifiers (such as dedicated or extended
+    EtherTypes), local address scoping, and / or Hop-Limit boundaries, protocol designers
+    can provide robust defense-in-depth and significantly reduce the operational and
+    security risks associated with limited-domain protocol leakage. These mechanisms
+    are not applicable to all protocols intended for use in a limited domain, but
+    if implemented on certain classes of protocols, can significantly reduce the risks.</p>
   language:
   - en
   script:
@@ -110,6 +111,16 @@ relation:
       primary: true
     formattedref:
       content: draft-wkumari-intarea-safe-limited-domains-07
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-wkumari-intarea-safe-limited-domains-08
+    docid:
+    - id: draft-wkumari-intarea-safe-limited-domains-08
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-wkumari-intarea-safe-limited-domains-08
       format: text/plain
 ext:
   schema-version: v1.0.1

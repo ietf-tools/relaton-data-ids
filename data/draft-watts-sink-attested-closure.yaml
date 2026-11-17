@@ -1,0 +1,50 @@
+---
+schema-version: v1.2.3
+id: draft-watts-sink-attested-closure
+title:
+- content: 'Sink-Attested Closure Evidence (SACE): Signed Epoch Acknowledgements and
+    Accountable Revocation Closure'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-watts-sink-attested-closure
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>Revoking delegated authority in an agentic system is complete only
+    when every place that can still act on that authority has stopped. Existing work
+    defines the states of that process but leaves its evidence format open. This document
+    defines Sink-Attested Closure Evidence (SACE): a small set of COSE-signed objects
+    and one deterministic algorithm. An authority root signs a Scope Manifest naming
+    the sinks a closure claim covers, and a Cut Statement raising the minimum admissible
+    authority epoch. Each sink signs an Epoch Acknowledgement with its own key, binding
+    the cut to the sequence number of the last effect it committed before applying
+    it. Each committed effect yields a signed Effect Receipt. From these objects any
+    party can compute one of three verdicts: CLOSED, UNKNOWN, or VIOLATED. A VIOLATED
+    verdict comes with a transferable proof consisting of two signatures by the same
+    sink. A sink that never acknowledges blocks CLOSED until it is removed from scope.
+    An optional binding ties the acknowledging key to remote attestation evidence.
+    This document makes no claim that a sink which signs an acknowledgement actually
+    enforces it; it makes a sink that does not enforce it provably accountable for
+    every effect it receipts.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-watts-sink-attested-closure-00
+    docid:
+    - id: draft-watts-sink-attested-closure-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-watts-sink-attested-closure-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

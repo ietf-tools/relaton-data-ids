@@ -14,12 +14,12 @@ docid:
   primary: true
 abstract:
 - content: "<p>This document requests the creation of ipn.arpa, an infrastructure
-    DNS namespace for the IPN node identifiers used by the Bundle Protocol (BP). Each
-    Fully Qualified Node Number has a canonical name of the form N.A.ipn.arpa, where
-    A is the Allocator Identifier and N is the Node Number. A BP Agent can query directly
-    beneath that name for records specified by a convergence-layer discovery binding,
-    such as SRV or SVCB records. The DNS records identify convergence-layer endpoints
-    advertised for reaching a destination, including relays.</p>"
+    DNS namespace for the IPN node identifiers of the Bundle Protocol (BP). Each Fully
+    Qualified Node Number has a DNS base name of the form N.A.ipn.arpa, where A is
+    the Allocator Identifier and N is the Node Number. A BP Agent can query beneath
+    that name for the records that a convergence-layer discovery binding specifies,
+    such as SRV or SVCB records. These records identify the convergence-layer endpoints,
+    including relays, that are advertised for reaching a destination.</p>"
   language:
   - en
   script:
@@ -45,6 +45,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ek-dtn-ipn-arpa-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ek-dtn-ipn-arpa-02
+    docid:
+    - id: draft-ek-dtn-ipn-arpa-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ek-dtn-ipn-arpa-02
       format: text/plain
 ext:
   schema-version: v1.0.1

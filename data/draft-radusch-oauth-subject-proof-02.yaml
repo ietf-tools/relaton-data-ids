@@ -1,0 +1,102 @@
+---
+schema-version: v1.2.3
+id: draft-radusch-oauth-subject-proof-02
+title:
+- content: OAuth 2.0 Subject-Proof Callers for Token Introspection and Revocation
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-radusch-oauth-subject-proof-02
+  type: src
+type: standard
+docid:
+- id: draft-radusch-oauth-subject-proof-02
+  type: Internet-Draft
+  primary: true
+- id: I-D.radusch-oauth-subject-proof
+  type: IETF
+  scope: anchor
+docnumber: I-D.radusch-oauth-subject-proof
+date:
+- type: published
+  value: '2026-11-16'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Ilja
+          language:
+          - en
+        - language:
+          - en
+          initial: I
+        formatted_initials:
+          content: I.
+          language:
+          - en
+      surname:
+        content: Radusch
+        language:
+        - en
+      completename:
+        content: Ilja Radusch
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Fraunhofer FOKUS
+  role:
+  - type: author
+version:
+- draft: '02'
+revdate: '2026-11-16'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>OAuth 2.0 Token Introspection (RFC 7662) and Token Revocation (RFC
+    7009) recognize two kinds of caller: the client a token was issued to, and (for
+    introspection) a protected resource the authorization server chooses to trust.
+    Neither covers a common case: a client that acts for the end user and wants to
+    see, or end, a grant that the same user gave to a different client, for example
+    a user disconnecting one AI agent from inside a web application. This document
+    defines a third kind of caller, the subject-proof caller. The caller presents
+    a token that the authorization server issued to that same caller for the same
+    end user. If the proof is valid and names the same subject as the target grant,
+    the authorization server discloses the grant's delegation metadata at the introspection
+    endpoint, or revokes exactly that one grant at the revocation endpoint.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-radusch-oauth-subject-proof-01
+    docid:
+    - id: draft-radusch-oauth-subject-proof-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-radusch-oauth-subject-proof-01
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-radusch-oauth-subject-proof-02
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

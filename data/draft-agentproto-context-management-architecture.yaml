@@ -14,27 +14,18 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>Agentic applications increasingly distribute a single objective across
-    autonomous agents, tools, and services implemented by different vendors, operated
-    by different organizations, and connected through different protocols. A single
-    activity may contain multiple pairwise dialogs, multiple tasks within each dialog,
-    tool invocations, derived resources, downstream delegations, and later interactions
-    that reinterpret or reuse artifacts produced earlier in the activity. Existing
-    protocols provide useful local identifiers for their own interactions, but those
-    identifiers do not by themselves provide a common information model for correlating
-    independently maintained dialogs, tasks, and resources across protocol and administrative
-    boundaries. This document defines an information model consisting of Activities,
-    Dialogs, Tasks, Resources, and typed Relationships. It distinguishes Activity
-    correlation from protocol-local Dialog context, and distinguishes stable resource
-    identity and provenance from locally defined interpretations. As such, this document
-    develops a context-and-correlation information-model architecture, not a functional
-    reference architecture or a wire protocol. It identifies relevant objects and
-    relationships, relevant to maintaining coherent context, and examines the implications
-    for preserving and propagating their correlations. It does not define the procedures
-    by which applications execute work. The model distinguishes the logical extent
-    of an Activity, which may extend beyond protocol-managed correlation; extending
-    that coverage is selective, while maintaining established managed correlations
-    entails responsibilities.</p>"
+- content: "<p>Agentic applications increasingly distribute objectives across autonomous
+    agents, tools, and services operating across different protocols and administrative
+    domains. A single Activity may involve multiple independently maintained Dialogs,
+    Tasks, Events, and Resources, spanning different modalities and extended periods
+    of time. Existing protocols provide identifiers and context-management mechanisms
+    for their own interactions, but these do not necessarily support correlation across
+    Dialogs, protocols, and administrative boundaries, particularly as interactions
+    evolve, branch, or resume over time. This document defines a context-and-correlation
+    architecture based on Activities, Dialogs, Tasks, Resources, and typed Relationships.
+    It describes how management and correlation metadata can be maintained and selectively
+    propagated to preserve coherent context across distributed interactions, while
+    allowing participants to determine the scope of correlations they share and manage.</p>"
   language:
   - en
   script:
@@ -50,6 +41,16 @@ relation:
       primary: true
     formattedref:
       content: draft-agentproto-context-management-architecture-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-agentproto-context-management-architecture-01
+    docid:
+    - id: draft-agentproto-context-management-architecture-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-agentproto-context-management-architecture-01
       format: text/plain
 ext:
   schema-version: v1.0.1

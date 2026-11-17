@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-wan-emu-aka-prime-identity-fragmentation
 title:
-- content: EAP-AKA' Identity Fragmentation
+- content: EAP-AKA' Large Identity
   language:
   - en
   script:
@@ -13,14 +13,19 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document updates EAP-AKA’ (RFC 9048) by defining the use of the
-    AT_FRAGMENT mechanism, as defined in I-D.ietf-emu-pqc-eapaka, for fragmentation
-    of the AT_IDENTITY attribute. This update allows a peer to convey a large network
-    access identifier, such as a Subscription Concealed Identifier (SUCI), during
-    the EAP-AKA’ identity exchange when the encoded identity is too large to fit reliably
-    in a single EAP packet. This is intended to support large SUCI values produced
-    by post-quantum cryptographic concealment schemes, while preserving the existing
-    EAP-AKA’ challenge and key derivation procedures.</p>"
+- content: "<p>This document updates EAP-AKA’ (RFC 9048) so that a peer can send an
+    identity that is too large for the initial EAP-Response/Identity packet, such
+    as a Subscription Concealed Identifier (SUCI) in Network Access Identifier (NAI)
+    format protected by a Post-Quantum Cryptography (PQC) scheme. The peer sends a
+    realm-only identity in EAP-Response/Identity and the large identity in EAP-Response/AKA-
+    Identity. If the identity fits in an AT_IDENTITY attribute, the peer sends it
+    there. Otherwise, the peer sends it in a new attribute, AT_LARGE_IDENTITY, which
+    is fragmented using the AT_FRAGMENT attribute defined in I-D.ietf-emu-pqc-eapaka.
+    A peer that supports several SUCI protection schemes (for example PQC and classical
+    schemes) uses the presence or absence of the AT_LARGE_IDENTITY_SUPPORTED attribute
+    in the server’s request to select a scheme whose SUCI can be carried in an identity
+    attribute that the server can process. These procedures support large SUCI values,
+    and do not change the EAP-AKA’ authentication or key derivation.</p>"
   language:
   - en
   script:
@@ -36,6 +41,16 @@ relation:
       primary: true
     formattedref:
       content: draft-wan-emu-aka-prime-identity-fragmentation-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-wan-emu-aka-prime-identity-fragmentation-01
+    docid:
+    - id: draft-wan-emu-aka-prime-identity-fragmentation-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-wan-emu-aka-prime-identity-fragmentation-01
       format: text/plain
 ext:
   schema-version: v1.0.1
