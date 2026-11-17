@@ -24,14 +24,13 @@ abstract:
     Its operative content is drawn from a closed vocabulary that cannot enter text,
     upload files, or reach another origin. Every action derived from a manifest passes
     through a policy enforcement point that is not a language model, and steps conventionally
-    bound to a decision require the user's confirmation by default. Security controls
-    such as access denials, rate limits, CAPTCHAs, authentication challenges, and
-    confirmation dialogs are stop conditions, never traps to be recovered from. Optional
-    publisher signatures and agent-configured reputation services provide authenticity
-    but never imply safety and never relax these requirements. This -03 revision replaces
-    the trust model of draft-han-ai-manifest- 02, removes the inline and vendor-path
-    discovery methods from the protocol, and restructures the schema around a closed
-    action vocabulary. Preliminary measurements are reported in an appendix.</p>"
+    bound to a decision always require the user's confirmation; an agent's own policy
+    can only deny them. Security controls such as access denials, rate limits, CAPTCHAs,
+    authentication challenges, and confirmation dialogs are stop conditions, never
+    traps to be recovered from. Optional publisher signatures and agent-configured
+    reputation services provide authenticity but never imply safety and never relax
+    these requirements. Preliminary measurements, including an adversarial evaluation
+    of a reference implementation, are reported in an appendix.</p>"
   language:
   - en
   script:
@@ -77,6 +76,16 @@ relation:
       primary: true
     formattedref:
       content: draft-han-ai-manifest-03
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-han-ai-manifest-04
+    docid:
+    - id: draft-han-ai-manifest-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-han-ai-manifest-04
       format: text/plain
 ext:
   schema-version: v1.0.1

@@ -13,16 +13,16 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>A COSE Hash Envelope signs the digest of a preimage, not the preimage
+- content: <p>A COSE Hash Envelope signs the digest of a preimage, not the preimage
     itself. When the preimage is the encoding of a structured value, such as a CBOR
     data item, and a verifier holds that value but not the bytes that were hashed,
     the verifier has to encode the value again, and the digest matches only if it
     applies the same deterministic encoding as the producer. RFC 8949 describes more
     than one such encoding for the same content type, and the preimage content type
     does not identify which one was applied. This document defines a COSE Hash Envelope
-    protected-header parameter that identifies the encoding, and an IANA registry
-    of deterministic encodings whose initial entry is the Core Deterministic Encoding
-    Requirements of RFC 8949.</p>"
+    protected-header parameter that identifies the encoding, and one value for CBOR
+    content, the text string "dtrm", which states that the Core Deterministic Encoding
+    Requirements of RFC 8949 were applied.</p>
   language:
   - en
   script:
@@ -38,6 +38,16 @@ relation:
       primary: true
     formattedref:
       content: draft-mih-sokolov-cose-deterministic-encodings-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-mih-sokolov-cose-deterministic-encodings-01
+    docid:
+    - id: draft-mih-sokolov-cose-deterministic-encodings-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-mih-sokolov-cose-deterministic-encodings-01
       format: text/plain
 ext:
   schema-version: v1.0.1

@@ -16,21 +16,25 @@ docid:
 abstract:
 - content: "<p>The architecture for auditing agent delegation and interactions proposed
     for the AUDIT effort names Interaction Records, Action Records and Authorization
-    Transition Records and leaves their encoding open. This document maps an existing
-    pair of signed records, the decision receipt and the outcome receipt of the open-
-    source proofbundle project, onto those record types for three cases, a human approval,
-    a declined action and an executed action with its result, and gives each record
-    exact bytes, a signature and digest bindings that a third party can check offline.
-    Each receipt is created when the decision or the outcome occurs and is checked
-    by an Auditor post hoc, and a declined or refused action is a record of its own.
-    For each case the document states what the receipt adds and what it does not show,
-    and it gives a verification procedure that runs offline. It requires that an approval
-    be honoured at most once, even after the record of consumed approvals is rotated.
-    Test vectors for all three cases, each with a counterexample, are included. The
-    document also describes, informatively, how a receipt can be registered with a
-    Transparency Service under RFC 9943 and what a SCITT Receipt then shows and does
-    not show. It uses existing receipt formats and defines no new predicate or registry.
-    How the issuer of a receipt enforces its decision is out of scope.</p>"
+    Transition Records and leaves their encoding open. This document maps a pair of
+    signed records, the decision receipt and the outcome receipt, onto those record
+    types for three cases, a human approval, a declined action and an executed action
+    with its result. It states what each record requires independently of its encoding,
+    exact bytes, a signature over them, digest bindings, required members and a content
+    root, with verification steps that a third party can run offline, and it gives
+    the binding of these requirements to DSSE and in-toto that existing receipts use
+    and a second binding to COSE_Sign1, in which a receipt is itself a Signed Statement
+    for a Transparency Service. Each receipt is created when the decision or the outcome
+    occurs and is checked by an Auditor post hoc, and a declined or refused action
+    is a record of its own. For each case the document states what the receipt adds
+    and what it does not show, and it gives a verification procedure that runs offline.
+    It requires that an approval be honoured at most once, even after the record of
+    consumed approvals is rotated. Test vectors for all three cases, each with a counterexample,
+    are included. The document also describes, informatively, how a receipt can be
+    registered with a Transparency Service under RFC 9943 and what a SCITT Receipt
+    then shows and does not show. It defines no new predicate or registry; the COSE_Sign1
+    binding names its two receipt types by new identifiers. How the issuer of a receipt
+    enforces its decision is out of scope.</p>"
   language:
   - en
   script:
@@ -136,6 +140,16 @@ relation:
       primary: true
     formattedref:
       content: draft-gruszka-audit-decision-receipts-09
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-gruszka-audit-decision-receipts-10
+    docid:
+    - id: draft-gruszka-audit-decision-receipts-10
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-gruszka-audit-decision-receipts-10
       format: text/plain
 ext:
   schema-version: v1.0.1
