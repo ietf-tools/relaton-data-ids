@@ -1,0 +1,106 @@
+---
+schema-version: v1.2.3
+id: draft-chandra-wimse-partition-tolerant-renewal-00
+title:
+- content: Extend-Only, Threshold-Attested Authority Renewal for Partitioned Agent
+    Meshes
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-chandra-wimse-partition-tolerant-renewal-00
+  type: src
+type: standard
+docid:
+- id: draft-chandra-wimse-partition-tolerant-renewal-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.chandra-wimse-partition-tolerant-renewal
+  type: IETF
+  scope: anchor
+docnumber: I-D.chandra-wimse-partition-tolerant-renewal
+date:
+- type: published
+  value: '2026-11-17'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Sharath
+          language:
+          - en
+        - language:
+          - en
+          initial: S
+        formatted_initials:
+          content: S.
+          language:
+          - en
+      surname:
+        content: Chandra
+        language:
+        - en
+      completename:
+        content: Sharath Chandra
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Stellarminds.ai
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-11-17'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>Every workload identity architecture in deployment today assumes its
+    credential issuer is reachable: short-lived tokens, fast rotation and timely revocation
+    are guarantees about the connected case. This document specifies what a workload
+    does when that assumption fails, when its credential is nearing or past expiry
+    and its issuer cannot be reached. It defines extend-only, threshold-attested authority
+    renewal. Before any partition, the issuer signs a Mesh Manifest that appoints
+    a bounded set of peers as a limited-authority local issuer: it names the members,
+    fixes a ceiling on total extension, caps the scope any renewal may carry, and
+    sets a validity window. During a partition, a severed workload broadcasts a signed
+    renewal request to those peers; each peer independently verifies that the request
+    extends existing authority without widening it, within the manifest's ceiling,
+    and against its own first-hand observation of the requester's health; each attestation
+    signs the digest of the entire request, so scope, requester, timestamps and predecessor
+    are all under the peer's signature; once a two-thirds threshold of the peers (ceil(2N/3)
+    of N &gt;= 4) has attested, the workload treats its authority as extended through
+    a bounded expiry. Rounds are hash- linked, so a chain's signatures commit to the
+    exact history being extended. The document specifies the manifest, the message
+    formats, the independent-evaluation procedure, the renewal-chain construction
+    for partitions outlasting one round, and the verification procedure a relying
+    party runs given the manifest, the chain and the original credential it already
+    trusts. It also specifies, normatively, what this mechanism does not provide:
+    it is not a consensus protocol, it does not establish that a workload is uncompromised,
+    and a revocation issued during a partition is not enforceable until the partition
+    heals; an implementation MUST NOT represent this mechanism as providing partition-proof
+    revocation.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-chandra-wimse-partition-tolerant-renewal-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

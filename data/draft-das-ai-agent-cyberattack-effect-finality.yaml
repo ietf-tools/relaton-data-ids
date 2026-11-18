@@ -1,0 +1,61 @@
+---
+schema-version: v1.2.3
+id: draft-das-ai-agent-cyberattack-effect-finality
+title:
+- content: 'AI Safety: When AI Agents Initiate Cyberattacks -- Execution Finality
+    for Data Exfiltration, Payment Diversion, Infrastructure Changes, and Code-Executing
+    Agents'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-das-ai-agent-cyberattack-effect-finality
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: '<p>Problem. An AI agent can cause an unauthorized real-world effect --
+    a confidential data export, a payment to a substituted beneficiary, a network
+    or industrial configuration change, a code deployment or a secret release -- while
+    every individual check succeeds: the model accepted a plausible task, the agent
+    held a valid credential, the tool call was syntactically permitted, and the gateway
+    saw an allowed method. The gap is that the check and the effect are not the same
+    thing. Identity and access controls answer "may this principal call this interface?";
+    they do not, by themselves, answer "may this exact effect, with these resolved
+    targets and values, complete now, on this route, given what has already happened?"
+    Solution. This document describes an execution-finality profile for AI-initiated
+    operations. An agent''s proposal is held as a non- effective Candidate Act. A
+    protected validator compares a canonical descriptor of the operation actually
+    about to be committed with a source-authority envelope that model-editable content
+    cannot create or enlarge. A Finality Sink, which owns the effect-causing credential
+    or commit right, verifies an act-bound, non-bearer Execution Handle over the same
+    bytes it commits, consumes it atomically with the commit, and emits an authenticated
+    destination receipt. Later phases and retries are gated on that receipt rather
+    than on the agent''s own report. Unknown outcomes become INDETERMINATE and are
+    reconciled before any retry. Context. The document analyses four scenarios (enterprise
+    data exfiltration, payment diversion, critical-infrastructure configuration manipulation,
+    and code-executing agents), specifies data objects, a Candidate Act state machine,
+    atomic consumption and crash-recovery rules, sink trust, delegation attenuation,
+    protocol placement for tool and agent-to-agent calls, revocation freshness, latency
+    placement, legacy integration and a falsifiable evaluation plan. It is a prospective
+    architecture: no measured latency, blocking rate or deployment is claimed. A reviewer
+    FAQ is included. Critical technical review is invited.</p>'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-das-ai-agent-cyberattack-effect-finality-00
+    docid:
+    - id: draft-das-ai-agent-cyberattack-effect-finality-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-das-ai-agent-cyberattack-effect-finality-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

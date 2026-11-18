@@ -1,0 +1,50 @@
+---
+schema-version: v1.2.3
+id: draft-hopley-x402-settlement-anchoring
+title:
+- content: Chain-Agnostic Anchoring of Canonical Settlement References for Agentic
+    Payments
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-hopley-x402-settlement-anchoring
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This document specifies how a canonical content-addressed settlement
+    reference is anchored into a transaction on any blockchain, uniformly across chain
+    families, so that the same agentic-payment settlement can be recorded on-chain
+    and later verified offline from the transaction bytes alone. The settlement reference
+    is a SHA-256 digest over the JSON Canonicalization Scheme (JCS, RFC 8785) form
+    of a settlement record. This document does not redefine the digest; it defines
+    (1) a chain identification rule that rejects ambiguous chain names before a settlement
+    is bound to a network, and (2) a family-uniform anchor encoding that places the
+    reference in the one field each chain family makes available for opaque data (EVM
+    calldata or a log topic, an SVM memo, an AVM note, a UTXO OP_RETURN output, or
+    a generic metadata carrier). The anchor carries only the digest; it carries no
+    party identifiers, amounts, or personal data in cleartext. Because the reference
+    is content-addressed and the encoding is fixed per family, any holder of the settlement
+    record can recompute the reference, read the anchor from the on-chain field, and
+    confirm the two match with no call to the settling party and no chain-specific
+    verification logic beyond reading one field.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-hopley-x402-settlement-anchoring-00
+    docid:
+    - id: draft-hopley-x402-settlement-anchoring-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-hopley-x402-settlement-anchoring-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

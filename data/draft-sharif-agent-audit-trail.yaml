@@ -55,7 +55,13 @@ abstract:
     and corrections to the EU AI Act Article 12 and Article 19 citations in the regulatory
     mapping (Section 11.1 and Appendix B). Records produced under -06 and earlier
     predate the "principal" field; verifiers processing mixed-revision archives SHOULD
-    treat its absence as "principal not recorded" rather than a validation failure.</p>'
+    treat its absence as "principal not recorded" rather than a validation failure.
+    The -10 revision strengthens recording independence (Section 5.2) from SHOULD
+    to MUST at trust level L2 and above, and requires the "authority_ref" of the "principal"
+    field (Section 3.1) to be non-null and to reference an authorization artifact
+    verifiable independently of the agent at L2 and above, in response to independent
+    review. Above L2, both the recorder and the authorizing artifact are therefore
+    independent of the agent.</p>'
   language:
   - en
   script:
@@ -161,6 +167,16 @@ relation:
       primary: true
     formattedref:
       content: draft-sharif-agent-audit-trail-09
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-sharif-agent-audit-trail-10
+    docid:
+    - id: draft-sharif-agent-audit-trail-10
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-sharif-agent-audit-trail-10
       format: text/plain
 ext:
   schema-version: v1.0.1

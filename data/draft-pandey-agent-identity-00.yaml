@@ -1,0 +1,93 @@
+---
+schema-version: v1.2.3
+id: draft-pandey-agent-identity-00
+title:
+- content: 'Session-Scoped Authorization for AI Agents: A Per-Tool-Call Authorization
+    Profile Building on WIMSE and OAuth'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-pandey-agent-identity-00
+  type: src
+type: standard
+docid:
+- id: draft-pandey-agent-identity-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.pandey-agent-identity
+  type: IETF
+  scope: anchor
+docnumber: I-D.pandey-agent-identity
+date:
+- type: published
+  value: '2026-11-17'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Karmendra
+          language:
+          - en
+        - language:
+          - en
+          initial: K
+        formatted_initials:
+          content: K.
+          language:
+          - en
+      surname:
+        content: Pandey
+        language:
+        - en
+      completename:
+        content: Karmendra Pandey
+        language:
+        - en
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-11-17'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>Autonomous AI agents act with privileges: they call tools, read and
+    write data, and operate services. In most current deployments they do so under
+    shared service accounts, with permissions broader than any single task requires
+    and without an audit trail that binds an action to the agent that took it and
+    the human on whose behalf it acted. This document specifies a session-scoped authorization
+    profile for AI agents, building on the WIMSE architecture and the OAuth 2.0 protocol
+    family. Each agent is a first-class IAM principal with its own credentials. Each
+    session is bound to an authenticated human sponsor through an authenticated delegation
+    chain. Authorization is evaluated at every tool call, with effective permissions
+    computed as the intersection -- never the union -- of the agent principal's permissions,
+    the sponsor's permissions, and the session scope. Actions that cannot be evaluated
+    are denied (fail closed), defined classes of irreversible actions require sponsor
+    approval, and every evaluated tool call produces a tamper-evident audit receipt.
+    The document defines the model, states requirements for implementations, maps
+    the model onto existing OAuth and WIMSE mechanisms, and gives full security considerations.
+    It defines no new protocol and requests no IANA actions.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-pandey-agent-identity-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
