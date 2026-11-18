@@ -20,12 +20,12 @@ abstract:
     Model Context Protocol servers through DNS TXT records, then expressing the verified
     envelope's Ed25519 key as a verification method. The identifier agrees with the
     handle grammar of the alter URI scheme and with the did:alter form already written
-    by the identity-attributed commits specification. The method introduces no new
-    record, no new cryptographic primitive and no registry of its own: create, update
-    and deactivate are the publication, replacement and revocation of that envelope,
-    and read is its verification. The document also sets out what the method cannot
-    yet do, because the envelope record it reads carries no key history, and revocation
-    cannot presently be observed from DNS alone.</p>"
+    by the identity-attributed commits specification. The method defines no record,
+    cryptographic primitive or registry of its own. Its create, update and deactivate
+    operations publish, replace and revoke that envelope, and its read operation verifies
+    it. The document also sets out what the method cannot yet do, because the envelope
+    record it reads carries no key history, and revocation cannot presently be observed
+    from DNS alone.</p>"
   language:
   - en
   script:
@@ -41,6 +41,16 @@ relation:
       primary: true
     formattedref:
       content: draft-morrison-did-alter-method-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-morrison-did-alter-method-01
+    docid:
+    - id: draft-morrison-did-alter-method-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-morrison-did-alter-method-01
       format: text/plain
 ext:
   schema-version: v1.0.1

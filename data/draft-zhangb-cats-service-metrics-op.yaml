@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-zhangb-cats-service-metrics-op
 title:
-- content: Computing Service Metrics Operation and Joint Service Selection under CATS
+- content: Computing Service Metric Definitions and Operation under CATS
   language:
   - en
   script:
@@ -17,20 +17,20 @@ abstract:
     by considering both computing and networking metrics. The CATS Metrics framework
     provides a general metric hierarchy and operational guidance for aggregation and
     normalization. Some deployment scenarios additionally require service-oriented
-    metrics with explicit semantics and units to be consumed directly for joint service-
-    instance and path selection. This document defines an operational approach that
-    does not rely on the Level 1 or Level 2 normalized scores of the CATS Metrics
-    framework. Instead, service sites report service-oriented metrics with explicit
-    semantics and units, such as Global Available Slots and Computing Time, which
-    are directly consumed by the C-PS for joint service-instance and path selection.
-    The document clarifies how these metrics are derived from basic resource information,
-    service reference information, and local policy. It also specifies how the C-PS
-    combines the Computing Service Table with the Network Service Table, and defines
-    update-control and fallback mechanisms suitable for large-scale deployments. Within
-    the unified CATS architecture, this service-oriented operational approach complements
-    the normalized-score approach. The two targeted scenarios are rapid deployment
-    without offline metric- function negotiation and fine-grained, requirement-aware
-    joint selection.</p>"
+    metrics with explicit semantics and units to be consumed directly for service-instance
+    selection based on both computing and network conditions. This document defines
+    an operational approach that does not rely on the Level 1 or Level 2 normalized
+    scores of the CATS Metrics framework. Instead, service sites report service-oriented
+    metrics with explicit semantics and units, such as Global Available Slots and
+    Computing Time, which are directly consumed by the C-PS for service- instance
+    selection based on both computing and network conditions. The document clarifies
+    how these metrics are derived from basic resource information, service reference
+    information, and local policy. It also specifies how the C-PS combines the Computing
+    Service Table with the Network Service Table, and defines update- control and
+    fallback mechanisms suitable for large-scale deployments. Within the unified CATS
+    architecture, this service-oriented operational approach complements the normalized-score
+    approach. The two targeted scenarios are rapid deployment without offline metric-
+    function negotiation and fine-grained, requirement-aware joint selection.</p>"
   language:
   - en
   script:
@@ -106,6 +106,16 @@ relation:
       primary: true
     formattedref:
       content: draft-zhangb-cats-service-metrics-op-06
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-zhangb-cats-service-metrics-op-07
+    docid:
+    - id: draft-zhangb-cats-service-metrics-op-07
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-zhangb-cats-service-metrics-op-07
       format: text/plain
 ext:
   schema-version: v1.0.1

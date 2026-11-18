@@ -20,15 +20,15 @@ abstract:
     Drafted-With) and three optional cryptographic trailers (Identity-Signature, Identity-
     Key-Id, Identity-Anchor). The signature is computed with Ed25519 over the commit's
     patch identifier, the value git patch-id derives from the change the commit makes,
-    under a fixed domain-separation prefix. It therefore attests the change and not
-    the resulting tree or the commit hash. A commit that carries the same change keeps
-    a verifying signature across rebase onto an unrelated base, cherry- pick, and
-    message amendment. A merge commit carries no signature, and a squash is a new
-    change signed by whoever squashed it. Conformant parsers reject cross-tier category
-    errors (e.g., an Instrument-tier handle in an Acted-By slot) as malformed. The
-    mechanism is provider-neutral, depends only on DNS and the ~handle resolution
-    algorithm of that draft, and requires no central authority or platform-specific
-    verification service.</p>"
+    under a fixed domain-separation prefix. The signed value therefore depends on
+    the change alone, and the resulting tree and the commit hash do not enter it.
+    A commit that carries the same change keeps a verifying signature across rebase
+    onto an unrelated base, cherry-pick, and message amendment. A merge commit carries
+    no signature, and a squash is a new change signed by whoever squashed it. Conformant
+    parsers reject cross-tier category errors (e.g., an Instrument-tier handle in
+    an Acted-By slot) as malformed. The mechanism is provider-neutral. It depends
+    only on DNS and the ~handle resolution algorithm of that draft and needs no central
+    authority or verification service run by a platform.</p>"
   language:
   - en
   script:
@@ -84,6 +84,16 @@ relation:
       primary: true
     formattedref:
       content: draft-morrison-identity-attributed-commits-04
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-morrison-identity-attributed-commits-05
+    docid:
+    - id: draft-morrison-identity-attributed-commits-05
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-morrison-identity-attributed-commits-05
       format: text/plain
 ext:
   schema-version: v1.0.1

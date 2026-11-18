@@ -20,16 +20,15 @@ abstract:
     band (FRESH, AGING, STALE) is derived at read time from the durable history and
     is never stored. A claim whose derived band is not FRESH MUST NOT be re- emitted
     as current and MUST NOT ground a new durable claim; the sole transition back to
-    currency is a fresh observation of the claim's basis, enforced at the substrate's
-    append stage rather than at any reader's discretion. The memo is the claim-layer
-    consumer that two companion specifications, Substrate-Observation as an Alternative
-    to Envelope Coordination and the Substrate-Provenance Annotation Grammar, each
-    left unspecified. The contribution is a specific composition: a read-time-derived
-    band, a decay clock measured in missing observations learned from a basis's own
-    change cadence, an append-stage rejection of any claim citing a basis that is
-    no longer the head of its lineage, and observation as the only admissible refresh.
-    No new substrate is standardised; the discipline composes with substrate that
-    already exists.</p>"
+    currency is a fresh observation of the claim's basis, and the substrate's append
+    stage enforces that for every reader. The memo specifies the claim-layer consumer
+    that two companion specifications, Substrate-Observation as an Alternative to
+    Envelope Coordination and the Substrate-Provenance Annotation Grammar, each left
+    unspecified. It composes a read-time-derived band, a decay clock measured in missing
+    observations learned from a basis's own change cadence, an append-stage rejection
+    of any claim citing a basis that is no longer the head of its lineage, and observation
+    as the only admissible refresh. No new substrate is standardised; the discipline
+    composes with substrate that already exists.</p>"
   language:
   - en
   script:
@@ -45,6 +44,16 @@ relation:
       primary: true
     formattedref:
       content: draft-morrison-claim-currency-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-morrison-claim-currency-01
+    docid:
+    - id: draft-morrison-claim-currency-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-morrison-claim-currency-01
       format: text/plain
 ext:
   schema-version: v1.0.1

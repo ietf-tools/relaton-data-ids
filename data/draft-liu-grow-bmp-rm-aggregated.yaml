@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-liu-grow-bmp-rm-aggregated
 title:
-- content: Definition for Aggregated BMP Route Monitoring Message
+- content: Efficient BMP Route Monitoring Messages
   language:
   - en
   script:
@@ -13,11 +13,17 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document proposes an aggregated BMP Route Monitoring message based
-    on the BMP Multi-Peer Header message (draft-liu-grow-bmp- multiple-peer-header).
-    It can compress multiple BMP Route Monitoring messages into one aggregated BMP
-    Route Monitoring message to reduce the amount of reported BMP Route Monitoring
-    messages and reduce the network overhead.</p>"
+- content: "<p>This document proposes two complementary optimizations for the BGP
+    Monitoring Protocol (BMP) Route Monitoring message to significantly reduce network
+    overhead and improve monitoring efficiency. The first optimization defines an
+    aggregated BMP Route Monitoring message based on the Multi-Peer Header mechanism,
+    which compresses multiple BMP Route Monitoring messages into a single aggregated
+    message by leveraging BGP group packaging technology. The second optimization
+    introduces a Common Update TLV that eliminates redundant transmission of routes
+    unchanged by inbound or outbound policies across different RIB views. These optimizations
+    work together to reduce the number of reported BMP messages, decrease bandwidth
+    consumption, and improve processing efficiency for both monitored routers and
+    monitoring stations.</p>"
   language:
   - en
   script:
@@ -93,6 +99,16 @@ relation:
       primary: true
     formattedref:
       content: draft-liu-grow-bmp-rm-aggregated-06
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-liu-grow-bmp-rm-aggregated-07
+    docid:
+    - id: draft-liu-grow-bmp-rm-aggregated-07
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-liu-grow-bmp-rm-aggregated-07
       format: text/plain
 ext:
   schema-version: v1.0.1
