@@ -13,19 +13,13 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>YANG Datastore Telemetry, YANG-Push version 2 [I-D.ietf-netconf-yang-push-2],
-    assigns each publisher a monotonically increasing sequence number so a receiver
-    can detect loss and reordering. The current design leaves two questions unanswered:
-    what happens when the counter wraps, and how a receiver aggregating records from
-    more than one publisher is to compare sequence numbers that were never defined
-    to be comparable across publishers in the first place. Both questions have already
-    been studied, and largely settled, in the distributed systems literature under
-    the heading of logical and hybrid logical clocks, and in deployed streaming systems
-    under the heading of offset and epoch numbering. This document evaluates three
-    existing causal- ordering primitives against YANG-Push's specific constraints
-    and proposes adopting a Hybrid Logical Clock so that the wraparound and cross-publisher
-    comparison problems are removed by construction rather than patched with a wider
-    counter.</p>"
+- content: "<p>In YANG Push version 2, each publisher numbers its own notifications,
+    and the numbers of two publishers are not comparable. When data moves from one
+    publisher to another, a receiver cannot tell from the sequence numbers which update
+    is newer. This document proposes carrying a Hybrid Logical Clock (HLC), a timestamp
+    plus a small tie-breaking counter, in the notification envelope. It gives one
+    order across publishers with constant state at the receiver and does not wrap
+    in practice.</p>"
   language:
   - en
   script:
@@ -41,6 +35,16 @@ relation:
       primary: true
     formattedref:
       content: draft-dikshit-netconf-yang-push-causal-ordering-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-dikshit-netconf-yang-push-causal-ordering-01
+    docid:
+    - id: draft-dikshit-netconf-yang-push-causal-ordering-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-dikshit-netconf-yang-push-causal-ordering-01
       format: text/plain
 ext:
   schema-version: v1.0.1

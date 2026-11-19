@@ -13,20 +13,15 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: <p>Several YANG modules currently in progress across multiple IETF working
-    groups define counters, gauges, and other measured values that are exported from
-    a network element and compared, summed, or averaged by a remote collector, either
-    against the same node's history or against values from a different node. YANG
-    (RFC 7950) has no first-class, machine-checkable way to state the administrative
-    or topological domain within which two occurrences of such a value are comparable,
-    so this determination is currently made, inconsistently or not at all, in prose.
+- content: <p>A value exported from a YANG data tree is often unique only within its
+    parent, for example an entry numbered 0 under two different parents. Once the
+    value is exported without the parent's key, a collector cannot tell whether two
+    such values refer to the same thing, and no collector-side normalization can recover
+    the missing key. YANG (RFC 7950) has no way to state this dependency in the schema.
     This document defines a YANG extension statement, "csc:comparability-scope", a
-    four-value scope lattice, and a compatibility rule that lets a schema-aware tool
-    statically detect an illegal aggregation across incomparable scopes, without waiting
-    for it to happen at a collector. A related but distinct axis, the measurement
-    window or method over which a rate or average value was computed, is identified
-    as a further gap this document's mechanism does not itself close, and is reported
-    separately as a candidate for future work.</p>
+    four-level scope lattice, a compatibility rule, and an export rule, so that the
+    key needed to compare a value travels with it, and a schema-aware tool can detect
+    an invalid comparison before any data is exported.</p>
   language:
   - en
   script:
@@ -72,6 +67,16 @@ relation:
       primary: true
     formattedref:
       content: draft-dikshit-netmod-comparability-scope-extension-03
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-dikshit-netmod-comparability-scope-extension-04
+    docid:
+    - id: draft-dikshit-netmod-comparability-scope-extension-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-dikshit-netmod-comparability-scope-extension-04
       format: text/plain
 ext:
   schema-version: v1.0.1
