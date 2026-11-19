@@ -1,0 +1,45 @@
+---
+schema-version: v1.2.3
+id: draft-gerber-oauth-refresh-one-time-proofs
+title:
+- content: OAuth 2.0 One-Time Refresh Proofs
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-gerber-oauth-refresh-one-time-proofs
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>Refresh token rotation asks the authorization server to deliver a new
+    secret to the client in every refresh response, and then treats any later appearance
+    of the old secret as evidence of theft. When a response is lost, the legitimate
+    client's retry is indistinguishable from token theft, and the grant is revoked.
+    This document defines an alternative for clients that are unable or unwilling
+    to implement DPoP. The client generates a key pair, registers the public key when
+    it redeems the authorization code, and thereafter accompanies each use of a non-rotating
+    refresh token with a signature over a strictly increasing counter and a nonce.
+    Everything the client needs in order to retry is something the client itself generated,
+    so a lost response can no longer desynchronize the two parties. Replay of a captured
+    request yields nothing, and concurrent use of a copied key is detected in the
+    same way that rotation detects reuse.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-gerber-oauth-refresh-one-time-proofs-00
+    docid:
+    - id: draft-gerber-oauth-refresh-one-time-proofs-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-gerber-oauth-refresh-one-time-proofs-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

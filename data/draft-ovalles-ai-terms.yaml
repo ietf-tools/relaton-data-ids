@@ -17,15 +17,14 @@ abstract:
 - content: "<p>This document defines AI Terms: a JSON document published at the well-known
     URI /.well-known/ai-terms in which a website states, for each of four uses of
     its content by automated AI systems (search, answer, training and agent), whether
-    the use is allowed, allowed for a price, or not allowed. It also defines an AI-Purpose
-    request header with which a client declares the use it intends, a way to point
-    to the terms from any HTTP response, how a quote for a paid page can describe
-    the page so that payment depends on that page being delivered, and how a paid
-    access produces a receipt that records the use. AI Terms is designed to sit alongside
-    the Robots Exclusion Protocol and the usage-preference vocabulary of the IETF
-    AI Preferences work, adding the pieces those leave out: price, a free allowance,
-    payment binding, a description of what is being bought, purpose declaration by
-    the client, and a record of licensed use.</p>"
+    the use is allowed, allowed for a price, or not allowed. Each use corresponds
+    to one category of the IETF AI Preferences vocabulary, and the document defines
+    how a site's terms are written, conservatively, as AI Preferences statements (the
+    Content-Usage header field and robots.txt rule) for clients that read only those.
+    AI Terms extends the AI Preferences work with what it leaves out: a price and
+    a free allowance, a payment binding (HTTP 402, with x402 as the first), a purpose
+    declaration by the client (the AI-Purpose header field), a description of a paid
+    page that the payment depends on, and a receipt that records the use.</p>"
   language:
   - en
   script:
@@ -61,6 +60,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ovalles-ai-terms-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ovalles-ai-terms-03
+    docid:
+    - id: draft-ovalles-ai-terms-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ovalles-ai-terms-03
       format: text/plain
 ext:
   schema-version: v1.0.1
