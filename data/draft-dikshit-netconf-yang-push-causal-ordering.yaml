@@ -2,7 +2,7 @@
 schema-version: v1.2.3
 id: draft-dikshit-netconf-yang-push-causal-ordering
 title:
-- content: Comparable Sequence Numbers Across Publishers in YANG Datastore Telemetry
+- content: Cross-Publisher Causal Ordering for YANG-Push Datastore Telemetry
   language:
   - en
   script:
@@ -13,13 +13,17 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>In YANG Push version 2, each publisher numbers its own notifications,
-    and the numbers of two publishers are not comparable. When data moves from one
-    publisher to another, a receiver cannot tell from the sequence numbers which update
-    is newer. This document proposes carrying a Hybrid Logical Clock (HLC), a timestamp
-    plus a small tie-breaking counter, in the notification envelope. It gives one
-    order across publishers with constant state at the receiver and does not wrap
-    in practice.</p>"
+- content: "<p>In YANG-Push version 2, each publisher numbers its own notifications,
+    and the numbers of two publishers are not comparable. When a single subscription
+    is served by several publishers, for example on a multi- line-card router or a
+    disaggregated routing stack, a collector cannot order updates across those publishers
+    from the sequence numbers alone. This document defines an opt-in, coordination-free
+    mechanism that carries a Comparability Scope, a coarse Causal-Epoch, and a per-
+    publisher Local-Sequence-Number in the notification envelope. Publishers stay
+    lock-free on the export fast path, and a collector reconstructs cross-publisher
+    order within a bounded reordering window. A companion YANG module adds the subscription
+    controls, the envelope metadata, and the capability discovery. The mechanism does
+    not require synchronized clocks across publishers.</p>"
   language:
   - en
   script:
@@ -45,6 +49,16 @@ relation:
       primary: true
     formattedref:
       content: draft-dikshit-netconf-yang-push-causal-ordering-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-dikshit-netconf-yang-push-causal-ordering-02
+    docid:
+    - id: draft-dikshit-netconf-yang-push-causal-ordering-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-dikshit-netconf-yang-push-causal-ordering-02
       format: text/plain
 ext:
   schema-version: v1.0.1

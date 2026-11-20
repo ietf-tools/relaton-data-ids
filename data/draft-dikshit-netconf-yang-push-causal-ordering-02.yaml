@@ -1,0 +1,102 @@
+---
+schema-version: v1.2.3
+id: draft-dikshit-netconf-yang-push-causal-ordering-02
+title:
+- content: Cross-Publisher Causal Ordering for YANG-Push Datastore Telemetry
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-dikshit-netconf-yang-push-causal-ordering-02
+  type: src
+type: standard
+docid:
+- id: draft-dikshit-netconf-yang-push-causal-ordering-02
+  type: Internet-Draft
+  primary: true
+- id: I-D.dikshit-netconf-yang-push-causal-ordering
+  type: IETF
+  scope: anchor
+docnumber: I-D.dikshit-netconf-yang-push-causal-ordering
+date:
+- type: published
+  value: '2026-11-20'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Saumya
+          language:
+          - en
+        - language:
+          - en
+          initial: D
+        formatted_initials:
+          content: D.
+          language:
+          - en
+      surname:
+        content: Dikshit
+        language:
+        - en
+      completename:
+        content: Saumya Dikshit
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Hewlett Packard Enterprise
+  role:
+  - type: author
+version:
+- draft: '02'
+revdate: '2026-11-20'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>In YANG-Push version 2, each publisher numbers its own notifications,
+    and the numbers of two publishers are not comparable. When a single subscription
+    is served by several publishers, for example on a multi- line-card router or a
+    disaggregated routing stack, a collector cannot order updates across those publishers
+    from the sequence numbers alone. This document defines an opt-in, coordination-free
+    mechanism that carries a Comparability Scope, a coarse Causal-Epoch, and a per-
+    publisher Local-Sequence-Number in the notification envelope. Publishers stay
+    lock-free on the export fast path, and a collector reconstructs cross-publisher
+    order within a bounded reordering window. A companion YANG module adds the subscription
+    controls, the envelope metadata, and the capability discovery. The mechanism does
+    not require synchronized clocks across publishers.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-dikshit-netconf-yang-push-causal-ordering-01
+    docid:
+    - id: draft-dikshit-netconf-yang-push-causal-ordering-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-dikshit-netconf-yang-push-causal-ordering-01
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-dikshit-netconf-yang-push-causal-ordering-02
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
