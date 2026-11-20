@@ -2,8 +2,8 @@
 schema-version: v1.2.3
 id: draft-geng-acme-idp
 title:
-- content: Automated Certificate Management Environment (ACME) Identity-Controlled
-    Validation Extension
+- content: Automated Certificate Management Environment (ACME) Delegated Identity
+    Control Validation Framework Using Identity Providers
   language:
   - en
   script:
@@ -14,25 +14,22 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: '<p>This document defines an Identity Control Validation (ICV) framework
-    for the ACME protocol [RFC8555], introducing a new ACME identifier type "idp"
-    and a new challenge type "idp-01". The ICV framework allows ACME servers to delegate
-    trusted Identity Providers (IdPs) to verify certificate applicants’ control over
-    the claimed identities. This document also defines an optional X.509 certificate
-    extension, the Trust-Domain-Restricted Certificate Extension, which explicitly
-    indicates that certificates issued via the ICV framework are backed by a specific
-    IdP trust domain and whose trustworthiness depends on the current status and policies
-    of that IdP, preventing trust leakage into contexts outside the IdP’s trust domain.
-    This extension is parallel to Domain Control Validation (DCV) [RFC8555]; either
-    can independently verify an applicant’s control over identities/resources and
-    request certificates. Proof-of-Possession (PoP) [I-D.geng-acme-public-key] serves
-    as an auxiliary enhancement framework. Based on this architecture, two standardized
-    certificate enrollment models are formed: the Domain Validation model (DCV + optional
-    PoP) and the Identity Validation model (ICV + optional PoP). This document focuses
-    on the latter. This document defines three deployment models: the IdP-Operated
-    Certificate Model, the Intra-PKI Domain Mutual-Trust Model, and the CA-Integrated
-    IdP Model. It supports multiple authentication protocols via the extensible idp_method
-    parameter, covering both device and account identities.</p>'
+- content: '<p>This document defines a Delegated Identity Control Validation (Delegated
+    ICV) framework for the ACME protocol [RFC8555]. It addresses a core problem: how
+    an ACME server can obtain proof that "the client controls the identifier" without
+    directly validating the identifier. The solution is for an Identity Provider (IdP)
+    to issue an identity assertion, acmeIdpToken, enabling the ACME server to delegate
+    identifier control validation to a trusted IdP, with the CA validating the IdP''s
+    assertion. The framework defines two trust models: PKI certificate binding (x509-chain),
+    in which the CA pre-configures a trust anchor that anchors the IdP certificate;
+    and dual-PoP public key binding (idp- pop), in which IdP static mapping and ACME-PoP
+    are combined back-to- back. Implementations MUST support at least one model; they
+    are not required to support both. The normative scope of this document is limited
+    to dedicated trust environments or private CAs. Identity validation rules for
+    publicly trusted certificates are defined by external rules; this document does
+    not define, interpret, or replace those rules. This document composes orthogonally
+    with [I-D.ietf-acme-pop]: the constrained ACME- PoP internalized by idp-pop is
+    used only for identifier binding and does not replace the generic pop-01 authorization.</p>'
   language:
   - en
   script:
@@ -48,6 +45,16 @@ relation:
       primary: true
     formattedref:
       content: draft-geng-acme-idp-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-geng-acme-idp-01
+    docid:
+    - id: draft-geng-acme-idp-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-geng-acme-idp-01
       format: text/plain
 ext:
   schema-version: v1.0.1

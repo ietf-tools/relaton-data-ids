@@ -1,0 +1,164 @@
+---
+schema-version: v1.2.3
+id: draft-geng-acme-idp-01
+title:
+- content: Automated Certificate Management Environment (ACME) Delegated Identity
+    Control Validation Framework Using Identity Providers
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-geng-acme-idp-01
+  type: src
+type: standard
+docid:
+- id: draft-geng-acme-idp-01
+  type: Internet-Draft
+  primary: true
+- id: I-D.geng-acme-idp
+  type: IETF
+  scope: anchor
+docnumber: I-D.geng-acme-idp
+date:
+- type: published
+  value: '2026-11-19'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Feng
+          language:
+          - en
+        - language:
+          - en
+          initial: F
+        formatted_initials:
+          content: F.
+          language:
+          - en
+      surname:
+        content: Geng
+        language:
+        - en
+      completename:
+        content: Feng Geng
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei Technologies
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Panyu
+          language:
+          - en
+        - language:
+          - en
+          initial: P
+        formatted_initials:
+          content: P.
+          language:
+          - en
+      surname:
+        content: Wu
+        language:
+        - en
+      completename:
+        content: Panyu Wu
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei Technologies
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Xin
+          language:
+          - en
+        - language:
+          - en
+          initial: C
+        formatted_initials:
+          content: C.
+          language:
+          - en
+      surname:
+        content: Chen
+        language:
+        - en
+      completename:
+        content: Xin Chen
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: TrustAsia
+  role:
+  - type: author
+version:
+- draft: '01'
+revdate: '2026-11-19'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: '<p>This document defines a Delegated Identity Control Validation (Delegated
+    ICV) framework for the ACME protocol [RFC8555]. It addresses a core problem: how
+    an ACME server can obtain proof that "the client controls the identifier" without
+    directly validating the identifier. The solution is for an Identity Provider (IdP)
+    to issue an identity assertion, acmeIdpToken, enabling the ACME server to delegate
+    identifier control validation to a trusted IdP, with the CA validating the IdP''s
+    assertion. The framework defines two trust models: PKI certificate binding (x509-chain),
+    in which the CA pre-configures a trust anchor that anchors the IdP certificate;
+    and dual-PoP public key binding (idp- pop), in which IdP static mapping and ACME-PoP
+    are combined back-to- back. Implementations MUST support at least one model; they
+    are not required to support both. The normative scope of this document is limited
+    to dedicated trust environments or private CAs. Identity validation rules for
+    publicly trusted certificates are defined by external rules; this document does
+    not define, interpret, or replace those rules. This document composes orthogonally
+    with [I-D.ietf-acme-pop]: the constrained ACME- PoP internalized by idp-pop is
+    used only for identifier binding and does not replace the generic pop-01 authorization.</p>'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-geng-acme-idp-00
+    docid:
+    - id: draft-geng-acme-idp-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-geng-acme-idp-00
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-geng-acme-idp-01
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
