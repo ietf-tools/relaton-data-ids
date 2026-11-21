@@ -31,11 +31,15 @@ abstract:
     two fixed-length wire formats, the 128-octet pulse header of the "rttp" scheme
     and the 128-octet attestation envelope of the "iqa" scheme; and a closed refusal
     vocabulary with grant references for attestation responses. This revision adds
-    to these the rules for when the facts a verification consumes are evaluated —
-    at the moment of use, not the moment of grant — and how any policy interpreter
-    relates to the answer it consumes. This document is not an Internet Standard.
-    It is an Informational specification of two experimental addressing schemes, published
-    for the public record.</p>'
+    to these the rules that fix when the facts a verification consumes are evaluated
+    — at the moment of use, not the moment of grant — and how any policy interpreter
+    relates to the answer it consumes. It further restricts the grammar so that no
+    component begins with a hyphen, tightens the response semantics and the wire-format
+    checks that the public conformance runs exercise, states what a response owes
+    its reader when members are omitted or a refusal is recorded on a label, and adds
+    a practice guide for testing an implementation against this text. This document
+    is not an Internet Standard. It is an Informational specification of two experimental
+    addressing schemes, published for the public record.</p>'
   language:
   - en
   script:
@@ -71,6 +75,16 @@ relation:
       primary: true
     formattedref:
       content: draft-li-rttp-iqa-addressing-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-li-rttp-iqa-addressing-03
+    docid:
+    - id: draft-li-rttp-iqa-addressing-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-li-rttp-iqa-addressing-03
       format: text/plain
 ext:
   schema-version: v1.0.1
