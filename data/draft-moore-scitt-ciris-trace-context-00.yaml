@@ -1,0 +1,98 @@
+---
+schema-version: v1.2.3
+id: draft-moore-scitt-ciris-trace-context-00
+title:
+- content: 'Context Manifests for the CIRIS Agent Trace: Prompt Context Provenance
+    for AI Agent Decision Traces'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-moore-scitt-ciris-trace-context-00
+  type: src
+type: standard
+docid:
+- id: draft-moore-scitt-ciris-trace-context-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.moore-scitt-ciris-trace-context
+  type: IETF
+  scope: anchor
+docnumber: I-D.moore-scitt-ciris-trace-context
+date:
+- type: published
+  value: '2026-11-20'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Eric
+          language:
+          - en
+        - language:
+          - en
+          initial: E
+        formatted_initials:
+          content: E.
+          language:
+          - en
+      surname:
+        content: Moore
+        language:
+        - en
+      completename:
+        content: Eric Moore
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: CIRIS L3C
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-11-20'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>An AI agent that acts on a person's behalf makes each decision through
+    several calls to language models: one stage drafts an action, others evaluate
+    it, and others may veto it. What each call was given decides what it can judge.
+    A record of the action alone cannot show whether a judging stage lacked a rule
+    the drafting stage had, whether untrusted text reached a stage designed never
+    to see it, or whether a stage was prompted in a language other than the one the
+    person used. This document specifies a per-call context manifest. It describes
+    every contiguous piece of text placed into a model call (a segment) by what it
+    is, where it came from, how far it can be trusted, which authority stands behind
+    it, how long it lives, and which language it is in. It specifies a closed-vocabulary
+    context policy that says which stage may and must receive which kinds of segment,
+    ablation stubs that stand in for text withheld from a stage, and the checks a
+    verifier runs against the manifest and against the bytes actually sent. It states
+    the safety properties of the policy as invariants checked by a model checker.
+    The context manifest is the context_manifest member of the LLM_CALL event of the
+    CIRIS agent trace, carried in a CEG trace row; it can also be the payload of any
+    SCITT signed statement.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-moore-scitt-ciris-trace-context-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

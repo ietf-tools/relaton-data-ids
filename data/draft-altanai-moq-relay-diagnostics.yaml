@@ -1,0 +1,54 @@
+---
+schema-version: v1.2.3
+id: draft-altanai-moq-relay-diagnostics
+title:
+- content: Client-Visible Relay Diagnostics for Media over QUIC Transport (MOQT)
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-altanai-moq-relay-diagnostics
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>Media over QUIC Transport (MOQT) deployments typically place one or
+    more relays between publishers and subscribers. When delivery stalls, degrades,
+    or fails, a client observes only its own leg of the path, and often cannot determine
+    whether the cause lies with the original publisher, an intermediate relay, path
+    conditions, authorization policy, or its own behavior. This document collects
+    use cases and requirements for exposing a limited, relay-controlled set of diagnostic
+    information to authorized MOQT clients. It examines three candidate mechanisms:
+    an explicit request and response exchange on the control path, diagnostic information
+    carried in existing responses and error codes, and advertisement of diagnostic
+    capability during session establishment. Because such information can reveal deployment
+    topology, operational state, or the activity of other users, authorization, data
+    minimization, and relay discretion over what is disclosed are treated as first-order
+    requirements rather than later refinements. Related operator examples describe
+    capacity and incident observations within a separately authorized administrative
+    scope. They motivate correlation with existing metrics and logging systems without
+    defining a relay management API. The goal is diagnostics that are actionable at
+    runtime and interoperable across implementations, not a general-purpose telemetry
+    channel within MOQT. Information intended primarily for offline analysis remains
+    the province of logging and observability systems such as qlog. This document
+    defines the problem space and the design constraints; a concrete wire format is
+    left to a follow-on document once the working group has settled on an approach.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-altanai-moq-relay-diagnostics-00
+    docid:
+    - id: draft-altanai-moq-relay-diagnostics-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-altanai-moq-relay-diagnostics-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

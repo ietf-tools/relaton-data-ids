@@ -15,7 +15,21 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>The draft aims to provide technical details of [CVE-2026-100833] of
+- content: "<p>As presented in [EarlyAttestationTschuess] (EAT), all major early attestation
+    implementations have declared end of life of early attestation, because of our
+    responsibly disclosed vulnerabilities. Privasys declared end of life (https://github.com/Privasys/go/
+    commit/91195564d435a374e45d485d39edbc6cf8235901) of early attestation in Go, archived
+    the early attestation repo on 04.09, and moved to standard (post-handshake) attestation.
+    Privasys declared end of life (https://github.com/Privasys/rustls/commit/ c39f7107dffd710c5087b1885a71b4bb8ff2de31)
+    of early attestation in rustls, archived the early attestation repo on 04.09,
+    and moved to standard attestation. Cocos AI declared end of life (https://github.com/ultravioletrs/cocos/releases/tag/v0.9.0)
+    of early attestation, and moved to standard attestation. CCC Attestation SIG declared
+    end of life (https://github.com/CCC-Attestation/attested- tls-poc/pull/60) of
+    early attestation, and archived the repo on 22.07. Moreover, authors of [I-D.fossati-tls-attestation-10]
+    have withdrawn their vulnerable draft (https://mailarchive.ietf.org/arch/msg/
+    i-d-announce/4QeQmyBwZpZ69MRry4wGzkGyU0o/) because of our discovered vulnerabilities.
+    Finally, [I-D.ritz-seat-facts] has been archived. This draft aims to provide technical
+    details of these vulnerabilities. Vulnerabilities include [CVE-2026-100833] of
     CVSS 9.6, [CVE-2026-108265] of CVSS 9.1, [CVE-2026-108266] of CVSS 9.1, [CVE-2026-108267]
     of CVSS 9.1, [CVE-2026-108268] of CVSS 9.1, [CVE-2026-108269] of CVSS 9.1, [CVE-2026-100835]
     of CVSS 9.1, [CVE-2026-92701] of CVSS 9.1, [CVE-2026-92702] of CVSS 9.1, [CVE-2026-108362]
@@ -30,23 +44,24 @@ abstract:
     and the artifacts [Intra-handshake.fail-repo] in state-of-the-art formal analysis
     tool, ProVerif, under Apache-2.0 license for reproducibility, extensibility, and
     review, and have been acknowledged by the relevant stakeholders. Currently, there
-    is *one CVE of CVSS 9.6, 11 CVEs of CVSS 9.1, one CVE of CVSS 8.2, one CVE of
-    CVSS 7.5, one CVE of CVSS 7.2, and 26+ GHSAs published awaiting CVE IDs against
-    the broader early attestation covering all layers of the ecosystem up to the application*.
-    The research papers on these are currently either under submission or being prepared
-    for submission. The artifacts of these papers will be shared with the community
-    under Apache-2.0 license for reproducibility, extensibility, and review. Based
-    on our work, all except two implementations of early attestation have been archived,
-    withdrawn, or moved to post-handshake attestation. In our analysis [Intra-handshake.fail-repo],
-    [ID-Crisis-repo], and [EarlyAttestationTschuess] (EAT) and based on discussions
-    in the CCC Attestation SIG, IETF SEAT WG, IRTF UFMRG, IRTF CFRG, and several other
-    forums, the remaining two implementations of early attestation -- Edgeless Systems
-    Contrast and Meta's AI following withdrawn [I-D.fossati-tls-attestation-10] --
-    remain vulnerable due to lack of binding to the underlying connection. We recommend
-    users of these two implementations to carefully evaluate their systems and understand
-    the risks. If you are aware of any open-source implementation of early attestation
-    that is not yet covered in this draft, please let us know to responsibly disclose
-    the vulnerabilities to them.</p>"
+    is *one CVE of CVSS 9.6, 13 CVEs of CVSS 9.1, one CVE of CVSS 8.2, one CVE of
+    CVSS 7.5, two CVEs of CVSS 7.2, two CVEs of 7.0, and 26+ GHSAs published awaiting
+    CVE IDs against the broader early attestation covering all layers of the ecosystem
+    up to the application*. The research papers on these are currently either under
+    submission or being prepared for submission. The artifacts of these papers will
+    be shared with the community under Apache-2.0 license for reproducibility, extensibility,
+    and review. Based on our work, as noted above, all except two implementations
+    of early attestation have been archived, withdrawn, or moved to post- handshake
+    attestation. In our analysis [Intra-handshake.fail-repo], [ID-Crisis-repo], and
+    [EarlyAttestationTschuess] (EAT) and based on discussions in the CCC Attestation
+    SIG, IETF SEAT WG, IRTF UFMRG, IRTF CFRG, and several other forums, the remaining
+    two implementations of early attestation -- Edgeless Systems Contrast and Meta's
+    AI following withdrawn [I-D.fossati-tls-attestation-10] -- remain vulnerable due
+    to lack of binding to the underlying connection. We recommend users of these two
+    implementations to carefully evaluate their systems and understand the risks.
+    If you are aware of any open-source implementation of early attestation that is
+    not yet covered in this draft, please let us know to responsibly disclose the
+    vulnerabilities to them.</p>"
   language:
   - en
   script:
@@ -682,6 +697,16 @@ relation:
       primary: true
     formattedref:
       content: draft-intra-handshake-fail-62
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-intra-handshake-fail-63
+    docid:
+    - id: draft-intra-handshake-fail-63
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-intra-handshake-fail-63
       format: text/plain
 ext:
   schema-version: v1.0.1

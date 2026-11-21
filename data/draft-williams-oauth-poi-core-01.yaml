@@ -1,0 +1,107 @@
+---
+schema-version: v1.2.3
+id: draft-williams-oauth-poi-core-01
+title:
+- content: Cryptographic Proof-of-Intent (PoI) Core Protocol for Human-in-the-Loop
+    (HITL) Step-Up Authorization
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-williams-oauth-poi-core-01
+  type: src
+type: standard
+docid:
+- id: draft-williams-oauth-poi-core-01
+  type: Internet-Draft
+  primary: true
+- id: I-D.williams-oauth-poi-core
+  type: IETF
+  scope: anchor
+docnumber: I-D.williams-oauth-poi-core
+date:
+- type: published
+  value: '2026-11-20'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Paul
+          language:
+          - en
+        - language:
+          - en
+          initial: P
+        - language:
+          - en
+          initial: C
+        formatted_initials:
+          content: P. C.
+          language:
+          - en
+      surname:
+        content: Williams
+        language:
+        - en
+      completename:
+        content: Paul Charles Williams
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Barefoot Coders, LLC
+  role:
+  - type: author
+version:
+- draft: '01'
+revdate: '2026-11-20'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>AI agents and workflow orchestrators call high-consequence APIs on
+    behalf of people. Bearer tokens and transport-level proof-of- possession show
+    which client made a call. They do not show that a person approved the specific
+    parameters of that call, and redirect- based step-up is too slow for frequent
+    approvals. This document specifies the Proof-of-Intent (PoI) Core protocol. A
+    Resource Server signs a challenge that binds the exact canonical parameters (RFC
+    8785) to human-readable facts. The person's client answers with a signed decision
+    (APPROVE, REJECT, or SUPERCEDE with new parameters) using a session key certified
+    by the Authorization Server (RFC 7800) or a WebAuthn or PSEA authenticator. The
+    Resource Server verifies the evidence without a call to the Authorization Server,
+    admits each approval once, and issues a signed receipt. Multi-approver chains,
+    escalation, and concurrency are specified in draft-williams-oauth-poi-chained-state-00.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-williams-oauth-poi-core-00
+    docid:
+    - id: draft-williams-oauth-poi-core-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-williams-oauth-poi-core-00
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-williams-oauth-poi-core-01
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

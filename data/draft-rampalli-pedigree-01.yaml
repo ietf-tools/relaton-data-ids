@@ -1,0 +1,109 @@
+---
+schema-version: v1.2.3
+id: draft-rampalli-pedigree-01
+title:
+- content: 'PEDIGREE: Verifiable Delegation Identity for Agentic AI Systems'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-rampalli-pedigree-01
+  type: src
+type: standard
+docid:
+- id: draft-rampalli-pedigree-01
+  type: Internet-Draft
+  primary: true
+- id: I-D.rampalli-pedigree
+  type: IETF
+  scope: anchor
+docnumber: I-D.rampalli-pedigree
+date:
+- type: published
+  value: '2026-11-20'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Karthik
+          language:
+          - en
+        - language:
+          - en
+          initial: K
+        formatted_initials:
+          content: K.
+          language:
+          - en
+      surname:
+        content: Rampalli
+        language:
+        - en
+      completename:
+        content: Karthik Rampalli
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Glyphzero, Inc.
+  role:
+  - type: author
+version:
+- draft: '01'
+revdate: '2026-11-20'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>This document defines PEDIGREE (Per-Agent Delegation Identity with
+    Governance-Enforced Execution), a delegation token profile for AI agents that
+    operates above WIMSE workload credentials. A PEDIGREE chain names one principal
+    at every hop, names the agent acting at each hop, binds each child token to a
+    digest of its parent's JWS Signing Input, and grants authority as named resources
+    with actions that each hop can only narrow. A separate invocation object, signed
+    by the leaf agent, names the one action, resource, and arguments being requested,
+    and the verifier evaluates exactly that. A verifier can check a chain offline
+    when it holds every input the chain needs: its trust anchors, its accepted ceilings,
+    and any status answers that are still within their time to live. The linkage,
+    principal, holder-binding, invocation, and status rules follow mechanisms specified
+    in other documents and are cited as such. On that base, PEDIGREE defines four
+    elements: an operator ceiling, referenced by digest and evaluated together with
+    each token's grants at decision time; an optional Cedar mandate per token, with
+    a syntactic narrowing check and an optional proof artifact; signed completion
+    blocks, in which an agent reports an outcome under the key its token binds; and
+    consent identifiers carried in every token and checked by every verifier against
+    a configured consent status source.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-rampalli-pedigree-00
+    docid:
+    - id: draft-rampalli-pedigree-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-rampalli-pedigree-00
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-rampalli-pedigree-01
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

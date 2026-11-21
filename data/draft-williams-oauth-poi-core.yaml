@@ -14,28 +14,18 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>Autonomous software agents and orchestrated workflows increasingly
-    invoke high-consequence operations on Resource Servers (such as financial originations
-    or clinical prescriptions) on behalf of human users. Existing bearer tokens and
-    transport-level Proof-of- Possession mechanisms cannot cryptographically distinguish
-    between parameters autonomously synthesized by an intermediary agent and parameters
-    explicitly reviewed, approved, or modified by an authorized human. Furthermore,
-    redirect-based authorization flows impose prohibitive user experience friction
-    for high-frequency Human- in-the-Loop (HITL) interactions. This document specifies
-    the Proof-of-Intent (PoI) Core Protocol, a stateless, single-hop cryptographic
-    framework building on JSON Web Signature (JWS, RFC 7515), Proof-of-Possession
-    Key Semantics for JWTs (RFC 7800), JSON Web Token Best Current Practices (RFC
-    8725), JSON Canonicalization Scheme (JCS, RFC 8785), OAuth 2.0 Rich Authorization
-    Requests (RAR, RFC 9396), OAuth 2.0 Step-Up Authentication Challenge Protocol
-    (RFC 9470), and W3C WebAuthn. PoI Core defines: (1) short- lived, client-generated
-    Ephemeral Intent Keys certified at login and rotated via Proof-of-Possession key
-    chaining; (2) Resource Server- signed Intent Challenge Objects binding canonical
-    action parameters to human-readable display facts; (3) multi-tier assurance attestations
-    spanning zero-friction session keys to hardware security tokens; and (4) stateless
-    verification and countersigned audit receipts for single-hop APPROVE, REJECT,
-    and within-authority SUPERCEDE decisions. Multi-hop chained escalations, asynchronous
-    intent escrowing, and concurrent multi-approver conflict resolution are specified
-    in the companion extension document, draft-williams-oauth-poi-chained-state- 00.</p>"
+- content: "<p>AI agents and workflow orchestrators call high-consequence APIs on
+    behalf of people. Bearer tokens and transport-level proof-of- possession show
+    which client made a call. They do not show that a person approved the specific
+    parameters of that call, and redirect- based step-up is too slow for frequent
+    approvals. This document specifies the Proof-of-Intent (PoI) Core protocol. A
+    Resource Server signs a challenge that binds the exact canonical parameters (RFC
+    8785) to human-readable facts. The person's client answers with a signed decision
+    (APPROVE, REJECT, or SUPERCEDE with new parameters) using a session key certified
+    by the Authorization Server (RFC 7800) or a WebAuthn or PSEA authenticator. The
+    Resource Server verifies the evidence without a call to the Authorization Server,
+    admits each approval once, and issues a signed receipt. Multi-approver chains,
+    escalation, and concurrency are specified in draft-williams-oauth-poi-chained-state-00.</p>"
   language:
   - en
   script:
@@ -51,6 +41,16 @@ relation:
       primary: true
     formattedref:
       content: draft-williams-oauth-poi-core-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-williams-oauth-poi-core-01
+    docid:
+    - id: draft-williams-oauth-poi-core-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-williams-oauth-poi-core-01
       format: text/plain
 ext:
   schema-version: v1.0.1

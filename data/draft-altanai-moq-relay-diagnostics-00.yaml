@@ -1,0 +1,101 @@
+---
+schema-version: v1.2.3
+id: draft-altanai-moq-relay-diagnostics-00
+title:
+- content: Client-Visible Relay Diagnostics for Media over QUIC Transport (MOQT)
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-altanai-moq-relay-diagnostics-00
+  type: src
+type: standard
+docid:
+- id: draft-altanai-moq-relay-diagnostics-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.altanai-moq-relay-diagnostics
+  type: IETF
+  scope: anchor
+docnumber: I-D.altanai-moq-relay-diagnostics
+date:
+- type: published
+  value: '2026-11-20'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Altanai
+          language:
+          - en
+        - language:
+          - en
+          initial: A
+        formatted_initials:
+          content: A.
+          language:
+          - en
+      surname:
+        content: Bisht
+        language:
+        - en
+      completename:
+        content: Altanai Bisht
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Cisco
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-11-20'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>Media over QUIC Transport (MOQT) deployments typically place one or
+    more relays between publishers and subscribers. When delivery stalls, degrades,
+    or fails, a client observes only its own leg of the path, and often cannot determine
+    whether the cause lies with the original publisher, an intermediate relay, path
+    conditions, authorization policy, or its own behavior. This document collects
+    use cases and requirements for exposing a limited, relay-controlled set of diagnostic
+    information to authorized MOQT clients. It examines three candidate mechanisms:
+    an explicit request and response exchange on the control path, diagnostic information
+    carried in existing responses and error codes, and advertisement of diagnostic
+    capability during session establishment. Because such information can reveal deployment
+    topology, operational state, or the activity of other users, authorization, data
+    minimization, and relay discretion over what is disclosed are treated as first-order
+    requirements rather than later refinements. Related operator examples describe
+    capacity and incident observations within a separately authorized administrative
+    scope. They motivate correlation with existing metrics and logging systems without
+    defining a relay management API. The goal is diagnostics that are actionable at
+    runtime and interoperable across implementations, not a general-purpose telemetry
+    channel within MOQT. Information intended primarily for offline analysis remains
+    the province of logging and observability systems such as qlog. This document
+    defines the problem space and the design constraints; a concrete wire format is
+    left to a follow-on document once the working group has settled on an approach.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-altanai-moq-relay-diagnostics-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
