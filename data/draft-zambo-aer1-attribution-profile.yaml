@@ -1,0 +1,54 @@
+---
+schema-version: v1.2.3
+id: draft-zambo-aer1-attribution-profile
+title:
+- content: 'AER-1 Attribution Profile: Optional Maker Attestation for AER-1 Execution
+    Receipts'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-zambo-aer1-attribution-profile
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: '<p>AER-1 specifies a portable execution receipt for AI agent tool calls.
+    A receipt''s output commitment lets any party recompute the digest of the saved
+    result and establish that the result was not changed after the commitment was
+    recorded. AER-1 deliberately defines no issuer authentication: its Security Considerations
+    state that verification proves the recorded bytes were not altered after minting,
+    not who minted them, and direct consumers that need to bind a receipt to its issuer
+    to "a signature scheme documented alongside the receipt". This document is that
+    scheme, for the consumers that need it. It defines an optional maker attestation:
+    a signature, by a key the maker controls, over a small commitment that binds the
+    receipt''s output_hash, the receipt''s identifier, and the receipt''s caller scope.
+    A relying party that evaluates the attestation can establish which key attested
+    to a record whose integrity the AER-1 recompute separately establishes. The profile
+    is optional in the strong sense: it is never required for AER-1 conformance, a
+    keyless implementation remains fully conformant, and a receipt carrying no attestation
+    is a normal receipt, not a defective one. The attestation proves that a key signed
+    the commitment; it does not prove that the saved result was right, that the work
+    happened, or that the key''s holder is any particular person. Attribution outcomes
+    are reported beside the AER-1 verification report, in the same present, evaluated,
+    outcome discipline AER-1 uses for anchors, and they never alter the AER-1 structural
+    verdict, id verdict, or anchor outcomes.</p>'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-zambo-aer1-attribution-profile-00
+    docid:
+    - id: draft-zambo-aer1-attribution-profile-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-zambo-aer1-attribution-profile-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
