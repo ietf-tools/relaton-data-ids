@@ -16,14 +16,22 @@ abstract:
 - content: "<p>This document defines the core of Groundmark, a protocol for DNS- anchored
     identity discovery and request authentication for autonomous software agents.
     Operators publish an agent's signing public key in a DNS TXT record under a reserved
-    label, and optionally publish references to externally hosted attestations under
-    a second reserved label. Agents authenticate HTTP requests using HTTP Message
-    Signatures (RFC 9421) with a key identifier that resolves through DNS. DNSSEC
-    is required for all Groundmark DNS lookups. The protocol provides operator accountability
-    discovery without a central registry, and is designed to compose with existing
-    identity, authorization, and payment systems rather than to replace them. The
-    attestation framework, including the role of Identity Service Providers, the attestation
-    level taxonomy, and the claim vocabulary, is defined in a companion document.</p>"
+    label and, optionally, name the agent's Identity Service Provider (IDSP) in a
+    second record. Agents authenticate HTTP requests using HTTP Message Signatures
+    (RFC 9421) with a key identifier that resolves through DNS. DNSSEC is required
+    for all Groundmark DNS lookups. Successful core verification establishes current-key
+    provenance: control of the private key corresponding to the DNSSEC-authenticated
+    _agentid key used for the request. It does not establish legal identity, registrar
+    identity proofing, brand authorization, or continuity with an earlier key or registrant.
+    When a relying party's policy requires more, the agent presents a reference in
+    a signature-covered header field, the relying party confirms that the reference
+    points at the IDSP named in the agent's DNSSEC-validated zone, and it fetches
+    a credential about the operator from that IDSP directly. No claim is published
+    in DNS. The credential is a W3C Verifiable Credential secured as an SD-JWT; its
+    format, the IDSP's obligations, method disclosure and status are defined in the
+    companion Groundmark Protocol specification, which is being developed in the Decentralized
+    Identity Foundation. This version replaces both draft-noss-jeftovic-groundmark-core-00
+    and draft-noss-jeftovic-groundmark-attestation-00.</p>"
   language:
   - en
   script:
@@ -39,6 +47,16 @@ relation:
       primary: true
     formattedref:
       content: draft-noss-jeftovic-groundmark-core-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-noss-jeftovic-groundmark-core-01
+    docid:
+    - id: draft-noss-jeftovic-groundmark-core-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-noss-jeftovic-groundmark-core-01
       format: text/plain
 ext:
   schema-version: v1.0.1

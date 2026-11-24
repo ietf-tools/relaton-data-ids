@@ -2,7 +2,8 @@
 schema-version: v1.2.3
 id: draft-elkins-plants-enterprise-mtc-deployment
 title:
-- content: Enterprise Deployment Considerations for Standalone Merkle Tree Certificates
+- content: Enterprise Deployment Considerations for Post-Quantum TLS Server Authentication
+    in the Public Web PKI
   language:
   - en
   script:
@@ -13,22 +14,24 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>The migration of public Web PKI authentication to post-quantum mechanisms
-    must fit enterprise certificate management and TLS termination architectures.
-    This document examines whether an urgent need for post-quantum authentication
-    would justify transitional support for standalone ML-DSA certificates in browser
-    root-store policy while standalone MTC deployment capabilities mature. The scope
-    is limited to enterprise public websites accessed by unmanaged clients using the
-    public Web PKI. Note: a large enterprise may operate many such sites. The document
-    describes enterprise-managed, third-party-hosted, and CDN-fronted deployments,
-    identifies the components needed to serve standalone Merkle Tree Certificates
-    (MTCs), and examines realistic authentication attack paths and migration priorities.
-    It distinguishes the browser-to-edge connection from origin and internal connections,
-    and server authentication from identity-provider login. The document draws on
-    initial browser and TLS client testing of Trust Anchor ID signaling, and proposes
-    interoperability tests and deployment requirements rather than changes to the
-    MTC wire format. Relative priorities are illustrative and not empirical attack
-    probabilities.</p>"
+- content: "<p>The migration of TLS server authentication to post-quantum mechanisms
+    in the public Web PKI must fit the scale and complexity of enterprise certificate
+    management and TLS termination. Public-facing services may support tens of millions
+    of customers using unmanaged browsers, mobile applications, and other TLS clients,
+    while authentication infrastructure is distributed across business units, hosting
+    providers, cloud platforms, and CDNs. Deployment readiness therefore depends on
+    cryptographic and protocol support as well as the ability to introduce new authentication
+    mechanisms without disrupting customer access. This document examines enterprise
+    deployment considerations for standalone Merkle Tree Certificates (MTCs) and conventional
+    standalone ML-DSA certificates on public websites accessed by unmanaged clients.
+    It addresses certificate issuance, provisioning, renewal, revocation, trust-anchor
+    signaling, credential selection, and interoperability across browsers, certificate-management
+    systems, and TLS termination platforms. Drawing on initial browser and TLS client
+    observations, the document identifies deployment dependencies, proposes interoperability
+    questions for implementers, and discusses migration priorities and operational
+    readiness. It does not define new certificate formats or TLS mechanisms, assume
+    that either certificate approach is easier to deploy, or commit the authors to
+    independently testing supplier implementations.</p>"
   language:
   - en
   script:
@@ -54,6 +57,16 @@ relation:
       primary: true
     formattedref:
       content: draft-elkins-plants-enterprise-mtc-deployment-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-elkins-plants-enterprise-mtc-deployment-02
+    docid:
+    - id: draft-elkins-plants-enterprise-mtc-deployment-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-elkins-plants-enterprise-mtc-deployment-02
       format: text/plain
 ext:
   schema-version: v1.0.1

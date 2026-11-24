@@ -13,32 +13,37 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>The Zero Trust Fabric Layer (ZTFL) verified a single autonomous agent
-    issuing a single request. It did not address what happens when that agent delegates
-    its authority to a second agent, or a third, a pattern already standard in multi-agent
-    orchestration. Existing delegation mechanisms do not close this gap. OAuth 2.0
-    Token Exchange represents prior actors as claims that are informational only for
-    access control decisions. Classical logic-based and relationship-based authorization
-    models were built for stable, long- lived principals and do not enforce a tenant
-    boundary at the specific hop where it is crossed, nor do they bind every hop in
-    a chain to a single expiring credential established at the chain's origin. This
-    document extends ZTFL with a chained authorization model, structured on the mechanics
-    of international travel. An immutable Passport establishes identity for the full
-    journey. A Ticket, issued once at task initiation as a conditional ephemeral credential,
-    binds every subsequent hop to the same authorized chain; a locally valid-looking
-    Boarding Pass that cannot trace back to it is rejected regardless of appearance.
-    A per-hop Boarding Pass, a child ephemeral token derived from and traceable to
-    the Ticket, authorizes each leg. A Visa, an explicit and narrowly scoped grant,
-    is required only at the moment a hop crosses a tenant boundary the Passport alone
-    cannot cross. The model is formalized as a boundary-conditional evaluation function,
-    implemented and validated against the Cedar policy language, and compared directly
-    against OAuth Token Exchange, delegation logic, and relationship-based authorization
-    on two properties none of them enforce structurally: chain-wide traceability to
-    a single origin, and containment at the boundary itself. This revision further
-    shows that the model's per-hop Boarding Pass structurally resists mid-chain redirection,
+- content: '<p>The Zero Trust Fabric Layer (ZTFL), an architecture the author previously
+    published as "Zero Trust for Autonomous AI Agents: A Fabric Layer Architecture
+    Verified in Cedar and AWS IAM" (SSRN, 2026), verified a single autonomous agent
+    issuing a single request. That earlier work by the author did not address what
+    happens when that agent delegates its authority to a second agent, or a third,
+    a pattern already standard in multi-agent orchestration. Existing delegation mechanisms
+    do not close this gap. OAuth 2.0 Token Exchange represents prior actors as claims
+    that are informational only for access control decisions. Classical logic-based
+    and relationship-based authorization models were built for stable, long- lived
+    principals and do not enforce a tenant boundary at the specific hop where it is
+    crossed, nor do they bind every hop in a chain to a single expiring credential
+    established at the chain''s origin. This document extends the author''s ZTFL architecture
+    with a chained authorization model, structured on the mechanics of international
+    travel. An immutable Passport establishes identity for the full journey. A Ticket,
+    issued once at task initiation as a conditional ephemeral credential, binds every
+    subsequent hop to the same authorized chain; a locally valid-looking Boarding
+    Pass that cannot trace back to it is rejected regardless of appearance. A per-hop
+    Boarding Pass, a child ephemeral token derived from and traceable to the Ticket,
+    authorizes each leg. A Visa, an explicit and narrowly scoped grant, is required
+    only at the moment a hop crosses a tenant boundary the Passport alone cannot cross.
+    The model is formalized as a boundary-conditional evaluation function, implemented
+    and validated against the Cedar policy language, and compared directly against
+    OAuth Token Exchange, delegation logic, and relationship-based authorization on
+    two properties none of them enforce structurally: chain-wide traceability to a
+    single origin, and containment at the boundary itself. This revision further shows
+    that the model''s per-hop Boarding Pass structurally resists mid-chain redirection,
     including redirection caused by prompt injection reaching an intermediate agent,
     because issuing a Boarding Pass requires standing the redirected agent never holds
-    and cannot acquire by altering its own behavior.</p>"
+    and cannot acquire by altering its own behavior. This revision also defines a
+    durable consumption record that limits each hop to a single completion, and states
+    the bounds beyond which replay and mid- chain redirection do not extend.</p>'
   language:
   - en
   script:
@@ -114,6 +119,16 @@ relation:
       primary: true
     formattedref:
       content: draft-seymour-wimse-connected-flight-06
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-seymour-wimse-connected-flight-07
+    docid:
+    - id: draft-seymour-wimse-connected-flight-07
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-seymour-wimse-connected-flight-07
       format: text/plain
 ext:
   schema-version: v1.0.1

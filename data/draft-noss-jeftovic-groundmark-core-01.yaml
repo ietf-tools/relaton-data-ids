@@ -1,0 +1,141 @@
+---
+schema-version: v1.2.3
+id: draft-noss-jeftovic-groundmark-core-01
+title:
+- content: DNS-Anchored Identity Discovery for Autonomous Agents
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-noss-jeftovic-groundmark-core-01
+  type: src
+type: standard
+docid:
+- id: draft-noss-jeftovic-groundmark-core-01
+  type: Internet-Draft
+  primary: true
+- id: I-D.noss-jeftovic-groundmark-core
+  type: IETF
+  scope: anchor
+docnumber: I-D.noss-jeftovic-groundmark-core
+date:
+- type: published
+  value: '2026-11-23'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: elliot
+          language:
+          - en
+        - language:
+          - en
+          initial: E
+        formatted_initials:
+          content: E.
+          language:
+          - en
+      surname:
+        content: noss
+        language:
+        - en
+      completename:
+        content: elliot noss
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Groundmark
+  role:
+  - type: author
+- person:
+    name:
+      given:
+        forename:
+        - content: Mark
+          language:
+          - en
+        - language:
+          - en
+          initial: M
+        - language:
+          - en
+          initial: E
+        formatted_initials:
+          content: M. E.
+          language:
+          - en
+      surname:
+        content: Jeftovic
+        language:
+        - en
+      completename:
+        content: Mark E. Jeftovic
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: easyDNS Technologies Inc.
+  role:
+  - type: author
+version:
+- draft: '01'
+revdate: '2026-11-23'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: "<p>This document defines the core of Groundmark, a protocol for DNS- anchored
+    identity discovery and request authentication for autonomous software agents.
+    Operators publish an agent's signing public key in a DNS TXT record under a reserved
+    label and, optionally, name the agent's Identity Service Provider (IDSP) in a
+    second record. Agents authenticate HTTP requests using HTTP Message Signatures
+    (RFC 9421) with a key identifier that resolves through DNS. DNSSEC is required
+    for all Groundmark DNS lookups. Successful core verification establishes current-key
+    provenance: control of the private key corresponding to the DNSSEC-authenticated
+    _agentid key used for the request. It does not establish legal identity, registrar
+    identity proofing, brand authorization, or continuity with an earlier key or registrant.
+    When a relying party's policy requires more, the agent presents a reference in
+    a signature-covered header field, the relying party confirms that the reference
+    points at the IDSP named in the agent's DNSSEC-validated zone, and it fetches
+    a credential about the operator from that IDSP directly. No claim is published
+    in DNS. The credential is a W3C Verifiable Credential secured as an SD-JWT; its
+    format, the IDSP's obligations, method disclosure and status are defined in the
+    companion Groundmark Protocol specification, which is being developed in the Decentralized
+    Identity Foundation. This version replaces both draft-noss-jeftovic-groundmark-core-00
+    and draft-noss-jeftovic-groundmark-attestation-00.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    id: draft-noss-jeftovic-groundmark-core-00
+    docid:
+    - id: draft-noss-jeftovic-groundmark-core-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-noss-jeftovic-groundmark-core-00
+      format: text/plain
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-noss-jeftovic-groundmark-core-01
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1
