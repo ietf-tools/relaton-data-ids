@@ -17,16 +17,19 @@ abstract:
 - content: "<p>This document discusses post-quantum key provisioning and lifecycle
     operations for Internet of Things (IoT) deployments that already use WireGuard,
     such as fleets of industrial gateways and capable managed devices with little
-    or no local user interface. It describes operational requirements for authorized
-    tunnel onboarding, identity- to-key binding, preshared-key rotation, failure recovery,
-    quarantine, and decommissioning. The operational model assumes an existing authorized
-    management channel and independently provisioned trust. It uses the existing WireGuard
-    PresharedKey configuration interface and leaves the native WireGuard handshake
-    and transport format unchanged. WireGuard remains an externally maintained dependency.
-    An appendix retains a candidate ML-KEM-768 and ML-DSA bootstrap exchange for technical
-    discussion and further security and interoperability review. This individual contribution
-    seeks Informational publication of the operational discussion and feedback on
-    the appropriate venue for any new protocol work.</p>"
+    or no local user interface. It addresses authorized tunnel onboarding, identity-to-key
+    binding, preshared-key rotation, installation-state reconciliation, failure remediation,
+    quarantine, and decommissioning at a scale that makes manual maintenance impractical.
+    The operational model assumes independently provisioned trust and authorized management
+    that remains reachable when the target tunnel fails. It relates provisioning to
+    inventory, separate access policy, observable readiness, and device lifecycle
+    decisions. It uses the existing WireGuard PresharedKey configuration interface
+    and leaves the native handshake and transport format unchanged. WireGuard remains
+    an externally maintained dependency. An appendix retains a candidate ML-KEM-768
+    and ML-DSA bootstrap exchange for technical discussion and further security and
+    interoperability review. This individual contribution seeks Informational publication
+    of the operational discussion and feedback on the appropriate venue for any new
+    protocol work.</p>"
   language:
   - en
   script:
@@ -62,6 +65,16 @@ relation:
       primary: true
     formattedref:
       content: draft-liu-iotops-pqc-wireguard-02
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-liu-iotops-pqc-wireguard-03
+    docid:
+    - id: draft-liu-iotops-pqc-wireguard-03
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-liu-iotops-pqc-wireguard-03
       format: text/plain
 ext:
   schema-version: v1.0.1

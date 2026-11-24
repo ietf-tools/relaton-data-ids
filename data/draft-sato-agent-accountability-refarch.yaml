@@ -18,14 +18,19 @@ abstract:
     semi-autonomous software agents, built from evidence captured across an action's
     full lifecycle -- before, during, and after it executes -- but assessed after
     the fact. It is scoped exclusively to post-hoc accountability, as distinct from
-    real- time enforcement, and depends on no other individual submission's proposed
-    architecture: everything it requires is either an already- settled standard, used
-    as published, or intended to be specified and released openly as the author's
-    own work, independent of this document's own adoption. It defines seven ordered
-    stages -- intent and mandate capture, the agent boundary, the record producer,
-    the event log and its cryptographic anchoring, a composed trust fabric, the disclosed
-    audit record, and third-party verification -- together with two branch conditions
-    covering cross-principal transactions and external resource ingestion.</p>"
+    real- time enforcement. It is intended as one concrete, implementable instantiation:
+    every building block it relies on is either a published specification used as
+    specified or is specified in this document, so that it can be deployed now without
+    waiting on related work still in progress, while remaining able to adopt that
+    work as it stabilizes. It defines seven ordered stages -- intent and mandate capture,
+    the agent boundary, the record producer, the event log and its cryptographic anchoring,
+    a composed trust fabric, the disclosed audit record, and third-party verification
+    -- together with two branch conditions covering cross-principal transactions and
+    external resource ingestion. The records it defines exist to give the principal
+    on whose behalf an agent acts, and the parties to a disputed action, verifiable
+    evidence of what was done in the principal's name; they are not a means of monitoring
+    the principal. Every flow of records between parties is bound to a signed, purpose-
+    limited Use-Limitation Declaration.</p>"
   language:
   - en
   script:
@@ -51,6 +56,16 @@ relation:
       primary: true
     formattedref:
       content: draft-sato-agent-accountability-refarch-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-sato-agent-accountability-refarch-02
+    docid:
+    - id: draft-sato-agent-accountability-refarch-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-sato-agent-accountability-refarch-02
       format: text/plain
 ext:
   schema-version: v1.0.1

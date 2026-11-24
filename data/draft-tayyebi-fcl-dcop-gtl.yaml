@@ -14,14 +14,16 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document specifies a Fabric Coordination Layer (FCL) designed
-    to stabilize data transmission in frontier-scale distributed computing fabrics.
-    As AI training clusters scale to hundreds of thousands of accelerators and link
-    speeds exceed 800 Gbps, traditional reactive congestion control mechanisms suffer
-    from severe feedback-loop latency. By allocating transmission authority via a
-    Global Token Ledger (GTL) and enforcing it through Distributed Credit-Orbit Pacing
-    (DCOP), the FCL mitigates incast-driven buffer overflows and significantly reduces
-    tail-latency variance, thereby maximizing Model Flops Utilization (MFU).</p>"
+- content: "<p>This document describes a Fabric Coordination Layer (FCL) for high-
+    scale distributed artificial intelligence (AI) training fabrics. FCL coordinates
+    transmission authority using a Global Token Ledger (GTL) and applies that authority
+    through Distributed Credit-Orbit Pacing (DCOP). The architecture relates workload
+    communication intent to available fabric capacity before traffic is injected.
+    The design objectives are to mitigate synchronized incast, reduce queue pressure
+    and tail-latency variability, and improve collective communication efficiency.
+    These objectives require experimental validation. This revision clarifies the
+    architectural scope and physical constraints of FCL; it does not define an interoperable
+    protocol or a production hardware implementation.</p>"
   language:
   - en
   script:
@@ -37,6 +39,16 @@ relation:
       primary: true
     formattedref:
       content: draft-tayyebi-fcl-dcop-gtl-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-tayyebi-fcl-dcop-gtl-01
+    docid:
+    - id: draft-tayyebi-fcl-dcop-gtl-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-tayyebi-fcl-dcop-gtl-01
       format: text/plain
 ext:
   schema-version: v1.0.1

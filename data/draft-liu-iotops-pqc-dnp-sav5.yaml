@@ -2,8 +2,8 @@
 schema-version: v1.2.3
 id: draft-liu-iotops-pqc-dnp-sav5
 title:
-- content: A Post-Quantum Cryptographic Profile for DNP3 Secure Authentication Version
-    5
+- content: Post-Quantum Authentication and Lifecycle Operations for IoT Deployments
+    Using DNP3 SAv5
   language:
   - en
   script:
@@ -14,17 +14,22 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document specifies a post-quantum cryptographic profile for DNP3
-    Secure Authentication version 5 (SAv5). It defines an ML-KEM-768 and ML-DSA authentication
-    exchange, HKDF-SHA-256 session keys, canonical DNP3 application protocol data
-    unit (APDU) encoding, transport segmentation, and HMAC-SHA-256 protection of application
-    messages. This Internet-Draft is a proposal for Standards Track publication. The
-    APDU uses DNP3 application control, authentication function codes, response internal
-    indications, and a length-delimited post- quantum authentication object. The object
-    variation and any externally allocated algorithm identifiers require coordination
-    with the responsible DNP3 standards authority. A local experimental selector is
-    specified only for explicitly configured laboratory use; this document does not
-    assign an IEEE or IEC identifier.</p>"
+- content: "<p>This document addresses post-quantum authentication migration for Internet
+    of Things (IoT) deployments that already use DNP3 Secure Authentication version
+    5 (SAv5), including fleets of networked outstations and industrial gateways with
+    limited local user interfaces. It describes identity provisioning, admission to
+    authenticated operation, credential and session replacement, failure recovery,
+    quarantine, and retirement under an operator's existing authorization policy.
+    A cryptographic profile supports these lifecycle operations using an ML-KEM-768
+    and ML-DSA exchange, HKDF-SHA-256 session keys, canonical DNP3 application protocol
+    data unit (APDU) encoding, transport segmentation, and HMAC-SHA-256 application
+    authentication. The profile does not encrypt DNP3 payloads or replace application
+    control authorization. This individual submission proposes Standards Track publication
+    and requests IOTOPS review of its IoT operational requirements. The appropriate
+    venue for new protocol work requires separate determination. DNP3 object variations
+    and externally allocated algorithm identifiers require coordination with the responsible
+    DNP3 standards authority. The local experimental selector is limited to explicitly
+    configured laboratory use and is not an IEEE or IEC assignment.</p>"
   language:
   - en
   script:
@@ -50,6 +55,16 @@ relation:
       primary: true
     formattedref:
       content: draft-liu-iotops-pqc-dnp-sav5-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-liu-iotops-pqc-dnp-sav5-02
+    docid:
+    - id: draft-liu-iotops-pqc-dnp-sav5-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-liu-iotops-pqc-dnp-sav5-02
       format: text/plain
 ext:
   schema-version: v1.0.1
