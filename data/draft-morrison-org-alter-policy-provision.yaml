@@ -14,24 +14,20 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This memo specifies how an artificial-intelligence agent runtime, bound
-    at instantiation to a principal identity handle, resolves at session initialisation
-    a target organisational identity substrate from a manifest source bound to the
-    runtime's working context and retrieves from that substrate a typed policy stack
-    comprising a handbook artefact, a standard-operating-procedure registry pointer,
-    an enforcement-gate specification, and an audit-signal ingestion endpoint. The
-    policy stack is then applied as runtime constraints on subsequent tool invocations,
-    with audit signals emitted back to the same substrate. Policy provision occurs
-    in the same act of session initialisation as principal identification, rather
-    than as a separate ceremony against a side-channel governance plane. A principal
-    concurrently bound to multiple organisational substrates operates the runtime
-    under a deterministic composition of the several policy stacks. A cross-organisational
-    residual conflict suspends the conflicting action, and is resolved through the
-    peer-protocol Identity Accord ceremony only where the principal discloses each
-    binding to the other, never through a meta-federation authority. The memo is Informational.
-    The wire surface relies on the DNS-based discovery of draft-morrison-mcp-dns-discovery
-    and the handle namespace of draft-morrison-identity-pronouns; no new transport
-    is introduced.</p>"
+- content: "<p>An agent runtime that acts under an organisation's rules receives those
+    rules in a form specific to each deployment, and the audit records it sends back
+    are specific to each deployment too. This memo specifies two elements that two
+    implementations would have to agree on. The first is an enforcement-gate specification,
+    a list of rules, each with a trigger predicate over a tool invocation's name and
+    arguments, an action (block, prompt for confirmation, or allow with audit), an
+    applicability scope and an explanation, with the most restrictive action prevailing
+    when several rules match. The second is an audit-signal record that the runtime
+    submits to an append-only ingestion endpoint. Both are exposed as typed Model
+    Context Protocol surfaces of an organisational identity substrate. The runtime
+    resolves the substrate at session start from a manifest source. A principal bound
+    to more than one substrate operates under the strictest applicable gate, and no
+    substrate learns of another. The memo is Informational. The only implementation
+    is the author's own substrate, and no agent runtime yet fetches policy this way.</p>"
   language:
   - en
   script:
@@ -107,6 +103,16 @@ relation:
       primary: true
     formattedref:
       content: draft-morrison-org-alter-policy-provision-06
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-morrison-org-alter-policy-provision-07
+    docid:
+    - id: draft-morrison-org-alter-policy-provision-07
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-morrison-org-alter-policy-provision-07
       format: text/plain
 ext:
   schema-version: v1.0.1

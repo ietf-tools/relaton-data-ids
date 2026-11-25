@@ -1,0 +1,48 @@
+---
+schema-version: v1.2.3
+id: draft-morrison-substrate-wake
+title:
+- content: 'Substrate Wake: Armed-Wait Liveness Without Addressability'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-morrison-substrate-wake
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>This memo specifies the armed wait, a way for a turn-based agent session
+    to be re-entered by an incoming message without becoming a network-addressable
+    endpoint and without polling any remote party. At the end of a turn a session
+    suspends onto a substrate its own host already maintains: a local projection of
+    the frames delivered to its principal's identity handle. An observer on the same
+    host watches that projection and re-enters the session the moment a frame of a
+    wake class arrives, or when a bounded window closes. The session holds no socket,
+    publishes no address and carries no session identifier on any wire. The memo defines
+    the wake class, the arm and wake procedure, the three outcomes of an arm, the
+    delivery and ordering properties a woken session can rely on, and the failure
+    behaviour. It builds on the agent-channel frame of draft-morrison- agent-channel-fan-out
+    and the coordination posture of draft-morrison- substrate-observation. Under the
+    agent-channel memo's rule for new kinds, it defines the four frame kinds it relies
+    on that the agent- channel memo does not define. Liveness obtained this way is
+    an optimisation over asynchronous delivery and never replaces it.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-morrison-substrate-wake-00
+    docid:
+    - id: draft-morrison-substrate-wake-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-morrison-substrate-wake-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

@@ -1,0 +1,54 @@
+---
+schema-version: v1.2.3
+id: draft-han-a-sfc-architecture-problem
+title:
+- content: 'Agent Service Function Chain (A-SFC): Architecture and Problem Statement'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-han-a-sfc-architecture-problem
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: <p>Large Language Model (LLM) agents granted write access to tools are
+    emerging as a new class of network participants. Their integrated nature of autonomous
+    decision-making and execution introduces challenges such as compliance bypass
+    and uncontrolled risks. Existing safeguards are mostly application-layer configurable
+    policies residing in the same trust plane as the agent, and are vulnerable to
+    software defects, unintended invocation paths, and bypass via direct connections.
+    Meanwhile, dynamic branching and cross-domain task interactions are pervasive
+    in multi-agent collaboration scenarios. Traditional networks only support flow-
+    level quality awareness and cannot provide task-level end-to-end traceability,
+    fault localization, and quality assurance. This document defines the A-SFC (Agent
+    Service Function Chain) architecture, which elevates compliance from a "configurable
+    policy" to a "topological fact". Through SRv6 segment routing, mandatory ordered
+    compliance steps are compiled into network forwarding paths; packets that skip
+    compliance gates are dropped directly at the forwarding plane, without relying
+    on cooperation from the agent side. On this basis, this document further introduces
+    a task-level in-situ flow telemetry mechanism. Through three-tier task encoding,
+    it achieves layered quality awareness and fault localization at the link level,
+    agent level, and task level, supporting end-to-end auditability and traceability
+    of multi-agent delegation chains. This document describes the core problems addressed
+    by A-SFC, its overall architecture, key technical components, operating mechanisms,
+    and typical application scenarios.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-han-a-sfc-architecture-problem-00
+    docid:
+    - id: draft-han-a-sfc-architecture-problem-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-han-a-sfc-architecture-problem-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1

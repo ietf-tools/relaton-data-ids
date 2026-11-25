@@ -13,19 +13,18 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document specifies the did:alter Decentralized Identifier method.
-    A did:alter identifier names a ~handle together with the DNS zone that publishes
-    the handle's signed envelope, and it resolves to a DID document by running the
-    envelope recognition procedure of the companion specification for discovering
-    Model Context Protocol servers through DNS TXT records, then expressing the verified
-    envelope's Ed25519 key as a verification method. The identifier agrees with the
-    handle grammar of the alter URI scheme and with the did:alter form already written
-    by the identity-attributed commits specification. The method defines no record,
-    cryptographic primitive or registry of its own. Its create, update and deactivate
-    operations publish, replace and revoke that envelope, and its read operation verifies
-    it. The document also sets out what the method cannot yet do, because the envelope
-    record it reads carries no key history, and revocation cannot presently be observed
-    from DNS alone.</p>"
+- content: "<p>This document specifies two things two independent implementations
+    would have to agree on. The first is the spelling of a Decentralized Identifier
+    that names a ~handle together with the DNS zone that publishes the handle's signed
+    envelope. The second is the DID document a resolver derives from that envelope,
+    once the envelope has passed DNSSEC validation and signature verification under
+    the companion specification for discovering Model Context Protocol servers through
+    DNS TXT records. The method defines no record, cryptographic primitive or registry
+    of its own. Resolution requires DNSSEC. The method is usable only for signed zones.
+    The envelope record carries no key history, and revocation cannot presently be
+    observed from DNS alone, and the document says what a resolver can and cannot
+    conclude as a result. No deployment exists. The document is Informational and
+    is offered for review as an Independent Submission.</p>"
   language:
   - en
   script:
@@ -51,6 +50,16 @@ relation:
       primary: true
     formattedref:
       content: draft-morrison-did-alter-method-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-morrison-did-alter-method-02
+    docid:
+    - id: draft-morrison-did-alter-method-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-morrison-did-alter-method-02
       format: text/plain
 ext:
   schema-version: v1.0.1

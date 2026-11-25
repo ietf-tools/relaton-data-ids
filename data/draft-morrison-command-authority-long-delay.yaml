@@ -13,25 +13,19 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>The operational-technology command authority profile defines a Command
-    Authority Envelope with which an enforcement point decides whether a software
-    agent may perform a control action, on whose authority, and with which human approval.
-    This document profiles that envelope for networks where the authority and the
-    enforcement point are separated by round-trip times from about 2.6 seconds to
-    about two weeks, as in the connectivity scenarios of the IP in deep space use-case
-    document. It says how each element of the envelope is evaluated offline, how expiry
-    and maximum age are checked against a declared clock uncertainty, how the revocation
-    latency budget and trust-anchor staleness are declared for each scenario, how
-    a human approval signed before a command departs stays bound to one action, how
-    an outcome that cannot be observed across a contact gap or a reboot is recorded,
-    what an agent may do once the origin has been silent past the revocation latency
-    budget, and how the envelope is carried over the Space Packet Protocol on UDP,
-    CoAP with OSCORE, and HTTP/3. It adds one grant field, with which a principal
-    writes in advance the actions an agent may take during that silence and the interval
-    in which it may take them. It states which way an unknown revocation check fails
-    for each action class, and it adds one declared bound, a second revocation latency
-    budget for the grants that field marks, beside the one budget the profile it builds
-    on has a deployment declare.</p>"
+- content: "<p>An enforcement point that checks agent-originated commands offline
+    can be out of contact with the party that issues authority for anything from about
+    2.6 seconds to about two weeks, and learns of no revocation in that time. This
+    document profiles the Command Authority Envelope of the operational-technology
+    command authority profile for that case. Two implementations have to agree on
+    how an enforcement point decides, from a signed revocation status and a monotonic
+    counter, that revocation status has gone silent past a declared budget, and on
+    what a grant written in advance, a contingency grant, permits during that silence.
+    The profile adds one grant field and one declared bound, a second revocation latency
+    budget for the grants that field marks. It also states how expiry and maximum
+    age are checked against a declared clock uncertainty, which way an unknown revocation
+    check fails for each action class, and how a human approval signed before a command
+    departs stays bound to one action.</p>"
   language:
   - en
   script:
@@ -47,6 +41,16 @@ relation:
       primary: true
     formattedref:
       content: draft-morrison-command-authority-long-delay-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-morrison-command-authority-long-delay-01
+    docid:
+    - id: draft-morrison-command-authority-long-delay-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-morrison-command-authority-long-delay-01
       format: text/plain
 ext:
   schema-version: v1.0.1

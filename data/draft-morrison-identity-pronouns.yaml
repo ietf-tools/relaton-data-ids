@@ -2,7 +2,8 @@
 schema-version: v1.2.3
 id: draft-morrison-identity-pronouns
 title:
-- content: 'Identity Pronouns: A Reference-Axis Extension to ~handle Identity Systems'
+- content: 'Identity Pronouns: A Client-Side Shorthand for ~handle References and
+    the Rule That Keeps It Off the Wire'
   language:
   - en
   script:
@@ -13,20 +14,16 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document defines an identity pronoun grammar as a reference axis
-    orthogonal to the tier taxonomy that draft-morrison-identity- attributed-commits
-    defines for the ~handle primitive of draft- morrison-mcp-dns-discovery. A pronoun
-    is a session-scoped reference that resolves client-side to a concrete handle using
-    local session state before any cryptographic, DNS, or federation operation. The
-    tier taxonomy (Sovereign, Bot, Instrument) is unchanged; this specification introduces
-    Absolute vs Pronoun as an orthogonal axis. A pronoun MUST NOT appear in a capability
-    token, in a DNS record, in an Accord signature, or in any inter-organisational
-    protocol payload. This document defines a single Wave-1 pronoun, ~org, that resolves
-    to the concrete handle of the organisation bound to the caller's current session.
-    An appendix defines a relative-path pronoun grammar (e.g. ~./finance, ~../compliance)
-    as a non-normative design surface for future work. The mechanism is provider-neutral,
-    introduces no new cryptographic primitive, and adds no load to DNS, capability-token
-    issuers, or federated resolvers.</p>"
+- content: "<p>A client that lets a person type a short reference such as ~org in
+    place of a concrete ~handle has to replace the reference before anything is sent.
+    This document states the one rule a receiver can check, that a typed handle field
+    in a payload crossing a trust boundary never carries such a reference, and describes
+    the client- side resolution that makes the rule hold. A reference of this kind
+    is called a pronoun. The document defines one pronoun, ~org. It resolves to the
+    organisation bound to the caller's current session. Resolution is local to the
+    client and uses no network exchange. The document is Informational. It describes
+    a convention that no second party implements, and it makes no claim that the convention
+    needs standardising.</p>"
   language:
   - en
   script:
@@ -92,6 +89,16 @@ relation:
       primary: true
     formattedref:
       content: draft-morrison-identity-pronouns-05
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-morrison-identity-pronouns-06
+    docid:
+    - id: draft-morrison-identity-pronouns-06
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-morrison-identity-pronouns-06
       format: text/plain
 ext:
   schema-version: v1.0.1

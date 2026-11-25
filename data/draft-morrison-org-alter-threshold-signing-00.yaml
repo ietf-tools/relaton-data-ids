@@ -1,0 +1,93 @@
+---
+schema-version: v1.2.3
+id: draft-morrison-org-alter-threshold-signing-00
+title:
+- content: Threshold Signing for Organisational Identities
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+link:
+- content: https://datatracker.ietf.org/doc/html/draft-morrison-org-alter-threshold-signing-00
+  type: src
+type: standard
+docid:
+- id: draft-morrison-org-alter-threshold-signing-00
+  type: Internet-Draft
+  primary: true
+- id: I-D.morrison-org-alter-threshold-signing
+  type: IETF
+  scope: anchor
+docnumber: I-D.morrison-org-alter-threshold-signing
+date:
+- type: published
+  value: '2026-11-25'
+contributor:
+- person:
+    name:
+      given:
+        forename:
+        - content: Blake
+          language:
+          - en
+        - language:
+          - en
+          initial: B
+        formatted_initials:
+          content: B.
+          language:
+          - en
+      surname:
+        content: Morrison
+        language:
+        - en
+      completename:
+        content: Blake Morrison
+        language:
+        - en
+    affiliation:
+    - organization:
+        name:
+        - content: Alter Meridian Pty Ltd
+  role:
+  - type: author
+version:
+- draft: '00'
+revdate: '2026-11-25'
+language:
+- en
+script:
+- Latn
+abstract:
+- content: <p>This memo profiles the two-round threshold Schnorr signature scheme
+    of RFC 9591 for the custody of the signing key of an organisational identity.
+    No single member or device of the organisation ever holds that key, and a quorum
+    of the organisation's authorised members signs on its behalf. The profile requires
+    the FROST(Ed25519, SHA-512) ciphersuite. Because that ciphersuite produces ordinary
+    Ed25519 signatures, a key held this way is published, rotated and verified exactly
+    as the DNS-based discovery memo "Discovery of Model Context Protocol Servers via
+    DNS TXT Records" already specifies, and no verifier needs to change. The memo
+    specifies a distributed key- generation ceremony in which the whole key never
+    exists in one place, the record of who may sign and how many must agree, the request
+    and assembly of a signature, a signed custody statement by which a verifier learns
+    that a published key is held under a threshold, and the handling of member removal,
+    share refresh and loss. The memo is Informational.</p>
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+series:
+- type: main
+  title:
+    content: Internet-Draft
+    language:
+    - en
+    script:
+    - Latn
+    format: text/plain
+  number: draft-morrison-org-alter-threshold-signing-00
+doctype: internet-draft
+ext:
+  schema-version: v1.0.1

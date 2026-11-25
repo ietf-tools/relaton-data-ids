@@ -1,0 +1,54 @@
+---
+schema-version: v1.2.3
+id: draft-morrison-cross-surface-canonical-knowledge
+title:
+- content: 'Cross-Surface Canonical Knowledge Integrity: Agent-Verifiable Anti-Cloaking
+    Across Scale-Invariant Serving Surfaces'
+  language:
+  - en
+  script:
+  - Latn
+  format: text/plain
+docid:
+- id: draft-morrison-cross-surface-canonical-knowledge
+  type: Internet-Draft
+  primary: true
+abstract:
+- content: "<p>Knowledge artefacts such as documentation, policy specifications, configuration
+    records and identity assertions are now served across two classes of surface at
+    once. One is rendered for people, such as an HTML document or a formatted record
+    view. The other is read by automated agents, such as a plain-text or JSON resource,
+    a Model Context Protocol resource, a DNS record, a filesystem object, or a kernel-resident
+    data structure. Independent code paths usually produce the two, and no protocol
+    mechanism lets an agent check that what it received on its surface matches what
+    a person approved on the rendered surface. Serving infrastructure can deliver
+    different content to agents and to people, and neither consumer can detect that
+    alone. This is called cloaking. This memo specifies a content-integrity mechanism
+    that applies unchanged at every scale. A publisher emits a Canonical Integrity
+    Record: a machine-readable digest of a canonical artefact, computed under a declared,
+    versioned normalisation procedure and published at a well-known location specific
+    to each surface class. A consuming agent retrieves the artefact from each serving
+    surface, recomputes the digest under the same normalisation, checks each result
+    against the published record, and emits a structured anti-cloaking verdict. The
+    mechanism reuses the HTTP digest fields of RFC 9530 and the well- known URI registry
+    of RFC 8615 and extends them across surfaces and representations, including a
+    kernel data-structure surface where there is no HTTP and no DNS and the check
+    runs in kernel context.</p>"
+  language:
+  - en
+  script:
+  - Latn
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    id: draft-morrison-cross-surface-canonical-knowledge-00
+    docid:
+    - id: draft-morrison-cross-surface-canonical-knowledge-00
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-morrison-cross-surface-canonical-knowledge-00
+      format: text/plain
+ext:
+  schema-version: v1.0.1
