@@ -16,30 +16,26 @@ docid:
   primary: true
 abstract:
 - content: "<p>This document specifies the Chorale Protocol, a secure packet transmission
-    system with active integrity assurance, for use cases requiring resistance to
-    interception, traffic analysis, replay, tampering, and retrospective decryption
-    by adversaries with future quantum capability. Chorale defines three confidentiality
-    regimes, computational, everlasting and information-theoretic, and states the
-    keying conditions under which each may be relied upon. The information-theoretic
-    regime requires an independently corroborated co-presence or quantum-key-distribution
-    strand consumed as an unexpanded pad. A session keyed by a derived keystream is
-    computational and is reported as computational. A conforming implementation fails
-    closed and refuses to report a regime its keying does not support. The protocol
-    composes a per-session secret graph topology that determines packet ordering without
-    transmitting any ordering information on the wire, cascade-integrity witnessing
-    over the hidden topology, cover packets carrying valid-looking witnesses for fictional
-    sessions, per-packet Verifiable Delay Function time- lock sealing, multi-source
-    physical-entropy one-time pad composition with sovereign jurisdictional separation,
-    multi-substrate flight requiring threshold reconstruction across diverse path
-    types, and a tombstone ledger that makes pad reuse structurally impossible at
-    the receiver. This version introduces hash-family negotiation at handshake, raising
-    the default hash function for HKDF key derivation, VDF time-lock sealing, and
-    server-blind relay commitments from SHA-256 to SHA-512, with SHA3-512 admitted
-    as a Keccak-family alternative for adversary-evolution- tolerant postures and
-    SHA-256 retained as a backward-compatible legacy mode for resource- constrained
-    devices. The protocol is intended for use by intelligence agencies, central banks,
-    treaty-bound corridors, regulator-to-regulator communications, and other settings
-    demanding the strongest practical confidentiality and integrity properties.</p>"
+    system with active integrity assurance for settings that require resistance to
+    interception, traffic analysis, replay, tampering and retrospective decryption
+    by adversaries with quantum capability. Sessions are keyed by a hybrid handoff
+    that combines ECDH with ML-KEM-1024 under an HKDF-SHA-512 combiner, binds the
+    selected suite into a short authentication string, and is verified in the Tamarin
+    prover. Chorale defines three confidentiality regimes, computational, everlasting
+    and information-theoretic, and states the keying conditions under which each applies.
+    Every session reports the regime its keying supports, and a conforming implementation
+    refuses to transmit a message whose required regime exceeds the achievable one.
+    The protocol composes a per-session secret graph topology that orders packets
+    without transmitting ordering information, cascade-integrity witnessing over the
+    hidden topology, cover packets carrying valid-looking witnesses for fictional
+    sessions, per-packet time-lock sealing over an RSA-group VDF or a post-quantum
+    sequential hash chain, multi-source physical-entropy pad composition with sovereign
+    jurisdictional separation, multi-substrate flight with threshold reconstruction,
+    hash-family negotiation across SHA-256, SHA-512 and SHA3-512, and a tombstone
+    ledger that makes pad reuse structurally impossible at the receiver. The protocol
+    serves intelligence agencies, central banks, treaty-bound corridors, regulator-to-regulator
+    communications and other settings that require the strongest confidentiality and
+    integrity properties currently attainable.</p>"
   language:
   - en
   script:
@@ -55,6 +51,16 @@ relation:
       primary: true
     formattedref:
       content: draft-hillier-chorale-protocol-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-hillier-chorale-protocol-01
+    docid:
+    - id: draft-hillier-chorale-protocol-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-hillier-chorale-protocol-01
       format: text/plain
 ext:
   schema-version: v1.0.1

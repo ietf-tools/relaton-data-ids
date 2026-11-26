@@ -20,11 +20,13 @@ abstract:
     RFC 8733 defines PCEP extensions for automatically adjusting bandwidth on MPLS-TE
     Label Switched Paths (LSPs) using a stateful PCE. This document applies the PCEP
     extensions for automatic bandwidth adjustment to SR-TE LSPs in both the MPLS (SR-MPLS)
-    and IPv6 (SRv6) data planes. It also applies these PCEP extensions to multipath
-    LSPs defined in RFC 10066. RFC 8733 defines the AUTO-BANDWIDTH-ATTRIBUTES TLV
-    and a set of sub- TLVs for the attributes. A sub-TLV is included when its value
-    differs from the value last sent in a PCEP message. However, RFC 8733 lacks a
-    mechanism to explicitly remove an attribute identified by a sub-TLV. This document
+    and IPv6 (SRv6) data planes. It also extends the RFC 8733 automatic bandwidth
+    adjustment procedure to multipath LSPs using the PCEP extensions defined in RFC
+    10066. This document updates RFC 10066 to signal per-path Requested Bandwidth
+    in multipath PCRpt, PCUpd, and PCInitiate messages. RFC 8733 defines the AUTO-BANDWIDTH-ATTRIBUTES
+    TLV and a set of sub- TLVs for the attributes. A sub-TLV is included when its
+    value differs from the value last sent in a PCEP message. However, RFC 8733 lacks
+    a mechanism to explicitly remove an attribute identified by a sub-TLV. This document
     updates RFC 8733 by defining such a mechanism.</p>"
   language:
   - en
@@ -111,6 +113,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-pce-stateful-pce-autobw-update-07
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-pce-stateful-pce-autobw-update-08
+    docid:
+    - id: draft-ietf-pce-stateful-pce-autobw-update-08
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-pce-stateful-pce-autobw-update-08
       format: text/plain
 ext:
   schema-version: v1.0.1

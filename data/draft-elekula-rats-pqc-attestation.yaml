@@ -14,20 +14,26 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>This document analyzes post-quantum cryptographic considerations for
-    Remote ATtestation procedureS (RATS) Evidence, Attestation Results, Endorsements,
-    and Reference Values. It describes the distinction between post-quantum key establishment
-    and post-quantum authentication of attestation artifacts; identifies integrity,
-    provenance, freshness, and session-context properties that must remain independently
-    verifiable; and provides implementation guidance for artifact sizing, bounded
-    processing, transformation, transport, failure handling, and privacy. The document
-    does not define a new cryptographic algorithm, attestation token, Evidence format,
-    transport protocol, TLS extension, or key-establishment mechanism. It relies on
-    existing RATS architecture and data models, existing COSE and JOSE mechanisms,
-    and protocol-specific work in the Secure Evidence and Attestation Transport (SEAT)
-    Working Group. The intended result is a set of interoperable considerations that
-    RATS profiles and attestation-system designers can apply when deploying post-quantum-capable
-    attestation systems.</p>"
+- content: "<p>The Remote ATtestation procedureS (RATS) architecture defines Evidence,
+    Endorsements, Reference Values, and Attestation Results as distinct conceptual
+    artifacts used by Attesters, Verifiers, Endorsers, and Relying Parties. The transition
+    to post-quantum cryptography (PQC) raises questions about the protection, validation,
+    transport, transformation, and retention of these artifacts. This document examines
+    post-quantum cryptographic considerations across the lifecycle of RATS artifacts.
+    It distinguishes post-quantum key establishment from artifact authentication and
+    considers the security properties that must be evaluated independently: integrity,
+    origin, signer authority, freshness, session context, provenance, appraisal, and
+    authorization. The document introduces three analytical constructs: the Artifact
+    Protection Matrix, the Provenance Continuity Chain, and the Cryptographic Transition
+    Assessment. These constructs provide a structured way to identify artifact-specific
+    protection requirements, evaluate transformations, and preserve the information
+    needed for later cryptographic verification. The analysis also addresses algorithm
+    selection, cryptographic agility, artifact size, bounded processing, transport
+    considerations, replay resistance, long-term verifiability, interoperability,
+    testing, and privacy. This document does not define a new cryptographic algorithm,
+    RATS message, token format, transport protocol, TLS extension, key-establishment
+    mechanism, or appraisal-policy language. It provides security analysis and implementation
+    guidance within the existing RATS architecture and established cryptographic standards.</p>"
   language:
   - en
   script:
@@ -43,6 +49,16 @@ relation:
       primary: true
     formattedref:
       content: draft-elekula-rats-pqc-attestation-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-elekula-rats-pqc-attestation-01
+    docid:
+    - id: draft-elekula-rats-pqc-attestation-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-elekula-rats-pqc-attestation-01
       format: text/plain
 ext:
   schema-version: v1.0.1

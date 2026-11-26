@@ -16,8 +16,9 @@ abstract:
 - content: "<p>This document specifies epoch checkpoints, the transparency witness
     and the anchoring of checkpoints as SCITT Signed Statements for the Cedulon audit
     layer. The spend receipt, rail-extract reconciliation and trust-root rules live
-    in the companion Cedulon Core document. A verifier that pins a witness key can
-    detect a withheld or rolled-back checkpoint; without that pin the suppression
+    in the companion Cedulon Core document. A verifier that pins a witness key and
+    holds a usable issuer root can detect a withheld or rolled-back checkpoint from
+    a body that answers to that root (MUST-T11-16); without those pins the suppression
     guarantee is conditional.</p>"
   language:
   - en
@@ -34,6 +35,16 @@ relation:
       primary: true
     formattedref:
       content: draft-dogru-cedulon-checkpoint-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-dogru-cedulon-checkpoint-01
+    docid:
+    - id: draft-dogru-cedulon-checkpoint-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-dogru-cedulon-checkpoint-01
       format: text/plain
 ext:
   schema-version: v1.0.1

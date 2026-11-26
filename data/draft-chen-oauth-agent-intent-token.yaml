@@ -13,18 +13,22 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: <p>In the scenario of AI agent authorization, how to ensure that a user's
-    high-level, natural-language intent is correctly and safely converted into low-level,
-    specific authorization grants. A misunderstanding or malicious interpretation
-    during this translation can lead to significant security vulnerabilities. This
-    document introduces the "Intent Token," a new type of security token designed
-    to bridge this semantic gap. The Intent Token is a signed credential that immutably
-    captures the user's original intent. It decouples the act of granting an intent
-    from the act of issuing specific access tokens. A client presents this Intent
-    Token to an Authorization Server, which acts as a trusted intermediary. The Authorization
-    Server's responsibility is to interpret the user's stated intent and, based on
-    its policies, issue narrowly-scoped, short-lived access tokens for specific resources,
-    thereby ensuring the principle of least privilege is upheld throughout the process.</p>
+- content: "<p>Autonomous Artificial Intelligence (AI) agents translate high-level,
+    often ambiguous natural-language instructions from end users into multi-step chains
+    of downstream API invocations. Traditional OAuth 2.0 authorization mechanisms
+    bind access tokens to static, pre- configured scopes or fine-grained resource
+    parameters known at the time of user consent, leaving a semantic gap when an agent
+    dynamically determines exact execution parameters at runtime. This document specifies
+    the Intent Token, a cryptographically signed, sender-constrained JSON Web Token
+    (JWT) profile that captures either user-approved authorization bounds or host-attested
+    user instructions, together with an upper-bound authorization envelope and optional
+    step-up action triggers. Rather than being presented directly to Resource Servers,
+    an Intent Token serves as a verifiable input artifact at the Authorization Server
+    or a dedicated Policy Decision Point (PDP) — either exchanged via OAuth 2.0 Token
+    Exchange (RFC 8693) — optionally accompanied by a client-side Agent Delegation
+    Proof (ADP) — for short-lived, narrowly scoped downstream access tokens, or submitted
+    via Pushed Authorization Requests (RFC 9126) to establish or advance a stateful
+    authorization workflow.</p>"
   language:
   - en
   script:
@@ -40,6 +44,26 @@ relation:
       primary: true
     formattedref:
       content: draft-chen-oauth-agent-intent-token-00
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-chen-oauth-agent-intent-token-01
+    docid:
+    - id: draft-chen-oauth-agent-intent-token-01
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-chen-oauth-agent-intent-token-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-chen-oauth-agent-intent-token-02
+    docid:
+    - id: draft-chen-oauth-agent-intent-token-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-chen-oauth-agent-intent-token-02
       format: text/plain
 ext:
   schema-version: v1.0.1
