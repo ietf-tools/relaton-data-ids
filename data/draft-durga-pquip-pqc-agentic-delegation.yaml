@@ -18,26 +18,28 @@ abstract:
     chains and signed execution traces (currently built on Ed25519, ECDSA P-256, and
     RSA-PSS) to enforce least-privilege tool invocations across Model Context Protocol
     (MCP) and Agent-to-Agent (A2A) boundaries, and to preserve long-term non-repudiation
-    for regulatory audit logs. This architecture faces two existential vulnerabilities
-    in the Post-Quantum era: (1) "Harvest-Now, Forge-and- Repudiate-Later" (HNFRL)
+    for regulatory audit logs. This architecture faces two vulnerabilities in the
+    Post-Quantum transition: (1) "Harvest-Now, Forge-and- Repudiate-Later" (HNFRL)
     attacks, wherein Cryptographically Relevant Quantum Computers (CRQCs) running
-    Shor''s algorithm retroactively forge or repudiate multi-year compliance traces
-    (e.g., 7-to-10-year HIPAA, SOX, FDA 21 CFR Part 11, and defense operational logs)
-    and synthesize retroactive human-in-the-loop approvals; and (2) "Lattice Signature-Bloat
-    Amplification," wherein naively substituting 64-byte Ed25519 signatures with 3,309-byte
-    ML-DSA-65 (FIPS 204) signatures across a 10-hop sub-agent chain inflates per-call
-    authorization headers from 640 bytes to over 46 KB (including public keys), exceeding
-    HTTP/2 header limits and degrading sub-10ms real-time tool routing. This document
-    specifies a wire-compatible Post-Quantum Agentic Delegation and Trace Receipt
-    profile ("PQ-Agentic"). It introduces a two-tier cryptographic architecture: (a)
-    a Hot-Path Hybrid Delegation Envelope combining classical Ed25519 with ML-DSA-65
-    (FIPS 204) via Pre-Verified Session-Grant Digest Chaining (PVSGDC), replacing
-    redundant per-call inline re-transmission of O(N) prior delegators'' 5,261-byte
-    ML-DSA-65 public keys and signatures with 32-byte SHAKE256 digests of out-of-band
-    PEP-verified delegation grants; and (b) a Cold-Path Long-Horizon Archival Receipt
-    anchored with stateless hash- based SLH-DSA-SHAKE-128f ([FIPS205]) over RFC 9943
-    SCITT transparency Merkle roots, guaranteeing 30-year quantum-resistant non-repudiation
-    even under catastrophic lattice cryptanalysis.</p>'
+    Shor''s algorithm retroactively forge or repudiate historical classical signatures
+    on compliance traces once historical public keys are compromised; and (2) "Lattice
+    Signature-Bloat Amplification," wherein naively carrying inline 3,309-byte ML-DSA-65
+    ([FIPS204]) signatures and 1,952-byte public keys across a 10-hop sub-agent chain
+    inflates raw cryptographic material from 960 bytes to 52,610 bytes (over 70 KB
+    when Base64url- encoded inside JSON-RPC headers), exceeding typical 8 KB to 16
+    KB HTTP/2 header limits. This document specifies a deterministic Post-Quantum
+    Agentic Delegation and Trace Receipt profile ("PQ-Agentic"). It defines a two-tier
+    cryptographic architecture built strictly from published IETF and NIST standards:
+    (a) a Hot-Path Hybrid Delegation Envelope combining classical Ed25519 ([RFC8032])
+    with pure ML-DSA-65 ([FIPS204]) over a single domain-separated RFC 8785 JSON Canonicalization
+    Scheme (JCS) transcript, replacing per-call inline re-transmission of prior delegators''
+    5,261-byte ML-DSA-65 public keys and signatures with 32-byte SHAKE256 digests
+    of cached, hybrid-signed SessionGrants; and (b) a Cold-Path Archival Profile that
+    registers Tier-1 execution receipts and SessionGrants as [RFC9943] SCITT Signed
+    Statements with [RFC9942] COSE Receipts and dual post-quantum epoch checkpoints
+    sealed with stateless hash-based SLH-DSA-SHAKE-192s / SLH-DSA-SHAKE-256s ([FIPS205])
+    and ML-DSA-87 ([FIPS204]). Complete multi-implementation conformance test vectors
+    are provided.</p>'
   language:
   - en
   script:
@@ -63,6 +65,16 @@ relation:
       primary: true
     formattedref:
       content: draft-durga-pquip-pqc-agentic-delegation-01
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-durga-pquip-pqc-agentic-delegation-02
+    docid:
+    - id: draft-durga-pquip-pqc-agentic-delegation-02
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-durga-pquip-pqc-agentic-delegation-02
       format: text/plain
 ext:
   schema-version: v1.0.1
