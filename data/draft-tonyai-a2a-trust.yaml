@@ -19,10 +19,15 @@ abstract:
     validated, how dynamic policies are governed under a dual-signature model, and
     how cross- organizational agent interactions are explicitly authorized. The model
     applies existing PKI primitives (X.509, CRL, CSR) and established identity patterns
-    (OAuth 2.0, On-Behalf-Of) to the problem of agent provenance. This document does
-    not address agent- to-resource access control, human-in-the-loop orchestration,
-    or agent behavior, as those concerns belong to the resource enforcement layer
-    and the orchestration layer respectively.</p>"
+    (OAuth 2.0, On-Behalf-Of) to the problem of agent provenance. It complements the
+    workload identity and OAuth delegation work in progress, supplying what that work
+    leaves to the deployment: who signs an agent's bounds, how agents that create
+    other agents are bounded, and per-call proof that the agent presenting a token
+    is the one it names. It addresses non-human identity only. This document does
+    not address agent-to-resource access control, human-in-the-loop orchestration,
+    agent behavior, or the identity of the person an agent acts for, as those concerns
+    belong to the resource enforcement layer, the orchestration layer, and the delegation
+    layer respectively.</p>"
   language:
   - en
   script:
@@ -68,6 +73,16 @@ relation:
       primary: true
     formattedref:
       content: draft-tonyai-a2a-trust-03
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-tonyai-a2a-trust-04
+    docid:
+    - id: draft-tonyai-a2a-trust-04
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-tonyai-a2a-trust-04
       format: text/plain
 ext:
   schema-version: v1.0.1

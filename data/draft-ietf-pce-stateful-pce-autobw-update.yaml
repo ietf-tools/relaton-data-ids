@@ -14,20 +14,11 @@ docid:
   type: Internet-Draft
   primary: true
 abstract:
-- content: "<p>Extensions for the stateful PCE model enable control of Traffic Engineering
-    (TE) LSPs using the Path Computation Element Communication Protocol (PCEP) for
-    RSVP-TE and Segment Routing (SR), for both PCE-initiated and PCC-initiated LSPs.
-    RFC 8733 defines PCEP extensions for automatically adjusting bandwidth on MPLS-TE
-    Label Switched Paths (LSPs) using a stateful PCE. This document applies the PCEP
-    extensions for automatic bandwidth adjustment to SR-TE LSPs in both the MPLS (SR-MPLS)
-    and IPv6 (SRv6) data planes. It also extends the RFC 8733 automatic bandwidth
-    adjustment procedure to multipath LSPs using the PCEP extensions defined in RFC
-    10066. This document updates RFC 10066 to signal per-path Requested Bandwidth
-    in multipath PCRpt, PCUpd, and PCInitiate messages. RFC 8733 defines the AUTO-BANDWIDTH-ATTRIBUTES
-    TLV and a set of sub- TLVs for the attributes. A sub-TLV is included when its
-    value differs from the value last sent in a PCEP message. However, RFC 8733 lacks
-    a mechanism to explicitly remove an attribute identified by a sub-TLV. This document
-    updates RFC 8733 by defining such a mechanism.</p>"
+- content: "<p>This document extends the automatic bandwidth adjustment procedure
+    in RFC 8733 to SR-TE LSPs using SR-MPLS and SRv6, and to multipath LSPs using
+    the PCEP extensions in RFC 10066. For multipath LSPs, it defines per-path list
+    signaling for Requested Bandwidth. It also updates RFC 8733 to define how an all-zero
+    AUTO-BANDWIDTH-ATTRIBUTES sub-TLV value restores a default or removes an attribute.</p>"
   language:
   - en
   script:
@@ -123,6 +114,16 @@ relation:
       primary: true
     formattedref:
       content: draft-ietf-pce-stateful-pce-autobw-update-08
+      format: text/plain
+- type: includes
+  bibitem:
+    id: draft-ietf-pce-stateful-pce-autobw-update-09
+    docid:
+    - id: draft-ietf-pce-stateful-pce-autobw-update-09
+      type: Internet-Draft
+      primary: true
+    formattedref:
+      content: draft-ietf-pce-stateful-pce-autobw-update-09
       format: text/plain
 ext:
   schema-version: v1.0.1
